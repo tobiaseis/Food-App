@@ -5,9 +5,14 @@
   "main": "discover.js",
   "scripts": {
     "discover": "node discover.js",
+    "pipeline": "node pipeline.js",
+    "analyze": "node analyze.js",
     "install-browsers": "npx playwright install chromium"
   },
   "dependencies": {
-    "playwright": "^1.44.0"
+    "playwright": "^1.44.0",
+    "@google/generative-ai": "^0.21.0",
+    "@anthropic-ai/sdk": "^0.39.0",
+    "better-sqlite3": "^9.6.0"
   }
 }
