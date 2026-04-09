@@ -16,6 +16,10 @@
  *
  * ── Kør med Claude Sonnet 4.6 (~$0.20-0.40 per avis) ──────────────────────
  *   MODEL=claude ANTHROPIC_API_KEY=din_nøgle node pipeline.js
+ *
+ * ── Kør lokalt med Gemma via Ollama (ingen cloud API-nøgle) ───────────────
+ *   ollama run gemma3:4b
+ *   MODEL=ollama OLLAMA_MODEL=gemma3:4b node pipeline.js
  */
 
 'use strict';
@@ -26,18 +30,31 @@ const path = require('path');
 
 // ── Konfiguration ─────────────────────────────────────────────────────────────
 
-const MODEL         = process.env.MODEL || 'gemini'; // 'gemini' | 'claude'
+const MODEL_RAW     = (process.env.MODEL || 'gemini').trim().toLowerCase();
+const MODEL         = MODEL_RAW === 'gemma' ? 'ollama' : MODEL_RAW; // 'gemini' | 'claude' | 'ollama'
 const GEMINI_KEY    = process.env.GEMINI_API_KEY  || '';
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY || '';
+const OLLAMA_HOST   = (process.env.OLLAMA_HOST || 'http://127.0.0.1:11434').replace(/\/+$/, '');
+const OLLAMA_MODEL  = process.env.OLLAMA_MODEL || 'gemma4:e4b';
 const PDF_DIR       = path.join(__dirname, 'pdfs');
 const DB_PATH       = path.join(__dirname, 'offers.db');
 
-// Rema 1000's faste dealer-ID på Tjek.com – ændrer sig ikke
-const REMA_DEALER_ID = '11deC';
 
 // Max PDF-størrelse der sendes inline til AI (i MB).
 // Gemini-grænse: 20 MB. Claude-grænse: ~24 MB (32 MB base64-kodet).
 const MAX_PDF_MB = 19;
+// Størrelse af hvert tekst-chunk sendt til Ollama per API-kald.
+// Mindre chunks = lavere hukommelsesforbrug (KV-cache) i Ollama.
+const OLLAMA_CHUNK_CHARS  = 8_000;
+const OLLAMA_NUM_CTX      = 4096; // Max tokens Ollama allokerer KV-cache til
+
+// ── Model-hjælpere ───────────────────────────────────────────────────────────
+
+function getModelLabel() {
+  if (MODEL === 'claude') return 'Claude Sonnet 4.6  (betalt ~$0.20-0.40/avis)';
+  if (MODEL === 'ollama') return `Ollama (${OLLAMA_MODEL})  (lokal)`;
+  return 'Gemini 2.0 Flash   (gratis)';
+}
 
 // ── ISO-ugehjælpere (identisk logik som discover.js) ─────────────────────────
 
@@ -133,7 +150,8 @@ async function downloadPdf(url, destPath) {
   const buf = Buffer.from(await res.arrayBuffer());
   const sizeMb = buf.length / 1024 / 1024;
 
-  if (sizeMb > MAX_PDF_MB) {
+  // Ollama-stien udtrækker tekst lokalt – ingen upload-grænse
+  if (MODEL !== 'ollama' && sizeMb > MAX_PDF_MB) {
     throw new Error(
       `PDF er ${sizeMb.toFixed(1)} MB – overskrider ${MAX_PDF_MB} MB AI-grænsen. ` +
       `Overvej at splitte filen i sider.`
@@ -144,32 +162,414 @@ async function downloadPdf(url, destPath) {
   console.log(`  ✔ Gemt: ${path.basename(destPath)} (${sizeMb.toFixed(1)} MB)`);
 }
 
-// ── PDF-opdagelse: Rema 1000 via Tjek.com (ingen browser nødvendig) ──────────
+// ── Gemini visuel klik-hjælper ────────────────────────────────────────────────
 
-async function findRema1000Pdf(week) {
-  console.log('  Kalder Tjek.com catalog-API...');
-  const apiUrl = `https://squid-api.tjek.com/v2/catalogs?dealer_id=${REMA_DEALER_ID}&order_by=-publication_date&offset=0&limit=5`;
-  const res = await fetch(apiUrl, { headers: { Accept: 'application/json' } });
-  if (!res.ok) throw new Error(`Tjek.com API: HTTP ${res.status}`);
+/**
+ * Tager et screenshot af `page`, sender det til Gemini og beder den finde
+ * et element beskrevet med `description`. Returnerer {x, y} pixelkoordinater
+ * eller null hvis elementet ikke kan lokaliseres.
+ */
+async function geminiLocateElement(page, description) {
+  if (!GEMINI_KEY) return null;
+  try {
+    const { GoogleGenerativeAI } = require('@google/generative-ai');
+    const genAI = new GoogleGenerativeAI(GEMINI_KEY);
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
-  const catalogs = await res.json();
-  const now = Date.now();
+    const screenshot = await page.screenshot({ type: 'png', fullPage: false });
+    const viewport   = page.viewportSize();
 
-  // Foretrær det aktive katalog – ellers det nyeste
-  const active = catalogs.find((c) => {
-    const from = new Date(c.run_from).getTime();
-    const till = new Date(c.run_till).getTime();
-    return now >= from && now <= till;
-  }) || catalogs[0];
+    const result = await model.generateContent([
+      { inlineData: { mimeType: 'image/png', data: screenshot.toString('base64') } },
+      { text:
+        `Se på dette screenshot af en webside (${viewport.width}×${viewport.height} pixels).\n` +
+        `Find: "${description}"\n` +
+        `Svar KUN med et JSON-objekt: {"x": <pixel fra venstre>, "y": <pixel fra top>}\n` +
+        `Koordinaterne skal pege på midten af elementet. Hvis elementet ikke er synligt, svar med: {"x": null, "y": null}`
+      },
+    ]);
 
-  if (!active) throw new Error('Ingen Rema 1000 katalog fundet på Tjek.com');
-
-  console.log(`  Katalog: "${active.label}"  (${active.offer_count} tilbud, ${active.page_count} sider)`);
-  console.log(`  PDF-URL: ${active.pdf_url}`);
-  return active.pdf_url;
+    const text  = result.response.text();
+    const match = text.match(/\{[^}]+\}/);
+    if (!match) return null;
+    const { x, y } = JSON.parse(match[0]);
+    if (x == null || y == null) return null;
+    return { x: Math.round(x), y: Math.round(y) };
+  } catch (err) {
+    console.log(`  ⚠ Gemini lokalisering fejlede: ${err.message.split('\n')[0]}`);
+    return null;
+  }
 }
 
-// ── PDF-opdagelse: iPaper-aviser (Netto / Føtex) via Playwright ───────────────
+// ── Ollama visuel klik-hjælper ────────────────────────────────────────────────
+
+/**
+ * Tager et screenshot af `page`, sender det til Ollama (Gemma 3 multimodal)
+ * og beder den finde et element beskrevet med `description`.
+ * Returnerer {x, y} pixelkoordinater eller null.
+ *
+ * Kræver at OLLAMA_MODEL er et multimodalt model (f.eks. gemma3:4b).
+ */
+async function ollamaLocateElement(page, description) {
+  try {
+    const screenshot = await page.screenshot({ type: 'png', fullPage: false });
+    const viewport   = page.viewportSize();
+    const base64     = screenshot.toString('base64');
+
+    const prompt =
+      `Look at this screenshot of a webpage (${viewport.width}×${viewport.height} pixels).\n` +
+      `Find: "${description}"\n` +
+      `Reply ONLY with a JSON object: {"x": <pixels from left>, "y": <pixels from top>}\n` +
+      `Coordinates must point to the center of the element. ` +
+      `If not visible, reply: {"x": null, "y": null}`;
+
+    const res = await fetch(`${OLLAMA_HOST}/api/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: OLLAMA_MODEL,
+        stream: false,
+        messages: [{ role: 'user', content: prompt, images: [base64] }],
+      }),
+    });
+
+    if (!res.ok) throw new Error(`Ollama HTTP ${res.status}`);
+    const data = await res.json();
+    const text = data.message?.content || '';
+    const match = text.match(/\{[^}]+\}/);
+    if (!match) return null;
+    const { x, y } = JSON.parse(match[0]);
+    if (x == null || y == null) return null;
+    console.log(`  ↳ Ollama/Gemma fandt element på (${Math.round(x)}, ${Math.round(y)})`);
+    return { x: Math.round(x), y: Math.round(y) };
+  } catch (err) {
+    console.log(`  ⚠ Ollama lokalisering fejlede: ${err.message.split('\n')[0]}`);
+    return null;
+  }
+}
+
+/**
+ * Vælger den bedste tilgængelige visuelle lokalisator:
+ * – Gemini hvis GEMINI_KEY er sat
+ * – Ollama/Gemma hvis MODEL=ollama
+ * – Ellers null
+ */
+async function locateElement(page, description) {
+  if (GEMINI_KEY) return geminiLocateElement(page, description);
+  if (MODEL === 'ollama') return ollamaLocateElement(page, description);
+  return null;
+}
+
+// ── PDF-opdagelse: Rema 1000 via rema1000.dk/avis (Playwright) ───────────────
+
+/**
+ * Finder Rema 1000's tilbudsavis PDF via rema1000.dk/avis:
+ *  1. Åbner rema1000.dk/avis og finder billedet for den aktuelle uge (f.eks. alt="Uge 15")
+ *  2. Klikker billedet/kortet → navigerer til rema1000.dk/avis/<ID>/1
+ *  3. Klikker knappen med aria-label="Handlinger"
+ *  4. Klikker "Hent som PDF" i dropdown-menuen
+ *  5. Opfanger PDF-download og returnerer URL'en
+ */
+async function findRema1000Pdf(week) {
+  console.log('  Åbner browser → https://rema1000.dk/avis');
+
+  const browser = await chromium.launch({ headless: true });
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    locale: 'da-DK',
+    acceptDownloads: true,
+  });
+
+  const page = await context.newPage();
+  let pdfUrl = null;
+
+  // Opfang PDF via netværk (nogle viewers åbner PDF direkte)
+  page.on('response', (response) => {
+    const url = response.url();
+    const ct  = response.headers()['content-type'] || '';
+    if (!pdfUrl && (ct.includes('application/pdf') || /\.pdf(\?|$)/i.test(url))) {
+      pdfUrl = url;
+      console.log(`  ✔ PDF opfanget (netværk): ${url.substring(0, 80)}`);
+    }
+  });
+  context.on('page', async (newPage) => {
+    newPage.on('response', (response) => {
+      const url = response.url();
+      const ct  = response.headers()['content-type'] || '';
+      if (!pdfUrl && (ct.includes('application/pdf') || /\.pdf(\?|$)/i.test(url))) {
+        pdfUrl = url;
+        console.log(`  ✔ PDF opfanget (ny fane): ${url.substring(0, 80)}`);
+      }
+    });
+  });
+
+  try {
+    await page.goto('https://rema1000.dk/avis', {
+      waitUntil: 'domcontentloaded',
+      timeout: 40_000,
+    });
+    await page.waitForTimeout(4_000);
+
+    // ① Find og klik billedet for den aktuelle uge
+    console.log(`  ↳ Leder efter Uge ${week}-billedet...`);
+    const weekAlt = `Uge ${week}`;
+
+    const clickedWeek = await page.evaluate((alt) => {
+      // Forsøg 1: direkte img[alt="Uge N"]
+      const img = Array.from(document.querySelectorAll('img'))
+        .find(i => i.alt && i.alt.trim().startsWith(alt));
+      if (img) {
+        const clickable = img.closest('a, button, [role="button"]') || img;
+        clickable.click();
+        return true;
+      }
+      // Forsøg 2: tekst der indeholder uge-nummeret
+      const el = Array.from(document.querySelectorAll('a, button, [role="button"]'))
+        .find(e => (e.textContent || '').includes(alt));
+      if (el) { el.click(); return true; }
+      return false;
+    }, weekAlt);
+
+    if (!clickedWeek) {
+      console.log(`  ↳ DOM-klik fejlede – prøver Gemma visuel lokalisering...`);
+      const coords = await locateElement(page, `billede eller kort med teksten "${weekAlt}"`);
+      if (coords) {
+        await page.mouse.click(coords.x, coords.y);
+      } else {
+        console.log(`  ⚠ Kunne ikke finde uge-billedet – hverken via DOM eller Gemma`);
+        return null;
+      }
+    }
+
+    console.log('  ↳ Uge-billede klikket – venter på avis-siden...');
+    await page.waitForTimeout(4_000);
+
+    if (pdfUrl) { await browser.close(); return pdfUrl; }
+
+    // ② Klik "Handlinger"-knappen
+    console.log('  ↳ Leder efter "Handlinger"-knap...');
+    let handlingerFound = false;
+    try {
+      await page.waitForSelector('button[aria-label="Handlinger"]', { timeout: 10_000 });
+      handlingerFound = true;
+    } catch {
+      console.log('  ↳ "Handlinger"-knap ikke fundet via selector – prøver Gemma...');
+    }
+
+    if (handlingerFound) {
+      await page.evaluate(() => {
+        document.querySelector('button[aria-label="Handlinger"]').click();
+      });
+    } else {
+      const coords = await locateElement(page, '"Handlinger" knap (tre prikker eller actions-menu)');
+      if (coords) {
+        await page.mouse.click(coords.x, coords.y);
+      } else {
+        console.log('  ⚠ "Handlinger"-knap ikke fundet');
+        return null;
+      }
+    }
+
+    await page.waitForTimeout(1_500);
+
+    // ③ Klik "Hent som PDF" i dropdown-menuen
+    console.log('  ↳ Klikker "Hent som PDF"...');
+    try {
+      const [download] = await Promise.all([
+        page.waitForEvent('download', { timeout: 15_000 }),
+        page.evaluate(() => {
+          const link = Array.from(document.querySelectorAll('a, [role="menuitem"]'))
+            .find(el => (el.textContent || '').trim().includes('Hent som PDF'));
+          if (link) { link.click(); return true; }
+          return false;
+        }),
+      ]);
+      pdfUrl = download.url();
+      console.log(`  ✔ PDF via download-event: ${pdfUrl.substring(0, 80)}`);
+    } catch {
+      // Ikke et download-event – prøv at fange via netværk
+      await page.waitForTimeout(6_000);
+    }
+
+    if (!pdfUrl) {
+      // Sidst: forsøg at finde link direkte i DOM
+      pdfUrl = await page.evaluate(() => {
+        const a = Array.from(document.querySelectorAll('a[href]'))
+          .find(el => /\.pdf(\?|$)/i.test(el.href));
+        return a?.href || null;
+      });
+      if (pdfUrl) console.log(`  ✔ PDF fundet i DOM: ${pdfUrl.substring(0, 80)}`);
+    }
+
+  } catch (err) {
+    console.log(`  ⚠ Browser-fejl: ${err.message.split('\n')[0]}`);
+  } finally {
+    await browser.close();
+  }
+
+  if (!pdfUrl) console.log('  ✗ Ingen PDF-URL fundet for Rema 1000');
+  return pdfUrl;
+}
+
+// ── PDF-opdagelse: Netto via Tjek.com viewer (Playwright) ────────────────────
+
+/**
+ * Netto bruger Tjek.com's viewer på netto.dk/netto-avisen/:
+ *  1. Siden viser en liste af ugeknapper med billeder fra image-transformer-api.tjek.com
+ *  2. Vi klikker den første (aktuelle) knap
+ *  3. Vieweren åbner – vi klikker "Download leaflet"-knappen
+ *  4. Vi opfanger download-eventet og returnerer PDF-URL'en
+ */
+async function findNettoPdf() {
+  console.log('  Åbner browser → https://netto.dk/netto-avisen/');
+
+  const browser = await chromium.launch({ headless: true });
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    locale: 'da-DK',
+    acceptDownloads: true,
+  });
+
+  const page = await context.newPage();
+  let pdfUrl = null;
+
+  // S3 pre-signerede URL'er har ikke .pdf i sig – match på domænet i stedet
+  const isTjekS3 = (url) => url.includes('sgn-prd-assets.s3') || url.includes('sgn-prd-assets.s3.eu-west');
+  const isPdf    = (url, ct) =>
+    ct.includes('application/pdf') ||
+    /\.pdf(\?|$)/i.test(url)       ||
+    isTjekS3(url);
+
+  // Lyt på netværkssvar – opfang S3-URL'en så snart browseren rammer den
+  page.on('response', (response) => {
+    const url = response.url();
+    const ct  = response.headers()['content-type'] || '';
+    if (!pdfUrl && isPdf(url, ct)) {
+      pdfUrl = url;
+      console.log(`  ✔ PDF opfanget (netværk): ${url.substring(0, 80)}`);
+    }
+  });
+
+  // Opfang S3-URL hvis download-knappen åbner en ny fane
+  context.on('page', async (newPage) => {
+    const url = newPage.url();
+    if (!pdfUrl && isTjekS3(url)) {
+      pdfUrl = url;
+      console.log(`  ✔ PDF opfanget (ny fane): ${url.substring(0, 80)}`);
+    }
+    // Lyt også på responses i den nye fane
+    newPage.on('response', (response) => {
+      const u  = response.url();
+      const ct = response.headers()['content-type'] || '';
+      if (!pdfUrl && isPdf(u, ct)) {
+        pdfUrl = u;
+        console.log(`  ✔ PDF opfanget (ny fane, netværk): ${u.substring(0, 80)}`);
+      }
+    });
+  });
+
+  try {
+    await page.goto('https://netto.dk/netto-avisen/', {
+      waitUntil: 'domcontentloaded',
+      timeout: 40_000,
+    });
+    // Vent på at React/JS-komponenter er renderet
+    await page.waitForTimeout(4_000);
+
+    // ① Vent på at ugeknapperne renderes, og klik via JS (bypasser scroll/viewport-check)
+    console.log('  ↳ Venter på avisknapper...');
+    try {
+      await page.waitForSelector('button:has(img[src*="image-transformer-api.tjek.com"])', {
+        timeout: 15_000,
+      });
+    } catch {
+      console.log('  ⚠ Fandt ingen ugeknapper på netto.dk/netto-avisen/');
+      return null;
+    }
+
+    const clicked = await page.evaluate(() => {
+      const btn = Array.from(document.querySelectorAll('button'))
+        .find(b => b.querySelector('img[src*="image-transformer-api.tjek.com"]'));
+      if (!btn) return false;
+      btn.scrollIntoView({ block: 'center' });
+      btn.click();
+      return true;
+    });
+
+    if (!clicked) {
+      // Fallback: bed Gemini om at finde knappen visuelt
+      console.log('  ↳ JS-klik fejlede – prøver Gemini visuel lokalisering...');
+      const coords = await locateElement(page, 'tilbudsavis / ugeavis knap med billedet af avisforsiden');
+      if (coords) {
+        console.log(`  ↳ Gemini fandt knap på (${coords.x}, ${coords.y}) – klikker...`);
+        await page.mouse.click(coords.x, coords.y);
+      } else {
+        console.log('  ⚠ Avisknap ikke fundet – hverken via DOM eller Gemini');
+        return null;
+      }
+    }
+    console.log('  ↳ Avisknap klikket – venter på viewer...');
+    await page.waitForTimeout(4_000);
+
+    if (pdfUrl) {
+      await browser.close();
+      return pdfUrl;
+    }
+
+    // ② Vent på "Download leaflet"-knappen og klik den via JS
+    let downloadBtnFound = false;
+    try {
+      await page.waitForSelector('button[aria-label="Download leaflet"]', { timeout: 15_000 });
+      downloadBtnFound = true;
+    } catch {
+      console.log('  ⚠ "Download leaflet"-knap ikke fundet via selector – prøver Gemini...');
+    }
+
+    // Fallback: Gemini finder download-knappen visuelt
+    if (!downloadBtnFound) {
+      const coords = await locateElement(page, 'Download leaflet knap (download-ikon)');
+      if (coords) {
+        console.log(`  ↳ Gemini fandt download-knap på (${coords.x}, ${coords.y}) – klikker...`);
+        try {
+          const [download] = await Promise.all([
+            page.waitForEvent('download', { timeout: 12_000 }),
+            page.mouse.click(coords.x, coords.y),
+          ]);
+          pdfUrl = download.url();
+          console.log(`  ✔ PDF via Gemini + download-event: ${pdfUrl.substring(0, 80)}`);
+        } catch {
+          await page.waitForTimeout(5_000);
+        }
+      }
+    } else {
+      console.log('  ↳ Klikker "Download leaflet"...');
+      try {
+        const [download] = await Promise.all([
+          page.waitForEvent('download', { timeout: 15_000 }),
+          page.evaluate(() => {
+            const btn = document.querySelector('button[aria-label="Download leaflet"]');
+            if (btn) btn.click();
+          }),
+        ]);
+        pdfUrl = download.url();
+        console.log(`  ✔ PDF via download-event: ${pdfUrl.substring(0, 80)}`);
+      } catch {
+        // Ikke et download-event – URL fanges via netværk/ny-fane listener ovenfor
+        await page.waitForTimeout(5_000);
+      }
+    }
+
+  } catch (err) {
+    console.log(`  ⚠ Browser-fejl: ${err.message.split('\n')[0]}`);
+  } finally {
+    await browser.close();
+  }
+
+  if (!pdfUrl) console.log('  ✗ Ingen PDF-URL fundet for Netto');
+  return pdfUrl;
+}
+
+// ── PDF-opdagelse: iPaper-aviser (Føtex) via Playwright ──────────────────────
 
 /**
  * Besøger en iPaper-baseret avis-URL med en rigtig browser.
@@ -191,8 +591,9 @@ async function findIpaperPdf(pageUrl, label) {
 
   const page = await context.newPage();
   let pdfUrl = null;
+  const candidateUrls = [];
 
-  // ① Lyt på PDF-responses fra netværket
+  // ① Lyt på ALLE netværkskald – opfang PDF + iPaper/iframe-URLs
   page.on('response', (response) => {
     const ct  = response.headers()['content-type'] || '';
     const url = response.url();
@@ -200,19 +601,28 @@ async function findIpaperPdf(pageUrl, label) {
       pdfUrl = url;
       console.log(`  ✔ PDF opfanget (netværk): ${url.substring(0, 80)}`);
     }
+    // Gem iPaper/viewer API-kald der kan indeholde publication-ID
+    if (/ipaper|viewer|publication|catalog|flyer/i.test(url) && !url.includes('analytics')) {
+      candidateUrls.push(url);
+    }
   });
 
   try {
     await page.goto(pageUrl, { waitUntil: 'domcontentloaded', timeout: 40_000 });
-    await page.waitForTimeout(4_000); // Vent på JavaScript-rendering
+    await page.waitForTimeout(5_000); // Vent på JavaScript-rendering
 
-    // ② Søg i DOM efter PDF-link eller download-knap
+    // ② Søg i DOM: PDF-links, iframes, script-tags med JSON-data
     if (!pdfUrl) {
       pdfUrl = await page.evaluate(() => {
         // Direkte PDF-link
         const pdfAnchor = Array.from(document.querySelectorAll('a[href]'))
           .find(a => /\.pdf(\?|$)/i.test(a.href));
         if (pdfAnchor) return pdfAnchor.href;
+
+        // iframe der peger på en avis-viewer
+        const iframe = Array.from(document.querySelectorAll('iframe[src]'))
+          .find(f => /ipaper|viewer|avis|flyer|catalog/i.test(f.src));
+        if (iframe) return iframe.src; // returnerer viewer-URL til videre behandling
 
         // Knap/link med download-relateret tekst
         const dlElement = Array.from(document.querySelectorAll('a, button, [role="button"]'))
@@ -222,21 +632,61 @@ async function findIpaperPdf(pageUrl, label) {
           });
         if (dlElement) return dlElement.href || dlElement.getAttribute('data-url') || null;
 
+        // JSON i script-tags der indeholder pdf-URL
+        for (const script of document.querySelectorAll('script:not([src])')) {
+          const m = script.textContent.match(/"(https?:[^"]+\.pdf[^"]*)"/i);
+          if (m) return m[1];
+          // iPaper publication pattern
+          const p = script.textContent.match(/publication[_-]?(?:id|url)['":\s]+['"]([^'"]+)['"]/i);
+          if (p) return p[1];
+        }
+
         return null;
       });
 
-      if (pdfUrl) console.log(`  ✔ PDF fundet i DOM: ${pdfUrl.substring(0, 80)}`);
+      if (pdfUrl) console.log(`  ✔ PDF/viewer fundet i DOM: ${pdfUrl.substring(0, 80)}`);
     }
 
-    // ③ Prøv at klikke download-knap og opfang browser-download
+    // ③ Hvis vi fandt en iframe-viewer-URL, gå ind i den og søg efter PDF der
+    if (pdfUrl && /ipaper|viewer|avis|flyer/i.test(pdfUrl) && !/\.pdf/i.test(pdfUrl)) {
+      console.log(`  ↳ Følger viewer-URL efter PDF...`);
+      const viewerUrl = pdfUrl;
+      pdfUrl = null;
+
+      const iframePage = await context.newPage();
+      iframePage.on('response', (response) => {
+        const ct  = response.headers()['content-type'] || '';
+        const url = response.url();
+        if (!pdfUrl && (ct.includes('application/pdf') || /\.pdf(\?|$)/i.test(url))) {
+          pdfUrl = url;
+          console.log(`  ✔ PDF opfanget i viewer (netværk): ${url.substring(0, 80)}`);
+        }
+      });
+
+      await iframePage.goto(viewerUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+      await iframePage.waitForTimeout(5_000);
+
+      if (!pdfUrl) {
+        pdfUrl = await iframePage.evaluate(() => {
+          const a = Array.from(document.querySelectorAll('a[href]'))
+            .find(el => /\.pdf(\?|$)/i.test(el.href));
+          return a?.href || null;
+        });
+        if (pdfUrl) console.log(`  ✔ PDF fundet i viewer-DOM: ${pdfUrl.substring(0, 80)}`);
+      }
+      await iframePage.close();
+    }
+
+    // ④ Prøv at klikke download-knap og opfang browser-download
     if (!pdfUrl) {
       try {
         const [download] = await Promise.all([
-          page.waitForEvent('download', { timeout: 6_000 }),
+          page.waitForEvent('download', { timeout: 8_000 }),
           page.click(
             'a[href*=".pdf"], button:has-text("Download"), a:has-text("Download"), ' +
-            'button:has-text("PDF"), a:has-text("PDF"), button:has-text("Hent")',
-            { timeout: 4_000 }
+            'button:has-text("PDF"), a:has-text("PDF"), button:has-text("Hent"), ' +
+            '[aria-label*="download" i], [aria-label*="pdf" i], [title*="download" i]',
+            { timeout: 5_000 }
           ),
         ]);
         pdfUrl = download.url();
@@ -246,7 +696,7 @@ async function findIpaperPdf(pageUrl, label) {
       }
     }
 
-    // ④ Vent lidt mere på lazy-loaded indhold og tjek igen
+    // ⑤ Vent lidt mere og prøv igen
     if (!pdfUrl) {
       await page.waitForTimeout(5_000);
       pdfUrl = await page.evaluate(() => {
@@ -257,6 +707,12 @@ async function findIpaperPdf(pageUrl, label) {
       if (pdfUrl) console.log(`  ✔ PDF fundet efter ekstra vent: ${pdfUrl.substring(0, 80)}`);
     }
 
+    // ⑥ Debug: log interessante netværkskald der blev opfanget
+    if (!pdfUrl && candidateUrls.length > 0) {
+      console.log('  ℹ Mulige viewer-API-kald opfanget (til debugging):');
+      candidateUrls.slice(0, 5).forEach(u => console.log(`    ${u.substring(0, 100)}`));
+    }
+
   } catch (err) {
     console.log(`  ⚠ Browser-fejl: ${err.message.split('\n')[0]}`);
   } finally {
@@ -265,7 +721,7 @@ async function findIpaperPdf(pageUrl, label) {
 
   if (!pdfUrl) {
     console.log(`  ✗ Ingen PDF-URL fundet for ${label}`);
-    console.log('    (Siden bruger muligvis en login-beskyttet avis eller en app-baseret viewer)');
+    console.log('    Tip: Kør med headless:false for at se hvad browseren ser.');
   }
 
   return pdfUrl;
@@ -367,6 +823,106 @@ async function extractWithClaude(pdfBase64, supermarket, week, year) {
   return response.content[0].text;
 }
 
+// ── AI-ekstraktion: Ollama (lokal Gemma) ────────────────────────────────────
+
+function buildOllamaPrompt(supermarket, week, year, flyerText) {
+  return `Extract supermarket offers from the text below. Output ONLY a JSON object — no markdown, no explanation, no text before or after the JSON.
+
+Required output format (copy this structure exactly):
+{"offers":[{"name":"Whole milk 1L","brand":"Arla","price":8.95,"original_price":null,"unit":"1L","valid_from":null,"valid_to":null,"page":1}]}
+
+Rules:
+- Only include products that have a visible price number
+- price must be a number (DKK), never a string
+- Use null for any missing field
+- If no products with prices are found, output: {"offers":[]}
+- Do NOT output anything except the JSON object
+
+Supermarket: ${supermarket.toUpperCase()}, week ${week}, year ${year}
+
+FLYER TEXT:
+${flyerText}`.trim();
+}
+
+async function callOllamaChunk(prompt) {
+  const res = await fetch(`${OLLAMA_HOST}/api/chat`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: OLLAMA_MODEL,
+      stream: false,
+      format: 'json',
+      options: { temperature: 0.1, num_ctx: OLLAMA_NUM_CTX },
+      messages: [
+        { role: 'system', content: 'Du er en præcis data-ekstraktor. Svar altid med valid JSON.' },
+        { role: 'user',   content: prompt },
+      ],
+    }),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(
+      `Ollama HTTP ${res.status}. Kører Ollama lokalt på ${OLLAMA_HOST}? ` +
+      `Model: ${OLLAMA_MODEL}. Svar: ${body.substring(0, 200)}`
+    );
+  }
+
+  const data = await res.json();
+  const content = data?.message?.content;
+  if (!content) throw new Error('Ollama returnerede intet svar-indhold i message.content');
+  return content;
+}
+
+async function extractWithOllama(pdfBuffer, supermarket, week, year) {
+  const pdfParse = require('pdf-parse');
+  const parsed = await pdfParse(pdfBuffer);
+  const fullText = String(parsed.text || '').replace(/\u0000/g, ' ').trim();
+
+  if (!fullText) {
+    throw new Error('Kunne ikke udtrække tekst fra PDF til Ollama. Prøv Gemini/Claude eller en anden flyer-PDF.');
+  }
+
+  // Split teksten i chunks så hvert kald holder sig inden for num_ctx
+  const chunks = [];
+  for (let i = 0; i < fullText.length; i += OLLAMA_CHUNK_CHARS) {
+    chunks.push(fullText.slice(i, i + OLLAMA_CHUNK_CHARS));
+  }
+  console.log(`  ↳ PDF-tekst opdelt i ${chunks.length} chunk(s) à max ${OLLAMA_CHUNK_CHARS.toLocaleString('da-DK')} tegn`);
+
+  const allOffers = [];
+  for (let i = 0; i < chunks.length; i++) {
+    console.log(`  ↳ Chunk ${i + 1}/${chunks.length} → Ollama...`);
+    const prompt = buildOllamaPrompt(supermarket, week, year, chunks[i]);
+    let raw = null;
+    let parsed = null;
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try {
+        raw    = await callOllamaChunk(prompt);
+        parsed = parseAiJson(raw);
+        break; // success
+      } catch {
+        if (attempt === 1) {
+          console.log(`  ↳ Chunk ${i + 1}: svar ikke JSON – prøver igen...`);
+        }
+      }
+    }
+    if (parsed && Array.isArray(parsed) && parsed.length > 0) {
+      allOffers.push(...parsed);
+    } else if (!parsed) {
+      console.log(`  ⚠ Chunk ${i + 1} fejlede efter 2 forsøg – springer over`);
+      if (raw) console.log(`     Råt svar (300 tegn): ${String(raw).substring(0, 300)}`);
+    } else {
+      console.log(`  ↳ Chunk ${i + 1}: ingen produkter i dette tekststykke`);
+    }
+  }
+
+  if (allOffers.length === 0) throw new Error('Ingen tilbud udtrukket fra nogen chunk');
+
+  // Returner som JSON-streng så resten af pipelinen kan parse det ens
+  return JSON.stringify(allOffers);
+}
+
 // ── Parse AI-svar til array ───────────────────────────────────────────────────
 
 function parseAiJson(rawText) {
@@ -377,9 +933,34 @@ function parseAiJson(rawText) {
     .replace(/\s*```$/m,      '')
     .trim();
 
-  const parsed = JSON.parse(cleaned);
-  if (!Array.isArray(parsed)) throw new Error('AI returnerede ikke et JSON-array');
-  return parsed;
+  try {
+    const parsed = JSON.parse(cleaned);
+    if (Array.isArray(parsed)) return parsed;
+    if (Array.isArray(parsed?.offers)) return parsed.offers;
+    throw new Error('AI returnerede hverken et JSON-array eller {"offers": [...]}');
+  } catch {
+    const arrayMatch = cleaned.match(/\[[\s\S]*\]/);
+    if (arrayMatch) {
+      try {
+        const parsedArray = JSON.parse(arrayMatch[0]);
+        if (Array.isArray(parsedArray)) return parsedArray;
+      } catch {
+        // Prøv næste fallback.
+      }
+    }
+
+    const objectMatch = cleaned.match(/\{[\s\S]*\}/);
+    if (objectMatch) {
+      try {
+        const parsedObject = JSON.parse(objectMatch[0]);
+        if (Array.isArray(parsedObject?.offers)) return parsedObject.offers;
+      } catch {
+        // Ingen flere fallbacks.
+      }
+    }
+
+    throw new Error('Kunne ikke parse AI-svar som gyldig JSON med tilbuds-array');
+  }
 }
 
 // ── Hoved-pipeline per supermarked ───────────────────────────────────────────
@@ -389,24 +970,25 @@ async function processSupermarket(db, config, week, year) {
   console.log(`[${config.name.toUpperCase()}]  uge ${week} / ${year}`);
   console.log('─'.repeat(65));
 
-  // 1. Find PDF-URL
-  let pdfUrl;
-  try {
-    pdfUrl = await config.findPdf(week, year);
-  } catch (err) {
-    console.log(`  ✗ PDF-søgning fejlede: ${err.message}`);
-    return 0;
-  }
-  if (!pdfUrl) return 0;
-
-  // 2. Download PDF (spring over hvis allerede hentet denne uge)
+  // 1. Check om PDF allerede er hentet denne uge – spring scraping over hvis ja
   const filename = `${config.name}_uge${week}_${year}.pdf`;
   const pdfPath  = path.join(PDF_DIR, filename);
 
   if (fs.existsSync(pdfPath)) {
     const sizeMb = fs.statSync(pdfPath).size / 1024 / 1024;
-    console.log(`  PDF allerede hentet: ${filename} (${sizeMb.toFixed(1)} MB)`);
+    console.log(`  PDF allerede hentet: ${filename} (${sizeMb.toFixed(1)} MB) – springer scraping over`);
   } else {
+    // 2. Find PDF-URL via browser/API
+    let pdfUrl;
+    try {
+      pdfUrl = await config.findPdf(week, year);
+    } catch (err) {
+      console.log(`  ✗ PDF-søgning fejlede: ${err.message}`);
+      return 0;
+    }
+    if (!pdfUrl) return 0;
+
+    // 3. Download PDF
     console.log(`  Downloader PDF...`);
     try {
       await downloadPdf(pdfUrl, pdfPath);
@@ -417,13 +999,20 @@ async function processSupermarket(db, config, week, year) {
   }
 
   // 3. Udtræk tilbud med AI
-  console.log(`  Sender PDF til AI (${MODEL === 'claude' ? 'Claude Sonnet 4.6' : 'Gemini 2.0 Flash'})...`);
+  const aiProvider = MODEL === 'claude'
+    ? 'Claude Sonnet 4.6'
+    : MODEL === 'ollama'
+      ? `Ollama (${OLLAMA_MODEL})`
+      : 'Gemini 2.0 Flash';
+  console.log(`  Sender PDF til AI (${aiProvider})...`);
   let offers;
   try {
-    const pdfBase64 = fs.readFileSync(pdfPath).toString('base64');
+    const pdfBuffer = fs.readFileSync(pdfPath);
     const rawText   = MODEL === 'claude'
-      ? await extractWithClaude(pdfBase64, config.name, week, year)
-      : await extractWithGemini(pdfBase64, config.name, week, year);
+      ? await extractWithClaude(pdfBuffer.toString('base64'), config.name, week, year)
+      : MODEL === 'ollama'
+        ? await extractWithOllama(pdfBuffer, config.name, week, year)
+        : await extractWithGemini(pdfBuffer.toString('base64'), config.name, week, year);
 
     offers = parseAiJson(rawText);
     console.log(`  AI udtrakte ${offers.length} produkter`);
@@ -448,7 +1037,7 @@ async function processSupermarket(db, config, week, year) {
       valid_from:     o.valid_from     != null ? String(o.valid_from)    : null,
       valid_to:       o.valid_to       != null ? String(o.valid_to)      : null,
       page_in_flyer:  typeof o.page === 'number' ? o.page                : null,
-      fetched_at,
+      fetched_at: fetchedAt,
     }));
 
   storeOffers(db, rows);
@@ -471,6 +1060,13 @@ async function processSupermarket(db, config, week, year) {
 // ── Entry point ───────────────────────────────────────────────────────────────
 
 async function main() {
+  const supported = new Set(['gemini', 'claude', 'ollama']);
+  if (!supported.has(MODEL)) {
+    throw new Error(
+      `Ukendt MODEL="${MODEL_RAW}". Brug en af: gemini, claude, ollama (eller gemma som alias for ollama).`
+    );
+  }
+
   const today = new Date();
   const week  = getISOWeek(today);
   const year  = today.getFullYear();
@@ -478,7 +1074,10 @@ async function main() {
   console.log('╔═══════════════════════════════════════════════════════════════╗');
   console.log('║         Supermarket Tilbud Pipeline  –  PDF + AI              ║');
   console.log('╚═══════════════════════════════════════════════════════════════╝');
-  console.log(`Model:      ${MODEL === 'claude' ? 'Claude Sonnet 4.6  (betalt ~$0.20-0.40/avis)' : 'Gemini 2.0 Flash   (gratis)'}`);
+  console.log(`Model:      ${getModelLabel()}`);
+  if (MODEL === 'ollama') {
+    console.log(`Ollama URL: ${OLLAMA_HOST}`);
+  }
   console.log(`ISO-uge:    ${week} / ${year}`);
   console.log(`Database:   ${DB_PATH}`);
   console.log(`PDF-mappe:  ${PDF_DIR}`);
@@ -489,7 +1088,7 @@ async function main() {
   const supermarkets = [
     {
       name:    'netto',
-      findPdf: async () => findIpaperPdf('https://netto.dk/netto-avisen/', 'Netto'),
+      findPdf: async () => findNettoPdf(),
     },
     {
       name:    'rema1000',

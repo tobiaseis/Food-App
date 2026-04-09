@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --check pipeline.js)",
+      "Bash(ollama list:*)"
+    ]
+  }
+}
