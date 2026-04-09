@@ -1,8 +1,19 @@
 /**
- * Midlertidigt analyse-script
+ * Analyse-script – supermarked JSON-strukturer
  *
- * Læser alle filer i ./intercepted_data/, finder produkt-arrays
- * og udskriver strukturen for ét eksempelprodukt per supermarked.
+ * Bygger på konkret viden om de tre interceptede datakilder:
+ *
+ *   Netto    → ingen produktdata fanget (Salling Group / Netto bruger
+ *              sandsynligvis server-side rendering og/eller kræver
+ *              brugerinteraktion for at kalde produkt-API'et)
+ *
+ *   Rema 1000 → Tjek.com catalog-API  (squid-api.tjek.com/v2/catalogs)
+ *               Giver katalogoversigt med catalog-IDs og offer_count.
+ *               Næste trin: /v2/offers?catalog_id={id}
+ *
+ *   Føtex    → iPaper enrichments-API  (b-cdn.ipaper.io/.../Page1-64.json)
+ *               Giver 93 produkt-hotspots med alttext ("Brand - Produktnavn")
+ *               og URL til foetex.dk produktsider. Ingen pris i dette kald.
  *
  * Kør: node analyze.js
  */
@@ -14,89 +25,95 @@ const path = require('path');
 
 const DATA_DIR = path.join(__dirname, 'intercepted_data');
 
-// ── Hjælpefunktioner ─────────────────────────────────────────────────────────
+// ── Parsere per datastruktur ──────────────────────────────────────────────────
 
 /**
- * Traverserer et objekt rekursivt og returnerer alle arrays af objekter
- * der er store nok til at ligne en produktliste.
- * Returnerer: [{ keyPath, array }]
+ * Tjek.com catalog-API (Rema 1000).
+ * Roden er et array af katalogobjekter.
  */
-function findProductArrays(obj, keyPath = 'root', results = []) {
-  if (Array.isArray(obj)) {
-    // Kig kun på arrays med mindst 2 elementer af typen object
-    const objectItems = obj.filter((el) => el && typeof el === 'object' && !Array.isArray(el));
-    if (objectItems.length >= 2) {
-      results.push({ keyPath, array: objectItems });
-    }
-    // Gå også dybere i hvert element (op til 3 niveauer)
-    if (keyPath.split('.').length < 4) {
-      obj.slice(0, 3).forEach((el, i) => findProductArrays(el, `${keyPath}[${i}]`, results));
-    }
-  } else if (obj && typeof obj === 'object') {
-    for (const [key, val] of Object.entries(obj)) {
-      findProductArrays(val, `${keyPath}.${key}`, results);
+function analyzeRema(data, meta) {
+  if (!Array.isArray(data)) return;
+
+  const catalogs = data.filter((c) => c.id && c.label);
+  console.log(`\n  Backend-URL:  ${meta.sourceUrl}`);
+  console.log(`  API-type:     Tjek.com  (squid-api.tjek.com/v2/catalogs)`);
+  console.log(`  Katalog-IDs:  ${catalogs.length} fundet\n`);
+
+  for (const cat of catalogs) {
+    console.log(`  ┌─ ${cat.label.padEnd(30)} id: ${cat.id}`);
+    console.log(`  │  Gyldig:    ${cat.run_from?.substring(0, 10)} → ${cat.run_till?.substring(0, 10)}`);
+    console.log(`  │  Tilbud:    ${cat.offer_count}   Sider: ${cat.page_count}`);
+    console.log(`  │  PDF:       ${cat.pdf_url}`);
+    console.log(`  └─ Næste kald for produkter:`);
+    console.log(`     https://squid-api.tjek.com/v2/offers?catalog_id=${cat.id}&limit=100\n`);
+  }
+
+  // Eksempel på ét katalogobjekts nøgler
+  if (catalogs[0]) {
+    console.log('  ── Felter i ét katalogobjekt ─────────────────────────────');
+    for (const [key, val] of Object.entries(catalogs[0])) {
+      if (typeof val === 'object' && val !== null) {
+        const sub = Array.isArray(val)
+          ? `Array[${val.length}]`
+          : `{ ${Object.keys(val).slice(0, 4).join(', ')} … }`;
+        console.log(`  ${key.padEnd(22)}: ${sub}`);
+      } else {
+        console.log(`  ${key.padEnd(22)}: ${String(val).substring(0, 70)}`);
+      }
     }
   }
-  return results;
 }
 
 /**
- * Scorer et array på sandsynlighed for at være en produktliste.
- * Højere score = mere sandsynligt produktdata.
+ * iPaper enrichments-API (Føtex).
+ * Roden er { enrichments: [...] }.
  */
-const PRODUCT_SCORE_KEYS = [
-  'price', 'pris', 'name', 'title', 'navn', 'titel',
-  'description', 'beskrivelse', 'image', 'billede', 'img',
-  'quantity', 'maengde', 'mængde', 'unit', 'enhed',
-  'offer', 'tilbud', 'discount', 'rabat', 'sku', 'id',
-  'brand', 'maerke', 'category', 'kategori',
-];
+function analyzeFoetex(data, meta) {
+  const enrichments = data?.enrichments;
+  if (!Array.isArray(enrichments)) return;
 
-function scoreArray(arr) {
-  if (!arr.length) return 0;
-  const sample = arr[0];
-  const keys = Object.keys(sample).map((k) => k.toLowerCase());
-  const hits = PRODUCT_SCORE_KEYS.filter((kw) =>
-    keys.some((k) => k.includes(kw))
-  ).length;
-  return hits * 10 + arr.length; // bonus for størrelse
-}
+  // Filtrér kun de med produkt-alttext (type === 1 = klikbart link)
+  const products = enrichments.filter((e) => e.alttext && e.type === 1);
+  const withProductUrl = products.filter((e) => e.url?.includes('foetex.dk/produkter/'));
+  const withSearchUrl  = products.filter((e) => e.url?.includes('foetex.dk/search/'));
 
-/**
- * Laver en "schema-visning" af ét objekt:
- * { key: typeof value  (+ eksempelværdi hvis primitiv) }
- */
-function describeObject(obj, indent = '  ') {
-  const lines = [];
-  for (const [key, val] of Object.entries(obj)) {
-    if (val === null) {
-      lines.push(`${indent}${key}: null`);
-    } else if (Array.isArray(val)) {
-      lines.push(`${indent}${key}: Array[${val.length}]${val[0] && typeof val[0] === 'object' ? ' af objekter' : ` (${typeof val[0]})`}`);
-    } else if (typeof val === 'object') {
-      lines.push(`${indent}${key}: {`);
-      lines.push(describeObject(val, indent + '  '));
-      lines.push(`${indent}}`);
-    } else {
-      const preview = String(val).substring(0, 80);
-      lines.push(`${indent}${key}: ${typeof val}  →  ${preview}`);
+  console.log(`\n  Backend-URL:  ${meta.sourceUrl.substring(0, 80)}...`);
+  console.log(`  API-type:     iPaper digital avis enrichments`);
+  console.log(`  Enrichments:  ${enrichments.length} total  /  ${products.length} med produktnavn`);
+  console.log(`  URL-typer:    ${withProductUrl.length} direkte produktlinks`);
+  console.log(`                ${withSearchUrl.length} søge-links (multi-SKU)\n`);
+
+  console.log('  ── Felter i ét enrichment-objekt ────────────────────────────');
+  if (products[0]) {
+    for (const [key, val] of Object.entries(products[0])) {
+      console.log(`  ${key.padEnd(14)}: ${typeof val}  →  ${String(val).substring(0, 70)}`);
     }
   }
-  return lines.join('\n');
+
+  console.log('\n  ── Eksempel: 5 produkter ─────────────────────────────────────');
+  for (const p of products.slice(0, 5)) {
+    const [brand, ...rest] = (p.alttext || '').split(' - ');
+    const name = rest.join(' - ');
+    // Udtræk SKU fra URL hvis muligt
+    const skuMatch = p.url?.match(/\/(\d+)\/?$/);
+    const sku = skuMatch ? skuMatch[1] : '(se URL)';
+    console.log(`  Brand:    ${brand}`);
+    console.log(`  Produkt:  ${name}`);
+    console.log(`  Side:     ${p.pageIndex + 1}`);
+    console.log(`  SKU:      ${sku}`);
+    console.log(`  URL:      ${p.url?.substring(0, 75)}`);
+    console.log(`  ⚠ Pris:  ikke tilgængelig i dette API-kald`);
+    console.log(`           Hent pris via: GET ${p.url?.substring(0, 60)}`);
+    console.log();
+  }
+
+  console.log('  ── Alle produktnavne ────────────────────────────────────────');
+  products.forEach((p, i) => {
+    console.log(`  ${String(i + 1).padStart(3)}. ${p.alttext}`);
+  });
 }
 
 // ── Hoved-logik ──────────────────────────────────────────────────────────────
-
-function analyzeFile(filepath) {
-  const raw = fs.readFileSync(filepath, 'utf8');
-  let parsed;
-  try {
-    parsed = JSON.parse(raw);
-  } catch {
-    return null;
-  }
-  return parsed;
-}
 
 function run() {
   const files = fs.readdirSync(DATA_DIR)
@@ -105,107 +122,52 @@ function run() {
 
   if (files.length === 0) {
     console.log('Ingen JSON-filer fundet i', DATA_DIR);
-    console.log('Kør først:  node discover.js');
+    console.log('Kør først: node discover.js');
     return;
   }
 
-  console.log(`\nFandt ${files.length} fil(er) i ${DATA_DIR}\n`);
+  console.log(`\nFandt ${files.length} fil(er) i ${DATA_DIR}`);
 
-  // Gruppér filer per supermarked (prefix før første _)
-  const byMarket = {};
   for (const file of files) {
+    const raw = fs.readFileSync(path.join(DATA_DIR, file), 'utf8');
+    let parsed;
+    try { parsed = JSON.parse(raw); } catch { continue; }
+
+    const meta = parsed._meta || {};
+    const data = parsed.data;
     const market = file.split('_')[0];
-    if (!byMarket[market]) byMarket[market] = [];
-    byMarket[market].push(file);
-  }
 
-  for (const [market, marketFiles] of Object.entries(byMarket)) {
-    console.log('═'.repeat(70));
-    console.log(`SUPERMARKED: ${market.toUpperCase()}  (${marketFiles.length} fil(er))`);
-    console.log('═'.repeat(70));
+    console.log(`\n${'═'.repeat(70)}`);
+    console.log(`FIL:  ${file}`);
+    console.log(`${'═'.repeat(70)}`);
 
-    let bestArray = null;
-    let bestScore = -1;
-    let bestMeta = null;
-    let bestKeyPath = '';
-
-    // Gennemgå alle filer for dette supermarked — find bedste produkt-array
-    for (const file of marketFiles) {
-      const parsed = analyzeFile(path.join(DATA_DIR, file));
-      if (!parsed) continue;
-
-      const meta = parsed._meta || {};
-      const data = parsed.data !== undefined ? parsed.data : parsed;
-
-      const candidates = findProductArrays(data);
-      for (const { keyPath, array } of candidates) {
-        const score = scoreArray(array);
-        if (score > bestScore) {
-          bestScore = score;
-          bestArray = array;
-          bestMeta = { file, ...meta };
-          bestKeyPath = keyPath;
-        }
-      }
-    }
-
-    if (!bestArray) {
-      console.log('  Ingen produkt-arrays fundet.\n');
+    if (meta.sourceUrl?.includes('cookieinformation.com') ||
+        meta.sourceUrl?.includes('usercentrics.eu')) {
+      console.log('  ⚠  FALSE POSITIVE: Consent-management API – ingen produktdata.');
+      console.log(`     Kilde: ${meta.sourceUrl}`);
       continue;
     }
 
-    console.log(`\nKilde-fil:   ${bestMeta.file}`);
-    console.log(`Backend-URL: ${bestMeta.sourceUrl || '(ikke registreret)'}`);
-    console.log(`Fanget:      ${bestMeta.capturedAt || '?'}`);
-    console.log(`Array-sti:   ${bestKeyPath}`);
-    console.log(`Antal varer: ${bestArray.length}`);
-
-    console.log('\n── Eksempel på ét produkt ──────────────────────────────────────');
-    console.log(describeObject(bestArray[0]));
-
-    // Prøv at identificere de mest sandsynlige felter for navn, pris, mængde
-    const keys = Object.keys(bestArray[0]).map((k) => k.toLowerCase());
-    const guesses = {
-      'Navn/titel': findKey(bestArray[0], ['name', 'title', 'navn', 'titel', 'description', 'productName', 'product_name']),
-      'Pris':       findKey(bestArray[0], ['price', 'pris', 'salesPrice', 'currentPrice', 'offerPrice', 'sale_price']),
-      'Mængde':     findKey(bestArray[0], ['quantity', 'amount', 'volume', 'size', 'unit', 'enhed', 'maengde', 'weight']),
-      'Billede':    findKey(bestArray[0], ['image', 'img', 'imageUrl', 'image_url', 'photo', 'thumbnail', 'picture']),
-    };
-
-    console.log('\n── Sandsynlige nøglefelter ─────────────────────────────────────');
-    for (const [label, result] of Object.entries(guesses)) {
-      if (result) {
-        console.log(`  ${label.padEnd(12)}: "${result.key}"  →  ${String(result.value).substring(0, 60)}`);
-      } else {
-        console.log(`  ${label.padEnd(12)}: (ikke fundet – se struktur ovenfor)`);
-      }
+    if (market === 'rema1000' && meta.sourceUrl?.includes('tjek.com')) {
+      analyzeRema(data, meta);
+    } else if (market === 'foetex' && meta.sourceUrl?.includes('ipaper.io')) {
+      analyzeFoetex(data, meta);
+    } else if (market === 'netto') {
+      console.log('  ℹ  Netto: Ingen produkt-API fanget under sidens indlæsning.');
+      console.log('     Forklaring: Netto/Salling Group renderer sandsynligvis');
+      console.log('     tilbudsdata server-side eller kræver brugerinteraktion.');
+      console.log(`     Kilde: ${meta.sourceUrl}`);
+    } else {
+      console.log(`  Ukendt struktur – kilde: ${meta.sourceUrl}`);
     }
-
-    console.log('');
   }
 
+  console.log(`\n${'═'.repeat(70)}`);
+  console.log('SAMMENFATNING:');
+  console.log('  Rema 1000 → Tjek.com API  →  brug catalog-ID til at hente tilbud');
+  console.log('  Føtex     → iPaper API    →  produktnavne fanget, pris kræver ekstra kald');
+  console.log('  Netto     → Ingen API fanget  →  overvej direkte Salling Group API');
   console.log('═'.repeat(70));
-  console.log('Analyse færdig.');
-}
-
-/** Finder første matching nøgle i et objekt (case-insensitive). */
-function findKey(obj, candidates) {
-  for (const candidate of candidates) {
-    for (const [key, value] of Object.entries(obj)) {
-      if (key.toLowerCase() === candidate.toLowerCase() && value !== null && value !== undefined) {
-        return { key, value };
-      }
-    }
-  }
-  // Prøv partial match
-  for (const candidate of candidates) {
-    for (const [key, value] of Object.entries(obj)) {
-      if (key.toLowerCase().includes(candidate.toLowerCase()) && value !== null && value !== undefined) {
-        return { key, value };
-      }
-    }
-  }
-  return null;
 }
 
 run();

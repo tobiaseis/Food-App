@@ -119,6 +119,29 @@ const MIN_JSON_BYTES = 150;
 // Ventetid (ms) efter scroll er færdigt
 const POST_SCROLL_WAIT_MS = 8_000;
 
+/**
+ * URL-segmenter der identificerer kendte false-positive kilder:
+ * consent-management, analytics, ads og tracking.
+ * Responses fra disse domæner gemmes ALDRIG, selv om de indeholder søgeord.
+ */
+const URL_BLOCKLIST = [
+  // Consent-management
+  'usercentrics.eu', 'cookieinformation.com', 'consentmanager.net',
+  'cookiebot.com', 'onetrust.com', 'trustarc.com',
+  // Analytics / tag managers
+  'googletagmanager.com', 'google-analytics.com', 'analytics.google.com',
+  'hotjar.com', 'segment.io', 'segment.com', 'mixpanel.com',
+  'tealiumiq.com', 'adobedtm.com',
+  // Ads / tracking
+  'doubleclick.net', 'adform.net', 'facebook.com', 'facebook.net',
+  'twitter.com', 'linkedin.com', 'pinterest.com', 'snapchat.com',
+  'criteo.com', 'adnxs.com', 'rubiconproject.com',
+  // Error reporting
+  'sentry.io', 'bugsnag.com', 'rollbar.com', 'datadog',
+  // CDN / font APIs (ikke produktdata)
+  'fonts.googleapis.com', 'cdn.jsdelivr.net',
+];
+
 // ── Hjælpefunktioner ─────────────────────────────────────────────────────────
 
 function ensureOutputDir() {
@@ -130,6 +153,12 @@ function ensureOutputDir() {
 
 function sanitize(name) {
   return name.replace(/[^a-z0-9_-]/gi, '_').toLowerCase();
+}
+
+/** Returnerer true hvis URL'en matcher en kendt false-positive kilde. */
+function isBlocklistedUrl(url) {
+  const lower = url.toLowerCase();
+  return URL_BLOCKLIST.some((segment) => lower.includes(segment));
 }
 
 /** Tjekker om en JSON-streng indeholder mindst ét produkt-søgeord. */
@@ -264,8 +293,13 @@ async function discoverSupermarket(browser, supermarket) {
   page.on('response', (response) => {
     const ct = response.headers()['content-type'] || '';
     const status = response.status();
-    if (ct.includes('application/json') && status >= 200 && status < 300) {
-      responseQueue.push({ response, url: response.url() });
+    const url = response.url();
+    if (
+      ct.includes('application/json') &&
+      status >= 200 && status < 300 &&
+      !isBlocklistedUrl(url)
+    ) {
+      responseQueue.push({ response, url });
     }
   });
 
