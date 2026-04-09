@@ -1,0 +1,13 @@
+{
+  "name": "supermarket-api-discovery",
+  "version": "1.0.0",
+  "description": "Playwright script to discover hidden JSON APIs from Danish supermarket online flyers",
+  "main": "discover.js",
+  "scripts": {
+    "discover": "node discover.js",
+    "install-browsers": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.44.0"
+  }
+}
