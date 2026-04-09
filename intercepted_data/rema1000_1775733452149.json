@@ -1,0 +1,329 @@
+{
+  "_meta": {
+    "supermarket": "rema1000",
+    "sourceUrl": "https://squid-api.tjek.com/v2/catalogs?dealer_id=11deC&order_by=-publication_date&offset=0&limit=24",
+    "capturedAt": "2026-04-09T11:17:32.149Z"
+  },
+  "data": [
+    {
+      "id": "x3SGwoSS",
+      "ern": "ern:catalog:x3SGwoSS",
+      "label": "Uge 16",
+      "background": "#FFFFFF",
+      "run_from": "2026-04-11T22:00:00+0000",
+      "run_till": "2026-04-18T21:59:59+0000",
+      "publish": "2026-04-08T10:00:00+0000",
+      "page_count": 24,
+      "offer_count": 108,
+      "branding": {
+        "name": "REMA 1000",
+        "website": "https://rema1000.dk/",
+        "description": "REMA 1000 - discount med holdning. Læs Rema 1000 tilbudsavis og se deres gode tilbud lige her.",
+        "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2FNSL4hmIeysfy2UPYcO5BT&w=300&s=7090b48154c10584df09f02c09424985",
+        "color": "014693",
+        "pageflip": {
+          "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2F2TDqjTbW_W8ZNWGouBuFw&w=300&s=63caaafb46fedb447c2420fe0bfe701a",
+          "color": "014693"
+        }
+      },
+      "dealer_id": "11deC",
+      "dealer_url": "https://rema1000.dk/",
+      "dealer": {
+        "id": "11deC",
+        "ern": "ern:dealer:11deC",
+        "graph_id": null,
+        "name": "REMA 1000",
+        "website": "https://rema1000.dk/",
+        "description": "REMA 1000 - discount med holdning. Læs Rema 1000 tilbudsavis og se deres gode tilbud lige her.",
+        "description_markdown": "",
+        "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2FNSL4hmIeysfy2UPYcO5BT&w=300&s=7090b48154c10584df09f02c09424985",
+        "color": "014693",
+        "pageflip": {
+          "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2F2TDqjTbW_W8ZNWGouBuFw&w=300&s=63caaafb46fedb447c2420fe0bfe701a",
+          "color": "014693"
+        },
+        "category_ids": [],
+        "country": {
+          "id": "DK",
+          "unsubscribe_print_url": null
+        },
+        "markets": [
+          {
+            "slug": "REMA-1000",
+            "country_code": "DK"
+          }
+        ],
+        "favorite_count": 0,
+        "facebook_page_id": null,
+        "youtube_user_id": null,
+        "twitter_handle": null
+      },
+      "store_id": null,
+      "store_url": null,
+      "dimensions": {
+        "height": 1.7455616,
+        "width": 1
+      },
+      "images": {
+        "@note.1": "",
+        "thumb": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2Fx3SGwoSS%2Fp-1.webp&w=250&s=4a8f18adff4995d85357e80f24c68c7f",
+        "view": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2Fx3SGwoSS%2Fp-1.webp&w=700&s=19e0e873d8950ee75403668f9cb7093d",
+        "zoom": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2Fx3SGwoSS%2Fp-1.webp&w=1400&s=18592b6d28161193ad08c7cee6b9efb5"
+      },
+      "pages": {
+        "@note.1": "",
+        "thumb": [],
+        "view": [],
+        "zoom": []
+      },
+      "category_ids": [],
+      "pdf_url": "https://squid-api.tjek.com/v2/catalogs/x3SGwoSS/download",
+      "all_stores": true,
+      "incito_publication_id": null,
+      "types": [
+        "paged"
+      ],
+      "tags": []
+    },
+    {
+      "id": "8YiPWrEV",
+      "ern": "ern:catalog:8YiPWrEV",
+      "label": "Uge 15",
+      "background": "#FFFFFF",
+      "run_from": "2026-04-06T22:00:00+0000",
+      "run_till": "2026-04-11T21:59:59+0000",
+      "publish": "2026-04-01T10:00:00+0000",
+      "page_count": 25,
+      "offer_count": 118,
+      "branding": {
+        "name": "REMA 1000",
+        "website": "https://rema1000.dk/",
+        "description": "REMA 1000 - discount med holdning. Læs Rema 1000 tilbudsavis og se deres gode tilbud lige her.",
+        "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2FNSL4hmIeysfy2UPYcO5BT&w=300&s=7090b48154c10584df09f02c09424985",
+        "color": "014693",
+        "pageflip": {
+          "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2F2TDqjTbW_W8ZNWGouBuFw&w=300&s=63caaafb46fedb447c2420fe0bfe701a",
+          "color": "014693"
+        }
+      },
+      "dealer_id": "11deC",
+      "dealer_url": "https://rema1000.dk/",
+      "dealer": {
+        "id": "11deC",
+        "ern": "ern:dealer:11deC",
+        "graph_id": null,
+        "name": "REMA 1000",
+        "website": "https://rema1000.dk/",
+        "description": "REMA 1000 - discount med holdning. Læs Rema 1000 tilbudsavis og se deres gode tilbud lige her.",
+        "description_markdown": "",
+        "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2FNSL4hmIeysfy2UPYcO5BT&w=300&s=7090b48154c10584df09f02c09424985",
+        "color": "014693",
+        "pageflip": {
+          "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2F2TDqjTbW_W8ZNWGouBuFw&w=300&s=63caaafb46fedb447c2420fe0bfe701a",
+          "color": "014693"
+        },
+        "category_ids": [],
+        "country": {
+          "id": "DK",
+          "unsubscribe_print_url": null
+        },
+        "markets": [
+          {
+            "slug": "REMA-1000",
+            "country_code": "DK"
+          }
+        ],
+        "favorite_count": 0,
+        "facebook_page_id": null,
+        "youtube_user_id": null,
+        "twitter_handle": null
+      },
+      "store_id": null,
+      "store_url": null,
+      "dimensions": {
+        "height": 1.7455616,
+        "width": 1
+      },
+      "images": {
+        "@note.1": "",
+        "thumb": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2FzcpMU-Sc%2Fp-1.webp&w=250&s=000e1c6e3e7f70a9012adba7230761a3",
+        "view": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2FzcpMU-Sc%2Fp-1.webp&w=700&s=82d82002964dd9443655745dd80e868c",
+        "zoom": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2FzcpMU-Sc%2Fp-1.webp&w=1400&s=a14787df41cf9311b137d7ae2d00d306"
+      },
+      "pages": {
+        "@note.1": "",
+        "thumb": [],
+        "view": [],
+        "zoom": []
+      },
+      "category_ids": [],
+      "pdf_url": "https://squid-api.tjek.com/v2/catalogs/8YiPWrEV/download",
+      "all_stores": true,
+      "incito_publication_id": null,
+      "types": [
+        "paged"
+      ],
+      "tags": []
+    },
+    {
+      "id": "dIZdPZ61",
+      "ern": "ern:catalog:dIZdPZ61",
+      "label": "Uge 15 Indstik",
+      "background": "#FFFFFF",
+      "run_from": "2026-04-08T22:00:00+0000",
+      "run_till": "2026-04-11T21:59:59+0000",
+      "publish": "2026-04-08T05:00:00+0000",
+      "page_count": 4,
+      "offer_count": 9,
+      "branding": {
+        "name": "REMA 1000",
+        "website": "https://rema1000.dk/",
+        "description": "REMA 1000 - discount med holdning. Læs Rema 1000 tilbudsavis og se deres gode tilbud lige her.",
+        "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2FNSL4hmIeysfy2UPYcO5BT&w=300&s=7090b48154c10584df09f02c09424985",
+        "color": "014693",
+        "pageflip": {
+          "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2F2TDqjTbW_W8ZNWGouBuFw&w=300&s=63caaafb46fedb447c2420fe0bfe701a",
+          "color": "014693"
+        }
+      },
+      "dealer_id": "11deC",
+      "dealer_url": "https://rema1000.dk/",
+      "dealer": {
+        "id": "11deC",
+        "ern": "ern:dealer:11deC",
+        "graph_id": null,
+        "name": "REMA 1000",
+        "website": "https://rema1000.dk/",
+        "description": "REMA 1000 - discount med holdning. Læs Rema 1000 tilbudsavis og se deres gode tilbud lige her.",
+        "description_markdown": "",
+        "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2FNSL4hmIeysfy2UPYcO5BT&w=300&s=7090b48154c10584df09f02c09424985",
+        "color": "014693",
+        "pageflip": {
+          "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2F2TDqjTbW_W8ZNWGouBuFw&w=300&s=63caaafb46fedb447c2420fe0bfe701a",
+          "color": "014693"
+        },
+        "category_ids": [],
+        "country": {
+          "id": "DK",
+          "unsubscribe_print_url": null
+        },
+        "markets": [
+          {
+            "slug": "REMA-1000",
+            "country_code": "DK"
+          }
+        ],
+        "favorite_count": 0,
+        "facebook_page_id": null,
+        "youtube_user_id": null,
+        "twitter_handle": null
+      },
+      "store_id": null,
+      "store_url": null,
+      "dimensions": {
+        "height": 1.7455616,
+        "width": 1
+      },
+      "images": {
+        "@note.1": "",
+        "thumb": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2FdIZdPZ61%2Fp-1.webp&w=250&s=aee80041cb2ba0328943b61e24dc9934",
+        "view": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2FdIZdPZ61%2Fp-1.webp&w=700&s=e9c33b28f954c39375e9ff85bfc50ab7",
+        "zoom": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2FdIZdPZ61%2Fp-1.webp&w=1400&s=fae8985f3b02e33043c63001a9f1848c"
+      },
+      "pages": {
+        "@note.1": "",
+        "thumb": [],
+        "view": [],
+        "zoom": []
+      },
+      "category_ids": [],
+      "pdf_url": "https://squid-api.tjek.com/v2/catalogs/dIZdPZ61/download",
+      "all_stores": true,
+      "incito_publication_id": null,
+      "types": [
+        "paged"
+      ],
+      "tags": []
+    },
+    {
+      "id": "R6Jh_VNJ",
+      "ern": "ern:catalog:R6Jh_VNJ",
+      "label": "Meget mere sæson - april",
+      "background": "#FFFFFF",
+      "run_from": "2026-03-31T22:00:00+0000",
+      "run_till": "2026-04-30T21:59:59+0000",
+      "publish": "2026-04-01T06:30:00+0000",
+      "page_count": 15,
+      "offer_count": 0,
+      "branding": {
+        "name": "REMA 1000",
+        "website": "https://rema1000.dk/",
+        "description": "REMA 1000 - discount med holdning. Læs Rema 1000 tilbudsavis og se deres gode tilbud lige her.",
+        "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2FNSL4hmIeysfy2UPYcO5BT&w=300&s=7090b48154c10584df09f02c09424985",
+        "color": "014693",
+        "pageflip": {
+          "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2F2TDqjTbW_W8ZNWGouBuFw&w=300&s=63caaafb46fedb447c2420fe0bfe701a",
+          "color": "014693"
+        }
+      },
+      "dealer_id": "11deC",
+      "dealer_url": "https://rema1000.dk/",
+      "dealer": {
+        "id": "11deC",
+        "ern": "ern:dealer:11deC",
+        "graph_id": null,
+        "name": "REMA 1000",
+        "website": "https://rema1000.dk/",
+        "description": "REMA 1000 - discount med holdning. Læs Rema 1000 tilbudsavis og se deres gode tilbud lige her.",
+        "description_markdown": "",
+        "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2FNSL4hmIeysfy2UPYcO5BT&w=300&s=7090b48154c10584df09f02c09424985",
+        "color": "014693",
+        "pageflip": {
+          "logo": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2F11deC%2F2TDqjTbW_W8ZNWGouBuFw&w=300&s=63caaafb46fedb447c2420fe0bfe701a",
+          "color": "014693"
+        },
+        "category_ids": [],
+        "country": {
+          "id": "DK",
+          "unsubscribe_print_url": null
+        },
+        "markets": [
+          {
+            "slug": "REMA-1000",
+            "country_code": "DK"
+          }
+        ],
+        "favorite_count": 0,
+        "facebook_page_id": null,
+        "youtube_user_id": null,
+        "twitter_handle": null
+      },
+      "store_id": null,
+      "store_url": null,
+      "dimensions": {
+        "height": 1.7142863,
+        "width": 1
+      },
+      "images": {
+        "@note.1": "",
+        "thumb": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2FR6Jh_VNJ%2Fp-1.webp&w=250&s=cd60d2ee3c709cfbd11b259256bf3643",
+        "view": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2FR6Jh_VNJ%2Fp-1.webp&w=700&s=40b613e821c2d750095a33ecbd797f10",
+        "zoom": "https://image-transformer-api.tjek.com/?u=s3%3A%2F%2Fsgn-prd-assets%2Fuploads%2FR6Jh_VNJ%2Fp-1.webp&w=1400&s=3e1c6a9469c160340edb38cfee71dc6a"
+      },
+      "pages": {
+        "@note.1": "",
+        "thumb": [],
+        "view": [],
+        "zoom": []
+      },
+      "category_ids": [],
+      "pdf_url": "https://squid-api.tjek.com/v2/catalogs/R6Jh_VNJ/download",
+      "all_stores": true,
+      "incito_publication_id": null,
+      "types": [
+        "paged"
+      ],
+      "tags": []
+    }
+  ]
+}

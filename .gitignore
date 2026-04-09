@@ -1,2 +1,4 @@
 node_modules/
 intercepted_data/*.json
+intercepted_data/*
+!intercepted_data/*.json

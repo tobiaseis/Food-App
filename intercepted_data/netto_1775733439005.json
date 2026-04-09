@@ -1,0 +1,1121 @@
+{
+  "_meta": {
+    "supermarket": "netto",
+    "sourceUrl": "https://v1.api.service.cmp.usercentrics.eu/latest/1/cmp/da/GDPR/3D1grZBx_1cLYM/12.9.35/12.9.35",
+    "capturedAt": "2026-04-09T11:17:19.005Z"
+  },
+  "data": {
+    "ui": {
+      "closedView": "button",
+      "theme": "cb",
+      "language": "da",
+      "reshowAfterDays": 366,
+      "dpsDisplayFormat": "ALL",
+      "poweredByLogo": "UC",
+      "lifecycleStatus": "active",
+      "gpcSignalHonoured": false
+    },
+    "languages": {
+      "languages": {
+        "da": {
+          "name": "Dansk"
+        },
+        "de": {
+          "name": "Deutsch"
+        },
+        "pl": {
+          "name": "Polski"
+        }
+      }
+    },
+    "core": {
+      "dataLayers": [
+        "dataLayer"
+      ],
+      "analyticsEnabled": true,
+      "googleConsentModeEnabled": true,
+      "advertiserConsentModeEnabled": true
+    },
+    "setting": {
+      "id": "3D1grZBx_1cLYM",
+      "version": "12.9.35",
+      "type": "GDPR"
+    },
+    "ageVerification": {
+      "enabled": false,
+      "ageThreshold": 18,
+      "verificationMethod": "yesno",
+      "backgroundColor": "",
+      "backgroundOpacity": 70,
+      "aboveAgeBackgroundColor": "",
+      "aboveAgeTextColor": "",
+      "underAgeBackgroundColor": "",
+      "underAgeTextColor": "",
+      "redirectUrl": "",
+      "logoUrl": "",
+      "logoSize": 32,
+      "logoAltTag": "",
+      "contentTitle": "Vi er nødt til at bekræfte din alder",
+      "contentText": "Du skal opfylde alderskravet for at få adgang til indholdet på dette websted.",
+      "buttonOverAgeText": "Jeg er 18 år eller ældre",
+      "buttonUnderAgeText": "Jeg er under 18"
+    },
+    "dps": {
+      "categories": {
+        "essential": {
+          "name": "Nødvendige",
+          "dps": {
+            "H1Vl5NidjWX": true,
+            "F-REmjGq7": true,
+            "rJJjcVouoZ7": true,
+            "SkPc5EjOsWm": true
+          },
+          "essential": true,
+          "state": "ALL_ACCEPTED"
+        },
+        "functional": {
+          "name": "Funktionel",
+          "dps": {
+            "U8QkTd2W": false,
+            "BJz7qNsdj-7": false,
+            "H1PKqNodoWQ": false,
+            "HkPBYFofN": false,
+            "Hko_qNsui-Q": false,
+            "rw4DyFQcg6s3-W": false,
+            "54s8nFgf": false,
+            "Sy7BcNo_ib7": false,
+            "BJ59EidsWQ": false,
+            "HyEX5Nidi-m": false,
+            "Xl0HIOViY": false,
+            "tnfBi7gwe": false,
+            "HkIVcNiuoZX": false,
+            "Z0TcXjY0P": false
+          },
+          "state": "ALL_DENIED"
+        },
+        "marketing": {
+          "name": "Markedsføring",
+          "dps": {
+            "9V8bg4D63": false,
+            "S1_9Vsuj-Q": false,
+            "s8nQgU9A5": false,
+            "XYQZBUojc": false,
+            "ko1w5PpFl": false,
+            "LykAT-gy": false,
+            "dsS7z9Hv4": false,
+            "rJ99c4oOo-X": false,
+            "H1dDqVjOjWX": false
+          },
+          "state": "ALL_DENIED"
+        },
+        "statistics": {
+          "name": "Statistik",
+          "dps": {
+            "HkocEodjb7": false
+          },
+          "state": "ALL_DENIED"
+        }
+      },
+      "services": {
+        "SkPc5EjOsWm": {
+          "name": "Google Syndication",
+          "version": "6.2.1",
+          "category": "essential",
+          "essential": true,
+          "consent": {
+            "given": true,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "94ae5251785cadded9fb28ca825d7d2c168cf492f312489c9e94abd6330a1375"
+        },
+        "rJJjcVouoZ7": {
+          "name": "gstatic.com",
+          "version": "8.3.6",
+          "category": "essential",
+          "essential": true,
+          "consent": {
+            "given": true,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "a8d0aadbb9c340197362e670095e694c50d28beee1605603442fbce10fb7b7d7"
+        },
+        "F-REmjGq7": {
+          "name": "JSDelivr",
+          "version": "3.2.3",
+          "category": "essential",
+          "essential": true,
+          "consent": {
+            "given": true,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "693bf3bef6ee22407a397aded4dc4b0f914d80bdc3ae66092cf322a9867d3179"
+        },
+        "H1Vl5NidjWX": {
+          "name": "Usercentrics Consent Management Platform",
+          "version": "40.18.46",
+          "category": "essential",
+          "essential": true,
+          "consent": {
+            "given": true,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "b371eb2fc592043cb547bb8467db686ad5ec44b873a9c71196e042a7889b482f"
+        },
+        "H1dDqVjOjWX": {
+          "name": "Adform",
+          "version": "14.12.18",
+          "category": "marketing",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "40d3914a523983a79eea20331428c2cc8c0ce52e97bfd6544da6d05ba49f842c"
+        },
+        "tnfBi7gwe": {
+          "name": "Algolia",
+          "version": "15.4.3",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "c94d938c7f17a26d8d5bf638a2a83a9a87af78d53e304f517ae95615b7833cf0"
+        },
+        "HkIVcNiuoZX": {
+          "name": "Cloudflare",
+          "version": "6.3.11",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "b7e68996590ca0a6e88ee95ab29b0ef870f57eba750d06cf17799510896f8f84"
+        },
+        "LykAT-gy": {
+          "name": "Conversion Linker",
+          "version": "3.4.6",
+          "category": "marketing",
+          "essential": false,
+          "gcm": {
+            "adStorage": true
+          },
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "eef54601e70605c81b922aeaae53cd47f3e8672d6d9a815c0a6f37fb80120152"
+        },
+        "Xl0HIOViY": {
+          "name": "Datadog Real User Monitoring",
+          "version": "1.0.14",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "15dc4e9c3855660eb774cb161cfa1144b1fddd56be36c355d7bc0e918d0f1d6e"
+        },
+        "9V8bg4D63": {
+          "name": "DoubleClick Ad",
+          "version": "9.6.16",
+          "category": "marketing",
+          "essential": false,
+          "gcm": {
+            "adStorage": true
+          },
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "ae1a21e7a2ebdd1123a15edf1642421dfcb6eb6f28dd4b2a496d173765c3da0d"
+        },
+        "ko1w5PpFl": {
+          "name": "Facebook Pixel",
+          "version": "23.12.22",
+          "category": "marketing",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "b647d8a9a87cf75f5653dabba2440f992e49592ba45d9def576c2be19398955d"
+        },
+        "XYQZBUojc": {
+          "name": "Facebook Social Plugins",
+          "version": "9.6.4",
+          "category": "marketing",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "87d6f603c5b3069ed90edbdb07f22617d4f6611568cf3acfce61cc071b39e480"
+        },
+        "S1_9Vsuj-Q": {
+          "name": "Google Ads",
+          "version": "15.8.29",
+          "category": "marketing",
+          "essential": false,
+          "gcm": {
+            "adStorage": true
+          },
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "eddb301294bbbbb9ab7ece96b8e925222a3e5f118072c12006581b7d176f11fa"
+        },
+        "rJ99c4oOo-X": {
+          "name": "Google AdServices",
+          "version": "7.3.6",
+          "category": "marketing",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "514c159d8919f87cab5ee3aab91d3eafab48dc59e1ac92bdec33f48db043e699"
+        },
+        "H1PKqNodoWQ": {
+          "name": "Google AJAX",
+          "version": "6.4.3",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "a10a3c27625ceb0229eea80bb63fea298f95b89e5204ca362a484dd6df6d8d93"
+        },
+        "HkocEodjb7": {
+          "name": "Google Analytics",
+          "version": "52.11.43",
+          "category": "statistics",
+          "essential": false,
+          "gcm": {
+            "analyticsStorage": true
+          },
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "19204a3fc4ee51d4470c25deea050311a4ee22393bf16f1ea341e4216f1176dd"
+        },
+        "HkPBYFofN": {
+          "name": "Google Fonts",
+          "version": "10.3.1",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "dd659e6d8e059f50fabdd723aa71f2cf6e562f8dd2e53d3b4ceea5710ea207b3"
+        },
+        "rw4DyFQcg6s3-W": {
+          "name": "Google Play",
+          "version": "1.0.1",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "2defa34b82b0cfc55e9a499f8d823130af2eba4a9c3cb545dc4118a658c6d7c2"
+        },
+        "BJ59EidsWQ": {
+          "name": "Google Tag Manager",
+          "version": "25.7.29",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "e94ccc0e93693c8e8954ee9c3b5257d0ee1a1c4e878cfebb206657ad26314479"
+        },
+        "Sy7BcNo_ib7": {
+          "name": "jQuery",
+          "version": "4.2.4",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "ed336332625e3ab1c95c4e8999963ec117d31cda7f56cfea8999cce3349bf83a"
+        },
+        "U8QkTd2W": {
+          "name": "Mapbox",
+          "version": "4.6.4",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "8ddb34f6a0a730e752bbe0f039c81e27c1091b2d30215992085509bf42474cf4"
+        },
+        "dsS7z9Hv4": {
+          "name": "Microsoft Advertising Remarketing",
+          "version": "1.1.4",
+          "category": "marketing",
+          "essential": false,
+          "uet": {
+            "adStorage": true
+          },
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "c5c28e689c62318a8875468066c063d00f6bb40c949a529ca77a15fb451f4301"
+        },
+        "Hko_qNsui-Q": {
+          "name": "reCAPTCHA",
+          "version": "14.5.15",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "c554d5495abf2487fa7459df56d0c4ee7faa8a8054061b38c557c12699920943"
+        },
+        "s8nQgU9A5": {
+          "name": "Tealium Inc",
+          "version": "5.1.3",
+          "category": "marketing",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "eb576bac069a961ba8621337ae6502c2affad13d893d25d91346ecdf843ca13b"
+        },
+        "Z0TcXjY0P": {
+          "name": "TikTok",
+          "version": "1.3.7",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "99ae07f27ffe1224c1c71e4e29603d735ecaa884fccee88f1c317d68f4af83aa"
+        },
+        "HyEX5Nidi-m": {
+          "name": "Vimeo",
+          "version": "12.6.1",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "22479859c3340713c8a953a86401db588b282854693c9f6df8840bdab09147e3"
+        },
+        "BJz7qNsdj-7": {
+          "name": "YouTube Video",
+          "version": "15.8.20",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "68631717e005c28cefa69d51a8ce877f325be1640dd285200b0f11fdf29af6cd"
+        },
+        "54s8nFgf": {
+          "name": "Zendesk",
+          "version": "3.4.7",
+          "category": "functional",
+          "essential": false,
+          "consent": {
+            "given": false,
+            "type": "IMPLICIT"
+          },
+          "subservices": {},
+          "processorId": "ccf0e2ddf3c694b31b06da49b2c732e2a35854ba8abb23fd8c75b98dbfb6ea0f"
+        }
+      },
+      "granularConsentDisabled": false
+    },
+    "gcm": {
+      "developerId": "developer_id.dOThhZD"
+    },
+    "uet": {
+      "enabled": true
+    },
+    "theme": {
+      "privacyButton": {
+        "default": {
+          "position": "left",
+          "size": 44,
+          "backgroundColor": "#004a62",
+          "pages": [],
+          "icon": {
+            "url": "http://img.usercentrics.eu/misc/icon-fingerprint.svg",
+            "type": "fingerprint"
+          }
+        },
+        "screens": {
+          "mobile": {
+            "size": 44
+          }
+        }
+      },
+      "cmp": {
+        "default": {
+          "layout": {
+            "template": "DIALOG"
+          },
+          "elements": {
+            "buttons": {
+              "order": [
+                [
+                  "deny",
+                  "save",
+                  "accept"
+                ]
+              ]
+            }
+          },
+          "visibility": {
+            "showCategoriesToggles": true,
+            "showMoreInformationLink": true
+          },
+          "typography": {
+            "font": "BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif"
+          },
+          "colors": {
+            "light": {
+              "main": {
+                "primary": "#0045A5",
+                "neutral": "#ffffff",
+                "border": "#DDDDDD"
+              },
+              "links": {
+                "anchor": "#000000",
+                "icon": "#000000"
+              },
+              "buttons": {
+                "accept": {
+                  "background": "#004A62",
+                  "text": "#FFFFFF"
+                },
+                "deny": {
+                  "background": "#004A62",
+                  "text": "#FFFFFF"
+                },
+                "save": {
+                  "background": "#004A62",
+                  "text": "#FFFFFF"
+                },
+                "ok": {
+                  "background": "#F5F5F5",
+                  "text": "#303030"
+                }
+              },
+              "cmp": {
+                "background": "#f6f6f6",
+                "scrollbarThumb": "#adadad"
+              },
+              "tabs": {
+                "containerBackground": "#fff",
+                "tabInactive": "#333333",
+                "tabActive": "#004a62"
+              }
+            }
+          }
+        },
+        "screens": {
+          "desktop": {
+            "first": {
+              "features": {
+                "denyConsentsOnClose": false
+              }
+            },
+            "second": {
+              "layout": {
+                "position": "center"
+              },
+              "elements": {
+                "buttons": {
+                  "order": [
+                    [
+                      "deny",
+                      "save",
+                      "accept"
+                    ]
+                  ]
+                }
+              },
+              "visibility": {
+                "hideDataProcessingServices": false,
+                "hideServicesToggles": true,
+                "hideLanguageSwitch": false
+              }
+            }
+          },
+          "mobile": {
+            "base": {
+              "elements": {
+                "buttons": {
+                  "order": [
+                    [
+                      "deny"
+                    ],
+                    [
+                      "save"
+                    ],
+                    [
+                      "accept"
+                    ]
+                  ]
+                }
+              }
+            },
+            "second": {
+              "elements": {
+                "buttons": {
+                  "order": [
+                    [
+                      "deny"
+                    ],
+                    [
+                      "save"
+                    ],
+                    [
+                      "accept"
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "consent": {
+      "controllerId": "",
+      "createdAt": 0,
+      "language": "da",
+      "required": true,
+      "setting": {
+        "id": "3D1grZBx_1cLYM",
+        "version": "12.9.35",
+        "type": "GDPR"
+      },
+      "updatedAt": 0,
+      "updatedBy": "onInitialPageLoad",
+      "type": "IMPLICIT",
+      "version": 1,
+      "status": "ALL_DENIED",
+      "hash": "",
+      "serviceIds": []
+    },
+    "i18n": {
+      "categories": {
+        "essential": {
+          "description": "Nødvendige cookies hjælper med at gøre en hjemmeside brugbar ved at aktivere grundlæggende funktioner, såsom side-navigation og adgang til sikre områder af hjemmesiden. Hjemmesiden kan ikke fungere optimalt uden disse cookies.",
+          "name": "Nødvendige",
+          "id": "essential"
+        },
+        "functional": {
+          "description": "Vi indsamler oplysninger om dine foretrukne indstillinger og valg på hjemmesiden. Det gør vi for at kunne vise dig den version af hjemmesiden, der passer til dine præferencer. Oplysningerne bliver brugt til at afgøre, hvilken region og sprog du foretrækker, til at vise videoer og andre visuelle elementer på hjemmesiden fx jobsøgning.",
+          "name": "Funktionel",
+          "id": "functional"
+        },
+        "marketing": {
+          "description": "Vi indsamler oplysninger om dine interesser, herunder hvilke sider og annoncer du klikker på, hvilke produkter eller ydelser du viser interesse for, eller køber, på denne og andre hjemmesider. Det gør vi for at kunne vise dig annoncer, der er relevante for dig og dine interesser. For at kunne vise dig målrettede annoncer på denne og andre hjemmesider, samarbejder vi med andre virksomheder, som vi deler oplysninger med. Det kan du læse mere om herunder.",
+          "name": "Markedsføring",
+          "id": "marketing"
+        },
+        "statistics": {
+          "description": "Vi indsamler oplysninger om, hvordan du interagerer med hjemmesiden, herunder hvor ofte du besøger siden, og hvilke sider du kigger på. Det gør vi for at kunne optimere design, brugervenlighed og styrke effektiviteten af hjemmesiden. Derudover bruger vi oplysningerne til at give dig personaliseret indhold og udarbejde markedsanalyser.",
+          "name": "Statistik",
+          "id": "statistics"
+        }
+      },
+      "services": {
+        "H1Vl5NidjWX": {
+          "description": "",
+          "id": "H1Vl5NidjWX",
+          "legalBasis": [],
+          "name": "Usercentrics Consent Management Platform"
+        },
+        "U8QkTd2W": {
+          "description": "",
+          "id": "U8QkTd2W",
+          "legalBasis": [],
+          "name": "Mapbox"
+        },
+        "9V8bg4D63": {
+          "description": "",
+          "id": "9V8bg4D63",
+          "legalBasis": [],
+          "name": "DoubleClick Ad"
+        },
+        "BJz7qNsdj-7": {
+          "description": "",
+          "id": "BJz7qNsdj-7",
+          "legalBasis": [],
+          "name": "YouTube Video"
+        },
+        "H1PKqNodoWQ": {
+          "description": "",
+          "id": "H1PKqNodoWQ",
+          "legalBasis": [],
+          "name": "Google AJAX"
+        },
+        "HkPBYFofN": {
+          "description": "",
+          "id": "HkPBYFofN",
+          "legalBasis": [],
+          "name": "Google Fonts"
+        },
+        "Hko_qNsui-Q": {
+          "description": "",
+          "id": "Hko_qNsui-Q",
+          "legalBasis": [],
+          "name": "reCAPTCHA"
+        },
+        "S1_9Vsuj-Q": {
+          "description": "",
+          "id": "S1_9Vsuj-Q",
+          "legalBasis": [],
+          "name": "Google Ads"
+        },
+        "rw4DyFQcg6s3-W": {
+          "description": "",
+          "id": "rw4DyFQcg6s3-W",
+          "legalBasis": [],
+          "name": "Google Play"
+        },
+        "54s8nFgf": {
+          "description": "",
+          "id": "54s8nFgf",
+          "legalBasis": [],
+          "name": "Zendesk"
+        },
+        "Sy7BcNo_ib7": {
+          "description": "",
+          "id": "Sy7BcNo_ib7",
+          "legalBasis": [],
+          "name": "jQuery"
+        },
+        "HkocEodjb7": {
+          "description": "",
+          "id": "HkocEodjb7",
+          "legalBasis": [],
+          "name": "Google Analytics"
+        },
+        "BJ59EidsWQ": {
+          "description": "",
+          "id": "BJ59EidsWQ",
+          "legalBasis": [],
+          "name": "Google Tag Manager"
+        },
+        "F-REmjGq7": {
+          "description": "",
+          "id": "F-REmjGq7",
+          "legalBasis": [],
+          "name": "JSDelivr"
+        },
+        "HyEX5Nidi-m": {
+          "description": "",
+          "id": "HyEX5Nidi-m",
+          "legalBasis": [],
+          "name": "Vimeo"
+        },
+        "Xl0HIOViY": {
+          "description": "",
+          "id": "Xl0HIOViY",
+          "legalBasis": [],
+          "name": "Datadog Real User Monitoring"
+        },
+        "rJJjcVouoZ7": {
+          "description": "",
+          "id": "rJJjcVouoZ7",
+          "legalBasis": [],
+          "name": "gstatic.com"
+        },
+        "tnfBi7gwe": {
+          "description": "",
+          "id": "tnfBi7gwe",
+          "legalBasis": [],
+          "name": "Algolia"
+        },
+        "HkIVcNiuoZX": {
+          "description": "",
+          "id": "HkIVcNiuoZX",
+          "legalBasis": [],
+          "name": "Cloudflare"
+        },
+        "SkPc5EjOsWm": {
+          "description": "",
+          "id": "SkPc5EjOsWm",
+          "legalBasis": [],
+          "name": "Google Syndication"
+        },
+        "s8nQgU9A5": {
+          "description": "",
+          "id": "s8nQgU9A5",
+          "legalBasis": [],
+          "name": "Tealium Inc"
+        },
+        "XYQZBUojc": {
+          "description": "",
+          "id": "XYQZBUojc",
+          "legalBasis": [],
+          "name": "Facebook Social Plugins"
+        },
+        "ko1w5PpFl": {
+          "description": "",
+          "id": "ko1w5PpFl",
+          "legalBasis": [],
+          "name": "Facebook Pixel"
+        },
+        "LykAT-gy": {
+          "description": "",
+          "id": "LykAT-gy",
+          "legalBasis": [],
+          "name": "Conversion Linker"
+        },
+        "Z0TcXjY0P": {
+          "description": "",
+          "id": "Z0TcXjY0P",
+          "legalBasis": [],
+          "name": "TikTok"
+        },
+        "dsS7z9Hv4": {
+          "description": "",
+          "id": "dsS7z9Hv4",
+          "legalBasis": [],
+          "name": "Microsoft Advertising Remarketing"
+        },
+        "rJ99c4oOo-X": {
+          "description": "",
+          "id": "rJ99c4oOo-X",
+          "legalBasis": [],
+          "name": "Google AdServices"
+        },
+        "H1dDqVjOjWX": {
+          "description": "",
+          "id": "H1dDqVjOjWX",
+          "legalBasis": [],
+          "name": "Adform"
+        }
+      },
+      "base": {
+        "ariaLabels": {
+          "acceptAllButton": "Accepter alle",
+          "ccpaButton": "Accepterer CCPA (California Consumer Privacy Act)",
+          "ccpaMoreInformation": "Flere oplysninger",
+          "closeButton": "Luk lag",
+          "collapse": "Skjul",
+          "cookiePolicyButton": "Åbn URL for cookie-politik",
+          "copyControllerId": "Kopier Controller-id",
+          "denyAllButton": "Afvis alle",
+          "expand": "Udvid",
+          "fullscreenButton": "Til fuld skærm",
+          "imprintButton": "Åbn aftryk",
+          "languageSelector": "Vælg sprog",
+          "privacyButton": "Åbn",
+          "privacyPolicyButton": "Åbn fortrolighedspolitik",
+          "saveButton": "Gem",
+          "serviceInCategoryDetails": "Se serviceoplysninger",
+          "servicesInCategory": "Liste over tjenester i denne kategori",
+          "tabButton": "Fane",
+          "usercentricsCMPButtons": "Sidefod inklusive knapper",
+          "usercentricsCMPContent": "Indhold",
+          "usercentricsCMPHeader": "Overskrift inklusive sprogvalg og eksterne links",
+          "usercentricsCMPUI": "Platform-interface til styring af samtykke",
+          "usercentricsCard": "Kort",
+          "usercentricsList": "List",
+          "vendorConsentToggle": "Samtykke",
+          "vendorDetailedStorageInformation": "Detaljerede opbevaringsoplysninger",
+          "vendorLegIntToggle": "Legitime interesser"
+        },
+        "cookieInformation": {
+          "anyDomain": "ethvert domæne (f.eks. førstepartscookie)",
+          "cookieRefresh": "Cookie opdatering",
+          "cookieStorage": "Lagring af cookies",
+          "day": "dag",
+          "days": "dage",
+          "description": "Nedenfor kan du se den længste potentielle varighed for lagring på en enhed, som angivet ved brug af en hvilken som helst lagringsmetode.",
+          "domain": "Område",
+          "duration": "Varighed",
+          "error": "Beklager, vi kunne desværre ikke indlæse de krævede oplysninger.",
+          "hour": "time",
+          "hours": "timer",
+          "identifier": "Identifikator",
+          "loading": "Indlæser opbevaringsoplysninger",
+          "maximumAge": "Maksimal alder for opbevaring af cookies",
+          "minute": "minut",
+          "minutes": "minutter",
+          "month": "måned",
+          "months": "måneder",
+          "multipleDomains": "der kan være flere underdomæner",
+          "name": "Navn",
+          "disclosureDescription": "Description",
+          "no": "nej",
+          "nonCookieStorage": "Opbevaring uden cookie",
+          "disclosureOptOut": "Opt-out",
+          "purposes": "Purposes",
+          "specialPurposes": "Special Purposes",
+          "second": "sekund",
+          "seconds": "sekunder",
+          "session": "Session",
+          "storedInformation": "Gemte oplysninger",
+          "storedInformationDescription": "Denne tjeneste bruger forskellige måder til lagring af oplysninger på en brugers enhed som angivet nedenfor.",
+          "title": "Oplysninger om opbevaring",
+          "titleDetailed": "Detaljerede opbevaringsoplysninger",
+          "tryAgain": "Vil du prøve igen?",
+          "type": "Type",
+          "year": "år",
+          "years": "år",
+          "yes": "ja"
+        },
+        "links": {
+          "privacyPolicy": {
+            "ariaLabel": "Åbn Privatlivspolitik",
+            "label": "Privatlivspolitik",
+            "url": "https://www.sallinggroup.com/privatlivspolitik#2.4.1",
+            "order": 1,
+            "type": "privacyPolicy"
+          }
+        },
+        "poweredBy": {
+          "isEnabled": true,
+          "labels": {
+            "prefix": "Powered by",
+            "uc": "Usercentrics Consent Management",
+            "cb": "Usercentrics Cookiebot",
+            "partner": ""
+          },
+          "links": {
+            "uc": "https://www.usercentrics.com/consent-management-platform-powered-by-usercentrics/",
+            "partner": ""
+          }
+        },
+        "serviceDetail": {
+          "dataCollected": {
+            "description": "Denne liste repræsenterer alle (personlige) data, der indsamles af eller gennem brugen af denne service.",
+            "title": "Indsamlet data"
+          },
+          "dataDistribution": {
+            "processingLocationDescription": "Dette er det primære sted, hvor de indsamlede data behandles. Hvis dataene også behandles i andre lande, informeres du separat.",
+            "processingLocationTitle": "Sted for behandling",
+            "thirdPartyCountriesDescription": "Denne tjeneste videresender muligvis de indsamlede data til et andet land. Bemærk, at denne tjeneste muligvis overfører data til et land uden de krævede databeskyttelsesstandarder. Nedenfor kan du finde en liste over de lande, som dataene overføres til. Du kan få flere oplysninger om sikkerhedsforanstaltninger i udbyderens privatlivspolitik eller ved at kontakte udbyderen direkte.",
+            "thirdPartyCountriesTitle": "Overførsel til tredjelande"
+          },
+          "dataProtectionOfficer": {
+            "description": "Nedenfor kan du finde e-mailadressen på behandlingsvirksomhedens databeskyttelsesansvarlige.",
+            "title": "Behandlingsvirksomhedens databeskyttelsesansvarlige"
+          },
+          "dataPurposes": {
+            "description": "Denne liste repræsenterer formålene med dataindsamlingen og -behandlingen.",
+            "title": "Formål med data"
+          },
+          "dataRecipients": {
+            "description": "I det følgende vises modtagerne af de indsamlede data.",
+            "title": "Datamodtagere"
+          },
+          "descriptionTitle": "Beskrivelse af tjeneste",
+          "history": {
+            "description": null,
+            "title": "Historik"
+          },
+          "legalBasis": {
+            "description": "I det følgende er det krævede juridiske grundlag for behandling af data angivet.",
+            "title": "Juridisk grundlag"
+          },
+          "retentionPeriod": {
+            "description": "Opbevaringsperioden er det tidsrum, hvor de indsamlede data gemmes til behandlingsformål. Dataene skal slettes, så snart de ikke længere er nødvendige for de angivne behandlingsformål.",
+            "title": "Opbevaringsperiode"
+          },
+          "technologiesUsed": {
+            "description": "Denne liste viser alle de teknologier, som denne tjeneste bruger til at indsamle data.",
+            "title": "Anvendte teknologier"
+          },
+          "urls": {
+            "cookiePolicyTitle": "Klik her for at læse databehandlerens cookie-politik",
+            "optOutTitle": "Klik her for at fravælge denne behandler på tværs af alle domæner",
+            "privacyPolicyTitle": "Klik her for at læse databehandlerens privatlivspolitik"
+          }
+        },
+        "back": "Tilbage",
+        "consentGiven": "ja",
+        "consentNotGiven": "nej",
+        "consentType": "Samtykketype",
+        "controllerId": "ID for at anmode om samtykkedata",
+        "copied": "kopieret",
+        "copy": "kopi",
+        "date": "Dato",
+        "decision": "Afgørelse",
+        "details": "Detaljer",
+        "explicit": "Eksplicit",
+        "gpcSignalHonored": "GPC-signalet overholdes",
+        "implicit": "Implicit",
+        "implicitNo": "nej (standard)",
+        "implicitYes": "ja (standard)",
+        "privacyButton": "Privatindstillinger",
+        "showLess": "Læs mindre",
+        "showMore": "Læs mere",
+        "subservice": "Underordnet tjeneste",
+        "subservices": "Underordnede tjenester",
+        "subservicesDescription": "Nedenfor kan du finde alle de tjenester, der er underordnet denne tjeneste. Den aktuelle samtykkestatus for denne tjeneste gælder for alle underordnede tjenester.",
+        "accepted": "ja",
+        "anyDomain": "ethvert domæne (f.eks. førstepartscookie)",
+        "btnBannerReadMore": "Læs mere",
+        "cookiePolicyInfo": "Klik her for at læse databehandlerens cookie-politik",
+        "cookiePolicyLinkText": "Cookiepolitik",
+        "cookiePolicyUrl": "",
+        "dataCollectedInfo": "Denne liste repræsenterer alle (personlige) data, der indsamles af eller gennem brugen af denne service.",
+        "dataCollectedList": "Indsamlet data",
+        "dataProtectionOfficer": "Behandlingsvirksomhedens databeskyttelsesansvarlige",
+        "dataProtectionOfficerInfo": "Nedenfor kan du finde e-mailadressen på behandlingsvirksomhedens databeskyttelsesansvarlige.",
+        "dataPurposes": "Formål med data",
+        "dataPurposesInfo": "Denne liste repræsenterer formålene med dataindsamlingen og -behandlingen.",
+        "dataRecipientsList": "Datamodtagere",
+        "dataRecipientsListInfo": "I det følgende vises modtagerne af de indsamlede data.",
+        "day": "dag",
+        "days": "dage",
+        "denied": "nej",
+        "descriptionOfService": "Beskrivelse af tjeneste",
+        "detailedStorageInformation": "Detaljerede opbevaringsoplysninger",
+        "domain": "Område",
+        "duration": "Varighed",
+        "history": "Historik",
+        "hour": "time",
+        "hours": "timer",
+        "identifier": "Identifikator",
+        "imprintLinkText": "Juridisk bemærkning",
+        "imprintUrl": "",
+        "informationLoadingNotPossible": "Beklager, vi kunne desværre ikke indlæse de krævede oplysninger.",
+        "legalBasisInfo": "I det følgende er det krævede juridiske grundlag for behandling af data angivet.",
+        "legalBasisList": "Juridisk grundlag",
+        "loadingStorageInformation": "Indlæser opbevaringsoplysninger",
+        "locationOfProcessing": "Sted for behandling",
+        "locationofProcessingInfo": "Dette er det primære sted, hvor de indsamlede data behandles. Hvis dataene også behandles i andre lande, informeres du separat.",
+        "maximumAgeCookieStorage": "Maksimal alder for opbevaring af cookies",
+        "minute": "minut",
+        "minutes": "minutter",
+        "month": "måned",
+        "months": "måneder",
+        "multipleDomains": "der kan være flere underdomæner",
+        "name": "Navn",
+        "no": "nej",
+        "noImplicit": "nej (standard)",
+        "nonCookieStorage": "Opbevaring uden cookie",
+        "optOut": "Klik her for at fravælge denne behandler på tværs af alle domæner",
+        "policyOf": "Klik her for at læse databehandlerens privatlivspolitik",
+        "processingCompany": "Behandlende virksomhed",
+        "privacyPolicyLinkText": "Privatlivspolitik",
+        "privacyPolicyUrl": "https://www.sallinggroup.com/privatlivspolitik#2.4.1",
+        "readLess": "Læs mindre",
+        "retentionPeriod": "Opbevaringsperiode",
+        "retentionPeriodInfo": "Opbevaringsperioden er det tidsrum, hvor de indsamlede data gemmes til behandlingsformål. Dataene skal slettes, så snart de ikke længere er nødvendige for de angivne behandlingsformål.",
+        "second": "sekund",
+        "seconds": "sekunder",
+        "session": "Session",
+        "storageInformation": "Oplysninger om opbevaring",
+        "storageInformationDescription": "Nedenfor kan du se den længste potentielle varighed for lagring på en enhed, som angivet ved brug af en hvilken som helst lagringsmetode.",
+        "storedInformation": "Gemte oplysninger",
+        "storedInformationDescription": "Denne tjeneste bruger forskellige måder til lagring af oplysninger på en brugers enhed som angivet nedenfor.",
+        "tabs": {
+          "categories": "Kategorier",
+          "services": "Tjenester",
+          "about": "Om",
+          "details": "Detaljer",
+          "consent": "Samtykke"
+        },
+        "technologiesUsed": "Anvendte teknologier",
+        "technologiesUsedInfo": "Denne liste viser alle de teknologier, som denne tjeneste bruger til at indsamle data.",
+        "transferToThirdCountries": "Overførsel til tredjelande",
+        "transferToThirdCountriesInfo": "Denne tjeneste videresender muligvis de indsamlede data til et andet land. Bemærk, at denne tjeneste muligvis overfører data til et land uden de krævede databeskyttelsesstandarder. Nedenfor kan du finde en liste over de lande, som dataene overføres til. Du kan få flere oplysninger om sikkerhedsforanstaltninger i udbyderens privatlivspolitik eller ved at kontakte udbyderen direkte.",
+        "tryAgain": "Vil du prøve igen?",
+        "type": "Type",
+        "year": "år",
+        "years": "år",
+        "yes": "ja",
+        "yesImplicit": "ja (standard)",
+        "ageVerificationTitle": "Vi er nødt til at bekræfte din alder",
+        "ageVerificationDescription": "Du skal opfylde alderskravet for at få adgang til indholdet på dette websted.",
+        "ageVerificationYes": "Jeg er 18 år eller ældre",
+        "ageVerificationNo": "Jeg er under 18",
+        "dataTransferFilter": {
+          "all": "Alle",
+          "thirdCountry": "Overførsel af data til tredjelande"
+        },
+        "crossDomainConsent": {
+          "title": "Samtykke på tværs af domæner",
+          "appliesTo": "Dit samtykke gælder for følgende domæner:",
+          "listOfDomains": "Liste over domæner, som dit samtykke gælder for:"
+        },
+        "unsupportedBrowserMessage": "Your browser version needs an update for this banner to work properly."
+      },
+      "gdpr": {
+        "continueWithoutAccept": "Fortsæt uden at acceptere",
+        "addVendorCount": false,
+        "dutchThirdPartyText": "Vi samarbejder med %THIRD_PARTY_COUNT% tredjeparter, der muligvis modtager og behandler dine oplysninger."
+      },
+      "firstLayer": {
+        "privacy": {
+          "title": "Du bestemmer over dine data",
+          "description": "Salling Group A/S og vores samarbejdspartnere bruger cookies, pixels og tilsvarende teknologier via hjemmesiden (\"Cookies\") for at få hjemmesiden til at fungere (nødvendige Cookies), huske dine indstillinger og skabe en bedre brugeroplevelse (funktionelle Cookies), til at analysere din adfærd for at optimere hjemmesiden (statistiske Cookies) og til at målrette markedsføring til dig via sociale medier (markedsføring af Cookies).<div><br></div><div>Vores Cookies indsamler oplysninger om et unikt ID, tekniske oplysninger om din enhed, sideindstillinger og præferencer, din IP-adresse, din geografiske placering, hvilke sider du klikker på (interesser og søgehistorik), information om køb, tidspunkt for besøg, demografiske data og i visse tilfælde en hashet e-mail (\"Oplysninger\").</div><div><br></div><div>Dine Oplysninger kan med dit samtykke blive behandlet af os og videregivet til vores samarbejdspartnere (f.eks. <a href=\"https://business.safety.google/privacy/\" target=\"_blank\">Googles</a> ) inden for sociale medier, annoncering og analyse. Vores samarbejdspartnere kan kombinere disse Oplysninger med andre oplysninger, som du har givet dem tidligere, eller som de har indsamlet via din brug af deres tjenester.</div><div><br></div><div>Ved at klikke på vores <a href=\"https://www.sallinggroup.com/privatlivspolitik#2.4.1\" target=\"_blank\">privatlivspolitik</a> og trykke ”flere oplysninger” nedenfor, kan du se nærmere beskrivelser af formålene for de enkelte Cookies, hvem der sætter hver enkelt Cookie, rollefordelingen mellem os og samarbejdspartnere samt hvor længe hver Cookie opbevares via dit terminaludstyr.</div><div><br></div><div>Du kan altid ændre eller tilbagekalde dit samtykke ved at trykke på det lille cookielogo i nederste venstre hjørne på hjemmesiden.</div>",
+          "about": "Cookies er små tekstfiler, som kan bruges af websteder til at gøre en brugers oplevelse mere effektiv. <br/><br/>\nLoven fastslår, at vi kan gemme cookies på din enhed, hvis de er strengt nødvendige for at sikre leveringen af den tjeneste, du udtrykkeligt har anmodet om at bruge. For alle andre typer cookies skal vi indhente dit samtykke. \n\nDette websted bruger forskellige typer af cookies. Nogle cookies sættes af tredjeparts tjenester, der vises på vores sider."
+        },
+        "buttons": {
+          "accept": "Accepter alle",
+          "deny": "Kun nødvendige",
+          "more": "Flere oplysninger",
+          "save": "Gem indstillinger"
+        }
+      },
+      "secondLayer": {
+        "privacy": {
+          "title": "Privatindstillinger",
+          "description": "Dette værktøj hjælper dig med at administrere samtykke til tredjelandsteknologier, der indsamler og behandler persondata."
+        },
+        "buttons": {
+          "accept": "Accepter alle",
+          "deny": "Kun nødvendige",
+          "save": "Gem indstillinger"
+        }
+      }
+    }
+  }
+}

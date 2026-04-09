@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "supermarket": "rema1000",
+    "sourceUrl": "https://policy.app.cookieinformation.com/cookie-data/rema1000.dk/cabl.json",
+    "capturedAt": "2026-04-09T11:17:32.147Z"
+  },
+  "data": {
+    "metadata": {
+      "last_updated": "2026-04-09T08:49:58.310Z",
+      "autoblocking_enabled": false
+    },
+    "cookies": [
+      {
+        "name": "CookieInformationConsent",
+        "domain": "rema1000.dk",
+        "category": "cookie_cat_necessary"
+      },
+      {
+        "name": "rema_1000_session",
+        "domain": "job.rema1000.dk",
+        "category": "cookie_cat_necessary"
+      },
+      {
+        "name": "login_code_verifier*",
+        "domain": "rema1000.dk",
+        "category": "cookie_cat_necessary"
+      },
+      {
+        "name": "_pk_idxxx",
+        "domain": "rema1000.dk",
+        "category": "cookie_cat_statistic"
+      },
+      {
+        "name": "_pk_ses.4.b54a",
+        "domain": "rema1000.dk",
+        "category": "cookie_cat_statistic"
+      },
+      {
+        "name": "_pk_sesxxx",
+        "domain": "rema1000.dk",
+        "category": "cookie_cat_statistic"
+      },
+      {
+        "name": "_pk_idxxx",
+        "domain": "rema1000.dk",
+        "category": "cookie_cat_statistic"
+      },
+      {
+        "name": "_pk_idxxx",
+        "domain": "vigo.dk",
+        "category": "cookie_cat_statistic"
+      },
+      {
+        "name": "_pk_sesxxx",
+        "domain": "vigo.dk",
+        "category": "cookie_cat_statistic"
+      },
+      {
+        "name": "_pk_ses.4.e99d",
+        "domain": "shop.rema1000.dk",
+        "category": "cookie_cat_statistic"
+      },
+      {
+        "name": "_pk_ses*",
+        "domain": "rema1000.dk",
+        "category": "cookie_cat_statistic"
+      },
+      {
+        "name": "_rema1000_session",
+        "domain": "rema1000.peytzmail.com",
+        "category": "cookie_cat_marketing"
+      },
+      {
+        "name": "_dd_s",
+        "domain": "job.rema1000.dk",
+        "category": "cookie_cat_marketing"
+      },
+      {
+        "name": "_dd_s",
+        "domain": "rema1000.dk",
+        "category": "cookie_cat_marketing"
+      },
+      {
+        "name": "_rema_1000_session",
+        "domain": "rema1000.peytzmail.com",
+        "category": "cookie_cat_marketing"
+      },
+      {
+        "name": "euconsent-v2",
+        "domain": "rema1000.dk",
+        "category": "cookie_cat_necessary"
+      }
+    ]
+  }
+}
