@@ -3,23 +3,19 @@
  *
  * 1. Finder PDF-URL for Netto, Rema 1000 og Føtex automatisk
  * 2. Downloader PDF'erne til ./pdfs/
- * 3. Sender PDF til AI for at udtrække navn, pris og mængde per tilbud
+ * 3. Sender PDF til Gemini/Claude Vision for at udtrække tilbudsdata
  * 4. Gemmer alle tilbud i en SQLite-database (offers.db)
  *
  * ── Opsætning ──────────────────────────────────────────────────────────────
  *   npm install
  *   npx playwright install chromium
  *
- * ── Kør med Gemini 2.0 Flash (GRATIS) ─────────────────────────────────────
+ * ── Kør med Gemini 2.0 Flash (standard) ───────────────────────────────────
  *   Hent gratis nøgle: https://aistudio.google.com/apikey
- *   GEMINI_API_KEY=din_nøgle node pipeline.js
+ *   $env:GEMINI_API_KEY="din_nøgle"; node pipeline.js
  *
  * ── Kør med Claude Sonnet 4.6 (~$0.20-0.40 per avis) ──────────────────────
- *   MODEL=claude ANTHROPIC_API_KEY=din_nøgle node pipeline.js
- *
- * ── Kør lokalt med Gemma via Ollama (ingen cloud API-nøgle) ───────────────
- *   ollama run gemma3:4b
- *   MODEL=ollama OLLAMA_MODEL=gemma3:4b node pipeline.js
+ *   $env:MODEL="claude"; $env:ANTHROPIC_API_KEY="din_nøgle"; node pipeline.js
  */
 
 'use strict';
@@ -30,29 +26,22 @@ const path = require('path');
 
 // ── Konfiguration ─────────────────────────────────────────────────────────────
 
-const MODEL_RAW     = (process.env.MODEL || 'gemini').trim().toLowerCase();
-const MODEL         = MODEL_RAW === 'gemma' ? 'ollama' : MODEL_RAW; // 'gemini' | 'claude' | 'ollama'
-const GEMINI_KEY    = process.env.GEMINI_API_KEY  || '';
+const MODEL         = (process.env.MODEL || 'gemini').trim().toLowerCase(); // 'gemini' | 'claude'
+const GEMINI_KEY    = process.env.GEMINI_API_KEY   || '';
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY || '';
-const OLLAMA_HOST   = (process.env.OLLAMA_HOST || 'http://127.0.0.1:11434').replace(/\/+$/, '');
-const OLLAMA_MODEL  = process.env.OLLAMA_MODEL || 'gemma4:e4b';
 const PDF_DIR       = path.join(__dirname, 'pdfs');
 const DB_PATH       = path.join(__dirname, 'offers.db');
 
-
-// Max PDF-størrelse der sendes inline til AI (i MB).
-// Gemini-grænse: 20 MB. Claude-grænse: ~24 MB (32 MB base64-kodet).
-const MAX_PDF_MB = 19;
-// Størrelse af hvert tekst-chunk sendt til Ollama per API-kald.
-// Mindre chunks = lavere hukommelsesforbrug (KV-cache) i Ollama.
-const OLLAMA_CHUNK_CHARS  = 8_000;
-const OLLAMA_NUM_CTX      = 4096; // Max tokens Ollama allokerer KV-cache til
+// PDFs under denne grænse sendes som inline base64 til Gemini.
+// Større filer uploades via Gemini Files API (ingen øvre grænse).
+const GEMINI_INLINE_MB = 19;
+// Claude-grænse: ~24 MB (32 MB base64-kodet)
+const MAX_CLAUDE_PDF_MB = 23;
 
 // ── Model-hjælpere ───────────────────────────────────────────────────────────
 
 function getModelLabel() {
   if (MODEL === 'claude') return 'Claude Sonnet 4.6  (betalt ~$0.20-0.40/avis)';
-  if (MODEL === 'ollama') return `Ollama (${OLLAMA_MODEL})  (lokal)`;
   return 'Gemini 2.0 Flash   (gratis)';
 }
 
@@ -150,11 +139,10 @@ async function downloadPdf(url, destPath) {
   const buf = Buffer.from(await res.arrayBuffer());
   const sizeMb = buf.length / 1024 / 1024;
 
-  // Ollama-stien udtrækker tekst lokalt – ingen upload-grænse
-  if (MODEL !== 'ollama' && sizeMb > MAX_PDF_MB) {
+  // Claude-grænse: ~23 MB. Gemini bruger Files API for større filer (ingen grænse).
+  if (MODEL === 'claude' && sizeMb > MAX_CLAUDE_PDF_MB) {
     throw new Error(
-      `PDF er ${sizeMb.toFixed(1)} MB – overskrider ${MAX_PDF_MB} MB AI-grænsen. ` +
-      `Overvej at splitte filen i sider.`
+      `PDF er ${sizeMb.toFixed(1)} MB – overskrider Claude-grænsen på ${MAX_CLAUDE_PDF_MB} MB.`
     );
   }
 
@@ -172,24 +160,26 @@ async function downloadPdf(url, destPath) {
 async function geminiLocateElement(page, description) {
   if (!GEMINI_KEY) return null;
   try {
-    const { GoogleGenerativeAI } = require('@google/generative-ai');
-    const genAI = new GoogleGenerativeAI(GEMINI_KEY);
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+    const { GoogleGenAI } = require('@google/genai');
+    const ai = new GoogleGenAI({ apiKey: GEMINI_KEY });
 
     const screenshot = await page.screenshot({ type: 'png', fullPage: false });
     const viewport   = page.viewportSize();
 
-    const result = await model.generateContent([
-      { inlineData: { mimeType: 'image/png', data: screenshot.toString('base64') } },
-      { text:
-        `Se på dette screenshot af en webside (${viewport.width}×${viewport.height} pixels).\n` +
-        `Find: "${description}"\n` +
-        `Svar KUN med et JSON-objekt: {"x": <pixel fra venstre>, "y": <pixel fra top>}\n` +
-        `Koordinaterne skal pege på midten af elementet. Hvis elementet ikke er synligt, svar med: {"x": null, "y": null}`
-      },
-    ]);
+    const response = await ai.models.generateContent({
+      model:    'gemini-2.5-flash',
+      contents: [
+        { inlineData: { mimeType: 'image/png', data: screenshot.toString('base64') } },
+        { text:
+          `Se på dette screenshot af en webside (${viewport.width}×${viewport.height} pixels).\n` +
+          `Find: "${description}"\n` +
+          `Svar KUN med et JSON-objekt: {"x": <pixel fra venstre>, "y": <pixel fra top>}\n` +
+          `Koordinaterne skal pege på midten af elementet. Hvis elementet ikke er synligt, svar med: {"x": null, "y": null}`
+        },
+      ],
+    });
 
-    const text  = result.response.text();
+    const text  = response.text;
     const match = text.match(/\{[^}]+\}/);
     if (!match) return null;
     const { x, y } = JSON.parse(match[0]);
@@ -201,62 +191,12 @@ async function geminiLocateElement(page, description) {
   }
 }
 
-// ── Ollama visuel klik-hjælper ────────────────────────────────────────────────
-
 /**
- * Tager et screenshot af `page`, sender det til Ollama (Gemma 3 multimodal)
- * og beder den finde et element beskrevet med `description`.
- * Returnerer {x, y} pixelkoordinater eller null.
- *
- * Kræver at OLLAMA_MODEL er et multimodalt model (f.eks. gemma3:4b).
- */
-async function ollamaLocateElement(page, description) {
-  try {
-    const screenshot = await page.screenshot({ type: 'png', fullPage: false });
-    const viewport   = page.viewportSize();
-    const base64     = screenshot.toString('base64');
-
-    const prompt =
-      `Look at this screenshot of a webpage (${viewport.width}×${viewport.height} pixels).\n` +
-      `Find: "${description}"\n` +
-      `Reply ONLY with a JSON object: {"x": <pixels from left>, "y": <pixels from top>}\n` +
-      `Coordinates must point to the center of the element. ` +
-      `If not visible, reply: {"x": null, "y": null}`;
-
-    const res = await fetch(`${OLLAMA_HOST}/api/chat`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: OLLAMA_MODEL,
-        stream: false,
-        messages: [{ role: 'user', content: prompt, images: [base64] }],
-      }),
-    });
-
-    if (!res.ok) throw new Error(`Ollama HTTP ${res.status}`);
-    const data = await res.json();
-    const text = data.message?.content || '';
-    const match = text.match(/\{[^}]+\}/);
-    if (!match) return null;
-    const { x, y } = JSON.parse(match[0]);
-    if (x == null || y == null) return null;
-    console.log(`  ↳ Ollama/Gemma fandt element på (${Math.round(x)}, ${Math.round(y)})`);
-    return { x: Math.round(x), y: Math.round(y) };
-  } catch (err) {
-    console.log(`  ⚠ Ollama lokalisering fejlede: ${err.message.split('\n')[0]}`);
-    return null;
-  }
-}
-
-/**
- * Vælger den bedste tilgængelige visuelle lokalisator:
- * – Gemini hvis GEMINI_KEY er sat
- * – Ollama/Gemma hvis MODEL=ollama
- * – Ellers null
+ * Vælger den bedste tilgængelige visuelle lokalisator.
+ * Bruger Gemini hvis GEMINI_KEY er sat, ellers null.
  */
 async function locateElement(page, description) {
   if (GEMINI_KEY) return geminiLocateElement(page, description);
-  if (MODEL === 'ollama') return ollamaLocateElement(page, description);
   return null;
 }
 
@@ -756,33 +696,100 @@ Regler:
 `.trim();
 }
 
-// ── AI-ekstraktion: Gemini 2.0 Flash (GRATIS) ────────────────────────────────
+// ── AI-ekstraktion: Gemini 2.0 Flash ─────────────────────────────────────────
 
-async function extractWithGemini(pdfBase64, supermarket, week, year) {
+const GEMINI_VISION_PROMPT =
+  'Du er en data-ekstraktor. Kig på dette billede fra en dansk tilbudsavis. ' +
+  'Find alle varer og returnér KUN et validt JSON-array med objekter på præcis dette format: ' +
+  '[{ "navn": "Produktets navn", "pris": 25.50, "maengde": "F.eks. 400g eller 1 stk" }]. ' +
+  'Inkluder kun produkter med en synlig pris. Skriv INTET andet end JSON-arrayet.';
+
+/**
+ * Sender en PDF til Gemini Vision og returnerer råt JSON-svar.
+ *
+ * – PDFs ≤ 19 MB: sendes som inline base64 (ét API-kald).
+ * – PDFs > 19 MB: uploades via Gemini Files API og slettes bagefter.
+ *   Gemini Files API håndterer op til 2 GB – ingen øvre grænse for tilbudsaviser.
+ */
+async function extractWithGemini(pdfPath) {
   if (!GEMINI_KEY) {
     throw new Error(
-      'GEMINI_API_KEY mangler.\n' +
-      'Hent gratis nøgle: https://aistudio.google.com/apikey\n' +
-      'Kør: GEMINI_API_KEY=din_nøgle node pipeline.js'
+      'GEMINI_API_KEY mangler. Hent gratis nøgle: https://aistudio.google.com/apikey\n' +
+      'Kør: $env:GEMINI_API_KEY="din_nøgle"; node pipeline.js'
     );
   }
 
-  // Lazy-load for at undgå fejl hvis pakken ikke er installeret
-  const { GoogleGenerativeAI } = require('@google/generative-ai');
-  const genAI = new GoogleGenerativeAI(GEMINI_KEY);
-  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+  const { GoogleGenAI } = require('@google/genai');
+  const ai = new GoogleGenAI({ apiKey: GEMINI_KEY });
 
-  const result = await model.generateContent([
-    {
-      inlineData: {
-        mimeType: 'application/pdf',
-        data:     pdfBase64,
-      },
-    },
-    { text: buildPrompt(supermarket, week, year) },
-  ]);
+  const sizeMb = fs.statSync(pdfPath).size / 1024 / 1024;
+  let uploadedFileName = null;
+  let parts;
 
-  return result.response.text();
+  if (sizeMb <= GEMINI_INLINE_MB) {
+    // ── Lille PDF: inline base64 ──────────────────────────────────────────────
+    const data = fs.readFileSync(pdfPath).toString('base64');
+    parts = [
+      { inlineData: { mimeType: 'application/pdf', data } },
+      { text: GEMINI_VISION_PROMPT },
+    ];
+  } else {
+    // ── Stor PDF: Files API ───────────────────────────────────────────────────
+    console.log(`  ↳ PDF (${sizeMb.toFixed(1)} MB) – uploader via Gemini Files API...`);
+    const upload = await ai.files.upload({
+      file:   pdfPath,
+      config: { mimeType: 'application/pdf', displayName: path.basename(pdfPath) },
+    });
+    uploadedFileName = upload.name;
+
+    // Poll indtil filen er ACTIVE (store filer tager op til 30+ sek.)
+    let file = upload;
+    while (file.state === 'PROCESSING') {
+      await new Promise(r => setTimeout(r, 5_000));
+      file = await ai.files.get({ name: uploadedFileName });
+      console.log(`  ↳ Processeringsstate: ${file.state}...`);
+    }
+    if (file.state === 'FAILED') {
+      throw new Error(`Gemini Files API: processeringen fejlede (state=FAILED)`);
+    }
+    if (file.state !== 'ACTIVE') {
+      throw new Error(`Gemini Files API: uventet state=${file.state}`);
+    }
+
+    console.log(`  ↳ Fil klar: ${file.uri.substring(0, 60)}`);
+    parts = [
+      { fileData: { mimeType: 'application/pdf', fileUri: file.uri } },
+      { text: GEMINI_VISION_PROMPT },
+    ];
+  }
+
+  const contents = [{ role: 'user', parts }];
+
+  try {
+    let lastErr;
+    for (let attempt = 1; attempt <= 5; attempt++) {
+      try {
+        const response = await ai.models.generateContent({
+          model:    'gemini-2.5-flash',
+          contents,
+          config:   { responseMimeType: 'application/json' },
+        });
+        return response.text;
+      } catch (err) {
+        lastErr = err;
+        const isRetryable = err.message && (err.message.includes('429') || err.message.includes('503'));
+        if (!isRetryable || attempt === 5) throw err;
+        const waitSec = 10 * Math.pow(2, attempt - 1); // 10s → 20s → 40s → 80s
+        console.log(`  ↳ API fejl (forsøg ${attempt}/5) – venter ${waitSec}s...`);
+        await new Promise(r => setTimeout(r, waitSec * 1000));
+      }
+    }
+    throw lastErr;
+  } finally {
+    if (uploadedFileName) {
+      await ai.files.delete({ name: uploadedFileName }).catch(() => {});
+    }
+  }
 }
 
 // ── AI-ekstraktion: Claude Sonnet 4.6 (~$0.20-0.40 per avis) ─────────────────
@@ -823,105 +830,6 @@ async function extractWithClaude(pdfBase64, supermarket, week, year) {
   return response.content[0].text;
 }
 
-// ── AI-ekstraktion: Ollama (lokal Gemma) ────────────────────────────────────
-
-function buildOllamaPrompt(supermarket, week, year, flyerText) {
-  return `Extract supermarket offers from the text below. Output ONLY a JSON object — no markdown, no explanation, no text before or after the JSON.
-
-Required output format (copy this structure exactly):
-{"offers":[{"name":"Whole milk 1L","brand":"Arla","price":8.95,"original_price":null,"unit":"1L","valid_from":null,"valid_to":null,"page":1}]}
-
-Rules:
-- Only include products that have a visible price number
-- price must be a number (DKK), never a string
-- Use null for any missing field
-- If no products with prices are found, output: {"offers":[]}
-- Do NOT output anything except the JSON object
-
-Supermarket: ${supermarket.toUpperCase()}, week ${week}, year ${year}
-
-FLYER TEXT:
-${flyerText}`.trim();
-}
-
-async function callOllamaChunk(prompt) {
-  const res = await fetch(`${OLLAMA_HOST}/api/chat`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      model: OLLAMA_MODEL,
-      stream: false,
-      format: 'json',
-      options: { temperature: 0.1, num_ctx: OLLAMA_NUM_CTX },
-      messages: [
-        { role: 'system', content: 'Du er en præcis data-ekstraktor. Svar altid med valid JSON.' },
-        { role: 'user',   content: prompt },
-      ],
-    }),
-  });
-
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(
-      `Ollama HTTP ${res.status}. Kører Ollama lokalt på ${OLLAMA_HOST}? ` +
-      `Model: ${OLLAMA_MODEL}. Svar: ${body.substring(0, 200)}`
-    );
-  }
-
-  const data = await res.json();
-  const content = data?.message?.content;
-  if (!content) throw new Error('Ollama returnerede intet svar-indhold i message.content');
-  return content;
-}
-
-async function extractWithOllama(pdfBuffer, supermarket, week, year) {
-  const pdfParse = require('pdf-parse');
-  const parsed = await pdfParse(pdfBuffer);
-  const fullText = String(parsed.text || '').replace(/\u0000/g, ' ').trim();
-
-  if (!fullText) {
-    throw new Error('Kunne ikke udtrække tekst fra PDF til Ollama. Prøv Gemini/Claude eller en anden flyer-PDF.');
-  }
-
-  // Split teksten i chunks så hvert kald holder sig inden for num_ctx
-  const chunks = [];
-  for (let i = 0; i < fullText.length; i += OLLAMA_CHUNK_CHARS) {
-    chunks.push(fullText.slice(i, i + OLLAMA_CHUNK_CHARS));
-  }
-  console.log(`  ↳ PDF-tekst opdelt i ${chunks.length} chunk(s) à max ${OLLAMA_CHUNK_CHARS.toLocaleString('da-DK')} tegn`);
-
-  const allOffers = [];
-  for (let i = 0; i < chunks.length; i++) {
-    console.log(`  ↳ Chunk ${i + 1}/${chunks.length} → Ollama...`);
-    const prompt = buildOllamaPrompt(supermarket, week, year, chunks[i]);
-    let raw = null;
-    let parsed = null;
-    for (let attempt = 1; attempt <= 2; attempt++) {
-      try {
-        raw    = await callOllamaChunk(prompt);
-        parsed = parseAiJson(raw);
-        break; // success
-      } catch {
-        if (attempt === 1) {
-          console.log(`  ↳ Chunk ${i + 1}: svar ikke JSON – prøver igen...`);
-        }
-      }
-    }
-    if (parsed && Array.isArray(parsed) && parsed.length > 0) {
-      allOffers.push(...parsed);
-    } else if (!parsed) {
-      console.log(`  ⚠ Chunk ${i + 1} fejlede efter 2 forsøg – springer over`);
-      if (raw) console.log(`     Råt svar (300 tegn): ${String(raw).substring(0, 300)}`);
-    } else {
-      console.log(`  ↳ Chunk ${i + 1}: ingen produkter i dette tekststykke`);
-    }
-  }
-
-  if (allOffers.length === 0) throw new Error('Ingen tilbud udtrukket fra nogen chunk');
-
-  // Returner som JSON-streng så resten af pipelinen kan parse det ens
-  return JSON.stringify(allOffers);
-}
 
 // ── Parse AI-svar til array ───────────────────────────────────────────────────
 
@@ -974,6 +882,15 @@ async function processSupermarket(db, config, week, year) {
   const filename = `${config.name}_uge${week}_${year}.pdf`;
   const pdfPath  = path.join(PDF_DIR, filename);
 
+  // 1b. Check om tilbud allerede er udtrukket denne uge – spring alt over hvis ja
+  const existing = db.prepare(
+    'SELECT COUNT(*) AS cnt FROM offers WHERE supermarket = ? AND week = ? AND year = ?'
+  ).get(config.name, week, year);
+  if (existing.cnt > 0) {
+    console.log(`  Allerede i database (${existing.cnt} tilbud) – springer over`);
+    return existing.cnt;
+  }
+
   if (fs.existsSync(pdfPath)) {
     const sizeMb = fs.statSync(pdfPath).size / 1024 / 1024;
     console.log(`  PDF allerede hentet: ${filename} (${sizeMb.toFixed(1)} MB) – springer scraping over`);
@@ -999,20 +916,14 @@ async function processSupermarket(db, config, week, year) {
   }
 
   // 3. Udtræk tilbud med AI
-  const aiProvider = MODEL === 'claude'
-    ? 'Claude Sonnet 4.6'
-    : MODEL === 'ollama'
-      ? `Ollama (${OLLAMA_MODEL})`
-      : 'Gemini 2.0 Flash';
+  const aiProvider = MODEL === 'claude' ? 'Claude Sonnet 4.6' : 'Gemini 2.0 Flash';
   console.log(`  Sender PDF til AI (${aiProvider})...`);
   let offers;
   try {
     const pdfBuffer = fs.readFileSync(pdfPath);
     const rawText   = MODEL === 'claude'
       ? await extractWithClaude(pdfBuffer.toString('base64'), config.name, week, year)
-      : MODEL === 'ollama'
-        ? await extractWithOllama(pdfBuffer, config.name, week, year)
-        : await extractWithGemini(pdfBuffer.toString('base64'), config.name, week, year);
+      : await extractWithGemini(pdfPath);
 
     offers = parseAiJson(rawText);
     console.log(`  AI udtrakte ${offers.length} produkter`);
@@ -1022,23 +933,28 @@ async function processSupermarket(db, config, week, year) {
   }
 
   // 4. Normaliser og gem i database
+  // Understøtter både danske feltnavne fra Gemini (navn/pris/maengde)
+  // og engelske feltnavne fra Claude (name/price/unit).
   const fetchedAt = new Date().toISOString();
   const rows = offers
-    .filter(o => o.name && String(o.name).trim())
-    .map(o => ({
-      supermarket:    config.name,
-      week,
-      year,
-      name:           String(o.name).trim().substring(0, 255),
-      brand:          o.brand          != null ? String(o.brand).trim()  : null,
-      price:          typeof o.price === 'number'          ? o.price          : null,
-      original_price: typeof o.original_price === 'number' ? o.original_price : null,
-      unit:           o.unit           != null ? String(o.unit).trim()   : null,
-      valid_from:     o.valid_from     != null ? String(o.valid_from)    : null,
-      valid_to:       o.valid_to       != null ? String(o.valid_to)      : null,
-      page_in_flyer:  typeof o.page === 'number' ? o.page                : null,
-      fetched_at: fetchedAt,
-    }));
+    .filter(o => (o.navn || o.name) && String(o.navn ?? o.name).trim())
+    .map(o => {
+      const price = o.pris ?? o.price;
+      return {
+        supermarket:    config.name,
+        week,
+        year,
+        name:           String(o.navn ?? o.name).trim().substring(0, 255),
+        brand:          o.brand != null ? String(o.brand).trim() : null,
+        price:          typeof price === 'number' ? price : null,
+        original_price: typeof o.original_price === 'number' ? o.original_price : null,
+        unit:           (o.maengde ?? o.unit) != null ? String(o.maengde ?? o.unit).trim() : null,
+        valid_from:     o.valid_from != null ? String(o.valid_from) : null,
+        valid_to:       o.valid_to   != null ? String(o.valid_to)   : null,
+        page_in_flyer:  typeof o.page === 'number' ? o.page : null,
+        fetched_at:     fetchedAt,
+      };
+    });
 
   storeOffers(db, rows);
   console.log(`  ✔ ${rows.length} tilbud gemt i databasen`);
@@ -1060,11 +976,8 @@ async function processSupermarket(db, config, week, year) {
 // ── Entry point ───────────────────────────────────────────────────────────────
 
 async function main() {
-  const supported = new Set(['gemini', 'claude', 'ollama']);
-  if (!supported.has(MODEL)) {
-    throw new Error(
-      `Ukendt MODEL="${MODEL_RAW}". Brug en af: gemini, claude, ollama (eller gemma som alias for ollama).`
-    );
+  if (!['gemini', 'claude'].includes(MODEL)) {
+    throw new Error(`Ukendt MODEL="${MODEL}". Brug: gemini (standard) eller claude.`);
   }
 
   const today = new Date();
@@ -1075,9 +988,6 @@ async function main() {
   console.log('║         Supermarket Tilbud Pipeline  –  PDF + AI              ║');
   console.log('╚═══════════════════════════════════════════════════════════════╝');
   console.log(`Model:      ${getModelLabel()}`);
-  if (MODEL === 'ollama') {
-    console.log(`Ollama URL: ${OLLAMA_HOST}`);
-  }
   console.log(`ISO-uge:    ${week} / ${year}`);
   console.log(`Database:   ${DB_PATH}`);
   console.log(`PDF-mappe:  ${PDF_DIR}`);
