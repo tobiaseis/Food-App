@@ -28,13 +28,21 @@ if (/service_role/.test(anon)) {
 // ville deployet lykkes og siden være helt tom – en fejl der er svær at
 // gennemskue bagefter. Stop hellere buildet med det samme.
 if (process.env.VERCEL && !(url && anon)) {
+  const env = process.env.VERCEL_ENV || 'ukendt';
   console.error([
     'FEJL: byg på Vercel uden Supabase-nøgler.',
     '',
     `  SUPABASE_URL       ${url ? 'sat' : 'MANGLER'}`,
     `  SUPABASE_ANON_KEY  ${anon ? 'sat' : 'MANGLER'}`,
     '',
-    'Tilføj dem under Project Settings → Environment Variables og deploy igen.',
+    `Denne kørsel er miljøet "${env}".`,
+    '',
+    'Project Settings → Environment Variables → tilføj begge, og sæt flueben',
+    'ved BÅDE Production, Preview og Development. Variabler er nemlig delt op',
+    'pr. miljø: sidder de kun på Production, kan et branch-deploy (= Preview)',
+    'ikke se dem, og buildet fejler præcis som her.',
+    '',
+    'SUPABASE_ANON_KEY skal være anon-nøglen – ikke service_role.',
   ].join('\n'));
   process.exit(1);
 }

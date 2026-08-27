@@ -82,8 +82,16 @@ jobs:
 
       # WAL-filen skal foldes ind i data.db, ellers uploader vi en base uden
       # de nyeste skrivninger.
+      #
+      # if: always() er vigtig. Ingest og opskrifts-crawl kan tage en halv time,
+      # og uden den blev hele det arbejde smidt væk, hver gang et senere trin
+      # fejlede – næste kørsel startede så forfra på en tom base og fejlede på
+      # ny. En delvist opdateret SQLite-base er stadig en gyldig base, så det er
+      # altid bedre at gemme den end at kassere den.
       - name: Luk databasen af
+        if: always()
         run: |
+          if [ ! -f data.db ]; then echo "ingen data.db at gemme"; exit 0; fi
           node -e "
             const db=require('better-sqlite3')('data.db');
             db.pragma('wal_checkpoint(TRUNCATE)');
@@ -92,7 +100,10 @@ jobs:
           ls -lh data.db
 
       - name: Gem database til næste kørsel
-        run: gh release upload db data.db --clobber
+        if: always()
+        run: |
+          if [ ! -f data.db ]; then echo "ingen data.db at gemme"; exit 0; fi
+          gh release upload db data.db --clobber
 
       - name: Resumé
         run: |

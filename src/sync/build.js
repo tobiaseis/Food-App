@@ -224,13 +224,92 @@ async function syncWatches(db, log) {
 
 // ── Push ─────────────────────────────────────────────────────────────────────
 
+/**
+ * Tabeller der er fuldstændig afledt af data.db, i barn→forælder-rækkefølge.
+ *
+ * De ryddes før indsættelsen i stedet for at blive upsertet ovenpå, fordi
+ * products.id, offers.id og recipes.id er AUTOINCREMENT i SQLite. De er altså
+ * lokale løbenumre, ikke stabile nøgler: bygges basen forfra – fx hvis
+ * release-assetet mangler i Actions – får de samme varer nye id'er. En upsert
+ * på id ville så lægge hele kataloget ind én gang til under nye numre, og i
+ * praksis vælte på UNIQUE(slug) med en 409 på første vare der allerede fandtes.
+ *
+ * De rigtige nøgler er products.slug, offers.external_id og recipes.url, men de
+ * kan ikke bruges som on_conflict-mål: så ville id'et blive opdateret, mens
+ * offers og price_stats stadig peger på det gamle, og fremmednøglerne knækker.
+ * At udskifte hele det afledte lag er både enklere og mere korrekt – det fjerner
+ * samtidig udløbne tilbud, som ellers ville hobe sig op i Supabase for evigt.
+ *
+ * chains og stores står udenfor: deres id'er kommer fra Tjek og er stabile.
+ */
+const DERIVED = [
+  ['meal_plans',   'tier=not.is.null'],
+  ['deals',        'offer_id=not.is.null'],
+  ['price_series', 'product_id=not.is.null'],
+  ['price_stats',  'product_id=not.is.null'],
+  ['offers',       'id=not.is.null'],   // cascader til notifications
+  ['recipes',      'id=not.is.null'],
+  ['products',     'id=not.is.null'],
+];
+
+/**
+ * Læst/ulæst er brugerens data, men notifications hænger på offers med
+ * ON DELETE CASCADE og ryger derfor med, når tilbuddene udskiftes ovenfor.
+ * Tilstanden huskes på (watch_id, tilbuddets external_id) – begge er stabile,
+ * hvor id'erne netop ikke er.
+ */
+async function saveReadState(log) {
+  const rows = await sb.selectAll('notifications', {
+    select: 'watch_id,read_at,offers(external_id)',
+    query: 'read_at=not.is.null',
+  });
+  const seen = new Map();
+  for (const r of rows) {
+    const ext = r.offers && r.offers.external_id;
+    if (ext) seen.set(`${r.watch_id}|${ext}`, r.read_at);
+  }
+  if (seen.size) log(`  husker ${seen.size} læste notifikationer`);
+  return seen;
+}
+
+async function restoreReadState(seen, model, log) {
+  if (!seen.size || !model.notifications.length) return;
+
+  const extById = new Map(model.offers.map((o) => [o.id, o.external_id]));
+  const groups = new Map();               // watch_id + tidsstempel → offer_id'er
+  for (const n of model.notifications) {
+    const readAt = seen.get(`${n.watch_id}|${extById.get(n.offer_id)}`);
+    if (!readAt) continue;
+    const k = `${n.watch_id}|${readAt}`;
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(n.offer_id);
+  }
+  if (!groups.size) return;
+
+  let n = 0;
+  for (const [k, offerIds] of groups) {
+    const [watchId, readAt] = k.split('|');
+    await sb.patch(
+      `notifications?watch_id=eq.${watchId}&offer_id=in.(${offerIds.join(',')})`,
+      { read_at: readAt },
+    );
+    n += offerIds.length;
+  }
+  log(`  genskabte læst-markering på ${n} notifikationer`);
+}
+
 async function push(model, log) {
   const t = (name, rows, opts) => {
     log(`  → ${name}: ${rows.length}`);
     return sb.upsert(name, rows, { ...opts, log });
   };
 
-  // Rækkefølgen respekterer fremmednøglerne
+  const readState = await saveReadState(log);
+
+  log('  rydder afledte tabeller...');
+  for (const [table, filter] of DERIVED) await sb.del(table, filter);
+
+  // Indsættelsen går den modsatte vej: forælder før barn.
   await t('chains', model.chains, { onConflict: 'id' });
   await t('products', model.products, { onConflict: 'id' });
   await t('stores', model.stores, { onConflict: 'id' });
@@ -238,16 +317,13 @@ async function push(model, log) {
   await t('recipes', model.recipes, { onConflict: 'id' });
   await t('price_stats', model.priceStats, { onConflict: 'product_id,base_unit' });
   await t('price_series', model.priceSeries, { onConflict: 'product_id,base_unit,period', chunk: 400 });
-
-  // Ugens fund erstattes helt – gamle rækker er ikke længere aktuelle
-  await sb.del('deals', 'offer_id=gt.0');
   await t('deals', model.deals, { onConflict: 'offer_id' });
-
   await t('meal_plans', model.plans, { onConflict: 'tier,year,week,variant', chunk: 12 });
 
   if (model.notifications.length) {
     await t('notifications', model.notifications, { onConflict: 'watch_id,offer_id' });
   }
+  await restoreReadState(readState, model, log);
 
   await sb.upsert('sync_state', [{
     key: 'last_build',
@@ -317,4 +393,4 @@ if (require.main === module) {
     .catch((err) => { console.error('\n[FEJL]', err.message); process.exit(1); });
 }
 
-module.exports = { build, collectCatalog, collectPriceModel, collectDeals, collectPlans };
+module.exports = { build, push, collectCatalog, collectPriceModel, collectDeals, collectPlans };

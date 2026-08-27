@@ -77,10 +77,15 @@ opdager at basen er tom. Det tager bare længere tid.
    - Output Directory: `public`
 3. **Environment Variables** – tilføj dem **før** første deploy:
 
-| Navn | Værdi |
-|---|---|
-| `SUPABASE_URL` | samme som ovenfor |
-| `SUPABASE_ANON_KEY` | **anon**-nøglen – aldrig service_role |
+| Navn | Værdi | Miljøer |
+|---|---|---|
+| `SUPABASE_URL` | samme som ovenfor | Production + Preview + Development |
+| `SUPABASE_ANON_KEY` | **anon**-nøglen – aldrig service_role | Production + Preview + Development |
+
+> **Sæt flueben ved alle tre miljøer.** Vercel holder variabler adskilt pr.
+> miljø, og alt andet end din produktionsgren bygger som **Preview**. Sidder
+> nøglerne kun på Production, fejler et branch-deploy med
+> `SUPABASE_URL MANGLER`, selv om variablen tydeligvis står i listen.
 
 4. Deploy.
 
@@ -149,3 +154,28 @@ npm run sync         # byg og push (kræver SUPABASE_URL + SUPABASE_SERVICE_KEY)
   Sker hvis `build.js` fejlede efter tilbud, men før planerne. Se Actions-loggen.
 - **Actions fejler på `better-sqlite3`:** tjek at Node-versionen i workflowet
   stadig har prebuilds (22 har).
+- **`409 · duplicate key value violates unique constraint "products_slug_key"`:**
+  skulle ikke kunne ske mere. `push()` udskifter hele det afledte lag ved hver
+  kørsel, netop fordi `products.id`, `offers.id` og `recipes.id` er
+  AUTOINCREMENT og altså får nye værdier, hvis basen bygges forfra. Ser du den
+  igen, er der kommet en upsert på `id` ind et sted – `test/sync.test.js`
+  fanger det.
+- **Vercel: `FEJL: byg på Vercel uden Supabase-nøgler`:** buildet stopper med
+  vilje. Se miljø-noten under punkt 3 – ni ud af ti gange mangler fluebenet ved
+  Preview.
+
+## Databasen skal overleve
+
+`data.db` er sandheden: prishistorikken findes kun der. Workflowet gemmer den
+som release-asset **også når et senere trin fejler** (`if: always()`), fordi
+ingest og opskrifts-crawl tager op mod en halv time. Uden det ville en fejlet
+Supabase-synkronisering smide hele kørslen væk, og næste kørsel ville starte
+forfra på en tom base.
+
+Har du en god base lokalt, så send den med, før du lader Actions køre – ellers
+crawler den sine egne (færre) opskrifter:
+
+```bash
+npm run db:checkpoint
+gh release upload db data.db --clobber
+```

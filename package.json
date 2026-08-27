@@ -13,7 +13,7 @@
     "reclassify": "node src/recipes/reclassify.js",
     "watch": "node src/watch/notify.js",
     "update": "node src/update.js",
-    "test": "node --test test/normalize.test.js",
+    "test": "node --test test/normalize.test.js test/sync.test.js",
     "legacy:pdf": "node pipeline.js",
     "update:quiet": "node src/update.js --quiet",
     "schedule": "powershell -ExecutionPolicy Bypass -File scripts/schedule-windows.ps1",

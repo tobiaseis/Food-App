@@ -107,4 +107,16 @@ async function del(table, query) {
   });
 }
 
-module.exports = { request, upsert, selectAll, del, headers, isConfigured, assertConfigured, URL_BASE };
+/** Opdaterer de rækker filteret rammer. `path` skal indeholde filteret. */
+async function patch(path, values) {
+  return request(path, {
+    method: 'PATCH',
+    headers: headers({ Prefer: 'return=minimal' }),
+    body: JSON.stringify(values),
+  });
+}
+
+module.exports = {
+  request, upsert, selectAll, del, patch,
+  headers, isConfigured, assertConfigured, URL_BASE,
+};
