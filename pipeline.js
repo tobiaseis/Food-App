@@ -10,7 +10,7 @@
  *   npm install
  *   npx playwright install chromium
  *
- * ── Kør med Gemini 2.0 Flash (standard) ───────────────────────────────────
+ * ── Kør med Gemini 2.5 Flash (standard) ───────────────────────────────────
  *   Hent gratis nøgle: https://aistudio.google.com/apikey
  *   $env:GEMINI_API_KEY="din_nøgle"; node pipeline.js
  *
@@ -42,7 +42,7 @@ const MAX_CLAUDE_PDF_MB = 23;
 
 function getModelLabel() {
   if (MODEL === 'claude') return 'Claude Sonnet 4.6  (betalt ~$0.20-0.40/avis)';
-  return 'Gemini 2.0 Flash   (gratis)';
+  return 'Gemini 2.5 Flash   (gratis)';
 }
 
 // ── ISO-ugehjælpere (identisk logik som discover.js) ─────────────────────────
@@ -696,7 +696,7 @@ Regler:
 `.trim();
 }
 
-// ── AI-ekstraktion: Gemini 2.0 Flash ─────────────────────────────────────────
+// ── AI-ekstraktion: Gemini 2.5 Flash ─────────────────────────────────────────
 
 const GEMINI_VISION_PROMPT =
   'Du er en data-ekstraktor. Kig på dette billede fra en dansk tilbudsavis. ' +
@@ -704,12 +704,73 @@ const GEMINI_VISION_PROMPT =
   '[{ "navn": "Produktets navn", "pris": 25.50, "maengde": "F.eks. 400g eller 1 stk" }]. ' +
   'Inkluder kun produkter med en synlig pris. Skriv INTET andet end JSON-arrayet.';
 
+// Maks sider pr. chunk når vi splitter store PDFs.
+// 4 sider à ~2.4 MB = ~10 MB pr. chunk – godt under Geminis 20 MB inline-grænse.
+const CHUNK_PAGES = 4;
+// Pause mellem chunk-kald for at undgå rate-limit
+const CHUNK_DELAY_MS = 15_000;
+
 /**
- * Sender en PDF til Gemini Vision og returnerer råt JSON-svar.
+ * Splitter en PDF-buffer op i chunks à max CHUNK_PAGES sider.
+ * Returnerer array af Buffer (én pr. chunk).
+ */
+async function splitPdfIntoChunks(pdfBuffer) {
+  const { PDFDocument } = require('pdf-lib');
+  const srcDoc = await PDFDocument.load(pdfBuffer);
+  const totalPages = srcDoc.getPageCount();
+  const chunks = [];
+
+  for (let start = 0; start < totalPages; start += CHUNK_PAGES) {
+    const end = Math.min(start + CHUNK_PAGES, totalPages);
+    const chunkDoc = await PDFDocument.create();
+    const pageIndices = Array.from({ length: end - start }, (_, i) => start + i);
+    const copiedPages = await chunkDoc.copyPages(srcDoc, pageIndices);
+    copiedPages.forEach(p => chunkDoc.addPage(p));
+    const chunkBytes = await chunkDoc.save();
+    chunks.push(Buffer.from(chunkBytes));
+  }
+
+  return chunks;
+}
+
+/**
+ * Sender ét Gemini-kald med en inline base64-PDF og returnerer parsed JSON-array.
+ * Prøver op til 5 gange med eksponentiel backoff ved 429/503.
+ */
+async function callGeminiWithChunk(ai, base64Data) {
+  const contents = [
+    { inlineData: { mimeType: 'application/pdf', data: base64Data } },
+    GEMINI_VISION_PROMPT,
+  ];
+
+  let lastErr;
+  for (let attempt = 1; attempt <= 5; attempt++) {
+    try {
+      const response = await ai.models.generateContent({
+        model:   'gemini-2.5-flash',
+        contents,
+        config:  { responseMimeType: 'application/json' },
+      });
+      const text = response.text.trim();
+      // Gem råt svar – parser håndterer tom eller ugyldig JSON
+      return JSON.parse(text);
+    } catch (err) {
+      lastErr = err;
+      const isRetryable = err.message && (err.message.includes('429') || err.message.includes('503'));
+      if (!isRetryable || attempt === 5) throw err;
+      const waitSec = 30 * Math.pow(2, attempt - 1); // 30s → 60s → 120s → 240s
+      console.log(`  ↳ API fejl (forsøg ${attempt}/5) – venter ${waitSec}s...`);
+      await new Promise(r => setTimeout(r, waitSec * 1000));
+    }
+  }
+  throw lastErr;
+}
+
+/**
+ * Sender en PDF til Gemini Vision og returnerer råt JSON-svar (samlet array).
  *
- * – PDFs ≤ 19 MB: sendes som inline base64 (ét API-kald).
- * – PDFs > 19 MB: uploades via Gemini Files API og slettes bagefter.
- *   Gemini Files API håndterer op til 2 GB – ingen øvre grænse for tilbudsaviser.
+ * Bruger udelukkende inlineData (ingen Files API).
+ * Store PDFs splittes i chunks à max CHUNK_PAGES sider, der sendes enkeltvis.
  */
 async function extractWithGemini(pdfPath) {
   if (!GEMINI_KEY) {
@@ -722,74 +783,41 @@ async function extractWithGemini(pdfPath) {
   const { GoogleGenAI } = require('@google/genai');
   const ai = new GoogleGenAI({ apiKey: GEMINI_KEY });
 
-  const sizeMb = fs.statSync(pdfPath).size / 1024 / 1024;
-  let uploadedFileName = null;
-  let parts;
+  const pdfBuffer = fs.readFileSync(pdfPath);
+  const sizeMb    = pdfBuffer.length / 1024 / 1024;
 
+  let chunks;
   if (sizeMb <= GEMINI_INLINE_MB) {
-    // ── Lille PDF: inline base64 ──────────────────────────────────────────────
-    const data = fs.readFileSync(pdfPath).toString('base64');
-    parts = [
-      { inlineData: { mimeType: 'application/pdf', data } },
-      { text: GEMINI_VISION_PROMPT },
-    ];
+    // Lille PDF: ét enkelt chunk
+    chunks = [pdfBuffer];
   } else {
-    // ── Stor PDF: Files API ───────────────────────────────────────────────────
-    console.log(`  ↳ PDF (${sizeMb.toFixed(1)} MB) – uploader via Gemini Files API...`);
-    const upload = await ai.files.upload({
-      file:   pdfPath,
-      config: { mimeType: 'application/pdf', displayName: path.basename(pdfPath) },
-    });
-    uploadedFileName = upload.name;
-
-    // Poll indtil filen er ACTIVE (store filer tager op til 30+ sek.)
-    let file = upload;
-    while (file.state === 'PROCESSING') {
-      await new Promise(r => setTimeout(r, 5_000));
-      file = await ai.files.get({ name: uploadedFileName });
-      console.log(`  ↳ Processeringsstate: ${file.state}...`);
-    }
-    if (file.state === 'FAILED') {
-      throw new Error(`Gemini Files API: processeringen fejlede (state=FAILED)`);
-    }
-    if (file.state !== 'ACTIVE') {
-      throw new Error(`Gemini Files API: uventet state=${file.state}`);
-    }
-
-    console.log(`  ↳ Fil klar: ${file.uri.substring(0, 60)}`);
-    parts = [
-      { fileData: { mimeType: 'application/pdf', fileUri: file.uri } },
-      { text: GEMINI_VISION_PROMPT },
-    ];
+    // Stor PDF: split i sider-chunks
+    console.log(`  ↳ PDF (${sizeMb.toFixed(1)} MB) – splitter i chunks à ${CHUNK_PAGES} sider...`);
+    chunks = await splitPdfIntoChunks(pdfBuffer);
+    console.log(`  ↳ ${chunks.length} chunks oprettet`);
   }
 
-  const contents = [{ role: 'user', parts }];
+  const allOffers = [];
 
-  try {
-    let lastErr;
-    for (let attempt = 1; attempt <= 5; attempt++) {
-      try {
-        const response = await ai.models.generateContent({
-          model:    'gemini-2.5-flash',
-          contents,
-          config:   { responseMimeType: 'application/json' },
-        });
-        return response.text;
-      } catch (err) {
-        lastErr = err;
-        const isRetryable = err.message && (err.message.includes('429') || err.message.includes('503'));
-        if (!isRetryable || attempt === 5) throw err;
-        const waitSec = 10 * Math.pow(2, attempt - 1); // 10s → 20s → 40s → 80s
-        console.log(`  ↳ API fejl (forsøg ${attempt}/5) – venter ${waitSec}s...`);
-        await new Promise(r => setTimeout(r, waitSec * 1000));
-      }
+  for (let i = 0; i < chunks.length; i++) {
+    if (chunks.length > 1) {
+      console.log(`  ↳ Sender chunk ${i + 1}/${chunks.length}...`);
     }
-    throw lastErr;
-  } finally {
-    if (uploadedFileName) {
-      await ai.files.delete({ name: uploadedFileName }).catch(() => {});
+
+    const base64Data = chunks[i].toString('base64');
+    const offers = await callGeminiWithChunk(ai, base64Data);
+
+    if (Array.isArray(offers)) {
+      allOffers.push(...offers);
+    }
+
+    // Vent mellem kald for at undgå rate-limit (spring over efter sidste chunk)
+    if (i < chunks.length - 1) {
+      await new Promise(r => setTimeout(r, CHUNK_DELAY_MS));
     }
   }
+
+  return JSON.stringify(allOffers);
 }
 
 // ── AI-ekstraktion: Claude Sonnet 4.6 (~$0.20-0.40 per avis) ─────────────────
@@ -916,7 +944,7 @@ async function processSupermarket(db, config, week, year) {
   }
 
   // 3. Udtræk tilbud med AI
-  const aiProvider = MODEL === 'claude' ? 'Claude Sonnet 4.6' : 'Gemini 2.0 Flash';
+  const aiProvider = MODEL === 'claude' ? 'Claude Sonnet 4.6' : 'Gemini 2.5 Flash';
   console.log(`  Sender PDF til AI (${aiProvider})...`);
   let offers;
   try {

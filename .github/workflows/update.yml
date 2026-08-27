@@ -1,0 +1,123 @@
+name: Hent tilbud og opdatér Supabase
+
+on:
+  schedule:
+    # 05:10 UTC dagligt. Kæderne udgiver ikke aviser på samme ugedag, og
+    # kørslen er idempotent (nøglet på Tjeks offer-id), så daglig kørsel
+    # koster ingenting og sikrer, at ingen uge går tabt.
+    # Bemærk: GitHub kan forsinke planlagte jobs 15-30 min i spidsbelastning.
+    - cron: '10 5 * * *'
+  workflow_dispatch:
+    inputs:
+      crawl_recipes:
+        description: 'Hent også nye opskrifter (tager ~20 min)'
+        type: boolean
+        default: false
+
+# Databasen er én fil – to samtidige kørsler ville overskrive hinanden.
+concurrency:
+  group: madplan-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write        # til at gemme databasen som release-asset
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Installér afhængigheder
+        run: npm ci --omit=optional
+
+      # Prishistorikken er hele pointen med appen, så databasen skal overleve
+      # mellem kørsler. Den gemmes som release-asset frem for i git: et 12 MB
+      # binært commit om dagen ville sprænge repoet på et år.
+      - name: Hent database fra release
+        run: |
+          gh release view db >/dev/null 2>&1 || \
+            gh release create db --title "Database" --notes "SQLite-snapshot. Overskrives af den daglige kørsel."
+          gh release download db --pattern data.db --clobber 2>/dev/null \
+            && echo "Database hentet ($(du -h data.db | cut -f1))" \
+            || echo "Ingen database endnu – der bygges en ny"
+
+      - name: Hent opskrifter (kun hvis basen er tom eller efterspurgt)
+        run: |
+          COUNT=$(node -e "
+            const fs=require('fs');
+            if(!fs.existsSync('data.db')){console.log(0);process.exit(0)}
+            try{
+              const db=require('better-sqlite3')('data.db',{readonly:true});
+              console.log(db.prepare('SELECT COUNT(*) n FROM recipes').get().n);
+            }catch{console.log(0)}
+          ")
+          echo "Opskrifter i basen: $COUNT"
+          if [ "$COUNT" -lt 200 ] || [ "${{ inputs.crawl_recipes }}" = "true" ]; then
+            echo "Henter opskrifter..."
+            npm run recipes
+            node src/recipes/backfill-images.js
+            npm run reclassify
+          else
+            echo "Springer opskrifts-crawl over"
+          fi
+
+      - name: Hent denne uges tilbudsaviser
+        run: npm run update
+
+      - name: Byg read-model og send til Supabase
+        run: node src/sync/build.js
+
+      # WAL-filen skal foldes ind i data.db, ellers uploader vi en base uden
+      # de nyeste skrivninger.
+      - name: Luk databasen af
+        run: |
+          node -e "
+            const db=require('better-sqlite3')('data.db');
+            db.pragma('wal_checkpoint(TRUNCATE)');
+            db.close();
+          "
+          ls -lh data.db
+
+      - name: Gem database til næste kørsel
+        run: gh release upload db data.db --clobber
+
+      - name: Resumé
+        run: |
+          {
+            echo "### Opdatering gennemført"
+            echo ""
+            node -e "
+              const db=require('better-sqlite3')('data.db',{readonly:true});
+              const q=s=>db.prepare(s).get().n;
+              const now=new Date().toISOString();
+              console.log('| Tal | |');
+              console.log('|---|---|');
+              console.log('| Tilbud i alt | '+q('SELECT COUNT(*) n FROM offers')+' |');
+              console.log('| Aktive tilbud | '+db.prepare('SELECT COUNT(*) n FROM offers WHERE run_till IS NULL OR run_till>=?').get(now).n+' |');
+              console.log('| Varetyper | '+q('SELECT COUNT(*) n FROM products')+' |');
+              console.log('| Opskrifter | '+q('SELECT COUNT(*) n FROM recipes')+' |');
+              console.log('| Uger med data | '+q(\"SELECT COUNT(DISTINCT year||'-'||week) n FROM offers\")+' |');
+            "
+          } >> $GITHUB_STEP_SUMMARY
+
+      - name: Gem log som artefakt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: update-log
+          path: logs/
+          retention-days: 14
+          if-no-files-found: ignore

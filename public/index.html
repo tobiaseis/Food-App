@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Madplan · tilbud fra danske supermarkeder</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🥦</text></svg>">
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">Madplan<span>.</span></div>
+      <nav class="tabs" id="tabs">
+        <a href="#/plan">Madplan</a>
+        <a href="#/deals">Ugens fund</a>
+        <a href="#/offers">Alle tilbud</a>
+        <a href="#/watch">Følg varer</a>
+        <a href="#/settings">Indstillinger</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app"><div class="loading">Indlæser…</div></main>
+
+  <dialog id="modal">
+    <div class="dlg-head">
+      <div class="spread">
+        <h2 id="modal-title" style="margin:0;font-size:17px"></h2>
+        <button class="ghost" onclick="document.getElementById('modal').close()">Luk</button>
+      </div>
+    </div>
+    <div class="dlg-body" id="modal-body"></div>
+  </dialog>
+
+  <script src="/config.js"></script>
+  <script src="/data.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

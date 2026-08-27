@@ -2,3 +2,16 @@ node_modules/
 intercepted_data/*.json
 intercepted_data/*
 !intercepted_data/*.json
+
+.agents
+.claude
+# Database (genskabes med: npm run ingest && npm run recipes)
+data.db
+data.db-wal
+data.db-shm
+
+# Genereres ved deploy af scripts/build-web.js.
+# config.js SKAL med i git med tomme værdier: uden den fejler /config.js med
+# 404 ved en frisk klon. Vercel overskriver den i sit eget checkout, så
+# nøglerne havner aldrig i repoet.
+logs/

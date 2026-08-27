@@ -1,15 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node --check pipeline.js)",
-      "Bash(ollama list:*)",
-      "Bash(node -e \"const pkg = require\\('@google/generative-ai'\\); console.log\\(Object.keys\\(pkg\\)\\)\")",
-      "Bash(node -e \"const pkg = require\\('@google/generative-ai/server'\\); console.log\\(Object.keys\\(pkg\\)\\)\")",
-      "Bash(node -e \"const p = require\\('./package.json'\\); console.log\\('type:', p.type\\)\")",
-      "Bash(npm uninstall:*)",
-      "Bash(npm install:*)",
-      "Bash(node -e \"const g = require\\('@google/genai'\\); console.log\\(Object.keys\\(g\\)\\)\")",
-      "Bash(node -e ':*)"
+      "Bash(npm --version)"
     ]
   }
 }

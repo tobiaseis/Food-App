@@ -1,19 +1,40 @@
 {
-  "name": "supermarket-api-discovery",
+  "name": "madplan-tilbud",
   "version": "1.0.0",
-  "description": "Playwright script to discover hidden JSON APIs from Danish supermarket online flyers",
-  "main": "discover.js",
+  "description": "Ugentlige madplaner bygget på danske supermarkeders tilbudsaviser – med prishistorik og varenotifikationer",
+  "main": "src/server.js",
   "scripts": {
-    "discover": "node discover.js",
-    "pipeline": "node pipeline.js",
-    "analyze": "node analyze.js",
-    "install-browsers": "npx playwright install chromium"
+    "start": "node src/server.js",
+    "ingest": "node src/ingest/run.js",
+    "ingest:stores": "node src/ingest/run.js --stores",
+    "recompute": "node src/ingest/recompute.js",
+    "recipes": "node src/recipes/crawl.js --limit 320",
+    "recipes:images": "node src/recipes/backfill-images.js",
+    "reclassify": "node src/recipes/reclassify.js",
+    "watch": "node src/watch/notify.js",
+    "update": "node src/update.js",
+    "test": "node --test test/normalize.test.js",
+    "legacy:pdf": "node pipeline.js",
+    "update:quiet": "node src/update.js --quiet",
+    "schedule": "powershell -ExecutionPolicy Bypass -File scripts/schedule-windows.ps1",
+    "schedule:status": "powershell -ExecutionPolicy Bypass -File scripts/schedule-windows.ps1 -Status",
+    "schedule:remove": "powershell -ExecutionPolicy Bypass -File scripts/schedule-windows.ps1 -Remove",
+    "build": "node scripts/build-web.js",
+    "sync": "node src/sync/build.js",
+    "sync:dry": "node src/sync/build.js --dry-run",
+    "db:checkpoint": "node -e \"const db=require('better-sqlite3')('data.db');db.pragma('wal_checkpoint(TRUNCATE)');db.close();console.log('data.db lukket af')\""
   },
   "dependencies": {
+    "better-sqlite3": "^11.0.0"
+  },
+  "optionalDependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
     "@google/genai": "^1.49.0",
-    "better-sqlite3": "^11.0.0",
+    "pdf-lib": "^1.17.1",
     "pdf-parse": "^1.1.1",
     "playwright": "^1.44.0"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
