@@ -1,0 +1,15 @@
+# Vercel bygger kun frontenden. Alt herunder hører til ingest-pipelinen,
+# som kører i GitHub Actions – det skal ikke med i deployet.
+src/
+test/
+supabase/
+intercepted_data/
+logs/
+docs/
+.agents/
+.github/
+data.db
+data.db-wal
+data.db-shm
+pipeline.js
+*.pdf

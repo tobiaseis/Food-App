@@ -47,7 +47,7 @@ let CHAINS = [];
 
 function offerCard(o) {
   const img = o.image
-    ? `<img src="${esc(o.image)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
+    ? `<img src="${esc(o.image)}" alt="" loading="lazy">`
     : `<div style="width:66px;height:66px;border-radius:8px;background:var(--surface-2);flex-shrink:0"></div>`;
 
   return `<div class="offer" data-product="${o.product_id}">
@@ -225,7 +225,7 @@ function renderPlan(p) {
 
     return `<div class="day">
       <div class="day-name">${esc(d.day_name)}</div>
-      ${r.image ? `<img src="${esc(r.image)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : ''}
+      ${r.image ? `<img src="${esc(r.image)}" alt="" loading="lazy">` : ''}
       <div class="day-body">
         <div class="day-title"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></div>
         <div class="day-meta">
@@ -376,7 +376,7 @@ async function viewWatch() {
 
     $('#n-list').innerHTML = ns.length ? ns.map((n) => `
       <div class="notif ${n.read_at ? '' : 'unread'}">
-        ${n.image ? `<img src="${esc(n.image)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : ''}
+        ${n.image ? `<img src="${esc(n.image)}" alt="" loading="lazy">` : ''}
         <div style="flex:1;min-width:0">
           <div style="font-weight:590;font-size:13.5px">${esc(n.heading)}</div>
           <div class="det note">
@@ -532,6 +532,17 @@ async function route() {
   window.scrollTo(0, 0);
   await (ROUTES[base] || viewPlan)();
 }
+
+// Erstatter inline onclick/onerror i HTML. En streng Content-Security-Policy
+// (script-src 'self') blokerer inline handlere, så de bor her i stedet.
+document.getElementById('modal-close')
+  .addEventListener('click', () => document.getElementById('modal').close());
+
+// 'error' bobler ikke - derfor capture-fasen. Skjuler billeder der ikke kan hentes
+// (opskriftsfotos peger på eksterne sites, som kan nå at fjerne dem).
+document.addEventListener('error', (e) => {
+  if (e.target instanceof HTMLImageElement) e.target.style.visibility = 'hidden';
+}, true);
 
 window.addEventListener('hashchange', route);
 

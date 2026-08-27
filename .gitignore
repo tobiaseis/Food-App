@@ -15,3 +15,6 @@ data.db-shm
 # 404 ved en frisk klon. Vercel overskriver den i sit eget checkout, så
 # nøglerne havner aldrig i repoet.
 logs/
+
+# Agent-skills installeret lokalt (.agents ignoreres allerede)
+skills-lock.json

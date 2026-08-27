@@ -70,12 +70,12 @@ opdager at basen er tom. Det tager bare længere tid.
 
 ## 3. Vercel (5 min)
 
-1. **Add New → Project** → importér repoet.
-2. Vercel læser `vercel.json`, så build-kommando og output-mappe er sat.
-   Bekræft at der står:
+1. **Add New → Project** → importér repoet. Framework Preset: **Other**.
+2. Vercel læser `vercel.json`, så build-kommando og output-mappe er sat:
+   - Install Command: *(tom – springes over med vilje, se nedenfor)*
    - Build Command: `node scripts/build-web.js`
    - Output Directory: `public`
-3. **Environment Variables:**
+3. **Environment Variables** – tilføj dem **før** første deploy:
 
 | Navn | Værdi |
 |---|---|
@@ -86,7 +86,30 @@ opdager at basen er tom. Det tager bare længere tid.
 
 `scripts/build-web.js` skriver `public/config.js` ud fra de to variabler. Er de
 tomme, falder frontenden tilbage til den lokale server på `/api/*`, så
-`npm start` bliver ved med at virke uændret under udvikling.
+`npm start` bliver ved med at virke uændret under udvikling. **På Vercel findes
+den server ikke**, så buildet fejler med vilje hvis variablerne mangler – ellers
+ville deployet lykkes og siden være helt tom.
+
+### Hvorfor `installCommand` er tom
+
+Frontend-buildet er én fil, `scripts/build-web.js`, og den bruger kun `node:fs`
+og `node:path`. Kørte Vercel `npm install`, ville den kompilere `better-sqlite3`
+– et native-modul der hverken bruges eller er nødvendigt her, og som kan fejle
+på Vercels build-image. Tom install-kommando springer trinnet helt over.
+
+### Sikkerhedsheaders
+
+`vercel.json` sætter en Content-Security-Policy. Den er tilpasset appen:
+
+| Direktiv | Hvorfor |
+|---|---|
+| `script-src 'self'` | ingen inline-scripts – derfor ligger `modal-close`- og billed-fallback-lytterne i `app.js` |
+| `style-src 'self' 'unsafe-inline'` | app.js genererer HTML med `style="…"`-attributter |
+| `img-src 'self' data: https:` | tilbuds- og opskriftsfotos hentes fra eksterne domæner |
+| `connect-src 'self' https://*.supabase.co` | frontenden taler kun med Supabase |
+
+Tilføjer du en ny ekstern kilde (fx et CDN eller en font), skal den med i det
+relevante direktiv – ellers blokerer browseren den tavst.
 
 ---
 

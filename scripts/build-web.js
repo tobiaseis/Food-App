@@ -24,6 +24,21 @@ if (/service_role/.test(anon)) {
   process.exit(1);
 }
 
+// På Vercel findes der ingen /api/*-server at falde tilbage på. Uden nøgler
+// ville deployet lykkes og siden være helt tom – en fejl der er svær at
+// gennemskue bagefter. Stop hellere buildet med det samme.
+if (process.env.VERCEL && !(url && anon)) {
+  console.error([
+    'FEJL: byg på Vercel uden Supabase-nøgler.',
+    '',
+    `  SUPABASE_URL       ${url ? 'sat' : 'MANGLER'}`,
+    `  SUPABASE_ANON_KEY  ${anon ? 'sat' : 'MANGLER'}`,
+    '',
+    'Tilføj dem under Project Settings → Environment Variables og deploy igen.',
+  ].join('\n'));
+  process.exit(1);
+}
+
 const out = path.join(__dirname, '..', 'public', 'config.js');
 fs.writeFileSync(out, `// Genereret af scripts/build-web.js – rediger ikke i hånden.
 window.APP_CONFIG = {
