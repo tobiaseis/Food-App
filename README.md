@@ -33,19 +33,29 @@ Vercel (frontend) + Supabase (data) + GitHub Actions (den daglige kørsel).
 Se **[DEPLOY.md](DEPLOY.md)** for opsætningen.
 
 Kort fortalt: den tunge beregning bliver i GitHub Actions mod en lokal
-SQLite-fil, fordi én madplan kræver ~3.200 enkeltopslag – 183 ms lokalt, men op
-mod et minut mod en fjern database. Supabase modtager kun færdige resultater,
-så frontenden laver rene SELECTs, og pipelinen skal ikke skrives om til
-Postgres.
+SQLite-fil, fordi opslagene mod en fjern database ville tage op mod et minut.
+Supabase modtager færdige resultater, så frontenden laver rene SELECTs.
+
+Madplanen er den ene undtagelse, og med vilje. Den afhænger af brugerens
+favoritbutikker, og dem findes der 32.767 kombinationer af – de kan ikke
+forudberegnes. Actions bygger derfor de to små opslagstabeller, planen består
+af (`offer_index`: ~550 rækker, `recipe_index`: ~2.100), og `public/engine.js`
+sætter planen sammen i browseren. Samme fil kører begge steder, så en plan
+bygget lokalt og en bygget i skyen er den samme plan – det er der en test på.
 
 ---
 
 ## Hvad appen gør
 
 **Madplan** i tre spor – *sund & proteinrig (lavt kulhydrat)*, *klassisk*,
-*gourmet*. Syv retter sammensat, så flest mulige råvarer er på tilbud lige nu.
-Hver ret linker til opskriften hos kilden, og der følger en indkøbsliste med,
-grupperet efter butik.
+*gourmet*. Syv retter, hvor rettens **hovedråvare er på tilbud i de butikker,
+du selv handler i**. Hver ret linker til opskriften hos kilden, og der følger
+en indkøbsliste med, grupperet efter butik.
+
+**Mine butikker.** Man vælger de kæder, der ligger i nærheden – har man Rema og
+Netto, bygges planen kun af deres tilbud. Uden det valg er en madplan ikke en
+indkøbsliste, men en køretur: femten kæder på tværs af landet er ikke et sted,
+man handler. Valget gælder også "Ugens fund" og "Alle tilbud".
 
 Planen varierer fra uge til uge: retter fra de seneste fire ugers planer
 trykkes ned i rangeringen, og "Ny plan" omroker feltet, så man ikke får de
@@ -127,6 +137,46 @@ Dansk er et sammensætningssprog, så opslaget accepterer delmatch inde i ord
 "is" ramme "ris". Rangeringen tager hovedordet forrest, fordi danske varenavne
 gør det samme: *Skinke*culotte er skinke.
 
+### Hovedråvare, støtte og basisvare
+
+Alle ingredienser skal ikke være på tilbud – det ville aldrig kunne lade sig
+gøre. Men de rigtige skal. Ingredienserne deles derfor i tre:
+
+| Rolle | Eksempel i en fajita | Betydning |
+|---|---|---|
+| **Hovedråvare** | kyllingen | *skal* være på tilbud |
+| **Støtteråvare** | peberfrugt, tortillas, flåede tomater | tæller positivt, er ikke et krav |
+| **Basisvare** | olie, spidskommen, hvidløg, salt | tælles slet ikke |
+
+Hovedråvaren findes ud fra kategori og mængde: kød, fisk, æg og bælgfrugter kan
+bære en ret, og den tungeste af dem er rettens hovedråvare. Er der to i samme
+størrelsesorden – laks *og* torsk i en fiskelasagne – er begge et krav, mens de
+25 g bacon til pynt ikke er. Vegetarretter falder tilbage på den tungeste
+bærende råvare, så en linsegryde stadig har noget at planlægges omkring.
+
+Basisvarerne er ikke en principiel afgrænsning, men en praktisk: står varen i
+skabet i forvejen, køber man den sjældent på tilbud, og den bruges i så små
+mængder, at prisen alligevel ikke flytter noget. En madplan, der ventede på
+tilbud på hvidløg og paprika, ville aldrig blive til noget.
+
+**Kravet lemper sig selv – og siger det.** Har man kun to butikker, er der
+færre tilbud at bygge på. Motoren vælger derfor det strengeste af fire krav,
+der stadig giver nok retter at vælge imellem, og skriver hvilket det blev:
+
+1. alle hovedråvarer på tilbud *og* mindst en fjerdedel af resten
+2. alle hovedråvarer på tilbud
+3. rettens vigtigste hovedråvare på tilbud
+4. mindst én råvare på tilbud
+
+Uden den besked kunne man ikke se forskel på "alt er på tilbud" og "vi gav op
+og tog, hvad vi kunne finde".
+
+**Ukendte råvarer udelader retten.** Løftet kan kun holdes for råvarer, vi kan
+genkende. En opskrift med "750 g lammebov" – som taksonomien ikke kender – ville
+ellers se ud som en vegetarret og blive planlagt op om kartoflerne ved siden af.
+Ingredienslinjer, der ligner kød eller fisk uden at kunne slås op, markerer
+retten som ikke-planlægbar i stedet.
+
 ### Varianter der flytter prisen
 
 Nogle egenskaber gør en vare til en *anden* vare, fordi de systematisk ændrer
@@ -195,10 +245,11 @@ src/
   ingest/      Tjek-klient, ingest, genberegning
   price/       prishistorik og tilbudsvurdering
   recipes/     udtræk, kilder, crawler, klassifikation
-  mealplan/    madplansgenerator + indkøbsliste
+  mealplan/    henter data til madplansmotoren
   watch/       følg varer + notifikationer
   server.js    JSON-API + statisk frontend
 public/        frontend (vanilla JS, ingen byggetrin)
+  engine.js    madplansmotoren – kører BÅDE i Node og i browseren
   data.js      datalag: lokal server eller Supabase
 supabase/      Postgres-skema til read-modellen
 scripts/       Windows-opgave + web-build
@@ -223,8 +274,13 @@ test/          regressionstests
   Det er ærligt – vi ved det ikke – men det giver en ekstra gruppe med færre
   observationer.
 - **Prisoverslag på en madplan er et overslag.** Det regnes som opskriftens
-  mængder gange tilbudsprisen pr. kg/l. Basisvarer (salt, olie, krydderier)
+  mængder gange tilbudsprisen pr. kg/l – og for de råvarer, der *ikke* er på
+  tilbud, gange varetypens normalpris. Basisvarer (salt, olie, krydderier)
   tælles ikke med, og varer uden kendt normalpris indgår ikke i beløbet.
+- **Færre butikker giver færre retter at vælge imellem.** Med to kæder er der
+  typisk 50-60 varetyper på tilbud mod ~90 for alle femten. Planen kan stadig
+  bygges, men kravet lempes oftere, og prisoverslaget bliver højere, fordi
+  flere råvarer skal købes til normalpris.
 - **Enhedsprisen kan mangle.** Hvis mængdedata er urealistiske og avisen ikke
   selv oplyser en kilopris, sættes `unit_price` til stykpris i stedet for at
   gætte. Et forkert kr/kg ville ellers toppe listen over bedste tilbud.

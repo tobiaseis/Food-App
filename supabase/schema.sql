@@ -129,6 +129,68 @@ create table if not exists meal_plans (
   primary key (tier, year, week, variant)
 );
 
+-- ── Madplans-indeks ─────────────────────────────────────────────────────────
+--
+-- Favoritbutikker kan ikke forudberegnes: femten kæder giver 32.767 mulige
+-- kombinationer, og brugerens er kun kendt i browseren. Derfor forudberegner
+-- vi ikke selve planen, men de to opslagstabeller, planen bygges af – de er
+-- små nok til at hentes hjem, og så kører madplans-motoren (public/engine.js)
+-- i browseren med præcis de butikker, brugeren har valgt.
+
+-- Billigste aktive tilbud pr. varetype PR. KÆDE. Frontenden vælger selv
+-- rækkerne for sine favoritter og reducerer dem til ét kort.
+create table if not exists offer_index (
+  taxonomy_key      text not null,
+  chain_id          text not null references chains(id),
+  offer_id          bigint,
+  product_id        bigint,
+  product_name      text,
+  heading           text,
+  price             double precision,
+  unit_price        double precision,
+  base_unit         text,
+  normal_unit_price double precision,   -- varens egen normalpris (median)
+  image             text,
+  run_till          timestamptz,
+  primary key (taxonomy_key, chain_id)
+);
+create index if not exists idx_offer_index_chain on offer_index(chain_id);
+
+-- Normalpris pr. varetype på tværs af kæder. Bruges til at prissætte de
+-- ingredienser, der IKKE er på tilbud – de skal jo også købes.
+create table if not exists taxonomy_prices (
+  taxonomy_key text primary key,
+  name         text,
+  unit_price   double precision,
+  base_unit    text,
+  samples      int
+);
+
+-- Opskrifterne i planlægningsklar form: ingredienserne er allerede slået op i
+-- taksonomien, så browseren hverken skal kende den eller regne mængder om.
+create table if not exists recipe_index (
+  recipe_id     bigint primary key,
+  title         text not null,
+  url           text not null,
+  image         text,
+  source        text,
+  source_name   text,
+  servings      int,
+  total_minutes int,
+  kcal          double precision,
+  protein_g     double precision,
+  carbs_g       double precision,
+  nutrition_src text,
+  score_healthy double precision,
+  score_classic double precision,
+  score_premium double precision,
+  unknown_main  boolean default false,
+  items         jsonb not null          -- [{key,cat,staple,grams,ingredient}]
+);
+create index if not exists idx_recipe_index_healthy on recipe_index(score_healthy);
+create index if not exists idx_recipe_index_classic on recipe_index(score_classic);
+create index if not exists idx_recipe_index_premium on recipe_index(score_premium);
+
 -- "Ugens fund" med færdig vurdering.
 create table if not exists deals (
   offer_id     bigint primary key references offers(id),
@@ -201,6 +263,9 @@ alter table recipes      enable row level security;
 alter table price_stats  enable row level security;
 alter table price_series enable row level security;
 alter table meal_plans   enable row level security;
+alter table offer_index     enable row level security;
+alter table taxonomy_prices enable row level security;
+alter table recipe_index    enable row level security;
 alter table deals        enable row level security;
 alter table sync_state   enable row level security;
 alter table watches      enable row level security;
@@ -211,7 +276,8 @@ declare t text;
 begin
   -- Offentlig læsning af katalogdata
   foreach t in array array['chains','products','stores','offers','recipes',
-                           'price_stats','price_series','meal_plans','deals','sync_state']
+                           'price_stats','price_series','meal_plans','deals','sync_state',
+                           'offer_index','taxonomy_prices','recipe_index']
   loop
     execute format('drop policy if exists read_all on %I', t);
     execute format('create policy read_all on %I for select to anon, authenticated using (true)', t);

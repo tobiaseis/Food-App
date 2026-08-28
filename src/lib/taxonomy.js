@@ -52,20 +52,25 @@ const TAXONOMY = [
     da: ['ribeye', 'entrecote', 'culotte', 'tournedos', 'flanksteak', 'bøf'],
     en: ['ribeye', 'sirloin', 'steak', 'entrecote'], premium: true },
   { key: 'oksekoed', name: 'Oksekød', cat: 'meat', p: 21, kcal: 180, c: 0,
-    da: ['tykstegsfilet', 'oksekød', 'okseklump', 'oksetykkam', 'oksebov'], en: ['beef'] },
+    da: ['tykstegsfilet', 'oksekød', 'okseklump', 'oksetykkam', 'oksebov',
+         'okseinderlår', 'okseyderlår', 'oksebryst'], en: ['beef', 'brisket'] },
   { key: 'svinemoerbrad', name: 'Svinemørbrad', cat: 'meat', p: 21, kcal: 140, c: 0,
     da: ['svinemørbrad', 'svinefilet', 'mørbrad'], en: ['pork tenderloin', 'pork fillet'] },
   { key: 'flaeskesteg', name: 'Flæskesteg', cat: 'meat', p: 20, kcal: 260, c: 0,
-    da: ['flæskesteg', 'svinekam', 'nakkefilet', 'nakkekam'], en: ['pork roast', 'pork loin'] },
+    da: ['flæskesteg', 'svinekam', 'nakkefilet', 'nakkekam', 'ribbensteg', 'ribbenssteg',
+         'svinekæber', 'svineskank'],
+    en: ['pork roast', 'pork loin', 'pork shoulder', 'pork belly', 'pulled pork'] },
   { key: 'svinekoteletter', name: 'Svinekoteletter', cat: 'meat', p: 21, kcal: 200, c: 0,
     da: ['svinekoteletter', 'koteletter', 'nakkekoteletter'], en: ['pork chops', 'chops'] },
   { key: 'bacon', name: 'Bacon', cat: 'meat', p: 13, kcal: 400, c: 1,
     da: ['bacon', 'baconskiver', 'bacon i tern'], en: ['bacon', 'pancetta', 'streaky bacon'] },
   { key: 'lam', name: 'Lammekød', cat: 'meat', p: 20, kcal: 230, c: 0,
-    da: ['lammekølle', 'lammekød', 'lammekoteletter', 'lammefilet'],
+    da: ['lammekølle', 'lammekød', 'lammekoteletter', 'lammefilet',
+         'lammekrone', 'lammebov', 'lammehals', 'lammeskank'],
     en: ['lamb', 'rack of lamb', 'leg of lamb'], premium: true },
   { key: 'kalvekoed', name: 'Kalvekød', cat: 'meat', p: 21, kcal: 150, c: 0,
-    da: ['kalveculotte', 'kalvekød', 'kalvefilet', 'kalvetykkam'], en: ['veal'], premium: true },
+    da: ['kalveculotte', 'kalvekød', 'kalvefilet', 'kalvetykkam', 'kalveschnitzel'],
+    en: ['veal'], premium: true },
   { key: 'poelser', name: 'Pølser', cat: 'meat', p: 12, kcal: 290, c: 3,
     da: ['grillpølser', 'medisterpølse', 'pølser', 'wienerpølser', 'chorizo'],
     en: ['sausages', 'chorizo', 'sausage'] },
@@ -281,10 +286,19 @@ const TAXONOMY = [
     da: ['hundefoder', 'kattefoder', 'kattegrus'], en: [] },
 ];
 
-// Basisvarer man antages at have hjemme. De tæller ikke som "match" når vi
-// vurderer hvor meget af en opskrift der er på tilbud.
+// Basisvarer man antages at have hjemme. De tæller hverken som krav eller som
+// "match", når vi vurderer hvor meget af en opskrift der er på tilbud.
+//
+// Afgrænsningen er praktisk, ikke principiel: står varen i skabet i forvejen,
+// købes den sjældent på tilbud, og den bruges i så små mængder, at prisen
+// alligevel ikke flytter noget. En madplan, der ventede på tilbud på
+// hvidløg og paprika, ville aldrig blive til noget.
 const STAPLE_KEYS = new Set([
-  'salt', 'peber', 'olie', 'eddike', 'sukker', 'mel', 'krydderi', 'vand', 'bouillon',
+  // kolonial
+  'salt', 'peber', 'krydderi', 'olie', 'eddike', 'sukker', 'mel', 'vand',
+  'bouillon', 'soja', 'honning', 'ketchup',
+  // friske aromater der bruges i teskefulde, ikke i portioner
+  'hvidloeg', 'ingefaer', 'persille',
 ]);
 
 const NONFOOD_CATS = new Set(['nonfood']);
@@ -347,6 +361,36 @@ function lookup(text) {
   return best ? { entry: best.entry, term: best.term } : null;
 }
 
+/**
+ * Ligner denne ingredienslinje en hovedråvare, taksonomien ikke kendte?
+ *
+ * Madplanen lover, at rettens hovedråvare er på tilbud. Det løfte kan kun
+ * holdes for råvarer, vi kan genkende: en opskrift med "750 g lammebov" ser
+ * uden dette tjek ud som en vegetarret, og så ville planen blive bygget op
+ * om kartoflerne ved siden af – og love et tilbud på et lam, den aldrig har
+ * kigget efter.
+ *
+ * Retter, der rammes af dette, udelades hellere end at blive lovet forkert.
+ * Listen er derfor kød- og fiske-ord, der IKKE allerede har en varetype.
+ */
+const MAIN_HINT = new RegExp(
+  '(^|[^a-zæøå])(' + [
+    // dansk
+    'lamme', 'okse', 'svine', 'kalve', 'kyllinge', 'kalkun', 'andebryst', 'andelår',
+    'ribbenssteg', 'ribbensteg', 'mørbrad', 'schnitzel', 'kotelet', 'culotte',
+    'spareribs', 'kæber', 'skank', 'lever', 'fiskefars', 'kødet af',
+    // engelsk
+    'pork', 'beef', 'chicken', 'lamb', 'turkey', 'duck', 'venison', 'veal', 'mutton',
+    'prawn', 'shrimp', 'salmon', 'haddock', 'mackerel', 'tuna', 'squid', 'octopus',
+    'crab', 'lobster', 'scallop', 'mussel', 'oyster', 'anchov',
+    'chorizo', 'pancetta', 'salami', 'brisket', 'mince', 'steak', 'sausage',
+  ].join('|') + ')', 'i'
+);
+
+function hintsAtMainIngredient(text) {
+  return !!text && MAIN_HINT.test(String(text));
+}
+
 function get(key) { return BY_KEY.get(key) || null; }
 function isStaple(key) { return STAPLE_KEYS.has(key); }
 function isNonFood(key) { const e = BY_KEY.get(key); return !!e && NONFOOD_CATS.has(e.cat); }
@@ -356,5 +400,6 @@ function isPremium(key) { const e = BY_KEY.get(key); return !!e && !!e.premium; 
 module.exports = {
   TAXONOMY, BY_KEY, SYNONYMS,
   lookup, get, isStaple, isNonFood, isMealCapable, isPremium,
+  hintsAtMainIngredient,
   STAPLE_KEYS, NON_MEAL_CATS,
 };

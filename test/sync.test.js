@@ -45,6 +45,16 @@ function makeModel(shift = 0) {
     priceSeries: [{ product_id: s(2), base_unit: 'kg', period: '2026-35', median: 89.5, n: 3 }],
     deals: [{ offer_id: s(11), product_id: s(2), verdict: 'godt', discount_pct: 0.22, rank: 1 }],
     plans: [{ tier: 'healthy', week: 35, year: 2026, variant: 0, payload: { days: [] } }],
+    // Madplans-indekset. offer_index hænger på chains, recipe_index på ingenting –
+    // begge udskiftes helt ved hver kørsel, ligesom resten af det afledte lag.
+    offerIndex: [{ taxonomy_key: 'hakket_oksekoed', chain_id: 'netto', offer_id: s(11),
+                   product_id: s(2), product_name: 'Hakket oksekød', unit_price: 69.9,
+                   base_unit: 'kg', normal_unit_price: 89.5 }],
+    taxonomyPrices: [{ taxonomy_key: 'hakket_oksekoed', name: 'Hakket oksekød',
+                       unit_price: 89.5, base_unit: 'kg', samples: 6 }],
+    recipeIndex: [{ recipe_id: s(20), title: 'Frikadeller', url: 'https://valdemarsro.dk/frikadeller/',
+                    score_classic: 0.8, unknown_main: false,
+                    items: [{ key: 'hakket_svinekoed', cat: 'meat', grams: 500 }] }],
     notifications: [],
     summary: { at: '2026-08-27T00:00:00.000Z', week: 35, year: 2026 },
   };
@@ -61,6 +71,19 @@ test('push lægger hele read-modellen ind', async () => {
   assert.equal(DB.deals.length, 1);
   assert.equal(DB.price_stats.length, 1);
   assert.equal(DB.meal_plans.length, 1);
+  assert.equal(DB.offer_index.length, 1);
+  assert.equal(DB.taxonomy_prices.length, 1);
+  assert.equal(DB.recipe_index.length, 1);
+});
+
+test('madplans-indekset udskiftes, det hober sig ikke op', async () => {
+  reset();
+  await push(makeModel(), quiet);
+  // Næste uge: nye opskrifts-id'er (basen er bygget forfra) og et andet tilbud.
+  await push(makeModel(500000), quiet);
+  assert.equal(DB.recipe_index.length, 1, 'gamle opskriftsrækker er væk');
+  assert.equal(DB.recipe_index[0].recipe_id, 500020);
+  assert.equal(DB.offer_index.length, 1);
 });
 
 test('en base bygget forfra giver ikke 409 på UNIQUE(slug)', async () => {

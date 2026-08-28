@@ -195,7 +195,7 @@ function topDeals({ limit = 24, chain = null, minSamples = 3 } = {}) {
 // ── Ruter ────────────────────────────────────────────────────────────────────
 
 const planCache = new Map();
-const planKey = (tier, chains) => `${tier}|${(chains || []).join(',')}`;
+const planKey = (tier, chains) => `${tier}|${[...(chains || [])].sort().join(',')}`;
 
 async function handleApi(req, res, url) {
   const p = url.pathname;
@@ -218,15 +218,20 @@ async function handleApi(req, res, url) {
       weeks_of_history: one('SELECT COUNT(DISTINCT year || \'-\' || week) n FROM offers').n,
       home: { lat: getSetting('home_lat', null), lng: getSetting('home_lng', null),
               label: getSetting('home_label', null) },
+      favorite_chains: getSetting('favorite_chains', []),
     });
   }
 
   if (p === '/api/chains') {
+    // Aktive tilbud tælles for sig: det er dem, en madplan kan bygges af, og
+    // dermed det tal, der siger noget om at vælge kæden som favorit.
     return json(res, db.prepare(`
-      SELECT c.*, COUNT(o.id) AS offer_count
+      SELECT c.*,
+             COUNT(o.id) AS offer_count,
+             SUM(CASE WHEN ${activeWhere()} THEN 1 ELSE 0 END) AS active_count
         FROM chains c LEFT JOIN offers o ON o.chain_id = c.id
        GROUP BY c.id ORDER BY c.name
-    `).all());
+    `).all({ now: nowIso() }));
   }
 
   if (p === '/api/categories') {
@@ -294,8 +299,15 @@ async function handleApi(req, res, url) {
   if (p === '/api/mealplan') {
     const tier = qs.get('tier') || 'classic';
     if (!plans.TIERS[tier]) return json(res, { error: 'Ukendt spor' }, 400);
-    const chainIds = (qs.get('chains') || '').split(',').filter(Boolean);
-    const key = planKey(tier, chainIds);
+    // Tre tilstande, ikke to:
+    //   ingen parameter  → brug de gemte favoritbutikker
+    //   chains=all       → udtrykkeligt alle kæder
+    //   chains=a,b       → netop de kæder
+    const raw = qs.get('chains');
+    const chainIds = raw === null ? null
+      : raw === 'all' ? []
+      : raw.split(',').filter(Boolean);
+    const key = planKey(tier, chainIds === null ? plans.favoriteChainIds() : chainIds);
 
     if (!qs.get('refresh') && planCache.has(key)) return json(res, planCache.get(key));
 
@@ -305,7 +317,7 @@ async function handleApi(req, res, url) {
     const { week, year } = require('./lib/normalize').isoWeek(new Date());
     const seed = qs.get('refresh') ? (Date.now() & 0x7fffffff) : (year * 100 + week);
 
-    const plan = plans.generatePlan({ tier, chainIds: chainIds.length ? chainIds : null, seed });
+    const plan = plans.generatePlan({ tier, chainIds, seed });
     if (!plan.error) {
       plan.shopping_list = plans.shoppingList(plan);
       try { plans.savePlan(plan); } catch { /* historik er ikke kritisk */ }
@@ -369,7 +381,10 @@ async function handleApi(req, res, url) {
   if (p === '/api/settings' && req.method === 'POST') {
     const body = await readBody(req);
     for (const [k, v] of Object.entries(body)) setSetting(k, v);
-    return json(res, { ok: true });
+    // Favoritbutikkerne bestemmer, hvilke tilbud madplanen bygges af – en
+    // plan fra cachen ville være bygget på de gamle butikker.
+    planCache.clear();
+    return json(res, { ok: true, favorite_chains: getSetting('favorite_chains', []) });
   }
 
   // ── Vedligehold ──────────────────────────────────────────────────────────

@@ -30,6 +30,9 @@ git – et 12 MB binært commit om dagen ville sprænge repoet i løbet af et å
 
 1. Opret et gratis projekt på [supabase.com](https://supabase.com).
 2. Åbn **SQL Editor** → indsæt hele `supabase/schema.sql` → **Run**.
+   Filen er idempotent – kør den igen efter en opdatering, der tilføjer
+   tabeller. Det gælder fx `offer_index`, `taxonomy_prices` og `recipe_index`,
+   som favoritbutikkerne bygger på.
 3. Under **Project Settings → API** finder du:
    - `Project URL` → bruges som `SUPABASE_URL`
    - `anon public` → `SUPABASE_ANON_KEY` (må gerne ligge i frontenden)
@@ -152,6 +155,9 @@ npm run sync         # byg og push (kræver SUPABASE_URL + SUPABASE_SERVICE_KEY)
   kørt. Kør filen igen – den er idempotent.
 - **Madplan siger "Ingen madplan er bygget endnu":** `meal_plans` er tom.
   Sker hvis `build.js` fejlede efter tilbud, men før planerne. Se Actions-loggen.
+- **Madplanen viser "madplans-indekset mangler i databasen":** `schema.sql` er
+  ikke kørt igen, efter favoritbutikkerne kom til. Kør den – frontenden falder
+  indtil da tilbage på en forudberegnet plan for alle kæder.
 - **Actions fejler på `better-sqlite3`:** tjek at Node-versionen i workflowet
   stadig har prebuilds (22 har).
 - **`409 · duplicate key value violates unique constraint "products_slug_key"`:**

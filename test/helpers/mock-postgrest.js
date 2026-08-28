@@ -14,6 +14,10 @@ const SCHEMA = {
   price_stats:  { pk: ['product_id','base_unit'], uniq: [], fks: [{ c:'product_id', t:'products', r:'id' }] },
   price_series: { pk: ['product_id','base_unit','period'], uniq: [], fks: [{ c:'product_id', t:'products', r:'id' }] },
   meal_plans:   { pk: ['tier','year','week','variant'], uniq: [], fks: [] },
+  offer_index:  { pk: ['taxonomy_key','chain_id'], uniq: [], fks: [
+                    { c:'chain_id', t:'chains', r:'id' }] },
+  taxonomy_prices: { pk: ['taxonomy_key'], uniq: [], fks: [] },
+  recipe_index: { pk: ['recipe_id'], uniq: [], fks: [] },
   deals:        { pk: ['offer_id'], uniq: [], fks: [
                     { c:'offer_id', t:'offers', r:'id' }, { c:'product_id', t:'products', r:'id' }] },
   watches:      { pk: ['id'], uniq: [], fks: [] },

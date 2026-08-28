@@ -9,9 +9,15 @@
  * Frontenden kalder de samme funktioner uanset hvad, så udvikling lokalt og
  * drift i skyen ikke er to forskellige apps.
  *
- * Supabase-varianten laver kun simple SELECTs: madplaner, prisstatistik og
+ * Supabase-varianten laver kun simple SELECTs: prisstatistik og
  * tilbudsvurderinger er regnet færdige af GitHub Actions og ligger klar som
- * rækker. Der er ingen tung logik i browseren.
+ * rækker.
+ *
+ * Madplanen er den ene undtagelse, og med vilje. Den afhænger af brugerens
+ * FAVORITBUTIKKER, og dem findes der 32.767 kombinationer af – de kan ikke
+ * forudberegnes. I stedet hentes de to små opslagstabeller, planen bygges af
+ * (`offer_index`, `recipe_index`), og `public/engine.js` – nøjagtig samme
+ * motor som kører i GitHub Actions – sætter planen sammen her i browseren.
  */
 
 const CFG = window.APP_CONFIG || {};
@@ -26,6 +32,30 @@ function deviceId() {
     try { localStorage.setItem('madplan_device', id); } catch { /* ignoreres */ }
   }
   return id;
+}
+
+// ── Favoritbutikker ──────────────────────────────────────────────────────────
+
+/**
+ * De kæder, brugeren rent faktisk handler i.
+ *
+ * Tom liste = ikke valgt endnu; så bygges madplanen af alle kæder, som den
+ * altid har gjort. Valget bor i localStorage, fordi det er personligt og skal
+ * virke i begge bagender – kører man mod den lokale server, spejles det også
+ * til dens `settings`, så `npm run update` bygger planen af de samme butikker.
+ */
+const FAV_KEY = 'madplan_favorite_chains';
+
+function readFavorites() {
+  try {
+    const raw = localStorage.getItem(FAV_KEY);
+    const ids = raw ? JSON.parse(raw) : null;
+    return Array.isArray(ids) ? ids.filter(Boolean) : [];
+  } catch { return []; }
+}
+
+function writeFavorites(ids) {
+  try { localStorage.setItem(FAV_KEY, JSON.stringify(ids || [])); } catch { /* privat vindue */ }
 }
 
 // ── PostgREST ────────────────────────────────────────────────────────────────
@@ -45,6 +75,26 @@ async function sb(path, options = {}) {
   if (!res.ok) throw new Error(`Supabase ${res.status}: ${(await res.text()).slice(0, 160)}`);
   const text = await res.text();
   return text ? JSON.parse(text) : null;
+}
+
+/**
+ * Henter ALLE rækker, ikke kun den første side.
+ *
+ * PostgREST svarer med et loft pr. forespørgsel (typisk 1.000 rækker), og
+ * madplans-indekset er større end det. Uden sidevisning ville planen stille og
+ * roligt blive bygget på en tilfældig tredjedel af opskrifterne.
+ */
+async function sbAll(path, pageSize = 1000) {
+  const out = [];
+  for (let from = 0; ; from += pageSize) {
+    const page = await sb(path, {
+      headers: { 'Range-Unit': 'items', Range: `${from}-${from + pageSize - 1}` },
+    });
+    if (!Array.isArray(page) || !page.length) break;
+    out.push(...page);
+    if (page.length < pageSize) break;
+  }
+  return out;
 }
 
 async function local(path, options = {}) {
@@ -72,6 +122,54 @@ function flattenOffer(o) {
     chain_name: o.chains?.name ?? null,
     color: o.chains?.color ?? null,
   };
+}
+
+// ── Madplans-indeks (kun Supabase-bagenden) ──────────────────────────────────
+
+// Indekset skifter kun, når den natlige kørsel har været forbi. Vi henter det
+// derfor én gang pr. sidevisning og genbruger det på tværs af spor og
+// "Ny plan" – ellers ville hvert klik koste et par hundrede kilobyte.
+const planIndex = { offers: null, prices: null, recipes: {} };
+
+const MIN_TIER_SCORE = 0.35;
+
+const TIER_LABELS = {
+  healthy: 'Sund & proteinrig (lavt kulhydrat)',
+  classic: 'Klassisk hverdagsmad',
+  premium: 'Gourmet',
+};
+
+async function loadPlanIndex(tier) {
+  if (!planIndex.prices) {
+    const [prices, offers] = await Promise.all([
+      sbAll('taxonomy_prices?select=*&order=taxonomy_key.asc'),
+      sbAll('offer_index?select=*&order=taxonomy_key.asc,chain_id.asc'),
+    ]);
+    planIndex.prices = prices;
+    planIndex.offers = offers;
+  }
+  if (!planIndex.recipes[tier]) {
+    planIndex.recipes[tier] = await sbAll(
+      `recipe_index?score_${tier}=gte.${MIN_TIER_SCORE}&select=*&order=recipe_id.asc`
+    );
+  }
+  return planIndex;
+}
+
+/**
+ * Reducerer indekset til ét tilbud pr. varetype – billigste pr. kg/l blandt
+ * brugerens egne butikker. Tom `chainIds` betyder alle kæder.
+ */
+function offerMapFor(rows, chainIds, chainNames) {
+  const allowed = chainIds && chainIds.length ? new Set(chainIds) : null;
+  const map = new Map();
+  for (const r of rows) {
+    if (allowed && !allowed.has(r.chain_id)) continue;
+    const prev = map.get(r.taxonomy_key);
+    if (prev && prev.unit_price <= r.unit_price) continue;
+    map.set(r.taxonomy_key, { ...r, chain: chainNames[r.chain_id] || r.chain_id });
+  }
+  return map;
 }
 
 // ── API ──────────────────────────────────────────────────────────────────────
@@ -111,9 +209,37 @@ const Data = {
 
   async chains() {
     if (!USE_SUPABASE) return local('/api/chains');
-    return sb('chains?select=id,name,slug,logo,color&order=name.asc');
+    const [rows, state] = await Promise.all([
+      sb('chains?select=id,name,slug,logo,color&order=name.asc'),
+      sb('sync_state?key=eq.last_build&select=value'),
+    ]);
+    const counts = state?.[0]?.value?.chain_offers || {};
+    return rows.map((c) => ({ ...c, active_count: counts[c.id] ?? null }));
   },
 
+  // ── Favoritbutikker ───────────────────────────────────────────────────────
+
+  favorites: readFavorites,
+
+  async setFavorites(ids) {
+    const clean = [...new Set((ids || []).filter(Boolean))];
+    writeFavorites(clean);
+    // Den lokale server bygger også planer uden for browseren (npm run update),
+    // så den skal kende valget. Supabase-bagenden har ingen server at fortælle.
+    if (!USE_SUPABASE) await local('/api/settings', { method: 'POST', body: { favorite_chains: clean } });
+    return clean;
+  },
+
+  /** Første besøg i en ny browser: overtag serverens gemte valg. */
+  async adoptServerFavorites(status) {
+    if (USE_SUPABASE || readFavorites().length) return readFavorites();
+    const saved = (status && status.favorite_chains) || [];
+    if (saved.length) writeFavorites(saved);
+    return readFavorites();
+  },
+
+  // `chain` er en kommasepareret liste (eller tom = alle kæder), så de samme
+  // favoritbutikker kan bruges her som i madplanen.
   async offers({ q = '', chain = '', sort = 'unit_price', limit = 72 } = {}) {
     if (!USE_SUPABASE) {
       const p = new URLSearchParams({ q, chain, sort, limit: String(limit) });
@@ -123,19 +249,32 @@ const Data = {
     let path = `offers?select=${OFFER_COLS},products(name,category,taxonomy_key),chains(name,color)` +
                `&${activeFilter()}&order=${order}&limit=${limit}`;
     if (q) path += `&heading=ilike.*${encodeURIComponent(q)}*`;
-    if (chain) path += `&chain_id=eq.${encodeURIComponent(chain)}`;
+    const ids = String(chain).split(',').filter(Boolean);
+    if (ids.length) path += `&chain_id=in.(${ids.map(encodeURIComponent).join(',')})`;
     return (await sb(path)).map(flattenOffer);
   },
 
-  async deals(limit = 48) {
-    if (!USE_SUPABASE) return local(`/api/deals?limit=${limit}`);
+  async deals(limit = 48, chain = '') {
+    const ids = String(chain).split(',').filter(Boolean);
+
+    if (!USE_SUPABASE) {
+      const p = new URLSearchParams({ limit: String(limit) });
+      if (ids.length) p.set('chain', ids.join(','));
+      return local(`/api/deals?${p}`);
+    }
+
+    // Listen er kort nok til at filtrere her. Alternativet – et filter på den
+    // indlejrede offers-relation – kræver !inner-join og gør forespørgslen
+    // væsentligt mere skrøbelig for at spare et par kilobyte.
     const rows = await sb(
       `deals?select=verdict,discount_pct,confidence,is_cheapest,rank,` +
       `offers(${OFFER_COLS},products(name,category,taxonomy_key),chains(name,color))` +
-      `&order=rank.asc&limit=${limit}`
+      `&order=rank.asc&limit=${ids.length ? 100 : limit}`
     );
+    const allowed = ids.length ? new Set(ids) : null;
     return rows
-      .filter((r) => r.offers)
+      .filter((r) => r.offers && (!allowed || allowed.has(r.offers.chain_id)))
+      .slice(0, limit)
       .map((r) => ({ ...flattenOffer(r.offers), verdict: r.verdict,
                      discount_pct: r.discount_pct, confidence: r.confidence,
                      is_cheapest: r.is_cheapest }));
@@ -175,28 +314,76 @@ const Data = {
   },
 
   /**
-   * Madplaner er regnet færdige. `variant` skifter mellem de forudberegnede
-   * udgaver, så "Ny plan" virker uden at generatoren skal køre i skyen.
+   * Ugens madplan for ét spor, bygget af tilbuddene i brugerens egne butikker.
+   *
+   * `variant` er "Ny plan": et nyt seed, ikke en ny forespørgsel til serveren.
    */
-  async mealPlan(tier, variant = 0) {
-    if (!USE_SUPABASE) {
-      return local(`/api/mealplan?tier=${tier}${variant ? '&refresh=1' : ''}`);
-    }
-    const rows = await sb(
-      `meal_plans?tier=eq.${tier}&select=variant,payload,est_cost,est_savings` +
-      `&order=year.desc,week.desc,variant.asc`
-    );
-    if (!rows.length) {
-      return { error: 'Ingen madplan er bygget endnu. Kør GitHub Actions-jobbet.' };
-    }
-    const week = rows.filter((r) => r.variant != null);
-    return week[variant % week.length].payload;
-  },
+  async mealPlan(tier, variant = 0, chainIds = null) {
+    const chains = chainIds || readFavorites();
 
-  async planVariantCount(tier) {
-    if (!USE_SUPABASE) return Infinity;
-    const rows = await sb(`meal_plans?tier=eq.${tier}&select=variant&order=variant.asc`);
-    return rows.length || 1;
+    if (!USE_SUPABASE) {
+      const q = new URLSearchParams({ tier });
+      q.set('chains', chains.length ? chains.join(',') : 'all');
+      if (variant) q.set('refresh', String(variant));
+      return local(`/api/mealplan?${q}`);
+    }
+
+    let index;
+    try {
+      index = await loadPlanIndex(tier);
+    } catch (err) {
+      // Er skemaet ikke migreret endnu, findes tabellerne ikke. Fald tilbage
+      // på den forudberegnede plan – den bruger alle kæder, men er bedre end
+      // en tom side, og beskeden siger hvorfor.
+      const rows = await sb(
+        `meal_plans?tier=eq.${tier}&select=variant,payload&order=year.desc,week.desc,variant.asc`
+      );
+      if (!rows.length) return { error: `Madplans-indekset kunne ikke hentes (${err.message}).` };
+      const plan = rows[variant % rows.length].payload;
+      return { ...plan, index_missing: true };
+    }
+
+    const chainRows = await this.chains();
+    const chainNames = Object.fromEntries(chainRows.map((c) => [c.id, c.name]));
+
+    const names = {};
+    const normalPrices = new Map();
+    for (const p of index.prices) {
+      names[p.taxonomy_key] = p.name;
+      if (p.unit_price != null) {
+        normalPrices.set(p.taxonomy_key,
+          { unit_price: p.unit_price, base_unit: p.base_unit, name: p.name });
+      }
+    }
+
+    const recipes = index.recipes[tier].map((r) => ({
+      id: r.recipe_id,
+      title: r.title, url: r.url, image: r.image,
+      source: r.source, source_name: r.source_name,
+      servings: r.servings, total_minutes: r.total_minutes,
+      kcal: r.kcal, protein_g: r.protein_g, carbs_g: r.carbs_g,
+      nutrition_src: r.nutrition_src,
+      tier_score: r[`score_${tier}`],
+      unknown_main: r.unknown_main,
+      // Indekset sender kun nøgle, kategori og mængde. Navnet ligger i
+      // taxonomy_prices, så det ikke gentages på 2.000 opskrifter.
+      items: (r.items || []).map((i) => ({ ...i, ingredient: names[i.key] || i.key })),
+    }));
+
+    const { week, year } = window.PlanEngine.isoWeek(new Date());
+    const plan = window.PlanEngine.buildPlan({
+      tier,
+      tierLabel: TIER_LABELS[tier] || '',
+      recipes,
+      offers: offerMapFor(index.offers, chains, chainNames),
+      normalPrices,
+      seed: variant ? (year * 1000 + week * 10 + variant) : (year * 100 + week),
+      chainIds: chains.length ? chains : null,
+      chainNames: chains.length ? chains.map((id) => chainNames[id]).filter(Boolean) : null,
+    });
+
+    if (!plan.error) plan.shopping_list = window.PlanEngine.shoppingList(plan);
+    return plan;
   },
 
   // ── Overvågninger ─────────────────────────────────────────────────────────

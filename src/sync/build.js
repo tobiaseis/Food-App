@@ -17,7 +17,9 @@
 
 const { getDb, setSetting } = require('../db');
 const sb = require('./supabase');
-const { generatePlan, savePlan } = require('../mealplan/generate');
+const plans = require('../mealplan/generate');
+const { generatePlan, savePlan } = plans;
+const taxonomy = require('../lib/taxonomy');
 const { getBaseline, weeklySeries, assessRow } = require('../price/history');
 const { topDeals } = require('../server');
 const watchLib = require('../watch/notify');
@@ -125,6 +127,79 @@ function collectDeals(log) {
 
   log(`  ugens fund: ${deals.length} reelle tilbud`);
   return deals;
+}
+
+/**
+ * Madplans-indekset: det, browseren skal bruge for selv at bygge en plan af
+ * netop DE butikker, brugeren har valgt.
+ *
+ * Selve planen kan ikke forudberegnes længere. Femten kæder giver 32.767
+ * mulige favorit-kombinationer, og hvilken af dem der er brugerens, ved kun
+ * browseren. Til gengæld er de opslagstabeller, planen bygges af, små: ~550
+ * tilbudsrækker og ~2.100 opskrifter. Dem henter frontenden hjem én gang og
+ * kører `public/engine.js` på – præcis den samme motor, som kører her.
+ */
+function collectPlanIndex(log) {
+  const offerIndex = plans.chainOfferIndex().map((o) => ({
+    taxonomy_key: o.taxonomy_key,
+    chain_id: o.chain_id,
+    offer_id: o.offer_id,
+    product_id: o.product_id,
+    product_name: o.product_name,
+    heading: o.heading,
+    price: o.price,
+    unit_price: o.unit_price,
+    base_unit: o.base_unit,
+    normal_unit_price: o.normal_unit_price,
+    image: o.image,
+    run_till: iso(o.run_till),
+  }));
+
+  // Navne kommer fra taksonomien, priser fra historikken. Uden navnene ville
+  // indkøbslisten i browseren vise nøgler som "hakkede_tomater".
+  const prices = plans.normalPriceMap();
+  const taxonomyPrices = taxonomy.TAXONOMY
+    .filter((t) => taxonomy.isMealCapable(t.key))
+    .map((t) => {
+      const p = prices.get(t.key);
+      return {
+        taxonomy_key: t.key,
+        name: t.name,
+        unit_price: p ? p.unit_price : null,
+        base_unit: p ? p.base_unit : null,
+        samples: p ? p.samples : 0,
+      };
+    });
+
+  // Basisvarer og ikke-mad ryger ud her frem for i browseren: motoren ser
+  // alligevel bort fra dem, og de fylder en fjerdedel af nyttelasten.
+  const skip = (i) => i.staple || ['drink', 'snack', 'nonfood'].includes(i.cat);
+  const recipeIndex = plans.loadRecipes({})
+    .map((r) => ({
+      recipe_id: r.id,
+      title: r.title,
+      url: r.url,
+      image: r.image,
+      source: r.source,
+      source_name: r.source_name,
+      servings: r.servings,
+      total_minutes: r.total_minutes,
+      kcal: r.kcal,
+      protein_g: r.protein_g,
+      carbs_g: r.carbs_g,
+      nutrition_src: r.nutrition_src,
+      score_healthy: r.score_healthy,
+      score_classic: r.score_classic,
+      score_premium: r.score_premium,
+      unknown_main: !!r.unknown_main,
+      items: r.items.filter((i) => !skip(i)).map((i) => ({
+        key: i.key, cat: i.cat, grams: i.grams == null ? null : Math.round(i.grams),
+      })),
+    }))
+    .filter((r) => r.items.length >= 2);
+
+  log(`  madplans-indeks: ${offerIndex.length} tilbudsrækker · ${taxonomyPrices.length} varetyper · ${recipeIndex.length} opskrifter`);
+  return { offerIndex, taxonomyPrices, recipeIndex };
 }
 
 /** Madplaner i flere varianter, så "Ny plan" kan skifte uden at regne. */
@@ -243,7 +318,9 @@ async function syncWatches(db, log) {
  * chains og stores står udenfor: deres id'er kommer fra Tjek og er stabile.
  */
 const DERIVED = [
-  ['meal_plans',   'tier=not.is.null'],
+  ['meal_plans',    'tier=not.is.null'],
+  ['recipe_index',  'recipe_id=not.is.null'],
+  ['offer_index',   'taxonomy_key=not.is.null'],
   ['deals',        'offer_id=not.is.null'],
   ['price_series', 'product_id=not.is.null'],
   ['price_stats',  'product_id=not.is.null'],
@@ -320,6 +397,11 @@ async function push(model, log) {
   await t('deals', model.deals, { onConflict: 'offer_id' });
   await t('meal_plans', model.plans, { onConflict: 'tier,year,week,variant', chunk: 12 });
 
+  // Madplans-indekset. offer_index peger på chains, så det skal efter dem.
+  await t('offer_index', model.offerIndex, { onConflict: 'taxonomy_key,chain_id', chunk: 400 });
+  await t('taxonomy_prices', model.taxonomyPrices, { onConflict: 'taxonomy_key' });
+  await t('recipe_index', model.recipeIndex, { onConflict: 'recipe_id', chunk: 200 });
+
   if (model.notifications.length) {
     await t('notifications', model.notifications, { onConflict: 'watch_id,offer_id' });
   }
@@ -344,7 +426,8 @@ async function build({ dryRun = false, log = console.log } = {}) {
 
   const { stats: priceStats, series: priceSeries } = collectPriceModel(db, log);
   const deals = collectDeals(log);
-  const plans = collectPlans(log);
+  const planIndex = collectPlanIndex(log);
+  const weekPlans = collectPlans(log);
 
   let notifications = [];
   if (!dryRun && sb.isConfigured()) {
@@ -352,19 +435,38 @@ async function build({ dryRun = false, log = console.log } = {}) {
     notifications = await syncWatches(db, log);
   }
 
+  // Aktive tilbud pr. kæde. Frontenden viser tallet ved siden af hver kæde i
+  // favorit-vælgeren – man skal kunne se, hvad man får ud af at vælge den til.
+  const chainOffers = {};
+  for (const row of db.prepare(`
+    SELECT chain_id, COUNT(*) n FROM offers
+     WHERE (run_from IS NULL OR run_from <= @now) AND (run_till IS NULL OR run_till >= @now)
+     GROUP BY chain_id
+  `).all({ now: new Date().toISOString() })) chainOffers[row.chain_id] = row.n;
+
   const { week, year } = isoWeek(new Date());
   const summary = {
     at: new Date().toISOString(),
     week, year,
+    chain_offers: chainOffers,
     offers: catalog.offers.length,
     products: catalog.products.length,
     recipes: catalog.recipes.length,
     deals: deals.length,
-    plans: plans.length,
+    plans: weekPlans.length,
+    plan_recipes: planIndex.recipeIndex.length,
+    plan_offers: planIndex.offerIndex.length,
     notifications: notifications.length,
   };
 
-  const model = { ...catalog, priceStats, priceSeries, deals, plans, notifications, summary };
+  const model = {
+    ...catalog, priceStats, priceSeries, deals,
+    plans: weekPlans,
+    offerIndex: planIndex.offerIndex,
+    taxonomyPrices: planIndex.taxonomyPrices,
+    recipeIndex: planIndex.recipeIndex,
+    notifications, summary,
+  };
 
   const payloadMb = (JSON.stringify(model).length / 1048576).toFixed(1);
   log(`Read-model klar: ${payloadMb} MB`);
@@ -374,8 +476,10 @@ async function build({ dryRun = false, log = console.log } = {}) {
     for (const [k, v] of Object.entries({
       chains: catalog.chains, products: catalog.products, stores: catalog.stores,
       offers: catalog.offers, recipes: catalog.recipes,
-      price_stats: priceStats, price_series: priceSeries, deals, meal_plans: plans,
-    })) log(`  ${k.padEnd(14)} ${v.length}`);
+      price_stats: priceStats, price_series: priceSeries, deals, meal_plans: weekPlans,
+      offer_index: planIndex.offerIndex, taxonomy_prices: planIndex.taxonomyPrices,
+      recipe_index: planIndex.recipeIndex,
+    })) log(`  ${k.padEnd(16)} ${v.length}`);
     return { model, pushed: false };
   }
 
@@ -393,4 +497,6 @@ if (require.main === module) {
     .catch((err) => { console.error('\n[FEJL]', err.message); process.exit(1); });
 }
 
-module.exports = { build, push, collectCatalog, collectPriceModel, collectDeals, collectPlans };
+module.exports = {
+  build, push, collectCatalog, collectPriceModel, collectDeals, collectPlans, collectPlanIndex,
+};

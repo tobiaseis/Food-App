@@ -42,6 +42,85 @@ const daysLeft = (till) => {
 
 let STATUS = {};
 let CHAINS = [];
+let FAVORITES = [];          // kæde-id'er brugeren handler i
+
+const chainById = (id) => CHAINS.find((c) => c.id === id) || null;
+const favoriteNames = () => FAVORITES.map((id) => chainById(id)?.name).filter(Boolean);
+
+/** Sætning der kan stå i en tekst: "Netto og REMA 1000". */
+function listNames(names) {
+  if (!names.length) return '';
+  if (names.length === 1) return names[0];
+  return `${names.slice(0, -1).join(', ')} og ${names[names.length - 1]}`;
+}
+
+/* ── Favoritbutikker ──────────────────────────────────────────────────────── */
+
+/**
+ * Madplanen skal kunne handles. Tilbud fra femten kæder på tværs af landet er
+ * ikke en indkøbsliste, så brugeren vælger de butikker, der ligger i nærheden,
+ * og planen bygges kun af dem.
+ */
+function storePicker(onSaved) {
+  const modal = $('#modal');
+  $('#modal-title').textContent = 'Mine butikker';
+
+  const rows = [...CHAINS]
+    .sort((a, b) => (b.active_count ?? b.offer_count ?? 0) - (a.active_count ?? a.offer_count ?? 0))
+    .map((c) => {
+      const n = c.active_count ?? c.offer_count;
+      return `<label class="store-row">
+        <input type="checkbox" value="${esc(c.id)}" ${FAVORITES.includes(c.id) ? 'checked' : ''}>
+        <span class="chain-chip"><i class="chain-dot" style="background:${esc(c.color || 'var(--text-faint)')}"></i>${esc(c.name)}</span>
+        <span class="note">${n != null ? `${num(n)} tilbud` : ''}</span>
+      </label>`;
+    }).join('');
+
+  $('#modal-body').innerHTML = `
+    <p class="note">Vælg de supermarkeder, du normalt handler i. Madplanen bygges
+    kun af tilbud fra dem – og indkøbslisten bliver til én, du kan gå ud og handle efter.</p>
+    <div class="store-list">${rows}</div>
+    <div class="divider"></div>
+    <div class="row">
+      <button class="primary" id="fav-save">Gem</button>
+      <button class="ghost" id="fav-none">Ryd valg – brug alle kæder</button>
+      <span class="note" id="fav-count"></span>
+    </div>`;
+
+  const boxes = () => [...$('#modal-body').querySelectorAll('input[type=checkbox]')];
+  const tally = () => {
+    const n = boxes().filter((b) => b.checked).length;
+    $('#fav-count').textContent = n ? `${n} valgt` : 'ingen valgt = alle kæder';
+  };
+  boxes().forEach((b) => b.addEventListener('change', tally));
+  tally();
+
+  const save = async (ids) => {
+    FAVORITES = await Data.setFavorites(ids);
+    modal.close();
+    if (onSaved) onSaved();
+  };
+  $('#fav-save').addEventListener('click', () => save(boxes().filter((b) => b.checked).map((b) => b.value)));
+  $('#fav-none').addEventListener('click', () => save([]));
+
+  modal.showModal();
+}
+
+/** Linjen over madplanen: hvilke butikker den er bygget af. */
+function favoriteBar() {
+  const names = favoriteNames();
+  return `<div class="fav-bar">
+    <div>${names.length
+      ? `Bygget på tilbud fra <strong>${esc(listNames(names))}</strong>`
+      : '<strong>Alle kæder</strong> – også dem, der ikke ligger i nærheden af dig'}</div>
+    <button class="ghost" id="pick-stores">${names.length ? 'Skift butikker' : 'Vælg mine butikker'}</button>
+  </div>`;
+}
+
+function bindFavoriteBar(reload) {
+  const btn = $('#pick-stores');
+  if (btn) btn.addEventListener('click', () => storePicker(reload));
+}
 
 /* ── Tilbudskort ──────────────────────────────────────────────────────────── */
 
@@ -181,7 +260,8 @@ async function viewPlan() {
 
   app().innerHTML = `
     <h1>Madplan for ugen</h1>
-    <p class="sub">Bygget ud fra de varer, der faktisk er på tilbud i denne uge.</p>
+    <p class="sub">Syv retter, hvor hovedråvaren er på tilbud i de butikker, du handler i.</p>
+    ${favoriteBar()}
     <div class="controls">
       <div class="seg">
         ${Object.entries(TIER_INFO).map(([k, v]) =>
@@ -200,15 +280,26 @@ async function viewPlan() {
     $('#plan').innerHTML = '<div class="loading">Sammensætter madplan…</div>';
     renderPlan(await Data.mealPlan(tier, variant));
   };
+  // Nye butikker = ny plan. Variantnummeret nulstilles, så man ser
+  // hovedplanen for det nye valg og ikke en omrokering af den gamle.
+  bindFavoriteBar(() => { variant = 0; viewPlan(); });
   $('#regen').addEventListener('click', () => { variant++; load(); });
   await load();
+}
+
+/** Råvare-mærkat: hovedråvarer markeres, så løftet er til at se. */
+function ingChip(m) {
+  const cls = m.role === 'main' ? 'ing main' : 'ing';
+  return `<span class="${cls}">${esc(m.name)} <span class="c">${esc(m.chain)}</span></span>`;
 }
 
 function renderPlan(p) {
   const el = $('#plan');
   if (p.error) {
-    el.innerHTML = `<div class="empty card"><h3>Ingen madplan endnu</h3><p>${esc(p.error)}</p>
-      <code>node src/recipes/crawl.js --limit 300</code></div>`;
+    el.innerHTML = `<div class="empty card"><h3>Ingen madplan</h3><p>${esc(p.error)}</p>
+      ${FAVORITES.length ? '<button class="primary" id="plan-pick">Vælg flere butikker</button>' : ''}</div>`;
+    const b = $('#plan-pick');
+    if (b) b.addEventListener('click', () => storePicker(() => viewPlan()));
     return;
   }
   if (!p.days.length) {
@@ -219,9 +310,10 @@ function renderPlan(p) {
 
   const days = p.days.map((d) => {
     const r = d.recipe;
-    const pct = Math.round((d.match_count / Math.max(d.considered, 1)) * 100);
-    const ings = d.matched.slice(0, 7).map((m) =>
-      `<span class="ing">${esc(m.name)} <span class="c">${esc(m.chain)}</span></span>`).join('');
+    const pct = Math.round((d.coverage || 0) * 100);
+    const chips = d.matched.slice(0, 7).map(ingChip).join('');
+    const missingAll = (d.unmatched || []).filter((u) => u.role === 'support');
+    const missing = missingAll.slice(0, 5);
 
     return `<div class="day">
       <div class="day-name">${esc(d.day_name)}</div>
@@ -239,10 +331,13 @@ function renderPlan(p) {
         </div>
         <div class="match-bar"><i style="width:${pct}%"></i></div>
         <div class="note" style="margin-bottom:7px">
-          <strong>${d.match_count} af ${d.considered}</strong> råvarer er på tilbud
+          <strong>${d.main_count} af ${d.main_total}</strong> hovedråvarer på tilbud${
+            d.support_total ? ` · ${d.support_count} af ${d.support_total} øvrige` : ''}
           ${d.est_savings > 0 ? ` · <span class="save">spar ca. ${kr(d.est_savings)}</span>` : ''}
         </div>
-        <div class="ing-list">${ings}${d.matched.length > 7 ? `<span class="ing">+${d.matched.length - 7}</span>` : ''}</div>
+        <div class="ing-list">${chips}${d.matched.length > 7 ? `<span class="ing">+${d.matched.length - 7}</span>` : ''}</div>
+        ${missing.length ? `<div class="note missing">Køb også: ${missing.map((m) => esc(m.name)).join(', ')}${
+          missingAll.length > missing.length ? ' m.fl.' : ''}</div>` : ''}
       </div>
     </div>`;
   }).join('');
@@ -251,10 +346,12 @@ function renderPlan(p) {
     <div class="card shop-chain">
       <h3><span>${esc(c.chain)}</span><span class="note">${kr(c.total)}${c.savings > 0 ? ` · <span class="save">spar ${kr(c.savings)}</span>` : ''}</span></h3>
       ${c.items.map((i) => `<div class="shop-item">
-        <span class="n">${esc(i.name)}<small>${esc(i.heading.substring(0, 60))}</small></span>
+        <span class="n">${esc(i.name)}<small>${esc((i.heading || '').substring(0, 60))}</small></span>
         <span class="p">${kr(i.price)} · ${num(i.unit_price, 2)} kr/${esc(i.base_unit)}</span>
       </div>`).join('')}
     </div>`).join('');
+
+  const rest = p.shopping_list?.rest || [];
 
   el.innerHTML = `
     <div class="plan-head">
@@ -263,25 +360,78 @@ function renderPlan(p) {
       <div class="stat"><span class="v save">${kr(p.est_savings)}</span><span class="l">Sparet vs. normalpris</span></div>
       <div class="stat"><span class="v">${p.offers_available}</span><span class="l">Varer på tilbud</span></div>
     </div>
+    ${planRule(p)}
     ${days}
     <h2>Indkøbsliste – det der er på tilbud</h2>
     <div class="grid wide">${shop}</div>
+    ${rest.length ? `<h2>Resten</h2>
+      <div class="card">
+        <p class="note" style="margin-top:0">Ikke på tilbud i dine butikker – men skal med i kurven.</p>
+        <div class="rest-list">${rest.map((i) =>
+          `<span class="ing">${esc(i.name)}${i.used_in.length > 1 ? ` <span class="c">${i.used_in.length} retter</span>` : ''}</span>`).join('')}</div>
+      </div>` : ''}
     <p class="note" style="margin-top:14px">
       Priserne er beregnet ud fra opskrifternes mængder gange tilbudsprisen pr. kg/liter.
-      Basisvarer som salt, olie og krydderier er ikke regnet med.
+      Basisvarer som salt, olie, mel og krydderier er hverken talt med i prisen eller i kravet –
+      dem regner vi med, du har hjemme.
       Opskrifterne ligger hos kilden – klik på titlen for fremgangsmåden.
     </p>`;
 }
 
+/**
+ * Hvad blev der egentlig krævet af ugens retter?
+ *
+ * Kravet lempes af sig selv, når der ikke er tilbud nok til at holde det. Det
+ * skal stå der – ellers kan man ikke se forskel på "alt er på tilbud" og
+ * "vi gav op og tog, hvad vi kunne finde".
+ */
+function planRule(p) {
+  if (!p.rule) return '';
+  const names = p.chain_names && p.chain_names.length ? listNames(p.chain_names) : 'alle kæder';
+  return `<div class="rule ${p.rule.relaxed ? 'relaxed' : ''}">
+    <strong>${esc(p.rule.label)}</strong>
+    <span class="note">${esc(names)} · ${num(p.candidates_qualified)} af ${num(p.candidates_scored)} opskrifter kunne opfylde kravet</span>
+    ${p.rule.relaxed ? '<span class="note">Der var ikke tilbud nok i dine butikker til det strengeste krav, så det er lempet et trin.</span>' : ''}
+    ${p.index_missing ? '<span class="note">Viser en forudberegnet plan for alle kæder – madplans-indekset mangler i databasen (kør supabase/schema.sql).</span>' : ''}
+  </div>`;
+}
+
 /* ── Visning: ugens fund ──────────────────────────────────────────────────── */
+
+/**
+ * Filteret "kun mine butikker" deles af Ugens fund og Alle tilbud. Det står i
+ * localStorage frem for i hukommelsen, så det overlever en genindlæsning –
+ * det er en indstilling, ikke et klik.
+ */
+const FAV_FILTER_KEY = 'madplan_only_favorites';
+function onlyFavorites() {
+  if (!FAVORITES.length) return false;
+  try { return localStorage.getItem(FAV_FILTER_KEY) !== '0'; } catch { return true; }
+}
+function setOnlyFavorites(on) {
+  try { localStorage.setItem(FAV_FILTER_KEY, on ? '1' : '0'); } catch { /* privat vindue */ }
+}
+
+/** Afkrydsningsfelt til de to tilbudslister. Skjult indtil man har valgt butikker. */
+function favFilterToggle() {
+  if (!FAVORITES.length) return '';
+  return `<label class="fav-toggle">
+    <input type="checkbox" id="only-fav" ${onlyFavorites() ? 'checked' : ''}>
+    Kun ${esc(listNames(favoriteNames()))}
+  </label>`;
+}
 
 async function viewDeals() {
   app().innerHTML = `
     <h1>Ugens fund</h1>
     <p class="sub">Tilbud hvor prisen pr. kg reelt ligger under varens normalpris – ikke bare dem med det største skilt.</p>
+    <div class="controls">${favFilterToggle()}</div>
     <div id="deals"><div class="loading">Regner på priserne…</div></div>`;
 
-  const deals = await Data.deals(48);
+  const box = $('#only-fav');
+  if (box) box.addEventListener('change', () => { setOnlyFavorites(box.checked); viewDeals(); });
+
+  const deals = await Data.deals(48, onlyFavorites() ? FAVORITES.join(',') : '');
   const el = $('#deals');
   if (!deals.length) {
     el.innerHTML = `<div class="empty card"><h3>Ingen data endnu</h3>
@@ -307,12 +457,18 @@ async function viewOffers() {
         <option value="price">Laveste pris</option>
         <option value="newest">Nyeste</option>
       </select>
+      ${favFilterToggle()}
     </div>
     <div id="list"><div class="loading">Henter…</div></div>`;
 
   const load = async () => {
+    // Den enkelte kæde i rullelisten slår filteret fra: har man valgt netop
+    // den, er det den, man vil se – også selvom den ikke er en favorit.
+    const one = $('#chain').value;
+    const box = $('#only-fav');
+    const chain = one ? one : (box && box.checked ? FAVORITES.join(',') : '');
     const rows = await Data.offers({
-      q: $('#q').value, chain: $('#chain').value, sort: $('#sort').value, limit: 72,
+      q: $('#q').value, chain, sort: $('#sort').value, limit: 72,
     });
     const el = $('#list');
     el.innerHTML = rows.length
@@ -325,6 +481,8 @@ async function viewOffers() {
   $('#q').addEventListener('input', () => { clearTimeout(t); t = setTimeout(load, 220); });
   $('#chain').addEventListener('change', load);
   $('#sort').addEventListener('change', load);
+  const favBox = $('#only-fav');
+  if (favBox) favBox.addEventListener('change', () => { setOnlyFavorites(favBox.checked); load(); });
   await load();
 }
 
@@ -438,6 +596,14 @@ async function viewSettings() {
     <h1>Indstillinger</h1>
     <p class="sub">Din placering bruges til at finde nærmeste butik – den forlader ikke maskinen.</p>
 
+    <div class="card" style="padding:17px;max-width:560px;margin-bottom:18px">
+      <h2 style="margin-top:0">Mine butikker</h2>
+      <p class="note" style="margin-top:0">${FAVORITES.length
+        ? `Madplanen bygges kun af tilbud fra <strong>${esc(listNames(favoriteNames()))}</strong>.`
+        : 'Ikke valgt endnu – madplanen bygges af alle kæder, også dem langt væk.'}</p>
+      <button class="primary" id="settings-stores">${FAVORITES.length ? 'Skift butikker' : 'Vælg butikker'}</button>
+    </div>
+
     <div class="card" style="padding:17px;max-width:560px">
       <h2 style="margin-top:0">Din adresse</h2>
       <div class="controls">
@@ -474,6 +640,8 @@ async function viewSettings() {
       Opskrifter hentes med <code style="padding:2px 6px">node src/recipes/crawl.js</code>.
       Hver ny uges ingest udbygger prishistorikken.
     </p>`;
+
+  $('#settings-stores').addEventListener('click', () => storePicker(() => viewSettings()));
 
   $('#locate').addEventListener('click', () => {
     navigator.geolocation?.getCurrentPosition(
@@ -549,5 +717,8 @@ window.addEventListener('hashchange', route);
 (async function init() {
   await loadStatus();
   CHAINS = await Data.chains();
+  // Nyt vindue, samme server: overtag det valg, serveren allerede har gemt,
+  // så madplanen ikke pludselig bygges af alle kæder igen.
+  FAVORITES = await Data.adoptServerFavorites(STATUS);
   await route();
 })();

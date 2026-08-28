@@ -1,27 +1,35 @@
 'use strict';
 
 /**
- * Bygger en ugentlig madplan ud fra dette uges tilbud.
+ * Madplan ud fra denne uges tilbud – SQLite-siden.
  *
- * Fremgangsmåde:
- *   1. Find alle AKTIVE tilbud og reducér dem til billigste tilbud pr.
- *      varetype (kr/kg), evt. begrænset til udvalgte kæder.
- *   2. Scor hver opskrift på hvor stor en del af dens ingredienser, der er
- *      på tilbud lige nu – basisvarer som salt og olie tæller ikke med.
- *   3. Vægt sammen med opskriftens score i det ønskede spor
- *      (sund & proteinrig / klassisk / gourmet).
- *   4. Vælg 7 retter grådigt, men tving variation frem, så ugen ikke ender
- *      som kylling syv dage i træk.
+ * Selve reglerne bor i `public/engine.js`, som også kører i browseren. Denne
+ * fil har én opgave: hente de tre ting, motoren skal bruge, ud af databasen.
  *
- * Pris og besparelse estimeres pr. portion ud fra ingrediensmængder ×
- * tilbudspris, med varens normalpris (median) som reference.
+ *   1. TILBUDSKORTET   billigste aktive tilbud pr. varetype – kun i de
+ *                      butikker brugeren har valgt som sine (favoritter).
+ *   2. NORMALPRISER    hvad varetypen normalt koster pr. kg/l, så en
+ *                      besparelse kan regnes, og så ingredienser UDEN tilbud
+ *                      stadig kan prissættes.
+ *   3. OPSKRIFTERNE    med ingredienser, taksonomi-nøgle og mængde.
+ *
+ * Favoritbutikkerne er hele pointen med opsætningen: en madplan bygget på
+ * tilbud fra femten kæder på tværs af landet er ikke en madplan, man kan
+ * handle efter. Har man Rema og Netto i nærheden, er det dem, planen skal
+ * bygges af.
  */
 
-const { getDb } = require('../db');
+const path = require('node:path');
+
+const { getDb, getSetting } = require('../db');
 const taxonomy = require('../lib/taxonomy');
 const { gramsOf } = require('../recipes/classify');
 const { getBaseline } = require('../price/history');
-const { isoWeek } = require('../lib/normalize');
+
+// Motoren ligger i public/, fordi browseren også skal kunne indlæse den.
+// Vi kræver den ind derfra i stedet for at kopiere den – to kopier af de
+// samme regler ville før eller siden komme til at være uenige.
+const engine = require(path.join(__dirname, '..', '..', 'public', 'engine.js'));
 
 const TIERS = {
   healthy: { column: 'score_healthy', label: 'Sund & proteinrig (lavt kulhydrat)' },
@@ -29,13 +37,16 @@ const TIERS = {
   premium: { column: 'score_premium', label: 'Gourmet' },
 };
 
-const DAYS = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'Søndag'];
+const DAYS = engine.DAYS;
 
-// ── Tilbud pr. varetype ──────────────────────────────────────────────────────
+// Prishistorik ældre end dette regnes ikke med i normalprisen.
+const HORIZON_DAYS = 400;
+
+// ── 1. Tilbudskortet ─────────────────────────────────────────────────────────
 
 /**
- * Billigste aktive tilbud pr. varetype, målt i kr/kg (eller kr/l).
- * Det er dette kort, opskrifterne matches imod.
+ * Billigste aktive tilbud pr. varetype, målt i kr/kg (eller kr/l), begrænset
+ * til de valgte kæder. Det er dette kort, opskrifterne matches imod.
  */
 function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
   const db = getDb();
@@ -43,7 +54,7 @@ function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
 
   const params = [now, now];
   let sql = `
-    SELECT o.id, o.product_id, o.chain_id, c.name AS chain_name, o.heading,
+    SELECT o.id AS offer_id, o.product_id, o.chain_id, c.name AS chain, o.heading,
            o.price, o.pre_price, o.unit_price, o.base_unit, o.base_qty,
            o.image, o.run_till, p.taxonomy_key, p.name AS product_name, p.category
       FROM offers o
@@ -62,123 +73,184 @@ function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
 
   const map = new Map();
   for (const row of db.prepare(sql).all(...params)) {
-    if (!map.has(row.taxonomy_key)) map.set(row.taxonomy_key, row);
+    // Drikkevarer, slik og non-food kan ikke bære en ret. De skal heller ikke
+    // kunne tælle med som "råvare på tilbud".
+    if (!taxonomy.isMealCapable(row.taxonomy_key)) continue;
+    if (map.has(row.taxonomy_key)) continue;
+
+    const baseline = getBaseline(row.product_id, row.base_unit);
+    map.set(row.taxonomy_key, { ...row, normal_unit_price: baseline?.median ?? null });
   }
   return map;
 }
 
-// ── Scoring af én opskrift ───────────────────────────────────────────────────
+/**
+ * Samme kort, men delt op PR. KÆDE – ét billigste tilbud pr. varetype pr. kæde.
+ *
+ * Det er formen, Supabase-indekset har, fordi favoritbutikkerne først er kendt
+ * i browseren: den henter rækkerne for sine egne kæder og reducerer dem til ét
+ * kort på nøjagtig samme måde som `activeOfferMap` gør her.
+ */
+function chainOfferIndex({ at = new Date() } = {}) {
+  const db = getDb();
+  const now = at.toISOString();
 
-const baselineCache = new Map();
-function cachedBaseline(productId, baseUnit) {
-  const k = `${productId}|${baseUnit}`;
-  if (!baselineCache.has(k)) baselineCache.set(k, getBaseline(productId, baseUnit));
-  return baselineCache.get(k);
+  const rows = db.prepare(`
+    SELECT o.id AS offer_id, o.product_id, o.chain_id, o.heading,
+           o.price, o.unit_price, o.base_unit, o.image, o.run_till,
+           p.taxonomy_key, p.name AS product_name
+      FROM offers o
+      JOIN products p ON p.id = o.product_id
+     WHERE p.taxonomy_key IS NOT NULL
+       AND o.unit_price IS NOT NULL
+       AND (o.run_from IS NULL OR o.run_from <= ?)
+       AND (o.run_till IS NULL OR o.run_till >= ?)
+     ORDER BY o.unit_price ASC
+  `).all(now, now);
+
+  const baselines = new Map();
+  const index = new Map();
+  for (const row of rows) {
+    if (!taxonomy.isMealCapable(row.taxonomy_key)) continue;
+    const k = `${row.taxonomy_key}|${row.chain_id}`;
+    if (index.has(k)) continue;                       // sorteret billigst først
+
+    const bk = `${row.product_id}|${row.base_unit}`;
+    if (!baselines.has(bk)) baselines.set(bk, getBaseline(row.product_id, row.base_unit));
+    index.set(k, { ...row, normal_unit_price: baselines.get(bk)?.median ?? null });
+  }
+  return [...index.values()];
 }
+
+// ── 2. Normalpriser pr. varetype ─────────────────────────────────────────────
+
+const median = (values) => {
+  if (!values.length) return null;
+  const s = [...values].sort((a, b) => a - b);
+  const mid = Math.floor(s.length / 2);
+  return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2;
+};
 
 /**
- * Hvor meget af opskriften er på tilbud, og hvad koster den cirka?
+ * Normalpris pr. varetype – på tværs af kæder og uger.
+ *
+ * Bruges dér, hvor produkt-niveauet er for fint: en opskrift beder om
+ * "hakket oksekød", ikke om en bestemt fedtprocent fra en bestemt kæde. Som i
+ * `price/history.js` tælles ÉN pris pr. kæde pr. uge, ellers trækker de kæder,
+ * der udgiver samme vare i seksten aviser, medianen ned mod sig selv.
  */
-function scoreRecipe(recipe, ingredients, offerMap) {
-  const relevant = ingredients.filter((i) => i.taxonomy_key && !i.is_staple);
-  const considered = relevant.length || 1;
+function normalPriceMap() {
+  const db = getDb();
+  const since = new Date(Date.now() - HORIZON_DAYS * 86400000).toISOString();
 
-  const matched = [];
-  let estCost = 0, estSavings = 0, pricedIngredients = 0;
+  const rows = db.prepare(`
+    SELECT p.taxonomy_key, o.base_unit, o.chain_id, o.year, o.week,
+           MIN(o.unit_price) AS unit_price, p.name AS name
+      FROM offers o
+      JOIN products p ON p.id = o.product_id
+     WHERE p.taxonomy_key IS NOT NULL
+       AND o.unit_price IS NOT NULL AND o.unit_price > 0
+       AND o.base_unit IN ('kg', 'l')
+       AND COALESCE(o.run_from, o.observed_at) >= ?
+     GROUP BY p.taxonomy_key, o.base_unit, o.chain_id, o.year, o.week
+  `).all(since);
 
-  const seen = new Set();
-  for (const ing of relevant) {
-    if (seen.has(ing.taxonomy_key)) continue;
-    seen.add(ing.taxonomy_key);
-
-    const offer = offerMap.get(ing.taxonomy_key);
-    const grams = gramsOf(ing);
-    // Kun vægt-/rumfangsbaserede tilbud kan prissættes pr. mængde.
-    const qtyInBase = grams && offer && (offer.base_unit === 'kg' || offer.base_unit === 'l')
-      ? grams / 1000
-      : null;
-
-    if (offer) {
-      const baseline = cachedBaseline(offer.product_id, offer.base_unit);
-      const normal = baseline?.median ?? null;
-
-      let cost = null, saving = null;
-      if (qtyInBase != null) {
-        cost = qtyInBase * offer.unit_price;
-        if (normal != null && normal > offer.unit_price) saving = qtyInBase * (normal - offer.unit_price);
-      }
-
-      if (cost != null) { estCost += cost; pricedIngredients++; }
-      if (saving != null) estSavings += saving;
-
-      matched.push({
-        taxonomy_key: ing.taxonomy_key,
-        name: offer.product_name,
-        ingredient: ing.ingredient,
-        offer_id: offer.id,
-        chain: offer.chain_name,
-        chain_id: offer.chain_id,
-        heading: offer.heading,
-        price: offer.price,
-        unit_price: offer.unit_price,
-        base_unit: offer.base_unit,
-        normal_unit_price: normal,
-        grams: grams ? Math.round(grams) : null,
-        est_cost: cost != null ? Math.round(cost * 100) / 100 : null,
-        est_saving: saving != null ? Math.round(saving * 100) / 100 : null,
-        image: offer.image,
-      });
-    } else if (grams) {
-      // Ikke på tilbud – prissæt til normalpris, hvis vi kender den.
-      const db = getDb();
-      const prod = db.prepare('SELECT id FROM products WHERE taxonomy_key = ? LIMIT 1').get(ing.taxonomy_key);
-      if (prod) {
-        const baseline = cachedBaseline(prod.id, 'kg');
-        if (baseline?.median) { estCost += (grams / 1000) * baseline.median; pricedIngredients++; }
-      }
+  const buckets = new Map();
+  for (const r of rows) {
+    const k = `${r.taxonomy_key}|${r.base_unit}`;
+    if (!buckets.has(k)) {
+      buckets.set(k, { key: r.taxonomy_key, base_unit: r.base_unit, name: r.name, prices: [] });
     }
+    buckets.get(k).prices.push(r.unit_price);
   }
 
-  const coverage = matched.length / considered;
-  const servings = recipe.servings && recipe.servings > 0 ? recipe.servings : 4;
-
-  return {
-    matched,
-    match_count: matched.length,
-    considered,
-    coverage: Math.round(coverage * 100) / 100,
-    est_cost: Math.round(estCost * 100) / 100,
-    est_cost_per_serving: Math.round((estCost / servings) * 100) / 100,
-    est_savings: Math.round(estSavings * 100) / 100,
-    priced_ingredients: pricedIngredients,
-  };
-}
-
-// ── Planlægning ──────────────────────────────────────────────────────────────
-
-/** Rettens "hovedråvare" – bruges til at sikre variation hen over ugen. */
-function mainProtein(ingredients) {
-  const order = ['fish', 'meat', 'poultry', 'legume', 'eggs', 'cheese'];
-  for (const cat of order) {
-    for (const ing of ingredients) {
-      if (!ing.taxonomy_key) continue;
-      if (taxonomy.get(ing.taxonomy_key)?.cat === cat) return ing.taxonomy_key;
-    }
+  // En varetype kan findes i både kg og l (fx fløde). Den enhed med flest
+  // observationer er den, opskrifterne i praksis skal prissættes efter.
+  const best = new Map();
+  for (const b of buckets.values()) {
+    const prev = best.get(b.key);
+    if (prev && prev.samples >= b.prices.length) continue;
+    best.set(b.key, {
+      unit_price: median(b.prices),
+      base_unit: b.base_unit,
+      name: b.name,
+      samples: b.prices.length,
+    });
   }
-  return null;
+  return best;
 }
 
-/** Lille deterministisk PRNG, så et givet seed altid giver samme plan. */
-function seededNoise(seed, id) {
-  let h = (seed ^ (id * 2654435761)) >>> 0;
-  h ^= h << 13; h >>>= 0;
-  h ^= h >> 17;
-  h ^= h << 5;  h >>>= 0;
-  return (h % 1000) / 1000;                        // 0…1
+// ── 3. Opskrifterne ──────────────────────────────────────────────────────────
+
+/**
+ * Opskrifter med ingredienserne oversat til motorens format.
+ *
+ * `tier` angivet  → kun opskrifter i det spor, med `tier_score` sat.
+ * `tier` udeladt  → alle opskrifter, med alle tre spor-scorer. Det er den
+ *                   form, Supabase-indekset skrives i, hvor sporet først
+ *                   vælges i browseren.
+ *
+ * `is_staple` læses fra basen, men taksonomien får det sidste ord: udvides
+ * listen over basisvarer, skal det virke med det samme – ikke først efter en
+ * `npm run reclassify`.
+ */
+function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
+  const db = getDb();
+  const column = tier ? TIERS[tier].column : null;
+  const params = column ? [minTierScore] : [];
+
+  const rows = db.prepare(`
+    SELECT id, title, url, image, source, source_name, servings, total_minutes,
+           kcal, protein_g, carbs_g, nutrition_src,
+           score_healthy, score_classic, score_premium
+      FROM recipes
+     ${column ? `WHERE ${column} >= ?` : ''}
+     ${column ? `ORDER BY ${column} DESC` : ''}
+  `).all(...params);
+
+  const byId = new Map(rows.map((r) => [r.id, {
+    ...r,
+    tier_score: column ? r[column] : null,
+    items: [],
+    unknown_main: false,
+  }]));
+  if (!byId.size) return [];
+
+  // Ét opslag frem for ét pr. opskrift: 30.000 rækker ad gangen er hurtigere
+  // end 2.000 forespørgsler, og planen skal kunne regnes på et øjeblik.
+  const ingredients = db.prepare(`
+    SELECT ri.recipe_id, ri.raw, ri.ingredient, ri.taxonomy_key, ri.is_staple, ri.qty, ri.unit
+      FROM recipe_ingredients ri
+      ${column ? `JOIN recipes r ON r.id = ri.recipe_id WHERE r.${column} >= ?` : ''}
+     ORDER BY ri.recipe_id, ri.position
+  `).all(...params);
+
+  for (const ing of ingredients) {
+    const recipe = byId.get(ing.recipe_id);
+    if (!recipe) continue;
+
+    if (!ing.taxonomy_key) {
+      // Ingrediens vi ikke kender. Ligner den kød eller fisk, kan retten ikke
+      // planlægges troværdigt – se `hintsAtMainIngredient`.
+      if (taxonomy.hintsAtMainIngredient(ing.raw)) recipe.unknown_main = true;
+      continue;
+    }
+
+    const entry = taxonomy.get(ing.taxonomy_key);
+    recipe.items.push({
+      key: ing.taxonomy_key,
+      cat: entry?.cat ?? null,
+      staple: Boolean(ing.is_staple) || taxonomy.isStaple(ing.taxonomy_key),
+      grams: gramsOf(ing),
+      ingredient: ing.ingredient || entry?.name || ing.taxonomy_key,
+    });
+  }
+
+  return [...byId.values()].filter((r) => r.items.length >= 3);
 }
 
 /** Opskrifter brugt i de seneste ugers planer – de skal vige for nye. */
-function recentlyUsedRecipes(tier, weeksBack) {
+function recentlyUsedRecipes(weeksBack) {
   const db = getDb();
   const rows = db.prepare(`
     SELECT DISTINCT i.recipe_id
@@ -189,8 +261,25 @@ function recentlyUsedRecipes(tier, weeksBack) {
   return new Set(rows.map((r) => r.recipe_id));
 }
 
+/** Brugerens favoritbutikker, hvis der ikke er givet nogen med kaldet. */
+function favoriteChainIds() {
+  const saved = getSetting('favorite_chains', null);
+  return Array.isArray(saved) && saved.length ? saved : null;
+}
+
+function chainNamesFor(chainIds) {
+  if (!chainIds || !chainIds.length) return null;
+  const db = getDb();
+  return db.prepare(
+    `SELECT name FROM chains WHERE id IN (${chainIds.map(() => '?').join(',')}) ORDER BY name`
+  ).all(...chainIds).map((r) => r.name);
+}
+
+// ── Sammensætning ────────────────────────────────────────────────────────────
+
 function generatePlan({
   tier = 'classic',
+  // null = ikke angivet → brug de gemte favoritter. [] = udtrykkeligt alle kæder.
   chainIds = null,
   days = 7,
   minTierScore = 0.35,
@@ -203,107 +292,36 @@ function generatePlan({
   variety = 0.18,
 } = {}) {
   if (!TIERS[tier]) throw new Error(`Ukendt spor: ${tier}`);
-  const db = getDb();
-  baselineCache.clear();
 
-  const offerMap = activeOfferMap({ chainIds, at });
-  const column = TIERS[tier].column;
+  const chains = chainIds === null ? favoriteChainIds()
+    : (chainIds.length ? chainIds : null);
 
-  const candidates = db.prepare(`
-    SELECT * FROM recipes
-     WHERE ${column} >= ?
-       AND (SELECT COUNT(*) FROM recipe_ingredients ri WHERE ri.recipe_id = recipes.id) >= 3
-     ORDER BY ${column} DESC
-     LIMIT 1200
-  `).all(minTierScore);
+  const offers = activeOfferMap({ chainIds: chains, at });
+  const recipes = loadRecipes({ tier, minTierScore });
 
-  if (!candidates.length) {
-    return { tier, days: [], error: 'Ingen opskrifter matcher sporet endnu – kør opskrifts-crawleren først.' };
+  if (!recipes.length) {
+    return {
+      tier, days: [], chain_ids: chains,
+      error: 'Ingen opskrifter matcher sporet endnu – kør opskrifts-crawleren først.',
+    };
   }
 
-  const getIngredients = db.prepare('SELECT * FROM recipe_ingredients WHERE recipe_id = ? ORDER BY position');
-
-  const recentlyUsed = avoidRecentWeeks > 0 ? recentlyUsedRecipes(tier, avoidRecentWeeks) : new Set();
-
-  const scored = [];
-  for (const r of candidates) {
-    const ingredients = getIngredients.all(r.id);
-    const s = scoreRecipe(r, ingredients, offerMap);
-    if (s.match_count === 0) continue;                    // intet på tilbud → ikke relevant
-
-    const tierScore = r[column] ?? 0;
-    // Tilbudsdækning vejer tungest – det er hele pointen med planen – men
-    // sporet skal stadig kunne skubbe en ret ud, hvis den ikke passer.
-    let total = 0.55 * s.coverage + 0.35 * tierScore + 0.10 * Math.min(s.est_savings / 40, 1);
-
-    // Var retten med i en af de sidste ugers planer, skal den vige for en ny.
-    const repeat = recentlyUsed.has(r.id);
-    if (repeat) total -= 0.22;
-
-    // Støj bryder uafgjorte kandidater op, så to kørsler ikke giver samme uge.
-    // Feltet af gode kandidater er stort; forskellen i kvalitet mellem nr. 7
-    // og nr. 25 er lille, mens forskellen i oplevet variation er stor.
-    total += seededNoise(seed, r.id) * variety;
-
-    scored.push({
-      recipe: r, ingredients, score: s, tierScore, total,
-      repeat, main: mainProtein(ingredients),
-    });
-  }
-
-  scored.sort((a, b) => b.total - a.total);
-
-  // Grådigt valg med variation: samme hovedråvare højst to gange, og samme
-  // ret aldrig to gange.
-  const chosen = [];
-  const mainCount = new Map();
-  for (const pass of [2, 99]) {
-    for (const cand of scored) {
-      if (chosen.length >= days) break;
-      if (chosen.some((c) => c.recipe.id === cand.recipe.id)) continue;
-      const used = mainCount.get(cand.main) || 0;
-      if (cand.main && used >= pass) continue;
-      chosen.push(cand);
-      mainCount.set(cand.main, used + 1);
-    }
-    if (chosen.length >= days) break;
-  }
-
-  const totalCost = chosen.reduce((a, c) => a + c.score.est_cost, 0);
-  const totalSavings = chosen.reduce((a, c) => a + c.score.est_savings, 0);
-
-  return {
+  const plan = engine.buildPlan({
     tier,
-    tier_label: TIERS[tier].label,
-    generated_at: new Date().toISOString(),
-    ...isoWeek(at),
-    chain_ids: chainIds,
+    tierLabel: TIERS[tier].label,
+    recipes,
+    offers,
+    normalPrices: normalPriceMap(),
+    days,
     seed,
-    offers_available: offerMap.size,
-    candidates_scored: scored.length,
-    est_cost: Math.round(totalCost * 100) / 100,
-    est_savings: Math.round(totalSavings * 100) / 100,
-    days: chosen.map((c, i) => ({
-      day: i,
-      day_name: DAYS[i % 7],
-      recipe: {
-        id: c.recipe.id,
-        title: c.recipe.title,
-        url: c.recipe.url,
-        image: c.recipe.image,
-        source: c.recipe.source,
-        source_name: c.recipe.source_name,
-        servings: c.recipe.servings,
-        total_minutes: c.recipe.total_minutes,
-        kcal: c.recipe.kcal,
-        protein_g: c.recipe.protein_g,
-        carbs_g: c.recipe.carbs_g,
-        nutrition_src: c.recipe.nutrition_src,
-      },
-      tier_score: c.tierScore,
-      ...c.score,
-    })),
-  };
+    variety,
+    recentIds: avoidRecentWeeks > 0 ? recentlyUsedRecipes(avoidRecentWeeks) : null,
+    chainIds: chains,
+    chainNames: chainNamesFor(chains),
+    at,
+  });
+
+  return plan;
 }
 
 // ── Persistering ─────────────────────────────────────────────────────────────
@@ -339,42 +357,10 @@ function savePlan(plan) {
   return tx();
 }
 
-/** Samlet indkøbsliste for en plan, grupperet efter butik. */
-function shoppingList(plan) {
-  const byChain = new Map();
-  const extras = new Map();
-
-  for (const day of plan.days) {
-    for (const m of day.matched) {
-      if (!byChain.has(m.chain)) byChain.set(m.chain, new Map());
-      const items = byChain.get(m.chain);
-      const prev = items.get(m.taxonomy_key);
-      if (prev) {
-        prev.grams += m.grams || 0;
-        prev.est_cost += m.est_cost || 0;
-        prev.est_saving += m.est_saving || 0;
-        prev.used_in.push(day.recipe.title);
-      } else {
-        items.set(m.taxonomy_key, {
-          name: m.name, heading: m.heading, chain: m.chain,
-          price: m.price, unit_price: m.unit_price, base_unit: m.base_unit,
-          grams: m.grams || 0, est_cost: m.est_cost || 0, est_saving: m.est_saving || 0,
-          image: m.image, used_in: [day.recipe.title],
-        });
-      }
-    }
-    // Ingredienser uden tilbud – skal stadig købes
-    for (const ing of day.unmatched || []) extras.set(ing, true);
-  }
-
-  return {
-    on_offer: [...byChain.entries()].map(([chain, items]) => ({
-      chain,
-      items: [...items.values()].sort((a, b) => b.est_saving - a.est_saving),
-      total: Math.round([...items.values()].reduce((a, i) => a + i.est_cost, 0) * 100) / 100,
-      savings: Math.round([...items.values()].reduce((a, i) => a + i.est_saving, 0) * 100) / 100,
-    })).sort((a, b) => b.savings - a.savings),
-  };
-}
-
-module.exports = { generatePlan, savePlan, shoppingList, activeOfferMap, scoreRecipe, TIERS, DAYS };
+module.exports = {
+  generatePlan, savePlan,
+  shoppingList: engine.shoppingList,
+  activeOfferMap, chainOfferIndex, normalPriceMap, loadRecipes,
+  favoriteChainIds, chainNamesFor,
+  TIERS, DAYS, engine,
+};
