@@ -188,6 +188,12 @@ create table if not exists recipe_index (
   unknown_main  boolean default false,
   items         jsonb not null          -- [{key,cat,staple,grams,ingredient}]
 );
+-- Tabellen findes allerede hos den, der kørte skemaet før sproget kom til.
+-- create table if not exists rører ikke en eksisterende tabel, så kolonnen
+-- skal lægges på eksplicit – ellers fejler synken med "column
+-- recipe_index.lang does not exist".
+alter table recipe_index add column if not exists lang text;
+
 create index if not exists idx_recipe_index_healthy on recipe_index(score_healthy);
 create index if not exists idx_recipe_index_classic on recipe_index(score_classic);
 create index if not exists idx_recipe_index_premium on recipe_index(score_premium);

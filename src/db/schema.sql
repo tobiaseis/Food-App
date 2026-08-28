@@ -88,12 +88,12 @@ CREATE TABLE IF NOT EXISTS offers (
   catalog_id    TEXT,
   observed_at   TEXT NOT NULL
 );
--- Samme tilbud, uanset hvilken avis det kom fra. Flere kæder udgiver den
--- samme tilbudsavis én gang pr. region, og hver kopi har sit eget catalog_id
--- og sine egne offer id'er – UNIQUE(external_id) fanger dem derfor ikke.
-CREATE UNIQUE INDEX IF NOT EXISTS idx_offers_natural
-  ON offers(chain_id, heading, IFNULL(description, ''), price,
-            IFNULL(run_from, ''), IFNULL(run_till, ''));
+-- BEMÆRK: den unikke nøgle mod dubletter (idx_offers_natural) lægges IKKE her,
+-- men i src/db/dedupe.js, som kaldes fra migrate(). Et CREATE UNIQUE INDEX i
+-- denne fil ville fejle på enhver base fra før nøglen blev indført – de
+-- indeholder dubletter – og da schema.sql køres ved hver eneste åbning, ville
+-- basen så slet ikke kunne åbnes. Migreringen rydder op først og lægger
+-- derefter nøglen på.
 
 CREATE INDEX IF NOT EXISTS idx_offers_product ON offers(product_id, run_from);
 CREATE INDEX IF NOT EXISTS idx_offers_chain   ON offers(chain_id, run_from);

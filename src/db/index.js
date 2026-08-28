@@ -4,6 +4,8 @@ const Database = require('better-sqlite3');
 const fs   = require('fs');
 const path = require('path');
 
+const { ensureNaturalKey } = require('./dedupe');
+
 const DB_PATH     = process.env.DB_PATH || path.join(__dirname, '..', '..', 'data.db');
 const SCHEMA_PATH = path.join(__dirname, 'schema.sql');
 
@@ -39,6 +41,10 @@ function migrate(db) {
     const cols = db.prepare(`PRAGMA table_info(${table})`).all().map((c) => c.name);
     if (!cols.includes(column)) db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${type}`);
   }
+
+  // Rydder dubletter og lægger den naturlige nøgle på. Første åbning af en
+  // base fra før nøglen tager et øjeblik; derefter er det ét opslag.
+  ensureNaturalKey(db, console.log);
 }
 
 /** Læser en indstilling; falder tilbage til `fallback`. */
