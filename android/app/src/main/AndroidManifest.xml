@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation|density"
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBarLaunch"
+            android:launchMode="singleTask"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- App Links: et delt link til madplanen åbner appen i stedet for
+                 browseren. autoVerify kræver, at der ligger en
+                 .well-known/assetlinks.json på værtsnavnet med APK-ens
+                 SHA-256-fingeraftryk - se public/.well-known/assetlinks.json
+                 og appLinkHost i android/variables.gradle. Er værtsnavnet
+                 ikke sat op endnu, fejler verifikationen i stilhed, og
+                 linkene åbner som før i browseren. -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="${appLinkHost}" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Push: silhuet-ikon og accentfarve til statuslinjen. Uden dem
+             tegner Android en hvid firkant. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_madplan" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/ic_launcher_background" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+    </application>
+
+    <!-- Permissions -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Afstand til nærmeste butik. KUN grov placering: appen måler km til et
+         supermarked, og det kræver ikke GPS-præcision. ACCESS_FINE_LOCATION
+         ville være at bede om mere, end appen bruger – og det skal stå til
+         regnskab i Play Console under datasikkerhed.
+
+         Geolocation-pluginet tilføjer ikke selv rettigheden; uden linjen her
+         fejler Native.getPosition() på telefonen, mens den virker fint i
+         browseren. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+</manifest>

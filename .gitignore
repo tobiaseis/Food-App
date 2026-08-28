@@ -18,3 +18,12 @@ logs/
 
 # Agent-skills installeret lokalt (.agents ignoreres allerede)
 skills-lock.json
+
+# Supabase-nøgler til Android-buildet. Læses af scripts/build-web.js.
+.env
+
+# Firebase-tjenestekonto til push (src/push/send.js). Denne ER en hemmelighed.
+fcm-service-account.json
+
+# Materiale til Play Console (genskabes med: npm run store)
+store/

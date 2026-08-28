@@ -13,13 +13,20 @@
     "reclassify": "node src/recipes/reclassify.js",
     "watch": "node src/watch/notify.js",
     "update": "node src/update.js",
-    "test": "node --test test/normalize.test.js test/sync.test.js test/mealplan.test.js",
+    "test": "node --test test/normalize.test.js test/sync.test.js test/mealplan.test.js test/push.test.js",
     "legacy:pdf": "node pipeline.js",
     "update:quiet": "node src/update.js --quiet",
     "schedule": "powershell -ExecutionPolicy Bypass -File scripts/schedule-windows.ps1",
     "schedule:status": "powershell -ExecutionPolicy Bypass -File scripts/schedule-windows.ps1 -Status",
     "schedule:remove": "powershell -ExecutionPolicy Bypass -File scripts/schedule-windows.ps1 -Remove",
     "build": "node scripts/build-web.js",
+    "icons": "node scripts/make-icons.js",
+    "store": "node scripts/store-assets.js",
+    "android:sync": "node scripts/build-web.js --android && npx cap sync android",
+    "android:open": "npm run android:sync && npx cap open android",
+    "android:run": "npm run android:sync && npx cap run android",
+    "android:apk": "npm run android:sync && cd android && gradlew.bat assembleDebug",
+    "android:aab": "npm run android:sync && cd android && gradlew.bat bundleRelease",
     "sync": "node src/sync/build.js",
     "sync:dry": "node src/sync/build.js --dry-run",
     "db:checkpoint": "node -e \"const db=require('better-sqlite3')('data.db');db.pragma('wal_checkpoint(TRUNCATE)');db.close();console.log('data.db lukket af')\""
@@ -36,5 +43,18 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.5.0",
+    "@capacitor/app": "^8.1.1",
+    "@capacitor/cli": "^8.5.0",
+    "@capacitor/core": "^8.5.0",
+    "@capacitor/geolocation": "^8.2.2",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/preferences": "^8.0.1",
+    "@capacitor/push-notifications": "^8.1.2",
+    "@capacitor/share": "^8.0.1",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.3"
   }
 }

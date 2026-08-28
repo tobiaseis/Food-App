@@ -287,11 +287,20 @@ async function syncWatches(db, log) {
     SELECT n.watch_id, n.offer_id, n.reason, n.unit_price, n.discount,
            n.nearest_km, n.nearest_store, n.created_at
       FROM notifications n
-  `).all().map((n) => ({
-    ...n,
-    device_id: byId.get(n.watch_id)?.device_id || 'unknown',
-    created_at: iso(n.created_at),
-  }));
+  `).all().map((n) => {
+    const w = byId.get(n.watch_id);
+    const row = {
+      ...n,
+      device_id: w?.device_id || 'unknown',
+      created_at: iso(n.created_at),
+    };
+    // user_id kommer først med, når supabase/auth.sql er kørt. Feltet tages
+    // med, hvis kolonnen findes (select=* ville så give den, også som null),
+    // og udelades ellers – en upsert med en kolonne, der ikke findes, ville
+    // vælte hele den natlige kørsel for alle, der ikke har migreret endnu.
+    if (w && 'user_id' in w) row.user_id = w.user_id;
+    return row;
+  });
 
   log(`  ${created.length} nye notifikationer`);
   return notifications;
@@ -330,49 +339,64 @@ const DERIVED = [
 ];
 
 /**
- * Læst/ulæst er brugerens data, men notifications hænger på offers med
- * ON DELETE CASCADE og ryger derfor med, når tilbuddene udskiftes ovenfor.
- * Tilstanden huskes på (watch_id, tilbuddets external_id) – begge er stabile,
- * hvor id'erne netop ikke er.
+ * To markeringer på notifications er brugerens/systemets, ikke data.db's:
+ *
+ *   read_at    har brugeren set beskeden
+ *   pushed_at  har vi sendt den som push
+ *
+ * Begge ville gå tabt hver nat: notifications hænger på offers med ON DELETE
+ * CASCADE og ryger med, når tilbuddene udskiftes ovenfor. For read_at ville
+ * det betyde et ulæst-tal, der poppede op igen; for pushed_at ville det
+ * betyde, at HVER notifikation blev sendt som push forfra hver eneste nat.
+ *
+ * Tilstanden huskes derfor på (watch_id, tilbuddets external_id) – begge er
+ * stabile, hvor id'erne netop ikke er.
  */
-async function saveReadState(log) {
+const STATE_COLUMNS = ['read_at', 'pushed_at'];
+
+async function saveNotificationState(log) {
   const rows = await sb.selectAll('notifications', {
-    select: 'watch_id,read_at,offers(external_id)',
-    query: 'read_at=not.is.null',
+    select: `watch_id,${STATE_COLUMNS.join(',')},offers(external_id)`,
+    query: 'or=(read_at.not.is.null,pushed_at.not.is.null)',
   });
   const seen = new Map();
   for (const r of rows) {
     const ext = r.offers && r.offers.external_id;
-    if (ext) seen.set(`${r.watch_id}|${ext}`, r.read_at);
+    if (!ext) continue;
+    seen.set(`${r.watch_id}|${ext}`, { read_at: r.read_at, pushed_at: r.pushed_at });
   }
-  if (seen.size) log(`  husker ${seen.size} læste notifikationer`);
+  if (seen.size) log(`  husker tilstand på ${seen.size} notifikationer`);
   return seen;
 }
 
-async function restoreReadState(seen, model, log) {
+async function restoreNotificationState(seen, model, log) {
   if (!seen.size || !model.notifications.length) return;
 
   const extById = new Map(model.offers.map((o) => [o.id, o.external_id]));
-  const groups = new Map();               // watch_id + tidsstempel → offer_id'er
-  for (const n of model.notifications) {
-    const readAt = seen.get(`${n.watch_id}|${extById.get(n.offer_id)}`);
-    if (!readAt) continue;
-    const k = `${n.watch_id}|${readAt}`;
-    if (!groups.has(k)) groups.set(k, []);
-    groups.get(k).push(n.offer_id);
-  }
-  if (!groups.size) return;
 
-  let n = 0;
-  for (const [k, offerIds] of groups) {
-    const [watchId, readAt] = k.split('|');
-    await sb.patch(
-      `notifications?watch_id=eq.${watchId}&offer_id=in.(${offerIds.join(',')})`,
-      { read_at: readAt },
-    );
-    n += offerIds.length;
+  for (const column of STATE_COLUMNS) {
+    const groups = new Map();             // watch_id + tidsstempel → offer_id'er
+    for (const n of model.notifications) {
+      const prev = seen.get(`${n.watch_id}|${extById.get(n.offer_id)}`);
+      const value = prev && prev[column];
+      if (!value) continue;
+      const k = `${n.watch_id}|${value}`;
+      if (!groups.has(k)) groups.set(k, []);
+      groups.get(k).push(n.offer_id);
+    }
+    if (!groups.size) continue;
+
+    let n = 0;
+    for (const [k, offerIds] of groups) {
+      const [watchId, value] = k.split('|');
+      await sb.patch(
+        `notifications?watch_id=eq.${watchId}&offer_id=in.(${offerIds.join(',')})`,
+        { [column]: value },
+      );
+      n += offerIds.length;
+    }
+    log(`  genskabte ${column} på ${n} notifikationer`);
   }
-  log(`  genskabte læst-markering på ${n} notifikationer`);
 }
 
 async function push(model, log) {
@@ -381,7 +405,7 @@ async function push(model, log) {
     return sb.upsert(name, rows, { ...opts, log });
   };
 
-  const readState = await saveReadState(log);
+  const notifState = await saveNotificationState(log);
 
   log('  rydder afledte tabeller...');
   for (const [table, filter] of DERIVED) await sb.del(table, filter);
@@ -405,7 +429,7 @@ async function push(model, log) {
   if (model.notifications.length) {
     await t('notifications', model.notifications, { onConflict: 'watch_id,offer_id' });
   }
-  await restoreReadState(readState, model, log);
+  await restoreNotificationState(notifState, model, log);
 
   await sb.upsert('sync_state', [{
     key: 'last_build',

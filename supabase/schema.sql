@@ -234,9 +234,33 @@ create table if not exists notifications (
   nearest_store text,
   created_at    timestamptz default now(),
   read_at       timestamptz,
+  -- Sat når beskeden er sendt som push. NULL = ikke sendt endnu, og det er
+  -- præcis den forespørgsel, src/push/send.js kører på.
+  pushed_at     timestamptz,
   unique (watch_id, offer_id)
 );
 create index if not exists idx_notif_device on notifications(device_id, read_at);
+-- Tabellen findes allerede hos den, der kørte skemaet før push kom til.
+alter table notifications add column if not exists pushed_at timestamptz;
+create index if not exists idx_notif_unpushed on notifications(pushed_at)
+  where pushed_at is null;
+
+-- ── Enheder der kan modtage push ────────────────────────────────────────────
+--
+-- Ét token pr. installation. FCM udskifter dem uden varsel, så appen
+-- registrerer sit token ved hver opstart, og token er derfor primærnøglen –
+-- den samme enhed kan optræde med et nyt.
+--
+-- Gamle tokens bliver ikke ryddet op her. Det gør send.js: svarer FCM
+-- UNREGISTERED eller INVALID_ARGUMENT, slettes rækken.
+create table if not exists device_tokens (
+  token      text primary key,
+  device_id  text not null,
+  platform   text not null default 'android',
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+create index if not exists idx_device_tokens_device on device_tokens(device_id);
 
 -- Sidste kørsel, så frontenden kan vise hvor friske data er.
 create table if not exists sync_state (
@@ -270,6 +294,7 @@ alter table deals        enable row level security;
 alter table sync_state   enable row level security;
 alter table watches      enable row level security;
 alter table notifications enable row level security;
+alter table device_tokens enable row level security;
 
 do $$
 declare t text;
@@ -295,6 +320,17 @@ create policy notif_read on notifications
 
 drop policy if exists notif_update on notifications;
 create policy notif_update on notifications
+  for update to anon, authenticated using (true) with check (true);
+
+-- Appen skriver sit eget push-token. Den skal aldrig LÆSE tabellen: et token
+-- er nok til at sende beskeder til enheden, og en offentlig select ville
+-- udlevere alle brugeres. Derfor kun insert og update.
+drop policy if exists tokens_write on device_tokens;
+create policy tokens_write on device_tokens
+  for insert to anon, authenticated with check (true);
+
+drop policy if exists tokens_update on device_tokens;
+create policy tokens_update on device_tokens
   for update to anon, authenticated using (true) with check (true);
 
 -- service_role (GitHub Actions) omgår RLS automatisk og behøver ingen policy.

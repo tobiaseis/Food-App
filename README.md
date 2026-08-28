@@ -27,6 +27,21 @@ skriver et resumé til `logs/update.log`.
 
 Uden planlagt opgave er `npm run update` den samme rutine kørt i hånden.
 
+### Eller som app på telefonen
+
+```bash
+npm run android:sync     # byg config.js og kopiér public/ ind i projektet
+npm run android:apk      # debug-APK
+```
+
+Capacitor pakker `public/` ind i en APK – samme kode som websiden, ingen
+bundler, ingen omskrivning. Det, der kommer med, er dét, en fane ikke kan:
+**rigtige notifikationer**. Overvågningerne er hele tiden blevet evalueret
+hver nat; det, der manglede, var at levere dem, så man opdager tilbuddet
+mens det gælder og ikke ugen efter.
+
+Se **[ANDROID.md](ANDROID.md)** for opsætning, push og Play Store.
+
 ### Eller kør det i skyen – gratis
 
 Vercel (frontend) + Supabase (data) + GitHub Actions (den daglige kørsel).

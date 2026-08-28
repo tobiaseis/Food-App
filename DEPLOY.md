@@ -121,6 +121,21 @@ relevante direktiv – ellers blokerer browseren den tavst.
 
 ---
 
+## Android
+
+Appen findes også som APK. Den bruger de samme Supabase-nøgler og den samme
+natlige kørsel – kun leveringen af notifikationer er ny, og den hænger på et
+ekstra trin i `update.yml` plus hemmeligheden `FCM_SERVICE_ACCOUNT`.
+
+Se **[ANDROID.md](ANDROID.md)**. To ting derfra hører hjemme her:
+
+* `supabase/schema.sql` skal køres igen – den tilføjer `device_tokens` og
+  `notifications.pushed_at`. Uden den sidste ville hver notifikation blive
+  sendt forfra hver nat.
+* Skal appen deles med andre end din egen husstand, er `supabase/auth.sql`
+  et krav, ikke en mulighed. Anon-nøglen ligger i enhver APK, og de nuværende
+  policyer er `using (true)`.
+
 ## Hvad der virker hvor
 
 | Funktion | Lokalt (`npm start`) | Vercel + Supabase |

@@ -80,6 +80,19 @@ jobs:
       - name: Byg read-model og send til Supabase
         run: node src/sync/build.js
 
+      # Selve detektionen skete ovenfor – build.js kører hver overvågning og
+      # lægger rækker i notifications. Her leveres de. Uden dette trin opdager
+      # man først, at en vare var på tilbud, når man tilfældigvis åbner appen.
+      #
+      # Trinnet må ikke kunne vælte kørslen: er Firebase ikke sat op, springer
+      # send.js over og går pænt ud. Databasen skal stadig gemmes bagefter.
+      - name: Send push til de enheder, der følger varerne
+        if: always()
+        continue-on-error: true
+        env:
+          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+        run: node src/push/send.js
+
       # WAL-filen skal foldes ind i data.db, ellers uploader vi en base uden
       # de nyeste skrivninger.
       #

@@ -1,0 +1,26 @@
+{
+  "appId": "dk.madplan.app",
+  "appName": "Madplan",
+  "webDir": "public",
+  "android": {
+    "backgroundColor": "#f6f7f9",
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true,
+      "backgroundColor": "#1d6f4f",
+      "androidSpinnerStyle": "small",
+      "spinnerColor": "#ffffff",
+      "launchShowDuration": 3000,
+      "launchFadeOutDuration": 200
+    },
+    "PushNotifications": {
+      "presentationOptions": [
+        "badge",
+        "sound",
+        "alert"
+      ]
+    }
+  }
+}

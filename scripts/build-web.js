@@ -16,6 +16,17 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
+// Android-buildet køres i hånden fra en almindelig terminal, hvor der ikke
+// er noget Vercel til at sætte miljøvariablerne. En .env ved siden af
+// package.json sparer brugeren for at eksportere dem hver gang. Filen er
+// ikke i git – se .gitignore.
+const envFile = path.join(__dirname, '..', '.env');
+if (fs.existsSync(envFile) && typeof process.loadEnvFile === 'function') {
+  try { process.loadEnvFile(envFile); } catch { /* en ulæselig .env stopper ikke buildet */ }
+}
+
+const forAndroid = process.argv.includes('--android');
+
 const url = process.env.SUPABASE_URL || '';
 const anon = process.env.SUPABASE_ANON_KEY || '';
 
@@ -43,6 +54,30 @@ if (process.env.VERCEL && !(url && anon)) {
     'ikke se dem, og buildet fejler præcis som her.',
     '',
     'SUPABASE_ANON_KEY skal være anon-nøglen – ikke service_role.',
+  ].join('\n'));
+  process.exit(1);
+}
+
+// Samme fælde, værre udgave. Inde i APK'en findes der ingen /api/*-server at
+// falde tilbage på, så uden nøgler ville appen installere fint, starte fint
+// og vise tomme skærme – og det er ikke til at gennemskue fra en telefon.
+// Buildet stoppes her, mens fejlen stadig står i terminalen.
+if (forAndroid && !(url && anon)) {
+  console.error([
+    'FEJL: Android-build uden Supabase-nøgler.',
+    '',
+    `  SUPABASE_URL       ${url ? 'sat' : 'MANGLER'}`,
+    `  SUPABASE_ANON_KEY  ${anon ? 'sat' : 'MANGLER'}`,
+    '',
+    'APK\'en har ingen lokal server at falde tilbage på: uden nøgler bliver',
+    'alle skærme tomme, uden fejlbesked på telefonen.',
+    '',
+    'Læg dem i en .env ved siden af package.json:',
+    '',
+    '  SUPABASE_URL=https://xxxx.supabase.co',
+    '  SUPABASE_ANON_KEY=eyJhbGci...',
+    '',
+    'eller sæt dem i miljøet før "npm run android:sync".',
   ].join('\n'));
   process.exit(1);
 }

@@ -30,6 +30,10 @@ function deviceId() {
   if (!id) {
     id = 'd_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
     try { localStorage.setItem('madplan_device', id); } catch { /* ignoreres */ }
+    // Spejles til den native lagring. Rydder Android WebView'ens data, er
+    // localStorage væk – og med den alle brugerens overvågninger, fordi de
+    // kun kendes på det her id. Kopien overlever oprydningen.
+    window.Native?.persist('madplan_device', id);
   }
   return id;
 }
@@ -55,23 +59,38 @@ function readFavorites() {
 }
 
 function writeFavorites(ids) {
-  try { localStorage.setItem(FAV_KEY, JSON.stringify(ids || [])); } catch { /* privat vindue */ }
+  const raw = JSON.stringify(ids || []);
+  try { localStorage.setItem(FAV_KEY, raw); } catch { /* privat vindue */ }
+  window.Native?.persist(FAV_KEY, raw);
 }
 
 // ── PostgREST ────────────────────────────────────────────────────────────────
 
 const sbHeaders = (extra = {}) => ({
   apikey: CFG.SUPABASE_ANON_KEY,
-  Authorization: `Bearer ${CFG.SUPABASE_ANON_KEY}`,
+  // Er anonymt login slået til, sendes brugerens EGEN token – det er den,
+  // Row Level Security kender som auth.uid(). Er det ikke, bruges anon-
+  // nøglen som hidtil, og de åbne policyer fra schema.sql gælder.
+  Authorization: `Bearer ${(window.Auth?.enabled && window.Auth.token()) || CFG.SUPABASE_ANON_KEY}`,
   'Content-Type': 'application/json',
   ...extra,
 });
 
-async function sb(path, options = {}) {
+/** Tilføjer user_id – men kun når kolonnen og login'et findes. */
+const withUser = (row) => (window.Auth?.enabled
+  ? { ...row, user_id: window.Auth.userId() }
+  : row);
+
+async function sb(path, options = {}, retried = false) {
   const res = await fetch(`${CFG.SUPABASE_URL}/rest/v1/${path}`, {
     ...options,
     headers: sbHeaders(options.headers),
   });
+  // Adgangstokenen lever en time og kan udløbe midt i en session. Uden det
+  // her ville appen stå tom, til brugeren selv genindlæste siden.
+  if (res.status === 401 && !retried && window.Auth?.enabled) {
+    if (await window.Auth.refresh()) return sb(path, options, true);
+  }
   if (!res.ok) throw new Error(`Supabase ${res.status}: ${(await res.text()).slice(0, 160)}`);
   const text = await res.text();
   return text ? JSON.parse(text) : null;
@@ -409,7 +428,7 @@ const Data = {
     const row = await sb('watches', {
       method: 'POST',
       headers: { Prefer: 'return=representation' },
-      body: JSON.stringify([{
+      body: JSON.stringify([withUser({
         device_id: deviceId(),
         label: body.label,
         query: body.query || body.label,
@@ -419,7 +438,7 @@ const Data = {
         max_unit_price: body.max_unit_price ?? null,
         home_lat: body.home_lat ?? null,
         home_lng: body.home_lng ?? null,
-      }]),
+      })]),
     });
     // Træf dannes af den natlige kørsel – der er ingen generator i browseren.
     return { watch: row[0], new_notifications: 0, deferred: true };
@@ -454,6 +473,32 @@ const Data = {
     }));
   },
 
+  /**
+   * Melder enheden til push. Kaldes af native.js, hver gang FCM udleverer et
+   * token – både første gang og når det senere udskiftes.
+   *
+   * Tabellen har ingen læsepolitik: et token er nok til at sende beskeder til
+   * telefonen, så det skrives blindt og læses kun af den natlige kørsel, der
+   * bruger service_role-nøglen.
+   */
+  async registerPushToken(token, platform = 'android') {
+    if (!token) return { ok: false };
+    // Den lokale server sender ikke push – det gør den natlige kørsel mod
+    // Supabase. Kører appen mod localhost, er der ingen at melde sig til.
+    if (!USE_SUPABASE) return { ok: false, deferred: true };
+    await sb('device_tokens?on_conflict=token', {
+      method: 'POST',
+      headers: { Prefer: 'resolution=merge-duplicates,return=minimal' },
+      body: JSON.stringify([withUser({
+        token,
+        device_id: deviceId(),
+        platform,
+        updated_at: new Date().toISOString(),
+      })]),
+    });
+    return { ok: true };
+  },
+
   async markRead() {
     if (!USE_SUPABASE) return local('/api/notifications/read', { method: 'POST', body: {} });
     await sb(`notifications?device_id=eq.${deviceId()}&read_at=is.null`, {
@@ -486,7 +531,9 @@ const Data = {
 
   async saveSettings(body) {
     if (!USE_SUPABASE) return local('/api/settings', { method: 'POST', body });
-    try { localStorage.setItem('madplan_home', JSON.stringify(body)); } catch { /* ignoreres */ }
+    const raw = JSON.stringify(body);
+    try { localStorage.setItem('madplan_home', raw); } catch { /* ignoreres */ }
+    window.Native?.persist('madplan_home', raw);
     return { ok: true };
   },
 

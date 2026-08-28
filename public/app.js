@@ -283,7 +283,7 @@ async function viewPlan() {
   // Nye butikker = ny plan. Variantnummeret nulstilles, så man ser
   // hovedplanen for det nye valg og ikke en omrokering af den gamle.
   bindFavoriteBar(() => { variant = 0; viewPlan(); });
-  $('#regen').addEventListener('click', () => { variant++; load(); });
+  $('#regen').addEventListener('click', () => { variant++; Native.haptic(); load(); });
   await load();
 }
 
@@ -362,7 +362,10 @@ function renderPlan(p) {
     </div>
     ${planRule(p)}
     ${days}
-    <h2>Indkøbsliste – det der er på tilbud</h2>
+    <div class="spread" style="margin:30px 0 12px">
+      <h2 style="margin:0">Indkøbsliste – det der er på tilbud</h2>
+      <button id="share-list">Del listen</button>
+    </div>
     <div class="grid wide">${shop}</div>
     ${rest.length ? `<h2>Resten</h2>
       <div class="card">
@@ -376,6 +379,57 @@ function renderPlan(p) {
       dem regner vi med, du har hjemme.
       Opskrifterne ligger hos kilden – klik på titlen for fremgangsmåden.
     </p>`;
+
+  const share = $('#share-list');
+  if (share) share.addEventListener('click', async () => {
+    try {
+      const how = await Native.share({
+        title: 'Indkøbsliste – Madplan',
+        text: shoppingListText(p),
+      });
+      share.textContent = how === 'copied' ? 'Kopieret' : 'Delt';
+    } catch {
+      // Brugeren fortrød i systemets delingsark. Ikke en fejl.
+      return;
+    }
+    setTimeout(() => { share.textContent = 'Del listen'; }, 2200);
+  });
+}
+
+/**
+ * Indkøbslisten som ren tekst, grupperet efter butik.
+ *
+ * Formen er den, listen faktisk bruges i: man står i én butik ad gangen, så
+ * butikken er overskriften og varerne står under den. Prisen kommer med –
+ * det er hele grunden til, at planen ser ud, som den gør.
+ */
+function shoppingListText(p) {
+  const lines = [];
+  if (p.week && p.year) lines.push(`Indkøbsliste – Madplan uge ${p.week}, ${p.year}`);
+  else lines.push('Indkøbsliste – Madplan');
+  lines.push('');
+
+  for (const c of p.shopping_list?.on_offer || []) {
+    lines.push(`${c.chain.toUpperCase()} – anslået ${kr(c.total)}${c.savings > 0 ? ` (spar ${kr(c.savings)})` : ''}`);
+    // Både hyldeprisen og kr/kg med. Uden kr/kg ser hyldepriserne ud som om
+    // de skulle lægge sammen til totalen – og det gør de ikke: totalen er
+    // prisen på DEN MÆNGDE, ugens retter bruger, ikke på hele pakken.
+    for (const i of c.items) {
+      const unit = i.unit_price != null ? ` (${num(i.unit_price, 2)} kr/${i.base_unit})` : '';
+      lines.push(`  · ${i.name} — ${kr(i.price)}${unit}`);
+    }
+    lines.push('');
+  }
+
+  const rest = p.shopping_list?.rest || [];
+  if (rest.length) {
+    lines.push('RESTEN – ikke på tilbud, men skal med');
+    lines.push(`  · ${rest.map((i) => i.name).join(', ')}`);
+    lines.push('');
+  }
+
+  lines.push(`I alt ca. ${kr(p.est_cost)} · sparet ${kr(p.est_savings)} mod normalpris.`);
+  return lines.join('\n');
 }
 
 /**
@@ -488,6 +542,25 @@ async function viewOffers() {
 
 /* ── Visning: følg varer ──────────────────────────────────────────────────── */
 
+/**
+ * Beder om lov til at sende push og melder enheden til.
+ *
+ * Returnerer en sætning, der kan stå efter kvitteringen for overvågningen –
+ * eller tom streng, hvis der ikke er noget at sige (nettet har ingen push,
+ * og er der allerede sagt ja, skal brugeren ikke mindes om det hver gang).
+ */
+async function askForPush() {
+  if (!Native.isNative) return '';
+  switch (await Native.enablePush()) {
+    case 'granted':
+      return 'Du får besked på telefonen, når der er nyt.';
+    case 'denied':
+      return 'Beskeder på telefonen er slået fra for Madplan – du kan slå dem til i Androids indstillinger.';
+    default:
+      return '';
+  }
+}
+
 async function viewWatch() {
   app().innerHTML = `
     <h1>Følg varer</h1>
@@ -561,13 +634,25 @@ async function viewWatch() {
       home_lat: home.home_lat ?? null,
       home_lng: home.home_lng ?? null,
     });
-    $('#w-msg').innerHTML = r.error
-      ? `<p class="note" style="color:var(--poor)">${esc(r.error)}</p>`
-      : r.deferred
-        ? `<p class="note">Følger nu <strong>${esc(label)}</strong>. Træf findes ved næste natlige opdatering.</p>`
-        : `<p class="note">Følger nu <strong>${esc(r.watch.label)}</strong>${r.watch.taxonomy_key ? ` (varetype: ${esc(r.watch.taxonomy_key)})` : ''} · ${r.new_notifications} træf med det samme.</p>`;
+    if (r.error) {
+      $('#w-msg').innerHTML = `<p class="note" style="color:var(--poor)">${esc(r.error)}</p>`;
+      return;
+    }
+
+    const created = r.deferred
+      ? `Følger nu <strong>${esc(label)}</strong>. Træf findes ved næste natlige opdatering.`
+      : `Følger nu <strong>${esc(r.watch.label)}</strong>${r.watch.taxonomy_key ? ` (varetype: ${esc(r.watch.taxonomy_key)})` : ''} · ${r.new_notifications} træf med det samme.`;
+
+    $('#w-msg').innerHTML = `<p class="note">${created}</p>`;
     $('#w-label').value = '';
     refresh(); loadStatus();
+
+    // Først her spørges der om lov til at sende push. Brugeren har lige bedt
+    // om at få besked, så spørgsmålet giver mening – og det er hele pointen:
+    // spørger man ved opstart, siger folk nej, og fra Android 13 er et nej
+    // svært at komme tilbage fra.
+    const pushMsg = await askForPush();
+    if (pushMsg) $('#w-msg').innerHTML = `<p class="note">${created} ${pushMsg}</p>`;
   });
 
   $('#w-run').addEventListener('click', async (e) => {
@@ -639,15 +724,30 @@ async function viewSettings() {
     <p class="note" style="margin-top:14px">
       Opskrifter hentes med <code style="padding:2px 6px">node src/recipes/crawl.js</code>.
       Hver ny uges ingest udbygger prishistorikken.
-    </p>`;
+    </p>
+
+    <div class="divider"></div>
+    <p class="note"><a href="/privatliv">Privatlivspolitik</a> – hvad appen gemmer, og hvor.</p>`;
 
   $('#settings-stores').addEventListener('click', () => storePicker(() => viewSettings()));
 
-  $('#locate').addEventListener('click', () => {
-    navigator.geolocation?.getCurrentPosition(
-      (pos) => { $('#lat').value = pos.coords.latitude.toFixed(4); $('#lng').value = pos.coords.longitude.toFixed(4); },
-      () => { $('#home-msg').textContent = 'Kunne ikke hente placering – indtast koordinaterne manuelt.'; }
-    );
+  // Native.getPosition tager den native plugin i appen og browserens API på
+  // nettet. Forskellen betyder noget: i appen kommer der en rigtig
+  // systemdialog, hvor browseren bare kan tie stille.
+  $('#locate').addEventListener('click', async (e) => {
+    e.target.disabled = true;
+    const before = e.target.textContent;
+    e.target.textContent = 'Finder…';
+    try {
+      const { lat, lng } = await Native.getPosition();
+      $('#lat').value = lat.toFixed(4);
+      $('#lng').value = lng.toFixed(4);
+      $('#home-msg').textContent = 'Placering hentet – tryk Gem.';
+    } catch {
+      $('#home-msg').textContent = 'Kunne ikke hente placering – indtast koordinaterne manuelt.';
+    }
+    e.target.disabled = false;
+    e.target.textContent = before;
   });
 
   $('#save-home').addEventListener('click', async () => {
@@ -680,8 +780,13 @@ async function viewSettings() {
 
 async function loadStatus() {
   STATUS = await Data.status();
-  const link = $('#tabs a[href="#/watch"]');
-  link.innerHTML = 'Følg varer' + (STATUS.unread ? `<span class="badge-count">${STATUS.unread}</span>` : '');
+  // Kun tallet røres. Skrev vi hele linkets innerHTML – som før – forsvandt
+  // fanens ikon ved første statusopdatering, og bundlinjen stod med huller.
+  const badge = $('#watch-badge');
+  if (badge) {
+    badge.textContent = STATUS.unread ? String(STATUS.unread) : '';
+    badge.hidden = !STATUS.unread;
+  }
 }
 
 const ROUTES = {
@@ -714,11 +819,82 @@ document.addEventListener('error', (e) => {
 
 window.addEventListener('hashchange', route);
 
-(async function init() {
+// Lander en push, mens appen er åben, vises der ingen systembesked – brugeren
+// kigger jo på skærmen. I stedet opdateres tallet, og står man på "Følg
+// varer", hentes listen igen, så det nye træf dukker op af sig selv.
+window.addEventListener('madplan:push', async () => {
   await loadStatus();
-  CHAINS = await Data.chains();
-  // Nyt vindue, samme server: overtag det valg, serveren allerede har gemt,
-  // så madplanen ikke pludselig bygges af alle kæder igen.
-  FAVORITES = await Data.adoptServerFavorites(STATUS);
-  await route();
+  if ((location.hash || '').startsWith('#/watch')) await route();
+});
+
+/**
+ * Når opstarten ikke kan hente data.
+ *
+ * På en telefon er det helt almindeligt: man står i en kælderbutik uden
+ * dækning. Uden det her blev "Indlæser…" stående for evigt, og appen så
+ * gået i stå frem for offline – to helt forskellige ting for den, der
+ * kigger på skærmen.
+ */
+function startupError(err) {
+  const offline = typeof navigator.onLine === 'boolean' && !navigator.onLine;
+  const misconfigured = Native.isNative && Data.backend === 'local';
+
+  app().innerHTML = `<div class="empty card">
+    <h3>${offline ? 'Ingen forbindelse' : 'Kunne ikke hente data'}</h3>
+    <p>${offline
+      ? 'Madplanen hentes, så snart du er online igen.'
+      : misconfigured
+        // Præcis den fejl, --android-tjekket i scripts/build-web.js findes
+        // for at fange. Slipper en sådan udgave alligevel igennem, skal
+        // beskeden sige hvorfor – ikke bare stå tom.
+        ? 'Appen er bygget uden Supabase-nøgler og har ingen server at spørge. Byg igen med <code>npm run android:sync</code>.'
+        : esc(err && err.message ? err.message : 'Ukendt fejl.')}</p>
+    <div class="row" style="justify-content:center;margin-top:16px">
+      <button class="primary" id="retry-start">Prøv igen</button>
+    </div>
+  </div>`;
+
+  $('#retry-start').addEventListener('click', () => location.reload());
+
+  // Kommer forbindelsen tilbage af sig selv, skal brugeren ikke skulle
+  // gætte, at der nu er noget at hente.
+  window.addEventListener('online', () => location.reload(), { once: true });
+}
+
+/* ── Service worker ───────────────────────────────────────────────────────── */
+
+/**
+ * Kun på nettet. I Capacitor ligger skallen allerede lokalt i APK'en, og en
+ * service worker oveni ville kun give ét sted mere, hvor en gammel version
+ * kan blive hængende efter en opdatering.
+ */
+function registerServiceWorker() {
+  if (Native.isNative || !('serviceWorker' in navigator)) return;
+  if (location.protocol !== 'https:' && location.hostname !== 'localhost') return;
+  navigator.serviceWorker.register('/sw.js').catch(() => { /* ikke kritisk */ });
+}
+
+(async function init() {
+  registerServiceWorker();
+
+  // Opstartstrinnene må ikke kunne tage resten af appen med sig. Fejler
+  // broen til den native skal eller login'et, skal madplanen stadig vises –
+  // en tom skærm er værre end en app uden push.
+  try { await Native.init(); } catch { /* appen kører videre uden */ }
+
+  // Anonymt login før første kald: de skal bære brugerens egen token, ikke
+  // anon-nøglen. Er anonymt login ikke slået til i Supabase-projektet, går
+  // Auth stille tilbage til anon-nøglen, og resten kører som før.
+  try { await Auth.init(); } catch { /* falder tilbage på anon-nøglen */ }
+
+  try {
+    await loadStatus();
+    CHAINS = await Data.chains();
+    // Nyt vindue, samme server: overtag det valg, serveren allerede har gemt,
+    // så madplanen ikke pludselig bygges af alle kæder igen.
+    FAVORITES = await Data.adoptServerFavorites(STATUS);
+    await route();
+  } catch (err) {
+    startupError(err);
+  }
 })();
