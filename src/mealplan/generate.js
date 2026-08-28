@@ -207,7 +207,7 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
   const params = column ? [minTierScore] : [];
 
   const rows = db.prepare(`
-    SELECT id, title, url, image, source, source_name, servings, total_minutes,
+    SELECT id, title, url, image, source, source_name, lang, servings, total_minutes,
            kcal, protein_g, carbs_g, nutrition_src,
            score_healthy, score_classic, score_premium
       FROM recipes

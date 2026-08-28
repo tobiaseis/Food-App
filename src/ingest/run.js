@@ -59,6 +59,17 @@ function upsertChain(db, chain, dealer) {
 
 // ── Tilbud ───────────────────────────────────────────────────────────────────
 
+/**
+ * Sammentrækker linjeskift og dobbelte mellemrum til ét mellemrum.
+ *
+ * Teksten kommer fra tilbudsavisernes layout, og den samme beskrivelse
+ * optræder med linjeskift i én avis og med mellemrum i den næste. For øjet er
+ * det den samme tekst; for en UNIQUE-nøgle er det to forskellige, og så slap
+ * dubletterne igennem. Normaliseringen sker her, så basen indeholder den rene
+ * tekst – ikke først når nøglen skal slås op.
+ */
+const flat = (s) => (s == null ? null : String(s).replace(/\s+/g, ' ').trim());
+
 function buildOfferRow(offer, chainId, productId, observedAt) {
   const up = norm.computeUnitPrice(offer);
   const runFrom = offer.run_from ? new Date(offer.run_from) : null;
@@ -70,8 +81,8 @@ function buildOfferRow(offer, chainId, productId, observedAt) {
     external_id: offer.id,
     product_id:  productId,
     chain_id:    chainId,
-    heading:     String(offer.heading || '').trim(),
-    description: offer.description ? String(offer.description).trim() : null,
+    heading:     flat(offer.heading) || '',
+    description: offer.description ? flat(offer.description) : null,
     brand:       norm.detectBrand(offer.heading) || null,
     price:       offer.pricing?.price ?? null,
     pre_price:   offer.pricing?.pre_price ?? null,
@@ -102,7 +113,15 @@ const INSERT_OFFER = `
     @run_from, @run_till, @week, @year, @page, @image, @catalog_id, @observed_at
   )
   ON CONFLICT(external_id) DO NOTHING
+  ON CONFLICT(chain_id, heading, IFNULL(description, ''), price,
+              IFNULL(run_from, ''), IFNULL(run_till, '')) DO NOTHING
 `;
+// Den anden klausul er den vigtige. Flere kæder udgiver den samme
+// tilbudsavis én gang pr. region – ABC Lavpris med 16 identiske aviser – og
+// hver kopi har sit eget catalog_id og sine egne offer id'er. UNIQUE på
+// external_id fangede dem derfor ikke, og hver vare stod 16 gange i "Alle
+// tilbud". Den naturlige nøgle er, hvad der gør et tilbud til ét tilbud:
+// kæde + overskrift + beskrivelse + pris + løbetid.
 
 // ── Butikker ─────────────────────────────────────────────────────────────────
 

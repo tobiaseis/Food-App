@@ -182,6 +182,7 @@ function collectPlanIndex(log) {
       image: r.image,
       source: r.source,
       source_name: r.source_name,
+      lang: r.lang,
       servings: r.servings,
       total_minutes: r.total_minutes,
       kcal: r.kcal,

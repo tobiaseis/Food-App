@@ -83,13 +83,53 @@ function priceGauge(v, pct) {
 const unitPrice = (o) =>
   o.unit_price == null ? '' : `${num(o.unit_price, 2)} kr/${o.base_unit}`;
 
+/**
+ * Hvor længe tilbuddet gælder.
+ *
+ * En nedtælling er kun en oplysning, så længe den kan nås. Nogle kæder sætter
+ * løbetiden på deres faste lavprisvarer til årets udgang, og "126 dage
+ * tilbage" siger hverken noget om varen eller om, hvornår man skal handle –
+ * så står der hellere ingenting.
+ */
+const COUNTDOWN_DAYS = 21;
+
 const daysLeft = (till) => {
   if (!till) return '';
   const d = Math.ceil((new Date(till) - Date.now()) / 86400000);
   if (d < 0) return 'udløbet';
   if (d === 0) return 'sidste dag';
+  if (d > COUNTDOWN_DAYS) return '';
   return `${d} dag${d === 1 ? '' : 'e'} tilbage`;
 };
+
+/**
+ * Beder billedtjenesten om et billede i den størrelse, vi rent faktisk viser.
+ *
+ * Opskriftsfotoet står som en 108px firkant på skrivebordet og i fuld bredde
+ * på en telefon – aldrig større end ~560px, selv på en 2×-skærm. Arla leverer
+ * som udgangspunkt 1300px, og syv af dem er over en megabyte, der skal hentes,
+ * før madplanen ser færdig ud. Tjenesten tager en width-parameter, så vi
+ * spørger om det, vi bruger.
+ *
+ * Kun værter, vi ved understøtter det. Andre URL'er røres ikke – et gæt, der
+ * ikke virker, ville give et hul, hvor der før var et billede.
+ */
+const THUMB_W = 560;
+
+function thumb(url) {
+  if (!url) return url;
+  try {
+    const u = new URL(url, location.href);
+    if (u.hostname !== 'images.arla.com') return url;
+    // Højden er sat sammen med bredden i kildens egne URL'er. Fjernes den
+    // ikke, beskærer tjenesten efter det gamle forhold.
+    u.searchParams.delete('height');
+    u.searchParams.set('width', String(THUMB_W));
+    return u.toString();
+  } catch {
+    return url;                  // ikke en URL vi kan læse – lad den være
+  }
+}
 
 /**
  * ISO-ugenummeret for i dag.
@@ -449,7 +489,7 @@ function renderPlan(p) {
     return `<article class="day">
       <div class="day-rule">${esc(d.day_name)}</div>
       <div class="day-card">
-        ${r.image ? `<img src="${esc(r.image)}" alt="" loading="lazy">` : ''}
+        ${r.image ? `<img src="${esc(thumb(r.image))}" alt="" width="108" height="108" loading="lazy" decoding="async">` : ''}
         <div class="day-body">
           <h3 class="day-title"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></h3>
           <div class="day-meta">
@@ -643,6 +683,34 @@ async function viewDeals() {
 
 /* ── Visning: alle tilbud ─────────────────────────────────────────────────── */
 
+/**
+ * Én række pr. vare pr. kæde – den billigste.
+ *
+ * Basen kan indeholde det samme tilbud beskrevet på et par forskellige måder
+ * ("Originale, fedtreducerede" / "Dybfrosne, nøddebrune"), fordi kæden trykker
+ * den samme avis med lidt forskellig sats i hver region. Rækkerne er ikke ens
+ * nok til at kunne slås sammen i basen – men på et kort, der ikke viser
+ * beskrivelsen, ser de fuldstændig ens ud, og tre identiske kort i træk ligner
+ * en fejl. Sammenlægningen hører derfor til her i visningen, hvor det er
+ * kortets indhold, der afgør, hvad der er en gentagelse.
+ *
+ * Prishistorikken bag varen er urørt: arket viser stadig hver kæde for sig.
+ */
+function collapseOffers(rows) {
+  const best = new Map();
+  for (const o of rows) {
+    const key = `${o.chain_id}|${o.heading}`;
+    const prev = best.get(key);
+    // Billigst pr. kg vinder; mangler kiloprisen, afgør hyldeprisen.
+    const better = !prev
+      || (o.unit_price != null && prev.unit_price != null && o.unit_price < prev.unit_price)
+      || (prev.unit_price == null && o.unit_price != null)
+      || (o.unit_price == null && prev.unit_price == null && o.price < prev.price);
+    if (better) best.set(key, o);
+  }
+  return [...best.values()];
+}
+
 async function viewOffers() {
   app().innerHTML = `
     <div class="enter">
@@ -670,9 +738,9 @@ async function viewOffers() {
     const one = $('#chain').value;
     const box = $('#only-fav');
     const chain = one ? one : (box && box.checked ? FAVORITES.join(',') : '');
-    const rows = await Data.offers({
+    const rows = collapseOffers(await Data.offers({
       q: $('#q').value, chain, sort: $('#sort').value, limit: 72,
-    });
+    }));
     const el = $('#list');
     el.innerHTML = rows.length
       ? `<div class="grid cols">${rows.map(offerCard).join('')}</div>`

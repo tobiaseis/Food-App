@@ -88,6 +88,13 @@ CREATE TABLE IF NOT EXISTS offers (
   catalog_id    TEXT,
   observed_at   TEXT NOT NULL
 );
+-- Samme tilbud, uanset hvilken avis det kom fra. Flere kæder udgiver den
+-- samme tilbudsavis én gang pr. region, og hver kopi har sit eget catalog_id
+-- og sine egne offer id'er – UNIQUE(external_id) fanger dem derfor ikke.
+CREATE UNIQUE INDEX IF NOT EXISTS idx_offers_natural
+  ON offers(chain_id, heading, IFNULL(description, ''), price,
+            IFNULL(run_from, ''), IFNULL(run_till, ''));
+
 CREATE INDEX IF NOT EXISTS idx_offers_product ON offers(product_id, run_from);
 CREATE INDEX IF NOT EXISTS idx_offers_chain   ON offers(chain_id, run_from);
 CREATE INDEX IF NOT EXISTS idx_offers_window  ON offers(run_from, run_till);

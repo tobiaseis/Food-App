@@ -175,6 +175,7 @@ create table if not exists recipe_index (
   image         text,
   source        text,
   source_name   text,
+  lang          text,
   servings      int,
   total_minutes int,
   kcal          double precision,

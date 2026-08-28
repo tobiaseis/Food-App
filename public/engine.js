@@ -165,10 +165,37 @@
   // kilo). Et enkelt sådant tal ville alene bestemme hele planens prisoverslag.
   const MAX_SANE_G = 5000;
 
-  /** Kun vægt-/rumfangstilbud kan prissættes ud fra en opskrifts mængder. */
+  /**
+   * Opskriftens mængde omregnet til tilbuddets egen enhed.
+   *
+   * Vægt og rumfang er lige ud ad landevejen. Styk er ikke: vi ved ikke, hvad
+   * ét stykke vejer, så 300 g avocado kan ikke oversættes til et antal.
+   *
+   * Men nul er et forkert svar. Man kan ikke købe en brøkdel af en avocado, og
+   * 38 % af tilbuddene sælges pr. styk – med nul stod hele kæder i
+   * indkøbslisten til "0 kr", selvom der lå varer under dem, og planens
+   * prisoverslag var systematisk for lavt. Ét stykke er det, man som minimum
+   * lægger i kurven, og derfor det konservative gæt.
+   */
   function qtyInBase(grams, baseUnit) {
     if (!grams || grams > MAX_SANE_G) return null;
-    return baseUnit === 'kg' || baseUnit === 'l' ? grams / 1000 : null;
+    if (isMeasured(baseUnit)) return grams / 1000;
+    if (baseUnit === 'stk') return 1;
+    return null;
+  }
+
+  /**
+   * Kan enheden sammenlignes på tværs af pakninger?
+   *
+   * Kilo og liter kan: 60 kr/kg er 60 kr/kg, uanset hvor stor pakken er. Styk
+   * kan ikke. "1 stk" er ét æble i ét tilbud og en 2-kilos pose i det næste,
+   * så medianprisen pr. styk er ikke en normalpris, men et gennemsnit af to
+   * forskellige varer. Derfor prissættes styk-varer kun ud fra det tilbud, vi
+   * faktisk har set – aldrig ud fra en median, og der beregnes ingen
+   * besparelse på dem.
+   */
+  function isMeasured(baseUnit) {
+    return baseUnit === 'kg' || baseUnit === 'l';
   }
 
   /**
@@ -198,7 +225,7 @@
         let cost = null, saving = null;
         if (qty != null) {
           cost = qty * offer.unit_price;
-          if (normalUnit != null && normalUnit > offer.unit_price) {
+          if (isMeasured(offer.base_unit) && normalUnit != null && normalUnit > offer.unit_price) {
             saving = qty * (normalUnit - offer.unit_price);
           }
         }
@@ -228,7 +255,12 @@
 
       // Ikke på tilbud – den skal stadig købes, og den skal med i prisen,
       // hvis vi kender varens normalpris.
-      const qty = normal ? qtyInBase(item.grams, normal.base_unit) : null;
+      // Uden et tilbud er der kun medianen at prissætte efter, og den duer
+      // ikke til styk – se isMeasured. Så tælles varen ikke med i prisen
+      // frem for at blive sat til et tal, der lige så godt kan være ti gange
+      // for højt.
+      const qty = normal && isMeasured(normal.base_unit)
+        ? qtyInBase(item.grams, normal.base_unit) : null;
       if (qty != null && normal.unit_price != null) {
         estCost += qty * normal.unit_price;
         pricedCount++;
@@ -283,6 +315,11 @@
   // ── Udvælgelse ─────────────────────────────────────────────────────────────
 
   const DAYS = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'Søndag'];
+
+  // Nøk til danske opskrifter i rangeringen. Sat lavt med vilje: en dansk ret
+  // skal vinde over en engelsk, der ligger tæt på – ikke over en, der dækker
+  // ugens tilbud mærkbart bedre. Til sammenligning vejer tilbudsdækningen 0,40.
+  const LANG_BONUS = 0.07;
 
   /** Lille deterministisk PRNG, så et givet seed altid giver samme plan. */
   function seededNoise(seed, id) {
@@ -365,7 +402,13 @@
       let total = 0.40 * cand.score.coverage
                 + 0.20 * cand.score.main_coverage
                 + 0.30 * tierScore
-                + 0.10 * Math.min(cand.score.est_savings / 40, 1);
+                + 0.10 * Math.min(cand.score.est_savings / 40, 1)
+                // Appen er dansk, og en madplan man skal lave i aften, læses
+                // lettere på sit eget sprog. Bevidst et lille nøk og ikke et
+                // filter: Gourmet-sporet henter det meste fra engelske kilder,
+                // og en uge uden gourmetretter ville være en dårligere plan
+                // end en uge med engelske titler.
+                + (cand.recipe.lang === 'da' ? LANG_BONUS : 0);
       cand.repeat = recent.has(cand.recipe.id);
       if (cand.repeat) total -= 0.22;         // var med i en af de sidste ugers planer
       total += seededNoise(seed, cand.recipe.id) * variety;

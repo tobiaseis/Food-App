@@ -8,6 +8,7 @@
     "ingest": "node src/ingest/run.js",
     "ingest:stores": "node src/ingest/run.js --stores",
     "recompute": "node src/ingest/recompute.js",
+    "dedupe": "node scripts/dedupe-offers.js",
     "recipes": "node src/recipes/crawl.js --limit 320",
     "recipes:images": "node src/recipes/backfill-images.js",
     "reclassify": "node src/recipes/reclassify.js",
