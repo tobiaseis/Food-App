@@ -47,9 +47,39 @@ const BRANDS = [
   'den grønne slagter', 'hanegal', 'tulip', 'steff houlberg', 'gøl', 'stryhns',
   'lambi', 'plenty', 'neutral', 'ajax', 'ariel', 'omo', 'zalo', 'nivea', 'colgate',
   'santa maria', 'uncle ben', 'barilla', 'de cecco', 'zeta', 'urtekram',
+  // Mærker hvis navn indeholder en råvare. Uden dem bliver "Selaks" til laks,
+  // "Lambi" til lam og "Lavazza helbønner" til bønner.
+  'selaks', 'lambi', 'lavazza', 'copenhagen roaster', 'merrild', 'beefeater',
+  'seagate', 'mr beef', 'bistronne', 'pålækker', 'pålægsslagteren', 'skagenfood',
+  'glyngøre', 'madværket', 'velsmag', 'gestus', 'freygaard', 'butcher\'s',
 ];
 
 // ── Rensning af overskrift ───────────────────────────────────────────────────
+
+/**
+ * Støj- og brandord fjernes som HELE ord, aldrig som orddele.
+ *
+ * Ren tekstudskiftning gør skade, man ikke opdager: "spar" åd sig ind i
+ * "spareribs", "frisk" i "friskost", "dansk" i "danskvand" – og "kun" i
+ * "kalkun", så en kalkunbrystfilet blev læst som en kyllingebrystfilet.
+ *
+ * \b duer ikke: JS regner æ/ø/å som ikke-ordtegn, så ordgrænserne skrives ud.
+ */
+const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+function wordPatterns(terms) {
+  return terms.map((t) => new RegExp(
+    `(^|[^a-zæøå0-9])${escapeRe(t.trim())}(?![a-zæøå0-9])`, 'gi'));
+}
+
+const NOISE_RE = wordPatterns(NOISE);
+const BRAND_RE = wordPatterns(BRANDS);
+
+function stripAll(text, patterns) {
+  let s = String(text);
+  for (const re of patterns) s = s.replace(re, '$1 ');
+  return s;
+}
 
 /**
  * Fjerner størrelser, procenter, pant, markedsføringsord og alternativ-varianter,
@@ -67,10 +97,16 @@ function cleanHeading(raw) {
   s = s.replace(/\d+([.,]\d+)?\s*(-\s*\d+([.,]\d+)?\s*)?(kg|g|gr|gram|ml|cl|dl|l|ltr|liter|stk|pk|pakke|rl|ruller)\b/g, ' ');
   s = s.replace(/\bca\.?\s*\d+/g, ' ');
 
-  for (const n of NOISE) s = s.split(n).join(' ');
+  s = stripAll(s, NOISE_RE);
 
-  // "Pepsi Max eller Faxe Kondi" → primær variant
-  s = s.split(/\s+eller\s+|\s*\/\s*|\s+samt\s+|\s*,\s*/)[0];
+  // "Pepsi Max eller Faxe Kondi" → primær variant.
+  //
+  // Undtagen når den første variant ender på bindestreg: "Lakse- eller
+  // torskefars" er ikke laks, den er fars. Bindestregen betyder, at ordet
+  // deler efterled med den næste variant, og efterleddet er dét, varen er.
+  // Så beholder vi hele strengen og lader opslaget finde det hele ord.
+  const variants = s.split(/\s+eller\s+|\s*\/\s*|\s+samt\s+|\s*,\s*/);
+  if (!/-\s*$/.test(variants[0])) s = variants[0];
 
   s = s.replace(/[^\wæøåÆØÅ\s&%-]/g, ' ')
        .replace(/\s+/g, ' ')
@@ -83,17 +119,17 @@ function detectBrand(text) {
   if (!text) return null;
   const hay = ' ' + String(text).toLowerCase() + ' ';
   let best = null;
-  for (const b of BRANDS) {
-    if (hay.includes(' ' + b)) { if (!best || b.length > best.length) best = b; }
+  for (let i = 0; i < BRANDS.length; i++) {
+    BRAND_RE[i].lastIndex = 0;
+    if (!BRAND_RE[i].test(hay)) continue;
+    if (!best || BRANDS[i].length > best.length) best = BRANDS[i];
   }
   return best ? titleCase(best) : null;
 }
 
 /** Fjerner brandnavnet fra en renset streng, så varetypen står tilbage. */
 function stripBrand(cleaned) {
-  let s = ' ' + cleaned + ' ';
-  for (const b of BRANDS) s = s.split(' ' + b).join(' ');
-  return s.replace(/\s+/g, ' ').trim();
+  return stripAll(' ' + cleaned + ' ', BRAND_RE).replace(/\s+/g, ' ').trim();
 }
 
 // ── Varianter der flytter prisen ─────────────────────────────────────────────
@@ -157,6 +193,22 @@ const ORGANIC_SPLIT_CATS = new Set(['meat', 'poultry', 'fish', 'dairy', 'cheese'
 // ── Vare-identitet ───────────────────────────────────────────────────────────
 
 /**
+ * Den del af beskrivelsen der er varespecifikation og ikke salgstale.
+ *
+ * Korte beskrivelser er specifikationer – "SPOT Dansk hakket kyllingekød
+ * 3-7% 450 g. Pr. kg 62,50" – og de er værd at slå op, når overskriften
+ * intet gav. Lange er markedsføringsprosa, og ét madord et tilfældigt sted
+ * i dem betyder ingenting: "HP trådløs mus" blev til AND, fordi ordet stod
+ * inde i en produkttekst om bluetooth.
+ */
+const DESC_SPEC_MAX = 120;
+
+function specText(description) {
+  const s = String(description || '').trim();
+  return s.length && s.length <= DESC_SPEC_MAX ? s : '';
+}
+
+/**
  * Afgør hvilken kanonisk vare et tilbud handler om.
  *
  * Taksonomi-match vinder altid: det er dét, der får "Kyllingebryst 1 kg" og
@@ -168,10 +220,26 @@ function productIdentity(heading, description = '') {
   const brand    = detectBrand(heading) || detectBrand(description);
 
   // Prøv i faldende specificitet: renset uden brand → renset → rå overskrift
-  const hit = taxonomy.lookup(noBrand)
-           || taxonomy.lookup(cleaned)
-           || taxonomy.lookup(heading)
-           || taxonomy.lookup(description);
+  // → en kort beskrivelse. Se `specText` for hvorfor den skal være kort.
+  // Beskrivelsen kan UDELUKKE en vare, men ikke udpege den som råvare.
+  //
+  // Den er markedsføringstekst, og et madord i den er som regel en
+  // smagsvariant: "Ribena – Blandet Bær & Frugt" er ikke bær, "Rynkeby
+  // Nektar – Æble, Appelsin" er ikke æbler, og "Pringles – Sour cream &
+  // onion" er ikke creme fraiche. Ingen af dem kan laves mad af.
+  //
+  // Den anden vej holder derimod: står der opvaskemiddel eller tandpasta i
+  // beskrivelsen, ER varen det – "Vel eller Duck" er toiletrens, ikke and.
+  // Derfor tæller beskrivelsen kun, når den peger væk fra madplanen.
+  const specHit = taxonomy.lookup(specText(description));
+  const specVeto = specHit && !taxonomy.isMealCapable(specHit.entry.key) ? specHit : null;
+
+  let hit = taxonomy.lookup(noBrand)
+         || taxonomy.lookup(cleaned)
+         || taxonomy.lookup(heading)
+         || specVeto;
+
+  if (hit && specVeto && taxonomy.isMealCapable(hit.entry.key)) hit = specVeto;
 
   if (hit) {
     const e = hit.entry;
@@ -179,6 +247,17 @@ function productIdentity(heading, description = '') {
 
     let slug = e.key.replace(/_/g, '-');
     let name = e.name;
+
+    // Forarbejdet vare: den indeholder råvaren, men er den ikke. "Indbagte
+    // rejer" er butterdej og rejesauce, "kyllingenuggets" er ikke kyllingelår.
+    // Den beholder sin varetype – prishistorikken skal stadig kunne følge
+    // nuggets som nuggets – men får sin egen identitet, så madplanen kan
+    // holde den ude af opskrifterne.
+    const form = taxonomy.preparedForm(heading);
+    if (form) {
+      slug += `-${form.key}`;
+      name += `, ${form.label}`;
+    }
 
     // Fedtprocent: kun på varer hvor den er en reel prisfaktor (hakket kød).
     const fat = e.fatGrades ? parseFatGrade(haystack) : null;
@@ -200,20 +279,26 @@ function productIdentity(heading, description = '') {
       taxonomy_key: e.key,
       fat_grade: fat ? fat.key : null,
       organic: organic ? 1 : 0,
+      prepared: form ? 1 : 0,
       protein_per_100g: e.p ?? null,
       kcal_per_100g: e.kcal ?? null,
       brand,
     };
   }
 
+  // Uden varetype er teksten selv identiteten. Formen skal stadig med i
+  // slug'en, ellers deler "Santa Maria Tex Mex" og "... eller Nissin
+  // kopnudler" nøgle, og varen skifter mellem råvare og færdigret.
   const fallback = noBrand || cleaned || String(heading).toLowerCase();
+  const form = taxonomy.preparedForm(heading);
   return {
-    slug: slugify(fallback),
+    slug: slugify(fallback) + (form ? `-${form.key}` : ''),
     name: titleCase(fallback),
     category: null,
     taxonomy_key: null,
     fat_grade: null,
     organic: 0,
+    prepared: taxonomy.preparedForm(heading) ? 1 : 0,
     protein_per_100g: null,
     kcal_per_100g: null,
     brand,

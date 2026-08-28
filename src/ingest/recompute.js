@@ -26,15 +26,30 @@ function recompute({ relinkProducts = true, log = console.log } = {}) {
      WHERE id = ?
   `);
   const updateProduct = db.prepare('UPDATE offers SET product_id = ? WHERE id = ?');
-  const findProduct = db.prepare('SELECT id FROM products WHERE slug = ?');
+  const findProduct = db.prepare(`
+    SELECT id, name, category, taxonomy_key, fat_grade, organic, prepared
+      FROM products WHERE slug = ?
+  `);
+  // En vare, hvis slug er uændret, kan alligevel have fået ny betydning –
+  // fx da "kyllingenuggets" holdt op med at tælle som kylling. Uden dette
+  // ville rettelsen først slå igennem, når varen forsvandt og kom igen.
+  //
+  // Visningsnavnet røres ikke: to overskrifter kan skrive sig til samme slug
+  // med hver sit navn, og så ville hver kørsel bytte om på dem.
+  const refreshProduct = db.prepare(`
+    UPDATE products SET category = @category, taxonomy_key = @taxonomy_key,
+                        fat_grade = @fat_grade, organic = @organic, prepared = @prepared,
+                        protein_per_100g = @protein_per_100g, kcal_per_100g = @kcal_per_100g
+     WHERE id = @id
+  `);
   const insertProduct = db.prepare(`
     INSERT INTO products (slug, name, category, taxonomy_key, fat_grade, organic,
-                          protein_per_100g, kcal_per_100g, created_at)
+                          prepared, protein_per_100g, kcal_per_100g, created_at)
     VALUES (@slug, @name, @category, @taxonomy_key, @fat_grade, @organic,
-            @protein_per_100g, @kcal_per_100g, @created_at)
+            @prepared, @protein_per_100g, @kcal_per_100g, @created_at)
   `);
 
-  let priceChanged = 0, cleared = 0, productChanged = 0;
+  let priceChanged = 0, cleared = 0, productChanged = 0, refreshed = 0;
 
   const run = db.transaction(() => {
     for (const r of rows) {
@@ -62,6 +77,11 @@ function recompute({ relinkProducts = true, log = console.log } = {}) {
         if (!prod) {
           insertProduct.run({ ...identity, created_at: new Date().toISOString() });
           prod = findProduct.get(identity.slug);
+        } else if (prod.taxonomy_key !== identity.taxonomy_key
+                || (prod.prepared || 0) !== identity.prepared
+                || prod.category !== identity.category) {
+          refreshProduct.run({ ...identity, id: prod.id });
+          refreshed++;
         }
         if (prod.id !== r.product_id) { updateProduct.run(prod.id, r.id); productChanged++; }
       }
@@ -75,9 +95,10 @@ function recompute({ relinkProducts = true, log = console.log } = {}) {
   log(`${rows.length} tilbud gennemgået`);
   log(`  ${priceChanged} fik ny enhedspris (${cleared} nulstillet som utroværdige)`);
   log(`  ${productChanged} blev koblet til en anden varetype`);
+  log(`  ${refreshed} varetyper fik opdateret betydning`);
   log(`  ${db.prepare('SELECT COUNT(*) n FROM products').get().n} varetyper tilbage`);
 
-  return { rows: rows.length, priceChanged, cleared, productChanged };
+  return { rows: rows.length, priceChanged, cleared, productChanged, refreshed };
 }
 
 if (require.main === module) recompute();

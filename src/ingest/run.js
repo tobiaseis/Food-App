@@ -22,9 +22,9 @@ function makeProductResolver(db) {
   const selectBySlug = db.prepare('SELECT id FROM products WHERE slug = ?');
   const insert = db.prepare(`
     INSERT INTO products (slug, name, category, taxonomy_key, fat_grade, organic,
-                          protein_per_100g, kcal_per_100g, created_at)
+                          prepared, protein_per_100g, kcal_per_100g, created_at)
     VALUES (@slug, @name, @category, @taxonomy_key, @fat_grade, @organic,
-            @protein_per_100g, @kcal_per_100g, @created_at)
+            @prepared, @protein_per_100g, @kcal_per_100g, @created_at)
   `);
   const cache = new Map();
 

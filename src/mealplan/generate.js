@@ -47,6 +47,10 @@ const HORIZON_DAYS = 400;
 /**
  * Billigste aktive tilbud pr. varetype, målt i kr/kg (eller kr/l), begrænset
  * til de valgte kæder. Det er dette kort, opskrifterne matches imod.
+ *
+ * Forarbejdede varer holdes ude: "indbagte rejer" er ikke rejer, og en
+ * opskrift på hele vannamei-rejer bliver ikke bedre af, at der er tilbud på
+ * en frostret med butterdej. De findes stadig under "Alle tilbud".
  */
 function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
   const db = getDb();
@@ -61,6 +65,7 @@ function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
       JOIN products p ON p.id = o.product_id
       JOIN chains   c ON c.id = o.chain_id
      WHERE p.taxonomy_key IS NOT NULL
+       AND COALESCE(p.prepared, 0) = 0
        AND o.unit_price IS NOT NULL
        AND (o.run_from IS NULL OR o.run_from <= ?)
        AND (o.run_till IS NULL OR o.run_till >= ?)`;
@@ -102,6 +107,7 @@ function chainOfferIndex({ at = new Date() } = {}) {
       FROM offers o
       JOIN products p ON p.id = o.product_id
      WHERE p.taxonomy_key IS NOT NULL
+       AND COALESCE(p.prepared, 0) = 0
        AND o.unit_price IS NOT NULL
        AND (o.run_from IS NULL OR o.run_from <= ?)
        AND (o.run_till IS NULL OR o.run_till >= ?)
@@ -149,6 +155,7 @@ function normalPriceMap() {
       FROM offers o
       JOIN products p ON p.id = o.product_id
      WHERE p.taxonomy_key IS NOT NULL
+       AND COALESCE(p.prepared, 0) = 0
        AND o.unit_price IS NOT NULL AND o.unit_price > 0
        AND o.base_unit IN ('kg', 'l')
        AND COALESCE(o.run_from, o.observed_at) >= ?

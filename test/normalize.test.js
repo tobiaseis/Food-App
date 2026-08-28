@@ -209,6 +209,115 @@ test('basisvarer markeres, så de ikke tæller som tilbudsmatch', () => {
   assert.equal(parseIngredient('400 g kyllingebryst').is_staple, 0);
 });
 
+// ── Forarbejdede varer ───────────────────────────────────────────────────────
+
+test('forarbejdet vare kan ikke gøre det ud for råvaren', () => {
+  // Madplanen foreslog en opskrift på hele vannamei-rejer, fordi der var
+  // tilbud på en frostret med butterdej og rejesauce – og kyllingelår,
+  // fordi der var tilbud på frosne kyllingenuggets.
+  const cases = [
+    'Rahbek indbagte rejer, laks eller sej',
+    'Bistronne kyllingenuggets',
+    'REMA 1000 Kyllingenuggets, dippers, pops eller burgerbøffer',
+    'Kyllingepopcorn',
+    'Navito paneret fisk eller tempurarejer',
+    'Coop torpedo, rejer eller fiskepinde',
+    'Danpo tempura nuggets, kyllingekebab eller Coop cordon bleu',
+    'CRISPY KYLLING',
+    'VITASIA Kyllingespyd',
+  ];
+  for (const heading of cases) {
+    assert.equal(norm.productIdentity(heading, '').prepared, 1, heading);
+  }
+});
+
+test('råvaren selv er ikke forarbejdet', () => {
+  const cases = [
+    'Gestus Danske Kyllingelår med Rygben',
+    'Dansk kyllingebrystfilet',
+    'GESTUS VANNAMEI ELLER TORPEDO REJER',
+    'Hakket oksekød 8-12 %',
+    'REMA 1000 Røget eller gravad laks',
+  ];
+  for (const heading of cases) {
+    assert.equal(norm.productIdentity(heading, '').prepared, 0, heading);
+  }
+});
+
+test('den forarbejdede vare beholder sin egen identitet', () => {
+  // Den skal stadig kunne følges i prishistorikken – bare ikke som kylling.
+  const nuggets = norm.productIdentity('Bistronne kyllingenuggets', '');
+  const filet = norm.productIdentity('Dansk kyllingebrystfilet', '');
+  assert.notEqual(nuggets.slug, filet.slug);
+  assert.equal(nuggets.taxonomy_key, 'kylling');
+});
+
+// ── Sprog og ordgrænser ──────────────────────────────────────────────────────
+
+test('korte danske ord kaprer ikke en engelsk ingredienslinje', () => {
+  // "boneless and skinless chicken thighs" blev læst som AND (fuglen)
+  assert.equal(parseIngredient('3 boneless and skinless chicken thighs').taxonomy_key, 'kyllingelaar');
+  assert.equal(parseIngredient('6 boneless and skinless chicken thighs').taxonomy_key, 'kyllingelaar');
+});
+
+test('engelske ord matcher som hele ord, ikke som orddele', () => {
+  // Engelsk sætter ikke ord sammen: pepperoni er ikke pepper, reveal ikke veal
+  assert.equal(taxonomy.lookup('Pepperoni')?.entry.key, undefined);
+  assert.equal(taxonomy.lookup('Babyshower & Gender reveal')?.entry.key, 'fest');
+  assert.equal(taxonomy.lookup('Lambi Classic papir')?.entry.key, 'toiletpapir');
+  // … men flertals-s tæller stadig som samme ord
+  assert.equal(taxonomy.lookup('medium courgettes')?.entry.key, 'squash');
+});
+
+test('hele udtryk slår deres eget første ord', () => {
+  const cases = [
+    ['Beauvais Tomat Ketchup', 'ketchup'],
+    ['butter beans drained', 'bonner'],
+    ['apple cider vinegar', 'eddike'],
+    ['egg noodles', 'pasta'],
+    ['cayenne pepper', 'krydderi'],
+    ['kyllingefond', 'bouillon'],
+    ['majsstivelse', 'mel'],
+    ['Lavazza helbønner', 'kaffe'],
+  ];
+  for (const [text, key] of cases) {
+    assert.equal(taxonomy.lookup(text)?.entry.key, key, text);
+  }
+});
+
+test('dansk sammensætning gælder stadig: hovedordet står forrest', () => {
+  assert.equal(taxonomy.lookup('Skinkeculotte')?.entry.key, 'skinke');
+  assert.equal(taxonomy.lookup('jomfruolivenolie')?.entry.key, 'olie');
+  assert.equal(taxonomy.lookup('Rahbek Indbagt Laks med Spinat')?.entry.key, 'laks');
+});
+
+test('støjord fjernes som hele ord, ikke som orddele', () => {
+  // "kun" åd sig ind i "kalkun", "spar" i "spareribs", "frisk" i "friskost"
+  assert.equal(norm.productIdentity('Kalkunbrystfilet', '').taxonomy_key, 'kalkun');
+  assert.equal(norm.productIdentity('Mr Beef Spareribs med BBQ', '').taxonomy_key, 'flaeskesteg');
+  assert.equal(norm.productIdentity('Buko Friskost', '').taxonomy_key, 'flodeost');
+  assert.equal(norm.productIdentity('Danskvand med citrus', '').taxonomy_key, 'vand');
+});
+
+test('bindestreg betyder delt efterled, ikke afkortet vare', () => {
+  // "Lakse- eller torskefars" er fars, ikke en laksefilet
+  assert.equal(norm.productIdentity('Lakse- eller torskefars', '').taxonomy_key, 'fiskefars');
+  assert.equal(norm.productIdentity('Hakket okse- eller grise-/kalvekød', '').taxonomy_key, 'hakket_oksekoed');
+});
+
+// ── Beskrivelsen ─────────────────────────────────────────────────────────────
+
+test('beskrivelsen kan udelukke en vare, men ikke udpege den som råvare', () => {
+  // Smagsvarianter i salgsteksten er ikke råvarer
+  assert.equal(norm.productIdentity('Ribena', 'Original, Light, Blandet Bær & Frugt').taxonomy_key, null);
+  assert.equal(norm.productIdentity('Rynkeby Nektar', 'Æble, Appelsin, Multifrugt').taxonomy_key, null);
+
+  // … men peger den væk fra madplanen, tæller den
+  assert.equal(
+    norm.productIdentity('Vel eller Duck', '475-500 ml opvaskemiddel, 750 ml toiletrens. Pr. liter max. 35,79').taxonomy_key,
+    'rengoering');
+});
+
 // ── ISO-uge ──────────────────────────────────────────────────────────────────
 
 test('ISO-uge beregnes efter torsdagsreglen', () => {

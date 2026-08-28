@@ -39,6 +39,10 @@ CREATE TABLE IF NOT EXISTS products (
   -- vareidentiteten. Hakket oksekød 8-12 % og 15-20 % er ikke samme vare.
   fat_grade        TEXT,                  -- '3-7' | '8-12' | '15-20' | '22-26'
   organic          INTEGER DEFAULT 0,
+  -- Forarbejdet vare: indeholder råvaren, men er den ikke ("indbagte rejer",
+  -- "kyllingenuggets"). Har pris og historik som alle andre, men kan ikke
+  -- gøre det ud for en råvare i en opskrift.
+  prepared         INTEGER DEFAULT 0,
   protein_per_100g REAL,
   kcal_per_100g    REAL,
   created_at       TEXT NOT NULL

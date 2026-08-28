@@ -33,6 +33,7 @@ function migrate(db) {
     ['recipes', 'score_premium', 'REAL'],
     ['products', 'fat_grade', 'TEXT'],
     ['products', 'organic', 'INTEGER DEFAULT 0'],
+    ['products', 'prepared', 'INTEGER DEFAULT 0'],
   ];
   for (const [table, column, type] of added) {
     const cols = db.prepare(`PRAGMA table_info(${table})`).all().map((c) => c.name);
