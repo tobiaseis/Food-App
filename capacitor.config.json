@@ -3,13 +3,13 @@
   "appName": "Madplan",
   "webDir": "public",
   "android": {
-    "backgroundColor": "#f6f7f9",
+    "backgroundColor": "#f1f2ee",
     "allowMixedContent": false
   },
   "plugins": {
     "SplashScreen": {
       "launchAutoHide": true,
-      "backgroundColor": "#1d6f4f",
+      "backgroundColor": "#1d4b38",
       "androidSpinnerStyle": "small",
       "spinnerColor": "#ffffff",
       "launchShowDuration": 3000,

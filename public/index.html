@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#1d6f4f" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f1319" media="(prefers-color-scheme: dark)">
-  <title>Madplan · tilbud fra danske supermarkeder</title>
+  <meta name="theme-color" content="#f1f2ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101310" media="(prefers-color-scheme: dark)">
+  <title>Madplan · ugens retter bygget på tilbud</title>
   <meta name="description" content="Ugentlige madplaner bygget på de varer, der faktisk er på tilbud i dine egne butikker – med prishistorik og varenotifikationer.">
   <link rel="stylesheet" href="/styles.css">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🥦</text></svg>">
+  <!-- Samme mærke som launcher-ikonet: et prisskilt. Formen kan læses ved
+       16 px, hvor et stykke mad ville blive til grød. -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231d4b38'/><path d='M16.6 7H24a1 1 0 0 1 1 1v7.4a2 2 0 0 1-.6 1.4l-7.6 7.6a2 2 0 0 1-2.8 0l-6-6a2 2 0 0 1 0-2.8l7.6-7.6a2 2 0 0 1 1.4-.6z' fill='none' stroke='%23fff' stroke-width='2'/><circle cx='20.4' cy='11.6' r='1.6' fill='%23fff'/></svg>">
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -17,9 +19,16 @@
 <body>
   <header class="top">
     <div class="top-inner">
-      <div class="brand">Madplan<span>.</span></div>
+      <!-- Mærket er en dokke: navnet, og den uge tallene på siden gælder for.
+           Ugen sættes af app.js, så den aldrig kan stå forkert i en fane,
+           der har været åben natten over. -->
+      <a class="brand" href="#/plan">
+        <span class="brand-name">Madplan</span>
+        <span class="brand-week" id="brand-week"></span>
+      </a>
+
       <!-- Samme <nav> begge steder: på brede skærme en pille-række i toppen,
-           under 640px en fast bundlinje inden for tommelfingerens rækkevidde.
+           under 720px en fast bundlinje inden for tommelfingerens rækkevidde.
            Ét sæt links betyder ét sted at vedligeholde ruterne – app.js'
            router kender kun "#tabs a" og skal ikke vide hvor de står. -->
       <nav class="tabs" id="tabs">
@@ -50,10 +59,20 @@
 
   <main id="app"><div class="loading">Indlæser…</div></main>
 
+  <!-- Foden hører hjemmesiden til. I en installeret app er der ingen
+       hjemmeside at gå ned i foden af, så CSS skjuler den i standalone. -->
+  <footer class="site">
+    <div class="site-inner">
+      <span>Ugens retter bygget på danske supermarkeders tilbudsaviser.</span>
+      <span id="site-updated"></span>
+      <a href="/privatliv">Privatliv</a>
+    </div>
+  </footer>
+
   <dialog id="modal">
     <div class="dlg-head">
       <div class="spread">
-        <h2 id="modal-title" style="margin:0;font-size:17px"></h2>
+        <h2 id="modal-title"></h2>
         <button class="ghost" id="modal-close">Luk</button>
       </div>
     </div>

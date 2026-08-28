@@ -197,7 +197,7 @@ function compareChains(productId, { activeOnly = true, baseUnit = null } = {}) {
   if (activeOnly) params.push(now);
 
   const rows = db.prepare(`
-    SELECT o.id, o.chain_id, c.name AS chain_name, c.logo,
+    SELECT o.id, o.chain_id, c.name AS chain_name, c.logo, c.color,
            o.heading, o.price, o.pre_price, o.unit_price, o.base_unit,
            o.base_qty, o.run_from, o.run_till, o.image
       FROM offers o

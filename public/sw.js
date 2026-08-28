@@ -22,7 +22,7 @@
  * i public/app.js.
  */
 
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL_CACHE = `madplan-shell-${VERSION}`;
 const DATA_CACHE = `madplan-data-${VERSION}`;
 

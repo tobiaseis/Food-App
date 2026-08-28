@@ -92,8 +92,8 @@ function sdTag(x, y) {
   return Math.max(box, -hole);         // trækker hullet ud af kassen
 }
 
-const ACCENT_TOP = [0x23, 0x7d, 0x5a];
-const ACCENT_BOT = [0x17, 0x59, 0x3f];
+const ACCENT_TOP = [0x2a, 0x65, 0x49];
+const ACCENT_BOT = [0x16, 0x38, 0x2a];
 const WHITE = [0xff, 0xff, 0xff];
 
 const clamp01 = (v) => (v < 0 ? 0 : v > 1 ? 1 : v);
@@ -226,9 +226,9 @@ if (fs.existsSync(path.join(root, 'android'))) {
   fs.writeFileSync(bgXml,
     '<?xml version="1.0" encoding="utf-8"?>\n' +
     '<resources>\n' +
-    '    <color name="ic_launcher_background">#1D6F4F</color>\n' +
+    '    <color name="ic_launcher_background">#1D4B38</color>\n' +
     '</resources>\n');
-  console.log('  values/ic_launcher_background.xml  #1D6F4F');
+  console.log('  values/ic_launcher_background.xml  #1D4B38');
 } else {
   console.log('\n(android/ findes ikke – springer launcher-ikonerne over)');
 }

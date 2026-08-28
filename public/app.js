@@ -29,6 +29,57 @@ const verdictTag = (v, pct) => {
   return `<span class="verdict ${k}">${VERDICT[k]}${p}</span>`;
 };
 
+/* ── Prisinstrumentet ─────────────────────────────────────────────────────────
+ * Dommen om en pris er appens hele påstand, og den fortjener en aflæsning
+ * frem for et skilt: en lineal med graduering, et nulmærke ved normalprisen
+ * og en nål ved dagens pris. Skalaen er den samme på hvert eneste kort, så to
+ * varer kan sammenlignes med øjnene alene.
+ *
+ * Enderne er valgt efter tallene, ikke omvendt. Under −20 % er alt "dyrere end
+ * normalt" alligevel, og ugens bedste fund lander rutinemæssigt mellem 60 og
+ * 80 % under normalprisen – med en kortere skala stod alle nåle i samme
+ * yderposition, og så måler instrumentet ingenting.
+ *
+ * 100 enheder fra ende til ende betyder samtidig, at gradueringen i CSS er
+ * kalibreret: hvert streg er præcis 10 procentpoint.
+ */
+const GAUGE_LO = -20;
+const GAUGE_HI = 80;
+
+const gaugeAt = (pct) =>
+  ((Math.min(Math.max(pct, GAUGE_LO), GAUGE_HI) - GAUGE_LO) / (GAUGE_HI - GAUGE_LO)) * 100;
+
+const GAUGE_ZERO = gaugeAt(0);
+
+/**
+ * @param v    dommen: great | good | fair | poor | unknown
+ * @param pct  procent under normalprisen; negativ betyder dyrere. Må mangle.
+ */
+function priceGauge(v, pct) {
+  const k = v && VERDICT[v] ? v : 'unknown';
+  const has = pct != null && isFinite(pct);
+  const word = VERDICT[k];
+
+  // Uden et tal er der ingen nål at sætte. Så står ordet alene frem for at
+  // lade en tilfældig position se ud som en måling.
+  if (!has || k === 'unknown') {
+    return `<div class="gauge unknown"><span class="gauge-label">${word}</span></div>`;
+  }
+
+  const x = gaugeAt(pct);
+  const n = num(Math.abs(pct), 0);
+  const spoken = `${word}: ${n} % ${pct < 0 ? 'over' : 'under'} normalprisen`;
+
+  return `<div class="gauge ${k}">
+    <span class="gauge-scale" role="img" aria-label="${esc(spoken)}">
+      <i class="g-fill" style="left:${Math.min(x, GAUGE_ZERO)}%;width:${Math.abs(x - GAUGE_ZERO)}%"></i>
+      <i class="g-zero" style="left:${GAUGE_ZERO}%"></i>
+      <i class="g-mark" style="left:${x}%"></i>
+    </span>
+    <span class="gauge-label" aria-hidden="true">${word} <b>${n} %</b></span>
+  </div>`;
+}
+
 const unitPrice = (o) =>
   o.unit_price == null ? '' : `${num(o.unit_price, 2)} kr/${o.base_unit}`;
 
@@ -39,6 +90,22 @@ const daysLeft = (till) => {
   if (d === 0) return 'sidste dag';
   return `${d} dag${d === 1 ? '' : 'e'} tilbage`;
 };
+
+/**
+ * ISO-ugenummeret for i dag.
+ *
+ * Tilbudsaviserne løber pr. ISO-uge, og hele appen regner i dem – ugen står
+ * derfor i mærket øverst. Den beregnes hver gang frem for at blive skrevet
+ * ind i HTML: en fane, der har stået åben natten over søndag-mandag, skal
+ * ikke vise sidste uges tal.
+ */
+function isoWeek(d = new Date()) {
+  // Torsdagsreglen: ugen hører til det år, dens torsdag ligger i.
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  t.setUTCDate(t.getUTCDate() + 4 - (t.getUTCDay() || 7));
+  const jan1 = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  return Math.ceil(((t - jan1) / 86400000 + 1) / 7);
+}
 
 let STATUS = {};
 let CHAINS = [];
@@ -71,7 +138,7 @@ function storePicker(onSaved) {
       const n = c.active_count ?? c.offer_count;
       return `<label class="store-row">
         <input type="checkbox" value="${esc(c.id)}" ${FAVORITES.includes(c.id) ? 'checked' : ''}>
-        <span class="chain-chip"><i class="chain-dot" style="background:${esc(c.color || 'var(--text-faint)')}"></i>${esc(c.name)}</span>
+        <span class="chain-chip"><i class="chain-dot" style="background:${esc(c.color || 'var(--ink-3)')}"></i>${esc(c.name)}</span>
         <span class="note">${n != null ? `${num(n)} tilbud` : ''}</span>
       </label>`;
     }).join('');
@@ -106,14 +173,25 @@ function storePicker(onSaved) {
   modal.showModal();
 }
 
-/** Linjen over madplanen: hvilke butikker den er bygget af. */
+/**
+ * Linjen over madplanen: hvilke butikker den er bygget af.
+ *
+ * Kædernes egne farver er den eneste kulør, grænsefladen selv låner ud – de
+ * er data, ikke pynt, og prikkerne gør linjen læsbar med et blik.
+ */
 function favoriteBar() {
-  const names = favoriteNames();
+  const chosen = FAVORITES.map(chainById).filter(Boolean);
+  const dots = chosen.map((c) =>
+    `<i class="chain-dot" style="background:${esc(c.color || 'var(--ink-3)')}"></i>`).join('');
+
   return `<div class="fav-bar">
-    <div>${names.length
-      ? `Bygget på tilbud fra <strong>${esc(listNames(names))}</strong>`
-      : '<strong>Alle kæder</strong> – også dem, der ikke ligger i nærheden af dig'}</div>
-    <button class="ghost" id="pick-stores">${names.length ? 'Skift butikker' : 'Vælg mine butikker'}</button>
+    <div class="row" style="gap:8px">
+      ${dots}
+      <span>${chosen.length
+        ? `Bygget på tilbud fra <strong>${esc(listNames(chosen.map((c) => c.name)))}</strong>`
+        : '<strong>Alle kæder</strong> – også dem, der ikke ligger i nærheden af dig'}</span>
+    </div>
+    <button class="ghost" id="pick-stores">${chosen.length ? 'Skift butikker' : 'Vælg mine butikker'}</button>
   </div>`;
 }
 
@@ -127,23 +205,30 @@ function bindFavoriteBar(reload) {
 function offerCard(o) {
   const img = o.image
     ? `<img src="${esc(o.image)}" alt="" loading="lazy">`
-    : `<div style="width:66px;height:66px;border-radius:8px;background:var(--surface-2);flex-shrink:0"></div>`;
+    : '<div class="offer-ph"></div>';
+
+  // Går tilbuddet ud i dag eller i morgen, er det den eneste oplysning på
+  // kortet, man skal handle på med det samme – derfor den varme farve.
+  const left = o.run_till ? daysLeft(o.run_till) : '';
+  const urgent = left === 'sidste dag' || left === '1 dag tilbage';
 
   return `<div class="offer" data-product="${o.product_id}">
-    ${img}
-    <div class="offer-body">
-      <div class="offer-title">${esc(o.heading)}</div>
-      <div class="offer-meta">
-        <span class="chain-chip"><i class="chain-dot" style="background:${esc(o.color || 'var(--text-faint)')}"></i>${esc(o.chain_name)}</span>
-        ${o.run_till ? `<span>${daysLeft(o.run_till)}</span>` : ''}
+    <div class="offer-head">
+      ${img}
+      <div class="offer-body">
+        <div class="offer-title">${esc(o.heading)}</div>
+        <div class="offer-meta">
+          <span class="chain-chip"><i class="chain-dot" style="background:${esc(o.color || 'var(--ink-3)')}"></i>${esc(o.chain_name)}</span>
+          ${left ? `<span class="${urgent ? 'urgent' : ''}">${left}</span>` : ''}
+        </div>
+        <div class="price-row">
+          <span class="price">${kr(o.price)}</span>
+          ${o.pre_price ? `<span class="pre-price">${kr(o.pre_price)}</span>` : ''}
+          ${o.unit_price != null ? `<span class="unit-price">${unitPrice(o)}</span>` : ''}
+        </div>
       </div>
-      <div class="price-row">
-        <span class="price">${kr(o.price)}</span>
-        ${o.pre_price ? `<span class="pre-price">${kr(o.pre_price)}</span>` : ''}
-        ${o.unit_price != null ? `<span class="unit-price">${unitPrice(o)}</span>` : ''}
-      </div>
-      ${o.verdict ? `<div style="margin-top:7px">${verdictTag(o.verdict, o.discount_pct)}</div>` : ''}
     </div>
+    ${o.verdict ? priceGauge(o.verdict, o.discount_pct) : ''}
   </div>`;
 }
 
@@ -169,25 +254,72 @@ function sparkline(series, unit) {
   const line = series.map((s, i) => `${x(i)},${y(s.median)}`).join(' ');
 
   const ticks = [lo, (lo + hi) / 2, hi].map((v) =>
-    `<text x="${pad.l - 7}" y="${y(v) + 3.5}" text-anchor="end" font-size="10" fill="var(--text-faint)">${num(v, 0)}</text>
-     <line x1="${pad.l}" y1="${y(v)}" x2="${w - pad.r}" y2="${y(v)}" stroke="var(--border)" stroke-width="1"/>`).join('');
+    `<text x="${pad.l - 7}" y="${y(v) + 3.5}" text-anchor="end" font-size="10" fill="var(--ink-3)">${num(v, 0)}</text>
+     <line x1="${pad.l}" y1="${y(v)}" x2="${w - pad.r}" y2="${y(v)}" stroke="var(--rule)" stroke-width="1"/>`).join('');
 
   // Yderste mærkater ankres indad, ellers klippes de af kanten
   const labels = series.map((s, i) => {
     if (!(i === 0 || i === series.length - 1 || series.length <= 6)) return '';
     const anchor = i === 0 ? 'start' : i === series.length - 1 ? 'end' : 'middle';
-    return `<text x="${x(i)}" y="${h - 8}" text-anchor="${anchor}" font-size="9.5" fill="var(--text-faint)">${esc(s.period)}</text>`;
+    return `<text x="${x(i)}" y="${h - 8}" text-anchor="${anchor}" font-size="9.5" fill="var(--ink-3)">${esc(s.period)}</text>`;
   }).join('');
 
   return `<svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet" role="img"
             aria-label="Prisudvikling i kr pr. ${esc(unit)}">
     ${ticks}
-    <polygon points="${band}" fill="var(--accent)" opacity=".13"/>
-    <polyline points="${line}" fill="none" stroke="var(--accent)" stroke-width="2"
+    <polygon points="${band}" fill="var(--bay)" opacity=".13"/>
+    <polyline points="${line}" fill="none" stroke="var(--bay)" stroke-width="2"
               stroke-linejoin="round" stroke-linecap="round"/>
-    ${series.map((s, i) => `<circle cx="${x(i)}" cy="${y(s.median)}" r="3" fill="var(--accent)"><title>${esc(s.period)}: ${num(s.median, 2)} kr/${esc(unit)} (${s.n} tilbud)</title></circle>`).join('')}
+    ${series.map((s, i) => `<circle cx="${x(i)}" cy="${y(s.median)}" r="3" fill="var(--bay)"><title>${esc(s.period)}: ${num(s.median, 2)} kr/${esc(unit)} (${s.n} tilbud)</title></circle>`).join('')}
     ${labels}
   </svg>`;
+}
+
+/**
+ * Instrumentet i fuld størrelse: varens egen prisspredning i kroner.
+ *
+ * Det er den samme aflæsning som på tilbudskortet, bare med rigtige tal på
+ * skalaen frem for procenter. Enderne er det billigste og dyreste, der er set
+ * for varen; mærket i midten er normalprisen, og nålen er den billigste pris
+ * lige nu.
+ *
+ * Dagens pris kan sagtens ligge uden for det hidtil sete – det er jo netop
+ * pointen med et godt tilbud – så skalaen strækkes til at rumme den frem for
+ * at klemme nålen ind mod kanten.
+ */
+function priceRange(b, best, unit) {
+  if (!b || b.min == null || b.max == null) return '';
+
+  const now = best && best.unit_price != null ? best.unit_price : null;
+  const lo = Math.min(b.min, now ?? b.min);
+  const hi = Math.max(b.max, now ?? b.max);
+  const span = hi - lo || 1;
+  // Skalaen trækkes ind fra kanterne, så en nål yderst ude står helt inde på
+  // linealen frem for at blive skåret over af kassen.
+  const at = (v) => 2 + ((v - lo) / span) * 96;
+
+  const reading = now != null
+    ? `Normalpris ${num(b.median, 2)} kr/${unit} · billigst nu ${num(now, 2)} kr/${unit}`
+    : `Normalpris ${num(b.median, 2)} kr/${unit}`;
+
+  // Fyldet er afstanden mellem normalprisen og dagens pris – altså præcis det,
+  // man sparer pr. kilo. Samme sprog som nålen på tilbudskortet.
+  const fill = now == null ? null
+    : { left: Math.min(at(now), at(b.median)), width: Math.abs(at(now) - at(b.median)) };
+
+  return `<div class="range">
+    <p class="note" style="margin:0 0 8px">${esc(reading)} · ${b.samples} observationer</p>
+    <div class="range-scale" role="img"
+         aria-label="${esc(`${reading}. Set mellem ${num(lo, 2)} og ${num(hi, 2)} kr pr. ${unit} over ${b.samples} observationer.`)}">
+      ${fill ? `<i class="range-span" style="left:${fill.left}%;width:${fill.width}%"></i>` : ''}
+      <i class="range-tick" style="left:${at(b.median)}%"></i>
+      ${now != null ? `<i class="range-now" style="left:${at(now)}%"></i>` : ''}
+    </div>
+    <div class="range-labels">
+      <span>${num(lo, 2)} laveste set</span>
+      <span>${num(hi, 2)} højeste set</span>
+    </div>
+  </div>`;
 }
 
 async function showProduct(productId) {
@@ -204,33 +336,28 @@ async function showProduct(productId) {
   const unit = d.base_unit;
 
   const rows = d.chains.map((c, i) => `<tr class="${i === 0 ? 'best' : ''}">
-    <td><span class="chain-chip"><i class="chain-dot"></i>${esc(c.chain_name)}</span></td>
-    <td style="font-size:12.5px;color:var(--text-dim)">${esc(c.heading.substring(0, 44))}</td>
+    <td><span class="chain-chip"><i class="chain-dot" style="background:${esc(c.color || 'var(--ink-3)')}"></i>${esc(c.chain_name)}</span></td>
+    <td class="note">${esc(c.heading.substring(0, 44))}</td>
     <td class="num">${kr(c.price)}</td>
-    <td class="num"><strong>${num(c.unit_price, 2)}</strong> <span style="color:var(--text-faint)">kr/${esc(c.base_unit)}</span></td>
+    <td class="num"><strong>${num(c.unit_price, 2)}</strong> kr/${esc(c.base_unit)}</td>
   </tr>`).join('');
 
   $('#modal-body').innerHTML = `
-    ${b ? `<div class="row" style="gap:24px;margin-bottom:16px">
-      <div class="stat"><span class="v">${num(b.median, 2)}</span><span class="l">Normalpris kr/${esc(unit)}</span></div>
-      <div class="stat"><span class="v">${num(b.min, 2)}</span><span class="l">Laveste set</span></div>
-      <div class="stat"><span class="v">${num(b.max, 2)}</span><span class="l">Højeste set</span></div>
-      <div class="stat"><span class="v">${b.samples}</span><span class="l">Observationer</span></div>
-    </div>` : ''}
+    ${priceRange(b, d.chains[0], unit)}
 
     <h2 style="margin-top:0">Prisudvikling</h2>
     ${d.series.length >= 2
       ? sparkline(d.series, unit) + `<p class="note">Median-pris pr. ${esc(unit)} pr. ISO-uge. Det skraverede felt viser spændet mellem billigste og dyreste kæde i ugen.</p>`
-      : `<div class="chart-empty">Der er endnu kun data fra én uge.<br>Grafen tegnes, når næste uges tilbudsaviser er hentet.</div>`}
+      : '<div class="chart-empty">Der er endnu kun data fra én uge.<br>Grafen tegnes, når næste uges tilbudsaviser er hentet.</div>'}
 
     <h2>Hvad koster den lige nu?</h2>
     ${d.chains.length
-      ? `<table class="cmp"><thead><tr><th>Kæde</th><th>Vare</th><th style="text-align:right">Pris</th><th style="text-align:right">Pr. ${esc(unit)}</th></tr></thead><tbody>${rows}</tbody></table>`
+      ? `<div class="scroll-x"><table class="cmp"><thead><tr><th>Kæde</th><th>Vare</th><th style="text-align:right">Pris</th><th style="text-align:right">Pr. ${esc(unit)}</th></tr></thead><tbody>${rows}</tbody></table></div>`
       : '<p class="note">Ingen aktive tilbud på denne vare lige nu.</p>'}
 
     <div class="divider"></div>
     <button class="primary" id="follow-btn">Følg ${esc(d.product.name)}</button>
-    <p class="note" style="margin-top:8px">Du får besked, når varen er på tilbud til under normalprisen.</p>
+    <p class="note" style="margin-top:10px">Du får besked, når varen er på tilbud til under normalprisen.</p>
   `;
 
   $('#follow-btn').addEventListener('click', async (e) => {
@@ -259,17 +386,19 @@ async function viewPlan() {
   const [label, blurb] = TIER_INFO[tier] || TIER_INFO.classic;
 
   app().innerHTML = `
-    <h1>Madplan for ugen</h1>
-    <p class="sub">Syv retter, hvor hovedråvaren er på tilbud i de butikker, du handler i.</p>
-    ${favoriteBar()}
-    <div class="controls">
-      <div class="seg">
-        ${Object.entries(TIER_INFO).map(([k, v]) =>
-          `<button data-tier="${k}" class="${k === tier ? 'active' : ''}">${v[0]}</button>`).join('')}
+    <div class="enter">
+      <p class="eyebrow">Uge ${isoWeek()}<i class="sep"></i>${esc(label)}</p>
+      <h1>Syv retter bygget på det, der faktisk er på tilbud.</h1>
+      <p class="lede">${esc(blurb)}</p>
+      ${favoriteBar()}
+      <div class="controls">
+        <div class="seg">
+          ${Object.entries(TIER_INFO).map(([k, v]) =>
+            `<button data-tier="${k}" class="${k === tier ? 'active' : ''}">${v[0]}</button>`).join('')}
+        </div>
+        <button id="regen">Ny plan</button>
       </div>
-      <button id="regen">Ny plan</button>
     </div>
-    <p class="sub">${esc(blurb)}</p>
     <div id="plan"><div class="loading">Sammensætter madplan…</div></div>`;
 
   app().querySelectorAll('[data-tier]').forEach((b) =>
@@ -315,36 +444,46 @@ function renderPlan(p) {
     const missingAll = (d.unmatched || []).filter((u) => u.role === 'support');
     const missing = missingAll.slice(0, 5);
 
-    return `<div class="day">
-      <div class="day-name">${esc(d.day_name)}</div>
-      ${r.image ? `<img src="${esc(r.image)}" alt="" loading="lazy">` : ''}
-      <div class="day-body">
-        <div class="day-title"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></div>
-        <div class="day-meta">
-          <span>${esc(r.source_name)}</span>
-          ${r.servings ? `<span>${r.servings} pers.</span>` : ''}
-          ${r.total_minutes ? `<span>${r.total_minutes} min.</span>` : ''}
-          ${r.protein_g != null ? `<span><strong>${num(r.protein_g, 0)} g</strong> protein</span>` : ''}
-          ${r.carbs_g != null ? `<span><strong>${num(r.carbs_g, 0)} g</strong> kulhydrat</span>` : ''}
-          ${r.kcal != null ? `<span>${num(r.kcal, 0)} kcal</span>` : ''}
-          ${r.nutrition_src === 'estimated' ? '<span title="Kilden oplyser ikke næringsindhold – tallene er estimeret ud fra ingredienserne">est.</span>' : ''}
+    // Dagsnavnet står i en streg hen over siden, ikke som en etiket inde i
+    // kortet: ugen er en rækkefølge, og stregerne gør den til én.
+    return `<article class="day">
+      <div class="day-rule">${esc(d.day_name)}</div>
+      <div class="day-card">
+        ${r.image ? `<img src="${esc(r.image)}" alt="" loading="lazy">` : ''}
+        <div class="day-body">
+          <h3 class="day-title"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></h3>
+          <div class="day-meta">
+            <span>${esc(r.source_name)}</span>
+            ${r.servings ? `<span>${r.servings} pers.</span>` : ''}
+            ${r.total_minutes ? `<span>${r.total_minutes} min.</span>` : ''}
+            ${r.protein_g != null ? `<span><strong>${num(r.protein_g, 0)} g</strong> protein</span>` : ''}
+            ${r.carbs_g != null ? `<span><strong>${num(r.carbs_g, 0)} g</strong> kulhydrat</span>` : ''}
+            ${r.kcal != null ? `<span>${num(r.kcal, 0)} kcal</span>` : ''}
+            ${r.nutrition_src === 'estimated' ? '<span title="Kilden oplyser ikke næringsindhold – tallene er estimeret ud fra ingredienserne">est.</span>' : ''}
+          </div>
+          <div class="cover">
+            <div class="match-bar"><i style="width:${pct}%"></i></div>
+            <span class="note">
+              <strong>${d.main_count} af ${d.main_total}</strong> hovedråvare${d.main_total === 1 ? '' : 'r'} på tilbud${
+                d.support_total ? ` · ${d.support_count} af ${d.support_total} øvrige` : ''}
+              ${d.est_savings > 0 ? ` · <span class="save">spar ca. ${kr(d.est_savings)}</span>` : ''}
+            </span>
+          </div>
+          <div class="ing-list">${chips}${d.matched.length > 7 ? `<span class="ing">+${d.matched.length - 7}</span>` : ''}</div>
+          ${missing.length ? `<p class="note missing">Køb også: ${missing.map((m) => esc(m.name)).join(', ')}${
+            missingAll.length > missing.length ? ' m.fl.' : ''}</p>` : ''}
         </div>
-        <div class="match-bar"><i style="width:${pct}%"></i></div>
-        <div class="note" style="margin-bottom:7px">
-          <strong>${d.main_count} af ${d.main_total}</strong> hovedråvarer på tilbud${
-            d.support_total ? ` · ${d.support_count} af ${d.support_total} øvrige` : ''}
-          ${d.est_savings > 0 ? ` · <span class="save">spar ca. ${kr(d.est_savings)}</span>` : ''}
-        </div>
-        <div class="ing-list">${chips}${d.matched.length > 7 ? `<span class="ing">+${d.matched.length - 7}</span>` : ''}</div>
-        ${missing.length ? `<div class="note missing">Køb også: ${missing.map((m) => esc(m.name)).join(', ')}${
-          missingAll.length > missing.length ? ' m.fl.' : ''}</div>` : ''}
       </div>
-    </div>`;
+    </article>`;
   }).join('');
 
   const shop = (p.shopping_list?.on_offer || []).map((c) => `
     <div class="card shop-chain">
-      <h3><span>${esc(c.chain)}</span><span class="note">${kr(c.total)}${c.savings > 0 ? ` · <span class="save">spar ${kr(c.savings)}</span>` : ''}</span></h3>
+      <h3>
+        <span class="row" style="gap:8px"><i class="chain-dot" style="background:${
+          esc(CHAINS.find((x) => x.name === c.chain)?.color || 'var(--ink-3)')}"></i>${esc(c.chain)}</span>
+        <span class="note">${kr(c.total)}${c.savings > 0 ? ` · <span class="save">spar ${kr(c.savings)}</span>` : ''}</span>
+      </h3>
       ${c.items.map((i) => `<div class="shop-item">
         <span class="n">${esc(i.name)}<small>${esc((i.heading || '').substring(0, 60))}</small></span>
         <span class="p">${kr(i.price)} · ${num(i.unit_price, 2)} kr/${esc(i.base_unit)}</span>
@@ -353,27 +492,29 @@ function renderPlan(p) {
 
   const rest = p.shopping_list?.rest || [];
 
+  // Tallene står som på en bon: én linje, faste cifre, hårfine skillelinjer –
+  // og kun det sparede beløb får vægt, for det er hele løftet.
   el.innerHTML = `
-    <div class="plan-head">
-      <div class="stat"><span class="v">${p.days.length}</span><span class="l">Retter</span></div>
-      <div class="stat"><span class="v">${kr(p.est_cost)}</span><span class="l">Anslået råvarepris</span></div>
-      <div class="stat"><span class="v save">${kr(p.est_savings)}</span><span class="l">Sparet vs. normalpris</span></div>
-      <div class="stat"><span class="v">${p.offers_available}</span><span class="l">Varer på tilbud</span></div>
+    <div class="docket">
+      <span class="figure"><b>${p.days.length}</b> retter</span>
+      <span class="figure"><b>${kr(p.est_cost)}</b> anslået råvarepris</span>
+      <span class="figure saved"><b>${kr(p.est_savings)}</b> sparet mod normalpris</span>
+      <span class="figure"><b>${num(p.offers_available)}</b> varer på tilbud</span>
     </div>
     ${planRule(p)}
-    ${days}
-    <div class="spread" style="margin:30px 0 12px">
+    <div class="days">${days}</div>
+    <div class="spread" style="margin:38px 0 14px">
       <h2 style="margin:0">Indkøbsliste – det der er på tilbud</h2>
       <button id="share-list">Del listen</button>
     </div>
     <div class="grid wide">${shop}</div>
     ${rest.length ? `<h2>Resten</h2>
-      <div class="card">
-        <p class="note" style="margin-top:0">Ikke på tilbud i dine butikker – men skal med i kurven.</p>
+      <div class="card" style="padding:16px 18px">
+        <p class="note" style="margin:0 0 10px">Ikke på tilbud i dine butikker – men skal med i kurven.</p>
         <div class="rest-list">${rest.map((i) =>
           `<span class="ing">${esc(i.name)}${i.used_in.length > 1 ? ` <span class="c">${i.used_in.length} retter</span>` : ''}</span>`).join('')}</div>
       </div>` : ''}
-    <p class="note" style="margin-top:14px">
+    <p class="note" style="margin-top:18px;max-width:70ch">
       Priserne er beregnet ud fra opskrifternes mængder gange tilbudsprisen pr. kg/liter.
       Basisvarer som salt, olie, mel og krydderier er hverken talt med i prisen eller i kravet –
       dem regner vi med, du har hjemme.
@@ -477,9 +618,13 @@ function favFilterToggle() {
 
 async function viewDeals() {
   app().innerHTML = `
-    <h1>Ugens fund</h1>
-    <p class="sub">Tilbud hvor prisen pr. kg reelt ligger under varens normalpris – ikke bare dem med det største skilt.</p>
-    <div class="controls">${favFilterToggle()}</div>
+    <div class="enter">
+      <p class="eyebrow">Uge ${isoWeek()}<i class="sep"></i>Ugens fund</p>
+      <h1>Tilbuddene der holder, når kiloprisen tjekkes efter.</h1>
+      <p class="lede">Skiltet siger rabat. Skalaen på hvert kort siger, hvor prisen
+      ligger i forhold til varens egen normalpris – det er den, du kan handle efter.</p>
+      <div class="controls">${favFilterToggle()}</div>
+    </div>
     <div id="deals"><div class="loading">Regner på priserne…</div></div>`;
 
   const box = $('#only-fav');
@@ -500,18 +645,22 @@ async function viewDeals() {
 
 async function viewOffers() {
   app().innerHTML = `
-    <h1>Alle tilbud</h1>
-    <p class="sub">${num(STATUS.active_offers)} aktive tilbud fra ${STATUS.chains} kæder. Klik på en vare for prishistorik.</p>
-    <div class="controls">
-      <input type="text" id="q" class="grow" placeholder="Søg – fx skyr, kyllingebryst, laks…">
-      <select id="chain"><option value="">Alle kæder</option>
-        ${CHAINS.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}</option>`).join('')}</select>
-      <select id="sort">
-        <option value="unit_price">Billigst pr. kg</option>
-        <option value="price">Laveste pris</option>
-        <option value="newest">Nyeste</option>
-      </select>
-      ${favFilterToggle()}
+    <div class="enter">
+      <p class="eyebrow">Uge ${isoWeek()}<i class="sep"></i>Alle tilbud</p>
+      <h1>${num(STATUS.active_offers)} aktive tilbud fra ${num(STATUS.chains)} kæder.</h1>
+      <p class="lede">Åbn en vare for at se, hvad den har kostet uge for uge, og hvor
+      den er billigst lige nu.</p>
+      <div class="controls">
+        <input type="text" id="q" class="grow" placeholder="Søg – fx skyr, kyllingebryst, laks…">
+        <select id="chain"><option value="">Alle kæder</option>
+          ${CHAINS.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}</option>`).join('')}</select>
+        <select id="sort">
+          <option value="unit_price">Billigst pr. kg</option>
+          <option value="price">Laveste pris</option>
+          <option value="newest">Nyeste</option>
+        </select>
+        ${favFilterToggle()}
+      </div>
     </div>
     <div id="list"><div class="loading">Henter…</div></div>`;
 
@@ -563,21 +712,27 @@ async function askForPush() {
 
 async function viewWatch() {
   app().innerHTML = `
-    <h1>Følg varer</h1>
-    <p class="sub">Få besked når en vare, du ofte køber, er på reelt tilbud i en butik nær dig.</p>
-    <div class="controls">
-      <input type="text" id="w-label" class="grow" placeholder="Hvilken vare? fx skyr, hakket oksekød, laks">
-      <input type="number" id="w-disc" placeholder="Min. rabat %" style="width:132px" min="0" max="90">
-      <input type="number" id="w-km" placeholder="Maks. km" style="width:112px" min="1">
-      <button class="primary" id="w-add">Følg vare</button>
+    <div class="enter">
+      <p class="eyebrow">Følg varer</p>
+      <h1>Få besked, når en vare du ofte køber er reelt billig.</h1>
+      <p class="lede">Skriv varen, som du ville sige den. Appen holder øje i alle
+      kæder og siger til, når prisen pr. kg ligger under normalprisen.</p>
+      <div class="controls">
+        <input type="text" id="w-label" class="grow" placeholder="Hvilken vare? fx skyr, hakket oksekød, laks">
+        <input type="number" id="w-disc" placeholder="Min. rabat %" style="width:140px" min="0" max="90">
+        <input type="number" id="w-km" placeholder="Maks. km" style="width:122px" min="1">
+        <button class="primary" id="w-add">Følg vare</button>
+      </div>
+      <div id="w-msg"></div>
     </div>
-    <div id="w-msg"></div>
     <h2>Dine overvågninger</h2>
     <div class="card" id="w-list"><div class="loading">Henter…</div></div>
-    <h2>Notifikationer</h2>
-    <div class="row" style="margin-bottom:11px">
-      <button id="w-run">Tjek for nye tilbud</button>
-      <button id="w-read" class="ghost">Markér alle som læst</button>
+    <div class="spread" style="margin:38px 0 14px">
+      <h2 style="margin:0">Notifikationer</h2>
+      <div class="row">
+        <button id="w-run">Tjek for nye tilbud</button>
+        <button id="w-read" class="ghost">Markér alle som læst</button>
+      </div>
     </div>
     <div class="card" id="n-list"><div class="loading">Henter…</div></div>`;
 
@@ -609,7 +764,7 @@ async function viewWatch() {
       <div class="notif ${n.read_at ? '' : 'unread'}">
         ${n.image ? `<img src="${esc(n.image)}" alt="" loading="lazy">` : ''}
         <div style="flex:1;min-width:0">
-          <div style="font-weight:590;font-size:13.5px">${esc(n.heading)}</div>
+          <div class="hd">${esc(n.heading)}</div>
           <div class="det note">
             <strong>${esc(n.watch_label)}</strong> · ${esc(n.chain_name)} · ${kr(n.price)}
             ${n.unit_price != null ? ` · ${num(n.unit_price, 2)} kr/${esc(n.base_unit)}` : ''}
@@ -635,7 +790,7 @@ async function viewWatch() {
       home_lng: home.home_lng ?? null,
     });
     if (r.error) {
-      $('#w-msg').innerHTML = `<p class="note" style="color:var(--poor)">${esc(r.error)}</p>`;
+      $('#w-msg').innerHTML = `<p class="note" style="color:var(--clay)">${esc(r.error)}</p>`;
       return;
     }
 
@@ -678,26 +833,29 @@ async function viewWatch() {
 async function viewSettings() {
   const home = STATUS.home || {};
   app().innerHTML = `
-    <h1>Indstillinger</h1>
-    <p class="sub">Din placering bruges til at finde nærmeste butik – den forlader ikke maskinen.</p>
+    <div class="enter">
+      <p class="eyebrow">Indstillinger</p>
+      <h1>Butikkerne, adressen og de data planen bygger på.</h1>
+      <p class="lede">Placeringen bruges kun til at finde nærmeste butik. Den forlader ikke maskinen.</p>
+    </div>
 
-    <div class="card" style="padding:17px;max-width:560px;margin-bottom:18px">
-      <h2 style="margin-top:0">Mine butikker</h2>
-      <p class="note" style="margin-top:0">${FAVORITES.length
+    <div class="card" style="padding:18px;max-width:660px;margin-bottom:16px">
+      <h3>Mine butikker</h3>
+      <p class="note" style="margin:0 0 14px">${FAVORITES.length
         ? `Madplanen bygges kun af tilbud fra <strong>${esc(listNames(favoriteNames()))}</strong>.`
         : 'Ikke valgt endnu – madplanen bygges af alle kæder, også dem langt væk.'}</p>
       <button class="primary" id="settings-stores">${FAVORITES.length ? 'Skift butikker' : 'Vælg butikker'}</button>
     </div>
 
-    <div class="card" style="padding:17px;max-width:560px">
-      <h2 style="margin-top:0">Din adresse</h2>
-      <div class="controls">
-        <input type="number" id="lat" step="0.0001" placeholder="Breddegrad" value="${home.lat ?? ''}" style="width:160px">
-        <input type="number" id="lng" step="0.0001" placeholder="Længdegrad" value="${home.lng ?? ''}" style="width:160px">
+    <div class="card" style="padding:18px;max-width:660px">
+      <h3>Din adresse</h3>
+      <div class="controls" style="margin-bottom:12px">
+        <input type="number" id="lat" step="0.0001" placeholder="Breddegrad" value="${home.lat ?? ''}" style="width:150px">
+        <input type="number" id="lng" step="0.0001" placeholder="Længdegrad" value="${home.lng ?? ''}" style="width:150px">
         <button id="locate">Brug min placering</button>
         <button class="primary" id="save-home">Gem</button>
       </div>
-      <p class="note" id="home-msg">${home.lat != null ? `Sat til ${num(home.lat, 4)}, ${num(home.lng, 4)}.` : 'Ikke sat endnu.'}</p>
+      <p class="note" id="home-msg" style="margin:0">${home.lat != null ? `Sat til ${num(home.lat, 4)}, ${num(home.lng, 4)}.` : 'Ikke sat endnu.'}</p>
       <div id="near"></div>
     </div>
 
@@ -712,7 +870,7 @@ async function viewSettings() {
         ['Opskrifter', num(STATUS.recipes)],
         ['Uger med data', num(STATUS.weeks_of_history)],
         ['Overvågninger', num(STATUS.watches)],
-      ].map(([l, v]) => `<div class="card" style="padding:14px 16px">
+      ].map(([l, v]) => `<div class="card" style="padding:16px 18px">
         <div class="stat"><span class="v">${v}</span><span class="l">${l}</span></div></div>`).join('')}
     </div>
 
@@ -721,8 +879,8 @@ async function viewSettings() {
       <button class="primary" id="do-ingest">Hent denne uges tilbudsaviser</button>
       <span class="note" id="ingest-msg">Senest hentet: ${STATUS.last_ingest ? new Date(STATUS.last_ingest).toLocaleString('da-DK') : 'aldrig'}</span>
     </div>
-    <p class="note" style="margin-top:14px">
-      Opskrifter hentes med <code style="padding:2px 6px">node src/recipes/crawl.js</code>.
+    <p class="note" style="margin-top:14px;max-width:70ch">
+      Opskrifter hentes med <code>node src/recipes/crawl.js</code>.
       Hver ny uges ingest udbygger prishistorikken.
     </p>
 
@@ -787,6 +945,14 @@ async function loadStatus() {
     badge.textContent = STATUS.unread ? String(STATUS.unread) : '';
     badge.hidden = !STATUS.unread;
   }
+
+  // Foden siger, hvor friske tallene er. Uden det kan man ikke se forskel på
+  // "der er ingen gode tilbud i denne uge" og "dataene er en måned gamle".
+  const upd = $('#site-updated');
+  if (upd && STATUS.last_ingest) {
+    upd.textContent = `Tilbud opdateret ${new Date(STATUS.last_ingest)
+      .toLocaleDateString('da-DK', { day: 'numeric', month: 'long' })}.`;
+  }
 }
 
 const ROUTES = {
@@ -802,6 +968,13 @@ async function route() {
   const base = '/' + (hash.replace(/^#\//, '').split('/')[0] || 'plan');
   document.querySelectorAll('#tabs a').forEach((a) =>
     a.classList.toggle('active', a.getAttribute('href').startsWith('#' + base)));
+
+  // Ugen i mærket sættes ved hvert rutehop frem for én gang ved opstart: en
+  // fane, der har stået åben natten over søndag-mandag, skal ikke vise
+  // sidste uges nummer.
+  const wk = $('#brand-week');
+  if (wk) wk.textContent = `Uge ${isoWeek()}`;
+
   window.scrollTo(0, 0);
   await (ROUTES[base] || viewPlan)();
 }

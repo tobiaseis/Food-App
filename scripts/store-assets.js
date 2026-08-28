@@ -107,9 +107,9 @@ function featureGraphic(w = 1024, h = 500) {
       const i = (y * w + x) * 4;
       // Diagonal tone fra mørk nederst til venstre mod lysere øverst til højre.
       const t = clamp01((x / w) * 0.55 + (1 - y / h) * 0.45);
-      let r = Math.round(0x14 + (0x2c - 0x14) * t);
-      let g = Math.round(0x4f + (0x8c - 0x4f) * t);
-      let b = Math.round(0x39 + (0x66 - 0x39) * t);
+      let r = Math.round(0x13 + (0x2a - 0x13) * t);
+      let g = Math.round(0x2f + (0x65 - 0x2f) * t);
+      let b = Math.round(0x24 + (0x49 - 0x24) * t);
 
       // Mærket, forskudt mod højre. Koordinaterne normaliseres efter HØJDEN,
       // ellers ville formen blive trukket ud i bredden.
