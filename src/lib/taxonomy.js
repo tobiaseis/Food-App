@@ -203,21 +203,22 @@ const TAXONOMY = [
     da: ['æg', 'økologiske æg', 'frilandsæg'], en: ['egg', 'eggs'] },
 
   // ── Grønt ─────────────────────────────────────────────────────────────────
-  // Kartofler er teknisk en rodfrugt, men i praksis en pose, der står i
-  // spisekammeret i månedsvis, ikke i grøntsagsskuffen i dagevis — deraf
-  // baseline/pantry i stedet for fresh/keeps som de øvrige rodfrugter.
+  // Rodfrugter, løg og kål er 'baseline', ikke 'fresh': prisen står stort set
+  // stille året rundt, så den behøver ikke genbesøges hver tredje måned, som
+  // en tomat eller en agurk gør. 'keeps' er stadig 'keeps' – en rest gulerod
+  // eller et halvt løg er ikke spild i morgen.
   { key: 'kartofler', name: 'Kartofler', cat: 'veg',
     class: 'baseline', keeps: 'keeps', p: 2, kcal: 77, c: 17,
     da: ['kartofler', 'bagekartofler', 'nye kartofler'], en: ['potatoes', 'potato'] },
   { key: 'loeg', name: 'Løg', cat: 'veg',
-    class: 'fresh', keeps: 'keeps', p: 1.1, kcal: 40, c: 9,
+    class: 'baseline', keeps: 'keeps', p: 1.1, kcal: 40, c: 9,
     da: ['løg', 'rødløg', 'skalotteløg', 'zittauerløg'], en: ['onion', 'onions', 'shallot', 'red onion'] },
   // Stod i STAPLE_KEYS, men købes: den bruges i portioner, ikke i teskefulde.
   { key: 'hvidloeg', name: 'Hvidløg', cat: 'veg',
     class: 'fresh', keeps: 'keeps', p: 6, kcal: 149, c: 33,
     da: ['hvidløg'], en: ['garlic', 'garlic clove', 'garlic cloves'] },
   { key: 'gulerod', name: 'Gulerødder', cat: 'veg',
-    class: 'fresh', keeps: 'keeps', p: 0.9, kcal: 41, c: 8,
+    class: 'baseline', keeps: 'keeps', p: 0.9, kcal: 41, c: 8,
     da: ['gulerødder', 'gulerod'], en: ['carrot', 'carrots'] },
   { key: 'tomat', name: 'Tomater', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 0.9, kcal: 18, c: 3.5,
@@ -265,7 +266,7 @@ const TAXONOMY = [
     class: 'fresh', keeps: 'keeps', p: 1.8, kcal: 80, c: 18,
     da: ['ingefær'], en: ['ginger'] },
   { key: 'kaal', name: 'Kål', cat: 'veg',
-    class: 'fresh', keeps: 'keeps', p: 1.3, kcal: 25, c: 5,
+    class: 'baseline', keeps: 'keeps', p: 1.3, kcal: 25, c: 5,
     da: ['hvidkål', 'rødkål', 'spidskål', 'grønkål', 'kål'], en: ['cabbage', 'kale'] },
   { key: 'majs', name: 'Majs', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 3.3, kcal: 86, c: 19,
@@ -286,8 +287,9 @@ const TAXONOMY = [
     class: 'baseline', keeps: 'pantry', p: 9, kcal: 116, c: 20, da: ['linser'], en: ['lentils'] },
   { key: 'avocado', name: 'Avocado', cat: 'fruit',
     class: 'fresh', keeps: 'perishable', p: 2, kcal: 160, c: 2, da: ['avocado'], en: ['avocado'] },
+  // Rodfrugt ligesom kartofler: prisen står stille, og den holder i ugevis.
   { key: 'sodkartoffel', name: 'Sødkartoffel', cat: 'veg',
-    class: 'fresh', keeps: 'keeps', p: 1.6, kcal: 86, c: 20,
+    class: 'baseline', keeps: 'keeps', p: 1.6, kcal: 86, c: 20,
     da: ['sødkartofler', 'sødkartoffel'], en: ['sweet potato', 'sweet potatoes'] },
   { key: 'asparges', name: 'Asparges', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 2.2, kcal: 20, c: 4,

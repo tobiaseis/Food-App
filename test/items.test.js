@@ -145,6 +145,22 @@ test('specialkrydderier er baseline: de købes, men holder i månedsvis', () => 
   }
 });
 
+test('rodfrugter og kål er baseline — prisen står stille året rundt', () => {
+  for (const key of ['kartofler', 'gulerod', 'loeg', 'kaal']) {
+    const it = taxonomy.get(key);
+    assert.equal(it.class, 'baseline', `${key} skal være baseline`);
+    assert.equal(it.keeps, 'keeps', `${key} skal holde i uger`);
+  }
+});
+
+test('varer der rådner på en uge er fresh og perishable', () => {
+  for (const key of ['tomat', 'agurk', 'broccoli', 'porre']) {
+    const it = taxonomy.get(key);
+    assert.equal(it.class, 'fresh', `${key} skal være fresh`);
+    assert.equal(it.keeps, 'perishable', `${key} skal være perishable`);
+  }
+});
+
 test('alle varer har gyldig class og keeps', () => {
   const CLASSES = new Set(['fresh', 'baseline', 'essential']);
   const KEEPS   = new Set(['perishable', 'keeps', 'pantry']);
