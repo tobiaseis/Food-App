@@ -81,3 +81,41 @@ test('isPremium læser premium-flaget', () => {
 test('all() giver alle varer', () => {
   assert.equal(idx.all().length, ITEMS.length);
 });
+
+// ── Brotest mod facit ────────────────────────────────────────────────────────
+//
+// Så længe taxonomy.js har sin egen lookup, ER den facit. Denne test er den
+// eneste, der kan fange, at det nye indeks er *næsten* magen til — og næsten
+// er ikke godt nok, når 26.242 ingredienslinjer skal slås op gennem det.
+// Opgave 3 sletter testen igen, fordi facit forsvinder dér.
+
+test('indekset svarer som taxonomy.js på ægte ingredienslinjer', () => {
+  const taxonomy = require('../src/lib/taxonomy');
+  const mirror = buildIndex(
+    taxonomy.TAXONOMY.map((e) => ({
+      key: e.key, name: e.name, category: e.cat,
+      class: 'fresh', keeps: 'keeps', base_unit: 'kg', premium: !!e.premium,
+    })),
+    taxonomy.TAXONOMY.flatMap((e) => [
+      ...(e.da || []).map((t) => ({ item_key: e.key, lang: 'da', text: t })),
+      ...(e.en || []).map((t) => ({ item_key: e.key, lang: 'en', text: t })),
+    ]),
+  );
+
+  // Hver linje er en fælde, kommentarerne i taxonomy.js navngiver.
+  const CASES = [
+    '500 g hakket oksekød', 'jomfruolivenolie', 'Skinkeculotte',
+    'Indbagt laks med spinat', 'majskylling', 'tomat ketchup', 'butter beans',
+    '3 boneless and skinless chicken thighs', 'Lambi crisps with topping',
+    '2 courgettes', 'tomatoes, roughly chopped', '400 g plum tomatoes',
+    '1 dåse hakkede tomater', 'friskkværnet peber', 'grillkylling',
+    'reveal the pepperoni', 'pork tenderloin, sliced', '2 dl piskefløde',
+  ];
+  for (const text of CASES) {
+    assert.equal(
+      mirror.lookup(text)?.entry.key ?? null,
+      taxonomy.lookup(text)?.entry.key ?? null,
+      text,
+    );
+  }
+});

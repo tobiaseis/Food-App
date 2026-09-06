@@ -33,6 +33,9 @@ function buildIndex(items, synonyms) {
     .map((s) => ({ term: String(s.text).toLowerCase(), lang: s.lang, entry: byKey.get(s.item_key) }))
     .sort((a, b) => b.term.length - a.term.length);
 
+  // Kopiér denne krop TEGN FOR TEGN fra src/lib/taxonomy.js. Den er
+  // aftrykket af den nuværende lookup(); enhver omskrivning — også en, der
+  // ser pænere ud — ændrer hvilke af 26.242 ingredienslinjer der matcher.
   function lookup(text) {
     if (!text) return null;
     const hay = String(text).toLowerCase();
@@ -47,29 +50,29 @@ function buildIndex(items, synonyms) {
       const after  = hay.slice(i + syn.term.length);
       let rightOK  = !isWordChar(after[0]);
 
-      // Engelsk sætter ikke ord sammen: helt ord, højst med flertals-s.
-      if (syn.lang === 'en' && !rightOK) rightOK = after[0] === 's' && !isWordChar(after[1]);
-
-      // Danske synonymer må sidde inde i et sammensat ord, men kun fra 4 tegn:
-      // ellers rammer 'is' i 'ris' og 'and' i hvad som helst.
-      const partialOK = syn.lang === 'da' && !english && syn.term.length >= 4;
-      if (!(leftOK && rightOK) && !partialOK) continue;
-
-      // Korte danske ord er farlige i engelsk tekst.
-      if (english && syn.lang === 'da' && syn.term.length < 6) continue;
-
-      const bounds = (leftOK ? 1 : 0) + (rightOK ? 1 : 0);
-      const cand = { entry: syn.entry, term: syn.term, lang: syn.lang, bounds, pos: i };
-
-      if (!best
-        || cand.bounds > best.bounds
-        || (cand.bounds === best.bounds && cand.pos < best.pos)
-        || (cand.bounds === best.bounds && cand.pos === best.pos && cand.term.length > best.term.length)) {
-        best = cand;
+      if (syn.lang === 'en') {
+        if (!leftOK) continue;                         // ikke en orddel på engelsk
+        if (!rightOK) {
+          if (!/^e?s(?![a-zæøå])/.test(after)) continue;
+          rightOK = true;                              // flertal: "courgettes"
+        }
+      } else if (english && syn.term.length < 5) {
+        continue;                                      // kort dansk ord i engelsk tekst
       }
+
+      const exact = (leftOK ? 1 : 0) + (rightOK ? 1 : 0);
+      if (exact === 0) continue;                       // midt inde i et ord
+      if (exact < 2 && syn.term.length < 4) continue;  // for kort til delmatch
+
+      const cand = { entry: syn.entry, term: syn.term, exact, pos: i, len: syn.term.length };
+      const wins = !best
+        || cand.exact > best.exact
+        || (cand.exact === best.exact && cand.pos < best.pos)
+        || (cand.exact === best.exact && cand.pos === best.pos && cand.len > best.len);
+      if (wins) best = cand;
     }
 
-    return best ? { entry: best.entry, term: best.term, lang: best.lang } : null;
+    return best ? { entry: best.entry, term: best.term } : null;
   }
 
   const get = (key) => byKey.get(key) || null;
