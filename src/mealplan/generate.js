@@ -246,7 +246,10 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
     const entry = taxonomy.get(ing.taxonomy_key);
     recipe.items.push({
       key: ing.taxonomy_key,
-      cat: entry?.cat ?? null,
+      // entry.category, ikke seedets korte entry.cat (opgave 3: taxonomy.get()
+      // returnerer nu en baserække). src/sync/build.js filtrerer drink/snack/
+      // nonfood fra på dette felt — var det null, slap de igennem.
+      cat: entry?.category ?? null,
       staple: Boolean(ing.is_staple) || taxonomy.isEssential(ing.taxonomy_key),
       grams: gramsOf(ing),
       ingredient: ing.ingredient || entry?.name || ing.taxonomy_key,

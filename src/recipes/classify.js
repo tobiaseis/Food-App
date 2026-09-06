@@ -21,13 +21,15 @@ function estimateNutrition(ingredients, servings) {
   for (const ing of ingredients) {
     total++;
     const entry = ing.taxonomy_key ? taxonomy.get(ing.taxonomy_key) : null;
-    if (!entry || entry.p == null) continue;
+    // entry er en baserække siden opgave 3: feltet hedder protein_per_100g,
+    // ikke seedets korte p.
+    if (!entry || entry.protein_per_100g == null) continue;
     const g = gramsOf(ing, entry);
     if (!g || g > 5000) continue;
     known++;
-    kcal    += (g / 100) * (entry.kcal || 0);
-    protein += (g / 100) * entry.p;
-    carbs   += (g / 100) * (entry.c || 0);
+    kcal    += (g / 100) * (entry.kcal_per_100g || 0);
+    protein += (g / 100) * entry.protein_per_100g;
+    carbs   += (g / 100) * (entry.carbs_per_100g || 0);
   }
 
   if (!known || known / Math.max(total, 1) < 0.4) return null;  // for tyndt grundlag
@@ -52,7 +54,8 @@ const SOURCE_PREMIUM_BIAS = {
 function scoreTiers(recipe, ingredients) {
   const keys = ingredients.map((i) => i.taxonomy_key).filter(Boolean);
   const uniq = new Set(keys);
-  const cat = (k) => taxonomy.get(k)?.cat;
+  // entry.category, ikke entry.cat — se kommentaren i estimateNutrition().
+  const cat = (k) => taxonomy.get(k)?.category;
 
   const protein = recipe.protein_g;
   const kcal    = recipe.kcal;
