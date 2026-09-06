@@ -969,7 +969,15 @@ function gramsOf(ing, item = null) {
   if (u && UNIT_ML[u])       return ing.qty * UNIT_ML[u] * (item?.density_g_ml ?? 1);
 
   // Ingen enhed: opskriften tæller stykker.
-  return ing.qty * (item?.piece_g ?? DEFAULT_PIECE_G);
+  //
+  // Falder tilbage til stykvægts-tabellen på ingrediensens egen nøgle, når
+  // varen ikke er sendt med. Den gamle gramsOf() slog selv op i PIECE_G, så
+  // uden det ville et glemt andet argument stille og roligt gøre hvert løg
+  // til 100 g i stedet for 110 — en fejl uden fejlmeddelelse.
+  const per = item?.piece_g
+    ?? PIECE_G[ing.item_key ?? ing.taxonomy_key]
+    ?? DEFAULT_PIECE_G;
+  return ing.qty * per;
 }
 
 /**
