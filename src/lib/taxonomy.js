@@ -31,7 +31,7 @@
 
 // cat: poultry | meat | fish | dairy | cheese | eggs | veg | fruit | grain
 //      | legume | pantry | bakery | drink | snack | nonfood
-const TAXONOMY = [
+const SEED = [
   // ── Fjerkræ ───────────────────────────────────────────────────────────────
   { key: 'kyllingebryst', name: 'Kyllingebryst', cat: 'poultry',
     class: 'fresh', keeps: 'perishable', p: 23, kcal: 110, c: 0,
@@ -498,25 +498,11 @@ const TAXONOMY = [
     da: ['fuglefoder', 'hundefoder', 'kattefoder', 'kattegrus'], en: [] },
 ];
 
-const NONFOOD_CATS = new Set(['nonfood']);
-
-// Kategorier der ikke kan bære et aftensmåltid.
-const NON_MEAL_CATS = new Set(['nonfood', 'drink', 'snack']);
-
-// ── Opslagsindeks ────────────────────────────────────────────────────────────
-// Alle synonymer i ét fladt indeks, sorteret længst-først så det mest
-// specifikke match vinder ("hakket oksekød" slår "oksekød").
-
-const BY_KEY = new Map(TAXONOMY.map((t) => [t.key, t]));
-
-const SYNONYMS = [];
-for (const entry of TAXONOMY) {
-  for (const s of entry.da || []) SYNONYMS.push({ term: s.toLowerCase(), lang: 'da', entry });
-  for (const s of entry.en || []) SYNONYMS.push({ term: s.toLowerCase(), lang: 'en', entry });
-}
-SYNONYMS.sort((a, b) => b.term.length - a.term.length);
-
-const isWordChar = (c) => c !== undefined && /[a-zæøå0-9]/.test(c);
+// Selve opslaget (BY_KEY, SYNONYMS, lookup) er flyttet til src/lib/items.js
+// og bygges nu af index() nedenfor, ud fra basen. NON_MEAL_CATS lever samme
+// sted, fordi buildIndex() bruger den til isMealCapable.
+const { buildIndex, NON_MEAL_CATS } = require('./items');
+const { PIECE_G } = require('./units');
 
 /**
  * Er teksten her engelsk?
@@ -531,66 +517,6 @@ const DA_HINT = /[æøå]|(^|[^a-z])(og|eller|med|uden|frit|valg|hakket|dansk|da
 
 function looksEnglish(text) {
   return EN_HINT.test(text) && !DA_HINT.test(text);
-}
-
-/**
- * Finder den bedste taksonomi-post i en fritekst.
- *
- * Dansk er et sammensætningssprog: "jomfruolivenolie" og "kaffebønner" er ét
- * ord, hvor betydningen sidder i en del af ordet. Derfor accepteres delmatch
- * inde i sammensatte ord, men kun for DANSKE synonymer på 4+ tegn – ellers
- * ville "is" ramme "ris" og "and" ramme hvad som helst.
- *
- * Engelsk sætter derimod ikke ord sammen. Et engelsk synonym skal stå som
- * helt ord, højst med et flertals-s: "courgettes" er courgette, men
- * "pepperoni" er ikke pepper, "reveal" er ikke veal og "Lambi" ikke lamb.
- *
- * Rangering: flest ordgrænser først (helt ord slår orddel), derefter
- * tidligste position (dansk sætter hovedordet forrest i varenavne:
- * "Skinkeculotte" er skinke, ikke culotte, og "Indbagt laks med spinat" er
- * laks, ikke spinat), derefter længste synonym.
- *
- * Når et længere udtryk skal vinde over sin egen første del – "tomat
- * ketchup" over "tomat", "butter beans" over "butter" – står det som sit
- * eget synonym. Så starter de samme sted, og længden afgør.
- */
-function lookup(text) {
-  if (!text) return null;
-  const hay = String(text).toLowerCase();
-  const english = looksEnglish(hay);
-  let best = null;
-
-  for (const syn of SYNONYMS) {
-    const i = hay.indexOf(syn.term);
-    if (i === -1) continue;
-
-    const leftOK = !isWordChar(hay[i - 1]);
-    const after  = hay.slice(i + syn.term.length);
-    let rightOK  = !isWordChar(after[0]);
-
-    if (syn.lang === 'en') {
-      if (!leftOK) continue;                         // ikke en orddel på engelsk
-      if (!rightOK) {
-        if (!/^e?s(?![a-zæøå])/.test(after)) continue;
-        rightOK = true;                              // flertal: "courgettes"
-      }
-    } else if (english && syn.term.length < 5) {
-      continue;                                      // kort dansk ord i engelsk tekst
-    }
-
-    const exact = (leftOK ? 1 : 0) + (rightOK ? 1 : 0);
-    if (exact === 0) continue;                       // midt inde i et ord
-    if (exact < 2 && syn.term.length < 4) continue;  // for kort til delmatch
-
-    const cand = { entry: syn.entry, term: syn.term, exact, pos: i, len: syn.term.length };
-    const wins = !best
-      || cand.exact > best.exact
-      || (cand.exact === best.exact && cand.pos < best.pos)
-      || (cand.exact === best.exact && cand.pos === best.pos && cand.len > best.len);
-    if (wins) best = cand;
-  }
-
-  return best ? { entry: best.entry, term: best.term } : null;
 }
 
 // ── Forarbejdede varer ───────────────────────────────────────────────────────
@@ -668,15 +594,57 @@ function hintsAtMainIngredient(text) {
   return !!text && MAIN_HINT.test(String(text));
 }
 
-function get(key) { return BY_KEY.get(key) || null; }
-function isEssential(key) { const e = BY_KEY.get(key); return !!e && e.class === 'essential'; }
-function isNonFood(key) { const e = BY_KEY.get(key); return !!e && NONFOOD_CATS.has(e.cat); }
-function isMealCapable(key) { const e = BY_KEY.get(key); return !!e && !NON_MEAL_CATS.has(e.cat); }
-function isPremium(key) { const e = BY_KEY.get(key); return !!e && !!e.premium; }
+/**
+ * Indekset bygges én gang pr. proces, ud fra basen.
+ *
+ * Falder tilbage til seed-arrayet, hvis tabellerne endnu ikke findes: så kan
+ * scripts køre på en frisk base, før seed-scriptet har kørt, og testene
+ * behøver ikke en database.
+ */
+let _index = null;
+
+function index() {
+  if (_index) return _index;
+  try {
+    const { getDb } = require('../db');
+    const db = getDb();
+    const items = db.prepare('SELECT * FROM items').all();
+    if (items.length) {
+      const syns = db.prepare('SELECT item_key, lang, text FROM item_synonyms').all();
+      _index = buildIndex(items, syns);
+      return _index;
+    }
+  } catch { /* ingen base tilgængelig – brug seed */ }
+
+  _index = buildIndex(
+    SEED.map((e) => ({
+      key: e.key, name: e.name, category: e.cat, class: e.class, keeps: e.keeps,
+      base_unit: e.base_unit || 'kg', piece_g: PIECE_G[e.key] ?? null,
+      density_g_ml: e.density_g_ml ?? null,
+      protein_per_100g: e.p ?? null, kcal_per_100g: e.kcal ?? null,
+      carbs_per_100g: e.c ?? null, premium: !!e.premium, fat_grades: !!e.fatGrades,
+    })),
+    SEED.flatMap((e) => [
+      ...(e.da || []).map((t) => ({ item_key: e.key, lang: 'da', text: t })),
+      ...(e.en || []).map((t) => ({ item_key: e.key, lang: 'en', text: t })),
+    ]),
+  );
+  return _index;
+}
+
+/** Tømmer memoiseringen. Kun til brug efter seed-scriptet har skrevet. */
+function reload() { _index = null; }
 
 module.exports = {
-  TAXONOMY, BY_KEY, SYNONYMS, PREPARED_FORMS,
-  lookup, get, all: () => TAXONOMY, isEssential, isNonFood, isMealCapable, isPremium,
-  hintsAtMainIngredient, preparedForm, looksEnglish,
-  NON_MEAL_CATS,
+  SEED, PREPARED_FORMS, NON_MEAL_CATS, reload,
+  get:           (k) => index().get(k),
+  lookup:        (t) => index().lookup(t),
+  all:           ()  => index().all(),
+  isEssential:   (k) => index().isEssential(k),
+  isPremium:     (k) => index().isPremium(k),
+  isNonFood:     (k) => index().isNonFood(k),
+  isMealCapable: (k) => index().isMealCapable(k),
+  looksEnglish,
+  hintsAtMainIngredient,
+  preparedForm,
 };

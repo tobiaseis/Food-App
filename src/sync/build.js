@@ -158,7 +158,7 @@ function collectPlanIndex(log) {
   // Navne kommer fra taksonomien, priser fra historikken. Uden navnene ville
   // indkøbslisten i browseren vise nøgler som "hakkede_tomater".
   const prices = plans.normalPriceMap();
-  const taxonomyPrices = taxonomy.TAXONOMY
+  const taxonomyPrices = taxonomy.all()
     .filter((t) => taxonomy.isMealCapable(t.key))
     .map((t) => {
       const p = prices.get(t.key);

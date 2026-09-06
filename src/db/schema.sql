@@ -106,6 +106,39 @@ CREATE VIRTUAL TABLE IF NOT EXISTS offers_fts USING fts5(
   content='', tokenize='unicode61 remove_diacritics 0'
 );
 
+-- ── Varetyper ───────────────────────────────────────────────────────────────
+-- Kanonisk varetype. Dét prishistorik, opskriftsmatch og indkøbsliste hænger
+-- på. Lå tidligere som en konstant i src/lib/taxonomy.js; ligger her, fordi
+-- den skal bære pris og kadence, og det kan en JavaScript-konstant ikke.
+CREATE TABLE IF NOT EXISTS items (
+  key              TEXT PRIMARY KEY,
+  name             TEXT NOT NULL,
+  category         TEXT NOT NULL,
+  -- fresh: prisen flytter sig ugentligt · baseline: sjældent · essential:
+  -- står i skabet, købes ikke pr. madplan og prissættes derfor aldrig
+  class            TEXT NOT NULL CHECK (class IN ('fresh','baseline','essential')),
+  -- Hvor længe en rest holder. Styrer alene madspilds-optimeringen: en rest
+  -- kartofler er ikke spild, en rest fløde er.
+  keeps            TEXT NOT NULL CHECK (keeps IN ('perishable','keeps','pantry')),
+  base_unit        TEXT NOT NULL CHECK (base_unit IN ('kg','l','stk')),
+  piece_g          REAL,
+  density_g_ml     REAL,
+  protein_per_100g REAL,
+  kcal_per_100g    REAL,
+  carbs_per_100g   REAL,
+  fat_grades       INTEGER DEFAULT 0,
+  premium          INTEGER DEFAULT 0
+);
+CREATE INDEX IF NOT EXISTS idx_items_class ON items(class);
+
+CREATE TABLE IF NOT EXISTS item_synonyms (
+  item_key TEXT NOT NULL REFERENCES items(key) ON DELETE CASCADE,
+  lang     TEXT NOT NULL,
+  text     TEXT NOT NULL,
+  PRIMARY KEY (item_key, lang, text)
+);
+CREATE INDEX IF NOT EXISTS idx_item_syn_text ON item_synonyms(text);
+
 -- ── Opskrifter ──────────────────────────────────────────────────────────────
 -- Vi gemmer FAKTA (titel, ingrediensliste, næring, link) og linker ud til
 -- kilden for fremgangsmåden. Opskriftsteksten kopieres ikke.

@@ -260,13 +260,14 @@ function productIdentity(heading, description = '') {
     }
 
     // Fedtprocent: kun på varer hvor den er en reel prisfaktor (hakket kød).
-    const fat = e.fatGrades ? parseFatGrade(haystack) : null;
+    // e.fat_grades kommer fra basen som 0/1, ikke som en boolean.
+    const fat = e.fat_grades ? parseFatGrade(haystack) : null;
     if (fat) {
       slug += `-${fat.key}`;
       name += ` ${fat.label}`;
     }
 
-    const organic = ORGANIC_SPLIT_CATS.has(e.cat) && isOrganic(haystack);
+    const organic = ORGANIC_SPLIT_CATS.has(e.category) && isOrganic(haystack);
     if (organic) {
       slug += '-oeko';
       name += ', økologisk';
@@ -275,13 +276,13 @@ function productIdentity(heading, description = '') {
     return {
       slug,
       name,
-      category: e.cat,
+      category: e.category,
       taxonomy_key: e.key,
       fat_grade: fat ? fat.key : null,
       organic: organic ? 1 : 0,
       prepared: form ? 1 : 0,
-      protein_per_100g: e.p ?? null,
-      kcal_per_100g: e.kcal ?? null,
+      protein_per_100g: e.protein_per_100g ?? null,
+      kcal_per_100g: e.kcal_per_100g ?? null,
       brand,
     };
   }
