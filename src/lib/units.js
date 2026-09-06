@@ -46,6 +46,10 @@ const PIECE_G = {
 const DEFAULT_PIECE_G = 100;
 const COUNT_UNITS = new Set(['stk', 'stykker', 'styk', 'piece', 'pieces']);
 
+// Et enhedsløst tal over dette er en vægt, ikke et antal. Kilder taber deres
+// "g": "400 hakket svinekød" bliver ellers til 400 stykker á 100 g = 40 kg.
+const UNITLESS_IS_GRAMS = 100;
+
 const norm = (u) => (u ? String(u).toLowerCase() : null);
 
 /** Rumfang i ml, hvis enheden er et rumfangsmål. Ellers null. */
@@ -67,8 +71,12 @@ function gramsOf(ing, item = null) {
   if (u && UNIT_APPROX_G[u]) return ing.qty * UNIT_APPROX_G[u];
   if (u && UNIT_ML[u])       return ing.qty * UNIT_ML[u] * (item?.density_g_ml ?? 1);
 
-  // Ingen enhed: opskriften tæller stykker.
-  //
+  // Ingen enhed: opskriften tæller stykker — medmindre tallet er så stort,
+  // at det kun kan være gram. Stykvarer (æg, tortillas) tælles altid.
+  if (ing.qty >= UNITLESS_IS_GRAMS && (item?.base_unit ?? 'kg') !== 'stk') {
+    return ing.qty;
+  }
+
   // Falder tilbage til stykvægts-tabellen på ingrediensens egen nøgle, når
   // varen ikke er sendt med. Den gamle gramsOf() slog selv op i PIECE_G, så
   // uden det ville et glemt andet argument stille og roligt gøre hvert løg

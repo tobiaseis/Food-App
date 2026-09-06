@@ -51,6 +51,17 @@ test('"2 løg" bruger stykvægten', () => {
   near(amountOf({ qty: 2, unit: null }, LOEG), 0.22);
 });
 
+test('enhedsløst tal over 100 er gram, ikke stykker', () => {
+  // "400 hakket svinekød" uden enhed: 400 g, ikke 400 stykker á 100 g.
+  near(amountOf({ qty: 400, unit: null, item_key: 'hakket_svinekoed' }, KG), 0.4);
+  near(amountOf({ qty: 175, unit: null, item_key: 'mel' }, KG), 0.175);
+  // Under grænsen tælles der stadig stykker.
+  near(amountOf({ qty: 2, unit: null }, LOEG), 0.22);
+  near(amountOf({ qty: 30, unit: null, item_key: 'asparges' }, KG), 3);
+  // Stykvarer tælles uanset hvor mange der er.
+  near(amountOf({ qty: 12, unit: null }, AEG), 12);
+});
+
 test('ukendt mængde giver null, ikke nul', () => {
   assert.equal(amountOf({ qty: null, unit: 'g' }, KG), null);
   assert.equal(amountOf({ qty: 0, unit: 'g' }, KG), null);
