@@ -777,12 +777,19 @@ Forventet: `items: ~155 · synonymer: ~900`
 ```bash
 node -e "
 const t=require('./src/lib/taxonomy');
+const { PIECE_G } = require('./src/lib/units');
 console.log(t.lookup('500 g kyllingebrystfilet').entry.key);   // kyllingebryst
 console.log(t.lookup('jomfruolivenolie').entry.key);           // olie
 console.log(t.get('rasp').class);                              // essential
+console.log(t.get('floede').base_unit, t.get('floede').density_g_ml);  // l 1
 console.log(t.all().length);
+// piece_g SKAL vaere landet: opgave 5 regner stykvarer paa det felt alene.
+const mangler = Object.keys(PIECE_G).filter((k) => t.get(k) && t.get(k).piece_g == null);
+console.log('varer uden piece_g:', mangler.length ? mangler.join(' ') : '(ingen)');
 "
 ```
+
+Sidste linje skal skrive `(ingen)`. Gør den ikke det, er `piece_g` ikke kommet med i seedet, og opgave 5 vil regne hvert løg som 100 g i stedet for 110 — uden at fejle.
 
 - [ ] **Step 8: Kør hele suiten**
 
@@ -1115,7 +1122,12 @@ function main() {
       }
 
       const item = key ? taxonomy.get(key) : null;
-      const amount = item ? amountOf({ qty: r.qty, unit: r.unit }, item) : null;
+      // Nøglen sendes med, selvom varen også gør det: uden den falder
+      // stykvarer tilbage til 100 g, hvis seedet har misset piece_g — og et
+      // løg på 100 g i stedet for 110 fejler ikke, det bliver bare forkert.
+      const amount = item
+        ? amountOf({ qty: r.qty, unit: r.unit, item_key: key }, item)
+        : null;
       const opt = OPTIONAL_RE.test(r.raw || '') ? 1 : 0;
 
       if (key)    keyed++;
