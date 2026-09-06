@@ -224,10 +224,14 @@ test('parseIngredient regner mængden om til varens enhed', () => {
   }
 });
 
-test('parseIngredient markerer det, der ikke driver et indkøb', () => {
+test('parseIngredient markerer kun det, kilden selv har kaldt valgfrit', () => {
   assert.equal(parseIngredient('(optional) persille').optional, 1);
   assert.equal(parseIngredient('evt. et skvæt fløde').optional, 1);
   assert.equal(parseIngredient('500 g hakket oksekød').optional, 0);
+  // "til servering" beskriver brugen, ikke indkøbet: persillen skal stadig købes.
+  assert.equal(parseIngredient('frisk persille til servering').optional, 0);
+  // "evt." inde i linjen kvalificerer et valg om noget, man køber alligevel.
+  assert.equal(parseIngredient('800 g kartofler - evt. nye').optional, 0);
 });
 
 // ── Forarbejdede varer ───────────────────────────────────────────────────────
