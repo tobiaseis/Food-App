@@ -153,6 +153,44 @@ test('isPremium læser premium-flaget', () => {
 test('all() giver alle varer', () => {
   assert.equal(idx.all().length, ITEMS.length);
 });
+
+// ── Brotest mod facit ────────────────────────────────────────────────────────
+//
+// Så længe taxonomy.js har sin egen lookup, ER den facit. Denne test er den
+// eneste, der kan fange, at det nye indeks er *næsten* magen til — og næsten
+// er ikke godt nok, når 26.242 ingredienslinjer skal slås op gennem det.
+// Opgave 3 sletter testen igen, fordi facit forsvinder dér.
+
+test('indekset svarer som taxonomy.js på ægte ingredienslinjer', () => {
+  const taxonomy = require('../src/lib/taxonomy');
+  const mirror = buildIndex(
+    taxonomy.TAXONOMY.map((e) => ({
+      key: e.key, name: e.name, category: e.cat,
+      class: 'fresh', keeps: 'keeps', base_unit: 'kg', premium: !!e.premium,
+    })),
+    taxonomy.TAXONOMY.flatMap((e) => [
+      ...(e.da || []).map((t) => ({ item_key: e.key, lang: 'da', text: t })),
+      ...(e.en || []).map((t) => ({ item_key: e.key, lang: 'en', text: t })),
+    ]),
+  );
+
+  // Hver linje er en fælde, kommentarerne i taxonomy.js navngiver.
+  const CASES = [
+    '500 g hakket oksekød', 'jomfruolivenolie', 'Skinkeculotte',
+    'Indbagt laks med spinat', 'majskylling', 'tomat ketchup', 'butter beans',
+    '3 boneless and skinless chicken thighs', 'Lambi crisps with topping',
+    '2 courgettes', 'tomatoes, roughly chopped', '400 g plum tomatoes',
+    '1 dåse hakkede tomater', 'friskkværnet peber', 'grillkylling',
+    'reveal the pepperoni', 'pork tenderloin, sliced', '2 dl piskefløde',
+  ];
+  for (const text of CASES) {
+    assert.equal(
+      mirror.lookup(text)?.entry.key ?? null,
+      taxonomy.lookup(text)?.entry.key ?? null,
+      text,
+    );
+  }
+});
 ```
 
 - [ ] **Step 2: Tilføj testfilen til `package.json`**
@@ -208,6 +246,9 @@ function buildIndex(items, synonyms) {
     .map((s) => ({ term: String(s.text).toLowerCase(), lang: s.lang, entry: byKey.get(s.item_key) }))
     .sort((a, b) => b.term.length - a.term.length);
 
+  // Kopiér denne krop TEGN FOR TEGN fra src/lib/taxonomy.js. Den er
+  // aftrykket af den nuværende lookup(); enhver omskrivning — også en, der
+  // ser pænere ud — ændrer hvilke af 26.242 ingredienslinjer der matcher.
   function lookup(text) {
     if (!text) return null;
     const hay = String(text).toLowerCase();
@@ -222,29 +263,29 @@ function buildIndex(items, synonyms) {
       const after  = hay.slice(i + syn.term.length);
       let rightOK  = !isWordChar(after[0]);
 
-      // Engelsk sætter ikke ord sammen: helt ord, højst med flertals-s.
-      if (syn.lang === 'en' && !rightOK) rightOK = after[0] === 's' && !isWordChar(after[1]);
-
-      // Danske synonymer må sidde inde i et sammensat ord, men kun fra 4 tegn:
-      // ellers rammer 'is' i 'ris' og 'and' i hvad som helst.
-      const partialOK = syn.lang === 'da' && !english && syn.term.length >= 4;
-      if (!(leftOK && rightOK) && !partialOK) continue;
-
-      // Korte danske ord er farlige i engelsk tekst.
-      if (english && syn.lang === 'da' && syn.term.length < 6) continue;
-
-      const bounds = (leftOK ? 1 : 0) + (rightOK ? 1 : 0);
-      const cand = { entry: syn.entry, term: syn.term, lang: syn.lang, bounds, pos: i };
-
-      if (!best
-        || cand.bounds > best.bounds
-        || (cand.bounds === best.bounds && cand.pos < best.pos)
-        || (cand.bounds === best.bounds && cand.pos === best.pos && cand.term.length > best.term.length)) {
-        best = cand;
+      if (syn.lang === 'en') {
+        if (!leftOK) continue;                         // ikke en orddel på engelsk
+        if (!rightOK) {
+          if (!/^e?s(?![a-zæøå])/.test(after)) continue;
+          rightOK = true;                              // flertal: "courgettes"
+        }
+      } else if (english && syn.term.length < 5) {
+        continue;                                      // kort dansk ord i engelsk tekst
       }
+
+      const exact = (leftOK ? 1 : 0) + (rightOK ? 1 : 0);
+      if (exact === 0) continue;                       // midt inde i et ord
+      if (exact < 2 && syn.term.length < 4) continue;  // for kort til delmatch
+
+      const cand = { entry: syn.entry, term: syn.term, exact, pos: i, len: syn.term.length };
+      const wins = !best
+        || cand.exact > best.exact
+        || (cand.exact === best.exact && cand.pos < best.pos)
+        || (cand.exact === best.exact && cand.pos === best.pos && cand.len > best.len);
+      if (wins) best = cand;
     }
 
-    return best ? { entry: best.entry, term: best.term, lang: best.lang } : null;
+    return best ? { entry: best.entry, term: best.term } : null;
   }
 
   const get = (key) => byKey.get(key) || null;
@@ -698,7 +739,11 @@ Der er ét: `src/sync/build.js:161` bygger `taxonomyPrices` ud fra arrayet. Arra
   const taxonomyPrices = taxonomy.all()
 ```
 
-Bemærk at posterne fra `all()` bruger databasens feltnavne (`category`, `protein_per_100g`) og ikke seed-arrayets korte (`cat`, `p`). Kør `node --test test/sync.test.js` bagefter og ret de felter, der læses længere nede i samme funktion.
+Blokken læser kun `t.key` og `t.name`, og de hedder det samme i basens rækker som i seed-arrayet, så det er hele ændringen. Poster fra `all()` bruger ellers databasens feltnavne (`category`, `protein_per_100g`) og ikke seedets korte (`cat`, `p`) — det får betydning i opgave 9, ikke her.
+
+Slet også brotesten `'indekset svarer som taxonomy.js på ægte ingredienslinjer'` i `test/items.test.js`. Den sammenlignede det nye indeks med `taxonomy.js`' egen `lookup`, og den findes ikke længere — fra nu af *er* indekset facit. Testen ville fra dette punkt sammenligne indekset med sig selv og bekræfte ingenting.
+
+Kør `node --test test/sync.test.js` og `node --test test/items.test.js` bagefter.
 
 - [ ] **Step 5: Tilføj scriptet til `package.json`**
 
