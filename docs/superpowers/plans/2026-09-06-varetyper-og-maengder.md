@@ -61,7 +61,7 @@ Flytter opslagsindekset ud af `taxonomy.js` uden at ændre dets opførsel. Ren f
     - `items`: `[{ key, name, category, class, keeps, base_unit, piece_g, density_g_ml, protein_per_100g, kcal_per_100g, carbs_per_100g, premium }]`
     - `synonyms`: `[{ item_key, lang, text }]`
     - `get(key)` → item-objekt eller `null`
-    - `lookup(text)` → `{ entry, term, lang }` eller `null`
+    - `lookup(text)` → `{ entry, term }` eller `null` — samme form som `taxonomy.lookup` returnerer i dag
     - `isEssential(key)` → boolean (`item.class === 'essential'`)
     - `all()` → array af alle items
 
