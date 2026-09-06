@@ -209,6 +209,27 @@ test('basisvarer markeres, så de ikke tæller som tilbudsmatch', () => {
   assert.equal(parseIngredient('400 g kyllingebryst').is_staple, 0);
 });
 
+// ── Mængde i varens egen enhed ───────────────────────────────────────────────
+
+test('parseIngredient regner mængden om til varens enhed', () => {
+  const cases = [
+    ['500 g hakket oksekød', 'hakket_oksekoed', 0.5],
+    ['2 dl fløde',           'floede',          0.2],
+    ['1 kg kartofler',       'kartofler',       1.0],
+  ];
+  for (const [raw, key, amount] of cases) {
+    const p = parseIngredient(raw);
+    assert.equal(p.item_key, key, raw);
+    assert.ok(Math.abs(p.amount - amount) < 1e-6, `${raw}: ${p.amount} != ${amount}`);
+  }
+});
+
+test('parseIngredient markerer det, der ikke driver et indkøb', () => {
+  assert.equal(parseIngredient('(optional) persille').optional, 1);
+  assert.equal(parseIngredient('evt. et skvæt fløde').optional, 1);
+  assert.equal(parseIngredient('500 g hakket oksekød').optional, 0);
+});
+
 // ── Forarbejdede varer ───────────────────────────────────────────────────────
 
 test('forarbejdet vare kan ikke gøre det ud for råvaren', () => {

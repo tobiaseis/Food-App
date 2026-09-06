@@ -15,6 +15,7 @@
  */
 
 const taxonomy = require('../lib/taxonomy');
+const { amountOf } = require('../lib/units');
 
 // ── HTML-hjælpere ────────────────────────────────────────────────────────────
 
@@ -210,6 +211,20 @@ const UNIT_RE = new RegExp(
 // Tilberedningsord der ikke er en del af varenavnet
 const PREP_WORDS = /\b(finthakket|hakket fint|groft hakket|i tern|i skiver|i både|revet|smuttede|pillede|friske?|frosne?|økologiske?|optøet|udbenet|marineret|chopped|finely chopped|diced|sliced|minced|grated|fresh|frozen|organic|peeled|trimmed|to serve|to taste|for the [a-z ]+|plus extra[a-z ,]*)\b/gi;
 
+// Kun det, kilden selv har markeret som valgfrit.
+//
+// "to serve" og "til pynt" fristede, men de beskriver HVORDAN varen bruges,
+// ikke OM den skal købes: "4 seeded burger buns, to serve" er retten, og
+// "1 tbsp sesame seeds plus extra to serve" har en grundmængde, der skal med.
+// Begge dele ville forsvinde fra indkøbslisten.
+//
+// "evt." er kun valgfri først i linjen. Inde i linjen kvalificerer den et
+// valg om noget, man køber alligevel: "800 g kartofler - evt. nye".
+//
+// Retningen er bevidst: flager vi for lidt, køber man en vare for meget.
+// Flager vi for meget, står man i køkkenet uden burgerboller.
+const OPTIONAL_RE = /\(optional\)|\boptional\b|\bif you like\b|^\s*evt\.?\s|^\s*eventuelt\b|^\s*valgfri/i;
+
 /**
  * "500 g hakket oksekød, finthakket" → { qty: 500, unit: 'g',
  *                                        ingredient: 'hakket oksekød', ... }
@@ -258,13 +273,18 @@ function parseIngredient(raw, position = 0) {
 
   const hit = taxonomy.lookup(s) || taxonomy.lookup(original);
   const key = hit ? hit.entry.key : null;
+  const item = key ? taxonomy.get(key) : null;
 
   return {
     raw: original,
     qty,
     unit,
     ingredient: s || original.toLowerCase(),
+    item_key: key,
+    // Alias, indtil de sidste forbrugere er flyttet.
     taxonomy_key: key,
+    amount: item ? amountOf({ qty, unit }, item) : null,
+    optional: OPTIONAL_RE.test(original) ? 1 : 0,
     is_staple: key ? (taxonomy.isEssential(key) ? 1 : 0) : 0,
     position,
   };

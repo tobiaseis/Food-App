@@ -134,11 +134,15 @@ function storeRecipe(db, source, parsed) {
 
   db.prepare('DELETE FROM recipe_ingredients WHERE recipe_id = ?').run(recipeId);
   const ins = db.prepare(`
-    INSERT INTO recipe_ingredients (recipe_id, raw, qty, unit, ingredient, taxonomy_key, is_staple, position)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO recipe_ingredients (recipe_id, raw, qty, unit, ingredient,
+                                    item_key, amount, optional,
+                                    taxonomy_key, is_staple, position)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `);
   for (const ing of parsed.ingredients) {
-    ins.run(recipeId, ing.raw, ing.qty, ing.unit, ing.ingredient, ing.taxonomy_key, ing.is_staple, ing.position);
+    ins.run(recipeId, ing.raw, ing.qty, ing.unit, ing.ingredient,
+            ing.item_key, ing.amount, ing.optional,
+            ing.taxonomy_key, ing.is_staple, ing.position);
   }
 
   return { recipeId, created: info.changes > 0, tier };
