@@ -1611,7 +1611,11 @@ main();
 - [ ] **Step 3: Kør rapporten og notér udgangspunktet**
 
 Kør: `npm run coverage`
-Forventet: `prissætbare` ligger omkring **631** (spec afsnit 4.1). Ligger tallet langt fra det, er noget i opgave 2, 3 eller 5 gået galt — undersøg før du fortsætter.
+Forventet: `prissætbare` ligger omkring **491**.
+
+Spec afsnit 4.1 sagde 631. Forskellen er ikke en fejl: det tal blev målt med et *regex*, der behandlede alt der lignede `/vand|water|rosmarin|…/` som essential. Det rigtige system kræver, at linjen slår op i et synonym, og de bare ord mangler — `vand`-varens danske synonymer er `danskvand` og `kildevand`, ikke `vand`. 214 linjer med "vand" blokerer derfor deres opskrifter.
+
+491 er det ærlige udgangspunkt. Ligger tallet væsentligt under, er noget i opgave 2, 3 eller 5 gået galt.
 
 - [ ] **Step 4: Commit**
 
@@ -1635,7 +1639,28 @@ Dette er dataarbejde, ikke kodearbejde. Arbejd i batches af ~25 navne og mål ef
 
 Hver ny post skal have `key`, `name`, `cat`, `class`, `keeps`, `p`, `kcal`, `c`, `da` og `en` — samme form som posterne i opgave 2. Poster uden `class`/`keeps` fanges af testen fra opgave 2.
 
-- [ ] **Step 1: Første batch — de 20 hyppigste blokkere**
+- [ ] **Step 1: Første batch — synonymer på varer, der allerede findes**
+
+Det billigste arbejde ligger ikke i nye varer, men i huller i de eksisterende. `vand`-varen har `danskvand` og `kildevand` som danske synonymer, men ikke `vand` — så 214 linjer med "vand" blokerer deres opskrifter. Samme mønster for `soja` (74 linjer), og `krydderi` mangler stort set alle de tørrede urter.
+
+Det kræver ingen `class`/`keeps`-beslutninger og ingen nye poster: bare synonymer på eksisterende varer. **Målt: 491 → ~671, altså ~180 opskrifter for ~30 navne.**
+
+Tilføj til de eksisterende posters `da`/`en`-arrays i `SEED`:
+
+| vare | tilføj `da` | tilføj `en` |
+|---|---|---|
+| `vand` | `vand` | — |
+| `soja` | `soja` | — |
+| `krydderi` | `tørret rosmarin`, `rosmarin`, `tørret timian`, `timian`, `laurbærblade`, `stødt kanel`, `kanel`, `muskatnød`, `oregano`, `paprika` | `rosemary`, `thyme`, `bay leaves`, `bay leaf`, `cinnamon`, `nutmeg` |
+| `sukker` | `brun farin`, `farin`, `flormelis` | — |
+| `mel` | `bagepulver` | `baking powder` |
+| `eddike` | `balsamico` | `balsamic vinegar` |
+
+Bemærk at `gær` mangler helt som vare — den skal oprettes (`class: 'essential'`, `keeps: 'pantry'`), for gær står i skabet og bruges i teskefulde.
+
+Kør `npm run seed:items && npm run backfill:amounts && npm run coverage` og bekræft, at tallet lander omkring 671, før du går videre.
+
+- [ ] **Step 2: Anden batch — de 20 hyppigste nye varer**
 
 Tilføj til `SEED` i `src/lib/taxonomy.js`:
 
@@ -1685,30 +1710,35 @@ Tilføj til `SEED` i `src/lib/taxonomy.js`:
     p: 3, kcal: 37, c: 4, base_unit: 'l', da: ['kærnemælk'], en: ['buttermilk'] },
 ```
 
-- [ ] **Step 2: Seed og mål**
+- [ ] **Step 3: Seed og mål**
 
 ```bash
 npm run seed:items && npm run backfill:amounts && npm run coverage
 ```
-Forventet: `prissætbare` går fra ~631 til ~**780**.
 
-- [ ] **Step 3: Kør testene**
+`seed:items` skal køre før `backfill:amounts`: backfillen slår ingredienser op gennem basen, så nye synonymer skal være landet først. Kører du dem i omvendt rækkefølge, ser rapporten ud som om batchen ikke virkede.
+
+- [ ] **Step 4: Kør testene**
 
 Kør: `npm test`
-Forventet: PASS. Testen "alle varer har gyldig class og keeps" fra opgave 2 fanger en post, der mangler felterne.
+Forventet: PASS. Testen "alle varer har gyldig class og keeps" fra opgave 2 fanger en post, der mangler felterne, og "seed-vejen og database-vejen giver samme varer" fra opgave 3 fanger, at du har glemt at seede.
 
-- [ ] **Step 4: Commit batchen**
+- [ ] **Step 5: Commit batchen**
+
+Skriv de målte tal i beskeden, ikke de forventede — de er journalen over, hvad arbejdet var værd:
 
 ```bash
 git add src/lib/taxonomy.js
-git commit -m "Synonymer batch 1: 20 varer, daekning 631 -> 780"
+git commit -m "Synonymer batch N: <antal> navne, daekning <foer> -> <efter>"
 ```
 
-- [ ] **Step 5: Gentag for batch 2-6**
+- [ ] **Step 6: Gentag, indtil udbyttet falder**
 
-Kør `npm run coverage`, tag de øverste ~25 blokkere fra listen, opret dem som poster efter samme form, og gentag trin 2-4. Slå både det danske og det engelske navn op — halvdelen af opskrifterne er britiske, og `bay leaves` og `laurbærblade` er samme vare.
+Kør `npm run coverage`, tag de øverste ~25 blokkere, opret dem som poster efter samme form, og gentag trin 3-5. Slå både det danske og det engelske navn op — omtrent halvdelen af opskrifterne er britiske, og `bay leaves` og `laurbærblade` er samme vare.
 
-Gate for at gå videre til opgave 9: `npm run coverage` viser **≥1.100 prissætbare opskrifter**. Stop tidligere, hvis en batch giver under 2 opskrifter pr. tilføjet navn.
+**Stopkriterium:** stop, når en batch giver under 2 opskrifter pr. tilføjet navn. Det er den rigtige gate — ikke et bestemt tal — fordi halen er lang og de sjældne råvarer også er dem, det er sværest at finde en dansk normalpris på.
+
+Til orientering om størrelsesordenen: udgangspunktet er 491, batch 1 måltes til ~671, og spec afsnit 4.1's kurve peger på omkring 1.100-1.200 ved ~150 navne. Lander du markant under det, når udbyttet falder til 2 pr. navn, så rapportér tallet frem for at presse flere batches igennem.
 
 ---
 
