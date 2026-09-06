@@ -751,7 +751,45 @@ Der er ét: `src/sync/build.js:161` bygger `taxonomyPrices` ud fra arrayet. Arra
   const taxonomyPrices = taxonomy.all()
 ```
 
-Blokken læser kun `t.key` og `t.name`, og de hedder det samme i basens rækker som i seed-arrayet, så det er hele ændringen. Poster fra `all()` bruger ellers databasens feltnavne (`category`, `protein_per_100g`) og ikke seedets korte (`cat`, `p`) — det får betydning i opgave 9, ikke her.
+Blokken læser kun `t.key` og `t.name`, og de hedder det samme i basens rækker som i seed-arrayet, så det er hele ændringen dér.
+
+**Men feltnavnene skifter for alle andre læsere, og det sker i denne opgave.** Fra nu af returnerer `taxonomy.get()` og `.lookup()` databaserækker med `category`, `protein_per_100g`, `kcal_per_100g`, `carbs_per_100g`, `fat_grades` — ikke seedets korte `cat`, `p`, `kcal`, `c`, `fatGrades`. Fire steder læser de gamle navne, og ingen af dem fejler; de bliver bare stille og roligt forkerte:
+
+| sted | læser | skal læse | hvad der går galt |
+|---|---|---|---|
+| `src/lib/normalize.js` | `e.cat`, `e.fatGrades` | `e.category`, `e.fat_grades` | fanget af `normalize.test.js` |
+| `src/recipes/classify.js:24,28-30` | `entry.p`, `.kcal`, `.c` | `.protein_per_100g`, `.kcal_per_100g`, `.carbs_per_100g` | `estimateNutrition()` returnerer altid `null` |
+| `src/recipes/classify.js:55` | `taxonomy.get(k)?.cat` | `?.category` | `scoreTiers` tæller 0 grøntsager og 0 proteinkilder i hver ret — sporene skrider |
+| `src/mealplan/generate.js:249` | `entry?.cat` | `entry?.category` | `cat: null` på hver vare, så `sync/build.js:176` holder op med at filtrere drikkevarer og snacks fra |
+
+Ret alle fire. Kun `normalize.js` har en test, der fanger det, hvilket er præcis derfor de tre andre skal rettes bevidst her og ikke opdages senere.
+
+Læg samtidig en test på de to utestede, i en ny `test/classify.test.js` (husk `package.json`):
+
+```js
+test('estimateNutrition regner på varens makroer', () => {
+  const est = estimateNutrition([
+    { taxonomy_key: 'kyllingebryst', qty: 600, unit: 'g' },
+    { taxonomy_key: 'ris',           qty: 250, unit: 'g' },
+  ], 4);
+  assert.ok(est, 'må ikke være null — det er den, når feltnavnene ikke passer');
+  assert.ok(est.protein_g > 20, `protein pr. portion var ${est.protein_g}`);
+});
+
+test('scoreTiers ser kategorierne', () => {
+  // Kylling + broccoli + ris er en lærebogs-"sund og proteinrig" ret. Ser
+  // scoreTiers ikke kategorierne, tæller den 0 grøntsager og scorer den som
+  // hverdagsmad — uden at fejle.
+  const s = scoreTiers({ protein_g: 35, kcal: 520, total_minutes: 30 }, [
+    { taxonomy_key: 'kyllingebryst', qty: 600, unit: 'g' },
+    { taxonomy_key: 'broccoli',      qty: 300, unit: 'g' },
+    { taxonomy_key: 'ris',           qty: 250, unit: 'g' },
+  ]);
+  assert.ok(s.healthy > s.classic, `healthy ${s.healthy} skulle slå classic ${s.classic}`);
+});
+```
+
+Kør dem før rettelsen og notér RED-outputtet — begge skal fejle på den nuværende kode.
 
 Slet også brotesten `'indekset svarer som taxonomy.js på ægte ingredienslinjer'` i `test/items.test.js`. Den sammenlignede det nye indeks med `taxonomy.js`' egen `lookup`, og den findes ikke længere — fra nu af *er* indekset facit. Testen ville fra dette punkt sammenligne indekset med sig selv og bekræfte ingenting.
 
