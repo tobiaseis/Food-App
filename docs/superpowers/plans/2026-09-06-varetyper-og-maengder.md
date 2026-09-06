@@ -403,9 +403,13 @@ Regler for tildelingen, i den rækkefølge:
 | | class | keeps |
 |---|---|---|
 | kød, fjerkræ, fisk, mejeri, ost, æg, friske grøntsager, frugt, brød | `fresh` | `perishable` |
-| rodfrugter, løg, kartofler, kål | `fresh` | `keeps` |
+| **rodfrugter, løg, kartofler, kål** | **`baseline`** | `keeps` |
 | ris, pasta, mel-produkter, tørrede bønner, konserves, krydderier der skal købes | `baseline` | `pantry` |
 | listen i `STAPLE_KEYS` minus `hvidloeg`, `ingefaer`, `persille`, plus `rasp` | `essential` | `pantry` |
+
+Rodfrugtrækken er `baseline`, ikke `fresh`, og det er hele pointen med kategorien: en gulerod koster stort set det samme hele året, så dens normalpris behøver ikke ses efter hver tredje måned. Spec afsnit 1.1 nævner netop "kartofler, gulerødder" som baseline-eksempler. `keeps` fortæller separat, at en rest ikke er spild med det samme — de to felter svarer på hver sit spørgsmål, og en rodfrugt er den vare, hvor forskellen er tydeligst.
+
+Bemærk at `class` og `keeps` ikke følges ad. `hvidloeg` er `fresh`/`keeps`: prisen svinger som friske varer, men et fed hvidløg rådner ikke i næste uge.
 
 Eksempler på den ændrede form:
 
