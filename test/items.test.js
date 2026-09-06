@@ -119,3 +119,49 @@ test('indekset svarer som taxonomy.js på ægte ingredienslinjer', () => {
     );
   }
 });
+
+// ── Kurateringen fra spec afsnit 1.1 ─────────────────────────────────────────
+
+const taxonomy = require('../src/lib/taxonomy');
+
+test('essentials er hvad der reelt står i et dansk køkkenskab', () => {
+  for (const key of ['salt', 'peber', 'olie', 'eddike', 'sukker', 'mel',
+                     'bouillon', 'soja', 'ketchup', 'honning', 'rasp']) {
+    assert.equal(taxonomy.get(key).class, 'essential', `${key} skal være essential`);
+  }
+});
+
+test('hvidløg, ingefær og frisk persille skal købes — de er ikke essentials', () => {
+  for (const key of ['hvidloeg', 'ingefaer', 'persille']) {
+    assert.notEqual(taxonomy.get(key).class, 'essential', `${key} skal købes`);
+  }
+});
+
+test('specialkrydderier er baseline: de købes, men holder i månedsvis', () => {
+  for (const key of ['sesamfroe', 'garam_masala', 'gurkemeje', 'kardemomme']) {
+    const it = taxonomy.get(key);
+    assert.equal(it.class, 'baseline', `${key} skal være baseline`);
+    assert.equal(it.keeps, 'pantry', `${key} skal holde i månedsvis`);
+  }
+});
+
+test('alle varer har gyldig class og keeps', () => {
+  const CLASSES = new Set(['fresh', 'baseline', 'essential']);
+  const KEEPS   = new Set(['perishable', 'keeps', 'pantry']);
+  for (const it of taxonomy.all()) {
+    assert.ok(CLASSES.has(it.class), `${it.key} har ugyldig class: ${it.class}`);
+    assert.ok(KEEPS.has(it.keeps),   `${it.key} har ugyldig keeps: ${it.keeps}`);
+  }
+});
+
+test('essentials må aldrig være perishable — så ville de ikke kunne stå i skabet', () => {
+  for (const it of taxonomy.all()) {
+    if (it.class === 'essential') {
+      assert.notEqual(it.keeps, 'perishable', `${it.key} kan ikke være essential og perishable`);
+    }
+  }
+});
+
+test('isStaple findes ikke længere — informationen bor i class', () => {
+  assert.equal(typeof taxonomy.isStaple, 'undefined');
+});

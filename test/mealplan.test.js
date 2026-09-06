@@ -281,13 +281,13 @@ test('indkøbslisten grupperes efter butik og har resten for sig', () => {
 
 // ── Taksonomi ────────────────────────────────────────────────────────────────
 
-test('krydderier, olie og aromater er basisvarer', () => {
-  for (const k of ['salt', 'peber', 'krydderi', 'olie', 'eddike', 'mel',
-                   'hvidloeg', 'ingefaer', 'persille', 'soja', 'bouillon']) {
-    assert.ok(taxonomy.isStaple(k), `${k} bør være basisvare`);
+test('krydderier og olie er basisvarer; aromater skal købes, ikke stå i skabet i forvejen', () => {
+  for (const k of ['salt', 'peber', 'krydderi', 'olie', 'eddike', 'mel', 'soja', 'bouillon']) {
+    assert.ok(taxonomy.isEssential(k), `${k} bør være basisvare`);
   }
-  for (const k of ['kyllingebryst', 'peberfrugt', 'tortilla', 'hakkede_tomater']) {
-    assert.ok(!taxonomy.isStaple(k), `${k} bør IKKE være basisvare`);
+  for (const k of ['kyllingebryst', 'peberfrugt', 'tortilla', 'hakkede_tomater',
+                   'hvidloeg', 'ingefaer', 'persille']) {
+    assert.ok(!taxonomy.isEssential(k), `${k} bør IKKE være basisvare`);
   }
 });
 

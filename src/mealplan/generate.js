@@ -247,7 +247,7 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
     recipe.items.push({
       key: ing.taxonomy_key,
       cat: entry?.cat ?? null,
-      staple: Boolean(ing.is_staple) || taxonomy.isStaple(ing.taxonomy_key),
+      staple: Boolean(ing.is_staple) || taxonomy.isEssential(ing.taxonomy_key),
       grams: gramsOf(ing),
       ingredient: ing.ingredient || entry?.name || ing.taxonomy_key,
     });

@@ -265,7 +265,7 @@ function parseIngredient(raw, position = 0) {
     unit,
     ingredient: s || original.toLowerCase(),
     taxonomy_key: key,
-    is_staple: key ? (taxonomy.isStaple(key) ? 1 : 0) : 0,
+    is_staple: key ? (taxonomy.isEssential(key) ? 1 : 0) : 0,
     position,
   };
 }
