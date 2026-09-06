@@ -597,11 +597,19 @@ function hintsAtMainIngredient(text) {
 /**
  * Indekset bygges én gang pr. proces, ud fra basen.
  *
- * Falder tilbage til seed-arrayet, hvis tabellerne endnu ikke findes: så kan
- * scripts køre på en frisk base, før seed-scriptet har kørt, og testene
- * behøver ikke en database.
+ * Falder tilbage til seed-arrayet, når tabellen endnu ikke findes eller er
+ * tom — så kan scripts køre på en frisk base, før seed-scriptet har kørt.
+ *
+ * Bemærk at fallbacket IKKE undgår databasen: getDb() åbner og migrerer
+ * filen først, og først derefter opdager vi, at `items` er tom.
+ *
+ * Enhver anden fejl kastes videre. Et bart `catch {}` her ville gøre "basen
+ * er låst", "schema.sql fejler" og "alt er fint" til samme udfald — og
+ * resten af processen kalder getDb() og fejler alligevel, så taksonomien
+ * ville stille og roligt være uenig med sin egen proces.
  */
 let _index = null;
+let _warned = false;
 
 function index() {
   if (_index) return _index;
@@ -614,7 +622,13 @@ function index() {
       _index = buildIndex(items, syns);
       return _index;
     }
-  } catch { /* ingen base tilgængelig – brug seed */ }
+    if (!_warned) {
+      _warned = true;
+      console.warn('taxonomy: items er tom – bruger seed-data. Kør `npm run seed:items`.');
+    }
+  } catch (err) {
+    if (!/no such table: items/.test(err.message)) throw err;
+  }
 
   _index = buildIndex(
     SEED.map((e) => ({
@@ -622,7 +636,10 @@ function index() {
       base_unit: e.base_unit || 'kg', piece_g: PIECE_G[e.key] ?? null,
       density_g_ml: e.density_g_ml ?? null,
       protein_per_100g: e.p ?? null, kcal_per_100g: e.kcal ?? null,
-      carbs_per_100g: e.c ?? null, premium: !!e.premium, fat_grades: !!e.fatGrades,
+      // 0/1 og ikke true/false: SQLite har ingen boolean, og de to veje skal
+      // levere samme type, ellers virker et fremtidigt `=== 1` kun på den ene.
+      carbs_per_100g: e.c ?? null,
+      premium: e.premium ? 1 : 0, fat_grades: e.fatGrades ? 1 : 0,
     })),
     SEED.flatMap((e) => [
       ...(e.da || []).map((t) => ({ item_key: e.key, lang: 'da', text: t })),

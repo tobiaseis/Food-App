@@ -12,6 +12,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 
 const { buildIndex } = require('../src/lib/items');
+const { PIECE_G } = require('../src/lib/units');
 const taxonomy = require('../src/lib/taxonomy');
 
 const ITEMS = [
@@ -154,4 +155,56 @@ test('essentials må aldrig være perishable — så ville de ikke kunne stå i 
 
 test('isStaple findes ikke længere — informationen bor i class', () => {
   assert.equal(typeof taxonomy.isStaple, 'undefined');
+});
+
+// ── Seed-vejen og database-vejen skal give det samme ────────────────────────
+//
+// Taksonomien har to kilder: basens rækker og SEED-arrayet. De skal give det
+// samme. Ellers består testene mod en forældet base, mens produktionen kører
+// på noget andet — præcis den fejltype, hele denne opgave findes for at
+// fjerne, og den der ikke fejler når den rammer.
+//
+// Mappingen herunder skal holdes identisk med fallbacket i taxonomy.js.
+function seedIndex() {
+  const { SEED } = taxonomy;
+  return buildIndex(
+    SEED.map((e) => ({
+      key: e.key, name: e.name, category: e.cat, class: e.class, keeps: e.keeps,
+      base_unit: e.base_unit || 'kg', piece_g: PIECE_G[e.key] ?? null,
+      density_g_ml: e.density_g_ml ?? null,
+      protein_per_100g: e.p ?? null, kcal_per_100g: e.kcal ?? null,
+      carbs_per_100g: e.c ?? null,
+      premium: e.premium ? 1 : 0, fat_grades: e.fatGrades ? 1 : 0,
+    })),
+    SEED.flatMap((e) => [
+      ...(e.da || []).map((t) => ({ item_key: e.key, lang: 'da', text: t })),
+      ...(e.en || []).map((t) => ({ item_key: e.key, lang: 'en', text: t })),
+    ]),
+  );
+}
+
+test('seed-vejen og database-vejen giver samme varer', () => {
+  const FIELDS = ['name', 'category', 'class', 'keeps', 'base_unit',
+                  'piece_g', 'density_g_ml', 'protein_per_100g',
+                  'kcal_per_100g', 'carbs_per_100g', 'fat_grades', 'premium'];
+  const dump = (it) => FIELDS.map((f) => `${f}=${it[f] ?? ''}`).join('|');
+
+  const seed = seedIndex();
+  assert.equal(taxonomy.all().length, seed.all().length,
+    'basen har ikke samme antal varer som SEED — kør `npm run seed:items`');
+
+  for (const e of seed.all()) {
+    const fromDb = taxonomy.get(e.key);
+    assert.ok(fromDb, `${e.key} findes i SEED men ikke i basen`);
+    assert.equal(dump(fromDb), dump(e), e.key);
+  }
+});
+
+test('seed-vejen og database-vejen slår ens op', () => {
+  const seed = seedIndex();
+  for (const text of ['500 g kyllingebrystfilet', 'jomfruolivenolie', 'sesamolie',
+                      '2 dl piskefløde', 'tomatoes, roughly chopped', 'majskylling']) {
+    assert.equal(taxonomy.lookup(text)?.entry.key ?? null,
+                 seed.lookup(text)?.entry.key ?? null, text);
+  }
 });

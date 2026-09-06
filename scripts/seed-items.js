@@ -12,6 +12,7 @@
 
 const { getDb } = require('../src/db');
 const { SEED } = require('../src/lib/taxonomy');
+const { PIECE_G } = require('../src/lib/units');
 
 // base_unit er kurateret på posten selv (opgave 2). Kg er standarden, fordi
 // langt de fleste varer vejes — en liste over undtagelser her ville være et
@@ -42,8 +43,16 @@ function main() {
     'INSERT OR IGNORE INTO item_synonyms (item_key, lang, text) VALUES (?, ?, ?)'
   );
 
-  const { PIECE_G } = require('../src/lib/units');
+  // En vare, der er fjernet eller omdøbt i SEED, skal også forsvinde fra
+  // basen. Uden det bliver den et spøgelse: all() returnerer den, lookup()
+  // matcher den, og sync/build.js sender den videre til browseren som en
+  // indkøbslinje — uden at noget fejler. Opgave 8 redigerer SEED kraftigt,
+  // så det er ikke et teoretisk hjørne.
+  const dropGone = db.prepare(
+    'DELETE FROM items WHERE key NOT IN (SELECT value FROM json_each(?))'
+  );
 
+  let removed = 0;
   const run = db.transaction(() => {
     for (const e of SEED) {
       upsertItem.run({
@@ -62,12 +71,20 @@ function main() {
       for (const s of e.da || []) insertSyn.run(e.key, 'da', s.toLowerCase());
       for (const s of e.en || []) insertSyn.run(e.key, 'en', s.toLowerCase());
     }
+    // ON DELETE CASCADE på item_synonyms rydder synonymerne med.
+    removed = dropGone.run(JSON.stringify(SEED.map((e) => e.key))).changes;
   });
   run();
 
   const items = db.prepare('SELECT count(*) c FROM items').get().c;
   const syns  = db.prepare('SELECT count(*) c FROM item_synonyms').get().c;
-  console.log(`items: ${items} · synonymer: ${syns}`);
+  console.log(`items: ${items} · synonymer: ${syns} · slettet: ${removed}`);
+
+  // Basen skal spejle SEED præcist. Gør den ikke det, er noget gået galt i en
+  // transaktion, og en forkert vareliste er værre end ingen.
+  if (items !== SEED.length) {
+    throw new Error(`items=${items} men SEED har ${SEED.length} varer`);
+  }
 }
 
 main();
