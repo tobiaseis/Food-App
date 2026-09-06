@@ -14,8 +14,19 @@ const { getDb } = require('../src/db');
 const taxonomy  = require('../src/lib/taxonomy');
 const { amountOf } = require('../src/lib/units');
 
-// "til servering", "evt.", "to serve" driver ikke et indkøb.
-const OPTIONAL_RE = /(til servering|til pynt|til garniture|evt\.?\s|eventuelt|efter smag|to serve|to garnish|optional|for serving|if you like)/i;
+// Kun det, kilden selv har markeret som valgfrit.
+//
+// "to serve" og "til pynt" fristede, men de beskriver HVORDAN varen bruges,
+// ikke OM den skal købes: "4 seeded burger buns, to serve" er retten, og
+// "1 tbsp sesame seeds plus extra to serve" har en grundmængde, der skal med.
+// Begge dele ville forsvinde fra indkøbslisten.
+//
+// "evt." er kun valgfri først i linjen. Inde i linjen kvalificerer den et
+// valg om noget, man køber alligevel: "800 g kartofler - evt. nye".
+//
+// Retningen er bevidst: flager vi for lidt, køber man en vare for meget.
+// Flager vi for meget, står man i køkkenet uden burgerboller.
+const OPTIONAL_RE = /\(optional\)|\boptional\b|\bif you like\b|^\s*evt\.?\s|^\s*eventuelt\b|^\s*valgfri/i;
 
 function main() {
   const db = getDb();

@@ -62,6 +62,13 @@ test('enhedsløst tal over 100 er gram, ikke stykker', () => {
   near(amountOf({ qty: 12, unit: null }, AEG), 12);
 });
 
+test('stykvarer tælles uanset hvor mange, også over gram-grænsen', () => {
+  // 150 æg er 150 stykker, ikke 150 gram. Uden undtagelsen i gramsOf ville
+  // grænsen slå til, og et stort antal stykvarer blive til en vægt.
+  near(amountOf({ qty: 150, unit: null }, AEG), 150);
+  near(gramsOf({ qty: 150, unit: null, item_key: 'aeg' }, AEG), 150 * 58);
+});
+
 test('ukendt mængde giver null, ikke nul', () => {
   assert.equal(amountOf({ qty: null, unit: 'g' }, KG), null);
   assert.equal(amountOf({ qty: 0, unit: 'g' }, KG), null);
