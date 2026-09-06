@@ -776,16 +776,28 @@ test('estimateNutrition regner på varens makroer', () => {
   assert.ok(est.protein_g > 20, `protein pr. portion var ${est.protein_g}`);
 });
 
+// Fejlen var, at cat() gav undefined for hver vare, så vegCount, proteinFoods
+// og premiumIng altid var 0. Testen skal derfor måle, at kategorien FLYTTER
+// noget — ikke at ét spor slår et andet. Sporenes indbyrdes rangering afhænger
+// af vægtene i scoreTiers, og de er ikke det, denne opgave rører.
 test('scoreTiers ser kategorierne', () => {
-  // Kylling + broccoli + ris er en lærebogs-"sund og proteinrig" ret. Ser
-  // scoreTiers ikke kategorierne, tæller den 0 grøntsager og scorer den som
-  // hverdagsmad — uden at fejle.
-  const s = scoreTiers({ protein_g: 35, kcal: 520, total_minutes: 30 }, [
+  const recipe = { protein_g: 35, kcal: 520, total_minutes: 30 };
+  const uden = scoreTiers(recipe, [{ taxonomy_key: 'kyllingebryst', qty: 600, unit: 'g' }]);
+  const med  = scoreTiers(recipe, [
     { taxonomy_key: 'kyllingebryst', qty: 600, unit: 'g' },
     { taxonomy_key: 'broccoli',      qty: 300, unit: 'g' },
-    { taxonomy_key: 'ris',           qty: 250, unit: 'g' },
+    { taxonomy_key: 'spinat',        qty: 100, unit: 'g' },
   ]);
-  assert.ok(s.healthy > s.classic, `healthy ${s.healthy} skulle slå classic ${s.classic}`);
+  assert.ok(med.healthy > uden.healthy,
+    `grøntsager skal hæve healthy: ${med.healthy} vs ${uden.healthy}`);
+});
+
+test('scoreTiers ser luksusråvarer', () => {
+  const s = scoreTiers({ protein_g: 35, kcal: 520, total_minutes: 30 }, [
+    { taxonomy_key: 'oksemoerbrad', qty: 600, unit: 'g' },
+    { taxonomy_key: 'lam',          qty: 200, unit: 'g' },
+  ]);
+  assert.ok(s.premium > 0, `premium var ${s.premium} — isPremium ses ikke`);
 });
 ```
 
