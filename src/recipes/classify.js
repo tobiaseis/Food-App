@@ -11,42 +11,7 @@
  */
 
 const taxonomy = require('../lib/taxonomy');
-
-// Omregning til gram. Rumfang antages ~1 g/ml, hvilket holder for de fleste
-// madvarer i en opskrift.
-const UNIT_G = {
-  g: 1, gram: 1, gr: 1, kg: 1000,
-  ml: 1, cl: 10, dl: 100, l: 1000, liter: 1000, ltr: 1000,
-  spsk: 15, tsk: 5, tbsp: 15, tablespoon: 15, tablespoons: 15,
-  tsp: 5, teaspoon: 5, teaspoons: 5,
-  cup: 240, cups: 240, oz: 28.35, lb: 453.6, lbs: 453.6, pound: 453.6, pounds: 453.6,
-  knivspids: 1, pinch: 1, nip: 1,
-  fed: 3, clove: 3, cloves: 3,
-  håndfuld: 30, handful: 30, bundt: 30, bunch: 30, sprig: 2, sprigs: 4,
-  dåse: 400, dåser: 400, can: 400, cans: 400, tin: 400, tins: 400,
-  skive: 25, skiver: 25, slice: 25, slices: 25, rasher: 25, rashers: 25,
-  pakke: 250, pakker: 250, pack: 250, packs: 250, pose: 250, poser: 250,
-};
-
-// Typisk stykvægt når opskriften bare siger "1 løg".
-const PIECE_G = {
-  aeg: 58, loeg: 110, hvidloeg: 4, gulerod: 70, tomat: 90, kartofler: 120,
-  citron: 90, appelsin: 140, banan: 120, aeble: 150, peberfrugt: 150,
-  agurk: 300, squash: 200, aubergine: 250, porre: 150, avocado: 150,
-  selleri: 40, broccoli: 350, blomkaal: 500, kyllingebryst: 150,
-  brod: 500, tortilla: 60, sodkartoffel: 150, ingefaer: 15,
-};
-const DEFAULT_PIECE_G = 100;
-
-function gramsOf(ing) {
-  if (!ing.qty || ing.qty <= 0) return null;
-  if (ing.unit) {
-    const f = UNIT_G[String(ing.unit).toLowerCase()];
-    if (f) return ing.qty * f;
-  }
-  const per = ing.taxonomy_key ? (PIECE_G[ing.taxonomy_key] ?? DEFAULT_PIECE_G) : DEFAULT_PIECE_G;
-  return ing.qty * per;
-}
+const { gramsOf, UNIT_G, PIECE_G } = require('../lib/units');
 
 /** Estimerer kcal/protein/kulhydrat pr. portion ud fra ingredienserne. */
 function estimateNutrition(ingredients, servings) {
@@ -57,7 +22,7 @@ function estimateNutrition(ingredients, servings) {
     total++;
     const entry = ing.taxonomy_key ? taxonomy.get(ing.taxonomy_key) : null;
     if (!entry || entry.p == null) continue;
-    const g = gramsOf(ing);
+    const g = gramsOf(ing, entry);
     if (!g || g > 5000) continue;
     known++;
     kcal    += (g / 100) * (entry.kcal || 0);
