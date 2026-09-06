@@ -20,7 +20,7 @@
  * Afgrænsningen er praktisk, ikke principiel: står varen i skabet i forvejen,
  * købes den sjældent på tilbud, og den bruges i så små mængder, at prisen
  * alligevel ikke flytter noget. En madplan, der ventede på tilbud på
- * hvidløg og paprika, ville aldrig blive til noget.
+ * salt og paprika, ville aldrig blive til noget.
  *
  * `class` ('fresh' | 'baseline' | 'essential') og `keeps`
  * ('perishable' | 'keeps' | 'pantry') beskriver sammen hvor ofte varen
@@ -214,6 +214,8 @@ const TAXONOMY = [
     class: 'baseline', keeps: 'keeps', p: 1.1, kcal: 40, c: 9,
     da: ['løg', 'rødløg', 'skalotteløg', 'zittauerløg'], en: ['onion', 'onions', 'shallot', 'red onion'] },
   // Stod i STAPLE_KEYS, men købes: den bruges i portioner, ikke i teskefulde.
+  // Ikke 'baseline' som løg/gulerod ved siden af: prisen svinger som en
+  // fersk vare, selvom et fed hvidløg holder i ugevis, når det først er købt.
   { key: 'hvidloeg', name: 'Hvidløg', cat: 'veg',
     class: 'fresh', keeps: 'keeps', p: 6, kcal: 149, c: 33,
     da: ['hvidløg'], en: ['garlic', 'garlic clove', 'garlic cloves'] },
@@ -347,7 +349,10 @@ const TAXONOMY = [
   // ── Kolonial ──────────────────────────────────────────────────────────────
   { key: 'olie', name: 'Olie', cat: 'pantry',
     class: 'essential', keeps: 'pantry', base_unit: 'l', density_g_ml: 0.92, p: 0, kcal: 880, c: 0,
-    da: ['olivenolie', 'rapsolie', 'solsikkeolie', 'olie'], en: ['olive oil', 'oil', 'vegetable oil'] },
+    // 'sesamolie' o.l. skal stå som sit eget synonym: ellers vinder det korte
+    // 'sesam' i sesamfroe på position, og sesamolie bliver til sesamfrø.
+    da: ['olivenolie', 'rapsolie', 'solsikkeolie', 'sesamolie', 'olie'],
+    en: ['olive oil', 'oil', 'vegetable oil', 'sesame oil', 'toasted sesame oil'] },
   { key: 'eddike', name: 'Eddike', cat: 'pantry',
     class: 'essential', keeps: 'pantry', base_unit: 'l', density_g_ml: 1.01, p: 0, kcal: 20, c: 1,
     da: ['eddike', 'balsamico'],
@@ -369,7 +374,7 @@ const TAXONOMY = [
          'grøntsagsfond', 'hønsebouillon', 'oksebouillon', 'bouillon', 'fond'],
     en: ['stock', 'chicken stock', 'beef stock', 'broth'] },
   { key: 'kokosmaelk', name: 'Kokosmælk', cat: 'pantry',
-    class: 'baseline', keeps: 'pantry', p: 2, kcal: 200, c: 3,
+    class: 'baseline', keeps: 'pantry', base_unit: 'l', density_g_ml: 1.0, p: 2, kcal: 200, c: 3,
     da: ['kokosmælk'], en: ['coconut milk'] },
   { key: 'ketchup', name: 'Ketchup / sauce', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 1, kcal: 100, c: 20,
@@ -395,8 +400,10 @@ const TAXONOMY = [
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 0, c: 0,
     da: ['trøffel', 'trøffelolie'], en: ['truffle', 'truffle oil'], premium: true },
   { key: 'sesamfroe', name: 'Sesamfrø', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    // Ingen bar stamme ('sesam'/'sesame') her: dansk matcher orddele, og det
+    // korte stammeord ville kapre 'sesamolie' fra 'olie' på position.
     p: 18, kcal: 570, c: 12,
-    da: ['sesamfrø', 'sesam'], en: ['sesame seeds', 'sesame'] },
+    da: ['sesamfrø', 'sorte sesamfrø'], en: ['sesame seeds', 'sesame seed'] },
   { key: 'garam_masala', name: 'Garam masala', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 0, kcal: 380, c: 45,
     da: ['garam masala'], en: ['garam masala'] },

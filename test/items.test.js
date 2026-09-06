@@ -12,6 +12,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 
 const { buildIndex } = require('../src/lib/items');
+const taxonomy = require('../src/lib/taxonomy');
 
 const ITEMS = [
   { key: 'hakket_oksekoed', name: 'Hakket oksekød', category: 'meat',
@@ -90,7 +91,6 @@ test('all() giver alle varer', () => {
 // Opgave 3 sletter testen igen, fordi facit forsvinder dér.
 
 test('indekset svarer som taxonomy.js på ægte ingredienslinjer', () => {
-  const taxonomy = require('../src/lib/taxonomy');
   const mirror = buildIndex(
     taxonomy.TAXONOMY.map((e) => ({
       key: e.key, name: e.name, category: e.cat,
@@ -121,8 +121,6 @@ test('indekset svarer som taxonomy.js på ægte ingredienslinjer', () => {
 });
 
 // ── Kurateringen fra spec afsnit 1.1 ─────────────────────────────────────────
-
-const taxonomy = require('../src/lib/taxonomy');
 
 test('essentials er hvad der reelt står i et dansk køkkenskab', () => {
   for (const key of ['salt', 'peber', 'olie', 'eddike', 'sukker', 'mel',
@@ -158,6 +156,19 @@ test('varer der rådner på en uge er fresh og perishable', () => {
     const it = taxonomy.get(key);
     assert.equal(it.class, 'fresh', `${key} skal være fresh`);
     assert.equal(it.keeps, 'perishable', `${key} skal være perishable`);
+  }
+});
+
+test('nye synonymer stjæler ikke match fra eksisterende varer', () => {
+  // Danske synonymer matcher som orddele, og lige match afgøres af position.
+  // Et kort, generisk stammeord kan derfor kapre linjer, det ikke ejer.
+  const CASES = [
+    ['sesamolie', 'olie'], ['sesame oil', 'olie'], ['toasted sesame oil', 'olie'],
+    ['sesamfrø', 'sesamfroe'], ['sesame seeds', 'sesamfroe'],
+    ['jomfruolivenolie', 'olie'], ['kokosmælk', 'kokosmaelk'],
+  ];
+  for (const [text, key] of CASES) {
+    assert.equal(taxonomy.lookup(text)?.entry.key ?? null, key, text);
   }
 });
 
