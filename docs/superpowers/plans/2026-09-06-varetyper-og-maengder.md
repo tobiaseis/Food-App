@@ -674,7 +674,7 @@ function main() {
 main();
 ```
 
-`PIECE_G` importeres fra `src/lib/units.js`, som oprettes i opgave 4. Kør derfor opgave 4 før dette script første gang — eller midlertidigt fra `../src/recipes/classify`, som stadig eksporterer den indtil opgave 4.
+**Udfør opgave 4 før denne opgave.** `PIECE_G` importeres fra `src/lib/units.js`, som oprettes dér, og opgave 4 afhænger ikke af noget i opgave 3. Køres de i nummerorden, skal importen midlertidigt pege på `../src/recipes/classify` og rettes bagefter — unødigt arbejde for ingenting.
 
 - [ ] **Step 3: Gør `taxonomy.js` til indlæser**
 
