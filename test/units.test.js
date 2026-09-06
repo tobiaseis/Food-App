@@ -61,3 +61,16 @@ test('gramsOf er stadig til rådighed for næringsberegningen', () => {
   near(gramsOf({ qty: 2, unit: 'dl' }, L), 200);
   near(gramsOf({ qty: 2, unit: null }, LOEG), 220);
 });
+
+test('gramsOf uden vare falder tilbage til stykvægten på ingrediensens nøgle', () => {
+  // Det gamle gramsOf slog selv op i PIECE_G. Mister vi det, bliver hvert
+  // løg til 100 g, og både rollevægt og pris i madplanen skrider.
+  near(gramsOf({ qty: 1, unit: null, taxonomy_key: 'loeg' }), 110);
+  near(gramsOf({ qty: 2, unit: null, item_key: 'aeg' }), 116);
+  near(gramsOf({ qty: 1, unit: null, taxonomy_key: 'ukendt_vare' }), 100);
+  near(gramsOf({ qty: 1, unit: null }), 100);
+});
+
+test('varen vinder over tabellen, når begge findes', () => {
+  near(gramsOf({ qty: 1, unit: null, taxonomy_key: 'loeg' }, { piece_g: 200 }), 200);
+});
