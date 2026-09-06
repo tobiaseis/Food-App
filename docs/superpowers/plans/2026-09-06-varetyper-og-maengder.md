@@ -485,6 +485,14 @@ I `src/lib/taxonomy.js`: fjern `const STAPLE_KEYS = new Set([...])` (linje 344-3
 function isEssential(key) { const e = BY_KEY.get(key); return !!e && e.class === 'essential'; }
 ```
 
+Tilføj samtidig `all` til `module.exports`:
+
+```js
+  all: () => TAXONOMY,
+```
+
+Den findes ikke i dag, men testene i trin 1 bruger den, og opgave 3 peger den om til basen. Lægges den på nu, behøver testene aldrig at blive skrevet om.
+
 Behold kommentaren over det gamle `STAPLE_KEYS` (linje 340-343), men flyt den op over `class`-feltets forklaring — begrundelsen holder stadig, den hører bare til et andet sted nu.
 
 - [ ] **Step 5: Ret de tre kaldssteder, der bruger `isStaple`**
