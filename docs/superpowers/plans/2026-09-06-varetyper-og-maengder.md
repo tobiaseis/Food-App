@@ -1306,9 +1306,11 @@ Forventet, i omegnen af:
 ```
 linjer: 31438
   med item_key: 26242+ (heraf 200+ nye match)
-  med amount:   28000+
+  med amount:   ca. 24.300
   optional:     500+
 ```
+
+`amount` er altid mindre end `item_key`: en linje uden nøgle får ingen mængde, og ~2.465 linjer har en nøgle men ingen `qty` ("salt og peber", "friske krydderurter"). Tallene skal hænge sådan sammen — er `amount` større end `item_key`, er noget galt i selve gatingen.
 
 - [ ] **Step 5: Stikprøve — er tallene rimelige?**
 
@@ -1322,6 +1324,54 @@ console.log('mistaenkeligt store:', db.prepare('select count(*) c from recipe_in
 
 Forventet: `500 g hakket oksekød` → `0.5`; `2 dl fløde` → `0.2`; `4 æg` → `4`.
 `amount > 10` skal være et lille tal (under ~100). Er det stort, er en enhed regnet forkert — undersøg før du går videre.
+
+Blandt de resterende udliggere skal der **ikke** stå vejede varer med tocifrede kilotal. Ser du `"400 hakket svinekød" → 40`, mangler værnet fra næste trin.
+
+- [ ] **Step 5b: Enhedsløse tal over 100 er gram, ikke stykker**
+
+Nogle opskriftskilder taber deres enhed: `"400 hakket svinekød"` står uden `g`. Parseren læser 400 stykker og ganger med stykvægten, så retten kommer til at bruge 40 kg svinekød. Fem linjer i basen har den fejl, og hver af dem ville ødelægge både indkøbsliste og prisoverslag for sin opskrift.
+
+Grænsen er målt, ikke gættet: ved `qty ≥ 30` er der 7 vejede linjer, hvoraf to er ægte antal (`30 asparagus spears`, `20-40 spring roll wrappers`). Ved `qty ≥ 100` er der 5, og alle fem er gram. Ingen laver mad på 100 løg.
+
+I `src/lib/units.js`, i `gramsOf`'s enhedsløse gren:
+
+```js
+// Et enhedsløst tal over dette er en vægt, ikke et antal. Kilder taber deres
+// "g": "400 hakket svinekød" bliver ellers til 400 stykker á 100 g = 40 kg.
+const UNITLESS_IS_GRAMS = 100;
+```
+
+```js
+  // Ingen enhed: opskriften tæller stykker — medmindre tallet er så stort,
+  // at det kun kan være gram. Stykvarer (æg, tortillas) tælles altid.
+  if (ing.qty >= UNITLESS_IS_GRAMS && (item?.base_unit ?? 'kg') !== 'stk') {
+    return ing.qty;
+  }
+
+  const per = item?.piece_g
+    ?? PIECE_G[ing.item_key ?? ing.taxonomy_key]
+    ?? DEFAULT_PIECE_G;
+  return ing.qty * per;
+```
+
+Test i `test/units.test.js`:
+
+```js
+test('enhedsløst tal over 100 er gram, ikke stykker', () => {
+  // "400 hakket svinekød" uden enhed: 400 g, ikke 400 stykker á 100 g.
+  near(amountOf({ qty: 400, unit: null, item_key: 'hakket_svinekoed' }, KG), 0.4);
+  near(amountOf({ qty: 175, unit: null, item_key: 'mel' }, KG), 0.175);
+  // Under grænsen tælles der stadig stykker.
+  near(amountOf({ qty: 2, unit: null }, LOEG), 0.22);
+  near(amountOf({ qty: 30, unit: null, item_key: 'asparges' }, KG), 3);
+  // Stykvarer tælles uanset hvor mange der er.
+  near(amountOf({ qty: 12, unit: null }, AEG), 12);
+});
+```
+
+Kør testen før rettelsen og notér RED — den første linje skal give 40, ikke 0,4.
+
+Kør derefter backfill igen, så de fem linjer bliver rettet i basen.
 
 - [ ] **Step 6: Commit**
 
