@@ -645,6 +645,16 @@ function main() {
 
   const { PIECE_G } = require('../src/lib/units');
 
+  // En vare, der er fjernet eller omdøbt i SEED, skal også forsvinde fra
+  // basen. Uden det bliver den et spøgelse: all() returnerer den, lookup()
+  // matcher den, og sync/build.js sender den videre til browseren som en
+  // indkøbslinje — uden at noget fejler. Opgave 8 redigerer SEED kraftigt,
+  // så det er ikke et teoretisk hjørne.
+  const dropGone = db.prepare(
+    'DELETE FROM items WHERE key NOT IN (SELECT value FROM json_each(?))'
+  );
+
+  let removed = 0;
   const run = db.transaction(() => {
     for (const e of SEED) {
       upsertItem.run({
@@ -663,12 +673,20 @@ function main() {
       for (const s of e.da || []) insertSyn.run(e.key, 'da', s.toLowerCase());
       for (const s of e.en || []) insertSyn.run(e.key, 'en', s.toLowerCase());
     }
+    // ON DELETE CASCADE på item_synonyms rydder synonymerne med.
+    removed = dropGone.run(JSON.stringify(SEED.map((e) => e.key))).changes;
   });
   run();
 
   const items = db.prepare('SELECT count(*) c FROM items').get().c;
   const syns  = db.prepare('SELECT count(*) c FROM item_synonyms').get().c;
-  console.log(`items: ${items} · synonymer: ${syns}`);
+  console.log(`items: ${items} · synonymer: ${syns} · slettet: ${removed}`);
+
+  // Basen skal spejle SEED præcist. Gør den ikke det, er noget gået galt i en
+  // transaktion, og en forkert vareliste er værre end ingen.
+  if (items !== SEED.length) {
+    throw new Error(`items=${items} men SEED har ${SEED.length} varer`);
+  }
 }
 
 main();
@@ -687,11 +705,19 @@ const { PIECE_G } = require('./units');
 /**
  * Indekset bygges én gang pr. proces, ud fra basen.
  *
- * Falder tilbage til seed-arrayet, hvis tabellerne endnu ikke findes: så kan
- * scripts køre på en frisk base, før seed-scriptet har kørt, og testene
- * behøver ikke en database.
+ * Falder tilbage til seed-arrayet, når tabellen endnu ikke findes eller er
+ * tom — så kan scripts køre på en frisk base, før seed-scriptet har kørt.
+ *
+ * Bemærk at fallbacket IKKE undgår databasen: getDb() åbner og migrerer
+ * filen først, og først derefter opdager vi, at `items` er tom.
+ *
+ * Enhver anden fejl kastes videre. Et bart `catch {}` her ville gøre "basen
+ * er låst", "schema.sql fejler" og "alt er fint" til samme udfald — og
+ * resten af processen kalder getDb() og fejler alligevel, så taksonomien
+ * ville stille og roligt være uenig med sin egen proces.
  */
 let _index = null;
+let _warned = false;
 
 function index() {
   if (_index) return _index;
@@ -704,7 +730,13 @@ function index() {
       _index = buildIndex(items, syns);
       return _index;
     }
-  } catch { /* ingen base tilgængelig – brug seed */ }
+    if (!_warned) {
+      _warned = true;
+      console.warn('taxonomy: items er tom – bruger seed-data. Kør `npm run seed:items`.');
+    }
+  } catch (err) {
+    if (!/no such table: items/.test(err.message)) throw err;
+  }
 
   _index = buildIndex(
     SEED.map((e) => ({
@@ -712,7 +744,10 @@ function index() {
       base_unit: e.base_unit || 'kg', piece_g: PIECE_G[e.key] ?? null,
       density_g_ml: e.density_g_ml ?? null,
       protein_per_100g: e.p ?? null, kcal_per_100g: e.kcal ?? null,
-      carbs_per_100g: e.c ?? null, premium: !!e.premium, fat_grades: !!e.fatGrades,
+      // 0/1 og ikke true/false: SQLite har ingen boolean, og de to veje skal
+      // levere samme type, ellers virker et fremtidigt `=== 1` kun på den ene.
+      carbs_per_100g: e.c ?? null,
+      premium: e.premium ? 1 : 0, fat_grades: e.fatGrades ? 1 : 0,
     })),
     SEED.flatMap((e) => [
       ...(e.da || []).map((t) => ({ item_key: e.key, lang: 'da', text: t })),
@@ -840,6 +875,62 @@ console.log('varer uden piece_g:', mangler.length ? mangler.join(' ') : '(ingen)
 ```
 
 Sidste linje skal skrive `(ingen)`. Gør den ikke det, er `piece_g` ikke kommet med i seedet, og opgave 5 vil regne hvert løg som 100 g i stedet for 110 — uden at fejle.
+
+Læg derefter den test på, hele designet hviler på, i `test/items.test.js`:
+
+```js
+// Taksonomien har to kilder: basens rækker og SEED-arrayet. De skal give det
+// samme. Ellers består testene mod en forældet base, mens produktionen kører
+// på noget andet — præcis den fejltype, hele denne opgave findes for at
+// fjerne, og den der ikke fejler når den rammer.
+//
+// Mappingen herunder skal holdes identisk med fallbacket i taxonomy.js.
+function seedIndex() {
+  const { SEED } = taxonomy;
+  return buildIndex(
+    SEED.map((e) => ({
+      key: e.key, name: e.name, category: e.cat, class: e.class, keeps: e.keeps,
+      base_unit: e.base_unit || 'kg', piece_g: PIECE_G[e.key] ?? null,
+      density_g_ml: e.density_g_ml ?? null,
+      protein_per_100g: e.p ?? null, kcal_per_100g: e.kcal ?? null,
+      carbs_per_100g: e.c ?? null,
+      premium: e.premium ? 1 : 0, fat_grades: e.fatGrades ? 1 : 0,
+    })),
+    SEED.flatMap((e) => [
+      ...(e.da || []).map((t) => ({ item_key: e.key, lang: 'da', text: t })),
+      ...(e.en || []).map((t) => ({ item_key: e.key, lang: 'en', text: t })),
+    ]),
+  );
+}
+
+test('seed-vejen og database-vejen giver samme varer', () => {
+  const FIELDS = ['name', 'category', 'class', 'keeps', 'base_unit',
+                  'piece_g', 'density_g_ml', 'protein_per_100g',
+                  'kcal_per_100g', 'carbs_per_100g', 'fat_grades', 'premium'];
+  const dump = (it) => FIELDS.map((f) => `${f}=${it[f] ?? ''}`).join('|');
+
+  const seed = seedIndex();
+  assert.equal(taxonomy.all().length, seed.all().length,
+    'basen har ikke samme antal varer som SEED — kør `npm run seed:items`');
+
+  for (const e of seed.all()) {
+    const fromDb = taxonomy.get(e.key);
+    assert.ok(fromDb, `${e.key} findes i SEED men ikke i basen`);
+    assert.equal(dump(fromDb), dump(e), e.key);
+  }
+});
+
+test('seed-vejen og database-vejen slår ens op', () => {
+  const seed = seedIndex();
+  for (const text of ['500 g kyllingebrystfilet', 'jomfruolivenolie', 'sesamolie',
+                      '2 dl piskefløde', 'tomatoes, roughly chopped', 'majskylling']) {
+    assert.equal(taxonomy.lookup(text)?.entry.key ?? null,
+                 seed.lookup(text)?.entry.key ?? null, text);
+  }
+});
+```
+
+Testfilen skal importere `buildIndex` fra `../src/lib/items` og `PIECE_G` fra `../src/lib/units`.
 
 - [ ] **Step 8: Kør hele suiten**
 
