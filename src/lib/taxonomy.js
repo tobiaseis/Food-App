@@ -332,8 +332,8 @@ const SEED = [
     da: ['havregryn', 'havregrød'], en: ['oats', 'porridge oats', 'rolled oats'] },
   { key: 'mel', name: 'Mel', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 10, kcal: 340, c: 72,
-    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel'],
-    en: ['cornflour', 'cornstarch', 'plain flour', 'flour'] },
+    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel', 'bagepulver'],
+    en: ['cornflour', 'cornstarch', 'plain flour', 'flour', 'baking powder'] },
   { key: 'brod', name: 'Brød', cat: 'bakery',
     class: 'fresh', keeps: 'perishable', base_unit: 'stk', p: 8, kcal: 260, c: 45,
     da: ['rugbrød', 'brød', 'franskbrød', 'flute', 'boller', 'toastbrød'],
@@ -360,7 +360,8 @@ const SEED = [
          'white wine vinegar', 'red wine vinegar', 'cider vinegar',
          'vinegar', 'balsamic'] },
   { key: 'sukker', name: 'Sukker', cat: 'pantry',
-    class: 'essential', keeps: 'pantry', p: 0, kcal: 400, c: 100, da: ['sukker'], en: ['sugar'] },
+    class: 'essential', keeps: 'pantry', p: 0, kcal: 400, c: 100,
+    da: ['sukker', 'brun farin', 'farin', 'flormelis'], en: ['sugar'] },
   { key: 'salt', name: 'Salt', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 0, c: 0, da: ['salt'], en: ['salt'] },
   { key: 'peber', name: 'Peber', cat: 'pantry',
@@ -383,13 +384,20 @@ const SEED = [
     en: ['tomato ketchup', 'ketchup', 'mayonnaise', 'mustard', 'dressing'] },
   { key: 'soja', name: 'Sojasauce', cat: 'pantry',
     class: 'essential', keeps: 'pantry', base_unit: 'l', density_g_ml: 1.2, p: 6, kcal: 60, c: 5,
-    da: ['sojasauce', 'soya'], en: ['soy sauce', 'soya sauce'] },
+    // Bar 'soja' manglede ved siden af 'sojasauce'/'soya' — 71 opskrifter
+    // skriver bare "soja".
+    da: ['sojasauce', 'soya', 'soja'], en: ['soy sauce', 'soya sauce'] },
   { key: 'krydderi', name: 'Krydderier', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 0, c: 0,
-    da: ['krydderi', 'paprika', 'spidskommen', 'karry', 'oregano', 'timian', 'basilikum', 'chili'],
+    // De tørrede urter/krydderier under er blandt de hyppigste blokkere —
+    // de findes typisk i skabet i forvejen, ligesom resten af krydderi-varen.
+    da: ['krydderi', 'paprika', 'spidskommen', 'karry', 'oregano', 'timian', 'basilikum', 'chili',
+         'tørret rosmarin', 'rosmarin', 'tørret timian', 'laurbærblade',
+         'stødt kanel', 'kanel', 'muskatnød'],
     en: ['cayenne pepper', 'chilli flakes', 'lemon thyme', 'lime leaves',
          'chillies', 'chilies', 'paprika', 'cumin', 'curry', 'oregano',
-         'thyme', 'basil', 'chilli', 'chili'] },
+         'thyme', 'basil', 'chilli', 'chili',
+         'rosemary', 'bay leaves', 'bay leaf', 'cinnamon', 'nutmeg'] },
   { key: 'noedder', name: 'Nødder', cat: 'snack',
     class: 'baseline', keeps: 'pantry', p: 20, kcal: 600, c: 15,
     da: ['mandler', 'nødder', 'valnødder', 'cashewnødder'], en: ['almonds', 'nuts', 'walnuts', 'cashews'] },
@@ -413,6 +421,11 @@ const SEED = [
   { key: 'kardemomme', name: 'Kardemomme', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 0, kcal: 310, c: 68,
     da: ['stødt kardemomme', 'kardemomme'], en: ['ground cardamom', 'cardamom', 'cardamom pods'] },
+  { key: 'gaer', name: 'Gær', cat: 'pantry', class: 'essential', keeps: 'pantry',
+    // Gær stod slet ikke som vare — den bruges i teskefulde og står i skabet
+    // ligesom resten af essential/pantry-gruppen.
+    p: 37, kcal: 325, c: 41,
+    da: ['tørgær', 'frisk gær', 'gær'], en: ['dried yeast', 'fresh yeast', 'yeast'] },
 
   // ── Drikkevarer & snacks ──────────────────────────────────────────────────
   { key: 'sodavand', name: 'Sodavand', cat: 'drink',
@@ -445,7 +458,9 @@ const SEED = [
     en: ['energy drink', 'iced tea'] },
   { key: 'vand', name: 'Vand', cat: 'drink',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 0, c: 0,
-    da: ['kildevand', 'danskvand'], en: ['water', 'sparkling water'] },
+    // Bar 'vand' manglede: 190 opskrifter med bare "vand" i ingredienslisten
+    // matchede intet, selvom 'kildevand'/'danskvand' allerede var dækket.
+    da: ['kildevand', 'danskvand', 'vand'], en: ['water', 'sparkling water'] },
   { key: 'chips', name: 'Chips', cat: 'snack',
     class: 'baseline', keeps: 'pantry', p: 6, kcal: 530, c: 50, da: ['chips'], en: ['crisps', 'chips'] },
   { key: 'chokolade', name: 'Chokolade & slik', cat: 'snack',
