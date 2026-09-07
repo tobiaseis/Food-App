@@ -41,8 +41,9 @@ function main() {
       priceable++;
       if (ings.every((r) => r.item_class === 'essential' || r.amount != null)) withAmount++;
     }
-    for (const r of bad) {
-      const name = (r.ingredient || '').toLowerCase().trim();
+    // Tæl OPSKRIFTER, ikke linjer. Står "vand" to gange i samme opskrift,
+    // låser ét synonym den stadig kun op én gang.
+    for (const name of new Set(bad.map((r) => (r.ingredient || '').toLowerCase().trim()))) {
       if (name) blockers.set(name, (blockers.get(name) || 0) + 1);
     }
   }
@@ -51,7 +52,7 @@ function main() {
   console.log(`  prissætbare:         ${priceable}`);
   console.log(`  heraf med alle mængder: ${withAmount}`);
   console.log(`distinkte blokkere:    ${blockers.size}`);
-  console.log('\nTop 40 blokkere — næste synonym-arbejde:');
+  console.log('\nTop 40 blokkere (opskrifter der låses op) — næste synonym-arbejde:');
   [...blockers]
     .sort((a, b) => b[1] - a[1])
     .slice(0, 40)
