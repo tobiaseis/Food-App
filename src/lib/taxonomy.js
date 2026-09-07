@@ -264,8 +264,12 @@ const SEED = [
   // Stod i STAPLE_KEYS, men købes: den bruges i portioner, ikke i teskefulde.
   { key: 'persille', name: 'Persille & krydderurter', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 3, kcal: 36, c: 6,
-    da: ['persille', 'dild', 'purløg', 'koriander', 'basilikum', 'krydderurter'],
-    en: ['parsley', 'dill', 'chives', 'coriander', 'cilantro', 'basil leaves'] },
+    // 'sage' er sikkert som engelsk synonym: den engelske matchregel kræver
+    // ordgrænse til venstre, så den ikke kaprer "sausage"/"grøntsager".
+    da: ['persille', 'dild', 'purløg', 'koriander', 'basilikum', 'krydderurter',
+         'salvie', 'estragon', 'karse'],
+    en: ['parsley', 'dill', 'chives', 'coriander', 'cilantro', 'basil leaves',
+         'sage', 'tarragon'] },
   // Stod i STAPLE_KEYS, men købes: den bruges i portioner, ikke i teskefulde.
   { key: 'ingefaer', name: 'Ingefær', cat: 'veg',
     class: 'fresh', keeps: 'keeps', p: 1.8, kcal: 80, c: 18,
@@ -335,7 +339,7 @@ const SEED = [
     da: ['havregryn', 'havregrød'], en: ['oats', 'porridge oats', 'rolled oats'] },
   { key: 'mel', name: 'Mel', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 10, kcal: 340, c: 72,
-    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel', 'bagepulver'],
+    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel', 'bagepulver', 'durummel'],
     en: ['cornflour', 'cornstarch', 'plain flour', 'flour', 'baking powder'] },
   { key: 'brod', name: 'Brød', cat: 'bakery',
     class: 'fresh', keeps: 'perishable', base_unit: 'stk', p: 8, kcal: 260, c: 45,
@@ -364,12 +368,15 @@ const SEED = [
          'vinegar', 'balsamic'] },
   { key: 'sukker', name: 'Sukker', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 400, c: 100,
-    da: ['sukker', 'brun farin', 'farin', 'flormelis'], en: ['sugar'] },
+    da: ['sukker', 'brun farin', 'farin', 'flormelis', 'glukosesirup'],
+    en: ['sugar', 'liquid glucose', 'glucose syrup'] },
   { key: 'salt', name: 'Salt', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 0, c: 0, da: ['salt'], en: ['salt'] },
   { key: 'peber', name: 'Peber', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 0, c: 0,
-    da: ['peber', 'sort peber'], en: ['pepper', 'black pepper'] },
+    // 'peppercorns' fanger alle farverne (black/pink/green/white/sichuan/...)
+    // i ét ord — ingen grund til at stave hver variant ud.
+    da: ['peber', 'sort peber'], en: ['pepper', 'black pepper', 'peppercorns'] },
   { key: 'bouillon', name: 'Bouillon', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 10, c: 1,
     // Sammensat skal fonden staves ud. Ellers vinder 'kylling' på position,
@@ -389,21 +396,30 @@ const SEED = [
     class: 'essential', keeps: 'pantry', base_unit: 'l', density_g_ml: 1.2, p: 6, kcal: 60, c: 5,
     // Bar 'soja' manglede ved siden af 'sojasauce'/'soya' — 71 opskrifter
     // skriver bare "soja".
-    da: ['sojasauce', 'soya', 'soja'], en: ['soy sauce', 'soya sauce'] },
+    da: ['sojasauce', 'soya', 'soja'],
+    // 'tamari' skal kun stå som engelsk: det engelske matchregelsæt kræver
+    // en ordgrænse til venstre, så det ikke kaprer "tamarind paste" (helt
+    // andet råvare) via det fælles præfiks.
+    en: ['soy sauce', 'soya sauce', 'tamari'] },
   { key: 'krydderi', name: 'Krydderier', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 0, c: 0,
     // De tørrede urter/krydderier under er blandt de hyppigste blokkere —
     // de findes typisk i skabet i forvejen, ligesom resten af krydderi-varen.
+    // NB: bevidst IKKE 'clove'/'cloves' — de ord kaprer "garlic cloves"
+    // (hvidløgsfed), som er allestedsnærværende i de engelske opskrifter.
+    // 'ground cloves' er specifik nok til at være sikker.
     da: ['krydderi', 'paprika', 'spidskommen', 'karry', 'oregano', 'timian', 'basilikum', 'chili',
          'tørret rosmarin', 'rosmarin', 'tørret timian', 'laurbærblade',
-         'stødt kanel', 'kanel', 'muskatnød'],
+         'stødt kanel', 'kanel', 'muskatnød', 'nellike', 'stødt nellike', 'allehånde'],
     en: ['cayenne pepper', 'chilli flakes', 'lemon thyme', 'lime leaves',
          'chillies', 'chilies', 'paprika', 'cumin', 'curry', 'oregano',
          'thyme', 'basil', 'chilli', 'chili',
-         'rosemary', 'bay leaves', 'bay leaf', 'cinnamon', 'nutmeg'] },
+         'rosemary', 'bay leaves', 'bay leaf', 'cinnamon', 'nutmeg',
+         'ground cloves', 'allspice', 'caraway seeds'] },
   { key: 'noedder', name: 'Nødder', cat: 'snack',
     class: 'baseline', keeps: 'pantry', p: 20, kcal: 600, c: 15,
-    da: ['mandler', 'nødder', 'valnødder', 'cashewnødder'], en: ['almonds', 'nuts', 'walnuts', 'cashews'] },
+    da: ['mandler', 'nødder', 'valnødder', 'cashewnødder', 'pistaciekerner', 'pistacienødder'],
+    en: ['almonds', 'nuts', 'walnuts', 'cashews', 'peanuts', 'peanut butter', 'peanutbutter', 'pistachios'] },
   { key: 'safran', name: 'Safran', cat: 'pantry',
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 0, c: 0,
     da: ['safran'], en: ['saffron'], premium: true },
@@ -465,7 +481,8 @@ const SEED = [
     // matchede intet, selvom 'kildevand'/'danskvand' allerede var dækket.
     da: ['kildevand', 'danskvand', 'vand'], en: ['water', 'sparkling water'] },
   { key: 'chips', name: 'Chips', cat: 'snack',
-    class: 'baseline', keeps: 'pantry', p: 6, kcal: 530, c: 50, da: ['chips'], en: ['crisps', 'chips'] },
+    class: 'baseline', keeps: 'pantry', p: 6, kcal: 530, c: 50,
+    da: ['chips', 'nachos'], en: ['crisps', 'chips', 'nachos'] },
   { key: 'chokolade', name: 'Chokolade & slik', cat: 'snack',
     class: 'baseline', keeps: 'pantry', p: 7, kcal: 540, c: 55,
     // marcipanbrød er konfekt, ikke brød – skal stå før 'brød' kan fange det
