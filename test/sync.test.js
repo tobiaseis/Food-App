@@ -54,7 +54,7 @@ function makeModel(shift = 0) {
                        unit_price: 89.5, base_unit: 'kg', samples: 6 }],
     recipeIndex: [{ recipe_id: s(20), title: 'Frikadeller', url: 'https://valdemarsro.dk/frikadeller/',
                     score_classic: 0.8, unknown_main: false,
-                    items: [{ key: 'hakket_svinekoed', cat: 'meat', grams: 500 }] }],
+                    items: [{ key: 'hakket_svinekoed', cat: 'meat', amount: 0.5 }] }],
     notifications: [],
     summary: { at: '2026-08-27T00:00:00.000Z', week: 35, year: 2026 },
   };

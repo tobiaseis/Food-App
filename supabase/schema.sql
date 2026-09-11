@@ -186,7 +186,7 @@ create table if not exists recipe_index (
   score_classic double precision,
   score_premium double precision,
   unknown_main  boolean default false,
-  items         jsonb not null          -- [{key,cat,staple,grams,ingredient}]
+  items         jsonb not null          -- [{key,cat,amount}] (opgave 9: staple/grams -> amount i varens egen enhed; essentials er allerede filtreret fra her)
 );
 -- Tabellen findes allerede hos den, der kørte skemaet før sproget kom til.
 -- create table if not exists rører ikke en eksisterende tabel, så kolonnen

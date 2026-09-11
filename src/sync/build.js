@@ -173,7 +173,7 @@ function collectPlanIndex(log) {
 
   // Basisvarer og ikke-mad ryger ud her frem for i browseren: motoren ser
   // alligevel bort fra dem, og de fylder en fjerdedel af nyttelasten.
-  const skip = (i) => i.staple || ['drink', 'snack', 'nonfood'].includes(i.cat);
+  const skip = (i) => i.essential || ['drink', 'snack', 'nonfood'].includes(i.cat);
   const recipeIndex = plans.loadRecipes({})
     .map((r) => ({
       recipe_id: r.id,
@@ -193,8 +193,12 @@ function collectPlanIndex(log) {
       score_classic: r.score_classic,
       score_premium: r.score_premium,
       unknown_main: !!r.unknown_main,
+      // amount er i varens egen enhed (kg/l/stk), ikke gram (opgave 9) – rundes
+      // til 3 decimaler (gram-præcision i kg) i stedet for til nærmeste hele
+      // tal, som ville nulle de fleste mængder ud.
       items: r.items.filter((i) => !skip(i)).map((i) => ({
-        key: i.key, cat: i.cat, grams: i.grams == null ? null : Math.round(i.grams),
+        key: i.key, cat: i.cat,
+        amount: i.amount == null ? null : Math.round(i.amount * 1000) / 1000,
       })),
     }))
     .filter((r) => r.items.length >= 2);

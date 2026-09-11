@@ -28,7 +28,7 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
     WHERE id = @id
   `);
   const updateIngredient = db.prepare(
-    'UPDATE recipe_ingredients SET taxonomy_key = ?, is_staple = ?, ingredient = ?, qty = ?, unit = ? WHERE id = ?'
+    'UPDATE recipe_ingredients SET item_key = ?, amount = ?, ingredient = ?, qty = ?, unit = ? WHERE id = ?'
   );
 
   let relinked = 0;
@@ -43,9 +43,9 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
       if (relinkIngredients) {
         for (const ing of ingredients) {
           const p = parseIngredient(ing.raw, ing.position);
-          if (p.taxonomy_key !== ing.taxonomy_key || p.ingredient !== ing.ingredient) relinked++;
-          updateIngredient.run(p.taxonomy_key, p.is_staple, p.ingredient, p.qty, p.unit, ing.id);
-          ing.taxonomy_key = p.taxonomy_key;
+          if (p.item_key !== ing.item_key || p.ingredient !== ing.ingredient) relinked++;
+          updateIngredient.run(p.item_key, p.amount, p.ingredient, p.qty, p.unit, ing.id);
+          ing.item_key = p.item_key;
           ing.is_staple = p.is_staple;
           ing.qty = p.qty;
           ing.unit = p.unit;

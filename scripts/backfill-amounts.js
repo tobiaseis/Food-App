@@ -3,9 +3,14 @@
 /**
  * Udfylder item_key, amount og optional på de eksisterende ingredienslinjer.
  *
- * item_key er indtil videre en kopi af taxonomy_key — de peger på samme
- * nøgler. Linjer uden nøgle slås op igen, fordi taksonomien har fået nye
- * varer siden de blev skrevet.
+ * Opslaget er ubetinget: hver linje slås op på ny mod taksonomien, uanset om
+ * den allerede har en item_key fra en tidligere kørsel. Før opgave 9 slog
+ * scriptet kun op, når feltet var tomt, og var derfor blindt for
+ * omklassificeringer — opgave 8 ramte netop det: seks varer flyttede fra
+ * essential til deres egen post, og 6.212 rækker (20 % af alle
+ * ingredienslinjer) beholdt den gamle nøgle, indtil den blev nulstillet i
+ * hånden. Taksonomien er facit, ikke rækken – slår vi kun op på tomme felter,
+ * kan en vare aldrig flytte sig igen.
  *
  *   npm run backfill:amounts
  */
@@ -30,8 +35,11 @@ const OPTIONAL_RE = /\(optional\)|\boptional\b|\bif you like\b|^\s*evt\.?\s|^\s*
 
 function main() {
   const db = getDb();
+  // item_key hentes med, ikke fordi opslaget skal springes over når den er
+  // sat (det må den netop ikke), men som facit for rekeyed-tællingen nedenfor:
+  // uden den kan vi ikke se, om den friske nøgle er en ÆNDRING.
   const rows = db.prepare(
-    'SELECT id, raw, qty, unit, ingredient, taxonomy_key FROM recipe_ingredients'
+    'SELECT id, raw, qty, unit, ingredient, item_key FROM recipe_ingredients'
   ).all();
 
   const upd = db.prepare(
@@ -42,12 +50,10 @@ function main() {
 
   const run = db.transaction(() => {
     for (const r of rows) {
-      let key = r.taxonomy_key;
-      if (!key) {
-        // Taksonomien er vokset siden linjen blev skrevet — prøv igen.
-        const hit = taxonomy.lookup(r.ingredient) || taxonomy.lookup(r.raw);
-        if (hit) { key = hit.entry.key; rekeyed++; }
-      }
+      // Taksonomien er facit, ikke rækken. Slår vi kun op på tomme felter,
+      // kan en vare aldrig flytte sig igen — og opgave 8 viste, at de gør.
+      const hit = taxonomy.lookup(r.ingredient) || taxonomy.lookup(r.raw);
+      const key = hit ? hit.entry.key : null;
 
       const item = key ? taxonomy.get(key) : null;
       // Nøglen sendes med, selvom varen også gør det: uden den falder
@@ -59,6 +65,11 @@ function main() {
       const opt = OPTIONAL_RE.test(r.raw || '') ? 1 : 0;
 
       if (key)    keyed++;
+      // Tælles som "linjer hvis nøgle ændrede sig", ikke "linjer der fik en
+      // nøgle": null → nøgle og nøgle-A → nøgle-B tæller begge med, nøgle-A →
+      // nøgle-A gør ikke. Det er det tal, der viser om en omklassificering i
+      // taksonomien rent faktisk slår igennem på allerede udtrukne rækker.
+      if (key !== r.item_key) rekeyed++;
       if (amount != null) amounts++;
       if (opt)    optional++;
 
@@ -68,7 +79,7 @@ function main() {
   run();
 
   console.log(`linjer: ${rows.length}`);
-  console.log(`  med item_key: ${keyed} (heraf ${rekeyed} nye match)`);
+  console.log(`  med item_key: ${keyed} (heraf ${rekeyed} med ændret nøgle)`);
   console.log(`  med amount:   ${amounts}`);
   console.log(`  optional:     ${optional}`);
 }

@@ -60,19 +60,25 @@
 
   // Ingredienser uden oplyst mængde vægtes som en middelstor portion, så et
   // "bacon til pynt" ikke pludselig bliver rettens hovedråvare.
-  const ROLE_FALLBACK_G = 100;
+  //
+  // Disse to var oprindeligt grammtal (100 og 40) sammenlignet mod item.grams.
+  // Siden opgave 9 er mængden i varens EGEN enhed (kg/l/stk), så begge er
+  // divideret med 1000 for at blive sammenlignelige igen — de er stadig
+  // kg/l-tal, ikke gram. (MAX_SANE_AMOUNT nedenfor i qtyInBase er samme historie.)
+  const ROLE_FALLBACK_AMOUNT = 0.1;
 
-  const MAIN_MIN_G  = 40;      // under det er man pynt, ikke hovedråvare
+  const MAIN_MIN_AMOUNT = 0.04;  // under det er man pynt, ikke hovedråvare
   const MAIN_SHARE  = 0.35;    // … og mindst en tredjedel af den største
   const MAX_MAINS   = 3;       // flere end det er et krav, ingen uge kan opfylde
 
-  const roleWeight = (item) => (item.grams != null && item.grams > 0 ? item.grams : ROLE_FALLBACK_G);
+  const roleWeight = (item) => (item.amount != null && item.amount > 0 ? item.amount : ROLE_FALLBACK_AMOUNT);
 
   /**
    * Deler en opskrifts ingredienser i hovedråvarer, støtteråvarer og basisvarer.
    *
-   * `items` er `{ key, cat, staple, grams, ingredient }` – taksonomien er
+   * `items` er `{ key, cat, essential, amount, ingredient }` – taksonomien er
    * allerede slået op af den, der kalder, så motoren selv er fri for opslag.
+   * `amount` er i varens egen enhed (kg, l eller stk), ikke gram.
    *
    * `unknownMain` sættes, når opskriften indeholder en ingrediens, der ligner
    * kød eller fisk, men ikke kunne slås op. Så må reserve-reglen for
@@ -91,9 +97,9 @@
         cat: raw.cat || null,
         ingredient: raw.ingredient || raw.name || raw.key,
         name: raw.name || null,
-        grams: raw.grams != null && raw.grams > 0 ? raw.grams : null,
+        amount: raw.amount != null && raw.amount > 0 ? raw.amount : null,
       };
-      if (raw.staple || IGNORED_CATS.has(item.cat)) { staples.push(item); continue; }
+      if (raw.essential || IGNORED_CATS.has(item.cat)) { staples.push(item); continue; }
       usable.push(item);
     }
 
@@ -114,7 +120,7 @@
     if (mains.length) {
       const top = roleWeight(mains[0]);
       mains = mains
-        .filter((i) => roleWeight(i) >= Math.max(MAIN_MIN_G, top * MAIN_SHARE))
+        .filter((i) => roleWeight(i) >= Math.max(MAIN_MIN_AMOUNT, top * MAIN_SHARE))
         .slice(0, MAX_MAINS);
     } else if (!unknownMain) {
       // Vegetarret: den tungeste bærende råvare træder i stedet for kødet,
@@ -163,13 +169,26 @@
 
   // Over dette er mængden næsten altid en fejllæsning ("1 pakke" tolket som
   // kilo). Et enkelt sådant tal ville alene bestemme hele planens prisoverslag.
-  const MAX_SANE_G = 5000;
+  //
+  // Var 5000 (gram) før opgave 9; amount er nu i kg/l, så grænsen er delt med
+  // 1000. Gælder kun kg/l — se qtyInBase: et stykantal styres ikke af denne
+  // grænse, for et højt antal (fx "12 æg") er ikke en fejllæsning på samme
+  // måde som 90 kg mel er.
+  const MAX_SANE_AMOUNT = 5;
 
   /**
    * Opskriftens mængde omregnet til tilbuddets egen enhed.
    *
-   * Vægt og rumfang er lige ud ad landevejen. Styk er ikke: vi ved ikke, hvad
-   * ét stykke vejer, så 300 g avocado kan ikke oversættes til et antal.
+   * `amount` er siden opgave 9 allerede i ingrediensens egen enhed (kg, l
+   * eller stk) – amountOf() i src/lib/units.js har regnet den om. For kg/l
+   * er tilbuddets enhed derfor den samme, og tallet bruges direkte uden at
+   * gå vejen om gram (at gøre det ville netop genindføre den unøjagtighed,
+   * amountOf() blev bygget for at fjerne – se kommentaren i units.js).
+   *
+   * Styk er stadig en fast 1: vi ved ikke, om tilbuddets "1 stk" er samme
+   * pakningsstørrelse som opskriftens "1 stk", så et regnet antal ville give
+   * falsk præcision. Sanity-grænsen herunder tjekkes derfor FØR stk-grenen,
+   * så et højt, men helt normalt stykantal (en bakke æg) ikke afvises.
    *
    * Men nul er et forkert svar. Man kan ikke købe en brøkdel af en avocado, og
    * 38 % af tilbuddene sælges pr. styk – med nul stod hele kæder i
@@ -177,10 +196,10 @@
    * prisoverslag var systematisk for lavt. Ét stykke er det, man som minimum
    * lægger i kurven, og derfor det konservative gæt.
    */
-  function qtyInBase(grams, baseUnit) {
-    if (!grams || grams > MAX_SANE_G) return null;
-    if (isMeasured(baseUnit)) return grams / 1000;
+  function qtyInBase(amount, baseUnit) {
+    if (!amount) return null;
     if (baseUnit === 'stk') return 1;
+    if (isMeasured(baseUnit) && amount <= MAX_SANE_AMOUNT) return amount;
     return null;
   }
 
@@ -218,7 +237,7 @@
       const normal = get(normalPrices, item.key);
 
       if (offer) {
-        const qty = qtyInBase(item.grams, offer.base_unit);
+        const qty = qtyInBase(item.amount, offer.base_unit);
         const normalUnit = offer.normal_unit_price != null ? offer.normal_unit_price
           : (normal && normal.base_unit === offer.base_unit ? normal.unit_price : null);
 
@@ -245,7 +264,7 @@
           unit_price: offer.unit_price,
           base_unit: offer.base_unit,
           normal_unit_price: normalUnit,
-          grams: item.grams ? Math.round(item.grams) : null,
+          amount: item.amount ? round2(item.amount) : null,
           est_cost: cost != null ? round2(cost) : null,
           est_saving: saving != null ? round2(saving) : null,
           image: offer.image,
@@ -260,7 +279,7 @@
       // frem for at blive sat til et tal, der lige så godt kan være ti gange
       // for højt.
       const qty = normal && isMeasured(normal.base_unit)
-        ? qtyInBase(item.grams, normal.base_unit) : null;
+        ? qtyInBase(item.amount, normal.base_unit) : null;
       if (qty != null && normal.unit_price != null) {
         estCost += qty * normal.unit_price;
         pricedCount++;
@@ -270,7 +289,7 @@
         role,
         ingredient: item.ingredient,
         name: normal && normal.name ? normal.name : item.ingredient,
-        grams: item.grams ? Math.round(item.grams) : null,
+        amount: item.amount ? round2(item.amount) : null,
         est_cost: qty != null && normal.unit_price != null ? round2(qty * normal.unit_price) : null,
       });
       return false;
@@ -342,7 +361,7 @@
   /**
    * Bygger ugens plan.
    *
-   *   recipes       [{ id, title, …, tier_score, items: [{key,cat,staple,grams,ingredient}] }]
+   *   recipes       [{ id, title, …, tier_score, items: [{key,cat,essential,amount,ingredient}] }]
    *   offers        varetype → billigste aktive tilbud i brugerens butikker
    *   normalPrices  varetype → { unit_price, base_unit, name }
    *   recentIds     opskrifter fra de seneste ugers planer; de trykkes ned
@@ -503,7 +522,7 @@
         const items = byChain.get(m.chain);
         const prev = items.get(m.taxonomy_key);
         if (prev) {
-          prev.grams += m.grams || 0;
+          prev.amount = round2(prev.amount + (m.amount || 0));
           prev.est_cost = round2(prev.est_cost + (m.est_cost || 0));
           prev.est_saving = round2(prev.est_saving + (m.est_saving || 0));
           prev.used_in.push(day.recipe.title);
@@ -511,7 +530,7 @@
           items.set(m.taxonomy_key, {
             name: m.name, heading: m.heading, chain: m.chain, role: m.role,
             price: m.price, unit_price: m.unit_price, base_unit: m.base_unit,
-            grams: m.grams || 0, est_cost: m.est_cost || 0, est_saving: m.est_saving || 0,
+            amount: m.amount || 0, est_cost: m.est_cost || 0, est_saving: m.est_saving || 0,
             image: m.image, used_in: [day.recipe.title],
           });
         }
@@ -520,13 +539,13 @@
       for (const u of day.unmatched || []) {
         const prev = rest.get(u.taxonomy_key);
         if (prev) {
-          prev.grams += u.grams || 0;
+          prev.amount = round2(prev.amount + (u.amount || 0));
           prev.est_cost = round2(prev.est_cost + (u.est_cost || 0));
           prev.used_in.push(day.recipe.title);
         } else {
           rest.set(u.taxonomy_key, {
             name: u.name || u.ingredient, role: u.role,
-            grams: u.grams || 0, est_cost: u.est_cost || 0,
+            amount: u.amount || 0, est_cost: u.est_cost || 0,
             used_in: [day.recipe.title],
           });
         }

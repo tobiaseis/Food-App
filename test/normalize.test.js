@@ -181,21 +181,21 @@ test('dansk enhedsforkortelse forveksles ikke med begyndelsen af et ord', () => 
   const r = parseIngredient('2 løg, finthakket');
   assert.equal(r.qty, 2);
   assert.equal(r.unit, null);
-  assert.equal(r.taxonomy_key, 'loeg');
+  assert.equal(r.item_key, 'loeg');
 });
 
 test('mængde og enhed læses ud af danske ingredienslinjer', () => {
   const r = parseIngredient('400 g hakket oksekød');
   assert.equal(r.qty, 400);
   assert.equal(r.unit, 'g');
-  assert.equal(r.taxonomy_key, 'hakket_oksekoed');
+  assert.equal(r.item_key, 'hakket_oksekoed');
 });
 
 test('engelske ingredienser kobles til danske varetyper', () => {
   // Sprogbroen: engelske opskrifter skal kunne matche danske tilbud
-  assert.equal(parseIngredient('500g beef mince').taxonomy_key, 'hakket_oksekoed');
-  assert.equal(parseIngredient('2 garlic cloves, crushed').taxonomy_key, 'hvidloeg');
-  assert.equal(parseIngredient('1 onion, finely chopped').taxonomy_key, 'loeg');
+  assert.equal(parseIngredient('500g beef mince').item_key, 'hakket_oksekoed');
+  assert.equal(parseIngredient('2 garlic cloves, crushed').item_key, 'hvidloeg');
+  assert.equal(parseIngredient('1 onion, finely chopped').item_key, 'loeg');
 });
 
 test('brøker og intervaller læses som tal', () => {
@@ -281,8 +281,8 @@ test('den forarbejdede vare beholder sin egen identitet', () => {
 
 test('korte danske ord kaprer ikke en engelsk ingredienslinje', () => {
   // "boneless and skinless chicken thighs" blev læst som AND (fuglen)
-  assert.equal(parseIngredient('3 boneless and skinless chicken thighs').taxonomy_key, 'kyllingelaar');
-  assert.equal(parseIngredient('6 boneless and skinless chicken thighs').taxonomy_key, 'kyllingelaar');
+  assert.equal(parseIngredient('3 boneless and skinless chicken thighs').item_key, 'kyllingelaar');
+  assert.equal(parseIngredient('6 boneless and skinless chicken thighs').item_key, 'kyllingelaar');
 });
 
 test('engelske ord matcher som hele ord, ikke som orddele', () => {

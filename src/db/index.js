@@ -45,6 +45,19 @@ function migrate(db) {
     if (!cols.includes(column)) db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${type}`);
   }
 
+  // Informationen bor nu i items.class og i amount. Droppes til sidst, så en
+  // delvist opdateret arbejdskopi ikke mister data undervejs.
+  //
+  // idx_ri_tax skal væk FØRST: SQLite nægter at droppe en kolonne, der stadig
+  // er indekseret ("error in index idx_ri_tax after drop column: no such
+  // column: taxonomy_key") — verificeret mod den sqlite3-version, better-
+  // sqlite3 bundler her. is_staple har intet indeks og er ikke ramt.
+  db.exec('DROP INDEX IF EXISTS idx_ri_tax');
+  for (const col of ['is_staple', 'taxonomy_key']) {
+    const cols = db.prepare('PRAGMA table_info(recipe_ingredients)').all().map((c) => c.name);
+    if (cols.includes(col)) db.exec(`ALTER TABLE recipe_ingredients DROP COLUMN ${col}`);
+  }
+
   // Rydder dubletter og lægger den naturlige nøgle på. Første åbning af en
   // base fra før nøglen tager et øjeblik; derefter er det ét opslag.
   ensureNaturalKey(db, console.log);

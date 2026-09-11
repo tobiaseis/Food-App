@@ -20,7 +20,12 @@ function estimateNutrition(ingredients, servings) {
 
   for (const ing of ingredients) {
     total++;
-    const entry = ing.taxonomy_key ? taxonomy.get(ing.taxonomy_key) : null;
+    // item_key er den kanoniske nøgle (opgave 9). taxonomy_key læses stadig som
+    // fallback, ligesom gramsOf() i units.js gør det: crawl.js og reclassify.js
+    // sender item_key, men intet forhindrer et kald udefra i stadig at bruge
+    // det gamle navn, og der er ingen grund til at lade det fejle stille.
+    const key = ing.item_key ?? ing.taxonomy_key;
+    const entry = key ? taxonomy.get(key) : null;
     // entry er en baserække siden opgave 3: feltet hedder protein_per_100g,
     // ikke seedets korte p.
     if (!entry || entry.protein_per_100g == null) continue;
@@ -52,7 +57,9 @@ const SOURCE_PREMIUM_BIAS = {
  * Scorer en opskrift mod hvert af de tre spor. Score 0–1.
  */
 function scoreTiers(recipe, ingredients) {
-  const keys = ingredients.map((i) => i.taxonomy_key).filter(Boolean);
+  // Samme fallback som estimateNutrition ovenfor: item_key er navnet fremover,
+  // taxonomy_key accepteres stadig.
+  const keys = ingredients.map((i) => i.item_key ?? i.taxonomy_key).filter(Boolean);
   const uniq = new Set(keys);
   // entry.category, ikke entry.cat — se kommentaren i estimateNutrition().
   const cat = (k) => taxonomy.get(k)?.category;

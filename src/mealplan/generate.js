@@ -23,7 +23,6 @@ const path = require('node:path');
 
 const { getDb, getSetting } = require('../db');
 const taxonomy = require('../lib/taxonomy');
-const { gramsOf } = require('../recipes/classify');
 const { getBaseline } = require('../price/history');
 
 // Motoren ligger i public/, fordi browseren også skal kunne indlæse den.
@@ -197,9 +196,9 @@ function normalPriceMap() {
  *                   form, Supabase-indekset skrives i, hvor sporet først
  *                   vælges i browseren.
  *
- * `is_staple` læses fra basen, men taksonomien får det sidste ord: udvides
- * listen over basisvarer, skal det virke med det samme – ikke først efter en
- * `npm run reclassify`.
+ * `essential` regnes hver gang frisk ud fra taksonomien (`items.class`), aldrig
+ * fra en gemt kolonne: udvides listen over basisvarer, skal det virke med det
+ * samme – ikke først efter en `npm run reclassify`.
  */
 function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
   const db = getDb();
@@ -225,8 +224,12 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
 
   // Ét opslag frem for ét pr. opskrift: 30.000 rækker ad gangen er hurtigere
   // end 2.000 forespørgsler, og planen skal kunne regnes på et øjeblik.
+  //
+  // item_key/amount (opgave 9): amount er allerede regnet om til varens egen
+  // enhed (kg/l/stk) af backfill-amounts.js/parseIngredient, så der skal ikke
+  // længere kaldes gramsOf() her – kolonnen ER facit.
   const ingredients = db.prepare(`
-    SELECT ri.recipe_id, ri.raw, ri.ingredient, ri.taxonomy_key, ri.is_staple, ri.qty, ri.unit
+    SELECT ri.recipe_id, ri.raw, ri.ingredient, ri.item_key, ri.amount
       FROM recipe_ingredients ri
       ${column ? `JOIN recipes r ON r.id = ri.recipe_id WHERE r.${column} >= ?` : ''}
      ORDER BY ri.recipe_id, ri.position
@@ -236,23 +239,23 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
     const recipe = byId.get(ing.recipe_id);
     if (!recipe) continue;
 
-    if (!ing.taxonomy_key) {
+    if (!ing.item_key) {
       // Ingrediens vi ikke kender. Ligner den kød eller fisk, kan retten ikke
       // planlægges troværdigt – se `hintsAtMainIngredient`.
       if (taxonomy.hintsAtMainIngredient(ing.raw)) recipe.unknown_main = true;
       continue;
     }
 
-    const entry = taxonomy.get(ing.taxonomy_key);
+    const entry = taxonomy.get(ing.item_key);
     recipe.items.push({
-      key: ing.taxonomy_key,
+      key: ing.item_key,
       // entry.category, ikke seedets korte entry.cat (opgave 3: taxonomy.get()
       // returnerer nu en baserække). src/sync/build.js filtrerer drink/snack/
       // nonfood fra på dette felt — var det null, slap de igennem.
       cat: entry?.category ?? null,
-      staple: Boolean(ing.is_staple) || taxonomy.isEssential(ing.taxonomy_key),
-      grams: gramsOf(ing),
-      ingredient: ing.ingredient || entry?.name || ing.taxonomy_key,
+      essential: taxonomy.isEssential(ing.item_key),
+      amount: ing.amount,
+      ingredient: ing.ingredient || entry?.name || ing.item_key,
     });
   }
 

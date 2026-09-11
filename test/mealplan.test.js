@@ -18,7 +18,7 @@ const taxonomy = require('../src/lib/taxonomy');
 
 // ── Hjælpere ─────────────────────────────────────────────────────────────────
 
-const item = (key, cat, grams, extra = {}) => ({ key, cat, grams, ingredient: key, ...extra });
+const item = (key, cat, amount, extra = {}) => ({ key, cat, amount, ingredient: key, ...extra });
 
 const offer = (key, chain, unitPrice, normal = null) => ([key, {
   offer_id: 1, product_id: 1, chain_id: chain.toLowerCase(), chain,
@@ -28,13 +28,13 @@ const offer = (key, chain, unitPrice, normal = null) => ([key, {
 }]);
 
 const FAJITA = [
-  item('kyllingebryst', 'poultry', 600),
-  item('peberfrugt', 'veg', 300),
-  item('tortilla', 'bakery', 240),
-  item('hakkede_tomater', 'pantry', 400),
-  item('olie', 'pantry', 15, { staple: true }),
-  item('krydderi', 'pantry', 5, { staple: true }),
-  item('salt', 'pantry', 3, { staple: true }),
+  item('kyllingebryst', 'poultry', 0.6),
+  item('peberfrugt', 'veg', 0.3),
+  item('tortilla', 'bakery', 0.24),
+  item('hakkede_tomater', 'pantry', 0.4),
+  item('olie', 'pantry', 0.015, { essential: true }),
+  item('krydderi', 'pantry', 0.005, { essential: true }),
+  item('salt', 'pantry', 0.003, { essential: true }),
 ];
 
 // ── Rollefordeling ───────────────────────────────────────────────────────────
@@ -57,9 +57,9 @@ test('kyllingen er hovedråvaren i en fajita – resten er støtte', () => {
 
 test('lidt bacon til pynt bliver ikke et krav ved siden af kødet', () => {
   const roles = engine.assignRoles([
-    item('oksekoed', 'meat', 800),
-    item('bacon', 'meat', 25),
-    item('kartofler', 'veg', 600),
+    item('oksekoed', 'meat', 0.8),
+    item('bacon', 'meat', 0.025),
+    item('kartofler', 'veg', 0.6),
   ]);
   assert.deepEqual(roles.mains.map((i) => i.key), ['oksekoed']);
   assert.ok(roles.support.some((i) => i.key === 'bacon'));
@@ -67,24 +67,24 @@ test('lidt bacon til pynt bliver ikke et krav ved siden af kødet', () => {
 
 test('to kød i samme mængde er begge hovedråvarer', () => {
   const roles = engine.assignRoles([
-    item('laks', 'fish', 400),
-    item('torsk', 'fish', 400),
-    item('pasta', 'grain', 300),
+    item('laks', 'fish', 0.4),
+    item('torsk', 'fish', 0.4),
+    item('pasta', 'grain', 0.3),
   ]);
   assert.deepEqual(roles.mains.map((i) => i.key).sort(), ['laks', 'torsk']);
 });
 
 test('vegetarret får den tungeste bærende råvare som hovedråvare', () => {
   const roles = engine.assignRoles([
-    item('kartofler', 'veg', 900),
-    item('loeg', 'veg', 100),
-    item('ost', 'cheese', 150),
+    item('kartofler', 'veg', 0.9),
+    item('loeg', 'veg', 0.1),
+    item('ost', 'cheese', 0.15),
   ]);
   assert.deepEqual(roles.mains.map((i) => i.key), ['kartofler']);
 });
 
 test('ukendt kød blokerer vegetar-reserven, så planen ikke lover forkert', () => {
-  const items = [item('kartofler', 'veg', 900), item('loeg', 'veg', 100)];
+  const items = [item('kartofler', 'veg', 0.9), item('loeg', 'veg', 0.1)];
   assert.equal(engine.assignRoles(items).mains.length, 1);
   // "750 g lammebov" kunne ikke slås op → retten er ikke en vegetarret,
   // og vi ved ikke, om hovedråvaren er på tilbud. Så udelades den.
@@ -93,12 +93,12 @@ test('ukendt kød blokerer vegetar-reserven, så planen ikke lover forkert', () 
 
 test('samme varetype to gange i listen er ét krav, ikke to', () => {
   const roles = engine.assignRoles([
-    item('loeg', 'veg', 100),
-    item('loeg', 'veg', 220),
-    item('kyllingebryst', 'poultry', 500),
+    item('loeg', 'veg', 0.1),
+    item('loeg', 'veg', 0.22),
+    item('kyllingebryst', 'poultry', 0.5),
   ]);
   assert.equal(roles.support.length, 1);
-  assert.equal(roles.support[0].grams, 220);      // største mængde vinder
+  assert.equal(roles.support[0].amount, 0.22);    // største mængde vinder
 });
 
 // ── Scoring ──────────────────────────────────────────────────────────────────
@@ -118,7 +118,7 @@ test('scoren skelner mellem hovedråvare og støtte', () => {
 });
 
 test('besparelsen regnes mod normalprisen, ikke mod skiltet', () => {
-  const roles = engine.assignRoles([item('kyllingebryst', 'poultry', 1000)]);
+  const roles = engine.assignRoles([item('kyllingebryst', 'poultry', 1)]);
   const offers = new Map([offer('kyllingebryst', 'Netto', 60, 100)]);
   const s = engine.scoreRecipe({ servings: 4 }, roles, offers, new Map());
   assert.equal(s.est_cost, 60);                   // 1 kg × 60 kr/kg
@@ -127,8 +127,8 @@ test('besparelsen regnes mod normalprisen, ikke mod skiltet', () => {
 
 test('ingredienser uden tilbud prissættes til normalpris', () => {
   const roles = engine.assignRoles([
-    item('kyllingebryst', 'poultry', 1000),
-    item('broccoli', 'veg', 500),
+    item('kyllingebryst', 'poultry', 1),
+    item('broccoli', 'veg', 0.5),
   ]);
   const offers = new Map([offer('kyllingebryst', 'Netto', 60, 100)]);
   const normal = new Map([['broccoli', { unit_price: 20, base_unit: 'kg', name: 'Broccoli' }]]);
@@ -138,17 +138,36 @@ test('ingredienser uden tilbud prissættes til normalpris', () => {
 });
 
 test('urealistiske mængder tælles ikke med i prisen', () => {
-  const roles = engine.assignRoles([item('mel', 'pantry', 90000)]);
+  const roles = engine.assignRoles([item('mel', 'pantry', 90)]);
   const offers = new Map([offer('mel', 'Netto', 12, 20)]);
   const s = engine.scoreRecipe({ servings: 4 }, roles, offers, new Map());
   assert.equal(s.est_cost, 0);
+});
+
+test('stykpriser regnes uafhængigt af antal, og et normalt antal styk afvises ikke', () => {
+  // 'aeg' er en reel stk-baseret vare i taksonomien og kan være hovedråvare
+  // (fx en omelet) — "eggs" er en af MAIN_CATS. amount er her et rigtigt
+  // stykantal (12, en bakke æg), ikke gram. MAX_SANE_AMOUNT gælder kun kg/l
+  // (se kommentaren i qtyInBase): den må IKKE afvise et helt normalt
+  // stykantal, bare fordi 12 > 5. Uden den regel ville hver eneste opskrift
+  // med mere end fem æg, skiver brød eller tortillas miste sin pris.
+  const roles = engine.assignRoles([item('aeg', 'eggs', 12)]);
+  const offers = new Map([['aeg', {
+    offer_id: 1, product_id: 1, chain_id: 'netto', chain: 'Netto',
+    product_name: 'Æg', heading: 'Æg tilbud', price: 30,
+    unit_price: 30, base_unit: 'stk', normal_unit_price: null, image: null,
+  }]]);
+  const s = engine.scoreRecipe({ servings: 4 }, roles, offers, new Map());
+  assert.equal(s.match_count, 1);
+  // 1 stk (den konservative regel — se qtyInBase), ikke 12, og ikke afvist.
+  assert.equal(s.matched[0].est_cost, 30);
 });
 
 // ── Krav-trin ────────────────────────────────────────────────────────────────
 
 const recipe = (id, mainKey, extra = []) => ({
   id, title: `Ret ${id}`, url: `https://x/${id}`, servings: 4, tier_score: 0.8,
-  items: [item(mainKey, 'poultry', 500), item('pasta', 'grain', 300), ...extra],
+  items: [item(mainKey, 'poultry', 0.5), item('pasta', 'grain', 0.3), ...extra],
 });
 
 test('retter uden hovedråvaren på tilbud kommer ikke med', () => {
@@ -221,8 +240,8 @@ test('ugen bliver ikke syv gange pasta, selvom pastaen er på tilbud', () => {
         recipes.push({
           id: id++, title: `${starch || 'salat'} med ${p}`, url: 'https://x', servings: 4,
           tier_score: starch === 'pasta' ? 0.9 : 0.7,
-          items: [item(p, 'meat', 500),
-                  starch ? item(starch, 'grain', 300) : item('salat', 'veg', 200)],
+          items: [item(p, 'meat', 0.5),
+                  starch ? item(starch, 'grain', 0.3) : item('salat', 'veg', 0.2)],
         });
       }
     }
@@ -248,7 +267,7 @@ test('spærren giver efter, hvis der ikke findes andet end pasta', () => {
   for (let i = 1; i <= 20; i++) {
     recipes.push({
       id: i, title: `Pastaret ${i}`, url: 'https://x', servings: 4, tier_score: 0.8,
-      items: [item('kyllingebryst', 'poultry', 500), item('pasta', 'grain', 300)],
+      items: [item('kyllingebryst', 'poultry', 0.5), item('pasta', 'grain', 0.3)],
     });
   }
   const plan = engine.buildPlan({
@@ -264,7 +283,7 @@ test('spærren giver efter, hvis der ikke findes andet end pasta', () => {
 test('indkøbslisten grupperes efter butik og har resten for sig', () => {
   const recipes = [];
   for (let i = 1; i <= 20; i++) {
-    recipes.push(recipe(i, 'kyllingebryst', [item('broccoli', 'veg', 400)]));
+    recipes.push(recipe(i, 'kyllingebryst', [item('broccoli', 'veg', 0.4)]));
   }
   const plan = engine.buildPlan({
     recipes,

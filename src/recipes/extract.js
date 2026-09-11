@@ -281,8 +281,6 @@ function parseIngredient(raw, position = 0) {
     unit,
     ingredient: s || original.toLowerCase(),
     item_key: key,
-    // Alias, indtil de sidste forbrugere er flyttet.
-    taxonomy_key: key,
     amount: item ? amountOf({ qty, unit }, item) : null,
     optional: OPTIONAL_RE.test(original) ? 1 : 0,
     is_staple: key ? (taxonomy.isEssential(key) ? 1 : 0) : 0,

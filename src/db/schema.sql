@@ -172,6 +172,11 @@ CREATE TABLE IF NOT EXISTS recipes (
 );
 CREATE INDEX IF NOT EXISTS idx_recipes_tier ON recipes(tier);
 
+-- item_key, amount og optional lægges på i migrate() (src/db/index.js), ikke
+-- her: CREATE TABLE IF NOT EXISTS rører aldrig en tabel der allerede findes,
+-- så de tre kolonner skal tilføjes eksplicit for enhver base fra før de fandtes.
+-- Kolonnerne taxonomy_key og is_staple (samme information, gammelt navn) er
+-- droppet i migrate() siden opgave 9 og står derfor heller ikke her.
 CREATE TABLE IF NOT EXISTS recipe_ingredients (
   id           INTEGER PRIMARY KEY AUTOINCREMENT,
   recipe_id    INTEGER NOT NULL REFERENCES recipes(id) ON DELETE CASCADE,
@@ -179,12 +184,9 @@ CREATE TABLE IF NOT EXISTS recipe_ingredients (
   qty          REAL,
   unit         TEXT,
   ingredient   TEXT,                   -- renset ingrediensnavn
-  taxonomy_key TEXT,                   -- kobling til varetype
-  is_staple    INTEGER DEFAULT 0,      -- salt/peber/olie: tæller ikke i match
   position     INTEGER
 );
 CREATE INDEX IF NOT EXISTS idx_ri_recipe ON recipe_ingredients(recipe_id);
-CREATE INDEX IF NOT EXISTS idx_ri_tax    ON recipe_ingredients(taxonomy_key);
 
 -- ── Madplaner ───────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS meal_plans (
