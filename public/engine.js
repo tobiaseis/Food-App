@@ -71,14 +71,26 @@
   const MAIN_SHARE  = 0.35;    // … og mindst en tredjedel af den største
   const MAX_MAINS   = 3;       // flere end det er et krav, ingen uge kan opfylde
 
-  const roleWeight = (item) => (item.amount != null && item.amount > 0 ? item.amount : ROLE_FALLBACK_AMOUNT);
+  // Rollevægten skal sammenligne æbler med æbler: 2 æg er ikke mere end
+  // 0,4 kg kylling, men det er præcis hvad amount siger, når den ene vare
+  // tælles i stk og den anden vejes. weight er amount omregnet til et
+  // kg-sammenligneligt tal (se generate.js/build.js, som udregner det) –
+  // findes den ikke (ældre payload, eller en test der ikke sætter den),
+  // falder vi tilbage til amount, som hidtil.
+  const roleWeight = (item) => {
+    const w = item.weight ?? item.amount;
+    return w != null && w > 0 ? w : ROLE_FALLBACK_AMOUNT;
+  };
 
   /**
    * Deler en opskrifts ingredienser i hovedråvarer, støtteråvarer og basisvarer.
    *
-   * `items` er `{ key, cat, essential, amount, ingredient }` – taksonomien er
-   * allerede slået op af den, der kalder, så motoren selv er fri for opslag.
-   * `amount` er i varens egen enhed (kg, l eller stk), ikke gram.
+   * `items` er `{ key, cat, essential, amount, weight, ingredient }` –
+   * taksonomien er allerede slået op af den, der kalder, så motoren selv er
+   * fri for opslag. `amount` er i varens egen enhed (kg, l eller stk), ikke
+   * gram — det er den, indkøbslisten og prisberegningen bruger. `weight` er
+   * KUN til at afgøre roller (se roleWeight ovenfor): en stk-vare og en
+   * kg/l-vare kan ellers ikke sammenlignes.
    *
    * `unknownMain` sættes, når opskriften indeholder en ingrediens, der ligner
    * kød eller fisk, men ikke kunne slås op. Så må reserve-reglen for
@@ -98,6 +110,7 @@
         ingredient: raw.ingredient || raw.name || raw.key,
         name: raw.name || null,
         amount: raw.amount != null && raw.amount > 0 ? raw.amount : null,
+        weight: raw.weight != null && raw.weight > 0 ? raw.weight : null,
       };
       if (raw.essential || IGNORED_CATS.has(item.cat)) { staples.push(item); continue; }
       usable.push(item);
@@ -187,8 +200,11 @@
    *
    * Styk er stadig en fast 1: vi ved ikke, om tilbuddets "1 stk" er samme
    * pakningsstørrelse som opskriftens "1 stk", så et regnet antal ville give
-   * falsk præcision. Sanity-grænsen herunder tjekkes derfor FØR stk-grenen,
-   * så et højt, men helt normalt stykantal (en bakke æg) ikke afvises.
+   * falsk præcision. Sanity-grænsen herunder tjekkes derfor EFTER stk-grenen
+   * (koden returnerer på stk, FØR grænsen nås) — ellers ville et højt, men
+   * helt normalt stykantal (en bakke æg, 91 linjer i korpus over
+   * MAX_SANE_AMOUNT på 5) blive afvist som en fejllæsning. Byt IKKE om på
+   * rækkefølgen: det er testet i test/mealplan.test.js.
    *
    * Men nul er et forkert svar. Man kan ikke købe en brøkdel af en avocado, og
    * 38 % af tilbuddene sælges pr. styk – med nul stod hele kæder i

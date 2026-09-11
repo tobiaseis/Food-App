@@ -10,6 +10,12 @@ data.db
 data.db-wal
 data.db-shm
 
+# Dedikeret testdatabase (genskabes af scripts/seed-test-db.js, kørt som
+# pretest) - npm test maa aldrig aabne data.db, se test/helpers/set-test-db.js
+test.db
+test.db-wal
+test.db-shm
+
 # Genereres ved deploy af scripts/build-web.js.
 # config.js SKAL med i git med tomme værdier: uden den fejler /config.js med
 # 404 ved en frisk klon. Vercel overskriver den i sit eget checkout, så

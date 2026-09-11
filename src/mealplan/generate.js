@@ -23,6 +23,7 @@ const path = require('node:path');
 
 const { getDb, getSetting } = require('../db');
 const taxonomy = require('../lib/taxonomy');
+const { DEFAULT_PIECE_G } = require('../lib/units');
 const { getBaseline } = require('../price/history');
 
 // Motoren ligger i public/, fordi browseren også skal kunne indlæse den.
@@ -189,6 +190,27 @@ function normalPriceMap() {
 // ── 3. Opskrifterne ──────────────────────────────────────────────────────────
 
 /**
+ * Rollevægt: amount omregnet til et tal, der kan sammenlignes på tværs af
+ * varens enhed. `amount` for en stk-vare er et STYKANTAL (fx 6 æg), og for en
+ * kg/l-vare en MASSE/RUMFANG (fx 0,5 kg kylling) – de to tal er ikke
+ * sammenlignelige som de står. `engine.js`s `assignRoles` afgør en opskrifts
+ * hovedråvare ved at sammenligne netop disse tal, og `aeg` (æg) er samtidig
+ * `base_unit: 'stk'` OG i `MAIN_CATS` (kategorien `eggs`) – uden dette regner
+ * "2 stk æg" for MERE end "0,4 kg kylling", fordi 2 > 0,4 som rene tal, og en
+ * kyllingeret bliver planlagt op om ægget i stedet. Fundet ved gennemregning
+ * af hele korpusset (287 af 2.224 opskrifter fik en anden hovedråvare, 200 af
+ * dem endte med æg som ENESTE hovedråvare) – ikke en teoretisk bekymring.
+ *
+ * `amount` selv røres ikke: indkøbslisten og prisberegningen skal stadig
+ * kunne vise/regne på det ægte stykantal, ikke en omregnet vægt.
+ */
+function weightFor(entry, amount) {
+  if (entry == null || amount == null) return null;
+  if (entry.base_unit === 'stk') return (amount * (entry.piece_g ?? DEFAULT_PIECE_G)) / 1000;
+  return amount;
+}
+
+/**
  * Opskrifter med ingredienserne oversat til motorens format.
  *
  * `tier` angivet  → kun opskrifter i det spor, med `tier_score` sat.
@@ -255,6 +277,7 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
       cat: entry?.category ?? null,
       essential: taxonomy.isEssential(ing.item_key),
       amount: ing.amount,
+      weight: weightFor(entry, ing.amount),
       ingredient: ing.ingredient || entry?.name || ing.item_key,
     });
   }

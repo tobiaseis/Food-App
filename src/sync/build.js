@@ -196,9 +196,18 @@ function collectPlanIndex(log) {
       // amount er i varens egen enhed (kg/l/stk), ikke gram (opgave 9) – rundes
       // til 3 decimaler (gram-præcision i kg) i stedet for til nærmeste hele
       // tal, som ville nulle de fleste mængder ud.
+      //
+      // weight (fix-runde efter review) skal med her OG i generate.js's
+      // loadRecipes(), som beregner den: browserens engine.js kører sin egen
+      // assignRoles() på PRÆCIS denne payload for at bygge planen af
+      // favoritbutikker, og uden weight ville browseren arve den samme
+      // stk-vs-kg-forveksling (æg som falsk hovedråvare), som blev fundet og
+      // rettet i den lokale sti. De to filer definerer kontrakten sammen –
+      // se DEPLOY.md om at deploye dem i samme trin.
       items: r.items.filter((i) => !skip(i)).map((i) => ({
         key: i.key, cat: i.cat,
         amount: i.amount == null ? null : Math.round(i.amount * 1000) / 1000,
+        weight: i.weight == null ? null : Math.round(i.weight * 1000) / 1000,
       })),
     }))
     .filter((r) => r.items.length >= 2);

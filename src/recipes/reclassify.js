@@ -38,6 +38,17 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
     for (const r of recipes) {
       let ingredients = getIngredients.all(r.id);
 
+      // is_staple findes ikke i basen længere (droppet i opgave 9) – den
+      // genberegnes altid her, UANSET relinkIngredients. Uden denne linje har
+      // rækkerne slet ikke feltet, når relinkIngredients er false (SELECT *
+      // giver ikke en kolonne, der ikke findes), og classify.js's scoreTiers
+      // ville så tælle salt og olie som rigtige ingredienser og forskyde hver
+      // spor-score. Ingen kalder bruger relinkIngredients: false i dag, men
+      // fælden skal ikke stå spændt til den dag, nogen gør.
+      for (const ing of ingredients) {
+        ing.is_staple = ing.item_key ? (taxonomy.isEssential(ing.item_key) ? 1 : 0) : 0;
+      }
+
       // Kør ingredienslinjerne gennem parseren igen, så nye taksonomi-poster
       // slår igennem på allerede hentede opskrifter.
       if (relinkIngredients) {

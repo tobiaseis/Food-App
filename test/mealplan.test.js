@@ -65,6 +65,35 @@ test('lidt bacon til pynt bliver ikke et krav ved siden af kødet', () => {
   assert.ok(roles.support.some((i) => i.key === 'bacon'));
 });
 
+test('æg vinder ikke hovedrollen over kylling alene på stykantal', () => {
+  // Regression fundet ved review af opgave 9: 'aeg' er den eneste stk-baserede
+  // MAIN_CATS-vare (piece_g 58). Uden en fælles vægt sammenlignede roleWeight()
+  // amount-tal på tværs af enheder direkte: "2" (stk æg) slog "0,4" (kg
+  // kylling) som rent tal, selvom to æg (~116 g) vejer langt mindre end
+  // 400 g kylling. Målt mod hele korpus: 287 af 2.224 opskrifter fik en
+  // anden hovedråvare, 200 af dem endte med æg som ENESTE hovedråvare (fx
+  // "Kålsalat med crispy kylling", "Friske forårsruller med kokosrejer").
+  // weight retter det ved at regne stk om til et kg-sammenligneligt tal FØR
+  // rollerne afgøres. amount er urørt — det er stadig det, der vises/regnes
+  // på i indkøbslisten og prisen.
+  const roles = engine.assignRoles([
+    item('kyllingebryst', 'poultry', 0.4, { weight: 0.4 }),
+    item('aeg', 'eggs', 2, { weight: (2 * 58) / 1000 }),
+  ]);
+  assert.deepEqual(roles.mains.map((i) => i.key), ['kyllingebryst']);
+});
+
+test('uden weight falder rollevægten tilbage til amount, som før opgaven', () => {
+  // Ældre payloads (eller en forbruger der ikke er opdateret) har ikke
+  // weight-feltet. roleWeight skal ikke krakelere af det — den falder
+  // tilbage til den gamle (ufuldkomne, men kendte) adfærd.
+  const roles = engine.assignRoles([
+    item('kyllingebryst', 'poultry', 0.4),
+    item('aeg', 'eggs', 2),
+  ]);
+  assert.deepEqual(roles.mains.map((i) => i.key), ['aeg']);
+});
+
 test('to kød i samme mængde er begge hovedråvarer', () => {
   const roles = engine.assignRoles([
     item('laks', 'fish', 0.4),

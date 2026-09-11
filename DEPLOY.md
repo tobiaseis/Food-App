@@ -24,6 +24,21 @@ grunden til, at de ~140 synkrone SQLite-kald i `src/` ikke skal skrives om.
 Prishistorikken bor i `data.db`, som gemmes som **release-asset** frem for i
 git – et 12 MB binært commit om dagen ville sprænge repoet i løbet af et år.
 
+> **`public/engine.js` og `recipe_index`-payloaden skal deployes i samme
+> trin.** De to kører på hver sit ur: et push til `main` deployer `engine.js`
+> til Vercel med det samme (statisk build, se afsnit 3 nedenfor), mens
+> `recipe_index`-rækkerne i Supabase først opdateres ved næste `npm run sync`
+> (den natlige GitHub Actions-kørsel, eller manuelt). Ændrer en commit
+> feltnavnene i `items`-payloaden begge steder – som opgave 9's
+> `staple/grams → essential/amount/weight` gjorde – er der et vindue, hvor den
+> nye `engine.js` læser en payload med de GAMLE feltnavne (eller omvendt).
+> Konkret: `raw.amount` bliver `undefined`, `roleWeight` falder tilbage til en
+> fast værdi for absolut alting, og `qtyInBase(undefined)` returnerer `null` –
+> så hele planens `est_cost` bliver 0. Ingen fejl, ingen advarsel i konsollen,
+> bare en madplan der pludselig er gratis. Kør derfor `npm run sync` i SAMME
+> release-trin som enhver deploy, der ændrer formen på `items`-payloaden –
+> ikke bagefter, og ikke "det retter natten selv".
+
 ---
 
 ## 1. Supabase (5 min)
