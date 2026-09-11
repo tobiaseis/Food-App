@@ -276,10 +276,18 @@ const SEED = [
     class: 'fresh', keeps: 'perishable', p: 3, kcal: 36, c: 6,
     // 'sage' er sikkert som engelsk synonym: den engelske matchregel kræver
     // ordgrænse til venstre, så den ikke kaprer "sausage"/"grøntsager".
+    //
+    // 'rosmarin'/'timian'/'rosemary'/'thyme' (bar/frisk form) flyttet hertil fra
+    // krydderi (opgave 8, fix-runde): frisk rosmarin/timian købes og visner som
+    // salvie/estragon ved siden af — kun de TØRREDE former ('tørret rosmarin',
+    // 'dried rosemary' osv.) hører hjemme i krydderi (essential, antages i
+    // skabet). Det længere 'tørret ...'/'dried ...'-synonym vinder stadig i
+    // krydderi, fordi det matcher tidligere/længere på samme position — se
+    // krydderi-varens kommentar og lookup()-tjek i commit-beskeden.
     da: ['persille', 'dild', 'purløg', 'koriander', 'basilikum', 'krydderurter',
-         'salvie', 'estragon', 'karse'],
+         'salvie', 'estragon', 'karse', 'rosmarin', 'frisk rosmarin', 'timian'],
     en: ['parsley', 'dill', 'chives', 'coriander', 'cilantro', 'basil leaves',
-         'sage', 'tarragon', 'watercress'] },
+         'sage', 'tarragon', 'watercress', 'rosemary', 'thyme'] },
   // Stod i STAPLE_KEYS, men købes: den bruges i portioner, ikke i teskefulde.
   { key: 'ingefaer', name: 'Ingefær', cat: 'veg',
     class: 'fresh', keeps: 'keeps', p: 1.8, kcal: 80, c: 18,
@@ -349,10 +357,14 @@ const SEED = [
   { key: 'havregryn', name: 'Havregryn', cat: 'grain',
     class: 'baseline', keeps: 'pantry', p: 13, kcal: 370, c: 60,
     da: ['havregryn', 'havregrød'], en: ['oats', 'porridge oats', 'rolled oats'] },
+  // 'durummel'/'semolina' og 'kokosmel' flyttet ud herfra (fix-runde) til
+  // egne baseline-poster — se dem nedenfor. 'bagepulver'/'baking powder' er
+  // almindeligt bagepulver og bliver på mel (essential), det er ikke en
+  // specialvare.
   { key: 'mel', name: 'Mel', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 10, kcal: 340, c: 72,
-    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel', 'bagepulver', 'durummel', 'kokosmel'],
-    en: ['cornflour', 'cornstarch', 'plain flour', 'flour', 'baking powder', 'semolina'] },
+    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel', 'bagepulver'],
+    en: ['cornflour', 'cornstarch', 'plain flour', 'flour', 'baking powder'] },
   { key: 'brod', name: 'Brød', cat: 'bakery',
     class: 'fresh', keeps: 'perishable', base_unit: 'stk', p: 8, kcal: 260, c: 45,
     da: ['rugbrød', 'brød', 'franskbrød', 'flute', 'boller', 'toastbrød'],
@@ -370,7 +382,9 @@ const SEED = [
     class: 'essential', keeps: 'pantry', base_unit: 'l', density_g_ml: 0.92, p: 0, kcal: 880, c: 0,
     // 'sesamolie' o.l. skal stå som sit eget synonym: ellers vinder det korte
     // 'sesam' i sesamfroe på position, og sesamolie bliver til sesamfrø.
-    da: ['olivenolie', 'rapsolie', 'solsikkeolie', 'sesamolie', 'kokosolie', 'olie'],
+    // 'kokosolie' flyttet ud herfra (fix-runde) til egen baseline-post:
+    // specialolie, ikke noget der antages i skabet ligesom oliven-/rapsolie.
+    da: ['olivenolie', 'rapsolie', 'solsikkeolie', 'sesamolie', 'olie'],
     en: ['olive oil', 'oil', 'vegetable oil', 'sesame oil', 'toasted sesame oil', 'baking spray'] },
   { key: 'eddike', name: 'Eddike', cat: 'pantry',
     class: 'essential', keeps: 'pantry', base_unit: 'l', density_g_ml: 1.01, p: 0, kcal: 20, c: 1,
@@ -378,10 +392,31 @@ const SEED = [
     en: ['apple cider vinegar', 'rice wine vinegar', 'rice vinegar',
          'white wine vinegar', 'red wine vinegar', 'cider vinegar',
          'vinegar', 'balsamic'] },
+  // 'glukosesirup'/'liquid glucose'/'glucose syrup', 'kokossukker' og
+  // 'black treacle'/'mørk sirup' flyttet ud herfra (fix-runde) til egne
+  // baseline-poster. 'brun farin'/'farin'/'flormelis' er almindelige danske
+  // sukkerformer og bliver på sukker (essential) — det er ikke specialvarer.
   { key: 'sukker', name: 'Sukker', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 400, c: 100,
-    da: ['sukker', 'brun farin', 'farin', 'flormelis', 'glukosesirup', 'kokossukker'],
-    en: ['sugar', 'liquid glucose', 'glucose syrup', 'black treacle'] },
+    da: ['sukker', 'brun farin', 'farin', 'flormelis'],
+    en: ['sugar'] },
+  // ── Specialvarer, der IKKE er "i skabet i forvejen" (fix-runde) ───────────
+  // Samme mønster som ghee/lønnesirup: hver har sin egen pris og skal købes
+  // specifikt, i modsætning til de almindelige former på sukker/mel/olie/
+  // ketchup ovenfor, der reelt er husstandsstandard i Danmark.
+  { key: 'sirup_moerk', name: 'Sirup (mørk)', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 0.5, kcal: 290, c: 72, da: ['mørk sirup'], en: ['black treacle', 'treacle'] },
+  { key: 'glukosesirup', name: 'Glukosesirup', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 0, kcal: 320, c: 80, da: ['glukosesirup'], en: ['liquid glucose', 'glucose syrup'] },
+  { key: 'durummel', name: 'Durummel / semulje', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 13, kcal: 350, c: 71, da: ['durummel'], en: ['semolina'] },
+  { key: 'kokosmel', name: 'Kokosmel', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 20, kcal: 440, c: 20, da: ['kokosmel'], en: ['coconut flour'] },
+  { key: 'kokosolie', name: 'Kokosolie', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    base_unit: 'l', density_g_ml: 0.92, p: 0, kcal: 862, c: 0,
+    da: ['kokosolie'], en: ['coconut oil'] },
+  { key: 'kokossukker', name: 'Kokossukker', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 0, kcal: 375, c: 95, da: ['kokossukker'], en: ['coconut sugar'] },
   { key: 'salt', name: 'Salt', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 0, kcal: 0, c: 0, da: ['salt'], en: ['salt'] },
   { key: 'peber', name: 'Peber', cat: 'pantry',
@@ -401,9 +436,19 @@ const SEED = [
     da: ['kokosmælk'], en: ['coconut milk'] },
   { key: 'ketchup', name: 'Ketchup / sauce', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 1, kcal: 100, c: 20,
+    // 'tabasco'/'sriracha'/'sambal oelek' flyttet ud herfra (fix-runde):
+    // essential betyder "antages i skabet", og det gælder ikke chilisauce-
+    // mærker på samme måde som ketchup/sennep/mayonnaise gør i et dansk
+    // køkken. Se de tre nye poster nedenfor.
     da: ['tomat ketchup', 'tomatketchup', 'ketchup', 'remoulade', 'mayonnaise', 'dressing',
-         'sennep', 'sauce', 'tabasco', 'sriracha', 'sambal oelek'],
-    en: ['tomato ketchup', 'ketchup', 'mayonnaise', 'mustard', 'dressing', 'tabasco'] },
+         'sennep', 'sauce'],
+    en: ['tomato ketchup', 'ketchup', 'mayonnaise', 'mustard', 'dressing'] },
+  { key: 'sriracha', name: 'Sriracha', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 2, kcal: 93, c: 19, da: ['sriracha'], en: ['sriracha'] },
+  { key: 'sambal_oelek', name: 'Sambal oelek', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 1.5, kcal: 35, c: 6, da: ['sambal oelek'], en: ['sambal oelek'] },
+  { key: 'tabasco', name: 'Tabasco', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 0.5, kcal: 12, c: 0.8, da: ['tabasco'], en: ['tabasco'] },
   { key: 'soja', name: 'Sojasauce', cat: 'pantry',
     class: 'essential', keeps: 'pantry', base_unit: 'l', density_g_ml: 1.2, p: 6, kcal: 60, c: 5,
     // Bar 'soja' manglede ved siden af 'sojasauce'/'soya' — 71 opskrifter
@@ -417,21 +462,33 @@ const SEED = [
     class: 'essential', keeps: 'pantry', p: 0, kcal: 0, c: 0,
     // De tørrede urter/krydderier under er blandt de hyppigste blokkere —
     // de findes typisk i skabet i forvejen, ligesom resten af krydderi-varen.
-    // NB: bevidst IKKE 'clove'/'cloves' — de ord kaprer "garlic cloves"
-    // (hvidløgsfed), som er allestedsnærværende i de engelske opskrifter.
-    // 'ground cloves' er specifik nok til at være sikker.
-    da: ['krydderi', 'paprika', 'spidskommen', 'karry', 'oregano', 'timian', 'basilikum', 'chili',
-         'tørret rosmarin', 'rosmarin', 'tørret timian', 'laurbærblade',
-         'stødt kanel', 'kanel', 'muskatnød', 'nellike', 'stødt nellike', 'allehånde',
-         'wasabi', 'kaffirblade'],
-    en: ['cayenne pepper', 'chilli flakes', 'lemon thyme', 'lime leaves',
+    //
+    // Kun de TØRREDE former af rosmarin/timian står her — de friske/bare
+    // former ('rosmarin', 'timian', 'rosemary', 'thyme') hører til på
+    // persille-varen (fresh, købes) og blev flyttet dertil i en fix-runde.
+    // Det længere 'tørret ...'/'dried ...'-synonym vinder stadig her, fordi
+    // det matcher tidligere/længere på samme position end det bare ord i
+    // persille — verificeret med lookup(), se commit-beskeden.
+    //
+    // 'cloves' (bar) TILFØJET i samme fix-runde: oprindeligt bevidst udeladt,
+    // fordi ordet kan kapre "garlic cloves" (hvidløgsfed). Men det længere,
+    // allerede registrerede 'garlic clove(s)' på hvidløg-varen vinder altid
+    // over bar 'cloves' på samme position (længde slår ved lige exact-score),
+    // så tilføjelsen er sikker — verificeret mod hele korpus, ingen eksisterende
+    // hvidløg-match ændrer sig. De 16 opskrifter, der kun skriver "N cloves"
+    // uden "garlic" i samme linje, har i 12 af 16 tilfælde en SEPARAT
+    // "N garlic cloves"-linje i samme opskrift, hvilket viser at "N cloves"
+    // alene er krydderiet (hele nelliker), ikke endnu en hvidløgsangivelse.
+    da: ['krydderi', 'paprika', 'spidskommen', 'karry', 'oregano', 'basilikum', 'chili',
+         'tørret rosmarin', 'tørret timian', 'laurbærblade',
+         'stødt kanel', 'kanel', 'muskatnød', 'nellike', 'stødt nellike', 'allehånde'],
+    en: ['cayenne pepper', 'chilli flakes', 'lemon thyme',
          'chillies', 'chilies', 'paprika', 'cumin', 'curry', 'oregano',
-         'thyme', 'basil', 'chilli', 'chili',
-         'rosemary', 'bay leaves', 'bay leaf', 'cinnamon', 'nutmeg',
-         'ground cloves', 'allspice', 'caraway seeds', 'five spice', 'mixed herbs',
+         'basil', 'chilli', 'chili', 'dried rosemary', 'dried thyme',
+         'bay leaves', 'bay leaf', 'cinnamon', 'nutmeg',
+         'ground cloves', 'cloves', 'allspice', 'caraway seeds', 'five spice', 'mixed herbs',
          'dried mixed herbs', 'mixed spice', "za'atar", 'za’atar',
-         'cajun spice mix', 'cajun seasoning', 'mixed dried herbs', 'ground mace',
-         'dried fenugreek leaves'] },
+         'cajun spice mix', 'cajun seasoning', 'mixed dried herbs', 'ground mace'] },
   { key: 'noedder', name: 'Nødder', cat: 'snack',
     class: 'baseline', keeps: 'pantry', p: 20, kcal: 600, c: 15,
     da: ['mandler', 'nødder', 'valnødder', 'cashewnødder', 'pistaciekerner', 'pistacienødder',
@@ -599,8 +656,13 @@ const SEED = [
     p: 0, kcal: 260, c: 67, da: ['lønnesirup', 'ahornsirup'], en: ['maple syrup'] },
   { key: 'sumak', name: 'Sumak', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 3, kcal: 300, c: 70, da: ['sumak'], en: ['sumac'] },
+  // 'radise' (ental) fjernet (fix-runde): det matcher som orddel midt i
+  // "grains of paradise" (pa|RADISE) med ren højregrænse, og korpus viser at
+  // det er den ENESTE ting, det bare ord fanger — "grains of paradise" er en
+  // helt anden vare (peberfrugt-krydderi), ikke radiser. 'radiser'/'radish'/
+  // 'radishes' dækker alt det ægte.
   { key: 'radiser', name: 'Radiser', cat: 'veg', class: 'fresh', keeps: 'perishable',
-    p: 0.7, kcal: 16, c: 3.4, da: ['radiser', 'radise'], en: ['radishes', 'radish'] },
+    p: 0.7, kcal: 16, c: 3.4, da: ['radiser'], en: ['radishes', 'radish'] },
   { key: 'mascarpone', name: 'Mascarpone', cat: 'cheese', class: 'fresh', keeps: 'perishable',
     p: 5, kcal: 450, c: 4, da: ['mascarpone'], en: ['mascarpone'] },
   { key: 'nigella', name: 'Nigellafrø', cat: 'pantry', class: 'baseline', keeps: 'pantry',
@@ -720,6 +782,19 @@ const SEED = [
   { key: 'fortykningsmiddel', name: 'Fortykningsmiddel', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 0, kcal: 0, c: 0,
     da: ['agar agar', 'agar-agar'], en: ['agar agar', 'xanthan gum', 'ultratex'] },
+
+  // ── Fix-runde: flyttet ud af krydderi (essential) ─────────────────────────
+  // Samme begrundelse som chaat_masala/gochugaru: specifikke, ikke-danske
+  // krydderier, man skal ud og købe, ikke noget der antages i skabet.
+  { key: 'wasabi', name: 'Wasabi', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 3, kcal: 109, c: 23, da: ['wasabi'], en: ['wasabi'] },
+  // 'kaffirblade' og 'lime leaves' er samme vare (kaffirlimeblade) — samlet
+  // her i stedet for at lade det danske og engelske navn splittes over to
+  // forskellige poster/klasser, den fejl der blev fundet i rosmarin/timian.
+  { key: 'kaffirblade', name: 'Kaffirlimeblade', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 3, kcal: 90, c: 15, da: ['kaffirblade'], en: ['lime leaves'] },
+  { key: 'fenugreekblade', name: 'Tørrede bukkehornsblade', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 20, kcal: 320, c: 45, da: [], en: ['dried fenugreek leaves'] },
 
   // ── Non-food (skal aldrig ende i en madplan) ──────────────────────────────
   { key: 'toiletpapir', name: 'Toiletpapir', cat: 'nonfood',
