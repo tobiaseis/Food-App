@@ -1813,6 +1813,26 @@ Tilføj til `migrate()` i `src/db/index.js`, efter `added`-løkken:
 
 Fjern også `taxonomy_key`-aliaset fra `parseIngredient` (opgave 6, trin 3) og de to kolonner fra INSERT-sætningen i `src/recipes/crawl.js`.
 
+**Og ret backfillens frosne nøgle.** `scripts/backfill-amounts.js` slår kun op, når `taxonomy_key` er `null`:
+
+```js
+      let key = r.taxonomy_key;
+      if (!key) { /* slå op */ }
+```
+
+Det gør scriptet blindt over for ændringer i taksonomien. Opgave 8 løb ind i det: seks varer blev flyttet fra `essential` til deres egen post, og 6.212 rækker — 20 % af alle ingredienslinjer — beholdt deres gamle nøgle, indtil den blev nulstillet i hånden. En omklassificering, der ikke slår igennem, er præcis den slags tavse fejl, resten af planen er bygget for at undgå.
+
+Når `taxonomy_key` er væk, skal opslaget være ubetinget:
+
+```js
+      // Taksonomien er facit, ikke rækken. Slår vi kun op på tomme felter,
+      // kan en vare aldrig flytte sig igen — og opgave 8 viste, at de gør.
+      const hit = taxonomy.lookup(r.ingredient) || taxonomy.lookup(r.raw);
+      const key = hit ? hit.entry.key : null;
+```
+
+Tæl `rekeyed` som "linjer hvis nøgle ændrede sig", ikke "linjer der fik en nøgle" — det er det tal, der fortæller om en omklassificering virkede.
+
 - [ ] **Step 7: Kør alt igen mod en frisk kopi**
 
 ```bash
