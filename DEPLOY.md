@@ -7,13 +7,26 @@ Alle tre er gratis i den nødvendige størrelse. Samlet tid: ~20 minutter.
 ```
 GitHub Actions  (dagligt 05:10 UTC)
   1. henter data.db fra release-asset
-  2. npm run update            ← ingest mod lokal SQLite, uændret kode
-  3. node src/sync/build.js    ← madplaner + prisstatistik regnes HER
-  4. push read-model           →  Supabase
-  5. gemmer data.db tilbage
+  2. npm run update                                ← ingest mod lokal SQLite, uændret kode
+  3. npm run seed:items && npm run backfill:amounts ← varetaksonomi + materialiserede mængder
+  4. node src/sync/build.js                         ← madplaner + prisstatistik regnes HER
+  5. push read-model                                →  Supabase
+  6. gemmer data.db tilbage
 
 Vercel  (statisk frontend)  →  læser Supabase direkte med anon-nøglen
 ```
+
+**Rækkefølgen i trin 3 er ikke valgfri.** `seed:items` fylder `items`-tabellen
+fra `taxonomy.js`; uden den falder ethvert opslag tilbage til SEED-konstanten
+i hukommelsen, hvilket virker i dag, men gør `items`-tabellen (og dermed
+`coverage-report.js`'s `LEFT JOIN items` og enhver fremmednøgle mod den)
+usynligt tom. `backfill:amounts` slår så hver ingredienslinje op på ny mod
+taksonomien og skriver `item_key`/`amount`/`optional` i varens egen enhed —
+det er først herefter, `loadRecipes()` kan se de ~1.546 fuldt prissætbare
+opskrifter. Kør begge, altid, uanset om opskriftscrawlet blev sprunget over:
+en base hentet fra release-assetet kan have `item_key` kopieret videre fra det
+gamle `taxonomy_key` (se `migrate()` i `src/db/index.js`), men har aldrig en
+fyldt `items`-tabel, før dette trin har kørt.
 
 **Hvorfor ikke bare køre alt i Supabase?** Én madplan kræver ~3.200 enkeltopslag.
 Lokalt mod SQLite tager det 183 ms; mod en fjern Postgres ville det tage op mod
@@ -214,4 +227,17 @@ crawler den sine egne (færre) opskrifter:
 ```bash
 npm run db:checkpoint
 gh release upload db data.db --clobber
+```
+
+**Peger `DB_PATH` direkte på et rollback-punkt (`data.db.pre-*`), skal den
+kopieres først.** `getDb()` migrerer den fil, `DB_PATH` peger på, ved selve
+åbningen — det gælder også kolonner, der droppes (se `migrate()` i
+`src/db/index.js`). Sætter du `DB_PATH=data.db.pre-items` for at undersøge et
+rollback-punkt, mister den ene åbning præcis de kolonner, punktet fandtes for
+at bevare, og du har ikke længere noget at rulle tilbage til. Kopiér altid
+filen til en ny sti, før du peger `DB_PATH` på den:
+
+```bash
+cp data.db.pre-items scratch.db
+DB_PATH=scratch.db node ...
 ```

@@ -45,6 +45,24 @@ function migrate(db) {
     if (!cols.includes(column)) db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${type}`);
   }
 
+  // Kopiér nøglen videre FØR den droppes. En base fra før opgave 9 (fx et
+  // release-asset, der endnu ikke er kørt igennem seed:items/backfill:amounts)
+  // har kun taxonomy_key udfyldt, aldrig item_key. Uden denne linje mister
+  // ÉT åbn af en sådan base alle 26.242 koblinger stille og roligt: kolonnen
+  // forsvinder i samme migrering, item_key er allerede oprettet (tom, ovenfor)
+  // men aldrig fyldt, og loadRecipes() ser bagefter 0 opskrifter med ≥3
+  // varer. Fundet ved at åbne en kopi af data.db.pre-items og sammenligne
+  // taxonomy_key-antal før/efter. Kør uanset om item_key allerede har data,
+  // så en delvist opdateret arbejdskopi ikke får overskrevet ægte linjer:
+  // WHERE item_key IS NULL gør kopieringen idempotent og ufarlig at gentage.
+  const cols0 = db.prepare('PRAGMA table_info(recipe_ingredients)').all().map((c) => c.name);
+  if (cols0.includes('taxonomy_key')) {
+    db.exec(`
+      UPDATE recipe_ingredients SET item_key = taxonomy_key
+       WHERE item_key IS NULL AND taxonomy_key IS NOT NULL
+    `);
+  }
+
   // Informationen bor nu i items.class og i amount. Droppes til sidst, så en
   // delvist opdateret arbejdskopi ikke mister data undervejs.
   //

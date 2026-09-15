@@ -77,6 +77,19 @@ jobs:
       - name: Hent denne uges tilbudsaviser
         run: npm run update
 
+      # Uden dette trin står `items`-tabellen tom i CI, og hver eneste
+      # opslag falder tilbage til taxonomy.js' SEED-konstant i stedet – det
+      # virker i dag, men er blindt for enhver fremmednøgle mod items, som
+      # næste plan lægger på (og coverage-report.js's LEFT JOIN items ville
+      # ikke se noget). Kør altid, ikke kun når opskrifter blev hentet: en
+      # base hentet fra release-assetet kan have item_key fra taxonomy_key
+      # (se migrate() i src/db/index.js), men aldrig en fyldt items-tabel før
+      # dette har kørt mindst én gang.
+      - name: Sørg for varetaksonomi og materialiserede mængder
+        run: |
+          npm run seed:items
+          npm run backfill:amounts
+
       - name: Byg read-model og send til Supabase
         run: node src/sync/build.js
 
