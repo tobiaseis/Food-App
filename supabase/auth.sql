@@ -92,11 +92,21 @@ grant execute on function claim_device(text) to authenticated;
 -- mister adgangen helt: en anonym Supabase-bruger er "authenticated", ikke
 -- "anon", så appen rammer stadig de nye policyer.
 
+-- De åbne fra schema.sql …
 drop policy if exists watches_all    on watches;
 drop policy if exists notif_read     on notifications;
 drop policy if exists notif_update   on notifications;
 drop policy if exists tokens_write   on device_tokens;
 drop policy if exists tokens_update  on device_tokens;
+
+-- … og de stramme herunder, så filen kan køres igen. Uden disse fejler en
+-- gentagen kørsel med "policy already exists", og det er præcis den
+-- situation, man står i, hvis kørslen er brudt sammen halvvejs.
+drop policy if exists watches_own        on watches;
+drop policy if exists notif_read_own     on notifications;
+drop policy if exists notif_update_own   on notifications;
+drop policy if exists tokens_insert_own  on device_tokens;
+drop policy if exists tokens_update_own  on device_tokens;
 
 create policy watches_own on watches
   for all to authenticated
