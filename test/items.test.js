@@ -107,6 +107,22 @@ test('specialkrydderier er baseline: de købes, men holder i månedsvis', () => 
   }
 });
 
+test('specialblandinger flyttet ud af krydderi er baseline, ikke essential', () => {
+  // Afsluttende whole-branch review: 'essential' betyder "antages allerede i
+  // skabet", og disse seks er specialblandinger/importvarer, ikke almindelige
+  // danske skabsvarer — samme begrundelse som garam masala og kardemomme
+  // ovenfor. Var de blevet på krydderi (essential), ville de aldrig komme på
+  // indkøbslisten eller få en pris, og opskrifter, der reelt mangler dem,
+  // ville tælles som fuldt prissatte.
+  for (const key of ['zaatar', 'cajun_krydderi', 'five_spice', 'mixed_spice',
+                      'blandede_krydderurter', 'muskatblomme']) {
+    const it = taxonomy.get(key);
+    assert.ok(it, `${key} skal findes i taksonomien`);
+    assert.equal(it.class, 'baseline', `${key} skal være baseline`);
+    assert.equal(it.keeps, 'pantry', `${key} skal holde i månedsvis`);
+  }
+});
+
 test('rodfrugter og kål er baseline — prisen står stille året rundt', () => {
   for (const key of ['kartofler', 'gulerod', 'loeg', 'kaal']) {
     const it = taxonomy.get(key);

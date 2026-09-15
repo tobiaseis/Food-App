@@ -479,6 +479,17 @@ const SEED = [
     // uden "garlic" i samme linje, har i 12 af 16 tilfælde en SEPARAT
     // "N garlic cloves"-linje i samme opskrift, hvilket viser at "N cloves"
     // alene er krydderiet (hele nelliker), ikke endnu en hvidløgsangivelse.
+    //
+    // za'atar, cajun-krydderi, five spice, mixed spice, blandede tørrede
+    // krydderurter og ground mace FLYTTET UD herfra (fix-runde, afsluttende
+    // review): essential betyder "antages allerede i skabet" — spec afsnit
+    // 1.1 er eksplicit om, at det er en kurateret liste over det, der rent
+    // faktisk står i et dansk køkken, ikke et mønster for "krydderi-agtig".
+    // De seks er specialblandinger/importvarer, samme kategori som
+    // garam masala og kardemomme, som specifikt nævnes som IKKE-essentials.
+    // Bay leaves, cinnamon, cloves, nutmeg, allspice, dried rosemary og
+    // dried thyme er urørt: de er almindelige danske skabsvarer, og at
+    // fjerne dem ville koste ~207 opskrifter uden en tilsvarende begrundelse.
     da: ['krydderi', 'paprika', 'spidskommen', 'karry', 'oregano', 'basilikum', 'chili',
          'tørret rosmarin', 'tørret timian', 'laurbærblade',
          'stødt kanel', 'kanel', 'muskatnød', 'nellike', 'stødt nellike', 'allehånde'],
@@ -486,9 +497,23 @@ const SEED = [
          'chillies', 'chilies', 'paprika', 'cumin', 'curry', 'oregano',
          'basil', 'chilli', 'chili', 'dried rosemary', 'dried thyme',
          'bay leaves', 'bay leaf', 'cinnamon', 'nutmeg',
-         'ground cloves', 'cloves', 'allspice', 'caraway seeds', 'five spice', 'mixed herbs',
-         'dried mixed herbs', 'mixed spice', "za'atar", 'za’atar',
-         'cajun spice mix', 'cajun seasoning', 'mixed dried herbs', 'ground mace'] },
+         'ground cloves', 'cloves', 'allspice', 'caraway seeds'] },
+  // Flyttet ud af krydderi (essential) i samme fix-runde: specialblandinger
+  // og importkrydderier, ikke almindelige danske skabsvarer — se kommentaren
+  // på krydderi. baseline/pantry, ligesom sriracha/wasabi/kaffirblade.
+  { key: 'zaatar', name: "Za'atar", cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 8, kcal: 300, c: 30, da: [], en: ["za'atar", 'za’atar'] },
+  { key: 'cajun_krydderi', name: 'Cajun-krydderi', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 10, kcal: 280, c: 40, da: [], en: ['cajun seasoning', 'cajun spice mix'] },
+  { key: 'five_spice', name: 'Five spice', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 8, kcal: 300, c: 50, da: [], en: ['five spice'] },
+  { key: 'mixed_spice', name: 'Mixed spice', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 8, kcal: 300, c: 50, da: [], en: ['mixed spice'] },
+  { key: 'blandede_krydderurter', name: 'Blandede tørrede krydderurter', cat: 'pantry',
+    class: 'baseline', keeps: 'pantry', p: 10, kcal: 280, c: 40,
+    da: [], en: ['mixed herbs', 'dried mixed herbs', 'mixed dried herbs'] },
+  { key: 'muskatblomme', name: 'Muskatblomme', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    p: 6, kcal: 475, c: 50, da: [], en: ['ground mace'] },
   { key: 'noedder', name: 'Nødder', cat: 'snack',
     class: 'baseline', keeps: 'pantry', p: 20, kcal: 600, c: 15,
     da: ['mandler', 'nødder', 'valnødder', 'cashewnødder', 'pistaciekerner', 'pistacienødder',
