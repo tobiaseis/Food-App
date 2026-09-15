@@ -22,7 +22,7 @@ JSON-svaret. Testvarer: `kartofler` (poser i varierende størrelse) og
 |---|---|---|---|---|---|
 | **REMA 1000** | `GET https://api.digital.rema1000.dk/api/search/products?query=<ord>&page=1&per_page=<n>` | Nej | **Ja** — `data[].prices[].price` | **Ja** — afledt: `price ÷ data[].prices[].compare_unit_price` (kg-pris), bekræftet af fritekstfeltet `data[].underline` (fx "400 GR. / REMA 1000") | **Kan automatiseres.** Stabilt, ustyret adgang, pænt struktureret svar. |
 | **Salling Group** (Bilka/føtex/Netto) | `GET https://api.sallinggroup.com/v1/food-waste`, `/v1/stores` (officielt API, `developer.sallinggroup.com`) | Ja — kræver oprettelse + API-nøgle | **Nej** — kun madspild-tilbud tæt på udløb, ikke normalsortiment | Nej | **Kan ikke bruges til normalpriser**, uanset at API'et er officielt. Dækningen er forkert, ikke adgangen. |
-| **Coop** (Kvickly/SuperBrugsen/Brugsen/365discount) | Officiel portal `developer.cl.coop.dk` **utilgængelig** (se nedenfor). Gateway `api.cl.coop.dk` findes, men ingen fundet produkt/pris-rute. | Ja for API-nøgle (der hvor porten overhovedet virker) | **Nej** — ingen produkt/pris-endpoint fundet | Nej | **Manuelt/CSV.** Coop.dk MAD (webshoppen) lukkede i 2023 — der er intet sted at spørge. |
+| **Coop** (Kvickly/SuperBrugsen/Brugsen/365discount) | Officiel portal `developer.cl.coop.dk` **utilgængelig** (se nedenfor). Gateway `api.cl.coop.dk` findes, men ingen fundet produkt/pris-rute. | Ja for API-nøgle (der hvor porten overhovedet virker) | **Nej** — ingen produkt/pris-endpoint fundet | Nej | **Manuelt/CSV.** Coop.dk MAD (webshoppen) lukkede i 2023 — der er intet sted at spørge. **Ikke udtømmende afprøvet** (ingen netværksfane til rådighed, se forbehold nedenfor) — værd at genbesøge. |
 
 ## Beviser pr. kæde
 
@@ -53,9 +53,10 @@ Uddrag af ét produkt (kartofler):
 }
 ```
 
-18 kr ÷ 9 kr/kg = 2 kg — stemmer med `underline`. For hakket oksekød (8 varianter
-hentet i én søgning) matchede samme regnestykke alle otte ikke-runde
-pakkestørrelser eksakt:
+18 kr ÷ 9 kr/kg = 2 kg — stemmer med `underline`. Søgningen på "hakket
+oksekød" gav 8 resultater; ét af dem ("HAKKET SPINAT") er ikke en
+kødvare og er udeladt. For de resterende syv kød-varianter (alle med
+ikke-runde pakkestørrelser) matchede samme regnestykke eksakt:
 
 | navn | underline | pris | compare_unit_price | udregnet pakke |
 |---|---|---|---|---|
@@ -153,6 +154,14 @@ henter i dag, ikke normalpriser.
 **Konklusion:** ingen vej ind, hverken officiel eller uofficiel, uden et
 større reverse-engineering-arbejde end denne dags budget tillader. Behandles
 som manuel/CSV, ligesom Lidl og franchisekæderne.
+
+**Forbehold:** dette er ikke udtømmende bevist. Metoden var `curl` mod kendte
+værter (kædesiderne, den officielle portal, gatewayen) og inspektion af deres
+JS/HTML for API-referencer — der var ingen interaktiv browser med
+netværksfane til rådighed. En butiksspecifik eller på anden vis skjult
+produkt-rute kan derfor være overset. Coop dækker fire af de fjorten kæder,
+så konklusionen bør revurderes, hvis nogen senere har adgang til bedre
+værktøjer, i stedet for at antages endeligt afklaret.
 
 ## Anbefaling
 
