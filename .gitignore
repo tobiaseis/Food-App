@@ -9,6 +9,9 @@ intercepted_data/*
 data.db
 data.db-wal
 data.db-shm
+# Rollback-kopier (data.db.pre-items, .pre-amounts, osv.) - samme grund som
+# data.db selv, plus at de kan blive store nok til at sprænge et "git add -A".
+data.db.*
 
 # Dedikeret testdatabase (genskabes af scripts/seed-test-db.js, kørt som
 # pretest) - npm test maa aldrig aabne data.db, se test/helpers/set-test-db.js

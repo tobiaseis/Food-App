@@ -27,8 +27,12 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
       score_healthy = @score_healthy, score_classic = @score_classic, score_premium = @score_premium
     WHERE id = @id
   `);
+  // optional skal med: parseIngredient beregner den, og crawl.js indsætter
+  // den ved første hentning – mangler den her, ville en fremtidig ændring af
+  // OPTIONAL_RE ramme nykrawlede opskrifter, men aldrig dem, der blot blev
+  // reklassificeret (npm run reclassify kører i CI, se update.yml).
   const updateIngredient = db.prepare(
-    'UPDATE recipe_ingredients SET item_key = ?, amount = ?, ingredient = ?, qty = ?, unit = ? WHERE id = ?'
+    'UPDATE recipe_ingredients SET item_key = ?, amount = ?, ingredient = ?, qty = ?, unit = ?, optional = ? WHERE id = ?'
   );
 
   let relinked = 0;
@@ -55,11 +59,12 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
         for (const ing of ingredients) {
           const p = parseIngredient(ing.raw, ing.position);
           if (p.item_key !== ing.item_key || p.ingredient !== ing.ingredient) relinked++;
-          updateIngredient.run(p.item_key, p.amount, p.ingredient, p.qty, p.unit, ing.id);
+          updateIngredient.run(p.item_key, p.amount, p.ingredient, p.qty, p.unit, p.optional, ing.id);
           ing.item_key = p.item_key;
           ing.is_staple = p.is_staple;
           ing.qty = p.qty;
           ing.unit = p.unit;
+          ing.optional = p.optional;
         }
       }
 
