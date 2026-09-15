@@ -209,7 +209,12 @@
     poultry:[20, 300],  fish:   [20, 700],  dairy: [5, 200],
     cheese: [30, 500],  eggs:   [10, 120],  grain: [5, 150],
     legume: [5, 200],   bakery: [5, 200],   pantry:[3, 400],
-    drink:  [2, 200],   snack:  [10, 400],
+    // 'drink' blander to slags varer: sodavand og juice solgt pr. liter, og
+    // kaffe og te solgt som TØRVÆGT. Målt i basen: te op til 450 kr/kg og
+    // kaffe til 421 er ægte hyldepriser, så loftet følger dem og ikke
+    // sodavanden. Den rene løsning er at flytte kaffe/te til 'pantry', men
+    // kategorien styrer også madplanen (IGNORED_CATS), så det er dataarbejde.
+    drink:  [2, 600],   snack:  [10, 400],
   };
 
   /**

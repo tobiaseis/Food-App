@@ -739,7 +739,9 @@ tre steder.
     poultry:[20, 300],  fish:   [20, 700],  dairy: [5, 200],
     cheese: [30, 500],  eggs:   [10, 120],  grain: [5, 150],
     legume: [5, 200],   bakery: [5, 200],   pantry:[3, 400],
-    drink:  [2, 200],   snack:  [10, 400],
+    // 'drink' blander sodavand solgt pr. liter med kaffe og te solgt som
+    // tørvægt. Målt: te 450 kr/kg, kaffe 421 — begge ægte. Loftet følger dem.
+    drink:  [2, 600],   snack:  [10, 400],
   };
 
   function isPlausiblePrice(category, unitPrice, baseUnit) {
