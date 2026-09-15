@@ -136,27 +136,3 @@ test('outlier-filtret kasserer fejlkoblingen og lader estimatoren vælge 11', ()
   const pick = boot.leastDiscounted(kept.map((r) => r.unit_price).sort((a, z) => a - z));
   near(pick, 11);
 });
-
-test('stk-tilbud på en kg-vare omregnes — og de blokerede gør ikke', () => {
-  const items = new Map([
-    ['blomkaal', { key: 'blomkaal', base_unit: 'kg', piece_g: 500 }],
-    ['selleri',  { key: 'selleri',  base_unit: 'kg', piece_g: 40 }],
-  ]);
-  const rows = [
-    { item_key: 'blomkaal', chain_id: '11deC', base_unit: 'stk', unit_price: 12, base_qty: 1 },
-    { item_key: 'selleri',  chain_id: '11deC', base_unit: 'stk', unit_price: 12, base_qty: 1 },
-  ];
-
-  const { rows: out, blocked } = boot.convertPieceOffers(rows, items);
-  assert.equal(out.length, 1);
-  assert.equal(out[0].item_key, 'blomkaal');
-  assert.equal(out[0].base_unit, 'kg');
-  near(out[0].unit_price, 24);        // 12 kr / 0,5 kg
-  near(out[0].base_qty, 0.5);
-
-  // selleri er holdt ude med vilje: piece_g = 40 g er én stang, ikke bundtet,
-  // og 300 kr/kg er ikke en butikspris. Den skal rapporteres, ikke skrives.
-  assert.ok(blocked.has('selleri'));
-  assert.equal(blocked.get('selleri').prices.length, 1);
-  near(blocked.get('selleri').prices[0], 300);
-});

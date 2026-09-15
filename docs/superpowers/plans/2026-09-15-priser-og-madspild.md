@@ -28,8 +28,8 @@ Det sidste tal er planens vigtigste. Den afledte bootstrap kan kun gætte en nor
 > uden essential-filteret: 11 af de 113 er salt, peber, olie og lignende, som aldrig skal
 > prissættes. Loftet er 102. Non-food tæller heller ikke med, så nævneren er **184, ikke 190**.
 >
-> Bootstrappen dækker i praksis **88 af 184 varer** med 583 rækker. **96 varer skal
-> indtastes manuelt.** Og det tal, der betyder mest for tilliden: **379 af de 583 rækker
+> Bootstrappen dækker i praksis **83 af 184 varer** med 548 rækker. **101 varer skal
+> indtastes manuelt.** Og det tal, der betyder mest for tilliden: **349 af de 548 rækker
 > hviler på én eneste observation.** To tredjedele af de afledte priser er altså ét
 > tilfældigt tilbud. Derfor findes `n_obs`, og derfor sorterer arbejdslisten efter den.
 
@@ -430,7 +430,7 @@ cp data.db data.db.pre-prices
 npm run prices:bootstrap
 ```
 
-Forventet: `varer med mindst én pris` lander omkring **88 af 184**. Ligger det væsentligt lavere, filtrerer `o.base_unit = i.base_unit` mere fra end ventet — undersøg hvilke varer der falder ud, før du går videre.
+Forventet: `varer med mindst én pris` lander omkring **83 af 184**. Ligger det væsentligt lavere, filtrerer `o.base_unit = i.base_unit` mere fra end ventet — undersøg hvilke varer der falder ud, før du går videre.
 
 Loftet er 102: kun så mange ikke-essentielle varer har overhovedet et tilbud bag sig. 9 af de
 resterende er non-food (vin, rengøring, toiletpapir, elektronik) og skal aldrig prissættes.
@@ -459,41 +459,37 @@ REMA's hakkede oksekød til 62,50 kr/kg mod Brugsens 122,50, og forskellen er st
 virkelige. Det kan ikke rettes med tilbudsdata alene, og det er derfor opgave 8 ikke må vælge
 kæde på 'derived'-priser uden at sige det højt.
 
-- [x] **Step 9: Hent de grøntsager, enhedsfiltret taber**
+- [ ] **Step 9: Lad være med at omregne stk-tilbud — og skriv hvorfor**
 
-`o.base_unit = i.base_unit` dropper 16 varer. 9 af dem er non-food og skal droppes. De
-øvrige 7 er grøntsager, hvor avisen skriver "1 stk" og varen regnes i kg:
-`blomkaal, broccoli, agurk, peberfrugt, squash, appelsin, selleri`. Stykvægten findes
-allerede som `items.piece_g` fra plan 1.
+> **Dette trin bad oprindeligt om det modsatte.** Det blev skrevet, rullet ud og rullet
+> tilbage igen, fordi implementeringen afdækkede noget, planen ikke vidste. Historikken
+> bliver stående, så ingen genopfinder idéen.
 
-Udvid SQL'ens `WHERE` til også at tage stk-tilbud på kg-varer med en kendt stykvægt, og
-regn dem om i samme åndedrag — både prisen og pakken, så parret bevares:
+Enhedsfiltret taber 7 grøntsager, hvor avisen skriver "1 stk" og varen regnes i kg, og det
+lød oplagt at hente dem ind med `items.piece_g`. Det må man ikke, og grunden står i
+`src/lib/units.js`: *"Typisk stykvægt når opskriften bare siger '1 løg'"*. `piece_g` er
+den **brugbare** vægt — det, der ender i gryden — ikke det, man lægger i kurven.
+Blomkål står til 500 g, mens et helt hoved vejer omkring et kilo. Porre står til 150 g
+mod en hel porres ~250 g.
 
-```sql
-           AND (o.base_unit = i.base_unit
-                OR (i.base_unit = 'kg' AND o.base_unit = 'stk' AND i.piece_g IS NOT NULL))
-```
+Omregner man alligevel, kommer `item_prices.unit_price` til at betyde to forskellige ting
+afhængigt af, hvor rækken kom fra: kroner pr. **købt** kilo for de 544 rækker fra rigtige
+kg-tilbud, og kroner pr. **brugbart** kilo for de 39 omregnede. De to kan ikke sammenlignes,
+og det er netop sammenligning på tværs af kæder, hele tabellen findes for. Målt på porre:
+93 kr/kg omregnet mod 25-40 kr/kg i virkeligheden.
 
-og i JavaScript, når rækken læses:
+**Derfor: ingen omregning.** De 7 grøntsager får ingen afledt pris og går i den manuelle
+bunke i opgave 2, hvor et menneske læser hyldeprisen. Færre og rigtige slår flere og
+skæve — samme regel som alle andre steder i denne plan. Fjern også
+`PIECE_CONVERSION_BLOCKED`: når ingen omregnes, er der intet at blokere.
 
-```js
-      // "1 stk blomkål 15 kr" er en kilopris, så snart man kender stykvægten.
-      // Pakken omregnes med, ellers kommer pris og pakke i forskellige enheder.
-      if (r.base_unit === 'stk' && item.base_unit === 'kg') {
-        const kg = item.piece_g / 1000;
-        r.unit_price = r.unit_price / kg;
-        r.base_qty   = r.base_qty * kg;
-        r.base_unit  = 'kg';
-      }
-```
+Forventet efter dette trin: **83 varer af 184**, og 101 i den manuelle bunke.
 
-**Kontrollér resultatet vare for vare, og stol ikke på, at `piece_g` er rigtig.** `selleri`
-står til 40 g — det er en stangselleri, ikke en knoldselleri, og en avispris på "1 stk
-selleri" er næsten altid knolden. Giver omregningen en kilopris, der ikke ligner en
-butikspris, skal varen ikke med, og `piece_g` skal rapporteres som forkert i stedet.
-`OUTLIER_FACTOR`-filtret er sidste værn, ikke første.
-
-Forventet efter dette trin: **88 varer** (5 af de 7 konverteres; `selleri` og `appelsin` afvises, se nedenfor).
+> **Til opgave 5, og det er en ægte mangel:** opskriftsmængder er i brugbare gram, mens
+> man køber hele grøntsager. "400 g broccoli" kræver et hoved på ~570 g. Prissættes der
+> på købt vægt uden et udbytte-forhold, bliver enhver grøntsagstung ret for billig.
+> Det hører hjemme i pakkeafrundingen, ikke i priskolonnen — afklares i opgave 5 med
+> rigtige tal i hånden.
 
 - [x] **Step 10: Bind de to farlige veje til testsuiten**
 
@@ -822,7 +818,7 @@ function main() {
 main();
 ```
 
-**Arbejdslisten skal sortere efter, hvor lidt vi ved.** 379 af de 583 afledte rækker hviler
+**Arbejdslisten skal sortere efter, hvor lidt vi ved.** 349 af de 548 afledte rækker hviler
 på én eneste observation — to tredjedele. En række med `source='derived'` og `n_obs = 1`
 er ét tilfældigt tilbud og næsten intet værd; en med `n_obs = 5` er et rimeligt gæt.
 Rækkefølgen er: helt manglende pris først, så `derived` med `n_obs = 1`, så øvrige
