@@ -35,8 +35,11 @@ const iso = (v) => (v ? new Date(v).toISOString() : null);
 function collectCatalog(db) {
   const chains = db.prepare('SELECT id, name, slug, logo, color, website FROM chains').all();
 
+  // Kolonnen hedder item_key lokalt, men Postgres-tabellen hedder den stadig
+  // taxonomy_key. Navnet oversættes her, ved kanten, så payloaden bliver ved
+  // med at passe til supabase/schema.sql.
   const products = db.prepare(`
-    SELECT id, slug, name, category, taxonomy_key, fat_grade, organic FROM products
+    SELECT id, slug, name, category, item_key AS taxonomy_key, fat_grade, organic FROM products
   `).all().map((p) => ({ ...p, organic: p.organic ? 1 : 0 }));
 
   const offers = db.prepare(`
@@ -141,7 +144,8 @@ function collectDeals(log) {
  */
 function collectPlanIndex(log) {
   const offerIndex = plans.chainOfferIndex().map((o) => ({
-    taxonomy_key: o.taxonomy_key,
+    // Samme oversættelse som for products: item_key lokalt, taxonomy_key i sky.
+    taxonomy_key: o.item_key,
     chain_id: o.chain_id,
     offer_id: o.offer_id,
     product_id: o.product_id,

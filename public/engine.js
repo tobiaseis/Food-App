@@ -176,6 +176,19 @@
     return true;
   }
 
+  // ── Normalpriser ───────────────────────────────────────────────────────────
+
+  // Hvor længe en normalpris må stå, før den skal ses efter. Tallene er
+  // spec afsnit 3.5: fresh svinger med sæson og leverandør, baseline gør
+  // ikke. Essentials får aldrig en pris, så de har heller ingen frist.
+  const PRICE_TTL_DAYS = { fresh: 90, baseline: 180, essential: null };
+
+  function validUntilFor(itemClass, observedAt = new Date()) {
+    const days = PRICE_TTL_DAYS[itemClass];
+    if (days == null) return null;
+    return new Date(observedAt.getTime() + days * 86400000).toISOString();
+  }
+
   // ── Scoring af én opskrift ─────────────────────────────────────────────────
 
   const round2 = (n) => Math.round(n * 100) / 100;
@@ -590,7 +603,8 @@
 
   return {
     assignRoles, scoreRecipe, buildPlan, shoppingList, qualifies,
-    seededNoise, isoWeek,
+    seededNoise, isoWeek, validUntilFor,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
+    PRICE_TTL_DAYS,
   };
 }));

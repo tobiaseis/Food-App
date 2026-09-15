@@ -108,7 +108,7 @@ function getBaseline(productId, baseUnit, { excludeOfferId = null } = {}) {
 function assessOffer(offerId) {
   const db = getDb();
   const offer = db.prepare(`
-    SELECT o.*, p.name AS product_name, p.taxonomy_key, c.name AS chain_name
+    SELECT o.*, p.name AS product_name, p.item_key AS taxonomy_key, c.name AS chain_name
       FROM offers o
       JOIN products p ON p.id = o.product_id
       JOIN chains c   ON c.id = o.chain_id

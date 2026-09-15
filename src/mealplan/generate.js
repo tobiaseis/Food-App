@@ -60,11 +60,11 @@ function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
   let sql = `
     SELECT o.id AS offer_id, o.product_id, o.chain_id, c.name AS chain, o.heading,
            o.price, o.pre_price, o.unit_price, o.base_unit, o.base_qty,
-           o.image, o.run_till, p.taxonomy_key, p.name AS product_name, p.category
+           o.image, o.run_till, p.item_key, p.name AS product_name, p.category
       FROM offers o
       JOIN products p ON p.id = o.product_id
       JOIN chains   c ON c.id = o.chain_id
-     WHERE p.taxonomy_key IS NOT NULL
+     WHERE p.item_key IS NOT NULL
        AND COALESCE(p.prepared, 0) = 0
        AND o.unit_price IS NOT NULL
        AND (o.run_from IS NULL OR o.run_from <= ?)
@@ -80,11 +80,11 @@ function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
   for (const row of db.prepare(sql).all(...params)) {
     // Drikkevarer, slik og non-food kan ikke bære en ret. De skal heller ikke
     // kunne tælle med som "råvare på tilbud".
-    if (!taxonomy.isMealCapable(row.taxonomy_key)) continue;
-    if (map.has(row.taxonomy_key)) continue;
+    if (!taxonomy.isMealCapable(row.item_key)) continue;
+    if (map.has(row.item_key)) continue;
 
     const baseline = getBaseline(row.product_id, row.base_unit);
-    map.set(row.taxonomy_key, { ...row, normal_unit_price: baseline?.median ?? null });
+    map.set(row.item_key, { ...row, normal_unit_price: baseline?.median ?? null });
   }
   return map;
 }
@@ -103,10 +103,10 @@ function chainOfferIndex({ at = new Date() } = {}) {
   const rows = db.prepare(`
     SELECT o.id AS offer_id, o.product_id, o.chain_id, o.heading,
            o.price, o.unit_price, o.base_unit, o.image, o.run_till,
-           p.taxonomy_key, p.name AS product_name
+           p.item_key, p.name AS product_name
       FROM offers o
       JOIN products p ON p.id = o.product_id
-     WHERE p.taxonomy_key IS NOT NULL
+     WHERE p.item_key IS NOT NULL
        AND COALESCE(p.prepared, 0) = 0
        AND o.unit_price IS NOT NULL
        AND (o.run_from IS NULL OR o.run_from <= ?)
@@ -117,8 +117,8 @@ function chainOfferIndex({ at = new Date() } = {}) {
   const baselines = new Map();
   const index = new Map();
   for (const row of rows) {
-    if (!taxonomy.isMealCapable(row.taxonomy_key)) continue;
-    const k = `${row.taxonomy_key}|${row.chain_id}`;
+    if (!taxonomy.isMealCapable(row.item_key)) continue;
+    const k = `${row.item_key}|${row.chain_id}`;
     if (index.has(k)) continue;                       // sorteret billigst først
 
     const bk = `${row.product_id}|${row.base_unit}`;
@@ -150,23 +150,23 @@ function normalPriceMap() {
   const since = new Date(Date.now() - HORIZON_DAYS * 86400000).toISOString();
 
   const rows = db.prepare(`
-    SELECT p.taxonomy_key, o.base_unit, o.chain_id, o.year, o.week,
+    SELECT p.item_key, o.base_unit, o.chain_id, o.year, o.week,
            MIN(o.unit_price) AS unit_price, p.name AS name
       FROM offers o
       JOIN products p ON p.id = o.product_id
-     WHERE p.taxonomy_key IS NOT NULL
+     WHERE p.item_key IS NOT NULL
        AND COALESCE(p.prepared, 0) = 0
        AND o.unit_price IS NOT NULL AND o.unit_price > 0
        AND o.base_unit IN ('kg', 'l')
        AND COALESCE(o.run_from, o.observed_at) >= ?
-     GROUP BY p.taxonomy_key, o.base_unit, o.chain_id, o.year, o.week
+     GROUP BY p.item_key, o.base_unit, o.chain_id, o.year, o.week
   `).all(since);
 
   const buckets = new Map();
   for (const r of rows) {
-    const k = `${r.taxonomy_key}|${r.base_unit}`;
+    const k = `${r.item_key}|${r.base_unit}`;
     if (!buckets.has(k)) {
-      buckets.set(k, { key: r.taxonomy_key, base_unit: r.base_unit, name: r.name, prices: [] });
+      buckets.set(k, { key: r.item_key, base_unit: r.base_unit, name: r.name, prices: [] });
     }
     buckets.get(k).prices.push(r.unit_price);
   }

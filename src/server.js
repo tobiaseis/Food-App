@@ -119,10 +119,13 @@ function queryOffers({ q, chain, category, sort = 'discount', limit = 60, offset
     discount: 'o.unit_price ASC NULLS LAST',
   }[sort] || 'o.unit_price ASC NULLS LAST';
 
+  // Kolonnen hedder item_key, men feltet hedder taxonomy_key hele vejen ud i
+  // browseren — det er samme form, som Supabase-vejen i public/data.js leverer,
+  // og de to skal blive ved med at være ét svar for frontenden.
   return db.prepare(`
     SELECT o.id, o.heading, o.description, o.price, o.pre_price, o.unit_price,
            o.base_unit, o.base_qty, o.image, o.run_from, o.run_till, o.page,
-           o.product_id, p.name AS product_name, p.category, p.taxonomy_key,
+           o.product_id, p.name AS product_name, p.category, p.item_key AS taxonomy_key,
            o.chain_id, c.name AS chain_name, c.color
       FROM offers o
       JOIN products p ON p.id = o.product_id
@@ -175,7 +178,7 @@ function topDeals({ limit = 24, chain = null, minSamples = 3 } = {}) {
     )
     SELECT o.id, o.heading, o.price, o.pre_price, o.unit_price, o.base_unit,
            o.image, o.run_till, o.product_id,
-           p.name AS product_name, p.category, p.taxonomy_key,
+           p.name AS product_name, p.category, p.item_key AS taxonomy_key,
            o.chain_id, c.name AS chain_name, c.color,
            s.avg_price, s.n AS samples,
            (s.avg_price - o.unit_price) / s.avg_price AS rough_discount

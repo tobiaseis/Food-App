@@ -103,7 +103,7 @@ function candidateOffers(watch, { at = new Date() } = {}) {
   const params = [now, now];
 
   if (watch.taxonomy_key) {
-    where.push('p.taxonomy_key = ?');
+    where.push('p.item_key = ?');
     params.push(watch.taxonomy_key);
   } else {
     // Fritekst: match på overskrift eller produktnavn
@@ -122,7 +122,7 @@ function candidateOffers(watch, { at = new Date() } = {}) {
   }
 
   return db.prepare(`
-    SELECT o.*, p.name AS product_name, p.taxonomy_key, c.name AS chain_name
+    SELECT o.*, p.name AS product_name, p.item_key AS taxonomy_key, c.name AS chain_name
       FROM offers o
       JOIN products p ON p.id = o.product_id
       JOIN chains   c ON c.id = o.chain_id

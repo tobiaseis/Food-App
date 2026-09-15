@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS products (
   slug             TEXT NOT NULL UNIQUE,  -- stabil nøgle, fx 'hakket-oksekoed'
   name             TEXT NOT NULL,         -- pænt visningsnavn
   category         TEXT,                  -- meat|fish|dairy|produce|pantry|...
-  taxonomy_key     TEXT,                  -- match i taxonomy.js, hvis fundet
+  item_key         TEXT,                  -- match i items(key), hvis fundet
   -- Varianter der systematisk flytter prisen, og som derfor er en del af
   -- vareidentiteten. Hakket oksekød 8-12 % og 15-20 % er ikke samme vare.
   fat_grade        TEXT,                  -- '3-7' | '8-12' | '15-20' | '22-26'
@@ -48,7 +48,11 @@ CREATE TABLE IF NOT EXISTS products (
   created_at       TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_products_cat ON products(category);
-CREATE INDEX IF NOT EXISTS idx_products_tax ON products(taxonomy_key);
+-- Navnet er fra dengang kolonnen hed taxonomy_key. Det beholdes, fordi denne
+-- fil køres FØR migrate(): på en base fra før omdøbningen findes item_key
+-- endnu ikke, og kun et navnesammenfald med det eksisterende indeks får
+-- IF NOT EXISTS til at springe sætningen over i stedet for at fejle.
+CREATE INDEX IF NOT EXISTS idx_products_tax ON products(item_key);
 
 -- Én observation af et tilbud. external_id gør ingest idempotent.
 CREATE TABLE IF NOT EXISTS offers (
@@ -138,6 +142,32 @@ CREATE TABLE IF NOT EXISTS item_synonyms (
   PRIMARY KEY (item_key, lang, text)
 );
 CREATE INDEX IF NOT EXISTS idx_item_syn_text ON item_synonyms(text);
+
+-- ── Normalpriser ────────────────────────────────────────────────────────────
+-- Hvad varen koster, når den IKKE er på tilbud. Findes ikke i tilbudsaviserne
+-- og er derfor det, hele denne plan handler om at skaffe.
+--
+-- Pakken står i rækken, ikke kun kr/kg. Uden den kan restvare-optimeringen
+-- ikke lade sig gøre, og en opskriftspris regnet som mængde × kr/kg er
+-- systematisk for lav: skal man bruge 0,5 kg kartofler, koster det hele posen.
+CREATE TABLE IF NOT EXISTS item_prices (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  item_key    TEXT NOT NULL REFERENCES items(key) ON DELETE CASCADE,
+  chain_id    TEXT NOT NULL REFERENCES chains(id),
+  pack_qty    REAL NOT NULL CHECK (pack_qty > 0),
+  pack_unit   TEXT NOT NULL CHECK (pack_unit IN ('kg','l','stk')),
+  pack_price  REAL NOT NULL CHECK (pack_price > 0),
+  -- kr pr. base_unit. Gemt frem for regnet, så SQL kan sortere på den.
+  unit_price  REAL NOT NULL,
+  source      TEXT NOT NULL CHECK (source IN ('manual','derived','api:rema')),
+  observed_at TEXT NOT NULL,
+  -- Kadencen som data, ikke som en kommentar i en cronjob: fresh 3 mdr,
+  -- baseline 6 mdr. Det er denne kolonne, arbejdslisten spørger til.
+  valid_until TEXT NOT NULL,
+  UNIQUE (item_key, chain_id, pack_qty, pack_unit)
+);
+CREATE INDEX IF NOT EXISTS idx_item_prices_item  ON item_prices(item_key, chain_id);
+CREATE INDEX IF NOT EXISTS idx_item_prices_stale ON item_prices(valid_until);
 
 -- ── Opskrifter ──────────────────────────────────────────────────────────────
 -- Vi gemmer FAKTA (titel, ingrediensliste, næring, link) og linker ud til

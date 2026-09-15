@@ -27,7 +27,7 @@ function recompute({ relinkProducts = true, log = console.log } = {}) {
   `);
   const updateProduct = db.prepare('UPDATE offers SET product_id = ? WHERE id = ?');
   const findProduct = db.prepare(`
-    SELECT id, name, category, taxonomy_key, fat_grade, organic, prepared
+    SELECT id, name, category, item_key, fat_grade, organic, prepared
       FROM products WHERE slug = ?
   `);
   // En vare, hvis slug er uændret, kan alligevel have fået ny betydning –
@@ -37,15 +37,15 @@ function recompute({ relinkProducts = true, log = console.log } = {}) {
   // Visningsnavnet røres ikke: to overskrifter kan skrive sig til samme slug
   // med hver sit navn, og så ville hver kørsel bytte om på dem.
   const refreshProduct = db.prepare(`
-    UPDATE products SET category = @category, taxonomy_key = @taxonomy_key,
+    UPDATE products SET category = @category, item_key = @item_key,
                         fat_grade = @fat_grade, organic = @organic, prepared = @prepared,
                         protein_per_100g = @protein_per_100g, kcal_per_100g = @kcal_per_100g
      WHERE id = @id
   `);
   const insertProduct = db.prepare(`
-    INSERT INTO products (slug, name, category, taxonomy_key, fat_grade, organic,
+    INSERT INTO products (slug, name, category, item_key, fat_grade, organic,
                           prepared, protein_per_100g, kcal_per_100g, created_at)
-    VALUES (@slug, @name, @category, @taxonomy_key, @fat_grade, @organic,
+    VALUES (@slug, @name, @category, @item_key, @fat_grade, @organic,
             @prepared, @protein_per_100g, @kcal_per_100g, @created_at)
   `);
 
@@ -72,12 +72,15 @@ function recompute({ relinkProducts = true, log = console.log } = {}) {
       }
 
       if (relinkProducts) {
-        const identity = norm.productIdentity(r.heading, r.description);
+        // productIdentity() hedder feltet taxonomy_key endnu; kolonnen hedder
+        // item_key. Oversættelsen sker her, ét sted, frem for i SQL'en.
+        const identity = { ...norm.productIdentity(r.heading, r.description) };
+        identity.item_key = identity.taxonomy_key;
         let prod = findProduct.get(identity.slug);
         if (!prod) {
           insertProduct.run({ ...identity, created_at: new Date().toISOString() });
           prod = findProduct.get(identity.slug);
-        } else if (prod.taxonomy_key !== identity.taxonomy_key
+        } else if (prod.item_key !== identity.item_key
                 || (prod.prepared || 0) !== identity.prepared
                 || prod.category !== identity.category) {
           refreshProduct.run({ ...identity, id: prod.id });

@@ -36,6 +36,7 @@ function migrate(db) {
     ['products', 'fat_grade', 'TEXT'],
     ['products', 'organic', 'INTEGER DEFAULT 0'],
     ['products', 'prepared', 'INTEGER DEFAULT 0'],
+    ['products', 'item_key', 'TEXT'],
     ['recipe_ingredients', 'item_key', 'TEXT'],
     ['recipe_ingredients', 'amount',   'REAL'],
     ['recipe_ingredients', 'optional', 'INTEGER DEFAULT 0'],
@@ -61,6 +62,25 @@ function migrate(db) {
       UPDATE recipe_ingredients SET item_key = taxonomy_key
        WHERE item_key IS NULL AND taxonomy_key IS NOT NULL
     `);
+  }
+
+  // products.taxonomy_key blev ikke omdøbt i plan 1. Samme information, to
+  // navne, og prisplanen joiner offers -> products -> items igen og igen.
+  //
+  // Indekset skal væk FØRST og lægges på igen bagefter: SQLite nægter at
+  // droppe en kolonne, der stadig er indekseret — nøjagtig samme fælde som
+  // idx_ri_tax nedenfor. Indekset beholder sit gamle NAVN med vilje: schema.sql
+  // køres før migrate() ved hver åbning, og et nyt navn dér ville forsøge at
+  // indeksere item_key på en base, hvor kolonnen endnu ikke er lagt på.
+  {
+    const cols = db.prepare('PRAGMA table_info(products)').all().map((c) => c.name);
+    if (cols.includes('taxonomy_key')) {
+      db.exec(`UPDATE products SET item_key = taxonomy_key
+                WHERE item_key IS NULL AND taxonomy_key IS NOT NULL`);
+      db.exec('DROP INDEX IF EXISTS idx_products_tax');
+      db.exec('ALTER TABLE products DROP COLUMN taxonomy_key');
+      db.exec('CREATE INDEX IF NOT EXISTS idx_products_tax ON products(item_key)');
+    }
   }
 
   // Informationen bor nu i items.class og i amount. Droppes til sidst, så en

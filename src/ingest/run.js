@@ -21,9 +21,9 @@ const norm = require('../lib/normalize');
 function makeProductResolver(db) {
   const selectBySlug = db.prepare('SELECT id FROM products WHERE slug = ?');
   const insert = db.prepare(`
-    INSERT INTO products (slug, name, category, taxonomy_key, fat_grade, organic,
+    INSERT INTO products (slug, name, category, item_key, fat_grade, organic,
                           prepared, protein_per_100g, kcal_per_100g, created_at)
-    VALUES (@slug, @name, @category, @taxonomy_key, @fat_grade, @organic,
+    VALUES (@slug, @name, @category, @item_key, @fat_grade, @organic,
             @prepared, @protein_per_100g, @kcal_per_100g, @created_at)
   `);
   const cache = new Map();
@@ -32,7 +32,10 @@ function makeProductResolver(db) {
     if (cache.has(identity.slug)) return cache.get(identity.slug);
     let row = selectBySlug.get(identity.slug);
     if (!row) {
-      insert.run({ ...identity, created_at: new Date().toISOString() });
+      // productIdentity() hedder feltet taxonomy_key endnu; kolonnen hedder
+      // item_key. Oversættelsen sker her, ét sted, frem for i SQL'en.
+      insert.run({ ...identity, item_key: identity.taxonomy_key,
+                   created_at: new Date().toISOString() });
       row = selectBySlug.get(identity.slug);
     }
     cache.set(identity.slug, row.id);
