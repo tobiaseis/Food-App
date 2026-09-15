@@ -24,10 +24,14 @@
 
 Det sidste tal er planens vigtigste. Den afledte bootstrap kan kun gætte en normalpris for varer, der har været på tilbud — **88 varer har ingen historik og skal indtastes fra dag ét.**
 
-> **Rettet efter opgave 1.** Tallet stod oprindeligt som 113. Det var talt uden at filtrere
-> essentials fra: 11 af de 113 er salt, peber, olie og lignende, som aldrig skal prissættes.
-> Efter enhedsfiltret lander bootstrappen på 85 varer, og med stykvægts-konverteringen
-> omkring 92. Resten — ca. 98 varer — skal indtastes manuelt i opgave 2.
+> **Rettet efter opgave 1, med målte tal.** Tallet stod oprindeligt som 113. Det var talt
+> uden essential-filteret: 11 af de 113 er salt, peber, olie og lignende, som aldrig skal
+> prissættes. Loftet er 102. Non-food tæller heller ikke med, så nævneren er **184, ikke 190**.
+>
+> Bootstrappen dækker i praksis **88 af 184 varer** med 583 rækker. **96 varer skal
+> indtastes manuelt.** Og det tal, der betyder mest for tilliden: **379 af de 583 rækker
+> hviler på én eneste observation.** To tredjedele af de afledte priser er altså ét
+> tilfældigt tilbud. Derfor findes `n_obs`, og derfor sorterer arbejdslisten efter den.
 
 Og API-undersøgelsen flyttede grundlaget: designet regnede med 8 af 14 kæder automatisk, svaret blev **1 af 14**. Kun REMA 1000. Derfor vægter denne plan CSV-importøren tungere end API-klienten, og API-klienten er én opgave, ikke tre.
 
@@ -426,7 +430,7 @@ cp data.db data.db.pre-prices
 npm run prices:bootstrap
 ```
 
-Forventet: `varer med mindst én pris` lander omkring **92 af 190**. Ligger det væsentligt lavere, filtrerer `o.base_unit = i.base_unit` mere fra end ventet — undersøg hvilke varer der falder ud, før du går videre.
+Forventet: `varer med mindst én pris` lander omkring **88 af 184**. Ligger det væsentligt lavere, filtrerer `o.base_unit = i.base_unit` mere fra end ventet — undersøg hvilke varer der falder ud, før du går videre.
 
 Loftet er 102: kun så mange ikke-essentielle varer har overhovedet et tilbud bag sig. 9 af de
 resterende er non-food (vin, rengøring, toiletpapir, elektronik) og skal aldrig prissættes.
@@ -489,7 +493,7 @@ selleri" er næsten altid knolden. Giver omregningen en kilopris, der ikke ligne
 butikspris, skal varen ikke med, og `piece_g` skal rapporteres som forkert i stedet.
 `OUTLIER_FACTOR`-filtret er sidste værn, ikke første.
 
-Forventet efter dette trin: **omkring 92 varer**.
+Forventet efter dette trin: **88 varer** (5 af de 7 konverteres; `selleri` og `appelsin` afvises, se nedenfor).
 
 - [x] **Step 10: Bind de to farlige veje til testsuiten**
 
@@ -715,6 +719,53 @@ module.exports = { parsePriceRow, parseCsv };
 
 Bemærk `if (require.main === module)`: testen indlæser filen for at få fat i `parsePriceRow`, og må ikke komme til at køre importen som bivirkning.
 
+- [ ] **Step 4b: `isPlausiblePrice` i `engine.js` — og afskaf blokeringslisten**
+
+Opgave 1 efterlod et hul, den ikke selv kunne lukke. Outlier-filtret måler en vare mod
+dens EGEN median på tværs af kæder, og det er blindt over for en vare, hvis observationer
+alle er forkerte. Den levende sag: `appelsin`s eneste stk-tilbud er **"Orange ilddæmon",
+1999,20 kr hos Bilka** — et stykke legetøj. Med én observation ER medianen selve
+fejlen, og uden en håndskrevet blokering ville der stå  14.280 kr/kg.
+
+En vare kan kun måles mod noget, der kommer udefra. Mad har kendte prisintervaller, og
+det er den viden, der mangler. Den hører hjemme i `engine.js` af samme grund som resten
+af prisreglerne: tre skrivere skal være enige om den — bootstrappen, denne importør og
+REMA-klienten i opgave 3 — og en tastefejl på 1500 i stedet for 15,00 skal afvises alle
+tre steder.
+
+```js
+  // Hvad mad kan koste pr. kg/l/stk i en dansk butik. Intervallerne er vide med
+  // vilje: de skal fange en tastefejl og en fejlkobling, ikke en dyr økovare.
+  // Kilden til en pris uden for båndet er næsten altid, at tilbuddet hører til
+  // noget andet end varen — "Apple iPad" på æble, ansigtscreme på fløde.
+  const PRICE_BAND = {
+    veg:    [2, 150],   fruit:  [2, 200],   meat:  [20, 600],
+    poultry:[20, 300],  fish:   [20, 700],  dairy: [5, 200],
+    cheese: [30, 500],  eggs:   [10, 120],  grain: [5, 150],
+    legume: [5, 200],   bakery: [5, 200],   pantry:[3, 400],
+    drink:  [2, 200],   snack:  [10, 400],
+  };
+
+  function isPlausiblePrice(category, unitPrice, baseUnit) {
+    const band = PRICE_BAND[category];
+    if (!band || !(unitPrice > 0)) return !!band === false ? null : false;
+    // 'stk' siger intet om mængden, så båndet gælder kun målte enheder.
+    if (baseUnit === 'stk') return unitPrice <= band[1];
+    return unitPrice >= band[0] && unitPrice <= band[1];
+  }
+```
+
+Returnerer `null` for en ukendt kategori — så kan en kalder skelne "ved det ikke" fra
+"nej". Eksportér både funktionen og `PRICE_BAND`.
+
+Brug den tre steder: importøren afviser rækken med en tydelig fejl, `bootstrap-prices.js`
+erstatter sin `PIECE_CONVERSION_BLOCKED`-liste med den, og opgave 3 kalder den, før den
+skriver. **Fjern blokeringslisten helt** — to varer navngivet i kode er en lap, og den
+næste vare, der går galt, står der ikke.
+
+Test at `appelsin` (fruit) afvises ved 14.280 kr/kg, at `selleri` (veg) afvises ved
+250 kr/kg, og at en dyr, men ægte vare — oksemørbrad omkring 400 kr/kg — stadig går igennem.
+
 - [ ] **Step 5: Skriv arbejdslisten**
 
 ```js
@@ -770,6 +821,14 @@ function main() {
 
 main();
 ```
+
+**Arbejdslisten skal sortere efter, hvor lidt vi ved.** 379 af de 583 afledte rækker hviler
+på én eneste observation — to tredjedele. En række med `source='derived'` og `n_obs = 1`
+er ét tilfældigt tilbud og næsten intet værd; en med `n_obs = 5` er et rimeligt gæt.
+Rækkefølgen er: helt manglende pris først, så `derived` med `n_obs = 1`, så øvrige
+`derived`, så udløbne `manual`. Og tæl kun varer, der kan stå i en opskrift —
+`class <> 'essential' AND category <> 'nonfood'` — ellers beder listen om priser på
+toiletpapir og elektronik.
 
 - [ ] **Step 6: Tilføj scripts, kør, commit**
 
