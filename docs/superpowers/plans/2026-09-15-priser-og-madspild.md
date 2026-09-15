@@ -20,9 +20,14 @@
 | Kæder | 14 |
 | Prissætbare opskrifter | 1.546 af 2.224 |
 | Tilbud med pakkestørrelse | 5.195 af 5.195 |
-| **Varer med tilbudshistorik** | **113 af 190** |
+| **Varer med tilbudshistorik** | **102 af 190** |
 
-Det sidste tal er planens vigtigste. Den afledte bootstrap kan kun gætte en normalpris for varer, der har været på tilbud — **77 varer har ingen historik og skal indtastes fra dag ét.**
+Det sidste tal er planens vigtigste. Den afledte bootstrap kan kun gætte en normalpris for varer, der har været på tilbud — **88 varer har ingen historik og skal indtastes fra dag ét.**
+
+> **Rettet efter opgave 1.** Tallet stod oprindeligt som 113. Det var talt uden at filtrere
+> essentials fra: 11 af de 113 er salt, peber, olie og lignende, som aldrig skal prissættes.
+> Efter enhedsfiltret lander bootstrappen på 85 varer, og med stykvægts-konverteringen
+> omkring 92. Resten — ca. 98 varer — skal indtastes manuelt i opgave 2.
 
 Og API-undersøgelsen flyttede grundlaget: designet regnede med 8 af 14 kæder automatisk, svaret blev **1 af 14**. Kun REMA 1000. Derfor vægter denne plan CSV-importøren tungere end API-klienten, og API-klienten er én opgave, ikke tre.
 
@@ -93,12 +98,24 @@ og derefter, før drop-løkken:
     if (cols.includes('taxonomy_key')) {
       db.exec(`UPDATE products SET item_key = taxonomy_key
                 WHERE item_key IS NULL AND taxonomy_key IS NOT NULL`);
+      // SQLite nægter at droppe en indekseret kolonne. Indekset beholder sit
+      // NAVN og flytter til item_key: skifter navnet, vil schema.sql forsøge at
+      // oprette det på en base, hvor item_key endnu ikke findes, og så kan
+      // basen ikke åbnes. Samme fælde er dokumenteret for idx_ri_tax.
+      db.exec('DROP INDEX IF EXISTS idx_products_tax');
       db.exec('ALTER TABLE products DROP COLUMN taxonomy_key');
+      db.exec('CREATE INDEX IF NOT EXISTS idx_products_tax ON products(item_key)');
     }
   }
 ```
 
-Ret derefter de kaldssteder, grep'et finder:
+**`src/db/schema.sql` skal med i samme ombæring.** Den deklarerer `taxonomy_key` på
+`products` og køres ved HVER åbning, før `migrate()`. Står den uændret, fødes en frisk
+base med en kolonne, `migrate()` straks dropper igen. Behold indeksnavnet `idx_products_tax`.
+
+Ret derefter de kaldssteder, grep'et finder — og vær opmærksom på, at grep'et **ikke**
+fanger `SELECT * FROM products` (`src/server.js`). Den slags skal findes i hånden.
+Ved kanten mod browseren og Supabase beholdes det gamle navn med `item_key AS taxonomy_key`:
 
 ```bash
 grep -rn "p\.taxonomy_key\|products.*taxonomy_key" src/ scripts/ test/ --include=*.js
@@ -125,6 +142,10 @@ CREATE TABLE IF NOT EXISTS item_prices (
   pack_price  REAL NOT NULL CHECK (pack_price > 0),
   -- kr pr. base_unit. Gemt frem for regnet, så SQL kan sortere på den.
   unit_price  REAL NOT NULL,
+  -- Hvor mange ugentlige observationer et 'derived'-gæt hviler på. En række med
+  -- n_obs = 1 er ét enkelt tilbud og næsten intet værd; arbejdslisten sorterer
+  -- efter den. 'manual' og 'api:rema' sætter 0: de er ikke gættet frem.
+  n_obs       INTEGER NOT NULL DEFAULT 0,
   source      TEXT NOT NULL CHECK (source IN ('manual','derived','api:rema')),
   observed_at TEXT NOT NULL,
   -- Kadencen som data, ikke som en kommentar i en cronjob: fresh 3 mdr,
@@ -207,8 +228,8 @@ Tilføj `validUntilFor` og `PRICE_TTL_DAYS` til returobjektet nederst i filen.
  * Det er ikke rigtigt — det er et udgangspunkt, der er bedre end ingenting,
  * og det markeres som 'derived', så arbejdslisten sætter det forrest.
  *
- * Kun 113 af de 190 varer, der skal prissættes, har overhovedet historik.
- * De øvrige 77 skal indtastes. Scriptet siger hvor mange.
+ * Kun 102 af de 190 varer, der skal prissættes, har overhovedet historik.
+ * De øvrige skal indtastes. Scriptet siger hvor mange.
  *
  *   npm run prices:bootstrap
  */
@@ -219,15 +240,24 @@ const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
 
 // Tilbud ældre end dette siger intet om prisen i dag.
 const HORIZON_DAYS = 400;
-// Den højeste observation kan være en fejllæsning. 90-percentilen er robust
-// mod den ene udreißer og stadig tæt på "mindst rabatterede uge".
-const PERCENTILE = 0.9;
 
-function percentile(sorted, p) {
+// En vare har højst 5 ugentlige observationer i denne base. Ved den slags
+// stikprøvestørrelser kan INGEN percentil udelukke den øverste værdi:
+// Math.floor(n * 0.9) giver n-1 for ethvert n <= 10. Derfor er reglen skrevet
+// som det, den faktisk er — næsthøjeste når der er nok at vælge imellem,
+// ellers højeste — i stedet for en percentil, der lover robusthed, den ikke har.
+function leastDiscounted(sorted) {
   if (!sorted.length) return null;
-  const i = Math.min(sorted.length - 1, Math.floor(sorted.length * p));
-  return sorted[i];
+  return sorted.length >= 3 ? sorted[sorted.length - 2] : sorted[sorted.length - 1];
 }
+
+// Tilbudsrækkerne indeholder fejlkoblinger: "Cerave moisturising lotion eller
+// cream" hænger på produktet Fløde, "Apple Macbook Pro" på æble. 39 af 2.333
+// tilbud ligger over 5 gange medianen for deres egen vare. En forkert pris er
+// værre end en manglende: den manglende gør opskriften uprissaetbar og synlig,
+// den forkerte gør den forkert og tavs. Derfor kasseres de — og de PRINTES,
+// så taksonomifejlen bag dem ikke forsvinder ned i et filter.
+const OUTLIER_FACTOR = 5;
 
 function main() {
   const db = getDb();
@@ -235,32 +265,65 @@ function main() {
 
   // Én observation pr. (vare, kæde, uge): den samme vare optræder flere gange
   // i samme avis, og uden grupperingen vægter en travl uge tungere.
+  //
+  // Prisen og pakken SKAL komme fra samme tilbud. To uafhængige MIN()-aggregater
+  // parrer den billigste pris med den mindste pakke, og de to stammer fra hver
+  // sin række: 171 af 786 ugegrupper gav en kombination, der ikke findes i nogen
+  // butik. row_number() vælger én række og tager begge værdier fra den.
   const rows = db.prepare(`
-    SELECT p.item_key, o.chain_id, o.base_unit, o.year, o.week,
-           MIN(o.unit_price) AS unit_price,
-           MIN(o.base_qty)   AS base_qty
-      FROM offers o
-      JOIN products p ON p.id = o.product_id
-      JOIN items    i ON i.key = p.item_key
-     WHERE p.item_key IS NOT NULL
-       AND i.class <> 'essential'
-       AND COALESCE(p.prepared, 0) = 0
-       AND o.unit_price IS NOT NULL AND o.unit_price > 0
-       AND o.base_qty  IS NOT NULL AND o.base_qty  > 0
-       AND o.base_unit = i.base_unit
-       AND COALESCE(o.run_from, o.observed_at) >= ?
-     GROUP BY p.item_key, o.chain_id, o.base_unit, o.year, o.week
+    SELECT item_key, chain_id, base_unit, year, week, unit_price, base_qty
+      FROM (
+        SELECT p.item_key, o.chain_id, o.base_unit, o.year, o.week,
+               o.unit_price, o.base_qty,
+               row_number() OVER (
+                 PARTITION BY p.item_key, o.chain_id, o.base_unit, o.year, o.week
+                 ORDER BY o.unit_price ASC, o.id ASC
+               ) AS rn
+          FROM offers o
+          JOIN products p ON p.id = o.product_id
+          JOIN items    i ON i.key = p.item_key
+         WHERE p.item_key IS NOT NULL
+           AND i.class <> 'essential'
+           AND i.category <> 'nonfood'
+           AND COALESCE(p.prepared, 0) = 0
+           AND o.unit_price IS NOT NULL AND o.unit_price > 0
+           AND o.base_qty  IS NOT NULL AND o.base_qty  > 0
+           AND o.base_unit = i.base_unit
+           AND COALESCE(o.run_from, o.observed_at) >= ?
+      )
+     WHERE rn = 1
   `).all(since);
 
-  const buckets = new Map();
+  // Kassér fejlkoblingerne, før de bliver til priser. Medianen regnes pr. vare
+  // på tværs af kæder, så grænsen kalibrerer sig selv i stedet for at være et
+  // tal, nogen har gættet.
+  const perItem = new Map();
   for (const r of rows) {
+    if (!perItem.has(r.item_key)) perItem.set(r.item_key, []);
+    perItem.get(r.item_key).push(r.unit_price);
+  }
+  const medians = new Map();
+  for (const [k, v] of perItem) {
+    const s2 = [...v].sort((a, z) => a - z);
+    medians.set(k, s2[Math.floor(s2.length / 2)]);
+  }
+  const rejected = [];
+  const kept = rows.filter((r) => {
+    const med = medians.get(r.item_key);
+    if (med && r.unit_price > med * OUTLIER_FACTOR) { rejected.push({ ...r, med }); return false; }
+    return true;
+  });
+
+  const buckets = new Map();
+  for (const r of kept) {
     const k = `${r.item_key}|${r.chain_id}`;
     if (!buckets.has(k)) {
       buckets.set(k, { item_key: r.item_key, chain_id: r.chain_id,
-                       base_unit: r.base_unit, prices: [], packs: [] });
+                       base_unit: r.base_unit, obs: [] });
     }
-    buckets.get(k).prices.push(r.unit_price);
-    buckets.get(k).packs.push(r.base_qty);
+    // Pris og pakke bliver i par. Bucket'en må ikke blande dem sammen igen,
+    // efter SQL'en netop har holdt dem sammen.
+    buckets.get(k).obs.push({ price: r.unit_price, pack: r.base_qty });
   }
 
   const items = new Map(db.prepare('SELECT key, class, base_unit FROM items').all()
@@ -268,15 +331,24 @@ function main() {
 
   const ins = db.prepare(`
     INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit,
-                             pack_price, unit_price, source, observed_at, valid_until)
+                             pack_price, unit_price, n_obs, source, observed_at, valid_until)
     VALUES (@item_key, @chain_id, @pack_qty, @pack_unit,
-            @pack_price, @unit_price, 'derived', @observed_at, @valid_until)
+            @pack_price, @unit_price, @n_obs, 'derived', @observed_at, @valid_until)
     ON CONFLICT(item_key, chain_id, pack_qty, pack_unit) DO UPDATE SET
       pack_price = excluded.pack_price, unit_price = excluded.unit_price,
+      n_obs = excluded.n_obs,
       observed_at = excluded.observed_at, valid_until = excluded.valid_until
      -- Et gæt må aldrig overskrive en rigtig pris.
      WHERE item_prices.source = 'derived'
   `);
+
+  // Den modale pakke flytter sig, når nye tilbud kommer ind (målt: 17 af 548
+  // bøtter skifter pakke mellem et 400- og et 120-dages vindue). Uden denne
+  // sletning bliver den gamle række liggende for evigt ved siden af den nye,
+  // fordi pakken indgår i nøglen. Kun kædens egne gæt ryddes — 'manual' og
+  // 'api:rema' røres ikke.
+  const clearDerived = db.prepare(
+    "DELETE FROM item_prices WHERE item_key = ? AND chain_id = ? AND source = 'derived'");
 
   const now = new Date();
   let written = 0;
@@ -284,34 +356,58 @@ function main() {
     for (const b of buckets.values()) {
       const item = items.get(b.item_key);
       if (!item) continue;
-      const unitPrice = percentile([...b.prices].sort((a, z) => a - z), PERCENTILE);
-      // Den hyppigste pakkestørrelse i kæden er den, man reelt møder.
-      const counts = new Map();
-      for (const q of b.packs) counts.set(q, (counts.get(q) || 0) + 1);
-      const packQty = [...counts.entries()].sort((a, z) => z[1] - a[1])[0][0];
-      if (!unitPrice || !packQty) continue;
+      // Vælg observationen, ikke tallet: den uge, hvor rabatten var mindst,
+      // og den pakke, DEN uge blev solgt i.
+      const sorted = [...b.obs].sort((a, z) => a.price - z.price);
+      const pick = leastDiscounted(sorted);
+      if (!pick || !pick.price || !pick.pack) continue;
 
-      ins.run({
+      clearDerived.run(b.item_key, b.chain_id);
+      written += ins.run({
         item_key: b.item_key, chain_id: b.chain_id,
-        pack_qty: packQty, pack_unit: b.base_unit,
-        pack_price: Math.round(unitPrice * packQty * 100) / 100,
-        unit_price: Math.round(unitPrice * 100) / 100,
+        pack_qty: pick.pack, pack_unit: b.base_unit,
+        pack_price: Math.round(pick.price * pick.pack * 100) / 100,
+        unit_price: Math.round(pick.price * 100) / 100,
+        n_obs: b.obs.length,
         observed_at: now.toISOString(),
         valid_until: engine.validUntilFor(item.class, now),
-      });
-      written++;
+      }).changes;
     }
   });
   run();
 
-  const priceable = db.prepare("SELECT count(*) c FROM items WHERE class <> 'essential'").get().c;
+  const priceable = db.prepare(
+    "SELECT count(*) c FROM items WHERE class <> 'essential' AND category <> 'nonfood'").get().c;
   const covered = db.prepare('SELECT count(DISTINCT item_key) c FROM item_prices').get().c;
   console.log(`rækker skrevet: ${written}`);
   console.log(`varer med mindst én pris: ${covered} af ${priceable}`);
   console.log(`mangler helt: ${priceable - covered} — de skal i data/item_prices.csv`);
+  console.log(`bygget på én enkelt observation: ${
+    db.prepare("SELECT count(*) c FROM item_prices WHERE source='derived' AND n_obs = 1").get().c
+  } rækker — dem skal arbejdslisten tage først`);
+
+  // Det kasserede printes. Hver linje er en fejlkobling i taksonomien, og den
+  // findes stadig i tilbudslisten, brugeren ser — filteret her skjuler den kun
+  // for priserne.
+  if (rejected.length) {
+    console.log(`
+kasseret som fejlkobling (> ${OUTLIER_FACTOR}x medianen for varen):`);
+    for (const r of rejected.sort((a, z) => z.unit_price / z.med - a.unit_price / a.med)) {
+      console.log(`  ${r.item_key.padEnd(16)} ${String(Math.round(r.unit_price)).padStart(6)}/${r.base_unit}` +
+                  ` (median ${Math.round(r.med)})`);
+    }
+  }
+  db.close();
 }
 
-main();
+try {
+  main();
+} catch (err) {
+  // Scriptet skriver som standard i data.db. En rå stacktrace midt i en
+  // transaktion siger ikke, om noget nåede at blive skrevet.
+  console.error('bootstrap afbrudt:', err.message);
+  process.exitCode = 1;
+}
 ```
 
 - [ ] **Step 7: Tilføj scriptet og kør det mod en kopi**
@@ -325,7 +421,10 @@ cp data.db data.db.pre-prices
 npm run prices:bootstrap
 ```
 
-Forventet: `varer med mindst én pris` lander omkring **113 af 190**. Ligger det væsentligt lavere, filtrerer `o.base_unit = i.base_unit` mere fra end ventet — undersøg hvilke varer der falder ud, før du går videre.
+Forventet: `varer med mindst én pris` lander omkring **92 af 190**. Ligger det væsentligt lavere, filtrerer `o.base_unit = i.base_unit` mere fra end ventet — undersøg hvilke varer der falder ud, før du går videre.
+
+Loftet er 102: kun så mange ikke-essentielle varer har overhovedet et tilbud bag sig. 9 af de
+resterende er non-food (vin, rengøring, toiletpapir, elektronik) og skal aldrig prissættes.
 
 - [ ] **Step 8: Stikprøve mod virkeligheden**
 
@@ -337,9 +436,78 @@ for(const r of db.prepare(\"select ip.item_key, c.name chain, ip.pack_qty, ip.pa
 "
 ```
 
-Tallene skal ligne butikspriser. Kartofler under 5 kr/kg eller hakket oksekød under 40 kr/kg betyder, at percentilen rammer for lavt — rapportér det frem for at justere `PERCENTILE` i blinde.
+Tallene skal ligne butikspriser. Kartofler under 5 kr/kg eller hakket oksekød under 40 kr/kg
+betyder, at estimatoren rammer for lavt — rapportér det frem for at justere `OUTLIER_FACTOR`
+eller `leastDiscounted` i blinde.
 
-- [ ] **Step 9: Kør suiten og commit**
+**Læs også listen over kasserede linjer, scriptet printer til sidst.** Hver af dem er en
+fejlkobling mellem et tilbud og en vare. De er filtreret væk fra priserne, men de står stadig
+i den tilbudsliste, brugeren ser.
+
+En ting må stå klart om det, der bliver tilbage: den afledte pris er bygget af TILBUDSpriser.
+En kæde, der rabatterer dybt og ofte, får derfor systematisk for lav normalpris — målt står
+REMA's hakkede oksekød til 62,50 kr/kg mod Brugsens 122,50, og forskellen er større end den
+virkelige. Det kan ikke rettes med tilbudsdata alene, og det er derfor opgave 8 ikke må vælge
+kæde på 'derived'-priser uden at sige det højt.
+
+- [ ] **Step 9: Hent de grøntsager, enhedsfiltret taber**
+
+`o.base_unit = i.base_unit` dropper 16 varer. 9 af dem er non-food og skal droppes. De
+øvrige 7 er grøntsager, hvor avisen skriver "1 stk" og varen regnes i kg:
+`blomkaal, broccoli, agurk, peberfrugt, squash, appelsin, selleri`. Stykvægten findes
+allerede som `items.piece_g` fra plan 1.
+
+Udvid SQL'ens `WHERE` til også at tage stk-tilbud på kg-varer med en kendt stykvægt, og
+regn dem om i samme åndedrag — både prisen og pakken, så parret bevares:
+
+```sql
+           AND (o.base_unit = i.base_unit
+                OR (i.base_unit = 'kg' AND o.base_unit = 'stk' AND i.piece_g IS NOT NULL))
+```
+
+og i JavaScript, når rækken læses:
+
+```js
+      // "1 stk blomkål 15 kr" er en kilopris, så snart man kender stykvægten.
+      // Pakken omregnes med, ellers kommer pris og pakke i forskellige enheder.
+      if (r.base_unit === 'stk' && item.base_unit === 'kg') {
+        const kg = item.piece_g / 1000;
+        r.unit_price = r.unit_price / kg;
+        r.base_qty   = r.base_qty * kg;
+        r.base_unit  = 'kg';
+      }
+```
+
+**Kontrollér resultatet vare for vare, og stol ikke på, at `piece_g` er rigtig.** `selleri`
+står til 40 g — det er en stangselleri, ikke en knoldselleri, og en avispris på "1 stk
+selleri" er næsten altid knolden. Giver omregningen en kilopris, der ikke ligner en
+butikspris, skal varen ikke med, og `piece_g` skal rapporteres som forkert i stedet.
+`OUTLIER_FACTOR`-filtret er sidste værn, ikke første.
+
+Forventet efter dette trin: **omkring 92 varer**.
+
+- [ ] **Step 10: Bind de to farlige veje til testsuiten**
+
+Hverken omdøbningen i `migrate()` eller `bootstrap-prices.js` kører nogensinde i CI:
+`pretest` bygger `test.db` frisk fra `schema.sql`, hvor `taxonomy_key` aldrig har eksisteret.
+I plan 1 var det netop en utestet migrationsvej, der slettede 26.242 nøgler.
+
+I `test/prices.test.js`:
+
+1. Byg en midlertidig base i `os.tmpdir()`, opret `products` med den GAMLE kolonne
+   `taxonomy_key` og en række med en nøgle i, sæt `DB_PATH` til den, åbn via `getDb()`,
+   og fastslå: kolonnen hedder nu `item_key`, værdien er bevaret, indekset findes, og
+   en anden åbning ændrer intet.
+2. Test `leastDiscounted` direkte: `[1,2,3]` → `2` (næsthøjeste), `[1,2]` → `2`
+   (højeste, for få til at kassere noget), `[]` → `null`.
+3. Test outlier-filtret på en håndskrevet rækkeliste: en vare med priser
+   `[10, 11, 12, 300]` skal kassere de 300 og vælge 11.
+
+Punkt 2 og 3 kræver, at `leastDiscounted` og filterfunktionen kan indlæses. Læg dem i
+`module.exports` i `scripts/bootstrap-prices.js`, og lad `main()` køre som nu — scriptet
+må ikke køre ved `require`. Brug `require.main === module`.
+
+- [ ] **Step 11: Kør suiten og commit**
 
 ```bash
 npm test
