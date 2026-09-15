@@ -207,8 +207,14 @@
   const PRICE_BAND = {
     veg:    [2, 150],   fruit:  [2, 200],   meat:  [20, 600],
     poultry:[20, 300],  fish:   [20, 700],  dairy: [5, 200],
-    cheese: [30, 500],  eggs:   [10, 120],  grain: [5, 150],
-    legume: [5, 200],   bakery: [5, 200],   pantry:[3, 400],
+    // eggs og bakery rummer BÅDE stk- og kg-varer (æggeblomme og æggehvide
+    // sælges pr. kg), så kg-båndet her skal være rummeligt nok til dem. Loftet
+    // pr. stk er en helt anden størrelsesorden og står i PRICE_BAND_STK.
+    cheese: [30, 500],  eggs:   [5, 200],   legume: [5, 200],
+    // grain-gulvet var 5, og den billigste ÆGTE korn-observation i basen er
+    // præcis 5,00 kr/kg (MADVÆRKET havregryn) — gulvet sad oven på en rigtig
+    // pris, hvor en øre den anden vej havde kasseret den. 2 giver luft.
+    grain:  [2, 150],   bakery: [5, 200],   pantry:[3, 400],
     // 'drink' blander to slags varer: sodavand og juice solgt pr. liter, og
     // kaffe og te solgt som TØRVÆGT. Målt i basen: te op til 450 kr/kg og
     // kaffe til 421 er ægte hyldepriser, så loftet følger dem og ikke
@@ -216,6 +222,15 @@
     // kategorien styrer også madplanen (IGNORED_CATS), så det er dataarbejde.
     drink:  [2, 600],   snack:  [10, 400],
   };
+
+  // Et stk-loft er en helt anden størrelsesorden end et kiloloft, og de to kan
+  // ikke dele tal. Kun tre varer sælges pr. stk — brod, tortilla, aeg — mens
+  // deres kategorier også rummer kg-varer (æggeblomme, æggehvide), som kg-
+  // båndet ovenfor skal blive ved med at dække. Målt i basen: ægte brød topper
+  // ved 35 kr/stk, æg ligger på 2,90-3,60. Uden det her slipper "Bodum
+  // brødkasse" (99), "Holm brødform" (79) og "Køkkenchef brødrister" (79)
+  // igennem som brødpriser, og et æg til 32 kr regnes for en rimelig hyldepris.
+  const PRICE_BAND_STK = { bakery: 60, eggs: 10 };
 
   /**
    * Kan denne kr/base_unit være en rigtig hyldepris?
@@ -227,11 +242,23 @@
    */
   function isPlausiblePrice(category, unitPrice, baseUnit) {
     const band = PRICE_BAND[category];
-    if (!band || !(unitPrice > 0)) return band ? false : null;
-    // 'stk' siger intet om mængden — ét æble og én kasse æbler er begge
-    // "1 stk" — så en undergrænse ville kassere den billige af dem.
-    if (baseUnit === 'stk') return unitPrice <= band[1];
+    if (!band) return null;
+    // Infinity og NaN slipper ellers igennem hver eneste sammenligning og
+    // videre ned i en REAL-kolonne, der kun kræver > 0.
+    if (!Number.isFinite(unitPrice) || unitPrice <= 0) return false;
+    if (baseUnit === 'stk') {
+      // Ingen undergrænse pr. stk: ét æble og én kasse æbler er begge "1 stk".
+      return unitPrice <= (PRICE_BAND_STK[category] ?? band[1]);
+    }
     return unitPrice >= band[0] && unitPrice <= band[1];
+  }
+
+  /** Det loft/gulv, isPlausiblePrice faktisk brugte — til fejlbeskeder. */
+  function priceBandFor(category, baseUnit) {
+    const band = PRICE_BAND[category];
+    if (!band) return null;
+    if (baseUnit === 'stk') return [0, PRICE_BAND_STK[category] ?? band[1]];
+    return band;
   }
 
   // ── Scoring af én opskrift ─────────────────────────────────────────────────
@@ -648,8 +675,8 @@
 
   return {
     assignRoles, scoreRecipe, buildPlan, shoppingList, qualifies,
-    seededNoise, isoWeek, validUntilFor, isPlausiblePrice,
+    seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
-    PRICE_TTL_DAYS, PRICE_BAND,
+    PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK,
   };
 }));

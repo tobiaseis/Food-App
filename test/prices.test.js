@@ -325,3 +325,267 @@ test('arbejdslisten stiller den ældste udløbne manual forrest i sin egen bunke
   ];
   assert.deepEqual(worklist.sortByUncertainty(rows).map((r) => r.key), ['gammel', 'ny']);
 });
+
+// ── Decimalkommaet: den fejl, en dansk fil er lettest at lave ────────────────
+//
+// `15,95` i stedet for `15.95` giver SYV celler i stedet for seks. Blev de
+// overskydende bare kasseret, ville pack_price blive 15 og observed_at '95' —
+// og `new Date('95')` er en gyldig dato (31-12-1994). Ingen fejl, ingen
+// advarsel: bare en pris, der er 6 % forkert, på det mest betroede niveau
+// basen har. Begge ender skal lukkes, for hver for sig er de begge blinde.
+
+test('CSV-parseren afviser en linje med et decimalkomma i prisen', () => {
+  const csv = [
+    'item_key,chain_slug,pack_qty,pack_unit,pack_price,observed_at',
+    'kartofler,rema1000,2,kg,15,95,2026-09-15',
+  ].join('\n');
+
+  const rows = parseCsv(csv);
+  assert.equal(rows.length, 1);
+  assert.ok(rows[0].error, 'skulle være afvist');
+  assert.match(rows[0].error, /linje 2/);
+  // Beskeden skal sige, hvad man gør ved det — ikke bare at noget er galt.
+  assert.match(rows[0].error, /15\.95/);
+  assert.match(rows[0].error, /decimalkomma/);
+  assert.equal(rows[0].row, undefined);
+});
+
+test('CSV-parseren afviser også en linje med for FÅ celler', () => {
+  const csv = [
+    'item_key,chain_slug,pack_qty,pack_unit,pack_price,observed_at',
+    'kartofler,rema1000,2,kg,15.95',
+  ].join('\n');
+  const rows = parseCsv(csv);
+  assert.ok(rows[0].error);
+  assert.match(rows[0].error, /linje 2/);
+  assert.match(rows[0].error, /5 felter/);
+});
+
+test('importøren kræver observed_at på formen ÅÅÅÅ-MM-DD', () => {
+  const items = new Map([['kartofler', { key: 'kartofler', class: 'baseline', base_unit: 'kg' }]]);
+  const chains = new Map([['rema1000', '11deC']]);
+  const at = (observed_at) => parsePriceRow({ item_key: 'kartofler', chain_slug: 'rema1000',
+    pack_qty: '2', pack_unit: 'kg', pack_price: '15.95', observed_at },
+    { items, chains, line: 2 });
+
+  // Resten af et decimalkomma, hvis celletællingen skulle svigte. new Date('95')
+  // er 31-12-1994 og ville aldrig blive opdaget.
+  assert.match(at('95').error, /observed_at/);
+  // new Date('2026') er 1. januar 2026. En dato uden dag er ikke en observation.
+  assert.match(at('2026').error, /observed_at/);
+  assert.match(at('15-09-2026').error, /observed_at/);
+  assert.match(at('2026-9-15').error, /observed_at/);
+  // Et umuligt datoformat skal stadig falde, selv når mønstret passer.
+  assert.match(at('2026-02-30').error, /findes ikke/);
+  // Og den rigtige form går igennem.
+  assert.equal(at('2026-09-15').error, undefined);
+});
+
+test('importøren afviser en observation i fremtiden', () => {
+  // valid_until regnes fra observed_at. En dato i 2099 ville give en pris, der
+  // aldrig udløber, og som arbejdslisten aldrig beder om igen.
+  const items = new Map([['kartofler', { key: 'kartofler', class: 'baseline', base_unit: 'kg' }]]);
+  const chains = new Map([['rema1000', '11deC']]);
+  const r = parsePriceRow({ item_key: 'kartofler', chain_slug: 'rema1000', pack_qty: '2',
+    pack_unit: 'kg', pack_price: '15.95', observed_at: '2099-01-01' },
+    { items, chains, line: 2 });
+  assert.match(r.error, /fremtiden/);
+});
+
+test('importørens enhedsfejl giver et råd, der passer til varens enhed', () => {
+  // "400 g skal skrives som 0.4 kg" er meningsløst for et æg, der tælles i stk.
+  const items = new Map([
+    ['aeg', { key: 'aeg', class: 'fresh', category: 'eggs', base_unit: 'stk' }],
+    ['floede', { key: 'floede', class: 'fresh', category: 'dairy', base_unit: 'l' }],
+  ]);
+  const chains = new Map([['rema1000', '11deC']]);
+  const egg = parsePriceRow({ item_key: 'aeg', chain_slug: 'rema1000', pack_qty: '10',
+    pack_unit: 'kg', pack_price: '30', observed_at: '2026-09-15' }, { items, chains, line: 2 });
+  assert.match(egg.error, /stk/);
+  assert.doesNotMatch(egg.error, /400 g/);
+
+  const fl = parsePriceRow({ item_key: 'floede', chain_slug: 'rema1000', pack_qty: '250',
+    pack_unit: 'ml', pack_price: '9.5', observed_at: '2026-09-15' }, { items, chains, line: 3 });
+  assert.match(fl.error, /0\.25 l/);
+});
+
+// ── stk-loftet: en anden størrelsesorden end kiloloftet ──────────────────────
+
+test('stk-loftet kasserer køkkenudstyr, der står som brød', () => {
+  // Målt i basen: "Bodum brødkasse" 99, "Holm brødform" 79, "Køkkenchef
+  // brødrister" 79 — alle koblet på varen brod, alle pr. stk. Ægte brød i
+  // samme base topper ved 35 kr/stk.
+  assert.equal(engine.isPlausiblePrice('bakery', 99, 'stk'), false);
+  assert.equal(engine.isPlausiblePrice('bakery', 79, 'stk'), false);
+  assert.equal(engine.isPlausiblePrice('bakery', 159.95, 'stk'), false);
+  assert.equal(engine.isPlausiblePrice('bakery', 35, 'stk'), true);
+  // tortilla ligger målt på 60 kr/stk for en pakke. Loftet skal lige rumme den.
+  assert.equal(engine.isPlausiblePrice('bakery', 60, 'stk'), true);
+});
+
+test('stk-loftet for æg er 10 kr, ikke kilobåndets loft', () => {
+  // Ægte æg ligger på 2,90-3,60 kr/stk. Et æg til 32 kr er en fejlkobling.
+  assert.equal(engine.isPlausiblePrice('eggs', 3.6, 'stk'), true);
+  assert.equal(engine.isPlausiblePrice('eggs', 2.9, 'stk'), true);
+  assert.equal(engine.isPlausiblePrice('eggs', 32, 'stk'), false);
+});
+
+test('stk-loftet rører ikke kg-varerne i samme kategori', () => {
+  // Det er hele grunden til, at loftet står i sin egen tabel. 'eggs' rummer
+  // aeggeblomme og aeggehvide, der sælges pr. KG — et loft på 10 kr ville
+  // kassere enhver rigtig pris på dem.
+  assert.equal(engine.isPlausiblePrice('eggs', 90, 'kg'), true);
+  assert.equal(engine.isPlausiblePrice('eggs', 180, 'kg'), true);
+  // Og brød solgt pr. kg (rugbrød i løsvægt) måles stadig mod bakery-båndet.
+  assert.equal(engine.isPlausiblePrice('bakery', 120, 'kg'), true);
+});
+
+test('grain-gulvet sidder under den billigste ægte kornpris', () => {
+  // Den billigste ægte korn-observation i basen er præcis 5,00 kr/kg
+  // (MADVÆRKET havregryn). Med et gulv på 5 sad grænsen oven på en rigtig
+  // pris; en øre den anden vej havde kasseret den.
+  assert.equal(engine.isPlausiblePrice('grain', 5, 'kg'), true);
+  assert.equal(engine.isPlausiblePrice('grain', 4.5, 'kg'), true);
+  assert.equal(engine.isPlausiblePrice('grain', 1.5, 'kg'), false);
+});
+
+test('isPlausiblePrice afviser Infinity og NaN', () => {
+  // Infinity slipper igennem HVER eneste sammenligning uden at kaste og ville
+  // lande i en REAL NOT NULL CHECK(x > 0) uden et ord.
+  assert.equal(engine.isPlausiblePrice('veg', Infinity, 'kg'), false);
+  assert.equal(engine.isPlausiblePrice('veg', Infinity, 'stk'), false);
+  assert.equal(engine.isPlausiblePrice('veg', NaN, 'kg'), false);
+  assert.equal(engine.isPlausiblePrice('veg', -Infinity, 'kg'), false);
+});
+
+test('drink-loftet lader kaffe og te passere', () => {
+  // Målt i basen: Nescafé instant 421 kr/kg og te op til 450 er ægte
+  // hyldepriser — tørvægt, ikke sodavand. Kasseres de, forsvinder to varer,
+  // der findes i hver eneste butik.
+  assert.equal(engine.isPlausiblePrice('drink', 450, 'kg'), true);
+  assert.equal(engine.isPlausiblePrice('drink', 421.33, 'kg'), true);
+  assert.equal(engine.isPlausiblePrice('drink', 799, 'kg'), false);
+});
+
+test('priceBandFor giver de tal, isPlausiblePrice faktisk brugte', () => {
+  // Fejlbeskederne læses af den, der skal rette filen. Står kilobåndets tal på
+  // en stk-række, leder man efter en fejl, der ikke findes.
+  assert.deepEqual(engine.priceBandFor('bakery', 'stk'), [0, 60]);
+  assert.deepEqual(engine.priceBandFor('bakery', 'kg'), [5, 200]);
+  // En kategori uden et stk-loft falder tilbage på kilobåndets loft.
+  assert.deepEqual(engine.priceBandFor('fruit', 'stk'), [0, 200]);
+  assert.equal(engine.priceBandFor('ukendt_kategori', 'kg'), null);
+});
+
+// ── Enhedsinvarianten, som databasen selv håndhæver ──────────────────────────
+//
+// pack_unit SKAL være varens base_unit. Reglen stod kun i JavaScript, ét sted
+// pr. skriver: bootstrap-prices.js, import-prices.js, og opgave 3's
+// REMA-klient bliver den tredje. En regel, tre programmer skal huske, er ikke
+// en regel. Triggerne i schema.sql gør den til en, basen ikke kan komme uden om.
+
+const { reportOrphans } = require(path.join(__dirname, '..', 'scripts', 'import-prices.js'));
+
+/** En tom base med ét item, én kæde og skemaet påført af den rigtige getDb(). */
+function freshPriceDb(label) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), `madplan-${label}-`));
+  const db = openThroughGetDb(path.join(dir, 'priser.db'));
+  db.prepare("INSERT INTO chains (id, name, slug) VALUES ('11deC', 'REMA 1000', 'rema1000')").run();
+  db.prepare(`INSERT INTO items (key, name, category, class, keeps, base_unit)
+              VALUES ('aeg', 'Æg', 'eggs', 'fresh', 'keeps', 'stk')`).run();
+  db.prepare(`INSERT INTO items (key, name, category, class, keeps, base_unit)
+              VALUES ('kartofler', 'Kartofler', 'veg', 'baseline', 'pantry', 'kg')`).run();
+  return db;
+}
+
+const INSERT_PRICE = `
+  INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit, pack_price,
+                           unit_price, source, observed_at, valid_until)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+test('basen selv nægter en pack_unit, der ikke er varens base_unit', () => {
+  const db = freshPriceDb('trigger');
+  try {
+    const ins = db.prepare(INSERT_PRICE);
+    // aeg tælles i stk. 'kg' må ikke kunne skrives, uanset hvem der skriver.
+    assert.throws(
+      () => ins.run('aeg', '11deC', 10, 'kg', 30, 3, 'manual', '2026-09-15', '2026-12-14'),
+      /base_unit/,
+    );
+    // Den rigtige enhed går igennem — triggeren må ikke stå i vejen for arbejdet.
+    ins.run('aeg', '11deC', 10, 'stk', 30, 3, 'manual', '2026-09-15', '2026-12-14');
+    ins.run('kartofler', '11deC', 2, 'kg', 15.95, 7.975, 'manual', '2026-09-15', '2027-03-14');
+    assert.equal(db.prepare('SELECT count(*) c FROM item_prices').get().c, 2);
+
+    // En UPDATE er den anden vej ind. Uden BEFORE UPDATE ville en
+    // ON CONFLICT DO UPDATE kunne sætte enheden skævt bagefter.
+    assert.throws(
+      () => db.prepare("UPDATE item_prices SET pack_unit = 'kg' WHERE item_key = 'aeg'").run(),
+      /base_unit/,
+    );
+    assert.equal(
+      db.prepare("SELECT pack_unit FROM item_prices WHERE item_key = 'aeg'").get().pack_unit,
+      'stk',
+    );
+  } finally {
+    db.close();
+  }
+});
+
+// ── En slettet CSV-linje sletter ikke prisen ─────────────────────────────────
+
+test('importøren viser de indtastede priser, filen ikke længere nævner', () => {
+  // Importøren indsætter og opdaterer kun — med vilje: en halvt gemt fil må
+  // ikke kunne slette rigtige priser. Men så skal forskellen VISES, ellers
+  // bliver en forkert pris stående for evigt på det mest betroede niveau.
+  const db = freshPriceDb('orphan');
+  const said = [];
+  const log = console.log;
+  console.log = (...a) => said.push(a.join(' '));
+  try {
+    db.prepare(INSERT_PRICE)
+      .run('kartofler', '11deC', 2, 'kg', 15.95, 7.975, 'manual', '2026-09-15', '2027-03-14');
+    // Et gæt er ikke en indtastet pris og skal ikke nævnes her.
+    db.prepare(INSERT_PRICE)
+      .run('aeg', '11deC', 10, 'stk', 30, 3, 'derived', '2026-09-15', '2026-12-14');
+
+    // Filen nævner stadig rækken: ingen besked.
+    reportOrphans(db, [{ item_key: 'kartofler', chain_id: '11deC', pack_qty: 2, pack_unit: 'kg' }]);
+    assert.equal(said.length, 0, 'en række, der står i filen, er ikke forældreløs');
+
+    // Linjen er slettet (eller kommenteret ud): rækken skal nævnes ved navn.
+    reportOrphans(db, []);
+    const out = said.join('\n');
+    assert.match(out, /kartofler/);
+    assert.match(out, /rema1000/);
+    assert.doesNotMatch(out, /aeg/, "et 'derived'-gæt hører ikke til her");
+  } finally {
+    console.log = log;
+    db.close();
+  }
+});
+
+test('importøren afviser to linjer, der rammer den samme række', () => {
+  // Nøglen er (vare, kæde, pakke). To linjer med samme nøgle sloges om den
+  // samme række, og ON CONFLICT lod den sidste vinde uden et ord — den, der
+  // skrev begge, gik derfra i troen på, at den første stod i basen.
+  const { flagDuplicates } = require(path.join(__dirname, '..', 'scripts', 'import-prices.js'));
+  const csv = [
+    'item_key,chain_slug,pack_qty,pack_unit,pack_price,observed_at',
+    'kartofler,rema1000,2,kg,15.95,2026-09-15',
+    'kartofler,rema1000,2,kg,17.95,2026-09-15',
+    'kartofler,rema1000,1,kg,9.95,2026-09-15',
+  ].join('\n');
+  const rows = parseCsv(csv);
+  const items = new Map([['kartofler', { key: 'kartofler', class: 'baseline', base_unit: 'kg' }]]);
+  const chains = new Map([['rema1000', '11deC']]);
+  const parsed = flagDuplicates(
+    rows.map((r) => parsePriceRow(r.row, { items, chains, line: r.line })), rows);
+
+  assert.equal(parsed[0].error, undefined);
+  // Den anden linje er dubletten, og beskeden skal pege på BEGGE linjer.
+  assert.match(parsed[1].error, /linje 3/);
+  assert.match(parsed[1].error, /linje 2/);
+  // En anden pakkestørrelse er en anden række og altså ikke en dublet.
+  assert.equal(parsed[2].error, undefined);
+});

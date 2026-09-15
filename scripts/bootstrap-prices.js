@@ -235,7 +235,10 @@ function main() {
       console.log(`
 kasseret som umulig hyldepris (uden for engine.PRICE_BAND):`);
       for (const r of band.rejected.sort((a, z) => z.unit_price - a.unit_price)) {
-        const b = engine.PRICE_BAND[r.category] || [];
+        // priceBandFor, ikke PRICE_BAND: en stk-række måles mod stk-loftet,
+        // og en besked med kilobåndets tal ville sende læseren efter en fejl,
+        // der ikke findes.
+        const b = engine.priceBandFor(r.category, r.base_unit) || [];
         console.log(`  ${r.item_key.padEnd(16)} ${String(Math.round(r.unit_price)).padStart(6)}/${r.base_unit}` +
                     `  (${r.category}: ${b[0]}-${b[1]})`);
       }

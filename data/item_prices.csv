@@ -13,12 +13,28 @@
 # i kurven, selv om items.piece_g siger 500 g — piece_g er det, der ender i
 # gryden. Samme skel er grunden til, at opgave 1 ikke omregnede stk-tilbud.
 #
-# Filen er git-versioneret med vilje: ændrer en pris sig fra 15,95 til 18,50,
+# PRISEN SKRIVES MED PUNKTUM: 15.95, ikke 15,95. Et komma deler feltet i to, og
+# alt efter det rykker én kolonne til venstre — pack_price ville blive 15 og
+# observed_at '95'. Importøren tæller felterne og afviser linjen, men det er
+# den fejl, filen er lettest at lave.
+#
+# observed_at er ÅÅÅÅ-MM-DD, og det skal være den dag, prisen faktisk stod på
+# hylden. Datoen er ikke dokumentation: den styrer valid_until, og dermed
+# hvornår arbejdslisten (npm run prices:worklist) beder om varen igen.
+#
+# AT SLETTE EN LINJE SLETTER IKKE PRISEN. Importøren indsætter og opdaterer,
+# den sletter aldrig — en halvt gemt fil ville ellers kunne tage rigtige priser
+# med sig. Fjerner du en linje, siger importøren til sidst, at rækken stadig
+# står i basen, og så skal den slettes i hånden med SQL. Det gælder også, hvis
+# du sætter et # foran linjen.
+#
+# Filen er git-versioneret med vilje: ændrer en pris sig fra 15.95 til 18.50,
 # kan man se hvornår og hvorfor. Det kan en admin-side i appen ikke.
 #
 # ── Om tallene nedenfor ─────────────────────────────────────────────────────
-# De syv første er de grøntsager, avisen kun prissætter pr. stk, så bootstrappen
-# ikke kunne give dem noget. Priserne er TYPISKE hyldepriser i en dansk
+# De seks første er grøntsager, avisen kun prissætter pr. stk, så bootstrappen
+# ikke kunne give dem noget. (Den syvende er selleri — se nederst.)
+# Priserne er TYPISKE hyldepriser i en dansk
 # discountbutik — ikke aflæst på en bestemt bon — og pakkevægten er den købte
 # vægt, ikke items.piece_g. Til sammenligning står avisens TILBUDSpris i
 # parentes; en normalpris skal ligge over den.
@@ -29,7 +45,16 @@
 #   squash      1 stk ~350 g   (tilbud set: 5 kr/stk)
 #   appelsin    net 1,5 kg     (avisen har kun "Orange ilddæmon" til 1999,20 —
 #                               et stykke legetøj koblet på varen)
-# Skriv datoen om til den dag, du faktisk har set prisen i butikken.
+#
+# DE SEKS RÆKKER ER DATERET 2026-01-01 MED VILJE, og det er ikke en fejl, der
+# skal rettes til i dag. Ingen har set de priser på en hylde; de er typiske tal,
+# der gør varerne prissætbare i mellemtiden. Med dagens dato ville de blive
+# 'manual' med et friskt valid_until og forsvinde fra arbejdslisten i 90 dage —
+# altså slukke for netop den påmindelse, der skal få nogen til at læse den
+# rigtige hyldepris. Med en gammel dato er de udløbet fra fødslen og bliver
+# ved med at stå på listen, til et menneske har været i butikken.
+#
+# Når du HAR set prisen: skriv din pris og DIN dato — den dag, du så den.
 #
 # selleri mangler med vilje. Varens synonymer dækker BÅDE bladselleri og
 # knoldselleri, og de to koster ikke det samme pr. kg (~33 mod ~19). Vælg
@@ -37,12 +62,12 @@
 # andet end prisen:
 # selleri,rema1000,0.45,kg,15.00,2026-09-15
 item_key,chain_slug,pack_qty,pack_unit,pack_price,observed_at
-agurk,rema1000,0.4,kg,10.00,2026-09-15
-blomkaal,rema1000,1.0,kg,18.00,2026-09-15
-broccoli,rema1000,0.4,kg,16.00,2026-09-15
-peberfrugt,rema1000,0.18,kg,8.00,2026-09-15
-squash,rema1000,0.35,kg,9.00,2026-09-15
-appelsin,rema1000,1.5,kg,25.00,2026-09-15
+agurk,rema1000,0.4,kg,10.00,2026-01-01
+blomkaal,rema1000,1.0,kg,18.00,2026-01-01
+broccoli,rema1000,0.4,kg,16.00,2026-01-01
+peberfrugt,rema1000,0.18,kg,8.00,2026-01-01
+squash,rema1000,0.35,kg,9.00,2026-01-01
+appelsin,rema1000,1.5,kg,25.00,2026-01-01
 kartofler,rema1000,2,kg,15.95,2026-09-15
 hakket_oksekoed,rema1000,0.4,kg,32.00,2026-09-15
 floede,netto,0.25,l,9.50,2026-09-15

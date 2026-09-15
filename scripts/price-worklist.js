@@ -47,7 +47,12 @@ function sortByUncertainty(rows) {
   return [...rows].sort((a, z) => {
     const d = bucketOf(a).rank - bucketOf(z).rank;
     if (d) return d;
-    return String(a.valid_until || '').localeCompare(String(z.valid_until || ''));
+    // ISO-8601 sorterer rigtigt som ren tekst — det er hele pointen med
+    // formatet. localeCompare ville kalde ind i ICU og kunne i en anden locale
+    // give en anden rækkefølge for de samme to datoer.
+    const x = String(a.valid_until || '');
+    const y = String(z.valid_until || '');
+    return x < y ? -1 : x > y ? 1 : 0;
   });
 }
 

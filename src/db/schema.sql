@@ -180,6 +180,35 @@ CREATE TABLE IF NOT EXISTS item_prices (
 CREATE INDEX IF NOT EXISTS idx_item_prices_item  ON item_prices(item_key, chain_id);
 CREATE INDEX IF NOT EXISTS idx_item_prices_stale ON item_prices(valid_until);
 
+-- unit_price er kroner pr. base_unit, og hele grunden til at tabellen findes er
+-- at kunne sammenligne den på tværs af kæder. Står pack_unit til 'stk' på en
+-- vare, der måles i kg, betyder unit_price to forskellige ting på to rækker,
+-- og sammenligningen falder uden at nogen opdager det.
+--
+-- Reglen stod kun i JavaScript, ét sted pr. skriver. Der er allerede to
+-- (bootstrap-prices.js, import-prices.js), opgave 3's REMA-klient bliver den
+-- tredje, og en fjerde bliver det ved at være en INSERT i en konsol. Her kan
+-- den ikke omgås. CHECK-begrænsningen kan ikke bruges: den må ikke slå op i
+-- en anden tabel, og det er præcis det, reglen går ud på.
+--
+-- IS NOT, ikke <>: er item_key ukendt, giver underforespørgslen NULL, og en
+-- <>-sammenligning ville blive NULL og dermed ikke udløse RAISE. Nøglen er
+-- en fremmednøgle mod items(key), så den sag afvises allerede — men en regel,
+-- der er tavs på den ene af sine indgange, er ikke en regel.
+CREATE TRIGGER IF NOT EXISTS item_prices_unit_ins
+BEFORE INSERT ON item_prices
+BEGIN
+  SELECT RAISE(ABORT, 'item_prices.pack_unit skal være varens base_unit i items')
+   WHERE NEW.pack_unit IS NOT (SELECT base_unit FROM items WHERE key = NEW.item_key);
+END;
+
+CREATE TRIGGER IF NOT EXISTS item_prices_unit_upd
+BEFORE UPDATE ON item_prices
+BEGIN
+  SELECT RAISE(ABORT, 'item_prices.pack_unit skal være varens base_unit i items')
+   WHERE NEW.pack_unit IS NOT (SELECT base_unit FROM items WHERE key = NEW.item_key);
+END;
+
 -- ── Opskrifter ──────────────────────────────────────────────────────────────
 -- Vi gemmer FAKTA (titel, ingrediensliste, næring, link) og linker ud til
 -- kilden for fremgangsmåden. Opskriftsteksten kopieres ikke.

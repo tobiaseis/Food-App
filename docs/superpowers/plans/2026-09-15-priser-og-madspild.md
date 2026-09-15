@@ -737,18 +737,39 @@ tre steder.
   const PRICE_BAND = {
     veg:    [2, 150],   fruit:  [2, 200],   meat:  [20, 600],
     poultry:[20, 300],  fish:   [20, 700],  dairy: [5, 200],
-    cheese: [30, 500],  eggs:   [10, 120],  grain: [5, 150],
+    cheese: [30, 500],  eggs:   [5, 200],   grain: [2, 150],
     legume: [5, 200],   bakery: [5, 200],   pantry:[3, 400],
     // 'drink' blander sodavand solgt pr. liter med kaffe og te solgt som
     // tørvægt. Målt: te 450 kr/kg, kaffe 421 — begge ægte. Loftet følger dem.
     drink:  [2, 600],   snack:  [10, 400],
   };
 
+  // Et stk-loft er en helt anden størrelsesorden end et kiloloft, og de to kan
+  // ikke dele tal. Kun tre varer sælges pr. stk — brod, tortilla, aeg — mens
+  // deres kategorier også rummer kg-varer (æggeblomme, æggehvide). Målt:
+  // ægte brod topper ved 35 kr/stk, æg ligger på 2,90-3,60. Uden det her
+  // slipper "Bodum brødkasse" (99) og "Køkkenchef brødrister" (79) igennem
+  // som brødpriser, og et æg til 32 kr regnes for en rimelig hyldepris.
+  const PRICE_BAND_STK = { bakery: 60, eggs: 10 };
+
+  /**
+   * Kan denne kr/base_unit være en rigtig hyldepris?
+   *
+   * `true` ja · `false` nej · `null` vi har intet bånd for kategorien.
+   * De tre svar skal holdes adskilt: en kalder, der læser "ved det ikke" som
+   * et nej, ville kassere hver eneste vare i en kategori, ingen har sat
+   * grænser for endnu.
+   */
   function isPlausiblePrice(category, unitPrice, baseUnit) {
     const band = PRICE_BAND[category];
-    if (!band || !(unitPrice > 0)) return !!band === false ? null : false;
-    // 'stk' siger intet om mængden, så båndet gælder kun målte enheder.
-    if (baseUnit === 'stk') return unitPrice <= band[1];
+    if (!band) return null;
+    // Infinity og NaN slipper ellers igennem hver eneste sammenligning og
+    // videre ned i en REAL-kolonne, der kun kræver > 0.
+    if (!Number.isFinite(unitPrice) || unitPrice <= 0) return false;
+    if (baseUnit === 'stk') {
+      // Ingen undergrænse pr. stk: ét æble og én kasse æbler er begge "1 stk".
+      return unitPrice <= (PRICE_BAND_STK[category] ?? band[1]);
+    }
     return unitPrice >= band[0] && unitPrice <= band[1];
   }
 ```
