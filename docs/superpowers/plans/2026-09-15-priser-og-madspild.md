@@ -1,0 +1,1753 @@
+# Priser og madspild — implementeringsplan (plan 2 af 2)
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Give varerne en normalpris, så en opskrift kan prissættes uden at være på tilbud, og lade madplanen regne på hele pakker i stedet for på kr/kg — så ugen kan sammensættes, så pakkerne bliver brugt op.
+
+**Architecture:** `item_prices` holder normalprisen pr. (vare, kæde, pakke). Den effektive pris er `coalesce(aktivt tilbud, normalpris)` og beregnes af rene funktioner i `public/engine.js`, som serveren allerede indlæser med `require` — så reglen findes ét sted og kan ikke drive fra hinanden. `recipe_costs` er den forudberegnede tabel, budget-sporet sorterer efter. Madplans-motoren får pakkeafrunding, spildvægtning efter `items.keeps`, to forslag og et eksakt valg af kædedelmængde.
+
+**Tech Stack:** Node ≥20 (CommonJS), better-sqlite3 v11, `node:test`. Ingen nye afhængigheder.
+
+**Spec:** `docs/superpowers/specs/2026-09-06-database-design.md` — denne plan dækker afsnit 4, skridt 6-8.
+**Forudsætning:** plan 1 (`2026-09-06-varetyper-og-maengder.md`) er kørt og pushet.
+**API-grundlag:** `docs/superpowers/specs/2026-09-06-api-undersoegelse.md`.
+
+## Udgangspunktet, målt
+
+| | |
+|---|---|
+| Varer i basen | 204, heraf **190 der skal prissættes** (14 er `essential`) |
+| Kæder | 14 |
+| Prissætbare opskrifter | 1.546 af 2.224 |
+| Tilbud med pakkestørrelse | 5.195 af 5.195 |
+| **Varer med tilbudshistorik** | **113 af 190** |
+
+Det sidste tal er planens vigtigste. Den afledte bootstrap kan kun gætte en normalpris for varer, der har været på tilbud — **77 varer har ingen historik og skal indtastes fra dag ét.**
+
+Og API-undersøgelsen flyttede grundlaget: designet regnede med 8 af 14 kæder automatisk, svaret blev **1 af 14**. Kun REMA 1000. Derfor vægter denne plan CSV-importøren tungere end API-klienten, og API-klienten er én opgave, ikke tre.
+
+## Global Constraints
+
+- Node ≥20, CommonJS (`require`/`module.exports`), `'use strict';` øverst i hver fil.
+- Ingen nye npm-afhængigheder. `better-sqlite3` er den eneste runtime-afhængighed; `fetch` er global i Node 20.
+- Kommentarer på dansk, der forklarer **hvorfor**, ikke hvad. Følg tonen i `src/lib/taxonomy.js` og `src/lib/normalize.js`.
+- **`public/engine.js` skal kunne indlæses både i Node og i en browser, og må aldrig røre databasen.** Den er UMD-pakket; serveren indlæser den med `require` fra `src/mealplan/generate.js:33`. Nye regler, som både server og browser skal bruge, lægges dér — ikke i to kopier.
+- Nye tabeller i `src/db/schema.sql` som `CREATE TABLE IF NOT EXISTS`; nye kolonner på eksisterende tabeller i `migrate()` i `src/db/index.js`.
+- Nye testfiler skal tilføjes til `test`-scriptet i `package.json`.
+- Testsuiten kører mod `test.db`, ikke `data.db` — sat af `test/helpers/set-test-db.js` via `node -r`, seedet af `pretest`. Rører du seed-data, så husk at `pretest` kun reseeder, når `items` er tom.
+- `data.db` er produktionsdata. Tag en kopi før destruktive kørsler.
+- Commit efter hver opgave.
+
+## Filstruktur
+
+| fil | ansvar |
+|---|---|
+| `src/db/schema.sql` | **ændres** — `item_prices`, `recipe_costs` |
+| `scripts/bootstrap-prices.js` | **ny** — afledt normalpris fra tilbudshistorik (`source='derived'`) |
+| `data/item_prices.csv` | **ny** — den manuelle priskilde, git-versioneret |
+| `scripts/import-prices.js` | **ny** — CSV → `item_prices`, med validering |
+| `src/prices/rema.js` | **ny** — REMA-klient: søg, udled pakkestørrelse |
+| `scripts/fetch-rema-prices.js` | **ny** — kører klienten over alle varer, skriver `source='api:rema'` |
+| `scripts/price-worklist.js` | **ny** — hvilke priser mangler eller er udløbet |
+| `public/engine.js` | **ændres** — effektiv pris, pakkeafrunding, spildvægt, to forslag, kædedelmængder, to lister |
+| `src/mealplan/generate.js` | **ændres** — henter `item_prices` og sender dem til motoren |
+| `scripts/recompute-recipe-costs.js` | **ny** — fylder `recipe_costs` |
+| `src/sync/build.js` | **ændres** — synker `item_prices` og `recipe_costs` |
+| `supabase/schema.sql` | **ændres** — samme to tabeller |
+| `test/prices.test.js` | **ny** |
+| `test/waste.test.js` | **ny** |
+
+Prisreglerne bor i `engine.js`, fordi de er de eneste regler, både serveren og browseren skal være enige om. Det er samme argument, som gjorde `src/lib/items.js` til en ren funktion i plan 1 — og samme grund til, at der ikke må opstå en server-kopi.
+
+---
+
+### Task 1: `item_prices` + afledt bootstrap
+
+**Files:**
+- Modify: `src/db/schema.sql`
+- Modify: `src/db/index.js` (`migrate()` — omdøbning af `products.taxonomy_key`)
+- Create: `scripts/bootstrap-prices.js`
+- Modify: `package.json`
+
+**Interfaces:**
+- Consumes: `items` (204 rækker), `offers` (5.195), `products`, `chains`
+- Produces: tabellen `item_prices`; `npm run prices:bootstrap` fylder den for de varer, der har tilbudshistorik
+
+- [ ] **Step 1: Ryd op i en rest fra plan 1**
+
+`products.taxonomy_key` blev aldrig omdøbt til `item_key`, selvom spec afsnit 1.3 siger det og `recipe_ingredients` fik omdøbningen. Alle 212 udfyldte nøgler peger på gyldige varer, så det er kosmetisk — men denne plan joiner `offers → products → items` mange gange, og to navne for samme fremmednøgle er en fælde.
+
+I `migrate()` i `src/db/index.js`, i `added`-arrayet og efter det:
+
+```js
+    ['products', 'item_key', 'TEXT'],
+```
+
+og derefter, før drop-løkken:
+
+```js
+  // products.taxonomy_key blev ikke omdøbt i plan 1. Samme information, to
+  // navne, og denne plan joiner offers -> products -> items igen og igen.
+  {
+    const cols = db.prepare('PRAGMA table_info(products)').all().map((c) => c.name);
+    if (cols.includes('taxonomy_key')) {
+      db.exec(`UPDATE products SET item_key = taxonomy_key
+                WHERE item_key IS NULL AND taxonomy_key IS NOT NULL`);
+      db.exec('ALTER TABLE products DROP COLUMN taxonomy_key');
+    }
+  }
+```
+
+Ret derefter de kaldssteder, grep'et finder:
+
+```bash
+grep -rn "p\.taxonomy_key\|products.*taxonomy_key" src/ scripts/ test/ --include=*.js
+```
+
+- [ ] **Step 2: Tabellen**
+
+I `src/db/schema.sql`, efter `item_synonyms`:
+
+```sql
+-- ── Normalpriser ────────────────────────────────────────────────────────────
+-- Hvad varen koster, når den IKKE er på tilbud. Findes ikke i tilbudsaviserne
+-- og er derfor det, hele denne plan handler om at skaffe.
+--
+-- Pakken står i rækken, ikke kun kr/kg. Uden den kan restvare-optimeringen
+-- ikke lade sig gøre, og en opskriftspris regnet som mængde × kr/kg er
+-- systematisk for lav: skal man bruge 0,5 kg kartofler, koster det hele posen.
+CREATE TABLE IF NOT EXISTS item_prices (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  item_key    TEXT NOT NULL REFERENCES items(key) ON DELETE CASCADE,
+  chain_id    TEXT NOT NULL REFERENCES chains(id),
+  pack_qty    REAL NOT NULL CHECK (pack_qty > 0),
+  pack_unit   TEXT NOT NULL CHECK (pack_unit IN ('kg','l','stk')),
+  pack_price  REAL NOT NULL CHECK (pack_price > 0),
+  -- kr pr. base_unit. Gemt frem for regnet, så SQL kan sortere på den.
+  unit_price  REAL NOT NULL,
+  source      TEXT NOT NULL CHECK (source IN ('manual','derived','api:rema')),
+  observed_at TEXT NOT NULL,
+  -- Kadencen som data, ikke som en kommentar i en cronjob: fresh 3 mdr,
+  -- baseline 6 mdr. Det er denne kolonne, arbejdslisten spørger til.
+  valid_until TEXT NOT NULL,
+  UNIQUE (item_key, chain_id, pack_qty, pack_unit)
+);
+CREATE INDEX IF NOT EXISTS idx_item_prices_item  ON item_prices(item_key, chain_id);
+CREATE INDEX IF NOT EXISTS idx_item_prices_stale ON item_prices(valid_until);
+```
+
+`pack_unit` **skal** være varens `base_unit` — 400 g hakket oksekød indføres som `pack_qty = 0.4, pack_unit = 'kg'`. Ellers er `unit_price` meningsløs. Importøren i opgave 2 afviser rækker, der bryder det; her er det en `CHECK` på værdimængden og en regel, alle skrivere holder.
+
+- [ ] **Step 3: Skriv den fejlende test**
+
+Opret `test/prices.test.js` og tilføj den til `package.json`s `test`-script:
+
+```js
+'use strict';
+
+/**
+ * Tests for normalpriser og pakkeregning.
+ *
+ * Den centrale regel: en pris uden en pakkestørrelse kan ikke bruges. Man
+ * køber ikke en halv pose kartofler, og hele planens madspilds-optimering
+ * hviler på at kende pakken, ikke kun kiloprisen.
+ */
+
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const path = require('node:path');
+
+const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
+
+const near = (a, b, eps = 1e-6) => assert.ok(Math.abs(a - b) < eps, `${a} != ${b}`);
+
+test('validUntilFor følger varens klasse', () => {
+  const t0 = Date.parse('2026-01-01T00:00:00Z');
+  // fresh: 3 måneder. baseline: 6. Essentials prissættes aldrig.
+  near(Date.parse(engine.validUntilFor('fresh', new Date(t0))) - t0, 90 * 86400000);
+  near(Date.parse(engine.validUntilFor('baseline', new Date(t0))) - t0, 180 * 86400000);
+  assert.equal(engine.validUntilFor('essential', new Date(t0)), null);
+});
+```
+
+- [ ] **Step 4: Kør testen og se den fejle**
+
+Kør: `node --test test/prices.test.js`
+Forventet: FAIL — `engine.validUntilFor is not a function`.
+
+- [ ] **Step 5: Læg kadencen i `engine.js`**
+
+I `public/engine.js`, ved de andre konstanter:
+
+```js
+  // Hvor længe en normalpris må stå, før den skal ses efter. Tallene er
+  // spec afsnit 3.5: fresh svinger med sæson og leverandør, baseline gør
+  // ikke. Essentials får aldrig en pris, så de har heller ingen frist.
+  const PRICE_TTL_DAYS = { fresh: 90, baseline: 180, essential: null };
+
+  function validUntilFor(itemClass, observedAt = new Date()) {
+    const days = PRICE_TTL_DAYS[itemClass];
+    if (days == null) return null;
+    return new Date(observedAt.getTime() + days * 86400000).toISOString();
+  }
+```
+
+Tilføj `validUntilFor` og `PRICE_TTL_DAYS` til returobjektet nederst i filen.
+
+- [ ] **Step 6: Skriv bootstrap-scriptet**
+
+```js
+'use strict';
+
+/**
+ * Et kvalificeret gæt på normalprisen, gratis og med det samme.
+ *
+ * For en vare med tilbudshistorik er den HØJESTE observerede kr/kg tættere
+ * på normalprisen end medianen: det er den uge, hvor rabatten var mindst.
+ * Det er ikke rigtigt — det er et udgangspunkt, der er bedre end ingenting,
+ * og det markeres som 'derived', så arbejdslisten sætter det forrest.
+ *
+ * Kun 113 af de 190 varer, der skal prissættes, har overhovedet historik.
+ * De øvrige 77 skal indtastes. Scriptet siger hvor mange.
+ *
+ *   npm run prices:bootstrap
+ */
+
+const { getDb } = require('../src/db');
+const path = require('node:path');
+const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
+
+// Tilbud ældre end dette siger intet om prisen i dag.
+const HORIZON_DAYS = 400;
+// Den højeste observation kan være en fejllæsning. 90-percentilen er robust
+// mod den ene udreißer og stadig tæt på "mindst rabatterede uge".
+const PERCENTILE = 0.9;
+
+function percentile(sorted, p) {
+  if (!sorted.length) return null;
+  const i = Math.min(sorted.length - 1, Math.floor(sorted.length * p));
+  return sorted[i];
+}
+
+function main() {
+  const db = getDb();
+  const since = new Date(Date.now() - HORIZON_DAYS * 86400000).toISOString();
+
+  // Én observation pr. (vare, kæde, uge): den samme vare optræder flere gange
+  // i samme avis, og uden grupperingen vægter en travl uge tungere.
+  const rows = db.prepare(`
+    SELECT p.item_key, o.chain_id, o.base_unit, o.year, o.week,
+           MIN(o.unit_price) AS unit_price,
+           MIN(o.base_qty)   AS base_qty
+      FROM offers o
+      JOIN products p ON p.id = o.product_id
+      JOIN items    i ON i.key = p.item_key
+     WHERE p.item_key IS NOT NULL
+       AND i.class <> 'essential'
+       AND COALESCE(p.prepared, 0) = 0
+       AND o.unit_price IS NOT NULL AND o.unit_price > 0
+       AND o.base_qty  IS NOT NULL AND o.base_qty  > 0
+       AND o.base_unit = i.base_unit
+       AND COALESCE(o.run_from, o.observed_at) >= ?
+     GROUP BY p.item_key, o.chain_id, o.base_unit, o.year, o.week
+  `).all(since);
+
+  const buckets = new Map();
+  for (const r of rows) {
+    const k = `${r.item_key}|${r.chain_id}`;
+    if (!buckets.has(k)) {
+      buckets.set(k, { item_key: r.item_key, chain_id: r.chain_id,
+                       base_unit: r.base_unit, prices: [], packs: [] });
+    }
+    buckets.get(k).prices.push(r.unit_price);
+    buckets.get(k).packs.push(r.base_qty);
+  }
+
+  const items = new Map(db.prepare('SELECT key, class, base_unit FROM items').all()
+    .map((i) => [i.key, i]));
+
+  const ins = db.prepare(`
+    INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit,
+                             pack_price, unit_price, source, observed_at, valid_until)
+    VALUES (@item_key, @chain_id, @pack_qty, @pack_unit,
+            @pack_price, @unit_price, 'derived', @observed_at, @valid_until)
+    ON CONFLICT(item_key, chain_id, pack_qty, pack_unit) DO UPDATE SET
+      pack_price = excluded.pack_price, unit_price = excluded.unit_price,
+      observed_at = excluded.observed_at, valid_until = excluded.valid_until
+     -- Et gæt må aldrig overskrive en rigtig pris.
+     WHERE item_prices.source = 'derived'
+  `);
+
+  const now = new Date();
+  let written = 0;
+  const run = db.transaction(() => {
+    for (const b of buckets.values()) {
+      const item = items.get(b.item_key);
+      if (!item) continue;
+      const unitPrice = percentile([...b.prices].sort((a, z) => a - z), PERCENTILE);
+      // Den hyppigste pakkestørrelse i kæden er den, man reelt møder.
+      const counts = new Map();
+      for (const q of b.packs) counts.set(q, (counts.get(q) || 0) + 1);
+      const packQty = [...counts.entries()].sort((a, z) => z[1] - a[1])[0][0];
+      if (!unitPrice || !packQty) continue;
+
+      ins.run({
+        item_key: b.item_key, chain_id: b.chain_id,
+        pack_qty: packQty, pack_unit: b.base_unit,
+        pack_price: Math.round(unitPrice * packQty * 100) / 100,
+        unit_price: Math.round(unitPrice * 100) / 100,
+        observed_at: now.toISOString(),
+        valid_until: engine.validUntilFor(item.class, now),
+      });
+      written++;
+    }
+  });
+  run();
+
+  const priceable = db.prepare("SELECT count(*) c FROM items WHERE class <> 'essential'").get().c;
+  const covered = db.prepare('SELECT count(DISTINCT item_key) c FROM item_prices').get().c;
+  console.log(`rækker skrevet: ${written}`);
+  console.log(`varer med mindst én pris: ${covered} af ${priceable}`);
+  console.log(`mangler helt: ${priceable - covered} — de skal i data/item_prices.csv`);
+}
+
+main();
+```
+
+- [ ] **Step 7: Tilføj scriptet og kør det mod en kopi**
+
+```json
+"prices:bootstrap": "node scripts/bootstrap-prices.js",
+```
+
+```bash
+cp data.db data.db.pre-prices
+npm run prices:bootstrap
+```
+
+Forventet: `varer med mindst én pris` lander omkring **113 af 190**. Ligger det væsentligt lavere, filtrerer `o.base_unit = i.base_unit` mere fra end ventet — undersøg hvilke varer der falder ud, før du går videre.
+
+- [ ] **Step 8: Stikprøve mod virkeligheden**
+
+```bash
+node -e "
+const db=require('better-sqlite3')('data.db',{readonly:true});
+for(const r of db.prepare(\"select ip.item_key, c.name chain, ip.pack_qty, ip.pack_unit, ip.pack_price, ip.unit_price from item_prices ip join chains c on c.id=ip.chain_id where ip.item_key in ('kartofler','hakket_oksekoed','floede') order by ip.item_key, ip.unit_price\").all())
+  console.log(r.item_key.padEnd(18), r.chain.padEnd(14), r.pack_qty+r.pack_unit, r.pack_price+' kr', '('+r.unit_price+'/'+r.pack_unit+')');
+"
+```
+
+Tallene skal ligne butikspriser. Kartofler under 5 kr/kg eller hakket oksekød under 40 kr/kg betyder, at percentilen rammer for lavt — rapportér det frem for at justere `PERCENTILE` i blinde.
+
+- [ ] **Step 9: Kør suiten og commit**
+
+```bash
+npm test
+git add src/db/schema.sql src/db/index.js scripts/bootstrap-prices.js test/prices.test.js package.json src/
+git commit -m "item_prices med pakkestoerrelse, og afledt bootstrap fra tilbudshistorik"
+```
+
+---
+
+### Task 2: CSV-importøren
+
+Den manuelle priskilde. Efter API-undersøgelsen er det hovedvejen, ikke reservevejen.
+
+**Files:**
+- Create: `data/item_prices.csv`
+- Create: `scripts/import-prices.js`
+- Create: `scripts/price-worklist.js`
+- Modify: `package.json`
+- Modify: `test/prices.test.js`
+
+**Interfaces:**
+- Consumes: `items`, `chains`, `engine.validUntilFor`
+- Produces: `npm run prices:import` og `npm run prices:worklist`
+
+- [ ] **Step 1: Formatet**
+
+Opret `data/item_prices.csv` med en håndfuld ægte rækker som skabelon:
+
+```csv
+item_key,chain_slug,pack_qty,pack_unit,pack_price,observed_at
+kartofler,rema1000,2,kg,15.95,2026-09-15
+hakket_oksekoed,rema1000,0.4,kg,32.00,2026-09-15
+floede,netto,0.25,l,9.50,2026-09-15
+```
+
+Kolonnen er `chain_slug`, ikke `chain_id`: kædernes id'er er uigennemsigtige Tjek-id'er (`bdf5A` er føtex), og ingen kan redigere dem i hånden. Importøren slår op via `chains.slug`.
+
+Filen er git-versioneret med vilje. Ændrer en pris sig fra 15,95 til 18,50, kan man se hvornår og hvorfor — det kan en admin-side i appen ikke.
+
+- [ ] **Step 2: Skriv de fejlende tests**
+
+Tilføj til `test/prices.test.js`:
+
+```js
+const { parsePriceRow } = require('../scripts/import-prices');
+
+test('importøren afviser en pakkeenhed, der ikke er varens egen', () => {
+  // 400 g hakket oksekød skal ind som 0.4 kg. Med 'g' ville unit_price
+  // blive 0,08 kr/g og alle sammenligninger med tilbud skride.
+  const items = new Map([['hakket_oksekoed', { key: 'hakket_oksekoed', class: 'fresh', base_unit: 'kg' }]]);
+  const chains = new Map([['rema1000', '11deC']]);
+  const bad = parsePriceRow(
+    { item_key: 'hakket_oksekoed', chain_slug: 'rema1000', pack_qty: '400',
+      pack_unit: 'g', pack_price: '32', observed_at: '2026-09-15' },
+    { items, chains, line: 2 },
+  );
+  assert.ok(bad.error, 'skulle være afvist');
+  assert.match(bad.error, /pack_unit/);
+});
+
+test('importøren afviser ukendt vare og ukendt kæde', () => {
+  const items = new Map();
+  const chains = new Map();
+  const a = parsePriceRow({ item_key: 'findes_ikke', chain_slug: 'rema1000', pack_qty: '1',
+    pack_unit: 'kg', pack_price: '10', observed_at: '2026-09-15' }, { items, chains, line: 2 });
+  assert.match(a.error, /item_key/);
+});
+
+test('importøren regner unit_price og valid_until selv', () => {
+  const items = new Map([['kartofler', { key: 'kartofler', class: 'baseline', base_unit: 'kg' }]]);
+  const chains = new Map([['rema1000', '11deC']]);
+  const row = parsePriceRow(
+    { item_key: 'kartofler', chain_slug: 'rema1000', pack_qty: '2',
+      pack_unit: 'kg', pack_price: '15.95', observed_at: '2026-09-15' },
+    { items, chains, line: 2 },
+  );
+  assert.equal(row.error, undefined);
+  near(row.unit_price, 7.975);
+  // baseline = 180 dage
+  assert.equal(row.valid_until.slice(0, 10), '2027-03-14');
+});
+```
+
+- [ ] **Step 3: Kør testene og se dem fejle**
+
+Kør: `node --test test/prices.test.js`
+Forventet: FAIL — `Cannot find module '../scripts/import-prices'`.
+
+- [ ] **Step 4: Skriv importøren**
+
+```js
+'use strict';
+
+/**
+ * data/item_prices.csv -> item_prices.
+ *
+ * Validerer hårdt og afviser hele filen ved den første fejl. En prisliste,
+ * der er halvt indlæst, er værre end en, der ikke er indlæst: man opdager
+ * det først, når en madplan koster det forkerte.
+ *
+ *   npm run prices:import
+ */
+
+const fs = require('node:fs');
+const path = require('node:path');
+const { getDb } = require('../src/db');
+const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
+
+const CSV = path.join(__dirname, '..', 'data', 'item_prices.csv');
+const COLUMNS = ['item_key', 'chain_slug', 'pack_qty', 'pack_unit', 'pack_price', 'observed_at'];
+
+/** Én CSV-række til en item_prices-række, eller `{ error }`. */
+function parsePriceRow(raw, { items, chains, line }) {
+  const at = (msg) => ({ error: `linje ${line}: ${msg}` });
+
+  const item = items.get(raw.item_key);
+  if (!item) return at(`ukendt item_key '${raw.item_key}'`);
+  if (item.class === 'essential') {
+    return at(`'${raw.item_key}' er essential og skal aldrig prissættes`);
+  }
+
+  const chainId = chains.get(raw.chain_slug);
+  if (!chainId) return at(`ukendt chain_slug '${raw.chain_slug}'`);
+
+  if (raw.pack_unit !== item.base_unit) {
+    return at(`pack_unit '${raw.pack_unit}' er ikke varens base_unit `
+            + `'${item.base_unit}' — 400 g skal skrives som 0.4 kg`);
+  }
+
+  const qty = Number(raw.pack_qty);
+  const price = Number(raw.pack_price);
+  if (!(qty > 0)) return at(`pack_qty '${raw.pack_qty}' skal være et tal over 0`);
+  if (!(price > 0)) return at(`pack_price '${raw.pack_price}' skal være et tal over 0`);
+
+  const observed = new Date(raw.observed_at);
+  if (Number.isNaN(observed.getTime())) return at(`observed_at '${raw.observed_at}' er ikke en dato`);
+
+  return {
+    item_key: item.key,
+    chain_id: chainId,
+    pack_qty: qty,
+    pack_unit: raw.pack_unit,
+    pack_price: price,
+    unit_price: Math.round((price / qty) * 1000) / 1000,
+    source: 'manual',
+    observed_at: observed.toISOString(),
+    valid_until: engine.validUntilFor(item.class, observed),
+  };
+}
+
+/** Minimal CSV: ingen citationstegn, ingen indlejrede kommaer. Prisdata har ingen. */
+function parseCsv(text) {
+  const lines = text.split(/\r?\n/).filter((l) => l.trim() && !l.startsWith('#'));
+  const header = lines.shift().split(',').map((h) => h.trim());
+  for (const c of COLUMNS) {
+    if (!header.includes(c)) throw new Error(`CSV mangler kolonnen '${c}'`);
+  }
+  return lines.map((l) => {
+    const cells = l.split(',').map((c) => c.trim());
+    return Object.fromEntries(header.map((h, i) => [h, cells[i]]));
+  });
+}
+
+function main() {
+  const db = getDb();
+  const items = new Map(db.prepare('SELECT key, class, base_unit FROM items').all()
+    .map((i) => [i.key, i]));
+  const chains = new Map(db.prepare('SELECT id, slug FROM chains').all()
+    .map((c) => [c.slug, c.id]));
+
+  const rows = parseCsv(fs.readFileSync(CSV, 'utf8'));
+  const parsed = rows.map((r, i) => parsePriceRow(r, { items, chains, line: i + 2 }));
+  const errors = parsed.filter((p) => p.error);
+
+  if (errors.length) {
+    for (const e of errors) console.error(e.error);
+    console.error(`\n${errors.length} fejl — intet er skrevet.`);
+    process.exit(1);
+  }
+
+  const ins = db.prepare(`
+    INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit,
+                             pack_price, unit_price, source, observed_at, valid_until)
+    VALUES (@item_key, @chain_id, @pack_qty, @pack_unit,
+            @pack_price, @unit_price, @source, @observed_at, @valid_until)
+    ON CONFLICT(item_key, chain_id, pack_qty, pack_unit) DO UPDATE SET
+      pack_price = excluded.pack_price, unit_price = excluded.unit_price,
+      source = excluded.source, observed_at = excluded.observed_at,
+      valid_until = excluded.valid_until
+  `);
+  db.transaction(() => { for (const p of parsed) ins.run(p); })();
+
+  console.log(`${parsed.length} priser importeret fra ${path.relative(process.cwd(), CSV)}`);
+}
+
+if (require.main === module) main();
+
+module.exports = { parsePriceRow, parseCsv };
+```
+
+Bemærk `if (require.main === module)`: testen indlæser filen for at få fat i `parsePriceRow`, og må ikke komme til at køre importen som bivirkning.
+
+- [ ] **Step 5: Skriv arbejdslisten**
+
+```js
+'use strict';
+
+/**
+ * Hvilke priser mangler, og hvilke er løbet ud?
+ *
+ * `valid_until` er ikke dokumentation — det er en forespørgsel. Den her.
+ * Afledte gæt står forrest, fordi de er de mindst pålidelige tal i basen.
+ *
+ *   npm run prices:worklist -- rema1000 netto foetex
+ */
+
+const { getDb } = require('../src/db');
+
+function main() {
+  const db = getDb();
+  const slugs = process.argv.slice(2);
+  const all = db.prepare('SELECT id, slug, name FROM chains').all();
+  const chains = slugs.length ? all.filter((c) => slugs.includes(c.slug)) : all;
+
+  if (!chains.length) {
+    console.error(`ingen kæder matchede. Kendte: ${all.map((c) => c.slug).join(' ')}`);
+    process.exit(1);
+  }
+
+  const now = new Date().toISOString();
+  for (const chain of chains) {
+    const rows = db.prepare(`
+      SELECT i.key, i.name, i.class, i.base_unit,
+             ip.source, ip.observed_at, ip.valid_until
+        FROM items i
+        LEFT JOIN item_prices ip ON ip.item_key = i.key AND ip.chain_id = ?
+       WHERE i.class <> 'essential'
+         AND (ip.id IS NULL OR ip.source = 'derived' OR ip.valid_until < ?)
+       ORDER BY (ip.id IS NULL) DESC, (ip.source = 'derived') DESC, ip.valid_until
+    `).all(chain.id, now);
+
+    const mangler = rows.filter((r) => !r.source).length;
+    const gaet = rows.filter((r) => r.source === 'derived').length;
+    const udloebet = rows.length - mangler - gaet;
+
+    console.log(`\n── ${chain.name} (${chain.slug}) ──`);
+    console.log(`mangler helt: ${mangler} · kun gæt: ${gaet} · udløbet: ${udloebet}`);
+    for (const r of rows.slice(0, 25)) {
+      const status = !r.source ? 'MANGLER' : r.source === 'derived' ? 'gæt    ' : 'udløbet';
+      console.log(`  ${status}  ${r.key.padEnd(24)} ${r.base_unit}  (${r.class})`);
+    }
+    if (rows.length > 25) console.log(`  … og ${rows.length - 25} mere`);
+  }
+}
+
+main();
+```
+
+- [ ] **Step 6: Tilføj scripts, kør, commit**
+
+```json
+"prices:import": "node scripts/import-prices.js",
+"prices:worklist": "node scripts/price-worklist.js",
+```
+
+```bash
+npm run prices:import
+npm run prices:worklist -- rema1000
+npm test
+```
+
+Forventet: importen skriver de tre eksempelrækker; arbejdslisten viser, at langt de fleste af de 190 varer mangler eller kun har et gæt. Det tal er det ærlige billede af, hvor meget indtastning der ligger foran.
+
+```bash
+git add data/item_prices.csv scripts/import-prices.js scripts/price-worklist.js test/prices.test.js package.json
+git commit -m "CSV-importoer og prisarbejdsliste"
+```
+
+---
+
+### Task 3: REMA 1000-klienten
+
+Den eneste kæde, der kan hentes automatisk. Undersøgelsen bekræftede endpointet uden login.
+
+**Files:**
+- Create: `src/prices/rema.js`
+- Create: `scripts/fetch-rema-prices.js`
+- Modify: `package.json`, `test/prices.test.js`
+
+**Interfaces:**
+- Produces: `parseRemaProduct(raw)` → `{ name, pack_qty, pack_unit, pack_price, unit_price }` eller `null`; `npm run prices:rema`
+
+- [ ] **Step 1: Skriv den fejlende test**
+
+Feltnavnene er dem, undersøgelsen dokumenterede. Testen bruger et ægte svar, ikke et opdigtet:
+
+```js
+const { parseRemaProduct } = require('../src/prices/rema');
+
+test('REMA-svar til pris og pakkestørrelse', () => {
+  // Ægte svar fra api.digital.rema1000.dk, gengivet i API-undersøgelsen.
+  const p = parseRemaProduct({
+    name: 'SKRÆLLE KARTOFLER',
+    underline: '2 KG. / DANMARK KL. 1',
+    prices: [{ price: 18, compare_unit: 'kg', compare_unit_price: 9 }],
+  });
+  assert.equal(p.pack_unit, 'kg');
+  near(p.pack_qty, 2);
+  near(p.pack_price, 18);
+  near(p.unit_price, 9);
+});
+
+test('REMA: pakkestørrelse udledes også når underline ikke siger den', () => {
+  const p = parseRemaProduct({
+    name: 'HAKKET OKSEKØD 4-7%',
+    underline: 'DANSK',
+    prices: [{ price: 25.95, compare_unit: 'kg', compare_unit_price: 64.88 }],
+  });
+  near(p.pack_qty, 0.4);       // 25.95 / 64.88
+  assert.equal(p.pack_unit, 'kg');
+});
+
+test('REMA: styk-varer får ingen vægt påduttet', () => {
+  const p = parseRemaProduct({
+    name: 'ØKOLOGISKE ÆG M/L 10 STK.',
+    underline: '10 STK.',
+    prices: [{ price: 32.95, compare_unit: 'stk', compare_unit_price: 3.295 }],
+  });
+  assert.equal(p.pack_unit, 'stk');
+  near(p.pack_qty, 10);
+});
+
+test('REMA: et svar uden sammenligningspris kan ikke bruges', () => {
+  assert.equal(parseRemaProduct({ name: 'X', prices: [{ price: 10 }] }), null);
+});
+```
+
+- [ ] **Step 2: Kør testene og se dem fejle**
+
+Kør: `node --test test/prices.test.js`
+Forventet: FAIL — modulet findes ikke.
+
+- [ ] **Step 3: Skriv klienten**
+
+```js
+'use strict';
+
+/**
+ * REMA 1000s eget shop-API.
+ *
+ * Den eneste af de 14 kæder, der kan hentes automatisk — se
+ * docs/superpowers/specs/2026-09-06-api-undersoegelse.md for hvorfor Salling
+ * og Coop ikke kan. Endpointet er udokumenteret og kan forsvinde uden varsel;
+ * derfor står kilden i item_prices.source, så en række herfra kan skelnes
+ * fra en indtastet og erstattes, hvis dagen kommer.
+ *
+ * Pakkestørrelsen står ikke som et tal. Den udledes af pris ÷ kilopris, og
+ * krydstjekkes mod `underline`, som ofte siger den i klartekst ("2 KG.").
+ */
+
+const BASE = 'https://api.digital.rema1000.dk/api';
+
+// REMAs compare_unit mod vores base_unit. Andet end disse tre kan vi ikke
+// sammenligne med en opskriftsmængde.
+const UNITS = { kg: 'kg', l: 'l', ltr: 'l', stk: 'stk', pcs: 'stk' };
+
+/** "2 KG." / "500 G." / "10 STK." -> mængde i base_unit, eller null. */
+function packFromUnderline(underline, baseUnit) {
+  if (!underline) return null;
+  const m = String(underline).match(/(\d+(?:[.,]\d+)?)\s*(kg|g|l|dl|cl|ml|stk)\b/i);
+  if (!m) return null;
+  const n = parseFloat(m[1].replace(',', '.'));
+  const u = m[2].toLowerCase();
+  const toBase = { kg: 1, g: 0.001, l: 1, dl: 0.1, cl: 0.01, ml: 0.001, stk: 1 };
+  const unitBase = (u === 'g' || u === 'kg') ? 'kg' : u === 'stk' ? 'stk' : 'l';
+  if (unitBase !== baseUnit) return null;
+  return n * toBase[u];
+}
+
+/** Ét produkt fra søgesvaret til en prisrække, eller null hvis det ikke kan bruges. */
+function parseRemaProduct(raw) {
+  const price = raw && raw.prices && raw.prices[0];
+  if (!price || !(price.price > 0)) return null;
+  if (!(price.compare_unit_price > 0)) return null;
+
+  const baseUnit = UNITS[String(price.compare_unit || '').toLowerCase()];
+  if (!baseUnit) return null;
+
+  // Klartekst slår regnestykket, når den er der: den er ikke afrundet.
+  const stated = packFromUnderline(raw.underline, baseUnit);
+  const derived = price.price / price.compare_unit_price;
+  const packQty = stated != null && Math.abs(stated - derived) / derived < 0.05
+    ? stated
+    : Math.round(derived * 1000) / 1000;
+
+  if (!(packQty > 0)) return null;
+
+  return {
+    name: raw.name,
+    pack_qty: packQty,
+    pack_unit: baseUnit,
+    pack_price: price.price,
+    unit_price: price.compare_unit_price,
+  };
+}
+
+/** Søger og returnerer de rå produkter. Kaster ved HTTP-fejl. */
+async function searchRema(query, { perPage = 20 } = {}) {
+  const url = `${BASE}/search/products?query=${encodeURIComponent(query)}`
+            + `&page=1&per_page=${perPage}`;
+  const res = await fetch(url, {
+    headers: { accept: 'application/json', 'accept-language': 'da-DK,da;q=0.9' },
+  });
+  if (!res.ok) throw new Error(`REMA svarede HTTP ${res.status} på "${query}"`);
+  const body = await res.json();
+  return body.data || body.results || [];
+}
+
+module.exports = { parseRemaProduct, packFromUnderline, searchRema, BASE };
+```
+
+- [ ] **Step 4: Kør testene og se dem passere**
+
+Kør: `node --test test/prices.test.js`
+Forventet: PASS.
+
+- [ ] **Step 5: Skriv hente-scriptet**
+
+Det søger på varens navn og synonymer, vælger det billigste troværdige match pr. vare, og skriver med `source='api:rema'`.
+
+```js
+'use strict';
+
+/**
+ * Henter normalpriser fra REMA 1000 for alle varer, der skal prissættes.
+ *
+ * Søger på varens navn og danske synonymer. Et søgeresultat er ikke et
+ * sikkert match — "kartofler" giver også kartoffelsalat — så kun produkter,
+ * hvis navn slår op til den SAMME vare gennem vores egen taksonomi, tælles
+ * med. Ellers ville prisen på en færdigret blive til prisen på råvaren.
+ *
+ *   npm run prices:rema
+ *   npm run prices:rema -- --dry-run
+ */
+
+const path = require('node:path');
+const { getDb } = require('../src/db');
+const taxonomy = require('../src/lib/taxonomy');
+const { parseRemaProduct, searchRema } = require('../src/prices/rema');
+const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
+
+const REMA_SLUG = 'rema1000';
+const PAUSE_MS = 400;   // høflighed mod et API, vi ikke er inviteret til
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function main() {
+  const dryRun = process.argv.includes('--dry-run');
+  const db = getDb();
+
+  const chain = db.prepare('SELECT id, name FROM chains WHERE slug = ?').get(REMA_SLUG);
+  if (!chain) throw new Error(`kæden '${REMA_SLUG}' findes ikke i chains`);
+
+  const items = db.prepare(
+    "SELECT key, name, class, base_unit FROM items WHERE class <> 'essential' ORDER BY key"
+  ).all();
+
+  const ins = db.prepare(`
+    INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit,
+                             pack_price, unit_price, source, observed_at, valid_until)
+    VALUES (@item_key, @chain_id, @pack_qty, @pack_unit,
+            @pack_price, @unit_price, 'api:rema', @observed_at, @valid_until)
+    ON CONFLICT(item_key, chain_id, pack_qty, pack_unit) DO UPDATE SET
+      pack_price = excluded.pack_price, unit_price = excluded.unit_price,
+      source = excluded.source, observed_at = excluded.observed_at,
+      valid_until = excluded.valid_until
+     -- En indtastet pris er set af et menneske. Den vinder over et API.
+     WHERE item_prices.source <> 'manual'
+  `);
+
+  const now = new Date();
+  let hit = 0, miss = 0, skipped = 0;
+
+  for (const item of items) {
+    let best = null;
+    try {
+      for (const raw of await searchRema(item.name)) {
+        const parsed = parseRemaProduct(raw);
+        if (!parsed || parsed.pack_unit !== item.base_unit) continue;
+        // Navnet skal slå op til den samme vare gennem vores egen taksonomi.
+        if (taxonomy.lookup(raw.name)?.entry.key !== item.key) { skipped++; continue; }
+        if (!best || parsed.unit_price < best.unit_price) best = parsed;
+      }
+    } catch (err) {
+      console.error(`${item.key}: ${err.message}`);
+      await sleep(PAUSE_MS);
+      continue;
+    }
+
+    if (!best) { miss++; await sleep(PAUSE_MS); continue; }
+    hit++;
+    console.log(`${item.key.padEnd(24)} ${best.pack_qty}${best.pack_unit} `
+              + `${best.pack_price} kr (${best.unit_price}/${best.pack_unit})  ${best.name}`);
+
+    if (!dryRun) {
+      ins.run({
+        item_key: item.key, chain_id: chain.id,
+        pack_qty: best.pack_qty, pack_unit: best.pack_unit,
+        pack_price: best.pack_price, unit_price: best.unit_price,
+        observed_at: now.toISOString(),
+        valid_until: engine.validUntilFor(item.class, now),
+      });
+    }
+    await sleep(PAUSE_MS);
+  }
+
+  console.log(`\nfundet: ${hit} · intet match: ${miss} · forkastet på taksonomi: ${skipped}`);
+  if (dryRun) console.log('(--dry-run: intet skrevet)');
+}
+
+main().catch((e) => { console.error(e); process.exit(1); });
+```
+
+- [ ] **Step 6: Kør tørt først**
+
+```json
+"prices:rema": "node scripts/fetch-rema-prices.js",
+```
+
+```bash
+npm run prices:rema -- --dry-run 2>&1 | tail -30
+```
+
+Gennemgå de første 30 linjer med øjnene. Er der varer, hvor prisen åbenlyst hører til et andet produkt, så stram taksonomi-tjekket frem for at acceptere dem — en forkert normalpris er værre end en manglende, fordi ingenting gør opmærksom på den.
+
+Kør derefter rigtigt og commit.
+
+---
+
+### Task 4: Den effektive pris
+
+Reglen, der binder tilbud og normalpris sammen. Ren funktion i `engine.js`, så server og browser ikke kan blive uenige.
+
+**Files:**
+- Modify: `public/engine.js`
+- Modify: `test/prices.test.js`
+
+**Interfaces:**
+- Consumes: `plans.normalPricesFor()` (opgave 6, men nøgleformen aftales her)
+- Produces: `effectivePrice(itemKey, chainId, { offers, normals })` → `{ pack_qty, pack_unit, pack_price, unit_price, on_offer, source }` eller `null`; `plans.activeOfferMap()` nøgler nu på `item|chain`
+
+- [ ] **Step 1: Ret tilbudskortets nøgle — det er en forudsætning**
+
+`activeOfferMap()` i `src/mealplan/generate.js` nøgler i dag på varen alene og springer over, hvis nøglen findes:
+
+```js
+    if (map.has(row.taxonomy_key)) continue;
+    map.set(row.taxonomy_key, { ... });
+```
+
+Fordi rækkerne er sorteret på `unit_price ASC`, betyder det **ét tilbud pr. vare, billigst på tværs af alle kæder**. Det var rigtigt, da motoren kun spurgte "er varen på tilbud et sted?" — men denne plan skal vide, hvad varen koster i *hver* kæde, for at kunne vælge mellem dem.
+
+Skift nøglen til `item|chain`, samme form som normalpriserne:
+
+```js
+  const map = new Map();
+  for (const row of db.prepare(sql).all(...params)) {
+    // Drikkevarer, slik og non-food kan ikke bære en ret.
+    if (!taxonomy.isMealCapable(row.item_key)) continue;
+
+    // Nøglen er vare OG kæde. Med varen alene beholdt vi kun det billigste
+    // tilbud på tværs af kæderne, og så kan man ikke vælge butik bagefter.
+    const k = `${row.item_key}|${row.chain_id}`;
+    if (map.has(k)) continue;            // rækkerne er sorteret billigst først
+
+    const baseline = getBaseline(row.product_id, row.base_unit);
+    map.set(k, { ...row, normal_unit_price: baseline?.median ?? null });
+  }
+```
+
+Grep efter kaldssteder og ret dem — `scoreRecipe` i `engine.js` slår op i kortet og skal bruge den nye form:
+
+```bash
+grep -rn "activeOfferMap\|offers.get(" src/ public/ test/ --include=*.js
+```
+
+- [ ] **Step 2: Læg `optional` i opskriftens items**
+
+`shoppingList` i opgave 8 skal kunne springe "evt."-linjer over, men payloaden bærer dem ikke. I `src/mealplan/generate.js`, i `items`-objektet:
+
+```js
+      optional: Boolean(ing.optional),
+```
+
+og tilsvarende i `src/sync/build.js`s `recipeIndex`-map, så browseren får det samme. De to filer definerer payloaden sammen og skal ændres i samme commit — det er den kontrakt, opgave 9 i plan 1 lagde en test på.
+
+Udvid den test i `test/sync.test.js`, så den også kræver `optional`.
+
+- [ ] **Step 3: Skriv de fejlende tests**
+
+```js
+const OFFERS = new Map([['kartofler|11deC', {
+  item_key: 'kartofler', chain_id: '11deC', base_qty: 2, base_unit: 'kg',
+  price: 12, unit_price: 6,
+}]]);
+const NORMALS = new Map([['kartofler|11deC', [
+  { item_key: 'kartofler', chain_id: '11deC', pack_qty: 2, pack_unit: 'kg',
+    pack_price: 15.95, unit_price: 7.975, source: 'manual' },
+]]]);
+
+test('tilbud slår normalpris, når det er billigere', () => {
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: OFFERS, normals: NORMALS });
+  near(p.unit_price, 6);
+  assert.equal(p.on_offer, true);
+});
+
+test('normalprisen gælder, når der ikke er tilbud', () => {
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: new Map(), normals: NORMALS });
+  near(p.unit_price, 7.975);
+  assert.equal(p.on_offer, false);
+  assert.equal(p.source, 'manual');
+});
+
+test('et dyrere "tilbud" overskriver ikke normalprisen', () => {
+  // Den klassiske avis-fælde: tilbudspris = normalpris. Vi tager den billigste.
+  const dyrt = new Map([['kartofler|11deC', { base_qty: 2, base_unit: 'kg', price: 20, unit_price: 10 }]]);
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: dyrt, normals: NORMALS });
+  near(p.unit_price, 7.975);
+  assert.equal(p.on_offer, false);
+});
+
+test('ingen pris i kæden giver null, ikke nul', () => {
+  assert.equal(engine.effectivePrice('kartofler', 'ukendt', { offers: new Map(), normals: new Map() }), null);
+});
+```
+
+- [ ] **Step 4: Kør, se dem fejle, og skriv funktionen**
+
+I `public/engine.js`:
+
+```js
+  /**
+   * Hvad koster varen i den kæde i dag?
+   *
+   * Tilbudsprisen overskriver aldrig normalprisen i basen — de to lever i
+   * hver sin tabel, og valget træffes her, ved opslaget. Så falder prisen
+   * tilbage af sig selv, når tilbuddet udløber, historikken er intakt, og
+   * der er ingen særregel for baseline kontra fresh.
+   *
+   * Billigste vinder. Et "tilbud" til normalpris er ikke et tilbud.
+   */
+  function effectivePrice(itemKey, chainId, { offers, normals }) {
+    const k = `${itemKey}|${chainId}`;
+
+    const offer = offers.get(k);
+    const fromOffer = offer && offer.unit_price > 0 && offer.base_qty > 0
+      ? { pack_qty: offer.base_qty, pack_unit: offer.base_unit,
+          pack_price: offer.price, unit_price: offer.unit_price,
+          on_offer: true, source: 'offer' }
+      : null;
+
+    // Flere pakkestørrelser pr. kæde er tilladt; den billigste pr. enhed er
+    // udgangspunktet. Pakkevalget sker senere, når behovet er kendt.
+    const rows = normals.get(k) || [];
+    let fromNormal = null;
+    for (const r of rows) {
+      if (!(r.unit_price > 0)) continue;
+      if (!fromNormal || r.unit_price < fromNormal.unit_price) {
+        fromNormal = { pack_qty: r.pack_qty, pack_unit: r.pack_unit,
+                       pack_price: r.pack_price, unit_price: r.unit_price,
+                       on_offer: false, source: r.source };
+      }
+    }
+
+    if (!fromOffer) return fromNormal;
+    if (!fromNormal) return fromOffer;
+    return fromOffer.unit_price <= fromNormal.unit_price ? fromOffer : fromNormal;
+  }
+```
+
+Tilføj `effectivePrice` til returobjektet.
+
+- [ ] **Step 5: Kør suiten og commit**
+
+---
+
+### Task 5: Pakkeafrunding og ægte kurvepris
+
+**Files:**
+- Modify: `public/engine.js`
+- Create: `test/waste.test.js` (+ `package.json`)
+
+**Interfaces:**
+- Produces: `choosePack(need, packs, { keeps })` → `{ pack_qty, pack_price, packs, bought, leftover, waste }`
+
+- [ ] **Step 1: Skriv de fejlende tests**
+
+```js
+'use strict';
+
+/**
+ * Tests for pakkeafrunding og spild.
+ *
+ * Reglen, hele planen hviler på: man køber hele pakker. Skal man bruge
+ * 1,3 kg kartofler, koster det to 1 kg-poser eller én 1,5 kg-pose — ikke
+ * 1,3 × kiloprisen. Og resten er kun spild, hvis varen ikke holder.
+ */
+
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const path = require('node:path');
+const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
+const near = (a, b, eps = 1e-6) => assert.ok(Math.abs(a - b) < eps, `${a} != ${b}`);
+
+const PACKS = [
+  { pack_qty: 1,   pack_price: 8,  unit_price: 8 },
+  { pack_qty: 1.5, pack_price: 12, unit_price: 8 },
+  { pack_qty: 2,   pack_price: 12, unit_price: 6 },
+];
+
+test('behovet rundes op til hele pakker', () => {
+  const c = engine.choosePack(1.3, PACKS, { keeps: 'keeps' });
+  near(c.bought, 1.5);
+  near(c.pack_price * c.packs, 12);
+  near(c.leftover, 0.2);
+});
+
+test('billigst vinder, når resten alligevel ikke er spild', () => {
+  // 2 kg til 12 kr er samme pris som 1,5 kg til 12 kr, men kartofler holder,
+  // så den større pose er ikke dyrere i spild.
+  const c = engine.choosePack(1.3, PACKS, { keeps: 'pantry' });
+  near(c.pack_price * c.packs, 12);
+  near(c.waste, 0);
+});
+
+test('for en letfordærvelig vare tæller resten fuldt', () => {
+  const c = engine.choosePack(1.3, PACKS, { keeps: 'perishable' });
+  near(c.bought, 1.5);
+  near(c.waste, 0.2);
+});
+
+test('to pakker, når ingen enkelt er stor nok', () => {
+  const c = engine.choosePack(3.4, [{ pack_qty: 2, pack_price: 12, unit_price: 6 }], { keeps: 'keeps' });
+  assert.equal(c.packs, 2);
+  near(c.bought, 4);
+  near(c.leftover, 0.6);
+});
+
+test('intet behov giver ingen pakke', () => {
+  assert.equal(engine.choosePack(0, PACKS, { keeps: 'keeps' }), null);
+  assert.equal(engine.choosePack(1, [], { keeps: 'keeps' }), null);
+});
+```
+
+- [ ] **Step 2: Kør, se dem fejle, og skriv funktionen**
+
+```js
+  // Hvor tungt en rest tæller som spild. Kartofler til overs er ikke spild;
+  // fløde til overs er. Det er forskellen på at optimere mod madspild og at
+  // optimere mod et regneark.
+  const WASTE_WEIGHT = { perishable: 1, keeps: 0.5, pantry: 0 };
+
+  // Hvad et kilo spild "koster" i valget mellem to pakker. Højere tal gør
+  // optimeringen mere villig til at betale for at undgå en rest.
+  const WASTE_PENALTY_PER_UNIT = 15;
+
+  /**
+   * Vælg pakkestørrelse og antal til et behov.
+   *
+   * Man kan ikke købe en halv pose. Behovet rundes op, og valget mellem to
+   * pakkestørrelser afgøres af pris PLUS vægtet spild — ellers ville
+   * 5 kg-posen altid vinde, fordi den er billigst pr. kilo.
+   */
+  function choosePack(need, packs, { keeps = 'keeps' } = {}) {
+    if (!(need > 0) || !packs || !packs.length) return null;
+    const w = WASTE_WEIGHT[keeps] ?? 0.5;
+
+    let best = null;
+    for (const p of packs) {
+      if (!(p.pack_qty > 0) || !(p.pack_price > 0)) continue;
+      const n = Math.ceil(need / p.pack_qty);
+      const bought = n * p.pack_qty;
+      const leftover = bought - need;
+      const waste = leftover * w;
+      const cost = n * p.pack_price;
+      const score = cost + waste * WASTE_PENALTY_PER_UNIT;
+
+      if (!best || score < best.score) {
+        best = { pack_qty: p.pack_qty, pack_price: p.pack_price, packs: n,
+                 bought, leftover, waste, cost, score };
+      }
+    }
+    return best;
+  }
+```
+
+Tilføj `choosePack`, `WASTE_WEIGHT` og `WASTE_PENALTY_PER_UNIT` til returobjektet.
+
+- [ ] **Step 3: Kør suiten og commit**
+
+`WASTE_PENALTY_PER_UNIT` er et skøn, ikke et resultat. Notér i commit-beskeden, at det skal justeres, når de første rigtige lister er set.
+
+---
+
+### Task 6: `recipe_costs`
+
+**Files:**
+- Modify: `src/db/schema.sql`
+- Create: `scripts/recompute-recipe-costs.js`
+- Modify: `src/mealplan/generate.js` (hent `item_prices`), `package.json`
+
+**Interfaces:**
+- Produces: tabellen `recipe_costs`; `npm run costs:recompute`; `plans.normalPricesFor(chainIds)` → `Map<'item|chain', rows[]>`
+
+- [ ] **Step 1: Tabellen**
+
+```sql
+-- ── Opskriftspriser ─────────────────────────────────────────────────────────
+-- Forudberegnet, fordi budget-sporet skal kunne sortere 1.546 opskrifter uden
+-- at regne noget. Genberegnes ugentligt, når tilbuddene er hentet.
+CREATE TABLE IF NOT EXISTS recipe_costs (
+  recipe_id   INTEGER NOT NULL REFERENCES recipes(id) ON DELETE CASCADE,
+  chain_id    TEXT    NOT NULL REFERENCES chains(id),
+  -- Σ mængde × enhedspris. Proportional, og derfor den rigtige til at
+  -- RANGERE opskrifter mod hinanden.
+  cost        REAL,
+  -- Σ hele pakker. Den rigtige, hvis retten står alene — men for høj for en
+  -- uge, hvor flere retter deles om samme pose.
+  cost_packs  REAL,
+  coverage    REAL,
+  priceable   INTEGER NOT NULL DEFAULT 0,
+  computed_at TEXT NOT NULL,
+  PRIMARY KEY (recipe_id, chain_id)
+);
+CREATE INDEX IF NOT EXISTS idx_recipe_costs_cheap
+  ON recipe_costs(chain_id, cost) WHERE priceable = 1;
+```
+
+- [ ] **Step 2: Hent normalpriser i `generate.js`**
+
+Ved siden af `normalPriceMap()`:
+
+```js
+/**
+ * Normalpriser pr. (vare, kæde), grupperet så motoren kan vælge pakke.
+ *
+ * Nøglen er `item|chain` — samme form som tilbudskortet, så effectivePrice()
+ * kan slå begge op med den samme streng.
+ */
+function normalPricesFor(chainIds = null) {
+  const db = getDb();
+  let sql = `SELECT item_key, chain_id, pack_qty, pack_unit, pack_price,
+                    unit_price, source, valid_until
+               FROM item_prices`;
+  const params = [];
+  if (chainIds && chainIds.length) {
+    sql += ` WHERE chain_id IN (${chainIds.map(() => '?').join(',')})`;
+    params.push(...chainIds);
+  }
+  const map = new Map();
+  for (const r of db.prepare(sql).all(...params)) {
+    const k = `${r.item_key}|${r.chain_id}`;
+    if (!map.has(k)) map.set(k, []);
+    map.get(k).push(r);
+  }
+  return map;
+}
+```
+
+Eksportér den sammen med de øvrige.
+
+- [ ] **Step 3: Skriv jobbet**
+
+```js
+'use strict';
+
+/**
+ * Fylder recipe_costs for hver (opskrift, kæde).
+ *
+ * To pristal, fordi de svarer på hver sit spørgsmål. `cost` er proportional
+ * og rigtig til at rangere opskrifter; `cost_packs` er rigtig, hvis retten
+ * står alene. Den faktiske madplanspris regnes på hele ugen, hvor pakkerne
+ * deles, og er derfor lavere end summen af cost_packs.
+ *
+ *   npm run costs:recompute
+ */
+
+const path = require('node:path');
+const { getDb } = require('../src/db');
+const plans = require('../src/mealplan/generate');
+const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
+
+function main() {
+  const db = getDb();
+  const chains = db.prepare('SELECT id, name FROM chains').all();
+  const recipes = plans.loadRecipes({});
+  const items = new Map(db.prepare('SELECT key, class, keeps FROM items').all()
+    .map((i) => [i.key, i]));
+
+  const ins = db.prepare(`
+    INSERT INTO recipe_costs (recipe_id, chain_id, cost, cost_packs,
+                              coverage, priceable, computed_at)
+    VALUES (@recipe_id, @chain_id, @cost, @cost_packs, @coverage, @priceable, @computed_at)
+    ON CONFLICT(recipe_id, chain_id) DO UPDATE SET
+      cost = excluded.cost, cost_packs = excluded.cost_packs,
+      coverage = excluded.coverage, priceable = excluded.priceable,
+      computed_at = excluded.computed_at
+  `);
+
+  const now = new Date().toISOString();
+  let written = 0;
+
+  for (const chain of chains) {
+    const offers = plans.activeOfferMap({ chainIds: [chain.id] });
+    const normals = plans.normalPricesFor([chain.id]);
+
+    const run = db.transaction(() => {
+      for (const r of recipes) {
+        let cost = 0, costPacks = 0, known = 0, total = 0;
+
+        for (const it of r.items) {
+          const item = items.get(it.key);
+          if (!item || item.class === 'essential') continue;   // essentials købes ikke
+          total++;
+          const need = it.weight ?? it.amount;
+          if (!(need > 0)) continue;
+
+          const price = engine.effectivePrice(it.key, chain.id, { offers, normals });
+          if (!price) continue;
+          known++;
+
+          cost += need * price.unit_price;
+          const pack = engine.choosePack(need, [price], { keeps: item.keeps });
+          if (pack) costPacks += pack.cost;
+        }
+
+        const coverage = total ? known / total : 0;
+        ins.run({
+          recipe_id: r.id, chain_id: chain.id,
+          cost: Math.round(cost * 100) / 100,
+          cost_packs: Math.round(costPacks * 100) / 100,
+          coverage: Math.round(coverage * 1000) / 1000,
+          priceable: coverage === 1 ? 1 : 0,
+          computed_at: now,
+        });
+        written++;
+      }
+    });
+    run();
+    console.log(`${chain.name.padEnd(16)} ${recipes.length} opskrifter`);
+  }
+
+  const p = db.prepare('SELECT count(*) c FROM recipe_costs WHERE priceable = 1').get().c;
+  console.log(`\nrækker: ${written} · fuldt prissatte (opskrift × kæde): ${p}`);
+}
+
+main();
+```
+
+- [ ] **Step 4: Kør og stikprøv**
+
+```json
+"costs:recompute": "node scripts/recompute-recipe-costs.js",
+```
+
+```bash
+npm run costs:recompute
+node -e "
+const db=require('better-sqlite3')('data.db',{readonly:true});
+for(const r of db.prepare(\"select r.title, rc.cost, rc.cost_packs, rc.coverage from recipe_costs rc join recipes r on r.id=rc.recipe_id join chains c on c.id=rc.chain_id where c.slug='rema1000' and rc.priceable=1 order by rc.cost limit 10\").all())
+  console.log(String(r.cost).padStart(7), String(r.cost_packs).padStart(7), ' ', r.title.slice(0,50));
+"
+```
+
+**Læs tallene, før du går videre.** En hverdagsret til fire personer ligger typisk mellem 25 og 90 kr i `cost`. Ligger de billigste under 10 kr, mangler der priser frem for at retten er billig — `coverage` skal være 1, og hvis den er, er det enhedspriserne, der er forkerte. `cost_packs` skal være højere end `cost`, aldrig lavere.
+
+- [ ] **Step 5: Kør suiten og commit**
+
+---
+
+### Task 7: De to forslag
+
+**Files:**
+- Modify: `public/engine.js`
+- Modify: `test/waste.test.js`
+
+**Interfaces:**
+- Produces: `sharedWeek(candidates, { days, servings, items, offers, normals, chainIds })` → `{ picks, cost, waste, shared }`; `twoProposals(...)` → `[A, B]`
+
+- [ ] **Step 1: Skriv de fejlende tests**
+
+```js
+test('delt indkøb foretrækker retter, der bruger samme pose op', () => {
+  // To retter deles om 1 kg hakket oksekød; den tredje bruger en helt ny vare
+  // til samme score. Ugen skal vælge de to, der deler.
+  const week = engine.sharedWeek(FIXTURE.candidates, { days: 2, ...FIXTURE.ctx });
+  assert.deepEqual(week.picks.map((p) => p.id).sort(), [1, 2]);
+  assert.ok(week.shared.length >= 1, 'skal kunne forklare hvad der deles');
+});
+
+test('de to forslag deler højst én ret', () => {
+  const [a, b] = engine.twoProposals(FIXTURE.candidates, { days: 3, ...FIXTURE.ctx });
+  const overlap = a.picks.filter((p) => b.picks.some((q) => q.id === p.id));
+  assert.ok(overlap.length <= 1, `delte ${overlap.length} retter`);
+});
+
+test('et forslag kan forklare sig selv i én linje', () => {
+  const [a] = engine.twoProposals(FIXTURE.candidates, { days: 3, ...FIXTURE.ctx });
+  assert.match(a.explanation, /deler/);
+});
+```
+
+Fiksturen er skrevet, så svaret kan regnes i hovedet. Læg den øverst i `test/waste.test.js`; opgave 8 bruger den samme.
+
+```js
+// ── Fikstur ──────────────────────────────────────────────────────────────────
+//
+// Tre retter. 1 og 2 deler hakket oksekød; 3 er lige så god, men trækker en
+// helt ny vare. Med to dage skal ugen vælge 1 og 2.
+//
+// Hakket oksekød sælges i 1 kg til 80 kr. Ret 1 og 2 bruger 0,5 kg hver, så
+// sammen bruger de posen op. Vælges 1 og 3, skal der købes en pose oksekød
+// (80 kr, halvdelen til overs) OG en pose laks (120 kr).
+
+const ITEMS = new Map([
+  ['hakket_oksekoed', { key: 'hakket_oksekoed', name: 'Hakket oksekød', category: 'meat', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
+  ['laks',            { key: 'laks',            name: 'Laks',            category: 'fish', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
+  ['kartofler',       { key: 'kartofler',       name: 'Kartofler',       category: 'veg',  class: 'baseline', keeps: 'keeps',   base_unit: 'kg' }],
+  ['salt',            { key: 'salt',            name: 'Salt',            category: 'pantry', class: 'essential', keeps: 'pantry', base_unit: 'kg' }],
+]);
+
+const NORMALS = new Map([
+  ['hakket_oksekoed|c1', [{ pack_qty: 1, pack_unit: 'kg', pack_price: 80,  unit_price: 80,  source: 'manual' }]],
+  ['laks|c1',            [{ pack_qty: 1, pack_unit: 'kg', pack_price: 120, unit_price: 120, source: 'manual' }]],
+  ['kartofler|c1',       [{ pack_qty: 2, pack_unit: 'kg', pack_price: 16,  unit_price: 8,   source: 'manual' }]],
+]);
+
+const recipe = (id, score, items) => ({ id, title: `Ret ${id}`, score, items });
+const line = (key, amount) => ({ key, amount, weight: amount, optional: false });
+
+const CANDIDATES = [
+  recipe(1, 0.8, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6), line('salt', 0.01)]),
+  recipe(2, 0.8, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6)]),
+  recipe(3, 0.8, [line('laks', 0.5),            line('kartofler', 0.6)]),
+];
+
+const CTX = { items: ITEMS, offers: new Map(), normals: NORMALS, chainIds: ['c1'] };
+const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
+```
+
+- [ ] **Step 2: Kør, se dem fejle, og skriv algoritmen**
+
+```js
+  /**
+   * Byg en uge ved grådigt at tilføje den ret, der giver mest for pengene.
+   *
+   * Målet er ikke laveste pris alene: en uge, hvor hver ret trækker sin egen
+   * pose op af fryseren, er dyrere i spild end i kroner. Derfor scorer vi
+   * marginalt — hvad koster retten OVEN I det, vi allerede køber — så en ret,
+   * der bruger resten af noget, vi har, vinder over en lige så god ret, der
+   * kræver en ny vare.
+   */
+  function sharedWeek(candidates, { days, seed = 0, items, offers, normals, chainIds }) {
+    const picks = [];
+    const basket = new Map();   // item_key -> samlet behov
+
+    const needsOf = (recipe) => {
+      const out = new Map();
+      for (const it of recipe.items || []) {
+        const meta = items.get(it.key);
+        if (!meta || meta.class === 'essential') continue;
+        const need = it.weight ?? it.amount;
+        if (need > 0) out.set(it.key, (out.get(it.key) || 0) + need);
+      }
+      return out;
+    };
+
+    const basketCost = (b) => {
+      let cost = 0, waste = 0;
+      for (const [key, need] of b) {
+        const meta = items.get(key);
+        let best = null;
+        for (const chainId of chainIds) {
+          const price = effectivePrice(key, chainId, { offers, normals });
+          if (!price) continue;
+          const pack = choosePack(need, [price], { keeps: meta.keeps });
+          if (pack && (!best || pack.score < best.score)) best = pack;
+        }
+        if (best) { cost += best.cost; waste += best.waste; }
+      }
+      return { cost, waste };
+    };
+
+    let current = basketCost(basket);
+
+    while (picks.length < days) {
+      let bestPick = null;
+
+      for (const cand of candidates) {
+        if (picks.some((p) => p.id === cand.id)) continue;
+
+        const merged = new Map(basket);
+        for (const [k, v] of needsOf(cand)) merged.set(k, (merged.get(k) || 0) + v);
+        const after = basketCost(merged);
+
+        // Marginal pris + marginalt spild, modregnet sporets score. Støjen
+        // gør, at "Ny plan" ikke giver præcis samme uge hver gang.
+        const marginal = (after.cost - current.cost)
+                       + (after.waste - current.waste) * WASTE_PENALTY_PER_UNIT;
+        const score = (cand.score || 0) * 40 - marginal + seededNoise(seed, cand.id);
+
+        if (!bestPick || score > bestPick.score) bestPick = { cand, merged, after, score };
+      }
+
+      if (!bestPick) break;
+      picks.push(bestPick.cand);
+      basket.clear();
+      for (const [k, v] of bestPick.merged) basket.set(k, v);
+      current = bestPick.after;
+    }
+
+    // Hvad deles der faktisk? Det er forklaringen, brugeren får at se.
+    const shared = [];
+    for (const [key, need] of basket) {
+      const used = picks.filter((p) => (p.items || []).some((i) => i.key === key)).length;
+      if (used >= 2) shared.push({ key, used, need: round2(need) });
+    }
+    shared.sort((a, b) => b.used - a.used || b.need - a.need);
+
+    return { picks, cost: round2(current.cost), waste: round2(current.waste), shared };
+  }
+
+  /**
+   * To uger, der er tilstrækkeligt forskellige til at være et valg.
+   *
+   * Samme algoritme, forskelligt udgangspunkt. Vi prøver flere frø og tager
+   * det første par, der deler højst én ret — to forslag med fire fælles
+   * retter er ikke to forslag.
+   */
+  function twoProposals(candidates, opts) {
+    const MAX_SHARED = 1;
+    const a = sharedWeek(candidates, { ...opts, seed: 1 });
+
+    let b = null;
+    for (let seed = 2; seed <= 12; seed++) {
+      const cand = sharedWeek(candidates, { ...opts, seed });
+      const overlap = cand.picks.filter((p) => a.picks.some((q) => q.id === p.id)).length;
+      if (overlap <= MAX_SHARED) { b = cand; break; }
+      if (!b) b = cand;   // fald tilbage på den mindst ens, hvis ingen er nok
+    }
+
+    return [a, b].map((w) => ({ ...w, explanation: explainWeek(w) }));
+  }
+
+  /** "deler 800 g hakket oksekød over 2 retter og 2 kg kartofler over 3" */
+  function explainWeek(week) {
+    if (!week.shared.length) return 'ingen råvarer deles på tværs af retterne';
+    const parts = week.shared.slice(0, 2)
+      .map((s) => `${s.need} ${s.key} over ${s.used} retter`);
+    return `deler ${parts.join(' og ')}`;
+  }
+```
+
+Tilføj `sharedWeek`, `twoProposals` og `explainWeek` til returobjektet.
+
+- [ ] **Step 3: Kør suiten og commit**
+
+---
+
+### Task 8: Kædevalg, de to lister, og synkning
+
+**Files:**
+- Modify: `public/engine.js` (`shoppingList`), `src/sync/build.js`, `supabase/schema.sql`
+- Modify: `test/waste.test.js`
+
+**Interfaces:**
+- Produces: `chooseChains(basket, { chainIds, items, offers, normals })` → `{ chains, assignment, cost }`; `shoppingList` returnerer `{ buy, pantry, waste, chains }`
+
+- [ ] **Step 1: Skriv de fejlende tests**
+
+Boden er 25 kr pr. ekstra butik, så grænsen ligger dér. Fiksturen lægger den ene vare billigere i kæde 2 med præcis kendt forskel:
+
+```js
+// Kæde 2 har laks billigere. To varianter: 18 kr sparet (under boden) og
+// 120 kr sparet (klart over).
+const NORMALS_2 = new Map([
+  ...NORMALS,
+  ['laks|c2',      [{ pack_qty: 1, pack_unit: 'kg', pack_price: 102, unit_price: 102, source: 'manual' }]],
+  ['kartofler|c2', [{ pack_qty: 2, pack_unit: 'kg', pack_price: 16,  unit_price: 8,   source: 'manual' }]],
+]);
+const NORMALS_BILLIG = new Map([
+  ...NORMALS,
+  ['laks|c2',      [{ pack_qty: 1, pack_unit: 'kg', pack_price: 0.5, unit_price: 0.5, source: 'manual' }]],
+  ['kartofler|c2', [{ pack_qty: 2, pack_unit: 'kg', pack_price: 16,  unit_price: 8,   source: 'manual' }]],
+]);
+const BASKET = new Map([['laks', 1], ['kartofler', 1]]);
+
+test('en besparelse på 18 kr udløser ikke en ekstra butik', () => {
+  // Laks: 120 kr i c1, 102 i c2. De 18 kr sparede er mindre end boden på 25.
+  const r = engine.chooseChains(BASKET, {
+    chainIds: ['c1', 'c2'], items: ITEMS, offers: new Map(), normals: NORMALS_2,
+  });
+  assert.deepEqual(r.chains, ['c1']);
+});
+
+test('en stor besparelse gør den ekstra butik det værd', () => {
+  const r = engine.chooseChains(BASKET, {
+    chainIds: ['c1', 'c2'], items: ITEMS, offers: new Map(), normals: NORMALS_BILLIG,
+  });
+  assert.deepEqual([...r.chains].sort(), ['c1', 'c2']);
+});
+
+test('indkøbslisten deler i køb og lagertjek', () => {
+  // Ret 1 har salt (essential) og kartofler (købes).
+  const plan = { days: [{ recipe: CANDIDATES[0] }] };
+  const list = engine.shoppingList(plan, CTX);
+
+  assert.ok(list.buy.some((b) => b.key === 'kartofler'));
+  assert.ok(list.buy.every((b) => b.key !== 'salt'), 'essentials må ikke købes');
+  assert.ok(list.pantry.some((p) => p.key === 'salt'), 'salt skal på lagerlisten');
+  assert.ok(list.pantry.every((p) => p.est_cost === undefined),
+    'essentials må aldrig have en pris');
+});
+
+test('valgfrie linjer driver ikke et indkøb', () => {
+  const plan = { days: [{ recipe: recipe(9, 0.5, [
+    line('kartofler', 0.6),
+    { ...line('laks', 0.4), optional: true },
+  ]) }] };
+  const list = engine.shoppingList(plan, CTX);
+  assert.ok(list.buy.every((b) => b.key !== 'laks'), 'optional skal springes over');
+});
+```
+
+- [ ] **Step 2: Kædevalget**
+
+```js
+  // Hvad en ekstra indkøbstur "koster". En plan, der kræver tre butikker for
+  // at spare 18 kr, er ikke en bedre plan. Tallet er et skøn og skal justeres,
+  // når de første rigtige lister er set.
+  const EXTRA_STORE_PENALTY = 25;
+
+  /**
+   * Hvilke af favoritkæderne skal man handle i?
+   *
+   * Med højst fem favoritter er der 31 ikke-tomme delmængder. Vi prøver dem
+   * alle med et fuldt kurveregnestykke og en fast bod pr. ekstra butik. Det
+   * er eksakt, ikke en heuristik, og det tager millisekunder.
+   */
+  function chooseChains(basket, { chainIds, items, offers, normals }) {
+    const ids = chainIds.slice(0, 5);
+    let best = null;
+
+    for (let mask = 1; mask < (1 << ids.length); mask++) {
+      const subset = ids.filter((_, i) => mask & (1 << i));
+      const assignment = new Map();
+      let cost = 0, covered = 0;
+
+      for (const [key, need] of basket) {
+        const meta = items.get(key);
+        let pick = null;
+        for (const chainId of subset) {
+          const price = effectivePrice(key, chainId, { offers, normals });
+          if (!price) continue;
+          const pack = choosePack(need, [price], { keeps: meta ? meta.keeps : 'keeps' });
+          if (pack && (!pick || pack.score < pick.score)) pick = { ...pack, chainId, price };
+        }
+        if (pick) { assignment.set(key, pick); cost += pick.cost; covered++; }
+      }
+
+      // En delmængde, der ikke kan skaffe varerne, er ikke billigere — den er
+      // ufuldstændig. Manglende varer straffes, så de ikke ser gratis ud.
+      const missing = basket.size - covered;
+      const total = cost + (subset.length - 1) * EXTRA_STORE_PENALTY + missing * 50;
+
+      if (!best || total < best.total) best = { chains: subset, assignment, cost, total };
+    }
+
+    return best;
+  }
+```
+
+- [ ] **Step 3: Skriv `shoppingList` om**
+
+Den nuværende grupperer i `on_offer` og `rest`. Spec afsnit 2.5 vil have **køb ind** og **tjek at du har** — to lister med hver sit formål.
+
+```js
+  /**
+   * De to lister, brugeren får: hvad der skal købes, og hvad der skal stå i
+   * skabet. Essentials optræder aldrig med en pris — det var hele pointen
+   * med kategorien.
+   */
+  function shoppingList(plan, { items, offers, normals, chainIds }) {
+    const basket = new Map();
+    const pantry = new Map();
+    const usedIn = new Map();
+
+    for (const day of plan.days || []) {
+      for (const it of day.recipe.items || []) {
+        const meta = items.get(it.key);
+        if (!meta) continue;
+
+        if (!usedIn.has(it.key)) usedIn.set(it.key, []);
+        usedIn.get(it.key).push(day.recipe.title);
+
+        if (meta.class === 'essential') {
+          pantry.set(it.key, { key: it.key, name: meta.name });
+          continue;
+        }
+        if (it.optional) continue;          // "evt." driver ikke et indkøb
+        const need = it.weight ?? it.amount;
+        if (need > 0) basket.set(it.key, (basket.get(it.key) || 0) + need);
+      }
+    }
+
+    const chosen = chooseChains(basket, { chainIds, items, offers, normals });
+
+    const buy = [];
+    for (const [key, need] of basket) {
+      const pick = chosen.assignment.get(key);
+      const meta = items.get(key);
+      buy.push({
+        key, name: meta.name, chain: pick ? pick.chainId : null,
+        need: round2(need),
+        packs: pick ? pick.packs : null,
+        pack_qty: pick ? pick.pack_qty : null,
+        unit: meta.base_unit,
+        est_cost: pick ? round2(pick.cost) : null,
+        leftover: pick ? round2(pick.leftover) : null,
+        on_offer: pick ? pick.price.on_offer : false,
+        used_in: usedIn.get(key) || [],
+      });
+    }
+    buy.sort((a, b) => (b.est_cost || 0) - (a.est_cost || 0));
+
+    return {
+      buy,
+      pantry: [...pantry.values()].sort((a, b) => a.name.localeCompare(b.name, 'da')),
+      chains: chosen.chains,
+      total: round2(buy.reduce((a, i) => a + (i.est_cost || 0), 0)),
+      waste: round2([...chosen.assignment.values()].reduce((a, p) => a + p.leftover, 0)),
+    };
+  }
+```
+
+`shoppingList` får nu et kontekst-argument. Ret kaldsstederne — grep efter `shoppingList(`.
+
+- [ ] **Step 4: Supabase-skemaet og synkningen**
+
+I `supabase/schema.sql`, efter `taxonomy_prices`:
+
+```sql
+-- Normalpriser. Ikke brugerdata: det er hvad varen koster i butikken, og
+-- frontenden skal kunne læse dem for at prissætte en plan i browseren.
+create table if not exists item_prices (
+  item_key    text not null,
+  chain_id    text not null references chains(id),
+  pack_qty    double precision not null,
+  pack_unit   text not null,
+  pack_price  double precision not null,
+  unit_price  double precision not null,
+  source      text not null,
+  observed_at timestamptz,
+  valid_until timestamptz,
+  primary key (item_key, chain_id, pack_qty, pack_unit)
+);
+create index if not exists idx_item_prices_chain on item_prices(chain_id);
+
+-- Forudberegnet opskriftspris. Budget-sporet sorterer på cost.
+create table if not exists recipe_costs (
+  recipe_id   bigint not null,
+  chain_id    text not null references chains(id),
+  cost        double precision,
+  cost_packs  double precision,
+  coverage    double precision,
+  priceable   boolean default false,
+  computed_at timestamptz,
+  primary key (recipe_id, chain_id)
+);
+create index if not exists idx_recipe_costs_cheap on recipe_costs(chain_id, cost)
+  where priceable;
+
+alter table item_prices  enable row level security;
+alter table recipe_costs enable row level security;
+```
+
+Tilføj `'item_prices'` og `'recipe_costs'` til `foreach t in array array[...]`-listen i `do $$`-blokken nederst, så de får `read_all`-policyen som de øvrige katalogtabeller.
+
+Bemærk at `item_key` her **ikke** har en fremmednøgle til `items`: den tabel synkes ikke til Supabase i dag. Vil du have nøglen, skal `items` synkes først — det er en selvstændig beslutning, ikke en del af denne opgave.
+
+I `src/sync/build.js`: synk `item_prices` for alle kæder (190 varer × 14 kæder er højst ~2.700 rækker) og `recipe_costs` for de prissætbare. Følg mønsteret fra `offer_index` — samme `upsert`-hjælper, samme batchstørrelse.
+
+- [ ] **Step 5: Kør alt igennem**
+
+```bash
+npm run prices:bootstrap && npm run prices:import && npm run costs:recompute && npm test
+npm run sync:dry
+```
+
+- [ ] **Step 6: Commit**
+
+---
+
+## Efter planen
+
+Motoren kan nu regne rigtigt. Det, der mangler, er at brugeren kan se det:
+
+- **Trin 1-5 i brugerfladen** (spec afsnit 2.2): vælg kæder → vælg spor → vælg dage og personer → vælg blandt 3× kandidater med de to forslag markeret → de to lister. `public/app.js` er urørt af denne plan.
+- **Budget-sporet som fjerde valg** — `recipe_costs` er der nu; det er en sortering og en knap.
+- **Justering af de to skøn:** `WASTE_PENALTY_PER_UNIT` og `EXTRA_STORE_PENALTY` er sat efter mavefornemmelse. De skal ses efter på rigtige lister, ikke før.
+- **Prisindtastningen selv.** ~240 rækker pr. kæde, minus det REMA kan hente. Arbejdslisten (`npm run prices:worklist`) er indgangen.
