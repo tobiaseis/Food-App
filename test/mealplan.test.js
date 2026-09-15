@@ -192,6 +192,20 @@ test('stykpriser regnes uafhængigt af antal, og et normalt antal styk afvises i
   assert.equal(s.matched[0].est_cost, 30);
 });
 
+test('en stk-vare mod et kilopris-tilbud prissættes på vægt, ikke på stykantal', () => {
+  // Regression: 'tortilla' er base_unit 'stk' i taksonomien, men mange
+  // tortilla-tilbud (og brød) er kg-prissat. amount er her et STYKANTAL (4
+  // tortillas), ikke en vægt — qtyInBase skal bruge item.weight (240 g,
+  // udregnet af weightFor() i generate.js) mod et kg-tilbud, ikke amount
+  // direkte. Uden det regnede motoren 4 stk som 4 kg: 4 × 90,91 kr/kg =
+  // 363,64 kr for en ret, der reelt koster ~21,82 kr for 240 g.
+  const roles = engine.assignRoles([item('tortilla', 'bakery', 4, { weight: 0.24 })]);
+  const offers = new Map([offer('tortilla', 'Netto', 90.91)]);
+  const s = engine.scoreRecipe({ servings: 4 }, roles, offers, new Map());
+  assert.equal(s.matched[0].est_cost, 21.82);
+  assert.notEqual(s.matched[0].est_cost, 363.64);
+});
+
 // ── Krav-trin ────────────────────────────────────────────────────────────────
 
 const recipe = (id, mainKey, extra = []) => ({

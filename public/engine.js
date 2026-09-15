@@ -192,11 +192,18 @@
   /**
    * Opskriftens mængde omregnet til tilbuddets egen enhed.
    *
-   * `amount` er siden opgave 9 allerede i ingrediensens egen enhed (kg, l
-   * eller stk) – amountOf() i src/lib/units.js har regnet den om. For kg/l
-   * er tilbuddets enhed derfor den samme, og tallet bruges direkte uden at
-   * gå vejen om gram (at gøre det ville netop genindføre den unøjagtighed,
-   * amountOf() blev bygget for at fjerne – se kommentaren i units.js).
+   * `amount` er i INGREDIENSENS egen enhed (kg, l eller stk) – amountOf() i
+   * src/lib/units.js har regnet den om. `baseUnit` er TILBUDDETS enhed, og de
+   * to er IKKE samme tal, når varen selv er stk, men mødes af et kg/l-prissat
+   * tilbud (fire tortillas mod et kg-prissat tortilla-tilbud: amount er 4,
+   * ikke 4 kg). Derfor tager funktionen `weight` som separat parameter — det
+   * er `amount` konverteret til et kg-sammenligneligt tal, allerede udregnet
+   * af weightFor() (src/mealplan/generate.js) til nøjagtig denne slags
+   * sammenligning (se roleWeight/assignRoles), og sendt med i payloaden af
+   * build.js. Bruges `amount` direkte for en stk-vare mod et kg/l-tilbud,
+   * prissættes et stykantal som var det en vægt/rumfang — for tortilla er
+   * fejlfaktoren 1000/piece_g, 16,7× for høj (verificeret: 4 stk × 90,91
+   * kr/kg = 363,64 kr for en ret, der reelt koster ~21,82 kr for 240 g).
    *
    * Styk er stadig en fast 1: vi ved ikke, om tilbuddets "1 stk" er samme
    * pakningsstørrelse som opskriftens "1 stk", så et regnet antal ville give
@@ -212,10 +219,11 @@
    * prisoverslag var systematisk for lavt. Ét stykke er det, man som minimum
    * lægger i kurven, og derfor det konservative gæt.
    */
-  function qtyInBase(amount, baseUnit) {
+  function qtyInBase(amount, weight, baseUnit) {
     if (!amount) return null;
     if (baseUnit === 'stk') return 1;
-    if (isMeasured(baseUnit) && amount <= MAX_SANE_AMOUNT) return amount;
+    const measured = weight ?? amount;
+    if (isMeasured(baseUnit) && measured <= MAX_SANE_AMOUNT) return measured;
     return null;
   }
 
@@ -253,7 +261,7 @@
       const normal = get(normalPrices, item.key);
 
       if (offer) {
-        const qty = qtyInBase(item.amount, offer.base_unit);
+        const qty = qtyInBase(item.amount, item.weight, offer.base_unit);
         const normalUnit = offer.normal_unit_price != null ? offer.normal_unit_price
           : (normal && normal.base_unit === offer.base_unit ? normal.unit_price : null);
 
@@ -295,7 +303,7 @@
       // frem for at blive sat til et tal, der lige så godt kan være ti gange
       // for højt.
       const qty = normal && isMeasured(normal.base_unit)
-        ? qtyInBase(item.amount, normal.base_unit) : null;
+        ? qtyInBase(item.amount, item.weight, normal.base_unit) : null;
       if (qty != null && normal.unit_price != null) {
         estCost += qty * normal.unit_price;
         pricedCount++;
