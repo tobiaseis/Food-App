@@ -40,6 +40,10 @@ function migrate(db) {
     ['recipe_ingredients', 'item_key', 'TEXT'],
     ['recipe_ingredients', 'amount',   'REAL'],
     ['recipe_ingredients', 'optional', 'INTEGER DEFAULT 0'],
+    // Kom til med prisplanen. En base, der allerede har item_prices fra før
+    // kolonnen fandtes, skal have den lagt på — CREATE TABLE IF NOT EXISTS i
+    // schema.sql rører ikke tabellen.
+    ['item_prices', 'n_obs', 'INTEGER NOT NULL DEFAULT 0'],
   ];
   for (const [table, column, type] of added) {
     const cols = db.prepare(`PRAGMA table_info(${table})`).all().map((c) => c.name);

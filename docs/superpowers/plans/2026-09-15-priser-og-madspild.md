@@ -78,7 +78,7 @@ Prisreglerne bor i `engine.js`, fordi de er de eneste regler, både serveren og 
 - Consumes: `items` (204 rækker), `offers` (5.195), `products`, `chains`
 - Produces: tabellen `item_prices`; `npm run prices:bootstrap` fylder den for de varer, der har tilbudshistorik
 
-- [ ] **Step 1: Ryd op i en rest fra plan 1**
+- [x] **Step 1: Ryd op i en rest fra plan 1**
 
 `products.taxonomy_key` blev aldrig omdøbt til `item_key`, selvom spec afsnit 1.3 siger det og `recipe_ingredients` fik omdøbningen. Alle 212 udfyldte nøgler peger på gyldige varer, så det er kosmetisk — men denne plan joiner `offers → products → items` mange gange, og to navne for samme fremmednøgle er en fælde.
 
@@ -121,7 +121,7 @@ Ved kanten mod browseren og Supabase beholdes det gamle navn med `item_key AS ta
 grep -rn "p\.taxonomy_key\|products.*taxonomy_key" src/ scripts/ test/ --include=*.js
 ```
 
-- [ ] **Step 2: Tabellen**
+- [x] **Step 2: Tabellen**
 
 I `src/db/schema.sql`, efter `item_synonyms`:
 
@@ -159,7 +159,7 @@ CREATE INDEX IF NOT EXISTS idx_item_prices_stale ON item_prices(valid_until);
 
 `pack_unit` **skal** være varens `base_unit` — 400 g hakket oksekød indføres som `pack_qty = 0.4, pack_unit = 'kg'`. Ellers er `unit_price` meningsløs. Importøren i opgave 2 afviser rækker, der bryder det; her er det en `CHECK` på værdimængden og en regel, alle skrivere holder.
 
-- [ ] **Step 3: Skriv den fejlende test**
+- [x] **Step 3: Skriv den fejlende test**
 
 Opret `test/prices.test.js` og tilføj den til `package.json`s `test`-script:
 
@@ -191,12 +191,12 @@ test('validUntilFor følger varens klasse', () => {
 });
 ```
 
-- [ ] **Step 4: Kør testen og se den fejle**
+- [x] **Step 4: Kør testen og se den fejle**
 
 Kør: `node --test test/prices.test.js`
 Forventet: FAIL — `engine.validUntilFor is not a function`.
 
-- [ ] **Step 5: Læg kadencen i `engine.js`**
+- [x] **Step 5: Læg kadencen i `engine.js`**
 
 I `public/engine.js`, ved de andre konstanter:
 
@@ -215,7 +215,7 @@ I `public/engine.js`, ved de andre konstanter:
 
 Tilføj `validUntilFor` og `PRICE_TTL_DAYS` til returobjektet nederst i filen.
 
-- [ ] **Step 6: Skriv bootstrap-scriptet**
+- [x] **Step 6: Skriv bootstrap-scriptet**
 
 ```js
 'use strict';
@@ -342,17 +342,23 @@ function main() {
      WHERE item_prices.source = 'derived'
   `);
 
-  // Den modale pakke flytter sig, når nye tilbud kommer ind (målt: 17 af 548
-  // bøtter skifter pakke mellem et 400- og et 120-dages vindue). Uden denne
-  // sletning bliver den gamle række liggende for evigt ved siden af den nye,
-  // fordi pakken indgår i nøglen. Kun kædens egne gæt ryddes — 'manual' og
-  // 'api:rema' røres ikke.
-  const clearDerived = db.prepare(
-    "DELETE FROM item_prices WHERE item_key = ? AND chain_id = ? AND source = 'derived'");
+  // Pakken indgår i nøglen, og den valgte pakke flytter sig, når nye tilbud
+  // kommer ind (målt: 17 af 548 bøtter skifter pakke mellem et 400- og et
+  // 120-dages vindue). Uden en oprydning bliver den gamle række liggende for
+  // evigt ved siden af den nye. Og udelukker et nyt filter en vare helt — som
+  // non-food nu bliver — ville dens gamle gæt aldrig blive rørt igen.
+  //
+  // Derfor er kørslen en fuld genopbygning af det gættede: alle 'derived'
+  // ryddes først, 'manual' og 'api:rema' røres ikke. ON CONFLICT-guarden
+  // nedenfor er stadig nødvendig — efter sletningen kan et sammenstoed kun
+  // være med en rigtig pris, og der skal gættet holde sig væk.
+  const clearAllDerived = db.prepare("DELETE FROM item_prices WHERE source = 'derived'");
 
   const now = new Date();
   let written = 0;
   const run = db.transaction(() => {
+    const dropped = clearAllDerived.run().changes;
+    if (dropped) console.log(`ryddede ${dropped} tidligere gæt`);
     for (const b of buckets.values()) {
       const item = items.get(b.item_key);
       if (!item) continue;
@@ -362,7 +368,6 @@ function main() {
       const pick = leastDiscounted(sorted);
       if (!pick || !pick.price || !pick.pack) continue;
 
-      clearDerived.run(b.item_key, b.chain_id);
       written += ins.run({
         item_key: b.item_key, chain_id: b.chain_id,
         pack_qty: pick.pack, pack_unit: b.base_unit,
@@ -410,7 +415,7 @@ try {
 }
 ```
 
-- [ ] **Step 7: Tilføj scriptet og kør det mod en kopi**
+- [x] **Step 7: Tilføj scriptet og kør det mod en kopi**
 
 ```json
 "prices:bootstrap": "node scripts/bootstrap-prices.js",
@@ -426,7 +431,7 @@ Forventet: `varer med mindst én pris` lander omkring **92 af 190**. Ligger det 
 Loftet er 102: kun så mange ikke-essentielle varer har overhovedet et tilbud bag sig. 9 af de
 resterende er non-food (vin, rengøring, toiletpapir, elektronik) og skal aldrig prissættes.
 
-- [ ] **Step 8: Stikprøve mod virkeligheden**
+- [x] **Step 8: Stikprøve mod virkeligheden**
 
 ```bash
 node -e "
@@ -450,7 +455,7 @@ REMA's hakkede oksekød til 62,50 kr/kg mod Brugsens 122,50, og forskellen er st
 virkelige. Det kan ikke rettes med tilbudsdata alene, og det er derfor opgave 8 ikke må vælge
 kæde på 'derived'-priser uden at sige det højt.
 
-- [ ] **Step 9: Hent de grøntsager, enhedsfiltret taber**
+- [x] **Step 9: Hent de grøntsager, enhedsfiltret taber**
 
 `o.base_unit = i.base_unit` dropper 16 varer. 9 af dem er non-food og skal droppes. De
 øvrige 7 er grøntsager, hvor avisen skriver "1 stk" og varen regnes i kg:
@@ -486,7 +491,7 @@ butikspris, skal varen ikke med, og `piece_g` skal rapporteres som forkert i ste
 
 Forventet efter dette trin: **omkring 92 varer**.
 
-- [ ] **Step 10: Bind de to farlige veje til testsuiten**
+- [x] **Step 10: Bind de to farlige veje til testsuiten**
 
 Hverken omdøbningen i `migrate()` eller `bootstrap-prices.js` kører nogensinde i CI:
 `pretest` bygger `test.db` frisk fra `schema.sql`, hvor `taxonomy_key` aldrig har eksisteret.
@@ -507,7 +512,7 @@ Punkt 2 og 3 kræver, at `leastDiscounted` og filterfunktionen kan indlæses. L�
 `module.exports` i `scripts/bootstrap-prices.js`, og lad `main()` køre som nu — scriptet
 må ikke køre ved `require`. Brug `require.main === module`.
 
-- [ ] **Step 11: Kør suiten og commit**
+- [x] **Step 11: Kør suiten og commit**
 
 ```bash
 npm test

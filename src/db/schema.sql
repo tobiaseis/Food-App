@@ -48,10 +48,17 @@ CREATE TABLE IF NOT EXISTS products (
   created_at       TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_products_cat ON products(category);
--- Navnet er fra dengang kolonnen hed taxonomy_key. Det beholdes, fordi denne
--- fil køres FØR migrate(): på en base fra før omdøbningen findes item_key
--- endnu ikke, og kun et navnesammenfald med det eksisterende indeks får
--- IF NOT EXISTS til at springe sætningen over i stedet for at fejle.
+-- Kolonnen hed taxonomy_key indtil prisplanen. At rette navnet HER ændrer intet
+-- for en base, der allerede findes: CREATE TABLE IF NOT EXISTS rører aldrig en
+-- eksisterende tabel, og omdøbningen sker i migrate(). Grunden til rettelsen er
+-- en anden og mindre dramatisk — en frisk base skal ikke fødes med en kolonne,
+-- migrate() dropper et øjeblik senere.
+--
+-- Indeksets NAVN er derimod ikke kosmetik. IF NOT EXISTS matcher på navnet, så
+-- på en base fra før omdøbningen springes sætningen over — hvilket er præcis
+-- det, der skal ske: item_key findes først, når migrate() har lagt den på, og
+-- schema.sql køres før migrate() ved hver eneste åbning. Et nyt indeksnavn
+-- ville dér fejle med "no such column: item_key".
 CREATE INDEX IF NOT EXISTS idx_products_tax ON products(item_key);
 
 -- Én observation af et tilbud. external_id gør ingest idempotent.
@@ -159,6 +166,10 @@ CREATE TABLE IF NOT EXISTS item_prices (
   pack_price  REAL NOT NULL CHECK (pack_price > 0),
   -- kr pr. base_unit. Gemt frem for regnet, så SQL kan sortere på den.
   unit_price  REAL NOT NULL,
+  -- Hvor mange ugentlige observationer et 'derived'-gæt hviler på. En række med
+  -- n_obs = 1 er ét enkelt tilbud og næsten intet værd; arbejdslisten sorterer
+  -- efter den. 'manual' og 'api:rema' sætter 0: de er ikke gættet frem.
+  n_obs       INTEGER NOT NULL DEFAULT 0,
   source      TEXT NOT NULL CHECK (source IN ('manual','derived','api:rema')),
   observed_at TEXT NOT NULL,
   -- Kadencen som data, ikke som en kommentar i en cronjob: fresh 3 mdr,

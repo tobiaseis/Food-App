@@ -74,7 +74,7 @@ function recompute({ relinkProducts = true, log = console.log } = {}) {
       if (relinkProducts) {
         // productIdentity() hedder feltet taxonomy_key endnu; kolonnen hedder
         // item_key. Oversættelsen sker her, ét sted, frem for i SQL'en.
-        const identity = { ...norm.productIdentity(r.heading, r.description) };
+        const identity = norm.productIdentity(r.heading, r.description);
         identity.item_key = identity.taxonomy_key;
         let prod = findProduct.get(identity.slug);
         if (!prod) {

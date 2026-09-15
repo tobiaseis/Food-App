@@ -269,7 +269,11 @@ async function handleApi(req, res, url) {
   const productMatch = p.match(/^\/api\/products\/(\d+)$/);
   if (productMatch) {
     const id = +productMatch[1];
-    const product = db.prepare('SELECT * FROM products WHERE id = ?').get(id);
+    // Aliasset er ikke pynt: Supabase-vejen i public/data.js henter det samme
+    // produkt med select=*, og DEN tabel hedder stadig kolonnen taxonomy_key.
+    // Uden aliasset får browseren to forskellige former for samme svar, og
+    // "Følg varen" i public/app.js falder tilbage til navnet i stedet for nøglen.
+    const product = db.prepare('SELECT *, item_key AS taxonomy_key FROM products WHERE id = ?').get(id);
     if (!product) return json(res, { error: 'Ukendt vare' }, 404);
 
     const unit = db.prepare(
