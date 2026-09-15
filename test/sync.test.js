@@ -21,7 +21,8 @@ process.env.SUPABASE_SERVICE_KEY = 'test-key';
 const test = require('node:test');
 const assert = require('node:assert');
 const { server, DB } = require('./helpers/mock-postgrest.js');
-const { push } = require('../src/sync/build.js');
+const { push, collectPlanIndex } = require('../src/sync/build.js');
+const { getDb } = require('../src/db');
 
 const quiet = () => {};
 const reset = () => { for (const t of Object.keys(DB)) DB[t].length = 0; };
@@ -151,4 +152,56 @@ test('overvågninger røres ikke', async () => {
   await push(makeModel(), quiet);
   await push(makeModel(500000), quiet);
   assert.equal(DB.watches.length, 1, 'brugerens overvågning er intakt');
+});
+
+// ── recipeIndex: kontrakten med browserens engine.js ─────────────────────────
+
+/**
+ * collectPlanIndex() (src/sync/build.js) er den anden halvdel af en kontrakt,
+ * public/engine.js kun kan holde, hvis begge sider leverer samme feltform.
+ * Ingen test kaldte tidligere collectPlanIndex() selv – test/mealplan.test.js
+ * satte `weight` i hånden på engine-siden, så den testede kun at motoren
+ * FORBRUGER feltet, aldrig at bygge-trinnet rent faktisk PRODUCERER det.
+ * Fjernes `weight` fra build.js, bestod hele testsuiten (111/111) alligevel –
+ * det er præcis den fejl, denne test findes for at fange.
+ */
+test('collectPlanIndex leverer amount OG weight, og de er ikke det samme for en stk-vare', () => {
+  const db = getDb();
+  const now = new Date().toISOString();
+
+  const { lastInsertRowid: recipeId } = db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at)
+    VALUES (?, 'test', 'Test', 'Æggekage', 'da', 4, ?)
+  `).run('https://test.invalid/aeggekage-contract-test', now);
+
+  // 'aeg' er base_unit 'stk' (piece_g 58) – amount er et STYKANTAL (6 æg),
+  // weight skal være det kg-sammenlignelige tal (6 × 58 g), altså IKKE amount.
+  // 'kyllingebryst' og 'kartofler' er kg-varer, hvor weight = amount, men de
+  // skal med for at nå loadRecipes()' krav om mindst 3 varer i opskriften.
+  const insertIng = db.prepare(`
+    INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional)
+    VALUES (?, ?, ?, ?, ?, ?, 0)
+  `);
+  insertIng.run(recipeId, '6 æg', 'æg', 1, 'aeg', 6);
+  insertIng.run(recipeId, '0.5 kg kyllingebryst', 'kyllingebryst', 2, 'kyllingebryst', 0.5);
+  insertIng.run(recipeId, '0.6 kg kartofler', 'kartofler', 3, 'kartofler', 0.6);
+
+  try {
+    const { recipeIndex } = collectPlanIndex(quiet);
+    const recipe = recipeIndex.find((r) => r.recipe_id === recipeId);
+    assert.ok(recipe, 'testopskriften er med i indekset');
+
+    const egg = recipe.items.find((i) => i.key === 'aeg');
+    assert.ok(egg, 'æg er med i items');
+    assert.equal(egg.amount, 6, 'amount er det ægte stykantal');
+    assert.notEqual(egg.weight, egg.amount, 'weight er IKKE amount for en stk-vare');
+    assert.equal(egg.weight, Math.round((6 * 58 / 1000) * 1000) / 1000, 'weight er stykantal × stykvægt');
+
+    for (const item of recipe.items) {
+      assert.ok('amount' in item, `${item.key} mangler amount`);
+      assert.ok('weight' in item, `${item.key} mangler weight`);
+    }
+  } finally {
+    db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
+  }
 });
