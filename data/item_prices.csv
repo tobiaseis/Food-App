@@ -1,0 +1,48 @@
+# Normalpriser indtastet i hånden. Den vigtigste priskilde, ikke reservevejen:
+# API-undersøgelsen fandt kun ÉN af de 14 kæder, der kan hentes automatisk.
+#
+# Kolonnen er chain_slug, ikke chain_id. Kædernes id'er er uigennemsigtige
+# Tjek-id'er (bdf5A er føtex), og ingen kan redigere dem i hånden.
+#
+# pack_unit SKAL være varens egen base_unit. 400 g hakket oksekød skrives som
+# pack_qty 0.4 og pack_unit kg — ikke 400 g. Uden den regel betyder unit_price
+# to forskellige ting på to rækker, og så kan kæderne ikke sammenlignes.
+# Importøren afviser rækken og siger hvilken linje.
+#
+# pack_qty er den KØBTE mængde, ikke den brugbare. Et blomkålshoved vejer ~1 kg
+# i kurven, selv om items.piece_g siger 500 g — piece_g er det, der ender i
+# gryden. Samme skel er grunden til, at opgave 1 ikke omregnede stk-tilbud.
+#
+# Filen er git-versioneret med vilje: ændrer en pris sig fra 15,95 til 18,50,
+# kan man se hvornår og hvorfor. Det kan en admin-side i appen ikke.
+#
+# ── Om tallene nedenfor ─────────────────────────────────────────────────────
+# De syv første er de grøntsager, avisen kun prissætter pr. stk, så bootstrappen
+# ikke kunne give dem noget. Priserne er TYPISKE hyldepriser i en dansk
+# discountbutik — ikke aflæst på en bestemt bon — og pakkevægten er den købte
+# vægt, ikke items.piece_g. Til sammenligning står avisens TILBUDSpris i
+# parentes; en normalpris skal ligge over den.
+#   agurk       1 stk ~400 g   (tilbud set: 6-8 kr/stk)
+#   blomkaal    1 hoved ~1 kg  (tilbud set: 12-15 kr/stk)
+#   broccoli    1 hoved ~400 g (tilbud set: 14-15 kr/stk)
+#   peberfrugt  1 stk ~180 g   (tilbud set: 6 kr/stk)
+#   squash      1 stk ~350 g   (tilbud set: 5 kr/stk)
+#   appelsin    net 1,5 kg     (avisen har kun "Orange ilddæmon" til 1999,20 —
+#                               et stykke legetøj koblet på varen)
+# Skriv datoen om til den dag, du faktisk har set prisen i butikken.
+#
+# selleri mangler med vilje. Varens synonymer dækker BÅDE bladselleri og
+# knoldselleri, og de to koster ikke det samme pr. kg (~33 mod ~19). Vælg
+# hvilken vare det er, før du sætter en pris — et gæt her er et gæt på noget
+# andet end prisen:
+# selleri,rema1000,0.45,kg,15.00,2026-09-15
+item_key,chain_slug,pack_qty,pack_unit,pack_price,observed_at
+agurk,rema1000,0.4,kg,10.00,2026-09-15
+blomkaal,rema1000,1.0,kg,18.00,2026-09-15
+broccoli,rema1000,0.4,kg,16.00,2026-09-15
+peberfrugt,rema1000,0.18,kg,8.00,2026-09-15
+squash,rema1000,0.35,kg,9.00,2026-09-15
+appelsin,rema1000,1.5,kg,25.00,2026-09-15
+kartofler,rema1000,2,kg,15.95,2026-09-15
+hakket_oksekoed,rema1000,0.4,kg,32.00,2026-09-15
+floede,netto,0.25,l,9.50,2026-09-15

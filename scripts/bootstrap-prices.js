@@ -39,6 +39,31 @@ function leastDiscounted(sorted) {
 const OUTLIER_FACTOR = 5;
 
 /**
+ * Kassér det, der slet ikke kan være en hyldepris — FØR medianen regnes.
+ *
+ * Filtret nedenfor måler en vare mod dens EGEN median, og det er blindt over
+ * for en vare, hvis observationer ALLE er forkerte: så ER medianen fejlen.
+ * appelsins eneste stk-tilbud er "Orange ilddæmon" til 1999,20 kr, og med én
+ * observation ville medianen godkende den uden at blinke.
+ *
+ * Båndet i engine.js er den eneste viden her, der kommer udefra, og det
+ * ERSTATTER ikke medianfiltret — de to ser hver sin slags fejl. Rækkefølgen
+ * er ikke tilfældig: køres båndet først, får skraldet ikke lov at trække
+ * medianen med sig.
+ */
+function rejectImplausible(rows) {
+  const rejected = [];
+  const kept = rows.filter((r) => {
+    if (engine.isPlausiblePrice(r.category, r.unit_price, r.base_unit) === false) {
+      rejected.push(r);
+      return false;
+    }
+    return true;
+  });
+  return { kept, rejected };
+}
+
+/**
  * Kassér fejlkoblingerne, før de bliver til priser. Medianen regnes pr. vare
  * på tværs af kæder, så grænsen kalibrerer sig selv i stedet for at være et
  * tal, nogen har gættet.
@@ -90,9 +115,9 @@ function main() {
     // Målt på porre: 93 kr/kg omregnet mod 25-40 i virkeligheden. De 7 går i
     // den manuelle bunke i stedet, hvor et menneske læser hyldeprisen.
     const rows = db.prepare(`
-      SELECT item_key, chain_id, base_unit, year, week, unit_price, base_qty
+      SELECT item_key, category, chain_id, base_unit, year, week, unit_price, base_qty
         FROM (
-          SELECT p.item_key, o.chain_id, o.base_unit, o.year, o.week,
+          SELECT p.item_key, i.category, o.chain_id, o.base_unit, o.year, o.week,
                  o.unit_price, o.base_qty,
                  row_number() OVER (
                    PARTITION BY p.item_key, o.chain_id, o.base_unit, o.year, o.week
@@ -113,7 +138,8 @@ function main() {
        WHERE rn = 1
     `).all(since);
 
-    const { kept, rejected } = rejectMislinks(rows);
+    const band = rejectImplausible(rows);
+    const { kept, rejected } = rejectMislinks(band.kept);
 
     const buckets = new Map();
     for (const r of kept) {
@@ -200,9 +226,21 @@ function main() {
       db.prepare("SELECT count(*) c FROM item_prices WHERE source='derived' AND n_obs = 1").get().c
     } rækker — dem skal arbejdslisten tage først`);
 
-    // Det kasserede printes. Hver linje er en fejlkobling i taksonomien, og den
-    // findes stadig i tilbudslisten, brugeren ser — filteret her skjuler den kun
-    // for priserne.
+    // Alt det kasserede printes — begge filtre. Hver linje er enten en
+    // fejlkobling i taksonomien eller en fejllæst pakkestørrelse, og den findes
+    // stadig i den tilbudsliste, brugeren ser: filtrene her skjuler den kun for
+    // priserne. Forsvandt de ned i et filter uden et ord, ville fejlen bag dem
+    // aldrig blive rettet.
+    if (band.rejected.length) {
+      console.log(`
+kasseret som umulig hyldepris (uden for engine.PRICE_BAND):`);
+      for (const r of band.rejected.sort((a, z) => z.unit_price - a.unit_price)) {
+        const b = engine.PRICE_BAND[r.category] || [];
+        console.log(`  ${r.item_key.padEnd(16)} ${String(Math.round(r.unit_price)).padStart(6)}/${r.base_unit}` +
+                    `  (${r.category}: ${b[0]}-${b[1]})`);
+      }
+    }
+
     if (rejected.length) {
       console.log(`
 kasseret som fejlkobling (> ${OUTLIER_FACTOR}x medianen for varen):`);
@@ -230,4 +268,6 @@ if (require.main === module) {
   }
 }
 
-module.exports = { leastDiscounted, rejectMislinks, OUTLIER_FACTOR, HORIZON_DAYS };
+module.exports = {
+  leastDiscounted, rejectMislinks, rejectImplausible, OUTLIER_FACTOR, HORIZON_DAYS,
+};

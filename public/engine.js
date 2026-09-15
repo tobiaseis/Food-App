@@ -189,6 +189,46 @@
     return new Date(observedAt.getTime() + days * 86400000).toISOString();
   }
 
+  // Hvad mad kan koste pr. kg/l/stk i en dansk butik. Intervallerne er vide med
+  // vilje: de skal fange en tastefejl og en fejlkobling, ikke en dyr økovare.
+  // Kilden til en pris uden for båndet er næsten altid, at tilbuddet hører til
+  // noget andet end varen — "Apple iPad" på æble, ansigtscreme på fløde.
+  //
+  // Båndet findes, fordi outlier-filtret i bootstrappen ikke kan se den slags:
+  // det måler en vare mod dens EGEN median, og er alle varens observationer
+  // forkerte, ER medianen fejlen. appelsins eneste stk-tilbud er "Orange
+  // ilddæmon" til 1999,20 kr — legetøj — og med én observation havde der stået
+  // 14.280 kr/kg. Båndet er den eneste viden her, der kommer udefra.
+  //
+  // Det er et værn mod STØRRELSESORDENER, ikke en priskontrol. En fejl på
+  // 2-3x slipper igennem og skal slippe igennem: porre står målt til 80 kr/kg
+  // mod 25-40 i virkeligheden, og 80 ligger inden for veg-båndet — som det
+  // skal, for asparges og friske krydderurter koster virkelig det.
+  const PRICE_BAND = {
+    veg:    [2, 150],   fruit:  [2, 200],   meat:  [20, 600],
+    poultry:[20, 300],  fish:   [20, 700],  dairy: [5, 200],
+    cheese: [30, 500],  eggs:   [10, 120],  grain: [5, 150],
+    legume: [5, 200],   bakery: [5, 200],   pantry:[3, 400],
+    drink:  [2, 200],   snack:  [10, 400],
+  };
+
+  /**
+   * Kan denne kr/base_unit være en rigtig hyldepris?
+   *
+   * `true` ja · `false` nej · `null` vi har intet bånd for kategorien.
+   * De tre svar skal holdes adskilt: en kalder, der læser "ved det ikke" som
+   * et nej, ville kassere hver eneste vare i en kategori, ingen har sat
+   * grænser for endnu.
+   */
+  function isPlausiblePrice(category, unitPrice, baseUnit) {
+    const band = PRICE_BAND[category];
+    if (!band || !(unitPrice > 0)) return band ? false : null;
+    // 'stk' siger intet om mængden — ét æble og én kasse æbler er begge
+    // "1 stk" — så en undergrænse ville kassere den billige af dem.
+    if (baseUnit === 'stk') return unitPrice <= band[1];
+    return unitPrice >= band[0] && unitPrice <= band[1];
+  }
+
   // ── Scoring af én opskrift ─────────────────────────────────────────────────
 
   const round2 = (n) => Math.round(n * 100) / 100;
@@ -603,8 +643,8 @@
 
   return {
     assignRoles, scoreRecipe, buildPlan, shoppingList, qualifies,
-    seededNoise, isoWeek, validUntilFor,
+    seededNoise, isoWeek, validUntilFor, isPlausiblePrice,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
-    PRICE_TTL_DAYS,
+    PRICE_TTL_DAYS, PRICE_BAND,
   };
 }));
