@@ -1027,7 +1027,12 @@ Det søger på varens navn og synonymer, vælger det billigste troværdige match
 /**
  * Henter normalpriser fra REMA 1000 for alle varer, der skal prissættes.
  *
- * Søger på varens navn og danske synonymer. Et søgeresultat er ikke et
+ * Én søgning pr. vare, på varens navn — ikke synonymerne også, for det ville
+ * gange kaldene op med fem mod et API, vi ikke er inviteret til.
+ *
+ * Prisen skal desuden ligge inden for kategoriens bånd. REMA er en tredje
+ * skriver til item_prices, og den har ingen median at læne sig op ad som
+ * bootstrappen — båndet er det eneste værn mod et fejlmatch. Et søgeresultat er ikke et
  * sikkert match — "kartofler" giver også kartoffelsalat — så kun produkter,
  * hvis navn slår op til den SAMME vare gennem vores egen taksonomi, tælles
  * med. Ellers ville prisen på en færdigret blive til prisen på råvaren.
@@ -1055,7 +1060,8 @@ async function main() {
   if (!chain) throw new Error(`kæden '${REMA_SLUG}' findes ikke i chains`);
 
   const items = db.prepare(
-    "SELECT key, name, class, base_unit FROM items WHERE class <> 'essential' ORDER BY key"
+    `SELECT key, name, class, base_unit, category FROM items
+      WHERE class <> 'essential' AND category <> 'nonfood' ORDER BY key`
   ).all();
 
   const ins = db.prepare(`
@@ -1073,6 +1079,7 @@ async function main() {
 
   const now = new Date();
   let hit = 0, miss = 0, skipped = 0;
+  const implausible = [];
 
   for (const item of items) {
     let best = null;
@@ -1082,6 +1089,11 @@ async function main() {
         if (!parsed || parsed.pack_unit !== item.base_unit) continue;
         // Navnet skal slå op til den samme vare gennem vores egen taksonomi.
         if (taxonomy.lookup(raw.name)?.entry.key !== item.key) { skipped++; continue; }
+        // Sidste værn før skrivning: er det overhovedet en hyldepris?
+        if (engine.isPlausiblePrice(item.category, parsed.unit_price, item.base_unit) === false) {
+          implausible.push({ key: item.key, ...parsed });
+          continue;
+        }
         if (!best || parsed.unit_price < best.unit_price) best = parsed;
       }
     } catch (err) {
@@ -1107,7 +1119,13 @@ async function main() {
     await sleep(PAUSE_MS);
   }
 
-  console.log(`\nfundet: ${hit} · intet match: ${miss} · forkastet på taksonomi: ${skipped}`);
+  console.log(`\nfundet: ${hit} · intet match: ${miss} · forkastet på taksonomi: ${skipped}`
+            + ` · forkastet på prisbånd: ${implausible.length}`);
+  // Printes, ikke bare tælles: en pris uden for båndet er et fejlmatch,
+  // taksonomien slap igennem, og det vil man se med øjnene.
+  for (const r of implausible) {
+    console.log(`  ${r.key.padEnd(20)} ${r.unit_price}/${r.pack_unit}  ${r.name}`);
+  }
   if (dryRun) console.log('(--dry-run: intet skrevet)');
 }
 
