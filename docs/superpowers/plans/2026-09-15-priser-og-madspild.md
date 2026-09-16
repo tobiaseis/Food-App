@@ -1760,7 +1760,7 @@ function main() {
           // indkøbslisten i opgave 8.
           if (it.optional) continue;
           total++;
-          const need = it.weight ?? it.amount;
+          const need = it.amount;   // ikke weight — se note nedenfor
           if (!(need > 0)) continue;
 
           const price = engine.effectivePrice(it.key, chain.id,
@@ -1812,6 +1812,24 @@ for(const r of db.prepare(\"select r.title, rc.cost, rc.cost_packs, rc.coverage 
   console.log(String(r.cost).padStart(7), String(r.cost_packs).padStart(7), ' ', r.title.slice(0,50));
 "
 ```
+
+> ### `amount`, aldrig `weight` — og hvorfor
+>
+> Planen sagde oprindeligt `it.weight ?? it.amount` alle tre steder. Det er forkert, og
+> fejlen går altid i den billige retning, så den ville have samlet sig øverst i
+> budget-sporet.
+>
+> `weightFor()` i `generate.js` regner en **stk**-vares antal om til kilo
+> (`amount × piece_g / 1000`), så `assignRoles` kan veje 6 æg mod 0,4 kg kylling. Dens
+> egen docstring siger, at `amount` med vilje ikke røres, fordi *"indkøbslisten og
+> prisberegningen skal stadig kunne regne på det ægte stykantal"*.
+>
+> Og `item_prices.unit_price` for en stk-vare er **kr/stk**. Ganger man vægten i kilo med
+> prisen pr. stykke, bliver 6 æg til 6 × 0,058 × 3,295 = **1,15 kr i stedet for 19,77**.
+> `aeg`, `brod` og `tortilla` er de tre stk-varer, og **748 af 2.208 opskrifter** har mindst
+> én af dem — en tredjedel af korpuset, 17× for lavt på æg og tortillas, 2× på brød.
+>
+> `amount` er allerede i varens egen enhed. Det er facit.
 
 **Forudsat i `effectivePrice`:** funktionen skal tage `baseUnit` med og forkaste enhver
 kandidat — tilbud som normalpris — hvis dens `pack_unit` ikke er varens egen enhed.
@@ -1918,7 +1936,7 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
       for (const it of recipe.items || []) {
         const meta = items.get(it.key);
         if (!meta || meta.class === 'essential') continue;
-        const need = it.weight ?? it.amount;
+        const need = it.amount;   // ikke weight — se note nedenfor
         if (need > 0) out.set(it.key, (out.get(it.key) || 0) + need);
       }
       return out;
@@ -2171,7 +2189,7 @@ Den nuværende grupperer i `on_offer` og `rest`. Spec afsnit 2.5 vil have **køb
           continue;
         }
         if (it.optional) continue;          // "evt." driver ikke et indkøb
-        const need = it.weight ?? it.amount;
+        const need = it.amount;   // ikke weight — se note nedenfor
         if (need > 0) basket.set(it.key, (basket.get(it.key) || 0) + need);
       }
     }
