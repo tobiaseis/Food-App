@@ -738,10 +738,20 @@ tre steder.
     veg:    [2, 150],   fruit:  [2, 200],   meat:  [20, 600],
     poultry:[20, 300],  fish:   [20, 700],  dairy: [5, 200],
     cheese: [30, 500],  eggs:   [5, 200],   grain: [2, 150],
-    legume: [5, 200],   bakery: [5, 200],   pantry:[3, 400],
+    legume: [5, 200],   bakery: [5, 200],
+    // Pinjekerner 480, pistacier 480, stødt kardemomme 590, husblas 512 —
+    // alle målt hos REMA og alle ægte. Tørvarer, nødder og krydderier sælges
+    // i små pakker, og høj kilopris er reglen, ikke fejlen. Loftet fanger
+    // stadig en tierfejl, og fejlmatch i dette interval fanges af
+    // taksonomien og af outlier-filteret, ikke af båndet.
+    pantry: [3, 900],   snack:  [10, 900],
     // 'drink' blander sodavand solgt pr. liter med kaffe og te solgt som
     // tørvægt. Målt: te 450 kr/kg, kaffe 421 — begge ægte. Loftet følger dem.
-    drink:  [2, 600],   snack:  [10, 400],
+    // 'drink' blander sodavand pr. liter med kaffe og te solgt som tørvægt.
+    // Loftet bliver på 600 selv om tebreve når 835 kr/kg: en Melitta
+    // kaffemaskine til 799 ligger i samme interval, og en kaffemaskine
+    // gemt som tepris er værre end en manglende tepris.
+    drink:  [2, 600],
   };
 
   // Et stk-loft er en helt anden størrelsesorden end et kiloloft, og de to kan
@@ -1132,7 +1142,52 @@ async function main() {
 main().catch((e) => { console.error(e); process.exit(1); });
 ```
 
-- [ ] **Step 6: Kør tørt først**
+- [ ] **Step 6: Gem de rå svar, så matchningen kan rettes gratis**
+
+En tørkørsel koster 178 forespørgsler mod et API, vi ikke er inviteret til, og
+matchningen skal justeres flere gange. Derfor skal svarene kunne gemmes og spilles
+om uden netværk:
+
+- `--save-raw <fil>` skriver hvert søgesvar som JSON, nøglet på varens nøgle.
+- `--from-raw <fil>` kører hele resten af scriptet mod filen i stedet for netværket.
+
+Med de to kan matchningen strammes og båndene efterregnes, uden at REMA hører
+fra os igen. Filen hører ikke i git — den er et øjebliksbillede, ikke en kilde.
+
+- [ ] **Step 7: Stram matchningen — taksonomien alene er ikke nok**
+
+Målt på en rigtig tørkørsel: 109 fundet, 75 uden match, 715 forkastet på
+taksonomi, 29 på prisbånd. Men blandt de 109 accepterede stod disse:
+
+| vare | REMA gav | hvad det er |
+|---|---|---|
+| `rejer` | KATTEMAD, FISK & REJER | kattemad |
+| `troffel` | TRØFFELKUGLER | chokolade |
+| `ymer` | YMERDRYS | drysset ovenpå |
+| `porre` | KARTOFFEL-PORRE SUPPE | suppe |
+| `torsk` | TORSKEROGN | rogn |
+| `skinke` | SKINKESALAT | pålægssalat |
+| `suppe` | SUPPEHORN | pasta |
+
+Alle syv indeholder varens ord, så `taxonomy.lookup` giver den rigtige nøgle.
+Det er samme familie som "Apple iPad" på æble — bare fra en ny kilde.
+
+`taxonomy.preparedForm()` findes allerede, men fanger ingen af dem, og den må
+**ikke** udvides: den bruges også til at klassificere opskrifter, og et nyt ord
+som `salat` ville gøre hovedsalat til en færdigvare. Stramningen hører hjemme i
+`src/prices/rema.js` og kun der.
+
+Byg en navngiven, kommenteret liste over ord, der gør en råvare til noget andet
+— `-salat`, `-suppe`, `-drys`, `-rogn`, `-kugler`, `kattemad`, `hundemad`,
+`-horn`, `-dej` — og afvis matchet, når produktnavnet bærer et af dem, **med
+mindre varen selv er den ting** (`suppe` må gerne matche en suppe, `salat` en
+salat). Print hver afvisning med produktnavnet. Det er en kurateret liste, ikke
+en regel, der kan udledes — præcis som `essential` blev det i plan 1.
+
+Målet er ikke flest mulige match. En forkert normalpris er værre end en
+manglende, fordi ingenting gør opmærksom på den.
+
+- [ ] **Step 8: Kør tørt og læs resultatet**
 
 ```json
 "prices:rema": "node scripts/fetch-rema-prices.js",
