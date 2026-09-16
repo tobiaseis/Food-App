@@ -1558,9 +1558,16 @@ test('intet behov giver ingen pakke', () => {
   // optimere mod et regneark.
   const WASTE_WEIGHT = { perishable: 1, keeps: 0.5, pantry: 0 };
 
-  // Hvad et kilo spild "koster" i valget mellem to pakker. Højere tal gør
-  // optimeringen mere villig til at betale for at undgå en rest.
-  const WASTE_PENALTY_PER_UNIT = 15;
+  // Hvor meget det er værd at betale for at undgå en rest, målt som en andel
+  // af hvad resten SELV er værd. 0,5 betyder: jeg betaler gerne 50 øre ekstra
+  // for at slippe for at smide mad ud for en krone.
+  //
+  // Det var først et fast kronebeløb pr. enhed, og det var dimensionelt
+  // forkert: én 'stk'-enhed er ét æg til 3 kr, mens én 'kg'-enhed kan være
+  // oksekød til 200. Målt gav 15 kr/enhed en straf på 22,50 kr for at have
+  // 3 æg til overs fra en 6-pakke, der kostede 20 — mere end pakken.
+  // Ganget på varens egen enhedspris skalerer reglen af sig selv.
+  const WASTE_AVERSION = 0.5;
 
   /**
    * Vælg pakkestørrelse og antal til et behov.
@@ -1581,7 +1588,10 @@ test('intet behov giver ingen pakke', () => {
       const leftover = bought - need;
       const waste = leftover * w;
       const cost = n * p.pack_price;
-      const score = cost + waste * WASTE_PENALTY_PER_UNIT;
+      // Prisen pr. enhed kan mangle på en håndskrevet række; den kan altid
+      // regnes.
+      const unit = p.unit_price > 0 ? p.unit_price : p.pack_price / p.pack_qty;
+      const score = cost + waste * unit * WASTE_AVERSION;
 
       if (!best || score < best.score) {
         best = { pack_qty: p.pack_qty, pack_price: p.pack_price, packs: n,
@@ -1595,12 +1605,23 @@ test('intet behov giver ingen pakke', () => {
 `score` er et internt sorteringstal og må **ikke** med ud af funktionen — samme fejl som
 `effectivePrice` fik rettet i opgave 4. `cost` må gerne: opgave 6 skal bruge den.
 
-Tilføj `choosePack`, `WASTE_WEIGHT` og `WASTE_PENALTY_PER_UNIT` til returobjektet, og frys
-de to tabeller med `Object.freeze`, som `SOURCE_RANK` blev det.
+Tilføj `choosePack`, `WASTE_WEIGHT` og `WASTE_AVERSION` til returobjektet, og frys
+`WASTE_WEIGHT` med `Object.freeze`, som `SOURCE_RANK` blev det.
 
 - [x] **Step 3: Kør suiten og commit**
 
-`WASTE_PENALTY_PER_UNIT` er et skøn, ikke et resultat. Notér i commit-beskeden, at det skal justeres, når de første rigtige lister er set.
+`WASTE_AVERSION` er et skøn, ikke et resultat. Notér i commit-beskeden, at det skal
+justeres, når de første rigtige lister er set.
+
+> **Målt efter første implementering:** alle **620** (vare, kæde)-par i basen har præcis
+> **én** pakkestørrelse i deres bedste kildeniveau. `choosePack` *vælger* derfor ikke
+> endnu — den runder op, og det er den halvdel, der betyder mest (0,5 kg kartofler koster
+> en hel 2 kg-pose til 15,95, ikke 3,99). Spildvægtningen er inert, indtil
+> `data/item_prices.csv` bærer flere pakker pr. par.
+>
+> Det er en datamangel, ikke en designfejl, og den rører **ikke** madspildsoptimeringen i
+> opgave 7: at dele en rest mellem to retter virker uanset hvor mange poser butikken
+> sælger varen i.
 
 ---
 
