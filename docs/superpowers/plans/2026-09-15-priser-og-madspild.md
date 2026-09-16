@@ -1262,8 +1262,8 @@ Reglen, der binder tilbud og normalpris sammen. Ren funktion i `engine.js`, så 
 `activeOfferMap()` i `src/mealplan/generate.js` nøgler i dag på varen alene og springer over, hvis nøglen findes:
 
 ```js
-    if (map.has(row.taxonomy_key)) continue;
-    map.set(row.taxonomy_key, { ... });
+    if (map.has(row.item_key)) continue;
+    map.set(row.item_key, { ... });
 ```
 
 Fordi rækkerne er sorteret på `unit_price ASC`, betyder det **ét tilbud pr. vare, billigst på tværs af alle kæder**. Det var rigtigt, da motoren kun spurgte "er varen på tilbud et sted?" — men denne plan skal vide, hvad varen koster i *hver* kæde, for at kunne vælge mellem dem.
@@ -1357,8 +1357,16 @@ I `public/engine.js`:
    *
    * Billigste vinder. Et "tilbud" til normalpris er ikke et tilbud.
    */
-  function effectivePrice(itemKey, chainId, { offers, normals }) {
+  // Leksikografisk sammenligning af to taltupler. Bruges til at rangere
+  // normalpriser paa (kilde, udloebet, pris) i den raekkefoelge.
+  function cmp(a, b) {
+    for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return a[i] < b[i] ? -1 : 1;
+    return 0;
+  }
+
+  function effectivePrice(itemKey, chainId, { offers, normals, now = new Date() }) {
     const k = `${itemKey}|${chainId}`;
+    const nowIso = now.toISOString();
 
     const offer = offers.get(k);
     const fromOffer = offer && offer.unit_price > 0 && offer.base_qty > 0
@@ -1367,18 +1375,37 @@ I `public/engine.js`:
           on_offer: true, source: 'offer' }
       : null;
 
-    // Flere pakkestørrelser pr. kæde er tilladt; den billigste pr. enhed er
-    // udgangspunktet. Pakkevalget sker senere, når behovet er kendt.
-    const rows = normals.get(k) || [];
+    // Kilden gaar FORUD for prisen. De afledte priser er bygget af
+    // TILBUDSpriser og ligger systematisk under den rigtige normalpris, saa
+    // "billigste vinder" ville lade et gaet slaa en hyldepris: maalt paa
+    // basen vinder et gaet i 10 af de 30 vare/kaede-par, der har flere
+    // kilder — boef 199,90 mod 219,44, flaeskesteg 65,83 mod 83,33.
+    // Saa var hele REMA-hentningen spildt.
+    //
+    //   manual   — et menneske har set hylden
+    //   api:rema — kaedens egen hyldepris
+    //   derived  — et gaet ud fra hvad varen har kostet PAA TILBUD
+    //
+    // Foerst inden for det bedste niveau, der findes, afgoer prisen: flere
+    // pakkestoerrelser er tilladt, og den billigste pr. enhed er
+    // udgangspunktet. Selve pakkevalget sker senere, naar behovet er kendt.
+    const SOURCE_RANK = { manual: 0, 'api:rema': 1, derived: 2 };
+    const rows = (normals.get(k) || []).filter((r) => r.unit_price > 0);
     let fromNormal = null;
     for (const r of rows) {
-      if (!(r.unit_price > 0)) continue;
-      if (!fromNormal || r.unit_price < fromNormal.unit_price) {
-        fromNormal = { pack_qty: r.pack_qty, pack_unit: r.pack_unit,
+      const rank = SOURCE_RANK[r.source] ?? 3;
+      // En udloebet pris taber til en gyldig paa samme niveau, men slaar
+      // stadig et daarligere niveau: gammelt og rigtigt slaar nyt og gaettet.
+      const stale = r.valid_until != null && r.valid_until < nowIso;
+      const score = [rank, stale ? 1 : 0, r.unit_price];
+      if (!fromNormal || cmp(score, fromNormal.score) < 0) {
+        fromNormal = { score,
+                       pack_qty: r.pack_qty, pack_unit: r.pack_unit,
                        pack_price: r.pack_price, unit_price: r.unit_price,
-                       on_offer: false, source: r.source };
+                       on_offer: false, source: r.source, stale };
       }
     }
+    if (fromNormal) delete fromNormal.score;
 
     if (!fromOffer) return fromNormal;
     if (!fromNormal) return fromOffer;
@@ -1387,6 +1414,32 @@ I `public/engine.js`:
 ```
 
 Tilføj `effectivePrice` til returobjektet.
+
+Og en test for rangordenen, med tal fra basen:
+
+```js
+test('en hyldepris slår et gæt, også når gættet er billigere', () => {
+  // Målt i data.db: boef hos REMA har begge dele. Gættet er bygget af
+  // TILBUDSpriser og er derfor systematisk for lavt — det er ikke en
+  // normalpris, bare det laveste varen har været nede på.
+  const normals = new Map([['boef|11deC', [
+    { pack_qty: 0.5,  pack_unit: 'kg', pack_price: 99.95, unit_price: 199.9,  source: 'derived' },
+    { pack_qty: 0.36, pack_unit: 'kg', pack_price: 79,    unit_price: 219.44, source: 'api:rema' },
+  ]]]);
+  const p = engine.effectivePrice('boef', '11deC', { offers: new Map(), normals });
+  near(p.unit_price, 219.44);
+  assert.equal(p.source, 'api:rema');
+});
+
+test('en indtastet pris slår både API og gæt', () => {
+  const normals = new Map([['kartofler|11deC', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 8,     unit_price: 8,     source: 'derived' },
+    { pack_qty: 2, pack_unit: 'kg', pack_price: 15.95, unit_price: 7.975, source: 'manual' },
+  ]]]);
+  assert.equal(engine.effectivePrice('kartofler', '11deC',
+    { offers: new Map(), normals }).source, 'manual');
+});
+```
 
 - [ ] **Step 5: Kør suiten og commit**
 
