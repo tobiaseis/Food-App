@@ -392,6 +392,107 @@
     return fromOffer.unit_price <= best.unit_price ? fromOffer : best;
   }
 
+  // ── Pakker og spild ────────────────────────────────────────────────────────
+
+  // Hvor tungt en rest tæller som spild. Kartofler til overs er ikke spild;
+  // fløde til overs er. Det er forskellen på at optimere mod madspild og at
+  // optimere mod et regneark.
+  //
+  // Frosset af samme grund som SOURCE_RANK: tabellen eksporteres, og en
+  // kalder, der satte `engine.WASTE_WEIGHT.perishable = 0`, ville slå
+  // spildvægtningen fra for hver eneste madplan i processen.
+  const WASTE_WEIGHT = Object.freeze({ perishable: 1, keeps: 0.5, pantry: 0 });
+
+  // Hvad én enhed vægtet spild "koster", når to pakker skal vejes op mod
+  // hinanden. Højere tal gør valget mere villigt til at betale for at undgå
+  // en rest.
+  //
+  // Tallet er et SKØN og ikke et resultat: 15 kr pr. vægtet kg/l/stk er et
+  // gæt på, hvad det er værd at slippe for en rest, og det er aldrig målt mod
+  // en rigtig kurv. Det skal efterses, når de første lister er set.
+  //
+  // Ingen Object.freeze her, selv om tabellen ovenfor har en: et tal kan ikke
+  // muteres, så kaldet ville være en no-op. choosePack læser konstanten, ikke
+  // eksporten, og kan derfor ikke flyttes udefra.
+  const WASTE_PENALTY_PER_UNIT = 15;
+
+  /**
+   * Hvilken pakke, og hvor mange af den, dækker behovet billigst?
+   *
+   * Man kan ikke købe en halv pose. Skal man bruge 1,3 kg kartofler, koster
+   * det to 1 kg-poser eller én 1,5 kg-pose — ikke 1,3 × kiloprisen. Valget
+   * mellem to pakkestørrelser afgøres af pris PLUS vægtet spild; på prisen
+   * alene ville storposen altid vinde, fordi den er billigst pr. kilo, og
+   * madplanen ville systematisk købe mere, end der bliver spist.
+   *
+   *   need   mængden i varens egen base_unit (kg, l eller stk)
+   *   packs  pakkerne, `{ pack_qty, pack_price }`. Se nedenfor — de skal komme
+   *          fra ÉN kilde.
+   *   keeps  `items.keeps`: hvor længe en rest holder. Ukendt værdi vægtes som
+   *          'keeps', midt imellem.
+   *
+   * **`packs` må kun rumme rækker fra det BEDSTE kildeniveau, der findes for
+   * (vare, kæde)** — samme rangorden som effectivePrice: manual > api:rema >
+   * derived. En pakkestørrelse på en 'derived'-række er ikke en pakke, nogen
+   * har set i en butik; den er udledt af, hvad varen tilfældigvis har været på
+   * tilbud i. Blandes niveauerne, kan indkøbslisten komme til at bede om en
+   * pose, der ikke findes. Funktionen kan ikke selv se forskel — rækkerne
+   * bærer ikke deres kilde hertil — så filtreringen hører hos kalderen.
+   *
+   * Og det, der IKKE er med: opskriftsmængder er i BRUGBARE gram, mens man
+   * køber hele grøntsager (400 g broccolibuketter kræver et hoved på ~570 g).
+   * Udbytte-faktoren hører hjemme lige her — `need` ganges med 1/yield, før
+   * der rundes op — men tallene for de ~30 grøntsager findes ikke, og gættede
+   * udbytter ville bytte en kendt lille fejl ud med en ukendt (opgave 1,
+   * trin 9 og opgave 5).
+   *
+   * `null`, når der ikke er noget at købe: intet behov, eller ingen brugbar
+   * pakke. Ikke en tom pose til 0 kr — se effectivePrice for samme skelnen.
+   */
+  function choosePack(need, packs, { keeps = 'keeps' } = {}) {
+    if (!(need > 0) || !packs || !packs.length) return null;
+
+    // hasOwn, ikke `[]`: et opslag gennem Object.prototype ville give
+    // keeps: 'constructor' en Function som vægt, `??` ville aldrig fyre, og
+    // spildet blive NaN. Basens CHECK holder de tre lovlige værdier, men
+    // kortet kommer også fra browserens JSON.
+    const w = Object.hasOwn(WASTE_WEIGHT, keeps) ? WASTE_WEIGHT[keeps] : WASTE_WEIGHT.keeps;
+
+    let best = null;
+    let bestScore = null;
+    for (const p of packs) {
+      if (!(p.pack_qty > 0) || !(p.pack_price > 0)) continue;
+
+      // Flydende tal går ikke rent op. Tre retter à 400 g lægges sammen til
+      // 1.2000000000000002, og delt med en 0,4 kg-bakke bliver det
+      // 3.0000000000000004 — et rent Math.ceil køber en fjerde bakke og
+      // kalder de 400 g for spild. Tolerancen er relativ og ligger mange
+      // størrelsesordener under et gram; den kan ikke skjule et rigtigt behov.
+      const ratio = need / p.pack_qty;
+      const n = Math.ceil(ratio - ratio * 1e-9);
+      const bought = n * p.pack_qty;
+      // Efter tolerancen kan `bought` lande en flimmer under `need`. En
+      // negativ rest er ikke en rest, og den ville tælle som en gevinst.
+      const leftover = Math.max(0, bought - need);
+      const waste = leftover * w;
+      const cost = n * p.pack_price;
+
+      // Scoren blander kroner og spild og er ikke en pris, nogen kan betale.
+      // Den bliver derfor i funktionen: effectivePrice lækkede præcis sådan
+      // et sorteringstal, og et tal i en indkøbsliste bliver læst som penge.
+      // `cost` går med ud — opskriftsprisen i opgave 6 er bygget af den.
+      const score = cost + waste * WASTE_PENALTY_PER_UNIT;
+
+      // Strengt `<`: ved uafgjort vinder den først i listen, så to kørsler på
+      // uændrede data vælger den samme pose (samme argument som cheapestPerItem).
+      if (best && score >= bestScore) continue;
+      bestScore = score;
+      best = { pack_qty: p.pack_qty, pack_price: p.pack_price, packs: n,
+               bought, leftover, waste, cost };
+    }
+    return best;
+  }
+
   // ── Scoring af én opskrift ─────────────────────────────────────────────────
 
   const round2 = (n) => Math.round(n * 100) / 100;
@@ -849,7 +950,9 @@
   return {
     assignRoles, scoreRecipe, buildPlan, shoppingList, qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
+    choosePack,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
+    WASTE_WEIGHT, WASTE_PENALTY_PER_UNIT,
   };
 }));

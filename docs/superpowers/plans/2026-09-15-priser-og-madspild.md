@@ -1490,7 +1490,7 @@ Blander man niveauerne, kan indkøbslisten komme til at bede om en pose, der ikk
 > Når tallene findes, er stedet her — `need` ganges med `1 / yield` før afrundingen —
 > og ikke i priskolonnen.
 
-- [ ] **Step 1: Skriv de fejlende tests**
+- [x] **Step 1: Skriv de fejlende tests**
 
 ```js
 'use strict';
@@ -1550,7 +1550,7 @@ test('intet behov giver ingen pakke', () => {
 });
 ```
 
-- [ ] **Step 2: Kør, se dem fejle, og skriv funktionen**
+- [x] **Step 2: Kør, se dem fejle, og skriv funktionen**
 
 ```js
   // Hvor tungt en rest tæller som spild. Kartofler til overs er ikke spild;
@@ -1598,7 +1598,7 @@ test('intet behov giver ingen pakke', () => {
 Tilføj `choosePack`, `WASTE_WEIGHT` og `WASTE_PENALTY_PER_UNIT` til returobjektet, og frys
 de to tabeller med `Object.freeze`, som `SOURCE_RANK` blev det.
 
-- [ ] **Step 3: Kør suiten og commit**
+- [x] **Step 3: Kør suiten og commit**
 
 `WASTE_PENALTY_PER_UNIT` er et skøn, ikke et resultat. Notér i commit-beskeden, at det skal justeres, når de første rigtige lister er set.
 

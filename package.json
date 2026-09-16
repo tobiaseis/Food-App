@@ -15,7 +15,7 @@
     "watch": "node src/watch/notify.js",
     "update": "node src/update.js",
     "pretest": "node scripts/seed-test-db.js",
-    "test": "node -r ./test/helpers/set-test-db.js --test test/normalize.test.js test/sync.test.js test/mealplan.test.js test/push.test.js test/items.test.js test/units.test.js test/classify.test.js test/prices.test.js",
+    "test": "node -r ./test/helpers/set-test-db.js --test test/normalize.test.js test/sync.test.js test/mealplan.test.js test/push.test.js test/items.test.js test/units.test.js test/classify.test.js test/prices.test.js test/waste.test.js",
     "seed:test-db": "node scripts/seed-test-db.js",
     "legacy:pdf": "node pipeline.js",
     "update:quiet": "node src/update.js --quiet",
