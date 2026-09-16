@@ -153,6 +153,11 @@ const DERAILING_WORDS = [
   { label: 'bagværk',    re: /baguette(s|r)?(?![a-zæøå])|naan|croutoner|grissini|flûte/ },
   // BANAN CHIPS er ikke banan.
   { label: 'chips',      re: /chips(?![a-zæøå])/ },
+  // "CUPNUDLER OKSEKØD" er 65 g nudler med oksesmag. Den stod gemt bag et
+  // endnu billigere fejlmatch og kom først frem, da det blev afvist — hvilket
+  // er selve pointen med at printe listerne og læse dem igen efter hver
+  // stramning: rettes ét match, rykker det næste op på pladsen.
+  { label: 'nudler',     re: /nudler(?![a-zæøå])/ },
   // ── Det, der kun smager af varen ─────────────────────────────────────────
   // "PROTEIN BANAN / ARLA, BANAN SMAG" og "NUDLER M/KYLLINGSMAG": et produkt,
   // der sælges på at smage af noget, er ikke det noget.
@@ -168,8 +173,85 @@ const DERAILING_WORDS = [
   // KATTEMAD, FISK & REJER siger det selv. De andre gør ikke: "SELECTION
   // LAKS" (SHEBA) og "POÉSIE KALKUN" (VITAKRAFT) er kattemad, og de stod som
   // billigste match på laks og kalkun. Derfor står mærkerne her.
-  { label: 'dyrefoder',  re: /kattemad|hundemad|kattefoder|hundefoder|kattemynte|godbidder|foder|sheba|whiskas|vitakraft|pedigree|friskies|royal canin|purina|matzinger|meaty cat/ },
+  { label: 'dyrefoder',  re: /kattemad|hundemad|kattefoder|hundefoder|kattemynte|godbidder|(^|[^a-zæøå])foder(?![a-zæøå])|sheba|whiskas|vitakraft|pedigree|friskies|royal canin|purina|matzinger|meaty cat/ },
 ];
+
+/**
+ * Ord, der siger, at tallet ikke er varens kilopris.
+ *
+ * Dette er en ANDEN slags afvisning end listen ovenfor, og derfor en anden
+ * liste. `DERAILING_WORDS` svarer på "er det overhovedet den vare?" —
+ * TORSKEROGN er ikke torsk. Denne svarer på "er tallet varens kilopris?":
+ * produktet ER den rigtige vare, men kiloprisen er regnet på en vægt, der
+ * ikke kun er varen.
+ *
+ *   BLOMKÅLSBLANDING 18,50 kr/kg — vægten er blomkål OG broccoli OG gulerod
+ *   LAKS I OLIVENOLIE 163,64    — olien vejer med
+ *   HK. OKSEKØD, 35% GRØNT      — 35 % af vægten er grøntsager
+ *
+ * Det er samme invariant, som fik opgave 1 til at droppe stk→kg-omregningen:
+ * `unit_price` skal betyde kroner pr. kilo AF VAREN, ellers kan rækken ikke
+ * sammenlignes med de andre kæders rækker, og hele kædevalget regner på
+ * tal, der ikke måler det samme.
+ *
+ * `madspild` står her af en beslægtet, men egen grund: en madspildskasse er
+ * en ryddepris, ikke en normalpris. Vægten ER varens, men prisen er ikke den,
+ * der står på hylden i næste uge.
+ *
+ * GRÆNSEN, der er trukket med vilje: `i lage` og `i vand` står IKKE på listen,
+ * selv om lagen også vejer. Dåsen er den normale form for tun, muslinger,
+ * oliven, kapers, cornichoner, bønner, ærter, asparges og ansjoser — ti varer,
+ * hvis eneste pris ville forsvinde — og de andre kæders rækker på de varer er
+ * den samme slags dåse. Sammenligneligheden, som er hele formålet, er i behold.
+ * Glasset med hvidløg i olie er derimod ikke den normale form for hvidløg.
+ */
+const PRICE_BASIS_WORDS = [
+  // "-blanding" som sammensat ord: BLOMKÅLSBLANDING, BROCCOLIBLANDING er poser
+  // med flere grøntsager. Det foranstillede bogstav er ikke pynt — det skiller
+  // dem fra "MIN EGEN BLANDING TE", hvor blandingen er te og kun te, og hvor
+  // hele vægten altså ER varen.
+  //
+  // `mix` står bevidst IKKE her: det bruges begge veje (SALATMIX er varens
+  // egen form, BACONMIX og SLIK MIX er varen selv), og sammensætningstricket
+  // skiller dem ikke ad. Det kommer først på, når data tvinger det.
+  { label: 'blanding', re: /[a-zæøå]blanding(en|er)?(?![a-zæøå])/ },
+  // Olien vejer med: LAKS I OLIVENOLIE, HVIDLØG KRYDDEROLIE, TUN I OLIE.
+  // "HVIDLØG I CHILI" er samme 290 g glas som HVIDLØG KRYDDEROLIE — fed på
+  // glasset, hvidløg i bunden — og skal med, ellers rykker afvisningen bare
+  // matchet én linje ned. Varer, hvis egen nøgle er en olie (kokosolie),
+  // slipper forbi på selv-undtagelsen.
+  { label: 'i olie',   re: /olie(n)?(?![a-zæøå])|(^|[^a-zæøå])i chili(?![a-zæøå])/ },
+  // "HK. OKSEKØD, 35% GRØNT": hver tredje kilo er grøntsager. `grønt` uden
+  // efterfølgende bogstav rammer ikke "grøntsager" i en underline og ikke
+  // "grønne" i DEN GRØNNE SLAGTER.
+  { label: 'strækket', re: /grønt(?![a-zæøå])/ },
+  // "PÆRER I BK. MADSPILD" og "MINI GULERØDDER / KL. 2 STOP MADSPILD": en
+  // ryddepris på varer, der er ved at være for gamle. Begge var BILLIGSTE
+  // match på deres vare, og begge ville have sat normalprisen ~40 % for lavt.
+  { label: 'madspild', re: /madspild/ },
+];
+
+/** Første ord i `list`, der rammer produktet uden også at ramme varen selv. */
+function firstMatch(list, product, selfText) {
+  const name = typeof product === 'string' ? product : (product && product.name) || '';
+  const underline = typeof product === 'string' ? '' : (product && product.underline) || '';
+  const hay = `${name} / ${underline}`.toLowerCase();
+  const self = String(selfText || '').toLowerCase();
+  for (const w of list) {
+    if (!w.re.test(hay)) continue;
+    if (w.re.test(self)) continue;
+    return w;
+  }
+  return null;
+}
+
+/**
+ * Er kiloprisen regnet på en vægt, der ikke kun er varen — eller på en
+ * ryddepris? Returnerer ordet, der forkastede matchet, eller `null`.
+ */
+function wrongPriceBasis(product, selfText) {
+  return firstMatch(PRICE_BASIS_WORDS, product, selfText);
+}
 
 /**
  * Bærer produktet et ord, der gør det til noget andet end varen?
@@ -182,16 +264,7 @@ const DERAILING_WORDS = [
  * Returnerer det ord, der forkastede matchet, eller `null`.
  */
 function derailingWord(product, selfText) {
-  const name = typeof product === 'string' ? product : (product && product.name) || '';
-  const underline = typeof product === 'string' ? '' : (product && product.underline) || '';
-  const hay = `${name} / ${underline}`.toLowerCase();
-  const self = String(selfText || '').toLowerCase();
-  for (const w of DERAILING_WORDS) {
-    if (!w.re.test(hay)) continue;
-    if (w.re.test(self)) continue;
-    return w;
-  }
-  return null;
+  return firstMatch(DERAILING_WORDS, product, selfText);
 }
 
 /** Søger og returnerer de rå produkter. Kaster ved HTTP-fejl. */
@@ -208,5 +281,7 @@ async function searchRema(query, { perPage = 20, fetchImpl = fetch } = {}) {
 
 module.exports = {
   parseRemaProduct, packFromUnderline, shelfPrice, searchRema,
-  derailingWord, DERAILING_WORDS, BASE,
+  derailingWord, DERAILING_WORDS,
+  wrongPriceBasis, PRICE_BASIS_WORDS,
+  BASE,
 };

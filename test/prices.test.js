@@ -815,3 +815,69 @@ test('listen er kurateret — den forkaster ikke en ren råvare', () => {
     assert.equal(derail(product, key, name), null, `${product.name} skulle ikke forkastes`);
   }
 });
+
+// ── Den anden liste: prisen er ikke pr. kilo af varen ────────────────────────
+//
+// To forskellige slags fejl, to lister. Den første svarer på "er det den
+// vare?" — TORSKEROGN er ikke torsk. Den anden svarer på "er tallet varens
+// kilopris?": produktet ER varen, men vægten, prisen er regnet på, er også
+// noget andet. Det er samme invariant, som fik opgave 1 til at droppe
+// stk→kg-omregningen: unit_price skal betyde kroner pr. kilo AF VAREN, ellers
+// kan rækken ikke sammenlignes med de andre kæders rækker.
+
+const { wrongPriceBasis } = require(path.join(__dirname, '..', 'src', 'prices', 'rema.js'));
+
+const basis = (product, key, name) => wrongPriceBasis(product, `${key} ${name || key}`);
+
+test('en pose blandede grøntsager er ikke varens kilopris', () => {
+  // 18,50 kr/kg for BLOMKÅLSBLANDING — men vægten er også broccoli og gulerod.
+  assert.equal(basis({ name: 'BLOMKÅLSBLANDING', underline: '700 GR. / REMA 1000' }, 'blomkaal', 'Blomkål').label, 'blanding');
+  assert.equal(basis({ name: 'BROCCOLIBLANDING', underline: '600 GR. / REMA 1000' }, 'broccoli', 'Broccoli').label, 'blanding');
+  // Men en blanding, der KUN er varen, er varen. Derfor kræver mønstret et
+  // bogstav foran: "-blanding" som sammensat ord, ikke "blanding" som ord.
+  assert.equal(basis({ name: 'MIN EGEN BLANDING TE', underline: '200 GR. / FREDSTED' }, 'the', 'Te'), null);
+});
+
+test('olien i glasset vejer med', () => {
+  assert.equal(basis({ name: 'LAKS I OLIVENOLIE', underline: '110 GR. / MUNKEBO' }, 'laks', 'Laks').label, 'i olie');
+  assert.equal(basis({ name: 'HVIDLØG KRYDDEROLIE', underline: '290 GR. / REMA 1000' }, 'hvidloeg', 'Hvidløg').label, 'i olie');
+  // Samme 290 g glas, andet navn. Uden den ville afvisningen af det første
+  // bare rykke matchet én linje ned til det andet.
+  assert.equal(basis({ name: 'HVIDLØG I CHILI', underline: '290 GR. / REMA 1000' }, 'hvidloeg', 'Hvidløg').label, 'i olie');
+  // Er varen selv en olie, er hele vægten varen.
+  assert.equal(basis({ name: 'KOKOSOLIE', underline: '250 ML. / INSPIRING FOOD' }, 'kokosolie', 'Kokosolie'), null);
+});
+
+test('lage og vand står IKKE på listen — og det er et valg', () => {
+  // Lagen vejer også med, men dåsen er den normale form for tun, muslinger,
+  // oliven, kapers, cornichoner, bønner og asparges. De andre kæders rækker
+  // på de varer er den samme slags dåse, så sammenligneligheden — som er hele
+  // formålet — er i behold. Kasserede vi dem, mistede ti varer deres eneste
+  // pris for at vinde en nøjagtighed, ingen kan bruge til noget.
+  assert.equal(basis({ name: 'TUN I VAND', underline: '140 GR. / REMA 1000' }, 'tun', 'Tun'), null);
+  assert.equal(basis({ name: 'MUSLINGER I LAGE', underline: '115 GR. / BORNHOLMS' }, 'muslinger', 'Muslinger'), null);
+  assert.equal(basis({ name: 'GRØNNE OLIVEN', underline: '200 GR. / REMA 1000' }, 'oliven', 'Oliven'), null);
+});
+
+test('kød strakt med grøntsager er ikke kød pr. kilo', () => {
+  assert.equal(basis({ name: 'HK. OKSEKØD, 35% GRØNT', underline: '400 GR. / REMA 1000' }, 'oksekoed', 'Oksekød').label, 'strækket');
+  // Men "grønne" og "grøntsager" er ikke det samme ord: mønstret må ikke
+  // ramme DEN GRØNNE SLAGTER eller en underline med "fyldt med grøntsager".
+  assert.equal(basis({ name: 'HK. OKSEKØD 8-12%', underline: '400 GR. / REMA 1000' }, 'oksekoed', 'Oksekød'), null);
+  assert.equal(basis({ name: 'KYLLINGEBRYST M/CHILI', underline: '100 GR. / DEN GRØNNE SLAGTER' }, 'kyllingebryst', 'Kyllingebryst'), null);
+});
+
+test('en madspildskasse er en ryddepris, ikke en normalpris', () => {
+  // Begge var BILLIGSTE match på deres vare. PÆRER I BK. MADSPILD gav 18
+  // kr/kg mod 20 for almindelige pærer, MINI GULERØDDER 10 mod 12.
+  assert.equal(basis({ name: 'PÆRER I BK. MADSPILD', underline: '1 KG. / HOLLAND KL.2' }, 'paere', 'Pære').label, 'madspild');
+  assert.equal(basis({ name: 'MINI GULERØDDER', underline: '500 GR. / DANMARK KL. 2 STOP MADSPILD' }, 'gulerod', 'Gulerod').label, 'madspild');
+  assert.equal(basis({ name: 'GULERØDDER', underline: '1 KG. / DANMARK KL. 1' }, 'gulerod', 'Gulerod'), null);
+});
+
+test('de to lister blander sig ikke i hinandens arbejde', () => {
+  // En forkert VARE er ikke et forkert vægtgrundlag, og omvendt. Står de to
+  // slags i samme liste, kan man ikke se, hvilken slags fejl der vokser.
+  assert.equal(derail({ name: 'BLOMKÅLSBLANDING', underline: '700 GR. / REMA 1000' }, 'blomkaal', 'Blomkål'), null);
+  assert.equal(basis({ name: 'SKINKESALAT', underline: '250 GR. / REMA 1000' }, 'skinke', 'Skinke'), null);
+});

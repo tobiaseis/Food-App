@@ -10,9 +10,12 @@
  * kartoffelsalat — så et produkt skal igennem tre sier, før prisen tælles med:
  *
  *   1. taksonomien: produktnavnet skal slå op til den SAMME vare,
- *   2. produktnavne-listen i src/prices/rema.js: navnet må ikke bære et ord,
- *      der gør råvaren til et andet produkt (SKINKESALAT, TORSKEROGN),
- *   3. kategoriens prisbånd i engine.js: er det overhovedet en hyldepris?
+ *   2. DERAILING_WORDS i src/prices/rema.js — er det overhovedet den vare?
+ *      SKINKESALAT er ikke skinke, TORSKEROGN er ikke torsk,
+ *   3. PRICE_BASIS_WORDS samme sted — er tallet varens kilopris? Vægten i
+ *      BLOMKÅLSBLANDING er også broccoli og gulerod, olien i LAKS I
+ *      OLIVENOLIE vejer med, og MADSPILD er en ryddepris, ikke en normalpris,
+ *   4. kategoriens prisbånd i engine.js: er det overhovedet en hyldepris?
  *
  * Målet er ikke flest mulige match. En forkert normalpris er værre end en
  * manglende, fordi ingenting gør opmærksom på den.
@@ -34,7 +37,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { getDb } = require('../src/db');
 const taxonomy = require('../src/lib/taxonomy');
-const { parseRemaProduct, searchRema, derailingWord } = require('../src/prices/rema');
+const { parseRemaProduct, searchRema, derailingWord, wrongPriceBasis } = require('../src/prices/rema');
 const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
 
 const REMA_SLUG = 'rema1000';
@@ -148,6 +151,7 @@ async function main() {
   const now = new Date();
   let hit = 0, miss = 0, skipped = 0;
   const derailed = [];
+  const wrongBasis = [];
   const implausible = [];
 
   for (const item of items) {
@@ -161,13 +165,27 @@ async function main() {
         // Taksonomien er ikke nok: SKINKESALAT slår op til skinke, fordi
         // navnet indeholder ordet. Listen i rema.js fanger de produkter,
         // hvor varens ord står i noget helt andet.
-        const word = derailingWord(product, `${item.key} ${item.name}`);
-        if (word) { derailed.push({ key: item.key, word: word.label, name: parsed.name, underline: product.underline || "" }); continue; }
+        const self = `${item.key} ${item.name}`;
+        const word = derailingWord(product, self);
+        if (word) { derailed.push({ key: item.key, word: word.label, name: parsed.name, underline: product.underline || '' }); continue; }
+        // Anden si, anden slags fejl. Her ER varen rigtig, men kiloprisen er
+        // regnet på en vægt, der ikke kun er varen — eller på en ryddepris.
+        const basis = wrongPriceBasis(product, self);
+        if (basis) { wrongBasis.push({ key: item.key, word: basis.label, name: parsed.name, underline: product.underline || '' }); continue; }
         // Sidste værn før skrivning: er det overhovedet en hyldepris?
         if (engine.isPlausiblePrice(item.category, parsed.unit_price, item.base_unit) === false) {
           implausible.push({ key: item.key, ...parsed });
           continue;
         }
+        // BEMÆRK en systematisk skævhed i "billigst vinder": det forarbejdede,
+        // blandede eller nedsatte produkt er næsten altid billigere pr. kilo
+        // end råvaren selv, så den regel trækker HVER normalpris nedad. Alle
+        // seks fejl, PRICE_BASIS_WORDS fanger, var billigste match på deres
+        // vare. Det er spejlbilledet af den skævhed, opgave 1 fjernede, og de
+        // to lister er en lap på den, ikke en løsning: så længe den billigste
+        // overlevende vinder, er det kun de fejl, nogen har sat ord på, der
+        // ikke slipper igennem. Se rapporten til opgave 3 for medianen som
+        // alternativ.
         if (!best || parsed.unit_price < best.unit_price) best = parsed;
       }
     } catch (err) {
@@ -197,13 +215,25 @@ async function main() {
 
   console.log(`\nfundet: ${hit} · intet match: ${miss} · forkastet på taksonomi: ${skipped}`
             + ` · forkastet på produktnavn: ${derailed.length}`
+            + ` · forkastet på vægtgrundlag: ${wrongBasis.length}`
             + ` · forkastet på prisbånd: ${implausible.length}`);
   // Printes, ikke bare tælles: hver afvisning er et produkt, taksonomien
   // slap igennem, og listen skal kunne læses med øjnene — både for at se, at
   // den rammer det rigtige, og for at opdage det, den endnu ikke fanger.
+  //
+  // De to lister holdes adskilt i udskriften, fordi de svarer på hver sit
+  // spørgsmål. Blandet sammen kan man ikke se, hvilken slags fejl der vokser,
+  // og de kræver hver sin rettelse: et nyt ord i den ene liste, eller en
+  // erkendelse af, at kiloprisen på en hel varegruppe ikke er sammenlignelig.
+  console.log('\n— forkert vare (produktnavnet siger noget andet) —');
   for (const r of derailed) {
     console.log(`  ${r.key.padEnd(20)} ${String(r.word).padEnd(12)} ${r.name}  ||  ${r.underline}`);
   }
+  console.log('\n— rigtig vare, men prisen er ikke pr. kilo af den —');
+  for (const r of wrongBasis) {
+    console.log(`  ${r.key.padEnd(20)} ${String(r.word).padEnd(12)} ${r.name}  ||  ${r.underline}`);
+  }
+  console.log('\n— uden for kategoriens prisbånd —');
   for (const r of implausible) {
     console.log(`  ${r.key.padEnd(20)} ${r.unit_price}/${r.pack_unit}  ${r.name}`);
   }

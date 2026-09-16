@@ -745,12 +745,14 @@ tre steder.
     // stadig en tierfejl, og fejlmatch i dette interval fanges af
     // taksonomien og af outlier-filteret, ikke af båndet.
     pantry: [3, 900],   snack:  [10, 900],
-    // 'drink' blander sodavand solgt pr. liter med kaffe og te solgt som
-    // tørvægt. Målt: te 450 kr/kg, kaffe 421 — begge ægte. Loftet følger dem.
-    // 'drink' blander sodavand pr. liter med kaffe og te solgt som tørvægt.
-    // Loftet bliver på 600 selv om tebreve når 835 kr/kg: en Melitta
-    // kaffemaskine til 799 ligger i samme interval, og en kaffemaskine
-    // gemt som tepris er værre end en manglende tepris.
+    // 'drink' blander sodavand og juice solgt pr. LITER med kaffe og te solgt
+    // som TØRVÆGT. Målt i basen: te 450 kr/kg og kaffe 421 er ægte hyldepriser,
+    // og loftet følger dem og ikke sodavanden.
+    //
+    // Det bliver på 600 og følger IKKE pantry op på 900, selv om tebreve målt
+    // hos REMA når 835 kr/kg og de er ægte: en Melitta kaffemaskine til 799
+    // ligger i samme interval, og en kaffemaskine gemt som tepris er værre end
+    // en manglende tepris. Det er et bevidst valg, ikke en glemt grænse.
     drink:  [2, 600],
   };
 
@@ -967,22 +969,41 @@ const BASE = 'https://api.digital.rema1000.dk/api';
 // sammenligne med en opskriftsmængde.
 const UNITS = { kg: 'kg', l: 'l', ltr: 'l', stk: 'stk', pcs: 'stk' };
 
-/** "2 KG." / "500 G." / "10 STK." -> mængde i base_unit, eller null. */
+/** "2 KG." / "400 GR." / "1 LTR." / "10 STK." -> mængde i base_unit, eller null. */
 function packFromUnderline(underline, baseUnit) {
   if (!underline) return null;
-  const m = String(underline).match(/(\d+(?:[.,]\d+)?)\s*(kg|g|l|dl|cl|ml|stk)\b/i);
+  // REMA staver gram "GR." og liter "LTR.". Uden deres stavemåde i mønstret
+  // fanger krydstjekket ingenting, og pakkestørrelsen bliver altid regnet ud.
+  const m = String(underline).match(/(\d+(?:[.,]\d+)?)\s*(kg|gr|g|ltr|l|dl|cl|ml|stk)\b/i);
   if (!m) return null;
   const n = parseFloat(m[1].replace(',', '.'));
   const u = m[2].toLowerCase();
-  const toBase = { kg: 1, g: 0.001, l: 1, dl: 0.1, cl: 0.01, ml: 0.001, stk: 1 };
-  const unitBase = (u === 'g' || u === 'kg') ? 'kg' : u === 'stk' ? 'stk' : 'l';
+  const toBase = { kg: 1, gr: 0.001, g: 0.001, ltr: 1, l: 1, dl: 0.1, cl: 0.01, ml: 0.001, stk: 1 };
+  const unitBase = (u === 'g' || u === 'gr' || u === 'kg') ? 'kg' : u === 'stk' ? 'stk' : 'l';
   if (unitBase !== baseUnit) return null;
   return n * toBase[u];
 }
 
+/**
+ * Hvilken af produktets priser er HYLDEPRISEN?
+ *
+ * `prices` er ikke én pris. Er varen på tilbud, står kampagneprisen FØRST og
+ * normalprisen bagefter — "HK. OKSEKØD, 35% GRØNT" stod med 29 kr (is_campaign)
+ * og 29,95 kr samme dag. item_prices er normalprisen, og den effektive pris
+ * regnes som coalesce(aktivt tilbud, normalpris): tog vi kampagneprisen, ville
+ * ugens tilbud blive skrevet ind som varens normale niveau, og rabatten
+ * forsvinde ud af regnestykket for evigt efter. `is_advertised` alene er ikke
+ * et tilbud — en vare kan være i avisen til sin almindelige hyldepris.
+ */
+
+function shelfPrice(prices) {
+  if (!Array.isArray(prices) || !prices.length) return null;
+  return prices.find((p) => p && !p.is_campaign) || null;
+}
+
 /** Ét produkt fra søgesvaret til en prisrække, eller null hvis det ikke kan bruges. */
 function parseRemaProduct(raw) {
-  const price = raw && raw.prices && raw.prices[0];
+  const price = shelfPrice(raw && raw.prices);
   if (!price || !(price.price > 0)) return null;
   if (!(price.compare_unit_price > 0)) return null;
 
@@ -1019,8 +1040,17 @@ async function searchRema(query, { perPage = 20 } = {}) {
   return body.data || body.results || [];
 }
 
-module.exports = { parseRemaProduct, packFromUnderline, searchRema, BASE };
+module.exports = {
+  parseRemaProduct, packFromUnderline, shelfPrice, searchRema,
+  // De to kuraterede lister kommer til i step 7 og bor i samme fil.
+  derailingWord, DERAILING_WORDS,
+  wrongPriceBasis, PRICE_BASIS_WORDS,
+  BASE,
+};
 ```
+
+`searchRema` tager et `fetchImpl` med `fetch` som standard, så en test kan give
+den et svar uden at røre nettet.
 
 - [ ] **Step 4: Kør testene og se dem passere**
 
@@ -1029,122 +1059,58 @@ Forventet: PASS.
 
 - [ ] **Step 5: Skriv hente-scriptet**
 
-Det søger på varens navn og synonymer, vælger det billigste troværdige match pr. vare, og skriver med `source='api:rema'`.
+Det søger på varens navn, vælger det billigste troværdige match pr. vare, og
+skriver med `source='api:rema'`. Én søgning pr. vare — ikke synonymerne også,
+for det ville gange kaldene op med fem mod et API, vi ikke er inviteret til.
 
-```js
-'use strict';
+Scriptet står i `scripts/fetch-rema-prices.js`, og filen er kilden. Her står
+kun det, der skal være rigtigt i den, og hvorfor:
 
-/**
- * Henter normalpriser fra REMA 1000 for alle varer, der skal prissættes.
- *
- * Én søgning pr. vare, på varens navn — ikke synonymerne også, for det ville
- * gange kaldene op med fem mod et API, vi ikke er inviteret til.
- *
- * Prisen skal desuden ligge inden for kategoriens bånd. REMA er en tredje
- * skriver til item_prices, og den har ingen median at læne sig op ad som
- * bootstrappen — båndet er det eneste værn mod et fejlmatch. Et søgeresultat er ikke et
- * sikkert match — "kartofler" giver også kartoffelsalat — så kun produkter,
- * hvis navn slår op til den SAMME vare gennem vores egen taksonomi, tælles
- * med. Ellers ville prisen på en færdigret blive til prisen på råvaren.
- *
- *   npm run prices:rema
- *   npm run prices:rema -- --dry-run
- */
+**Fire sier, før en pris tælles med.** Rækkefølgen er billigst-først:
 
-const path = require('node:path');
-const { getDb } = require('../src/db');
-const taxonomy = require('../src/lib/taxonomy');
-const { parseRemaProduct, searchRema } = require('../src/prices/rema');
-const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
+1. `taxonomy.lookup(product.name)?.entry.key === item.key` — samme vare.
+2. `derailingWord(product, "<nøgle> <navn>")` — er det overhovedet den vare?
+3. `wrongPriceBasis(product, "<nøgle> <navn>")` — er tallet varens kilopris?
+4. `engine.isPlausiblePrice(item.category, unit_price, base_unit) !== false` —
+   er det overhovedet en hyldepris? Bemærk `!== false`: `null` betyder "ingen
+   bånd for kategorien", og en kalder, der læser det som et nej, ville kassere
+   hver eneste vare i en kategori, ingen har sat grænser for endnu.
 
-const REMA_SLUG = 'rema1000';
-const PAUSE_MS = 400;   // høflighed mod et API, vi ikke er inviteret til
+Hver afvisning i 2, 3 og 4 printes med produktnavnet, i tre adskilte lister.
+Det er ikke pynt: en afvisning er et produkt, taksonomien slap igennem, og de
+tre lister kræver hver sin rettelse.
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+**Arbejdslisten** er `class <> 'essential' AND category <> 'nonfood'` — 184
+varer. Essentials prissættes aldrig (plan 1), og non-food skal ikke i en madplan.
 
-async function main() {
-  const dryRun = process.argv.includes('--dry-run');
-  const db = getDb();
+**Skrivningen** skal have tre ting rigtige:
 
-  const chain = db.prepare('SELECT id, name FROM chains WHERE slug = ?').get(REMA_SLUG);
-  if (!chain) throw new Error(`kæden '${REMA_SLUG}' findes ikke i chains`);
-
-  const items = db.prepare(
-    `SELECT key, name, class, base_unit, category FROM items
-      WHERE class <> 'essential' AND category <> 'nonfood' ORDER BY key`
-  ).all();
-
-  const ins = db.prepare(`
-    INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit,
-                             pack_price, unit_price, source, observed_at, valid_until)
-    VALUES (@item_key, @chain_id, @pack_qty, @pack_unit,
-            @pack_price, @unit_price, 'api:rema', @observed_at, @valid_until)
-    ON CONFLICT(item_key, chain_id, pack_qty, pack_unit) DO UPDATE SET
-      pack_price = excluded.pack_price, unit_price = excluded.unit_price,
-      source = excluded.source, observed_at = excluded.observed_at,
-      valid_until = excluded.valid_until
-     -- En indtastet pris er set af et menneske. Den vinder over et API.
-     WHERE item_prices.source <> 'manual'
-  `);
-
-  const now = new Date();
-  let hit = 0, miss = 0, skipped = 0;
-  const implausible = [];
-
-  for (const item of items) {
-    let best = null;
-    try {
-      for (const raw of await searchRema(item.name)) {
-        const parsed = parseRemaProduct(raw);
-        if (!parsed || parsed.pack_unit !== item.base_unit) continue;
-        // Navnet skal slå op til den samme vare gennem vores egen taksonomi.
-        if (taxonomy.lookup(raw.name)?.entry.key !== item.key) { skipped++; continue; }
-        // Sidste værn før skrivning: er det overhovedet en hyldepris?
-        if (engine.isPlausiblePrice(item.category, parsed.unit_price, item.base_unit) === false) {
-          implausible.push({ key: item.key, ...parsed });
-          continue;
-        }
-        if (!best || parsed.unit_price < best.unit_price) best = parsed;
-      }
-    } catch (err) {
-      console.error(`${item.key}: ${err.message}`);
-      await sleep(PAUSE_MS);
-      continue;
-    }
-
-    if (!best) { miss++; await sleep(PAUSE_MS); continue; }
-    hit++;
-    console.log(`${item.key.padEnd(24)} ${best.pack_qty}${best.pack_unit} `
-              + `${best.pack_price} kr (${best.unit_price}/${best.pack_unit})  ${best.name}`);
-
-    if (!dryRun) {
-      ins.run({
-        item_key: item.key, chain_id: chain.id,
-        pack_qty: best.pack_qty, pack_unit: best.pack_unit,
-        pack_price: best.pack_price, unit_price: best.unit_price,
-        observed_at: now.toISOString(),
-        valid_until: engine.validUntilFor(item.class, now),
-      });
-    }
-    await sleep(PAUSE_MS);
-  }
-
-  console.log(`\nfundet: ${hit} · intet match: ${miss} · forkastet på taksonomi: ${skipped}`
-            + ` · forkastet på prisbånd: ${implausible.length}`);
-  // Printes, ikke bare tælles: en pris uden for båndet er et fejlmatch,
-  // taksonomien slap igennem, og det vil man se med øjnene.
-  for (const r of implausible) {
-    console.log(`  ${r.key.padEnd(20)} ${r.unit_price}/${r.pack_unit}  ${r.name}`);
-  }
-  if (dryRun) console.log('(--dry-run: intet skrevet)');
-}
-
-main().catch((e) => { console.error(e); process.exit(1); });
+```sql
+INSERT INTO item_prices (...) VALUES (..., 'api:rema', ...)
+ON CONFLICT(item_key, chain_id, pack_qty, pack_unit) DO UPDATE SET
+  pack_price = excluded.pack_price, unit_price = excluded.unit_price,
+  source = excluded.source, observed_at = excluded.observed_at,
+  valid_until = excluded.valid_until,
+  -- En hentet pris er ikke gættet frem. Ramte den et 'derived'-gæt på samme
+  -- (vare, kæde, pakke), ville gættets n_obs blive hængende og få rækken til
+  -- at se ud som et gæt bygget på n observationer.
+  n_obs = 0
+ -- En indtastet pris er set af et menneske. Den vinder over et API.
+ WHERE item_prices.source <> 'manual'
 ```
+
+`valid_until` sættes af `engine.validUntilFor(item.class, now)`, og `pack_unit`
+er varens `base_unit` — triggerne fra opgave 2 afbryder, hvis den ikke er.
+
+`--dry-run` springer `ins.run()` over og kun det. Alt andet — søgning, sier,
+tælling, udskrift — kører ens, så en tørkørsel viser præcis det, en rigtig
+kørsel ville skrive.
+
 
 - [ ] **Step 6: Gem de rå svar, så matchningen kan rettes gratis**
 
-En tørkørsel koster 178 forespørgsler mod et API, vi ikke er inviteret til, og
+En tørkørsel koster 184 forespørgsler — én pr. vare, der skal prissættes — mod
+et API, vi ikke er inviteret til, og
 matchningen skal justeres flere gange. Derfor skal svarene kunne gemmes og spilles
 om uden netværk:
 
@@ -1187,6 +1153,69 @@ en regel, der kan udledes — præcis som `essential` blev det i plan 1.
 Målet er ikke flest mulige match. En forkert normalpris er værre end en
 manglende, fordi ingenting gør opmærksom på den.
 
+**Hvad de rå svar viste, da listen blev bygget** (skrevet ned bagefter, så
+næste kæde ikke skal opdage det forfra):
+
+- De ni ord ovenfor var et udgangspunkt, ikke svaret. Det tog ~25 poster at
+  dække de fejlmatch, ét øjebliksbillede af 184 søgninger indeholdt: pålægssalat
+  og mayo, suppe, drys, rogn, lever, kugler, horn, dej, færdigret (`farserede`,
+  `indbagt`, `fyldt`, `risotto`, `bolognese`, `carbonara`, `lasagne(?!plader)`),
+  tilbehør (`sauce`, `sovs`, `dressing`, `chutney`, `marmelade`, `relish`,
+  `bearnaise`, `sky`), pizza, mejeri (`yoghurt`, `yoggi`, `skyr`), granola,
+  slik, kage, bagværk, chips, nudler, `smag`, kartoffel, smøreost, vegansk og
+  dyrefoder.
+- **Ordet står ikke altid i navnet.** Mærket i `underline` er tit det eneste,
+  der afslører produktet: "SELECTION LAKS" er kattemad fra SHEBA, "POÉSIE
+  KALKUN" fra VITAKRAFT, "PÆRE/BANAN" er yoghurt fra ARLA, "PASSION & BANAN" er
+  skyr fra CHEASY, og pålægssalaterne kommer fra K-SALAT. Listen prøves derfor
+  mod navn OG underline. Prisen er til at tro på i alle fem tilfælde — det er
+  varen, der er en anden.
+- **Undtagelsen "varen er selv den ting" åbner et hul for netop den vare.**
+  `salat` slipper den generelle `salat`-regel forbi, og så vandt ITALIENSK
+  SALAT til 36,50 kr/kg over et hoved salat til 133. Mayonnaisesalaterne skal
+  derfor nævnes ved navn i en egen post.
+- **Mønstrene skal slutte et dansk ord.** Uden et negativt lookahead rammer
+  `horn` HORNFISK og `dej` "dejlig". Og `lasagne` skal undtage LASAGNEPLADER,
+  som ER pasta — samme undtagelse, som allerede står i `taxonomy.js`.
+
+- [ ] **Step 7b: Den anden liste — prisen er ikke pr. kilo af varen**
+
+Da den første liste var på plads, stod der stadig seks match tilbage, hvor
+varen var rigtig, men tallet ikke var varens kilopris:
+
+| vare | REMA gav | hvorfor ikke |
+|---|---|---|
+| `blomkaal` | BLOMKÅLSBLANDING 18,50 | vægten er også broccoli og gulerod |
+| `broccoli` | BROCCOLIBLANDING 21,58 | samme |
+| `laks` | LAKS I OLIVENOLIE 163,64 | olien vejer med |
+| `hvidloeg` | HVIDLØG KRYDDEROLIE 61,38 | samme |
+| `oksekoed` | HK. OKSEKØD, 35% GRØNT 74,88 | hver tredje kilo er grøntsager |
+| `paere` | PÆRER I BK. MADSPILD 18,00 | ryddepris, ikke normalpris |
+
+Det er en ANDEN slags afvisning, og derfor en anden liste, `PRICE_BASIS_WORDS`,
+med sin egen udskrift. Den første svarer på "er det den vare?", den anden på
+"er tallet varens kilopris?". `unit_price` skal betyde kroner pr. kilo AF
+VAREN, ellers kan rækken ikke sammenlignes med de andre kæders — samme
+invariant, som fik opgave 1 til at droppe stk→kg-omregningen.
+
+Poster: `-blanding` (sammensat, så "MIN EGEN BLANDING TE" slipper forbi —
+blandingen dér er te og kun te), `olie` (og "i chili", som er samme 290 g glas),
+`grønt` (uden efterfølgende bogstav, så "grøntsager" og "grønne" går fri) og
+`madspild`.
+
+**Grænsen, der er trukket med vilje:** `i lage` og `i vand` står IKKE på listen,
+selv om lagen også vejer. Dåsen er den normale form for tun, muslinger, oliven,
+kapers, cornichoner, bønner og asparges, og de andre kæders rækker på de varer
+er den samme slags dåse. Sammenligneligheden, som er hele formålet, er i behold.
+Glasset med hvidløg i olie er derimod ikke den normale form for hvidløg.
+
+**Og en skævhed, de to lister kun lapper på:** "billigst vinder" foretrækker
+systematisk den forarbejdede, blandede eller nedsatte variant, for den er
+næsten altid billigere pr. kilo end råvaren. Alle seks fejl ovenfor var
+BILLIGSTE match på deres vare. Det er spejlbilledet af den skævhed, opgave 1
+fjernede, og så længe den billigste overlevende vinder, er det kun de fejl,
+nogen har sat ord på, der ikke slipper igennem.
+
 - [ ] **Step 8: Kør tørt og læs resultatet**
 
 ```json
@@ -1194,10 +1223,23 @@ manglende, fordi ingenting gør opmærksom på den.
 ```
 
 ```bash
-npm run prices:rema -- --dry-run 2>&1 | tail -30
+npm run prices:rema -- --dry-run --save-raw tmp/rema-raw.json > tmp/rema.log 2>&1
+# og derefter, så tit det skal være, uden at REMA hører fra os igen:
+npm run prices:rema -- --dry-run --from-raw tmp/rema-raw.json > tmp/rema.log 2>&1
 ```
 
-Gennemgå de første 30 linjer med øjnene. Er der varer, hvor prisen åbenlyst hører til et andet produkt, så stram taksonomi-tjekket frem for at acceptere dem — en forkert normalpris er værre end en manglende, fordi ingenting gør opmærksom på den.
+Læs `tmp/rema.log` fra toppen: de accepterede match står FØRST og de tre
+afvisningslister bagefter. `tail -30` viser derfor kun afvisninger og ikke en
+eneste af de priser, der faktisk bliver skrevet.
+
+Gennemgå HELE listen af accepterede match med øjnene — ikke en stikprøve. Er der
+varer, hvor prisen åbenlyst hører til et andet produkt, så stram listerne i
+`src/prices/rema.js` frem for at acceptere dem: en forkert normalpris er værre
+end en manglende, fordi ingenting gør opmærksom på den.
+
+Og læs listen igen efter HVER stramning. Afvises det billigste match, rykker det
+næste op på pladsen, og det næste kan være værre: da "HK. OKSEKØD, 35% GRØNT"
+blev afvist, kom "CUPNUDLER OKSEKØD" frem som billigste match på oksekød.
 
 Kør derefter rigtigt og commit.
 
