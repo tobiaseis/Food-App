@@ -36,3 +36,8 @@ fcm-service-account.json
 
 # Materiale til Play Console (genskabes med: npm run store)
 store/
+
+# Gemte rå søgesvar fra REMA (npm run prices:rema -- --save-raw tmp/rema-raw.json).
+# Et øjebliksbillede, ikke en kilde: basen er kilden, og filen er kun til at
+# rette matchningen uden at kalde et API, vi ikke er inviteret til, igen.
+tmp/

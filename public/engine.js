@@ -214,13 +214,27 @@
     // grain-gulvet var 5, og den billigste ÆGTE korn-observation i basen er
     // præcis 5,00 kr/kg (MADVÆRKET havregryn) — gulvet sad oven på en rigtig
     // pris, hvor en øre den anden vej havde kasseret den. 2 giver luft.
-    grain:  [2, 150],   bakery: [5, 200],   pantry:[3, 400],
+    grain:  [2, 150],   bakery: [5, 200],
+    // pantry- og snack-loftet var 400 og kasserede ægte hyldepriser: målt hos
+    // REMA koster PINJEKERNER 455-480 kr/kg, PISTACIEKERNER 480, STØDT
+    // KARDEMOMME 590 og HUSBLAS 512. Tørvarer, nødder og krydderier sælges i
+    // små pakker, og en høj kilopris er reglen dér, ikke fejlen — loftet på
+    // 400 skar tværs gennem én rigtig fordeling (pinjekerner blev accepteret
+    // til 400 og forkastet til 455, samme vare i samme butik). 900 fanger
+    // stadig en tierfejl; et fejlmatch under 900 er taksonomiens og
+    // produktnavnelistens arbejde, ikke båndets.
+    pantry: [3, 900],   snack:  [10, 900],
     // 'drink' blander to slags varer: sodavand og juice solgt pr. liter, og
     // kaffe og te solgt som TØRVÆGT. Målt i basen: te op til 450 kr/kg og
     // kaffe til 421 er ægte hyldepriser, så loftet følger dem og ikke
     // sodavanden. Den rene løsning er at flytte kaffe/te til 'pantry', men
     // kategorien styrer også madplanen (IGNORED_CATS), så det er dataarbejde.
-    drink:  [2, 600],   snack:  [10, 400],
+    //
+    // Loftet bliver på 600, selv om tebreve målt når 835 kr/kg: en Melitta
+    // kaffemaskine til 799 ligger i samme interval, og en kaffemaskine gemt
+    // som tepris er værre end en manglende tepris. Derfor følger 'drink' IKKE
+    // pantry op på 900.
+    drink:  [2, 600],
   };
 
   // Et stk-loft er en helt anden størrelsesorden end et kiloloft, og de to kan
