@@ -1465,7 +1465,30 @@ test('en indtastet pris slår både API og gæt', () => {
 - Create: `test/waste.test.js` (+ `package.json`)
 
 **Interfaces:**
-- Produces: `choosePack(need, packs, { keeps })` → `{ pack_qty, pack_price, packs, bought, leftover, waste }`
+- Produces: `choosePack(need, packs, { keeps })` → `{ pack_qty, pack_price, packs, bought, leftover, waste, cost }`
+
+**Hvilke pakker må med i `packs`?** Kun dem fra det bedste kildeniveau, der findes for
+(vare, kæde) — samme rangorden som `effectivePrice` i opgave 4: `manual` > `api:rema` >
+`derived`. Grunden er, at en pakkestørrelse fra en `derived`-række er et *gæt* på hvilke
+pakker butikken overhovedet sælger, udledt af hvad varen tilfældigvis har været på tilbud i.
+Blander man niveauerne, kan indkøbslisten komme til at bede om en pose, der ikke findes.
+
+> ### Den manglende udbytte-faktor, og hvorfor den ikke bygges her
+>
+> Opgave 1 parkerede denne: **opskriftsmængder er i BRUGBARE gram, mens man køber hele
+> grøntsager.** `items.piece_g` er kommenteret *"Typisk stykvægt når opskriften bare siger
+> '1 løg'"* — broccoli står til 350 g mod et helt hoveds ~500 g, blomkål 500 mod ~1000.
+> En ret, der skal bruge 400 g broccolibuketter, kræver altså et hoved på omkring 570 g.
+>
+> Uden en udbytte-faktor bliver enhver grøntsagstung ret for billig, og fejlen er ensrettet.
+> Størrelsen er skønnet til groft **3-5 % på en ugekurv** — ikke ingenting, men langt under
+> usikkerheden på de 540 `derived`-priser, hvoraf 348 hviler på én observation.
+>
+> **Den bygges ikke i denne opgave.** En udbytte-faktor for ~30 grøntsager er tal, ingen af
+> os har, og at digte dem ville være at bytte en kendt, lille, ensrettet fejl ud med en
+> ukendt. Den hører sammen med at få rigtige priser på de 58 varer, der mangler helt.
+> Når tallene findes, er stedet her — `need` ganges med `1 / yield` før afrundingen —
+> og ikke i priskolonnen.
 
 - [ ] **Step 1: Skriv de fejlende tests**
 
@@ -1500,8 +1523,9 @@ test('behovet rundes op til hele pakker', () => {
 });
 
 test('billigst vinder, når resten alligevel ikke er spild', () => {
-  // 2 kg til 12 kr er samme pris som 1,5 kg til 12 kr, men kartofler holder,
-  // så den større pose er ikke dyrere i spild.
+  // 2 kg og 1,5 kg koster begge 12 kr, og for en pantry-vare vejer resten
+  // ingenting. De to får altså samme score, og den første i listen vinder.
+  // Testen siger derfor kun at PRISEN er 12 — ikke hvilken pose der blev valgt.
   const c = engine.choosePack(1.3, PACKS, { keeps: 'pantry' });
   near(c.pack_price * c.packs, 12);
   near(c.waste, 0);
@@ -1568,7 +1592,11 @@ test('intet behov giver ingen pakke', () => {
   }
 ```
 
-Tilføj `choosePack`, `WASTE_WEIGHT` og `WASTE_PENALTY_PER_UNIT` til returobjektet.
+`score` er et internt sorteringstal og må **ikke** med ud af funktionen — samme fejl som
+`effectivePrice` fik rettet i opgave 4. `cost` må gerne: opgave 6 skal bruge den.
+
+Tilføj `choosePack`, `WASTE_WEIGHT` og `WASTE_PENALTY_PER_UNIT` til returobjektet, og frys
+de to tabeller med `Object.freeze`, som `SOURCE_RANK` blev det.
 
 - [ ] **Step 3: Kør suiten og commit**
 
