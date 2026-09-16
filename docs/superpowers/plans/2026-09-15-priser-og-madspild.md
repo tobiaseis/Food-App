@@ -1717,8 +1717,19 @@ function main() {
   const db = getDb();
   const chains = db.prepare('SELECT id, name FROM chains').all();
   const recipes = plans.loadRecipes({});
-  const items = new Map(db.prepare('SELECT key, class, keeps FROM items').all()
+  const items = new Map(db.prepare('SELECT key, class, keeps, base_unit FROM items').all()
     .map((i) => [i.key, i]));
+
+  // Ingredienser, taksonomien ikke kender, naar ALDRIG ind i r.items:
+  // loadRecipes springer dem over. Talte man kun de kendte, ville en ret med
+  // 5 kendte og 2 ukendte faa coverage = 1 og en pris, der mangler to
+  // ingredienser — og budget-sporet ville rangere den som billig, netop
+  // fordi vi ved mindst om den. 678 af 2.224 opskrifter (30,5 %) har mindst
+  // en ukendt linje, saa det er ikke en randtilfaelde.
+  const unknownCount = new Map(db.prepare(`
+    SELECT recipe_id, count(*) n FROM recipe_ingredients
+     WHERE item_key IS NULL AND COALESCE(optional, 0) = 0
+     GROUP BY recipe_id`).all().map((r) => [r.recipe_id, r.n]));
 
   const ins = db.prepare(`
     INSERT INTO recipe_costs (recipe_id, chain_id, cost, cost_packs,
@@ -1744,11 +1755,16 @@ function main() {
         for (const it of r.items) {
           const item = items.get(it.key);
           if (!item || item.class === 'essential') continue;   // essentials købes ikke
+          // "evt. et skvæt fløde" købes ikke, og skal derfor hverken koste
+          // noget eller kunne gøre en ret uprissaetbar. Samme regel som
+          // indkøbslisten i opgave 8.
+          if (it.optional) continue;
           total++;
           const need = it.weight ?? it.amount;
           if (!(need > 0)) continue;
 
-          const price = engine.effectivePrice(it.key, chain.id, { offers, normals });
+          const price = engine.effectivePrice(it.key, chain.id,
+            { offers, normals, baseUnit: item.base_unit });
           if (!price) continue;
           known++;
 
@@ -1757,6 +1773,8 @@ function main() {
           if (pack) costPacks += pack.cost;
         }
 
+        // De ukendte tæller med i nævneren, aldrig i tælleren.
+        total += unknownCount.get(r.id) || 0;
         const coverage = total ? known / total : 0;
         ins.run({
           recipe_id: r.id, chain_id: chain.id,
@@ -1794,6 +1812,14 @@ for(const r of db.prepare(\"select r.title, rc.cost, rc.cost_packs, rc.coverage 
   console.log(String(r.cost).padStart(7), String(r.cost_packs).padStart(7), ' ', r.title.slice(0,50));
 "
 ```
+
+**Forudsat i `effectivePrice`:** funktionen skal tage `baseUnit` med og forkaste enhver
+kandidat — tilbud som normalpris — hvis dens `pack_unit` ikke er varens egen enhed.
+Opgave 4 lagde vagten ind, men kun i sammenligningen MELLEM et tilbud og en normalpris;
+er der slet ingen normalpris, returneres tilbuddet i den enhed, avisen nævnte. Det er
+ikke teoretisk: **292 (vare, kæde)-par har et tilbud i en anden enhed og ingen normalpris**,
+og `brod` er et af dem — 33,33 kr/**kg** på en vare, der måles i **stk**. Uden vagten
+ganger dette job `behov × enhedspris` på tværs af to forskellige enheder.
 
 **Læs tallene, før du går videre.** En hverdagsret til fire personer ligger typisk mellem 25 og 90 kr i `cost`. Ligger de billigste under 10 kr, mangler der priser frem for at retten er billig — `coverage` skal være 1, og hvis den er, er det enhedspriserne, der er forkerte. `cost_packs` skal være højere end `cost`, aldrig lavere.
 
