@@ -1409,6 +1409,19 @@ I `public/engine.js`:
 
     if (!fromOffer) return fromNormal;
     if (!fromNormal) return fromOffer;
+
+    // Kr/stk og kr/kg kan ikke sammenlignes. Tilbuddets base_unit er avisens,
+    // ikke varens, og de to er forskellige i 973 af 2.376 tilbudsraekker.
+    // Uden dette slaar et tilbud paa "1 stk blomkaal 12 kr" en indtastet pris
+    // paa 18 kr/KG — den hoejeste tillidskilde i hele rangordenen, kastet vaek
+    // for et tal, der ikke maaler det samme. item_prices har en TRIGGER mod
+    // praecis denne fejl; her er der ingen base at spoerge, saa reglen skal
+    // staa i koden.
+    //
+    // Tilbuddet forkastes, ikke omregnes: piece_g er den BRUGBARE vaegt, ikke
+    // koebsvaegten, og den vej er allerede proevet og rullet tilbage i opgave 1.
+    if (fromOffer.pack_unit !== fromNormal.pack_unit) return fromNormal;
+
     return fromOffer.unit_price <= fromNormal.unit_price ? fromOffer : fromNormal;
   }
 ```
