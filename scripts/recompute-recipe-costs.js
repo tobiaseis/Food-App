@@ -21,12 +21,32 @@ const { getDb } = require('../src/db');
 const plans = require('../src/mealplan/generate');
 const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
 
+// Kategorier, hvor et 'optional'-flag ikke skal tros. En ret med valgfri
+// kylling er ikke en ret.
+//
+// OPTIONAL_RE i src/recipes/extract.js matcher `optional` og `if you like`
+// HVOR SOM HELST i linjen, mens de danske mønstre er forankret til linjestart.
+// "4 chicken breasts (skinless, if you like)" og "2 whole tilapia … (optional
+// to keep head on)" blev derfor flaget, og flaget fjerner linjen fra BÅDE
+// prisen og nævneren: et fejlflag bliver til "fuldt prissat og næsten gratis"
+// og lander øverst i budget-sporet. Den første af de to var indtil nu basens
+// billigste prissatte ret til 0,08 kr med coverage 1.
+//
+// At forankre de engelske mønstre er målt til netto negativt — 17 ægte flag
+// ("few sprigs thyme optional") tabt for at rette 5, og forskellen på
+// "(optional; se tip)" og "(se tip, optional)" er ordstilling. Så grænsen
+// trækkes her, hvor den kan siges enkelt: en hovedprotein er aldrig valgfri.
+// Prisen for reglen er de 5 linjer, hvor kødet ER en garniture (ansjoser i en
+// braiseret oksebryst, pancetta på fritter) — de bliver nu købt. Færre og
+// rigtige retter slår flere og forkerte, samme regel som resten af planen.
+const MAIN_PROTEIN = new Set(['meat', 'poultry', 'fish']);
+
 /**
  * Prisen på ÉN opskrift i ÉN kæde. Ren funktion, så reglerne kan efterprøves
- * uden en base — det er her, de tre fælder i denne opgave sidder.
+ * uden en base — det er her, fælderne i denne opgave sidder.
  *
  *   recipe   fra plans.loadRecipes(): `items` med key, amount og optional
- *   items    `items`-tabellen som Map, for class, keeps og base_unit
+ *   items    `items`-tabellen som Map, for class, keeps, base_unit og category
  *   unknown  antal ikke-valgfri ingredienslinjer UDEN item_key på retten
  *
  * `coverage` måles mod alt, retten faktisk kræver — også de linjer,
@@ -36,14 +56,24 @@ const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
  * ville rangere den øverst, netop fordi vi ved mindst om den.
  */
 function costRecipe(recipe, chainId, { offers, normals, items, unknown = 0 }) {
-  let cost = 0; let costPacks = 0; let known = 0; let total = 0;
+  let cost = 0; let known = 0; let total = 0;
+
+  // Behovet pr. VARE, ikke pr. linje. Samme vare står på flere linjer i 1.086
+  // af de 2.224 opskrifter ("1 lemon, zested" og "zest of 1 lemon", persille
+  // fire steder), og rundes hver linje op for sig, køber cost_packs en pose
+  // pr. linje: Potato masa tortillas betalte 31,90 kr for to 2 kg-poser
+  // kartofler, den samme pose to gange. `cost` er lineær og rammes ikke.
+  // choosePack er selv skrevet til et sammenlagt behov — se dens note om
+  // 1.2000000000000002.
+  const packNeed = new Map();
 
   for (const it of recipe.items) {
     const item = items.get(it.key);
     if (!item || item.class === 'essential') continue;   // essentials købes ikke
     // "evt. et skvæt fløde" købes ikke, og skal derfor hverken koste noget
     // eller kunne gøre en ret uprissætbar. Samme regel som indkøbslisten.
-    if (it.optional) continue;
+    // Undtagen hovedproteinen: se MAIN_PROTEIN ovenfor.
+    if (it.optional && !MAIN_PROTEIN.has(item.category)) continue;
     total++;
 
     // `amount`, ikke `weight`. De to er kun det samme for kg/l-varer.
@@ -69,13 +99,22 @@ function costRecipe(recipe, chainId, { offers, normals, items, unknown = 0 }) {
 
     cost += need * price.unit_price;
 
-    // Kun den række, effectivePrice valgte. choosePack må kun se pakker fra
-    // ÉT kildeniveau (se dens egen dokumentation), og rangordenen bor i
-    // effectivePrice — den skal ikke skrives af her for at kunne sende flere
-    // pakker med. I dag har hvert (vare, kæde)-par alligevel præcis én
-    // pakkestørrelse på sit bedste niveau, så valget er givet på forhånd;
-    // det, der tæller her, er oprundingen.
-    const pack = engine.choosePack(need, [price], { keeps: item.keeps });
+    // Linjen lægges i behovet for VAREN; pakken vælges først, når hele
+    // opskriften er talt op.
+    const prev = packNeed.get(it.key);
+    if (prev) prev.need += need;
+    else packNeed.set(it.key, { need, price, keeps: item.keeps });
+  }
+
+  // Først her rundes der op — og kun på den række, effectivePrice valgte.
+  // choosePack må kun se pakker fra ÉT kildeniveau (se dens egen
+  // dokumentation), og rangordenen bor i effectivePrice; den skal ikke
+  // skrives af her for at kunne sende flere pakker med. I dag har hvert
+  // (vare, kæde)-par alligevel præcis én pakkestørrelse på sit bedste niveau,
+  // så valget er givet på forhånd, og det, der tæller, er oprundingen.
+  let costPacks = 0;
+  for (const p of packNeed.values()) {
+    const pack = engine.choosePack(p.need, [p.price], { keeps: p.keeps });
     if (pack) costPacks += pack.cost;
   }
 
@@ -95,7 +134,9 @@ function main() {
   const db = getDb();
   const chains = db.prepare('SELECT id, name FROM chains ORDER BY name').all();
   const recipes = plans.loadRecipes({});
-  const items = new Map(db.prepare('SELECT key, class, keeps, base_unit FROM items').all()
+  // `category` er med, fordi MAIN_PROTEIN spørger til den: et 'optional'-flag
+  // på kød, fjerkræ eller fisk skal ikke tros.
+  const items = new Map(db.prepare('SELECT key, class, keeps, base_unit, category FROM items').all()
     .map((i) => [i.key, i]));
 
   // Ingredienser, taksonomien ikke kender, når ALDRIG ind i r.items:

@@ -1375,12 +1375,13 @@ test('normalPricesFor grupperer alle rækker pr. vare|kæde', () => {
 
 const { costRecipe } = require(path.join(__dirname, '..', 'scripts', 'recompute-recipe-costs.js'));
 
+// `category` er med, fordi et 'optional'-flag ikke skal tros på en hovedprotein.
 const COST_ITEMS = new Map([
-  ['kyllingebryst', { key: 'kyllingebryst', class: 'fresh',    keeps: 'perishable', base_unit: 'kg' }],
-  ['kartofler',     { key: 'kartofler',     class: 'baseline', keeps: 'keeps',      base_unit: 'kg' }],
-  ['aeg',           { key: 'aeg',           class: 'fresh',    keeps: 'keeps',      base_unit: 'stk' }],
-  ['brod',          { key: 'brod',          class: 'fresh',    keeps: 'perishable', base_unit: 'stk' }],
-  ['salt',          { key: 'salt',          class: 'essential', keeps: 'pantry',    base_unit: 'kg' }],
+  ['kyllingebryst', { key: 'kyllingebryst', class: 'fresh',    keeps: 'perishable', base_unit: 'kg',  category: 'poultry' }],
+  ['kartofler',     { key: 'kartofler',     class: 'baseline', keeps: 'keeps',      base_unit: 'kg',  category: 'veg' }],
+  ['aeg',           { key: 'aeg',           class: 'fresh',    keeps: 'keeps',      base_unit: 'stk', category: 'eggs' }],
+  ['brod',          { key: 'brod',          class: 'fresh',    keeps: 'perishable', base_unit: 'stk', category: 'bakery' }],
+  ['salt',          { key: 'salt',          class: 'essential', keeps: 'pantry',    base_unit: 'kg',  category: 'pantry' }],
 ]);
 
 const COST_NORMALS = new Map([
@@ -1472,4 +1473,38 @@ test('en ret uden noget at købe er ikke en gratis ret', () => {
   near(c.cost, 0);
   assert.equal(c.coverage, 0);
   assert.equal(c.priceable, 0);
+});
+
+test('en hovedprotein er aldrig valgfri, uanset flaget', () => {
+  // "4 chicken breasts (skinless, if you like)" — OPTIONAL_RE matcher
+  // "if you like" midt i linjen, og flaget fjerner linjen fra BÅDE prisen og
+  // nævneren. Retten stod derfor som basens billigste prissatte ret til
+  // 0,08 kr med coverage 1. Kyllingen skal med, selv om linjen er flaget.
+  const r = { id: 7, title: 'Bagt kyllingebryst',
+    items: [line('kyllingebryst', 0.6, { optional: true }), line('kartofler', 0.5)] };
+  const c = costRecipe(r, 'TST', { offers: new Map(), normals: COST_NORMALS, items: COST_ITEMS });
+  near(c.cost, 0.6 * 70 + 0.5 * 7.975);
+  assert.equal(c.coverage, 1);   // 2 af 2, ikke 1 af 1
+  assert.equal(c.priceable, 1);
+
+  // Og reglen gælder KUN kød, fjerkræ og fisk: et valgfrit brød er stadig
+  // valgfrit, ellers ville "evt. et skvæt fløde" blive købt.
+  const b = { id: 8, title: 'Med evt. brød',
+    items: [line('kyllingebryst', 0.6), line('brod', 2, { optional: true })] };
+  near(costRecipe(b, 'TST', { offers: new Map(), normals: COST_NORMALS, items: COST_ITEMS }).cost,
+    0.6 * 70);
+});
+
+test('samme vare på to linjer køber én pakke, ikke to', () => {
+  // "1 lemon, zested" og "zest of 1 lemon" er den samme citron. 1.086 af de
+  // 2.224 opskrifter har mindst én vare på flere linjer, og rundes hver linje
+  // op for sig, betaler cost_packs for den samme pose to gange.
+  const r = { id: 9, title: 'Kartofler to gange',
+    items: [line('kartofler', 0.5), line('kartofler', 0.5)] };
+  const c = costRecipe(r, 'TST', { offers: new Map(), normals: COST_NORMALS, items: COST_ITEMS });
+  near(c.cost, 1 * 7.975);
+  near(c.cost_packs, 15.95);          // én 2 kg-pose dækker begge linjer
+  assert.ok(c.cost_packs >= c.cost, 'hele pakker kan ikke koste mindre end behovet');
+  // Nævneren tæller stadig linjer: begge er kendte, så dækningen er hel.
+  assert.equal(c.coverage, 1);
 });
