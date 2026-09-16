@@ -1635,7 +1635,7 @@ justeres, når de første rigtige lister er set.
 **Interfaces:**
 - Produces: tabellen `recipe_costs`; `npm run costs:recompute`; `plans.normalPricesFor(chainIds)` → `Map<'item|chain', rows[]>`
 
-- [ ] **Step 1: Tabellen**
+- [x] **Step 1: Tabellen**
 
 ```sql
 -- ── Opskriftspriser ─────────────────────────────────────────────────────────
@@ -1659,7 +1659,7 @@ CREATE INDEX IF NOT EXISTS idx_recipe_costs_cheap
   ON recipe_costs(chain_id, cost) WHERE priceable = 1;
 ```
 
-- [ ] **Step 2: Hent normalpriser i `generate.js`**
+- [x] **Step 2: Hent normalpriser i `generate.js`**
 
 Ved siden af `normalPriceMap()`:
 
@@ -1692,7 +1692,7 @@ function normalPricesFor(chainIds = null) {
 
 Eksportér den sammen med de øvrige.
 
-- [ ] **Step 3: Skriv jobbet**
+- [x] **Step 3: Skriv jobbet**
 
 ```js
 'use strict';
@@ -1798,7 +1798,7 @@ function main() {
 main();
 ```
 
-- [ ] **Step 4: Kør og stikprøv**
+- [x] **Step 4: Kør og stikprøv**
 
 ```json
 "costs:recompute": "node scripts/recompute-recipe-costs.js",
@@ -1823,7 +1823,7 @@ ganger dette job `behov × enhedspris` på tværs af to forskellige enheder.
 
 **Læs tallene, før du går videre.** En hverdagsret til fire personer ligger typisk mellem 25 og 90 kr i `cost`. Ligger de billigste under 10 kr, mangler der priser frem for at retten er billig — `coverage` skal være 1, og hvis den er, er det enhedspriserne, der er forkerte. `cost_packs` skal være højere end `cost`, aldrig lavere.
 
-- [ ] **Step 5: Kør suiten og commit**
+- [x] **Step 5: Kør suiten og commit**
 
 ---
 
