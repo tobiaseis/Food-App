@@ -1755,6 +1755,7 @@ function main() {
     const run = db.transaction(() => {
       for (const r of recipes) {
         let cost = 0, costPacks = 0, known = 0, total = 0;
+        const perItem = new Map();
 
         for (const it of r.items) {
           const item = items.get(it.key);
@@ -1789,7 +1790,17 @@ function main() {
           known++;
 
           cost += need * price.unit_price;
-          const pack = engine.choosePack(need, [price], { keeps: item.keeps });
+          // Pakkerne købes pr. VARE, ikke pr. linje. Samme vare står på flere
+          // linjer i 1.086 af 2.224 opskrifter — "1 citron, revet skal" og
+          // "skal af 1 citron", persille på fire linjer — og rundede hver
+          // linje op for sig, kom "Potato masa tortillas" til at betale for to
+          // 2 kg-poser kartofler. Behovet samles først, pakken vælges bagefter.
+          const prev = perItem.get(it.key);
+          perItem.set(it.key, { need: (prev?.need || 0) + need, price, keeps: item.keeps });
+        }
+
+        for (const agg of perItem.values()) {
+          const pack = engine.choosePack(agg.need, [agg.price], { keeps: agg.keeps });
           if (pack) costPacks += pack.cost;
         }
 
