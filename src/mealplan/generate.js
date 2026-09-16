@@ -78,6 +78,12 @@ function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
   }
   sql += ' ORDER BY o.unit_price ASC';
 
+  // Samme lokale cache som i `chainOfferIndex`: `getBaseline` slår op i 400
+  // dages historik og cacher ikke selv, og siden nøglen blev `vare|kæde`, er
+  // der én række pr. kæde i stedet for én pr. vare. Uden dette blev opslaget
+  // kaldt 484 gange i stedet for 87 på en travl uge — midt på webserverens
+  // requestvej. Målt på data.db, uge 35: 1.130 ms → 401 ms for tyve kald.
+  const baselines = new Map();
   const map = new Map();
   for (const row of db.prepare(sql).all(...params)) {
     // Drikkevarer, slik og non-food kan ikke bære en ret. De skal heller ikke
@@ -92,8 +98,9 @@ function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
     const k = `${row.item_key}|${row.chain_id}`;
     if (map.has(k)) continue;                          // sorteret billigst først
 
-    const baseline = getBaseline(row.product_id, row.base_unit);
-    map.set(k, { ...row, normal_unit_price: baseline?.median ?? null });
+    const bk = `${row.product_id}|${row.base_unit}`;
+    if (!baselines.has(bk)) baselines.set(bk, getBaseline(row.product_id, row.base_unit));
+    map.set(k, { ...row, normal_unit_price: baselines.get(bk)?.median ?? null });
   }
   return map;
 }
@@ -112,7 +119,7 @@ function chainOfferIndex({ at = new Date() } = {}) {
 
   const rows = db.prepare(`
     SELECT o.id AS offer_id, o.product_id, o.chain_id, o.heading,
-           o.price, o.unit_price, o.base_unit, o.image, o.run_till,
+           o.price, o.unit_price, o.base_unit, o.base_qty, o.image, o.run_till,
            p.item_key, p.name AS product_name
       FROM offers o
       JOIN products p ON p.id = o.product_id

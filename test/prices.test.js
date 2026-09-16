@@ -1038,6 +1038,86 @@ test('ukendt kilde taber til alle de kendte', () => {
     { offers: new Map(), normals }).source, 'derived');
 });
 
+test('kr/stk sammenlignes ikke med kr/kg — tilbuddet forkastes', () => {
+  // Tilbuddets `base_unit` er AVISENS enhed, ikke varens: de to er forskellige
+  // i 973 af 2.376 tilbudsrækker i data.db, og 130 vare|kæde-par har et tilbud
+  // i en anden enhed end deres normalpris.
+  //
+  // Målt på blomkaal|11deC: avisen sælger ÉT blomkål til 12 kr, item_prices
+  // har en INDTASTET pris på 18 kr/KG. 12 < 18, så uden enhedsvagten vandt
+  // tilbuddet — og den højeste tillidskilde i hele rangordenen blev kastet
+  // væk for et tal, der ikke måler det samme. item_prices holder invarianten
+  // med en TRIGGER (src/db/schema.sql); her er der ingen base at spørge.
+  const normals = new Map([['blomkaal|11deC', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 18, unit_price: 18, source: 'manual' },
+  ]]]);
+  const offers = new Map([['blomkaal|11deC',
+    { base_qty: 1, base_unit: 'stk', price: 12, unit_price: 12 }]]);
+  const p = engine.effectivePrice('blomkaal', '11deC', { offers, normals });
+  near(p.unit_price, 18);
+  assert.equal(p.pack_unit, 'kg');
+  assert.equal(p.source, 'manual');
+  assert.equal(p.on_offer, false);
+});
+
+test('enhedsvagten går også den anden vej — kg-tilbud mod stk-normalpris', () => {
+  // brod|0b1e8 i data.db: tilbuddet er 26,67 kr/KG (0,75 kg til 20 kr),
+  // normalprisen 29 kr/STK. Vagten må ikke kun være skrevet for stk-tilbud —
+  // så ville halvdelen af de 130 par stadig sammenligne æbler med pærer.
+  const normals = new Map([['brod|0b1e8', [
+    { pack_qty: 1, pack_unit: 'stk', pack_price: 29, unit_price: 29, source: 'derived' },
+  ]]]);
+  const offers = new Map([['brod|0b1e8',
+    { base_qty: 0.75, base_unit: 'kg', price: 20, unit_price: 26.67 }]]);
+  const p = engine.effectivePrice('brod', '0b1e8', { offers, normals });
+  near(p.unit_price, 29);
+  assert.equal(p.pack_unit, 'stk');
+  assert.equal(p.on_offer, false);
+});
+
+test('samme enhed: det billigere tilbud vinder stadig', () => {
+  // Kontrolprøven. Uden den kunne enhedsvagten bestå de to ovenstående ved
+  // simpelthen at forkaste ethvert tilbud.
+  const normals = new Map([['brod|0b1e8', [
+    { pack_qty: 1, pack_unit: 'stk', pack_price: 29, unit_price: 29, source: 'derived' },
+  ]]]);
+  const offers = new Map([['brod|0b1e8',
+    { base_qty: 1, base_unit: 'stk', price: 20, unit_price: 20 }]]);
+  const p = engine.effectivePrice('brod', '0b1e8', { offers, normals });
+  near(p.unit_price, 20);
+  assert.equal(p.on_offer, true);
+  assert.equal(p.source, 'offer');
+});
+
+test('en source, der findes på Object.prototype, er stadig ukendt', () => {
+  // `SOURCE_RANK['constructor']` gav en Function gennem prototypekæden, og
+  // `?? UKENDT` fyrer aldrig på en Function — rækken kom forrest i stedet for
+  // bagest og slog `derived`. Basens CHECK holder værdien ude i dag, men
+  // rangordenen skal ikke hvile på den.
+  const normals = new Map([['kartofler|11deC', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 4, unit_price: 4, source: 'constructor' },
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 9, unit_price: 9, source: 'derived' },
+  ]]]);
+  assert.equal(engine.effectivePrice('kartofler', '11deC',
+    { offers: new Map(), normals }).source, 'derived');
+
+  // Og rangordenen eksporteres — den må ikke kunne skrives udefra.
+  assert.ok(Object.isFrozen(engine.SOURCE_RANK), 'SOURCE_RANK skal være frosset');
+});
+
+test('effectivePrice tåler et almindeligt objekt og et manglende kort', () => {
+  // `cheapestPerItem` og `scoreRecipe` tager begge former; browserens kort
+  // kommer fra JSON. effectivePrice kastede på et objekt og på et manglende
+  // tredje argument.
+  const p = engine.effectivePrice('kartofler', '11deC', {
+    offers: { 'kartofler|11deC': { base_qty: 2, base_unit: 'kg', price: 12, unit_price: 6 } },
+    normals: { 'kartofler|11deC': [
+      { pack_qty: 2, pack_unit: 'kg', pack_price: 15.95, unit_price: 7.975, source: 'manual' }] },
+  });
+  near(p.unit_price, 6);
+  assert.equal(engine.effectivePrice('kartofler', '11deC'), null);
+});
+
 // ── Tilbudskortets nøgleform ─────────────────────────────────────────────────
 
 test('cheapestPerItem reducerer vare|kæde til ét tilbud pr. vare', () => {
@@ -1063,4 +1143,102 @@ test('cheapestPerItem lader et kort nøglet på varen alene gå uændret igennem
   const offers = new Map([['kartofler', { unit_price: 6, offer_id: 7 }]]);
   const byItem = engine.cheapestPerItem(offers);
   assert.equal(byItem.get('kartofler').offer_id, 7);
+});
+
+/**
+ * Serversidens del af den nye nøgleform.
+ *
+ * Ingen test rørte `activeOfferMap()`, så suiten bestod uændret, hvis nøglen
+ * var forkert — eller hvis `base_qty` faldt ud af `chainOfferIndex()`s SELECT,
+ * som er præcis den vej, tilbuddene forsvandt i browseren: `offer.base_qty`
+ * blev `undefined`, `undefined > 0` er falsk, og effectivePrice så aldrig et
+ * tilbud. Serveren virkede videre, fordi `activeOfferMap()` havde kolonnen.
+ *
+ * Basen er en frisk fil i tmpdir, ikke `test.db`: testfilerne kører som
+ * samtidige processer mod samme `test.db`, og fem indsatte tilbudsrækker
+ * ville flytte tallene under `sync.test.js`.
+ */
+function freshPlans(dbPath) {
+  const ids = ['src/db', 'src/price/history', 'src/mealplan/generate']
+    .map((m) => require.resolve(path.join(__dirname, '..', m)));
+  const prev = process.env.DB_PATH;
+  process.env.DB_PATH = dbPath;
+  for (const id of ids) delete require.cache[id];
+  try {
+    // `close` skal med ud: getDb() cacher forbindelsen i modulet, og på
+    // Windows kan filen ikke slettes, mens håndtaget står åbent.
+    const dbMod = require(path.join(__dirname, '..', 'src', 'db'));
+    return {
+      plans: require(path.join(__dirname, '..', 'src', 'mealplan', 'generate')),
+      close: () => dbMod.getDb().close(),
+    };
+  } finally {
+    if (prev === undefined) delete process.env.DB_PATH;
+    else process.env.DB_PATH = prev;
+    for (const id of ids) delete require.cache[id];
+  }
+}
+
+test('activeOfferMap nøgler på vare|kæde — ét tilbud pr. par', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'madplan-offermap-'));
+  const dbPath = path.join(dir, 'offermap.db');
+  const db = openThroughGetDb(dbPath);          // skema + migrate, som i drift
+
+  const at = new Date('2026-09-16T12:00:00Z');
+  const from = '2026-09-10T00:00:00Z';
+  const till = '2026-09-30T00:00:00Z';
+
+  db.prepare("INSERT INTO chains (id, name, slug) VALUES ('TST1', 'Testkæde 1', 'tst1')").run();
+  db.prepare("INSERT INTO chains (id, name, slug) VALUES ('TST2', 'Testkæde 2', 'tst2')").run();
+  const prod = db.prepare(`INSERT INTO products (slug, name, category, item_key, created_at)
+                           VALUES (?, ?, ?, ?, ?)`);
+  const pKart = prod.run('t-kartofler', 'Kartofler', 'produce', 'kartofler', from).lastInsertRowid;
+  const pKyll = prod.run('t-kyllingebryst', 'Kyllingebryst', 'meat', 'kyllingebryst', from).lastInsertRowid;
+
+  const offer = db.prepare(`
+    INSERT INTO offers (external_id, product_id, chain_id, heading, price,
+                        base_qty, base_unit, unit_price, run_from, run_till, observed_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
+  offer.run('t-k1-billig', pKart, 'TST1', 'Kartofler 2 kg', 12, 2, 'kg',  6, from, till, from);
+  offer.run('t-k1-dyr',    pKart, 'TST1', 'Kartofler 1 kg',  9, 1, 'kg',  9, from, till, from);
+  offer.run('t-k2',        pKart, 'TST2', 'Kartofler 2 kg',  8, 2, 'kg',  4, from, till, from);
+  offer.run('t-y1',        pKyll, 'TST1', 'Kyllingebryst',  50, 1, 'kg', 50, from, till, from);
+  offer.run('t-y2',        pKyll, 'TST2', 'Kyllingebryst',  60, 1, 'kg', 60, from, till, from);
+  db.close();
+
+  const { plans, close } = freshPlans(dbPath);
+  const map = plans.activeOfferMap({ at });
+
+  // Nøglen er vare OG kæde — begge dele, hver gang.
+  for (const k of map.keys()) {
+    assert.ok(k.includes('|'), `nøglen "${k}" mangler kæden`);
+    assert.equal(k.split('|').length, 2, `nøglen "${k}" har ikke formen vare|kæde`);
+  }
+  assert.deepEqual([...map.keys()].sort(),
+    ['kartofler|TST1', 'kartofler|TST2', 'kyllingebryst|TST1', 'kyllingebryst|TST2']);
+
+  // Ét tilbud pr. par: den dyre kartoffelrække i TST1 er væk, men TST1's egen
+  // pris er i behold ved siden af TST2's billigere. Nøglet på varen alene
+  // ville kortet være halveret til to rækker — og spørgsmålet "hvad koster
+  // varen i DENNE butik" kunne ikke stilles.
+  assert.equal(map.size, 4);
+  assert.equal(new Set([...map.keys()].map((k) => k.split('|')[0])).size, 2);
+  near(map.get('kartofler|TST1').unit_price, 6);
+  near(map.get('kartofler|TST2').unit_price, 4);
+  assert.equal(map.get('kartofler|TST1').chain_id, 'TST1');
+
+  // Pakken skal med hele vejen ud — ellers er tilbuddet ikke en pris.
+  for (const [k, o] of map) assert.ok(o.base_qty > 0, `${k} mangler base_qty`);
+
+  // Samme krav til den FLADE liste, browseren får. Det var her kolonnen
+  // manglede: serveren virkede, browseren tabte hvert eneste tilbud.
+  const index = plans.chainOfferIndex({ at });
+  assert.equal(index.length, 4);
+  for (const row of index) {
+    assert.ok(row.base_qty > 0, `${row.item_key}|${row.chain_id} mangler base_qty`);
+    assert.ok(row.base_unit, 'base_unit skal med');
+  }
+
+  close();
+  fs.rmSync(dir, { recursive: true, force: true });
 });

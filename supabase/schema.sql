@@ -149,11 +149,18 @@ create table if not exists offer_index (
   price             double precision,
   unit_price        double precision,
   base_unit         text,
+  base_qty          double precision,   -- pakkens mængde; effectivePrice kræver den
   normal_unit_price double precision,   -- varens egen normalpris (median)
   image             text,
   run_till          timestamptz,
   primary key (taxonomy_key, chain_id)
 );
+-- Tabellen findes allerede hos den, der kørte skemaet før base_qty kom til.
+-- create table if not exists rører ikke en eksisterende tabel, så kolonnen
+-- skal lægges på eksplicit – ellers fejler synken med "column
+-- offer_index.base_qty does not exist", og uden den er tilbuddet ikke en
+-- brugbar pris i browserens effectivePrice.
+alter table offer_index add column if not exists base_qty double precision;
 create index if not exists idx_offer_index_chain on offer_index(chain_id);
 
 -- Normalpris pr. varetype på tværs af kæder. Bruges til at prissætte de

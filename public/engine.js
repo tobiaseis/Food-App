@@ -285,8 +285,16 @@
   // En kilde, der ikke står her, hører bagest: den dag Salling åbner et API,
   // skal 'api:salling' ikke umærkeligt komme forrest, bare fordi ingen nåede
   // at tage stilling til den.
-  const SOURCE_RANK = { manual: 0, 'api:rema': 1, derived: 2 };
+  // Frosset, fordi den eksporteres: uden dette kunne en tilfældig side
+  // skrive `engine.SOURCE_RANK.derived = -1` og vende rangordenen om for
+  // alle opslag i processen.
+  const SOURCE_RANK = Object.freeze({ manual: 0, 'api:rema': 1, derived: 2 });
   const SOURCE_RANK_UNKNOWN = 3;
+
+  // Opslag i et kort, der må være et Map ELLER et almindeligt objekt.
+  // Browseren bygger sine kort af JSON, serveren af Map's, og ingen af
+  // opslagsfunktionerne her skal kende forskel.
+  const lookup = (m, k) => (m instanceof Map ? m.get(k) : m && m[k]) || null;
 
   // Leksikografisk sammenligning af to taltupler. Bruges til at rangere
   // normalpriser på (kilde, udløbet, pris) i netop den rækkefølge.
@@ -303,7 +311,9 @@
    * tilbage af sig selv, når tilbuddet udløber, historikken er intakt, og
    * der er ingen særregel for baseline kontra fresh.
    *
-   *   offers   `vare|kæde` → aktivt tilbud (activeOfferMap / offer_index)
+   *   offers   `vare|kæde` → aktivt tilbud. Rækken skal bære `base_qty`,
+   *            ellers er den ikke en brugbar pris (se herunder) — både
+   *            activeOfferMap og `offer_index` leverer den kolonne.
    *   normals  `vare|kæde` → ALLE normalpris-rækker for det par
    *   now      sammenligningstidspunktet, så udløb kan testes
    *
@@ -311,7 +321,7 @@
    * en vare til 0 kr ser ud som en gratis vare i et budget, mens `null`
    * siger det, der faktisk er tilfældet — at vi ikke ved det.
    */
-  function effectivePrice(itemKey, chainId, { offers, normals, now = new Date() }) {
+  function effectivePrice(itemKey, chainId, { offers, normals, now = new Date() } = {}) {
     const k = `${itemKey}|${chainId}`;
     const nowIso = now.toISOString();
 
@@ -319,7 +329,7 @@
     // gælder, og uden den kan hverken pakkeafrundingen eller kurveprisen
     // regne på rækken — så er tilbuddet ikke en brugbar pris, og
     // normalprisen står tilbage.
-    const offer = offers.get(k);
+    const offer = lookup(offers, k);
     const fromOffer = offer && offer.unit_price > 0 && offer.base_qty > 0
       ? { pack_qty: offer.base_qty, pack_unit: offer.base_unit,
           pack_price: offer.price, unit_price: offer.unit_price,
@@ -338,12 +348,17 @@
     // udgangspunktet. Selve pakkevalget sker senere, når behovet er kendt.
     let best = null;
     let bestScore = null;
-    for (const r of normals.get(k) || []) {
+    for (const r of lookup(normals, k) || []) {
       if (!(r.unit_price > 0)) continue;
       // En udløben pris taber til en gyldig på samme niveau, men slår
       // stadig et dårligere niveau: gammelt og rigtigt slår nyt og gættet.
       const stale = r.valid_until != null && r.valid_until < nowIso;
-      const score = [SOURCE_RANK[r.source] ?? SOURCE_RANK_UNKNOWN, stale ? 1 : 0, r.unit_price];
+      // hasOwn, ikke `[]`: et opslag gennem Object.prototype ville give
+      // source: 'constructor' en Function som rang, `??` ville aldrig
+      // fyre, og rækken ville slå `derived`. Basens CHECK holder det ude
+      // i dag, men rangordenen skal ikke afhænge af den.
+      const rank = Object.hasOwn(SOURCE_RANK, r.source) ? SOURCE_RANK[r.source] : SOURCE_RANK_UNKNOWN;
+      const score = [rank, stale ? 1 : 0, r.unit_price];
       if (best && cmp(score, bestScore) >= 0) continue;
       bestScore = score;
       best = { pack_qty: r.pack_qty, pack_unit: r.pack_unit,
@@ -356,6 +371,24 @@
     // konkurrerer på prisen alene mod den vinder, rangordenen fandt.
     if (!fromOffer) return best;
     if (!best) return fromOffer;
+
+    // Men kr/stk og kr/kg er ikke det samme tal. Tilbuddets `base_unit` er
+    // AVISENS enhed, ikke varens: den er forskellig fra varens egen i 973 af
+    // 2.376 tilbudsrækker, og 130 vare|kæde-par har et tilbud i en anden
+    // enhed end deres normalpris. Uden denne linje slår "blomkål 12 kr/STK"
+    // en indtastet pris på 18 kr/KG — den højeste tillidskilde i hele
+    // rangordenen, kastet væk for et tal, der ikke måler det samme (målt:
+    // blomkaal|11deC den ene vej, brod|0b1e8 den anden).
+    //
+    // `item_prices` holder den samme invariant med en TRIGGER (se
+    // src/db/schema.sql); her er der ingen base at spørge, så reglen skal
+    // stå i koden.
+    //
+    // Tilbuddet FORKASTES, det omregnes ikke: `piece_g` er den BRUGBARE
+    // vægt, ikke købsvægten, og den vej er prøvet og rullet tilbage i
+    // opgave 1, trin 9.
+    if (fromOffer.pack_unit !== best.pack_unit) return best;
+
     return fromOffer.unit_price <= best.unit_price ? fromOffer : best;
   }
 
@@ -471,15 +504,13 @@
    * der ikke er på tilbud.
    */
   function scoreRecipe(recipe, roles, offers, normalPrices) {
-    const get = (m, k) => (m instanceof Map ? m.get(k) : m && m[k]) || null;
-
     const matched = [];
     const missing = [];
     let estCost = 0, estSavings = 0, pricedCount = 0;
 
     const consider = (item, role) => {
-      const offer = get(offers, item.key);
-      const normal = get(normalPrices, item.key);
+      const offer = lookup(offers, item.key);
+      const normal = lookup(normalPrices, item.key);
 
       if (offer) {
         const qty = qtyInBase(item.amount, item.weight, offer.base_unit);

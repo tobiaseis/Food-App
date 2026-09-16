@@ -154,6 +154,13 @@ function collectPlanIndex(log) {
     price: o.price,
     unit_price: o.unit_price,
     base_unit: o.base_unit,
+    // `base_qty` SKAL med. `effectivePrice` i public/engine.js kræver, at
+    // tilbuddet bærer sin egen pakke, og uden kolonnen er `offer.base_qty`
+    // `undefined` i browseren — så virker tilbuddene på serveren og
+    // forsvinder i browseren, præcis den afdrift, den delte motor findes
+    // for at undgå. Kolonnen skal stå tre steder: her, i `chainOfferIndex`
+    // og i supabase/schema.sql.
+    base_qty: o.base_qty,
     normal_unit_price: o.normal_unit_price,
     image: o.image,
     run_till: iso(o.run_till),
