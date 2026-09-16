@@ -79,6 +79,40 @@ test('et behov, der går præcist op, køber ikke en pakke for meget', () => {
   near(c.waste, 0);
 });
 
+test('spildstraffen følger varens værdi og er ikke et fast kronebeløb', () => {
+  // Den dimensionelle regel, og hele grunden til at straffen er en ANDEL:
+  // én 'stk'-enhed er ét æg til 3 kr, mens én 'kg'-enhed kan være
+  // oksemørbrad til 200. Et fast beløb pr. enhed straffer de tre æg
+  // hårdest — det er fem gange så mange enheder — selvom der ryger mad for
+  // 9 kr ud mod 60.
+  //
+  // Målt udefra: hvor meget EKSTRA vil funktionen give for en pakke uden
+  // rest? Det er lige præcis straffen, og den skal stå i forhold til, hvad
+  // resten er værd.
+  const vælgerPakkenUdenRest = (need, spildpakke, exactQty, pris) => {
+    const c = engine.choosePack(need,
+      [spildpakke, { pack_qty: exactQty, pack_price: pris }], { keeps: 'keeps' });
+    return c.pack_qty === exactQty;
+  };
+
+  // 3 æg af en 6-pakke til 18 kr (3 kr/stk): 3 æg til overs = 9 kr mad,
+  // halvt vægtet og halv aversion -> tærsklen er 2,25 kr.
+  const AEG = { pack_qty: 6, pack_price: 18 };
+  assert.ok(vælgerPakkenUdenRest(3, AEG, 3, 18 + 2),
+    'æg: 2 kr ekstra er under straffen og skal vinde');
+  assert.ok(!vælgerPakkenUdenRest(3, AEG, 3, 18 + 2.5),
+    'æg: 2,50 kr ekstra er over straffen og skal tabe');
+
+  // 0,3 kg oksemørbrad af en 0,6 kg-pakke til 120 kr (200 kr/kg): resten er
+  // 60 kr mad, knap syv gange så meget, og tærsklen er 15 kr. Med et fast
+  // beløb pr. enhed ville den have været 6,7 gange MINDRE end æggenes.
+  const OKSE = { pack_qty: 0.6, pack_price: 120 };
+  assert.ok(vælgerPakkenUdenRest(0.3, OKSE, 0.3, 120 + 14),
+    'okse: 14 kr ekstra er under straffen og skal vinde');
+  assert.ok(!vælgerPakkenUdenRest(0.3, OKSE, 0.3, 120 + 16),
+    'okse: 16 kr ekstra er over straffen og skal tabe');
+});
+
 test('en ukendt holdbarhed vægtes som "keeps" og giver ikke NaN', () => {
   // Kortopslaget må ikke gå gennem Object.prototype: med 'constructor' som
   // nøgle ville vægten blive en Function, og spildet NaN — samme fælde som

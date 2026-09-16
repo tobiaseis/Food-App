@@ -403,31 +403,38 @@
   // spildvægtningen fra for hver eneste madplan i processen.
   const WASTE_WEIGHT = Object.freeze({ perishable: 1, keeps: 0.5, pantry: 0 });
 
-  // Hvad én enhed vægtet spild "koster", når to pakker skal vejes op mod
-  // hinanden. Højere tal gør valget mere villigt til at betale for at undgå
-  // en rest.
+  // Hvor meget det er værd at betale for at undgå en rest, målt som en andel
+  // af hvad resten SELV er værd. 0,5 betyder: jeg betaler gerne 50 øre ekstra
+  // for at slippe for at smide mad ud for en krone.
   //
-  // Tallet er et SKØN og ikke et resultat: 15 kr pr. vægtet kg/l/stk er et
-  // gæt på, hvad det er værd at slippe for en rest, og det er aldrig målt mod
-  // en rigtig kurv. Det skal efterses, når de første lister er set.
+  // Det var først et fast kronebeløb pr. enhed, og det var dimensionelt
+  // forkert: én 'stk'-enhed er ét æg til 3 kr, mens én 'kg'-enhed kan være
+  // oksekød til 200. Målt gav 15 kr/enhed en straf på 22,50 kr for 3 æg til
+  // overs fra en 6-pakke, der kostede 20 — mere end pakken selv. Ganget på
+  // varens egen enhedspris skalerer reglen af sig selv og kræver ingen nye
+  // data: `unit_price` står på hver eneste prisrække.
+  //
+  // Andelen er stadig et SKØN og ikke et resultat — den er aldrig efterprøvet
+  // mod en rigtig kurv og skal ses efter, når de første lister er set.
   //
   // Ingen Object.freeze her, selv om tabellen ovenfor har en: et tal kan ikke
   // muteres, så kaldet ville være en no-op. choosePack læser konstanten, ikke
   // eksporten, og kan derfor ikke flyttes udefra.
-  const WASTE_PENALTY_PER_UNIT = 15;
+  const WASTE_AVERSION = 0.5;
 
   /**
    * Hvilken pakke, og hvor mange af den, dækker behovet billigst?
    *
    * Man kan ikke købe en halv pose. Skal man bruge 1,3 kg kartofler, koster
    * det to 1 kg-poser eller én 1,5 kg-pose — ikke 1,3 × kiloprisen. Valget
-   * mellem to pakkestørrelser afgøres af pris PLUS vægtet spild; på prisen
-   * alene ville storposen altid vinde, fordi den er billigst pr. kilo, og
-   * madplanen ville systematisk købe mere, end der bliver spist.
+   * mellem to pakkestørrelser afgøres af pris PLUS vægtet spild, hvor resten
+   * er sat til det, den selv er værd; på prisen alene ville storposen altid
+   * vinde, fordi den er billigst pr. kilo, og madplanen ville systematisk
+   * købe mere, end der bliver spist.
    *
    *   need   mængden i varens egen base_unit (kg, l eller stk)
-   *   packs  pakkerne, `{ pack_qty, pack_price }`. Se nedenfor — de skal komme
-   *          fra ÉN kilde.
+   *   packs  pakkerne, `{ pack_qty, pack_price, unit_price }`. `unit_price` må
+   *          mangle — den kan regnes. Se nedenfor: de skal komme fra ÉN kilde.
    *   keeps  `items.keeps`: hvor længe en rest holder. Ukendt værdi vægtes som
    *          'keeps', midt imellem.
    *
@@ -438,6 +445,14 @@
    * tilbud i. Blandes niveauerne, kan indkøbslisten komme til at bede om en
    * pose, der ikke findes. Funktionen kan ikke selv se forskel — rækkerne
    * bærer ikke deres kilde hertil — så filtreringen hører hos kalderen.
+   *
+   * Sådan ser basen ud i dag: alle 620 (vare, kæde)-par har præcis ÉN
+   * pakkestørrelse i deres bedste kildeniveau. Funktionen *vælger* derfor
+   * ikke endnu — den runder op, og det er den halvdel, der betyder mest
+   * (0,5 kg kartofler koster en hel 2 kg-pose til 15,95, ikke 3,99).
+   * Spildvægtningen får først noget at vælge imellem, når
+   * `data/item_prices.csv` bærer flere pakker pr. par. Det er en datamangel
+   * og ikke en fejl i reglen her.
    *
    * Og det, der IKKE er med: opskriftsmængder er i BRUGBARE gram, mens man
    * køber hele grøntsager (400 g broccolibuketter kræver et hoved på ~570 g).
@@ -477,11 +492,16 @@
       const waste = leftover * w;
       const cost = n * p.pack_price;
 
+      // Resten prissættes til det, den er værd — ikke til et fast beløb pr.
+      // enhed. Enhedsprisen kan mangle på en håndskrevet række; den kan
+      // altid regnes, og pack_qty er allerede sikret større end nul ovenfor.
+      const unit = p.unit_price > 0 ? p.unit_price : p.pack_price / p.pack_qty;
+
       // Scoren blander kroner og spild og er ikke en pris, nogen kan betale.
       // Den bliver derfor i funktionen: effectivePrice lækkede præcis sådan
       // et sorteringstal, og et tal i en indkøbsliste bliver læst som penge.
       // `cost` går med ud — opskriftsprisen i opgave 6 er bygget af den.
-      const score = cost + waste * WASTE_PENALTY_PER_UNIT;
+      const score = cost + waste * unit * WASTE_AVERSION;
 
       // Strengt `<`: ved uafgjort vinder den først i listen, så to kørsler på
       // uændrede data vælger den samme pose (samme argument som cheapestPerItem).
@@ -953,6 +973,6 @@
     choosePack,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
-    WASTE_WEIGHT, WASTE_PENALTY_PER_UNIT,
+    WASTE_WEIGHT, WASTE_AVERSION,
   };
 }));
