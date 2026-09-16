@@ -275,6 +275,90 @@
     return band;
   }
 
+  // Rangorden mellem priskilder. Tallet er ikke en kvalitetsscore, kun en
+  // rækkefølge — se effectivePrice for hvorfor den skal gå forud for prisen.
+  //
+  //   manual   et menneske har set hylden
+  //   api:rema kædens egen hyldepris, hentet direkte
+  //   derived  et gæt ud fra hvad varen har kostet PÅ TILBUD
+  //
+  // En kilde, der ikke står her, hører bagest: den dag Salling åbner et API,
+  // skal 'api:salling' ikke umærkeligt komme forrest, bare fordi ingen nåede
+  // at tage stilling til den.
+  const SOURCE_RANK = { manual: 0, 'api:rema': 1, derived: 2 };
+  const SOURCE_RANK_UNKNOWN = 3;
+
+  // Leksikografisk sammenligning af to taltupler. Bruges til at rangere
+  // normalpriser på (kilde, udløbet, pris) i netop den rækkefølge.
+  function cmp(a, b) {
+    for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return a[i] < b[i] ? -1 : 1;
+    return 0;
+  }
+
+  /**
+   * Hvad koster varen i den kæde i dag?
+   *
+   * Tilbudsprisen overskriver aldrig normalprisen i basen — de to lever i
+   * hver sin tabel, og valget træffes her, ved opslaget. Så falder prisen
+   * tilbage af sig selv, når tilbuddet udløber, historikken er intakt, og
+   * der er ingen særregel for baseline kontra fresh.
+   *
+   *   offers   `vare|kæde` → aktivt tilbud (activeOfferMap / offer_index)
+   *   normals  `vare|kæde` → ALLE normalpris-rækker for det par
+   *   now      sammenligningstidspunktet, så udløb kan testes
+   *
+   * Svaret er `null`, når vi ikke kender nogen pris i den kæde. Ikke nul:
+   * en vare til 0 kr ser ud som en gratis vare i et budget, mens `null`
+   * siger det, der faktisk er tilfældet — at vi ikke ved det.
+   */
+  function effectivePrice(itemKey, chainId, { offers, normals, now = new Date() }) {
+    const k = `${itemKey}|${chainId}`;
+    const nowIso = now.toISOString();
+
+    // Tilbuddet skal bære sin egen pakke. `base_qty` er den mængde, prisen
+    // gælder, og uden den kan hverken pakkeafrundingen eller kurveprisen
+    // regne på rækken — så er tilbuddet ikke en brugbar pris, og
+    // normalprisen står tilbage.
+    const offer = offers.get(k);
+    const fromOffer = offer && offer.unit_price > 0 && offer.base_qty > 0
+      ? { pack_qty: offer.base_qty, pack_unit: offer.base_unit,
+          pack_price: offer.price, unit_price: offer.unit_price,
+          on_offer: true, source: 'offer', stale: false }
+      : null;
+
+    // Kilden går FORUD for prisen. De afledte priser er bygget af
+    // TILBUDSpriser og ligger systematisk under den rigtige normalpris, så
+    // "billigste vinder" ville lade et gæt slå en hyldepris: målt på basen
+    // vinder gættet i 10 af de 30 vare/kæde-par, der har flere kilder —
+    // boef 199,90 mod 219,44, flaeskesteg 65,83 mod 83,33. Så var hele
+    // REMA-hentningen spildt.
+    //
+    // Først inden for det bedste niveau, der findes, afgør prisen: flere
+    // pakkestørrelser er tilladt, og den billigste pr. enhed er
+    // udgangspunktet. Selve pakkevalget sker senere, når behovet er kendt.
+    let best = null;
+    let bestScore = null;
+    for (const r of normals.get(k) || []) {
+      if (!(r.unit_price > 0)) continue;
+      // En udløben pris taber til en gyldig på samme niveau, men slår
+      // stadig et dårligere niveau: gammelt og rigtigt slår nyt og gættet.
+      const stale = r.valid_until != null && r.valid_until < nowIso;
+      const score = [SOURCE_RANK[r.source] ?? SOURCE_RANK_UNKNOWN, stale ? 1 : 0, r.unit_price];
+      if (best && cmp(score, bestScore) >= 0) continue;
+      bestScore = score;
+      best = { pack_qty: r.pack_qty, pack_unit: r.pack_unit,
+               pack_price: r.pack_price, unit_price: r.unit_price,
+               on_offer: false, source: r.source, stale };
+    }
+
+    // Og her holder rangordenen op. Et tilbud er ikke et gæt på, hvad varen
+    // koster — det er en pris, man faktisk kan betale i denne uge — så det
+    // konkurrerer på prisen alene mod den vinder, rangordenen fandt.
+    if (!fromOffer) return best;
+    if (!best) return fromOffer;
+    return fromOffer.unit_price <= best.unit_price ? fromOffer : best;
+  }
+
   // ── Scoring af én opskrift ─────────────────────────────────────────────────
 
   const round2 = (n) => Math.round(n * 100) / 100;
@@ -338,6 +422,44 @@
    */
   function isMeasured(baseUnit) {
     return baseUnit === 'kg' || baseUnit === 'l';
+  }
+
+  /**
+   * Tilbudskortet reduceret til ÉT billigste tilbud pr. vare.
+   *
+   * `activeOfferMap()` og Supabase-indekset nøgler på `vare|kæde`, fordi
+   * prisreglerne skal kunne spørge, hvad varen koster i den enkelte butik.
+   * Scoringen af en opskrift stiller et andet og grovere spørgsmål — "er
+   * varen på tilbud et sted i mine butikker, og hvad koster den så billigst?"
+   * — og det er dét, denne reduktion svarer på. Den ligger her og ikke i
+   * `generate.js`, fordi browseren bygger sit kort af de samme rækker: to
+   * kopier af reglen ville før eller siden vælge hver sit tilbud.
+   *
+   * Nøglen læses som alt FØR det første '|'. Et kort, der stadig nøgler på
+   * varen alene, falder derfor uændret igennem — varenøgler er
+   * taksonomiens `[a-z0-9_]`-nøgler og indeholder aldrig '|'.
+   *
+   * `<=` og ikke `<`: ved samme kilopris vinder den først indsatte, og
+   * rækkerne kommer sorteret billigst først fra begge kilder. Så er valget
+   * det samme hver gang — en plan, der skifter tilbud mellem to kørsler på
+   * uændrede data, er ikke til at fejlsøge.
+   */
+  function cheapestPerItem(offers) {
+    const entries = offers instanceof Map
+      ? offers.entries() : Object.entries(offers || {});
+    // En manglende kilopris må ikke vinde over en rigtig. Kilderne filtrerer
+    // dem fra i SQL'en, men kortet kommer også fra browseren.
+    const price = (o) => (Number.isFinite(o.unit_price) ? o.unit_price : Infinity);
+
+    const byItem = new Map();
+    for (const [key, offer] of entries) {
+      if (!offer) continue;
+      const itemKey = String(key).split('|')[0];
+      const prev = byItem.get(itemKey);
+      if (prev && price(prev) <= price(offer)) continue;
+      byItem.set(itemKey, offer);
+    }
+    return byItem;
   }
 
   /**
@@ -485,7 +607,8 @@
    * Bygger ugens plan.
    *
    *   recipes       [{ id, title, …, tier_score, items: [{key,cat,essential,amount,ingredient}] }]
-   *   offers        varetype → billigste aktive tilbud i brugerens butikker
+   *   offers        `vare|kæde` → billigste aktive tilbud i den kæde. Et kort
+   *                 nøglet på varen alene virker også — se cheapestPerItem.
    *   normalPrices  varetype → { unit_price, base_unit, name }
    *   recentIds     opskrifter fra de seneste ugers planer; de trykkes ned
    */
@@ -506,7 +629,12 @@
     const recent = recentIds instanceof Set ? recentIds
       : new Set(Array.isArray(recentIds) ? recentIds : []);
 
-    const offerCount = offers instanceof Map ? offers.size : Object.keys(offers || {}).length;
+    // Kortet kommer nøglet på `vare|kæde`. Scoringen skal have ét tilbud pr.
+    // vare, og tallet i `offers_available` betyder "varer på tilbud" i
+    // brugerfladen — ikke vare/kæde-par. Begge dele kommer af den samme
+    // reduktion, regnet én gang for hele planen.
+    const offerByItem = cheapestPerItem(offers);
+    const offerCount = offerByItem.size;
 
     // 1) Scor alt én gang. Scoren afhænger ikke af kravniveauet – kun af
     //    hvilke varer der er på tilbud – så den skal ikke regnes forfra,
@@ -516,7 +644,7 @@
       const roles = assignRoles(r.items, { unknownMain: r.unknown_main });
       if (!roles.mains.length) continue;                  // ingen bærende råvare
       if (roles.mains.length + roles.support.length < 2) continue;
-      const s = scoreRecipe(r, roles, offers, normalPrices);
+      const s = scoreRecipe(r, roles, offerByItem, normalPrices);
       const starch = [...roles.mains, ...roles.support].find((i) => STARCH_KEYS.has(i.key));
       scored.push({
         recipe: r, roles, score: s,
@@ -688,9 +816,9 @@
   }
 
   return {
-    assignRoles, scoreRecipe, buildPlan, shoppingList, qualifies,
-    seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor,
+    assignRoles, scoreRecipe, buildPlan, shoppingList, qualifies, cheapestPerItem,
+    seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
-    PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK,
+    PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
   };
 }));

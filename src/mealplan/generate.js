@@ -45,8 +45,10 @@ const HORIZON_DAYS = 400;
 // ── 1. Tilbudskortet ─────────────────────────────────────────────────────────
 
 /**
- * Billigste aktive tilbud pr. varetype, målt i kr/kg (eller kr/l), begrænset
- * til de valgte kæder. Det er dette kort, opskrifterne matches imod.
+ * Billigste aktive tilbud pr. varetype PR. KÆDE, målt i kr/kg (eller kr/l),
+ * begrænset til de valgte kæder. Nøglen er `vare|kæde`. Det er dette kort,
+ * opskrifterne matches imod — motoren reducerer det selv til ét tilbud pr.
+ * vare, når den kun spørger "er varen på tilbud et sted?".
  *
  * Forarbejdede varer holdes ude: "indbagte rejer" er ikke rejer, og en
  * opskrift på hele vannamei-rejer bliver ikke bedre af, at der er tilbud på
@@ -81,20 +83,28 @@ function activeOfferMap({ chainIds = null, at = new Date() } = {}) {
     // Drikkevarer, slik og non-food kan ikke bære en ret. De skal heller ikke
     // kunne tælle med som "råvare på tilbud".
     if (!taxonomy.isMealCapable(row.item_key)) continue;
-    if (map.has(row.item_key)) continue;
+
+    // Nøglen er vare OG kæde. Med varen alene beholdt kortet kun det billigste
+    // tilbud PÅ TVÆRS af kæderne, og så kan man ikke bagefter spørge, hvad
+    // varen koster i den enkelte butik — hverken for at vælge kæde eller for
+    // at holde tilbuddet op mod kædens egen normalpris i `effectivePrice`.
+    // Samme nøgleform som `chainOfferIndex` og som normalpriserne.
+    const k = `${row.item_key}|${row.chain_id}`;
+    if (map.has(k)) continue;                          // sorteret billigst først
 
     const baseline = getBaseline(row.product_id, row.base_unit);
-    map.set(row.item_key, { ...row, normal_unit_price: baseline?.median ?? null });
+    map.set(k, { ...row, normal_unit_price: baseline?.median ?? null });
   }
   return map;
 }
 
 /**
- * Samme kort, men delt op PR. KÆDE – ét billigste tilbud pr. varetype pr. kæde.
+ * Samme udvalg som `activeOfferMap`, men som en FLAD LISTE – ét billigste
+ * tilbud pr. varetype pr. kæde, uden kædefilter.
  *
  * Det er formen, Supabase-indekset har, fordi favoritbutikkerne først er kendt
- * i browseren: den henter rækkerne for sine egne kæder og reducerer dem til ét
- * kort på nøjagtig samme måde som `activeOfferMap` gør her.
+ * i browseren: den henter rækkerne, filtrerer på sine egne kæder og bygger
+ * kortet dér. De to funktioner deler nøgleformen `vare|kæde` med vilje.
  */
 function chainOfferIndex({ at = new Date() } = {}) {
   const db = getDb();
@@ -251,7 +261,7 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
   // enhed (kg/l/stk) af backfill-amounts.js/parseIngredient, så der skal ikke
   // længere kaldes gramsOf() her – kolonnen ER facit.
   const ingredients = db.prepare(`
-    SELECT ri.recipe_id, ri.raw, ri.ingredient, ri.item_key, ri.amount
+    SELECT ri.recipe_id, ri.raw, ri.ingredient, ri.item_key, ri.amount, ri.optional
       FROM recipe_ingredients ri
       ${column ? `JOIN recipes r ON r.id = ri.recipe_id WHERE r.${column} >= ?` : ''}
      ORDER BY ri.recipe_id, ri.position
@@ -278,6 +288,11 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
       essential: taxonomy.isEssential(ing.item_key),
       amount: ing.amount,
       weight: weightFor(entry, ing.amount),
+      // "evt. et skvæt fløde" skal kunne udelades af indkøbslisten. Flaget
+      // sættes af parseIngredient ved indlæsningen og bæres helt ud til
+      // browseren — src/sync/build.js lægger det samme felt i sin payload,
+      // for motoren kører begge steder og kan kun holde én regel.
+      optional: Boolean(ing.optional),
       ingredient: ing.ingredient || entry?.name || ing.item_key,
     });
   }

@@ -1257,7 +1257,7 @@ Reglen, der binder tilbud og normalpris sammen. Ren funktion i `engine.js`, så 
 - Consumes: `plans.normalPricesFor()` (opgave 6, men nøgleformen aftales her)
 - Produces: `effectivePrice(itemKey, chainId, { offers, normals })` → `{ pack_qty, pack_unit, pack_price, unit_price, on_offer, source }` eller `null`; `plans.activeOfferMap()` nøgler nu på `item|chain`
 
-- [ ] **Step 1: Ret tilbudskortets nøgle — det er en forudsætning**
+- [x] **Step 1: Ret tilbudskortets nøgle — det er en forudsætning**
 
 `activeOfferMap()` i `src/mealplan/generate.js` nøgler i dag på varen alene og springer over, hvis nøglen findes:
 
@@ -1292,7 +1292,7 @@ Grep efter kaldssteder og ret dem — `scoreRecipe` i `engine.js` slår op i kor
 grep -rn "activeOfferMap\|offers.get(" src/ public/ test/ --include=*.js
 ```
 
-- [ ] **Step 2: Læg `optional` i opskriftens items**
+- [x] **Step 2: Læg `optional` i opskriftens items**
 
 `shoppingList` i opgave 8 skal kunne springe "evt."-linjer over, men payloaden bærer dem ikke. I `src/mealplan/generate.js`, i `items`-objektet:
 
@@ -1304,7 +1304,7 @@ og tilsvarende i `src/sync/build.js`s `recipeIndex`-map, så browseren får det 
 
 Udvid den test i `test/sync.test.js`, så den også kræver `optional`.
 
-- [ ] **Step 3: Skriv de fejlende tests**
+- [x] **Step 3: Skriv de fejlende tests**
 
 ```js
 const OFFERS = new Map([['kartofler|11deC', {
@@ -1342,7 +1342,7 @@ test('ingen pris i kæden giver null, ikke nul', () => {
 });
 ```
 
-- [ ] **Step 4: Kør, se dem fejle, og skriv funktionen**
+- [x] **Step 4: Kør, se dem fejle, og skriv funktionen**
 
 I `public/engine.js`:
 
@@ -1441,7 +1441,7 @@ test('en indtastet pris slår både API og gæt', () => {
 });
 ```
 
-- [ ] **Step 5: Kør suiten og commit**
+- [x] **Step 5: Kør suiten og commit**
 
 ---
 

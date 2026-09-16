@@ -165,7 +165,7 @@ test('overvågninger røres ikke', async () => {
  * Fjernes `weight` fra build.js, bestod hele testsuiten (111/111) alligevel –
  * det er præcis den fejl, denne test findes for at fange.
  */
-test('collectPlanIndex leverer amount OG weight, og de er ikke det samme for en stk-vare', () => {
+test('collectPlanIndex leverer amount, weight OG optional', () => {
   const db = getDb();
   const now = new Date().toISOString();
 
@@ -178,13 +178,17 @@ test('collectPlanIndex leverer amount OG weight, og de er ikke det samme for en 
   // weight skal være det kg-sammenlignelige tal (6 × 58 g), altså IKKE amount.
   // 'kyllingebryst' og 'kartofler' er kg-varer, hvor weight = amount, men de
   // skal med for at nå loadRecipes()' krav om mindst 3 varer i opskriften.
+  //
+  // Fløden er 'evt.' og står der for optional-feltet: uden en linje, hvor
+  // flaget er SANDT, ville testen bestå på et felt, der altid var false.
   const insertIng = db.prepare(`
     INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional)
-    VALUES (?, ?, ?, ?, ?, ?, 0)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
   `);
-  insertIng.run(recipeId, '6 æg', 'æg', 1, 'aeg', 6);
-  insertIng.run(recipeId, '0.5 kg kyllingebryst', 'kyllingebryst', 2, 'kyllingebryst', 0.5);
-  insertIng.run(recipeId, '0.6 kg kartofler', 'kartofler', 3, 'kartofler', 0.6);
+  insertIng.run(recipeId, '6 æg', 'æg', 1, 'aeg', 6, 0);
+  insertIng.run(recipeId, '0.5 kg kyllingebryst', 'kyllingebryst', 2, 'kyllingebryst', 0.5, 0);
+  insertIng.run(recipeId, '0.6 kg kartofler', 'kartofler', 3, 'kartofler', 0.6, 0);
+  insertIng.run(recipeId, 'evt. et skvæt fløde', 'fløde', 4, 'floede', 0.1, 1);
 
   try {
     const { recipeIndex } = collectPlanIndex(quiet);
@@ -197,9 +201,21 @@ test('collectPlanIndex leverer amount OG weight, og de er ikke det samme for en 
     assert.notEqual(egg.weight, egg.amount, 'weight er IKKE amount for en stk-vare');
     assert.equal(egg.weight, Math.round((6 * 58 / 1000) * 1000) / 1000, 'weight er stykantal × stykvægt');
 
+    // 'evt.'-linjer skal kunne springes over i indkøbslisten, og browseren
+    // kan kun det, hvis flaget følger med i nyttelasten. Det er samme
+    // kontrakt som weight: ingen anden test dækker, at build.js rent
+    // faktisk PRODUCERER feltet.
+    const floede = recipe.items.find((i) => i.key === 'floede');
+    assert.ok(floede, 'fløde er med i items');
+    assert.equal(floede.optional, true, 'evt.-linjen er markeret optional');
+    assert.equal(recipe.items.find((i) => i.key === 'aeg').optional, false,
+      'en almindelig linje er ikke optional');
+
     for (const item of recipe.items) {
       assert.ok('amount' in item, `${item.key} mangler amount`);
       assert.ok('weight' in item, `${item.key} mangler weight`);
+      assert.ok('optional' in item, `${item.key} mangler optional`);
+      assert.equal(typeof item.optional, 'boolean', `${item.key}.optional er ikke boolsk`);
     }
   } finally {
     db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);

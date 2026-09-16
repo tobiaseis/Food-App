@@ -881,3 +881,186 @@ test('de to lister blander sig ikke i hinandens arbejde', () => {
   assert.equal(derail({ name: 'BLOMKÅLSBLANDING', underline: '700 GR. / REMA 1000' }, 'blomkaal', 'Blomkål'), null);
   assert.equal(basis({ name: 'SKINKESALAT', underline: '250 GR. / REMA 1000' }, 'skinke', 'Skinke'), null);
 });
+
+// ── Den effektive pris ───────────────────────────────────────────────────────
+//
+// Tilbudsprisen skrives ALDRIG ned i item_prices. De to lever i hver sin
+// tabel, og valget mellem dem træffes her, ved opslaget: så falder prisen
+// tilbage af sig selv, når tilbuddet udløber, og historikken er intakt.
+
+const OFFERS = new Map([['kartofler|11deC', {
+  item_key: 'kartofler', chain_id: '11deC', base_qty: 2, base_unit: 'kg',
+  price: 12, unit_price: 6,
+}]]);
+const NORMALS = new Map([['kartofler|11deC', [
+  { item_key: 'kartofler', chain_id: '11deC', pack_qty: 2, pack_unit: 'kg',
+    pack_price: 15.95, unit_price: 7.975, source: 'manual' },
+]]]);
+
+test('tilbud slår normalpris, når det er billigere', () => {
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: OFFERS, normals: NORMALS });
+  near(p.unit_price, 6);
+  assert.equal(p.on_offer, true);
+  assert.equal(p.source, 'offer');
+  near(p.pack_qty, 2);
+  assert.equal(p.pack_unit, 'kg');
+  near(p.pack_price, 12);
+});
+
+test('normalprisen gælder, når der ikke er tilbud', () => {
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: new Map(), normals: NORMALS });
+  near(p.unit_price, 7.975);
+  assert.equal(p.on_offer, false);
+  assert.equal(p.source, 'manual');
+});
+
+test('et dyrere "tilbud" overskriver ikke normalprisen', () => {
+  // Den klassiske avis-fælde: tilbudspris = normalpris. Vi tager den billigste.
+  const dyrt = new Map([['kartofler|11deC', { base_qty: 2, base_unit: 'kg', price: 20, unit_price: 10 }]]);
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: dyrt, normals: NORMALS });
+  near(p.unit_price, 7.975);
+  assert.equal(p.on_offer, false);
+});
+
+test('ingen pris i kæden giver null, ikke nul', () => {
+  assert.equal(engine.effectivePrice('kartofler', 'ukendt', { offers: new Map(), normals: new Map() }), null);
+});
+
+test('en hyldepris slår et gæt, også når gættet er billigere', () => {
+  // Målt i data.db: boef hos REMA har begge dele. Gættet er bygget af
+  // TILBUDSpriser og er derfor systematisk for lavt — det er ikke en
+  // normalpris, bare det laveste varen har været nede på.
+  const normals = new Map([['boef|11deC', [
+    { pack_qty: 0.5,  pack_unit: 'kg', pack_price: 99.95, unit_price: 199.9,  source: 'derived' },
+    { pack_qty: 0.36, pack_unit: 'kg', pack_price: 79,    unit_price: 219.44, source: 'api:rema' },
+  ]]]);
+  const p = engine.effectivePrice('boef', '11deC', { offers: new Map(), normals });
+  near(p.unit_price, 219.44);
+  assert.equal(p.source, 'api:rema');
+});
+
+test('en indtastet pris slår både API og gæt', () => {
+  const normals = new Map([['kartofler|11deC', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 8,     unit_price: 8,     source: 'derived' },
+    { pack_qty: 2, pack_unit: 'kg', pack_price: 15.95, unit_price: 7.975, source: 'manual' },
+  ]]]);
+  assert.equal(engine.effectivePrice('kartofler', '11deC',
+    { offers: new Map(), normals }).source, 'manual');
+});
+
+test('et tilbud konkurrerer på pris alene — også mod en hyldepris', () => {
+  // Rangordenen gælder MELLEM normalpriser. Et tilbud er ikke et gæt på, hvad
+  // varen koster; det er en pris, man faktisk kan betale i denne uge, og
+  // derfor vinder det, så snart det er billigere end det bedste alternativ.
+  const normals = new Map([['boef|11deC', [
+    { pack_qty: 0.36, pack_unit: 'kg', pack_price: 79, unit_price: 219.44, source: 'api:rema' },
+  ]]]);
+  const offers = new Map([['boef|11deC', { base_qty: 0.4, base_unit: 'kg', price: 40, unit_price: 100 }]]);
+  const p = engine.effectivePrice('boef', '11deC', { offers, normals });
+  near(p.unit_price, 100);
+  assert.equal(p.on_offer, true);
+});
+
+test('inden for samme kilde vinder den billigste pakke', () => {
+  const normals = new Map([['kartofler|11deC', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 12,    unit_price: 12,    source: 'manual' },
+    { pack_qty: 2, pack_unit: 'kg', pack_price: 15.95, unit_price: 7.975, source: 'manual' },
+  ]]]);
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: new Map(), normals });
+  near(p.unit_price, 7.975);
+  near(p.pack_qty, 2);
+});
+
+test('en gyldig pris slår en udløben — men kun på samme niveau', () => {
+  // Rækkefølgen er kilde, så friskhed, så pris. En udløben hyldepris er
+  // stadig en hyldepris: den skal slå et gæt, der blev skrevet i går.
+  const now = new Date('2026-09-16T00:00:00Z');
+  const normals = new Map([['kartofler|11deC', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 9,  unit_price: 9,  source: 'api:rema',
+      valid_until: '2026-01-01T00:00:00.000Z' },                       // udløbet
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 11, unit_price: 11, source: 'api:rema',
+      valid_until: '2027-01-01T00:00:00.000Z' },                       // gyldig
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 5,  unit_price: 5,  source: 'derived',
+      valid_until: '2027-01-01T00:00:00.000Z' },                       // gyldigt gæt
+  ]]]);
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: new Map(), normals, now });
+  near(p.unit_price, 11);
+  assert.equal(p.stale, false);
+
+  // Findes KUN den udløbne på det gode niveau, vinder den stadig over gættet.
+  const kun = new Map([['kartofler|11deC', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 9, unit_price: 9, source: 'api:rema',
+      valid_until: '2026-01-01T00:00:00.000Z' },
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 5, unit_price: 5, source: 'derived',
+      valid_until: '2027-01-01T00:00:00.000Z' },
+  ]]]);
+  const q = engine.effectivePrice('kartofler', '11deC', { offers: new Map(), normals: kun, now });
+  near(q.unit_price, 9);
+  assert.equal(q.source, 'api:rema');
+  assert.equal(q.stale, true);
+});
+
+test('et tilbud uden brugbar pakke er ikke en pris', () => {
+  // base_qty er den pakke, tilbuddet gælder. Uden den kan hverken
+  // pakkeafrundingen eller kurveprisen i opgave 5 regne på rækken, og et nul
+  // ville se ud som en gratis vare frem for som en manglende oplysning.
+  const normals = new Map([['kartofler|11deC', [
+    { pack_qty: 2, pack_unit: 'kg', pack_price: 15.95, unit_price: 7.975, source: 'manual' },
+  ]]]);
+  const uden = new Map([['kartofler|11deC', { base_qty: null, base_unit: 'kg', price: 4, unit_price: 2 }]]);
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: uden, normals });
+  assert.equal(p.on_offer, false);
+  near(p.unit_price, 7.975);
+});
+
+test('effectivePrice er ren — samme kort ind, samme svar ud', () => {
+  // Reglen skal kunne køre i browseren, og den må ikke have en skjult vej til
+  // basen. `now` er en parameter med en standardværdi, ikke et opslag i uret
+  // midt i en sammenligning.
+  const normals = new Map([['kartofler|11deC', [
+    { pack_qty: 2, pack_unit: 'kg', pack_price: 15.95, unit_price: 7.975, source: 'manual' },
+  ]]]);
+  const a = engine.effectivePrice('kartofler', '11deC', { offers: OFFERS, normals });
+  const b = engine.effectivePrice('kartofler', '11deC', { offers: OFFERS, normals });
+  assert.deepEqual(a, b);
+  assert.ok(engine.effectivePrice('kartofler', '11deC', { offers: new Map(), normals }));
+});
+
+test('ukendt kilde taber til alle de kendte', () => {
+  // En fremtidig source — 'api:salling' den dag Salling åbner — må ikke
+  // umærkeligt komme forrest i rangordenen, bare fordi den ikke står i
+  // tabellen. Den er ukendt, og ukendt hører bagest.
+  const normals = new Map([['kartofler|11deC', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 4, unit_price: 4, source: 'api:ukendt' },
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 9, unit_price: 9, source: 'derived' },
+  ]]]);
+  assert.equal(engine.effectivePrice('kartofler', '11deC',
+    { offers: new Map(), normals }).source, 'derived');
+});
+
+// ── Tilbudskortets nøgleform ─────────────────────────────────────────────────
+
+test('cheapestPerItem reducerer vare|kæde til ét tilbud pr. vare', () => {
+  // `activeOfferMap()` nøgler nu på vare OG kæde, så opgave 8 kan vælge butik.
+  // Opskriftsscoringen spørger stadig kun "er varen på tilbud et sted?", og
+  // motoren skal selv kunne reducere kortet — ellers ville hvert eneste
+  // opslag i scoreRecipe ramme forbi.
+  const offers = new Map([
+    ['kartofler|A', { chain_id: 'A', unit_price: 9, offer_id: 1 }],
+    ['kartofler|B', { chain_id: 'B', unit_price: 6, offer_id: 2 }],
+    ['laks|A',      { chain_id: 'A', unit_price: 80, offer_id: 3 }],
+  ]);
+  const byItem = engine.cheapestPerItem(offers);
+  assert.equal(byItem.size, 2);
+  assert.equal(byItem.get('kartofler').offer_id, 2);
+  assert.equal(byItem.get('laks').offer_id, 3);
+});
+
+test('cheapestPerItem lader et kort nøglet på varen alene gå uændret igennem', () => {
+  // Browserens `offerMapFor` nøgler stadig på varen alene. Begge former skal
+  // kunne bæres, indtil opgave 8 flytter også den — ellers får skyen og den
+  // lokale server hver sin madplan af de samme tilbud.
+  const offers = new Map([['kartofler', { unit_price: 6, offer_id: 7 }]]);
+  const byItem = engine.cheapestPerItem(offers);
+  assert.equal(byItem.get('kartofler').offer_id, 7);
+});

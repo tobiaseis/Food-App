@@ -212,6 +212,10 @@ function collectPlanIndex(log) {
         key: i.key, cat: i.cat,
         amount: i.amount == null ? null : Math.round(i.amount * 1000) / 1000,
         weight: i.weight == null ? null : Math.round(i.weight * 1000) / 1000,
+        // optional hører til samme kontrakt som weight: indkøbslisten skal
+        // kunne springe "evt."-linjer over, og gør den det kun lokalt, køber
+        // browserens bruger persille, der aldrig blev bedt om.
+        optional: !!i.optional,
       })),
     }))
     .filter((r) => r.items.length >= 2);
