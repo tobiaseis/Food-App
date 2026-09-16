@@ -1726,6 +1726,10 @@ function main() {
   // ingredienser — og budget-sporet ville rangere den som billig, netop
   // fordi vi ved mindst om den. 678 af 2.224 opskrifter (30,5 %) har mindst
   // en ukendt linje, saa det er ikke en randtilfaelde.
+  // Kategorier, hvor et 'optional'-flag ikke skal tros. En ret med valgfri
+  // kylling er ikke en ret.
+  const MAIN_PROTEIN = new Set(['meat', 'poultry', 'fish']);
+
   const unknownCount = new Map(db.prepare(`
     SELECT recipe_id, count(*) n FROM recipe_ingredients
      WHERE item_key IS NULL AND COALESCE(optional, 0) = 0
@@ -1758,7 +1762,23 @@ function main() {
           // "evt. et skvæt fløde" købes ikke, og skal derfor hverken koste
           // noget eller kunne gøre en ret uprissaetbar. Samme regel som
           // indkøbslisten i opgave 8.
-          if (it.optional) continue;
+          //
+          // Men en hovedprotein er aldrig valgfri, uanset hvad flaget siger.
+          // Flaget fjerner linjen fra BÅDE prisen og nævneren, så et fejlflag
+          // bliver til "fuldt prissat og næsten gratis" — og lander dermed
+          // øverst i budget-sporet. Det er ikke hypotetisk: OPTIONAL_RE i
+          // src/recipes/extract.js matcher `optional` og `if you like` hvor
+          // som helst i linjen, mens de danske mønstre er forankret til
+          // linjestart, og "4 chicken breasts (skinless, if you like)" blev
+          // derfor den billigste prissatte ret i hele basen til 0,08 kr.
+          //
+          // At forankre de engelske mønstre er målt til at være netto
+          // negativt: det ville miste 17 ægte flag ("few sprigs thyme
+          // optional") for at rette 5. Forskellen på "(optional; see tip)" og
+          // "(see tip, optional)" er ordstilling. Så grænsen trækkes her i
+          // stedet, hvor den kan siges enkelt.
+          const isProtein = MAIN_PROTEIN.has(item.category);
+          if (it.optional && !isProtein) continue;
           total++;
           const need = it.amount;   // ikke weight — se note nedenfor
           if (!(need > 0)) continue;
