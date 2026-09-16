@@ -1898,8 +1898,15 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
       return out;
     };
 
+    // Spildet akkumuleres i KRONER, ikke i enheder. En kurv indeholder både
+    // kilo kartofler og stykker æg, og lægger man dem sammen først og ganger
+    // bagefter, adderer man to ting, der ikke har samme enhed. Det var samme
+    // fejl som det faste WASTE_PENALTY_PER_UNIT, bare et niveau højere oppe.
+    //
+    // `choosePack` giver ikke sin interne score fra sig — med vilje — så
+    // sammenligningen mellem kæder regnes her, af de felter den DA giver.
     const basketCost = (b) => {
-      let cost = 0, waste = 0;
+      let cost = 0, wasteKr = 0;
       for (const [key, need] of b) {
         const meta = items.get(key);
         let best = null;
@@ -1907,11 +1914,17 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
           const price = effectivePrice(key, chainId, { offers, normals });
           if (!price) continue;
           const pack = choosePack(need, [price], { keeps: meta.keeps });
-          if (pack && (!best || pack.score < best.score)) best = pack;
+          if (!pack) continue;
+          const unit = price.unit_price > 0
+            ? price.unit_price
+            : price.pack_price / price.pack_qty;
+          const kr = pack.waste * unit * WASTE_AVERSION;
+          const score = pack.cost + kr;
+          if (!best || score < best.score) best = { ...pack, kr, score };
         }
-        if (best) { cost += best.cost; waste += best.waste; }
+        if (best) { cost += best.cost; wasteKr += best.kr; }
       }
-      return { cost, waste };
+      return { cost, wasteKr };
     };
 
     let current = basketCost(basket);
@@ -1926,10 +1939,11 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
         for (const [k, v] of needsOf(cand)) merged.set(k, (merged.get(k) || 0) + v);
         const after = basketCost(merged);
 
-        // Marginal pris + marginalt spild, modregnet sporets score. Støjen
-        // gør, at "Ny plan" ikke giver præcis samme uge hver gang.
+        // Marginal pris + marginalt spild, modregnet sporets score. Begge led
+        // er kroner, så der er intet at gange med. Støjen gør, at "Ny plan"
+        // ikke giver præcis samme uge hver gang.
         const marginal = (after.cost - current.cost)
-                       + (after.waste - current.waste) * WASTE_PENALTY_PER_UNIT;
+                       + (after.wasteKr - current.wasteKr);
         const score = (cand.score || 0) * 40 - marginal + seededNoise(seed, cand.id);
 
         if (!bestPick || score > bestPick.score) bestPick = { cand, merged, after, score };
@@ -2230,5 +2244,5 @@ Motoren kan nu regne rigtigt. Det, der mangler, er at brugeren kan se det:
 
 - **Trin 1-5 i brugerfladen** (spec afsnit 2.2): vælg kæder → vælg spor → vælg dage og personer → vælg blandt 3× kandidater med de to forslag markeret → de to lister. `public/app.js` er urørt af denne plan.
 - **Budget-sporet som fjerde valg** — `recipe_costs` er der nu; det er en sortering og en knap.
-- **Justering af de to skøn:** `WASTE_PENALTY_PER_UNIT` og `EXTRA_STORE_PENALTY` er sat efter mavefornemmelse. De skal ses efter på rigtige lister, ikke før.
+- **Justering af de to skøn:** `WASTE_AVERSION` og `EXTRA_STORE_PENALTY` er sat efter mavefornemmelse. De skal ses efter på rigtige lister, ikke før.
 - **Prisindtastningen selv.** ~240 rækker pr. kæde, minus det REMA kan hente. Arbejdslisten (`npm run prices:worklist`) er indgangen.
