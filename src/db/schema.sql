@@ -258,6 +258,30 @@ CREATE TABLE IF NOT EXISTS recipe_ingredients (
 );
 CREATE INDEX IF NOT EXISTS idx_ri_recipe ON recipe_ingredients(recipe_id);
 
+-- ── Opskriftspriser ─────────────────────────────────────────────────────────
+-- Forudberegnet, fordi budget-sporet skal kunne sortere 2.224 opskrifter uden
+-- at regne noget. Genberegnes ugentligt, når tilbuddene er hentet.
+CREATE TABLE IF NOT EXISTS recipe_costs (
+  recipe_id   INTEGER NOT NULL REFERENCES recipes(id) ON DELETE CASCADE,
+  chain_id    TEXT    NOT NULL REFERENCES chains(id),
+  -- Σ mængde × enhedspris. Proportional, og derfor den rigtige til at
+  -- RANGERE opskrifter mod hinanden.
+  cost        REAL,
+  -- Σ hele pakker. Den rigtige, hvis retten står alene — men for høj for en
+  -- uge, hvor flere retter deles om samme pose.
+  cost_packs  REAL,
+  -- Hvor stor en del af de ingredienser, retten faktisk kræver, vi har en
+  -- pris på. Nævneren tæller også de linjer, taksonomien IKKE kender: talte
+  -- den kun de kendte, ville en ret med fem kendte og to ukendte stå som
+  -- fuldt prissat med en pris, der mangler to ingredienser.
+  coverage    REAL,
+  priceable   INTEGER NOT NULL DEFAULT 0,
+  computed_at TEXT NOT NULL,
+  PRIMARY KEY (recipe_id, chain_id)
+);
+CREATE INDEX IF NOT EXISTS idx_recipe_costs_cheap
+  ON recipe_costs(chain_id, cost) WHERE priceable = 1;
+
 -- ── Madplaner ───────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS meal_plans (
   id           INTEGER PRIMARY KEY AUTOINCREMENT,

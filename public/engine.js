@@ -316,14 +316,32 @@
    *            activeOfferMap og `offer_index` leverer den kolonne.
    *   normals  `vare|kæde` → ALLE normalpris-rækker for det par
    *   now      sammenligningstidspunktet, så udløb kan testes
+   *   baseUnit varens egen enhed (`items.base_unit`). Angivet: enhver
+   *            kandidat i en ANDEN enhed kasseres, før noget sammenlignes.
    *
    * Svaret er `null`, når vi ikke kender nogen pris i den kæde. Ikke nul:
    * en vare til 0 kr ser ud som en gratis vare i et budget, mens `null`
    * siger det, der faktisk er tilfældet — at vi ikke ved det.
    */
-  function effectivePrice(itemKey, chainId, { offers, normals, now = new Date() } = {}) {
+  function effectivePrice(itemKey, chainId, { offers, normals, now = new Date(), baseUnit = null } = {}) {
     const k = `${itemKey}|${chainId}`;
     const nowIso = now.toISOString();
+
+    // Enheden tjekkes FØR kandidaterne findes, ikke kun når to skal måles mod
+    // hinanden. Sammenligningen længere nede kasserer et tilbud i den forkerte
+    // enhed — men kun hvis der er en normalpris at holde det op mod. Er der
+    // ingen, blev tilbuddet returneret i den enhed, AVISEN nævnte, og den
+    // kalder, der ganger `behov × unit_price`, gangede på tværs af to enheder.
+    //
+    // Målt i data.db: 257 (vare, kæde)-par har et tilbud i en anden enhed end
+    // varens og ingen normalpris overhovedet. `brod` er et af dem — avisen
+    // siger 9,90 kr/KG, varen måles i STK — og læst som kr/stk kostede et
+    // brød en tredjedel af, hvad det gør.
+    //
+    // `baseUnit` er valgfri, fordi ikke enhver kalder kender varens enhed
+    // (browserens tilbudsliste slår op uden at have `items` ved hånden). Er
+    // den ikke givet, gælder den gamle regel alene: bedre end ingen vagt.
+    const wrongUnit = (unit) => baseUnit != null && unit !== baseUnit;
 
     // Tilbuddet skal bære sin egen pakke. `base_qty` er den mængde, prisen
     // gælder, og uden den kan hverken pakkeafrundingen eller kurveprisen
@@ -331,6 +349,7 @@
     // normalprisen står tilbage.
     const offer = lookup(offers, k);
     const fromOffer = offer && offer.unit_price > 0 && offer.base_qty > 0
+      && !wrongUnit(offer.base_unit)
       ? { pack_qty: offer.base_qty, pack_unit: offer.base_unit,
           pack_price: offer.price, unit_price: offer.unit_price,
           on_offer: true, source: 'offer', stale: false }
@@ -350,6 +369,11 @@
     let bestScore = null;
     for (const r of lookup(normals, k) || []) {
       if (!(r.unit_price > 0)) continue;
+      // Samme vagt på normalsiden. `item_prices` holder invarianten med en
+      // TRIGGER, så basen kan ikke levere en forkert enhed i dag — men
+      // browseren bygger sit kort af JSON fra src/sync/build.js, og reglen
+      // her må ikke hvile på, at den anden ende er i orden.
+      if (wrongUnit(r.pack_unit)) continue;
       // En udløben pris taber til en gyldig på samme niveau, men slår
       // stadig et dårligere niveau: gammelt og rigtigt slår nyt og gættet.
       const stale = r.valid_until != null && r.valid_until < nowIso;

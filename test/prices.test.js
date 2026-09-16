@@ -1089,6 +1089,67 @@ test('samme enhed: det billigere tilbud vinder stadig', () => {
   assert.equal(p.source, 'offer');
 });
 
+// ── baseUnit-vagten ──────────────────────────────────────────────────────────
+//
+// Sammenligningen ovenfor kasserer kun en forkert enhed, når der ER to
+// kandidater. Er der kun én, slap den igennem i avisens enhed — og 257
+// (vare, kæde)-par i data.db er præcis den sag: et tilbud i en anden enhed
+// end varens og ingen normalpris at måle det mod. Opskriftsprisen i opgave 6
+// ganger `behov × unit_price`, og et behov i stk ganget med en kilopris er
+// ikke en pris, det er et tal.
+
+test('uden normalpris forkastes et tilbud i den forkerte enhed', () => {
+  // brod|71c90, levende i data.db: avisen sælger brød til 9,90 kr/KG, varen
+  // måles i STK. Uden vagten blev 9,90 læst som kr/stk, og et brød kostede
+  // en tredjedel af, hvad det gør. Svaret skal være null — vi kender ikke
+  // prisen i den kæde — ikke et tal, der ser rigtigt ud.
+  const offers = new Map([['brod|71c90',
+    { base_qty: 0.75, base_unit: 'kg', price: 7.43, unit_price: 9.9 }]]);
+  assert.equal(
+    engine.effectivePrice('brod', '71c90', { offers, normals: new Map(), baseUnit: 'stk' }),
+    null,
+  );
+  // Og kontrolprøven: uden `baseUnit` kan funktionen ikke vide det, og den
+  // gamle adfærd står uændret. Vagten er et tilvalg, ikke en ny standard.
+  assert.ok(engine.effectivePrice('brod', '71c90', { offers, normals: new Map() }));
+});
+
+test('uden tilbud forkastes en normalpris i den forkerte enhed', () => {
+  // Den anden gren. `item_prices` har en TRIGGER mod netop det her, så basen
+  // kan ikke levere rækken i dag — men browseren bygger sit kort af JSON, og
+  // vagten må ikke kun være skrevet for tilbudssiden.
+  const normals = new Map([['aeg|11deC', [
+    { pack_qty: 0.6, pack_unit: 'kg', pack_price: 30, unit_price: 50, source: 'manual' },
+  ]]]);
+  assert.equal(
+    engine.effectivePrice('aeg', '11deC', { offers: new Map(), normals, baseUnit: 'stk' }),
+    null,
+  );
+});
+
+test('baseUnit kasserer kun den forkerte kandidat, ikke hele opslaget', () => {
+  // Det ville være for nemt at bestå de to ovenstående ved at svare null,
+  // så snart noget er i den forkerte enhed. Her er tilbuddet forkert og
+  // normalprisen rigtig: svaret er normalprisen.
+  const normals = new Map([['aeg|11deC', [
+    { pack_qty: 10, pack_unit: 'stk', pack_price: 32.95, unit_price: 3.295, source: 'api:rema' },
+  ]]]);
+  const offers = new Map([['aeg|11deC',
+    { base_qty: 0.6, base_unit: 'kg', price: 20, unit_price: 33.33 }]]);
+  const p = engine.effectivePrice('aeg', '11deC', { offers, normals, baseUnit: 'stk' });
+  near(p.unit_price, 3.295);
+  assert.equal(p.pack_unit, 'stk');
+  assert.equal(p.on_offer, false);
+
+  // Og med den rigtige enhed på begge sider vinder tilbuddet stadig.
+  const rigtigt = new Map([['aeg|11deC',
+    { base_qty: 10, base_unit: 'stk', price: 25, unit_price: 2.5 }]]);
+  const q = engine.effectivePrice('aeg', '11deC',
+    { offers: rigtigt, normals, baseUnit: 'stk' });
+  near(q.unit_price, 2.5);
+  assert.equal(q.on_offer, true);
+});
+
 test('en source, der findes på Object.prototype, er stadig ukendt', () => {
   // `SOURCE_RANK['constructor']` gav en Function gennem prototypekæden, og
   // `?? UKENDT` fyrer aldrig på en Function — rækken kom forrest i stedet for
@@ -1241,4 +1302,174 @@ test('activeOfferMap nøgler på vare|kæde — ét tilbud pr. par', () => {
 
   close();
   fs.rmSync(dir, { recursive: true, force: true });
+});
+
+/**
+ * Normalpriserne, som opskriftsprisen henter dem.
+ *
+ * Værdien skal være en LISTE. Vælges rækken allerede i SQL'en, er valget
+ * truffet af en sortering, der hverken kender rangordenen mellem kilder,
+ * behovet eller varens holdbarhed — og både `effectivePrice` og `choosePack`
+ * står tilbage med ét tal, de ikke selv har valgt.
+ */
+test('normalPricesFor grupperer alle rækker pr. vare|kæde', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'madplan-normals-'));
+  const dbPath = path.join(dir, 'normals.db');
+  const db = openThroughGetDb(dbPath);
+
+  db.prepare("INSERT INTO chains (id, name, slug) VALUES ('TST1', 'Testkæde 1', 'tst1')").run();
+  db.prepare("INSERT INTO chains (id, name, slug) VALUES ('TST2', 'Testkæde 2', 'tst2')").run();
+  const item = db.prepare(`INSERT INTO items (key, name, category, class, keeps, base_unit)
+                           VALUES (?, ?, ?, ?, ?, ?)`);
+  item.run('kartofler', 'Kartofler', 'veg', 'baseline', 'keeps', 'kg');
+  item.run('aeg', 'Æg', 'eggs', 'fresh', 'keeps', 'stk');
+
+  const price = db.prepare(`
+    INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit, pack_price,
+                             unit_price, source, observed_at, valid_until)
+    VALUES (?, ?, ?, ?, ?, ?, ?, '2026-09-15T00:00:00Z', '2027-03-14T00:00:00Z')`);
+  price.run('kartofler', 'TST1', 1, 'kg', 12,    12,    'derived');
+  price.run('kartofler', 'TST1', 2, 'kg', 15.95, 7.975, 'manual');
+  price.run('kartofler', 'TST2', 2, 'kg', 18,    9,     'manual');
+  price.run('aeg',       'TST1', 10, 'stk', 32.95, 3.295, 'api:rema');
+  db.close();
+
+  const { plans, close } = freshPlans(dbPath);
+  try {
+    const all = plans.normalPricesFor();
+    assert.deepEqual([...all.keys()].sort(), ['aeg|TST1', 'kartofler|TST1', 'kartofler|TST2']);
+
+    // Begge pakkestørrelser skal med — ellers kan effectivePrice ikke vælge
+    // efter kilde og choosePack ikke efter behov.
+    const kart = all.get('kartofler|TST1');
+    assert.equal(kart.length, 2);
+    assert.deepEqual(kart.map((r) => r.source).sort(), ['derived', 'manual']);
+    for (const r of kart) {
+      assert.ok(r.pack_qty > 0 && r.pack_price > 0 && r.unit_price > 0);
+      assert.equal(r.pack_unit, 'kg');
+      assert.ok(r.valid_until, 'valid_until skal med — effectivePrice måler udløb på den');
+    }
+
+    // Og kortet skal kunne begrænses til de valgte kæder: jobbet kører én
+    // kæde ad gangen, og TST2's priser må ikke dukke op i TST1's regnestykke.
+    const kun1 = plans.normalPricesFor(['TST1']);
+    assert.deepEqual([...kun1.keys()].sort(), ['aeg|TST1', 'kartofler|TST1']);
+
+    // Formen er den, effectivePrice faktisk slår op i.
+    const p = engine.effectivePrice('kartofler', 'TST1',
+      { offers: new Map(), normals: kun1, baseUnit: 'kg' });
+    near(p.unit_price, 7.975);
+    assert.equal(p.source, 'manual');
+  } finally {
+    close();
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+// ── Opskriftsprisen ──────────────────────────────────────────────────────────
+//
+// `costRecipe` er ren og tager sine kort med ind, så de tre fælder i denne
+// opgave kan efterprøves uden en base. Alle tre har det samme mønster: de
+// giver et FOR LAVT tal og en FOR HØJ dækning, og budget-sporet sorterer
+// netop efter de to.
+
+const { costRecipe } = require(path.join(__dirname, '..', 'scripts', 'recompute-recipe-costs.js'));
+
+const COST_ITEMS = new Map([
+  ['kyllingebryst', { key: 'kyllingebryst', class: 'fresh',    keeps: 'perishable', base_unit: 'kg' }],
+  ['kartofler',     { key: 'kartofler',     class: 'baseline', keeps: 'keeps',      base_unit: 'kg' }],
+  ['aeg',           { key: 'aeg',           class: 'fresh',    keeps: 'keeps',      base_unit: 'stk' }],
+  ['brod',          { key: 'brod',          class: 'fresh',    keeps: 'perishable', base_unit: 'stk' }],
+  ['salt',          { key: 'salt',          class: 'essential', keeps: 'pantry',    base_unit: 'kg' }],
+]);
+
+const COST_NORMALS = new Map([
+  ['kyllingebryst|TST', [{ pack_qty: 1, pack_unit: 'kg', pack_price: 70, unit_price: 70, source: 'manual' }]],
+  ['kartofler|TST',     [{ pack_qty: 2, pack_unit: 'kg', pack_price: 15.95, unit_price: 7.975, source: 'manual' }]],
+  ['aeg|TST',           [{ pack_qty: 10, pack_unit: 'stk', pack_price: 32.95, unit_price: 3.295, source: 'api:rema' }]],
+]);
+
+const line = (key, amount, extra = {}) => ({
+  key, amount, weight: COST_ITEMS.get(key).base_unit === 'stk' ? amount * 0.058 : amount,
+  optional: false, ...extra,
+});
+
+test('en ret prissættes på mængde × enhedspris, og pakkerne rundes op', () => {
+  const r = { id: 1, title: 'Kylling med kartofler',
+    items: [line('kyllingebryst', 0.6), line('kartofler', 0.5), line('salt', 0.005)] };
+  const c = costRecipe(r, 'TST', { offers: new Map(), normals: COST_NORMALS, items: COST_ITEMS });
+
+  // 0,6 kg kylling à 70 + 0,5 kg kartofler à 7,975. Saltet er essential og
+  // tæller hverken i prisen eller i nævneren.
+  near(c.cost, 0.6 * 70 + 0.5 * 7.975);
+  // Men man køber ikke en halv pose: 1 kg kylling + én 2 kg-pose kartofler.
+  near(c.cost_packs, 70 + 15.95);
+  assert.ok(c.cost_packs > c.cost, 'hele pakker kan ikke koste mindre end behovet');
+  assert.equal(c.coverage, 1);
+  assert.equal(c.priceable, 1);
+});
+
+test('en stk-vare prissættes på stykantallet, ikke på rollevægten', () => {
+  // `weight` er æggene omregnet til kilo, så assignRoles kan sammenligne
+  // 6 æg med 0,4 kg kylling. Prisen er kr/STK, og de to tal må ikke bytte
+  // plads: 6 × 3,295 = 19,77 kr, mens vægten ville give 6 × 0,058 × 3,295
+  // = 1,15 kr. 748 opskrifter har mindst én stk-vare, så fejlen ville ramme
+  // en tredjedel af korpusset og altid i samme retning — for billigt.
+  const r = { id: 2, title: 'Omelet', items: [line('aeg', 6)] };
+  const c = costRecipe(r, 'TST', { offers: new Map(), normals: COST_NORMALS, items: COST_ITEMS });
+  near(c.cost, 6 * 3.295);
+  // Én 10-pakke dækker de seks.
+  near(c.cost_packs, 32.95);
+  assert.equal(c.priceable, 1);
+});
+
+test('ukendte ingredienser tæller i nævneren og gør retten uprissætbar', () => {
+  const r = { id: 3, title: 'Ret med to ukendte',
+    items: [line('kyllingebryst', 0.6), line('kartofler', 0.5), line('aeg', 2)] };
+  const uden = costRecipe(r, 'TST', { offers: new Map(), normals: COST_NORMALS, items: COST_ITEMS });
+  assert.equal(uden.priceable, 1);
+
+  // Samme ret, men to linjer taksonomien ikke kender. De når aldrig ind i
+  // `items`, så uden `unknown` ville den stå som fuldt prissat med en pris,
+  // der mangler to ingredienser.
+  const med = costRecipe(r, 'TST',
+    { offers: new Map(), normals: COST_NORMALS, items: COST_ITEMS, unknown: 2 });
+  near(med.cost, uden.cost);                 // prisen er den samme …
+  near(med.coverage, 3 / 5);                 // … men vi ved mindre, end vi troede
+  assert.equal(med.priceable, 0);
+});
+
+test('valgfri linjer koster intet og gør ikke retten uprissætbar', () => {
+  // "evt. et skvæt fløde" købes ikke. Havde den talt med, ville en ret med
+  // en evt.-linje, vi ikke har pris på, stå som uprissætbar — og en, vi HAR
+  // pris på, blive dyrere end kurven.
+  const r = { id: 4, title: 'Ret med evt.',
+    items: [line('kyllingebryst', 0.6),
+            line('brod', 2, { optional: true })] };   // brod har ingen pris
+  const c = costRecipe(r, 'TST', { offers: new Map(), normals: COST_NORMALS, items: COST_ITEMS });
+  near(c.cost, 0.6 * 70);
+  assert.equal(c.coverage, 1);
+  assert.equal(c.priceable, 1);
+});
+
+test('et tilbud i den forkerte enhed prissætter ikke retten', () => {
+  // brod hos Min Købmand: 9,90 kr/KG på en vare, der måles i STK, og ingen
+  // normalpris at falde tilbage på. Uden baseUnit-vagten kostede to brød
+  // 19,80 kr og retten stod som fuldt prissat.
+  const r = { id: 5, title: 'Brød og æg', items: [line('brod', 2), line('aeg', 2)] };
+  const offers = new Map([['brod|TST', { base_qty: 0.75, base_unit: 'kg', price: 7.43, unit_price: 9.9 }]]);
+  const c = costRecipe(r, 'TST', { offers, normals: COST_NORMALS, items: COST_ITEMS });
+  near(c.cost, 2 * 3.295);                   // kun æggene
+  near(c.coverage, 0.5);
+  assert.equal(c.priceable, 0);
+});
+
+test('en ret uden noget at købe er ikke en gratis ret', () => {
+  // Kun essentials tilbage: 0 af 0. Uden vagten ville 0/0 blive NaN eller
+  // coverage = 1, og retten stå øverst i budget-sporet til 0 kr.
+  const r = { id: 6, title: 'Kun krydderier', items: [line('salt', 0.01)] };
+  const c = costRecipe(r, 'TST', { offers: new Map(), normals: COST_NORMALS, items: COST_ITEMS });
+  near(c.cost, 0);
+  assert.equal(c.coverage, 0);
+  assert.equal(c.priceable, 0);
 });

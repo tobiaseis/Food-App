@@ -204,6 +204,41 @@ function normalPriceMap() {
   return best;
 }
 
+/**
+ * Normalpriserne fra `item_prices`, grupperet pr. (vare, kæde).
+ *
+ * Nøglen er `vare|kæde` — samme form som tilbudskortet, så `effectivePrice()`
+ * kan slå begge op med den samme streng.
+ *
+ * Værdien er en LISTE, ikke én række. Et par kan have flere pakkestørrelser
+ * og flere kilder, og både rangordenen i `effectivePrice` og pakkevalget i
+ * `choosePack` skal se dem alle: vælges rækken allerede her, er valget truffet
+ * af en SQL-sortering, der hverken kender behovet eller varens holdbarhed.
+ *
+ * `normalPriceMap()` ovenfor er noget andet og bliver stående: den er en
+ * median af TILBUDSpriser pr. varetype på tværs af kæder, og bruges til at
+ * vise en besparelse. Denne er hyldeprisen i den enkelte butik.
+ */
+function normalPricesFor(chainIds = null) {
+  const db = getDb();
+  let sql = `SELECT item_key, chain_id, pack_qty, pack_unit, pack_price,
+                    unit_price, source, valid_until
+               FROM item_prices`;
+  const params = [];
+  if (chainIds && chainIds.length) {
+    sql += ` WHERE chain_id IN (${chainIds.map(() => '?').join(',')})`;
+    params.push(...chainIds);
+  }
+
+  const map = new Map();
+  for (const r of db.prepare(sql).all(...params)) {
+    const k = `${r.item_key}|${r.chain_id}`;
+    if (!map.has(k)) map.set(k, []);
+    map.get(k).push(r);
+  }
+  return map;
+}
+
 // ── 3. Opskrifterne ──────────────────────────────────────────────────────────
 
 /**
@@ -418,7 +453,7 @@ function savePlan(plan) {
 module.exports = {
   generatePlan, savePlan,
   shoppingList: engine.shoppingList,
-  activeOfferMap, chainOfferIndex, normalPriceMap, loadRecipes,
+  activeOfferMap, chainOfferIndex, normalPriceMap, normalPricesFor, loadRecipes,
   favoriteChainIds, chainNamesFor,
   TIERS, DAYS, engine,
 };
