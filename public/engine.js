@@ -1042,6 +1042,13 @@
    * Prisen for reglen er de rene grøntsagsretter uden bælgfrugt. Det er et
    * bevidst valg og ikke en glemt kategori: en billig kurv, der ikke er
    * aftensmad, er værre end en ret, der mangler.
+   *
+   * Filteret kan kun være så godt som koblingen mellem ingrediens og vare.
+   * Målt: "100ml strong espresso" er koblet til varen `bonner` (bælgfrugt)
+   * med mængden 0,1 kg, og derfor har en café con leche en "hovedråvare".
+   * Den hører til i den voksende liste over fejlkoblinger fra plan 1 —
+   * "Apple iPad" på æble, Cerave-creme på fløde, "1 tsk dijonsennep" på
+   * ketchup — og den rettes i taksonomien, ikke her.
    */
   function hasMainCourse(recipe, items) {
     const lines = ((recipe && recipe.items) || []).map((it) => {
@@ -1072,29 +1079,33 @@
   // og derfor skal tallet måles og ikke gættes.
   //
   // Målt over de 112 kandidater, der er tilbage efter hovedråvare-kravet
-  // (REMA 1000, hyldepriser, ingen aktive tilbud i ugen):
+  // (REMA 1000, hyldepriser, ingen aktive tilbud i ugen), EFTER at
+  // opskrifterne skaleres til husstanden:
   //
-  //   marginal pr. portion   p10 14,42   median 35,88   p90 94,53   spænd 80,12 kr
+  //   marginal pr. portion   p10 16,08   median 31,55   p90 56,15   spænd 40,07 kr
   //   score_classic          p10  0,52   median  0,87   p90  1,00   spænd  0,48
   //
-  // 80,12 / 0,48 = 166,9. Ved SCORE_KR = 167 spænder kvalitetsleddet lige så
-  // meget som prisleddet over de midterste 80 % af kandidaterne, og så kan
-  // hverken pris eller score afgøre ugen alene.
+  // 40,07 / 0,48 = 83,5, og **SCORE_KR = 84**: kvalitetsleddet spænder lige så
+  // meget som prisleddet over de midterste 80 % af kandidaterne, og hverken
+  // pris eller score kan afgøre ugen alene.
   //
-  // Prøvekørslerne bekræfter, at grænserne ligger, hvor målingen siger. Ved
-  // 40 vinder prisen: ugen fyldes med 10-portions-deller til 58-76 kr, fordi
-  // de er billigst pr. portion. Ved 250 vinder scoren: den samme uge stiger
-  // til 323 kr, fordi hver ret med score 1,00 kommer ind uanset hvad den
-  // koster. Ved 167 koster de to forslag 234 og 256 kr for fire retter à
-  // fire portioner — omkring 15 kr pr. portion — og delingen sparer stadig
-  // 74 og 113 kr.
+  // Tallet stod på 167 i ét trin, målt før skaleringen, og det var rigtigt DA.
+  // Skaleringen halverede prisleddets spænd — den fjernede jo netop
+  // portionsantallet som kilde til spredning — og så var 167 dobbelt vægt til
+  // scoren. Målt med 167 og skalering: forslag B blev fire kyllingeretter i
+  // træk til 278 kr (sushi bowls, stir-fry, stir-fry, kyiv), fordi prisen
+  // holdt op med at betyde noget inden for score-1,00-båndet. Ved 84 bliver
+  // den samme uge frikadeller, majsdeller, bagte æg og en bønnegryde til
+  // 183 kr. Det er hele forskellen på en madplan og en liste over gode tal.
   //
-  // Det er ikke et resultat, kun et målt skøn: ÉN kæde, hyldepriser uden
-  // aktive tilbud, og score_classic er tæt pakket (mere end hver tiende ret
-  // har 1,00, så over ~120 holder scoren op med at skelne, og prisen afgør
-  // inden for topbåndet). Tallet skal ses efter igen, når rigtige madplaner
-  // har været i hænderne på nogen.
-  const SCORE_KR = 167;
+  // Bemærk hvad der IKKE er et argument: den monotone uge ved 167 delte
+  // 1,3 kg kyllingebryst over tre retter og sparede 122,90 kr — det bedste
+  // delingstal i hele målingen. Deling er et bindeled, ikke et mål.
+  //
+  // Det er stadig ikke et resultat: ÉN kæde, hyldepriser uden aktive tilbud,
+  // og score_classic er tæt pakket (mere end hver tiende ret har 1,00). Skal
+  // ses efter igen, når rigtige madplaner har været i hænderne på nogen.
+  const SCORE_KR = 84;
 
   // Hvad det koster en ret at stå i det ANDET forslag allerede. Stor nok til
   // at slå enhver kurveforskel, så forslag B bygges af andre retter — men
@@ -1102,6 +1113,18 @@
   // kun fravalgte retter i spil, bærer de den alle sammen, og rækkefølgen
   // mellem dem er uændret.
   const AVOID_PENALTY = 1e4;
+
+  // Mængden, som den skal SES. round2 er rigtig for en pris, men 3 g hvidløg
+  // bliver til 0 med to decimaler, og "deler 0 kg Hvidløg over 4 retter" er
+  // ikke en forklaring — det er en fejl, der ser ud som en oplysning. Små
+  // mængder beholder derfor betydende cifre i stedet for faste decimaler.
+  // Fundet, da skaleringen til husstanden gjorde mængderne mindre.
+  const roundQty = (n) => {
+    if (!(n > 0)) return 0;
+    const digits = Math.min(6, Math.max(2, 1 - Math.floor(Math.log10(n))));
+    const f = 10 ** digits;
+    return Math.round(n * f) / f;
+  };
 
   /**
    * Byg en uge ved grådigt at tilføje den ret, der giver mest for pengene.
@@ -1119,12 +1142,17 @@
    *   offers      `vare|kæde` → aktivt tilbud   (som effectivePrice vil have dem)
    *   normals     `vare|kæde` → normalpris-rækker
    *   chainIds    de kæder, der må handles i
+   *   servings    hvor mange der spiser med. Opskrifterne skaleres til det.
    *   avoid       Set af opskrift-id'er, der skal vige (se twoProposals)
    */
   function sharedWeek(candidates, {
-    days = 5, seed = 0, items = new Map(), offers = new Map(), normals = new Map(),
+    days = 5, seed = 0, servings = DEFAULT_SERVINGS,
+    items = new Map(), offers = new Map(), normals = new Map(),
     chainIds = [], avoid = null, now = new Date(),
   } = {}) {
+    // Husstanden, ikke opskriftens eget portionsantal. 0 eller negativ er
+    // ikke en husstand og ville gøre hele kurven til nul eller negativ.
+    const household = servings > 0 ? servings : DEFAULT_SERVINGS;
     const picks = [];
     const basket = new Map();   // vare → samlet behov i varens base_unit
 
@@ -1158,6 +1186,13 @@
     /** Rettens behov pr. VARE — ikke pr. linje: samme vare står ofte flere gange. */
     const needsOf = (rec) => {
       const out = new Map();
+      // Opskriften skaleres til husstanden. Uden det købes retten, som den er
+      // skrevet: målt lå to retter til TI personer i den samme uge som to til
+      // fire, og man køber ikke ti portioner majsdeller til én aftensmad.
+      // Skaleringen ændrer ikke, hvilke retter der vælges — marginalen blev
+      // allerede målt pr. portion — men den ændrer kurven, prisen og hvad der
+      // reelt kan deles, og det er den halvdel, brugeren mærker.
+      const factor = household / (rec && rec.servings > 0 ? rec.servings : DEFAULT_SERVINGS);
       for (const it of (rec && rec.items) || []) {
         const meta = items.get(it.key);
         if (!isBoughtLine(it, meta)) continue;
@@ -1165,8 +1200,15 @@
         // omregnet til kilo, så assignRoles kan sammenligne 6 æg med 0,4 kg
         // kylling — mens `amount` er mængden i varens EGEN enhed, og det er
         // den, prisen er målt i.
-        const need = it.amount;
+        const need = it.amount * factor;
         if (need > 0) out.set(it.key, (out.get(it.key) || 0) + need);
+      }
+      // Et stykke kan ikke deles. Skaleringen laver 2 æg til ti personer om
+      // til 0,8 æg til fire, og både kurven og forklaringen skal sige 1 —
+      // man bruger et helt æg. Oprundingen sker på det SAMLEDE behov for
+      // varen, ikke pr. linje: to linjer à et halvt æg er ét æg, ikke to.
+      for (const [key, need] of out) {
+        if (items.get(key).base_unit === 'stk') out.set(key, Math.ceil(need));
       }
       return out;
     };
@@ -1233,11 +1275,18 @@
                        + (after.wasteKr - current.wasteKr);
 
         // …og marginalen måles PR. PORTION. Portionsantallet går fra 1 til 12
-        // blandt de prissatte opskrifter (33 af dem siger 1, 19 siger intet),
+        // blandt de prissatte opskrifter (19 af dem siger 1, 8 siger intet),
         // og uden normaliseringen sammenlignes en ret til én person med en
         // ret til tolv. Retten til én vinder hver gang, fordi den køber
         // mindst — ikke fordi den er billigere at spise.
-        const perServing = marginal / (cand.servings > 0 ? cand.servings : DEFAULT_SERVINGS);
+        //
+        // Der divideres med HUSSTANDEN og ikke med opskriftens eget tal:
+        // needsOf har allerede skaleret retten til husstanden, så alle
+        // kandidater måles på lige mange portioner. Divisoren er dermed den
+        // samme for dem alle og kan ikke flytte rangordenen — den holder kun
+        // leddet i samme størrelsesorden som SCORE_KR, der blev målt på
+        // netop kroner pr. portion.
+        const perServing = marginal / household;
 
         const score = (cand.score || 0) * SCORE_KR - perServing
                     + seededNoise(seed, cand.id)
@@ -1286,7 +1335,7 @@
           name: meta.name || key,
           unit: meta.base_unit,
           used: users.length,
-          need: round2(need),
+          need: roundQty(need),
           saved,
           // Besparelsen i kroner, så opgave 8 kan vise den uden at regne
           // pakkeprisen ud igen — og uden at kunne komme til at bruge en
@@ -1343,12 +1392,22 @@
     return [a, b].map((w) => ({ ...w, explanation: explainWeek(w) }));
   }
 
+  // Hvor lidt en besparelse må være værd og stadig komme i overskriften,
+  // målt som andel af ugens pris. "Sparer 7,96 kr på smør" er småpenge i en
+  // uge til 234 kr, og en overskrift, der fyldes op med småpenge, får hele
+  // delingen til at lyde som ingenting.
+  const EXPLAIN_MIN_SHARE = 0.05;
+
   /** "deler 1 kg Hakket oksekød over 2 retter og 1.2 kg Kartofler over 2 retter" */
   function explainWeek(week) {
     if (!week || !week.shared || !week.shared.length) {
       return 'ingen råvarer deles på tværs af retterne';
     }
-    const parts = week.shared.slice(0, 2)
+    // Kun hvis der ER en besparelse, der bærer sin plads. Findes der ingen,
+    // nævnes de små alligevel: at fortie en ægte deling er værre end at
+    // nævne en lille.
+    const worth = week.shared.filter((s) => s.saved_kr >= week.cost * EXPLAIN_MIN_SHARE);
+    const parts = (worth.length ? worth : week.shared).slice(0, 2)
       .map((s) => `${s.need} ${s.unit} ${s.name} over ${s.used} retter`);
     return `deler ${parts.join(' og ')}`;
   }

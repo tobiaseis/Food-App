@@ -2194,7 +2194,7 @@ med at se rigtige madplaner.
 > første kørsel, at en café con leche og en tunsalat *deler bønner*. Regnestykket
 > var rigtigt, koblingen er forkert. Den hører til i taksonomien, ikke her.
 
-- [ ] **Step 4: Skalér opskrifterne til husstanden**
+- [x] **Step 4: Skalér opskrifterne til husstanden**
 
 Interfaces-linjen har hele tiden nævnt `servings`, men intet trin beskrev den, og målingen
 viste hvorfor det betyder noget: forslag B indeholdt **to retter til ti personer** ved siden
@@ -2211,7 +2211,51 @@ der reelt deles. Det er den halvdel, brugeren mærker.
 
 Standard er 4. Rapportér begge uger igen bagefter med de nye priser.
 
-- [ ] **Step 5: Kør suiten og commit**
+> **Rettet: rangordenen ÆNDREDE sig, og SCORE_KR måtte måles om.**
+>
+> Argumentet — skalér med 4/10 og dividér med 4 er det samme som at dividere
+> med 10 — holder kun, hvis kurven er lineær i mængden. Det er den ikke:
+> **pakkeafrundingen er hele pointen med denne plan.** En ret til ti skaleret
+> ned til fire har mindre behov, men posen bliver ikke mindre, så prisen pr.
+> portion STIGER. En ret til én skaleret op til fire køber stadig kun én
+> karton mælk, så prisen pr. portion FALDER. Målt: forslag B skiftede alle
+> fire retter.
+>
+> Og fordelingen flyttede sig med, for skaleringen fjerner netop
+> portionsantallet som kilde til spredning:
+>
+> | | p10 | median | p90 | p10-p90 |
+> |---|---|---|---|---|
+> | marginal pr. portion, **før** skalering | 14,42 | 35,88 | 94,53 | **80,12 kr** |
+> | marginal pr. portion, **efter** | 16,08 | 31,55 | 56,15 | **40,07 kr** |
+>
+> 40,07 / 0,48 = 83,5, så **`SCORE_KR` går fra 167 til 84**. 167 var rigtigt,
+> da det blev målt, og forkert bagefter: med det halverede prisspænd gav det
+> scoren dobbelt vægt. Set på ugerne (uden `Spanish latte`, se nedenfor) blev
+> forslag B ved 167 til **fire kyllingeretter i træk til 278 kr** — sushi
+> bowls, stir-fry, stir-fry, kyiv — fordi prisen holdt op med at betyde noget
+> inden for score-1,00-båndet. Ved 84 bliver den samme uge frikadeller,
+> majsdeller, bagte æg og en bønnegryde til 183 kr.
+>
+> Bemærk hvad der IKKE er et argument for 167: den monotone kyllingeuge delte
+> 1,3 kg kyllingebryst over tre retter og sparede 122,90 kr — det bedste
+> delingstal i hele målingen. **Deling er et bindeled, ikke et mål.**
+>
+> **To fejl, skaleringen gjorde synlige, og som er rettet:**
+> `round2` på en mængde gjorde 3 g hvidløg til `0` ("deler 0 kg Hvidløg over
+> 4 retter"); mængder afrundes nu med betydende cifre. Og skaleringen lavede
+> 2 æg til ti personer om til 0,8 æg — et stykke kan ikke deles, så stk-varer
+> rundes op på det samlede behov.
+>
+> **Og den, der ikke er rettet:** `Spanish latte (café con leche)` står nu i
+> forslag A. Skaleringen ×4 gør den billig pr. portion, og den slipper
+> igennem hovedråvare-filteret, fordi `"100ml strong espresso"` er koblet til
+> varen `bonner` (bælgfrugt). Det er plan-1-taksonomi — samme familie som
+> "Apple iPad" på æble, Cerave-creme på fløde og "1 tsk dijonsennep" på
+> ketchup — og den kan ikke lukkes i motoren: 0,1 kg bælgfrugt pr. portion er
+> en fuldt plausibel hovedråvare. Rettes koblingen, forsvinder retten.
+
+- [x] **Step 5: Kør suiten og commit**
 
 ---
 

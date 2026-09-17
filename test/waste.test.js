@@ -153,6 +153,8 @@ const W_ITEMS = new Map([
   ['kartofler',       { key: 'kartofler',       name: 'Kartofler',       category: 'veg',  class: 'baseline', keeps: 'keeps',   base_unit: 'kg' }],
   ['ris',             { key: 'ris',             name: 'Ris',             category: 'grain', class: 'baseline', keeps: 'keeps',  base_unit: 'kg' }],
   ['persille',        { key: 'persille',        name: 'Persille',        category: 'veg',  class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
+  ['aeg',             { key: 'aeg',             name: 'Æg',              category: 'eggs', class: 'fresh', keeps: 'keeps',      base_unit: 'stk' }],
+  ['hvidloeg',        { key: 'hvidloeg',        name: 'Hvidløg',         category: 'veg',  class: 'fresh', keeps: 'keeps',      base_unit: 'kg' }],
   ['salt',            { key: 'salt',            name: 'Salt',            category: 'pantry', class: 'essential', keeps: 'pantry', base_unit: 'kg' }],
 ]);
 
@@ -163,6 +165,8 @@ const W_NORMALS = new Map([
   ['kartofler|c1',       [{ pack_qty: 2, pack_unit: 'kg', pack_price: 16,  unit_price: 8,   source: 'manual' }]],
   ['ris|c1',             [{ pack_qty: 1, pack_unit: 'kg', pack_price: 20,  unit_price: 20,  source: 'manual' }]],
   ['persille|c1',        [{ pack_qty: 0.05, pack_unit: 'kg', pack_price: 10, unit_price: 200, source: 'manual' }]],
+  ['aeg|c1',             [{ pack_qty: 6, pack_unit: 'stk', pack_price: 18, unit_price: 3, source: 'manual' }]],
+  ['hvidloeg|c1',        [{ pack_qty: 0.09, pack_unit: 'kg', pack_price: 6, unit_price: 66.67, source: 'manual' }]],
 ]);
 
 const recipe = (id, score, items) => ({ id, title: `Ret ${id}`, score, items });
@@ -264,15 +268,62 @@ test('marginalen måles pr. portion', () => {
   // retten til én vinder hver gang — ikke fordi den er billigere at spise,
   // men fordi den køber mindst.
   //
-  // Til én:  0,5 kg hakket oksekød = 80 kr + 20 kr spildvægt = 100 kr, og
-  //          det er 100 kr for ét måltid.
-  // Til fire: 1 kg laks + 0,6 kg kartofler = 136 kr + 2,80 = 138,80 kr, men
-  //          kun 34,70 kr pr. portion. Den er dyrest og skal alligevel vinde.
+  // Til én:  0,5 kg hakket oksekød, ganget op til fire personer = 2 kg = to
+  //          poser = 160 kr. Ulæst er den 100 kr og ser billigst ud.
+  // Til fire: 1 kg laks + 0,6 kg kartofler = 136 kr + 2,80 spildvægt. Den er
+  //          dyrest som opskrift og skal alligevel vinde.
   const tilEn = { ...recipe(13, 0.8, [line('hakket_oksekoed', 0.5)]), servings: 1 };
   const tilFire = { ...recipe(14, 0.8, [line('laks', 1), line('kartofler', 0.6)]), servings: 4 };
   const week = engine.sharedWeek([tilEn, tilFire], { days: 1, ...FIXTURE.ctx });
   assert.deepEqual(week.picks.map((p) => p.id), [14]);
   near(week.cost, 136);
+});
+
+test('opskrifterne skaleres til husstanden', () => {
+  // Man køber ikke ti portioner majsdeller til én aftensmad. Retten her er
+  // skrevet til ti personer og bruger 2,5 kg hakket oksekød — 0,25 kg pr.
+  // portion — og kurven skal følge husstanden, ikke opskriften.
+  const tilTi = { ...recipe(15, 0.8, [line('hakket_oksekoed', 2.5)]), servings: 10 };
+  const uge = (servings) => engine.sharedWeek([tilTi], { days: 1, servings, ...FIXTURE.ctx });
+
+  near(uge(4).cost, 80);    // 1,0 kg → én pose
+  near(uge(8).cost, 160);   // 2,0 kg → to poser
+  near(uge(2).cost, 80);    // 0,5 kg → stadig én pose, halvdelen til overs
+  near(uge(2).waste, 20);   // … og den halve pose tæller som spild
+
+  // Standard er 4, og en husstand på nul er ikke en husstand.
+  near(engine.sharedWeek([tilTi], { days: 1, ...FIXTURE.ctx }).cost, 80);
+  near(uge(0).cost, 80);
+});
+
+test('et stykke kan ikke deles, og en lille mængde forsvinder ikke i afrundingen', () => {
+  // Skaleringen laver 2 æg til ti personer om til 0,8 æg til fire. Man bruger
+  // et helt æg, og både kurven og forklaringen skal sige 1.
+  const aegRet = (id) => ({ ...recipe(id, 0.8, [line('aeg', 2), line('kylling', 0.5)]), servings: 10 });
+  const week = engine.sharedWeek([aegRet(16), aegRet(17)], { days: 2, servings: 4, ...FIXTURE.ctx });
+  const aeg = week.shared.find((s) => s.key === 'aeg');
+  assert.equal(aeg.need, 2, '0,8 + 0,8 æg skal købes som 1 + 1, ikke som 1,6');
+
+  // Og 3 g hvidløg må ikke stå som "0 kg". round2 er rigtig for en pris og
+  // forkert for en mængde.
+  const fedRet = (id) => recipe(id, 0.8, [line('hvidloeg', 0.003), line('kylling', 0.5)]);
+  const uge2 = engine.sharedWeek([fedRet(18), fedRet(19)], { days: 2, ...FIXTURE.ctx });
+  const fed = uge2.shared.find((s) => s.key === 'hvidloeg');
+  assert.ok(fed.need > 0, `hvidløget stod som ${fed.need}`);
+  assert.match(engine.explainWeek(uge2), /0\.006 kg Hvidløg/);
+});
+
+test('forklaringen fyldes ikke op med småpenge', () => {
+  // "sparer 7,96 kr på smør" er en tynd overskrift for en uge til 234 kr.
+  // Er der en besparelse, der bærer sin plads, nævnes kun den.
+  const stor = { key: 'a', name: 'Oksekød', unit: 'kg', used: 2, need: 1, saved: 1, saved_kr: 80 };
+  const lille = { key: 'b', name: 'Smør', unit: 'kg', used: 2, need: 0.05, saved: 1, saved_kr: 8 };
+  assert.equal(engine.explainWeek({ cost: 234, shared: [stor, lille] }),
+    'deler 1 kg Oksekød over 2 retter');
+
+  // Men er alt, der deles, småt, er det stadig sandt og skal siges.
+  assert.equal(engine.explainWeek({ cost: 234, shared: [lille] }),
+    'deler 0.05 kg Smør over 2 retter');
 });
 
 test('de to forslag deler højst én ret', () => {
