@@ -2288,7 +2288,80 @@ Standard er 4. Rapportér begge uger igen bagefter med de nye priser.
 > ketchup — og den kan ikke lukkes i motoren: 0,1 kg bælgfrugt pr. portion er
 > en fuldt plausibel hovedråvare. Rettes koblingen, forsvinder retten.
 
-- [x] **Step 5: Kør suiten og commit**
+> **Rettet efter review. C1 havde TRE veje, ikke én, og C2 kunne kun lukkes ved
+> at slå de to funktioner sammen.**
+>
+> **C1.** Filteret på "alle varer har en pris" fangede kun den ene af tre måder,
+> en ret kan se gratis ud på. Målt over alle 2.208 opskrifter hos REMA: 8 af 8
+> valgte retter havde `priceable = 0` før, **7 af 8 stadig efter**. De to, der
+> manglede:
+>
+> 2. **En ingrediens, taksonomien slet ikke kender.** Den når aldrig ind i
+>    `recipe.items`, så motoren kan ikke selv tælle den — 678 af 2.208
+>    opskrifter har mindst én. `loadRecipes` sætter nu `unknown_count`, og
+>    `src/sync/build.js` + `supabase/schema.sql` bærer feltet videre til
+>    browseren. **Uden kolonnen ville synken fejle med "column
+>    recipe_index.unknown_count does not exist"** — samme fælde som `lang`.
+> 3. **En KENDT vare uden mængde.** `needsOf` springer linjer uden `amount`
+>    over, og så er varen gratis. Målt: *Pork noodle stir-fry* stod som fuldt
+>    prissat uden at købe ingefæren (`amount` er NULL).
+>
+> Med alle tre: **0 af 8** valgte retter er uprissætbare, og ugerne over hele
+> korpusset er de samme som over den håndfiltrerede liste (201,70 og 190,09 kr).
+> Motoren har ikke længere brug for, at kalderen filtrerer først. Og uden kæder
+> returneres en TOM uge — ikke fire retter til 0 kr.
+>
+> **C2.** Rettet ved at der nu kun er ÉN funktion, `bestPackFor`. Så længe der
+> er to, kan de drive fra hinanden igen — det var jo netop det, der skete.
+> Efterprøvet på fire kæder (Bilka, Netto, REMA, føtex), som `generatePlan`
+> gør det: 22 af de 66 varer med pris i mere end én kæde vælger forskellig
+> butik efter de to regler, og forslag B's payload påstod **76,45 kr** sparet
+> mod de rigtige **31,50**. Kurvens pris var uændret hele vejen — det var kun
+> påstanden, der løj.
+>
+> **De tre minors, alle rettet.** `explainWeek` skriver nu kronerne, der gav
+> linjen dens plads ("0.015 kg Hvidløg over 3 retter (12 kr)"). `stk`-oprundingen
+> er flyttet fra `needsOf` til pakkevalget, så fire retter à 0,4 æg køber 2 æg
+> og ikke 4. `overlap` står på begge forslag.
+
+- [x] **Step 6: Mål tre veje til at lukke de rigtige middage ind** (kun målt, ikke valgt)
+
+`hasMainCourse` lukker 47 af de 159 prissætbare ude. De fleste er sirupper og
+saucer, men ~15 er rigtige middage. Målt hos REMA:
+
+**1. `cheese` i MAIN_CATS — beholder 124 (+12), lukker ingen ude.**
+Ind: Macaroni and Cheese, Authentic spaghetti cacio e pepe, Boursin pasta,
+Air fryer mac & cheese, Slow-cooked courgette pasta, Gnocchi traybake with
+lemony ricotta, Little Gem/courgette/feta, Sommerpasta med ærter og tomat,
+Crispy potato terrine, Nem salat med bagte rødder — **og Rød pesto,
+Stracciatella ost**, som ikke er middage. `MAIN_MIN_AMOUNT`/`MAIN_SHARE`
+holder som ventet smør-i-dej ude; de holder ikke en pestokrukke ude.
+
+**2. `aerter` som `legume` — beholder 117 (+5), lukker ingen ude.**
+Ind: Ærtesuppe, Pasta med ærter og citron, Sommerpasta med ærter og tomat,
+Curried satay noodles — og Pea purée, som er tilbehør. Ærter ER en bælgfrugt,
+så det er en rettelse af en forkert kategori og ikke en løsnet grænse.
+De to overlapper på Sommerpasta.
+
+**3. Gulv på købt vægt pr. portion — fordelingerne overlapper for meget.**
+
+| | n | min | p10 | median | p90 | max |
+|---|---|---|---|---|---|---|
+| beholdt i dag | 112 | 0,017 | 0,098 | **0,311** | 0,705 | 2,730 |
+| lukket ude i dag | 47 | 0,015 | 0,058 | **0,215** | 0,564 | 1,230 |
+
+Medianerne ligger 0,1 kg fra hinanden, og halerne dækker hinanden helt. Hvad
+et gulv koster: `>= 0,10` lukker 37 ind og 14 ud (og blandt de 37 er **Mørdej**
+— den ret, hele filteret blev bygget for); `>= 0,20` lukker 24 ind og 33 ud;
+`>= 0,30` lukker 15 ind og 53 ud. Der findes ikke et tal, der lukker Macaroni
+and Cheese ind uden også at lukke smoothies, mangochutney og pærecrumble ind.
+De tungeste udelukkede er Risengrød (1,23 kg/portion) og en grøn smoothie
+(0,67) — vægt måler ikke, om noget er aftensmad.
+
+Ingen af de tre lukker leek & potato soup eller risengrød ind: de har hverken
+ost eller bælgfrugt. **Valget er ikke truffet her.**
+
+- [x] **Step 7: Kør suiten og commit**
 
 ---
 
