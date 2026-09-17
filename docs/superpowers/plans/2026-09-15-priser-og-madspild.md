@@ -2361,6 +2361,26 @@ De tungeste udelukkede er Risengrød (1,23 kg/portion) og en grøn smoothie
 Ingen af de tre lukker leek & potato soup eller risengrød ind: de har hverken
 ost eller bælgfrugt. **Valget er ikke truffet her.**
 
+- [ ] **Step 8: Afgørelsen — to tages, én forkastes**
+
+**`aerter` skal være `legume`, ikke `veg`.** Ærter *er* bælgfrugter. Det er en rettelse af
+en forkert kategori, ikke en løsere tærskel, og den hører hjemme i taksonomien uanset denne
+opgave. +5 retter, og én tilbehørsret lukkes ind.
+
+**`cheese` skal være en hovedkategori.** +12 ægte middage mod to, der ikke er det. Handelen
+er klart positiv, og den er mildere end den ser ud: brugeren får **tre gange så mange retter,
+som der er dage**, og vælger selv. En mærkelig post i en liste på tolv koster et øjekast.
+En tredjedel af hverdagsretterne, der aldrig vises, koster hele sporet.
+
+**Vægtgulvet forkastes**, og målingen er grunden: `>= 0,10` lukker **Mørdej** ind — den ret,
+filteret findes for — og ingen værdi henter Macaroni and Cheese uden også at hente smoothies
+og pærecrumble. De to tungeste ekskluderede er risengrød og en grøn smoothie. Vægt måler
+ikke, om noget er aftensmad.
+
+**Og det, der bliver tilbage, siges højt:** rene grøntsagsretter uden bælgfrugt eller ost er
+stadig ude. Reglen er "en middag har et protein eller en ost", og den grænse er **valgt,
+ikke fundet**.
+
 - [x] **Step 7: Kør suiten og commit**
 
 ---
