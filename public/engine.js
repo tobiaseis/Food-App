@@ -1156,15 +1156,12 @@
     const picks = [];
     const basket = new Map();   // vare → samlet behov i varens base_unit
 
-    // En ret uden hovedråvare er ikke aftensmad. Filteret står FØR alt andet,
-    // fordi den grådige regel ellers griber det billigste i basen, og det
-    // billigste er sirup og roux — se hasMainCourse.
-    //
-    // Er der ingen tilbage, bruges de oprindelige: to tomme forslag er ikke
-    // et bedre svar end fire tvivlsomme, og kalderen kan ikke se forskel på
-    // "ingen retter" og "motoren sagde nej".
-    const withMain = (candidates || []).filter((c) => hasMainCourse(c, items));
-    const pool = withMain.length ? withMain : (candidates || []);
+    // Uden butikker er der ingen priser, og uden priser koster hver eneste
+    // ret nul. En uge med retter i og 0 kr på er en løgn; en tom uge er
+    // sandheden og kan ses med det samme. Derfor bygges der ikke videre.
+    if (!chainIds || !chainIds.length) {
+      return { picks: [], cost: 0, waste: 0, shared: [] };
+    }
 
     // Den grådige løkke prissætter HELE kurven om for hver kandidat på hver
     // dag. Uden et memo slås den samme (vare, kæde) op titusindvis af gange
@@ -1203,58 +1200,122 @@
         const need = it.amount * factor;
         if (need > 0) out.set(it.key, (out.get(it.key) || 0) + need);
       }
-      // Et stykke kan ikke deles. Skaleringen laver 2 æg til ti personer om
-      // til 0,8 æg til fire, og både kurven og forklaringen skal sige 1 —
-      // man bruger et helt æg. Oprundingen sker på det SAMLEDE behov for
-      // varen, ikke pr. linje: to linjer à et halvt æg er ét æg, ikke to.
-      for (const [key, need] of out) {
-        if (items.get(key).base_unit === 'stk') out.set(key, Math.ceil(need));
-      }
       return out;
     };
 
-    // Den billigste kæde for varen, målt på enhedspris. Bruges både af
-    // kurveregningen og af delings-forklaringen, så de to ikke kan komme til
-    // at tale om hver sin butik.
-    const bestPriceFor = (key, meta) => {
+    /**
+     * Et stykke kan ikke deles: 0,8 æg er ét æg.
+     *
+     * Oprundingen sker HER og ikke i needsOf, og forskellen er målbar. Ligger
+     * den i needsOf, rundes hver ret op for sig, og fire retter à 0,4 æg
+     * køber fire æg, hvor to slår til. Behovet skal lægges sammen først og
+     * rundes op bagefter — præcis samme regel som pakkeafrundingen, og af
+     * samme grund.
+     */
+    const wholeUnits = (meta, need) => (meta.base_unit === 'stk' ? Math.ceil(need) : need);
+
+    /**
+     * Hvor køber vi varen, hvilken pakke, og hvad koster det?
+     *
+     * ÉN funktion, fordi kurven og forklaringen SKAL være enige. Her stod
+     * først to: kurven valgte kæde på pris plus værdien af spildet, mens
+     * forklaringen valgte på enhedspris alene — med en kommentar om, at de
+     * delte regnestykke. De var uenige for 49 af de 76 varer, der har priser
+     * i mere end én kæde, typisk kød, hvor den laveste kilopris kommer i en
+     * større pakke.
+     *
+     * Følgen var ikke kosmetisk. Målt på en uge til 149,15 kr påstod
+     * payloaden 119,56 kr sparet, hvor kurven sparede 76,95 — kyllingelinjen
+     * alene lå 47 % for højt. Og da valget af kæde også vælger PAKKEN, løj
+     * den om antallet af poser, ikke bare om kronerne. Det er sætningen,
+     * brugeren læser, så to regnestykker må der ikke være.
+     *
+     * Spildet vægtes i kroner, ikke i enheder: en kurv rummer både kilo
+     * kartofler og stykker æg, og lagde man dem sammen først, adderede man to
+     * ting uden fælles enhed. `choosePack` giver ikke sin interne score fra
+     * sig — med vilje — så sammenligningen mellem kæder regnes her, af de
+     * felter, den DA giver.
+     */
+    const bestPackFor = (key, meta, need) => {
+      const n = wholeUnits(meta, need);
       let best = null;
       for (const chainId of chainIds) {
         const price = priceIn(key, chainId, meta);
         if (!price) continue;
-        if (!best || price.unit_price < best.unit_price) best = price;
+        const pack = choosePack(n, [price], { keeps: meta.keeps });
+        if (!pack) continue;
+        const unit = price.unit_price > 0
+          ? price.unit_price
+          : price.pack_price / price.pack_qty;
+        const kr = pack.waste * unit * WASTE_AVERSION;
+        const score = pack.cost + kr;
+        if (best && score >= best.score) continue;
+        best = { price, pack, kr, score };
       }
       return best;
     };
 
-    // Spildet akkumuleres i KRONER, ikke i enheder. En kurv indeholder både
-    // kilo kartofler og stykker æg, og lægger man dem sammen først og ganger
-    // bagefter, adderer man to ting, der ikke har samme enhed. Det var samme
-    // fejl som det faste WASTE_PENALTY_PER_UNIT, bare et niveau højere oppe.
-    //
-    // `choosePack` giver ikke sin interne score fra sig — med vilje — så
-    // sammenligningen mellem kæder regnes her, af de felter, den DA giver.
+    /**
+     * Kan HELE retten prissættes? Tre ting kan ellers gøre den gratis, og
+     * alle tre er målt i basen:
+     *
+     *  1. en vare uden pris i nogen af de valgte kæder;
+     *  2. en ingrediens, taksonomien slet ikke kender. Den når aldrig ind i
+     *     `recipe.items`, så motoren kan ikke selv se den — kun den, der læste
+     *     opskriften, kan tælle den, og det er `unknown_count` fra
+     *     loadRecipes. 678 af 2.208 opskrifter har mindst én;
+     *  3. en KENDT vare uden mængde ("et stykke ingefær"). needsOf springer
+     *     den over, og så er den gratis. Målt: "Pork noodle stir-fry" stod
+     *     som fuldt prissat uden at købe ingefæren.
+     *
+     * Det er samme regel som `recipe_costs.priceable`, regnet uden basen — så
+     * en ret er prissætbar begge steder eller ingen af dem.
+     */
+    const canPrice = (rec) => {
+      if (rec.unknown_count > 0) return false;
+      for (const it of (rec && rec.items) || []) {
+        const meta = items.get(it.key);
+        if (!isBoughtLine(it, meta)) continue;
+        if (!(it.amount > 0)) return false;
+        if (!chainIds.some((chainId) => priceIn(it.key, chainId, meta))) return false;
+      }
+      return true;
+    };
+
     const basketCost = (b) => {
       let cost = 0; let wasteKr = 0;
       for (const [key, need] of b) {
         const meta = items.get(key);
         if (!meta) continue;
-        let best = null;
-        for (const chainId of chainIds) {
-          const price = priceIn(key, chainId, meta);
-          if (!price) continue;
-          const pack = choosePack(need, [price], { keeps: meta.keeps });
-          if (!pack) continue;
-          const unit = price.unit_price > 0
-            ? price.unit_price
-            : price.pack_price / price.pack_qty;
-          const kr = pack.waste * unit * WASTE_AVERSION;
-          const score = pack.cost + kr;
-          if (!best || score < best.score) best = { cost: pack.cost, kr, score };
-        }
-        if (best) { cost += best.cost; wasteKr += best.kr; }
+        const best = bestPackFor(key, meta, need);
+        if (best) { cost += best.pack.cost; wasteKr += best.kr; }
       }
       return { cost, wasteKr };
     };
+
+    // ── Hvilke retter må komme i betragtning? ────────────────────────────────
+    //
+    // To krav, begge bløde: kan intet opfylde dem, er en dårlig uge bedre end
+    // ingen uge, og kalderen kan ikke se forskel på "ingen retter" og
+    // "motoren sagde nej".
+    //
+    // 1. En ret uden hovedråvare er ikke aftensmad. Uden det greb den
+    //    grådige regel det billigste i basen, og det billigste er sirup,
+    //    hot honey og en roux — se hasMainCourse.
+    //
+    // 2. En ret, vi ikke kan prissætte, ser GRATIS ud. basketCost springer en
+    //    vare uden pris over — den koster nul og spilder nul — så reglen
+    //    griber efter de opskrifter, basen ved mindst om. Målt: får
+    //    twoProposals alle 2.208 opskrifter, har alle otte valgte retter
+    //    priceable = 0, og en havbars-middag står til 6 kr, fordi tre
+    //    fjerdedele af dens ingredienser er usynlige.
+    //
+    //    Det er samme fejl som sirup-ugen, et lag længere nede: dengang
+    //    manglede KVALITETEN modvægt, her er selve prisen fiktion. Og her
+    //    står det forkerte tal på skærmen.
+    const withMain = (candidates || []).filter((c) => hasMainCourse(c, items));
+    const priced = withMain.filter(canPrice);
+    const pool = priced.length ? priced : (withMain.length ? withMain : (candidates || []));
 
     let current = basketCost(basket);
 
@@ -1318,14 +1379,18 @@
 
       const meta = items.get(key);
       if (!meta) continue;
-      const price = bestPriceFor(key, meta);
-      if (!price) continue;
+      // Samme funktion som kurven bruger — så besparelsen er regnet i den
+      // butik og på den pakke, ugen faktisk køber i. Se bestPackFor.
+      const best = bestPackFor(key, meta, need);
+      if (!best) continue;
 
-      const together = choosePack(need, [price], { keeps: meta.keeps });
-      if (!together) continue;
+      const together = best.pack;
       let apart = 0;
       for (const u of users) {
-        const pack = choosePack(needsOf(u).get(key) || 0, [price], { keeps: meta.keeps });
+        // Hver for sig købes der i den SAMME butik: spørgsmålet er, hvad
+        // sammenlægningen sparer, ikke hvad en anden butik ville have kostet.
+        const own = wholeUnits(meta, needsOf(u).get(key) || 0);
+        const pack = choosePack(own, [best.price], { keeps: meta.keeps });
         if (pack) apart += pack.packs;
       }
       const saved = apart - together.packs;
@@ -1335,7 +1400,7 @@
           name: meta.name || key,
           unit: meta.base_unit,
           used: users.length,
-          need: roundQty(need),
+          need: roundQty(wholeUnits(meta, need)),
           saved,
           // Besparelsen i kroner, så opgave 8 kan vise den uden at regne
           // pakkeprisen ud igen — og uden at kunne komme til at bruge en
@@ -1389,7 +1454,10 @@
         { ...opts, seed: 2, avoid: new Set(a.picks.map((p) => p.id)) }));
     }
 
-    return [a, b].map((w) => ({ ...w, explanation: explainWeek(w) }));
+    // Overlappet er en egenskab ved PARRET og står derfor på dem begge.
+    // Stod det kun på B, ville opgave 8 læse undefined på A.
+    const overlap = b ? b.overlap : 0;
+    return [a, b].map((w) => ({ ...w, overlap, explanation: explainWeek(w) }));
   }
 
   // Hvor lidt en besparelse må være værd og stadig komme i overskriften,
@@ -1407,8 +1475,11 @@
     // nævnes de små alligevel: at fortie en ægte deling er værre end at
     // nævne en lille.
     const worth = week.shared.filter((s) => s.saved_kr >= week.cost * EXPLAIN_MIN_SHARE);
+    // Kronerne skal MED. Pladsen i overskriften gives efter besparelsen, og
+    // står der kun en mængde, læses "0.021 kg Hvidløg" som ingenting, selv om
+    // det er de 12 kr, der gav linjen dens plads.
     const parts = (worth.length ? worth : week.shared).slice(0, 2)
-      .map((s) => `${s.need} ${s.unit} ${s.name} over ${s.used} retter`);
+      .map((s) => `${s.need} ${s.unit} ${s.name} over ${s.used} retter (${s.saved_kr} kr)`);
     return `deler ${parts.join(' og ')}`;
   }
 

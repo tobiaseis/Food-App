@@ -193,6 +193,10 @@ create table if not exists recipe_index (
   score_classic double precision,
   score_premium double precision,
   unknown_main  boolean default false,
+  -- Antal ikke-valgfri ingredienslinjer UDEN item_key. Uden den kan browserens
+  -- motor ikke se, at en ret har ingredienser, den ikke kender -- de naar
+  -- aldrig ind i `items`, og retten ser gratis ud. Se sharedWeek/canPrice.
+  unknown_count int default 0,
   items         jsonb not null          -- [{key,cat,amount,weight,optional}] (opgave 9: staple/grams -> amount i varens egen enhed; essentials er allerede filtreret fra her)
 );
 -- Tabellen findes allerede hos den, der kørte skemaet før sproget kom til.
@@ -200,6 +204,11 @@ create table if not exists recipe_index (
 -- skal lægges på eksplicit – ellers fejler synken med "column
 -- recipe_index.lang does not exist".
 alter table recipe_index add column if not exists lang text;
+-- Samme historie som `lang`: tabellen findes allerede hos den, der koerte
+-- skemaet foer opgave 7, og `create table if not exists` roerer den ikke.
+-- Uden dette fejler synken med "column recipe_index.unknown_count does not
+-- exist", fordi build.js nu sender feltet med.
+alter table recipe_index add column if not exists unknown_count int default 0;
 
 create index if not exists idx_recipe_index_healthy on recipe_index(score_healthy);
 create index if not exists idx_recipe_index_classic on recipe_index(score_classic);

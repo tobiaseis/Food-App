@@ -155,6 +155,8 @@ const W_ITEMS = new Map([
   ['persille',        { key: 'persille',        name: 'Persille',        category: 'veg',  class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
   ['aeg',             { key: 'aeg',             name: 'Æg',              category: 'eggs', class: 'fresh', keeps: 'keeps',      base_unit: 'stk' }],
   ['hvidloeg',        { key: 'hvidloeg',        name: 'Hvidløg',         category: 'veg',  class: 'fresh', keeps: 'keeps',      base_unit: 'kg' }],
+  // Uden pris i nogen kæde, med vilje: den er C1-testens hele pointe.
+  ['havbars',         { key: 'havbars',         name: 'Havbars',         category: 'fish', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
   ['salt',            { key: 'salt',            name: 'Salt',            category: 'pantry', class: 'essential', keeps: 'pantry', base_unit: 'kg' }],
 ]);
 
@@ -304,6 +306,14 @@ test('et stykke kan ikke deles, og en lille mængde forsvinder ikke i afrundinge
   const aeg = week.shared.find((s) => s.key === 'aeg');
   assert.equal(aeg.need, 2, '0,8 + 0,8 æg skal købes som 1 + 1, ikke som 1,6');
 
+  // Og oprundingen sker på SUMMEN, ikke pr. ret. Fire retter à 0,4 æg er
+  // to æg, ikke fire — rundes hver ret op for sig, køber ugen dobbelt.
+  const lidtAeg = (id) => ({ ...recipe(id, 0.8, [line('aeg', 1), line('kylling', 0.5)]), servings: 10 });
+  const fire = engine.sharedWeek([lidtAeg(20), lidtAeg(21), lidtAeg(22), lidtAeg(23)],
+    { days: 4, servings: 4, ...FIXTURE.ctx });
+  assert.equal(fire.shared.find((s) => s.key === 'aeg').need, 2,
+    '4 x 0,4 æg er 2 æg, ikke 4');
+
   // Og 3 g hvidløg må ikke stå som "0 kg". round2 er rigtig for en pris og
   // forkert for en mængde.
   const fedRet = (id) => recipe(id, 0.8, [line('hvidloeg', 0.003), line('kylling', 0.5)]);
@@ -318,12 +328,87 @@ test('forklaringen fyldes ikke op med småpenge', () => {
   // Er der en besparelse, der bærer sin plads, nævnes kun den.
   const stor = { key: 'a', name: 'Oksekød', unit: 'kg', used: 2, need: 1, saved: 1, saved_kr: 80 };
   const lille = { key: 'b', name: 'Smør', unit: 'kg', used: 2, need: 0.05, saved: 1, saved_kr: 8 };
+  // Og kronerne står der: det er dem, der gav linjen dens plads, og en ren
+  // mængde ("0.021 kg Hvidløg") læses som ingenting.
   assert.equal(engine.explainWeek({ cost: 234, shared: [stor, lille] }),
-    'deler 1 kg Oksekød over 2 retter');
+    'deler 1 kg Oksekød over 2 retter (80 kr)');
 
   // Men er alt, der deles, småt, er det stadig sandt og skal siges.
   assert.equal(engine.explainWeek({ cost: 234, shared: [lille] }),
-    'deler 0.05 kg Smør over 2 retter');
+    'deler 0.05 kg Smør over 2 retter (8 kr)');
+});
+
+test('en ret, vi ikke kan prissætte, ser gratis ud og skal ikke vinde', () => {
+  // C1. basketCost springer en vare uden pris over — den koster nul og
+  // spilder nul. Målt på hele korpusset havde alle otte valgte retter
+  // priceable = 0, og en havbars-middag stod til 6 kr, fordi tre fjerdedele
+  // af dens ingredienser var usynlige.
+  //
+  // 'havbars' har ingen pris i c1. Retten har en hovedråvare og ser billig
+  // ud — og skal alligevel tabe til ret 2, der koster 96 kr for alt.
+  const ukendt = recipe(24, 1.0, [line('havbars', 0.6), line('kartofler', 0.6)]);
+  const week = engine.sharedWeek([ukendt, CANDIDATES[1]], { days: 1, ...FIXTURE.ctx });
+  assert.deepEqual(week.picks.map((p) => p.id), [2]);
+
+  // Blødt, som hovedråvare-filteret: kan INGEN prissættes, er en dårlig uge
+  // bedre end ingen uge.
+  assert.equal(engine.sharedWeek([ukendt], { days: 1, ...FIXTURE.ctx }).picks.length, 1);
+
+  // To veje mere til den samme gratis frokost, begge målt i basen.
+  //
+  // En ingrediens, taksonomien ikke kender, når aldrig ind i recipe.items —
+  // motoren kan ikke selv se den, så loadRecipes tæller den.
+  const medUkendtLinje = { ...recipe(27, 1.0, [line('kylling', 0.5)]), unknown_count: 2 };
+  assert.deepEqual(
+    engine.sharedWeek([medUkendtLinje, CANDIDATES[1]], { days: 1, ...FIXTURE.ctx })
+      .picks.map((p) => p.id), [2]);
+
+  // Og en KENDT vare uden mængde ("et stykke ingefær"): needsOf springer den
+  // over, og retten køber den aldrig.
+  const udenMaengde = recipe(28, 1.0, [line('kylling', 0.5), line('kartofler', null)]);
+  assert.deepEqual(
+    engine.sharedWeek([udenMaengde, CANDIDATES[1]], { days: 1, ...FIXTURE.ctx })
+      .picks.map((p) => p.id), [2]);
+});
+
+test('uden butikker er der ingen uge — ikke en gratis uge', () => {
+  // C1, anden halvdel: uden kæder kan intet prissættes, og hver ret koster
+  // nul. En uge med fire retter og 0 kr på er det værste af begge dele.
+  const week = engine.sharedWeek(CANDIDATES, { days: 4, ...FIXTURE.ctx, chainIds: [] });
+  assert.deepEqual(week.picks, []);
+  assert.equal(week.cost, 0);
+  assert.deepEqual(week.shared, []);
+});
+
+test('besparelsen regnes i den butik, kurven køber i', () => {
+  // C2. Kurven vælger kæde på pris PLUS værdien af spildet; forklaringen
+  // valgte på enhedspris alene. De to er uenige, når den laveste kilopris
+  // kommer i en større pakke — målt for 49 af de 76 varer med priser i mere
+  // end én kæde.
+  //
+  // Her: c2 har den laveste kilopris (70 kr/kg) i en 2 kg-pose, c1 en dyrere
+  // kilopris (80) i en 1 kg-pose. Behovet er 1 kg, så c1 er billigst i
+  // kroner OG uden spild — kurven køber der. Enhedsprisen ville have peget
+  // på c2 og talt en 2 kg-pose.
+  const normals = new Map([
+    ['hakket_oksekoed|c1', [{ pack_qty: 1, pack_unit: 'kg', pack_price: 80, unit_price: 80, source: 'manual' }]],
+    ['hakket_oksekoed|c2', [{ pack_qty: 2, pack_unit: 'kg', pack_price: 140, unit_price: 70, source: 'manual' }]],
+  ]);
+  const ctx = { items: W_ITEMS, offers: new Map(), normals, chainIds: ['c1', 'c2'] };
+  const halv = (id) => recipe(id, 0.8, [line('hakket_oksekoed', 0.5)]);
+  const week = engine.sharedWeek([halv(25), halv(26)], { days: 2, ...ctx });
+
+  near(week.cost, 80);                       // én 1 kg-pose fra c1
+  const okse = week.shared.find((s) => s.key === 'hakket_oksekoed');
+  assert.equal(okse.saved, 1);
+  near(okse.saved_kr, 80);                   // c1's pose, ikke c2's 140 kr
+});
+
+test('begge forslag bærer overlappet', () => {
+  // Opgave 8 læser feltet. Stod det kun på B, ville A give undefined.
+  const [a, b] = engine.twoProposals(FIXTURE.candidates, { days: 3, ...FIXTURE.ctx });
+  assert.equal(typeof a.overlap, 'number');
+  assert.equal(a.overlap, b.overlap);
 });
 
 test('de to forslag deler højst én ret', () => {

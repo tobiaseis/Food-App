@@ -293,6 +293,7 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
     tier_score: column ? r[column] : null,
     items: [],
     unknown_main: false,
+    unknown_count: 0,
   }]));
   if (!byId.size) return [];
 
@@ -317,6 +318,13 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
       // Ingrediens vi ikke kender. Ligner den kød eller fisk, kan retten ikke
       // planlægges troværdigt – se `hintsAtMainIngredient`.
       if (taxonomy.hintsAtMainIngredient(ing.raw)) recipe.unknown_main = true;
+      // Og den TÆLLES. Linjen når aldrig ind i recipe.items, så motoren kan
+      // ikke selv se, at den findes – og en ret, hvor tre fjerdedele af
+      // ingredienserne er usynlige, ser gratis ud for madplanen. 678 af de
+      // 2.224 opskrifter har mindst én. De valgfri tælles ikke med: "evt. et
+      // skvæt fløde" købes ikke, og en ukendt evt.-linje skal ikke kunne gøre
+      // retten uprissætbar. Samme regel som recipe_costs' coverage.
+      if (!ing.optional) recipe.unknown_count = (recipe.unknown_count || 0) + 1;
       continue;
     }
 
