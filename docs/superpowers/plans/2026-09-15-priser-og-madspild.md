@@ -2136,7 +2136,39 @@ Tilføj `sharedWeek`, `twoProposals` og `explainWeek` til returobjektet.
 >    `scripts/recompute-recipe-costs.js` kalder nu den samme funktion i
 >    stedet for sin egen kopi. Målt: uændret, 159 fuldt prissatte hos REMA.
 
-- [ ] **Step 3: Kør suiten og commit**
+- [ ] **Step 3: Gør ugen til et måltid og ikke en billig kurv**
+
+> **Tilføjet efter første implementering, og det er planens vigtigste rettelse.**
+> Den grådige regel blev kørt mod de 159 prissatte REMA-opskrifter og foreslog
+> **hasselnøddesirup, hot honey, mørdej og en roux** som fire dages aftensmad.
+
+Årsagen er målt, ikke gættet: `score * 40` spænder 2,80-40,00 kr over de 159, mens
+marginalprisen spænder 8-298 kr med median 82. **Prisen vejer omkring syv gange tungere
+end kvaliteten**, så reglen kan kun vælge det billigste i basen — og det billigste er
+krydderier og halvfabrikata. Selve delingen virker: hver eneste besparelse er efterregnet
+mod pakkestørrelserne og ingen var overdrevet. Det er ikke mekanikken, der er gal, det er
+hvad den bliver sluppet løs på.
+
+**1. En ret uden hovedråvare er ikke aftensmad.** `assignRoles` findes allerede og bruges
+af `buildPlan` til netop dette. Kør kandidaterne igennem den og luk dem ude, der ingen
+`main` har. Målt: 179 prissatte opskrifter, hvoraf **121** bærer kød, fisk, æg eller
+bælgfrugt. Sirupper og roux har ingen hovedråvare og forsvinder af sig selv.
+
+**2. Marginalen skal være pr. portion.** Portionsantallet går fra 1 til 12 blandt de
+prissatte (80 af dem har 4, 33 har 1, 19 har slet ingen angivelse). Uden normalisering
+sammenlignes en ret til én person med en ret til tolv. Brug `servings || 4` — 4 er både
+den hyppigste og den, resten af appen regner i.
+
+**3. `SCORE_KR` skal måles, ikke gættes.** Den står på 40, og det tal er lige så meget et
+skøn som `WASTE_PENALTY_PER_UNIT` var, før det viste sig at være dimensionelt forkert.
+Når 1 og 2 er på plads: mål begge fordelinger igen over de kandidater, der nu er tilbage,
+og vælg en værdi, hvor ingen af de to led alene afgør valget. **Rapportér begge
+fordelinger og de uger, værdien giver** — tallet skal kunne forsvares med data.
+
+Det er stadig ikke et resultat, kun et bedre skøn. Den endelige justering hører sammen
+med at se rigtige madplaner.
+
+- [ ] **Step 4: Kør suiten og commit**
 
 ---
 
