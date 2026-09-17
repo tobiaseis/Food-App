@@ -1980,13 +1980,28 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
     //
     // `choosePack` giver ikke sin interne score fra sig — med vilje — så
     // sammenligningen mellem kæder regnes her, af de felter den DA giver.
+    // Den billigste kæde for varen, målt på enhedspris. Bruges både af
+    // kurveregningen og af delings-forklaringen, så de to ikke kan komme til
+    // at tale om hver sin butik.
+    const bestPriceFor = (key, meta) => {
+      let best = null;
+      for (const chainId of chainIds) {
+        const price = effectivePrice(key, chainId,
+          { offers, normals, baseUnit: meta.base_unit });
+        if (!price) continue;
+        if (!best || price.unit_price < best.unit_price) best = price;
+      }
+      return best;
+    };
+
     const basketCost = (b) => {
       let cost = 0, wasteKr = 0;
       for (const [key, need] of b) {
         const meta = items.get(key);
         let best = null;
         for (const chainId of chainIds) {
-          const price = effectivePrice(key, chainId, { offers, normals });
+          const price = effectivePrice(key, chainId,
+            { offers, normals, baseUnit: meta.base_unit });
           if (!price) continue;
           const pack = choosePack(need, [price], { keeps: meta.keeps });
           if (!pack) continue;
@@ -2031,15 +2046,37 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
       current = bestPick.after;
     }
 
-    // Hvad deles der faktisk? Det er forklaringen, brugeren får at se.
+    // Hvad deles der FAKTISK? Det er forklaringen, brugeren får at se, og
+    // den skal kunne holde.
+    //
+    // "Bruges af to retter" er ikke det samme som "deles". To retter, der
+    // hver bruger en hel 1 kg-pose, deler ingenting — der købes to poser.
+    // Deling er, at ugen slipper med færre pakker, end retterne ville koste
+    // hver for sig. Det er den forskel, brugeren bad om, og den kan måles.
     const shared = [];
     for (const [key, need] of basket) {
-      const used = picks.filter((p) => (p.items || []).some((i) => i.key === key)).length;
-      if (used >= 2) shared.push({ key, used, need: round2(need) });
-    }
-    shared.sort((a, b) => b.used - a.used || b.need - a.need);
+      const users = picks.filter((p) => (p.items || []).some((i) => i.key === key));
+      if (users.length < 2) continue;
 
-    return { picks, cost: round2(current.cost), waste: round2(current.waste), shared };
+      const meta = items.get(key);
+      const price = bestPriceFor(key, meta);
+      if (!price) continue;
+
+      const together = choosePack(need, [price], { keeps: meta.keeps });
+      let apart = 0;
+      for (const u of users) {
+        const own = needsOf(u).get(key) || 0;
+        const pack = choosePack(own, [price], { keeps: meta.keeps });
+        if (pack) apart += pack.packs;
+      }
+      const saved = apart - (together ? together.packs : 0);
+      if (saved > 0) {
+        shared.push({ key, used: users.length, need: round2(need), saved });
+      }
+    }
+    shared.sort((a, b) => b.saved - a.saved || b.used - a.used);
+
+    return { picks, cost: round2(current.cost), waste: round2(current.wasteKr), shared };
   }
 
   /**
@@ -2057,8 +2094,11 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
     for (let seed = 2; seed <= 12; seed++) {
       const cand = sharedWeek(candidates, { ...opts, seed });
       const overlap = cand.picks.filter((p) => a.picks.some((q) => q.id === p.id)).length;
-      if (overlap <= MAX_SHARED) { b = cand; break; }
-      if (!b) b = cand;   // fald tilbage på den mindst ens, hvis ingen er nok
+      if (overlap <= MAX_SHARED) { b = cand; b.overlap = overlap; break; }
+      // Ellers: behold den MINDST ens, ikke bare den første. Med få
+      // kandidater kan alle frø give samme uge, og så skal brugeren i det
+      // mindste have den, der ligner mindst.
+      if (!b || overlap < b.overlap) { b = cand; b.overlap = overlap; }
     }
 
     return [a, b].map((w) => ({ ...w, explanation: explainWeek(w) }));
@@ -2172,7 +2212,8 @@ test('valgfrie linjer driver ikke et indkøb', () => {
         const meta = items.get(key);
         let pick = null;
         for (const chainId of subset) {
-          const price = effectivePrice(key, chainId, { offers, normals });
+          const price = effectivePrice(key, chainId,
+            { offers, normals, baseUnit: meta.base_unit });
           if (!price) continue;
           const pack = choosePack(need, [price], { keeps: meta ? meta.keeps : 'keeps' });
           if (pack && (!pick || pack.score < pick.score)) pick = { ...pack, chainId, price };
