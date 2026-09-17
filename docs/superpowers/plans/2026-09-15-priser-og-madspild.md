@@ -2194,7 +2194,24 @@ med at se rigtige madplaner.
 > første kørsel, at en café con leche og en tunsalat *deler bønner*. Regnestykket
 > var rigtigt, koblingen er forkert. Den hører til i taksonomien, ikke her.
 
-- [x] **Step 4: Kør suiten og commit**
+- [ ] **Step 4: Skalér opskrifterne til husstanden**
+
+Interfaces-linjen har hele tiden nævnt `servings`, men intet trin beskrev den, og målingen
+viste hvorfor det betyder noget: forslag B indeholdt **to retter til ti personer** ved siden
+af to til fire. Man køber ikke ti portioner majsdeller til én aftensmad.
+
+I `needsOf` ganges hver mængde med `servings / (recipe.servings || DEFAULT_SERVINGS)`.
+
+Det ændrer **ikke** rangordenen, og det er værd at forstå hvorfor: at skalere med
+`4 / 10` og derefter dividere med 4 er det samme som at dividere med 10, som marginalen
+allerede gjorde. `SCORE_KR = 167` står altså ved magt, og målingen bag den er stadig gyldig.
+
+Det, der ændrer sig, er **kurven** — og dermed prisen, indkøbslisten i opgave 8, og hvad
+der reelt deles. Det er den halvdel, brugeren mærker.
+
+Standard er 4. Rapportér begge uger igen bagefter med de nye priser.
+
+- [ ] **Step 5: Kør suiten og commit**
 
 ---
 
