@@ -2136,7 +2136,7 @@ Tilføj `sharedWeek`, `twoProposals` og `explainWeek` til returobjektet.
 >    `scripts/recompute-recipe-costs.js` kalder nu den samme funktion i
 >    stedet for sin egen kopi. Målt: uændret, 159 fuldt prissatte hos REMA.
 
-- [ ] **Step 3: Gør ugen til et måltid og ikke en billig kurv**
+- [x] **Step 3: Gør ugen til et måltid og ikke en billig kurv**
 
 > **Tilføjet efter første implementering, og det er planens vigtigste rettelse.**
 > Den grådige regel blev kørt mod de 159 prissatte REMA-opskrifter og foreslog
@@ -2168,7 +2168,33 @@ fordelinger og de uger, værdien giver** — tallet skal kunne forsvares med dat
 Det er stadig ikke et resultat, kun et bedre skøn. Den endelige justering hører sammen
 med at se rigtige madplaner.
 
-- [ ] **Step 4: Kør suiten og commit**
+> **Målt, efter at 1 og 2 var på plads.** 159 prissatte REMA-opskrifter, 112 med
+> hovedråvare. De 47, der lukkes ude, er netop dem, der væltede første kørsel:
+> mørdej 8 kr, hot honey 9, hasselnøddesirup 9, roux 18, vinaigrette 18.
+>
+> | led | p10 | median | p90 | p10-p90 |
+> |---|---|---|---|---|
+> | marginal pr. portion | 14,42 kr | 35,88 kr | 94,53 kr | **80,12 kr** |
+> | `score_classic` | 0,52 | 0,87 | 1,00 | **0,48** |
+>
+> 80,12 / 0,48 = 166,9, og **`SCORE_KR` sættes til 167**. Prøvekørslerne viser de to
+> yderpunkter, tallet ligger imellem: ved 40 vinder prisen (ugen fyldes med
+> 10-portions-deller, fordi de er billigst pr. portion), ved 250 vinder scoren
+> (samme uge stiger til 323 kr, fordi score 1,00 kommer ind uanset prisen). Ved 167
+> koster de to forslag 234 og 256 kr for fire retter à fire portioner — omkring
+> 15 kr pr. portion — og delingen sparer stadig 74 og 113 kr.
+>
+> Forbeholdet skal med: score_classic er tæt pakket, og mere end hver tiende ret har
+> 1,00. Over ca. 120 holder scoren op med at skelne, og prisen afgør inden for
+> topbåndet. Tallet er målt på ÉN kæde uden aktive tilbud og skal ses efter igen.
+>
+> **Og en fejlkobling, målingen afdækkede:** "100ml strong espresso" er koblet til
+> varen `bonner` (bælgfrugt) med mængden 0,1 kg. Derfor har "Spanish latte" en
+> hovedråvare og slap igennem filteret ved lavere SCORE_KR — og derfor stod der i
+> første kørsel, at en café con leche og en tunsalat *deler bønner*. Regnestykket
+> var rigtigt, koblingen er forkert. Den hører til i taksonomien, ikke her.
+
+- [x] **Step 4: Kør suiten og commit**
 
 ---
 

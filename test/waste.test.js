@@ -227,11 +227,52 @@ test('"deler" måles i sparede pakker, ikke i antal retter', () => {
 test('valgfri ingredienser købes ikke — men en valgfri hovedprotein gør', () => {
   // Samme regel som recipe_costs i opgave 6, og det skal være den SAMME regel:
   // ellers koster ugen noget andet end de retter, den er bygget af.
-  const medPersille = [recipe(9, 0.8, [line('kartofler', 0.6), line('persille', 0.02, true)])];
-  near(engine.sharedWeek(medPersille, { days: 1, ...FIXTURE.ctx }).cost, 16);
+  //
+  // Persillen koster 10 kr for den mindste bakke. Købes den, står der 116.
+  const medPersille = [recipe(9, 0.8,
+    [line('kylling', 0.5), line('kartofler', 0.6), line('persille', 0.02, true)])];
+  near(engine.sharedWeek(medPersille, { days: 1, ...FIXTURE.ctx }).cost, 106);
 
+  // Og modsat: kyllingen er flaget valgfri, men en ret med valgfri kylling er
+  // ikke en ret. Den købes, og så koster ugen 90 + 16.
   const medKylling = [recipe(10, 0.8, [line('kartofler', 0.6), line('kylling', 0.5, true)])];
   near(engine.sharedWeek(medKylling, { days: 1, ...FIXTURE.ctx }).cost, 106);
+});
+
+test('en ret uden hovedråvare er ikke aftensmad', () => {
+  // Rettelsen efter første prøvekørsel mod rigtige data: ugen foreslog
+  // hasselnøddesirup, hot honey, mørdej og en roux. De er billige og scorer
+  // højt, og den grådige regel kan ikke se, at de ikke er aftensmad.
+  //
+  // Ret 12 er billigere END og scorer højere end ret 2 — og skal alligevel
+  // tabe, fordi der ikke er noget at bygge en middag op om.
+  const kunTilbehoer = recipe(12, 0.99, [line('kartofler', 0.2)]);
+  const week = engine.sharedWeek([kunTilbehoer, CANDIDATES[1]], { days: 1, ...FIXTURE.ctx });
+  assert.deepEqual(week.picks.map((p) => p.id), [2]);
+
+  assert.equal(engine.hasMainCourse(kunTilbehoer, W_ITEMS), false);
+  assert.equal(engine.hasMainCourse(CANDIDATES[1], W_ITEMS), true);
+
+  // Er der INGEN retter med hovedråvare, er to tomme forslag ikke et bedre
+  // svar end én tvivlsom ret. Så falder filteret tilbage.
+  assert.equal(engine.sharedWeek([kunTilbehoer], { days: 1, ...FIXTURE.ctx }).picks.length, 1);
+});
+
+test('marginalen måles pr. portion', () => {
+  // Portionsantallet går fra 1 til 12 blandt de prissatte opskrifter. Uden
+  // normalisering sammenlignes en ret til én person med en ret til fire, og
+  // retten til én vinder hver gang — ikke fordi den er billigere at spise,
+  // men fordi den køber mindst.
+  //
+  // Til én:  0,5 kg hakket oksekød = 80 kr + 20 kr spildvægt = 100 kr, og
+  //          det er 100 kr for ét måltid.
+  // Til fire: 1 kg laks + 0,6 kg kartofler = 136 kr + 2,80 = 138,80 kr, men
+  //          kun 34,70 kr pr. portion. Den er dyrest og skal alligevel vinde.
+  const tilEn = { ...recipe(13, 0.8, [line('hakket_oksekoed', 0.5)]), servings: 1 };
+  const tilFire = { ...recipe(14, 0.8, [line('laks', 1), line('kartofler', 0.6)]), servings: 4 };
+  const week = engine.sharedWeek([tilEn, tilFire], { days: 1, ...FIXTURE.ctx });
+  assert.deepEqual(week.picks.map((p) => p.id), [14]);
+  near(week.cost, 136);
 });
 
 test('de to forslag deler højst én ret', () => {

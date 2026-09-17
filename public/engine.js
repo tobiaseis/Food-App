@@ -1024,10 +1024,77 @@
     return true;
   }
 
-  // Hvad ugens spor-score er værd i kroner. En ret med score 1,0 må koste
-  // 40 kr mere end en med score 0,0, før den taber. Tallet er et skøn og det
-  // eneste sted, "god mad" og "billig mad" gøres sammenlignelige.
-  const SCORE_KR = 40;
+  /**
+   * Har retten en hovedråvare — er den overhovedet aftensmad?
+   *
+   * `assignRoles` svarer allerede på det og bruges af buildPlan til netop
+   * dette, men den har en reserve-regel: uden kød peger den på den tungeste
+   * BÆRENDE råvare, så en vegetarret stadig har noget at planlægge om. Den
+   * regel er for mild her. Målt mod de prissatte REMA-opskrifter foreslog
+   * ugen hasselnøddesirup, hot honey, mørdej og en roux som fire dages
+   * aftensmad — mel og smør er `grain` og `dairy`, og reserve-reglen lod dem
+   * passere som "hovedråvare". Derfor kræves en rigtig hovedrolle:
+   * kød, fjerkræ, fisk, æg eller bælgfrugt.
+   *
+   * Tærsklerne kommer gratis med fra assignRoles: 20 g ansjoser i en gryde er
+   * pynt (MAIN_MIN_AMOUNT) og bliver ikke til en fiskeret.
+   *
+   * Prisen for reglen er de rene grøntsagsretter uden bælgfrugt. Det er et
+   * bevidst valg og ikke en glemt kategori: en billig kurv, der ikke er
+   * aftensmad, er værre end en ret, der mangler.
+   */
+  function hasMainCourse(recipe, items) {
+    const lines = ((recipe && recipe.items) || []).map((it) => {
+      const meta = items.get(it.key);
+      return {
+        key: it.key,
+        // Rollerne læses af VARETABELLEN, ikke af linjens eget `cat`-felt.
+        // Kalderen her har `items` ved hånden, og så skal kategorien komme
+        // ét sted fra — buildPlan bruger linjens felt, fordi den ikke har
+        // tabellen, ikke fordi de to må nå frem til hver sit svar.
+        cat: meta ? meta.category : it.cat || null,
+        essential: meta ? meta.class === 'essential' : Boolean(it.essential),
+        amount: it.amount,
+        weight: it.weight,
+      };
+    });
+    const { mains } = assignRoles(lines, { unknownMain: Boolean(recipe.unknown_main) });
+    return mains.some((m) => MAIN_CATS.has(m.cat));
+  }
+
+  // Portionsantal, når opskriften ikke siger det. 4 er både det hyppigste tal
+  // i basen (80 af de prissatte) og det, resten af appen regner i.
+  const DEFAULT_SERVINGS = 4;
+
+  // Hvad ugens spor-score er værd i kroner PR. PORTION. En ret med score 1,0
+  // må koste SCORE_KR mere pr. portion end en med score 0,0, før den taber.
+  // Det er det eneste sted, "god mad" og "billig mad" gøres sammenlignelige,
+  // og derfor skal tallet måles og ikke gættes.
+  //
+  // Målt over de 112 kandidater, der er tilbage efter hovedråvare-kravet
+  // (REMA 1000, hyldepriser, ingen aktive tilbud i ugen):
+  //
+  //   marginal pr. portion   p10 14,42   median 35,88   p90 94,53   spænd 80,12 kr
+  //   score_classic          p10  0,52   median  0,87   p90  1,00   spænd  0,48
+  //
+  // 80,12 / 0,48 = 166,9. Ved SCORE_KR = 167 spænder kvalitetsleddet lige så
+  // meget som prisleddet over de midterste 80 % af kandidaterne, og så kan
+  // hverken pris eller score afgøre ugen alene.
+  //
+  // Prøvekørslerne bekræfter, at grænserne ligger, hvor målingen siger. Ved
+  // 40 vinder prisen: ugen fyldes med 10-portions-deller til 58-76 kr, fordi
+  // de er billigst pr. portion. Ved 250 vinder scoren: den samme uge stiger
+  // til 323 kr, fordi hver ret med score 1,00 kommer ind uanset hvad den
+  // koster. Ved 167 koster de to forslag 234 og 256 kr for fire retter à
+  // fire portioner — omkring 15 kr pr. portion — og delingen sparer stadig
+  // 74 og 113 kr.
+  //
+  // Det er ikke et resultat, kun et målt skøn: ÉN kæde, hyldepriser uden
+  // aktive tilbud, og score_classic er tæt pakket (mere end hver tiende ret
+  // har 1,00, så over ~120 holder scoren op med at skelne, og prisen afgør
+  // inden for topbåndet). Tallet skal ses efter igen, når rigtige madplaner
+  // har været i hænderne på nogen.
+  const SCORE_KR = 167;
 
   // Hvad det koster en ret at stå i det ANDET forslag allerede. Stor nok til
   // at slå enhver kurveforskel, så forslag B bygges af andre retter — men
@@ -1060,6 +1127,16 @@
   } = {}) {
     const picks = [];
     const basket = new Map();   // vare → samlet behov i varens base_unit
+
+    // En ret uden hovedråvare er ikke aftensmad. Filteret står FØR alt andet,
+    // fordi den grådige regel ellers griber det billigste i basen, og det
+    // billigste er sirup og roux — se hasMainCourse.
+    //
+    // Er der ingen tilbage, bruges de oprindelige: to tomme forslag er ikke
+    // et bedre svar end fire tvivlsomme, og kalderen kan ikke se forskel på
+    // "ingen retter" og "motoren sagde nej".
+    const withMain = (candidates || []).filter((c) => hasMainCourse(c, items));
+    const pool = withMain.length ? withMain : (candidates || []);
 
     // Den grådige løkke prissætter HELE kurven om for hver kandidat på hver
     // dag. Uden et memo slås den samme (vare, kæde) op titusindvis af gange
@@ -1142,7 +1219,7 @@
     while (picks.length < days) {
       let bestPick = null;
 
-      for (const cand of candidates) {
+      for (const cand of pool) {
         if (picks.some((p) => p.id === cand.id)) continue;
 
         const merged = new Map(basket);
@@ -1154,7 +1231,15 @@
         // ikke giver præcis samme uge hver gang.
         const marginal = (after.cost - current.cost)
                        + (after.wasteKr - current.wasteKr);
-        const score = (cand.score || 0) * SCORE_KR - marginal
+
+        // …og marginalen måles PR. PORTION. Portionsantallet går fra 1 til 12
+        // blandt de prissatte opskrifter (33 af dem siger 1, 19 siger intet),
+        // og uden normaliseringen sammenlignes en ret til én person med en
+        // ret til tolv. Retten til én vinder hver gang, fordi den køber
+        // mindst — ikke fordi den er billigere at spise.
+        const perServing = marginal / (cand.servings > 0 ? cand.servings : DEFAULT_SERVINGS);
+
+        const score = (cand.score || 0) * SCORE_KR - perServing
                     + seededNoise(seed, cand.id)
                     - (avoid && avoid.has(cand.id) ? AVOID_PENALTY : 0);
 
@@ -1271,8 +1356,8 @@
   return {
     assignRoles, scoreRecipe, buildPlan, shoppingList, qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
-    choosePack, isBoughtLine, sharedWeek, twoProposals, explainWeek,
-    MAIN_PROTEIN, SCORE_KR,
+    choosePack, isBoughtLine, hasMainCourse, sharedWeek, twoProposals, explainWeek,
+    MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
     WASTE_WEIGHT, WASTE_AVERSION,
