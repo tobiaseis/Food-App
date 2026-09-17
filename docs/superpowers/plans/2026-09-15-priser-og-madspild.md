@@ -1962,6 +1962,21 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
     const picks = [];
     const basket = new Map();   // item_key -> samlet behov
 
+    // En kandidat, vi ikke kan prissætte, ser gratis ud.
+    //
+    // `basketCost` springer en vare uden pris over — den koster nul og spilder
+    // nul — så den grådige regel griber efter de opskrifter, basen ved MINDST
+    // om. Målt: får `twoProposals` alle 2.208 opskrifter, har alle otte valgte
+    // retter `priceable = 0`, og en havbars-middag står til 6 kr, fordi tre
+    // fjerdedele af dens ingredienser er usynlige.
+    //
+    // Det er samme fejl som sirup-ugen, et lag længere nede: dengang var det
+    // KVALITETEN, der manglede modvægt, her er det selve prisen, der er
+    // fiktion. Og her står det forkerte tal på skærmen.
+    //
+    // Filtrene er bløde med samme begrundelse som `hasMainCourse`: kan intet
+    // opfylde kravet, er en dårlig uge bedre end ingen uge.
+
     const needsOf = (recipe) => {
       const out = new Map();
       for (const it of recipe.items || []) {
@@ -1980,16 +1995,34 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
     //
     // `choosePack` giver ikke sin interne score fra sig — med vilje — så
     // sammenligningen mellem kæder regnes her, af de felter den DA giver.
-    // Den billigste kæde for varen, målt på enhedspris. Bruges både af
-    // kurveregningen og af delings-forklaringen, så de to ikke kan komme til
-    // at tale om hver sin butik.
-    const bestPriceFor = (key, meta) => {
-      let best = null;
+    // Den billigste kæde for varen — målt PÅ SAMME MÅDE som kurven gør det.
+    //
+    // Her stod først en version, der minimerede enhedsprisen, med en
+    // kommentar om at kurven og forklaringen delte regnestykke. Det var
+    // forkert: kurven minimerer pris plus værdien af spildet, og de to er
+    // uenige for 49 af de 76 varer, der har priser i mere end én kæde —
+    // typisk kød, hvor den laveste kilopris kommer i en større pakke.
+    //
+    // Følgen var ikke kosmetisk: forklaringen regnede besparelsen i én butik,
+    // mens kurven købte i en anden. Målt på en uge til 149 kr påstod
+    // payloaden 119,56 kr sparet, hvor det rigtige tal var 76,95 — og da
+    // den også vælger pakkestørrelsen, løj den om ANTALLET af poser, ikke
+    // bare om kronerne. Det er den værste fejl, denne opgave kan have: det
+    // er sætningen, brugeren læser.
+    const bestPriceFor = (key, meta, need) => {
+      let best = null, bestScore = null;
       for (const chainId of chainIds) {
         const price = effectivePrice(key, chainId,
           { offers, normals, baseUnit: meta.base_unit });
         if (!price) continue;
-        if (!best || price.unit_price < best.unit_price) best = price;
+        const pack = choosePack(need, [price], { keeps: meta.keeps });
+        if (!pack) continue;
+        const unit = price.unit_price > 0
+          ? price.unit_price
+          : price.pack_price / price.pack_qty;
+        const score = pack.cost + pack.waste * unit * WASTE_AVERSION;
+        if (best && score >= bestScore) continue;
+        bestScore = score; best = price;
       }
       return best;
     };
@@ -2059,7 +2092,7 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
       if (users.length < 2) continue;
 
       const meta = items.get(key);
-      const price = bestPriceFor(key, meta);
+      const price = bestPriceFor(key, meta, need);
       if (!price) continue;
 
       const together = choosePack(need, [price], { keeps: meta.keeps });
