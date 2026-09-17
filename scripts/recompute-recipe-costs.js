@@ -20,26 +20,30 @@ const path = require('node:path');
 const { getDb } = require('../src/db');
 const plans = require('../src/mealplan/generate');
 const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
+const { isBoughtLine } = engine;
 
-// Kategorier, hvor et 'optional'-flag ikke skal tros. En ret med valgfri
-// kylling er ikke en ret.
+// Hvilke linjer der overhovedet købes — basisvarer og "evt. et skvæt fløde"
+// gør ikke, men en valgfri hovedprotein gør — bor i engine.js som
+// `isBoughtLine`. Reglen stod her alene indtil opgave 7, hvor ugens kurv
+// skulle bruge den samme: købte madplanen den valgfri persille, mens
+// recipe_costs lod være, ville de to tal, brugeren ser side om side, være
+// regnet på hver sin ret.
 //
-// OPTIONAL_RE i src/recipes/extract.js matcher `optional` og `if you like`
-// HVOR SOM HELST i linjen, mens de danske mønstre er forankret til linjestart.
-// "4 chicken breasts (skinless, if you like)" og "2 whole tilapia … (optional
-// to keep head on)" blev derfor flaget, og flaget fjerner linjen fra BÅDE
-// prisen og nævneren: et fejlflag bliver til "fuldt prissat og næsten gratis"
-// og lander øverst i budget-sporet. Den første af de to var indtil nu basens
-// billigste prissatte ret til 0,08 kr med coverage 1.
+// Baggrunden for undtagelsen: OPTIONAL_RE i src/recipes/extract.js matcher
+// `optional` og `if you like` HVOR SOM HELST i linjen, mens de danske mønstre
+// er forankret til linjestart. "4 chicken breasts (skinless, if you like)" og
+// "2 whole tilapia … (optional to keep head on)" blev derfor flaget, og flaget
+// fjerner linjen fra BÅDE prisen og nævneren: et fejlflag bliver til "fuldt
+// prissat og næsten gratis" og lander øverst i budget-sporet. Den første af de
+// to var indtil nu basens billigste prissatte ret til 0,08 kr med coverage 1.
 //
 // At forankre de engelske mønstre er målt til netto negativt — 17 ægte flag
 // ("few sprigs thyme optional") tabt for at rette 5, og forskellen på
 // "(optional; se tip)" og "(se tip, optional)" er ordstilling. Så grænsen
-// trækkes her, hvor den kan siges enkelt: en hovedprotein er aldrig valgfri.
+// trækkes, hvor den kan siges enkelt: en hovedprotein er aldrig valgfri.
 // Prisen for reglen er de 5 linjer, hvor kødet ER en garniture (ansjoser i en
 // braiseret oksebryst, pancetta på fritter) — de bliver nu købt. Færre og
 // rigtige retter slår flere og forkerte, samme regel som resten af planen.
-const MAIN_PROTEIN = new Set(['meat', 'poultry', 'fish']);
 
 /**
  * Prisen på ÉN opskrift i ÉN kæde. Ren funktion, så reglerne kan efterprøves
@@ -69,11 +73,10 @@ function costRecipe(recipe, chainId, { offers, normals, items, unknown = 0 }) {
 
   for (const it of recipe.items) {
     const item = items.get(it.key);
-    if (!item || item.class === 'essential') continue;   // essentials købes ikke
-    // "evt. et skvæt fløde" købes ikke, og skal derfor hverken koste noget
-    // eller kunne gøre en ret uprissætbar. Samme regel som indkøbslisten.
-    // Undtagen hovedproteinen: se MAIN_PROTEIN ovenfor.
-    if (it.optional && !MAIN_PROTEIN.has(item.category)) continue;
+    // Basisvarer købes ikke, og "evt. et skvæt fløde" skal hverken koste noget
+    // eller kunne gøre en ret uprissætbar. Samme regel som indkøbslisten og som
+    // ugens kurv i engine.sharedWeek — se kommentaren ovenfor.
+    if (!isBoughtLine(it, item)) continue;
     total++;
 
     // `amount`, ikke `weight`. De to er kun det samme for kg/l-varer.

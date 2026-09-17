@@ -1885,7 +1885,7 @@ ganger dette job `behov × enhedspris` på tværs af to forskellige enheder.
 **Interfaces:**
 - Produces: `sharedWeek(candidates, { days, servings, items, offers, normals, chainIds })` → `{ picks, cost, waste, shared }`; `twoProposals(...)` → `[A, B]`
 
-- [ ] **Step 1: Skriv de fejlende tests**
+- [x] **Step 1: Skriv de fejlende tests**
 
 ```js
 test('delt indkøb foretrækker retter, der bruger samme pose op', () => {
@@ -1946,7 +1946,7 @@ const CTX = { items: ITEMS, offers: new Map(), normals: NORMALS, chainIds: ['c1'
 const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
 ```
 
-- [ ] **Step 2: Kør, se dem fejle, og skriv algoritmen**
+- [x] **Step 2: Kør, se dem fejle, og skriv algoritmen**
 
 ```js
   /**
@@ -2114,6 +2114,27 @@ const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
 ```
 
 Tilføj `sharedWeek`, `twoProposals` og `explainWeek` til returobjektet.
+
+> **Rettet under implementeringen, tre steder.**
+>
+> 1. **Fiksturen havde tre retter, og testen bad om tre dage.** Så indeholder
+>    begge forslag alle tre retter, og `overlap <= 1` kan ikke opfyldes af
+>    nogen algoritme. Fiksturen har nu seks retter i to familier (oksekød/
+>    kartofler og kylling/ris); familie B er dyrere med vilje, så de to
+>    oprindelige marginaler står uændret: ret 2 koster **−21,20 kr** oven i
+>    ret 1, ret 3 koster **+148,80 kr**.
+> 2. **Frøet alene kan ikke give to forskellige uger.** `seededNoise` er
+>    under én krone, mens to retter typisk er hundrede kroner fra hinanden i
+>    marginal pris — frøet kan kun vende et uafgjort. `sharedWeek` tager
+>    derfor et `avoid`-sæt, og `twoProposals` bygger B med A's retter
+>    fravalgt, når ingen af de elleve frø rakte. Den mindst ens beholdes
+>    stadig som sidste udvej.
+> 3. **Valgfri linjer blev købt.** `needsOf` så ikke `optional`, mens
+>    `recipe_costs` i opgave 6 gør — så ville ugens kurv og rettens pris,
+>    som brugeren ser side om side, være regnet på hver sin ret. Reglen er
+>    flyttet til `engine.isBoughtLine` (med `MAIN_PROTEIN`), og
+>    `scripts/recompute-recipe-costs.js` kalder nu den samme funktion i
+>    stedet for sin egen kopi. Målt: uændret, 159 fuldt prissatte hos REMA.
 
 - [ ] **Step 3: Kør suiten og commit**
 

@@ -991,10 +991,288 @@
     };
   }
 
+  // ── Ugen, sat sammen så pakkerne bliver brugt op ───────────────────────────
+
+  // Kategorier, hvor et 'optional'-flag ikke skal tros. En ret med valgfri
+  // kylling er ikke en ret.
+  //
+  // OPTIONAL_RE i src/recipes/extract.js matcher `optional` og `if you like`
+  // HVOR SOM HELST i linjen, mens de danske mønstre er forankret til
+  // linjestart. "4 chicken breasts (skinless, if you like)" blev derfor
+  // flaget, og flaget fjerner linjen fra både prisen og nævneren: et fejlflag
+  // bliver til "fuldt prissat og næsten gratis". Grænsen trækkes, hvor den
+  // kan siges enkelt: en hovedprotein er aldrig valgfri.
+  //
+  // Reglen stod først i scripts/recompute-recipe-costs.js alene. Den hører
+  // her, fordi ugens kurv og opskriftens pris SKAL svare til hinanden —
+  // købte ugen den valgfri persille, mens recipe_costs lod være, ville de to
+  // tal, brugeren ser side om side, være regnet på hver sin ret.
+  const MAIN_PROTEIN = new Set(['meat', 'poultry', 'fish']);
+
+  /**
+   * Skal denne ingredienslinje overhovedet købes?
+   *
+   *   line  `{ key, amount, optional }` fra loadRecipes
+   *   meta  varens række i `items` (class, category)
+   *
+   * Basisvarer står allerede i skabet, og "evt. et skvæt fløde" købes ikke.
+   * Begge dele skal være samme regel hos alle kaldere — se MAIN_PROTEIN.
+   */
+  function isBoughtLine(line, meta) {
+    if (!line || !meta || meta.class === 'essential') return false;
+    if (line.optional && !MAIN_PROTEIN.has(meta.category)) return false;
+    return true;
+  }
+
+  // Hvad ugens spor-score er værd i kroner. En ret med score 1,0 må koste
+  // 40 kr mere end en med score 0,0, før den taber. Tallet er et skøn og det
+  // eneste sted, "god mad" og "billig mad" gøres sammenlignelige.
+  const SCORE_KR = 40;
+
+  // Hvad det koster en ret at stå i det ANDET forslag allerede. Stor nok til
+  // at slå enhver kurveforskel, så forslag B bygges af andre retter — men
+  // endelig, så ugen stadig kan fyldes, når der ikke er andre tilbage: er
+  // kun fravalgte retter i spil, bærer de den alle sammen, og rækkefølgen
+  // mellem dem er uændret.
+  const AVOID_PENALTY = 1e4;
+
+  /**
+   * Byg en uge ved grådigt at tilføje den ret, der giver mest for pengene.
+   *
+   * Målet er ikke laveste pris alene: en uge, hvor hver ret trækker sin egen
+   * pose op af fryseren, er dyrere i spild end i kroner. Derfor scorer vi
+   * marginalt — hvad koster retten OVEN I det, vi allerede køber — så en ret,
+   * der bruger resten af noget, vi har, vinder over en lige så god ret, der
+   * kræver en ny vare. Det var præcis det, der blev bedt om: køber man 1 kg
+   * kartofler til én ret, skal en anden ret bruge resten.
+   *
+   *   candidates  opskrifter fra loadRecipes, med `score` (sporets score)
+   *   days        hvor mange retter ugen skal have
+   *   items       `items`-tabellen som Map: class, category, keeps, base_unit
+   *   offers      `vare|kæde` → aktivt tilbud   (som effectivePrice vil have dem)
+   *   normals     `vare|kæde` → normalpris-rækker
+   *   chainIds    de kæder, der må handles i
+   *   avoid       Set af opskrift-id'er, der skal vige (se twoProposals)
+   */
+  function sharedWeek(candidates, {
+    days = 5, seed = 0, items = new Map(), offers = new Map(), normals = new Map(),
+    chainIds = [], avoid = null, now = new Date(),
+  } = {}) {
+    const picks = [];
+    const basket = new Map();   // vare → samlet behov i varens base_unit
+
+    // Den grådige løkke prissætter HELE kurven om for hver kandidat på hver
+    // dag. Uden et memo slås den samme (vare, kæde) op titusindvis af gange
+    // for én uge, og svaret er det samme hver gang — priserne kan ikke ændre
+    // sig midt i en kørsel.
+    const priceMemo = new Map();
+    const priceIn = (key, chainId, meta) => {
+      const mk = `${key}|${chainId}`;
+      if (priceMemo.has(mk)) return priceMemo.get(mk);
+      const p = effectivePrice(key, chainId,
+        // `baseUnit` er ikke pynt: uden den kan effectivePrice returnere et
+        // tilbud i AVISENS enhed, når varen ingen normalpris har, og så
+        // regnes et behov i stk mod en kilopris (opgave 6).
+        { offers, normals, now, baseUnit: meta.base_unit });
+      priceMemo.set(mk, p);
+      return p;
+    };
+
+    /** Rettens behov pr. VARE — ikke pr. linje: samme vare står ofte flere gange. */
+    const needsOf = (rec) => {
+      const out = new Map();
+      for (const it of (rec && rec.items) || []) {
+        const meta = items.get(it.key);
+        if (!isBoughtLine(it, meta)) continue;
+        // `amount`, ikke `weight`. `weight` er en ROLLEVÆGT — stykantal
+        // omregnet til kilo, så assignRoles kan sammenligne 6 æg med 0,4 kg
+        // kylling — mens `amount` er mængden i varens EGEN enhed, og det er
+        // den, prisen er målt i.
+        const need = it.amount;
+        if (need > 0) out.set(it.key, (out.get(it.key) || 0) + need);
+      }
+      return out;
+    };
+
+    // Den billigste kæde for varen, målt på enhedspris. Bruges både af
+    // kurveregningen og af delings-forklaringen, så de to ikke kan komme til
+    // at tale om hver sin butik.
+    const bestPriceFor = (key, meta) => {
+      let best = null;
+      for (const chainId of chainIds) {
+        const price = priceIn(key, chainId, meta);
+        if (!price) continue;
+        if (!best || price.unit_price < best.unit_price) best = price;
+      }
+      return best;
+    };
+
+    // Spildet akkumuleres i KRONER, ikke i enheder. En kurv indeholder både
+    // kilo kartofler og stykker æg, og lægger man dem sammen først og ganger
+    // bagefter, adderer man to ting, der ikke har samme enhed. Det var samme
+    // fejl som det faste WASTE_PENALTY_PER_UNIT, bare et niveau højere oppe.
+    //
+    // `choosePack` giver ikke sin interne score fra sig — med vilje — så
+    // sammenligningen mellem kæder regnes her, af de felter, den DA giver.
+    const basketCost = (b) => {
+      let cost = 0; let wasteKr = 0;
+      for (const [key, need] of b) {
+        const meta = items.get(key);
+        if (!meta) continue;
+        let best = null;
+        for (const chainId of chainIds) {
+          const price = priceIn(key, chainId, meta);
+          if (!price) continue;
+          const pack = choosePack(need, [price], { keeps: meta.keeps });
+          if (!pack) continue;
+          const unit = price.unit_price > 0
+            ? price.unit_price
+            : price.pack_price / price.pack_qty;
+          const kr = pack.waste * unit * WASTE_AVERSION;
+          const score = pack.cost + kr;
+          if (!best || score < best.score) best = { cost: pack.cost, kr, score };
+        }
+        if (best) { cost += best.cost; wasteKr += best.kr; }
+      }
+      return { cost, wasteKr };
+    };
+
+    let current = basketCost(basket);
+
+    while (picks.length < days) {
+      let bestPick = null;
+
+      for (const cand of candidates) {
+        if (picks.some((p) => p.id === cand.id)) continue;
+
+        const merged = new Map(basket);
+        for (const [k, v] of needsOf(cand)) merged.set(k, (merged.get(k) || 0) + v);
+        const after = basketCost(merged);
+
+        // Marginal pris + marginalt spild, modregnet sporets score. Begge led
+        // er kroner, så der er intet at gange med. Støjen gør, at "Ny plan"
+        // ikke giver præcis samme uge hver gang.
+        const marginal = (after.cost - current.cost)
+                       + (after.wasteKr - current.wasteKr);
+        const score = (cand.score || 0) * SCORE_KR - marginal
+                    + seededNoise(seed, cand.id)
+                    - (avoid && avoid.has(cand.id) ? AVOID_PENALTY : 0);
+
+        if (!bestPick || score > bestPick.score) bestPick = { cand, merged, after, score };
+      }
+
+      if (!bestPick) break;
+      picks.push(bestPick.cand);
+      basket.clear();
+      for (const [k, v] of bestPick.merged) basket.set(k, v);
+      current = bestPick.after;
+    }
+
+    // Hvad deles der FAKTISK? Det er forklaringen, brugeren får at se, og
+    // den skal kunne holde.
+    //
+    // "Bruges af to retter" er ikke det samme som "deles". To retter, der
+    // hver bruger en hel 1 kg-pose, deler ingenting — der købes to poser.
+    // Deling er, at ugen slipper med FÆRRE PAKKER, end retterne ville koste
+    // hver for sig. Det er den forskel, brugeren bad om, og den kan måles:
+    // choosePack(hele behovet).packs mod summen af choosePack(hver rets
+    // behov).packs. Kun når forskellen er positiv, er der sparet noget.
+    const shared = [];
+    for (const [key, need] of basket) {
+      const users = picks.filter((p) => needsOf(p).has(key));
+      if (users.length < 2) continue;
+
+      const meta = items.get(key);
+      if (!meta) continue;
+      const price = bestPriceFor(key, meta);
+      if (!price) continue;
+
+      const together = choosePack(need, [price], { keeps: meta.keeps });
+      if (!together) continue;
+      let apart = 0;
+      for (const u of users) {
+        const pack = choosePack(needsOf(u).get(key) || 0, [price], { keeps: meta.keeps });
+        if (pack) apart += pack.packs;
+      }
+      const saved = apart - together.packs;
+      if (saved > 0) {
+        shared.push({
+          key,
+          name: meta.name || key,
+          unit: meta.base_unit,
+          used: users.length,
+          need: round2(need),
+          saved,
+          // Besparelsen i kroner, så opgave 8 kan vise den uden at regne
+          // pakkeprisen ud igen — og uden at kunne komme til at bruge en
+          // anden butiks pris end den, tallet blev målt i.
+          saved_kr: round2(saved * together.pack_price),
+        });
+      }
+    }
+    shared.sort((a, b) => b.saved_kr - a.saved_kr || b.saved - a.saved || b.used - a.used);
+
+    // `current.wasteKr`, ikke `current.waste`: kurven regner spild i kroner,
+    // og feltet hedder derfor det. Et opslag på det gamle navn giver
+    // undefined, og round2(undefined) er NaN — et tal, der ser ud som et tal.
+    return { picks, cost: round2(current.cost), waste: round2(current.wasteKr), shared };
+  }
+
+  /**
+   * To uger, der er tilstrækkeligt forskellige til at være et valg.
+   *
+   * Samme algoritme, forskelligt udgangspunkt. Vi prøver flere frø og tager
+   * det første par, der deler højst én ret — to forslag med fire fælles
+   * retter er ikke to forslag.
+   *
+   * Frøet alene rækker ikke. Støjen er under én krone, mens to retter typisk
+   * er hundrede kroner fra hinanden i marginal pris, så den grådige løkke
+   * vælger det samme hver gang; frøet kan kun vende et uafgjort. Derfor er
+   * sidste udvej at bygge B med A's retter FRAVALGT — det er stadig den
+   * samme algoritme, den må bare ikke gribe efter de samme retter først.
+   *
+   * Og er der færre kandidater end dage, er de to uger nødt til at ligne
+   * hinanden: så beholdes den MINDST ens, ikke bare den første, der blev
+   * prøvet. Brugeren skal i det mindste have den bedste af de dårlige valg.
+   */
+  function twoProposals(candidates, opts) {
+    const MAX_SHARED = 1;
+    const a = sharedWeek(candidates, { ...opts, seed: 1 });
+
+    let b = null;
+    const consider = (week) => {
+      week.overlap = week.picks.filter((p) => a.picks.some((q) => q.id === p.id)).length;
+      if (!b || week.overlap < b.overlap) b = week;
+      return b.overlap <= MAX_SHARED;
+    };
+
+    let ok = false;
+    for (let seed = 2; seed <= 12 && !ok; seed++) {
+      ok = consider(sharedWeek(candidates, { ...opts, seed }));
+    }
+    if (!ok) {
+      consider(sharedWeek(candidates,
+        { ...opts, seed: 2, avoid: new Set(a.picks.map((p) => p.id)) }));
+    }
+
+    return [a, b].map((w) => ({ ...w, explanation: explainWeek(w) }));
+  }
+
+  /** "deler 1 kg Hakket oksekød over 2 retter og 1.2 kg Kartofler over 2 retter" */
+  function explainWeek(week) {
+    if (!week || !week.shared || !week.shared.length) {
+      return 'ingen råvarer deles på tværs af retterne';
+    }
+    const parts = week.shared.slice(0, 2)
+      .map((s) => `${s.need} ${s.unit} ${s.name} over ${s.used} retter`);
+    return `deler ${parts.join(' og ')}`;
+  }
+
   return {
     assignRoles, scoreRecipe, buildPlan, shoppingList, qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
-    choosePack,
+    choosePack, isBoughtLine, sharedWeek, twoProposals, explainWeek,
+    MAIN_PROTEIN, SCORE_KR,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
     WASTE_WEIGHT, WASTE_AVERSION,

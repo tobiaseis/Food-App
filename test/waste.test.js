@@ -123,3 +123,130 @@ test('en ukendt holdbarhed vægtes som "keeps" og giver ikke NaN', () => {
     near(c.waste, 0.1);
   }
 });
+
+// ── Fikstur til ugen ─────────────────────────────────────────────────────────
+//
+// Seks retter i to familier, så svaret kan regnes i hovedet.
+//
+// Familie A: ret 1 og 2 deler hakket oksekød; ret 3 er lige så god, men
+// trækker en helt ny vare. Hakket oksekød sælges i 1 kg til 80 kr, og 1 og 2
+// bruger 0,5 kg hver — sammen bruger de posen op. Vælges 1 og 3, skal der
+// købes en pose oksekød (80 kr, halvdelen til overs) OG en pose laks (120 kr).
+//
+// Familie B (4, 5, 6) er den samme historie med kylling og ris, og den er
+// dyrere end A med vilje: så ved vi, at A vinder på pris og ikke på et
+// tilfælde, OG at der er retter tilbage at bygge et ANDET forslag af. Med
+// færre kandidater end dage kan to forslag pr. definition ikke være
+// forskellige — se kommentaren ved twoProposals.
+//
+// Regnet igennem, dag 2, med ret 1 i kurven (0,5 kg oksekød, 0,6 kg kartofler):
+//   ret 2 koster  −21,20 kr — posen bliver brugt op, og det sparede spild er
+//                             mere værd end retten koster at tilføje
+//   ret 3 koster  +148,80 kr — en ny pose laks, og halvdelen af oksekødet
+//                             stadig til overs
+// Hele mekanismen står i de to tal.
+
+const W_ITEMS = new Map([
+  ['hakket_oksekoed', { key: 'hakket_oksekoed', name: 'Hakket oksekød', category: 'meat', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
+  ['laks',            { key: 'laks',            name: 'Laks',            category: 'fish', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
+  ['kylling',         { key: 'kylling',         name: 'Kylling',         category: 'poultry', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
+  ['kartofler',       { key: 'kartofler',       name: 'Kartofler',       category: 'veg',  class: 'baseline', keeps: 'keeps',   base_unit: 'kg' }],
+  ['ris',             { key: 'ris',             name: 'Ris',             category: 'grain', class: 'baseline', keeps: 'keeps',  base_unit: 'kg' }],
+  ['persille',        { key: 'persille',        name: 'Persille',        category: 'veg',  class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
+  ['salt',            { key: 'salt',            name: 'Salt',            category: 'pantry', class: 'essential', keeps: 'pantry', base_unit: 'kg' }],
+]);
+
+const W_NORMALS = new Map([
+  ['hakket_oksekoed|c1', [{ pack_qty: 1, pack_unit: 'kg', pack_price: 80,  unit_price: 80,  source: 'manual' }]],
+  ['laks|c1',            [{ pack_qty: 1, pack_unit: 'kg', pack_price: 120, unit_price: 120, source: 'manual' }]],
+  ['kylling|c1',         [{ pack_qty: 1, pack_unit: 'kg', pack_price: 90,  unit_price: 90,  source: 'manual' }]],
+  ['kartofler|c1',       [{ pack_qty: 2, pack_unit: 'kg', pack_price: 16,  unit_price: 8,   source: 'manual' }]],
+  ['ris|c1',             [{ pack_qty: 1, pack_unit: 'kg', pack_price: 20,  unit_price: 20,  source: 'manual' }]],
+  ['persille|c1',        [{ pack_qty: 0.05, pack_unit: 'kg', pack_price: 10, unit_price: 200, source: 'manual' }]],
+]);
+
+const recipe = (id, score, items) => ({ id, title: `Ret ${id}`, score, items });
+const line = (key, amount, optional = false) => ({ key, amount, weight: amount, optional });
+
+const CANDIDATES = [
+  recipe(1, 0.8, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6), line('salt', 0.01)]),
+  recipe(2, 0.8, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6)]),
+  recipe(3, 0.8, [line('laks', 0.5),            line('kartofler', 0.6)]),
+  recipe(4, 0.8, [line('kylling', 0.5),         line('ris', 0.3)]),
+  recipe(5, 0.8, [line('kylling', 0.5),         line('ris', 0.3)]),
+  recipe(6, 0.8, [line('laks', 0.5),            line('ris', 0.3)]),
+];
+
+const CTX = { items: W_ITEMS, offers: new Map(), normals: W_NORMALS, chainIds: ['c1'] };
+const FIXTURE = { candidates: CANDIDATES, ctx: CTX };
+
+test('delt indkøb foretrækker retter, der bruger samme pose op', () => {
+  // To retter deles om 1 kg hakket oksekød; de øvrige trækker en helt ny vare
+  // til samme score. Ugen skal vælge de to, der deler.
+  const week = engine.sharedWeek(FIXTURE.candidates, { days: 2, ...FIXTURE.ctx });
+  assert.deepEqual(week.picks.map((p) => p.id).sort(), [1, 2]);
+  assert.ok(week.shared.length >= 1, 'skal kunne forklare hvad der deles');
+});
+
+test('ugens pris er hele pakker, og spildet er kroner — ikke NaN', () => {
+  // Tallene kan regnes i hånden: 1 kg oksekød (80) + én pose kartofler à 2 kg
+  // (16) = 96 kr. Oksekødet går præcist op; kartoflerne har 0,8 kg til overs,
+  // som for en 'keeps'-vare vægter halvt: 0,8 × 0,5 × 8 kr/kg × 0,5 = 1,60 kr.
+  //
+  // `waste` skal læse kurvens wasteKr. Feltet skiftede navn, da spildet gik
+  // fra enheder til kroner, og et opslag på det gamle navn giver NaN — et tal,
+  // ingen opdager, fordi det står, hvor et tal skal stå.
+  const week = engine.sharedWeek(FIXTURE.candidates, { days: 2, ...FIXTURE.ctx });
+  near(week.cost, 96);
+  near(week.waste, 1.6);
+});
+
+test('"deler" måles i sparede pakker, ikke i antal retter', () => {
+  // Kernen i rettelsen. To retter, der HVER bruger en hel 1 kg-pose, deler
+  // ingenting: der købes to poser. Meldes det alligevel som deling, lyver
+  // forklaringen om netop den besparelse, brugeren bad om.
+  const helePakker = [
+    recipe(7, 0.8, [line('hakket_oksekoed', 1), line('salt', 0.01)]),
+    recipe(8, 0.8, [line('hakket_oksekoed', 1), line('salt', 0.01)]),
+  ];
+  const week = engine.sharedWeek(helePakker, { days: 2, ...FIXTURE.ctx });
+  assert.equal(week.picks.length, 2);
+  near(week.cost, 160);                       // to poser, ikke én
+  assert.deepEqual(week.shared, [], 'to hele poser er ikke en deling');
+
+  // Og modstykket: kan behovet samles i én pose, er besparelsen ægte og står
+  // i nyttelasten, så opgave 8 kan vise den uden at regne den ud igen.
+  const delt = engine.sharedWeek(FIXTURE.candidates, { days: 2, ...FIXTURE.ctx });
+  const okse = delt.shared.find((s) => s.key === 'hakket_oksekoed');
+  assert.ok(okse, 'oksekødet deles og skal stå i forklaringen');
+  assert.equal(okse.used, 2);
+  assert.equal(okse.saved, 1);                // to poser hver for sig, én sammen
+  near(okse.saved_kr, 80);
+});
+
+test('valgfri ingredienser købes ikke — men en valgfri hovedprotein gør', () => {
+  // Samme regel som recipe_costs i opgave 6, og det skal være den SAMME regel:
+  // ellers koster ugen noget andet end de retter, den er bygget af.
+  const medPersille = [recipe(9, 0.8, [line('kartofler', 0.6), line('persille', 0.02, true)])];
+  near(engine.sharedWeek(medPersille, { days: 1, ...FIXTURE.ctx }).cost, 16);
+
+  const medKylling = [recipe(10, 0.8, [line('kartofler', 0.6), line('kylling', 0.5, true)])];
+  near(engine.sharedWeek(medKylling, { days: 1, ...FIXTURE.ctx }).cost, 106);
+});
+
+test('de to forslag deler højst én ret', () => {
+  const [a, b] = engine.twoProposals(FIXTURE.candidates, { days: 3, ...FIXTURE.ctx });
+  const overlap = a.picks.filter((p) => b.picks.some((q) => q.id === p.id));
+  assert.ok(overlap.length <= 1, `delte ${overlap.length} retter`);
+});
+
+test('et forslag kan forklare sig selv i én linje', () => {
+  const [a] = engine.twoProposals(FIXTURE.candidates, { days: 3, ...FIXTURE.ctx });
+  assert.match(a.explanation, /deler/);
+});
+
+test('en uge uden deling påstår ikke at dele', () => {
+  const week = engine.sharedWeek(
+    [recipe(11, 0.8, [line('hakket_oksekoed', 1)])], { days: 1, ...FIXTURE.ctx });
+  assert.equal(engine.explainWeek(week), 'ingen råvarer deles på tværs af retterne');
+});
