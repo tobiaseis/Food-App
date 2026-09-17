@@ -2361,7 +2361,7 @@ De tungeste udelukkede er Risengrød (1,23 kg/portion) og en grøn smoothie
 Ingen af de tre lukker leek & potato soup eller risengrød ind: de har hverken
 ost eller bælgfrugt. **Valget er ikke truffet her.**
 
-- [ ] **Step 8: Afgørelsen — to tages, én forkastes**
+- [x] **Step 8: Afgørelsen — to tages, én forkastes**
 
 **`aerter` skal være `legume`, ikke `veg`.** Ærter *er* bælgfrugter. Det er en rettelse af
 en forkert kategori, ikke en løsere tærskel, og den hører hjemme i taksonomien uanset denne
@@ -2380,6 +2380,43 @@ ikke, om noget er aftensmad.
 **Og det, der bliver tilbage, siges højt:** rene grøntsagsretter uden bælgfrugt eller ost er
 stadig ude. Reglen er "en middag har et protein eller en ost", og den grænse er **valgt,
 ikke fundet**.
+
+> **Gennemført, med tre ting målingen ikke havde forudset.**
+>
+> **Osten kunne ikke holdes ude af `MAIN_CATS`.** Det blev prøvet først — et separat
+> `DINNER_CATS` kun til optagelseskravet, så `assignRoles` og dermed buildPlan stod
+> urørt. Det virker ikke: reserve-reglen tager kun den TUNGESTE bærende råvare, og i
+> en ostepasta vejer pastaen mere end osten. Macaroni and Cheese blev planlagt op om
+> pastaen og faldt ud alligevel; det eneste, der kom ind, var Stracciatella ost
+> (113 mod de ventede 124). Skal osten tælle, skal den være en hovedkategori.
+>
+> **Og så koster den mere end optagelsen.** `MAIN_CATS` styrer også tilbudsmatch,
+> variationsspærren og vægtningen i `scoreRecipe`. **Målt: 344 af 2.208 opskrifter
+> (15,6 %) skifter hovedråvare.** En kartoffelgratin planlægges nu op om osten og
+> ikke om kartoflen. Kun optagelseskravet er målt; de tre andre virkninger er det
+> ikke. Det er regningen, og den står i koden.
+>
+> **Resultatet: 128 af 159 beholdt, 31 ude** (før: 112 og 47). Re-seed og
+> `costs:recompute` kørt; **prissætbare uændret 159 hos REMA, 382 i alt** — ærternes
+> kategori flytter roller, ikke priser.
+>
+> **SCORE_KR målt om: 83,5 → 80,3, sat til 80.** Spændet faldt fra 40,07 til 38,55 kr.
+> 80 og 84 giver PRÆCIS samme to uger, så valget er ufølsomt i det interval — men
+> tallet skal kunne spores til den måling, det hviler på, og puljen er en anden.
+>
+> **Dukker de to op?** Nej. På en liste over alle 128 kandidater ligger
+> Stracciatella ost nr. 19 og Rød pesto nr. 47, og der vises 12 for fire dage.
+> Handelen holder: de to er optaget, men de bliver ikke vist.
+>
+> **Men ærterne lukkede Pea purée ind, og den ligger nr. 4.** Den ER i forslag A.
+> Sammen med Spanish latte (nr. 3, espresso-koblingen) er to af forslag A's fire
+> retter ikke aftensmad. Forslag B er derimod rigtigt hele vejen. Det skal ses efter,
+> før det vises til nogen — og det er ikke `SCORE_KR`, der er problemet: begge retter
+> er billige pr. portion, fordi de i virkeligheden er tilbehør og en kop kaffe.
+>
+> **Og en advarsel til den næste:** Macaroni and Cheese ligger nr. 94 af 128. De tolv
+> middage er nu *optaget*, men de er dyre pr. portion og bliver sjældent *vist*.
+> Optagelse er ikke det samme som at komme på bordet.
 
 - [x] **Step 7: Kør suiten og commit**
 

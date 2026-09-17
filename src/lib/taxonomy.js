@@ -298,7 +298,12 @@ const SEED = [
   { key: 'majs', name: 'Majs', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 3.3, kcal: 86, c: 19,
     da: ['majskolbe', 'majs'], en: ['sweetcorn', 'corn'] },
-  { key: 'aerter', name: 'Ærter', cat: 'veg',
+  // 'legume', ikke 'veg': ærter ER bælgfrugter. Det stod som veg, fordi de
+  // ligger i grøntsagsafdelingen, og det kostede fem retter — ærtesuppe,
+  // pasta med ærter og citron, sommerpasta — som madplanen ikke ville vise,
+  // fordi de ikke havde nogen hovedråvare. Rettelsen hører i taksonomien
+  // uanset madplanen: kategorien var forkert.
+  { key: 'aerter', name: 'Ærter', cat: 'legume',
     class: 'fresh', keeps: 'perishable', p: 5, kcal: 81, c: 14, da: ['ærter'], en: ['peas'] },
   { key: 'bonner', name: 'Bønner', cat: 'legume',
     class: 'baseline', keeps: 'pantry', p: 8, kcal: 130, c: 20,
