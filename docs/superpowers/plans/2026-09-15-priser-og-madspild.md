@@ -2367,19 +2367,41 @@ ost eller bælgfrugt. **Valget er ikke truffet her.**
 en forkert kategori, ikke en løsere tærskel, og den hører hjemme i taksonomien uanset denne
 opgave. +5 retter, og én tilbehørsret lukkes ind.
 
-**`cheese` skal være en hovedkategori.** +12 ægte middage mod to, der ikke er det. Handelen
-er klart positiv, og den er mildere end den ser ud: brugeren får **tre gange så mange retter,
-som der er dage**, og vælger selv. En mærkelig post i en liste på tolv koster et øjekast.
-En tredjedel af hverdagsretterne, der aldrig vises, koster hele sporet.
+**`cheese` som hovedkategori blev taget — og rullet tilbage igen.** Begrundelsen holdt ikke,
+og de to tal, der væltede den, kom først frem, da ændringen var lavet:
+
+- **Macaroni and Cheese rangerer nr. 94 af 128.** Hele formålet var at få ostepastaretterne
+  på hverdagslisten. De blev *mulige*, ikke sandsynlige — de er dyre pr. portion og vises
+  reelt aldrig. Gevinsten materialiserede sig ikke.
+- **344 af 2.208 opskrifter (15,6 %) skifter hovedingrediens.** `MAIN_CATS` styrer også
+  tilbudsmatchning, stivelsesvariation og main/support-vægtningen i `scoreRecipe`. En
+  kartoffelgratin planlægges nu omkring osten i stedet for kartoflen. Kun optagelses-
+  kriteriet var målt; de tre andre virkninger var ikke.
+
+Høj og ukendt pris, ingen realiseret gevinst. Et smallere forsøg — en `DINNER_CATS`, der
+kun bruges af `hasMainCourse` — virker heller ikke: den vegetariske fallback i `assignRoles`
+tager kun den TUNGESTE bærer, og i en ostepasta vejer pastaen mere end osten, så retten
+falder ud alligevel. Skal ost tælle, skal den være en hovedkategori, og så følger de 344 med.
+
+Ostepastaretterne bliver altså ude. Det er en ægte mangel, og den står her frem for i en
+kommentar, ingen finder.
 
 **Vægtgulvet forkastes**, og målingen er grunden: `>= 0,10` lukker **Mørdej** ind — den ret,
 filteret findes for — og ingen værdi henter Macaroni and Cheese uden også at hente smoothies
 og pærecrumble. De to tungeste ekskluderede er risengrød og en grøn smoothie. Vægt måler
 ikke, om noget er aftensmad.
 
-**Og det, der bliver tilbage, siges højt:** rene grøntsagsretter uden bælgfrugt eller ost er
-stadig ude. Reglen er "en middag har et protein eller en ost", og den grænse er **valgt,
-ikke fundet**.
+**Og det, der bliver tilbage, siges højt.** Reglen er "en middag har et protein eller en
+bælgfrugt", og den grænse er **valgt, ikke fundet**. Ude er: rene grøntsagsretter
+(porre-kartoffelsuppe), mælkeretter (risengrød) og ostepasta.
+
+Og én ting til, som ingen af de tre kandidater rørte: **optagelse skiller ikke en middag
+fra et tilbehør.** Ærtekorrektionen lukkede `Pea purée` ind, og den rangerer **nr. 4 af 128**
+— ikke i udkanten, men nær toppen. Sammen med `Spanish latte` (nr. 3, på den kendte
+espresso-fejl) fylder de to pladser i forslag A. De rangerer højt af præcis den grund, de
+ikke burde være der: de er billige pr. portion, **fordi** de er et tilbehør og en kop kaffe.
+Ingen vægtning retter det. Den viden hører hjemme i `score_classic`, altså i plan 1's
+klassificering, og ikke i denne opgave.
 
 > **Gennemført, med tre ting målingen ikke havde forudset.**
 >
