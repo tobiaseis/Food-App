@@ -459,7 +459,7 @@ REMA's hakkede oksekød til 62,50 kr/kg mod Brugsens 122,50, og forskellen er st
 virkelige. Det kan ikke rettes med tilbudsdata alene, og det er derfor opgave 8 ikke må vælge
 kæde på 'derived'-priser uden at sige det højt.
 
-- [ ] **Step 9: Lad være med at omregne stk-tilbud — og skriv hvorfor**
+- [x] **Step 9: Lad være med at omregne stk-tilbud — og skriv hvorfor**
 
 > **Dette trin bad oprindeligt om det modsatte.** Det blev skrevet, rullet ud og rullet
 > tilbage igen, fordi implementeringen afdækkede noget, planen ikke vidste. Historikken
@@ -537,7 +537,7 @@ Den manuelle priskilde. Efter API-undersøgelsen er det hovedvejen, ikke reserve
 - Consumes: `items`, `chains`, `engine.validUntilFor`
 - Produces: `npm run prices:import` og `npm run prices:worklist`
 
-- [ ] **Step 1: Formatet**
+- [x] **Step 1: Formatet**
 
 Opret `data/item_prices.csv` med en håndfuld ægte rækker som skabelon:
 
@@ -552,7 +552,7 @@ Kolonnen er `chain_slug`, ikke `chain_id`: kædernes id'er er uigennemsigtige Tj
 
 Filen er git-versioneret med vilje. Ændrer en pris sig fra 15,95 til 18,50, kan man se hvornår og hvorfor — det kan en admin-side i appen ikke.
 
-- [ ] **Step 2: Skriv de fejlende tests**
+- [x] **Step 2: Skriv de fejlende tests**
 
 Tilføj til `test/prices.test.js`:
 
@@ -596,12 +596,12 @@ test('importøren regner unit_price og valid_until selv', () => {
 });
 ```
 
-- [ ] **Step 3: Kør testene og se dem fejle**
+- [x] **Step 3: Kør testene og se dem fejle**
 
 Kør: `node --test test/prices.test.js`
 Forventet: FAIL — `Cannot find module '../scripts/import-prices'`.
 
-- [ ] **Step 4: Skriv importøren**
+- [x] **Step 4: Skriv importøren**
 
 ```js
 'use strict';
@@ -715,7 +715,7 @@ module.exports = { parsePriceRow, parseCsv };
 
 Bemærk `if (require.main === module)`: testen indlæser filen for at få fat i `parsePriceRow`, og må ikke komme til at køre importen som bivirkning.
 
-- [ ] **Step 4b: `isPlausiblePrice` i `engine.js` — og afskaf blokeringslisten**
+- [x] **Step 4b: `isPlausiblePrice` i `engine.js` — og afskaf blokeringslisten**
 
 Opgave 1 efterlod et hul, den ikke selv kunne lukke. Outlier-filtret måler en vare mod
 dens EGEN median på tværs af kæder, og det er blindt over for en vare, hvis observationer
@@ -797,7 +797,7 @@ næste vare, der går galt, står der ikke.
 Test at `appelsin` (fruit) afvises ved 14.280 kr/kg, at `selleri` (veg) afvises ved
 250 kr/kg, og at en dyr, men ægte vare — oksemørbrad omkring 400 kr/kg — stadig går igennem.
 
-- [ ] **Step 5: Skriv arbejdslisten**
+- [x] **Step 5: Skriv arbejdslisten**
 
 ```js
 'use strict';
@@ -861,7 +861,7 @@ Rækkefølgen er: helt manglende pris først, så `derived` med `n_obs = 1`, så
 `class <> 'essential' AND category <> 'nonfood'` — ellers beder listen om priser på
 toiletpapir og elektronik.
 
-- [ ] **Step 6: Tilføj scripts, kør, commit**
+- [x] **Step 6: Tilføj scripts, kør, commit**
 
 ```json
 "prices:import": "node scripts/import-prices.js",
@@ -895,7 +895,7 @@ Den eneste kæde, der kan hentes automatisk. Undersøgelsen bekræftede endpoint
 **Interfaces:**
 - Produces: `parseRemaProduct(raw)` → `{ name, pack_qty, pack_unit, pack_price, unit_price }` eller `null`; `npm run prices:rema`
 
-- [ ] **Step 1: Skriv den fejlende test**
+- [x] **Step 1: Skriv den fejlende test**
 
 Feltnavnene er dem, undersøgelsen dokumenterede. Testen bruger et ægte svar, ikke et opdigtet:
 
@@ -940,12 +940,12 @@ test('REMA: et svar uden sammenligningspris kan ikke bruges', () => {
 });
 ```
 
-- [ ] **Step 2: Kør testene og se dem fejle**
+- [x] **Step 2: Kør testene og se dem fejle**
 
 Kør: `node --test test/prices.test.js`
 Forventet: FAIL — modulet findes ikke.
 
-- [ ] **Step 3: Skriv klienten**
+- [x] **Step 3: Skriv klienten**
 
 ```js
 'use strict';
@@ -1052,12 +1052,12 @@ module.exports = {
 `searchRema` tager et `fetchImpl` med `fetch` som standard, så en test kan give
 den et svar uden at røre nettet.
 
-- [ ] **Step 4: Kør testene og se dem passere**
+- [x] **Step 4: Kør testene og se dem passere**
 
 Kør: `node --test test/prices.test.js`
 Forventet: PASS.
 
-- [ ] **Step 5: Skriv hente-scriptet**
+- [x] **Step 5: Skriv hente-scriptet**
 
 Det søger på varens navn, vælger det billigste troværdige match pr. vare, og
 skriver med `source='api:rema'`. Én søgning pr. vare — ikke synonymerne også,
@@ -1107,7 +1107,7 @@ tælling, udskrift — kører ens, så en tørkørsel viser præcis det, en rigt
 kørsel ville skrive.
 
 
-- [ ] **Step 6: Gem de rå svar, så matchningen kan rettes gratis**
+- [x] **Step 6: Gem de rå svar, så matchningen kan rettes gratis**
 
 En tørkørsel koster 184 forespørgsler — én pr. vare, der skal prissættes — mod
 et API, vi ikke er inviteret til, og
@@ -1120,7 +1120,7 @@ om uden netværk:
 Med de to kan matchningen strammes og båndene efterregnes, uden at REMA hører
 fra os igen. Filen hører ikke i git — den er et øjebliksbillede, ikke en kilde.
 
-- [ ] **Step 7: Stram matchningen — taksonomien alene er ikke nok**
+- [x] **Step 7: Stram matchningen — taksonomien alene er ikke nok**
 
 Målt på en rigtig tørkørsel: 109 fundet, 75 uden match, 715 forkastet på
 taksonomi, 29 på prisbånd. Men blandt de 109 accepterede stod disse:
@@ -1178,7 +1178,7 @@ næste kæde ikke skal opdage det forfra):
   `horn` HORNFISK og `dej` "dejlig". Og `lasagne` skal undtage LASAGNEPLADER,
   som ER pasta — samme undtagelse, som allerede står i `taxonomy.js`.
 
-- [ ] **Step 7b: Den anden liste — prisen er ikke pr. kilo af varen**
+- [x] **Step 7b: Den anden liste — prisen er ikke pr. kilo af varen**
 
 Da den første liste var på plads, stod der stadig seks match tilbage, hvor
 varen var rigtig, men tallet ikke var varens kilopris:
@@ -1216,7 +1216,7 @@ BILLIGSTE match på deres vare. Det er spejlbilledet af den skævhed, opgave 1
 fjernede, og så længe den billigste overlevende vinder, er det kun de fejl,
 nogen har sat ord på, der ikke slipper igennem.
 
-- [ ] **Step 8: Kør tørt og læs resultatet**
+- [x] **Step 8: Kør tørt og læs resultatet**
 
 ```json
 "prices:rema": "node scripts/fetch-rema-prices.js",
