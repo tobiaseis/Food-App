@@ -411,6 +411,37 @@ test('begge forslag bærer overlappet', () => {
   assert.equal(a.overlap, b.overlap);
 });
 
+test('ugen bliver ikke tre retter om samme hovedråvare', () => {
+  // Den sidste fælde, og den er indbygget i mekanismen: delingen BELØNNER
+  // ensformighed. Tre ærteretter deles om én pose ærter, og det er den
+  // billigste uge, der findes. Målt på rigtige data gav det Ærtesuppe,
+  // Pea purée og Pasta med ærter og citron i samme forslag — og før det fire
+  // kyllingeretter i træk.
+  //
+  // Fire retter med hakket oksekød som hovedråvare; kun to må komme med, og
+  // den femte ret med en anden hovedråvare skal ind i stedet, selv om den er
+  // dyrere.
+  const okse = (id) => recipe(id, 1.0, [line('hakket_oksekoed', 0.5), line('kartofler', 0.3)]);
+  const laksRet = recipe(33, 1.0, [line('laks', 0.5), line('ris', 0.3)]);
+  const week = engine.sharedWeek([okse(29), okse(30), okse(31), okse(32), laksRet],
+    { days: 3, ...FIXTURE.ctx });
+
+  assert.equal(week.picks.length, 3);
+  const okseRetter = week.picks.filter((p) => p.items.some((i) => i.key === 'hakket_oksekoed'));
+  assert.equal(okseRetter.length, 2, `${okseRetter.length} retter om samme oksekød`);
+  assert.ok(week.picks.some((p) => p.id === 33), 'laksen skal ind i stedet');
+});
+
+test('spærren giver efter, når der ikke er andet', () => {
+  // Anden runde er [99, 99]: en uge med for få retter er ikke et bedre svar
+  // end en ensformig uge. Fire oksekødsretter og tre dage — så bliver det tre
+  // oksekødsretter.
+  const okse = (id) => recipe(id, 1.0, [line('hakket_oksekoed', 0.5), line('kartofler', 0.3)]);
+  const week = engine.sharedWeek([okse(34), okse(35), okse(36), okse(37)],
+    { days: 3, ...FIXTURE.ctx });
+  assert.equal(week.picks.length, 3);
+});
+
 test('de to forslag deler højst én ret', () => {
   const [a, b] = engine.twoProposals(FIXTURE.candidates, { days: 3, ...FIXTURE.ctx });
   const overlap = a.picks.filter((p) => b.picks.some((q) => q.id === p.id));

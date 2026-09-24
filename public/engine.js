@@ -83,6 +83,49 @@
   const STARCH_KEYS = new Set(['pasta', 'ris', 'kartofler', 'brod', 'tortilla',
                                'bulgur', 'pizza', 'sodkartoffel', 'havregryn']);
 
+  // ── Variationsspærren ──────────────────────────────────────────────────────
+  //
+  // To spærrer, ikke én. Hovedråvaren alene rækker ikke: syv retter med hver
+  // sin protein kan sagtens ende som syv gange pasta, fordi det er pastaen,
+  // der er på tilbud. Tilbehøret skal derfor også variere.
+  //
+  // Anden runde er [99, 99] og slipper alt igennem: en uge skal kunne fyldes,
+  // også når feltet er så smalt, at spærren ikke kan holdes. Færre retter end
+  // dage er ikke et bedre svar end en ensformig uge.
+  //
+  // Reglen bor HER, fordi to steder skal bruge den — buildPlan og sharedWeek —
+  // og fordi den slags lige blev en critical: `bestPriceFor` og `basketCost`
+  // var to funktioner, der skulle være enige, og de holdt op med at være det.
+  // Iterationen er forskellig (buildPlan går én sorteret liste igennem,
+  // sharedWeek vælger om for hver dag), men tællingen og grænserne er de samme.
+  const VARIETY_PASSES = [[2, 3], [99, 99]];
+
+  /** Hvad spærren tæller på: rettens hovedråvare og dens tilbehør. */
+  function varietyKeys(roles) {
+    const starch = [...roles.mains, ...roles.support].find((i) => STARCH_KEYS.has(i.key));
+    return {
+      main: roles.mains.length ? roles.mains[0].key : null,
+      starch: starch ? starch.key : null,
+    };
+  }
+
+  /** Tællerne plus reglen om, hvad der må komme ind. Én pr. uge. */
+  function varietyTally() {
+    const mains = new Map();
+    const starches = new Map();
+    return {
+      allows(keys, [maxMain, maxStarch]) {
+        if (keys.main && (mains.get(keys.main) || 0) >= maxMain) return false;
+        if (keys.starch && (starches.get(keys.starch) || 0) >= maxStarch) return false;
+        return true;
+      },
+      add(keys) {
+        if (keys.main) mains.set(keys.main, (mains.get(keys.main) || 0) + 1);
+        if (keys.starch) starches.set(keys.starch, (starches.get(keys.starch) || 0) + 1);
+      },
+    };
+  }
+
   // Ingredienser uden oplyst mængde vægtes som en middelstor portion, så et
   // "bacon til pynt" ikke pludselig bliver rettens hovedråvare.
   //
@@ -846,12 +889,9 @@
       if (!roles.mains.length) continue;                  // ingen bærende råvare
       if (roles.mains.length + roles.support.length < 2) continue;
       const s = scoreRecipe(r, roles, offerByItem, normalPrices);
-      const starch = [...roles.mains, ...roles.support].find((i) => STARCH_KEYS.has(i.key));
-      scored.push({
-        recipe: r, roles, score: s,
-        main: roles.mains[0].key,
-        starch: starch ? starch.key : null,
-      });
+      // main/starch kommer fra den fælles varietyKeys, så spærren tæller på
+      // det samme i buildPlan og i sharedWeek.
+      scored.push({ recipe: r, roles, score: s, ...varietyKeys(roles) });
     }
 
     // 2) Vælg det strengeste krav, der stadig giver nok at vælge imellem.
@@ -888,24 +928,16 @@
     }
     pool.sort((a, b) => b.total - a.total);
 
-    // 4) Grådigt valg med variation.
-    //
-    // To spærrer, ikke én. Hovedråvaren alene rækker ikke: syv retter med hver
-    // sin protein kan sagtens ende som syv gange pasta, fordi det er pastaen,
-    // der er på tilbud. Tilbehøret skal derfor også variere.
+    // 4) Grådigt valg med variation. Spærren er den fælles — se VARIETY_PASSES.
     const chosen = [];
-    const mainCount = new Map();
-    const starchCount = new Map();
-    for (const pass of [[2, 3], [99, 99]]) {
-      const [maxMain, maxStarch] = pass;
+    const tally = varietyTally();
+    for (const pass of VARIETY_PASSES) {
       for (const cand of pool) {
         if (chosen.length >= days) break;
         if (chosen.some((c) => c.recipe.id === cand.recipe.id)) continue;
-        if (cand.main && (mainCount.get(cand.main) || 0) >= maxMain) continue;
-        if (cand.starch && (starchCount.get(cand.starch) || 0) >= maxStarch) continue;
+        if (!tally.allows(cand, pass)) continue;
         chosen.push(cand);
-        mainCount.set(cand.main, (mainCount.get(cand.main) || 0) + 1);
-        if (cand.starch) starchCount.set(cand.starch, (starchCount.get(cand.starch) || 0) + 1);
+        tally.add(cand);
       }
       if (chosen.length >= days) break;
     }
@@ -1103,22 +1135,30 @@
    * De to står sammen, fordi de ser ens ud udefra — en billig ret, der ikke
    * er aftensmad, øverst på listen — men kun den ene er en fejl i data.
    */
-  function hasMainCourse(recipe, items) {
-    const lines = ((recipe && recipe.items) || []).map((it) => {
+  /**
+   * Opskriftens linjer i den form, assignRoles vil have dem.
+   *
+   * Rollerne læses af VARETABELLEN og ikke af linjens eget `cat`-felt: den,
+   * der har `items` ved hånden, skal have kategorien ét sted fra. buildPlan
+   * bruger linjens felt, fordi den ikke har tabellen — ikke fordi de to må nå
+   * frem til hver sit svar.
+   */
+  function roleLines(recipe, items) {
+    return ((recipe && recipe.items) || []).map((it) => {
       const meta = items.get(it.key);
       return {
         key: it.key,
-        // Rollerne læses af VARETABELLEN, ikke af linjens eget `cat`-felt.
-        // Kalderen her har `items` ved hånden, og så skal kategorien komme
-        // ét sted fra — buildPlan bruger linjens felt, fordi den ikke har
-        // tabellen, ikke fordi de to må nå frem til hver sit svar.
         cat: meta ? meta.category : it.cat || null,
         essential: meta ? meta.class === 'essential' : Boolean(it.essential),
         amount: it.amount,
         weight: it.weight,
       };
     });
-    const { mains } = assignRoles(lines, { unknownMain: Boolean(recipe.unknown_main) });
+  }
+
+  function hasMainCourse(recipe, items) {
+    const { mains } = assignRoles(roleLines(recipe, items),
+      { unknownMain: Boolean(recipe.unknown_main) });
     return mains.some((m) => MAIN_CATS.has(m.cat));
   }
 
@@ -1375,45 +1415,72 @@
 
     let current = basketCost(basket);
 
+    // Variationsspærren, den samme som buildPlan bruger. Den står INDE i den
+    // grådige løkke og ikke som et forfilter, fordi hvilken ret der må være
+    // den tredje afhænger af, hvad de to første blev.
+    //
+    // Uden den bliver ugen ensformig, netop FORDI delingen belønner det: tre
+    // ærteretter deles om én pose ærter, og det er den billigste uge, der
+    // findes. Målt gav det Ærtesuppe, Pea purée og Pasta med ærter og citron
+    // i samme forslag, og før det fire kyllingeretter i træk. Brugeren sagde
+    // det selv i designfasen: en uge behøver ikke være kylling hele vejen.
+    const tally = varietyTally();
+    const varietyMemo = new Map();
+    const keysOf = (cand) => {
+      if (!varietyMemo.has(cand.id)) {
+        varietyMemo.set(cand.id, varietyKeys(assignRoles(roleLines(cand, items),
+          { unknownMain: Boolean(cand.unknown_main) })));
+      }
+      return varietyMemo.get(cand.id);
+    };
+
     while (picks.length < days) {
       let bestPick = null;
 
-      for (const cand of pool) {
-        if (picks.some((p) => p.id === cand.id)) continue;
+      // Første runde med spærren; er der ingen ret, der må komme ind, gælder
+      // [99, 99], og ugen bliver fyldt. En uge med for få retter er ikke et
+      // bedre svar end en ensformig uge.
+      for (const pass of VARIETY_PASSES) {
+        for (const cand of pool) {
+          if (picks.some((p) => p.id === cand.id)) continue;
+          if (!tally.allows(keysOf(cand), pass)) continue;
 
-        const merged = new Map(basket);
-        for (const [k, v] of needsOf(cand)) merged.set(k, (merged.get(k) || 0) + v);
-        const after = basketCost(merged);
+          const merged = new Map(basket);
+          for (const [k, v] of needsOf(cand)) merged.set(k, (merged.get(k) || 0) + v);
+          const after = basketCost(merged);
 
-        // Marginal pris + marginalt spild, modregnet sporets score. Begge led
-        // er kroner, så der er intet at gange med. Støjen gør, at "Ny plan"
-        // ikke giver præcis samme uge hver gang.
-        const marginal = (after.cost - current.cost)
-                       + (after.wasteKr - current.wasteKr);
+          // Marginal pris + marginalt spild, modregnet sporets score. Begge led
+          // er kroner, så der er intet at gange med. Støjen gør, at "Ny plan"
+          // ikke giver præcis samme uge hver gang.
+          const marginal = (after.cost - current.cost)
+                         + (after.wasteKr - current.wasteKr);
 
-        // …og marginalen måles PR. PORTION. Portionsantallet går fra 1 til 12
-        // blandt de prissatte opskrifter (19 af dem siger 1, 8 siger intet),
-        // og uden normaliseringen sammenlignes en ret til én person med en
-        // ret til tolv. Retten til én vinder hver gang, fordi den køber
-        // mindst — ikke fordi den er billigere at spise.
-        //
-        // Der divideres med HUSSTANDEN og ikke med opskriftens eget tal:
-        // needsOf har allerede skaleret retten til husstanden, så alle
-        // kandidater måles på lige mange portioner. Divisoren er dermed den
-        // samme for dem alle og kan ikke flytte rangordenen — den holder kun
-        // leddet i samme størrelsesorden som SCORE_KR, der blev målt på
-        // netop kroner pr. portion.
-        const perServing = marginal / household;
+          // …og marginalen måles PR. PORTION. Portionsantallet går fra 1 til 12
+          // blandt de prissatte opskrifter (19 af dem siger 1, 8 siger intet),
+          // og uden normaliseringen sammenlignes en ret til én person med en
+          // ret til tolv. Retten til én vinder hver gang, fordi den køber
+          // mindst — ikke fordi den er billigere at spise.
+          //
+          // Der divideres med HUSSTANDEN og ikke med opskriftens eget tal:
+          // needsOf har allerede skaleret retten til husstanden, så alle
+          // kandidater måles på lige mange portioner. Divisoren er dermed den
+          // samme for dem alle og kan ikke flytte rangordenen — den holder kun
+          // leddet i samme størrelsesorden som SCORE_KR, der blev målt på
+          // netop kroner pr. portion.
+          const perServing = marginal / household;
 
-        const score = (cand.score || 0) * SCORE_KR - perServing
-                    + seededNoise(seed, cand.id)
-                    - (avoid && avoid.has(cand.id) ? AVOID_PENALTY : 0);
+          const score = (cand.score || 0) * SCORE_KR - perServing
+                      + seededNoise(seed, cand.id)
+                      - (avoid && avoid.has(cand.id) ? AVOID_PENALTY : 0);
 
-        if (!bestPick || score > bestPick.score) bestPick = { cand, merged, after, score };
+          if (!bestPick || score > bestPick.score) bestPick = { cand, merged, after, score };
+        }
+        if (bestPick) break;            // den strenge spærre rakte
       }
 
       if (!bestPick) break;
       picks.push(bestPick.cand);
+      tally.add(keysOf(bestPick.cand));
       basket.clear();
       for (const [k, v] of bestPick.merged) basket.set(k, v);
       current = bestPick.after;

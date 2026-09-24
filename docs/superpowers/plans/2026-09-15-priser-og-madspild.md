@@ -2443,7 +2443,7 @@ klassificering, og ikke i denne opgave.
 >   og de ligger nr. 3 og nr. 4 af 117. Det er den mangel, afsnittet ovenfor peger på
 >   `score_classic` med — ikke noget, denne opgave kan lukke.
 
-- [ ] **Step 9: Variation — deling alene giver en ensformig uge**
+- [x] **Step 9: Variation — deling alene giver en ensformig uge**
 
 Målt efter espresso-rettelsen blev forslag A **tre ærteretter af fire**: Ærtesuppe,
 Ærtepuré og Pasta med ærter og citron. Det er samme fejl som de fire kyllingeretter ved
@@ -2465,6 +2465,43 @@ nummer tre afhænger af, hvad nummer ét og to blev.
 
 Rapportér begge uger bagefter. Bliver de dyrere, er det den rigtige pris: en ensformig uge
 er billigere, fordi den køber færre forskellige varer, og det er ikke en bedre madplan.
+
+> **Gennemført, og reglen findes ét sted.**
+>
+> `buildPlan` havde tallene og tællerne inde i sin egen løkke, så de kunne ikke genbruges
+> uden at blive skrevet af. De er trukket ud som `VARIETY_PASSES`, `varietyKeys()` og
+> `varietyTally()`, og **begge steder kalder nu de samme tre** — ét sted defineret, to
+> kaldssteder, ingen private tællere tilbage. Det var netop den slags dobbelthed, der
+> gjorde `bestPriceFor` til en critical, og linjelængden mellem de to kaldssteder gør det
+> ikke mindre sandsynligt. `roleLines()` er trukket ud af samme grund: `hasMainCourse` og
+> spærren i `sharedWeek` skal læse roller ens.
+>
+> Iterationen er stadig forskellig, og det er den nødt til at være: `buildPlan` går én
+> sorteret liste igennem, `sharedWeek` scorer alt om for hver dag. Spærren ligger derfor
+> inde i den grådige løkke, som en prøve på om retten må komme ind — og anden runde
+> `[99, 99]` fyrer kun, hvis ingen ret må.
+>
+> **Efterprøvet ved 4, 5 og 7 dage:** aldrig mere end 2 om samme hovedråvare, aldrig mere
+> end 3 om samme tilbehør. Ved syv dage har forslag A seks forskellige hovedråvarer.
+>
+> **Forslag A blev dyrere, og det er den rigtige pris: 134,90 → 191,54 kr** (11,97 kr pr.
+> portion). Ærtesuppe er ude; tilbage står Baked chicken breast, Pasta med ærter og citron,
+> Pea purée og Healthy baked beans. Delingen falder fra tre ærteretter til to —
+> *"deler 0.37 kg Ærter over 2 retter (11.95 kr)"* — og det er præcis handelen: den
+> ensformige uge var billigere, fordi den købte færre forskellige varer.
+>
+> **Forslag B: 171,59 kr** (10,72 kr pr. portion), sparer 100,83 kr mod retterne hver for
+> sig: Baked eggs with spinach & tomato · Kåldolmere · Majsdeller · Chorizosuppe med
+> kartofler og grønkål. *"deler 6 stk Æg over 3 retter (33 kr) og 0.37 kg Løg over 3 retter
+> (24 kr)"*.
+>
+> **`SCORE_KR` bliver på 84.** Puljen flyttede sig kun lidt (116 med hovedråvare mod 117),
+> og spændet er 40,29 kr mod score_classics 0,48 — 40,29 / 0,48 = **83,9**.
+>
+> **Det, spærren ikke retter:** Pea purée er stadig i forslag A. Den har ærter og er dermed
+> "aftensmad", og den er billig pr. portion, fordi den er tilbehør. Spærren tæller retter
+> pr. råvare og kan ikke se forskel på en ærtesuppe og en ærtepuré. Den viden hører i
+> `score_classic` — se kommentaren ved `hasMainCourse`.
 
 - [x] **Step 7: Kør suiten og commit**
 
