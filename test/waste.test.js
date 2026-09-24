@@ -151,6 +151,9 @@ const W_ITEMS = new Map([
   ['laks',            { key: 'laks',            name: 'Laks',            category: 'fish', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
   ['kylling',         { key: 'kylling',         name: 'Kylling',         category: 'poultry', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
   ['kartofler',       { key: 'kartofler',       name: 'Kartofler',       category: 'veg',  class: 'baseline', keeps: 'keeps',   base_unit: 'kg' }],
+  ['kyllingebryst',   { key: 'kyllingebryst',   name: 'Kyllingebryst',   category: 'poultry', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
+  ['kyllingelaar',    { key: 'kyllingelaar',    name: 'Kyllingelår',     category: 'poultry', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
+  ['pasta',           { key: 'pasta',           name: 'Pasta',           category: 'grain', class: 'baseline', keeps: 'pantry', base_unit: 'kg' }],
   ['ris',             { key: 'ris',             name: 'Ris',             category: 'grain', class: 'baseline', keeps: 'keeps',  base_unit: 'kg' }],
   ['persille',        { key: 'persille',        name: 'Persille',        category: 'veg',  class: 'fresh', keeps: 'perishable', base_unit: 'kg' }],
   ['aeg',             { key: 'aeg',             name: 'Æg',              category: 'eggs', class: 'fresh', keeps: 'keeps',      base_unit: 'stk' }],
@@ -166,6 +169,9 @@ const W_NORMALS = new Map([
   ['kylling|c1',         [{ pack_qty: 1, pack_unit: 'kg', pack_price: 90,  unit_price: 90,  source: 'manual' }]],
   ['kartofler|c1',       [{ pack_qty: 2, pack_unit: 'kg', pack_price: 16,  unit_price: 8,   source: 'manual' }]],
   ['ris|c1',             [{ pack_qty: 1, pack_unit: 'kg', pack_price: 20,  unit_price: 20,  source: 'manual' }]],
+  ['pasta|c1',           [{ pack_qty: 1, pack_unit: 'kg', pack_price: 12,  unit_price: 12,  source: 'manual' }]],
+  ['kyllingebryst|c1',   [{ pack_qty: 1, pack_unit: 'kg', pack_price: 95,  unit_price: 95,  source: 'manual' }]],
+  ['kyllingelaar|c1',    [{ pack_qty: 1, pack_unit: 'kg', pack_price: 60,  unit_price: 60,  source: 'manual' }]],
   ['persille|c1',        [{ pack_qty: 0.05, pack_unit: 'kg', pack_price: 10, unit_price: 200, source: 'manual' }]],
   ['aeg|c1',             [{ pack_qty: 6, pack_unit: 'stk', pack_price: 18, unit_price: 3, source: 'manual' }]],
   ['hvidloeg|c1',        [{ pack_qty: 0.09, pack_unit: 'kg', pack_price: 6, unit_price: 66.67, source: 'manual' }]],
@@ -430,6 +436,42 @@ test('ugen bliver ikke tre retter om samme hovedråvare', () => {
   const okseRetter = week.picks.filter((p) => p.items.some((i) => i.key === 'hakket_oksekoed'));
   assert.equal(okseRetter.length, 2, `${okseRetter.length} retter om samme oksekød`);
   assert.ok(week.picks.some((p) => p.id === 33), 'laksen skal ind i stedet');
+});
+
+test('spærren tæller hovedråvaren på kategori, ikke på nøgle', () => {
+  // Fælden, der slap igennem den første udgave: 'poultry' rummer syv varer
+  // (and, hakket_kylling, hel_kylling, kalkun, kylling, kyllingebryst,
+  // kyllingelaar), så "højst 2 pr. NØGLE" tillader fjorten kyllingemiddage.
+  // Målt gav det fire kyllingeretter i samme forslag — uden at bryde spærren.
+  //
+  // Her: tre retter med hver sin kyllingeudskæring. Kun to må med, og laksen
+  // skal ind i stedet, selv om den er dyrere.
+  const kyl = (id, key) => recipe(id, 1.0, [line(key, 0.5), line('kartofler', 0.3)]);
+  const laksRet = recipe(41, 1.0, [line('laks', 0.5), line('ris', 0.3)]);
+  const week = engine.sharedWeek(
+    [kyl(38, 'kylling'), kyl(39, 'kyllingebryst'), kyl(40, 'kyllingelaar'), laksRet],
+    { days: 3, ...FIXTURE.ctx });
+
+  const fjer = week.picks.filter((p) => W_ITEMS.get(p.items[0].key).category === 'poultry');
+  assert.equal(fjer.length, 2, `${fjer.length} fjerkræretter af 3`);
+  assert.ok(week.picks.some((p) => p.id === 41), 'laksen skal ind i stedet');
+});
+
+test('tilbehørsspærren overlever, at hovedråvarerne er brugt op', () => {
+  // Runderne løsner én spærre ad gangen. Med [2,3] og så [99,99] forsvandt
+  // tilbehørsspærren i samme øjeblik hovedråvarerne var opbrugt, og så blev
+  // ugen pasta hver dag alligevel — netop den fejl, spærren findes for.
+  //
+  // Fem pastaretter og to risretter, alle med oksekød: hovedråvaren er
+  // opbrugt efter to retter, men der må stadig højst være tre med pasta.
+  const medPasta = (id) => recipe(id, 1.0, [line('hakket_oksekoed', 0.4), line('pasta', 0.3)]);
+  const medRis = (id) => recipe(id, 0.9, [line('hakket_oksekoed', 0.4), line('ris', 0.3)]);
+  const week = engine.sharedWeek(
+    [medPasta(42), medPasta(43), medPasta(44), medPasta(45), medPasta(46), medRis(47), medRis(48)],
+    { days: 5, ...FIXTURE.ctx });
+  assert.equal(week.picks.length, 5);
+  const pastaRetter = week.picks.filter((p) => p.items.some((i) => i.key === 'pasta'));
+  assert.ok(pastaRetter.length <= 3, `${pastaRetter.length} pastaretter af 5`);
 });
 
 test('spærren giver efter, når der ikke er andet', () => {

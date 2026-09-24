@@ -89,22 +89,46 @@
   // sin protein kan sagtens ende som syv gange pasta, fordi det er pastaen,
   // der er på tilbud. Tilbehøret skal derfor også variere.
   //
-  // Anden runde er [99, 99] og slipper alt igennem: en uge skal kunne fyldes,
-  // også når feltet er så smalt, at spærren ikke kan holdes. Færre retter end
-  // dage er ikke et bedre svar end en ensformig uge.
+  // Runderne løsner ÉN spærre ad gangen, og rækkefølgen er målt frem. Med to
+  // runder — [2, 3] og så [99, 99] — forsvandt tilbehørsspærren i samme
+  // øjeblik hovedråvarerne var brugt op, og så blev ugen syv gange pasta
+  // alligevel. Det er netop den fejl, spærren findes for.
+  //
+  // Hovedråvaren løsnes derfor først, og tilbehøret holder: en uge med tre
+  // kyllingeretter og varieret tilbehør er bedre end en uge med tre
+  // forskellige proteiner og pasta hver dag. Sidste runde slipper alt
+  // igennem, for en uge med for få retter er ikke et bedre svar end en
+  // ensformig uge.
   //
   // Reglen bor HER, fordi to steder skal bruge den — buildPlan og sharedWeek —
   // og fordi den slags lige blev en critical: `bestPriceFor` og `basketCost`
   // var to funktioner, der skulle være enige, og de holdt op med at være det.
   // Iterationen er forskellig (buildPlan går én sorteret liste igennem,
   // sharedWeek vælger om for hver dag), men tællingen og grænserne er de samme.
-  const VARIETY_PASSES = [[2, 3], [99, 99]];
+  const VARIETY_PASSES = [[2, 3], [99, 3], [99, 99]];
 
-  /** Hvad spærren tæller på: rettens hovedråvare og dens tilbehør. */
+  /**
+   * Hvad spærren tæller på: hovedråvarens KATEGORI og tilbehørets NØGLE.
+   *
+   * De to sider tælles forskelligt, og det er målt frem. Hovedråvaren blev
+   * først talt pr. nøgle, og så var spærren tom: `poultry` rummer syv varer
+   * (and, hakket_kylling, hel_kylling, kalkun, kylling, kyllingebryst,
+   * kyllingelaar), så "højst 2 pr. nøgle" tillader fjorten kyllingemiddage på
+   * en uge. Målt gav det fire kyllingeretter i samme forslag uden at bryde
+   * spærren. Kategorien er det, brugeren ser: kylling er kylling.
+   *
+   * Tilbehøret bliver på nøglen. Pasta og ris er begge `grain`, og tre
+   * kornretter på en uge er helt almindeligt — talt pr. kategori ville
+   * spærren forbyde en uge, ingen ville klage over. Det er tre gange pasta,
+   * der er problemet, og det fanger nøglen.
+   *
+   * Fem hovedkategorier × 2 giver plads til ti retter, så en uge på syv dage
+   * fyldes stadig uden den løsnende runde. Efterprøvet: 7/7 i begge forslag.
+   */
   function varietyKeys(roles) {
     const starch = [...roles.mains, ...roles.support].find((i) => STARCH_KEYS.has(i.key));
     return {
-      main: roles.mains.length ? roles.mains[0].key : null,
+      main: roles.mains.length ? roles.mains[0].cat : null,
       starch: starch ? starch.key : null,
     };
   }

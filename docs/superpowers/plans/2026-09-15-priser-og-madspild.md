@@ -2503,7 +2503,7 @@ er billigere, fordi den køber færre forskellige varer, og det er ikke en bedre
 > pr. råvare og kan ikke se forskel på en ærtesuppe og en ærtepuré. Den viden hører i
 > `score_classic` — se kommentaren ved `hasMainCourse`.
 
-- [ ] **Step 10: Loftet på hovedråvaren skal tælle på KATEGORIEN**
+- [x] **Step 10: Loftet på hovedråvaren skal tælle på KATEGORIEN**
 
 Spærren fra trin 9 virker som den er skrevet, men den er for finmasket. Målt ved **syv**
 dage — som trin 9 ikke prøvede — indeholder forslag B fire kyllingeretter:
@@ -2535,6 +2535,61 @@ stadig fyldes uden den løsnende runde.
 - [x] **Step 7: Kør suiten og commit**
 
 ---
+
+> **Gennemført, og målingen fandt en fælde mere i spærren selv.**
+>
+> `varietyKeys` tæller nu hovedråvaren på `cat` og tilbehøret stadig på `key`, og den
+> asymmetri står forklaret i koden: pasta og ris er begge `grain`, og tre kornretter på
+> en uge er almindeligt, mens tre gange pasta ikke er.
+>
+> **Men to runder var ikke nok længere.** `[[2, 3], [99, 99]]` løsner BEGGE spærrer på
+> én gang, og med kun fem hovedkategorier bliver den første opbrugt langt oftere end
+> med syv kyllingenøgler. I samme øjeblik forsvandt tilbehørsspærren — og
+> `test/mealplan.test.js`s "ugen bliver ikke syv gange pasta" faldt med **7 af 7
+> pastaretter**. Det er præcis den fejl, spærren findes for, og den blev fanget af en
+> test fra plan 1, ikke af mig. Runderne er nu `[[2, 3], [99, 3], [99, 99]]`:
+> hovedråvaren løsnes først, tilbehøret holder, og alt slippes kun som sidste udvej.
+> En uge med tre kyllingeretter og varieret tilbehør er bedre end en uge med tre
+> proteiner og pasta hver dag.
+>
+> **1) `sharedWeek`.** Fire dage: forslag A går fra `legume:3` til
+> `{poultry 1, legume 2, meat 1}` og fra 191,54 til 186,66 kr; B fra `{eggs 2, meat 2}`
+> til `{legume 1, meat 1, eggs 2}` og 171,59 → 172,01. Syv dage: A fra
+> `{poultry 1, legume 3, meat 2, eggs 1}` til `{poultry 1, legume 2, meat 2, eggs 2}`,
+> 289,76 → 262,97 kr; B fra `{eggs 2, meat 2, poultry 2, fish 1}` til
+> `{legume 2, eggs 2, meat 2, poultry 1}`, 358,22 → 366,36 kr.
+>
+> **3) Syv dage fyldes UDEN den løsnende runde: 7/7 i begge forslag.** Fem kategorier ×
+> 2 giver plads til ti retter, som forudsagt.
+>
+> **2) `buildPlan`, og det er den halvdel, der kunne have gjort skade:**
+>
+> | | 4 dage | 7 dage, før | 7 dage, efter |
+> |---|---|---|---|
+> | healthy | **uændret** | meat 3, poultry 3, bakery 1 · 316,23 kr / sparer 66,59 | meat 2, poultry 2, bakery 2, fish 1 · 360,43 / **87,88** |
+> | classic | **uændret** | meat 3, dairy 3, bakery 1 · 279,39 / 109,17 | meat 2, dairy 2, bakery 2, cheese 1 · **251,47** / 94,89 |
+> | premium | **uændret** | meat 3, fish 1, bakery 1, poultry 1, dairy 1 · 936,56 / 119,40 | meat 2, fish 1, bakery 1, poultry 2, dairy 1 · **724,78** / **141,35** |
+>
+> **Fire dage er bit for bit uændret i alle tre spor** — samme retter, samme pris,
+> samme besparelse. Det almindelige tilfælde er ikke rørt.
+>
+> **Syv dage blev bedre, ikke blot anderledes.** Alle tre spor går fra tre retter i én
+> kategori til højst to, og ingen af dem taber retter (7/7 overalt). Premium bliver
+> 212 kr billigere OG sparer 22 kr mere; healthy sparer 21 kr mere for 44 kr mere i
+> kurven. Kravniveauet er `strict` før og efter i alle seks kørsler.
+>
+> **Én skavank, og den er ærlig:** classic henter `Stracciatella ost` ind på den syvende
+> plads og sparer 14 kr mindre. Det er ikke aftensmad. Men den uge indeholdt allerede
+> Frappé, Snobrød og Koldskål før ændringen — `buildPlan` har ingen `hasMainCourse`, kun
+> `sharedWeek` har. Problemet er ældre end denne ændring og ligger et andet sted.
+>
+> **`SCORE_KR` bliver på 84.** `hasMainCourse` er urørt, så puljen er den samme 116, og
+> forholdet står på 83,9.
+>
+> **Det spærren stadig ikke kan:** en kyllingeret, hvis panering vejer mere end kødet,
+> får `aeg` som hovedråvare og tælles som en æggeret. Kategorien retter tælleenheden,
+> ikke rollefordelingen — det er `roleWeight`, der måler paneringen tungest, og den
+> hører sammen med de andre ting, der skal måles i `score_classic`.
 
 ### Task 8: Kædevalg, de to lister, og synkning
 
