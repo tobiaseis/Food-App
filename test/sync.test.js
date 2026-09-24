@@ -303,6 +303,14 @@ test('collectPlanIndex leverer base_qty på tilbuddene OG unknown_count på rett
     assert.ok(recipe, 'opskriften er med i indekset');
     assert.equal(recipe.unknown_count, 1, 'den ukendte, ikke-valgfri linje er talt');
     assert.equal(typeof recipe.unknown_count, 'number');
+
+    // keywords er FJERDE felt i denne payload, der skal huskes fire steder
+    // (loadRecipes, build.js, supabase/schema.sql, public/data.js). De tre
+    // foerste — base_qty, optional, unknown_count — blev alle glemt et af
+    // stederne og virkede paa serveren mens browseren fik ingenting.
+    // engine.isDinner laeser dette felt; uden det er hver ret aftensmad.
+    assert.ok('keywords' in recipe,
+      'keywords mangler i payloaden — isDinner kan ikke skelne dessert fra middag');
   } finally {
     db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
     db.prepare('DELETE FROM offers WHERE id = ?').run(offerId);

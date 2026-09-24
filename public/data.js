@@ -406,6 +406,10 @@ const Data = {
       // ingrediens ser fuldt prissatte ud, og en havbars-middag står til 6 kr,
       // fordi tre fjerdedele af dens ingredienser er usynlige.
       unknown_count: r.unknown_count || 0,
+      // Samme grund: engine.isDinner spoerger til `rec.keywords` for at
+      // skelne en middag fra en dessert. Uden linjen er alt aftensmad, og
+      // browseren ville foreslaa Marie Rose sauce til mandag.
+      keywords: r.keywords || null,
       // Indekset sender kun nøgle, kategori og mængde. Navnet ligger i
       // taxonomy_prices, så det ikke gentages på 2.000 opskrifter.
       items: (r.items || []).map((i) => ({ ...i, ingredient: names[i.key] || i.key })),

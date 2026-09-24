@@ -284,6 +284,10 @@ function collectPlanIndex(log) {
       // ingredienser taksonomien ikke kender – de ser gratis ud, fordi de
       // manglende linjer aldrig når ind i `items`. Se sharedWeek/canPrice.
       unknown_count: r.unknown_count || 0,
+      // Kildens egen etiket. engine.isDinner laeser den, saa browseren og
+      // serveren skal have samme streng — det er fjerde gang et felt i
+      // denne payload skulle vaere husket fire steder.
+      keywords: r.keywords || null,
       // amount er i varens egen enhed (kg/l/stk), ikke gram (opgave 9) – rundes
       // til 3 decimaler (gram-præcision i kg) i stedet for til nærmeste hele
       // tal, som ville nulle de fleste mængder ud.

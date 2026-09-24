@@ -814,3 +814,49 @@ test('en vare uden pris står stadig på listen — og tælles', () => {
   assert.equal(list.unpriced, 1);
   near(list.total, 16);
 });
+
+// ── Kildens egen etiket ──────────────────────────────────────────────────────
+//
+// En ingrediensliste kan ikke skelne en ærtesuppe fra en ærtepuré, eller en
+// muffin fra en frikadelle: begge par har de samme varer i sig. Det hul blev
+// skrevet ned tre gange i plan 2 som noget, der måtte bygges et andet sted —
+// og svaret lå i recipes.keywords, som 2.211 af 2.224 opskrifter bærer.
+
+test('kildens nøgleord skiller en middag fra en dessert', () => {
+  assert.equal(engine.looksLikeDinner('Hovedretter, Aftensmad, Fastfood'), true);
+  assert.equal(engine.looksLikeDinner('Desserter, Kager, Søde sager'), false);
+  assert.equal(engine.looksLikeDinner('Side dish, Double cream'), false);
+  assert.equal(engine.looksLikeDinner('Condiment, easy'), false);
+  assert.equal(engine.looksLikeDinner('Drink, Spanish, Coffee'), false);
+});
+
+test('et middagsord slår et tilbehørsord i samme linje', () => {
+  // "Squash Frikadeller" er tagget begge dele, og den ER aftensmad.
+  assert.equal(engine.looksLikeDinner('Aftensmad, Tilbehør Aftensmad'), true);
+});
+
+test('nøgleordet må stå hvor som helst i rækken, også efter et mellemrum', () => {
+  // Den her fangede en ægte fejl: '\s' i en JS-streng er bare 's', så
+  // regexen blev (^|,)s*(...) og matchede kun, når ordet stod først eller
+  // uden mellemrum efter kommaet. "Luscious lemon cake" slap derfor igennem
+  // som aftensmad og lå nr. 7 i budget-sporet.
+  assert.equal(engine.looksLikeDinner('BBQ, Dessert, Lemon cake, Lemons'), false);
+  assert.equal(engine.looksLikeDinner('Italiensk, Aftensmad'), true);
+});
+
+test('ingen nøgleord er ikke et nej', () => {
+  // 13 af 2.224 opskrifter har ingen. De skal ikke straffes for det.
+  assert.equal(engine.looksLikeDinner(''), true);
+  assert.equal(engine.looksLikeDinner(null), true);
+  assert.equal(engine.looksLikeDinner(undefined), true);
+});
+
+test('isDinner kræver både en hovedråvare og en middags-etiket', () => {
+  const medKoed = { ...CANDIDATES[1], keywords: 'Aftensmad' };
+  const dessertAfKoed = { ...CANDIDATES[1], keywords: 'Desserter, Kager' };
+  const kunTilbehoer = { ...recipe(13, 0.9, [line('kartofler', 0.2)]), keywords: 'Aftensmad' };
+
+  assert.equal(engine.isDinner(medKoed, W_ITEMS), true);
+  assert.equal(engine.isDinner(dessertAfKoed, W_ITEMS), false, 'etiketten skal kunne sige nej');
+  assert.equal(engine.isDinner(kunTilbehoer, W_ITEMS), false, 'hovedråvaren skal stadig kræves');
+});

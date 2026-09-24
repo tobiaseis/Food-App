@@ -20,7 +20,7 @@ const path = require('node:path');
 const { getDb } = require('../src/db');
 const plans = require('../src/mealplan/generate');
 const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
-const { isBoughtLine, hasMainCourse, DEFAULT_SERVINGS } = engine;
+const { isBoughtLine, isDinner, DEFAULT_SERVINGS } = engine;
 
 // Hvilke linjer der overhovedet købes — basisvarer og "evt. et skvæt fløde"
 // gør ikke, men en valgfri hovedprotein gør — bor i engine.js som
@@ -150,7 +150,10 @@ function costRecipe(recipe, chainId, { offers, normals, items, unknown = 0 }) {
     // sirup, hot honey, mørdej og en roux er billige, fuldt prissatte og
     // ikke en middag. Flaget står i tabellen frem for at filtrere rækken væk,
     // så tallene stadig kan slås op for en ret, der bruges som tilbehør.
-    has_main: hasMainCourse(recipe, items) ? 1 : 0,
+    // Baade hovedraavare OG kildens egen etiket. Uden det andet sorterer
+    // budget-sporet muffins og en Marie Rose sauce ind som de billigste
+    // 'middage' — maalt, det var 7 af de 20 oeverste.
+    has_main: isDinner(recipe, items) ? 1 : 0,
   };
 }
 

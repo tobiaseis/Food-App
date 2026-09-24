@@ -1249,6 +1249,55 @@
     });
   }
 
+  // Hvad kilden selv kalder retten.
+  //
+  // 2.211 af 2.224 opskrifter bærer nøgleord, og de ved noget, ingen
+  // ingrediensliste kan udlede: at "Hindbærmuffins" er *Desserter, Kager,
+  // Søde sager*, og at "Hel kylling i airfryer" er *Hovedretter, Aftensmad*.
+  //
+  // Det hul her lukker, blev skrevet ned tre gange i plan 2 som noget, der
+  // måtte bygges et andet sted — en puré og en suppe af ærter er lige
+  // "ærteretter" for en ingrediensregel, og en muffin og en frikadelle er
+  // lige meget "æg". Oplysningen lå i en kolonne, ingen havde åbnet.
+  //
+  // Målt over de 119 prissatte REMA-retter med en hovedråvare: 70 bærer kun
+  // middagsord, 30 kun dessert-/tilbehørsord, 12 begge, 7 ingen af delene.
+  const DINNER_WORDS = new RegExp('(^|,)\\s*(' + [
+    'aftensmad', 'hovedret(ter)?', 'middag', 'nem hverdagsmad', 'simremad',
+    'dinner', 'supper', 'main course', 'main dish', 'main',
+  ].join('|') + ')\\s*(,|$)', 'i');
+
+  // Det, der ikke er aftensmad. Bemærk at et middagsord ALTID vinder over
+  // disse: "Squash Frikadeller" er tagget *Aftensmad, Tilbehør Aftensmad*,
+  // og den er en middag.
+  const NON_DINNER_WORDS = new RegExp('(^|,)\\s*(' + [
+    'dessert(er)?', 'kage(r)?', 'søde sager', 'småkager', 'bagværk', 'bagning',
+    'brød og boller', 'tilbehør', 'side dish', 'condiment', 'dip', 'dressing',
+    'sauce', 'snacks?', 'morgenmad', 'breakfast', 'brunch', 'lunch', 'frokost',
+    'starter', 'forret', 'drinks?', 'kolde drikke', 'is og sorbet',
+    'marmelade', 'syltetöj', 'syltetøj',
+  ].join('|') + ')\\s*(,|$)', 'i');
+
+  /** Kalder kilden selv retten noget andet end aftensmad? */
+  function looksLikeDinner(keywords) {
+    const k = String(keywords || '');
+    if (!k) return true;                    // ingen oplysning er ikke et nej
+    if (DINNER_WORDS.test(k)) return true;  // et middagsord slaar alt
+    return !NON_DINNER_WORDS.test(k);
+  }
+
+  /**
+   * Er retten aftensmad?
+   *
+   * To spørgsmål, ét svar: har den en hovedråvare, OG kalder kilden den en
+   * middag? Det første alene lukkede ærtepuré og Marie Rose sauce ind i
+   * madplanen; det andet alene ville lukke en vinaigrette ind, hvis nogen
+   * havde tagget den "aftensmad".
+   */
+  function isDinner(recipe, items) {
+    return hasMainCourse(recipe, items) && looksLikeDinner(recipe && recipe.keywords);
+  }
+
   function hasMainCourse(recipe, items) {
     const { mains } = assignRoles(roleLines(recipe, items),
       { unknownMain: Boolean(recipe.unknown_main) });
@@ -1563,7 +1612,7 @@
     //    Det er samme fejl som sirup-ugen, et lag længere nede: dengang
     //    manglede KVALITETEN modvægt, her er selve prisen fiktion. Og her
     //    står det forkerte tal på skærmen.
-    const withMain = (candidates || []).filter((c) => hasMainCourse(c, items));
+    const withMain = (candidates || []).filter((c) => isDinner(c, items));
     const priced = withMain.filter(canPrice);
     const pool = priced.length ? priced : (withMain.length ? withMain : (candidates || []));
 
@@ -2106,7 +2155,8 @@
     assignRoles, scoreRecipe, buildPlan, shoppingList, offerShoppingList, chooseChains,
     qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
-    choosePack, isBoughtLine, hasMainCourse, sharedWeek, twoProposals, explainWeek,
+    choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner,
+    sharedWeek, twoProposals, explainWeek,
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,

@@ -259,6 +259,10 @@ create table if not exists recipe_index (
   -- motor ikke se, at en ret har ingredienser, den ikke kender -- de naar
   -- aldrig ind i `items`, og retten ser gratis ud. Se sharedWeek/canPrice.
   unknown_count int default 0,
+  -- Kildens egne nøgleord. engine.isDinner læser dem for at skelne en middag
+  -- fra en dessert eller et tilbehør — en oplysning ingen ingrediensliste kan
+  -- udlede, og som 2.211 af 2.224 opskrifter bærer.
+  keywords text,
   items         jsonb not null          -- [{key,cat,amount,weight,optional}] (opgave 9: staple/grams -> amount i varens egen enhed; essentials er allerede filtreret fra her)
 );
 -- Tabellen findes allerede hos den, der kørte skemaet før sproget kom til.
@@ -271,6 +275,7 @@ alter table recipe_index add column if not exists lang text;
 -- Uden dette fejler synken med "column recipe_index.unknown_count does not
 -- exist", fordi build.js nu sender feltet med.
 alter table recipe_index add column if not exists unknown_count int default 0;
+alter table recipe_index add column if not exists keywords text;
 
 create index if not exists idx_recipe_index_healthy on recipe_index(score_healthy);
 create index if not exists idx_recipe_index_classic on recipe_index(score_classic);
