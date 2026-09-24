@@ -2503,6 +2503,35 @@ er billigere, fordi den køber færre forskellige varer, og det er ikke en bedre
 > pr. råvare og kan ikke se forskel på en ærtesuppe og en ærtepuré. Den viden hører i
 > `score_classic` — se kommentaren ved `hasMainCourse`.
 
+- [ ] **Step 10: Loftet på hovedråvaren skal tælle på KATEGORIEN**
+
+Spærren fra trin 9 virker som den er skrevet, men den er for finmasket. Målt ved **syv**
+dage — som trin 9 ikke prøvede — indeholder forslag B fire kyllingeretter:
+
+| ret | hovedråvare |
+|---|---|
+| Inside-out chicken kyiv | `kyllingebryst` |
+| Stir-fried chicken with broccoli | `kyllingebryst` |
+| Chicken sausage pasta | `kylling` |
+| Sprød crispy kylling | `aeg` (panering vejer mere end kødet) |
+
+Ingen gruppe har mere end to, så loftet er overholdt. `poultry` rummer **syv** varer
+(`and, hakket_kylling, hel_kylling, kalkun, kylling, kyllingebryst, kyllingelaar`), og et
+loft på 2 pr. **nøgle** tillader altså op til fjorten kyllingeretter på en uge. Det er
+præcis det, brugeren afviste i designfasen.
+
+**Loftet på hovedråvaren skal tælle på varens `category`** — højst 2 `poultry`, 2 `meat`,
+2 `fish`. Loftet på tilbehør bliver på nøglen: pasta og ris er begge `grain`, og tre
+kornretter på en uge er helt normalt.
+
+Med fem hovedkategorier og 2 hver er der plads til ti retter, så en uge på syv dage kan
+stadig fyldes uden den løsnende runde.
+
+> **Mål BEGGE halvdele, før du melder den hjem.** Reglen deles med `buildPlan`, så den
+> ændrer også plan 1's madplan. Det var præcis den fejl, ost-afgørelsen blev truffet på:
+> optagelseskriteriet var målt, de tre andre virkninger var ikke. Rapportér både
+> `sharedWeek` ved 4 og 7 dage OG hvad `buildPlan` giver før og efter, for alle tre spor.
+
 - [x] **Step 7: Kør suiten og commit**
 
 ---
