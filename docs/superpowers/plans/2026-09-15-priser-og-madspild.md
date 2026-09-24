@@ -2886,6 +2886,33 @@ Bemærk at `item_key` her **ikke** har en fremmednøgle til `items`: den tabel s
 
 I `src/sync/build.js`: synk `item_prices` for alle kæder (190 varer × 14 kæder er højst ~2.700 rækker) og `recipe_costs` for de prissætbare. Følg mønsteret fra `offer_index` — samme `upsert`-hjælper, samme batchstørrelse.
 
+- [ ] **Step 4b: Ugen og listen skal vise det samme tal**
+
+Målt på rigtige data: ugen siger **111,33 kr**, listen **157,93** — 42 % forskel, og begge
+tal står side om side på skærmen i trin 4 og 5. Testen kunne ikke fange det, fordi
+fiksturen kun har én kæde, og med én kæde kan `chooseChains` ikke indsnævre noget.
+
+Forskellen er ikke en regnefejl: `sharedWeek` prissætter hver vare i den billigste
+favoritbutik uden butiksbod, mens listen prissætter den i de butikker, man faktisk kommer
+i. Men **det tal, brugeren vælger ud fra, skal være det tal, brugeren betaler.** Ellers kan
+et forslag, der vises som det billigste, koste mest, når butikkerne er valgt.
+
+Kør `chooseChains` én gang på den færdige kurv, før `sharedWeek` returnerer, og meld den
+pris. Retterne ændrer sig ikke — valget er truffet — så det er ét ekstra kald på noget,
+der allerede står stille. Og **testen skal have mere end én kæde**, ellers måler den
+fortsat ingenting.
+
+- [ ] **Step 4c: Fem favoritter er loftet — så skal det gælde begge steder**
+
+`chooseChains` tager `chainIds.slice(0, 5)`, fordi 31 delmængder er det, man kan
+gennemregne eksakt. Men intet begrænser favoritterne, og `sharedWeek` løber over dem
+**alle**. Følgen er målt: en vare, som kun den sjette favorit fører, indgår i ugens pris
+og ender på listen som "ingen pris".
+
+Loftet skal gælde samme sted for begge — afkort listen ét sted og lad dem dele den — og
+når der afkortes, skal brugeren have det at vide frem for at opdage det som en manglende
+vare.
+
 - [x] **Step 5: Kør alt igennem**
 
 ```bash
