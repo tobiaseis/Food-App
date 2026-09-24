@@ -577,8 +577,17 @@ const SEED = [
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 0, c: 0,
     // "Lavazza hele bønner" er kaffe. Uden de sammensatte former ville
     // 'bønner' vinde, og en chili con carne ville blive planlagt om kaffe.
-    da: ['kaffebønner', 'formalet kaffe', 'helbønner', 'hele bønner', 'kaffe'],
-    en: ['coffee beans', 'coffee'] },
+    //
+    // Og 'espresso' skal med af samme grund, bare den anden vej: linjen
+    // "strong espresso best made with freshly ground beans" matchede
+    // 'bønner' til sidst i strængen og blev en bælgfrugt, så en caffè latte
+    // fik en hovedråvare og kom med i madplanen. Med 'espresso' vinder
+    // kaffen, fordi den står tidligere. Fem linjer, der slet ikke matchede
+    // ('espresso', 'shot of espresso', 'instant espresso powder'), kommer
+    // med i samme ombæring.
+    da: ['kaffebønner', 'formalet kaffe', 'helbønner', 'hele bønner',
+         'espressoshot', 'espresso', 'kaffe'],
+    en: ['coffee beans', 'coffee', 'espresso'] },
   { key: 'the', name: 'Te', cat: 'drink',
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 0, c: 0, da: ['te'], en: ['tea'] },
   { key: 'juice', name: 'Juice', cat: 'drink',

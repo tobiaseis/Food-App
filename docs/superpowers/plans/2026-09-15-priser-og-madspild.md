@@ -2443,6 +2443,29 @@ klassificering, og ikke i denne opgave.
 >   og de ligger nr. 3 og nr. 4 af 117. Det er den mangel, afsnittet ovenfor peger på
 >   `score_classic` med — ikke noget, denne opgave kan lukke.
 
+- [ ] **Step 9: Variation — deling alene giver en ensformig uge**
+
+Målt efter espresso-rettelsen blev forslag A **tre ærteretter af fire**: Ærtesuppe,
+Ærtepuré og Pasta med ærter og citron. Det er samme fejl som de fire kyllingeretter ved
+`SCORE_KR = 167`, bare med en anden råvare — og den opstår **fordi** deling belønner det.
+Brugeren sagde det selv i designfasen: der behøver ikke være en hel uge med kylling.
+
+`sharedWeek` har ingen variationsspærre. `buildPlan` har, tolv hundrede linjer længere op,
+og **den skal genbruges frem for at der skrives en ny** — dens egen kommentar forklarer
+allerede hvorfor der skal være to og ikke én:
+
+> *To spærrer, ikke én. Hovedråvaren alene rækker ikke: syv retter med hver sin protein
+> kan sagtens ende som syv gange pasta, fordi det er pastaen, der er på tilbud.*
+
+Højst **2** retter med samme hovedråvare, højst **3** med samme tilbehør, og en løsnende
+anden runde (`[99, 99]`), så ugen altid bliver fuld. Samme tal, samme struktur.
+
+Spærren skal ligge **i den grådige løkke**, ikke som et for-filter: hvilken ret der er
+nummer tre afhænger af, hvad nummer ét og to blev.
+
+Rapportér begge uger bagefter. Bliver de dyrere, er det den rigtige pris: en ensformig uge
+er billigere, fordi den køber færre forskellige varer, og det er ikke en bedre madplan.
+
 - [x] **Step 7: Kør suiten og commit**
 
 ---
