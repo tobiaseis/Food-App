@@ -1014,13 +1014,23 @@
     return plan;
   }
 
-  // ── Indkøbsliste ───────────────────────────────────────────────────────────
+  // ── Indkøbsliste, tilbudsudgaven ───────────────────────────────────────────
 
   /**
    * Samlet indkøbsliste: det, der er på tilbud, grupperet efter butik – og
    * resten som én liste, for den skal jo også købes.
+   *
+   * Dette er `buildPlan`s liste, og den hed `shoppingList` indtil opgave 8.
+   * Navnet gik videre til de TO lister (køb ind / tjek at du har), og denne
+   * blev omdøbt frem for slettet, fordi den er den eneste, der kan bygges af
+   * det, kalderen HAR: `buildPlan` afleverer `matched`/`unmatched` pr. dag, og
+   * de bærer navn, pris og butik med sig. De to nye lister kræver
+   * `items`-tabellen (klasse, holdbarhed, enhed), og den findes hverken i
+   * `buildPlan`s nyttelast eller i browserens Supabase-indeks. Så længe
+   * brugerfladen er trin 1-5 i spec afsnit 2.2 — altså efter denne plan —
+   * ville et navneskifte alene betyde, at listen forsvandt fra skærmen.
    */
-  function shoppingList(plan) {
+  function offerShoppingList(plan) {
     const byChain = new Map();
     const rest = new Map();
 
@@ -1630,13 +1640,295 @@
     return `deler ${parts.join(' og ')}`;
   }
 
+
+  // ── Kædevalg og de to lister ───────────────────────────────────────────────
+
+  // Hvad en ekstra indkøbstur "koster". En plan, der kræver tre butikker for
+  // at spare 18 kr, er ikke en bedre plan. Tallet er et skøn og skal justeres,
+  // når de første rigtige lister er set.
+  const EXTRA_STORE_PENALTY = 25;
+
+  // Hvad det koster i ærgrelse ikke at kunne få en vare, ud over varens egen
+  // pris.
+  //
+  // Den er SKREVET som en sum med butiksboden, og det er ikke pynt. Var den
+  // mindre end EXTRA_STORE_PENALTY, ville "lad kartoflerne være" altid slå
+  // "tag turen til butik 2": at undlade varen koster så dens egen pris plus
+  // et lille beløb, mens at hente den koster dens egen pris plus 25. Så
+  // svarer optimeringen på "hvilke butikker?" ved at fjerne varer fra
+  // listen — og en indkøbsliste, der lydløst dropper aftensmaden, er værre
+  // end en tur mere. De to tal kan derfor ikke sættes uafhængigt af hinanden,
+  // og relationen står i koden i stedet for i en kommentar, ingen læser.
+  //
+  // Begge er skøn som WASTE_AVERSION og skal ses efter på rigtige lister.
+  const MISSING_ITEM_NUISANCE = EXTRA_STORE_PENALTY + 15;
+
+  // Hvor mange favoritter der prøves udtømmende. 2^n delmængder: fem kæder er
+  // 31, femten ville være 32.767 × hele kurven. Er der flere, bruges de fem
+  // FØRSTE — det er en grænse, ikke et valg, og den, der giver brugeren seks
+  // favoritbutikker i brugerfladen, skal vide, at den sjette ikke kommer med.
+  const MAX_CHOICE_CHAINS = 5;
+
+  /**
+   * Hvilke af favoritkæderne skal man handle i?
+   *
+   * Vi prøver alle ikke-tomme delmængder med et fuldt kurveregnestykke og en
+   * fast bod pr. ekstra butik. Det er eksakt, ikke en heuristik, og det tager
+   * millisekunder.
+   *
+   *   basket    vare → behov i varens egen base_unit (færdigt afrundet)
+   *   chainIds  favoritterne, i prioriteret rækkefølge
+   *   items     `items`-tabellen som Map: class, keeps, base_unit
+   *   offers    `vare|kæde` → aktivt tilbud
+   *   normals   `vare|kæde` → normalpris-rækker
+   *
+   * Svaret er `{ chains, assignment, cost, total }`. `cost` er kroner for
+   * varerne; `total` er den med boderne i og er IKKE en pris, nogen betaler —
+   * den bliver i funktionen som sammenligningstal og går kun med ud, fordi
+   * testene skal kunne regne den efter.
+   */
+  function chooseChains(basket, { chainIds = [], items = new Map(), offers = new Map(),
+                                  normals = new Map(), now = new Date() } = {}) {
+    const ids = (chainIds || []).slice(0, MAX_CHOICE_CHAINS);
+
+    // Ingen butikker, intet valg. Løkken nedenfor kører nul gange, og uden
+    // denne udgang var svaret `null` — så ville indkøbslisten kaste på
+    // `chosen.assignment` i stedet for at sige, at vi ikke kender en pris.
+    // Samme skelnen som i sharedWeek: en tom uge er sandheden, en gratis er
+    // en løgn.
+    if (!ids.length) return { chains: [], assignment: new Map(), cost: 0, total: 0 };
+
+    // Prisen for én vare i én kæde afhænger ikke af, hvilken delmængde vi
+    // prøver. Regnes den inde i mask-løkken, slås det samme par op 31 gange
+    // med det samme svar; her regnes det én gang, og løkken bliver rent
+    // opslag. Den billigste pakkepris overhovedet falder samtidig ud — det er
+    // den, boden for en manglende vare bygger på.
+    const options = new Map();            // vare → kandidater, én pr. kæde
+    const cheapestAnywhere = new Map();   // vare → billigste pakkepris nogen steder
+    for (const [key, need] of basket) {
+      const meta = items.get(key);
+      const cands = [];
+      for (const chainId of ids) {
+        const price = effectivePrice(key, chainId,
+          // `baseUnit` er ikke pynt: uden den kan effectivePrice returnere et
+          // tilbud i AVISENS enhed, når varen ingen normalpris har, og så
+          // måles et behov i stk mod en kilopris.
+          { offers, normals, now, baseUnit: meta ? meta.base_unit : null });
+        if (!price) continue;
+        const pack = choosePack(need, [price], { keeps: meta ? meta.keeps : 'keeps' });
+        if (!pack) continue;
+        // choosePack giver ikke sin interne score fra sig — med vilje, se
+        // opgave 5. Sammenligningen mellem kæder regnes derfor her, af de
+        // felter den DA giver. Uden dette er pick.score undefined, enhver
+        // sammenligning falsk, og den første kæde i rækken vinder altid.
+        // Samme regnestykke som bestPackFor i sharedWeek, så ugen og listen
+        // vælger den samme butik og den samme pose.
+        const unit = price.unit_price > 0
+          ? price.unit_price
+          : price.pack_price / price.pack_qty;
+        cands.push({ ...pack, chainId, price,
+                     score: pack.cost + pack.waste * unit * WASTE_AVERSION });
+        const low = cheapestAnywhere.get(key);
+        if (low == null || pack.cost < low) cheapestAnywhere.set(key, pack.cost);
+      }
+      options.set(key, cands);
+    }
+
+    let best = null;
+    for (let mask = 1; mask < (1 << ids.length); mask++) {
+      const subset = ids.filter((_, i) => mask & (1 << i));
+      const inSubset = new Set(subset);
+      const assignment = new Map();
+      let cost = 0;
+
+      // En delmængde, der ikke kan skaffe varerne, er ikke billigere — den er
+      // ufuldstændig. Uden en bod ville den kæde, der fører færrest varer,
+      // altid se billigst ud, fordi det den ikke har koster nul.
+      //
+      // Boden er varens egen billigste pris på tværs af ALLE kæder — så "ikke
+      // at have den" koster mindst det samme som at have den — plus et fast
+      // beløb for besværet. Selvskalerende, så en manglende laks til 120 kr
+      // ikke vejer det samme som en manglende pose kartofler til 16.
+      let missingKr = 0;
+
+      for (const [key, cands] of options) {
+        let pick = null;
+        for (const c of cands) {
+          if (!inSubset.has(c.chainId)) continue;
+          if (!pick || c.score < pick.score) pick = c;
+        }
+        if (pick) { assignment.set(key, pick); cost += pick.cost; }
+        else missingKr += (cheapestAnywhere.get(key) || 0) + MISSING_ITEM_NUISANCE;
+      }
+
+      const total = cost + (subset.length - 1) * EXTRA_STORE_PENALTY + missingKr;
+      // Strengt `<`: ved uafgjort vinder den laveste maske, og det er den med
+      // de FØRSTE og dermed færreste kæder. To kørsler på uændrede data
+      // sender én ud efter den samme butik — samme argument som i choosePack.
+      if (!best || total < best.total) best = { chains: subset, assignment, cost, total };
+    }
+
+    return best;
+  }
+
+  /**
+   * De to lister, brugeren får: hvad der skal købes, og hvad der skal stå i
+   * skabet.
+   *
+   * Essentials optræder aldrig med en pris — det var hele pointen med
+   * kategorien. Salt, olie og peber står i ethvert køkken, og en madplan, der
+   * beder folk købe salt hver uge, bliver ikke brugt.
+   *
+   *   plan      `{ days: [{ recipe }] }` — retterne, ikke tilbudsmatchene
+   *   items     `items`-tabellen som Map
+   *   offers    `vare|kæde` → aktivt tilbud
+   *   normals   `vare|kæde` → normalpris-rækker
+   *   chainIds  favoritbutikkerne; chooseChains vælger blandt dem
+   *   servings  husstanden. Opskrifterne skaleres til den.
+   *
+   * Kurven bygges med PRÆCIS de samme regler som sharedWeek: isBoughtLine,
+   * skalering til husstanden, oprunding af stk på SUMMEN. Skred de fra
+   * hinanden, ville ugen blive valgt på én kurv og listen skrevet på en anden,
+   * og de to tal står side om side på skærmen.
+   */
+  function shoppingList(plan, { items = new Map(), offers = new Map(), normals = new Map(),
+                                chainIds = [], servings = DEFAULT_SERVINGS,
+                                now = new Date() } = {}) {
+    // Husstanden, ikke opskriftens eget portionsantal — og 0 er ikke en
+    // husstand. Samme vagt som i sharedWeek, af samme grund.
+    const household = servings > 0 ? servings : DEFAULT_SERVINGS;
+
+    const basket = new Map();
+    const pantry = new Map();
+    const usedIn = new Map();
+
+    for (const day of plan.days || []) {
+      const rec = (day && day.recipe) || {};
+      // Samme vare står ofte på to linjer i samme opskrift ("100 g grønkål"
+      // og "1 håndfuld grønkål til servering"). Retten skal kun tælle én gang
+      // i `used_in`, ellers står der "bruges i 3 retter" om en uge med to.
+      const counted = new Set();
+      const countOnce = (key) => {
+        if (counted.has(key)) return;
+        counted.add(key);
+        if (!usedIn.has(key)) usedIn.set(key, []);
+        usedIn.get(key).push(rec.title);
+      };
+
+      for (const it of rec.items || []) {
+        const meta = items.get(it.key);
+        if (!meta) continue;
+
+        if (meta.class === 'essential') {
+          pantry.set(it.key, { key: it.key, name: meta.name || it.key });
+          continue;
+        }
+        // isBoughtLine og ikke `it.optional` alene: en ret med valgfri kylling
+        // er ikke en ret, og ugens kurv køber den. Skulle listen springe den
+        // over, ville den ret, brugeren har fået at se, mangle sin hovedråvare.
+        if (!isBoughtLine(it, meta)) continue;
+
+        // Samme skalering som i sharedWeek. Uden den vælges ugen på skalerede
+        // mængder, mens indkøbslisten skrives på opskriftens egne — og så
+        // står brugeren med ti portioner majsdeller til en aften for fire.
+        // Listen er det, der bliver til virkelighed; den skal regne på det
+        // samme som planen.
+        const factor = household / (rec.servings > 0 ? rec.servings : DEFAULT_SERVINGS);
+        // `amount`, ikke `weight`: weight er en ROLLEVÆGT (stykantal omregnet
+        // til kilo, så assignRoles kan sammenligne 6 æg med 0,4 kg kylling),
+        // mens amount er mængden i varens egen enhed — den, prisen måles i.
+        const need = it.amount * factor;
+        if (!(need > 0)) continue;
+        // Tælles HER og ikke ved linjens start. "potato wedges and green veg,
+        // to serve (optional)" er en kartoffellinje, der aldrig bliver købt —
+        // talte den med, stod der "Kartofler · 0,7 kg · 2 retter" om en
+        // mængde, kun én ret har bedt om. Tallet står lige ved siden af
+        // mængden og skal måle det samme.
+        countOnce(it.key);
+        basket.set(it.key, (basket.get(it.key) || 0) + need);
+      }
+    }
+
+    // Et halvt æg findes ikke. Oprundingen sker på SUMMEN og ikke pr. ret —
+    // fire retter à 0,4 æg er to æg, ikke fire — præcis som i sharedWeek, så
+    // kurven og listen siger det samme tal.
+    for (const [key, need] of basket) {
+      const meta = items.get(key);
+      if (meta && meta.base_unit === 'stk') basket.set(key, Math.ceil(need - 1e-9));
+    }
+
+    const chosen = chooseChains(basket, { chainIds, items, offers, normals, now });
+
+    const buy = [];
+    let unpriced = 0;
+    for (const [key, need] of basket) {
+      const pick = chosen.assignment.get(key);
+      const meta = items.get(key);
+      if (!pick) unpriced++;
+      buy.push({
+        key, name: meta.name || key, chain: pick ? pick.chainId : null,
+        // roundQty og ikke round2: 3 g hvidløg bliver 0 med to decimaler, og
+        // "0 kg Hvidløg" på en indkøbsliste er ikke en oplysning — det er en
+        // fejl, der ser ud som et tal. Samme rettelse som i explainWeek.
+        need: roundQty(need),
+        packs: pick ? pick.packs : null,
+        pack_qty: pick ? pick.pack_qty : null,
+        unit: meta.base_unit,
+        est_cost: pick ? round2(pick.cost) : null,
+        leftover: pick ? roundQty(pick.leftover) : null,
+        on_offer: pick ? Boolean(pick.price.on_offer) : false,
+        used_in: usedIn.get(key) || [],
+      });
+    }
+    // Dyrest først: det er den linje, der betyder noget for budgettet, og den
+    // man skifter ud, hvis ugen blev for dyr. Navnet afgør uafgjort, så to
+    // kørsler på uændrede data giver den samme liste.
+    buy.sort((a, b) => (b.est_cost || 0) - (a.est_cost || 0)
+                    || a.name.localeCompare(b.name, 'da'));
+
+    return {
+      buy,
+      pantry: [...pantry.values()].sort((a, b) => a.name.localeCompare(b.name, 'da')),
+      chains: chosen.chains,
+      total: round2(buy.reduce((a, i) => a + (i.est_cost || 0), 0)),
+      // Hvor mange linjer vi IKKE kender en pris på. Uden tallet ser totalen
+      // fuldstændig ud, selv om der står varer på listen, den ikke har regnet
+      // med — 101 af de 184 varer mangler stadig en pris, så det er ikke et
+      // hjørnetilfælde.
+      unpriced,
+      // Spildet i KRONER. At lægge de rå rester sammen ville addere kilo
+      // kartofler og stykker æg — samme dimensionsfejl som opgave 5 og 7,
+      // og her ville den stå direkte på skærmen som ét tal.
+      //
+      // `p.waste` og ikke `p.leftover`: choosePack har allerede vægtet resten
+      // efter items.keeps, og det er hele grunden til, at kolonnen findes —
+      // "kartofler til overs er ikke spild, fløde til overs er". Målt på den
+      // første rigtige liste var forskellen 79 kr uvægtet mod 59 vægtet, og de
+      // 20 kr var 0,75 kg pasta og 0,87 kg kål, der holder til næste uge. Et
+      // tal, der hedder madspild, må ikke tælle dem fuldt.
+      //
+      // WASTE_AVERSION ganges IKKE på: den er en betalingsvillighed og hører
+      // til i kurvens scoringsled. Her er tallet, hvad maden er VÆRD, så
+      // ugens spildscore er præcis halvdelen af dette — to tal, der kan
+      // regnes om til hinanden, frem for to, der bare er forskellige.
+      waste_kr: round2([...chosen.assignment.values()].reduce((a, p) => {
+        const unit = p.price.unit_price > 0
+          ? p.price.unit_price
+          : p.price.pack_price / p.price.pack_qty;
+        return a + p.waste * unit;
+      }, 0)),
+    };
+  }
+
   return {
-    assignRoles, scoreRecipe, buildPlan, shoppingList, qualifies, cheapestPerItem,
+    assignRoles, scoreRecipe, buildPlan, shoppingList, offerShoppingList, chooseChains,
+    qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
     choosePack, isBoughtLine, hasMainCourse, sharedWeek, twoProposals, explainWeek,
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
-    WASTE_WEIGHT, WASTE_AVERSION,
+    WASTE_WEIGHT, WASTE_AVERSION, EXTRA_STORE_PENALTY, MISSING_ITEM_NUISANCE,
+    MAX_CHOICE_CHAINS,
   };
 }));

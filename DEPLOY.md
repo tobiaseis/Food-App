@@ -60,7 +60,10 @@ git – et 12 MB binært commit om dagen ville sprænge repoet i løbet af et å
 2. Åbn **SQL Editor** → indsæt hele `supabase/schema.sql` → **Run**.
    Filen er idempotent – kør den igen efter en opdatering, der tilføjer
    tabeller. Det gælder fx `offer_index`, `taxonomy_prices` og `recipe_index`,
-   som favoritbutikkerne bygger på.
+   som favoritbutikkerne bygger på, og `item_prices` + `recipe_costs`, som kom
+   til med normalpriserne. **Kører du den ikke, fejler `npm run sync` med
+   "relation item_prices does not exist"** – hele den natlige kørsel, ikke kun
+   de to tabeller.
 3. Under **Project Settings → API** finder du:
    - `Project URL` → bruges som `SUPABASE_URL`
    - `anon public` → `SUPABASE_ANON_KEY` (må gerne ligge i frontenden)

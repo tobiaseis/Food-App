@@ -338,7 +338,7 @@ test('indkøbslisten grupperes efter butik og har resten for sig', () => {
     seed: 1,
   });
 
-  const list = engine.shoppingList(plan);
+  const list = engine.offerShoppingList(plan);
   assert.deepEqual(list.on_offer.map((c) => c.chain).sort(), ['Netto', 'REMA 1000']);
   assert.deepEqual(list.rest.map((r) => r.name), ['Broccoli']);
   assert.equal(list.rest[0].used_in.length, 7);   // brugt i alle syv retter

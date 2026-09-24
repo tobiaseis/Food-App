@@ -2600,7 +2600,7 @@ stadig fyldes uden den løsnende runde.
 **Interfaces:**
 - Produces: `chooseChains(basket, { chainIds, items, offers, normals })` → `{ chains, assignment, cost, total }`; `shoppingList` returnerer `{ buy, pantry, chains, total, waste_kr }`
 
-- [ ] **Step 1: Skriv de fejlende tests**
+- [x] **Step 1: Skriv de fejlende tests**
 
 Boden er 25 kr pr. ekstra butik, så grænsen ligger dér. Fiksturen lægger den ene vare billigere i kæde 2 med præcis kendt forskel:
 
@@ -2664,7 +2664,7 @@ test('valgfrie linjer driver ikke et indkøb', () => {
 });
 ```
 
-- [ ] **Step 2: Kædevalget**
+- [x] **Step 2: Kædevalget**
 
 ```js
   // Hvad en ekstra indkøbstur "koster". En plan, der kræver tre butikker for
@@ -2753,7 +2753,7 @@ test('valgfrie linjer driver ikke et indkøb', () => {
   }
 ```
 
-- [ ] **Step 3: Skriv `shoppingList` om**
+- [x] **Step 3: Skriv `shoppingList` om**
 
 Den nuværende grupperer i `on_offer` og `rest`. Spec afsnit 2.5 vil have **køb ind** og **tjek at du har** — to lister med hver sit formål.
 
@@ -2841,7 +2841,7 @@ Den nuværende grupperer i `on_offer` og `rest`. Spec afsnit 2.5 vil have **køb
 
 `shoppingList` får nu et kontekst-argument. Ret kaldsstederne — grep efter `shoppingList(`.
 
-- [ ] **Step 4: Supabase-skemaet og synkningen**
+- [x] **Step 4: Supabase-skemaet og synkningen**
 
 I `supabase/schema.sql`, efter `taxonomy_prices`:
 
@@ -2886,14 +2886,14 @@ Bemærk at `item_key` her **ikke** har en fremmednøgle til `items`: den tabel s
 
 I `src/sync/build.js`: synk `item_prices` for alle kæder (190 varer × 14 kæder er højst ~2.700 rækker) og `recipe_costs` for de prissætbare. Følg mønsteret fra `offer_index` — samme `upsert`-hjælper, samme batchstørrelse.
 
-- [ ] **Step 5: Kør alt igennem**
+- [x] **Step 5: Kør alt igennem**
 
 ```bash
 npm run prices:bootstrap && npm run prices:import && npm run costs:recompute && npm test
 npm run sync:dry
 ```
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ---
 

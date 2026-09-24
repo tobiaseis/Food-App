@@ -18,6 +18,10 @@ const SCHEMA = {
                     { c:'chain_id', t:'chains', r:'id' }] },
   taxonomy_prices: { pk: ['taxonomy_key'], uniq: [], fks: [] },
   recipe_index: { pk: ['recipe_id'], uniq: [], fks: [] },
+  item_prices:  { pk: ['item_key','chain_id','pack_qty','pack_unit'], uniq: [], fks: [
+                    { c:'chain_id', t:'chains', r:'id' }] },
+  recipe_costs: { pk: ['recipe_id','chain_id'], uniq: [], fks: [
+                    { c:'chain_id', t:'chains', r:'id' }] },
   deals:        { pk: ['offer_id'], uniq: [], fks: [
                     { c:'offer_id', t:'offers', r:'id' }, { c:'product_id', t:'products', r:'id' }] },
   watches:      { pk: ['id'], uniq: [], fks: [] },

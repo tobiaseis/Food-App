@@ -326,7 +326,7 @@ async function handleApi(req, res, url) {
 
     const plan = plans.generatePlan({ tier, chainIds, seed });
     if (!plan.error) {
-      plan.shopping_list = plans.shoppingList(plan);
+      plan.shopping_list = plans.offerShoppingList(plan);
       try { plans.savePlan(plan); } catch { /* historik er ikke kritisk */ }
       planCache.set(key, plan);
     }

@@ -56,6 +56,15 @@ function makeModel(shift = 0) {
     recipeIndex: [{ recipe_id: s(20), title: 'Frikadeller', url: 'https://valdemarsro.dk/frikadeller/',
                     score_classic: 0.8, unknown_main: false,
                     items: [{ key: 'hakket_svinekoed', cat: 'meat', amount: 0.5 }] }],
+    // Priserne. item_prices hænger på chains; recipe_costs gør også, men
+    // BEVIDST ikke på recipes — recipes.id er et lokalt løbenummer, og hele
+    // det afledte lag udskiftes i samme kørsel.
+    itemPrices: [{ item_key: 'hakket_oksekoed', chain_id: 'netto', pack_qty: 0.4,
+                   pack_unit: 'kg', pack_price: 32, unit_price: 80, n_obs: 3,
+                   source: 'manual', observed_at: '2026-09-15T00:00:00.000Z',
+                   valid_until: '2027-03-14T00:00:00.000Z' }],
+    recipeCosts: [{ recipe_id: s(20), chain_id: 'netto', cost: 48.5, cost_packs: 64,
+                    coverage: 1, priceable: true, computed_at: '2026-09-15T00:00:00.000Z' }],
     notifications: [],
     summary: { at: '2026-08-27T00:00:00.000Z', week: 35, year: 2026 },
   };
@@ -68,6 +77,8 @@ test('push lægger hele read-modellen ind', async () => {
   reset();
   await push(makeModel(), quiet);
   assert.equal(DB.products.length, 2);
+  assert.equal(DB.item_prices.length, 1);
+  assert.equal(DB.recipe_costs.length, 1);
   assert.equal(DB.offers.length, 2);
   assert.equal(DB.deals.length, 1);
   assert.equal(DB.price_stats.length, 1);
@@ -85,6 +96,14 @@ test('madplans-indekset udskiftes, det hober sig ikke op', async () => {
   assert.equal(DB.recipe_index.length, 1, 'gamle opskriftsrækker er væk');
   assert.equal(DB.recipe_index[0].recipe_id, 500020);
   assert.equal(DB.offer_index.length, 1);
+
+  // Samme krav til recipe_costs, og her er det ikke kosmetisk: nøglen er
+  // recipe_id, og det er et lokalt løbenummer. Ryddes tabellen ikke, bliver
+  // sidste uges pris liggende under et id, der nu tilhører en anden opskrift —
+  // og budget-sporet sorterer efter den.
+  assert.equal(DB.recipe_costs.length, 1, 'gamle opskriftspriser er væk');
+  assert.equal(DB.recipe_costs[0].recipe_id, 500020);
+  assert.equal(DB.item_prices.length, 1);
 });
 
 test('en base bygget forfra giver ikke 409 på UNIQUE(slug)', async () => {

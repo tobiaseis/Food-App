@@ -461,6 +461,7 @@ function savePlan(plan) {
 module.exports = {
   generatePlan, savePlan,
   shoppingList: engine.shoppingList,
+  offerShoppingList: engine.offerShoppingList,
   activeOfferMap, chainOfferIndex, normalPriceMap, normalPricesFor, loadRecipes,
   favoriteChainIds, chainNamesFor,
   TIERS, DAYS, engine,

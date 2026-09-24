@@ -401,7 +401,14 @@ const Data = {
       chainNames: chains.length ? chains.map((id) => chainNames[id]).filter(Boolean) : null,
     });
 
-    if (!plan.error) plan.shopping_list = window.PlanEngine.shoppingList(plan);
+    // offerShoppingList og ikke shoppingList: de to nye lister (køb ind /
+    // tjek at du har) kræver items-tabellen — klasse, holdbarhed, base_unit —
+    // og den synkes ikke til Supabase. Browseren har kun offer_index,
+    // taxonomy_prices og recipe_index, og recipe_index har oven i købet
+    // filtreret basisvarerne væk, så lagerlisten ville være tom. Skal
+    // browseren bygge dem, skal items synkes først; det er en selvstændig
+    // beslutning og hører til trin 1-5 i brugerfladen.
+    if (!plan.error) plan.shopping_list = window.PlanEngine.offerShoppingList(plan);
     return plan;
   },
 

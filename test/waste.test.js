@@ -500,3 +500,201 @@ test('en uge uden deling påstår ikke at dele', () => {
     [recipe(11, 0.8, [line('hakket_oksekoed', 1)])], { days: 1, ...FIXTURE.ctx });
   assert.equal(engine.explainWeek(week), 'ingen råvarer deles på tværs af retterne');
 });
+
+// ── Kædevalg og de to lister ─────────────────────────────────────────────────
+//
+// Boden er 25 kr pr. ekstra butik, så grænsen ligger dér. Fiksturen lægger den
+// ene vare billigere i kæde 2 med præcis kendt forskel.
+//
+// Kæde 2 har KUN laks. Gav man den også kartofler, kunne den dække hele kurven
+// alene og uden bod — så ville svaret være ['c2'], og testen målte ikke det,
+// den tror. Nu skal man i c1 efter kartoflerne uanset hvad, og spørgsmålet
+// bliver det rigtige: er laksen billig nok til turen?
+const NORMALS_2 = new Map([
+  ...W_NORMALS,
+  ['laks|c2', [{ pack_qty: 1, pack_unit: 'kg', pack_price: 102, unit_price: 102, source: 'manual' }]],
+]);
+const NORMALS_BILLIG = new Map([
+  ...W_NORMALS,
+  ['laks|c2', [{ pack_qty: 1, pack_unit: 'kg', pack_price: 0.5, unit_price: 0.5, source: 'manual' }]],
+]);
+const BASKET = new Map([['laks', 1], ['kartofler', 1]]);
+
+test('en besparelse på 18 kr udløser ikke en ekstra butik', () => {
+  // Laks: 120 kr i c1, 102 i c2. Kartoflerne findes kun i c1.
+  //   c1 alene : 120 + 16                                  = 136
+  //   c2 alene : 102 + manglende kartofler (16 + 40)        = 158
+  //   c1 + c2  : 102 + 16 + 25 bod                          = 143
+  // De 18 kr sparede bærer ikke turen.
+  const r = engine.chooseChains(BASKET, {
+    chainIds: ['c1', 'c2'], items: W_ITEMS, offers: new Map(), normals: NORMALS_2,
+  });
+  assert.deepEqual(r.chains, ['c1']);
+  near(r.total, 136);
+});
+
+test('en stor besparelse gør den ekstra butik det værd', () => {
+  //   c1 alene : 120 + 16                                  = 136
+  //   c2 alene : 0,5 + manglende kartofler (16 + 40)        = 56,5
+  //   c1 + c2  : 0,5 + 16 + 25 bod                          = 41,5
+  //
+  // Og her ligger hele grunden til, at boden for en manglende vare SKAL være
+  // større end boden for en ekstra butik: var den mindre, ville "så lad
+  // kartoflerne være" altid slå "så tag turen til butik 2", og optimeringen
+  // ville svare ved at fjerne varer fra listen i stedet for at vælge butik.
+  const r = engine.chooseChains(BASKET, {
+    chainIds: ['c1', 'c2'], items: W_ITEMS, offers: new Map(), normals: NORMALS_BILLIG,
+  });
+  assert.deepEqual([...r.chains].sort(), ['c1', 'c2']);
+  near(r.total, 41.5);
+  assert.ok(engine.MISSING_ITEM_NUISANCE > engine.EXTRA_STORE_PENALTY,
+    'en manglende vare skal koste mere end turen, der ville skaffe den');
+});
+
+test('boden for en manglende vare følger varens egen pris', () => {
+  // En delmængde, der ikke FØRER varen, må ikke se billig ud, fordi det den
+  // ikke har koster nul. Med en fast bod på 50 kr ville c2 alene stå til
+  // 16 + 50 = 66 og vinde — og laksen til 120 kr ville forsvinde lydløst fra
+  // indkøbslisten. Boden er varens egen billigste pris plus besværet.
+  //
+  //   c1 alene : 120 + 16                                  = 136
+  //   c2 alene : 16 + manglende laks (120 + 40)            = 176
+  //   c1 + c2  : 120 + 16 + 25 bod                          = 161
+  const normals = new Map([
+    ...W_NORMALS,
+    ['kartofler|c2', [{ pack_qty: 2, pack_unit: 'kg', pack_price: 16, unit_price: 8, source: 'manual' }]],
+  ]);
+  const r = engine.chooseChains(BASKET, {
+    chainIds: ['c1', 'c2'], items: W_ITEMS, offers: new Map(), normals,
+  });
+  assert.deepEqual(r.chains, ['c1']);
+  assert.ok(r.assignment.has('laks'), 'laksen skal købes, ikke droppes');
+  assert.ok(r.assignment.has('kartofler'));
+});
+
+test('uden butikker er der intet kædevalg — og ingen undtagelse', () => {
+  // Løkken over delmængder kører nul gange uden kæder. Uden en egen udgang
+  // returnerede funktionen null, og indkøbslisten ville kaste på
+  // `chosen.assignment` i stedet for at sige, at vi ikke kender nogen pris.
+  const r = engine.chooseChains(BASKET, { chainIds: [], items: W_ITEMS, normals: W_NORMALS });
+  assert.deepEqual(r.chains, []);
+  assert.equal(r.assignment.size, 0);
+});
+
+test('indkøbslisten deler i køb og lagertjek', () => {
+  // Ret 1 har salt (essential) og kartofler (købes).
+  const plan = { days: [{ recipe: CANDIDATES[0] }] };
+  const list = engine.shoppingList(plan, CTX);
+
+  assert.ok(list.buy.some((b) => b.key === 'kartofler'));
+  assert.ok(list.buy.every((b) => b.key !== 'salt'), 'essentials må ikke købes');
+  assert.ok(list.pantry.some((p) => p.key === 'salt'), 'salt skal på lagerlisten');
+  assert.ok(list.pantry.every((p) => p.est_cost === undefined),
+    'essentials må aldrig have en pris');
+
+  // 1 kg hakket oksekød (80) + én 2 kg-pose kartofler (16).
+  near(list.total, 96);
+  assert.deepEqual(list.chains, ['c1']);
+});
+
+test('valgfrie linjer driver ikke et indkøb — men en valgfri hovedprotein gør', () => {
+  // Præcis samme regel som ugens kurv (isBoughtLine). Var de to uenige, ville
+  // ugen blive valgt på én kurv og listen skrevet på en anden — og de to tal
+  // står side om side på skærmen.
+  const medPersille = { days: [{ recipe: recipe(60, 0.5, [
+    line('kartofler', 0.6),
+    { ...line('persille', 0.02), optional: true },
+  ]) }] };
+  assert.ok(engine.shoppingList(medPersille, CTX).buy.every((b) => b.key !== 'persille'),
+    'evt. persille skal springes over');
+
+  // OPTIONAL_RE fejlflager "4 chicken breasts (skinless, if you like)". En ret
+  // med valgfri laks er ikke en ret, så laksen købes.
+  const medLaks = { days: [{ recipe: recipe(61, 0.5, [
+    line('kartofler', 0.6),
+    { ...line('laks', 0.4), optional: true },
+  ]) }] };
+  assert.ok(engine.shoppingList(medLaks, CTX).buy.some((b) => b.key === 'laks'),
+    'en valgfri hovedprotein købes — se isBoughtLine');
+});
+
+test('indkøbslisten skalerer til husstanden', () => {
+  // Ellers vælges ugen på skalerede mængder, mens listen skrives på
+  // opskriftens egne — og listen er det, der bliver til virkelighed.
+  const tilTi = { ...recipe(62, 0.8, [line('hakket_oksekoed', 2.5)]), servings: 10 };
+  const plan = { days: [{ recipe: tilTi }] };
+
+  near(engine.shoppingList(plan, { ...CTX, servings: 4 }).total, 80);   // 1,0 kg -> én pose
+  near(engine.shoppingList(plan, { ...CTX, servings: 8 }).total, 160);  // 2,0 kg -> to poser
+  near(engine.shoppingList(plan, CTX).total, 80);                      // standard er 4
+});
+
+test('listen og ugen regner på den samme kurv', () => {
+  // Invarianten, der betyder mest: ugens pris og indkøbslistens sum er det
+  // samme regnestykke på det samme grundlag. Skrider de fra hinanden, står
+  // der to forskellige tal på skærmen for den samme uge.
+  const week = engine.sharedWeek(CANDIDATES, { days: 2, ...CTX });
+  const list = engine.shoppingList({ days: week.picks.map((r) => ({ recipe: r })) }, CTX);
+  near(list.total, week.cost);
+});
+
+test('spildet står i kroner og er vægtet efter holdbarhed', () => {
+  // Tre tal, og kun det ene er rigtigt. 0,6 kg laks til overs (perishable,
+  // 120 kr/kg) og 0,75 kg pasta (pantry, 12 kr/kg):
+  //
+  //   1,35        de rå rester lagt sammen — kilo laks plus kilo pasta er
+  //               tilfældigvis samme enhed her, men med æg i kurven adderer
+  //               samme regnestykke stykker og kilo. Dimensionsfejlen fra
+  //               opgave 5 og 7, denne gang direkte på skærmen.
+  //   81 kr       uvægtet: 72 for laksen PLUS 9 for pasta, der ikke bliver
+  //               smidt ud. Så er items.keeps uden virkning, og "kartofler
+  //               til overs er ikke spild" gælder ikke længere.
+  //   72 kr       vægtet: laksen tæller fuldt, pastaen slet ikke.
+  const plan = { days: [{ recipe: recipe(63, 0.8, [line('laks', 0.4), line('pasta', 0.25)]) }] };
+  near(engine.shoppingList(plan, CTX).waste_kr, 72);
+});
+
+test('ugens spildscore er halvdelen af listens spild', () => {
+  // De to tal står side om side i brugerfladen — ugens "spild" i forslaget og
+  // listens waste_kr — og skal kunne regnes om til hinanden. Ugens er
+  // betalingsvilligheden (× WASTE_AVERSION), listens er værdien.
+  const week = engine.sharedWeek(CANDIDATES, { days: 2, ...CTX });
+  const list = engine.shoppingList({ days: week.picks.map((r) => ({ recipe: r })) }, CTX);
+  near(week.waste, list.waste_kr * engine.WASTE_AVERSION);
+});
+
+test('used_in tæller kun de retter, varen faktisk købes til', () => {
+  // Målt på første rigtige kørsel: "potato wedges and green veg, to serve
+  // (optional)" er en kartoffellinje, der aldrig bliver købt. Talte den med,
+  // stod der "Kartofler · 0,7 kg · 2 retter" om en mængde, kun én ret havde
+  // bedt om — og tallet står lige ved siden af mængden.
+  const koeber = recipe(66, 0.8, [line('kartofler', 0.7), line('kylling', 0.5)]);
+  const pynt = recipe(67, 0.8, [line('laks', 0.5), { ...line('kartofler', null), optional: true }]);
+  const list = engine.shoppingList({ days: [{ recipe: koeber }, { recipe: pynt }] }, CTX);
+  const kart = list.buy.find((b) => b.key === 'kartofler');
+  near(kart.need, 0.7);
+  assert.deepEqual(kart.used_in, ['Ret 66']);
+});
+
+test('3 g hvidløg står ikke som 0 kg på listen', () => {
+  // round2 er rigtig for en pris og forkert for en mængde. "0 kg Hvidløg" på
+  // en indkøbsliste er ikke en oplysning — samme fejl som i explainWeek.
+  const plan = { days: [{ recipe: recipe(64, 0.8, [line('hvidloeg', 0.003)]) }] };
+  const hvid = engine.shoppingList(plan, CTX).buy.find((b) => b.key === 'hvidloeg');
+  assert.ok(hvid.need > 0, `hvidløget stod som ${hvid.need}`);
+});
+
+test('en vare uden pris står stadig på listen — og tælles', () => {
+  // Havbars har ingen pris i c1. Den skal stadig købes: behovet er ægte, og
+  // en liste, der tier om det, sender folk hjem uden aftensmad. Men den må
+  // ikke tælle som 0 kr i totalen, og brugeren skal kunne se, hvor mange
+  // linjer der mangler en pris.
+  const plan = { days: [{ recipe: recipe(65, 0.8, [line('havbars', 0.6), line('kartofler', 0.6)]) }] };
+  const list = engine.shoppingList(plan, CTX);
+  const hav = list.buy.find((b) => b.key === 'havbars');
+  assert.ok(hav, 'havbarsen skal stå på listen');
+  assert.equal(hav.est_cost, null);
+  assert.equal(hav.chain, null);
+  assert.equal(list.unpriced, 1);
+  near(list.total, 16);
+});

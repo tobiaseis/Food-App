@@ -109,6 +109,48 @@ function collectPriceModel(db, log) {
   return { stats, series };
 }
 
+/**
+ * Normalpriser og forudberegnede opskriftspriser.
+ *
+ * Begge er rene resultater — regnet her, mod den lokale base — og begge skal
+ * med til Supabase, fordi browseren prissætter planen selv: den henter
+ * favoritbutikkernes rækker og kører samme engine.js som denne fil.
+ *
+ * `item_prices` synkes for alle kæder. Det er ~650 rækker i dag og kan højst
+ * blive 184 varer x 14 kæder, så der er ingen grund til at filtrere.
+ *
+ * `recipe_costs` synkes kun for de PRISSÆTBARE. De øvrige 30.500 rækker har
+ * en pris, der mangler ingredienser, og en pris, der mangler ingredienser, er
+ * ikke en pris — budget-sporet sorterer alligevel kun blandt dem, der kan
+ * prissættes helt.
+ */
+function collectPriceTables(db, log) {
+  const itemPrices = db.prepare(`
+    SELECT item_key, chain_id, pack_qty, pack_unit, pack_price, unit_price,
+           n_obs, source, observed_at, valid_until
+      FROM item_prices
+  `).all().map((r) => ({
+    ...r,
+    observed_at: iso(r.observed_at),
+    valid_until: iso(r.valid_until),
+  }));
+
+  const recipeCosts = db.prepare(`
+    SELECT recipe_id, chain_id, cost, cost_packs, coverage, priceable, computed_at
+      FROM recipe_costs
+     WHERE priceable = 1
+  `).all().map((r) => ({
+    ...r,
+    // SQLite har ingen boolean, Postgres-kolonnen ER en. Sendes 1, afviser
+    // PostgREST hele batchen med "invalid input syntax for type boolean".
+    priceable: !!r.priceable,
+    computed_at: iso(r.computed_at),
+  }));
+
+  log(`  priser: ${itemPrices.length} normalpriser · ${recipeCosts.length} prissatte opskrifter`);
+  return { itemPrices, recipeCosts };
+}
+
 /** Ugens fund med færdig vurdering. */
 function collectDeals(log) {
   const rows = topDeals({ limit: 100 });
@@ -250,7 +292,7 @@ function collectPlans(log) {
       });
       if (plan.error || !plan.days.length) continue;
 
-      plan.shopping_list = require('../mealplan/generate').shoppingList(plan);
+      plan.shopping_list = require('../mealplan/generate').offerShoppingList(plan);
       if (variant === 0) { try { savePlan(plan); } catch { /* historik er ikke kritisk */ } }
 
       plans.push({
@@ -362,6 +404,12 @@ async function syncWatches(db, log) {
 const DERIVED = [
   ['meal_plans',    'tier=not.is.null'],
   ['recipe_index',  'recipe_id=not.is.null'],
+  // Begge er fuldstændig afledt af data.db og udskiftes i hver kørsel. Det er
+  // ikke kun oprydning: ryddes recipe_costs ikke, bliver gamle rækker liggende
+  // under recipe_id'er, der nu tilhører en anden opskrift — recipes.id er et
+  // lokalt løbenummer, ikke en stabil nøgle (se kommentaren ovenfor).
+  ['item_prices',   'item_key=not.is.null'],
+  ['recipe_costs',  'recipe_id=not.is.null'],
   ['offer_index',   'taxonomy_key=not.is.null'],
   ['deals',        'offer_id=not.is.null'],
   ['price_series', 'product_id=not.is.null'],
@@ -459,6 +507,12 @@ async function push(model, log) {
   await t('taxonomy_prices', model.taxonomyPrices, { onConflict: 'taxonomy_key' });
   await t('recipe_index', model.recipeIndex, { onConflict: 'recipe_id', chunk: 200 });
 
+  // Priserne. item_prices og recipe_costs peger begge på chains, så de skal
+  // efter dem — de står her, fordi de hører til samme madplans-indeks.
+  await t('item_prices', model.itemPrices,
+    { onConflict: 'item_key,chain_id,pack_qty,pack_unit', chunk: 400 });
+  await t('recipe_costs', model.recipeCosts, { onConflict: 'recipe_id,chain_id', chunk: 400 });
+
   if (model.notifications.length) {
     await t('notifications', model.notifications, { onConflict: 'watch_id,offer_id' });
   }
@@ -483,6 +537,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
 
   const { stats: priceStats, series: priceSeries } = collectPriceModel(db, log);
   const deals = collectDeals(log);
+  const priceTables = collectPriceTables(db, log);
   const planIndex = collectPlanIndex(log);
   const weekPlans = collectPlans(log);
 
@@ -513,6 +568,8 @@ async function build({ dryRun = false, log = console.log } = {}) {
     plans: weekPlans.length,
     plan_recipes: planIndex.recipeIndex.length,
     plan_offers: planIndex.offerIndex.length,
+    item_prices: priceTables.itemPrices.length,
+    recipe_costs: priceTables.recipeCosts.length,
     notifications: notifications.length,
   };
 
@@ -522,6 +579,8 @@ async function build({ dryRun = false, log = console.log } = {}) {
     offerIndex: planIndex.offerIndex,
     taxonomyPrices: planIndex.taxonomyPrices,
     recipeIndex: planIndex.recipeIndex,
+    itemPrices: priceTables.itemPrices,
+    recipeCosts: priceTables.recipeCosts,
     notifications, summary,
   };
 
@@ -536,6 +595,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
       price_stats: priceStats, price_series: priceSeries, deals, meal_plans: weekPlans,
       offer_index: planIndex.offerIndex, taxonomy_prices: planIndex.taxonomyPrices,
       recipe_index: planIndex.recipeIndex,
+      item_prices: priceTables.itemPrices, recipe_costs: priceTables.recipeCosts,
     })) log(`  ${k.padEnd(16)} ${v.length}`);
     return { model, pushed: false };
   }
@@ -556,4 +616,5 @@ if (require.main === module) {
 
 module.exports = {
   build, push, collectCatalog, collectPriceModel, collectDeals, collectPlans, collectPlanIndex,
+  collectPriceTables,
 };

@@ -173,6 +173,55 @@ create table if not exists taxonomy_prices (
   samples      int
 );
 
+-- Normalpriser. Ikke brugerdata: det er hvad varen koster i butikken, og
+-- frontenden skal kunne læse dem for at prissætte en plan i browseren.
+--
+-- Pakken står i rækken, ikke kun kr/kg. Uden den kan hverken pakkeafrundingen
+-- eller kædevalget regne, og en opskriftspris som mængde x kr/kg er
+-- systematisk for lav: skal man bruge 0,5 kg kartofler, koster det hele posen.
+create table if not exists item_prices (
+  item_key    text not null,
+  chain_id    text not null references chains(id),
+  pack_qty    double precision not null,
+  pack_unit   text not null,
+  pack_price  double precision not null,
+  unit_price  double precision not null,
+  -- Hvor mange ugentlige observationer et 'derived'-gæt hviler på. 1 er ét
+  -- enkelt tilbud og næsten intet værd. Kolonnen skal med herop, for uden den
+  -- kan browseren ikke se forskel på et gæt og en hyldepris.
+  n_obs       int not null default 0,
+  source      text not null,
+  observed_at timestamptz,
+  valid_until timestamptz,
+  primary key (item_key, chain_id, pack_qty, pack_unit)
+);
+-- Samme historie som offer_index.base_qty og recipe_index.unknown_count:
+-- `create table if not exists` rører ikke en eksisterende tabel. n_obs kom til
+-- i opgave 1, efter tabellen var skrevet ned i planen, så den, der oprettede
+-- item_prices efter plantekstens udgave, har den uden kolonnen — og synken
+-- ville fejle med "column item_prices.n_obs does not exist".
+alter table item_prices add column if not exists n_obs int not null default 0;
+create index if not exists idx_item_prices_chain on item_prices(chain_id);
+
+-- Forudberegnet opskriftspris. Budget-sporet sorterer på cost.
+--
+-- `recipe_id` har med vilje INGEN fremmednøgle til recipes: recipes.id er et
+-- lokalt AUTOINCREMENT-løbenummer, og hele det afledte lag udskiftes i samme
+-- kørsel, så de to sæt id'er kommer fra den samme base. En fremmednøgle ville
+-- kun flytte rækkefølgekravet ind i Postgres uden at gøre tallene mere stabile.
+create table if not exists recipe_costs (
+  recipe_id   bigint not null,
+  chain_id    text not null references chains(id),
+  cost        double precision,
+  cost_packs  double precision,
+  coverage    double precision,
+  priceable   boolean default false,
+  computed_at timestamptz,
+  primary key (recipe_id, chain_id)
+);
+create index if not exists idx_recipe_costs_cheap on recipe_costs(chain_id, cost)
+  where priceable;
+
 -- Opskrifterne i planlægningsklar form: ingredienserne er allerede slået op i
 -- taksonomien, så browseren hverken skal kende den eller regne mængder om.
 create table if not exists recipe_index (
@@ -313,6 +362,8 @@ alter table meal_plans   enable row level security;
 alter table offer_index     enable row level security;
 alter table taxonomy_prices enable row level security;
 alter table recipe_index    enable row level security;
+alter table item_prices     enable row level security;
+alter table recipe_costs    enable row level security;
 alter table deals        enable row level security;
 alter table sync_state   enable row level security;
 alter table watches      enable row level security;
@@ -325,7 +376,8 @@ begin
   -- Offentlig læsning af katalogdata
   foreach t in array array['chains','products','stores','offers','recipes',
                            'price_stats','price_series','meal_plans','deals','sync_state',
-                           'offer_index','taxonomy_prices','recipe_index']
+                           'offer_index','taxonomy_prices','recipe_index',
+                           'item_prices','recipe_costs']
   loop
     execute format('drop policy if exists read_all on %I', t);
     execute format('create policy read_all on %I for select to anon, authenticated using (true)', t);
