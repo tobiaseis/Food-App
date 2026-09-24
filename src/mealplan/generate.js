@@ -460,7 +460,12 @@ function savePlan(plan) {
 
 module.exports = {
   generatePlan, savePlan,
-  shoppingList: engine.shoppingList,
+  // `shoppingList` re-eksporteres IKKE. Den hed sådan indtil opgave 8 og tog
+  // en buildPlan alene; nu kræver den en kontekst med items, priser og kæder,
+  // og fordi hvert felt har en standardværdi, ville et gammelt kald
+  // `plans.shoppingList(plan)` ikke kaste — det ville returnere tomme lister,
+  // og app.js ville tegne ingenting. De to nye lister hentes fra `engine`,
+  // som også er eksporteret herunder, så navnet ikke kan bruges i vanvare.
   offerShoppingList: engine.offerShoppingList,
   activeOfferMap, chainOfferIndex, normalPriceMap, normalPricesFor, loadRecipes,
   favoriteChainIds, chainNamesFor,

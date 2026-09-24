@@ -2664,6 +2664,29 @@ test('valgfrie linjer driver ikke et indkøb', () => {
 });
 ```
 
+> **Rettet efter implementering og review — tre af testene ovenfor står
+> anderledes i `test/waste.test.js`, og forskellene er målte.**
+>
+> **`laks`-assertionen er vendt.** Planens sidste test påstod, at en `optional`
+> linje aldrig bliver købt. Første rigtige kørsel valgte *Baked chicken breast*,
+> hvis kyllingelinje ER flaget optional — `OPTIONAL_RE` matcher "(skinless, if
+> you like)" midt i linjen — og en indkøbsliste til en kyllingeret uden kylling
+> er 49 kr for lav. Reglen er `isBoughtLine`, den samme som ugens kurv bruger, og
+> testen hedder nu "valgfrie linjer driver ikke et indkøb — men en valgfri
+> hovedprotein gør". Persillen har taget laksens plads som den valgfri linje,
+> der IKKE købes.
+>
+> **`est_cost === undefined` er ikke en prøve.** Den består også for en
+> lagerlinje, der har fået et `price`-, `chain`- eller `pack_qty`-felt med.
+> Testen sammenligner nøglerne i stedet: `Object.keys(row).sort()` skal være
+> præcis `['key', 'name']` — samme idiom som "score er et internt tal og slipper
+> ikke ud".
+>
+> **Og fiksturen skal have mere end én kæde.** `CTX` har kun `c1`, og med én kæde
+> kan `chooseChains` ikke indsnævre noget — så hverken prisinvarianten eller
+> spildforholdet kan fejle af det, der faktisk bryder dem (trin 4b). `CTX_2`,
+> hvor c2 har kartofler billigere i en mindre pose, er tilføjet til netop de to.
+
 - [x] **Step 2: Kædevalget**
 
 ```js
@@ -2753,6 +2776,35 @@ test('valgfrie linjer driver ikke et indkøb', () => {
   }
 ```
 
+> **Rettet: `MISSING_ITEM_NUISANCE` er `EXTRA_STORE_PENALTY + 15`, ikke 20 — og
+> loftet på fem kæder bor ikke længere i funktionen.**
+>
+> **De to bod-tal kan ikke sættes uafhængigt af hinanden.** Var boden for en
+> manglende vare MINDRE end boden for en ekstra butik, ville "lad kartoflerne
+> være" altid slå "tag turen til butik 2", og optimeringen ville svare på
+> "hvilke butikker?" ved at fjerne varer fra listen. Planens egen test ville
+> have svaret `['c2']`, hvor den påstod `['c1','c2']`: c2 alene 36,50 kr mod
+> c1+c2 41,50. Relationen står nu i koden som en sum, ikke i en kommentar,
+> ingen læser.
+>
+> **Kun relationen betyder noget, og det er målt.** Fem motorer (0, 20, 26, 40
+> og 200) over 520 rigtige kurve: svaret er identisk for 26, 40 og 200, mens
+> planens 20 ændrer det i 154 af 520 og dropper 173 varer, der kunne være købt.
+>
+> **Prisen pr. (vare, kæde) regnes ÉN gang før mask-løkken**, ikke 31 gange inde
+> i den, og sammenligningen mellem kæder regnes af `choosePack`s egne felter —
+> den giver ikke sin interne score fra sig, så uden det var `pick.score`
+> undefined, enhver sammenligning falsk, og den første kæde vandt altid.
+>
+> **`chainIds.slice(0, 5)` er flyttet til `chainsInPlay`** — se trin 4c.
+>
+> **Det, der IKKE er rettet, og som er et bevidst valg:** fordi
+> `MISSING_ITEM_NUISANCE > EXTRA_STORE_PENALTY`, bliver en favorit, der er den
+> eneste med en vare i kurven, altid taget med — også når listen derved bliver
+> dyrere. Målt: 152,88 → 160,98 kr. At droppe en ingrediens er værre end en
+> ekstra indkøbstur, og tallet står i koden som det, de to skøn skal ses efter
+> på, når de første rigtige lister har været i hænderne på nogen.
+
 - [x] **Step 3: Skriv `shoppingList` om**
 
 Den nuværende grupperer i `on_offer` og `rest`. Spec afsnit 2.5 vil have **køb ind** og **tjek at du har** — to lister med hver sit formål.
@@ -2841,6 +2893,49 @@ Den nuværende grupperer i `on_offer` og `rest`. Spec afsnit 2.5 vil have **køb
 
 `shoppingList` får nu et kontekst-argument. Ret kaldsstederne — grep efter `shoppingList(`.
 
+> **Rettet fem steder, tre af dem fundet på rigtige data.**
+>
+> **1. `if (it.optional) continue` → `isBoughtLine(it, meta)`.** Se trin 1: ugens
+> kurv køber den valgfrie hovedprotein, og de to skal regne på det samme.
+>
+> **2. `waste_kr` vægtes efter `items.keeps`** (`p.waste`, ikke `p.leftover`).
+> Uvægtet stod der 79 kr på den første rigtige liste mod 59 vægtet, og de 20 kr
+> var 0,75 kg pasta og 0,87 kg kål, der holder til næste uge. Kolonnen findes
+> præcis for at sige "kartofler til overs er ikke spild".
+>
+> **3. `used_in` tælles først, når linjen bliver et indkøb.** "potato wedges and
+> green veg, to serve (optional)" gjorde Kartofler til "0,7 kg over 2 retter",
+> hvor kun én ret havde bedt om dem — og tallet står lige ved siden af mængden.
+> Samme vare på to linjer i samme ret tælles også kun én gang.
+>
+> **4. Mængden vises med `roundQty`, ikke `round2`.** 3 g hvidløg blev "0 kg
+> Hvidløg": en fejl, der ser ud som en oplysning. Samme rettelse som i
+> `explainWeek`.
+>
+> **5. Oprundingen af `stk` er ikke listens egen længere.** `Math.ceil(need - 1e-9)`
+> stod her, mens ugens `wholeUnits` havde et bart `Math.ceil`, og kommentaren
+> påstod, at de var den samme regel. **75 sammenlagte behov afveg** i korpusset
+> — opskrift 30, 45 og 428 ved husstand 6 giver `need = 3.0000000000000004`, så
+> ugen købte 4 brød og listen 3. Listen havde ret, og reglen er nu én delt
+> `wholeUnits`, som begge kalder.
+>
+> **Returformen har to felter mere end ovenfor:** `unpriced` (101 af de 184
+> varer mangler stadig en pris, så en total uden det tal ser fuldstændig ud) og
+> `dropped_chains` (trin 4c). `est_cost` og `chain` er `null` og ikke udeladt for
+> en vare uden pris — behovet er ægte, og en liste, der tier om det, sender folk
+> hjem uden aftensmad. `total` og `waste_kr` regnes af `basketTotalKr` og
+> `basketWasteKr`, de samme to funktioner som ugens pris (trin 4b).
+>
+> **Og den gamle `shoppingList` er ikke slettet, men omdøbt til
+> `offerShoppingList`.** Alle tre kaldere (`src/server.js`, `src/sync/build.js`,
+> `public/data.js`) giver den en `buildPlan`, hvis dage bærer matched/unmatched
+> og INGEN `recipe.items`; de to nye lister kræver `items`-tabellen, og den
+> synkes ikke til Supabase. Skiftede man navnet alene, forsvandt listen fra
+> skærmen. Re-eksporten `plans.shoppingList` er til gengæld fjernet: hvert felt
+> i konteksten har en standardværdi, så et gammelt kald `plans.shoppingList(plan)`
+> ville ikke kaste — det ville returnere tomme lister, og `app.js` ville tegne
+> ingenting.
+
 - [x] **Step 4: Supabase-skemaet og synkningen**
 
 I `supabase/schema.sql`, efter `taxonomy_prices`:
@@ -2886,7 +2981,7 @@ Bemærk at `item_key` her **ikke** har en fremmednøgle til `items`: den tabel s
 
 I `src/sync/build.js`: synk `item_prices` for alle kæder (190 varer × 14 kæder er højst ~2.700 rækker) og `recipe_costs` for de prissætbare. Følg mønsteret fra `offer_index` — samme `upsert`-hjælper, samme batchstørrelse.
 
-- [ ] **Step 4b: Ugen og listen skal vise det samme tal**
+- [x] **Step 4b: Ugen og listen skal vise det samme tal**
 
 Målt på rigtige data: ugen siger **111,33 kr**, listen **157,93** — 42 % forskel, og begge
 tal står side om side på skærmen i trin 4 og 5. Testen kunne ikke fange det, fordi
@@ -2902,7 +2997,33 @@ pris. Retterne ændrer sig ikke — valget er truffet — så det er ét ekstra 
 der allerede står stille. Og **testen skal have mere end én kæde**, ellers måler den
 fortsat ingenting.
 
-- [ ] **Step 4c: Fem favoritter er loftet — så skal det gælde begge steder**
+> **Gennemført, og de to tal er nu ét.** `sharedWeek` kalder `chooseChains` på
+> den færdige kurv og melder DEN pris, DE butikker og det tilsvarende spild;
+> `basketTotalKr` og `basketWasteKr` er de samme to funktioner, indkøbslisten
+> bruger, så summen er øre for øre den samme. Målt på reviewets eget scenarie
+> (alle 2.175 opskrifter, ingen spor-score, 4 dage, husstand 4, frø 0):
+>
+> | favoritter | uge før | liste | uge efter | spildfaktor før → efter |
+> |---|---|---|---|---|
+> | REMA+Kvickly+Netto+føtex | 111,33 | 157,93 | **157,93** | 5,52 → **2,000** |
+> | REMA+Kvickly | 88,85 | 110,70 | **110,70** | 4,22 → **2,000** |
+> | de fire + Lidl + Bilka | 96,33 | 126,98 | **126,98** | 4,56 → **2,000** |
+>
+> Retterne er de samme før og efter: valget er truffet af marginalen, og
+> butiksboden er den samme, hvilken ret der end vælges. Den grådige løkke
+> prissætter derfor stadig i den billigste favoritbutik uden bod — det er
+> rigtigt til en SAMMENLIGNING — men det tal går ikke længere ud af funktionen.
+>
+> Spildfaktoren var 2 i test og 4-5 på rigtige data af samme grund: ugen regnede
+> spildet på den billigste pose nogen steder, listen på den, der blev købt. Nu
+> er begge `basketWasteKr` af den samme `assignment`, og forholdet er
+> `WASTE_AVERSION` **per konstruktion**, ikke tilfældigvis.
+>
+> Og `shared`/`saved_kr` regnes nu af kædevalgets egen pakke: ellers stod
+> besparelsen i kroner fra en butik, brugeren ikke kommer i, mens prisen lige
+> ved siden af var regnet i dem, hun gør.
+
+- [x] **Step 4c: Fem favoritter er loftet — så skal det gælde begge steder**
 
 `chooseChains` tager `chainIds.slice(0, 5)`, fordi 31 delmængder er det, man kan
 gennemregne eksakt. Men intet begrænser favoritterne, og `sharedWeek` løber over dem
@@ -2912,6 +3033,18 @@ og ender på listen som "ingen pris".
 Loftet skal gælde samme sted for begge — afkort listen ét sted og lad dem dele den — og
 når der afkortes, skal brugeren have det at vide frem for at opdage det som en manglende
 vare.
+
+> **Gennemført: `chainsInPlay` afkorter ét sted, og begge bruger den.**
+> `sharedWeek` prissætter nu kun i de fem første favoritter — `bestPackFor` og
+> `canPrice` med — og både ugen og listen bærer `dropped_chains` ud, så den, der
+> giver brugeren seks favoritbutikker i brugerfladen, kan sige det frem for at
+> lade hende opdage det som en manglende vare.
+>
+> Efterprøvet i test: seks favoritter, hvor kun den sjette fører laks, giver
+> `dropped_chains: ['c6']`, laksen på listen uden pris, `unpriced: 1` — og ugen
+> melder de samme 16 kr som listen i stedet for at prissætte en laks, den ikke
+> kan købe. På rigtige data (de fire + Lidl + Bilka) er Bilka den afkortede, og
+> ugen og listen er enige om 126,98 kr.
 
 - [x] **Step 5: Kør alt igennem**
 

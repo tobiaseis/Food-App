@@ -539,6 +539,19 @@
   const WASTE_AVERSION = 0.5;
 
   /**
+   * Pakkens pris pr. enhed: enhedsprisen, når den står, ellers regnet ud.
+   *
+   * Udtrykket stod fire steder — ugens kurv, kædevalget, listens spild og
+   * choosePack — og de fire må aldrig kunne komme til at svare forskelligt.
+   * `unit_price` kan mangle helt på en håndskrevet række; et opslag, der så
+   * giver undefined, gør spildet til NaN, og NaN står, hvor et tal skal stå.
+   * `pack_qty` er sikret større end nul, dér hvor priserne kommer ind.
+   */
+  const unitPriceOf = (price) => (price.unit_price > 0
+    ? price.unit_price
+    : price.pack_price / price.pack_qty);
+
+  /**
    * Hvilken pakke, og hvor mange af den, dækker behovet billigst?
    *
    * Man kan ikke købe en halv pose. Skal man bruge 1,3 kg kartofler, koster
@@ -611,7 +624,7 @@
       // Resten prissættes til det, den er værd — ikke til et fast beløb pr.
       // enhed. Enhedsprisen kan mangle på en håndskrevet række; den kan
       // altid regnes, og pack_qty er allerede sikret større end nul ovenfor.
-      const unit = p.unit_price > 0 ? p.unit_price : p.pack_price / p.pack_qty;
+      const unit = unitPriceOf(p);
 
       // Scoren blander kroner og spild og er ikke en pris, nogen kan betale.
       // Den bliver derfor i funktionen: effectivePrice lækkede præcis sådan
@@ -1257,6 +1270,67 @@
   };
 
   /**
+   * Et stykke kan ikke deles: 0,8 æg er ét æg.
+   *
+   * Oprundingen sker på SUMMEN og ikke pr. ret, og forskellen er målbar. Rundes
+   * hver ret op for sig, køber fire retter à 0,4 æg fire æg, hvor to slår til.
+   * Behovet skal lægges sammen først og rundes op bagefter — præcis samme regel
+   * som pakkeafrundingen, og af samme grund.
+   *
+   * Tolerancen er ikke pynt. 0,5 + 0,5 + 2 flydende halve giver
+   * 3.0000000000000004, og et rent `Math.ceil` køber et fjerde brød. Målt over
+   * hele korpusset afveg 75 sammenlagte behov præcis sådan — opskrift 30, 45 og
+   * 428 ved husstand 6 — så ugen købte fire, hvor listen købte tre. Reglen bor
+   * HER, fordi begge skal bruge den: stod den to steder, ville ugens pris og
+   * listens pris bygge på hvert sit antal brød.
+   *
+   * Absolut og ikke relativ tolerance som i choosePack: dér divideres et behov
+   * med en pakkestørrelse, og resultatet kan blive stort, mens et stykantal i
+   * en madplan er små tal (højeste i korpusset er 24), hvor 1e-9 ligger mange
+   * størrelsesordener over float-støjen og mange under et halvt stykke.
+   */
+  const wholeUnits = (meta, need) => (meta && meta.base_unit === 'stk'
+    ? Math.ceil(need - 1e-9)
+    : need);
+
+  /**
+   * Prisen og spildet for et kædevalg — de to tal, ugen og listen deler.
+   *
+   * Begge tager `chooseChains`' assignment, og det er hele pointen: ugens pris
+   * og indkøbslistens sum skal være ØRE for øre det samme tal, for de står side
+   * om side på skærmen i trin 4 og 5. Målt før: ugen sagde 111,33 kr, listen
+   * 157,93 — 42 % — fordi ugen prissatte hver vare i den billigste favoritbutik
+   * uden butiksbod, mens listen prissatte den i de butikker, man faktisk kommer
+   * i. Det tal, brugeren vælger ud fra, skal være det tal, brugeren betaler.
+   *
+   * Summen lægges af de AFRUNDEDE linjepriser og ikke af de rå: listen viser
+   * hver linje med to decimaler, og en total, der ikke kan lægges sammen af de
+   * tal, der står på den, er den samme slags fejl et lag nede.
+   */
+  const basketTotalKr = (assignment) => round2([...assignment.values()]
+    .reduce((a, p) => a + round2(p.cost), 0));
+
+  /**
+   * Spildet i KRONER for et kædevalg. `p.waste` og ikke `p.leftover`:
+   * choosePack har allerede vægtet resten efter items.keeps, og det er hele
+   * grunden til, at kolonnen findes — "kartofler til overs er ikke spild, fløde
+   * til overs er". Målt på den første rigtige liste var forskellen 79 kr
+   * uvægtet mod 59 vægtet, og de 20 kr var 0,75 kg pasta og 0,87 kg kål, der
+   * holder til næste uge.
+   *
+   * At lægge de rå rester sammen ville addere kilo kartofler og stykker æg —
+   * samme dimensionsfejl som opgave 5 og 7, og her ville den stå direkte på
+   * skærmen som ét tal.
+   *
+   * WASTE_AVERSION ganges IKKE på her: den er en betalingsvillighed og hører
+   * til i kurvens scoringsled. Dette tal er, hvad maden er VÆRD, og ugens
+   * spildscore er præcis det gange WASTE_AVERSION — to tal, der kan regnes om
+   * til hinanden, frem for to, der bare er forskellige.
+   */
+  const basketWasteKr = (assignment) => round2([...assignment.values()]
+    .reduce((a, p) => a + p.waste * unitPriceOf(p.price), 0));
+
+  /**
    * Byg en uge ved grådigt at tilføje den ret, der giver mest for pengene.
    *
    * Målet er ikke laveste pris alene: en uge, hvor hver ret trækker sin egen
@@ -1286,11 +1360,17 @@
     const picks = [];
     const basket = new Map();   // vare → samlet behov i varens base_unit
 
+    // Loftet på fem favoritter gælder HER OG SÅ, og ikke først i kædevalget.
+    // Prissatte ugen i alle favoritter, mens kædevalget kun så de fem første,
+    // ville en vare, kun den sjette fører, komme med i ugens pris og bagefter
+    // stå på listen uden pris. Se chainsInPlay.
+    const { ids: shopIds, dropped } = chainsInPlay(chainIds);
+
     // Uden butikker er der ingen priser, og uden priser koster hver eneste
     // ret nul. En uge med retter i og 0 kr på er en løgn; en tom uge er
     // sandheden og kan ses med det samme. Derfor bygges der ikke videre.
-    if (!chainIds || !chainIds.length) {
-      return { picks: [], cost: 0, waste: 0, shared: [] };
+    if (!shopIds.length) {
+      return { picks: [], cost: 0, waste: 0, shared: [], chains: [], dropped_chains: dropped };
     }
 
     // Den grådige løkke prissætter HELE kurven om for hver kandidat på hver
@@ -1333,16 +1413,10 @@
       return out;
     };
 
-    /**
-     * Et stykke kan ikke deles: 0,8 æg er ét æg.
-     *
-     * Oprundingen sker HER og ikke i needsOf, og forskellen er målbar. Ligger
-     * den i needsOf, rundes hver ret op for sig, og fire retter à 0,4 æg
-     * køber fire æg, hvor to slår til. Behovet skal lægges sammen først og
-     * rundes op bagefter — præcis samme regel som pakkeafrundingen, og af
-     * samme grund.
-     */
-    const wholeUnits = (meta, need) => (meta.base_unit === 'stk' ? Math.ceil(need) : need);
+    // Oprundingen af stk sker EFTER sammenlægningen og ikke i needsOf — og af
+    // den DELTE `wholeUnits`, ikke en kopi. Her stod en egen med et bart
+    // Math.ceil, mens listen rundede med en tolerance, og de to var uenige om
+    // 75 sammenlagte behov i korpusset. Se wholeUnits.
 
     /**
      * Hvor køber vi varen, hvilken pakke, og hvad koster det?
@@ -1369,15 +1443,12 @@
     const bestPackFor = (key, meta, need) => {
       const n = wholeUnits(meta, need);
       let best = null;
-      for (const chainId of chainIds) {
+      for (const chainId of shopIds) {
         const price = priceIn(key, chainId, meta);
         if (!price) continue;
         const pack = choosePack(n, [price], { keeps: meta.keeps });
         if (!pack) continue;
-        const unit = price.unit_price > 0
-          ? price.unit_price
-          : price.pack_price / price.pack_qty;
-        const kr = pack.waste * unit * WASTE_AVERSION;
+        const kr = pack.waste * unitPriceOf(price) * WASTE_AVERSION;
         const score = pack.cost + kr;
         if (best && score >= best.score) continue;
         best = { price, pack, kr, score };
@@ -1407,7 +1478,7 @@
         const meta = items.get(it.key);
         if (!isBoughtLine(it, meta)) continue;
         if (!(it.amount > 0)) return false;
-        if (!chainIds.some((chainId) => priceIn(it.key, chainId, meta))) return false;
+        if (!shopIds.some((chainId) => priceIn(it.key, chainId, meta))) return false;
       }
       return true;
     };
@@ -1520,6 +1591,27 @@
       current = bestPick.after;
     }
 
+    // ── Prisen, brugeren kommer til at betale ────────────────────────────────
+    //
+    // Retterne er valgt; her prissættes den FÆRDIGE kurv én gang mere, denne
+    // gang med kædevalget. Den grådige løkke ovenfor prissætter hver vare i den
+    // billigste favoritbutik og uden butiksbod, og det er rigtigt til at
+    // SAMMENLIGNE retter med — boden er den samme, hvilken ret der end vælges.
+    // Men det tal er ikke en pris, nogen betaler: når butikkerne er valgt,
+    // købes varen i en af DEM. Målt før: ugen sagde 111,33 kr, listen 157,93 —
+    // 42 % — og de to tal står side om side på skærmen i trin 4 og 5. Det tal,
+    // brugeren vælger ud fra, skal være det tal, brugeren betaler.
+    //
+    // Retterne ændrer sig ikke af det: valget er truffet, og dette er ét kald
+    // på noget, der står stille.
+    const finalBasket = new Map();
+    for (const [key, need] of basket) {
+      const meta = items.get(key);
+      if (meta) finalBasket.set(key, wholeUnits(meta, need));
+    }
+    const chosen = chooseChains(finalBasket,
+      { chainIds: shopIds, items, offers, normals, now });
+
     // Hvad deles der FAKTISK? Det er forklaringen, brugeren får at se, og
     // den skal kunne holde.
     //
@@ -1536,18 +1628,21 @@
 
       const meta = items.get(key);
       if (!meta) continue;
-      // Samme funktion som kurven bruger — så besparelsen er regnet i den
-      // butik og på den pakke, ugen faktisk køber i. Se bestPackFor.
-      const best = bestPackFor(key, meta, need);
-      if (!best) continue;
+      // Kædevalgets egen pakke, ikke den billigste nogen steder. Besparelsen
+      // skal være regnet i den butik, ugen FAKTISK køber i, og i de kroner,
+      // prisen lige ved siden af er regnet i — ellers er det den gamle fejl
+      // igen, et lag nede i forklaringen. Kan varen ikke fås i de valgte
+      // butikker, er der heller ingen pose at dele: så købes den ikke.
+      const pick = chosen.assignment.get(key);
+      if (!pick) continue;
 
-      const together = best.pack;
+      const together = pick;
       let apart = 0;
       for (const u of users) {
         // Hver for sig købes der i den SAMME butik: spørgsmålet er, hvad
         // sammenlægningen sparer, ikke hvad en anden butik ville have kostet.
         const own = wholeUnits(meta, needsOf(u).get(key) || 0);
-        const pack = choosePack(own, [best.price], { keeps: meta.keeps });
+        const pack = choosePack(own, [pick.price], { keeps: meta.keeps });
         if (pack) apart += pack.packs;
       }
       const saved = apart - together.packs;
@@ -1568,10 +1663,23 @@
     }
     shared.sort((a, b) => b.saved_kr - a.saved_kr || b.saved - a.saved || b.used - a.used);
 
-    // `current.wasteKr`, ikke `current.waste`: kurven regner spild i kroner,
-    // og feltet hedder derfor det. Et opslag på det gamle navn giver
-    // undefined, og round2(undefined) er NaN — et tal, der ser ud som et tal.
-    return { picks, cost: round2(current.cost), waste: round2(current.wasteKr), shared };
+    return {
+      picks,
+      // Kædevalgets pris og spild, de samme to funktioner som indkøbslisten
+      // bruger — så de to tal på skærmen ER det samme regnestykke og ikke to,
+      // der ligner hinanden. `waste` er betalingsvilligheden (× WASTE_AVERSION),
+      // listens waste_kr er værdien, og de kan regnes om til hinanden.
+      cost: basketTotalKr(chosen.assignment),
+      waste: round2(basketWasteKr(chosen.assignment) * WASTE_AVERSION),
+      shared,
+      // Butikkerne, ugen er prissat i, og de favoritter, loftet skar væk. Uden
+      // dem ville brugeren først opdage afkortningen som en vare uden pris.
+      chains: chosen.chains,
+      dropped_chains: dropped,
+      // Varer, vi ikke kender en pris på i de valgte butikker. Prisen ovenfor
+      // er summen af dem, vi gør; uden tallet ser den fuldstændig ud.
+      unpriced: finalBasket.size - chosen.assignment.size,
+    };
   }
 
   /**
@@ -1660,14 +1768,41 @@
   // end en tur mere. De to tal kan derfor ikke sættes uafhængigt af hinanden,
   // og relationen står i koden i stedet for i en kommentar, ingen læser.
   //
-  // Begge er skøn som WASTE_AVERSION og skal ses efter på rigtige lister.
+  // Og det er RELATIONEN, der betyder noget, ikke de 15. Målt med fem motorer
+  // (0, 20, 26, 40 og 200) over 520 rigtige kurve: svaret er identisk for 26,
+  // 40 og 200, mens 20 — under butiksboden — ændrer det i 154 af de 520 og
+  // dropper 173 varer, der kunne være købt.
+  //
+  // Prisen for relationen, og den er bevidst: en favorit, der er den eneste med
+  // en vare i kurven, tages ALTID med — også når listen derved bliver dyrere.
+  // Målt: 152,88 → 160,98 kr. At droppe en ingrediens er værre end en ekstra
+  // indkøbstur. De 8,10 kr er det tal, de to skøn skal ses efter på, når de
+  // første rigtige lister har været i hænderne på nogen; begge er skøn som
+  // WASTE_AVERSION.
   const MISSING_ITEM_NUISANCE = EXTRA_STORE_PENALTY + 15;
 
   // Hvor mange favoritter der prøves udtømmende. 2^n delmængder: fem kæder er
   // 31, femten ville være 32.767 × hele kurven. Er der flere, bruges de fem
-  // FØRSTE — det er en grænse, ikke et valg, og den, der giver brugeren seks
-  // favoritbutikker i brugerfladen, skal vide, at den sjette ikke kommer med.
+  // FØRSTE — det er en grænse, ikke et valg.
   const MAX_CHOICE_CHAINS = 5;
+
+  /**
+   * Favoritterne, som de FAKTISK bruges — og dem, der ikke kom med.
+   *
+   * Loftet skal gælde ét sted. Stod afkortningen kun i `chooseChains`, mens
+   * ugen løb over alle favoritter, ville en vare, som kun den sjette favorit
+   * fører, indgå i ugens pris og bagefter ende på listen som "ingen pris":
+   * målt gav seks favoritter `chains: ['c1']`, `assignment.has('laks') === false`
+   * og laksen på listen uden pris — efter at ugen havde prissat den.
+   *
+   * De afkortede kæder går med UD som `dropped_chains`. Et loft, brugeren kun
+   * kan opdage som en manglende vare, er ikke et loft, det er en fejl; den, der
+   * giver brugeren seks favoritbutikker i brugerfladen, skal kunne sige det.
+   */
+  function chainsInPlay(chainIds) {
+    const all = (chainIds || []).filter(Boolean);
+    return { ids: all.slice(0, MAX_CHOICE_CHAINS), dropped: all.slice(MAX_CHOICE_CHAINS) };
+  }
 
   /**
    * Hvilke af favoritkæderne skal man handle i?
@@ -1689,7 +1824,7 @@
    */
   function chooseChains(basket, { chainIds = [], items = new Map(), offers = new Map(),
                                   normals = new Map(), now = new Date() } = {}) {
-    const ids = (chainIds || []).slice(0, MAX_CHOICE_CHAINS);
+    const { ids } = chainsInPlay(chainIds);
 
     // Ingen butikker, intet valg. Løkken nedenfor kører nul gange, og uden
     // denne udgang var svaret `null` — så ville indkøbslisten kaste på
@@ -1723,11 +1858,8 @@
         // sammenligning falsk, og den første kæde i rækken vinder altid.
         // Samme regnestykke som bestPackFor i sharedWeek, så ugen og listen
         // vælger den samme butik og den samme pose.
-        const unit = price.unit_price > 0
-          ? price.unit_price
-          : price.pack_price / price.pack_qty;
         cands.push({ ...pack, chainId, price,
-                     score: pack.cost + pack.waste * unit * WASTE_AVERSION });
+                     score: pack.cost + pack.waste * unitPriceOf(price) * WASTE_AVERSION });
         const low = cheapestAnywhere.get(key);
         if (low == null || pack.cost < low) cheapestAnywhere.set(key, pack.cost);
       }
@@ -1849,15 +1981,18 @@
       }
     }
 
-    // Et halvt æg findes ikke. Oprundingen sker på SUMMEN og ikke pr. ret —
-    // fire retter à 0,4 æg er to æg, ikke fire — præcis som i sharedWeek, så
-    // kurven og listen siger det samme tal.
+    // Et halvt æg findes ikke. Den DELTE `wholeUnits`, ikke en kopi: oprundingen
+    // sker på SUMMEN og med den samme tolerance som ugens kurv, ellers køber
+    // ugen fire brød, hvor listen køber tre.
     for (const [key, need] of basket) {
-      const meta = items.get(key);
-      if (meta && meta.base_unit === 'stk') basket.set(key, Math.ceil(need - 1e-9));
+      basket.set(key, wholeUnits(items.get(key), need));
     }
 
-    const chosen = chooseChains(basket, { chainIds, items, offers, normals, now });
+    // Samme loft som ugen, fra det samme sted. De afkortede favoritter går med
+    // ud, så brugeren kan få det at vide frem for at opdage det som en vare
+    // uden pris.
+    const { ids: shopIds, dropped } = chainsInPlay(chainIds);
+    const chosen = chooseChains(basket, { chainIds: shopIds, items, offers, normals, now });
 
     const buy = [];
     let unpriced = 0;
@@ -1890,33 +2025,22 @@
       buy,
       pantry: [...pantry.values()].sort((a, b) => a.name.localeCompare(b.name, 'da')),
       chains: chosen.chains,
-      total: round2(buy.reduce((a, i) => a + (i.est_cost || 0), 0)),
+      // De favoritter, loftet på fem skar væk — samme felt og samme navn som i
+      // ugens svar, for det er den samme oplysning.
+      dropped_chains: dropped,
+      // Præcis den sum, sharedWeek melder som ugens pris: samme funktion, samme
+      // assignment. Var de to regnestykker hver sit, kunne et forslag, der
+      // vises som det billigste, koste mest, når butikkerne er valgt.
+      total: basketTotalKr(chosen.assignment),
       // Hvor mange linjer vi IKKE kender en pris på. Uden tallet ser totalen
       // fuldstændig ud, selv om der står varer på listen, den ikke har regnet
       // med — 101 af de 184 varer mangler stadig en pris, så det er ikke et
       // hjørnetilfælde.
       unpriced,
-      // Spildet i KRONER. At lægge de rå rester sammen ville addere kilo
-      // kartofler og stykker æg — samme dimensionsfejl som opgave 5 og 7,
-      // og her ville den stå direkte på skærmen som ét tal.
-      //
-      // `p.waste` og ikke `p.leftover`: choosePack har allerede vægtet resten
-      // efter items.keeps, og det er hele grunden til, at kolonnen findes —
-      // "kartofler til overs er ikke spild, fløde til overs er". Målt på den
-      // første rigtige liste var forskellen 79 kr uvægtet mod 59 vægtet, og de
-      // 20 kr var 0,75 kg pasta og 0,87 kg kål, der holder til næste uge. Et
-      // tal, der hedder madspild, må ikke tælle dem fuldt.
-      //
-      // WASTE_AVERSION ganges IKKE på: den er en betalingsvillighed og hører
-      // til i kurvens scoringsled. Her er tallet, hvad maden er VÆRD, så
-      // ugens spildscore er præcis halvdelen af dette — to tal, der kan
-      // regnes om til hinanden, frem for to, der bare er forskellige.
-      waste_kr: round2([...chosen.assignment.values()].reduce((a, p) => {
-        const unit = p.price.unit_price > 0
-          ? p.price.unit_price
-          : p.price.pack_price / p.price.pack_qty;
-        return a + p.waste * unit;
-      }, 0)),
+      // Spildet i kroner, vægtet efter holdbarhed. Samme funktion som ugens
+      // spildscore bygger på — se basketWasteKr — så ugens tal er præcis dette
+      // gange WASTE_AVERSION og ikke et tal, der bare ligner.
+      waste_kr: basketWasteKr(chosen.assignment),
     };
   }
 
