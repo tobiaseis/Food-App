@@ -21,7 +21,7 @@ process.env.SUPABASE_SERVICE_KEY = 'test-key';
 const test = require('node:test');
 const assert = require('node:assert');
 const { server, DB } = require('./helpers/mock-postgrest.js');
-const { push, collectPlanIndex } = require('../src/sync/build.js');
+const { push, collectPlanIndex, collectPriceTables } = require('../src/sync/build.js');
 const { getDb } = require('../src/db');
 
 const quiet = () => {};
@@ -238,5 +238,121 @@ test('collectPlanIndex leverer amount, weight OG optional', () => {
     }
   } finally {
     db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
+  }
+});
+
+/**
+ * De tre felter, der blev lagt på nyttelasten i denne plan — og som ingen test
+ * ville have savnet.
+ *
+ * `sync.test.js` prøver ellers push() mod en HÅNDSKREVET model (makeModel), og
+ * dén går glat igennem, selv om en kolonne falder ud af build.js' SELECT:
+ * modellen er jo ikke bygget af basen. Det samme hul, som `weight` havde, før
+ * testen ovenfor kom til.
+ *
+ *   base_qty      uden den kan effectivePrice ikke bruge tilbuddet som pris;
+ *                 serveren virker, og browseren taber hvert eneste tilbud.
+ *   unknown_count uden den ser de 678 opskrifter med ukendte ingredienser
+ *                 fuldt prissatte ud i browseren (canPrice).
+ *   collectPriceTables  eksporteres, synkes — og havde ingen test overhovedet.
+ */
+test('collectPlanIndex leverer base_qty på tilbuddene OG unknown_count på retten', () => {
+  const db = getDb();
+  const now = new Date().toISOString();
+  const till = new Date(Date.now() + 7 * 86400000).toISOString();
+
+  db.prepare("INSERT OR IGNORE INTO chains (id, name, slug) VALUES ('tst', 'Testkæde', 'tst-sync')").run();
+  const { lastInsertRowid: productId } = db.prepare(`
+    INSERT INTO products (slug, name, category, item_key, created_at)
+    VALUES ('t-sync-kartofler', 'Kartofler 2 kg', 'produce', 'kartofler', ?)`).run(now);
+  const { lastInsertRowid: offerId } = db.prepare(`
+    INSERT INTO offers (external_id, product_id, chain_id, heading, price,
+                        base_qty, base_unit, unit_price, run_from, run_till, observed_at)
+    VALUES ('t-sync-1', ?, 'tst', 'Kartofler 2 kg', 12, 2, 'kg', 6, ?, ?, ?)`)
+    .run(productId, now, till, now);
+
+  // En opskrift med én ingrediens, taksonomien IKKE kender. Den når aldrig
+  // ind i items — kun tællingen kan fortælle browseren, at den findes.
+  const { lastInsertRowid: recipeId } = db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at)
+    VALUES (?, 'test', 'Test', 'Ret med en ukendt', 'da', 4, ?)`)
+    .run('https://test.invalid/ukendt-count-test', now);
+  const insertIng = db.prepare(`
+    INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional)
+    VALUES (?, ?, ?, ?, ?, ?, ?)`);
+  insertIng.run(recipeId, '0.5 kg kyllingebryst', 'kyllingebryst', 1, 'kyllingebryst', 0.5, 0);
+  insertIng.run(recipeId, '0.6 kg kartofler', 'kartofler', 2, 'kartofler', 0.6, 0);
+  insertIng.run(recipeId, '6 æg', 'æg', 3, 'aeg', 6, 0);
+  insertIng.run(recipeId, 'et stykke galangal', 'galangal', 4, null, null, 0);
+  // En ukendt EVT.-linje tæller ikke: den købes ikke og må ikke kunne gøre
+  // retten uprissætbar. Samme regel som i loadRecipes og recipe_costs.
+  insertIng.run(recipeId, 'evt. lidt koriander', 'koriander', 5, null, null, 1);
+
+  try {
+    const { offerIndex, recipeIndex } = collectPlanIndex(quiet);
+
+    const offer = offerIndex.find((o) => o.offer_id === offerId);
+    assert.ok(offer, 'tilbuddet er med i indekset');
+    assert.ok(offer.base_qty > 0, 'base_qty skal med — ellers er tilbuddet ikke en pris');
+    assert.equal(offer.base_unit, 'kg');
+    for (const row of offerIndex) {
+      assert.ok('base_qty' in row, `${row.taxonomy_key} mangler base_qty`);
+    }
+
+    const recipe = recipeIndex.find((r) => r.recipe_id === recipeId);
+    assert.ok(recipe, 'opskriften er med i indekset');
+    assert.equal(recipe.unknown_count, 1, 'den ukendte, ikke-valgfri linje er talt');
+    assert.equal(typeof recipe.unknown_count, 'number');
+  } finally {
+    db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
+    db.prepare('DELETE FROM offers WHERE id = ?').run(offerId);
+    db.prepare('DELETE FROM products WHERE id = ?').run(productId);
+  }
+});
+
+test('collectPriceTables har den form, Supabase tager imod', () => {
+  const db = getDb();
+  const now = '2026-09-15T00:00:00.000Z';
+
+  db.prepare("INSERT OR IGNORE INTO chains (id, name, slug) VALUES ('tst', 'Testkæde', 'tst-sync')").run();
+  const { lastInsertRowid: recipeId } = db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at)
+    VALUES (?, 'test', 'Test', 'Prissat ret', 'da', 2, ?)`)
+    .run('https://test.invalid/pris-tabel-test', now);
+
+  db.prepare(`
+    INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit, pack_price,
+                             unit_price, n_obs, source, observed_at, valid_until)
+    VALUES ('kartofler', 'tst', 2, 'kg', 15.95, 7.975, 0, 'manual', ?, '2027-03-14T00:00:00.000Z')`)
+    .run(now);
+  db.prepare(`
+    INSERT INTO recipe_costs (recipe_id, chain_id, cost, cost_packs, cost_per_serving,
+                              coverage, priceable, has_main, computed_at)
+    VALUES (?, 'tst', 48.5, 64, 24.25, 1, 1, 1, ?)`).run(recipeId, now);
+
+  try {
+    const { itemPrices, recipeCosts } = collectPriceTables(db, quiet);
+
+    const price = itemPrices.find((r) => r.item_key === 'kartofler' && r.chain_id === 'tst');
+    assert.ok(price, 'normalprisen er med');
+    for (const f of ['pack_qty', 'pack_unit', 'pack_price', 'unit_price', 'n_obs',
+                     'source', 'observed_at', 'valid_until']) {
+      assert.ok(f in price, `item_prices mangler ${f}`);
+    }
+    assert.ok(price.pack_qty > 0, 'pack_qty skal med — choosePack runder op på den');
+
+    const cost = recipeCosts.find((r) => r.recipe_id === recipeId);
+    assert.ok(cost, 'den prissatte ret er med');
+    // Budget-sporet sorterer på cost_per_serving blandt rækker med has_main.
+    // Falder en af de to ud af SELECT'en, er sorteringen i skyen enten
+    // unormaliseret eller fyldt med dressinger — se spec 1.5.
+    assert.equal(cost.cost_per_serving, 24.25);
+    assert.equal(cost.has_main, true, 'has_main skal være BOOLSK, ikke 1');
+    assert.equal(cost.priceable, true, 'priceable skal være boolsk — Postgres afviser 1');
+    assert.equal(typeof cost.cost, 'number');
+  } finally {
+    db.prepare('DELETE FROM recipe_costs WHERE recipe_id = ?').run(recipeId);
+    db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
+    db.prepare("DELETE FROM item_prices WHERE chain_id = 'tst'").run();
   }
 });

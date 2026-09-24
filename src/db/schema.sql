@@ -276,11 +276,29 @@ CREATE TABLE IF NOT EXISTS recipe_costs (
   -- fuldt prissat med en pris, der mangler to ingredienser.
   coverage    REAL,
   priceable   INTEGER NOT NULL DEFAULT 0,
+  -- cost delt med portionsantallet (recipes.servings, ellers motorens
+  -- DEFAULT_SERVINGS). Budget-sporet sorterer på DENNE og ikke på cost: 29 af
+  -- de 160 prissatte REMA-opskrifter siger servings = 1 og 18 siger ingenting,
+  -- så en gryde til én og en gryde til otte blev sammenlignet som to tal på
+  -- samme skala. Madplanen normaliserede allerede pr. portion (opgave 7);
+  -- tabellen her gjorde det ikke, og spec 1.5 siger, at budget-sporet ER
+  -- denne tabel sorteret stigende.
+  cost_per_serving REAL,
+  -- Har retten en hovedråvare — er den overhovedet aftensmad? Samme
+  -- engine.hasMainCourse som madplanen bruger. Uden flaget returnerer den
+  -- stigende sortering præcis den liste, opgave 7 afviste: Vinaigrette 0,18,
+  -- Hvidløgssauce 2,75, Hot honey, Mørdej, Hasselnøddesirup, en roux.
+  has_main    INTEGER NOT NULL DEFAULT 0,
   computed_at TEXT NOT NULL,
   PRIMARY KEY (recipe_id, chain_id)
 );
 CREATE INDEX IF NOT EXISTS idx_recipe_costs_cheap
   ON recipe_costs(chain_id, cost) WHERE priceable = 1;
+-- Budget-sporets egen sortering — pr. portion, kun rigtige middage — ligger
+-- i migrate() i src/db/index.js og IKKE her. Denne fil køres FØR migrate ved
+-- hver åbning, og et delvist indeks på has_main ville derfor blive forsøgt
+-- lagt på en base, der endnu ikke har kolonnen: "no such column: has_main",
+-- og så kan basen slet ikke åbnes. Samme fælde som idx_products_tax.
 
 -- ── Madplaner ───────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS meal_plans (

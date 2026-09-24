@@ -176,17 +176,32 @@ async function loadPlanIndex(tier) {
 }
 
 /**
- * Reducerer indekset til ét tilbud pr. varetype – billigste pr. kg/l blandt
- * brugerens egne butikker. Tom `chainIds` betyder alle kæder.
+ * Indekset som det tilbudskort, motoren vil have: ét billigste tilbud pr.
+ * `vare|kæde` blandt brugerens egne butikker. Tom `chainIds` betyder alle.
+ *
+ * Nøglen er vare OG kæde — samme form som `activeOfferMap` på serveren og
+ * som `normalPricesFor`. Kortet nøglede før på varen alene, og det gik godt,
+ * fordi den eneste læser er `buildPlan`, der reducerer til én pris pr. vare
+ * alligevel (`cheapestPerItem`, som med vilje tåler begge nøgleformer).
+ *
+ * Men det er den samme slags afdrift som `base_qty` og `unknown_count`: i det
+ * øjeblik browseren kalder `sharedWeek`/`offerShoppingList` — dem, hele
+ * nyttelasten er ved at blive gjort klar til — slår `effectivePrice` op på
+ * `vare|kæde`, finder ingenting, og hvert eneste tilbud ville forsvinde i
+ * browseren, mens serveren regnede rigtigt. Ændringen koster to linjer nu og
+ * en fejl uden fejlmeddelelse senere.
  */
 function offerMapFor(rows, chainIds, chainNames) {
   const allowed = chainIds && chainIds.length ? new Set(chainIds) : null;
   const map = new Map();
   for (const r of rows) {
     if (allowed && !allowed.has(r.chain_id)) continue;
-    const prev = map.get(r.taxonomy_key);
+    const key = `${r.taxonomy_key}|${r.chain_id}`;
+    const prev = map.get(key);
+    // `<=`: ved samme kilopris vinder den først indsatte, og rækkerne kommer
+    // sorteret billigst først. Samme regel som cheapestPerItem i engine.js.
     if (prev && prev.unit_price <= r.unit_price) continue;
-    map.set(r.taxonomy_key, { ...r, chain: chainNames[r.chain_id] || r.chain_id });
+    map.set(key, { ...r, chain: chainNames[r.chain_id] || r.chain_id });
   }
   return map;
 }
@@ -384,6 +399,13 @@ const Data = {
       nutrition_src: r.nutrition_src,
       tier_score: r[`score_${tier}`],
       unknown_main: r.unknown_main,
+      // Kolonnen blev lagt på recipe_index, fyldt i build.js og erklæret i
+      // supabase/schema.sql — og tabt her, i det fjerde led. `canPrice` i
+      // engine.js spørger til `rec.unknown_count`, og uden linjen er den
+      // undefined i browseren: de 678 opskrifter med mindst én ukendt
+      // ingrediens ser fuldt prissatte ud, og en havbars-middag står til 6 kr,
+      // fordi tre fjerdedele af dens ingredienser er usynlige.
+      unknown_count: r.unknown_count || 0,
       // Indekset sender kun nøgle, kategori og mængde. Navnet ligger i
       // taxonomy_prices, så det ikke gentages på 2.000 opskrifter.
       items: (r.items || []).map((i) => ({ ...i, ingredient: names[i.key] || i.key })),

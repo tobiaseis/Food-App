@@ -9,9 +9,12 @@ GitHub Actions  (dagligt 05:10 UTC)
   1. henter data.db fra release-asset
   2. npm run update                                ← ingest mod lokal SQLite, uændret kode
   3. npm run seed:items && npm run backfill:amounts ← varetaksonomi + materialiserede mængder
-  4. node src/sync/build.js                         ← madplaner + prisstatistik regnes HER
-  5. push read-model                                →  Supabase
-  6. gemmer data.db tilbage
+  4. npm run prices:import                          ← data/item_prices.csv ind i basen
+     npm run prices:bootstrap                       ← normalpris-gæt af tilbudshistorikken
+     npm run costs:recompute                        ← recipe_costs, budget-sporets tabel
+  5. node src/sync/build.js                         ← madplaner + prisstatistik regnes HER
+  6. push read-model                                →  Supabase
+  7. gemmer data.db tilbage
 
 Vercel  (statisk frontend)  →  læser Supabase direkte med anon-nøglen
 ```
@@ -27,6 +30,16 @@ opskrifter. Kør begge, altid, uanset om opskriftscrawlet blev sprunget over:
 en base hentet fra release-assetet kan have `item_key` kopieret videre fra det
 gamle `taxonomy_key` (se `migrate()` i `src/db/index.js`), men har aldrig en
 fyldt `items`-tabel, før dette trin har kørt.
+
+**Rækkefølgen i trin 4 er heller ikke valgfri.** `prices:import` lægger de
+INDTASTEDE priser ind først: de er den højeste tillidskilde i `effectivePrice`
+og skal stå, før gættene bygges. `prices:bootstrap` genopbygger hele
+`derived`-laget ud fra tilbudshistorikken og skal køre EFTER ingesten, så
+nattens tilbud tæller med. `costs:recompute` læser begge dele og kommer
+derfor sidst. Springes trinnet over, viser appen nattens tilbud ved siden af
+en `recipe_costs`, der blev regnet, dengang nogen sidst kørte scriptet i
+hånden — og `data/item_prices.csv`, som ligger i git netop for at
+prisændringer kan ses i en diff, bliver aldrig læst ind.
 
 **Hvorfor ikke bare køre alt i Supabase?** Én madplan kræver ~3.200 enkeltopslag.
 Lokalt mod SQLite tager det 183 ms; mod en fjern Postgres ville det tage op mod

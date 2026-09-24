@@ -42,6 +42,9 @@ const PIECE_G = {
   agurk: 300, squash: 200, aubergine: 250, porre: 150, avocado: 150,
   selleri: 40, broccoli: 350, blomkaal: 500, kyllingebryst: 150,
   brod: 500, tortilla: 60, sodkartoffel: 150, ingefaer: 15,
+  // Målt på den ene linje i korpus, der siger både antal og vægt:
+  // "20 plader rispapir (ca. 200 g)".
+  rispapir: 10,
 };
 const DEFAULT_PIECE_G = 100;
 const COUNT_UNITS = new Set(['stk', 'stykker', 'styk', 'piece', 'pieces']);

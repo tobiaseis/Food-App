@@ -216,11 +216,24 @@ create table if not exists recipe_costs (
   cost_packs  double precision,
   coverage    double precision,
   priceable   boolean default false,
+  -- Kroner pr. portion og "er det overhovedet aftensmad". Budget-sporet
+  -- sorterer på cost_per_serving blandt rækker med has_main — se
+  -- src/db/schema.sql for målingen bag begge.
+  cost_per_serving double precision,
+  has_main    boolean default false,
   computed_at timestamptz,
   primary key (recipe_id, chain_id)
 );
+-- Samme historie som item_prices.n_obs: en sky-base, der blev oprettet før
+-- kolonnerne fandtes, har tabellen uden dem, og create table if not exists
+-- rører den ikke. Uden disse to fejler synken med "column
+-- recipe_costs.cost_per_serving does not exist".
+alter table recipe_costs add column if not exists cost_per_serving double precision;
+alter table recipe_costs add column if not exists has_main boolean default false;
 create index if not exists idx_recipe_costs_cheap on recipe_costs(chain_id, cost)
   where priceable;
+create index if not exists idx_recipe_costs_budget
+  on recipe_costs(chain_id, cost_per_serving) where priceable and has_main;
 
 -- Opskrifterne i planlægningsklar form: ingredienserne er allerede slået op i
 -- taksonomien, så browseren hverken skal kende den eller regne mængder om.

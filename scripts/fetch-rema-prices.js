@@ -147,8 +147,28 @@ async function main() {
      WHERE item_prices.source <> 'manual'
   `);
 
+  // Rækker, der ERSTATTER de gamle — ikke rækker, der lægges oven i dem.
+  //
+  // Pakkestørrelsen er en del af nøglen (item_key, chain_id, pack_qty,
+  // pack_unit), så en ren INSERT … ON CONFLICT kan ikke rydde op efter sig:
+  // den dag REMA skifter hakkebøffen fra 400 g til 500 g, skrives den nye
+  // række ved siden af den gamle, og begge bliver stående. effectivePrice
+  // rangerer på (kilde, friskhed, pris) og vælger den BILLIGSTE pr. enhed
+  // inden for niveauet — så den døde 400 g-række vinder, hver gang den var
+  // billigere, og gør det for evigt. Med `packs` (fix-runden) er det ikke
+  // længere kun prisen, der arves: choosePack kan nu vælge en pakke, der
+  // ikke findes i butikken.
+  //
+  // bootstrap-prices.js gør præcis det samme for 'derived' og af præcis den
+  // samme grund (målt dér: 17 af 548 par skifter pakke mellem to vinduer).
+  // Argumentet nåede aldrig herover.
+  const del = db.prepare(
+    "DELETE FROM item_prices WHERE chain_id = ? AND source = 'api:rema'");
+
   const raw = rawSource({ fromRaw, saveRaw });
   const now = new Date();
+  const writes = [];
+  let failed = 0;
   let hit = 0, miss = 0, skipped = 0;
   const derailed = [];
   const wrongBasis = [];
@@ -190,6 +210,8 @@ async function main() {
       }
     } catch (err) {
       console.error(`${item.key}: ${err.message}`);
+      // Tælles, fordi oprydningen nedenfor afhænger af, om runden var HEL.
+      failed++;
       if (!raw.offline) await sleep(PAUSE_MS);
       continue;
     }
@@ -199,19 +221,56 @@ async function main() {
     console.log(`${item.key.padEnd(24)} ${best.pack_qty}${best.pack_unit} `
               + `${best.pack_price} kr (${best.unit_price}/${best.pack_unit})  ${best.name}`);
 
-    if (!dryRun) {
-      ins.run({
-        item_key: item.key, chain_id: chain.id,
-        pack_qty: best.pack_qty, pack_unit: best.pack_unit,
-        pack_price: best.pack_price, unit_price: best.unit_price,
-        observed_at: now.toISOString(),
-        valid_until: engine.validUntilFor(item.class, now),
-      });
-    }
+    // Samles op og skrives til sidst, i ÉN transaktion sammen med
+    // oprydningen. Skrev vi undervejs, ville sletningen af de gamle rækker
+    // enten skulle ske først — på et tidspunkt, hvor vi endnu ikke ved, om
+    // der kommer noget at sætte i stedet — eller slet ikke kunne ske.
+    writes.push({
+      item_key: item.key, chain_id: chain.id,
+      pack_qty: best.pack_qty, pack_unit: best.pack_unit,
+      pack_price: best.pack_price, unit_price: best.unit_price,
+      observed_at: now.toISOString(),
+      valid_until: engine.validUntilFor(item.class, now),
+    });
     if (!raw.offline) await sleep(PAUSE_MS);
   }
 
   raw.done();
+
+  if (!dryRun) {
+    // Samme værn som i bootstrap-prices.js: en genopbygning uden noget at
+    // bygge med er bare en sletning. Rammer hver eneste søgning ved siden af
+    // — et ændret API, en tom svarfil — skal basen stå, som den stod.
+    if (!writes.length) {
+      throw new Error('ingen brugbare REMA-priser fundet — afbryder uden at røre basen, '
+                    + 'frem for at slette alle api:rema-rækker og skrive nul nye');
+    }
+
+    // Og en ufuldstændig runde rydder ikke op. Fejlede opslag er varer, vi
+    // ikke har spurgt om i dag; deres gamle række er det bedste, vi ved, og
+    // en oprydning bygget på en halv sweep ville slette den. Så skrives der
+    // kun oven i, præcis som før — det er ikke perfekt, men det er den
+    // sikre af de to fejl.
+    const run = db.transaction(() => {
+      let dropped = 0;
+      if (!failed) dropped = del.run(chain.id).changes;
+      // .changes og ikke writes.length: en indtastet pris på samme pakke
+      // afviser skrivningen (se ON CONFLICT-guarden ovenfor), og et tal, der
+      // tæller FORSØG, ville påstå, at rækken blev skrevet.
+      let ok = 0;
+      for (const row of writes) ok += ins.run(row).changes;
+      return { dropped, ok };
+    });
+    const { dropped, ok } = run();
+    if (failed) {
+      console.log(`\n${ok} rækker skrevet · ${failed} opslag fejlede, så de gamle `
+                + 'rækker bliver stående (en halv runde rydder ikke op efter en hel)');
+    } else {
+      console.log(`\nryddede ${dropped} tidligere api:rema-rækker · skrev ${ok}`
+                + (ok < writes.length
+                  ? ` (${writes.length - ok} afvist: en indtastet pris står på samme pakke)` : ''));
+    }
+  }
 
   console.log(`\nfundet: ${hit} · intet match: ${miss} · forkastet på taksonomi: ${skipped}`
             + ` · forkastet på produktnavn: ${derailed.length}`
@@ -237,7 +296,13 @@ async function main() {
   for (const r of implausible) {
     console.log(`  ${r.key.padEnd(20)} ${r.unit_price}/${r.pack_unit}  ${r.name}`);
   }
-  if (dryRun) console.log('(--dry-run: intet skrevet)');
+  if (dryRun) {
+    const gamle = db.prepare(
+      "SELECT count(*) c FROM item_prices WHERE chain_id = ? AND source = 'api:rema'")
+      .get(chain.id).c;
+    console.log(`(--dry-run: intet skrevet. En rigtig kørsel ville rydde ${gamle} `
+              + `api:rema-rækker og skrive ${writes.length})`);
+  }
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

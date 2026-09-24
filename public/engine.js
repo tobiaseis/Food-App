@@ -444,7 +444,14 @@
       && !wrongUnit(offer.base_unit)
       ? { pack_qty: offer.base_qty, pack_unit: offer.base_unit,
           pack_price: offer.price, unit_price: offer.unit_price,
-          on_offer: true, source: 'offer', stale: false }
+          on_offer: true, source: 'offer', stale: false,
+          // Et tilbud ER én pakke — avisen har én pris på én størrelse — men
+          // feltet sættes alligevel, så enhver kalder kan skrive
+          // `choosePack(n, price.packs)` uden at skulle vide, hvilken gren
+          // prisen kom fra. En kopi og ikke rækken selv: prisen skal kunne
+          // sendes gennem JSON uden en cyklus.
+          packs: [{ pack_qty: offer.base_qty, pack_unit: offer.base_unit,
+                    pack_price: offer.price, unit_price: offer.unit_price }] }
       : null;
 
     // Kilden går FORUD for prisen. De afledte priser er bygget af
@@ -459,6 +466,10 @@
     // udgangspunktet. Selve pakkevalget sker senere, når behovet er kendt.
     let best = null;
     let bestScore = null;
+    // Alle brugbare rækker gemmes, ikke kun vinderen: choosePack skal se HELE
+    // det bedste kildeniveau for at kunne vælge pakkestørrelse (se `packs`
+    // nedenfor).
+    const usable = [];
     for (const r of lookup(normals, k) || []) {
       if (!(r.unit_price > 0)) continue;
       // Samme vagt på normalsiden. `item_prices` holder invarianten med en
@@ -475,11 +486,41 @@
       // i dag, men rangordenen skal ikke afhænge af den.
       const rank = Object.hasOwn(SOURCE_RANK, r.source) ? SOURCE_RANK[r.source] : SOURCE_RANK_UNKNOWN;
       const score = [rank, stale ? 1 : 0, r.unit_price];
+      usable.push({ rank, stale, row: r });
       if (best && cmp(score, bestScore) >= 0) continue;
       bestScore = score;
       best = { pack_qty: r.pack_qty, pack_unit: r.pack_unit,
                pack_price: r.pack_price, unit_price: r.unit_price,
                on_offer: false, source: r.source, stale };
+    }
+
+    // Vinderen bærer RESTEN af sit eget kildeniveau med ud.
+    //
+    // choosePack er skrevet til at vælge mellem flere pakkestørrelser — 1 kg
+    // til 8 kr eller 5 kg til 25 — men fik indtil nu kun én række at vælge
+    // imellem, fordi denne funktion kun gav sin vinder fra sig. Billigst PR.
+    // ENHED er ikke billigst for BEHOVET: skal man bruge 1 kg, købte den
+    // gamle sti 5 kg-posen til 25 kr med 4 kg til overs, hvor kontrakten
+    // køber 1 kg til 8. Ingen af de 620 par i basen har to pakker på deres
+    // bedste niveau i dag, så fejlen har aldrig kunnet ses — men
+    // data/item_prices.csv indbyder til den anden pakkestørrelse og tager
+    // imod den uden en advarsel.
+    //
+    // Kun rækker med SAMME rang og SAMME friskhed som vinderen kommer med:
+    // det er det, 'bedste kildeniveau' betyder. Ellers kunne et 'derived'-gæt
+    // eller en udløbet pris snige sig ind som pakkevalg, og hele rangordenen
+    // ovenfor ville være omsonst. Og samme ENHED: kg-pakker og stk-pakker kan
+    // ikke sammenlignes, og `baseUnit` er valgfri, så listen kan rumme begge.
+    //
+    // Navnet deles med choosePack's svar, hvor `packs` er ANTALLET af poser.
+    // De to lever på hver sit objekt — `price.packs` er rækkerne, `pack.packs`
+    // er tallet — og den, der læser `pick.packs` på en købslinje, får tallet.
+    if (best) {
+      best.packs = usable
+        .filter((u) => u.rank === bestScore[0] && (u.stale ? 1 : 0) === bestScore[1]
+                    && u.row.pack_unit === best.pack_unit && u.row.pack_qty > 0)
+        .map((u) => ({ pack_qty: u.row.pack_qty, pack_unit: u.row.pack_unit,
+                       pack_price: u.row.pack_price, unit_price: u.row.unit_price }));
     }
 
     // Og her holder rangordenen op. Et tilbud er ikke et gæt på, hvad varen
@@ -574,6 +615,11 @@
    * tilbud i. Blandes niveauerne, kan indkøbslisten komme til at bede om en
    * pose, der ikke findes. Funktionen kan ikke selv se forskel — rækkerne
    * bærer ikke deres kilde hertil — så filtreringen hører hos kalderen.
+   *
+   * Derfor bærer `effectivePrice` hele niveauet med ud som `price.packs`, og
+   * enhver kalder skal sende NETOP den liste videre. Den, der i stedet
+   * skriver `[price]`, har kastet de andre pakkestørrelser væk og gjort
+   * funktionen til en oprunding.
    *
    * Sådan ser basen ud i dag: alle 620 (vare, kæde)-par har præcis ÉN
    * pakkestørrelse i deres bedste kildeniveau. Funktionen *vælger* derfor
@@ -1446,7 +1492,10 @@
       for (const chainId of shopIds) {
         const price = priceIn(key, chainId, meta);
         if (!price) continue;
-        const pack = choosePack(n, [price], { keeps: meta.keeps });
+        // `price.packs` og ikke `[price]`: effectivePrice har allerede
+        // filtreret ned til det bedste kildeniveau, og det er DEN liste,
+        // choosePack skal vælge pakkestørrelse i.
+        const pack = choosePack(n, price.packs || [price], { keeps: meta.keeps });
         if (!pack) continue;
         const kr = pack.waste * unitPriceOf(price) * WASTE_AVERSION;
         const score = pack.cost + kr;
@@ -1642,7 +1691,10 @@
         // Hver for sig købes der i den SAMME butik: spørgsmålet er, hvad
         // sammenlægningen sparer, ikke hvad en anden butik ville have kostet.
         const own = wholeUnits(meta, needsOf(u).get(key) || 0);
-        const pack = choosePack(own, [pick.price], { keeps: meta.keeps });
+        // Samme pakkeliste, som `together` blev regnet af. Fik den ene sti
+        // alle pakkestørrelser og den anden kun vinderen pr. enhed, ville de
+        // to pakketal ikke måle det samme, og besparelsen blive et tilfælde.
+        const pack = choosePack(own, pick.price.packs || [pick.price], { keeps: meta.keeps });
         if (pack) apart += pack.packs;
       }
       const saved = apart - together.packs;
@@ -1850,7 +1902,9 @@
           // måles et behov i stk mod en kilopris.
           { offers, normals, now, baseUnit: meta ? meta.base_unit : null });
         if (!price) continue;
-        const pack = choosePack(need, [price], { keeps: meta ? meta.keeps : 'keeps' });
+        // `price.packs`: se bestPackFor i sharedWeek — ugen og listen skal
+        // vælge den samme pose.
+        const pack = choosePack(need, price.packs || [price], { keeps: meta ? meta.keeps : 'keeps' });
         if (!pack) continue;
         // choosePack giver ikke sin interne score fra sig — med vilje, se
         // opgave 5. Sammenligningen mellem kæder regnes derfor her, af de
@@ -2007,7 +2061,11 @@
         // fejl, der ser ud som et tal. Samme rettelse som i explainWeek.
         need: roundQty(need),
         packs: pick ? pick.packs : null,
-        pack_qty: pick ? pick.pack_qty : null,
+        // Også her roundQty. Pakkestørrelsen kommer fra en flydende
+        // beregning (base_qty = pris / enhedspris), og en rigtig liste
+        // printede "1x0.28500000000000003". De andre mængdefelter på linjen
+        // rundes allerede; dette var det eneste, der slap.
+        pack_qty: pick ? roundQty(pick.pack_qty) : null,
         unit: meta.base_unit,
         est_cost: pick ? round2(pick.cost) : null,
         leftover: pick ? roundQty(pick.leftover) : null,

@@ -20,7 +20,7 @@ const path = require('node:path');
 const { getDb } = require('../src/db');
 const plans = require('../src/mealplan/generate');
 const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
-const { isBoughtLine } = engine;
+const { isBoughtLine, hasMainCourse, DEFAULT_SERVINGS } = engine;
 
 // Hvilke linjer der overhovedet købes — basisvarer og "evt. et skvæt fløde"
 // gør ikke, men en valgfri hovedprotein gør — bor i engine.js som
@@ -61,6 +61,12 @@ const { isBoughtLine } = engine;
  */
 function costRecipe(recipe, chainId, { offers, normals, items, unknown = 0 }) {
   let cost = 0; let known = 0; let total = 0;
+
+  // Portionsantallet og hovedråvare-spærren HENTES i motoren, de skrives
+  // ikke af. Det var præcis dén fejl, `bestPriceFor` blev rettet for: to
+  // kopier af samme regel driver fra hinanden, og så sorterer budget-sporet
+  // efter ét tal, mens madplanen vælger efter et andet.
+  const servings = recipe.servings > 0 ? recipe.servings : DEFAULT_SERVINGS;
 
   // Behovet pr. VARE, ikke pr. linje. Samme vare står på flere linjer i 1.086
   // af de 2.224 opskrifter ("1 lemon, zested" og "zest of 1 lemon", persille
@@ -109,15 +115,15 @@ function costRecipe(recipe, chainId, { offers, normals, items, unknown = 0 }) {
     else packNeed.set(it.key, { need, price, keeps: item.keeps });
   }
 
-  // Først her rundes der op — og kun på den række, effectivePrice valgte.
-  // choosePack må kun se pakker fra ÉT kildeniveau (se dens egen
-  // dokumentation), og rangordenen bor i effectivePrice; den skal ikke
-  // skrives af her for at kunne sende flere pakker med. I dag har hvert
-  // (vare, kæde)-par alligevel præcis én pakkestørrelse på sit bedste niveau,
-  // så valget er givet på forhånd, og det, der tæller, er oprundingen.
+  // Først her rundes der op. choosePack må kun se pakker fra ÉT kildeniveau
+  // (se dens egen dokumentation), og rangordenen bor i effectivePrice — som
+  // derfor bærer hele det vindende niveau med ud i `price.packs`. Den liste
+  // skal sendes videre uskåret: `[p.price]` ville kaste de andre
+  // pakkestørrelser væk og gøre pakkevalget til en ren oprunding af den
+  // række, der var billigst pr. enhed.
   let costPacks = 0;
   for (const p of packNeed.values()) {
-    const pack = engine.choosePack(p.need, [p.price], { keeps: p.keeps });
+    const pack = engine.choosePack(p.need, p.price.packs || [p.price], { keeps: p.keeps });
     if (pack) costPacks += pack.cost;
   }
 
@@ -126,10 +132,25 @@ function costRecipe(recipe, chainId, { offers, normals, items, unknown = 0 }) {
   return {
     cost,
     cost_packs: costPacks,
+    // Kroner PR. PORTION. `cost` er hele gryden, og gryderne er ikke lige
+    // store: 29 af de 160 prissatte REMA-opskrifter siger servings = 1 og 18
+    // siger ingenting. Sorteret på `cost` returnerer budget-sporet derfor
+    // dressinger og saucer — den liste, opgave 7 afviste i madplanen — mens
+    // en familiegryde ser dyr ud, fordi den mætter fire.
+    //
+    // Regnet på `cost` og ikke på `cost_packs`: den proportionale pris er
+    // den, der kan sammenlignes på tværs af retter (se filens hoved), og
+    // hele pakker hører til den ret, der står ALENE.
+    cost_per_serving: cost / servings,
     coverage: total ? known / total : 0,
     // `known === total`, ikke `coverage === 1`: en ret helt uden købte
     // ingredienser giver 0/0, og det er ikke en fuldt prissat ret.
     priceable: total > 0 && known === total ? 1 : 0,
+    // Er retten overhovedet aftensmad? Motorens egen spærre, ikke en kopi:
+    // sirup, hot honey, mørdej og en roux er billige, fuldt prissatte og
+    // ikke en middag. Flaget står i tabellen frem for at filtrere rækken væk,
+    // så tallene stadig kan slås op for en ret, der bruges som tilbehør.
+    has_main: hasMainCourse(recipe, items) ? 1 : 0,
   };
 }
 
@@ -151,18 +172,23 @@ function main() {
   //
   // De valgfri tælles ikke med: "evt. et skvæt fløde" købes ikke, og en
   // ukendt evt.-linje skal derfor heller ikke kunne gøre retten uprissætbar.
-  const unknownCount = new Map(db.prepare(`
-    SELECT recipe_id, count(*) n FROM recipe_ingredients
-     WHERE item_key IS NULL AND COALESCE(optional, 0) = 0
-     GROUP BY recipe_id`).all().map((r) => [r.recipe_id, r.n]));
+  //
+  // Tallet REGNES IKKE her. `loadRecipes` tæller det allerede — samme regel,
+  // samme WHERE — og lægger det på `r.unknown_count`, som både browserens
+  // canPrice og recipe_index bygger på. Stod der også en SQL her, ville ét
+  // tal have to definitioner, og den dag den ene ændrer sig, ville
+  // budget-sporet og madplanen være uenige om, hvilke retter vi kender helt.
 
   const ins = db.prepare(`
-    INSERT INTO recipe_costs (recipe_id, chain_id, cost, cost_packs,
-                              coverage, priceable, computed_at)
-    VALUES (@recipe_id, @chain_id, @cost, @cost_packs, @coverage, @priceable, @computed_at)
+    INSERT INTO recipe_costs (recipe_id, chain_id, cost, cost_packs, cost_per_serving,
+                              coverage, priceable, has_main, computed_at)
+    VALUES (@recipe_id, @chain_id, @cost, @cost_packs, @cost_per_serving,
+            @coverage, @priceable, @has_main, @computed_at)
     ON CONFLICT(recipe_id, chain_id) DO UPDATE SET
       cost = excluded.cost, cost_packs = excluded.cost_packs,
+      cost_per_serving = excluded.cost_per_serving,
       coverage = excluded.coverage, priceable = excluded.priceable,
+      has_main = excluded.has_main,
       computed_at = excluded.computed_at
   `);
 
@@ -187,7 +213,7 @@ function main() {
     const run = db.transaction(() => {
       for (const r of recipes) {
         const c = costRecipe(r, chain.id,
-          { offers, normals, items, unknown: unknownCount.get(r.id) || 0 });
+          { offers, normals, items, unknown: r.unknown_count || 0 });
         if (c.priceable) { priceableHere++; priceableTotal++; }
         // Tolerancen er en halv øre: de gemte tal afrundes til to decimaler,
         // og en uenighed under den kan ikke ses i tabellen.
@@ -200,8 +226,10 @@ function main() {
           chain_id: chain.id,
           cost: Math.round(c.cost * 100) / 100,
           cost_packs: Math.round(c.cost_packs * 100) / 100,
+          cost_per_serving: Math.round(c.cost_per_serving * 100) / 100,
           coverage: Math.round(c.coverage * 1000) / 1000,
           priceable: c.priceable,
+          has_main: c.has_main,
           computed_at: now,
         });
         written++;

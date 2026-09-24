@@ -26,13 +26,20 @@ process.env.DB_PATH = path.join(__dirname, '..', 'test.db');
 const { getDb } = require('../src/db');
 
 const db = getDb();
-const itemCount = db.prepare('SELECT COUNT(*) c FROM items').get().c;
+const before = db.prepare('SELECT COUNT(*) c FROM items').get().c;
 
-if (itemCount === 0) {
-  // Samme seed-script som data.db bruger, krævet direkte i stedet for som
-  // underproces: ingen skal involveret, og getDb()'s modul-singleton
-  // genbruger forbindelsen, vi allerede har åbnet til test.db ovenfor.
-  require('./seed-items');
-} else {
-  console.log(`test.db er allerede sået (${itemCount} varer) – springer over`);
-}
+// Sås HVER gang, ikke kun når tabellen er tom. seed-items er idempotent
+// (upsert pr. vare, synonymer skrevet forfra, varer der er ude af SEED
+// slettet), og en test.db fra i går er ellers en fælde: tilføjes en vare til
+// SEED, bliver den gamle fil liggende med det gamle antal, og
+// "seed-vejen og database-vejen giver samme varer" fejler med 204 mod 205 —
+// en rød test, der intet siger om koden. Målt: præcis det skete, da
+// `rispapir` kom til.
+//
+// Samme seed-script som data.db bruger, krævet direkte i stedet for som
+// underproces: ingen skal involveret, og getDb()'s modul-singleton genbruger
+// forbindelsen, vi allerede har åbnet til test.db ovenfor.
+require('./seed-items');
+
+const after = db.prepare('SELECT COUNT(*) c FROM items').get().c;
+if (after !== before) console.log(`test.db: ${before} → ${after} varer`);

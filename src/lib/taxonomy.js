@@ -251,7 +251,12 @@ const SEED = [
     class: 'fresh', keeps: 'perishable', p: 1.9, kcal: 25, c: 5, da: ['blomkål'], en: ['cauliflower'] },
   { key: 'salat', name: 'Salat', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 1.4, kcal: 15, c: 2,
-    da: ['salat', 'icebergsalat', 'romainesalat', 'salatblanding', 'babyleaf'],
+    // 'rucola' er det danske ord for 'rocket', som allerede står på engelsk.
+    // Det MÅ stå her: uden det matcher sodavandens 'cola' inde i ordet —
+    // delmatch er tilladt fra fire tegn — og 65 linjer "75 g rucola" blev
+    // til sodavand. Det kunne ikke ses, så længe src/sync/build.js skar
+    // 'drink' væk af nyttelasten; nu køber indkøbslisten dem.
+    da: ['salat', 'icebergsalat', 'romainesalat', 'salatblanding', 'babyleaf', 'rucola'],
     en: ['lettuce', 'salad', 'rocket', 'mixed leaves', 'radicchio', 'iceberg'] },
   { key: 'spinat', name: 'Spinat', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 2.9, kcal: 23, c: 1.5, da: ['spinat'], en: ['spinach'] },
@@ -368,8 +373,13 @@ const SEED = [
   // specialvare.
   { key: 'mel', name: 'Mel', cat: 'pantry',
     class: 'essential', keeps: 'pantry', p: 10, kcal: 340, c: 72,
-    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel', 'bagepulver'],
-    en: ['cornflour', 'cornstarch', 'plain flour', 'flour', 'baking powder'] },
+    // Natron hører samme sted som bagepulver: en basisvare i skabet, målt i
+    // teskefulde. Uden ordene her matcher sodavandens 'soda' det sidste ord
+    // i "bicarbonate of soda" som et HELT ord, og 29 bagelinjer blev til
+    // sodavand — på indkøbslisten som en flaske cola.
+    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel', 'bagepulver', 'natron'],
+    en: ['cornflour', 'cornstarch', 'plain flour', 'flour', 'baking powder',
+         'bicarbonate of soda', 'baking soda'] },
   { key: 'brod', name: 'Brød', cat: 'bakery',
     class: 'fresh', keeps: 'perishable', base_unit: 'stk', p: 8, kcal: 260, c: 45,
     da: ['rugbrød', 'brød', 'franskbrød', 'flute', 'boller', 'toastbrød'],
@@ -834,6 +844,25 @@ const SEED = [
     p: 3, kcal: 90, c: 15, da: ['kaffirblade'], en: ['lime leaves'] },
   { key: 'fenugreekblade', name: 'Tørrede bukkehornsblade', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 20, kcal: 320, c: 45, da: [], en: ['dried fenugreek leaves'] },
+  // Rispapir til forårsruller. Egen post, fordi linjerne ellers falder ned i
+  // to forskellige fejlkoblinger, begge målt i basen:
+  //
+  //   'rispapir'   → toiletpapir (9 linjer): synonymet 'papir' matcher inde i
+  //                  ordet, og linjerne blev til 1,6 kg non-food i en madplan;
+  //   'rice paper' → ris         (2 linjer): 'rice' matcher først, så
+  //                  "8 rice paper wrappers" blev til 0,8 kg ris og
+  //                  "20-40 … rice paper sheets" til 3 kg.
+  //
+  // Begge slår nu op her: det længste synonym med hele ordgrænser vinder
+  // (se lookup i src/lib/items.js).
+  //
+  // base_unit er 'stk', fordi alle elleve linjer TÆLLER ark — "16 rispapir",
+  // "16 ark rispapir", "8 rice paper wrappers". Stykvægten står i PIECE_G
+  // (src/lib/units.js) og er målt på den ene linje, der siger begge dele:
+  // "20 plader rispapir (ca. 200 g)" = 10 g pr. ark.
+  { key: 'rispapir', name: 'Rispapir', cat: 'pantry', class: 'baseline', keeps: 'pantry',
+    base_unit: 'stk', p: 0.5, kcal: 330, c: 82,
+    da: ['rispapir'], en: ['rice paper'] },
 
   // ── Non-food (skal aldrig ende i en madplan) ──────────────────────────────
   { key: 'toiletpapir', name: 'Toiletpapir', cat: 'nonfood',

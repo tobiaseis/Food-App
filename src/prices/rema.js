@@ -59,9 +59,8 @@ function parseRemaProduct(raw) {
   // Klartekst slår regnestykket, når den er der: den er ikke afrundet.
   const stated = packFromUnderline(raw.underline, baseUnit);
   const derived = price.price / price.compare_unit_price;
-  const packQty = stated != null && Math.abs(stated - derived) / derived < 0.05
-    ? stated
-    : Math.round(derived * 1000) / 1000;
+  const useStated = stated != null && Math.abs(stated - derived) / derived < 0.05;
+  const packQty = useStated ? stated : Math.round(derived * 1000) / 1000;
 
   if (!(packQty > 0)) return null;
 
@@ -70,7 +69,21 @@ function parseRemaProduct(raw) {
     pack_qty: packQty,
     pack_unit: baseUnit,
     pack_price: price.price,
-    unit_price: price.compare_unit_price,
+    // `unit_price` SKAL være pack_price / pack_qty. Vælger vi klarteksten,
+    // har vi netop sagt, at REMA's egen compare_unit_price er regnet på en
+    // ANDEN pakkestørrelse end den, vi skriver ned — op til 5 % ved siden af,
+    // det er hele tolerancen ovenfor. Beholdt vi den, ville de to tal på
+    // rækken ikke måle den samme pakke, og de to priser i recipe_costs (cost
+    // = behov × unit_price, cost_packs = hele pakker) ville drive fra hinanden
+    // uden at nogen kunne se hvor.
+    //
+    // Fire decimaler og ikke to: afrundingen skal ikke selv kunne bryde den
+    // invariant, den er her for at holde — og en unit_price, der ligger en
+    // anelse OVER pack_price/pack_qty, udløser "cost_packs lavere end cost" i
+    // recompute-recipe-costs.js.
+    unit_price: useStated
+      ? Math.round((price.price / packQty) * 10000) / 10000
+      : price.compare_unit_price,
   };
 }
 

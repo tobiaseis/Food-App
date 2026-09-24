@@ -332,8 +332,12 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
     recipe.items.push({
       key: ing.item_key,
       // entry.category, ikke seedets korte entry.cat (opgave 3: taxonomy.get()
-      // returnerer nu en baserække). src/sync/build.js filtrerer drink/snack/
-      // nonfood fra på dette felt — var det null, slap de igennem.
+      // returnerer nu en baserække). Feltet bæres hele vejen ud i
+      // recipe_index og bruges i browseren af IGNORED_CATS/hasMainCourse til
+      // at afgøre, om retten er en MIDDAG — var det null, kunne en sodavand
+      // blive hovedråvare. (src/sync/build.js filtrerede indtil fix-runden
+      // også drink/snack/nonfood-LINJER væk på feltet; det gør den ikke
+      // længere — man køber vinen til gryden. Se kommentaren dér.)
       cat: entry?.category ?? null,
       essential: taxonomy.isEssential(ing.item_key),
       amount: ing.amount,

@@ -44,11 +44,27 @@ function migrate(db) {
     // kolonnen fandtes, skal have den lagt på — CREATE TABLE IF NOT EXISTS i
     // schema.sql rører ikke tabellen.
     ['item_prices', 'n_obs', 'INTEGER NOT NULL DEFAULT 0'],
+    // Kom til i fix-runden til plan 2. En base med en recipe_costs fra før
+    // budget-sporet blev normaliseret pr. portion skal have de to kolonner
+    // lagt på; de fyldes ved næste `npm run costs:recompute`.
+    ['recipe_costs', 'cost_per_serving', 'REAL'],
+    ['recipe_costs', 'has_main', 'INTEGER NOT NULL DEFAULT 0'],
   ];
   for (const [table, column, type] of added) {
     const cols = db.prepare(`PRAGMA table_info(${table})`).all().map((c) => c.name);
     if (!cols.includes(column)) db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${type}`);
   }
+
+  // Budget-sporets indeks hører HER og ikke i schema.sql, selv om det er et
+  // helt almindeligt indeks: schema.sql køres FØR denne funktion ved hver
+  // eneste åbning, og et delvist indeks på `has_main` ville blive forsøgt
+  // lagt på en base, der først får kolonnen to linjer længere oppe. Det
+  // fejler med "no such column: has_main", og så kan basen ikke åbnes
+  // overhovedet — målt på data.db, ikke gættet. Nøjagtig samme fælde som
+  // idx_products_tax nedenfor, bare fra den anden side.
+  db.exec(`CREATE INDEX IF NOT EXISTS idx_recipe_costs_budget
+             ON recipe_costs(chain_id, cost_per_serving)
+          WHERE priceable = 1 AND has_main = 1`);
 
   // Kopiér nøglen videre FØR den droppes. En base fra før opgave 9 (fx et
   // release-asset, der endnu ikke er kørt igennem seed:items/backfill:amounts)

@@ -90,6 +90,31 @@ jobs:
           npm run seed:items
           npm run backfill:amounts
 
+      # Priserne. Uden dette trin pushede den natlige kørsel nattens tilbud
+      # ved siden af en `recipe_costs`, der blev regnet den dag, nogen sidst
+      # huskede at køre scriptet i hånden — og `data/item_prices.csv`, som
+      # ligger i git netop for at prisændringer kan ses i en diff, blev aldrig
+      # læst ind i basen overhovedet.
+      #
+      # Rækkefølgen er ikke valgfri:
+      #   prices:import     de indtastede priser ind først. De er den højeste
+      #                     tillidskilde og må stå, når gættene bygges.
+      #   prices:bootstrap  gætter normalpriser ud fra tilbudshistorikken og
+      #                     genopbygger hele 'derived'-laget. Skal køre EFTER
+      #                     ingesten, så nattens tilbud er med.
+      #   costs:recompute   læser begge dele og skal derfor køre sidst.
+      #
+      # Om værnet i bootstrap ("nægter at slette, når der ikke skrives noget"):
+      # det måler tilbud inden for 400 dage, ikke inden for ugen. Målt på den
+      # nuværende base ligger alle 5.195 tilbud inden i det vindue, så en stille
+      # uge uden nye aviser kan ikke udløse det. Det kan kun en base helt uden
+      # tilbudshistorik — og på den sti har synken alligevel intet at sende.
+      - name: Priser — indtastede, gættede og opskriftspriser
+        run: |
+          npm run prices:import
+          npm run prices:bootstrap
+          npm run costs:recompute
+
       - name: Byg read-model og send til Supabase
         run: node src/sync/build.js
 

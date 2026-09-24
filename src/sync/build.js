@@ -136,7 +136,8 @@ function collectPriceTables(db, log) {
   }));
 
   const recipeCosts = db.prepare(`
-    SELECT recipe_id, chain_id, cost, cost_packs, coverage, priceable, computed_at
+    SELECT recipe_id, chain_id, cost, cost_packs, cost_per_serving,
+           coverage, priceable, has_main, computed_at
       FROM recipe_costs
      WHERE priceable = 1
   `).all().map((r) => ({
@@ -144,6 +145,11 @@ function collectPriceTables(db, log) {
     // SQLite har ingen boolean, Postgres-kolonnen ER en. Sendes 1, afviser
     // PostgREST hele batchen med "invalid input syntax for type boolean".
     priceable: !!r.priceable,
+    // Samme oversættelse, samme grund. `has_main` skal MED: uden den kan
+    // browseren ikke skelne budget-sporets middage fra dressingerne, og
+    // sorteringen på cost_per_serving ville være normaliseret men stadig
+    // forkert — se spec 1.5 og engine.hasMainCourse.
+    has_main: !!r.has_main,
     computed_at: iso(r.computed_at),
   }));
 
@@ -224,9 +230,37 @@ function collectPlanIndex(log) {
       };
     });
 
-  // Basisvarer og ikke-mad ryger ud her frem for i browseren: motoren ser
-  // alligevel bort fra dem, og de fylder en fjerdedel af nyttelasten.
-  const skip = (i) => i.essential || ['drink', 'snack', 'nonfood'].includes(i.cat);
+  // Basisvarer ryger ud her frem for i browseren: motoren ser alligevel bort
+  // fra dem (isBoughtLine), og de fylder en stor del af nyttelasten.
+  //
+  // 'drink', 'snack' og 'nonfood' blev skåret væk her indtil denne runde, og
+  // begrundelsen var rigtig, da den blev skrevet: dengang var assignRoles
+  // eneste læser af nyttelasten, og den ser bort fra netop de tre kategorier
+  // (IGNORED_CATS). Opgave 6-8 gav nyttelasten fire læsere mere — needsOf,
+  // canPrice, offerShoppingList og kædevalget — og de KØBER linjerne. Så
+  // købte serveren 14,95 kr chokolade og 11,70 kr chips til Chili con carne,
+  // mens browserens kopi af den samme motor ikke kunne se dem: 612 opskrifter
+  // var uenige mellem de to ender.
+  //
+  // Målt på de linjer, der forsvandt: 796 fordelt på 13 varer — noedder 309,
+  // vin 183, juice 111, chokolade 86 (mørk og hvid, til bagning), dertil
+  // chips, kiks, øl, kaffe, spiritus, te og tre sodavand (cola til en
+  // braisering). Man laver mad med dem, altså køber man dem. De eneste, der
+  // ikke er mad, er 6 linjer isterninger — de er vand og koster ingenting.
+  //
+  // Tallet var 888, indtil de 92 fejlkoblinger, ophævelsen bragte frem i
+  // lyset, blev rettet i samme runde: 65 linjer "75 g rucola" matchede
+  // sodavandens 'cola' inde i ordet, og 27 "bicarbonate of soda" matchede
+  // dens 'soda'. Begge blev købt som sodavand — også på serveren, hvor
+  // linjerne aldrig havde været skåret væk. Se rucola/natron i
+  // src/lib/taxonomy.js.
+  //
+  // Skellet, kategorierne findes for, står uberørt: IGNORED_CATS og
+  // hasMainCourse i public/engine.js skal forhindre, at en sodavand bliver
+  // ugens HOVEDRET. De skal ikke forhindre, at man køber vinen til gryden.
+  // Det ene er et spørgsmål om, hvad der er aftensmad; det andet om, hvad der
+  // står på indkøbssedlen.
+  const skip = (i) => i.essential;
   const recipeIndex = plans.loadRecipes({})
     .map((r) => ({
       recipe_id: r.id,

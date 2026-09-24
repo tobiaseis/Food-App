@@ -648,6 +648,40 @@ test('REMA: pakkestørrelse udledes også når underline ikke siger den', () => 
   assert.equal(p.pack_unit, 'kg');
 });
 
+/**
+ * Når klarteksten vinder, skal kiloprisen regnes om.
+ *
+ * Tolerancen tillader 5 % afstand mellem den oplyste pakkestørrelse og den
+ * udledte, og vælger vi klarteksten, har vi netop sagt, at REMA's egen
+ * compare_unit_price er regnet på en anden pakke end den, vi skriver ned.
+ * Beholdt vi den, ville unit_price og pack_price/pack_qty være to forskellige
+ * tal på den samme række — og recipe_costs regner i begge.
+ */
+test('REMA: klartekstens pakke bestemmer også kiloprisen', () => {
+  const p = parseRemaProduct({
+    name: 'NOGET KØD',
+    underline: '500 GR. / REMA 1000',
+    // 25 / 52 = 0,4808 kg — 3,8 % fra de 500 g, altså inden for tolerancen.
+    prices: [{ price: 25, compare_unit: 'kg', compare_unit_price: 52 }],
+  });
+  near(p.pack_qty, 0.5);
+  // 25 kr for 500 g er 50 kr/kg, ikke 52.
+  near(p.unit_price, 50);
+  near(p.unit_price, p.pack_price / p.pack_qty);
+});
+
+test('REMA: er klarteksten for langt væk, gælder regnestykket — og kædens kilopris', () => {
+  const p = parseRemaProduct({
+    name: 'NOGET ANDET KØD',
+    // 1 kg oplyst, men 25/52 = 0,48 kg: 52 % ved siden af, så klarteksten
+    // er en anden pakke end den, prisen gælder.
+    underline: '1 KG. / REMA 1000',
+    prices: [{ price: 25, compare_unit: 'kg', compare_unit_price: 52 }],
+  });
+  near(p.pack_qty, 0.481);
+  near(p.unit_price, 52);
+});
+
 test('REMA: styk-varer får ingen vægt påduttet', () => {
   const p = parseRemaProduct({
     name: 'ØKOLOGISKE ÆG M/L 10 STK.',
@@ -682,7 +716,9 @@ test('REMA: tilbudsprisen står først, men det er hyldeprisen, vi skal have', (
     ],
   });
   near(p.pack_price, 29.95);
-  near(p.unit_price, 74.88);
+  // 29,95 for 400 g er 74,875 kr/kg. REMA selv siger 74,88 — deres eget tal
+  // er afrundet, og rækken skal bære det, pakken faktisk koster pr. kilo.
+  near(p.unit_price, 74.875);
 });
 
 test('REMA: en vare, der KUN har en kampagnepris, har ingen normalpris at give', () => {
@@ -969,6 +1005,87 @@ test('inden for samme kilde vinder den billigste pakke', () => {
   const p = engine.effectivePrice('kartofler', '11deC', { offers: new Map(), normals });
   near(p.unit_price, 7.975);
   near(p.pack_qty, 2);
+});
+
+/**
+ * Billigst pr. enhed er ikke billigst for behovet.
+ *
+ * effectivePrice vælger den række, der er billigst PR. KG, og indtil denne
+ * runde var det den eneste, der kom ud: kalderne skrev `choosePack(n,
+ * [price])`, og så kunne choosePack pr. konstruktion ikke vælge noget. Med to
+ * pakkestørrelser på samme niveau er forskellen målbar — 1 kg til 8 kr mod en
+ * 5 kg-pose til 25 med 4 kg til overs. Testen fejler mod den gamle kode.
+ *
+ * Ingen af de 620 (vare, kæde)-par i basen har to pakker på deres bedste
+ * niveau i dag, så fejlen kunne ikke ses på data — men data/item_prices.csv
+ * tager imod den anden pakkestørrelse uden en advarsel.
+ */
+test('effectivePrice bærer hele det vindende niveau med ud som packs', () => {
+  const normals = new Map([['kartofler|TST', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 8,  unit_price: 8, source: 'manual' },
+    { pack_qty: 5, pack_unit: 'kg', pack_price: 25, unit_price: 5, source: 'manual' },
+  ]]]);
+  const p = engine.effectivePrice('kartofler', 'TST',
+    { offers: new Map(), normals, baseUnit: 'kg' });
+
+  // Vinderen er stadig den billigste pr. kilo — rangordenen er uændret.
+  near(p.unit_price, 5);
+  near(p.pack_qty, 5);
+
+  // Men begge pakker er med, så choosePack har noget at vælge imellem.
+  assert.equal(p.packs.length, 2);
+  assert.deepEqual(p.packs.map((x) => x.pack_qty).sort((a, b) => a - b), [1, 5]);
+
+  // Og valget falder ud som det skal: 1 kg købes som 1 kg til 8 kr.
+  const pack = engine.choosePack(1, p.packs, { keeps: 'keeps' });
+  near(pack.pack_qty, 1);
+  near(pack.cost, 8);
+  near(pack.leftover, 0);
+
+  // Sådan så det ud før: den gamle kaldeform køber 5 kg-posen til 25 kr og
+  // kalder de 4 kg til overs for spild.
+  const gammel = engine.choosePack(1, [p], { keeps: 'keeps' });
+  near(gammel.cost, 25);
+  near(gammel.leftover, 4);
+
+  // Og storposen vinder stadig, når behovet er stort nok til den.
+  near(engine.choosePack(5, p.packs, { keeps: 'keeps' }).cost, 25);
+});
+
+test('packs rummer kun vinderens eget niveau — ikke gæt, udløb eller anden enhed', () => {
+  const now = new Date('2026-09-16T00:00:00Z');
+  const normals = new Map([['kartofler|TST', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 8,  unit_price: 8, source: 'manual',
+      valid_until: '2027-01-01T00:00:00.000Z' },
+    { pack_qty: 5, pack_unit: 'kg', pack_price: 25, unit_price: 5, source: 'manual',
+      valid_until: '2027-01-01T00:00:00.000Z' },
+    // Et gæt er ikke en pakke, nogen har set på en hylde.
+    { pack_qty: 10, pack_unit: 'kg', pack_price: 30, unit_price: 3, source: 'derived',
+      valid_until: '2027-01-01T00:00:00.000Z' },
+    // En udløben pris er ikke en pakke, man kan købe i dag.
+    { pack_qty: 3, pack_unit: 'kg', pack_price: 9, unit_price: 3, source: 'manual',
+      valid_until: '2026-01-01T00:00:00.000Z' },
+    // Og kg-pakker og stk-pakker kan ikke sammenlignes. Rækken er dyrere end
+    // vinderen, så den taber allerede på pris — men den har samme kilde og
+    // samme friskhed, og uden enhedsfiltret ville den stå i packs og kunne
+    // vinde pakkevalget for et behov målt i kilo. `baseUnit` er med vilje
+    // ikke sendt med her: det er netop dét tilfælde, filtret findes for.
+    { pack_qty: 12, pack_unit: 'stk', pack_price: 72, unit_price: 6, source: 'manual',
+      valid_until: '2027-01-01T00:00:00.000Z' },
+  ]]]);
+  const p = engine.effectivePrice('kartofler', 'TST', { offers: new Map(), normals, now });
+  assert.deepEqual(p.packs.map((x) => x.pack_qty).sort((a, b) => a - b), [1, 5]);
+  for (const x of p.packs) assert.equal(x.pack_unit, 'kg');
+});
+
+test('et tilbud er én pakke — men bærer feltet, så kalderne kan være ens', () => {
+  const p = engine.effectivePrice('kartofler', '11deC', { offers: OFFERS, normals: NORMALS });
+  assert.equal(p.source, 'offer');
+  assert.equal(p.packs.length, 1);
+  near(p.packs[0].pack_qty, 2);
+  near(p.packs[0].pack_price, 12);
+  // Kopi og ikke rækken selv: prisen skal kunne sendes gennem JSON.
+  assert.ok(JSON.stringify(p).length > 0);
 });
 
 test('en gyldig pris slår en udløben — men kun på samme niveau', () => {
@@ -1408,6 +1525,26 @@ test('en ret prissættes på mængde × enhedspris, og pakkerne rundes op', () =
   assert.ok(c.cost_packs > c.cost, 'hele pakker kan ikke koste mindre end behovet');
   assert.equal(c.coverage, 1);
   assert.equal(c.priceable, 1);
+});
+
+/**
+ * Og hele vejen igennem costRecipe: pakkevalget skal nå ud i cost_packs.
+ *
+ * Det er den samme fejl som i effectivePrice-testen ovenfor, men på det sted,
+ * hvor tallet ender i en tabel og bliver til budget-sporets rækkefølge.
+ */
+test('cost_packs vælger pakkestørrelse, når niveauet har flere', () => {
+  const normals = new Map([['kartofler|TST', [
+    { pack_qty: 1, pack_unit: 'kg', pack_price: 8,  unit_price: 8, source: 'manual' },
+    { pack_qty: 5, pack_unit: 'kg', pack_price: 25, unit_price: 5, source: 'manual' },
+  ]]]);
+  const r = { id: 9, title: 'Kartofler alene', items: [line('kartofler', 1)] };
+  const c = costRecipe(r, 'TST', { offers: new Map(), normals, items: COST_ITEMS });
+
+  // `cost` er proportional og måles på den billigste pr. kilo — uændret.
+  near(c.cost, 5);
+  // `cost_packs` køber 1 kg-posen til 8 kr og ikke 5 kg-posen til 25.
+  near(c.cost_packs, 8);
 });
 
 test('en stk-vare prissættes på stykantallet, ikke på rollevægten', () => {
