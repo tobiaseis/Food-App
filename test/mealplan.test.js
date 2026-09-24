@@ -104,28 +104,15 @@ test('to kød i samme mængde er begge hovedråvarer', () => {
 });
 
 test('vegetarret får den tungeste bærende råvare som hovedråvare', () => {
-  const roles = engine.assignRoles([
-    item('kartofler', 'veg', 0.9),
-    item('loeg', 'veg', 0.1),
-  ]);
-  assert.deepEqual(roles.mains.map((i) => i.key), ['kartofler']);
-});
-
-test('ost er en hovedråvare og slår den tungere kartoffel', () => {
-  // Fulgte med beslutningen i opgave 7: uden 'cheese' i MAIN_CATS faldt
-  // Macaroni and Cheese, cacio e pepe og ti andre hverdagsmiddage ud af
-  // madplanen, fordi reserve-reglen kun tager den TUNGESTE bærende råvare,
-  // og pastaen vejer mere end osten.
-  //
-  // Prisen står her: en kartoffelgratin planlægges nu op om osten. Det er
-  // ikke gratis — mains styrer også tilbudsmatch og variationsspærren — og
-  // 344 af de 2.208 opskrifter skifter hovedråvare.
+  // Osten er IKKE hovedråvaren: en kartoffelgratin planlægges op om
+  // kartoflen. 'cheese' var kortvarigt i MAIN_CATS i opgave 7 og blev rullet
+  // tilbage — se kommentaren dér for de to tal, der afgjorde det.
   const roles = engine.assignRoles([
     item('kartofler', 'veg', 0.9),
     item('loeg', 'veg', 0.1),
     item('ost', 'cheese', 0.15),
   ]);
-  assert.deepEqual(roles.mains.map((i) => i.key), ['ost']);
+  assert.deepEqual(roles.mains.map((i) => i.key), ['kartofler']);
 });
 
 test('ukendt kød blokerer vegetar-reserven, så planen ikke lover forkert', () => {

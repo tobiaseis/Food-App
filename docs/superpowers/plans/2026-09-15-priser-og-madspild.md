@@ -2403,42 +2403,45 @@ ikke burde være der: de er billige pr. portion, **fordi** de er et tilbehør og
 Ingen vægtning retter det. Den viden hører hjemme i `score_classic`, altså i plan 1's
 klassificering, og ikke i denne opgave.
 
-> **Gennemført, med tre ting målingen ikke havde forudset.**
+> **Gennemført, og så delvis rullet tilbage. Sluttilstanden, målt.**
 >
-> **Osten kunne ikke holdes ude af `MAIN_CATS`.** Det blev prøvet først — et separat
-> `DINNER_CATS` kun til optagelseskravet, så `assignRoles` og dermed buildPlan stod
-> urørt. Det virker ikke: reserve-reglen tager kun den TUNGESTE bærende råvare, og i
-> en ostepasta vejer pastaen mere end osten. Macaroni and Cheese blev planlagt op om
-> pastaen og faldt ud alligevel; det eneste, der kom ind, var Stracciatella ost
-> (113 mod de ventede 124). Skal osten tælle, skal den være en hovedkategori.
+> **`aerter` → `legume` står.** Re-seed og `costs:recompute` kørt (`data.db.pre-aerter`
+> taget først). **Prissætbare uændret: 159 hos REMA, 382 i alt** — ærternes kategori
+> flytter roller, ikke priser. Alene flytter den hovedråvare i **61 af 2.208**
+> opskrifter, og den lukker Ærtesuppe (nu nr. 21) og Pasta med ærter og citron ind.
 >
-> **Og så koster den mere end optagelsen.** `MAIN_CATS` styrer også tilbudsmatch,
-> variationsspærren og vægtningen i `scoreRecipe`. **Målt: 344 af 2.208 opskrifter
-> (15,6 %) skifter hovedråvare.** En kartoffelgratin planlægges nu op om osten og
-> ikke om kartoflen. Kun optagelseskravet er målt; de tre andre virkninger er det
-> ikke. Det er regningen, og den står i koden.
+> **`cheese` blev prøvet, målt og rullet tilbage.** Først som et smallere
+> `DINNER_CATS`, der kun gjaldt optagelsen — det virker ikke: reserve-reglen i
+> `assignRoles` tager kun den TUNGESTE bærende råvare, og pastaen vejer mere end
+> osten, så Macaroni and Cheese faldt ud alligevel (113 mod de ventede 124). Så som
+> hovedkategori, hvor den virkede, men kostede **344 af 2.208 opskrifter (15,6 %)**
+> en ny hovedråvare. De to tal, der væltede den, står i afsnittet ovenfor.
 >
-> **Resultatet: 128 af 159 beholdt, 31 ude** (før: 112 og 47). Re-seed og
-> `costs:recompute` kørt; **prissætbare uændret 159 hos REMA, 382 i alt** — ærternes
-> kategori flytter roller, ikke priser.
+> **Tilbagerulningen er efterprøvet, ikke antaget.** Af de 344 opskrifter, osten
+> flyttede, afviger nu **10** fra udgangspunktet — og **0 af dem er ost-drevne**; alle
+> 10 skyldes ærterne, som blev beholdt. Osten ville stadig flytte 340, hvis den kom
+> tilbage. De 334 øvrige står præcis, hvor de stod.
 >
-> **SCORE_KR målt om: 83,5 → 80,3, sat til 80.** Spændet faldt fra 40,07 til 38,55 kr.
-> 80 og 84 giver PRÆCIS samme to uger, så valget er ufølsomt i det interval — men
-> tallet skal kunne spores til den måling, det hviler på, og puljen er en anden.
+> **Sluttilstand: 117 af 159 beholdt, 42 ude** (udgangspunktet var 112 og 47; med ost
+> var det 128 og 31). Macaroni and Cheese, cacio e pepe, Rød pesto og Stracciatella
+> ost er alle ude igen.
 >
-> **Dukker de to op?** Nej. På en liste over alle 128 kandidater ligger
-> Stracciatella ost nr. 19 og Rød pesto nr. 47, og der vises 12 for fire dage.
-> Handelen holder: de to er optaget, men de bliver ikke vist.
+> **`SCORE_KR` landede tilbage på 84.** Målt over de 117: marginalens p10-p90-spænd
+> er 40,40 kr mod score_classics 0,48, og 40,40 / 0,48 = 84,2. Rækken er 40 (gættet)
+> → 167 → 84 → 80 (mens osten var inde) → **84**. At tallet vender tilbage til sit
+> gamle leje, når en ændring trækkes tilbage, er den kontrol man kan håbe på.
 >
-> **Men ærterne lukkede Pea purée ind, og den ligger nr. 4.** Den ER i forslag A.
-> Sammen med Spanish latte (nr. 3, espresso-koblingen) er to af forslag A's fire
-> retter ikke aftensmad. Forslag B er derimod rigtigt hele vejen. Det skal ses efter,
-> før det vises til nogen — og det er ikke `SCORE_KR`, der er problemet: begge retter
-> er billige pr. portion, fordi de i virkeligheden er tilbehør og en kop kaffe.
+> **De to uger til sidst** (REMA, 4 dage, husstand på 4, hyldepriser uden aktive
+> tilbud):
 >
-> **Og en advarsel til den næste:** Macaroni and Cheese ligger nr. 94 af 128. De tolv
-> middage er nu *optaget*, men de er dyre pr. portion og bliver sjældent *vist*.
-> Optagelse er ikke det samme som at komme på bordet.
+> * **B — 192,91 kr, 12,06 kr/portion**, sparer 118,28 kr mod retterne hver for sig:
+>   Healthy baked beans · Kåldolmere · Majsdeller · Chorizosuppe med kartofler og
+>   grønkål. *"deler 0.48 kg Løg over 4 retter (36 kr) og 0.027 kg Hvidløg over 4
+>   retter (18 kr)"*. Den er rigtig hele vejen.
+> * **A — 134,90 kr, 8,43 kr/portion**, sparer 11,95: Baked chicken breast · Pasta med
+>   ærter og citron · **Spanish latte** · **Pea purée**. To af fire er ikke aftensmad,
+>   og de ligger nr. 3 og nr. 4 af 117. Det er den mangel, afsnittet ovenfor peger på
+>   `score_classic` med — ikke noget, denne opgave kan lukke.
 
 - [x] **Step 7: Kør suiten og commit**
 

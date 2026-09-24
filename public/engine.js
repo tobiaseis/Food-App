@@ -44,28 +44,30 @@
   // Kategorier der kan bære en ret. Det er dem, retten planlægges omkring,
   // og det er dem, der gør en ret til aftensmad.
   //
-  // 'cheese' kom til, da hovedråvare-kravet blev målt. Uden den manglede
-  // Macaroni and Cheese, cacio e pepe, boursinpasta, gnocchi traybake og
-  // otte andre — tolv ægte hverdagsmiddage — mod to retter, der ikke er
-  // middage (Rød pesto, Stracciatella ost). Handelen er mildere end den ser
-  // ud: brugeren får tre gange så mange retter, som der er dage, og vælger
-  // selv. Én mærkelig post i en liste på tolv koster et øjekast; en
-  // tredjedel af hverdagsretterne, der aldrig vises, koster hele sporet.
+  // 'cheese' var her kortvarigt og er rullet tilbage. Historikken bliver
+  // stående, så ingen genopfinder idéen:
   //
-  // Det blev forsøgt at holde osten ude af MAIN_CATS og kun lade den tælle
-  // ved optagelsen. Det virker ikke, og grunden er værd at kende:
-  // reserve-reglen i assignRoles tager kun den TUNGESTE bærende råvare, og i
-  // en ostepasta vejer pastaen mere end osten. Macaroni and Cheese blev
-  // planlagt op om pastaen og faldt ud alligevel; det eneste, der kom ind,
-  // var Stracciatella ost. Skal osten tælle, skal den være en hovedkategori.
+  // Formålet var at få ostepastaretterne med — Macaroni and Cheese, cacio e
+  // pepe, boursinpasta, gnocchi traybake og otte andre, tolv ægte
+  // hverdagsmiddage, mod to retter der ikke er middage. Målt bagefter kom
+  // gevinsten aldrig: **Macaroni and Cheese lå nr. 94 af 128 kandidater**,
+  // og der vises tolv. Retterne blev MULIGE, ikke sandsynlige — de er dyre
+  // pr. portion, og optagelse er ikke det samme som at komme på bordet.
   //
-  // Følgen er, at en kartoffelgratin nu planlægges op om osten og ikke om
-  // kartoflen: MAIN_CATS afgør også tilbudsmatch, variationsspærren og
-  // vægtningen i scoreRecipe. **Målt på hele korpusset skifter 344 af 2.208
-  // opskrifter hovedråvare — 15,6 %.** Det tal er IKKE efterprøvet mod, hvad
-  // det gør ved tilbudsmatchet og ved variationen; kun optagelseskravet er
-  // målt. Det er den regning, der følger med beslutningen.
-  const MAIN_CATS = new Set(['meat', 'poultry', 'fish', 'eggs', 'legume', 'cheese']);
+  // Prisen var derimod høj og umålt. MAIN_CATS afgør ikke kun optagelsen,
+  // men også tilbudsmatchet, variationsspærren og vægtningen i scoreRecipe,
+  // og **344 af 2.208 opskrifter (15,6 %) skiftede hovedråvare**: en
+  // kartoffelgratin blev planlagt op om osten i stedet for om kartoflen.
+  // Kun optagelsen var målt; de tre andre virkninger var ikke.
+  //
+  // Og der findes ingen billig udgave. Det blev forsøgt at lade osten tælle
+  // ved optagelsen alene, i et separat sæt, så assignRoles stod urørt — men
+  // reserve-reglen tager kun den TUNGESTE bærende råvare, og i en ostepasta
+  // vejer pastaen mere end osten. Macaroni and Cheese blev planlagt op om
+  // pastaen og faldt ud alligevel; det eneste, der kom ind, var
+  // Stracciatella ost. Enten er osten en hovedkategori med alt hvad det
+  // koster, eller også er den ikke med.
+  const MAIN_CATS = new Set(['meat', 'poultry', 'fish', 'eggs', 'legume']);
 
   // Bærende, men ikke hovedrolle. Bruges som reserve-hovedråvare i
   // vegetarretter, hvor der ikke er noget kød at pege på.
@@ -1062,25 +1064,44 @@
    * Tærsklerne kommer gratis med fra assignRoles: 20 g ansjoser i en gryde er
    * pynt (MAIN_MIN_AMOUNT) og bliver ikke til en fiskeret.
    *
-   * **Reglen er: en middag har et protein eller en ost. Den grænse er VALGT,
-   * ikke fundet** — og prisen for den er de rene grøntsagsretter uden
-   * bælgfrugt eller ost. Porre-kartoffelsuppe og risengrød er stadig ude, og
-   * det er ikke en glemt kategori.
+   * **Reglen er: en middag har et protein eller en bælgfrugt. Den grænse er
+   * VALGT, ikke fundet.** Prisen for den er de rene grøntsagsretter, de
+   * mælkebaserede retter og ostepastaretterne: porre-kartoffelsuppe,
+   * risengrød, grønlangkål, Macaroni and Cheese og cacio e pepe er alle ude.
+   * Det er ikke en glemt kategori, og det er ikke et hul, der bare skal
+   * lukkes — begge de oplagte måder at lukke det på er målt og forkastet:
    *
-   * Et vægtgulv i stedet blev målt og forkastet: fordelingerne for de 112
-   * beholdte og de 47 udelukkede overlapper næsten helt (median 0,311 mod
-   * 0,215 kg pr. portion). Et gulv på 0,10 kg lukker **Mørdej** ind — den
-   * ret, hele filteret findes for — og ingen værdi henter Macaroni and
-   * Cheese uden også at hente smoothies og pærecrumble. De to tungeste
-   * udelukkede er risengrød og en grøn smoothie. Vægt måler ikke, om noget
-   * er aftensmad.
+   *   'cheese' i MAIN_CATS: gevinsten kom aldrig (Macaroni and Cheese lå
+   *   nr. 94 af 128 og ville ikke blive vist), og prisen var 15,6 % af
+   *   korpusset, der skiftede hovedråvare. Se kommentaren ved MAIN_CATS.
    *
-   * Filteret kan kun være så godt som koblingen mellem ingrediens og vare.
-   * Målt: "100ml strong espresso" er koblet til varen `bonner` (bælgfrugt)
-   * med mængden 0,1 kg, og derfor har en café con leche en "hovedråvare".
-   * Den hører til i den voksende liste over fejlkoblinger fra plan 1 —
-   * "Apple iPad" på æble, Cerave-creme på fløde, "1 tsk dijonsennep" på
-   * ketchup — og den rettes i taksonomien, ikke her.
+   *   Et gulv på købt vægt pr. portion: fordelingerne for de beholdte og de
+   *   udelukkede overlapper næsten helt (median 0,311 mod 0,215 kg). Et gulv
+   *   på 0,10 kg lukker **Mørdej** ind — den ret, hele filteret findes for —
+   *   og ingen værdi henter Macaroni and Cheese uden også at hente smoothies
+   *   og pærecrumble. De to tungeste udelukkede er risengrød og en grøn
+   *   smoothie. Vægt måler ikke, om noget er aftensmad.
+   *
+   * To ting, filteret ikke kan, og som ikke skal løses her:
+   *
+   * 1. **Det skelner ikke en middag fra et tilbehør.** Pea purée har ærter
+   *    og er dermed "aftensmad"; målt lå den nr. 4 af 128 og stod i et
+   *    forslag. Den ligger højt af præcis den grund, den ikke burde være
+   *    der: den er billig pr. portion, FORDI den er tilbehør. Ingen vægtning
+   *    retter det — hverken SCORE_KR eller spildleddet — for de måler
+   *    kroner, og det her er viden om, hvad en ret ER. Den viden hører i
+   *    `score_classic`, plan 1's klassifikator.
+   *
+   * 2. **Filteret kan kun være så godt som koblingen mellem ingrediens og
+   *    vare.** Målt: "100ml strong espresso" er koblet til varen `bonner`
+   *    (bælgfrugt) med mængden 0,1 kg, og derfor har en café con leche en
+   *    "hovedråvare" — den lå nr. 3 af 128. Den hører til i den voksende
+   *    liste over fejlkoblinger fra plan 1: "Apple iPad" på æble,
+   *    Cerave-creme på fløde, "1 tsk dijonsennep" på ketchup. Rettes i
+   *    taksonomien, ikke her.
+   *
+   * De to står sammen, fordi de ser ens ud udefra — en billig ret, der ikke
+   * er aftensmad, øverst på listen — men kun den ene er en fejl i data.
    */
   function hasMainCourse(recipe, items) {
     const lines = ((recipe && recipe.items) || []).map((it) => {
@@ -1110,27 +1131,28 @@
   // Det er det eneste sted, "god mad" og "billig mad" gøres sammenlignelige,
   // og derfor skal tallet måles og ikke gættes.
   //
-  // Målt over de 128 kandidater, der er tilbage efter hovedråvare-kravet
+  // Målt over de 117 kandidater, der er tilbage efter hovedråvare-kravet
   // (REMA 1000, hyldepriser, ingen aktive tilbud i ugen), med opskrifterne
   // skaleret til husstanden:
   //
-  //   marginal pr. portion   p10 15,75   median 30,58   p90 54,30   spænd 38,55 kr
+  //   marginal pr. portion   p10 15,75   median 31,43   p90 56,15   spænd 40,40 kr
   //   score_classic          p10  0,52   median  0,87   p90  1,00   spænd  0,48
   //
-  // 38,55 / 0,48 = 80,3, og **SCORE_KR = 80**: kvalitetsleddet spænder lige
+  // 40,40 / 0,48 = 84,2, og **SCORE_KR = 84**: kvalitetsleddet spænder lige
   // så meget som prisleddet over de midterste 80 % af kandidaterne, og
   // hverken pris eller score kan afgøre ugen alene.
   //
-  // Tallet er målt tre gange, hver gang puljen har ændret sig, og det er
-  // værd at kende historien: 40 (gættet) → 167 (målt før skaleringen) → 84
-  // (målt efter) → 80 (målt efter ost og ærter kom ind). De sidste to er
-  // inden for 5 % af hinanden og giver PRÆCIS samme to uger; valget er altså
-  // ufølsomt i det interval. Springet fra 167 var derimod reelt: skaleringen
-  // halverede prisleddets spænd, og 167 gav scoren dobbelt vægt — forslag B
-  // blev fire kyllingeretter i træk til 278 kr.
+  // Tallet er målt hver gang puljen har ændret sig, og historien er værd at
+  // kende: 40 (gættet) → 167 (målt før skaleringen) → 84 (målt efter) → 80
+  // (målt mens 'cheese' var en hovedkategori) → 84 igen, da osten blev
+  // rullet tilbage. At det lander på sit gamle tal, efter en ændring er
+  // trukket tilbage, er den kontrol man kan håbe på.
   //
-  // Yderpunkterne står fast som kontrol: ved 40 afgør prisen alene (ugen
-  // fyldes med 10-portions-deller), ved 250 afgør scoren alene.
+  // Springet fra 167 var derimod reelt: skaleringen halverede prisleddets
+  // spænd, og 167 gav scoren dobbelt vægt — forslag B blev fire
+  // kyllingeretter i træk til 278 kr. Yderpunkterne står fast som kontrol:
+  // ved 40 afgør prisen alene (ugen fyldes med 10-portions-deller), ved 250
+  // afgør scoren alene.
   //
   // Bemærk hvad der IKKE er et argument: den monotone kyllingeuge delte
   // 1,3 kg kyllingebryst over tre retter og sparede 122,90 kr — det bedste
@@ -1139,7 +1161,7 @@
   // Det er stadig ikke et resultat: ÉN kæde, hyldepriser uden aktive tilbud,
   // og score_classic er tæt pakket (mere end hver tiende ret har 1,00). Skal
   // ses efter igen, når rigtige madplaner har været i hænderne på nogen.
-  const SCORE_KR = 80;
+  const SCORE_KR = 84;
 
   // Hvad det koster en ret at stå i det ANDET forslag allerede. Stor nok til
   // at slå enhver kurveforskel, så forslag B bygges af andre retter — men
