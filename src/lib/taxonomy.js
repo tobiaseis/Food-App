@@ -180,8 +180,13 @@ const SEED = [
     // "nye" creme_fraiche-post blev slået sammen hertil i stedet for duplikeret.
     da: ['creme fraiche', 'cremefraiche', 'æblemost creme', 'crème fraîche', 'fraiche'],
     en: ['creme fraiche', 'soured cream', 'sour cream', 'crema'] },
+  // Smør står i køleskabet, som olie står i skabet. Målt: 933 ingrediens-
+  // linjer i 749 af 2.224 opskrifter, og de hyppigste mængder er 15 g (137
+  // gange) og 25 g (90) — smør til at stege i. Som 'fresh' drev 15 g et
+  // køb på en hel 200 g-pakke, mens 15 g olie ikke gjorde, fordi olie er
+  // essential. Brugerens afgørelse, og den samme regel som rasp og mel.
   { key: 'smoer', name: 'Smør', cat: 'dairy',
-    class: 'fresh', keeps: 'perishable', p: 0.5, kcal: 740, c: 0.6,
+    class: 'essential', keeps: 'keeps', p: 0.5, kcal: 740, c: 0.6,
     da: ['smør', 'kærgården', 'smørbar'], en: ['butter'] },
   { key: 'ost', name: 'Ost', cat: 'cheese',
     class: 'fresh', keeps: 'perishable', p: 25, kcal: 350, c: 1,

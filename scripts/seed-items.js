@@ -52,7 +52,17 @@ function main() {
     'DELETE FROM items WHERE key NOT IN (SELECT value FROM json_each(?))'
   );
 
+  // En vare kan også blive essential efter at have haft priser — smoer blev
+  // det. Ingen af skriverne rører den slags række igen: importøren afviser
+  // essentials, bootstrappen og REMA-klienten filtrerer dem fra, så den
+  // gamle pris bliver liggende og prissatte en vare, der aldrig købes.
+  const dropEssentialPrices = db.prepare(
+    `DELETE FROM item_prices WHERE item_key IN
+       (SELECT key FROM items WHERE class = 'essential')`
+  );
+
   let removed = 0;
+  let droppedPrices = 0;
   const run = db.transaction(() => {
     for (const e of SEED) {
       upsertItem.run({
@@ -73,12 +83,13 @@ function main() {
     }
     // ON DELETE CASCADE på item_synonyms rydder synonymerne med.
     removed = dropGone.run(JSON.stringify(SEED.map((e) => e.key))).changes;
+    droppedPrices = dropEssentialPrices.run().changes;
   });
   run();
 
   const items = db.prepare('SELECT count(*) c FROM items').get().c;
   const syns  = db.prepare('SELECT count(*) c FROM item_synonyms').get().c;
-  console.log(`items: ${items} · synonymer: ${syns} · slettet: ${removed}`);
+  console.log(`items: ${items} · synonymer: ${syns} · slettet: ${removed}` + (droppedPrices ? ` · forladte priser ryddet: ${droppedPrices}` : ''));
 
   // Basen skal spejle SEED præcist. Gør den ikke det, er noget gået galt i en
   // transaktion, og en forkert vareliste er værre end ingen.
