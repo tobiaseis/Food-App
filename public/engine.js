@@ -1378,6 +1378,73 @@
   }
 
   /**
+   * Prisopslaget for én kørsel: (vare, kæde) → effectivePrice, husket.
+   *
+   * Den grådige løkke i sharedWeek prissætter HELE kurven om for hver
+   * kandidat på hver dag, og puljen spørger til de samme par for hver af
+   * sporets retter. Uden et memo slås den samme (vare, kæde) op titusindvis af
+   * gange, og svaret er det samme hver gang — priserne kan ikke ændre sig
+   * midt i en kørsel.
+   */
+  function priceLookup({ offers = new Map(), normals = new Map(), now = new Date() } = {}) {
+    const memo = new Map();
+    return (key, chainId, meta) => {
+      const mk = `${key}|${chainId}`;
+      if (memo.has(mk)) return memo.get(mk);
+      const p = effectivePrice(key, chainId,
+        // `baseUnit` er ikke pynt: uden den kan effectivePrice returnere et
+        // tilbud i AVISENS enhed, når varen ingen normalpris har, og så
+        // regnes et behov i stk mod en kilopris (opgave 6).
+        { offers, normals, now, baseUnit: meta.base_unit });
+      memo.set(mk, p);
+      return p;
+    };
+  }
+
+  /**
+   * Kan HELE retten prissættes i brugerens butikker? Tre ting kan ellers gøre
+   * den gratis, og alle tre er målt i basen:
+   *
+   *  1. en vare uden pris i nogen af de valgte kæder;
+   *  2. en ingrediens, taksonomien slet ikke kender. Den når aldrig ind i
+   *     `recipe.items`, så motoren kan ikke selv se den — kun den, der læste
+   *     opskriften, kan tælle den, og det er `unknown_count` fra
+   *     loadRecipes. 678 af 2.208 opskrifter har mindst én;
+   *  3. en KENDT vare uden mængde ("et stykke ingefær"). needsOf springer
+   *     den over, og så er den gratis. Målt: "Pork noodle stir-fry" stod
+   *     som fuldt prissat uden at købe ingefæren.
+   *
+   * Det er samme regel som `recipe_costs.priceable`, regnet uden basen — så
+   * en ret er prissætbar begge steder eller ingen af dem.
+   *
+   * Den bor her og ikke inde i sharedWeek, fordi to skal bruge den: ugen og
+   * puljen i trin 4. Filtrerede puljen med en anden regel, ville den vise
+   * retter, forslagene stiltiende springer over, og en bruger, der valgte én
+   * selv, fik en indkøbsliste med linjer uden pris — bestPriceFor-driften fra
+   * plan 2 igen.
+   *
+   *   items, offers, normals, chainIds, now   som sharedWeek
+   *   priceIn   et færdigt priceLookup. Valgfrit: en kalder, der spørger for
+   *             mange retter i træk, giver sit eget, så parrene ikke slås op
+   *             forfra for hver ret.
+   */
+  function canPrice(rec, { items = new Map(), offers, normals, chainIds = [], now,
+                           priceIn = null } = {}) {
+    // Samme loft på fem favoritter som ugen og listen — se chainsInPlay. En
+    // ret, kun den sjette favorit kan prissætte, er ikke prissat i ugen.
+    const { ids } = chainsInPlay(chainIds);
+    const lookup = priceIn || priceLookup({ offers, normals, now });
+    if (rec.unknown_count > 0) return false;
+    for (const it of (rec && rec.items) || []) {
+      const meta = items.get(it.key);
+      if (!isBoughtLine(it, meta)) continue;
+      if (!(it.amount > 0)) return false;
+      if (!ids.some((chainId) => lookup(it.key, chainId, meta))) return false;
+    }
+    return true;
+  }
+
+  /**
    * Det, variationsspærren tæller på, for en hel opskrift slået op i
    * varetabellen.
    *
@@ -1427,9 +1494,11 @@
   //
   // Hovedkategorien løsnes i TRIN og ikke i ét hop. Fem kategorier × 3 er 15,
   // og en syv-dages pulje skal have 21, så den løsnende runde er ikke et
-  // hjørnetilfælde. Målt i klassisk: hoppet fra 3 til 99 gav 9 kødretter af
-  // 21, fordi kød ligger øverst og tog alle de resterende pladser; over 6
-  // blev det 6 kød, 5 fisk, 4 fjerkræ, 3 bælgfrugt og 3 æg. Har en bruger kun
+  // hjørnetilfælde. Målt i klassisk (før frøet, id som tiebreak): hoppet fra
+  // 3 til 99 gav 9 kødretter af 21, fordi kød ligger øverst og tog alle de
+  // resterende pladser; over 6 blev det 6 kød, 5 fisk, 4 fjerkræ, 3
+  // bælgfrugt og 3 æg. Med ugentlige frø: højst 6 pr. kategori og alle fem
+  // kategorier med i hver af 19 uger. Har en bruger kun
   // to kategorier, fylder 2 × 6 en fire-dages pulje ligeligt. Sidste runde
   // slipper alt igennem: for få retter er ikke et bedre svar end en ensidig
   // liste, og `thin` siger fra, hvis det heller ikke rækker.
@@ -1439,19 +1508,26 @@
    * De retter, trin 4 viser: tre pr. dag, spredt over hovedkategorierne.
    *
    * To trin, fordi det ene ikke kan gøre begges arbejde. Udvælgelsen alene
-   * giver de højest scorende, og i klassisk er det otte kødretter af de
-   * tolv. Sammensætningen alene ville række ned i bunden af sporet for at
+   * giver de højest scorende, og i klassisk er 40 af de 100 bedste kød —
+   * målt med id som tiebreak blev det otte kødretter af de tolv.
+   * Sammensætningen alene ville række ned i bunden af sporet for at
    * fylde en kategori.
    *
-   *   recipes  sporets opskrifter i sharedWeeks form, med `score`. Kalderen
-   *            giver dem, der kan prissættes i brugerens butikker: puljen har
-   *            ingen priser og kan ikke selv se det (sharedWeeks canPrice).
+   *   recipes  sporets opskrifter i sharedWeeks form, med `score`
    *   days     planens længde; puljen er POOL_PER_DAY × days
    *   items    `items`-tabellen som Map
    *   rank     hvad sporet rangerer efter, HØJEST først. Standard er `score`.
    *            Budget-sporet rangerer efter pris pr. portion og giver fx
    *            `(r) => (r.cost_per_serving == null ? null : -r.cost_per_serving)`
    *            — `-null` er 0 og ville gøre en ret uden pris gratis.
+   *   seed     afgør UAFGJORT, og kun det — se sorteringen nedenfor. Samme
+   *            frø giver samme pulje, så serveren og browseren skal give det
+   *            samme tal for samme uge (data.js bruger år × 100 + uge).
+   *   offers, normals, chainIds, now
+   *            prissammenhængen, som sharedWeek tager den, så kalderen kan
+   *            give begge det samme objekt. Er `chainIds` givet, holdes retter
+   *            ude, som canPrice afviser — den samme funktion, ugen bruger.
+   *            Udeladt prissættes intet, og så er det kalderens ansvar.
    *
    * Svaret er `{ pool, thin }`. `thin` er ikke en fejl, men det, brugeren
    * skal have at vide, før hun vælger: fire retter vist som et frit valg til
@@ -1463,8 +1539,15 @@
    * prissatte middage pr. kæde er det spredningen, der binder. sharedWeek
    * belønner delingen inden for puljen.
    */
-  function candidatePool(recipes, { days = 5, items = new Map(), rank = (r) => r.score } = {}) {
+  function candidatePool(recipes, {
+    days = 5, items = new Map(), rank = (r) => r.score, seed = 0,
+    offers, normals, chainIds, now,
+  } = {}) {
     const want = POOL_PER_DAY * days;
+
+    // Ét prisopslag for hele puljen: sporets retter deler de fleste varer.
+    const priceCtx = chainIds === undefined ? null
+      : { items, chainIds, priceIn: priceLookup({ offers, normals, now }) };
 
     // 1) Udvælgelse. En ret uden en værdi i sporet er ikke i sporet: glemmer
     //    kalderen at sætte `score`, skal puljen komme tom tilbage og melde
@@ -1474,13 +1557,21 @@
       const value = rank(r);
       if (value == null || !Number.isFinite(value)) continue;
       if (!isDinner(r, items)) continue;
-      ranked.push({ r, value });
+      if (priceCtx && !canPrice(r, priceCtx)) continue;
+      ranked.push({ r, value, noise: seededNoise(seed, r.id) });
     }
-    // Uafgjort afgøres på id og ikke på rækkefølgen ind: serveren og
-    // browseren henter opskrifterne i hver sin orden, og de skal nå frem til
-    // samme pulje. Det er ikke en detalje — målt har 83 af de 100 bedste i
-    // klassisk score 1,00, så det er id'et, der vælger de fleste af dem.
-    ranked.sort((a, b) => b.value - a.value || (a.r.id < b.r.id ? -1 : a.r.id > b.r.id ? 1 : 0));
+    // Uafgjort afgøres af frøet. Målt har 83 af de 100 bedste i klassisk
+    // score 1,00, så det er tiebreaket, der vælger de fleste af de tolv — på
+    // id'et alene fik brugeren de samme tolv hver uge.
+    //
+    // Støjen er et TIEBREAK og lægges ikke til scoren: en ret på 0,97 står
+    // bag hver ret på 1,00, hvilket frø det end er. buildPlan lægger den til
+    // (× variety), men dér er den et nøk i en samlet vægtning; her er scoren
+    // sporets hele dom. Id'et til sidst, fordi seededNoise kun har tusind
+    // trin, og to lige retter ellers ville afhænge af rækkefølgen ind — og
+    // serveren og browseren henter i hver sin orden.
+    ranked.sort((a, b) => b.value - a.value || b.noise - a.noise
+      || (a.r.id < b.r.id ? -1 : a.r.id > b.r.id ? 1 : 0));
     const selected = ranked.slice(0, POOL_SELECTION)
       .map((c) => ({ ...c, keys: recipeVarietyKeys(c.r, items) }));
 
@@ -1669,21 +1760,8 @@
     }
 
     // Den grådige løkke prissætter HELE kurven om for hver kandidat på hver
-    // dag. Uden et memo slås den samme (vare, kæde) op titusindvis af gange
-    // for én uge, og svaret er det samme hver gang — priserne kan ikke ændre
-    // sig midt i en kørsel.
-    const priceMemo = new Map();
-    const priceIn = (key, chainId, meta) => {
-      const mk = `${key}|${chainId}`;
-      if (priceMemo.has(mk)) return priceMemo.get(mk);
-      const p = effectivePrice(key, chainId,
-        // `baseUnit` er ikke pynt: uden den kan effectivePrice returnere et
-        // tilbud i AVISENS enhed, når varen ingen normalpris har, og så
-        // regnes et behov i stk mod en kilopris (opgave 6).
-        { offers, normals, now, baseUnit: meta.base_unit });
-      priceMemo.set(mk, p);
-      return p;
-    };
+    // dag — se priceLookup, der husker svaret.
+    const priceIn = priceLookup({ offers, normals, now });
 
     /** Rettens behov pr. VARE — ikke pr. linje: samme vare står ofte flere gange. */
     const needsOf = (rec) => {
@@ -1754,33 +1832,6 @@
       return best;
     };
 
-    /**
-     * Kan HELE retten prissættes? Tre ting kan ellers gøre den gratis, og
-     * alle tre er målt i basen:
-     *
-     *  1. en vare uden pris i nogen af de valgte kæder;
-     *  2. en ingrediens, taksonomien slet ikke kender. Den når aldrig ind i
-     *     `recipe.items`, så motoren kan ikke selv se den — kun den, der læste
-     *     opskriften, kan tælle den, og det er `unknown_count` fra
-     *     loadRecipes. 678 af 2.208 opskrifter har mindst én;
-     *  3. en KENDT vare uden mængde ("et stykke ingefær"). needsOf springer
-     *     den over, og så er den gratis. Målt: "Pork noodle stir-fry" stod
-     *     som fuldt prissat uden at købe ingefæren.
-     *
-     * Det er samme regel som `recipe_costs.priceable`, regnet uden basen — så
-     * en ret er prissætbar begge steder eller ingen af dem.
-     */
-    const canPrice = (rec) => {
-      if (rec.unknown_count > 0) return false;
-      for (const it of (rec && rec.items) || []) {
-        const meta = items.get(it.key);
-        if (!isBoughtLine(it, meta)) continue;
-        if (!(it.amount > 0)) return false;
-        if (!shopIds.some((chainId) => priceIn(it.key, chainId, meta))) return false;
-      }
-      return true;
-    };
-
     const basketCost = (b) => {
       let cost = 0; let wasteKr = 0;
       for (const [key, need] of b) {
@@ -1812,8 +1863,12 @@
     //    Det er samme fejl som sirup-ugen, et lag længere nede: dengang
     //    manglede KVALITETEN modvægt, her er selve prisen fiktion. Og her
     //    står det forkerte tal på skærmen.
+    //
+    //    Den FÆLLES canPrice, med ugens eget prisopslag: puljen i trin 4
+    //    filtrerer med den samme, så de to ikke kan være uenige om en ret.
     const withMain = (candidates || []).filter((c) => isDinner(c, items));
-    const priced = withMain.filter(canPrice);
+    const priceCtx = { items, chainIds: shopIds, priceIn };
+    const priced = withMain.filter((c) => canPrice(c, priceCtx));
     const pool = priced.length ? priced : (withMain.length ? withMain : (candidates || []));
 
     let current = basketCost(basket);
@@ -2355,7 +2410,7 @@
     qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
     choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner, withEstimates,
-    candidatePool, mainCategoryOf, sharedWeek, twoProposals, explainWeek,
+    canPrice, candidatePool, mainCategoryOf, sharedWeek, twoProposals, explainWeek,
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,

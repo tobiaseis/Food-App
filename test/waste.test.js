@@ -979,6 +979,65 @@ test('budget-sporet rangerer efter pris pr. portion, ikke efter score', () => {
   assert.deepEqual(pool.map((r) => r.id), [119, 118, 117]);
 });
 
+test('frøet skifter, hvilke af de lige gode retter der kommer med', () => {
+  // Målt i klassisk: 83 af de 100 bedste har score 1,00. Afgjorde id'et
+  // uafgjort, fik brugeren de samme tolv retter hver uge.
+  const lige = [...Array(12)].map((_, i) =>
+    recipe(260 + i, 1.0, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6)]));
+  const ids = (seed) => engine.candidatePool(lige, { days: 1, items: W_ITEMS, seed })
+    .pool.map((r) => r.id).join(',');
+  const set = new Set([...Array(10)].map((_, s) => ids(s + 1)));
+  assert.ok(set.size > 1, 'ti frø gav den samme pulje');
+  // Samme frø, samme pulje: serveren og browseren skal være enige om ugen.
+  assert.equal(ids(7), ids(7));
+});
+
+test('frøet afgør kun uafgjort og løfter aldrig en ret forbi en bedre', () => {
+  // Støjen er et tiebreak, ikke et tillæg til scoren. Lagt til scoren ville
+  // en ret på 0,97 kunne springe forbi de tolv på 1,00 i nogle uger.
+  const lige = [...Array(12)].map((_, i) =>
+    recipe(280 + i, 1.0, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6)]));
+  const lidtRingere = recipe(299, 0.97, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6)]);
+  for (let seed = 0; seed < 50; seed++) {
+    const { pool } = engine.candidatePool([...lige, lidtRingere], { days: 1, items: W_ITEMS, seed });
+    assert.ok(!pool.some((r) => r.id === 299), `frø ${seed} løftede 0,97 forbi 1,00`);
+  }
+});
+
+test('puljen og ugen prissætter med den samme regel', () => {
+  // Filtrerede kalderen selv med en anden regel end ugens, viste puljen retter,
+  // forslagene stiltiende springer over — og en bruger, der valgte én selv,
+  // fik en indkøbsliste med linjer uden pris. Én regel, to kaldere.
+  const havbars = recipe(310, 2, [line('havbars', 0.6), line('kartofler', 0.6)]);
+  const ukendtLinje = { ...recipe(311, 2, [line('kylling', 0.5), line('ris', 0.3)]), unknown_count: 1 };
+  const alle = [havbars, ukendtLinje, ...MANGE];
+
+  assert.equal(engine.canPrice(havbars, CTX), false, 'havbars har ingen pris i c1');
+  assert.equal(engine.canPrice(ukendtLinje, CTX), false);
+  assert.equal(engine.canPrice(MANGE[0], CTX), true);
+
+  const { pool, thin } = engine.candidatePool(alle, { days: 4, ...CTX });
+  assert.ok(!pool.some((r) => r.id === 310 || r.id === 311));
+  assert.ok(pool.every((r) => engine.canPrice(r, CTX)));
+  assert.equal(pool.length, 12);
+  assert.equal(thin, false);
+
+  // Uden priser prissættes intet, og så er det kalderens ansvar.
+  const uden = engine.candidatePool(alle, { days: 4, items: W_ITEMS });
+  assert.ok(uden.pool.some((r) => r.id === 310));
+});
+
+test('puljen prissætter i de samme fem butikker som ugen', () => {
+  // Loftet på fem favoritter (chainsInPlay) gælder også her: en ret, kun den
+  // sjette favorit kan prissætte, ville stå i puljen og mangle i ugen.
+  const normals = new Map([...W_NORMALS].map(([k, v]) => [k.replace('|c1', '|c6'), v]));
+  const ctx = { items: W_ITEMS, normals, chainIds: ['c1', 'c2', 'c3', 'c4', 'c5', 'c6'] };
+  assert.equal(engine.canPrice(MANGE[0], ctx), false);
+  const { pool, thin } = engine.candidatePool(MANGE, { days: 4, ...ctx });
+  assert.equal(pool.length, 0);
+  assert.equal(thin, true);
+});
+
 test('en ret uden score i sporet kommer ikke i puljen', () => {
   // Glemmer kalderen at sætte `score` (browseren har den som tier_score),
   // skal puljen melde tom og tynd — ikke rangere alt som lige godt.
