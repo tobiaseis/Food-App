@@ -24,7 +24,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const vm = require('node:vm');
-const { server, DB } = require('./helpers/mock-postgrest.js');
+const { server, DB, SCHEMA } = require('./helpers/mock-postgrest.js');
 const build = require('../src/sync/build.js');
 const { push, collectPlanIndex, collectPriceTables } = build;
 const { getDb } = require('../src/db');
@@ -101,6 +101,27 @@ test('push lægger hele read-modellen ind', async () => {
   assert.equal(DB.taxonomy_prices.length, 1);
   assert.equal(DB.recipe_index.length, 1);
   assert.equal(DB.items.length, 2, 'varekataloget skal med — ellers kan browseren ikke bygge listerne');
+});
+
+test('en Supabase uden items-tabellen tømmer ikke madplanen', async () => {
+  // items er den nyeste tabel, og en eksisterende installation har den ikke,
+  // før schema.sql er kørt igen. Al sletning sker før al indsættelse, så
+  // stod items sidst i DERIVED, var meal_plans, recipe_index, item_prices og
+  // recipe_costs allerede tømt, når 404'en kom — målt i reviewet af plan 3
+  // opgave 1, hvor de fire stod med 0 rækker. Nu skal fejlen komme FØR.
+  reset();
+  await push(makeModel(), quiet);
+  const saved = SCHEMA.items;
+  delete SCHEMA.items;
+  try {
+    await assert.rejects(push(makeModel(), quiet), /items/);
+  } finally {
+    SCHEMA.items = saved;
+  }
+  assert.equal(DB.meal_plans.length, 1, 'madplanen må ikke være væk');
+  assert.equal(DB.recipe_index.length, 1, 'opskrifterne må ikke være væk');
+  assert.equal(DB.item_prices.length, 1, 'priserne må ikke være væk');
+  assert.equal(DB.recipe_costs.length, 1, 'opskriftspriserne må ikke være væk');
 });
 
 test('varekataloget udskiftes, det hober sig ikke op', async () => {
@@ -423,7 +444,15 @@ test('collectItems leverer det, de to lister skal bruge', () => {
  */
 function fakePostgrest(tables) {
   const calls = [];
-  const pgTime = (v) => (typeof v === 'string' ? v.replace(/(\.\d+)?Z$/, '+00:00') : v);
+  // Som en Supabase i dansk tid svarer: samme øjeblik, men skrevet '+02:00'.
+  // effectivePrice sammenligner valid_until med nu SOM TEKST, og
+  // '2026-09-25T13:00:00+02:00' ser senere ud end '2026-09-25T12:00:00.000Z',
+  // selv om det er en time TIDLIGERE. Uden browserens omregning til '…Z'
+  // bliver en udløbet pris læst som gyldig.
+  const pgTime = (v) => {
+    if (typeof v !== 'string' || !/Z$/.test(v)) return v;
+    return new Date(Date.parse(v) + 2 * 3600e3).toISOString().replace(/\.\d+Z$/, '') + '+02:00';
+  };
   const fetch = async (url) => {
     const u = new URL(url);
     const table = u.pathname.replace('/rest/v1/', '');
@@ -445,6 +474,17 @@ function fakePostgrest(tables) {
         const set = new Set(val.replace(/^\(|\)$/g, '').split(','));
         rows = rows.filter((r) => set.has(String(r[col])));
       } else throw new Error(`falsk PostgREST kender ikke ${col}=${v}`);
+    }
+    // order= skal virke, ellers kan testen ikke se, om data.js beder om den
+    // raekkefoelge, serverens normalPricesFor bruger. effectivePrice tager den
+    // foerste ved uafgjort, og pakkerne kommer i hentet orden.
+    const ord = u.searchParams.get('order');
+    if (ord) {
+      const keys = ord.split(',').map((x) => { const [c, d] = x.split('.'); return [c, d === 'desc' ? -1 : 1]; });
+      rows.sort((a, b) => {
+        for (const [c, d] of keys) { if (a[c] < b[c]) return -d; if (a[c] > b[c]) return d; }
+        return 0;
+      });
     }
     const sel = u.searchParams.get('select');
     if (sel && sel !== '*') {
@@ -545,10 +585,15 @@ test('browserens normalpriskort giver samme pris som serverens normalPricesFor',
     item.run('kartofler', 'Kartofler', 'veg', 'baseline', 'keeps', 'kg');
     item.run('aeg', 'Æg', 'eggs', 'fresh', 'keeps', 'stk');
     item.run('persille', 'Persille', 'veg', 'fresh', 'perishable', 'kg');
-    const UNITS = { loeg: 'kg', kartofler: 'kg', aeg: 'stk', persille: 'kg' };
+    item.run('vin', 'Vin', 'drink', 'baseline', 'pantry', 'l');
+    const UNITS = { loeg: 'kg', kartofler: 'kg', aeg: 'stk', persille: 'kg', vin: 'l' };
 
     const FRESH = '2099-01-01T00:00:00Z';
     const STALE = '2020-01-01T00:00:00Z';
+    // Udløbet en time før `now` nedenfor. Det er den eneste række, hvor
+    // tidszonen kan vende svaret: 2020 og 2099 ligger for langt væk til, at
+    // to timers forskel betyder noget.
+    const NEAR = '2026-09-25T11:00:00.000Z';
     const price = db.prepare(`
       INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit, pack_price,
                                unit_price, source, observed_at, valid_until)
@@ -567,13 +612,26 @@ test('browserens normalpriskort giver samme pris som serverens normalPricesFor',
     // valid_until, vinder den forkerte.
     price.run('persille', 'N', 0.075, 'kg', 6, 80, 'manual', STALE);
     price.run('persille', 'N', 0.1, 'kg', 17.4, 174, 'manual', FRESH);
+    // Samme mønster i F, men den billige udløb for en time siden. Læser
+    // browseren '+02:00' som tekst, tror den, prisen stadig gælder, og vælger
+    // den forkerte pakke.
+    price.run('persille', 'F', 0.075, 'kg', 6, 80, 'manual', NEAR);
+    price.run('persille', 'F', 0.1, 'kg', 17.4, 174, 'manual', FRESH);
+    // To pakker paa samme niveau, sat ind MOD primaernoeglens orden (1 l foer
+    // 0,375 l). Det er virkeligheden: vin har netop de to hos REMA, og skoennet
+    // kopierer begge til alle kaeder. Uden en fast orden paa begge sider kommer
+    // `packs` i hver sin raekkefoelge, og effectivePrice er ikke laengere ens.
+    price.run('vin', 'R', 1, 'l', 29, 29, 'manual', FRESH);
+    price.run('vin', 'R', 0.375, 'l', 25, 66.67, 'manual', FRESH);
 
     // Browserens rækker kommer ad synk-vejen: collectCatalog og
     // collectPriceTables er præcis det, build.js sender til Supabase.
     const tables = {
       chains: build.collectCatalog(db).chains,
       sync_state: [],
-      item_prices: collectPriceTables(db, quiet).itemPrices,
+      // Vendt om med vilje: sorterer browseren ikke selv (order= i
+      // forespoergslen), faar den raekkerne i forkert orden, og testen fejler.
+      item_prices: collectPriceTables(db, quiet).itemPrices.slice().reverse(),
     };
 
     const now = new Date('2026-09-25T12:00:00Z');

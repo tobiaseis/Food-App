@@ -225,10 +225,13 @@ function normalPricesFor(chainIds = null, { estimates = true } = {}) {
                 unit_price, source, valid_until`;
   // Samme rækkefølge som browseren henter i (public/data.js, normalPrices).
   // effectivePrice tager den FØRSTE ved uafgjort på kilde, alder og enhedspris,
-  // så uden en fast orden kunne serveren og appen vælge hver sin pakke af to
-  // lige gode — og recipe_costs og skærmen være uenige om samme ret. Kan ikke
-  // ske i dag (intet par har to pakker på sit bedste niveau), men den dag en
-  // anden pakkestørrelse tastes ind.
+  // og pakkerne (`packs`) kommer i den orden, de blev hentet — så uden en fast
+  // orden kunne serveren og appen vælge hver sin pakke af to lige gode, og
+  // recipe_costs og skærmen være uenige om samme ret.
+  //
+  // Det sker i dag: vin har to 'manual'-pakker hos REMA (0,375 l og 1 l), og
+  // skønnet kopierer begge til de tretten andre kæder. Målt i reviewet af plan 3
+  // opgave 1: med omvendt orden var `packs` forskellig for vin i alle 14 kæder.
   const ORDER = ' ORDER BY item_key, chain_id, pack_qty, pack_unit';
   let sql = `SELECT ${cols} FROM item_prices`;
   const params = [];

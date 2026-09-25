@@ -497,6 +497,11 @@ const Data = {
     if (!USE_SUPABASE) throw new Error('Varekataloget hentes kun fra Supabase-bagenden.');
     if (!planIndex.items) {
       const rows = await sbAll('items?select=*&order=key.asc');
+      // Samme grund som ovenfor, bare fra den anden side: en tom tabel er ikke
+      // et tomt katalog, men en synk midt i sin sletning eller en, der fejlede.
+      // Caches kortet tomt, holder siden fast i to tomme lister, til den
+      // genindlæses.
+      if (!rows.length) throw new Error('Varekataloget er tomt — prøv igen om lidt.');
       planIndex.items = new Map(rows.map((r) => [r.key, r]));
     }
     return planIndex.items;
