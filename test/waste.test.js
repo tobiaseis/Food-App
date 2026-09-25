@@ -860,3 +860,130 @@ test('isDinner kræver både en hovedråvare og en middags-etiket', () => {
   assert.equal(engine.isDinner(dessertAfKoed, W_ITEMS), false, 'etiketten skal kunne sige nej');
   assert.equal(engine.isDinner(kunTilbehoer, W_ITEMS), false, 'hovedråvaren skal stadig kræves');
 });
+
+// ── Kandidatpuljen (spec 2.3) ────────────────────────────────────────────────
+//
+// Trin 4 viser tre gange så mange retter som dage, og de to forslag er
+// præ-markerede delmængder af dem. sharedWeek scorer den liste, den får; det er
+// puljen, der laver listen.
+
+// Tyve middage i fire hovedkategorier, fem af hver, faldende score. Tilbehøret
+// skifter, så stivelse ikke er det, der spreder dem.
+const KAT = [
+  ['kyllingebryst', 'poultry'], ['hakket_oksekoed', 'meat'],
+  ['laks', 'fish'], ['aeg', 'eggs'],
+];
+const MANGE = [];
+KAT.forEach(([key], k) => {
+  for (let i = 0; i < 5; i++) {
+    const id = 100 + k * 5 + i;
+    const side = i % 2 ? line('pasta', 0.3) : line('kartofler', 0.6);
+    MANGE.push(recipe(id, 1 - (k * 5 + i) / 100,
+      [line(key, key === 'aeg' ? 4 : 0.5), side]));
+  }
+});
+
+test('puljen er tre gange så mange retter som dage', () => {
+  const { pool } = engine.candidatePool(MANGE, { days: 4, items: W_ITEMS });
+  assert.equal(pool.length, 12);
+});
+
+test('højst tre retter deler hovedråvare', () => {
+  // Uden spredningen kan de 12 blive 12 pastaretter, og så findes der ingen
+  // spildfri uge at vælge imellem — puljen ville være et valg uden valg.
+  const { pool } = engine.candidatePool(MANGE, { days: 4, items: W_ITEMS });
+  const tally = new Map();
+  for (const r of pool) {
+    const m = engine.mainCategoryOf(r, W_ITEMS);
+    tally.set(m, (tally.get(m) || 0) + 1);
+  }
+  assert.ok([...tally.values()].every((n) => n <= 3));
+});
+
+test('puljen melder selv, når den er for tynd', () => {
+  // Fire kandidater til en fire-dages plan er ikke et valg. Før version
+  // 1-skønnet havde en bruger uden REMA blandt sine favoritter præcis så få;
+  // i dag giver Netto + Lidl 512 prissatte, men en bruger, der fravælger det
+  // meste, eller et spor med få opskrifter kan stadig ende her.
+  const { pool, thin } = engine.candidatePool(MANGE.slice(0, 4), { days: 4, items: W_ITEMS });
+  assert.equal(pool.length, 4);
+  assert.equal(thin, true, 'brugeren skal have det at vide, ikke opdage det');
+});
+
+test('mainCategoryOf svarer det, variationsspærren tæller på', () => {
+  // Kategorien og ikke nøglen — samme regel som varietyKeys. Kyllingebryst og
+  // kyllingelår er begge kylling for den, der læser listen.
+  const bryst = recipe(200, 1, [line('kyllingebryst', 0.5), line('kartofler', 0.6)]);
+  const laar = recipe(201, 1, [line('kyllingelaar', 0.5), line('ris', 0.3)]);
+  assert.equal(engine.mainCategoryOf(bryst, W_ITEMS), 'poultry');
+  assert.equal(engine.mainCategoryOf(laar, W_ITEMS), 'poultry');
+  assert.equal(engine.mainCategoryOf(recipe(202, 1, [line('salt', 0.01)]), W_ITEMS), null,
+    'en ret uden noget at bære den har ingen hovedkategori');
+});
+
+test('puljen tæller kylling på kategori, ikke på nøgle', () => {
+  // Samme fælde som i ugen: 'poultry' rummer syv varer, og talt pr. nøgle
+  // kunne seks kyllingeretter med hver sin udskæring fylde en pulje på seks.
+  const kyl = (id, key, s) => recipe(id, s, [line(key, 0.5), line('kartofler', 0.6)]);
+  const fjer = [
+    kyl(210, 'kylling', 1.0), kyl(211, 'kyllingebryst', 0.99), kyl(212, 'kyllingelaar', 0.98),
+    kyl(213, 'kylling', 0.97), kyl(214, 'kyllingebryst', 0.96), kyl(215, 'kyllingelaar', 0.95),
+  ];
+  const andre = MANGE.filter((r) => r.id >= 105);   // kød, fisk og æg, lavere score
+  const { pool } = engine.candidatePool([...fjer, ...andre], { days: 2, items: W_ITEMS });
+  const n = pool.filter((r) => engine.mainCategoryOf(r, W_ITEMS) === 'poultry').length;
+  assert.equal(pool.length, 6);
+  assert.equal(n, 3, `${n} fjerkræretter i en pulje på 6`);
+});
+
+test('puljen er kun aftensmad', () => {
+  // Højeste score, men kilden kalder den en dessert. En ret, der ikke er
+  // aftensmad, må ikke tage en af de tolv pladser.
+  const dessert = { ...recipe(220, 2, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6)]),
+                    keywords: 'Desserter, Kager' };
+  const { pool } = engine.candidatePool([dessert, ...MANGE], { days: 4, items: W_ITEMS });
+  assert.ok(!pool.some((r) => r.id === 220));
+  assert.equal(pool.length, 12);
+});
+
+test('puljen fyldes, selv når brugeren kun har to kategorier', () => {
+  // To kategorier × 3 er seks retter, og planen skal bruge ni. Spredningen er
+  // et ønske om variation, ikke en grund til at vise for få retter.
+  const to = MANGE.filter((r) => r.id < 110);        // fjerkræ og kød, fem af hver
+  const { pool, thin } = engine.candidatePool(to, { days: 3, items: W_ITEMS });
+  assert.equal(pool.length, 9);
+  assert.equal(thin, false);
+});
+
+test('loftet løsnes i trin, så den øverste kategori ikke tager resten', () => {
+  // Otte fjerkræ øverst, otte kød under. Strengt giver 3 + 3; sprang loftet
+  // derfra til 99, tog fjerkræet alle seks resterende pladser (9 mod 3).
+  // Målt på klassisk med syv dage: 9 kødretter af 21 mod 6 over trinnet.
+  const ret = (id, key, s) => recipe(id, s, [line(key, 0.5), line('kartofler', 0.6)]);
+  const fjer = [...Array(8)].map((_, i) => ret(230 + i, 'kyllingebryst', 1 - i / 100));
+  const koed = [...Array(8)].map((_, i) => ret(240 + i, 'hakket_oksekoed', 0.9 - i / 100));
+  const { pool } = engine.candidatePool([...fjer, ...koed], { days: 4, items: W_ITEMS });
+  const n = pool.filter((r) => engine.mainCategoryOf(r, W_ITEMS) === 'poultry').length;
+  assert.equal(pool.length, 12);
+  assert.equal(n, 6, `${n} fjerkræretter af 12`);
+});
+
+test('budget-sporet rangerer efter pris pr. portion, ikke efter score', () => {
+  // Ingen score_budget findes med vilje (spec 1.5): om en ret er billig,
+  // afhænger af ugen og kæderne. Æggeretterne er billigst og skal ind først,
+  // selv om de har den laveste score. En ret uden pris er ikke gratis.
+  const medPris = MANGE.map((r) => ({ ...r, cost_per_serving: 200 - r.id }));
+  const udenPris = { ...recipe(250, 1, [line('laks', 0.5), line('ris', 0.3)]), cost_per_serving: null };
+  const rank = (r) => (r.cost_per_serving == null ? null : -r.cost_per_serving);
+  const { pool } = engine.candidatePool([udenPris, ...medPris], { days: 1, items: W_ITEMS, rank });
+  assert.deepEqual(pool.map((r) => r.id), [119, 118, 117]);
+});
+
+test('en ret uden score i sporet kommer ikke i puljen', () => {
+  // Glemmer kalderen at sætte `score` (browseren har den som tier_score),
+  // skal puljen melde tom og tynd — ikke rangere alt som lige godt.
+  const udenScore = MANGE.map((r) => ({ ...r, score: undefined }));
+  const { pool, thin } = engine.candidatePool(udenScore, { days: 4, items: W_ITEMS });
+  assert.equal(pool.length, 0);
+  assert.equal(thin, true);
+});

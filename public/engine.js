@@ -1377,6 +1377,133 @@
     return mains.some((m) => MAIN_CATS.has(m.cat));
   }
 
+  /**
+   * Det, variationsspærren tæller på, for en hel opskrift slået op i
+   * varetabellen.
+   *
+   * Én vej fra opskrift til nøgler, fordi tre steder skal bruge den: ugens
+   * spærre i sharedWeek, puljens spærre i candidatePool og mærkaten, brugeren
+   * ser (mainCategoryOf). Sagde mærkaten én ting, mens spærren talte en anden,
+   * kunne listen vise fire kyllingeretter under et loft på tre — samme slags
+   * drift som bestPriceFor og basketCost i plan 2.
+   */
+  function recipeVarietyKeys(recipe, items) {
+    return varietyKeys(assignRoles(roleLines(recipe, items),
+      { unknownMain: Boolean(recipe && recipe.unknown_main) }));
+  }
+
+  /**
+   * Rettens hovedkategori — `poultry`, `meat`, … — eller `null`.
+   *
+   * Ikke ny logik, men præcis det, spærrerne tæller på: kategorien og ikke
+   * nøglen, så kyllingebryst og kyllingelår begge er kylling. Brugerfladen
+   * mærker retterne med den, og mærkaten skal kunne tælles efter.
+   */
+  function mainCategoryOf(recipe, items) {
+    return recipeVarietyKeys(recipe, items).main;
+  }
+
+  // ── Kandidatpuljen (spec 2.3) ──────────────────────────────────────────────
+
+  // Trin 4 viser tre retter pr. dag i planen: 12 for fire dage. De to forslag
+  // er præ-markerede delmængder af dem, så færre ville ikke være et valg.
+  const POOL_PER_DAY = 3;
+
+  // Hvor dybt udvælgelsen går, før sammensætningen tager over (specets "top
+  // ~100"). Dybt nok til, at spredningen finder alle fem hovedkategorier —
+  // målt i klassisk-sporet med Netto, føtex og REMA: 40 kød, 26 fjerkræ,
+  // 21 fisk, 8 bælgfrugt og 5 æg blandt de 100 — men ikke så dybt, at en
+  // kategori fyldes op med retter fra bunden af sporet.
+  const POOL_SELECTION = 100;
+
+  // Puljens lofter: [hovedkategori, tilbehør] pr. runde, samme form som
+  // VARIETY_PASSES og talt af den samme varietyTally — men med egne tal.
+  // VARIETY_PASSES er bygget til en UGE på fire-syv retter; puljen har tolv
+  // eller flere, og specet siger 3 pr. hovedkategori.
+  //
+  // Tilbehøret har intet loft her (99). Specet beder kun om spredning på
+  // hovedråvaren, og det er ugen, der bliver spist: sharedWeek holder selv
+  // tilbehøret nede med VARIETY_PASSES, uanset hvad puljen rummer.
+  //
+  // Hovedkategorien løsnes i TRIN og ikke i ét hop. Fem kategorier × 3 er 15,
+  // og en syv-dages pulje skal have 21, så den løsnende runde er ikke et
+  // hjørnetilfælde. Målt i klassisk: hoppet fra 3 til 99 gav 9 kødretter af
+  // 21, fordi kød ligger øverst og tog alle de resterende pladser; over 6
+  // blev det 6 kød, 5 fisk, 4 fjerkræ, 3 bælgfrugt og 3 æg. Har en bruger kun
+  // to kategorier, fylder 2 × 6 en fire-dages pulje ligeligt. Sidste runde
+  // slipper alt igennem: for få retter er ikke et bedre svar end en ensidig
+  // liste, og `thin` siger fra, hvis det heller ikke rækker.
+  const POOL_PASSES = [[3, 99], [6, 99], [99, 99]];
+
+  /**
+   * De retter, trin 4 viser: tre pr. dag, spredt over hovedkategorierne.
+   *
+   * To trin, fordi det ene ikke kan gøre begges arbejde. Udvælgelsen alene
+   * giver de højest scorende, og i klassisk er det otte kødretter af de
+   * tolv. Sammensætningen alene ville række ned i bunden af sporet for at
+   * fylde en kategori.
+   *
+   *   recipes  sporets opskrifter i sharedWeeks form, med `score`. Kalderen
+   *            giver dem, der kan prissættes i brugerens butikker: puljen har
+   *            ingen priser og kan ikke selv se det (sharedWeeks canPrice).
+   *   days     planens længde; puljen er POOL_PER_DAY × days
+   *   items    `items`-tabellen som Map
+   *   rank     hvad sporet rangerer efter, HØJEST først. Standard er `score`.
+   *            Budget-sporet rangerer efter pris pr. portion og giver fx
+   *            `(r) => (r.cost_per_serving == null ? null : -r.cost_per_serving)`
+   *            — `-null` er 0 og ville gøre en ret uden pris gratis.
+   *
+   * Svaret er `{ pool, thin }`. `thin` er ikke en fejl, men det, brugeren
+   * skal have at vide, før hun vælger: fire retter vist som et frit valg til
+   * en fire-dages plan er ikke et valg.
+   *
+   * Specets anden bibetingelse, OVERLAP — at puljen kollektivt deler nok
+   * råvarer til, at gode spildfri delmængder findes — er udeladt med vilje,
+   * ikke glemt. Den kræver et mål for "nok delte råvarer", og med 305-400
+   * prissatte middage pr. kæde er det spredningen, der binder. sharedWeek
+   * belønner delingen inden for puljen.
+   */
+  function candidatePool(recipes, { days = 5, items = new Map(), rank = (r) => r.score } = {}) {
+    const want = POOL_PER_DAY * days;
+
+    // 1) Udvælgelse. En ret uden en værdi i sporet er ikke i sporet: glemmer
+    //    kalderen at sætte `score`, skal puljen komme tom tilbage og melde
+    //    `thin` — ikke stille rangere alle retter som lige gode.
+    const ranked = [];
+    for (const r of recipes || []) {
+      const value = rank(r);
+      if (value == null || !Number.isFinite(value)) continue;
+      if (!isDinner(r, items)) continue;
+      ranked.push({ r, value });
+    }
+    // Uafgjort afgøres på id og ikke på rækkefølgen ind: serveren og
+    // browseren henter opskrifterne i hver sin orden, og de skal nå frem til
+    // samme pulje. Det er ikke en detalje — målt har 83 af de 100 bedste i
+    // klassisk score 1,00, så det er id'et, der vælger de fleste af dem.
+    ranked.sort((a, b) => b.value - a.value || (a.r.id < b.r.id ? -1 : a.r.id > b.r.id ? 1 : 0));
+    const selected = ranked.slice(0, POOL_SELECTION)
+      .map((c) => ({ ...c, keys: recipeVarietyKeys(c.r, items) }));
+
+    // 2) Sammensætning: gå ned gennem de udvalgte og tag én ad gangen, så
+    //    længe dens hovedkategori er under loftet. Samme tæller som ugen, så
+    //    puljen og ugen er enige om, hvad en ret tæller som.
+    const pool = [];
+    const taken = new Set();
+    const tally = varietyTally();
+    for (const pass of POOL_PASSES) {
+      for (const c of selected) {
+        if (pool.length >= want) break;
+        if (taken.has(c.r) || !tally.allows(c.keys, pass)) continue;
+        pool.push(c.r);
+        taken.add(c.r);
+        tally.add(c.keys);
+      }
+      if (pool.length >= want) break;
+    }
+
+    return { pool, thin: pool.length < want };
+  }
+
   // Portionsantal, når opskriften ikke siger det. 4 er både det hyppigste tal
   // i basen (80 af de prissatte) og det, resten af appen regner i.
   const DEFAULT_SERVINGS = 4;
@@ -1702,11 +1829,10 @@
     // det selv i designfasen: en uge behøver ikke være kylling hele vejen.
     const tally = varietyTally();
     const varietyMemo = new Map();
+    // recipeVarietyKeys og ikke en egen kæde af opslag: puljen og mærkaten i
+    // brugerfladen tæller på det samme, og det skal ugen også.
     const keysOf = (cand) => {
-      if (!varietyMemo.has(cand.id)) {
-        varietyMemo.set(cand.id, varietyKeys(assignRoles(roleLines(cand, items),
-          { unknownMain: Boolean(cand.unknown_main) })));
-      }
+      if (!varietyMemo.has(cand.id)) varietyMemo.set(cand.id, recipeVarietyKeys(cand, items));
       return varietyMemo.get(cand.id);
     };
 
@@ -2229,7 +2355,7 @@
     qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
     choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner, withEstimates,
-    sharedWeek, twoProposals, explainWeek,
+    candidatePool, mainCategoryOf, sharedWeek, twoProposals, explainWeek,
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
