@@ -223,12 +223,20 @@ function normalPricesFor(chainIds = null, { estimates = true } = {}) {
   const db = getDb();
   const cols = `item_key, chain_id, pack_qty, pack_unit, pack_price,
                 unit_price, source, valid_until`;
+  // Samme rækkefølge som browseren henter i (public/data.js, normalPrices).
+  // effectivePrice tager den FØRSTE ved uafgjort på kilde, alder og enhedspris,
+  // så uden en fast orden kunne serveren og appen vælge hver sin pakke af to
+  // lige gode — og recipe_costs og skærmen være uenige om samme ret. Kan ikke
+  // ske i dag (intet par har to pakker på sit bedste niveau), men den dag en
+  // anden pakkestørrelse tastes ind.
+  const ORDER = ' ORDER BY item_key, chain_id, pack_qty, pack_unit';
   let sql = `SELECT ${cols} FROM item_prices`;
   const params = [];
   if (chainIds && chainIds.length) {
     sql += ` WHERE chain_id IN (${chainIds.map(() => '?').join(',')})`;
     params.push(...chainIds);
   }
+  sql += ORDER;
 
   const map = new Map();
   for (const r of db.prepare(sql).all(...params)) {
@@ -244,7 +252,7 @@ function normalPricesFor(chainIds = null, { estimates = true } = {}) {
   // ud for madplanen, ikke for den, der skal taste de rigtige priser ind.
   const rema = db.prepare("SELECT id FROM chains WHERE slug = 'rema1000'").get();
   if (!rema) return map;
-  const remaRows = db.prepare(`SELECT ${cols} FROM item_prices WHERE chain_id = ?`).all(rema.id);
+  const remaRows = db.prepare(`SELECT ${cols} FROM item_prices WHERE chain_id = ?${ORDER}`).all(rema.id);
   const fill = chainIds && chainIds.length
     ? chainIds
     : db.prepare('SELECT id FROM chains').all().map((c) => c.id);
