@@ -1488,9 +1488,24 @@
   // VARIETY_PASSES er bygget til en UGE på fire-syv retter; puljen har tolv
   // eller flere, og specet siger 3 pr. hovedkategori.
   //
-  // Tilbehøret har intet loft her (99). Specet beder kun om spredning på
-  // hovedråvaren, og det er ugen, der bliver spist: sharedWeek holder selv
-  // tilbehøret nede med VARIETY_PASSES, uanset hvad puljen rummer.
+  // Tilbehøret må højst fylde en TREDJEDEL af listen (`days` af 3 × days).
+  // Specet spreder "så listen ikke bliver 12 pastaretter", men pasta er
+  // aldrig en puljerets hovedråvare — isDinner kræver et protein — så loftet
+  // på hovedkategorien alene kan aldrig tjene den grund. Målt i klassisk over
+  // 52 ugentlige frø uden tilbehørsloft: op til 8 af 12 med kartofler ved
+  // fire dage og 15 af 21 ved syv. Et loft på 3 som ugens er for stramt:
+  // kartofler dominerer klassisk, og den strenge runde slog fejl i 48 af 52
+  // uger ved fire dage.
+  //
+  // Tilbehøret løsnes FØR hovedkategorien: en pulje med fem kartoffelretter
+  // og tre pr. kategori er bedre end en med fire og seks kødretter.
+  //
+  // Prisen, målt på de to forslag bygget af puljen (klassisk, Netto + føtex
+  // + REMA, fire personer, samme 52 frø): +1,4 % ved fire dage (394,33 →
+  // 399,80 kr), +2,2 % ved fem, +0,5 % ved syv. Mest af ét tilbehør i
+  // puljen faldt fra 8/12 til 5/12, 11/15 til 8/15 og 15/21 til 8/21.
+  // Forslagene selv holdt sig på højst 3 af ét tilbehør med og uden — ugens
+  // egen spærre — så loftet ændrer kun den liste, brugeren vælger fra.
   //
   // Hovedkategorien løsnes i TRIN og ikke i ét hop. Fem kategorier × 3 er 15,
   // og en syv-dages pulje skal have 21, så den løsnende runde er ikke et
@@ -1502,7 +1517,7 @@
   // to kategorier, fylder 2 × 6 en fire-dages pulje ligeligt. Sidste runde
   // slipper alt igennem: for få retter er ikke et bedre svar end en ensidig
   // liste, og `thin` siger fra, hvis det heller ikke rækker.
-  const POOL_PASSES = [[3, 99], [6, 99], [99, 99]];
+  const poolPasses = (days) => [[3, days], [3, 99], [6, days], [6, 99], [99, 99]];
 
   /**
    * De retter, trin 4 viser: tre pr. dag, spredt over hovedkategorierne.
@@ -1525,9 +1540,9 @@
    *            samme tal for samme uge (data.js bruger år × 100 + uge).
    *   offers, normals, chainIds, now
    *            prissammenhængen, som sharedWeek tager den, så kalderen kan
-   *            give begge det samme objekt. Er `chainIds` givet, holdes retter
-   *            ude, som canPrice afviser — den samme funktion, ugen bruger.
-   *            Udeladt prissættes intet, og så er det kalderens ansvar.
+   *            give begge det samme objekt. Retter, canPrice afviser, holdes
+   *            ude — den samme funktion, ugen bruger. Uden `chainIds` er
+   *            puljen tom og `thin`, som ugen uden butikker.
    *
    * Svaret er `{ pool, thin }`. `thin` er ikke en fejl, men det, brugeren
    * skal have at vide, før hun vælger: fire retter vist som et frit valg til
@@ -1541,13 +1556,19 @@
    */
   function candidatePool(recipes, {
     days = 5, items = new Map(), rank = (r) => r.score, seed = 0,
-    offers, normals, chainIds, now,
+    offers, normals, chainIds = [], now,
   } = {}) {
     const want = POOL_PER_DAY * days;
 
+    // Prissætningen er IKKE valgfri. Var den det, gav et glemt `chainIds`
+    // en pulje fuld af retter, ugen aldrig vælger: kaldt med planens egen
+    // signatur `{ days, items }` kunne 151 af 228 puljeretter over 19 uger
+    // ikke prissættes i Netto, føtex og REMA, og `thin` sagde intet. Uden
+    // butikker er puljen tom og tynd — samme svar som sharedWeek og samme
+    // valg som for en manglende score: højlydt frem for forkert.
+    //
     // Ét prisopslag for hele puljen: sporets retter deler de fleste varer.
-    const priceCtx = chainIds === undefined ? null
-      : { items, chainIds, priceIn: priceLookup({ offers, normals, now }) };
+    const priceCtx = { items, chainIds, priceIn: priceLookup({ offers, normals, now }) };
 
     // 1) Udvælgelse. En ret uden en værdi i sporet er ikke i sporet: glemmer
     //    kalderen at sætte `score`, skal puljen komme tom tilbage og melde
@@ -1557,7 +1578,7 @@
       const value = rank(r);
       if (value == null || !Number.isFinite(value)) continue;
       if (!isDinner(r, items)) continue;
-      if (priceCtx && !canPrice(r, priceCtx)) continue;
+      if (!canPrice(r, priceCtx)) continue;
       ranked.push({ r, value, noise: seededNoise(seed, r.id) });
     }
     // Uafgjort afgøres af frøet. Målt har 83 af de 100 bedste i klassisk
@@ -1570,6 +1591,25 @@
     // sporets hele dom. Id'et til sidst, fordi seededNoise kun har tusind
     // trin, og to lige retter ellers ville afhænge af rækkefølgen ind — og
     // serveren og browseren henter i hver sin orden.
+    //
+    // Variationen fra uge til uge holder derfor kun, hvor sporet HAR
+    // uafgjorte. Målt over 52 frø (fire dage, Netto + føtex + REMA): klassisk
+    // skifter 9 af 12 om ugen (median), sund 4, gourmet 1 — 83, 23 og 14
+    // forskellige retter på et år. Skorebånd blev målt som middel — rund
+    // scoren ned til et bånd, før frøet bryder uafgjort — og forkastet:
+    //
+    //   bånd 0,02-0,05  intet vundet. 1,00 er sit eget bånd (scoren er
+    //                   klemt ved 1), og under det ligger kategorierne tyndt.
+    //   bånd 0,15       sund 7 af 12, men 1,00 og 0,90 deler bånd, og en ret
+    //                   kommer ind foran én 0,09 bedre i samme kategori —
+    //                   netop det, 0,97-mod-1,00-reglen forbyder.
+    //   bånd 0,25       gourmet 3 af 12, men forbi retter op til 0,24 bedre.
+    //
+    // Gourmet har ingen bredde, der hjælper: kun 37 af sporets 224 middage
+    // kan prissættes i de tre kæder, og den tolvte bedste har score 0,49.
+    // Puljen tager tre af fire fjerkræ- og bælgfrugtretter — den er næsten
+    // hele sporet, og variation kræver flere prissatte gourmetretter (rigtige
+    // priser fra flere kæder), ikke en anden sortering.
     ranked.sort((a, b) => b.value - a.value || b.noise - a.noise
       || (a.r.id < b.r.id ? -1 : a.r.id > b.r.id ? 1 : 0));
     const selected = ranked.slice(0, POOL_SELECTION)
@@ -1581,7 +1621,7 @@
     const pool = [];
     const taken = new Set();
     const tally = varietyTally();
-    for (const pass of POOL_PASSES) {
+    for (const pass of poolPasses(days)) {
       for (const c of selected) {
         if (pool.length >= want) break;
         if (taken.has(c.r) || !tally.allows(c.keys, pass)) continue;
