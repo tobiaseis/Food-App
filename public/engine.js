@@ -338,6 +338,22 @@
   // igennem som brødpriser, og et æg til 32 kr regnes for en rimelig hyldepris.
   const PRICE_BAND_STK = { bakery: 60, eggs: 10 };
 
+  // Et loft pr. VARE, for de få varer hvis ægte prisleje ligger uden for
+  // kategoriens. Krydderurter sælges i bundter på 20-75 g, og det giver en
+  // kilopris, grøntsagsbåndet på 150 afviser: REMA's persille er 75 g til
+  // 13,05 kr = 174 kr/kg, et bundt på 30 g til 12 kr er 400. Posesalat og
+  // babyspinat ligger på 150-220. Det er ægte hyldepriser, og persille er den
+  // ene vare, der åbner flest aftensmadsretter i alle kæder.
+  //
+  // Kategoribåndet hæves IKKE: det fanger fejlkoblinger som
+  // "tomatvinaigrette-pulver" til 500 kr/kg og majskager til 167, og en højere
+  // grænse for alle grøntsager ville lukke dem ind.
+  const PRICE_BAND_ITEM = Object.freeze({
+    persille: [20, 1500],
+    salat:    [2, 400],
+    spinat:   [2, 400],
+  });
+
   /**
    * Kan denne kr/base_unit være en rigtig hyldepris?
    *
@@ -346,8 +362,9 @@
    * et nej, ville kassere hver eneste vare i en kategori, ingen har sat
    * grænser for endnu.
    */
-  function isPlausiblePrice(category, unitPrice, baseUnit) {
-    const band = PRICE_BAND[category];
+  function isPlausiblePrice(category, unitPrice, baseUnit, itemKey) {
+    const own = itemKey && Object.hasOwn(PRICE_BAND_ITEM, itemKey) ? PRICE_BAND_ITEM[itemKey] : null;
+    const band = own || PRICE_BAND[category];
     if (!band) return null;
     // Infinity og NaN slipper ellers igennem hver eneste sammenligning og
     // videre ned i en REAL-kolonne, der kun kræver > 0.
@@ -360,8 +377,9 @@
   }
 
   /** Det loft/gulv, isPlausiblePrice faktisk brugte — til fejlbeskeder. */
-  function priceBandFor(category, baseUnit) {
-    const band = PRICE_BAND[category];
+  function priceBandFor(category, baseUnit, itemKey) {
+    const own = itemKey && Object.hasOwn(PRICE_BAND_ITEM, itemKey) ? PRICE_BAND_ITEM[itemKey] : null;
+    const band = own || PRICE_BAND[category];
     if (!band) return null;
     if (baseUnit === 'stk') return [0, PRICE_BAND_STK[category] ?? band[1]];
     return band;
@@ -370,9 +388,15 @@
   // Rangorden mellem priskilder. Tallet er ikke en kvalitetsscore, kun en
   // rækkefølge — se effectivePrice for hvorfor den skal gå forud for prisen.
   //
-  //   manual   et menneske har set hylden
-  //   api:rema kædens egen hyldepris, hentet direkte
-  //   derived  et gæt ud fra hvad varen har kostet PÅ TILBUD
+  //   manual        et menneske har set hylden
+  //   api:rema      kædens egen hyldepris, hentet direkte
+  //   estimate:rema REMA's hyldepris brugt som skøn i en ANDEN kæde
+  //   derived       et gæt ud fra hvad varen har kostet PÅ TILBUD
+  //
+  // Skønnet står over 'derived' af samme grund som REMA-prisen gjorde det i
+  // plan 2: 'derived' er bygget af tilbudspriser og ligger systematisk for lavt,
+  // og tabellen handler om normalpriser. En ægte hyldepris fra en nabokæde er
+  // et bedre gæt på en normalpris end det laveste, varen har været nede på.
   //
   // En kilde, der ikke står her, hører bagest: den dag Salling åbner et API,
   // skal 'api:salling' ikke umærkeligt komme forrest, bare fordi ingen nåede
@@ -380,8 +404,10 @@
   // Frosset, fordi den eksporteres: uden dette kunne en tilfældig side
   // skrive `engine.SOURCE_RANK.derived = -1` og vende rangordenen om for
   // alle opslag i processen.
-  const SOURCE_RANK = Object.freeze({ manual: 0, 'api:rema': 1, derived: 2 });
-  const SOURCE_RANK_UNKNOWN = 3;
+  const SOURCE_RANK = Object.freeze({
+    manual: 0, 'api:rema': 1, 'estimate:rema': 2, derived: 3,
+  });
+  const SOURCE_RANK_UNKNOWN = 4;
 
   // Opslag i et kort, der må være et Map ELLER et almindeligt objekt.
   // Browseren bygger sine kort af JSON, serveren af Map's, og ingen af
@@ -547,6 +573,53 @@
     if (fromOffer.pack_unit !== best.pack_unit) return best;
 
     return fromOffer.unit_price <= best.unit_price ? fromOffer : best;
+  }
+
+  // ── Skøn fra en nabokæde ───────────────────────────────────────────────────
+
+  // Hvilke kilder i kildekæden der må bruges som skøn andre steder. Kun
+  // normalpriser: 'derived' er selv et gæt bygget af tilbud, og et gæt på et
+  // gæt i en tredje butik er ikke en pris.
+  const ESTIMATE_FROM = new Set(['manual', 'api:rema']);
+
+  /**
+   * Læg én kædes normalpriser ind som skøn i alle de andre.
+   *
+   * Version 1 af appen har rigtige hyldepriser fra én kæde (REMA, via deres
+   * API) og næsten ingen fra de tretten andre. Målt før dette: 88 prissatte
+   * aftensmadsretter hos REMA mod 63 hos alle tretten andre tilsammen, så en
+   * bruger uden REMA fik fire retter at vælge imellem til en fire-dages plan.
+   *
+   * Skønnet lægges ind som ekstra rækker med kilden 'estimate:rema', og
+   * rangordenen i effectivePrice klarer resten: en rigtig pris fra kæden selv
+   * — indtastet eller fra dens eget API — slår altid skønnet, og et aktivt
+   * tilbud konkurrerer med det på pris som med enhver anden normalpris.
+   *
+   * Det, skønnet IKKE kan, skal siges: har to kæder samme skøn på en vare,
+   * kan butiksvalget ikke finde en besparelse på den. Det er rigtigt — vi ved
+   * ikke, om løg er billigere i Netto — men det betyder, at kædevalget i v1
+   * kun reagerer på tilbud og på de priser, der er tastet ind.
+   *
+   * Ren funktion: rækkerne kommer udefra, så serveren og browseren kan kalde
+   * den med hver sin datakilde og få samme svar.
+   */
+  function withEstimates(normals, sourceRows, chainIds, sourceChainId) {
+    const out = new Map(normals instanceof Map ? normals : Object.entries(normals || {}));
+    const byItem = new Map();
+    for (const r of sourceRows || []) {
+      if (!ESTIMATE_FROM.has(r.source)) continue;
+      if (!byItem.has(r.item_key)) byItem.set(r.item_key, []);
+      byItem.get(r.item_key).push(r);
+    }
+    for (const chainId of chainIds || []) {
+      if (chainId === sourceChainId) continue;   // kilden har sine egne rækker
+      for (const [itemKey, rows] of byItem) {
+        const k = `${itemKey}|${chainId}`;
+        const copy = rows.map((r) => ({ ...r, chain_id: chainId, source: 'estimate:rema' }));
+        out.set(k, (out.get(k) || []).concat(copy));
+      }
+    }
+    return out;
   }
 
   // ── Pakker og spild ────────────────────────────────────────────────────────
@@ -2155,7 +2228,7 @@
     assignRoles, scoreRecipe, buildPlan, shoppingList, offerShoppingList, chooseChains,
     qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
-    choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner,
+    choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner, withEstimates,
     sharedWeek, twoProposals, explainWeek,
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,

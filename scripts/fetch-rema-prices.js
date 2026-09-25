@@ -193,7 +193,7 @@ async function main() {
         const basis = wrongPriceBasis(product, self);
         if (basis) { wrongBasis.push({ key: item.key, word: basis.label, name: parsed.name, underline: product.underline || '' }); continue; }
         // Sidste værn før skrivning: er det overhovedet en hyldepris?
-        if (engine.isPlausiblePrice(item.category, parsed.unit_price, item.base_unit) === false) {
+        if (engine.isPlausiblePrice(item.category, parsed.unit_price, item.base_unit, item.key) === false) {
           implausible.push({ key: item.key, ...parsed });
           continue;
         }

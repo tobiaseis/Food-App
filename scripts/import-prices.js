@@ -91,11 +91,11 @@ function parsePriceRow(raw, { items, chains, line }) {
   // engine.js, fordi de tre skrivere skal være enige om den. Her fanger den
   // frem for alt tastefejlen: 1500 i stedet for 15,00. null betyder "vi har
   // intet bånd for kategorien" og er ikke et nej.
-  if (engine.isPlausiblePrice(item.category, unitPrice, item.base_unit) === false) {
+  if (engine.isPlausiblePrice(item.category, unitPrice, item.base_unit, item.key) === false) {
     // priceBandFor, ikke PRICE_BAND: en stk-vare måles mod stk-loftet, og en
     // besked med kilobåndets tal ville sende læseren efter en fejl, der ikke
     // findes ('brod' måles mod 60 kr/stk, ikke mod bakery-båndets 5-200).
-    const band = engine.priceBandFor(item.category, item.base_unit);
+    const band = engine.priceBandFor(item.category, item.base_unit, item.key);
     return at(`${unitPrice} kr/${item.base_unit} er en usandsynlig pris for `
             + `'${item.key}' (${item.category}: ${band[0]}-${band[1]} kr/${item.base_unit})`
             + ' — tjek pack_qty og pack_price');

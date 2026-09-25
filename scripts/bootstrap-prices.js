@@ -54,7 +54,7 @@ const OUTLIER_FACTOR = 5;
 function rejectImplausible(rows) {
   const rejected = [];
   const kept = rows.filter((r) => {
-    if (engine.isPlausiblePrice(r.category, r.unit_price, r.base_unit) === false) {
+    if (engine.isPlausiblePrice(r.category, r.unit_price, r.base_unit, r.item_key) === false) {
       rejected.push(r);
       return false;
     }
@@ -238,7 +238,7 @@ kasseret som umulig hyldepris (uden for engine.PRICE_BAND):`);
         // priceBandFor, ikke PRICE_BAND: en stk-række måles mod stk-loftet,
         // og en besked med kilobåndets tal ville sende læseren efter en fejl,
         // der ikke findes.
-        const b = engine.priceBandFor(r.category, r.base_unit) || [];
+        const b = engine.priceBandFor(r.category, r.base_unit, r.item_key) || [];
         console.log(`  ${r.item_key.padEnd(16)} ${String(Math.round(r.unit_price)).padStart(6)}/${r.base_unit}` +
                     `  (${r.category}: ${b[0]}-${b[1]})`);
       }

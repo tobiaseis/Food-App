@@ -1645,3 +1645,62 @@ test('samme vare på to linjer køber én pakke, ikke to', () => {
   // Nævneren tæller stadig linjer: begge er kendte, så dækningen er hel.
   assert.equal(c.coverage, 1);
 });
+
+// ── Version 1: REMA som skøn for alle kæder ─────────────────────────────────
+//
+// Brugerens afgørelse: REMA's normalpriser er skønnet for de andre kæder,
+// indtil kædens egen pris er tastet ind. Målt før: 88 prissatte
+// aftensmadsretter hos REMA mod 63 hos alle tretten andre tilsammen.
+
+test('skønnet lægges ind i de andre kæder, ikke i kilden selv', () => {
+  const rema = [{ item_key: 'loeg', chain_id: 'R', pack_qty: 1, pack_unit: 'kg',
+                  pack_price: 12, unit_price: 12, source: 'api:rema' }];
+  const out = engine.withEstimates(new Map(), rema, ['R', 'N', 'F'], 'R');
+  assert.equal(out.has('loeg|R'), false, 'kilden har sine egne rækker og skal ikke få kopier');
+  assert.equal(out.get('loeg|N')[0].source, 'estimate:rema');
+  assert.equal(out.get('loeg|N')[0].chain_id, 'N');
+  assert.equal(out.get('loeg|F')[0].pack_price, 12);
+});
+
+test('et gæt bygget af tilbud bliver ALDRIG et skøn i en anden kæde', () => {
+  // 'derived' er selv et gæt; et gæt på et gæt i en tredje butik er ikke en pris.
+  const rema = [{ item_key: 'loeg', chain_id: 'R', pack_qty: 1, pack_unit: 'kg',
+                  pack_price: 5, unit_price: 5, source: 'derived' }];
+  const out = engine.withEstimates(new Map(), rema, ['N'], 'R');
+  assert.equal(out.has('loeg|N'), false);
+});
+
+test('kædens egen pris slår skønnet; skønnet slår et gæt', () => {
+  const est = { pack_qty: 1, pack_unit: 'kg', pack_price: 12, unit_price: 12, source: 'estimate:rema' };
+  const derived = { pack_qty: 1, pack_unit: 'kg', pack_price: 7, unit_price: 7, source: 'derived' };
+  const manual = { pack_qty: 1, pack_unit: 'kg', pack_price: 14, unit_price: 14, source: 'manual' };
+
+  // Skønnet vinder over det billigere gæt: gættet er bygget af tilbudspriser
+  // og ligger systematisk for lavt, og tabellen handler om normalpriser.
+  const a = engine.effectivePrice('loeg', 'N',
+    { offers: new Map(), normals: new Map([['loeg|N', [derived, est]]]) });
+  assert.equal(a.source, 'estimate:rema');
+
+  // En indtastet pris fra kæden selv vinder over skønnet, også når den er dyrere.
+  const b = engine.effectivePrice('loeg', 'N',
+    { offers: new Map(), normals: new Map([['loeg|N', [est, manual]]]) });
+  assert.equal(b.source, 'manual');
+});
+
+test('krydderurter har deres eget prisloft — andre grøntsager har ikke', () => {
+  // REMA's persille: 75 g til 13,05 kr = 174 kr/kg. En ægte hyldepris, og den
+  // ene vare, der åbner flest aftensmadsretter i alle kæder.
+  assert.equal(engine.isPlausiblePrice('veg', 174, 'kg', 'persille'), true);
+  assert.equal(engine.isPlausiblePrice('veg', 400, 'kg', 'persille'), true, 'et bundt på 30 g til 12 kr');
+  // Uden varens navn gælder kategoriens bånd som før — det fanger stadig
+  // fejlkoblinger som tomatvinaigrette-pulver til 500 kr/kg.
+  assert.equal(engine.isPlausiblePrice('veg', 174, 'kg'), false);
+  assert.equal(engine.isPlausiblePrice('veg', 500, 'kg', 'tomat'), false);
+});
+
+test('vin måles i liter', () => {
+  // Den stod i kg, fordi feltet manglede, og så blev hver eneste vinpris
+  // afvist på enheden: 111 vintilbud i basen står i liter.
+  const vin = require('../src/lib/taxonomy').SEED.find((e) => e.key === 'vin');
+  assert.equal(vin.base_unit, 'l');
+});

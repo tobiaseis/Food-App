@@ -219,11 +219,11 @@ function normalPriceMap() {
  * median af TILBUDSpriser pr. varetype på tværs af kæder, og bruges til at
  * vise en besparelse. Denne er hyldeprisen i den enkelte butik.
  */
-function normalPricesFor(chainIds = null) {
+function normalPricesFor(chainIds = null, { estimates = true } = {}) {
   const db = getDb();
-  let sql = `SELECT item_key, chain_id, pack_qty, pack_unit, pack_price,
-                    unit_price, source, valid_until
-               FROM item_prices`;
+  const cols = `item_key, chain_id, pack_qty, pack_unit, pack_price,
+                unit_price, source, valid_until`;
+  let sql = `SELECT ${cols} FROM item_prices`;
   const params = [];
   if (chainIds && chainIds.length) {
     sql += ` WHERE chain_id IN (${chainIds.map(() => '?').join(',')})`;
@@ -236,7 +236,19 @@ function normalPricesFor(chainIds = null) {
     if (!map.has(k)) map.set(k, []);
     map.get(k).push(r);
   }
-  return map;
+  if (!estimates) return map;
+
+  // Version 1: REMA's normalpriser er skønnet for alle andre kæder — se
+  // engine.withEstimates. Arbejdslisten (scripts/price-worklist.js) læser
+  // item_prices direkte og ser derfor stadig hullerne; skønnet fylder dem kun
+  // ud for madplanen, ikke for den, der skal taste de rigtige priser ind.
+  const rema = db.prepare("SELECT id FROM chains WHERE slug = 'rema1000'").get();
+  if (!rema) return map;
+  const remaRows = db.prepare(`SELECT ${cols} FROM item_prices WHERE chain_id = ?`).all(rema.id);
+  const fill = chainIds && chainIds.length
+    ? chainIds
+    : db.prepare('SELECT id FROM chains').all().map((c) => c.id);
+  return engine.withEstimates(map, remaRows, fill, rema.id);
 }
 
 // ── 3. Opskrifterne ──────────────────────────────────────────────────────────

@@ -577,7 +577,12 @@ const SEED = [
     // egne (længere) synonymer vinder på position, og linjer, hvor 'cider'
     // sidder midt i et sammensat ord uden ordgrænse, giver exact=0.
     en: ['beer', 'lager', 'cider'] },
-  { key: 'vin', name: 'Vin', cat: 'drink',
+  // Vin er en væske og måles i liter. Den stod i kg, fordi feltet manglede og
+  // seed-items faldt tilbage på 'kg' — og så afviste både REMA-hentningen og
+  // bootstrappen hver eneste vinpris, fordi de står i liter: en flaske er
+  // 0,75 l, ikke 0,75 kg. Målt i REMA's søgesvar: syv vine, alle kasseret på
+  // enheden alene.
+  { key: 'vin', name: 'Vin', cat: 'drink', base_unit: 'l', density_g_ml: 0.99,
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 83, c: 2.5,
     da: ['rødvin', 'hvidvin', 'lambrusco', 'prosecco', 'champagne', 'vin', 'rosé', 'vermouth',
          'noilly prat'],

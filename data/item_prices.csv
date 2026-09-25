@@ -56,12 +56,24 @@
 #
 # Når du HAR set prisen: skriv din pris og DIN dato — den dag, du så den.
 #
-# selleri mangler med vilje. Varens synonymer dækker BÅDE bladselleri og
-# knoldselleri, og de to koster ikke det samme pr. kg (~33 mod ~19). Vælg
-# hvilken vare det er, før du sætter en pris — et gæt her er et gæt på noget
-# andet end prisen:
-# selleri,rema1000,0.45,kg,15.00,2026-09-15
+# selleri er afgjort: BLADSELLERI. Varens synonymer dækker både blad- og
+# knoldselleri, men opskrifterne mener stængler — målt: 136 af 157 linjer er
+# "celery sticks" / "stængler bladselleri", 21 er knoldselleri. Prisen er
+# REMA's "Selleri med top", 15 kr pr. bundt, set i deres API 2026-09-25. REMA
+# sælger den kun pr. stk, så vægten er SKØNNET til 0,5 kg; et bundt med top
+# vejer 400-600 g. Er du i butikken, så vej et og ret tallet.
+#
+# vin er REMA's "Faina 11%", rød og hvid, 1 l til 29 kr — den billigste
+# bordvin og den oplagte at lave mad med — og "El Senvino" 0,375 l til 25 kr.
+# Begge set i REMA's API 2026-09-25. To pakker med vilje: en ret, der skal
+# bruge et glas, skal kunne vælge den lille flaske frem for en hel liter.
+#
+# Version 1: disse REMA-priser bruges som SKØN for alle de andre kæder, indtil
+# kædens egen pris er tastet ind her. Se engine.withEstimates.
 item_key,chain_slug,pack_qty,pack_unit,pack_price,observed_at
+selleri,rema1000,0.5,kg,15.00,2026-09-25
+vin,rema1000,1,l,29.00,2026-09-25
+vin,rema1000,0.375,l,25.00,2026-09-25
 agurk,rema1000,0.4,kg,10.00,2026-01-01
 blomkaal,rema1000,1.0,kg,18.00,2026-01-01
 broccoli,rema1000,0.4,kg,16.00,2026-01-01
