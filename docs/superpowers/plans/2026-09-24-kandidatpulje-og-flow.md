@@ -211,6 +211,13 @@ det er udeladt med vilje og ikke glemt.
 Ruten `#/plan` viser i dag en forudberegnet uge fra `meal_plans`. Den erstattes af
 flowet; den gamle visning bliver til ugens forslag på forsiden, ikke til planen.
 
+> **Tilføjet efter opgave 1.** `Data.items()` og `Data.normalPrices()` kaster en
+> fejl mod den lokale server (`npm start`), fordi den ikke har ruter til dem —
+> med vilje: et tomt kort ville give to tomme lister uden et ord. Skal flowet virke
+> lokalt, skal `src/server.js` have `/api/items` og `/api/item-prices`, der svarer
+> med samme form som Supabase-vejen, og den lokale ruté for normalpriser skal
+> kalde `normalPricesFor` — ikke bygge kortet en tredje gang.
+
 - [ ] **Step 1: Trin 1-3 — filteret**
 
 Favoritkæder findes allerede (`Data.setFavorites`). Tilføj spor og
