@@ -173,6 +173,23 @@ create table if not exists taxonomy_prices (
   samples      int
 );
 
+-- Varekataloget. Browseren skal kunne slå class/keeps/base_unit op for at
+-- bygge indkøbslisten og lagerlisten; recipe_index.items har allerede
+-- filtreret essentials fra, så lagerlisten kan ikke udledes derfra.
+--
+-- Kun de felter, motoren læser — ikke næringsindhold og synonymer. Tabellen
+-- er ny i plan 3, så der findes ingen ældre udgave, der skal have kolonner
+-- lagt på med alter table.
+create table if not exists items (
+  key       text primary key,
+  name      text not null,
+  category  text,
+  class     text,
+  keeps     text,
+  base_unit text,
+  piece_g   double precision
+);
+
 -- Normalpriser. Ikke brugerdata: det er hvad varen koster i butikken, og
 -- frontenden skal kunne læse dem for at prissætte en plan i browseren.
 --
@@ -379,6 +396,7 @@ alter table price_series enable row level security;
 alter table meal_plans   enable row level security;
 alter table offer_index     enable row level security;
 alter table taxonomy_prices enable row level security;
+alter table items           enable row level security;
 alter table recipe_index    enable row level security;
 alter table item_prices     enable row level security;
 alter table recipe_costs    enable row level security;
@@ -395,7 +413,7 @@ begin
   foreach t in array array['chains','products','stores','offers','recipes',
                            'price_stats','price_series','meal_plans','deals','sync_state',
                            'offer_index','taxonomy_prices','recipe_index',
-                           'item_prices','recipe_costs']
+                           'item_prices','recipe_costs','items']
   loop
     execute format('drop policy if exists read_all on %I', t);
     execute format('create policy read_all on %I for select to anon, authenticated using (true)', t);

@@ -17,6 +17,7 @@ const SCHEMA = {
   offer_index:  { pk: ['taxonomy_key','chain_id'], uniq: [], fks: [
                     { c:'chain_id', t:'chains', r:'id' }] },
   taxonomy_prices: { pk: ['taxonomy_key'], uniq: [], fks: [] },
+  items:        { pk: ['key'], uniq: [], fks: [] },
   recipe_index: { pk: ['recipe_id'], uniq: [], fks: [] },
   item_prices:  { pk: ['item_key','chain_id','pack_qty','pack_unit'], uniq: [], fks: [
                     { c:'chain_id', t:'chains', r:'id' }] },

@@ -157,6 +157,36 @@ function collectPriceTables(db, log) {
   return { itemPrices, recipeCosts };
 }
 
+/**
+ * Varekataloget, som browserens `shoppingList` og `chooseChains` slår op i:
+ * `class` (lagerlisten), `keeps` (spildvægtningen) og `base_unit`
+ * (pakkeafrundingen og enhedsvagten i effectivePrice).
+ *
+ * Det kan ikke udledes af `recipe_index`: dér er essentials allerede skåret
+ * fra, så lagerlisten ville komme tom tilbage.
+ *
+ * Gennem taksonomien og ikke direkte fra `items`: `loadRecipes` afgør
+ * essential via `taxonomy.isEssential`, og falder taksonomien tilbage på
+ * SEED, skal browseren se det samme katalog, som recipe_index blev filtreret
+ * med — ikke et tomt.
+ *
+ * Alle varer, også essentials og non-food. 205 rækker er intet, og en vare,
+ * der mangler i kataloget, springer `shoppingList` stiltiende over.
+ */
+function collectItems(log = () => {}) {
+  const rows = taxonomy.all().map((t) => ({
+    key: t.key,
+    name: t.name,
+    category: t.category ?? null,
+    class: t.class ?? null,
+    keeps: t.keeps ?? null,
+    base_unit: t.base_unit ?? null,
+    piece_g: t.piece_g ?? null,
+  }));
+  log(`  varekatalog: ${rows.length} varer`);
+  return rows;
+}
+
 /** Ugens fund med færdig vurdering. */
 function collectDeals(log) {
   const rows = topDeals({ limit: 100 });
@@ -448,6 +478,10 @@ const DERIVED = [
   // lokalt løbenummer, ikke en stabil nøgle (se kommentaren ovenfor).
   ['item_prices',   'item_key=not.is.null'],
   ['recipe_costs',  'recipe_id=not.is.null'],
+  // Nøglen er stabil, så en upsert ville ikke duplikere — men en vare, der er
+  // fjernet fra SEED, ville blive liggende i skyen og stå på browserens
+  // lagerliste. Samme grund som dropGone i scripts/seed-items.js.
+  ['items',         'key=not.is.null'],
   ['offer_index',   'taxonomy_key=not.is.null'],
   ['deals',        'offer_id=not.is.null'],
   ['price_series', 'product_id=not.is.null'],
@@ -543,6 +577,7 @@ async function push(model, log) {
   // Madplans-indekset. offer_index peger på chains, så det skal efter dem.
   await t('offer_index', model.offerIndex, { onConflict: 'taxonomy_key,chain_id', chunk: 400 });
   await t('taxonomy_prices', model.taxonomyPrices, { onConflict: 'taxonomy_key' });
+  await t('items', model.items, { onConflict: 'key' });
   await t('recipe_index', model.recipeIndex, { onConflict: 'recipe_id', chunk: 200 });
 
   // Priserne. item_prices og recipe_costs peger begge på chains, så de skal
@@ -576,6 +611,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
   const { stats: priceStats, series: priceSeries } = collectPriceModel(db, log);
   const deals = collectDeals(log);
   const priceTables = collectPriceTables(db, log);
+  const items = collectItems(log);
   const planIndex = collectPlanIndex(log);
   const weekPlans = collectPlans(log);
 
@@ -608,6 +644,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
     plan_offers: planIndex.offerIndex.length,
     item_prices: priceTables.itemPrices.length,
     recipe_costs: priceTables.recipeCosts.length,
+    items: items.length,
     notifications: notifications.length,
   };
 
@@ -619,6 +656,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
     recipeIndex: planIndex.recipeIndex,
     itemPrices: priceTables.itemPrices,
     recipeCosts: priceTables.recipeCosts,
+    items,
     notifications, summary,
   };
 
@@ -634,6 +672,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
       offer_index: planIndex.offerIndex, taxonomy_prices: planIndex.taxonomyPrices,
       recipe_index: planIndex.recipeIndex,
       item_prices: priceTables.itemPrices, recipe_costs: priceTables.recipeCosts,
+      items,
     })) log(`  ${k.padEnd(16)} ${v.length}`);
     return { model, pushed: false };
   }
@@ -654,5 +693,5 @@ if (require.main === module) {
 
 module.exports = {
   build, push, collectCatalog, collectPriceModel, collectDeals, collectPlans, collectPlanIndex,
-  collectPriceTables,
+  collectPriceTables, collectItems,
 };

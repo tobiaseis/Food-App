@@ -20,9 +20,15 @@ process.env.SUPABASE_SERVICE_KEY = 'test-key';
 
 const test = require('node:test');
 const assert = require('node:assert');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const vm = require('node:vm');
 const { server, DB } = require('./helpers/mock-postgrest.js');
-const { push, collectPlanIndex, collectPriceTables } = require('../src/sync/build.js');
+const build = require('../src/sync/build.js');
+const { push, collectPlanIndex, collectPriceTables } = build;
 const { getDb } = require('../src/db');
+const engine = require('../public/engine.js');
 
 const quiet = () => {};
 const reset = () => { for (const t of Object.keys(DB)) DB[t].length = 0; };
@@ -53,6 +59,14 @@ function makeModel(shift = 0) {
                    base_unit: 'kg', normal_unit_price: 89.5 }],
     taxonomyPrices: [{ taxonomy_key: 'hakket_oksekoed', name: 'Hakket oksekød',
                        unit_price: 89.5, base_unit: 'kg', samples: 6 }],
+    // Varekataloget. Salt står der for lagerlistens skyld: det er en essential,
+    // og dem har recipe_index allerede filtreret væk.
+    items: [
+      { key: 'hakket_oksekoed', name: 'Hakket oksekød', category: 'meat', class: 'fresh',
+        keeps: 'perishable', base_unit: 'kg', piece_g: null },
+      { key: 'salt', name: 'Salt', category: 'pantry', class: 'essential',
+        keeps: 'pantry', base_unit: 'kg', piece_g: null },
+    ],
     recipeIndex: [{ recipe_id: s(20), title: 'Frikadeller', url: 'https://valdemarsro.dk/frikadeller/',
                     score_classic: 0.8, unknown_main: false,
                     items: [{ key: 'hakket_svinekoed', cat: 'meat', amount: 0.5 }] }],
@@ -86,6 +100,19 @@ test('push lægger hele read-modellen ind', async () => {
   assert.equal(DB.offer_index.length, 1);
   assert.equal(DB.taxonomy_prices.length, 1);
   assert.equal(DB.recipe_index.length, 1);
+  assert.equal(DB.items.length, 2, 'varekataloget skal med — ellers kan browseren ikke bygge listerne');
+});
+
+test('varekataloget udskiftes, det hober sig ikke op', async () => {
+  // En vare, der er fjernet fra SEED, skal også forsvinde i skyen. Upsertes
+  // kataloget ovenpå, bliver den et spøgelse, som browserens lagerliste
+  // stadig kan slå op — samme grund som seed-items' dropGone.
+  reset();
+  await push(makeModel(), quiet);
+  const next = makeModel();
+  next.items = next.items.filter((i) => i.key !== 'salt');
+  await push(next, quiet);
+  assert.deepEqual(DB.items.map((i) => i.key), ['hakket_oksekoed']);
 });
 
 test('madplans-indekset udskiftes, det hober sig ikke op', async () => {
@@ -362,5 +389,225 @@ test('collectPriceTables har den form, Supabase tager imod', () => {
     db.prepare('DELETE FROM recipe_costs WHERE recipe_id = ?').run(recipeId);
     db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
     db.prepare("DELETE FROM item_prices WHERE chain_id = 'tst'").run();
+  }
+});
+
+// ── Det browseren skal have til de to lister (plan 3, opgave 1) ─────────────
+
+test('collectItems leverer det, de to lister skal bruge', () => {
+  const rows = build.collectItems();
+  const salt = rows.find((r) => r.key === 'salt');
+  const kartofler = rows.find((r) => r.key === 'kartofler');
+
+  assert.equal(salt.class, 'essential', 'lagerlisten hviler på class');
+  assert.equal(kartofler.base_unit, 'kg', 'pakkeafrundingen hviler på base_unit');
+  assert.ok(kartofler.keeps, 'spildvægtningen hviler på keeps');
+  // Essentials SKAL med: de er hele pointen med lagerlisten.
+  assert.ok(rows.some((r) => r.class === 'essential'));
+});
+
+// ── Browserens halvdel af kontrakten ─────────────────────────────────────────
+//
+// De to tests herunder kører public/data.js, som den kører i browseren: i ét
+// vm-rige sammen med engine.js, med `window` som det globale objekt og en
+// falsk PostgREST, der serverer det, build.js ville have synket. Et
+// håndskrevet kort ville kun teste, at motoren FORBRUGER rækkerne — ikke at
+// browseren rent faktisk bygger dem, og det er dér, base_qty, optional og
+// unknown_count faldt ud.
+
+/**
+ * Supabase set udefra: filtrene data.js bruger (eq, in), select-projektion og
+ * tidsstempler i Postgres' form ('+00:00', ikke 'Z'). Et filter, den ikke
+ * kender, kaster — ellers kunne testen bestå på rækker, et rigtigt PostgREST
+ * aldrig ville have sendt.
+ */
+function fakePostgrest(tables) {
+  const calls = [];
+  const pgTime = (v) => (typeof v === 'string' ? v.replace(/(\.\d+)?Z$/, '+00:00') : v);
+  const fetch = async (url) => {
+    const u = new URL(url);
+    const table = u.pathname.replace('/rest/v1/', '');
+    calls.push(table);
+    if (!tables[table]) {
+      return { ok: false, status: 404, text: async () => `relation "${table}" does not exist` };
+    }
+    let rows = tables[table].map((r) => ({
+      ...r,
+      ...('valid_until' in r ? { valid_until: pgTime(r.valid_until) } : {}),
+      ...('observed_at' in r ? { observed_at: pgTime(r.observed_at) } : {}),
+    }));
+    for (const [col, v] of u.searchParams) {
+      if (['select', 'order', 'limit', 'offset'].includes(col)) continue;
+      const i = v.indexOf('.');
+      const [op, val] = [v.slice(0, i), v.slice(i + 1)];
+      if (op === 'eq') rows = rows.filter((r) => String(r[col]) === val);
+      else if (op === 'in') {
+        const set = new Set(val.replace(/^\(|\)$/g, '').split(','));
+        rows = rows.filter((r) => set.has(String(r[col])));
+      } else throw new Error(`falsk PostgREST kender ikke ${col}=${v}`);
+    }
+    const sel = u.searchParams.get('select');
+    if (sel && sel !== '*') {
+      rows = rows.map((r) => Object.fromEntries(sel.split(',').map((c) => [c, r[c]])));
+    }
+    return { ok: true, status: 200, text: async () => JSON.stringify(rows) };
+  };
+  return { fetch, calls };
+}
+
+/** engine.js + data.js i ét rige, som i browseren. */
+function loadBrowser(tables) {
+  const pg = fakePostgrest(tables);
+  const sandbox = {
+    console,
+    fetch: pg.fetch,
+    APP_CONFIG: { SUPABASE_URL: 'https://fake.supabase.test', SUPABASE_ANON_KEY: 'anon' },
+    localStorage: { getItem: () => null, setItem: () => {} },
+  };
+  // I browseren ER window det globale objekt. engine.js lægger PlanEngine på
+  // `this`, data.js læser window.PlanEngine — de to skal ramme det samme.
+  sandbox.window = sandbox;
+  vm.createContext(sandbox);
+  for (const f of ['engine.js', 'data.js']) {
+    vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'public', f), 'utf8'),
+      sandbox, { filename: f });
+  }
+  return { Data: sandbox.Data, engine: sandbox.PlanEngine, calls: pg.calls };
+}
+
+/**
+ * En frisk base i tmpdir med sin egen `generate.js`, så serverens
+ * normalPricesFor kan køre på præcis de rækker, testen lægger ind. test.db
+ * røres ikke: en REMA-kæde dér ville give skøn i hver anden testfil.
+ */
+function tempServer() {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'madplan-binding-'));
+  const dbPath = path.join(dir, 'binding.db');
+  assert.ok(path.resolve(dbPath).startsWith(path.resolve(os.tmpdir())),
+    'testbasen skal ligge i os.tmpdir()');
+  const ids = ['src/db', 'src/price/history', 'src/mealplan/generate']
+    .map((m) => require.resolve(path.join(__dirname, '..', m)));
+  const prev = process.env.DB_PATH;
+  process.env.DB_PATH = dbPath;
+  for (const id of ids) delete require.cache[id];
+  try {
+    const db = require('../src/db').getDb();
+    const plans = require('../src/mealplan/generate');
+    return {
+      db, plans,
+      // Håndtaget skal lukkes, før filen kan slettes på Windows.
+      cleanup: () => { db.close(); fs.rmSync(dir, { recursive: true, force: true }); },
+    };
+  } finally {
+    if (prev === undefined) delete process.env.DB_PATH;
+    else process.env.DB_PATH = prev;
+    for (const id of ids) delete require.cache[id];
+  }
+}
+
+test('browseren får varekataloget som det kort, shoppingList slår op i', async () => {
+  const items = build.collectItems();
+  const b = loadBrowser({ items });
+  const map = await b.Data.items();
+
+  assert.equal(map.size, items.length, 'hele kataloget, også essentials');
+  assert.equal(map.get('salt').class, 'essential', 'lagerlisten hviler på class');
+  assert.equal(map.get('kartofler').base_unit, 'kg');
+  assert.ok(map.get('kartofler').keeps);
+
+  // Kataloget skifter sjældnere end priserne; det hentes én gang pr. visning.
+  await b.Data.items();
+  assert.equal(b.calls.filter((t) => t === 'items').length, 1, 'kataloget caches');
+});
+
+/**
+ * Serverens og browserens normalpriskort skal være det SAMME kort.
+ *
+ * Version 1 bruger REMA's normalpriser som skøn i alle andre kæder
+ * (engine.withEstimates). Serveren lægger skønnet ind i normalPricesFor;
+ * browseren skal gøre det samme, ellers viser appen en ret som prissat, som
+ * recipe_costs kalder uprissat — eller omvendt. Testen fejler, hvis data.js
+ * glemmer withEstimates, glemmer at hente REMA's rækker, når REMA ikke er en
+ * favorit, eller taber en kolonne, effectivePrice læser.
+ */
+test('browserens normalpriskort giver samme pris som serverens normalPricesFor', async () => {
+  const srv = tempServer();
+  const { db } = srv;
+  try {
+    const chain = db.prepare('INSERT INTO chains (id, name, slug) VALUES (?, ?, ?)');
+    chain.run('R', 'REMA 1000', 'rema1000');
+    chain.run('N', 'Testkæde N', 'tst-n');
+    chain.run('F', 'Testkæde F', 'tst-f');
+
+    const item = db.prepare(`INSERT INTO items (key, name, category, class, keeps, base_unit)
+                             VALUES (?, ?, ?, ?, ?, ?)`);
+    item.run('loeg', 'Løg', 'veg', 'baseline', 'keeps', 'kg');
+    item.run('kartofler', 'Kartofler', 'veg', 'baseline', 'keeps', 'kg');
+    item.run('aeg', 'Æg', 'eggs', 'fresh', 'keeps', 'stk');
+    item.run('persille', 'Persille', 'veg', 'fresh', 'perishable', 'kg');
+    const UNITS = { loeg: 'kg', kartofler: 'kg', aeg: 'stk', persille: 'kg' };
+
+    const FRESH = '2099-01-01T00:00:00Z';
+    const STALE = '2020-01-01T00:00:00Z';
+    const price = db.prepare(`
+      INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit, pack_price,
+                               unit_price, source, observed_at, valid_until)
+      VALUES (?, ?, ?, ?, ?, ?, ?, '2026-09-15T00:00:00Z', ?)`);
+    // REMA's hyldepris — kilden til skønnet.
+    price.run('loeg', 'R', 1, 'kg', 12, 12, 'api:rema', FRESH);
+    // Kædens egen indtastede pris slår skønnet, også når den er dyrere.
+    price.run('loeg', 'N', 1, 'kg', 14, 14, 'manual', FRESH);
+    // Et REMA-gæt bygget af tilbud må ALDRIG blive et skøn andre steder.
+    price.run('kartofler', 'R', 2, 'kg', 10, 5, 'derived', FRESH);
+    price.run('kartofler', 'F', 2, 'kg', 16, 8, 'derived', FRESH);
+    // Skønnet slår kædens eget, billigere gæt.
+    price.run('aeg', 'R', 10, 'stk', 32.95, 3.295, 'api:rema', FRESH);
+    price.run('aeg', 'N', 10, 'stk', 25, 2.5, 'derived', FRESH);
+    // To indtastede priser: den billige er udløbet. Taber browseren
+    // valid_until, vinder den forkerte.
+    price.run('persille', 'N', 0.075, 'kg', 6, 80, 'manual', STALE);
+    price.run('persille', 'N', 0.1, 'kg', 17.4, 174, 'manual', FRESH);
+
+    // Browserens rækker kommer ad synk-vejen: collectCatalog og
+    // collectPriceTables er præcis det, build.js sender til Supabase.
+    const tables = {
+      chains: build.collectCatalog(db).chains,
+      sync_state: [],
+      item_prices: collectPriceTables(db, quiet).itemPrices,
+    };
+
+    const now = new Date('2026-09-25T12:00:00Z');
+    const plain = (x) => JSON.parse(JSON.stringify(x));
+    let estimateOnly = 0;
+
+    // REMA uden for favoritterne (skønnet skal hentes alligevel), REMA som
+    // favorit, og ingen favoritter (= alle kæder, som i mealPlan).
+    for (const favs of [['N', 'F'], ['R', 'N'], []]) {
+      const server = srv.plans.normalPricesFor(favs.length ? favs : null);
+      const b = loadBrowser(tables);
+      const browser = await b.Data.normalPrices(favs);
+
+      assert.deepEqual([...browser.keys()].sort(), [...server.keys()].sort(),
+        `samme vare|kæde-par for favoritterne [${favs}]`);
+
+      for (const key of Object.keys(UNITS)) {
+        for (const chainId of favs.length ? favs : ['R', 'N', 'F']) {
+          const opts = { now, baseUnit: UNITS[key] };
+          const s = engine.effectivePrice(key, chainId, { ...opts, normals: server });
+          const w = b.engine.effectivePrice(key, chainId, { ...opts, normals: browser });
+          assert.deepEqual(plain(w), plain(s), `${key}|${chainId} for favoritterne [${favs}]`);
+          // Tæl de par, hvor prisen KUN findes som skøn (løg og æg i F).
+          // Uden dem kunne testen bestå på et fixture, der aldrig prøvede
+          // skønnet — og det er netop dem, en browser uden withEstimates
+          // kalder uprissat.
+          const own = (server.get(`${key}|${chainId}`) || [])
+            .filter((r) => r.source !== 'estimate:rema');
+          if (s && s.source === 'estimate:rema' && !own.length) estimateOnly++;
+        }
+      }
+    }
+    assert.ok(estimateOnly >= 2, `par med kun et skøn skal være prøvet af (${estimateOnly})`);
+  } finally {
+    srv.cleanup();
   }
 });

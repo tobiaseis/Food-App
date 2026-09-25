@@ -148,7 +148,7 @@ function flattenOffer(o) {
 // Indekset skifter kun, når den natlige kørsel har været forbi. Vi henter det
 // derfor én gang pr. sidevisning og genbruger det på tværs af spor og
 // "Ny plan" – ellers ville hvert klik koste et par hundrede kilobyte.
-const planIndex = { offers: null, prices: null, recipes: {} };
+const planIndex = { offers: null, prices: null, recipes: {}, items: null, normals: new Map() };
 
 const MIN_TIER_SCORE = 0.35;
 
@@ -204,6 +204,52 @@ function offerMapFor(rows, chainIds, chainNames) {
     map.set(key, { ...r, chain: chainNames[r.chain_id] || r.chain_id });
   }
   return map;
+}
+
+// ── Varekatalog og normalpriser (kun Supabase-bagenden) ──────────────────────
+
+// Kæden, hvis hyldepriser er skønnet i alle andre (version 1). Den slås op på
+// slug, som normalPricesFor gør på serveren: id'et kommer fra Tjek og hører
+// ikke hjemme som en konstant i koden.
+const ESTIMATE_SOURCE_SLUG = 'rema1000';
+
+/**
+ * Normalprisrækkerne som det kort, motoren slår op i: `vare|kæde → rækker[]`,
+ * med REMA's hyldepriser lagt ind som skøn i de andre kæder.
+ *
+ * Det er PRÆCIS reglen fra `normalPricesFor` i src/mealplan/generate.js, og
+ * derfor kalder begge `PlanEngine.withEstimates` i stedet for at have hver sin
+ * kopi. Springes skønnet over her, prissætter serveren en ret, som browseren
+ * kalder uprissat, og `recipe_costs` og skærmen er uenige om den samme ret.
+ * test/sync.test.js binder de to sammen.
+ *
+ *   rows      item_prices for favoritterne OG for kilden til skønnet
+ *   chainIds  de kæder, kortet skal dække
+ *   sourceId  REMA's id, eller null når kæden ikke findes — så intet skøn
+ *
+ * Kildens egne rækker kommer kun med i kortet, hvis kilden selv er en favorit:
+ * de hentes for skønnets skyld, ikke for at gøre REMA til en butik, brugeren
+ * ikke har valgt. Samme afgrænsning som serverens.
+ */
+function normalMapFor(rows, chainIds, sourceId) {
+  const wanted = new Set(chainIds);
+  const own = new Map();
+  const sourceRows = [];
+  for (const raw of rows) {
+    // PostgREST sender timestamptz som '…+00:00' i basens tidszone, SQLite
+    // gemmer '…Z'. effectivePrice måler udløb ved at sammenligne valid_until
+    // med nu som STRENGE, så formen skal være den, serveren regner med.
+    const r = raw.valid_until
+      ? { ...raw, valid_until: new Date(raw.valid_until).toISOString() }
+      : raw;
+    if (r.chain_id === sourceId) sourceRows.push(r);
+    if (!wanted.has(r.chain_id)) continue;
+    const k = `${r.item_key}|${r.chain_id}`;
+    if (!own.has(k)) own.set(k, []);
+    own.get(k).push(r);
+  }
+  if (!sourceId) return own;
+  return window.PlanEngine.withEstimates(own, sourceRows, chainIds, sourceId);
 }
 
 // ── API ──────────────────────────────────────────────────────────────────────
@@ -427,15 +473,66 @@ const Data = {
       chainNames: chains.length ? chains.map((id) => chainNames[id]).filter(Boolean) : null,
     });
 
-    // offerShoppingList og ikke shoppingList: de to nye lister (køb ind /
-    // tjek at du har) kræver items-tabellen — klasse, holdbarhed, base_unit —
-    // og den synkes ikke til Supabase. Browseren har kun offer_index,
-    // taxonomy_prices og recipe_index, og recipe_index har oven i købet
-    // filtreret basisvarerne væk, så lagerlisten ville være tom. Skal
-    // browseren bygge dem, skal items synkes først; det er en selvstændig
-    // beslutning og hører til trin 1-5 i brugerfladen.
+    // offerShoppingList og ikke shoppingList: denne visning er den gamle
+    // tilbudsplan. De to nye lister (køb ind / tjek at du har) bygges af
+    // `Data.items()` og `Data.normalPrices()` herunder og hører til de fem
+    // trin i brugerfladen (plan 3, opgave 3), ikke til denne plan.
     if (!plan.error) plan.shopping_list = window.PlanEngine.offerShoppingList(plan);
     return plan;
+  },
+
+  /**
+   * Varekataloget som `key → { name, category, class, keeps, base_unit, piece_g }`
+   * — det kort, `shoppingList` og `chooseChains` slår op i.
+   *
+   * Det kan ikke udledes af recipe_index: dér er essentials allerede skåret
+   * fra, og så ville lagerlisten komme tom tilbage. Hentes én gang pr.
+   * sidevisning som de øvrige opslagstabeller; 205 varer skifter sjældnere
+   * end priserne.
+   */
+  async items() {
+    // Kaster frem for at svare med et tomt kort: shoppingList springer en vare
+    // uden katalogrække stiltiende over, så et tomt kort ville give to tomme
+    // lister og ingen fejl. Den lokale server har intet endpoint til det endnu.
+    if (!USE_SUPABASE) throw new Error('Varekataloget hentes kun fra Supabase-bagenden.');
+    if (!planIndex.items) {
+      const rows = await sbAll('items?select=*&order=key.asc');
+      planIndex.items = new Map(rows.map((r) => [r.key, r]));
+    }
+    return planIndex.items;
+  },
+
+  /**
+   * Normalpriskortet `vare|kæde → rækker[]` for favoritterne, med REMA's
+   * hyldepriser som skøn i de andre kæder — samme kort som serverens
+   * `normalPricesFor`, og det `effectivePrice` og hele plan 2's motor kræver.
+   *
+   * `chainIds` som i mealPlan: udeladt = de gemte favoritter, tom = alle kæder.
+   *
+   * REMA's rækker hentes OGSÅ, når REMA ikke er en favorit: det er dem,
+   * skønnet bygges af. Uden dem har en bruger uden REMA næsten ingen
+   * prissatte retter — det var hele grunden til version 1-skønnet.
+   */
+  async normalPrices(chainIds = null) {
+    if (!USE_SUPABASE) throw new Error('Normalpriserne hentes kun fra Supabase-bagenden.');
+    const favs = chainIds || readFavorites();
+    const cacheKey = favs.length ? [...favs].sort().join(',') : '*';
+    if (planIndex.normals.has(cacheKey)) return planIndex.normals.get(cacheKey);
+
+    const chains = await sb('chains?select=id,slug');
+    const source = chains.find((c) => c.slug === ESTIMATE_SOURCE_SLUG) || null;
+    const ids = favs.length ? favs : chains.map((c) => c.id);
+    const fetchIds = [...new Set(source ? [...ids, source.id] : ids)];
+
+    // Ordnet på hele primærnøglen: sbAll henter i sider, og uden en total
+    // orden kan Postgres levere en række på to sider eller på ingen.
+    const rows = await sbAll(
+      `item_prices?chain_id=in.(${fetchIds.map(encodeURIComponent).join(',')})` +
+      '&select=*&order=item_key.asc,chain_id.asc,pack_qty.asc,pack_unit.asc'
+    );
+    const map = normalMapFor(rows, ids, source ? source.id : null);
+    planIndex.normals.set(cacheKey, map);
+    return map;
   },
 
   // ── Overvågninger ─────────────────────────────────────────────────────────
