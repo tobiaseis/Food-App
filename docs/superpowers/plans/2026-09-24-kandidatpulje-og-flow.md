@@ -12,28 +12,28 @@ de data browseren skal bruge, og de fem trin.
 
 ## Udgangspunktet, målt
 
+> **Rettet efter version 1-skønnet (2026-09-25).** Planen blev skrevet, da REMA
+> havde 88 prissatte aftensmadsretter og de tretten andre kæder 1-12 hver. Det
+> var for tyndt til trin 4, der skal vise 12 retter. Brugeren besluttede derefter,
+> at REMA's normalpriser er skønnet for alle kæder (`engine.withEstimates`,
+> kilden `estimate:rema`). Tallene nedenfor er målt efter den beslutning.
+
 | | |
 |---|---|
-| Prissatte aftensmadsretter, REMA | **88** |
-| Samme, alle 13 øvrige kæder tilsammen | **63** |
-| Union af fem typiske favoritter | **89** |
-| Deres ingrediens-linjer | 899 |
-| `item_prices` for fem kæder | 316 |
-| Grov datapakke | **~126 KB** |
+| Prissatte aftensmadsretter pr. kæde | **305-400** (REMA 311, Bilka 400) |
+| Fuldt prissatte opskrift-kæde-par | 7.297 (før skønnet: 412) |
+| `item_prices` i alt | 653: 102 `api:rema`, 12 `manual`, 539 `derived` |
+| Grov datapakke, fem favoritter | ~150 KB |
 
-**Det vigtigste tal er 88 mod 63.** Specets afsnit 2.2 anslog "~290 opskrifter,
-~3.000 linjer" pr. spor og frygtede en for stor datapakke. Den frygt var ubegrundet:
-126 KB er intet. Den virkelige begrænsning er den modsatte — **der er for få
-kandidater, ikke for mange**, og de kommer næsten alle fra den ene kæde, der har
-rigtige hyldepriser.
+Tyndheden er løst for alle kæder, så `thin` fyrer sjældent. Den bygges alligevel:
+en bruger, der fravælger alt kød, eller et spor med få opskrifter, kan stadig
+ende under `3 × dage`, og så skal det siges frem for at vise fire retter som et
+frit valg.
 
-Trin 4 skal vise tre gange så mange retter som dage: 12 for en fire-dages plan.
-En REMA-bruger har 88 at vælge blandt. En bruger uden REMA har 4.
-
-**Det er ikke noget, denne plan kan bygge sig ud af.** Det kræver priser, og priser
-kræver indtastning (`npm run prices:worklist`) eller flere API-kilder. Planen bygger
-derfor mekanikken færdig og **siger tydeligt fra, når puljen er for tynd**, frem for
-at vise fire retter og lade som om det er et valg.
+**Hvad skønnet betyder for denne plan:** browseren skal lægge det ind præcis som
+serveren gør. Ellers prissætter appen en ret, serveren kalder uprissat, og de to
+tal på skærmen og i `recipe_costs` er uenige — den drift, der har ramt denne
+kodebase tre gange. Se opgave 1.
 
 ## Global Constraints
 
@@ -52,14 +52,21 @@ at vise fire retter og lade som om det er et valg.
 
 ---
 
-### Task 1: `items` ud til browseren
+### Task 1: Det browseren skal have — varekataloget og normalpriserne
 
-Uden den kan browseren ikke bygge nogen af de to lister: `shoppingList` slår
-`class`, `keeps` og `base_unit` op i den, og `recipe_index.items` har allerede
-filtreret essentials fra, så lagerlisten ville komme tom tilbage. Det er grunden
-til, at `shoppingList` i dag ingen produktionskalder har.
+To ting mangler i browseren, og uden dem kan ingen af de to lister bygges:
 
-205 rækker. Det er den billigste blokering i hele projektet at fjerne.
+**Varekataloget.** `shoppingList` slår `class`, `keeps` og `base_unit` op i
+`items`, og `recipe_index.items` har allerede filtreret essentials fra, så
+lagerlisten ville komme tom tilbage. Det er grunden til, at `shoppingList` i dag
+ingen produktionskalder har. 205 rækker — den billigste blokering i projektet.
+
+**Normalpriserne med skønnet.** Browseren henter i dag slet ikke `item_prices`;
+den bruger den gamle `taxonomy_prices` (median af tilbudshistorik). `effectivePrice`
+og dermed hele plan 2's motor kan ikke køre uden normalpriskortet. Og det skal
+bygges **præcis** som `normalPricesFor` gør det på serveren — med REMA's rækker
+lagt ind via `engine.withEstimates` — ellers er appens pris og `recipe_costs`
+uenige om den samme ret.
 
 **Files:** `src/sync/build.js`, `supabase/schema.sql`, `public/data.js`, `test/sync.test.js`
 
@@ -113,7 +120,24 @@ I `src/sync/build.js`, ved siden af `collectPriceTables`. Eksportér den, læg d
 I `public/data.js`, samme sted som de øvrige opslagstabeller. Den skal caches som
 resten — 205 rækker ændrer sig sjældnere end priserne.
 
-- [ ] **Step 5: Kør suiten, `sync:dry`, og commit**
+- [ ] **Step 5: Normalpriskortet i browseren, med skønnet**
+
+`item_prices` synkes allerede (plan 2, opgave 8). Hent rækkerne for brugerens
+favoritter **og for REMA**, også når REMA ikke er en favorit — skønnet kommer
+derfra. Byg kortet `item|chain → rows[]` og kald
+`PlanEngine.withEstimates(kort, remaRækker, favoritter, remaId)`. REMA's id slås
+op på `slug = 'rema1000'` i `chains`, ikke skrevet ind som en konstant.
+
+Det er den samme regel, serveren kører i `normalPricesFor`, og det er hele
+grunden til, at `withEstimates` ligger i `engine.js` og ikke i `generate.js`.
+
+**Læg en test, der binder de to sammen.** Med samme rækker ind skal serverens
+`normalPricesFor` og browserens kort give samme `effectivePrice` for en håndfuld
+(vare, kæde)-par — inklusive et par, hvor prisen kun findes som skøn. Uden den
+test er det kun et spørgsmål om tid, før de to driver fra hinanden; det er sket
+med `base_qty`, `optional` og `unknown_count`.
+
+- [ ] **Step 6: Kør suiten, `sync:dry`, og commit**
 
 ---
 
@@ -217,9 +241,15 @@ De to skal være enige — det er hele grunden til, at motoren er én fil.
 
 ## Efter planen
 
-- **Priserne.** 96 varer har ingen pris, og 13 af 14 kæder er næsten tomme.
-  Det er det, der afgør, om flowet er brugbart for andre end en REMA-kunde.
-  `npm run prices:worklist` er indgangen.
+- **Rigtige priser fra de andre kæder.** Version 1 bruger REMA's normalpris som
+  skøn overalt, så butiksvalget i dag kun reagerer på tilbud og på indtastede
+  priser — det kan ikke opdage, at løg er billigere i Netto. Hver pris, der
+  tastes ind i `data/item_prices.csv`, overskriver skønnet for den kæde.
+  `npm run prices:worklist -- <kæde>` viser hullerne; ~10 varer pr. kæde
+  (persille, hvidløg, citron, løg, squash, selleri, champignon, peberfrugt, vin,
+  fløde) dækker det meste.
+- **REMA-priserne skal fornyes.** Hentningen kører ikke i den natlige kørsel, fordi
+  den kontakter REMA's API. Friske varer udløber efter 90 dage.
 - **Justering af de tre skøn:** `WASTE_AVERSION`, `EXTRA_STORE_PENALTY` og
   `MISSING_ITEM_NUISANCE`. Relationen mellem de to sidste er målt og bærende;
   de absolutte værdier er ikke. De skal ses efter på rigtige lister.
