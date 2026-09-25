@@ -241,10 +241,39 @@ det er udeladt med vilje og ikke glemt.
 
 ### Task 3: De fem trin i brugerfladen
 
-**Files:** `public/app.js`, `public/index.html`, `public/style.css`, `public/data.js`
+**Files:** `public/app.js`, `public/index.html`, `public/styles.css`, `public/data.js`,
+`src/server.js`
 
-Ruten `#/plan` viser i dag en forudberegnet uge fra `meal_plans`. Den erstattes af
-flowet; den gamle visning bliver til ugens forslag på forsiden, ikke til planen.
+Ruten `#/plan` viser i dag en forudberegnet uge fra `meal_plans` (`viewPlan`,
+`Data.mealPlan`). **Flowet erstatter den.** `meal_plans` og `buildPlan` bliver
+stående på serveren — de rører ikke flowet og skal ikke fjernes i denne opgave.
+
+> **Samlet op før dispatch — fire krav, der er kommet til undervejs:**
+>
+> 1. **Første gang motoren kører i browseren.** `Data.items()`,
+>    `Data.normalPrices()`, `candidatePool`, `twoProposals` og `shoppingList` har
+>    aldrig haft en produktionskalder. Alt, der er testet, er testet i Node.
+> 2. **`tier_score` → `score`.** `recipe_index` bærer sporets score som
+>    `tier_score`; `candidatePool` læser `score` og udelader med vilje en ret uden
+>    score (højlydt tom pulje frem for en stille nul-rangering). Glemmes
+>    omsætningen, er puljen tom og `thin` sat — det er meningen, men det skal ikke
+>    ske i produktion.
+> 3. **Frøet er ugen.** `candidatePool({ seed })` med `år × 100 + uge`, som
+>    `data.js` allerede regner det. Samme uge giver samme 12 på server og i app;
+>    næste uge giver målt ~10 nye.
+> 4. **Designretningen er fastlagt:** neutral grund, farve kun fra maden, fra
+>    kædernes egne brandfarver (`chains.color`) og ét sjældent varmt signal. Byg på
+>    tokens og kommentarer i `public/styles.css` (`--ground`, `--surface`, `--bay`,
+>    `--saffron`, `--clay` …) — **indfør ikke et nyt system.** CSP'en i `vercel.json`
+>    sætter `font-src 'self'`, så webfonte kan ikke indlæses; typografien hviler på
+>    systemstakken, hvor `ui-serif` giver New York på Apple-platforme.
+>
+> **Budget-sporet** er det fjerde spor i specets trin 2 og findes ikke i dag
+> (`TIER_INFO` har sund, klassisk, gourmet). Det rangerer efter
+> `recipe_costs.cost_per_serving` blandt `has_main`-rækker — `candidatePool` har
+> en `rank`-indgang til netop det. For en bruger med flere favoritter er rettens
+> pris den **laveste** `cost_per_serving` blandt favoritterne. `recipe_costs` er
+> allerede synket; browseren henter den ikke endnu.
 
 > **Tilføjet efter opgave 1.** `Data.items()` og `Data.normalPrices()` kaster en
 > fejl mod den lokale server (`npm start`), fordi den ikke har ruter til dem —
@@ -273,6 +302,10 @@ et frit valg er en løgn.
 
 `shoppingList` giver `buy` og `pantry`. Essentials har aldrig en pris.
 Vis `dropped_chains`, hvis der blev afkortet.
+
+Hver linje på købslisten bærer sin kilde. **Vis den ikke som jargon**, men sig det,
+når prisen er et skøn: "pris fra REMA" ved en vare, hvor kæden selv ingen pris har.
+Ellers tror brugeren, at 29 kr i Netto er Nettos pris.
 
 - [ ] **Step 4: Kør alt igennem, og se på det**
 
