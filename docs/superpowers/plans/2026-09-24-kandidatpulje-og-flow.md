@@ -148,11 +148,40 @@ trin 4 ikke: `sharedWeek` scorer den liste, den får, og ingen laver listen.
 
 **Files:** `public/engine.js`, `test/waste.test.js`
 
-**Interfaces:** `candidatePool(recipes, { days, items })` → `{ pool, thin }`
+**Interfaces:** `candidatePool(recipes, { days, items })` → `{ pool, thin }`;
+`mainCategoryOf(recipe, items)` → hovedkategorien, eller `null`
+
+> **Rettet før dispatch.** Testene nedenfor kaldte `engine.mainCategoryOf` og
+> fiksturen `MANGE`, og ingen af dem fandtes — to pladsholdere i planens egen
+> kode. `mainCategoryOf` er en tynd indpakning af det, der allerede findes
+> (`roleLines` → `assignRoles` → `varietyKeys(...).main`), ikke ny logik: den
+> skal svare det samme, som variationsspærren tæller på. Og `MANGE` står nu
+> skrevet ud herunder.
 
 - [ ] **Step 1: Skriv de fejlende tests**
 
+Fiksturen øverst i blokken, efter `W_ITEMS`. Den er bygget, så testen for
+spredning **skelner**: fjerkræ har de fem højeste scorer, kød de næste fem.
+Uden loft ville de 12 bedste være fem fjerkræ, fem kød og to fisk — med loftet
+på 3 bliver det tre af hver af de fire kategorier.
+
 ```js
+// Tyve middage i fire hovedkategorier, fem af hver, faldende score. Tilbehøret
+// skifter, så stivelse ikke er det, der spreder dem.
+const KAT = [
+  ['kyllingebryst', 'poultry'], ['hakket_oksekoed', 'meat'],
+  ['laks', 'fish'], ['aeg', 'eggs'],
+];
+const MANGE = [];
+KAT.forEach(([key], k) => {
+  for (let i = 0; i < 5; i++) {
+    const id = 100 + k * 5 + i;
+    const side = i % 2 ? line('pasta', 0.3) : line('kartofler', 0.6);
+    MANGE.push(recipe(id, 1 - (k * 5 + i) / 100,
+      [line(key, key === 'aeg' ? 4 : 0.5), side]));
+  }
+});
+
 test('puljen er tre gange så mange retter som dage', () => {
   const { pool } = engine.candidatePool(MANGE, { days: 4, items: W_ITEMS });
   assert.equal(pool.length, 12);
@@ -187,17 +216,23 @@ To trin, som specet siger, fordi det ene ikke kan gøre begges arbejde:
 for budget-sporet efter `cost_per_serving`. Tag de bedste ~100.
 
 **Sammensætning.** Gå ned gennem de ~100 og tag en ret ad gangen, så længe
-dens hovedkategori har under 3 i puljen. Samme struktur som `VARIETY_PASSES`
-i `sharedWeek` — og **genbrug den, skriv ikke en ny.** To steder, der skal
-være enige om hvad variation er, driver fra hinanden; det skete med
-`bestPriceFor` i plan 2.
+dens hovedkategori har under 3 i puljen.
+
+**Genbrug mekanikken, ikke tallene.** `varietyKeys` og `varietyTally` er det,
+der afgør hvad en ret tæller som, og det skal puljen og ugen være enige om — to
+steder, der hver har deres egen idé om variation, driver fra hinanden; det
+skete med `bestPriceFor` i plan 2. Men `VARIETY_PASSES` er `[[2, 3], [99, 3],
+[99, 99]]` og er bygget til en **uge** på fire-syv retter. Puljen har tolv, og
+specet siger **3** pr. hovedkategori. Giv puljen sine egne lofter med samme
+struktur — et strengt første gennemløb og et løsnende, så puljen stadig fyldes,
+hvis en bruger kun har to kategorier at vælge imellem.
 
 `thin` sættes, når puljen ikke når `3 × days`. Den er ikke en fejl — den er
 den oplysning, brugeren skal have, før hun vælger.
 
 Specets **overlap**-bibetingelse bygges IKKE i denne omgang. Den kræver et mål
-for "nok delte råvarer til at gode delmængder eksisterer", og med 89 kandidater
-er spredningen alene bindende. Skriv det i kommentaren, så næste læser ved, at
+for "nok delte råvarer til at gode delmængder eksisterer", og med 305-400
+kandidater pr. kæde er spredningen alene bindende. Skriv det i kommentaren, så næste læser ved, at
 det er udeladt med vilje og ikke glemt.
 
 - [ ] **Step 3: Kør suiten og commit**
