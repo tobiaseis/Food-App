@@ -259,8 +259,16 @@ stående på serveren — de rører ikke flowet og skal ikke fjernes i denne opg
 >    omsætningen, er puljen tom og `thin` sat — det er meningen, men det skal ikke
 >    ske i produktion.
 > 3. **Frøet er ugen.** `candidatePool({ seed })` med `år × 100 + uge`, som
->    `data.js` allerede regner det. Samme uge giver samme 12 på server og i app;
->    næste uge giver målt ~10 nye.
+>    `data.js` allerede regner det. Samme uge giver samme 12 på server og i app.
+>    Hvor mange der skifter fra uge til uge afhænger af sporet, målt over 52 uger:
+>    klassisk median 9 af 12, sund 4, **gourmet 1**. Gourmet er ikke en
+>    sorteringsfejl: kun 37 af 224 gourmetmiddage kan prissættes, fordi de bruger
+>    varer, REMA ikke fører, og nummer tolv scorer 0,49. Scorebånd blev målt og
+>    forkastet — de lod enten intet ske eller lod en tydeligt dårligere ret ind.
+>    Det løses af rigtige priser fra flere kæder, ikke af koden.
+> 5. **`chainIds` SKAL med til `candidatePool`.** Udelades den, er puljen tom og
+>    `thin` sat — med vilje, efter reviewet fandt, at den ellers sprang
+>    prischecket over i stilhed (151 af 228 retter uprissaetbare).
 > 4. **Designretningen er fastlagt:** neutral grund, farve kun fra maden, fra
 >    kædernes egne brandfarver (`chains.color`) og ét sjældent varmt signal. Byg på
 >    tokens og kommentarer i `public/styles.css` (`--ground`, `--surface`, `--bay`,
