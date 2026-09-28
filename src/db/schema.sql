@@ -221,7 +221,8 @@ CREATE TABLE IF NOT EXISTS recipes (
   description    TEXT,
   image          TEXT,
   lang           TEXT,                 -- 'da' | 'en'
-  servings       INTEGER,
+  servings       INTEGER,              -- portioner, regnet af src/recipes/servings.js
+  yield_count    INTEGER,              -- kildens rå antal; for frikadeller er det stykker
   total_minutes  INTEGER,
 
   kcal           REAL,                 -- pr. portion

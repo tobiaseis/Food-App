@@ -49,6 +49,9 @@ function migrate(db) {
     // lagt på; de fyldes ved næste `npm run costs:recompute`.
     ['recipe_costs', 'cost_per_serving', 'REAL'],
     ['recipe_costs', 'has_main', 'INTEGER NOT NULL DEFAULT 0'],
+    // Kildens rå antal. Tom på en ældre base, hvor servings stadig ER det rå
+    // tal; reclassify fylder den derfra, før portionerne regnes om.
+    ['recipes', 'yield_count', 'INTEGER'],
   ];
   for (const [table, column, type] of added) {
     const cols = db.prepare(`PRAGMA table_info(${table})`).all().map((c) => c.name);

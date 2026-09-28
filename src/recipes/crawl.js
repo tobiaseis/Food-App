@@ -16,6 +16,7 @@ const { getDb } = require('../db');
 const { SOURCES, BY_KEY } = require('./sources');
 const { extractRecipe } = require('./extract');
 const { estimateNutrition, scoreTiers, primaryTier } = require('./classify');
+const { servingsFromYield, scaleNutrition } = require('./servings');
 
 const UA = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -73,35 +74,40 @@ async function discoverUrls(source, limit) {
 // ── Lagring ──────────────────────────────────────────────────────────────────
 
 function storeRecipe(db, source, parsed) {
+  // parsed.servings er kildens rå antal — for frikadeller stykker. Se
+  // src/recipes/servings.js.
+  const servings = servingsFromYield(parsed.title, parsed.servings);
+  const site = scaleNutrition(parsed, parsed.servings, servings);
   const nutritionFromSite = parsed.kcal != null || parsed.protein_g != null;
-  let kcal = parsed.kcal, protein = parsed.protein_g, carbs = parsed.carbs_g;
+  let kcal = site.kcal, protein = site.protein_g, carbs = site.carbs_g;
   let nutritionSrc = nutritionFromSite ? 'site' : null;
 
   if (!nutritionFromSite) {
-    const est = estimateNutrition(parsed.ingredients, parsed.servings);
+    const est = estimateNutrition(parsed.ingredients, servings);
     if (est) { kcal = est.kcal; protein = est.protein_g; carbs = est.carbs_g; nutritionSrc = 'estimated'; }
   } else if (carbs == null) {
-    const est = estimateNutrition(parsed.ingredients, parsed.servings);
+    const est = estimateNutrition(parsed.ingredients, servings);
     if (est) carbs = est.carbs_g;
   }
 
-  const scores = scoreTiers({ ...parsed, kcal, protein_g: protein, carbs_g: carbs, source: source.key }, parsed.ingredients);
+  const scores = scoreTiers({ ...parsed, servings, kcal, protein_g: protein, carbs_g: carbs, source: source.key }, parsed.ingredients);
   const { tier, tier_score } = primaryTier(scores);
 
   const info = db.prepare(`
     INSERT INTO recipes (
-      url, source, source_name, title, description, image, lang, servings,
+      url, source, source_name, title, description, image, lang, servings, yield_count,
       total_minutes, kcal, protein_g, carbs_g, fat_g, nutrition_src,
       tier, tier_score, score_healthy, score_classic, score_premium,
       keywords, fetched_at
     ) VALUES (
-      @url, @source, @source_name, @title, @description, @image, @lang, @servings,
+      @url, @source, @source_name, @title, @description, @image, @lang, @servings, @yield_count,
       @total_minutes, @kcal, @protein_g, @carbs_g, @fat_g, @nutrition_src,
       @tier, @tier_score, @score_healthy, @score_classic, @score_premium,
       @keywords, @fetched_at
     )
     ON CONFLICT(url) DO UPDATE SET
       title = excluded.title, image = excluded.image, servings = excluded.servings,
+      yield_count = excluded.yield_count,
       total_minutes = excluded.total_minutes, kcal = excluded.kcal,
       protein_g = excluded.protein_g, nutrition_src = excluded.nutrition_src,
       tier = excluded.tier, tier_score = excluded.tier_score,
@@ -116,10 +122,11 @@ function storeRecipe(db, source, parsed) {
     description: parsed.description,
     image: parsed.image,
     lang: source.lang,
-    servings: parsed.servings,
+    servings,
+    yield_count: parsed.servings,
     total_minutes: parsed.total_minutes,
     kcal, protein_g: protein,
-    carbs_g: carbs, fat_g: parsed.fat_g,
+    carbs_g: carbs, fat_g: site.fat_g,
     nutrition_src: nutritionSrc,
     tier, tier_score,
     score_healthy: scores.healthy,

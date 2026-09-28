@@ -45,3 +45,78 @@ test('scoreTiers ser luksusråvarer', () => {
   ]);
   assert.ok(s.premium > 0, `premium var ${s.premium} — isPremium ses ikke`);
 });
+
+// ── Frikadeller tælles i stykker, ikke portioner ─────────────────────────────
+
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const { servingsFromYield, scaleNutrition } = require('../src/recipes/servings');
+
+test('servingsFromYield: 18 frikadeller er 5 portioner, 4 personer er 4', () => {
+  // Brugerens regel: én portion er 3-4 frikadeller.
+  assert.equal(servingsFromYield('Linsefrikadeller', 18), 5);
+  assert.equal(servingsFromYield('Pink tundeller', 8), 2);
+  assert.equal(servingsFromYield('Easy healthy falafels', 16), 5);
+  assert.equal(servingsFromYield('Chicken & basil meatballs', 24), 7);
+  // Under 8 er tallet personer.
+  assert.equal(servingsFromYield('Frikadeller', 4), 4);
+  assert.equal(servingsFromYield('Classic homemade meatballs', 6), 6);
+  // Frikadellen er ikke hovedordet: 8 pitaer er ikke 8 frikadeller.
+  assert.equal(servingsFromYield('Bagt frikadellepita med cremefraiche dressing', 8), 8);
+  assert.equal(servingsFromYield('Lasagne', 12), 12);
+  assert.equal(servingsFromYield('Linsefrikadeller', null), null);
+});
+
+test('scaleNutrition: kildens tal pr. stykke bliver tal pr. portion', () => {
+  assert.deepEqual(scaleNutrition({ kcal: 100, protein_g: 5, carbs_g: null, fat_g: 4 }, 18, 5),
+    { kcal: 360, protein_g: 18, carbs_g: null, fat_g: 14.4 });
+  const same = { kcal: 500 };
+  assert.equal(scaleNutrition(same, 4, 4), same);
+});
+
+test('reclassify regner portioner fra kildens rå antal — og kun én gang', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'madplan-servings-'));
+  const dbPath = path.join(dir, 'servings.db');
+  assert.ok(path.resolve(dbPath).startsWith(path.resolve(os.tmpdir())));
+  const mods = ['src/db', 'src/lib/taxonomy', 'src/recipes/extract', 'src/recipes/classify',
+                'src/recipes/reclassify'].map((m) => require.resolve(path.join(__dirname, '..', m)));
+  const prev = process.env.DB_PATH;
+  process.env.DB_PATH = dbPath;
+  for (const id of mods) delete require.cache[id];
+  const warn = console.warn;
+  console.warn = () => {};
+  let db;
+  try {
+    db = require('../src/db').getDb();
+    const { reclassify } = require('../src/recipes/reclassify');
+    const ins = db.prepare(`INSERT INTO recipes (url, source, source_name, title, servings,
+                              kcal, protein_g, fat_g, nutrition_src, fetched_at)
+                            VALUES (?, 'x', 'X', ?, ?, ?, ?, ?, ?, '2026-09-28')`);
+    // En base fra før kolonnen: servings ER kildens rå antal, yield_count er tom.
+    const a = ins.run('a', 'Linsefrikadeller', 18, 100, 5, 4, 'site').lastInsertRowid;
+    const b = ins.run('b', 'Frikadeller', 4, 600, 30, 30, 'site').lastInsertRowid;
+    // 28 stk er 8 portioner — og 8 ligner igen et stykantal. Uden det rå tal
+    // ville næste kørsel gøre det til 2.
+    const c = ins.run('c', 'Chicken & basil meatballs', 28, 50, 4, 2, 'site').lastInsertRowid;
+    const get = db.prepare('SELECT servings, yield_count, kcal, fat_g FROM recipes WHERE id = ?');
+
+    reclassify({ log: () => {} });
+    assert.deepEqual({ ...get.get(a) }, { servings: 5, yield_count: 18, kcal: 360, fat_g: 14.4 });
+    assert.deepEqual({ ...get.get(b) }, { servings: 4, yield_count: 4, kcal: 600, fat_g: 30 });
+    assert.deepEqual({ ...get.get(c) }, { servings: 8, yield_count: 28, kcal: 175, fat_g: 7 });
+
+    // Kører hver nat. En anden kørsel må hverken dele 5 igen eller gange
+    // næringen op en gang til.
+    const again = reclassify({ log: () => {} });
+    assert.equal(again.reserved, 0);
+    assert.deepEqual({ ...get.get(a) }, { servings: 5, yield_count: 18, kcal: 360, fat_g: 14.4 });
+    assert.deepEqual({ ...get.get(c) }, { servings: 8, yield_count: 28, kcal: 175, fat_g: 7 });
+  } finally {
+    console.warn = warn;
+    if (db) db.close();
+    if (prev === undefined) delete process.env.DB_PATH;
+    else process.env.DB_PATH = prev;
+    for (const id of mods) delete require.cache[id];
+  }
+});

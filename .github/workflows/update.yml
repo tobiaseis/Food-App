@@ -85,10 +85,17 @@ jobs:
       # base hentet fra release-assetet kan have item_key fra taxonomy_key
       # (se migrate() i src/db/index.js), men aldrig en fyldt items-tabel før
       # dette har kørt mindst én gang.
+      #
+      # reclassify kørte før kun efter et opskrifts-crawl. Den regner portioner
+      # (frikadeller tælles i stykker, se src/recipes/servings.js), næring og
+      # spor-scorer ud fra det, der ligger i basen, og en ændring i taksonomien
+      # eller portionsreglen slog derfor aldrig igennem på de opskrifter, der
+      # allerede var hentet. Den tager 1,5 sekund og kan køres igen og igen.
       - name: Sørg for varetaksonomi og materialiserede mængder
         run: |
           npm run seed:items
           npm run backfill:amounts
+          npm run reclassify
 
       # Priserne. Uden dette trin pushede den natlige kørsel nattens tilbud
       # ved siden af en `recipe_costs`, der blev regnet den dag, nogen sidst

@@ -14,6 +14,7 @@ const { getDb } = require('../db');
 const taxonomy = require('../lib/taxonomy');
 const { parseIngredient } = require('./extract');
 const { estimateNutrition, scoreTiers, primaryTier } = require('./classify');
+const { servingsFromYield, scaleNutrition } = require('./servings');
 
 function reclassify({ relinkIngredients = true, log = console.log } = {}) {
   const db = getDb();
@@ -22,7 +23,9 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
 
   const updateRecipe = db.prepare(`
     UPDATE recipes SET
-      kcal = @kcal, protein_g = @protein_g, carbs_g = @carbs_g, nutrition_src = @nutrition_src,
+      servings = @servings, yield_count = @yield_count,
+      kcal = @kcal, protein_g = @protein_g, carbs_g = @carbs_g, fat_g = @fat_g,
+      nutrition_src = @nutrition_src,
       tier = @tier, tier_score = @tier_score,
       score_healthy = @score_healthy, score_classic = @score_classic, score_premium = @score_premium
     WHERE id = @id
@@ -35,7 +38,7 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
     'UPDATE recipe_ingredients SET item_key = ?, amount = ?, ingredient = ?, qty = ?, unit = ?, optional = ? WHERE id = ?'
   );
 
-  let relinked = 0;
+  let relinked = 0, reserved = 0;
   const tiers = {};
 
   const run = db.transaction(() => {
@@ -68,22 +71,32 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
         }
       }
 
-      let kcal = r.kcal, protein = r.protein_g, carbs = r.carbs_g, src = r.nutrition_src;
+      // Portionerne regnes altid fra kildens RÅ antal (se servings.js). En
+      // base fra før kolonnen har det rå tal i servings; det flyttes over
+      // første gang, og derefter deles der aldrig to gange.
+      const yieldCount = r.yield_count ?? r.servings;
+      const servings = servingsFromYield(r.title, yieldCount);
+      if (servings !== r.servings) reserved++;
+      // Kildens næring er pr. den portion, der stod i basen før denne kørsel.
+      const n = r.nutrition_src === 'site' ? scaleNutrition(r, r.servings, servings) : r;
+
+      let kcal = n.kcal, protein = n.protein_g, carbs = n.carbs_g, src = r.nutrition_src;
       if (src !== 'site') {
-        const est = estimateNutrition(ingredients, r.servings);
+        const est = estimateNutrition(ingredients, servings);
         if (est) { kcal = est.kcal; protein = est.protein_g; carbs = est.carbs_g; src = 'estimated'; }
       } else if (carbs == null) {
         // Kilden oplyser protein/kcal, men ikke kulhydrat – estimér det ene tal
-        const est = estimateNutrition(ingredients, r.servings);
+        const est = estimateNutrition(ingredients, servings);
         if (est) carbs = est.carbs_g;
       }
 
-      const scores = scoreTiers({ ...r, kcal, protein_g: protein, carbs_g: carbs }, ingredients);
+      const scores = scoreTiers({ ...r, servings, kcal, protein_g: protein, carbs_g: carbs }, ingredients);
       const { tier, tier_score } = primaryTier(scores);
       tiers[tier] = (tiers[tier] || 0) + 1;
 
       updateRecipe.run({
-        id: r.id, kcal, protein_g: protein, carbs_g: carbs, nutrition_src: src,
+        id: r.id, servings, yield_count: yieldCount,
+        kcal, protein_g: protein, carbs_g: carbs, fat_g: n.fat_g, nutrition_src: src,
         tier, tier_score,
         score_healthy: scores.healthy,
         score_classic: scores.classic,
@@ -93,11 +106,12 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
   });
   run();
 
-  log(`${recipes.length} opskrifter genberegnet · ${relinked} ingredienslinjer fik ny kobling`);
+  log(`${recipes.length} opskrifter genberegnet · ${relinked} ingredienslinjer fik ny kobling`
+    + ` · ${reserved} fik nyt portionsantal`);
   for (const [t, n] of Object.entries(tiers).sort((a, b) => b[1] - a[1])) {
     log(`  ${t.padEnd(10)} ${n}`);
   }
-  return { recipes: recipes.length, relinked, tiers };
+  return { recipes: recipes.length, relinked, reserved, tiers };
 }
 
 if (require.main === module) reclassify();

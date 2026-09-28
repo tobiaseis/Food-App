@@ -9,6 +9,7 @@ GitHub Actions  (dagligt 05:10 UTC)
   1. henter data.db fra release-asset
   2. npm run update                                ← ingest mod lokal SQLite, uændret kode
   3. npm run seed:items && npm run backfill:amounts ← varetaksonomi + materialiserede mængder
+     npm run reclassify                             ← portioner, næring og spor-scorer
   4. npm run prices:import                          ← data/item_prices.csv ind i basen
      npm run prices:import-rema                     ← data/rema-prices.csv (REMA's hyldepriser) ind i basen
      npm run prices:bootstrap                       ← normalpris-gæt af tilbudshistorikken
