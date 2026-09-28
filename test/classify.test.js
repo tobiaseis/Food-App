@@ -80,6 +80,13 @@ test('servingsFromYield: spyd, forårsruller, dumplings og pandekager tælles i 
   assert.equal(servingsFromYield('Chicken skewers with tzatziki', 8, 1229), 3);
 });
 
+test('portionsantallet læses også fra greatbritishchefs\' egen side-JSON', () => {
+  // Ingen recipeYield i deres JSON-LD; alle 400 stod uden og blev regnet som 4.
+  const { yieldFromPage } = require('../src/recipes/extract');
+  assert.equal(yieldFromPage('..."description":"x","yieldTextOverride":"6","tagCourse":{...'), 6);
+  assert.equal(yieldFromPage('<html>ingen</html>'), null);
+});
+
 test('servingsFromYield: "1" på en tærte er én hel tærte, ikke én portion', () => {
   assert.equal(servingsFromYield('Kartoffel og bacon tærte', 1), 4);
   assert.equal(servingsFromYield('Quiche lorraine', 1), 4);

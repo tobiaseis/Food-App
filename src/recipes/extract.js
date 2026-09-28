@@ -170,6 +170,18 @@ function parseYield(v) {
   return n && n > 0 && n <= 40 ? n : null;
 }
 
+/**
+ * Antallet, når siden ikke har recipeYield i sin JSON-LD.
+ *
+ * greatbritishchefs har det aldrig der — alle 400 af deres opskrifter stod
+ * uden portionsantal og blev regnet som 4 — men deres egen side-JSON bærer
+ * "yieldTextOverride":"4", og det er det tal, siden viser som "Serves 4".
+ */
+function yieldFromPage(html) {
+  const m = String(html || '').match(/"yieldTextOverride"\s*:\s*"([^"]{1,40})"/);
+  return m ? parseYield(m[1]) : null;
+}
+
 function parseNutritionNumber(v) {
   if (v == null) return null;
   const m = String(v).replace(',', '.').match(/[\d.]+/);
@@ -324,7 +336,7 @@ function extractRecipe(html, url) {
   if (!ingredientLines.length) return null;
 
   const n = raw.nutrition || {};
-  const servings = parseYield(raw.recipeYield);
+  const servings = parseYield(raw.recipeYield) ?? yieldFromPage(html);
 
   const totalTime = parseDuration(raw.totalTime)
     || ((parseDuration(raw.prepTime) || 0) + (parseDuration(raw.cookTime) || 0)) || null;
@@ -363,5 +375,5 @@ function extractRecipe(html, url) {
 
 module.exports = {
   extractRecipe, parseIngredient, findJsonLdRecipes, findMicrodataRecipe,
-  parseDuration, parseYield, stripTags, decodeEntities,
+  parseDuration, parseYield, yieldFromPage, stripTags, decodeEntities,
 };

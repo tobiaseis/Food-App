@@ -136,6 +136,11 @@ Kør derefter workflowet: **Actions → "Hent tilbud og opdatér Supabase" → R
 Springer du uploadet over, henter workflowet selv opskrifter, første gang det
 opdager at basen er tom. Det tager bare længere tid.
 
+**Portionsantal fra greatbritishchefs (én gang).** Deres opskrifter blev hentet,
+før udtrækket kunne læse portionsantallet, og står derfor som 4 portioner.
+Kør workflowet én gang med **"Hent også nye opskrifter"** slået til: så henter
+`src/recipes/backfill-yield.js` tallet for dem, der mangler det (~8 min).
+
 ## 3. Vercel (5 min)
 
 1. **Add New → Project** → importér repoet. Framework Preset: **Other**.

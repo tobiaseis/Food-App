@@ -69,6 +69,10 @@ jobs:
             echo "Henter opskrifter..."
             npm run recipes
             node src/recipes/backfill-images.js
+            # Kildens portionsantal for opskrifter, der blev hentet, før
+            # udtrækket kunne læse det (greatbritishchefs). Spørger kun til
+            # dem, der stadig mangler; reclassify regner portionerne.
+            node src/recipes/backfill-yield.js
             npm run reclassify
           else
             echo "Springer opskrifts-crawl over"
