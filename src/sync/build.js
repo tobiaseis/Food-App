@@ -337,9 +337,16 @@ function collectPlanIndex(log) {
       // serveren skal have samme streng — det er fjerde gang et felt i
       // denne payload skulle vaere husket fire steder.
       keywords: r.keywords || null,
-      // amount er i varens egen enhed (kg/l/stk), ikke gram (opgave 9) – rundes
-      // til 3 decimaler (gram-præcision i kg) i stedet for til nærmeste hele
-      // tal, som ville nulle de fleste mængder ud.
+      // amount er i varens egen enhed (kg/l/stk), ikke gram (opgave 9), og
+      // sendes UAFRUNDET — præcis det tal, loadRecipes giver serveren.
+      //
+      // Her stod en afrunding til 3 decimaler. Den sparede 1,5 KB af 1,44 MB,
+      // og den ændrede 1.398 mængder og 1.387 vægte: "1½ tsk" = 0,0075 blev
+      // 0,008. Målt i plan 3, opgave 3, da de fem trin blev kørt i browseren
+      // og på serveren side om side: samme retter, samme priser, samme linjer
+      // — og et spild, der var 2 øre forskelligt (108,72 mod 108,74 kr), fordi
+      // resten af en pakke blev regnet af hver sin mængde. Et behov lige ved en
+      // pakkegrænse ville have givet en pose mere det ene sted.
       //
       // weight (fix-runde efter review) skal med her OG i generate.js's
       // loadRecipes(), som beregner den: browserens engine.js kører sin egen
@@ -351,8 +358,8 @@ function collectPlanIndex(log) {
       items: [
         ...r.items.filter((i) => !i.essential).map((i) => ({
           key: i.key, cat: i.cat,
-          amount: i.amount == null ? null : Math.round(i.amount * 1000) / 1000,
-          weight: i.weight == null ? null : Math.round(i.weight * 1000) / 1000,
+          amount: i.amount == null ? null : i.amount,
+          weight: i.weight == null ? null : i.weight,
           // optional hører til samme kontrakt som weight: indkøbslisten skal
           // kunne springe "evt."-linjer over, og gør den det kun lokalt, køber
           // browserens bruger persille, der aldrig blev bedt om.

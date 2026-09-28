@@ -427,6 +427,45 @@ test('collectPlanIndex sender basisvarerne med, så lagerlisten er den samme i b
   }
 });
 
+/**
+ * Mængderne i browseren er serverens mængder — ikke afrundede.
+ *
+ * build.js rundede amount og weight til tre decimaler. Da de fem trin blev
+ * kørt i browseren og på serveren side om side, var retter, priser og linjer
+ * ens, men spildet var 2 øre forskelligt, fordi resten af pakken blev regnet
+ * af hver sin mængde. Og et behov ved en pakkegrænse giver en pose mere det
+ * ene sted end det andet.
+ */
+test('collectPlanIndex sender mængderne uafrundede, som loadRecipes har dem', () => {
+  const db = getDb();
+  const now = new Date().toISOString();
+  const { lastInsertRowid: recipeId } = db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at)
+    VALUES (?, 'test', 'Test', 'Kylling i tredjedele', 'da', 4, ?)`)
+    .run('https://test.invalid/afrunding-test', now);
+  const insertIng = db.prepare(`
+    INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional)
+    VALUES (?, ?, ?, ?, ?, ?, ?)`);
+  // Tre mængder, tre decimaler ikke kan bære: en tredjedel, 1½ tsk og et
+  // stykantal, hvis vægt (piece_g) er et flydende produkt.
+  insertIng.run(recipeId, '1/3 kg kyllingebryst', 'kyllingebryst', 1, 'kyllingebryst', 1 / 3, 0);
+  insertIng.run(recipeId, '1½ tsk hvidløg', 'hvidløg', 2, 'hvidloeg', 0.0075, 0);
+  insertIng.run(recipeId, '3 æg', 'æg', 3, 'aeg', 3, 0);
+
+  try {
+    const synced = collectPlanIndex(quiet).recipeIndex.find((r) => r.recipe_id === recipeId);
+    const served = require('../src/mealplan/generate').loadRecipes({}).find((r) => r.id === recipeId);
+    assert.ok(synced && served);
+    for (const line of served.items.filter((i) => !i.essential)) {
+      const s = synced.items.find((i) => i.key === line.key);
+      assert.strictEqual(s.amount, line.amount, `${line.key}.amount er serverens`);
+      assert.strictEqual(s.weight, line.weight, `${line.key}.weight er serverens`);
+    }
+  } finally {
+    db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
+  }
+});
+
 test('collectPriceTables har den form, Supabase tager imod', () => {
   const db = getDb();
   const now = '2026-09-15T00:00:00.000Z';
@@ -728,5 +767,150 @@ test('browserens normalpriskort giver samme pris som serverens normalPricesFor',
     assert.ok(estimateOnly >= 2, `par med kun et skøn skal være prøvet af (${estimateOnly})`);
   } finally {
     srv.cleanup();
+  }
+});
+
+// ── De fem trin: browseren og serveren giver de samme tal (plan 3, opgave 3) ──
+
+/**
+ * Hele flowet, begge veje, på de samme rækker.
+ *
+ * Browseren: public/data.js mod den LOKALE server (npm start) over rigtig
+ * HTTP — flowInputs, choices og lists, som app.js kalder dem. Serveren: den
+ * samme motor på serverens egne indlæsere (loadRecipes, activeOfferMap,
+ * normalPricesFor). Puljen, begge forslag, deres pris og begge lister skal
+ * være ens til øret.
+ *
+ * Det er grunden til, at motoren er én fil. Uden testen er der kun ordet for,
+ * at tabellerne, browseren får, er dem, serveren regner med — og det ord har
+ * holdt for lidt fem gange: base_qty, optional, unknown_count, keywords og
+ * basisvarerne.
+ */
+test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', async () => {
+  const db = getDb();
+  const now = new Date().toISOString();
+  const till = new Date(Date.now() + 7 * 86400000).toISOString();
+  const plans = require('../src/mealplan/generate');
+  const { server } = require('../src/server');
+
+  db.prepare("INSERT OR IGNORE INTO chains (id, name, slug) VALUES ('tst', 'Testkæde', 'tst-sync')").run();
+  const recipeIds = [];
+  const addRecipe = (title, score, lines) => {
+    const { lastInsertRowid: id } = db.prepare(`
+      INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at, keywords, score_classic)
+      VALUES (?, 'test', 'Test', ?, 'da', 4, ?, 'Aftensmad', ?)`)
+      .run(`https://test.invalid/flow-${recipeIds.length}`, title, now, score);
+    const ins = db.prepare(`INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional)
+                            VALUES (?, ?, ?, ?, ?, ?, 0)`);
+    lines.forEach(([key, amount], i) => ins.run(id, `${amount} ${key}`, key, i + 1, key, amount));
+    recipeIds.push(Number(id));
+  };
+  // Fire middage i fire kategorier, der deler kartofler, løg og pasta, og
+  // som alle bruger salt — lagerlisten skal have noget at vise.
+  addRecipe('Kylling med kartofler', 0.9, [['kyllingebryst', 0.5], ['kartofler', 0.6], ['loeg', 0.1], ['salt', 0.005]]);
+  addRecipe('Oksekød med pasta', 0.9, [['hakket_oksekoed', 0.5], ['pasta', 0.4], ['loeg', 0.2], ['salt', 0.005]]);
+  addRecipe('Laks med kartofler', 0.8, [['laks', 0.4], ['kartofler', 0.8], ['floede', 0.2], ['salt', 0.005]]);
+  addRecipe('Kylling med ris', 0.7, [['kyllingebryst', 1 / 3], ['ris', 0.3], ['loeg', 0.1], ['salt', 0.005]]);
+
+  const price = db.prepare(`INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit, pack_price,
+                              unit_price, source, observed_at, valid_until)
+                            VALUES (?, 'tst', ?, ?, ?, ?, 'manual', ?, '2099-01-01T00:00:00.000Z')`);
+  for (const [key, qty, unit, kr] of [['kyllingebryst', 0.5, 'kg', 45], ['hakket_oksekoed', 0.4, 'kg', 32],
+    ['laks', 0.25, 'kg', 40], ['kartofler', 2, 'kg', 16], ['loeg', 1, 'kg', 12], ['pasta', 0.5, 'kg', 10],
+    ['floede', 0.25, 'l', 9], ['ris', 1, 'kg', 14]]) price.run(key, qty, unit, kr, kr / qty, now);
+
+  // Et aktivt tilbud på kartofler, så kilden 'offer' også prøves.
+  const { lastInsertRowid: productId } = db.prepare(`INSERT INTO products (slug, name, category, item_key, created_at)
+    VALUES ('t-flow-kartofler', 'Kartofler 2 kg', 'produce', 'kartofler', ?)`).run(now);
+  db.prepare(`INSERT INTO offers (external_id, product_id, chain_id, heading, price, base_qty, base_unit,
+                                  unit_price, run_from, run_till, observed_at)
+              VALUES ('t-flow-1', ?, 'tst', 'Kartofler 2 kg', 10, 2, 'kg', 5, ?, ?, ?)`).run(productId, now, till, now);
+
+  // Budget-sporets rangering, som scripts/recompute-recipe-costs.js skriver den.
+  const cost = db.prepare(`INSERT INTO recipe_costs (recipe_id, chain_id, cost, cost_packs, cost_per_serving,
+                             coverage, priceable, has_main, computed_at) VALUES (?, 'tst', ?, ?, ?, 1, 1, 1, ?)`);
+  recipeIds.forEach((id, i) => cost.run(id, 40 + i, 60 + i, [18, 11, 25, 14][i], now));
+
+  await new Promise((r) => server.listen(0, r));
+  const base = `http://localhost:${server.address().port}`;
+  try {
+    const sandbox = {
+      console, URL,
+      fetch: (u, o) => fetch(new URL(u, base), o),
+      APP_CONFIG: {},                           // ingen Supabase: den lokale bagende
+      localStorage: { getItem: () => null, setItem: () => {} },
+    };
+    sandbox.window = sandbox;
+    vm.createContext(sandbox);
+    for (const f of ['engine.js', 'data.js']) {
+      vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'public', f), 'utf8'), sandbox, { filename: f });
+    }
+    const Data = sandbox.Data;
+    const plain = (x) => JSON.parse(JSON.stringify(x));
+
+    const items = new Map(build.collectItems().map((r) => [r.key, r]));
+    const chainIds = ['tst'];
+    const offers = plans.activeOfferMap({ chainIds });
+    const normals = plans.normalPricesFor(chainIds);
+    const { week, year } = engine.isoWeek(new Date());
+    const days = 2;
+    const servings = 3;
+
+    for (const track of ['classic', 'budget']) {
+      const ctx = await Data.flowInputs(track, chainIds);
+      assert.equal(ctx.seed, year * 100 + week, 'frøet er ugen');
+      const browser = Data.choices(ctx, { days, servings });
+
+      let recipes = plans.loadRecipes(track === 'budget' ? {} : { tier: track })
+        .filter((r) => recipeIds.includes(r.id));
+      let rank;
+      if (track === 'budget') {
+        const per = new Map(db.prepare("SELECT recipe_id, cost_per_serving FROM recipe_costs WHERE chain_id = 'tst'")
+          .all().map((r) => [r.recipe_id, r.cost_per_serving]));
+        recipes = recipes.map((r) => ({ ...r, score: 0, cost_per_serving: per.get(r.id) }));
+        rank = (r) => -r.cost_per_serving;
+      } else {
+        recipes = recipes.map((r) => ({ ...r, score: r.tier_score }));
+      }
+      const pool = engine.candidatePool(recipes,
+        { days, items, rank, seed: year * 100 + week, offers, normals, chainIds });
+      const props = engine.twoProposals(pool.pool, { days, servings, items, offers, normals, chainIds });
+
+      assert.equal(browser.pool.length, 4, `${track}: hele fiksturen er i puljen`);
+      assert.deepEqual(browser.pool.map((r) => r.id), pool.pool.map((r) => r.id), `${track}: samme pulje`);
+      assert.equal(browser.thin, pool.thin);
+      if (track === 'budget') {
+        assert.deepEqual(browser.pool.slice(0, 2).map((r) => r.title), ['Oksekød med pasta', 'Kylling med ris'],
+          'budget rangerer efter pris pr. portion');
+      }
+
+      props.forEach((w, i) => {
+        const tag = `${track} forslag ${'AB'[i]}`;
+        const bw = browser.proposals[i];
+        assert.deepEqual(bw.picks.map((r) => r.id), w.picks.map((r) => r.id), `${tag}: samme retter`);
+        assert.equal(bw.cost, w.cost, `${tag}: samme ugepris`);
+        assert.equal(bw.waste, w.waste, `${tag}: samme spild`);
+
+        const s = engine.shoppingList({ days: w.picks.map((recipe) => ({ recipe })) },
+          { items, offers, normals, chainIds, servings });
+        const b = Data.lists(ctx, bw.picks, { servings });
+        assert.equal(b.total, s.total, `${tag}: samme indkøbssum`);
+        assert.equal(b.total, w.cost, `${tag}: listen koster det, forslaget sagde`);
+        assert.equal(b.waste_kr, s.waste_kr, `${tag}: samme spild på listen`);
+        assert.deepEqual(plain(b.pantry), plain(s.pantry), `${tag}: samme lagerliste`);
+        assert.ok(b.pantry.some((p) => p.key === 'salt'), `${tag}: lagerlisten er ikke tom i browseren`);
+        const lines = plain(b.buy).map(({ source, stale, ...line }) => line);
+        assert.deepEqual(lines, plain(s.buy), `${tag}: samme købsliste`);
+        // Kilden, skærmen viser, er kædevalgets egen: et tilbud er et tilbud.
+        for (const line of b.buy) assert.equal(line.source === 'offer', line.on_offer, `${line.key}: kilde og on_offer`);
+      });
+    }
+  } finally {
+    await new Promise((r) => server.close(r));
+    db.prepare(`DELETE FROM recipe_costs WHERE recipe_id IN (${recipeIds.join(',')})`).run();
+    for (const id of recipeIds) db.prepare('DELETE FROM recipes WHERE id = ?').run(id);
+    db.prepare("DELETE FROM offers WHERE external_id = 't-flow-1'").run();
+    db.prepare('DELETE FROM products WHERE id = ?').run(productId);
+    db.prepare("DELETE FROM item_prices WHERE chain_id = 'tst'").run();
   }
 });
