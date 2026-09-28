@@ -68,6 +68,24 @@ test('servingsFromYield: 18 frikadeller er 5 portioner, 4 personer er 4', () => 
   assert.equal(servingsFromYield('Linsefrikadeller', null), null);
 });
 
+test('servingsFromYield: spyd, forårsruller, dumplings og pandekager tælles i stykker', () => {
+  assert.equal(servingsFromYield('Grillspyd med kylling, halloumi og chorizo', 12), 4);
+  assert.equal(servingsFromYield('Sprøde forårsruller', 30), 8);
+  assert.equal(servingsFromYield('Rice paper dumplings', 20), 3);
+  assert.equal(servingsFromYield('Sliders – Miniburger', 20), 7);
+  assert.equal(servingsFromYield('Majspandekager', 10), 3);
+  assert.equal(servingsFromYield('Smash burger tacos', 8), 3);
+  // Over 250 g pr. "stykke" er tallet personer: 2,5 kg til 8.
+  assert.equal(servingsFromYield('Herbed chicken skewers', 8, 2521), 8);
+  assert.equal(servingsFromYield('Chicken skewers with tzatziki', 8, 1229), 3);
+});
+
+test('servingsFromYield: "1" på en tærte er én hel tærte, ikke én portion', () => {
+  assert.equal(servingsFromYield('Kartoffel og bacon tærte', 1), 4);
+  assert.equal(servingsFromYield('Quiche lorraine', 1), 4);
+  assert.equal(servingsFromYield('Crab & asparagus omelette', 1), 1);
+});
+
 test('scaleNutrition: kildens tal pr. stykke bliver tal pr. portion', () => {
   assert.deepEqual(scaleNutrition({ kcal: 100, protein_g: 5, carbs_g: null, fat_g: 4 }, 18, 5),
     { kcal: 360, protein_g: 18, carbs_g: null, fat_g: 14.4 });

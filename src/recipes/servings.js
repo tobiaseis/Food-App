@@ -3,35 +3,68 @@
 /**
  * Portioner ud fra kildens "antal".
  *
- * Kilden siger recipeYield, og for frikadeller, deller, kødboller og falafel
- * er det STYKANTALLET: "Linsefrikadeller" står til 18 for 175 g røde linser,
- * "Pink tundeller" til 8 for én dåse tun. Læst som portioner blev retterne
- * regnet om til husstanden med en faktor op til 4,5 for lille, og prisen pr.
+ * Kilden siger recipeYield, og for stykretter er det STYKANTALLET:
+ * "Linsefrikadeller" står til 18 for 175 g røde linser, "Sprøde forårsruller"
+ * til 30, "Grillspyd med kylling" til 12. Læst som portioner blev retterne
+ * regnet om til husstanden med en faktor op til 7 for lille, og prisen pr.
  * portion blev tilsvarende for lav. Brugerens tommelfingerregel 2026-09-28:
- * én portion er 3-4 frikadeller.
+ * én portion er 3-4 frikadeller. Resten af tabellen er bygget i samme ånd.
  *
- * Grænsen på 8: under den er tallet personer. Ingen opskrift med en af
- * titlerne står mellem 6 og 8 i basen; "Frikadeller" (500 g kød) står til 4,
- * "Classic homemade meatballs" (knap 1 kg kød) til 6.
+ * Og den modsatte vej: valdemarsros tærter står til 1 — én hel tærte.
  *
  * Kildens rå tal gemmes i recipes.yield_count og portionerne regnes altid
  * derfra. Så kan reglen køres igen og igen uden at dele et tal, der allerede
  * er delt — og ændres, uden at nogen skal hente opskrifterne forfra.
  */
 
-// Flertal, i ordets slutning: "Linsefrikadeller", "Pink tundeller", "Kødboller
-// - til baby". IKKE "Bagt frikadellepita" — dér er de 8 pitaer, og 400 g kød
-// delt på 2 portioner gav 3.707 kcal pr. portion.
-const PIECE_TITLE = /(?:deller|kødboller|meatballs|falafels?)(?![a-zæøå])/i;
-const PIECES_PER_SERVING = 3.5;
+// Stk. pr. portion, efter titlen. Første match vinder. Flertal i ordets
+// slutning, så "Bagt frikadellepita" (8 pitaer) ikke er 8 frikadeller.
+const PIECE_RULES = [
+  [/(?:deller|kødboller|meatballs|falafels?)(?![a-zæøå])/i, 3.5],
+  [/spyd(?![a-zæøå])|skewers?\b|kebabs?\b/i, 3],
+  [/forårsrull?er|spring rolls?\b|summer rolls?\b/i, 4],
+  [/dumplings?\b|wontons?\b|gyoza\b|potstickers?\b/i, 6],
+  [/sliders\b|miniburgere?(?![a-zæøå])/i, 3],
+  [/pandekager|pancakes\b|vafler(?![a-zæøå])|waffles\b/i, 3],
+  [/tacos\b|taquitos\b/i, 3],
+];
+// Under 8 er tallet personer. Ingen af titlerne står mellem 6 og 8 i basen
+// som stykantal; "Frikadeller" (500 g kød) står til 4.
 const MIN_PIECES = 8;
+// Og er der over 250 g mad pr. "stykke", er tallet også personer: "Herbed
+// chicken skewers" er 2,5 kg til 8, ikke 8 spyd til knap 3.
+const PIECE_MAX_G = 250;
 
-function servingsFromYield(title, yieldCount) {
+// "1" på en tærte er én hel tærte. 19 aftensretter, alle over 1 kg.
+const WHOLE_DISH = /tærte|quiche|\btarts?\b|\bpie\b/i;
+const WHOLE_DISH_SERVINGS = 4;
+
+function servingsFromYield(title, yieldCount, totalGrams = null) {
   if (!(yieldCount > 0)) return yieldCount ?? null;
-  if (yieldCount >= MIN_PIECES && PIECE_TITLE.test(title || '')) {
-    return Math.max(1, Math.round(yieldCount / PIECES_PER_SERVING));
+  const t = title || '';
+  if (yieldCount === 1 && WHOLE_DISH.test(t)) return WHOLE_DISH_SERVINGS;
+  if (yieldCount >= MIN_PIECES && !(totalGrams / yieldCount >= PIECE_MAX_G)) {
+    const rule = PIECE_RULES.find(([re]) => re.test(t));
+    if (rule) return Math.max(1, Math.round(yieldCount / rule[1]));
   }
   return yieldCount;
+}
+
+/**
+ * Opskriftens samlede vægt i gram ud fra linjernes mængder (kg/l/stk).
+ * `getItem(key)` giver varen med base_unit, piece_g og density_g_ml.
+ */
+function totalGrams(lines, getItem) {
+  let g = 0;
+  for (const l of lines || []) {
+    const key = l.item_key ?? l.key;
+    const it = key ? getItem(key) : null;
+    if (!it || !(l.amount > 0)) continue;
+    if (it.base_unit === 'stk') g += l.amount * (it.piece_g || 100);
+    else if (it.base_unit === 'l') g += l.amount * 1000 * (it.density_g_ml || 1);
+    else g += l.amount * 1000;
+  }
+  return g;
 }
 
 /**
@@ -45,4 +78,7 @@ function scaleNutrition(n, fromServings, toServings) {
   return { kcal: s(n.kcal, 0), protein_g: s(n.protein_g, 1), carbs_g: s(n.carbs_g, 1), fat_g: s(n.fat_g, 1) };
 }
 
-module.exports = { servingsFromYield, scaleNutrition, PIECES_PER_SERVING, MIN_PIECES };
+module.exports = {
+  servingsFromYield, totalGrams, scaleNutrition,
+  PIECE_RULES, MIN_PIECES, PIECE_MAX_G, WHOLE_DISH_SERVINGS,
+};

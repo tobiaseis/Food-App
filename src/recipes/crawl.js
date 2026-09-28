@@ -16,7 +16,8 @@ const { getDb } = require('../db');
 const { SOURCES, BY_KEY } = require('./sources');
 const { extractRecipe } = require('./extract');
 const { estimateNutrition, scoreTiers, primaryTier } = require('./classify');
-const { servingsFromYield, scaleNutrition } = require('./servings');
+const { servingsFromYield, totalGrams, scaleNutrition } = require('./servings');
+const taxonomy = require('../lib/taxonomy');
 
 const UA = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -76,7 +77,8 @@ async function discoverUrls(source, limit) {
 function storeRecipe(db, source, parsed) {
   // parsed.servings er kildens rå antal — for frikadeller stykker. Se
   // src/recipes/servings.js.
-  const servings = servingsFromYield(parsed.title, parsed.servings);
+  const servings = servingsFromYield(parsed.title, parsed.servings,
+    totalGrams(parsed.ingredients, taxonomy.get));
   const site = scaleNutrition(parsed, parsed.servings, servings);
   const nutritionFromSite = parsed.kcal != null || parsed.protein_g != null;
   let kcal = site.kcal, protein = site.protein_g, carbs = site.carbs_g;

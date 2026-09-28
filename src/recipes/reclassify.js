@@ -14,7 +14,7 @@ const { getDb } = require('../db');
 const taxonomy = require('../lib/taxonomy');
 const { parseIngredient } = require('./extract');
 const { estimateNutrition, scoreTiers, primaryTier } = require('./classify');
-const { servingsFromYield, scaleNutrition } = require('./servings');
+const { servingsFromYield, totalGrams, scaleNutrition } = require('./servings');
 
 function reclassify({ relinkIngredients = true, log = console.log } = {}) {
   const db = getDb();
@@ -64,6 +64,7 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
           if (p.item_key !== ing.item_key || p.ingredient !== ing.ingredient) relinked++;
           updateIngredient.run(p.item_key, p.amount, p.ingredient, p.qty, p.unit, p.optional, ing.id);
           ing.item_key = p.item_key;
+          ing.amount = p.amount;
           ing.is_staple = p.is_staple;
           ing.qty = p.qty;
           ing.unit = p.unit;
@@ -75,7 +76,7 @@ function reclassify({ relinkIngredients = true, log = console.log } = {}) {
       // base fra før kolonnen har det rå tal i servings; det flyttes over
       // første gang, og derefter deles der aldrig to gange.
       const yieldCount = r.yield_count ?? r.servings;
-      const servings = servingsFromYield(r.title, yieldCount);
+      const servings = servingsFromYield(r.title, yieldCount, totalGrams(ingredients, taxonomy.get));
       if (servings !== r.servings) reserved++;
       // Kildens næring er pr. den portion, der stod i basen før denne kørsel.
       const n = r.nutrition_src === 'site' ? scaleNutrition(r, r.servings, servings) : r;
