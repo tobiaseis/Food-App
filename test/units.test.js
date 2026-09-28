@@ -57,7 +57,8 @@ test('enhedsløst tal over 100 er gram, ikke stykker', () => {
   near(amountOf({ qty: 175, unit: null, item_key: 'mel' }, KG), 0.175);
   // Under grænsen tælles der stadig stykker.
   near(amountOf({ qty: 2, unit: null }, LOEG), 0.22);
-  near(amountOf({ qty: 30, unit: null, item_key: 'asparges' }, KG), 3);
+  // 30 asparges à 20 g. Var 3 kg, da asparges faldt tilbage til 100 g stykket.
+  near(amountOf({ qty: 30, unit: null, item_key: 'asparges' }, KG), 0.6);
   // Stykvarer tælles uanset hvor mange der er.
   near(amountOf({ qty: 12, unit: null }, AEG), 12);
 });

@@ -192,12 +192,15 @@ const VULGAR = { '½': 0.5, '¼': 0.25, '¾': 0.75, '⅓': 1 / 3, '⅔': 2 / 3, 
 
 const UNITS = [
   // dansk
-  'kg', 'gram', 'gr', 'g', 'liter', 'ltr', 'dl', 'cl', 'ml', 'l',
+  'kg', 'gram', 'gr', 'g', 'liter', 'ltr', 'dl', 'cl', 'ml', 'l', 'kilo', 'kilos',
   'spsk', 'tsk', 'knivspids', 'nip', 'fed', 'bundt', 'stilk', 'håndfuld',
   'dåse', 'dåser', 'pakke', 'pakker', 'pose', 'poser', 'stk', 'skiver', 'skive',
   // engelsk
   'tbsp', 'tablespoon', 'tablespoons', 'tsp', 'teaspoon', 'teaspoons',
   'cup', 'cups', 'oz', 'lb', 'lbs', 'pound', 'pounds', 'clove', 'cloves',
+  // "2 litres" og "500 grams" faldt igennem: 'l' og 'gram' må ikke efterfølges
+  // af et bogstav, så linjen blev "2 stk. à 100 g" — 0,2 l bouillon.
+  'litre', 'litres', 'liters', 'grams',
   'handful', 'pinch', 'sprig', 'sprigs', 'rasher', 'rashers', 'slice', 'slices',
   'can', 'cans', 'tin', 'tins', 'pack', 'packs', 'bunch',
 ];
@@ -207,6 +210,8 @@ const UNITS = [
 const UNIT_RE = new RegExp(
   `^(${[...UNITS].sort((a, b) => b.length - a.length).join('|')})(?![a-zæøåA-ZÆØÅ])\\.?`, 'i'
 );
+
+const PACK_RE = /^(?:[x×]\s*)?(\d+(?:[.,]\d+)?)\s*(kg|grams|gram|g|ml|cl|litres|litre|liters|l|oz)(?![a-zæøå])\.?/i;
 
 // Tilberedningsord der ikke er en del af varenavnet
 const PREP_WORDS = /\b(finthakket|hakket fint|groft hakket|i tern|i skiver|i både|revet|smuttede|pillede|friske?|frosne?|økologiske?|optøet|udbenet|marineret|chopped|finely chopped|diced|sliced|minced|grated|fresh|frozen|organic|peeled|trimmed|to serve|to taste|for the [a-z ]+|plus extra[a-z ,]*)\b/gi;
@@ -258,9 +263,20 @@ function parseIngredient(raw, position = 0) {
       qty = parseFloat(tok.replace(',', '.'));
     }
     s = s.slice(qtyMatch[0].length).trim();
+
+    // "2 x 400g cans", "2 400g tins", "4 150g skinless fish fillets": antal
+    // gange pakkevægt. Før læste vi "2" og ingen enhed, og så var to dåser
+    // bønner to stykker à 100 g — 200 g i stedet for 800. 132 linjer, kun
+    // fra de engelske kilder, og ingen af dem er et dansk tusindtal ("1 500 g").
+    const pack = s.match(PACK_RE);
+    if (pack) {
+      qty *= parseFloat(pack[1].replace(',', '.'));
+      unit = pack[2].toLowerCase();
+      s = s.slice(pack[0].length).trim();
+    }
   }
 
-  const unitMatch = s.match(UNIT_RE);
+  const unitMatch = unit ? null : s.match(UNIT_RE);
   if (unitMatch) {
     unit = unitMatch[1].toLowerCase();
     s = s.slice(unitMatch[0].length).trim();

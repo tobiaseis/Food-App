@@ -13,13 +13,14 @@
 
 // Rene massemål.
 const UNIT_G = {
-  g: 1, gram: 1, gr: 1, kg: 1000, oz: 28.35,
+  g: 1, gram: 1, grams: 1, gr: 1, kg: 1000, kilo: 1000, kilos: 1000, oz: 28.35,
   lb: 453.6, lbs: 453.6, pound: 453.6, pounds: 453.6,
 };
 
 // Rene rumfangsmål, i ml.
 const UNIT_ML = {
   ml: 1, cl: 10, dl: 100, l: 1000, liter: 1000, ltr: 1000,
+  litre: 1000, litres: 1000, liters: 1000,
   spsk: 15, tsk: 5, tbsp: 15, tablespoon: 15, tablespoons: 15,
   tsp: 5, teaspoon: 5, teaspoons: 5, cup: 240, cups: 240,
 };
@@ -45,7 +46,34 @@ const PIECE_G = {
   // Målt på den ene linje i korpus, der siger både antal og vægt:
   // "20 plader rispapir (ca. 200 g)".
   rispapir: 10,
+
+  // 2026-09-28: de varer, hvor et bart antal oftest faldt tilbage til 100 g.
+  // 1.465 linjer i alt; en hel kylling var 100 g, en spidskål 100 g, fire
+  // æggeblommer 400 g. Tallene er typiske købsvægte. Rækkefølge: flest linjer.
+  persille: 25,          // "1 bundt", "1 frisk koriander", "1 håndfuld"
+  foraarsloeg: 15,
+  aeggeblomme: 18, aeggehvide: 33,
+  salat: 250,            // et hoved; "2 handfuls of rocket" har egen enhed
+  kyllingelaar: 150,     // overlår med ben ~200 g, udbenet ~110 g
+  kaal: 800,             // spidskål; hvidkål er tungere, men sjældnere hel
+  laks: 125,             // et stykke filet
+  majs: 250,             // en majskolbe
+  vanilje: 3, ansjoser: 4, kardemomme: 0.2, stjerneanis: 1, husblas: 2,
+  fennikel: 250, mango: 350, asparges: 20, poelser: 60,
+  oliven: 4, stenfrugt: 70, mynte: 0.5, roedbede: 150,
+  and: 280,              // andebryst ~300 g, andelår ~250 g
+  rodspaette: 150, kammuslinger: 25, toerret_frugt: 8, jalapeno: 20,
+  torsk: 140, paere: 180, lam: 80, ananas: 1000, noedder: 1.5,
+  chipotle: 10, rejer: 20, boef: 200, hel_kylling: 1600, kaffirblade: 0.3,
+  havbars: 150, radiser: 15, burrata: 125, cornichoner: 8, pak_choi: 150,
+  svinekoteletter: 200, tunsteak: 150, rabarber: 100, mozzarella: 125,
+  bacon: 25,
 };
+
+// En dåse er 400 g — undtagen dåsetun, som er 150 g (105-200 g i
+// tilbudsaviserne). "1 dåse tun i vand" var 400 g tun.
+const CAN_G = { tun: 150 };
+const CAN_UNITS = new Set(['dåse', 'dåser', 'can', 'cans', 'tin', 'tins']);
 const DEFAULT_PIECE_G = 100;
 const COUNT_UNITS = new Set(['stk', 'stykker', 'styk', 'piece', 'pieces']);
 
@@ -71,6 +99,8 @@ function gramsOf(ing, item = null) {
   const u = norm(ing.unit);
 
   if (u && UNIT_G[u])        return ing.qty * UNIT_G[u];
+  const key = item?.key ?? ing.item_key ?? ing.taxonomy_key;
+  if (u && CAN_UNITS.has(u) && CAN_G[key]) return ing.qty * CAN_G[key];
   if (u && UNIT_APPROX_G[u]) return ing.qty * UNIT_APPROX_G[u];
   if (u && UNIT_ML[u])       return ing.qty * UNIT_ML[u] * (item?.density_g_ml ?? 1);
 
@@ -140,6 +170,10 @@ const PER_PIECE = /(^|\s)(à|á|a)\s*\d|\b(each|hver|apiece|stykket)\b|\bper\s+\
 // "1 ribbensteg, cirka 1,5 kg." er stegens vægt; "2 løg, hakket" er ikke.
 const APPROX_START = /^\s*(ca\.?|cirka|omkring|about|approx\.?|approximately|around)\s/i;
 
+// "2 Denver steaks, 300g each, patted dry": stykvægten efter et komma. Den
+// var 100 g pr. bøf, fordi kun en omtrentlig vægt ("cirka 1,5 kg") talte.
+const EACH_START = /^\s*(?:(?:à|á|a)\s*)?\d+(?:[.,]\d+)?\s*(?:kg|g|gram)\b.*\b(?:each|hver|stykket|apiece)\b/i;
+
 function readWeight(text) {
   const w = text.match(PAREN_W);
   if (!w) return null;
@@ -168,7 +202,7 @@ function parenWeight(raw) {
   // samme fælde som "15,95" i CSV-importøren i plan 2.
   const segments = s.replace(/\([^)]*\)/g, ' ').split(/,(?!\d)/).slice(1);
   for (const seg of segments) {
-    if (!APPROX_START.test(seg)) continue;
+    if (!APPROX_START.test(seg) && !EACH_START.test(seg)) continue;
     const w = readWeight(seg);
     if (w) return w;
   }

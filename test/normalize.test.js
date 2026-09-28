@@ -191,6 +191,25 @@ test('mængde og enhed læses ud af danske ingredienslinjer', () => {
   assert.equal(r.item_key, 'hakket_oksekoed');
 });
 
+test('antal gange pakkevægt: "2 x 400g cans" er 800 g', () => {
+  // To dåser bønner var to stykker à 100 g.
+  const near = (a, b) => assert.ok(Math.abs(a - b) < 1e-9, `${a} != ${b}`);
+  near(parseIngredient('2 x 400g cans butter beans drained').amount, 0.8);
+  near(parseIngredient('2 400g tins of chickpeas, drained and rinsed').amount, 0.8);
+  near(parseIngredient('4 150g skinless cod fillets').amount, 0.6);
+  near(parseIngredient('⅓ x 30g pack of coriander chopped').amount, 0.01);
+  // Stykvægten efter et komma.
+  near(parseIngredient('2 Denver steaks, 300g each, patted dry').amount, 0.6);
+  // "litres" og "grams" var ukendte enheder.
+  near(parseIngredient('2 litres vegetable stock').amount, 2);
+  near(parseIngredient('500 grams potatoes').amount, 0.5);
+  // En dåse tun er ikke 400 g.
+  near(parseIngredient('1 dåse tun i vand').amount, 0.15);
+  near(parseIngredient('1 dåse hakkede tomater').amount, 0.4);
+  // "1 1/2" er stadig ikke en pakke.
+  assert.notEqual(parseIngredient('1 1/2 large rosemary sprigs').unit, 'g');
+});
+
 test('engelske ingredienser kobles til danske varetyper', () => {
   // Sprogbroen: engelske opskrifter skal kunne matche danske tilbud
   assert.equal(parseIngredient('500g beef mince').item_key, 'hakket_oksekoed');
