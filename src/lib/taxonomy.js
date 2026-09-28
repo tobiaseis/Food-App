@@ -132,10 +132,24 @@ const SEED = [
   { key: 'rejer', name: 'Rejer', cat: 'fish',
     class: 'fresh', keeps: 'perishable', p: 20, kcal: 100, c: 0,
     da: ['rejer', 'kæmperejer', 'tigerrejer'], en: ['prawns', 'shrimp', 'king prawns'] },
-  { key: 'tun', name: 'Tun', cat: 'fish',
-    class: 'fresh', keeps: 'perishable', p: 24, kcal: 115, c: 0,
-    da: ['tunsteak', 'tunbøf', 'tun i vand', 'tun i olie', 'tun'],
-    en: ['tuna steak', 'tuna'] },
+  // Tun er to varer (2026-09-28, brugerens rettelse). De stod som én, og en
+  // opskrift på tunsteak til sushi fik en dåse tun i vand på indkøbslisten —
+  // den billigste pakke under samme nøgle. Omvendt blev tilbud på frosne
+  // tunsteaks lagt sammen med dåsetun. Bart "tun"/"tuna" er dåsetun: det er
+  // det, 16 af de 25 tunlinjer i korpus mener. Dåse-formerne af "tuna steak"
+  // ('can tuna steak', 'cans tuna steaks') står på dåsevaren og vinder, fordi
+  // de begynder tidligere i linjen.
+  { key: 'tun', name: 'Tun på dåse', cat: 'fish',
+    class: 'baseline', keeps: 'pantry', p: 24, kcal: 115, c: 0,
+    da: ['tun i vand', 'tun i olie', 'dåsetun', 'dåse tun', 'dåser tun', 'tun på dåse', 'tunfisk', 'tun'],
+    en: ['canned tuna', 'tinned tuna', 'tuna tinned', 'can tuna', 'cans tuna',
+         'can tuna steak', 'cans tuna steaks', 'tuna in spring water', 'tuna in water',
+         'tuna in olive oil', 'albacore tuna', 'tuna'] },
+  { key: 'tunsteak', name: 'Tunsteak', cat: 'fish',
+    class: 'fresh', keeps: 'perishable', p: 23, kcal: 110, c: 0,
+    da: ['tunsteak', 'tun steak', 'tunbøf', 'frisk tun', 'tunfilet'],
+    en: ['tuna steak', 'tuna steaks', 'fresh tuna', 'tuna fillet', 'tuna fillets',
+         'sashimi-grade tuna', 'sashimi-grade yellow fin tuna', 'tuna block'] },
   { key: 'fiskefars', name: 'Fiskefars', cat: 'fish',
     class: 'fresh', keeps: 'perishable', p: 12, kcal: 130, c: 6,
     da: ['laksefars', 'torskefars', 'fiskefars', 'fiskefrikadeller'], en: ['fish cakes'] },

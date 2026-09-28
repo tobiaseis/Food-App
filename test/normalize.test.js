@@ -343,6 +343,36 @@ test('beskrivelsen kan udelukke en vare, men ikke udpege den som råvare', () =>
     'rengoering');
 });
 
+test('en drikkevare i beskrivelsen overtrumfer ikke mad i overskriften', () => {
+  // Bart 'vand' er en drikkevare, og som veto gjorde det kyllingebryst til vand.
+  assert.equal(norm.productIdentity('Kyllingefilet af dansk kylling',
+    '800 g. Tilsat 9% vand. Pr. kg 73,75').taxonomy_key, 'kyllingebryst');
+  assert.equal(norm.productIdentity('MADVÆRKET Kyllingebrystfilet',
+    'Fast lav pris Uden vand. 280 g. Pr. kg 99,82').taxonomy_key, 'kyllingebryst');
+  // Men siger overskriften intet, må beskrivelsen stadig navngive drikken:
+  // vinens overskrift er bare mærker.
+  assert.equal(norm.productIdentity('Il Capolavoro, Kung Fu Girl, Lindemans eller Mucho Mas Bag-in-Box',
+    '1,5-3 liter. Rødvin eller hvidvin. Pr. liter max. 79,33').taxonomy_key, 'vin');
+});
+
+test('frisk tunsteak og dåsetun er to varer', () => {
+  // En sushiopskrift på tunsteak fik en dåse tun på indkøbslisten, og tilbud
+  // på frosne tunsteaks blev lagt sammen med dåsetun.
+  assert.equal(norm.productIdentity('Princip Tunsteak, rejer eller Gambas pil pil', '').taxonomy_key, 'tunsteak');
+  assert.equal(norm.productIdentity('Glyngøre tun', '105 g. Kg-pris 114,29').taxonomy_key, 'tun');
+  const CASES = [
+    ['400 g tun steak (til sushi)', 'tunsteak'], ['2 thick tuna steaks', 'tunsteak'],
+    ['2 x 140g fresh tuna fillets, defrosted', 'tunsteak'],
+    ['500g of sashimi-grade tuna, chopped into 5mm dice', 'tunsteak'],
+    ['1 dåse tun i vand', 'tun'], ['2 dåser tun i olie, drænet', 'tun'],
+    ['225g can tuna drained', 'tun'], ['50g canned tuna', 'tun'],
+    // Dåsen står først i linjen og vinder over "tuna steak".
+    ['197g can tuna steak in spring water, drained', 'tun'],
+    ['2 x cans tuna steaks in water, drained', 'tun'],
+  ];
+  for (const [text, key] of CASES) assert.equal(taxonomy.lookup(text)?.entry.key, key, text);
+});
+
 // ── ISO-uge ──────────────────────────────────────────────────────────────────
 
 test('ISO-uge beregnes efter torsdagsreglen', () => {

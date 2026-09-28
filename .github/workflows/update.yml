@@ -91,9 +91,14 @@ jobs:
       # spor-scorer ud fra det, der ligger i basen, og en ændring i taksonomien
       # eller portionsreglen slog derfor aldrig igennem på de opskrifter, der
       # allerede var hentet. Den tager 1,5 sekund og kan køres igen og igen.
+      #
+      # recompute kobler tilbuddene til varer på ny. `npm run update` gør det
+      # også, men FØR seed:items, dvs. med gårsdagens taksonomi — en ny vare
+      # (fx tunsteak skilt ud fra dåsetun) nåede først tilbuddene en nat for sent.
       - name: Sørg for varetaksonomi og materialiserede mængder
         run: |
           npm run seed:items
+          npm run recompute
           npm run backfill:amounts
           npm run reclassify
 

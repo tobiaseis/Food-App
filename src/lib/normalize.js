@@ -231,13 +231,21 @@ function productIdentity(heading, description = '') {
   // Den anden vej holder derimod: står der opvaskemiddel eller tandpasta i
   // beskrivelsen, ER varen det – "Vel eller Duck" er toiletrens, ikke and.
   // Derfor tæller beskrivelsen kun, når den peger væk fra madplanen.
+  //
+  // To roller, to regler. Siger overskriften intet, må beskrivelsen NAVNGIVE
+  // en vare uden for madplanen — vinens overskrift er et mærke ("Kung Fu
+  // Girl"), og kun beskrivelsen siger rødvin. Men kun NONFOOD må OVERTRUMFE
+  // en overskrift, der peger på mad. Bart 'vand' er en drikkevare (den dækker
+  // opskrifternes "2 dl vand"), og som veto gjorde "Tilsat 9% vand" og "Uden
+  // vand" kyllingebrystfilet til vand — målt 2026-09-28.
   const specHit = taxonomy.lookup(specText(description));
-  const specVeto = specHit && !taxonomy.isMealCapable(specHit.entry.key) ? specHit : null;
+  const specNames = specHit && !taxonomy.isMealCapable(specHit.entry.key) ? specHit : null;
+  const specVeto = specHit && taxonomy.isNonFood(specHit.entry.key) ? specHit : null;
 
   let hit = taxonomy.lookup(noBrand)
          || taxonomy.lookup(cleaned)
          || taxonomy.lookup(heading)
-         || specVeto;
+         || specNames;
 
   if (hit && specVeto && taxonomy.isMealCapable(hit.entry.key)) hit = specVeto;
 
