@@ -1375,7 +1375,29 @@
     'sauce', 'snacks?', 'morgenmad', 'breakfast', 'brunch', 'lunch', 'frokost',
     'starter', 'forret', 'drinks?', 'kolde drikke', 'is og sorbet',
     'marmelade', 'syltetöj', 'syltetøj',
+    // Tilføjet 2026-09-28. De engelske kilder skriver kager og tilbehør på
+    // engelsk, og da æg er en hovedråvare, var "Chocolate concrete" (Afternoon
+    // tea, Baking, Cakes) og 18 af greatbritishchefs' "Cake"-opskrifter
+    // aftensmad. greatbritishchefs skriver "Main" og "Side" — kun det første
+    // stod her. Et middagsord vinder stadig: "chicken traybake" er aftensmad.
+    'sides?', 'side dishes', 'cakes?', 'baking', 'bakes?', 'afternoon tea', 'treats?',
+    'bake sale', 'cake sale', 'cake stall', 'coffee morning', 'desserts?', 'puddings?',
+    'biscuits?', 'cookies?', 'sweets?', 'canap[ée]s?', 'nibbles', 'tapas',
+    'appetizers?', 'forretter', 'pålæg', 'madpakker?',
   ].join('|') + ')\\s*(,|$)', 'i');
+
+  // Titler, der er noget andet end aftensmad, også når kilden har tagget dem
+  // "Aftensmad"/"Dinner": "Breakfast burrito", "One-pan English breakfast",
+  // "Sprøde wontons" (40 stk), "Stenbiderrogn på spinatblinis" (30 stk).
+  // Ikke "cake": "Babka ziemniaczana (Polish potato cake)" er en hovedret.
+  const NON_DINNER_TITLE = /\b(breakfast|morgenmad|brunch)\b|blinis\b|\bwontons?\b/i;
+
+  // Brugerens valg 2026-09-28: højst en time i alt, tid i ovnen medregnet.
+  // Appens brugere har ikke tid til en langtidssteg på en hverdag. Målt: 287
+  // af 1.362 aftensretter tog længere, heraf 95 over to timer (slow cooker,
+  // flæskesteg, rimmet laks på 24 timer). En ret uden tidsangivelse slipper
+  // igennem — samme regel som nøgleordene: ingen oplysning er ikke et nej.
+  const DINNER_MAX_MINUTES = 60;
 
   /** Kalder kilden selv retten noget andet end aftensmad? */
   function looksLikeDinner(keywords) {
@@ -1385,16 +1407,26 @@
     return !NON_DINNER_WORDS.test(k);
   }
 
+  /** Kan den laves på en hverdag? */
+  function quickEnough(recipe) {
+    const m = recipe && recipe.total_minutes;
+    return !(m > DINNER_MAX_MINUTES);
+  }
+
   /**
-   * Er retten aftensmad?
+   * Er retten aftensmad — i denne app, på en hverdag?
    *
-   * To spørgsmål, ét svar: har den en hovedråvare, OG kalder kilden den en
-   * middag? Det første alene lukkede ærtepuré og Marie Rose sauce ind i
+   * Har den en hovedråvare, OG kalder kilden den en middag, OG kan den nås på
+   * en time? Det første alene lukkede ærtepuré og Marie Rose sauce ind i
    * madplanen; det andet alene ville lukke en vinaigrette ind, hvis nogen
-   * havde tagget den "aftensmad".
+   * havde tagget den "aftensmad". Tiden står HER og ikke i puljen, så puljen,
+   * forslagene og budget-sporets has_main er enige om, hvad der er en ret.
    */
   function isDinner(recipe, items) {
-    return hasMainCourse(recipe, items) && looksLikeDinner(recipe && recipe.keywords);
+    return hasMainCourse(recipe, items)
+      && looksLikeDinner(recipe && recipe.keywords)
+      && !NON_DINNER_TITLE.test((recipe && recipe.title) || '')
+      && quickEnough(recipe);
   }
 
   function hasMainCourse(recipe, items) {
@@ -2499,7 +2531,8 @@
     assignRoles, scoreRecipe, buildPlan, shoppingList, offerShoppingList, chooseChains,
     qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
-    choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner, withEstimates,
+    choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner, quickEnough, withEstimates,
+    DINNER_MAX_MINUTES,
     canPrice, candidatePool, mainCategoryOf, sharedWeek, twoProposals, explainWeek,
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,

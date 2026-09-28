@@ -861,6 +861,36 @@ test('isDinner kræver både en hovedråvare og en middags-etiket', () => {
   assert.equal(engine.isDinner(kunTilbehoer, W_ITEMS), false, 'hovedråvaren skal stadig kræves');
 });
 
+test('engelske kager, tilbehør og forretter er ikke aftensmad', () => {
+  // Æg er en hovedråvare, så kagen havde én. Kun etiketten kunne sige nej,
+  // og den stod på engelsk: 25 kager og tilbehørsretter var "aftensmad".
+  assert.equal(engine.looksLikeDinner('Afternoon tea, Baking, Cakes, Chocolate, Traybake'), false);
+  assert.equal(engine.looksLikeDinner('Cake, easy'), false);
+  assert.equal(engine.looksLikeDinner('Side, fries, tornado, gochujang, easy'), false);
+  assert.equal(engine.looksLikeDinner('Buffet, Canapes, Basil, Canapés, Chicken'), false);
+  assert.equal(engine.looksLikeDinner('Forretter, Nordisk, Ost, Varme supper'), false);
+  assert.equal(engine.looksLikeDinner('Madpakke, Wraps'), false);
+  // Middagsordet vinder stadig.
+  assert.equal(engine.looksLikeDinner('Main, chicken traybake, easy'), true);
+});
+
+test('en ret over en time er ikke hverdagsmad', () => {
+  // Brugerens valg: højst 60 minutter i alt.
+  const ret = { ...CANDIDATES[1], keywords: 'Aftensmad' };
+  assert.equal(engine.isDinner({ ...ret, total_minutes: 60 }, W_ITEMS), true);
+  assert.equal(engine.isDinner({ ...ret, total_minutes: 61 }, W_ITEMS), false);
+  assert.equal(engine.isDinner({ ...ret, total_minutes: 465 }, W_ITEMS), false, 'slow cooker');
+  assert.equal(engine.isDinner({ ...ret, total_minutes: null }, W_ITEMS), true, 'ingen oplysning er ikke et nej');
+});
+
+test('morgenmad og forretter i titlen er ikke aftensmad, selv tagget "Dinner"', () => {
+  const ret = { ...CANDIDATES[1], keywords: 'Dinner, Main course' };
+  assert.equal(engine.isDinner({ ...ret, title: 'Breakfast burrito' }, W_ITEMS), false);
+  assert.equal(engine.isDinner({ ...ret, title: 'Stenbiderrogn på spinatblinis' }, W_ITEMS), false);
+  assert.equal(engine.isDinner({ ...ret, title: 'Sprøde wontons' }, W_ITEMS), false);
+  assert.equal(engine.isDinner({ ...ret, title: 'Babka ziemniaczana (Polish potato cake)' }, W_ITEMS), true);
+});
+
 // ── Kandidatpuljen (spec 2.3) ────────────────────────────────────────────────
 //
 // Trin 4 viser tre gange så mange retter som dage, og de to forslag er
