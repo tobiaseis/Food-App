@@ -116,7 +116,7 @@ const daysLeft = (till) => {
  */
 const THUMB_W = 560;
 
-function thumb(url) {
+function thumb(url, width = THUMB_W) {
   if (!url) return url;
   try {
     const u = new URL(url, location.href);
@@ -124,7 +124,7 @@ function thumb(url) {
     // Højden er sat sammen med bredden i kildens egne URL'er. Fjernes den
     // ikke, beskærer tjenesten efter det gamle forhold.
     u.searchParams.delete('height');
-    u.searchParams.set('width', String(THUMB_W));
+    u.searchParams.set('width', String(width));
     return u.toString();
   } catch {
     return url;                  // ikke en URL vi kan læse – lad den være
@@ -183,9 +183,10 @@ function storePicker(onSaved) {
       </label>`;
     }).join('');
 
+  const max = maxStores();
   $('#modal-body').innerHTML = `
-    <p class="note">Vælg de supermarkeder, du normalt handler i. Madplanen bygges
-    kun af tilbud fra dem – og indkøbslisten bliver til én, du kan gå ud og handle efter.</p>
+    <p class="note">Vælg de supermarkeder, du normalt handler i – højst ${max}. Madplanen
+    prissættes kun i dem, og indkøbslisten bliver til én, du kan gå ud og handle efter.</p>
     <div class="store-list">${rows}</div>
     <div class="divider"></div>
     <div class="row">
@@ -195,9 +196,15 @@ function storePicker(onSaved) {
     </div>`;
 
   const boxes = () => [...$('#modal-body').querySelectorAll('input[type=checkbox]')];
+  // Loftet håndhæves dér, hvor butikkerne vælges: madplanens kædevalg regner
+  // alle delmængder igennem og tager kun de fem første med. En sjette ville
+  // først vise sig som en vare uden pris på indkøbslisten.
   const tally = () => {
     const n = boxes().filter((b) => b.checked).length;
-    $('#fav-count').textContent = n ? `${n} valgt` : 'ingen valgt = alle kæder';
+    for (const b of boxes()) b.disabled = !b.checked && n >= max;
+    $('#fav-save').disabled = n > max;
+    $('#fav-count').textContent = n > max ? `${n} valgt – højst ${max}, fravælg ${n - max}`
+      : n ? `${n} af højst ${max}` : 'ingen valgt = alle kæder i tilbudslisterne';
   };
   boxes().forEach((b) => b.addEventListener('change', tally));
   tally();
@@ -207,37 +214,16 @@ function storePicker(onSaved) {
     modal.close();
     if (onSaved) onSaved();
   };
-  $('#fav-save').addEventListener('click', () => save(boxes().filter((b) => b.checked).map((b) => b.value)));
+  // Favoritternes rækkefølge er motorens prioritet (chainsInPlay), så de
+  // allerede valgte beholder deres plads, og nye kommer bagest.
+  $('#fav-save').addEventListener('click', () => {
+    const chosen = boxes().filter((b) => b.checked).map((b) => b.value);
+    save([...FAVORITES.filter((id) => chosen.includes(id)),
+          ...chosen.filter((id) => !FAVORITES.includes(id))]);
+  });
   $('#fav-none').addEventListener('click', () => save([]));
 
   modal.showModal();
-}
-
-/**
- * Linjen over madplanen: hvilke butikker den er bygget af.
- *
- * Kædernes egne farver er den eneste kulør, grænsefladen selv låner ud – de
- * er data, ikke pynt, og prikkerne gør linjen læsbar med et blik.
- */
-function favoriteBar() {
-  const chosen = FAVORITES.map(chainById).filter(Boolean);
-  const dots = chosen.map((c) =>
-    `<i class="chain-dot" style="background:${esc(c.color || 'var(--ink-3)')}"></i>`).join('');
-
-  return `<div class="fav-bar">
-    <div class="row" style="gap:8px">
-      ${dots}
-      <span>${chosen.length
-        ? `Bygget på tilbud fra <strong>${esc(listNames(chosen.map((c) => c.name)))}</strong>`
-        : '<strong>Alle kæder</strong> – også dem, der ikke ligger i nærheden af dig'}</span>
-    </div>
-    <button class="ghost" id="pick-stores">${chosen.length ? 'Skift butikker' : 'Vælg mine butikker'}</button>
-  </div>`;
-}
-
-function bindFavoriteBar(reload) {
-  const btn = $('#pick-stores');
-  if (btn) btn.addEventListener('click', () => storePicker(reload));
 }
 
 /* ── Tilbudskort ──────────────────────────────────────────────────────────── */
@@ -413,222 +399,651 @@ async function showProduct(productId) {
   });
 }
 
-/* ── Visning: madplan ─────────────────────────────────────────────────────── */
+/* ── Visning: madplanen i fem trin ────────────────────────────────────────────
+ * Brugerens egne ord: vælg butikker; vælg budget, sund, klassisk eller gourmet;
+ * vælg hvor mange dage; få tre gange så mange retter at vælge imellem; få en
+ * hel indkøbsliste — som TO lister, det der skal købes, og det man skal tjekke,
+ * at man har.
+ *
+ * Trin 1-3 er et filter, og alt bliver på én side. Et trin-for-trin-guide med
+ * "Næste" ville tvinge den, der kommer tilbage hver uge med de samme butikker,
+ * gennem tre skærme for at nå de retter, hun kom efter. Her står valgene, hun
+ * allerede har truffet, øverst, og retterne er et rul væk.
+ *
+ * Motoren kører her i browseren (public/engine.js, samme fil som serveren), og
+ * alt, den får, hentes gennem Data.flowInputs. Tallene på skærmen SKAL være
+ * serverens tal for samme butikker, spor, dage og uge — se test/sync.test.js.
+ */
 
 const TIER_INFO = {
+  budget:  ['Budget', 'Det billigste først – rangeret efter prisen pr. portion i dine butikker.'],
   healthy: ['Sund & proteinrig', 'Højt proteinindhold og få kulhydrater pr. portion.'],
   classic: ['Klassisk', 'Almindelig hverdagsmad – hurtig, kendt og til at gå til.'],
   premium: ['Gourmet', 'Mere ambitiøse retter fra kokke-orienterede kilder.'],
 };
 
+// Vælgerens korte navne. Fire knapper skal kunne stå på én linje på en
+// 360px-telefon; det fulde navn står i linjen under.
+const TRACK_SHORT = { budget: 'Budget', healthy: 'Sund', classic: 'Klassisk', premium: 'Gourmet' };
+
+// Hovedkategorien, som variationsspærren tæller den (engine.mainCategoryOf).
+// Mærkaten på retten er den samme tælling, så "højst tre fjerkræretter" kan
+// tælles efter på skærmen.
+const MAIN_LABEL = { meat: 'Kød', poultry: 'Fjerkræ', fish: 'Fisk', eggs: 'Æg', legume: 'Bælgfrugter' };
+
+const DAYS_MIN = 1, DAYS_MAX = 7;
+const PEOPLE_MIN = 1, PEOPLE_MAX = 8;
+
+// Loftet på favoritter er motorens eget tal, ikke en kopi: chooseChains regner
+// alle delmængder igennem, og en sjette butik ville først vise sig som en vare
+// uden pris på listen. Derfor håndhæves det dér, hvor butikkerne vælges.
+const maxStores = () => window.PlanEngine.MAX_CHOICE_CHAINS;
+
+/**
+ * Valgene fra trin 2-3 og de valgte retter, pr. browser.
+ *
+ * Personerne huskes, fordi specet siger "forudfyldes med sidste valg". De
+ * valgte retter huskes for UGEN: står man i butikken og genindlæser, skal
+ * indkøbslisten stå der endnu — men ikke næste mandag, hvor puljen er en anden.
+ */
+const FLOW_KEY = 'madplan_flow';
+
+function readFlow() {
+  let v = null;
+  try { v = JSON.parse(localStorage.getItem(FLOW_KEY) || 'null'); } catch { /* privat vindue */ }
+  const f = v && typeof v === 'object' ? v : {};
+  const int = (x, lo, hi, d) => (Number.isInteger(x) && x >= lo && x <= hi ? x : d);
+  return {
+    track: TIER_INFO[f.track] ? f.track : 'classic',
+    days: int(f.days, DAYS_MIN, DAYS_MAX, 4),
+    servings: int(f.servings, PEOPLE_MIN, PEOPLE_MAX, 4),
+    picks: f.picks && Array.isArray(f.picks.ids) ? f.picks : null,
+  };
+}
+
+function writeFlow() {
+  const s = FLOW.settings;
+  const picks = FLOW.ctx ? { week: `${FLOW.ctx.year}-${FLOW.ctx.week}`, ids: FLOW.selected } : s.picks;
+  try {
+    localStorage.setItem(FLOW_KEY, JSON.stringify({
+      track: s.track, days: s.days, servings: s.servings, picks,
+    }));
+  } catch { /* privat vindue – valget gælder så kun denne visning */ }
+}
+
+const FLOW = {
+  settings: null,
+  ctx: null,              // Data.flowInputs
+  choice: null,           // { pool, thin, proposals }
+  proposalLists: [],      // Data.lists for hvert forslag
+  selected: [],           // opskrift-id'er i den rækkefølge, de blev valgt
+  list: null,             // Data.lists for det valgte
+  token: 0,               // kun den nyeste beregning må tegne
+  hint: '',
+};
+
+/** Mængde, som man siger den i et køkken: 400 g, ikke 0,4 kg. */
+function qty(n, unit) {
+  if (n == null || !isFinite(n)) return '';
+  const t = (x) => Number(x).toLocaleString('da-DK', { maximumFractionDigits: 2 });
+  if (unit === 'kg') return n < 1 ? `${t(Math.round(n * 1000))} g` : `${t(n)} kg`;
+  if (unit === 'l') {
+    if (n >= 1) return `${t(n)} l`;
+    const dl = Math.round(n * 1000) / 100;
+    return Number.isInteger(dl) ? `${dl} dl` : `${t(Math.round(n * 1000))} ml`;
+  }
+  return `${t(n)} stk`;
+}
+
+/** Hvor mange pakker af hvad: "2 × 500 g". */
+const packLabel = (b) => (b.packs ? `${b.packs} × ${qty(b.pack_qty, b.unit)}` : qty(b.need, b.unit));
+
+const sameSet = (a, b) => a.length === b.length && a.every((x) => b.includes(x));
+
 async function viewPlan() {
-  const tier = location.hash.split('/')[2] || 'classic';
-  const [label, blurb] = TIER_INFO[tier] || TIER_INFO.classic;
+  const s = readFlow();
+  // Gamle links (#/plan/healthy) vælger stadig sporet.
+  const fromHash = location.hash.split('/')[2];
+  if (fromHash && TIER_INFO[fromHash]) s.track = fromHash;
+  FLOW.settings = s;
+  FLOW.ctx = null;
+  FLOW.choice = null;
+  FLOW.list = null;
+  FLOW.hint = '';
 
   app().innerHTML = `
     <div class="enter">
-      <p class="eyebrow">Uge ${isoWeek()}<i class="sep"></i>${esc(label)}</p>
-      <h1>Syv retter bygget på det, der faktisk er på tilbud.</h1>
-      <p class="lede">${esc(blurb)}</p>
-      ${favoriteBar()}
-      <div class="controls">
-        <div class="seg">
-          ${Object.entries(TIER_INFO).map(([k, v]) =>
-            `<button data-tier="${k}" class="${k === tier ? 'active' : ''}">${v[0]}</button>`).join('')}
-        </div>
-        <button id="regen">Ny plan</button>
-      </div>
+      <p class="eyebrow">Uge ${isoWeek()}<i class="sep"></i>Madplan</p>
+      <h1>Ugens aftensmad, fra butikken til indkøbssedlen.</h1>
+      <p class="lede">Vælg dine butikker og din slags mad. Så finder vi tre retter
+      pr. aften, som kan prissættes hos dig – og to forslag, der deler råvarerne,
+      så mindre bliver til overs.</p>
     </div>
-    <div id="plan"><div class="loading">Sammensætter madplan…</div></div>`;
+    <div class="flow">
+      <section class="step" id="step-stores">
+        <h2 class="step-rule"><span class="step-no">1</span>Dine butikker</h2>
+        <div id="flow-stores"></div>
+      </section>
+      <section class="step">
+        <h2 class="step-rule"><span class="step-no">2</span>Slags mad</h2>
+        <div id="flow-track"></div>
+      </section>
+      <section class="step">
+        <h2 class="step-rule"><span class="step-no">3</span>Aftener og personer</h2>
+        <div id="flow-week"></div>
+      </section>
+      <section class="step" id="step-choose">
+        <h2 class="step-rule"><span class="step-no">4</span>Vælg retterne</h2>
+        <div id="flow-choose"></div>
+      </section>
+      <section class="step" id="step-list">
+        <h2 class="step-rule"><span class="step-no">5</span>Indkøbslisten</h2>
+        <div id="flow-list"></div>
+      </section>
+    </div>`;
 
-  app().querySelectorAll('[data-tier]').forEach((b) =>
-    b.addEventListener('click', () => { location.hash = `#/plan/${b.dataset.tier}`; }));
-
-  let variant = 0;
-  const load = async () => {
-    $('#plan').innerHTML = '<div class="loading">Sammensætter madplan…</div>';
-    renderPlan(await Data.mealPlan(tier, variant));
-  };
-  // Nye butikker = ny plan. Variantnummeret nulstilles, så man ser
-  // hovedplanen for det nye valg og ikke en omrokering af den gamle.
-  bindFavoriteBar(() => { variant = 0; viewPlan(); });
-  $('#regen').addEventListener('click', () => { variant++; Native.haptic(); load(); });
-  await load();
+  renderStores();
+  renderTrack();
+  renderWeek();
+  await recompute();
 }
 
-/** Råvare-mærkat: hovedråvarer markeres, så løftet er til at se. */
-function ingChip(m) {
-  const cls = m.role === 'main' ? 'ing main' : 'ing';
-  return `<span class="${cls}">${esc(m.name)} <span class="c">${esc(m.chain)}</span></span>`;
-}
+/* ── Trin 1: butikkerne ───────────────────────────────────────────────────── */
 
-function renderPlan(p) {
-  const el = $('#plan');
-  if (p.error) {
-    el.innerHTML = `<div class="empty card"><h3>Ingen madplan</h3><p>${esc(p.error)}</p>
-      ${FAVORITES.length ? '<button class="primary" id="plan-pick">Vælg flere butikker</button>' : ''}</div>`;
-    const b = $('#plan-pick');
-    if (b) b.addEventListener('click', () => storePicker(() => viewPlan()));
-    return;
-  }
-  if (!p.days.length) {
-    el.innerHTML = `<div class="empty card"><h3>Ingen retter matchede</h3>
-      <p>Der er ${p.offers_available} varetyper på tilbud, men ingen opskrifter i dette spor bruger dem.</p></div>`;
-    return;
-  }
+function renderStores() {
+  const el = $('#flow-stores');
+  if (!el) return;
+  const max = maxStores();
+  const n = FAVORITES.length;
+  const full = n >= max;
 
-  const days = p.days.map((d) => {
-    const r = d.recipe;
-    const pct = Math.round((d.coverage || 0) * 100);
-    const chips = d.matched.slice(0, 7).map(ingChip).join('');
-    const missingAll = (d.unmatched || []).filter((u) => u.role === 'support');
-    const missing = missingAll.slice(0, 5);
-
-    // Dagsnavnet står i en streg hen over siden, ikke som en etiket inde i
-    // kortet: ugen er en rækkefølge, og stregerne gør den til én.
-    return `<article class="day">
-      <div class="day-rule">${esc(d.day_name)}</div>
-      <div class="day-card">
-        ${r.image ? `<img src="${esc(thumb(r.image))}" alt="" width="108" height="108" loading="lazy" decoding="async">` : ''}
-        <div class="day-body">
-          <h3 class="day-title"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></h3>
-          <div class="day-meta">
-            <span>${esc(r.source_name)}</span>
-            ${r.servings ? `<span>${r.servings} pers.</span>` : ''}
-            ${r.total_minutes ? `<span>${r.total_minutes} min.</span>` : ''}
-            ${r.protein_g != null ? `<span><strong>${num(r.protein_g, 0)} g</strong> protein</span>` : ''}
-            ${r.carbs_g != null ? `<span><strong>${num(r.carbs_g, 0)} g</strong> kulhydrat</span>` : ''}
-            ${r.kcal != null ? `<span>${num(r.kcal, 0)} kcal</span>` : ''}
-            ${r.nutrition_src === 'estimated' ? '<span title="Kilden oplyser ikke næringsindhold – tallene er estimeret ud fra ingredienserne">est.</span>' : ''}
-          </div>
-          <div class="cover">
-            <div class="match-bar"><i style="width:${pct}%"></i></div>
-            <span class="note">
-              <strong>${d.main_count} af ${d.main_total}</strong> hovedråvare${d.main_total === 1 ? '' : 'r'} på tilbud${
-                d.support_total ? ` · ${d.support_count} af ${d.support_total} øvrige` : ''}
-              ${d.est_savings > 0 ? ` · <span class="save">spar ca. ${kr(d.est_savings)}</span>` : ''}
-            </span>
-          </div>
-          <div class="ing-list">${chips}${d.matched.length > 7 ? `<span class="ing">+${d.matched.length - 7}</span>` : ''}</div>
-          ${missing.length ? `<p class="note missing">Køb også: ${missing.map((m) => esc(m.name)).join(', ')}${
-            missingAll.length > missing.length ? ' m.fl.' : ''}</p>` : ''}
-        </div>
-      </div>
-    </article>`;
+  // Kædens egen farve i prikken – den eneste kulør, grænsefladen låner ud.
+  const picks = CHAINS.map((c) => {
+    const on = FAVORITES.includes(c.id);
+    return `<button type="button" class="chain-pick" data-chain="${esc(c.id)}"
+      aria-pressed="${on}" ${!on && full ? 'disabled' : ''}>
+      <i class="chain-dot" style="background:${esc(c.color || 'var(--ink-3)')}"></i>${esc(c.name)}</button>`;
   }).join('');
 
-  const shop = (p.shopping_list?.on_offer || []).map((c) => `
-    <div class="card shop-chain">
-      <h3>
-        <span class="row" style="gap:8px"><i class="chain-dot" style="background:${
-          esc(CHAINS.find((x) => x.name === c.chain)?.color || 'var(--ink-3)')}"></i>${esc(c.chain)}</span>
-        <span class="note">${kr(c.total)}${c.savings > 0 ? ` · <span class="save">spar ${kr(c.savings)}</span>` : ''}</span>
-      </h3>
-      ${c.items.map((i) => `<div class="shop-item">
-        <span class="n">${esc(i.name)}<small>${esc((i.heading || '').substring(0, 60))}</small></span>
-        <span class="p">${kr(i.price)} · ${num(i.unit_price, 2)} kr/${esc(i.base_unit)}</span>
-      </div>`).join('')}
-    </div>`).join('');
+  // Fra før loftet kan en bruger have gemt flere end fem. Dem, motoren ikke
+  // regner med, nævnes ved navn — ellers opdages de som varer uden pris.
+  const over = FAVORITES.slice(max).map(chainById).filter(Boolean).map((c) => c.name);
 
-  const rest = p.shopping_list?.rest || [];
+  el.innerHTML = `
+    <div class="chain-picks" role="group" aria-label="Butikker">${picks}</div>
+    <p class="note step-note">${!n ? `Vælg de butikker, du handler i – højst ${max}.`
+      : n > max ? `${n} valgt – højst ${max}.`
+      : `${n} af højst ${max}. Vi regner alle kombinationer af dem igennem og siger, hvilke du skal i.`}</p>
+    ${over.length ? `<p class="flag">Madplanen regner kun med dine fem første butikker.
+      <strong>${esc(listNames(over))}</strong> er ikke med – fravælg ${over.length === 1 ? 'én' : over.length}.</p>` : ''}`;
 
-  // Tallene står som på en bon: én linje, faste cifre, hårfine skillelinjer –
-  // og kun det sparede beløb får vægt, for det er hele løftet.
+  el.querySelectorAll('[data-chain]').forEach((b) =>
+    b.addEventListener('click', () => toggleStore(b.dataset.chain)));
+}
+
+async function toggleStore(id) {
+  const on = FAVORITES.includes(id);
+  // Loftet holdes også her og ikke kun med `disabled` på knappen.
+  if (!on && FAVORITES.length >= maxStores()) return;
+  FAVORITES = await Data.setFavorites(on ? FAVORITES.filter((x) => x !== id) : [...FAVORITES, id]);
+  Native.haptic();
+  renderStores();
+  await recompute();
+}
+
+/* ── Trin 2: sporet ───────────────────────────────────────────────────────── */
+
+function renderTrack() {
+  const el = $('#flow-track');
+  if (!el) return;
+  const t = FLOW.settings.track;
+  const [label, blurb] = TIER_INFO[t];
+  el.innerHTML = `
+    <div class="seg" role="radiogroup" aria-label="Slags mad">
+      ${Object.keys(TIER_INFO).map((k) => `<button type="button" role="radio" data-track="${k}"
+        aria-checked="${k === t}" class="${k === t ? 'active' : ''}">${TRACK_SHORT[k]}</button>`).join('')}
+    </div>
+    <p class="note step-note"><strong>${esc(label)}.</strong> ${esc(blurb)}</p>`;
+
+  el.querySelectorAll('[data-track]').forEach((b) => b.addEventListener('click', () => {
+    if (FLOW.settings.track === b.dataset.track) return;
+    FLOW.settings.track = b.dataset.track;
+    // Et nyt spor er en ny pulje. De valgte retter fra det gamle hører ikke
+    // hjemme i den.
+    FLOW.selected = [];
+    writeFlow();
+    renderTrack();
+    recompute();
+  }));
+}
+
+/* ── Trin 3: aftener og personer ──────────────────────────────────────────── */
+
+function renderWeek() {
+  const el = $('#flow-week');
+  if (!el) return;
+  const { days, servings } = FLOW.settings;
+  const stepper = (field, value, lo, hi, one, many, less, more) => `
+    <div class="stepper" data-field="${field}">
+      <button type="button" data-delta="-1" aria-label="${less}" ${value <= lo ? 'disabled' : ''}>−</button>
+      <output aria-live="polite"><b>${value}</b> ${value === 1 ? one : many}</output>
+      <button type="button" data-delta="1" aria-label="${more}" ${value >= hi ? 'disabled' : ''}>+</button>
+    </div>`;
+  el.innerHTML = `
+    <div class="week-pick">
+      ${stepper('days', days, DAYS_MIN, DAYS_MAX, 'aften', 'aftener', 'Færre aftener', 'Flere aftener')}
+      ${stepper('servings', servings, PEOPLE_MIN, PEOPLE_MAX, 'person', 'personer', 'Færre personer', 'Flere personer')}
+    </div>
+    <p class="note step-note">Opskrifterne regnes om til ${servings} ${servings === 1 ? 'person' : 'personer'}.</p>`;
+
+  el.querySelectorAll('.stepper button').forEach((b) => b.addEventListener('click', () => {
+    const field = b.closest('.stepper').dataset.field;
+    const [lo, hi] = field === 'days' ? [DAYS_MIN, DAYS_MAX] : [PEOPLE_MIN, PEOPLE_MAX];
+    const next = Math.min(hi, Math.max(lo, FLOW.settings[field] + Number(b.dataset.delta)));
+    if (next === FLOW.settings[field]) return;
+    FLOW.settings[field] = next;
+    writeFlow();
+    renderWeek();
+    // Tre hurtige tryk på + er én beslutning, ikke tre beregninger.
+    clearTimeout(renderWeek.timer);
+    renderWeek.timer = setTimeout(recompute, 220);
+  }));
+}
+
+/* ── Beregningen ──────────────────────────────────────────────────────────── */
+
+/**
+ * Henter (fra cache, når det kan) og kører puljen og forslagene forfra.
+ *
+ * Kun den nyeste beregning må tegne: skifter man butik to gange hurtigt, kan
+ * den første hentning lande sidst, og så stod den gamle butiks retter på
+ * skærmen under den nye butiks navn.
+ */
+async function recompute() {
+  const token = ++FLOW.token;
+  const s = FLOW.settings;
+  const choose = $('#flow-choose');
+  if (!choose) return;
+
+  if (!FAVORITES.length) {
+    FLOW.ctx = null;
+    FLOW.choice = null;
+    choose.innerHTML = `<div class="empty card"><h3>Vælg dine butikker først</h3>
+      <p>Retterne vælges blandt dem, vi kan prissætte i de butikker, du handler i.</p></div>`;
+    syncSelection();
+    return;
+  }
+
+  choose.innerHTML = '<div class="loading">Finder retter, der kan prissættes i dine butikker…</div>';
+  let ctx;
+  try {
+    ctx = await Data.flowInputs(s.track, FAVORITES);
+  } catch (err) {
+    if (token !== FLOW.token) return;
+    choose.innerHTML = `<div class="empty card"><h3>Kunne ikke hente opskrifter og priser</h3>
+      <p>${esc(err && err.message ? err.message : 'Ukendt fejl.')}</p>
+      <div class="row" style="justify-content:center;margin-top:16px">
+        <button class="primary" id="flow-retry">Prøv igen</button></div></div>`;
+    $('#flow-retry').addEventListener('click', recompute);
+    return;
+  }
+  if (token !== FLOW.token || !$('#flow-choose')) return;
+
+  // Lad "Finder retter…" nå at blive tegnet, før motoren tager tråden.
+  await new Promise((r) => setTimeout(r, 20));
+  if (token !== FLOW.token) return;
+
+  const choice = Data.choices(ctx, { days: s.days, servings: s.servings });
+  FLOW.ctx = ctx;
+  FLOW.choice = choice;
+  FLOW.proposalLists = choice.proposals.map((w) => Data.lists(ctx, w.picks, { servings: s.servings }));
+
+  // De valgte retter overlever alt, der ikke skifter puljen ud: flere
+  // personer, en butik mere. Første gang i en ny uge hentes ugens valg.
+  const inPool = new Set(choice.pool.map((r) => r.id));
+  const saved = s.picks && s.picks.week === `${ctx.year}-${ctx.week}` ? s.picks.ids : [];
+  if (!FLOW.selected.length && saved.length) FLOW.selected = saved;
+  s.picks = null;
+  FLOW.selected = FLOW.selected.filter((id) => inPool.has(id)).slice(0, s.days);
+
+  renderChoose();
+  syncSelection();
+}
+
+/* ── Trin 4: de 3 × dage og de to forslag ─────────────────────────────────── */
+
+/** "deler 1,2 kg kartofler over 3 retter og 800 g hakket oksekød over 2" */
+function sharedSentence(week) {
+  const shared = week.shared || [];
+  if (!shared.length) return 'Retterne deler ingen råvarer – hver køber sit eget.';
+  // Samme udvalg som engine.explainWeek: det, der er værd at nævne, og ellers
+  // de små – at fortie en ægte deling er værre end at nævne en lille.
+  const worth = shared.filter((x) => x.saved_kr >= week.cost * 0.05);
+  const parts = (worth.length ? worth : shared).slice(0, 2)
+    .map((x) => `${qty(x.need, x.unit)} ${x.name.toLocaleLowerCase('da')} over ${x.used} retter`);
+  const kr0 = shared.reduce((a, x) => a + x.saved_kr, 0);
+  return `Deler ${parts.join(' og ')} – ${kr(Math.round(kr0))} mindre i pakker end hver for sig.`;
+}
+
+function proposalCard(week, list, i) {
+  const name = `Forslag ${'AB'[i]}`;
+  const ids = week.picks.map((r) => r.id);
+  const active = ids.length && sameSet(ids, FLOW.selected);
+  const shops = list.chains.map(chainById).filter(Boolean).map((c) => c.name);
+  return `<article class="proposal ${active ? 'is-active' : ''}" data-proposal="${i}">
+    <div class="proposal-head">
+      <h3>${name}</h3>
+      <span class="proposal-price">${kr(list.total)}</span>
+    </div>
+    <p class="note proposal-meta">${week.picks.length} retter${
+      shops.length ? ` · ${esc(listNames(shops))}` : ''} · spild ca. ${kr(Math.round(list.waste_kr))}</p>
+    <ol class="proposal-dishes">${week.picks.map((r) => `<li>${esc(r.title)}</li>`).join('')}</ol>
+    <p class="note">${esc(sharedSentence(week))}</p>
+    <button type="button" class="${active ? '' : 'primary'}" data-accept="${i}" aria-pressed="${active ? 'true' : 'false'}">
+      ${active ? `${name} er valgt` : `Vælg forslag ${'AB'[i]}`}</button>
+  </article>`;
+}
+
+function pickMeta(r, track) {
+  const parts = [];
+  const main = MAIN_LABEL[window.PlanEngine.mainCategoryOf(r, FLOW.ctx.items)];
+  if (main) parts.push(main);
+  // Det, sporet er valgt efter, står forrest efter kategorien.
+  if (track === 'budget' && r.cost_per_serving != null) parts.push(`ca. ${kr(Math.round(r.cost_per_serving))} pr. portion`);
+  if (track === 'healthy' && r.protein_g != null) parts.push(`${num(r.protein_g)} g protein`);
+  if (r.total_minutes) parts.push(`${r.total_minutes} min.`);
+  if (r.source_name) parts.push(esc(r.source_name));
+  // Linket står inde i kortet. Et klik på et link i en <label> sætter ikke
+  // fluebenet (HTML: interaktivt indhold i en label aktiverer den ikke), så
+  // man kan læse opskriften uden at vælge retten.
+  if (r.url) parts.push(`<a class="pick-link" href="${esc(r.url)}" target="_blank" rel="noopener">Opskrift</a>`);
+  return parts.join('<i class="sep"></i>');
+}
+
+function renderChoose() {
+  const el = $('#flow-choose');
+  if (!el || !FLOW.choice) return;
+  const { pool, thin, proposals } = FLOW.choice;
+  const { days, track } = FLOW.settings;
+  const shops = FAVORITES.slice(0, maxStores()).map(chainById).filter(Boolean).map((c) => c.name);
+
+  if (!pool.length) {
+    el.innerHTML = `<div class="flag">
+      <p><strong>Vi kan ikke prissætte en eneste ${esc(TIER_INFO[track][0].toLowerCase())}-ret i ${esc(listNames(shops))}.</strong>
+      Flere butikker giver flere priser at regne med.</p>
+      <button type="button" class="primary" data-goto-stores>Vælg flere butikker</button></div>`;
+    bindGotoStores(el);
+    return;
+  }
+
+  // Tynd pulje siges rent ud. Fire retter vist som et frit valg til fire
+  // aftener er ikke et valg, og det skal brugeren vide, FØR hun vælger.
+  const head = thin
+    ? `<div class="flag">
+        <p><strong>Vi kan kun prissætte ${pool.length} ${pool.length === 1 ? 'ret' : 'retter'} i dine butikker</strong>
+        – for få til at vælge ${days} af ${days * 3}. Flere butikker giver flere retter at vælge imellem.</p>
+        <button type="button" data-goto-stores>Vælg flere butikker</button>
+      </div>`
+    : `<p class="step-lede">Vælg ${days} af de ${pool.length} retter – eller tag et af de to forslag.
+        De er sat sammen, så retterne deler råvarerne, og det, du køber til den ene, bliver brugt i den næste.</p>`;
+
+  const inA = new Set((proposals[0]?.picks || []).map((r) => r.id));
+  const inB = new Set((proposals[1]?.picks || []).map((r) => r.id));
+  // To forslag med de samme retter er ét forslag. Så vises det én gang.
+  const showB = proposals[1] && !sameSet([...inA], [...inB]);
+
+  const cards = proposals.slice(0, showB ? 2 : 1)
+    .map((w, i) => proposalCard(w, FLOW.proposalLists[i], i)).join('');
+
+  const rows = pool.map((r) => {
+    const marks = `${inA.has(r.id) ? '<span class="mark" title="Med i forslag A">A</span>' : ''}${
+      showB && inB.has(r.id) ? '<span class="mark" title="Med i forslag B">B</span>' : ''}`;
+    return `<li><label class="pick" data-id="${r.id}">
+      <input type="checkbox" class="pick-box" value="${r.id}">
+      ${r.image ? `<img src="${esc(thumb(r.image, 200))}" alt="" width="64" height="64" loading="lazy" decoding="async">`
+                : '<span class="pick-ph" aria-hidden="true"></span>'}
+      <span class="pick-body">
+        <span class="pick-title">${esc(r.title)}</span>
+        <span class="pick-meta">${pickMeta(r, track)}</span>
+      </span>
+      <span class="pick-marks">${marks}</span>
+    </label></li>`;
+  }).join('');
+
+  el.innerHTML = `
+    ${head}
+    <div class="docket tally" id="flow-tally" aria-live="polite"></div>
+    <div class="proposals">${cards}</div>
+    <ul class="picks">${rows}</ul>`;
+
+  bindGotoStores(el);
+  el.querySelectorAll('[data-accept]').forEach((b) => b.addEventListener('click', () => {
+    const w = proposals[Number(b.dataset.accept)];
+    FLOW.selected = w.picks.map((r) => r.id);
+    FLOW.hint = '';
+    Native.haptic();
+    syncSelection();
+    // Ét tryk accepterer – og så er det listen, man skal videre til.
+    $('#step-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+  el.querySelectorAll('.pick-box').forEach((box) => box.addEventListener('change', () => {
+    const id = Number(box.value);
+    if (box.checked) {
+      if (FLOW.selected.length >= FLOW.settings.days) {
+        // Loftet er brugerens eget antal aftener. Hellere et ord end at
+        // skubbe den ret ud, hun valgte først.
+        box.checked = false;
+        FLOW.hint = `Du har valgt ${FLOW.settings.days} – fravælg en ret først.`;
+      } else {
+        FLOW.selected = [...FLOW.selected, id];
+        FLOW.hint = '';
+      }
+    } else {
+      FLOW.selected = FLOW.selected.filter((x) => x !== id);
+      FLOW.hint = '';
+    }
+    syncSelection();
+  }));
+}
+
+function bindGotoStores(root) {
+  root.querySelectorAll('[data-goto-stores]').forEach((b) => b.addEventListener('click', () =>
+    $('#step-stores').scrollIntoView({ behavior: 'smooth', block: 'start' })));
+}
+
+/**
+ * Valget har ændret sig: flueben, forslagenes tilstand, tallene og listen.
+ *
+ * Retterne tegnes IKKE om — tolv billeder, der blinker ved hvert tryk, er
+ * værre end en side, der står stille og bare skifter markering.
+ */
+function syncSelection() {
+  const picks = FLOW.choice
+    ? FLOW.selected.map((id) => FLOW.choice.pool.find((r) => r.id === id)).filter(Boolean)
+    : [];
+  FLOW.list = FLOW.ctx && picks.length
+    ? Data.lists(FLOW.ctx, picks, { servings: FLOW.settings.servings })
+    : null;
+  writeFlow();
+
+  const choose = $('#flow-choose');
+  if (choose && FLOW.choice) {
+    choose.querySelectorAll('.pick').forEach((el) => {
+      const on = FLOW.selected.includes(Number(el.dataset.id));
+      el.classList.toggle('is-on', on);
+      el.querySelector('.pick-box').checked = on;
+    });
+    choose.querySelectorAll('.proposal').forEach((card) => {
+      const i = Number(card.dataset.proposal);
+      const ids = FLOW.choice.proposals[i].picks.map((r) => r.id);
+      const on = ids.length > 0 && sameSet(ids, FLOW.selected);
+      const name = `Forslag ${'AB'[i]}`;
+      const btn = card.querySelector('[data-accept]');
+      card.classList.toggle('is-active', on);
+      btn.classList.toggle('primary', !on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.textContent = on ? `${name} er valgt` : `Vælg forslag ${'AB'[i]}`;
+    });
+    renderTally(picks.length);
+  }
+  renderList(picks);
+}
+
+/** Bonen over retterne: hvad det valgte koster, mens man vælger. */
+function renderTally(n) {
+  const el = $('#flow-tally');
+  if (!el) return;
+  const days = FLOW.settings.days;
+  const l = FLOW.list;
+  el.innerHTML = `
+    <span class="figure"><b>${n} af ${days}</b> valgt</span>
+    <span class="figure"><b>${l ? kr(l.total) : '–'}</b> i alt</span>
+    <span class="figure"><b>${l ? kr(Math.round(l.waste_kr)) : '–'}</b> spild</span>
+    <span class="figure"><b>${l ? l.chains.length : '–'}</b> ${l && l.chains.length === 1 ? 'butik' : 'butikker'}</span>
+    ${FLOW.hint ? `<span class="tally-hint">${esc(FLOW.hint)}</span>` : ''}`;
+}
+
+/* ── Trin 5: de to lister ─────────────────────────────────────────────────── */
+
+/**
+ * Hvor prisen kommer fra, sagt som en person ville sige det.
+ *
+ * Version 1 bruger REMA's hyldepris som skøn i alle andre kæder. Står der
+ * 29 kr ved løg i Netto uden et ord, læses det som Nettos pris — og det er det
+ * ikke. Et tilbud står der, fordi det er grunden til, at varen er billig.
+ */
+function sourceNote(b) {
+  const notes = [];
+  if (b.source === 'offer') notes.push('<span class="src offer">tilbud</span>');
+  else if (b.source === 'estimate:rema') notes.push('<span class="src">pris fra REMA</span>');
+  else if (b.source === 'derived') notes.push('<span class="src">anslået pris</span>');
+  if (b.stale) notes.push('<span class="src">ældre pris</span>');
+  return notes.join(' · ');
+}
+
+function buyLine(b) {
+  const used = b.used_in.length === 1 ? `til ${esc(b.used_in[0])}` : `til ${b.used_in.length} retter`;
+  const left = b.leftover > 0 ? ` · ${qty(b.leftover, b.unit)} til overs` : '';
+  return `<div class="shop-item">
+    <span class="n">${esc(b.name)}<small>${packLabel(b)} · ${used}${left}</small></span>
+    <span class="p">${b.est_cost != null ? kr(b.est_cost) : '–'}${sourceNote(b) ? `<small>${sourceNote(b)}</small>` : ''}</span>
+  </div>`;
+}
+
+function renderList(picks) {
+  const el = $('#flow-list');
+  if (!el) return;
+  const l = FLOW.list;
+  if (!l) {
+    el.innerHTML = `<div class="empty card"><p>Vælg et forslag eller dine egne retter ovenfor,
+      så skriver vi listen – det, du skal købe, og det, du skal tjekke, at du har.</p></div>`;
+    return;
+  }
+
+  const priced = l.buy.filter((b) => b.chain);
+  const unpriced = l.buy.filter((b) => !b.chain);
+
+  // Én kasse pr. butik: man står i én ad gangen.
+  const groups = l.chains.map((id) => {
+    const c = chainById(id);
+    const lines = priced.filter((b) => b.chain === id);
+    const sum = Math.round(lines.reduce((a, b) => a + b.est_cost, 0) * 100) / 100;
+    return `<div class="card shop-chain">
+      <h3><span class="row" style="gap:8px"><i class="chain-dot" style="background:${esc(c?.color || 'var(--ink-3)')}"></i>${esc(c?.name || id)}</span>
+        <span class="note">${kr(sum)}</span></h3>
+      ${lines.map(buyLine).join('')}
+    </div>`;
+  }).join('');
+
+  // Butikker, der ikke skal besøges, og butikker, loftet skar fra.
+  const inPlay = FAVORITES.slice(0, maxStores());
+  const skipped = inPlay.filter((id) => !l.chains.includes(id)).map(chainById).filter(Boolean).map((c) => c.name);
+  const dropped = (l.dropped_chains || []).map(chainById).filter(Boolean).map((c) => c.name);
+
+  const estimated = priced.some((b) => b.source === 'estimate:rema');
+
   el.innerHTML = `
     <div class="docket">
-      <span class="figure"><b>${p.days.length}</b> retter</span>
-      <span class="figure"><b>${kr(p.est_cost)}</b> anslået råvarepris</span>
-      <span class="figure saved"><b>${kr(p.est_savings)}</b> sparet mod normalpris</span>
-      <span class="figure"><b>${num(p.offers_available)}</b> varer på tilbud</span>
+      <span class="figure"><b>${kr(l.total)}</b> i alt</span>
+      <span class="figure"><b>${l.chains.length}</b> ${l.chains.length === 1 ? 'butik' : 'butikker'}</span>
+      <span class="figure"><b>${kr(Math.round(l.waste_kr))}</b> spild</span>
+      <span class="figure"><b>${picks.length}</b> ${picks.length === 1 ? 'ret' : 'retter'} til ${FLOW.settings.servings}</span>
     </div>
-    ${planRule(p)}
-    <div class="days">${days}</div>
-    <div class="spread" style="margin:38px 0 14px">
-      <h2 style="margin:0">Indkøbsliste – det der er på tilbud</h2>
-      <button id="share-list">Del listen</button>
+    ${skipped.length ? `<p class="note">Alt kan købes i ${esc(listNames(l.chains.map((id) => chainById(id)?.name || id)))} –
+      du behøver ikke i ${esc(listNames(skipped))} denne gang.</p>` : ''}
+    ${dropped.length ? `<p class="flag">Listen regner kun med dine fem første butikker. <strong>${esc(listNames(dropped))}</strong> er ikke med.</p>` : ''}
+
+    <div class="spread list-head">
+      <h3>Køb ind</h3>
+      <button type="button" id="share-list">Del listen</button>
     </div>
-    <div class="grid wide">${shop}</div>
-    ${rest.length ? `<h2>Resten</h2>
-      <div class="card" style="padding:16px 18px">
-        <p class="note" style="margin:0 0 10px">Ikke på tilbud i dine butikker – men skal med i kurven.</p>
-        <div class="rest-list">${rest.map((i) =>
-          `<span class="ing">${esc(i.name)}${i.used_in.length > 1 ? ` <span class="c">${i.used_in.length} retter</span>` : ''}</span>`).join('')}</div>
-      </div>` : ''}
-    <p class="note" style="margin-top:18px;max-width:70ch">
-      Priserne er beregnet ud fra opskrifternes mængder gange tilbudsprisen pr. kg/liter.
-      Basisvarer som salt, olie, mel og krydderier er hverken talt med i prisen eller i kravet –
-      dem regner vi med, du har hjemme.
-      Opskrifterne ligger hos kilden – klik på titlen for fremgangsmåden.
+    <div class="buy-groups ${l.chains.length === 1 ? 'single' : ''}">${groups}</div>
+    ${unpriced.length ? `<div class="card shop-chain unpriced">
+      <h3><span>Uden pris i dine butikker</span><span class="note">${unpriced.length} ${unpriced.length === 1 ? 'vare' : 'varer'}</span></h3>
+      ${unpriced.map((b) => `<div class="shop-item"><span class="n">${esc(b.name)}<small>brug ${qty(b.need, b.unit)} · ${
+        b.used_in.length === 1 ? `til ${esc(b.used_in[0])}` : `til ${b.used_in.length} retter`}</small></span><span class="p">–</span></div>`).join('')}
+      <p class="note">Dem kender vi ingen pris på i dine butikker. De er ikke regnet med i ${kr(l.total)}.</p>
+    </div>` : ''}
+
+    <h3 class="list-head">Tjek at du har</h3>
+    ${l.pantry.length ? `<div class="card pantry">
+      ${l.pantry.map((p) => `<label class="pantry-row"><input type="checkbox"> ${esc(p.name)}</label>`).join('')}
+    </div>
+    <p class="note">Basisvarer, retterne bruger. Dem regner vi med, du har – de er ikke med i prisen.</p>`
+    : '<p class="note">Retterne bruger ingen basisvarer, vi kender til.</p>'}
+
+    <h3 class="list-head">Ugens retter</h3>
+    <ol class="week-dishes">${picks.map((r) => `<li>${r.url
+      ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a>` : esc(r.title)}</li>`).join('')}</ol>
+
+    <p class="note list-foot">
+      Priserne er hele pakker: har en vare kun én pakkestørrelse, købes den, og resten står
+      som "til overs". Spild er den del af resterne, der ikke holder til næste uge, regnet i kroner.
+      ${estimated ? 'Hvor en butik ikke selv har en pris, bruger vi REMA 1000’s hyldepris som skøn – det står ved varen.' : ''}
     </p>`;
 
   const share = $('#share-list');
   if (share) share.addEventListener('click', async () => {
     try {
-      const how = await Native.share({
-        title: 'Indkøbsliste – Madplan',
-        text: shoppingListText(p),
-      });
+      const how = await Native.share({ title: 'Indkøbsliste – Madplan', text: listText(l, picks) });
       share.textContent = how === 'copied' ? 'Kopieret' : 'Delt';
     } catch {
-      // Brugeren fortrød i systemets delingsark. Ikke en fejl.
-      return;
+      return;                    // brugeren fortrød i delingsarket – ikke en fejl
     }
     setTimeout(() => { share.textContent = 'Del listen'; }, 2200);
   });
 }
 
 /**
- * Indkøbslisten som ren tekst, grupperet efter butik.
- *
- * Formen er den, listen faktisk bruges i: man står i én butik ad gangen, så
- * butikken er overskriften og varerne står under den. Prisen kommer med –
- * det er hele grunden til, at planen ser ud, som den gør.
+ * Listen som ren tekst: butikken som overskrift, varerne under den, og
+ * lagerlisten til sidst. Samme form som på skærmen, fordi den bruges ens —
+ * én butik ad gangen.
  */
-function shoppingListText(p) {
-  const lines = [];
-  if (p.week && p.year) lines.push(`Indkøbsliste – Madplan uge ${p.week}, ${p.year}`);
-  else lines.push('Indkøbsliste – Madplan');
-  lines.push('');
-
-  for (const c of p.shopping_list?.on_offer || []) {
-    lines.push(`${c.chain.toUpperCase()} – anslået ${kr(c.total)}${c.savings > 0 ? ` (spar ${kr(c.savings)})` : ''}`);
-    // Både hyldeprisen og kr/kg med. Uden kr/kg ser hyldepriserne ud som om
-    // de skulle lægge sammen til totalen – og det gør de ikke: totalen er
-    // prisen på DEN MÆNGDE, ugens retter bruger, ikke på hele pakken.
-    for (const i of c.items) {
-      const unit = i.unit_price != null ? ` (${num(i.unit_price, 2)} kr/${i.base_unit})` : '';
-      lines.push(`  · ${i.name} — ${kr(i.price)}${unit}`);
+function listText(l, picks) {
+  const out = [`Indkøbsliste – Madplan uge ${FLOW.ctx.week}`, ''];
+  out.push(`Retter: ${picks.map((r) => r.title).join(', ')}`, '');
+  for (const id of l.chains) {
+    const c = chainById(id);
+    out.push((c?.name || id).toUpperCase());
+    for (const b of l.buy.filter((x) => x.chain === id)) {
+      const src = b.source === 'estimate:rema' ? ' (pris fra REMA)' : b.source === 'offer' ? ' (tilbud)' : '';
+      out.push(`  · ${b.name} — ${packLabel(b)} — ${kr(b.est_cost)}${src}`);
     }
-    lines.push('');
+    out.push('');
   }
-
-  const rest = p.shopping_list?.rest || [];
-  if (rest.length) {
-    lines.push('RESTEN – ikke på tilbud, men skal med');
-    lines.push(`  · ${rest.map((i) => i.name).join(', ')}`);
-    lines.push('');
+  const unpriced = l.buy.filter((b) => !b.chain);
+  if (unpriced.length) {
+    out.push('UDEN PRIS');
+    for (const b of unpriced) out.push(`  · ${b.name} — ${qty(b.need, b.unit)}`);
+    out.push('');
   }
-
-  lines.push(`I alt ca. ${kr(p.est_cost)} · sparet ${kr(p.est_savings)} mod normalpris.`);
-  return lines.join('\n');
-}
-
-/**
- * Hvad blev der egentlig krævet af ugens retter?
- *
- * Kravet lempes af sig selv, når der ikke er tilbud nok til at holde det. Det
- * skal stå der – ellers kan man ikke se forskel på "alt er på tilbud" og
- * "vi gav op og tog, hvad vi kunne finde".
- */
-function planRule(p) {
-  if (!p.rule) return '';
-  const names = p.chain_names && p.chain_names.length ? listNames(p.chain_names) : 'alle kæder';
-  return `<div class="rule ${p.rule.relaxed ? 'relaxed' : ''}">
-    <strong>${esc(p.rule.label)}</strong>
-    <span class="note">${esc(names)} · ${num(p.candidates_qualified)} af ${num(p.candidates_scored)} opskrifter kunne opfylde kravet</span>
-    ${p.rule.relaxed ? '<span class="note">Der var ikke tilbud nok i dine butikker til det strengeste krav, så det er lempet et trin.</span>' : ''}
-    ${p.index_missing ? '<span class="note">Viser en forudberegnet plan for alle kæder – madplans-indekset mangler i databasen (kør supabase/schema.sql).</span>' : ''}
-  </div>`;
+  if (l.pantry.length) {
+    out.push('TJEK AT DU HAR');
+    out.push(`  · ${l.pantry.map((p) => p.name).join(', ')}`);
+    out.push('');
+  }
+  out.push(`I alt ca. ${kr(l.total)}.`);
+  return out.join('\n');
 }
 
 /* ── Visning: ugens fund ──────────────────────────────────────────────────── */

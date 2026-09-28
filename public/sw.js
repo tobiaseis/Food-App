@@ -22,7 +22,10 @@
  * i public/app.js.
  */
 
-const VERSION = 'v2';
+// v3: madplanen blev til de fem trin (plan 3, opgave 3). app.js, data.js og
+// styles.css skal skiftes samlet — ellers taler en gammel app.js med et nyt
+// datalag, eller omvendt.
+const VERSION = 'v3';
 const SHELL_CACHE = `madplan-shell-${VERSION}`;
 const DATA_CACHE = `madplan-data-${VERSION}`;
 
@@ -42,7 +45,7 @@ const SHELL = [
 ];
 
 /** Tabeller, der kun ændrer sig efter den natlige kørsel. */
-const CACHEABLE_TABLES = /\/rest\/v1\/(offer_index|recipe_index|taxonomy_prices|chains|price_stats|price_series|deals|offers|products|sync_state|meal_plans|stores)\b/;
+const CACHEABLE_TABLES = /\/rest\/v1\/(offer_index|recipe_index|taxonomy_prices|chains|price_stats|price_series|deals|offers|products|sync_state|meal_plans|stores|items|item_prices|recipe_costs)\b/;
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {

@@ -206,7 +206,7 @@ code {
 /* Alt der er et tal, skal have fast cifferbredde. Ellers hopper linjen, hver
    gang prisen eller tælleren skifter. */
 .price, .stat .v, .figure b, .shop-item .p, .unit-price, .pre-price,
-table.cmp .num, .badge-count, .gauge-label b, .day-meta strong, .range-labels {
+table.cmp .num, .badge-count, .gauge-label b, .range-labels {
   font-variant-numeric: tabular-nums;
 }
 
@@ -525,10 +525,9 @@ input.grow { flex: 1; min-width: 200px; }
   font-family: var(--mono); font-size: 12px; letter-spacing: -.02em; color: var(--ink-2);
 }
 
-/* ── Madplan: passet ──────────────────────────────────────────────────────────
+/* ── Madplan: bonen ───────────────────────────────────────────────────────────
    Ingen stak af nøgletalskort. Tallene står som på en bon: én linje, faste
-   cifre, hårfine skillelinjer – og kun det sparede beløb får vægt, for det er
-   hele løftet.                                                              */
+   cifre, hårfine skillelinjer.                                              */
 .docket {
   display: flex; flex-wrap: wrap; align-items: baseline;
   margin: 24px 0 6px; padding: 15px 4px;
@@ -542,97 +541,204 @@ input.grow { flex: 1; min-width: 200px; }
 }
 .figure:first-child { border-left: 0; padding-left: 0; }
 .figure b { font-size: 17px; font-weight: 620; letter-spacing: -.02em; color: var(--ink); }
-.figure.saved b { color: var(--save); }
 
-/* Butikslinjen er en oplysning, ikke et panel – derfor ingen kasse. */
-.fav-bar {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 12px; flex-wrap: wrap;
-  margin: 0 0 22px; font-size: 14px; color: var(--ink-2);
-}
-.fav-bar strong { color: var(--ink); font-weight: 590; }
+/* ── Madplan: de fem trin ─────────────────────────────────────────────────────
+   Trinene står som stationerne på et pas: et lille nummer, et navn og en
+   streg hen over siden. Trinene selv får ingen kasse – kasserne er til det,
+   man vælger, så øjet ved, hvad der kan trykkes på.                        */
+.flow { display: flex; flex-direction: column; }
+.step { margin-top: 34px; }
+.step:first-child { margin-top: 8px; }
 
-/* Kravet planen faktisk blev bygget efter. */
-.rule {
-  display: flex; flex-direction: column; gap: 3px;
-  margin-bottom: 26px; padding: 12px 0 12px 16px;
-  border-left: 2px solid var(--bay);
-  font-size: 14px;
-}
-.rule.relaxed { border-left-color: var(--rule); }
-.rule strong { font-weight: 600; }
-
-/* ── Madplan: ugens syv stationer ─────────────────────────────────────────────
-   Dagene er en rækkefølge, og rækkefølgen er reel – man spiser dem én ad
-   gangen. Derfor står dagsnavnet i en streg hen over siden som overskrifterne
-   på en menu, og ikke som en etiket inde i kortet.                          */
-.days { display: flex; flex-direction: column; }
-
-.day-rule {
-  display: flex; align-items: center; gap: 14px;
-  margin: 26px 0 12px;
+.step-rule {
+  display: flex; align-items: center; gap: 12px;
+  margin: 0 0 14px;
   font-size: 11.5px; font-weight: 660; letter-spacing: .12em; text-transform: uppercase;
   color: var(--ink-3);
 }
-.day-rule::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
-.day:first-child .day-rule { margin-top: 4px; }
+.step-rule::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.step-no {
+  display: inline-grid; place-items: center; flex: none;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--surface); box-shadow: var(--shadow-border);
+  font-size: 11.5px; letter-spacing: 0; color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+.step-note { margin: 10px 0 0; }
+.step-lede { max-width: 62ch; margin: 0 0 4px; font-size: 15px; color: var(--ink-2); }
 
-.day-card {
-  display: flex; gap: 16px; padding: 12px;
-  background: var(--surface); border-radius: var(--r-xl);
+/* Trin 1. Kædens egen farve i prikken; det valgte markeres i grænsefladens
+   laurbær, så brandfarverne ikke også skal bære "valgt". */
+.chain-picks { display: flex; flex-wrap: wrap; gap: 8px; }
+.chain-pick {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 999px;
+  font-size: 14px; font-weight: 540; color: var(--ink-2);
+}
+.chain-pick .chain-dot { width: 10px; height: 10px; }
+.chain-pick[aria-pressed="true"] {
+  background: var(--bay-soft); color: var(--ink); font-weight: 600;
+  box-shadow: inset 0 0 0 1.5px var(--bay);
+}
+.chain-pick:disabled { opacity: .38; }
+
+/* Trin 3. */
+.week-pick { display: flex; flex-wrap: wrap; gap: 12px; }
+.stepper {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px; border-radius: 999px; background: var(--surface-2);
+}
+.stepper button {
+  width: 36px; height: 36px; padding: 0; border-radius: 50%;
+  font-size: 18px; line-height: 1;
+}
+.stepper output { min-width: 112px; text-align: center; font-size: 14px; color: var(--ink-2); }
+.stepper output b {
+  font-size: 17px; font-weight: 640; color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Det ene sted, safran bruges uden for et udløbende tilbud: noget, brugeren
+   skal gøre noget ved, før valget giver mening (for få retter, for mange
+   butikker). Sjældent nok til at blive set. */
+.flag {
+  margin: 12px 0 16px; padding: 12px 16px;
+  border-left: 2px solid var(--saffron);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  background: var(--saffron-soft);
+  font-size: 14px; color: var(--ink-2);
+}
+.flag p { margin: 0 0 10px; }
+.flag p:last-child { margin: 0; }
+.flag strong { color: var(--ink); font-weight: 620; }
+
+/* Trin 4. Bonen står fast under hovedet, mens man ruller gennem retterne:
+   prisen skal kunne ses i det øjeblik, man sætter et flueben. */
+.tally {
+  position: sticky; top: calc(64px + env(safe-area-inset-top)); z-index: 5;
+  margin: 16px 0 18px;
+  background: var(--ground);
+}
+.tally-hint { flex-basis: 100%; padding-top: 8px; font-size: 13px; font-weight: 560; color: var(--ink-2); }
+
+.proposals {
+  display: grid; gap: 14px; margin-bottom: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+.proposal {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 16px 18px 18px;
+  background: var(--surface); border-radius: var(--r-lg);
   box-shadow: var(--shadow-border);
+  transition: box-shadow 160ms var(--ease);
 }
-/* Koncentrisk: 22px ydre − 12px polstring = 10px indre. */
-.day-card img {
-  width: 108px; height: 108px; flex-shrink: 0;
-  object-fit: cover; border-radius: var(--r-photo);
-  background: var(--surface-2);
+.proposal.is-active { box-shadow: inset 0 0 0 1.5px var(--bay), var(--shadow-border); }
+.proposal-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.proposal-head h3 {
+  margin: 0; font-family: var(--font-display);
+  font-size: 20px; font-weight: 500; letter-spacing: -.015em;
 }
-.day-body { flex: 1; min-width: 0; padding: 4px 4px 4px 0; }
-.day-title {
+.proposal-price {
+  font-size: 20px; font-weight: 640; letter-spacing: -.025em;
+  font-variant-numeric: tabular-nums;
+}
+.proposal .note { margin: 0; }
+.proposal .proposal-meta { margin-top: -4px; }
+.proposal-dishes { margin: 2px 0 0; padding-left: 20px; font-size: 14px; line-height: 1.55; }
+.proposal-dishes li::marker { color: var(--ink-3); }
+/* Knapperne på linje i bunden af begge kort, uanset hvor lange titlerne er. */
+.proposal button { margin-top: auto; align-self: flex-start; }
+
+.picks {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+}
+.pick {
+  display: flex; align-items: center; gap: 12px; height: 100%;
+  padding: 10px 12px 10px 14px;
+  background: var(--surface); border-radius: var(--r-lg);
+  box-shadow: var(--shadow-border); cursor: pointer;
+  transition: box-shadow 140ms var(--ease);
+}
+.pick:hover { box-shadow: var(--shadow-border-hover); }
+.pick.is-on { box-shadow: inset 0 0 0 1.5px var(--bay), var(--shadow-border); }
+/* Koncentrisk: 18px ydre − 10px polstring = 8px indre. */
+.pick img, .pick-ph {
+  width: 64px; height: 64px; flex-shrink: 0;
+  object-fit: cover; border-radius: var(--r-sm); background: var(--surface-2);
+}
+.pick-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.pick-title {
   font-family: var(--font-display);
-  font-size: 20px; font-weight: 500; line-height: 1.2; letter-spacing: -.015em;
-  margin: 0 0 6px;
+  font-size: 16.5px; line-height: 1.25; letter-spacing: -.01em;
 }
-.day-title a { text-decoration: none; }
-.day-title a:hover { color: var(--bay); }
-.day-meta {
-  display: flex; flex-wrap: wrap; gap: 4px 12px;
-  margin-bottom: 10px; font-size: 13px; color: var(--ink-3);
+.pick-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 2px 7px;
+  font-size: 12.5px; color: var(--ink-3);
 }
-.day-meta strong { color: var(--ink-2); font-weight: 620; }
+.pick-meta .sep { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: .55; }
+.pick-link { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.pick-link:hover { color: var(--ink); border-bottom-color: currentColor; }
+.pick-marks { display: flex; gap: 4px; align-self: flex-start; }
+/* Forslagenes bogstav på retten: "præ-markeret" (spec 2.1), men neutralt –
+   det er en oplysning, ikke et valg. */
+.mark {
+  display: inline-grid; place-items: center;
+  width: 20px; height: 20px; border-radius: 6px;
+  font-size: 11px; font-weight: 680; color: var(--ink-2);
+  box-shadow: inset 0 0 0 1px var(--rule);
+}
+/* Fluebenet er en rund markering, som i systemets egne lister. */
+.pick-box {
+  appearance: none; -webkit-appearance: none; margin: 0; flex: none;
+  display: grid; place-items: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--ink) 28%, transparent);
+  cursor: pointer;
+  transition: background 140ms var(--ease), box-shadow 140ms var(--ease);
+}
+.pick-box:checked { background: var(--bay); box-shadow: none; }
+.pick-box:checked::after {
+  content: ""; width: 5px; height: 10px; margin-top: -2px;
+  border: solid var(--surface); border-width: 0 2px 2px 0; rotate: 45deg;
+}
+.pick-box:focus-visible { outline: 2px solid var(--bay); outline-offset: 2px; }
 
-.cover { display: flex; align-items: center; gap: 11px; margin-bottom: 10px; }
-.match-bar {
-  width: 108px; height: 4px; flex: none;
-  background: var(--surface-2); border-radius: 999px; overflow: hidden;
+/* Trin 5. */
+.list-head { margin: 28px 0 12px; }
+h3.list-head, .list-head h3 { font-size: 16px; }
+.spread.list-head h3 { margin: 0; }
+.shop-item .p small {
+  display: block; margin-top: 2px; text-align: right;
+  font-family: var(--font-ui); font-size: 11.5px; letter-spacing: 0; color: var(--ink-3);
 }
-.match-bar > i { display: block; height: 100%; background: var(--bay); border-radius: 999px; }
+/* Én kasse pr. butik. Er der kun én butik, står den som en liste i læsbar
+   bredde – ikke som en tredjedel af et gitter med tomt til højre. */
+.buy-groups {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
+}
+.buy-groups.single { max-width: 620px; }
+/* Kilden står ved prisen, fordi det er prisen, den tager forbehold for. */
+.src.offer { color: var(--bay); font-weight: 620; }
+.shop-chain.unpriced { margin-top: 14px; }
+.shop-chain.unpriced .note { margin: 10px 0 0; }
 
-.ing-list, .rest-list { display: flex; flex-wrap: wrap; gap: 6px; }
-.ing {
-  display: inline-flex; align-items: baseline; gap: 5px;
-  padding: 3px 9px; border-radius: 999px;
-  font-size: 12px; font-weight: 550;
-  background: var(--surface-2); color: var(--ink-2);
+.pantry { padding: 8px 18px; columns: 2 180px; column-gap: 28px; }
+.pantry-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 0; break-inside: avoid;
+  font-size: 14px; cursor: pointer;
 }
-.ing .c { font-size: 11px; font-weight: 500; color: var(--ink-3); }
-/* Hovedråvaren er selve løftet i planen – den skal kunne ses uden at læse. */
-.ing.main { background: var(--bay); color: var(--surface); font-weight: 600; }
-.ing.main .c { color: color-mix(in srgb, var(--surface) 74%, var(--bay)); }
-/* På mørk grund er laurbær en lys mynte, og en fyldt flade af den råber
-   højere end fotoet ved siden af. Samme betoning, oversat: tonet flade med
-   en ring om, som iOS gør med accentfarver i mørk tilstand. */
-@media (prefers-color-scheme: dark) {
-  .ing.main {
-    background: color-mix(in srgb, var(--bay) 18%, transparent);
-    color: var(--bay);
-    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bay) 38%, transparent);
-  }
-  .ing.main .c { color: color-mix(in srgb, var(--bay) 72%, transparent); }
-}
+.pantry-row input { accent-color: var(--bay); width: 17px; height: 17px; flex: none; }
+.pantry-row:has(input:checked) { color: var(--ink-3); text-decoration: line-through; }
 
-.note.missing { margin-top: 9px; }
+.week-dishes { margin: 0; padding-left: 20px; font-size: 14.5px; line-height: 1.75; }
+.week-dishes a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+.week-dishes a:hover { border-bottom-color: currentColor; }
+.list-foot { margin-top: 22px; max-width: 70ch; }
 
 /* ── Indkøbslisten ────────────────────────────────────────────────────────── */
 .shop-chain { padding: 6px 18px 14px; }
@@ -652,7 +758,6 @@ input.grow { flex: 1; min-width: 200px; }
   font-family: var(--mono); font-size: 12.5px; letter-spacing: -.02em;
   color: var(--ink-2); white-space: nowrap;
 }
-.save { color: var(--save); font-weight: 640; }
 
 /* ── Vare-arket: prishistorik ─────────────────────────────────────────────── */
 /* Grafens viewBox er 580×150. Med height:auto skalerer den i forhold frem for
@@ -866,10 +971,21 @@ dialog::backdrop {
   input[type=text], input[type=number], select { min-height: 44px; font-size: 16px; }
   .controls input.grow { flex: 1 1 100%; }
 
-  .day-card { flex-wrap: wrap; }
-  .day-card img { width: 100%; height: 168px; }
-  .day-body { padding: 2px 6px 6px; }
-  .day-title { font-size: 19px; }
+  .stepper button { width: 44px; height: 44px; padding: 0; }
+  .stepper output { min-width: 104px; }
+  .chain-pick { min-height: 40px; padding: 8px 13px; }
+  /* Hovedet er lavere på en telefon; bonen skal sidde lige under det. */
+  .tally { top: calc(54px + env(safe-area-inset-top)); }
+  /* Står bonen fast som et 2×2-gitter, tager den en fjerdedel af skærmen fra
+     retterne, man er ved at vælge. Her er den én linje – to, hvis beløbene
+     er lange. */
+  .docket.tally { display: flex; flex-wrap: wrap; gap: 2px 14px; padding: 10px 0; }
+  .docket.tally .figure { flex-direction: row; align-items: baseline; gap: 5px; }
+  .docket.tally .figure b { font-size: 15px; }
+  .tally-hint { padding-top: 4px; }
+  .pick { padding: 10px 12px; }
+  .pick-title { font-size: 16px; }
+  .proposal-head h3, .proposal-price { font-size: 19px; }
 
   /* Bonens ene linje kan ikke være én linje på en telefon. Et 2×2-gitter
      ombryder forudsigeligt – med lodrette skillelinjer landede de i
@@ -883,13 +999,6 @@ dialog::backdrop {
     padding: 0; border-left: 0;
     font-size: 12px;
   }
-
-  /* Knappen skal flugte med teksten over den, ikke stå rykket ind af sin
-     egen polstring. */
-  .fav-bar { align-items: flex-start; gap: 4px; }
-  .fav-bar button.ghost { margin-left: -11px; }
-
-  .rule { margin-bottom: 20px; padding: 10px 0 10px 14px; font-size: 13.5px; }
 
   .empty { padding: 44px 20px; }
 
