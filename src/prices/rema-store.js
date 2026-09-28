@@ -27,6 +27,16 @@ const path = require('node:path');
 
 const REMA_CSV = path.join(__dirname, '..', '..', 'data', 'rema-prices.csv');
 
+// Brugerens valg 2026-09-28: "De priser jeg selv har indtastet må gerne
+// overskrives for nu." De indtastede REMA-priser var pladsholdere fra januar;
+// som indtastede vandt de over REMA's egne, friske hyldepriser, også efter de
+// var udløbet (blomkål: 18 kr/kg i stedet for 39,86). Så længe dette står på
+// true, sletter en indlæsning de indtastede REMA-priser på hver vare, REMA
+// selv har en pris på. Varer, REMA ikke har (selleri, vin), og andre kæders
+// indtastede priser røres ikke. Sæt den til false, når indtastede REMA-priser
+// igen skal vinde.
+const REMA_BEATS_MANUAL = true;
+
 // Produktnavnet står SIDST, og kun de første seks kommaer deler felterne. Så
 // kan et REMA-navn indeholde et komma uden citationstegn — og uden en
 // CSV-afhængighed.
@@ -103,6 +113,10 @@ function storeRemaRows(db, chainId, rows, { clean, validUntilFor }) {
   }
   const cls = new Map(db.prepare('SELECT key, class FROM items').all().map((i) => [i.key, i.class]));
   const del = db.prepare("DELETE FROM item_prices WHERE chain_id = ? AND source = 'api:rema'");
+  const manualOf = db.prepare(
+    "SELECT item_key, pack_qty, pack_unit FROM item_prices WHERE chain_id = ? AND source = 'manual' AND item_key = ?");
+  const dropManual = db.prepare(
+    "DELETE FROM item_prices WHERE chain_id = ? AND source = 'manual' AND item_key = ?");
   const ins = db.prepare(`
     INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit,
                              pack_price, unit_price, source, observed_at, valid_until)
@@ -115,19 +129,27 @@ function storeRemaRows(db, chainId, rows, { clean, validUntilFor }) {
       -- En hentet pris er ikke gættet frem; et 'derived'-gæts n_obs må ikke
       -- blive hængende på den.
       n_obs = 0
-     -- En indtastet pris er set af et menneske. Den vinder over et API.
+     -- En indtastet pris er set af et menneske. Den vinder over et API —
+     -- medmindre REMA_BEATS_MANUAL har ryddet den af vejen først.
      WHERE item_prices.source <> 'manual'
   `);
 
   let unknown = 0;
+  const overwritten = [];
   const run = db.transaction(() => {
     const dropped = clean ? del.run(chainId).changes : 0;
     let ok = 0;
+    const seen = new Set();
     for (const r of rows) {
       const c = cls.get(r.item_key);
       // En vare, der er forsvundet fra kataloget eller blevet essential siden
       // hentningen, springes over frem for at vælte hele indlæsningen.
       if (!c || c === 'essential') { unknown++; continue; }
+      if (REMA_BEATS_MANUAL && !seen.has(r.item_key)) {
+        seen.add(r.item_key);
+        overwritten.push(...manualOf.all(chainId, r.item_key));
+        dropManual.run(chainId, r.item_key);
+      }
       ok += ins.run({
         item_key: r.item_key, chain_id: chainId,
         pack_qty: r.pack_qty, pack_unit: r.pack_unit,
@@ -138,7 +160,15 @@ function storeRemaRows(db, chainId, rows, { clean, validUntilFor }) {
     }
     return { dropped, ok };
   });
-  return { ...run(), unknown };
+  return { ...run(), unknown, overwritten };
 }
 
-module.exports = { REMA_CSV, COLUMNS, writeRemaCsv, readRemaCsv, storeRemaRows };
+/** Til udskriften: hvilke indtastede priser REMA_BEATS_MANUAL fjernede. */
+function overwrittenNote(overwritten) {
+  if (!overwritten.length) return '';
+  return `\n${overwritten.length} ${overwritten.length === 1 ? 'indtastet REMA-pris' : 'indtastede REMA-priser'}`
+    + " overskrevet af REMA's egen (REMA_BEATS_MANUAL i src/prices/rema-store.js):\n"
+    + overwritten.map((r) => `  ${r.item_key} ${r.pack_qty} ${r.pack_unit}`).join('\n');
+}
+
+module.exports = { REMA_CSV, REMA_BEATS_MANUAL, overwrittenNote, COLUMNS, writeRemaCsv, readRemaCsv, storeRemaRows };

@@ -17,7 +17,7 @@
 
 const path = require('node:path');
 const { getDb } = require('../src/db');
-const { readRemaCsv, storeRemaRows, REMA_CSV } = require('../src/prices/rema-store');
+const { readRemaCsv, storeRemaRows, overwrittenNote, REMA_CSV } = require('../src/prices/rema-store');
 const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
 
 function main() {
@@ -33,11 +33,12 @@ function main() {
     if (!rema) throw new Error("kæden 'rema1000' findes ikke i chains");
     // Filen er altid en HEL runde (prices:rema skriver den kun sådan), så
     // indlæsningen rydder de gamle api:rema-rækker først.
-    const { dropped, ok, unknown } = storeRemaRows(db, rema.id, rows,
+    const { dropped, ok, unknown, overwritten } = storeRemaRows(db, rema.id, rows,
       { clean: true, validUntilFor: engine.validUntilFor });
     console.log(`REMA: ryddede ${dropped} · skrev ${ok} af ${rows.length}`
       + (ok + unknown < rows.length ? ` (${rows.length - ok - unknown} afvist: en indtastet pris står på samme pakke)` : '')
-      + (unknown ? ` · ${unknown} sprunget over (ikke længere i kataloget, eller blevet essential)` : ''));
+      + (unknown ? ` · ${unknown} sprunget over (ikke længere i kataloget, eller blevet essential)` : '')
+      + overwrittenNote(overwritten));
   } finally {
     db.close();
   }

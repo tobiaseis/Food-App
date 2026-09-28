@@ -205,7 +205,7 @@ function reportOrphans(db, parsed) {
   if (!orphans.length) return;
   const slugOf = new Map(db.prepare('SELECT id, slug FROM chains').all()
     .map((c) => [c.id, c.slug]));
-  console.log(`\n${orphans.length} indtastet${orphans.length === 1 ? ' pris' : 'e priser'}`
+  console.log(`\n${orphans.length} ${orphans.length === 1 ? 'indtastet pris' : 'indtastede priser'}`
             + ' står i basen uden at stå i filen:');
   for (const r of orphans) {
     console.log(`  ${r.item_key.padEnd(20)} ${(slugOf.get(r.chain_id) || r.chain_id).padEnd(13)}`

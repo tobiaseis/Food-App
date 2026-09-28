@@ -32,8 +32,9 @@
 # kan man se hvornår og hvorfor. Det kan en admin-side i appen ikke.
 #
 # ── Om tallene nedenfor ─────────────────────────────────────────────────────
-# De seks første er grøntsager, avisen kun prissætter pr. stk, så bootstrappen
-# ikke kunne give dem noget. (Den syvende er selleri — se nederst.)
+# agurk, squash og appelsin er varer, avisen kun prissætter pr. stk, så
+# bootstrappen ikke kunne give dem noget. (Blomkål, broccoli og peberfrugt stod
+# her også; REMA's egne priser har overtaget dem — se nederst.)
 # Priserne er TYPISKE hyldepriser i en dansk
 # discountbutik — ikke aflæst på en bestemt bon — og pakkevægten er den købte
 # vægt, ikke items.piece_g. Til sammenligning står avisens TILBUDSpris i
@@ -46,7 +47,7 @@
 #   appelsin    net 1,5 kg     (avisen har kun "Orange ilddæmon" til 1999,20 —
 #                               et stykke legetøj koblet på varen)
 #
-# DE SEKS RÆKKER ER DATERET 2026-01-01 MED VILJE, og det er ikke en fejl, der
+# DE TRE RÆKKER ER DATERET 2026-01-01 MED VILJE, og det er ikke en fejl, der
 # skal rettes til i dag. Ingen har set de priser på en hylde; de er typiske tal,
 # der gør varerne prissætbare i mellemtiden. Med dagens dato ville de blive
 # 'manual' med et friskt valid_until og forsvinde fra arbejdslisten i 90 dage —
@@ -75,11 +76,13 @@ selleri,rema1000,0.5,kg,15.00,2026-09-25
 vin,rema1000,1,l,29.00,2026-09-25
 vin,rema1000,0.375,l,25.00,2026-09-25
 agurk,rema1000,0.4,kg,10.00,2026-01-01
-blomkaal,rema1000,1.0,kg,18.00,2026-01-01
-broccoli,rema1000,0.4,kg,16.00,2026-01-01
-peberfrugt,rema1000,0.18,kg,8.00,2026-01-01
 squash,rema1000,0.35,kg,9.00,2026-01-01
 appelsin,rema1000,1.5,kg,25.00,2026-01-01
-kartofler,rema1000,2,kg,15.95,2026-09-15
 hakket_oksekoed,rema1000,0.4,kg,32.00,2026-09-15
+# Fjernet 2026-09-28: blomkaal (1 kg, 18 kr), broccoli (0,4 kg, 16 kr),
+# peberfrugt (0,18 kg, 8 kr) og kartofler (2 kg, 15,95 kr). REMA's egne
+# hyldepriser i data/rema-prices.csv dækker dem nu, og brugerens valg er, at de
+# indtastede må overskrives for nu (REMA_BEATS_MANUAL i src/prices/rema-store.js).
+# Står en af dem her igen, sletter prices:import-rema den hver nat, så længe
+# flaget står på true.
 floede,netto,0.25,l,9.50,2026-09-15

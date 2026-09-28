@@ -38,7 +38,7 @@ const path = require('node:path');
 const { getDb } = require('../src/db');
 const taxonomy = require('../src/lib/taxonomy');
 const { parseRemaProduct, searchRema, derailingWord, wrongPriceBasis } = require('../src/prices/rema');
-const { writeRemaCsv, storeRemaRows } = require('../src/prices/rema-store');
+const { writeRemaCsv, storeRemaRows, overwrittenNote } = require('../src/prices/rema-store');
 const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
 
 const REMA_SLUG = 'rema1000';
@@ -225,7 +225,7 @@ async function main() {
     if (clean) writeRemaCsv(writes);
     // .changes og ikke writes.length: en indtastet pris på samme pakke afviser
     // skrivningen, og et tal, der tæller FORSØG, ville påstå, at rækken blev skrevet.
-    const { dropped, ok } = storeRemaRows(db, chain.id, writes,
+    const { dropped, ok, overwritten } = storeRemaRows(db, chain.id, writes,
       { clean, validUntilFor: engine.validUntilFor });
     if (!clean) {
       console.log(`\n${ok} rækker skrevet · ${failed} opslag fejlede, så de gamle `
@@ -238,6 +238,8 @@ async function main() {
                 + `\ndata/rema-prices.csv skrevet med ${writes.length} priser — commit den, `
                 + 'så den natlige kørsel får dem med.');
     }
+    const note = overwrittenNote(overwritten);
+    if (note) console.log(note);
   }
 
   console.log(`\nfundet: ${hit} · intet match: ${miss} · forkastet på taksonomi: ${skipped}`

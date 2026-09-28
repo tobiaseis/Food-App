@@ -1770,14 +1770,27 @@ test('storeRemaRows: ingen rækker tømmer ikke REMA\'s priser', () => {
   }
 });
 
-test('storeRemaRows: indtastet pris vinder, ukendte og essentials springes over, gamle pakker ryddes', () => {
+test('storeRemaRows: REMA overskriver kun REMA-kædens indtastede priser på varer, REMA selv har', () => {
+  // Brugerens valg 2026-09-28: "De priser jeg selv har indtastet må gerne
+  // overskrives for nu." Målt før: en udløbet indtastet blomkålspris (18 kr/kg)
+  // vandt over REMA's friske (39,86), fordi indtastet slår API uanset alder.
+  assert.equal(remaStore.REMA_BEATS_MANUAL, true);
   const db = freshPriceDb('rema-store');
   try {
+    db.prepare("INSERT INTO chains (id, name, slug) VALUES ('N', 'Netto', 'netto')").run();
     db.prepare(`INSERT INTO items (key, name, category, class, keeps, base_unit)
                 VALUES ('salt', 'Salt', 'pantry', 'essential', 'keeps', 'kg')`).run();
+    db.prepare(`INSERT INTO items (key, name, category, class, keeps, base_unit)
+                VALUES ('agurk', 'Agurk', 'veg', 'fresh', 'perishable', 'kg')`).run();
     const ins = db.prepare(INSERT_PRICE);
-    // En indtastet pris på præcis den pakke, REMA også melder.
+    // Indtastet på præcis den pakke, REMA også melder.
     ins.run('aeg', '11deC', 10, 'stk', 32, 3.2, 'manual', '2026-09-15', '2026-12-14');
+    // Indtastet på en ANDEN pakke — blomkålsfaldet. Skal også væk.
+    ins.run('kartofler', '11deC', 1, 'kg', 18, 18, 'manual', '2026-01-01', '2026-04-01');
+    // Indtastet på en vare, REMA ikke melder: bliver stående.
+    ins.run('agurk', '11deC', 0.4, 'kg', 10, 25, 'manual', '2026-01-01', '2026-04-01');
+    // En anden kædes indtastede pris er dens egen, ikke et skøn: bliver stående.
+    ins.run('kartofler', 'N', 2, 'kg', 20, 10, 'manual', '2026-09-15', '2027-03-14');
     // En pakke, REMA er holdt op med at sælge.
     ins.run('kartofler', '11deC', 5, 'kg', 30, 6, 'api:rema', '2026-06-01', '2026-11-28');
 
@@ -1789,14 +1802,22 @@ test('storeRemaRows: indtastet pris vinder, ukendte og essentials springes over,
       { item_key: 'forsvundet', pack_qty: 1, pack_unit: 'kg', pack_price: 5, unit_price: 5, observed_at: obs },
     ], { clean: true, validUntilFor: engine.validUntilFor });
 
-    assert.deepEqual(res, { dropped: 1, ok: 1, unknown: 2 });
-    const all = db.prepare('SELECT item_key, pack_qty, pack_price, source, valid_until FROM item_prices ORDER BY item_key').all();
-    assert.deepEqual(all.map((r) => [r.item_key, r.pack_qty, r.pack_price, r.source]), [
-      ['aeg', 10, 32, 'manual'],
-      ['kartofler', 2, 15.95, 'api:rema'],
+    assert.equal(res.dropped, 1);
+    assert.equal(res.ok, 2);
+    assert.equal(res.unknown, 2, 'essential og ukendt springes over');
+    assert.deepEqual(res.overwritten.map((r) => `${r.item_key} ${r.pack_qty}`).sort(),
+      ['aeg 10', 'kartofler 1']);
+    const all = db.prepare(`SELECT item_key, chain_id, pack_qty, pack_price, source, valid_until
+                              FROM item_prices ORDER BY item_key, chain_id`).all();
+    assert.deepEqual(all.map((r) => [r.item_key, r.chain_id, r.pack_qty, r.source]), [
+      ['aeg', '11deC', 10, 'api:rema'],
+      ['agurk', '11deC', 0.4, 'manual'],
+      ['kartofler', '11deC', 2, 'api:rema'],
+      ['kartofler', 'N', 2, 'manual'],
     ]);
     // Udløbet regnes fra klassen og hentetidspunktet, ikke fra filen.
-    assert.equal(all[1].valid_until, engine.validUntilFor('baseline', new Date(obs)));
+    assert.equal(all[2].valid_until, engine.validUntilFor('baseline', new Date(obs)));
+    assert.match(remaStore.overwrittenNote(res.overwritten), /2 indtastede REMA-priser[^]*kartofler 1 kg/);
   } finally {
     db.close();
   }

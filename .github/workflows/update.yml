@@ -104,8 +104,11 @@ jobs:
       #                     prices:rema og committes. Uden trinnet havde
       #                     produktionen 273 fuldt prissatte opskrift-kæde-par i
       #                     stedet for 7.302 — version 1's skøn i alle kæder
-      #                     bygger på netop disse rækker. En indtastet pris på
-      #                     samme pakke vinder, derfor efter prices:import.
+      #                     bygger på netop disse rækker. For nu overskriver
+      #                     REMA's pris en indtastet REMA-pris på samme vare
+      #                     (REMA_BEATS_MANUAL i src/prices/rema-store.js) —
+      #                     derfor EFTER prices:import, ellers lagde den dem
+      #                     tilbage igen.
       #   prices:bootstrap  gætter normalpriser ud fra tilbudshistorikken og
       #                     genopbygger hele 'derived'-laget. Skal køre EFTER
       #                     ingesten, så nattens tilbud er med.
