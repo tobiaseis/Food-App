@@ -675,16 +675,22 @@ async function recompute() {
   }
 
   choose.innerHTML = '<div class="loading">Finder retter, der kan prissættes i dine butikker…</div>';
-  let ctx;
-  try {
-    ctx = await Data.flowInputs(s.track, FAVORITES);
-  } catch (err) {
+  // Én fejlvisning for både hentningen og motoren. Kastede Data.choices eller
+  // Data.lists før, blev fejlen aldrig fanget, og "Finder retter…" stod på
+  // skærmen for evigt uden et ord om hvorfor.
+  const fail = (title, err) => {
     if (token !== FLOW.token) return;
-    choose.innerHTML = `<div class="empty card"><h3>Kunne ikke hente opskrifter og priser</h3>
+    choose.innerHTML = `<div class="empty card"><h3>${esc(title)}</h3>
       <p>${esc(err && err.message ? err.message : 'Ukendt fejl.')}</p>
       <div class="row" style="justify-content:center;margin-top:16px">
         <button class="primary" id="flow-retry">Prøv igen</button></div></div>`;
     $('#flow-retry').addEventListener('click', recompute);
+  };
+  let ctx;
+  try {
+    ctx = await Data.flowInputs(s.track, FAVORITES);
+  } catch (err) {
+    fail('Kunne ikke hente opskrifter og priser', err);
     return;
   }
   if (token !== FLOW.token || !$('#flow-choose')) return;
@@ -693,10 +699,16 @@ async function recompute() {
   await new Promise((r) => setTimeout(r, 20));
   if (token !== FLOW.token) return;
 
-  const choice = Data.choices(ctx, { days: s.days, servings: s.servings });
+  let choice;
+  try {
+    choice = Data.choices(ctx, { days: s.days, servings: s.servings });
+    FLOW.proposalLists = choice.proposals.map((w) => Data.lists(ctx, w.picks, { servings: s.servings }));
+  } catch (err) {
+    fail('Kunne ikke sætte ugen sammen', err);
+    return;
+  }
   FLOW.ctx = ctx;
   FLOW.choice = choice;
-  FLOW.proposalLists = choice.proposals.map((w) => Data.lists(ctx, w.picks, { servings: s.servings }));
 
   // De valgte retter overlever alt, der ikke skifter puljen ud: flere
   // personer, en butik mere. Første gang i en ny uge hentes ugens valg.
@@ -784,8 +796,13 @@ function renderChoose() {
         – for få til at vælge ${days} af ${days * 3}. Flere butikker giver flere retter at vælge imellem.</p>
         <button type="button" data-goto-stores>Vælg flere butikker</button>
       </div>`
+    // Kun forslag A er bygget til at dele råvarer. B sættes sammen af de retter,
+    // A IKKE tog, og målt i den afsluttende gennemgang af plan 3 var B's spild
+    // værre end 85 % af alle mulige uger fra puljen. Teksten lovede delingen
+    // for begge; nu lover den den dér, hvor den holder.
     : `<p class="step-lede">Vælg ${days} af de ${pool.length} retter – eller tag et af de to forslag.
-        De er sat sammen, så retterne deler råvarerne, og det, du køber til den ene, bliver brugt i den næste.</p>`;
+        Forslag A er sat sammen, så retterne deler råvarerne, og det, du køber til den ene, bliver
+        brugt i den næste. Forslag B er et andet bud, lavet af de retter, A ikke tog.</p>`;
 
   const inA = new Set((proposals[0]?.picks || []).map((r) => r.id));
   const inB = new Set((proposals[1]?.picks || []).map((r) => r.id));

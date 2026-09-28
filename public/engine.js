@@ -603,17 +603,43 @@
    * Ren funktion: rækkerne kommer udefra, så serveren og browseren kan kalde
    * den med hver sin datakilde og få samme svar.
    */
-  function withEstimates(normals, sourceRows, chainIds, sourceChainId) {
+  function withEstimates(normals, sourceRows, chainIds, sourceChainId, now = new Date()) {
     const out = new Map(normals instanceof Map ? normals : Object.entries(normals || {}));
     const byItem = new Map();
     for (const r of sourceRows || []) {
       if (!ESTIMATE_FROM.has(r.source)) continue;
-      if (!byItem.has(r.item_key)) byItem.set(r.item_key, []);
-      byItem.get(r.item_key).push(r);
+      const k = `${r.item_key}|${sourceChainId}`;
+      if (!byItem.has(k)) byItem.set(k, []);
+      byItem.get(k).push(r);
+    }
+    // Skønnet er REMA's EGEN pris — det, effectivePrice vælger for REMA — og
+    // ikke alle REMA's rækker blandet sammen til ét niveau. Kopierede vi dem
+    // alle, tabte vi den rangorden, REMA selv bruger: målt i den afsluttende
+    // gennemgang af plan 3 kostede 0,5 kg blomkål 18 kr i REMA (en indtastet
+    // pris slår en API-pris) og 27,90 alle andre steder (den kopierede
+    // API-række vandt dér, fordi de to lå på samme niveau). Så var "REMA's pris
+    // som skøn" ikke REMA's pris.
+    const nowIso = now.toISOString();
+    const isStale = (r) => r.valid_until != null && r.valid_until < nowIso;
+    const chosen = [];
+    for (const [k, rows] of byItem) {
+      const itemKey = k.slice(0, k.lastIndexOf('|'));
+      const best = effectivePrice(itemKey, sourceChainId,
+        { offers: new Map(), normals: new Map([[k, rows]]), now });
+      if (!best) continue;
+      // De ORIGINALE rækker på vinderens niveau — samme kilde, samme friskhed,
+      // samme enhed — ikke `best.packs`. Den er afskallet til pakke og pris og
+      // har hverken valid_until eller kilde: kopieret videre ville et skøn
+      // bygget på en udløbet REMA-pris se frisk ud, og appen ville holde op med
+      // at skrive "ældre pris" ved det. Flere pakker på niveauet følger med,
+      // så pakkevalget også kan vælge i skønnet.
+      const tier = rows.filter((r) => r.source === best.source
+        && isStale(r) === Boolean(best.stale) && r.pack_unit === best.pack_unit);
+      if (tier.length) chosen.push([itemKey, tier]);
     }
     for (const chainId of chainIds || []) {
       if (chainId === sourceChainId) continue;   // kilden har sine egne rækker
-      for (const [itemKey, rows] of byItem) {
+      for (const [itemKey, rows] of chosen) {
         const k = `${itemKey}|${chainId}`;
         const copy = rows.map((r) => ({ ...r, chain_id: chainId, source: 'estimate:rema' }));
         out.set(k, (out.get(k) || []).concat(copy));

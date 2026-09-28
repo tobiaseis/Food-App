@@ -23,7 +23,7 @@ de data browseren skal bruge, og de fem trin.
 | Prissatte aftensmadsretter pr. kæde | **305-400** (REMA 311, Bilka 400) |
 | Fuldt prissatte opskrift-kæde-par | 7.297 (før skønnet: 412) |
 | `item_prices` i alt | 653: 102 `api:rema`, 12 `manual`, 539 `derived` |
-| Grov datapakke, fem favoritter | ~150 KB |
+| Grov datapakke, fem favoritter | ~150 KB priser — **men `recipe_index` alene er 3,0 MB rå, 314 KB gzippet** (målt i den afsluttende gennemgang; skønnet her talte kun priserne) |
 
 Tyndheden er løst for alle kæder, så `thin` fyrer sjældent. Den bygges alligevel:
 en bruger, der fravælger alt kød, eller et spor med få opskrifter, kan stadig

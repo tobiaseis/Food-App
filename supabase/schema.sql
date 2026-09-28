@@ -174,8 +174,9 @@ create table if not exists taxonomy_prices (
 );
 
 -- Varekataloget. Browseren skal kunne slå class/keeps/base_unit op for at
--- bygge indkøbslisten og lagerlisten; recipe_index.items har allerede
--- filtreret essentials fra, så lagerlisten kan ikke udledes derfra.
+-- bygge indkøbslisten og lagerlisten. recipe_index.items bærer essentials som
+-- ren nøgle ({ key, essential: true }) — det siger, AT retten bruger salt;
+-- kataloget her siger, at salt ER en essential. Lagerlisten kræver begge.
 --
 -- Kun de felter, motoren læser — ikke næringsindhold og synonymer. Tabellen
 -- er ny i plan 3, så der findes ingen ældre udgave, der skal have kolonner
@@ -280,7 +281,7 @@ create table if not exists recipe_index (
   -- fra en dessert eller et tilbehør — en oplysning ingen ingrediensliste kan
   -- udlede, og som 2.211 af 2.224 opskrifter bærer.
   keywords text,
-  items         jsonb not null          -- [{key,cat,amount,weight,optional}] (opgave 9: staple/grams -> amount i varens egen enhed; essentials er allerede filtreret fra her)
+  items         jsonb not null          -- [{key,cat,amount,weight,optional}]; essentials som {key, essential: true} (plan 3 opgave 3 — uden dem var lagerlisten tom i browseren)
 );
 -- Tabellen findes allerede hos den, der kørte skemaet før sproget kom til.
 -- create table if not exists rører ikke en eksisterende tabel, så kolonnen

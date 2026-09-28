@@ -1704,3 +1704,27 @@ test('vin måles i liter', () => {
   const vin = require('../src/lib/taxonomy').SEED.find((e) => e.key === 'vin');
   assert.equal(vin.base_unit, 'l');
 });
+
+test('skønnet er REMA\'s EGEN pris, ikke alle REMA\'s rækker blandet sammen', () => {
+  // Målt i den afsluttende gennemgang af plan 3: REMA havde en indtastet
+  // blomkålspris (18 kr/kg, udløbet) og en frisk API-pris (39,86). REMA selv
+  // brugte den indtastede — en indtastet pris slår en API-pris — men de andre
+  // kæder fik begge som ét niveau, og API-prisen vandt dér. 18 kr i REMA,
+  // 27,90 alle andre steder for samme 0,5 kg.
+  const NOW = new Date('2026-09-28T12:00:00Z');
+  const rema = [
+    { item_key: 'blomkaal', chain_id: 'R', pack_qty: 1, pack_unit: 'kg', pack_price: 18,
+      unit_price: 18, source: 'manual', valid_until: '2026-04-01T00:00:00.000Z' },
+    { item_key: 'blomkaal', chain_id: 'R', pack_qty: 0.35, pack_unit: 'kg', pack_price: 13.95,
+      unit_price: 39.86, source: 'api:rema', valid_until: '2099-01-01T00:00:00.000Z' },
+  ];
+  const out = engine.withEstimates(new Map(), rema, ['R', 'N'], 'R', NOW);
+  const own = engine.effectivePrice('blomkaal', 'R',
+    { offers: new Map(), normals: new Map([['blomkaal|R', rema]]), now: NOW });
+  const est = engine.effectivePrice('blomkaal', 'N', { offers: new Map(), normals: out, now: NOW });
+
+  assert.equal(est.unit_price, own.unit_price, 'skønnet skal være det, REMA selv bruger');
+  assert.equal(est.source, 'estimate:rema');
+  // Og alderen følger med: en udløbet REMA-pris er også et udløbet skøn.
+  assert.equal(est.stale, true, 'appen skal kunne skrive "ældre pris" ved skønnet');
+});

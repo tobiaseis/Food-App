@@ -600,8 +600,16 @@ const Data = {
         ? await sbAll('offer_index?select=*&order=taxonomy_key.asc,chain_id.asc')
         : await localRows('/api/offer-index');
     }
+    // Kun tilbud, der stadig gælder NU. offer_index hentes én gang pr.
+    // sidevisning og caches, så uden dette ville et tilbud, der udløb i løbet
+    // af dagen, blive ved med at prissætte retter til næste synk — mens
+    // serverens activeOfferMap filtrerer på klokkeslættet. Samme ret, to
+    // priser. `run_till` sammenlignes som tidspunkt, ikke som tekst: Supabase
+    // svarer '+02:00', og det er netop den fælde, valid_until faldt i.
+    const now = Date.now();
+    const live = planIndex.offers.filter((o) => !o.run_till || Date.parse(o.run_till) >= now);
     // Navnene bruges kun af den gamle tilbudsplan; flowet slår op på id.
-    return offerMapFor(planIndex.offers, chainIds, {});
+    return offerMapFor(live, chainIds, {});
   },
 
   /**

@@ -25,7 +25,9 @@
 // v3: madplanen blev til de fem trin (plan 3, opgave 3). app.js, data.js og
 // styles.css skal skiftes samlet — ellers taler en gammel app.js med et nyt
 // datalag, eller omvendt.
-const VERSION = 'v3';
+// v4: sider fra Supabase fik hver deres cache-nøgle (se staleWhileRevalidate).
+// Versionen skal op, så de forkerte, sammenblandede sider fra v3 kasseres.
+const VERSION = 'v4';
 const SHELL_CACHE = `madplan-shell-${VERSION}`;
 const DATA_CACHE = `madplan-data-${VERSION}`;
 
@@ -89,9 +91,21 @@ async function shellFirst(request) {
 /** Svar fra cachen med det samme, hent nyt til næste gang. */
 async function staleWhileRevalidate(request) {
   const cache = await caches.open(DATA_CACHE);
-  const hit = await cache.match(request);
+  // Store tabeller hentes i sider à 1.000 rækker (sbAll), og hver side har
+  // SAMME adresse — kun `Range`-hovedet skiller dem ad. Cachen nøgler på
+  // adressen alene, så siderne overskrev hinanden. Målt i den afsluttende
+  // gennemgang af plan 3: recipe_index er tre sider, og puljen på tolv retter
+  // indeholdt fem forskellige; efter en genindlæsning var den gemte side den
+  // tomme sidste, og siden viste "Kunne ikke hente opskrifter". Siden skal
+  // derfor med i nøglen.
+  const range = request.headers.get('Range');
+  const key = range
+    ? new Request(request.url + (request.url.includes('?') ? '&' : '?') +
+        '__range=' + encodeURIComponent(range))
+    : request;
+  const hit = await cache.match(key);
   const fresh = fetch(request).then((res) => {
-    if (res.ok) cache.put(request, res.clone());
+    if (res.ok) cache.put(key, res.clone());
     return res;
   }).catch(() => null);
   if (hit) return hit;
@@ -141,7 +155,11 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  if (url.origin === self.location.origin) {
+  // /api/ er data, ikke skal. shellFirst ignorerer forespørgselsstrengen, så
+  // /api/item-prices?chains=netto og ?chains=netto,rema1000 fik det SAMME
+  // gemte svar — prislisten låste sig fast på den første butik, man valgte,
+  // og listen sagde "Alt kan købes i Netto" med REMA som favorit.
+  if (url.origin === self.location.origin && !url.pathname.startsWith('/api/')) {
     event.respondWith(shellFirst(request));
     return;
   }
