@@ -152,6 +152,24 @@ test('nye synonymer stjæler ikke match fra eksisterende varer', () => {
   }
 });
 
+test('stødt koriander er et krydderi, frisk koriander er en krydderurt', () => {
+  // 192 linjer tørret koriander blev prissat som et bundt frisk koriander,
+  // fordi persille-varens bare 'koriander'/'coriander' tog dem.
+  const CASES = [
+    ['1 tsk stødt koriander', 'krydderi'], ['2 tsk korianderfrø', 'krydderi'],
+    ['1 tsp ground coriander', 'krydderi'], ['2 tbsp coriander seeds', 'krydderi'],
+    ['1 heaped tsp coriander seeds lightly crushed', 'krydderi'],
+    ['1 each ground coriander and cumin', 'krydderi'],
+    ['1 håndfuld frisk koriander, grofthakket', 'persille'],
+    ['chopped coriander', 'persille'], ['coriander leaves', 'persille'],
+    ['hakkede korianderblade', 'persille'],
+    ['1 tsp garam masala (or ground coriander)', 'garam_masala'],
+  ];
+  for (const [text, key] of CASES) {
+    assert.equal(taxonomy.lookup(text)?.entry.key ?? null, key, text);
+  }
+});
+
 test('alle varer har gyldig class og keeps', () => {
   const CLASSES = new Set(['fresh', 'baseline', 'essential']);
   const KEEPS   = new Set(['perishable', 'keeps', 'pantry']);

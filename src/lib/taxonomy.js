@@ -510,14 +510,23 @@ const SEED = [
     // Bay leaves, cinnamon, cloves, nutmeg, allspice, dried rosemary og
     // dried thyme er urørt: de er almindelige danske skabsvarer, og at
     // fjerne dem ville koste ~207 opskrifter uden en tilsvarende begrundelse.
+    //
+    // Stødt koriander og korianderfrø (2026-09-28, brugerens rettelse): de
+    // faldt på persille-varens bare 'koriander'/'coriander' — 192 linjer, hvor
+    // et tørret krydderi blev prissat som et bundt frisk koriander. De står
+    // ved siden af spidskommen i næsten hver eneste af de opskrifter. Det
+    // længere synonym vinder over det bare ord, samme mekanisme som 'tørret
+    // rosmarin' ovenfor; frisk koriander bliver på persille.
     da: ['krydderi', 'paprika', 'spidskommen', 'karry', 'oregano', 'basilikum', 'chili',
          'tørret rosmarin', 'tørret timian', 'laurbærblade',
-         'stødt kanel', 'kanel', 'muskatnød', 'nellike', 'stødt nellike', 'allehånde'],
+         'stødt kanel', 'kanel', 'muskatnød', 'nellike', 'stødt nellike', 'allehånde',
+         'stødt koriander', 'korianderfrø'],
     en: ['cayenne pepper', 'chilli flakes', 'lemon thyme',
          'chillies', 'chilies', 'paprika', 'cumin', 'curry', 'oregano',
          'basil', 'chilli', 'chili', 'dried rosemary', 'dried thyme',
          'bay leaves', 'bay leaf', 'cinnamon', 'nutmeg',
-         'ground cloves', 'cloves', 'allspice', 'caraway seeds'] },
+         'ground cloves', 'cloves', 'allspice', 'caraway seeds',
+         'ground coriander', 'coriander seeds', 'coriander seed'] },
   // Flyttet ud af krydderi (essential) i samme fix-runde: specialblandinger
   // og importkrydderier, ikke almindelige danske skabsvarer — se kommentaren
   // på krydderi. baseline/pantry, ligesom sriracha/wasabi/kaffirblade.
