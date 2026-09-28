@@ -125,6 +125,17 @@ async function local(path, options = {}) {
   return res.json();
 }
 
+/**
+ * Som `local`, men en fejl er en fejl. Flowets tabeller må ikke komme tilbage
+ * som `{ error }` og blive læst som et tomt katalog: to tomme lister uden et
+ * ord er præcis den fejl, `items()` kaster for at undgå.
+ */
+async function localRows(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Serveren svarede ${res.status} på ${path}`);
+  return res.json();
+}
+
 // Kun aktive tilbud: run_till mangler eller ligger i fremtiden
 const activeFilter = () => `or=(run_till.is.null,run_till.gte.${new Date().toISOString()})`;
 
@@ -148,7 +159,11 @@ function flattenOffer(o) {
 // Indekset skifter kun, når den natlige kørsel har været forbi. Vi henter det
 // derfor én gang pr. sidevisning og genbruger det på tværs af spor og
 // "Ny plan" – ellers ville hvert klik koste et par hundrede kilobyte.
-const planIndex = { offers: null, prices: null, recipes: {}, items: null, normals: new Map() };
+const planIndex = {
+  offers: null, prices: null, recipes: {}, items: null, normals: new Map(),
+  // Flowets: hele recipe_index (alle spor) og budget-sporets priser pr. kædesæt.
+  all: null, costs: new Map(),
+};
 
 const MIN_TIER_SCORE = 0.35;
 
@@ -491,17 +506,18 @@ const Data = {
    * end priserne.
    */
   async items() {
-    // Kaster frem for at svare med et tomt kort: shoppingList springer en vare
-    // uden katalogrække stiltiende over, så et tomt kort ville give to tomme
-    // lister og ingen fejl. Den lokale server har intet endpoint til det endnu.
-    if (!USE_SUPABASE) throw new Error('Varekataloget hentes kun fra Supabase-bagenden.');
     if (!planIndex.items) {
-      const rows = await sbAll('items?select=*&order=key.asc');
-      // Samme grund som ovenfor, bare fra den anden side: en tom tabel er ikke
-      // et tomt katalog, men en synk midt i sin sletning eller en, der fejlede.
-      // Caches kortet tomt, holder siden fast i to tomme lister, til den
-      // genindlæses.
-      if (!rows.length) throw new Error('Varekataloget er tomt — prøv igen om lidt.');
+      // Den lokale server svarer med de rækker, build.js ville have synket
+      // (collectItems) — samme form, så resten af funktionen er fælles.
+      const rows = USE_SUPABASE
+        ? await sbAll('items?select=*&order=key.asc')
+        : await localRows('/api/items');
+      // Kaster frem for at svare med et tomt kort: shoppingList springer en
+      // vare uden katalogrække stiltiende over, så et tomt kort ville give to
+      // tomme lister og ingen fejl. En tom tabel er ikke et tomt katalog, men
+      // en synk midt i sin sletning eller en, der fejlede. Caches kortet tomt,
+      // holder siden fast i to tomme lister, til den genindlæses.
+      if (!Array.isArray(rows) || !rows.length) throw new Error('Varekataloget er tomt — prøv igen om lidt.');
       planIndex.items = new Map(rows.map((r) => [r.key, r]));
     }
     return planIndex.items;
@@ -519,10 +535,20 @@ const Data = {
    * prissatte retter — det var hele grunden til version 1-skønnet.
    */
   async normalPrices(chainIds = null) {
-    if (!USE_SUPABASE) throw new Error('Normalpriserne hentes kun fra Supabase-bagenden.');
     const favs = chainIds || readFavorites();
     const cacheKey = favs.length ? [...favs].sort().join(',') : '*';
     if (planIndex.normals.has(cacheKey)) return planIndex.normals.get(cacheKey);
+
+    // Lokalt bygger serveren kortet selv, med normalPricesFor — den funktion,
+    // madplanen og recipe_costs regnes med. Kortet kommer som et objekt og
+    // bliver til det samme Map, Supabase-vejen bygger nedenfor.
+    if (!USE_SUPABASE) {
+      const obj = await localRows(`/api/item-prices?chains=${favs.length
+        ? favs.map(encodeURIComponent).join(',') : 'all'}`);
+      const map = new Map(Object.entries(obj || {}));
+      planIndex.normals.set(cacheKey, map);
+      return map;
+    }
 
     const chains = await sb('chains?select=id,slug');
     const source = chains.find((c) => c.slug === ESTIMATE_SOURCE_SLUG) || null;
@@ -538,6 +564,193 @@ const Data = {
     const map = normalMapFor(rows, ids, source ? source.id : null);
     planIndex.normals.set(cacheKey, map);
     return map;
+  },
+
+  // ── Madplansflowet: de fem trin ───────────────────────────────────────────
+  //
+  // Trin 1-3 er et filter (butikker, spor, dage og personer), trin 4 er puljen
+  // og de to forslag, trin 5 de to lister. Motoren er public/engine.js, den
+  // samme fil serveren kører; her hentes kun det, den skal have, i den form
+  // serveren giver den. Enhver forskel i formen er en forskel i tallene — se
+  // test/sync.test.js, der kører begge veje og sammenligner.
+
+  /**
+   * Hele recipe_index — alle spor på én gang.
+   *
+   * Klassisk alene er 1.912 af 2.173 retter, så at hente pr. spor sparer
+   * næsten intet ved første visning og koster en hentning ved hvert skift.
+   * Hentes én gang pr. sidevisning.
+   */
+  async recipeIndex() {
+    if (!planIndex.all) {
+      const rows = USE_SUPABASE
+        ? await sbAll('recipe_index?select=*&order=recipe_id.asc')
+        : await localRows('/api/recipe-index');
+      // Samme skelnen som i items(): tomt er en fejl, ikke et svar.
+      if (!Array.isArray(rows) || !rows.length) throw new Error('Opskrifterne kunne ikke hentes — prøv igen om lidt.');
+      planIndex.all = rows;
+    }
+    return planIndex.all;
+  },
+
+  /** Tilbudskortet `vare|kæde → tilbud` for favoritterne (offer_index). */
+  async offerMap(chainIds) {
+    if (!planIndex.offers) {
+      planIndex.offers = USE_SUPABASE
+        ? await sbAll('offer_index?select=*&order=taxonomy_key.asc,chain_id.asc')
+        : await localRows('/api/offer-index');
+    }
+    // Navnene bruges kun af den gamle tilbudsplan; flowet slår op på id.
+    return offerMapFor(planIndex.offers, chainIds, {});
+  },
+
+  /**
+   * Budget-sporets pris pr. ret: den LAVESTE `cost_per_serving` blandt de
+   * butikker, ugen må handle i — `recipe_id → kr pr. portion`.
+   *
+   * Kun de fem første favoritter: motoren handler ikke i den sjette (se
+   * chainsInPlay i engine.js), så en ret, der kun er billig dér, er ikke
+   * billig for brugeren. Kun middage (`has_main`): rækkerne dækker hele
+   * korpusset, dressinger og kager med, og de billigste retter i basen er
+   * netop dem.
+   */
+  async recipeCosts(chainIds) {
+    const ids = (chainIds || []).slice(0, window.PlanEngine.MAX_CHOICE_CHAINS);
+    const key = [...ids].sort().join(',');
+    if (!planIndex.costs.has(key)) {
+      const rows = !ids.length ? []
+        : USE_SUPABASE
+          ? await sbAll(`recipe_costs?chain_id=in.(${ids.map(encodeURIComponent).join(',')})` +
+                        '&has_main=eq.true&select=recipe_id,chain_id,cost_per_serving' +
+                        '&order=recipe_id.asc,chain_id.asc')
+          : await localRows(`/api/recipe-costs?chains=${ids.map(encodeURIComponent).join(',')}`);
+      const best = new Map();
+      for (const r of rows) {
+        if (!(r.cost_per_serving >= 0)) continue;
+        const prev = best.get(r.recipe_id);
+        if (prev == null || r.cost_per_serving < prev) best.set(r.recipe_id, r.cost_per_serving);
+      }
+      planIndex.costs.set(key, best);
+    }
+    return planIndex.costs.get(key);
+  },
+
+  /**
+   * Alt, motoren skal have til trin 4 og 5, for ét spor og ét sæt butikker.
+   *
+   *   track     'budget' | 'healthy' | 'classic' | 'premium'
+   *   chainIds  favoritterne i prioriteret rækkefølge
+   *
+   * Tre ting, der hver især har været en stille fejl et andet sted:
+   *
+   *   · `score`, ikke `tier_score`. recipe_index bærer sporets score som
+   *     `score_<spor>`, loadRecipes som `tier_score`, og candidatePool læser
+   *     `score` — og udelader MED VILJE en ret uden. Glemmes omsætningen, er
+   *     puljen tom og `thin`: højlydt, men forkert.
+   *   · `chainIds` skal med til puljen. Uden dem er den tom (candidatePool).
+   *   · Frøet er ugen, `år × 100 + uge`, så samme uge giver de samme tolv her
+   *     og på serveren.
+   *
+   * Budget har ingen score — om en ret er billig, afhænger af ugens priser og
+   * af butikkerne, så den kan ikke gemmes på opskriften (spec 1.5). Den
+   * rangeres efter prisen pr. portion, og dens `score` er 0: så afgør ugens
+   * egen pris og spild forslagene alene, og det er, hvad budget betyder.
+   */
+  async flowInputs(track, chainIds = null) {
+    const favs = chainIds || readFavorites();
+    const budget = track === 'budget';
+    const [rows, items, normals, offers, costs] = await Promise.all([
+      this.recipeIndex(), this.items(), this.normalPrices(favs), this.offerMap(favs),
+      budget ? this.recipeCosts(favs) : null,
+    ]);
+
+    const recipes = [];
+    for (const r of rows) {
+      let score = 0;
+      let cost = null;
+      if (budget) {
+        cost = costs.has(r.recipe_id) ? costs.get(r.recipe_id) : null;
+        if (cost == null) continue;
+      } else {
+        score = r[`score_${track}`];
+        // Samme grænse som loadRecipes' minTierScore på serveren.
+        if (!(score >= MIN_TIER_SCORE)) continue;
+      }
+      recipes.push({
+        id: r.recipe_id,
+        title: r.title, url: r.url, image: r.image,
+        source: r.source, source_name: r.source_name,
+        servings: r.servings, total_minutes: r.total_minutes,
+        kcal: r.kcal, protein_g: r.protein_g, carbs_g: r.carbs_g,
+        nutrition_src: r.nutrition_src,
+        score,
+        cost_per_serving: cost,
+        unknown_main: Boolean(r.unknown_main),
+        unknown_count: r.unknown_count || 0,
+        keywords: r.keywords || null,
+        items: (r.items || []).map((i) => ({ ...i, ingredient: items.get(i.key)?.name || i.key })),
+      });
+    }
+
+    const { week, year } = window.PlanEngine.isoWeek(new Date());
+    return {
+      track, recipes, items, normals, offers,
+      chainIds: favs,
+      rank: budget ? (r) => (r.cost_per_serving == null ? null : -r.cost_per_serving) : undefined,
+      seed: year * 100 + week,
+      week, year,
+    };
+  },
+
+  /**
+   * Trin 4: de 3 × dage retter og de to forslag blandt dem.
+   *
+   * Forslagene bygges af PULJEN og ikke af hele sporet: de er præ-markerede
+   * delmængder af det, brugeren ser (spec 2.1). En tom pulje giver ingen
+   * forslag frem for to tomme uger.
+   */
+  choices(ctx, { days, servings }) {
+    const E = window.PlanEngine;
+    const { pool, thin } = E.candidatePool(ctx.recipes, {
+      days, items: ctx.items, rank: ctx.rank, seed: ctx.seed,
+      offers: ctx.offers, normals: ctx.normals, chainIds: ctx.chainIds,
+    });
+    const proposals = pool.length
+      ? E.twoProposals(pool, {
+        days, servings, items: ctx.items,
+        offers: ctx.offers, normals: ctx.normals, chainIds: ctx.chainIds,
+      })
+      : [];
+    return { pool, thin, proposals };
+  },
+
+  /**
+   * Trin 5: køb ind og tjek at du har, for de valgte retter.
+   *
+   * Hver købslinje får sin priskilde med (`source`, `stale`). shoppingList
+   * giver den ikke selv — kun `on_offer` — og uden den kan skærmen ikke sige
+   * "pris fra REMA" ved en vare, hvor Netto ingen egen pris har; så læses 29 kr
+   * i Netto som Nettos pris. Kilden slås op med den samme effectivePrice og de
+   * samme argumenter, som kædevalget brugte til at vælge linjen, og giver
+   * derfor den samme pris.
+   */
+  lists(ctx, picks, { servings }) {
+    const E = window.PlanEngine;
+    const list = E.shoppingList({ days: picks.map((recipe) => ({ recipe })) }, {
+      items: ctx.items, offers: ctx.offers, normals: ctx.normals,
+      chainIds: ctx.chainIds, servings,
+    });
+    for (const line of list.buy) {
+      line.source = null;
+      line.stale = false;
+      if (!line.chain) continue;
+      const meta = ctx.items.get(line.key);
+      const price = E.effectivePrice(line.key, line.chain, {
+        offers: ctx.offers, normals: ctx.normals, baseUnit: meta ? meta.base_unit : null,
+      });
+      if (price) { line.source = price.source; line.stale = Boolean(price.stale); }
+    }
+    return list;
   },
 
   // ── Overvågninger ─────────────────────────────────────────────────────────

@@ -366,6 +366,67 @@ test('collectPlanIndex leverer base_qty på tilbuddene OG unknown_count på rett
   }
 });
 
+/**
+ * Lagerlisten i browseren — femte felt i rækken efter base_qty, optional,
+ * unknown_count og keywords.
+ *
+ * shoppingList bygger "tjek at du har" af rettens essential-linjer. build.js
+ * skar dem fra, så browserens lagerliste var tom, mens serverens loadRecipes
+ * havde dem: to lister på skærmen, den ene altid tom, og ingen fejl. Samme
+ * filter holdt en ret med kun ÉN købt linje ude af browseren, som serveren
+ * kunne vælge ("Hel kylling i airfryer" er kylling, salt og peber).
+ *
+ * Testen kører shoppingList på begge ender af den SAMME ret og kræver samme
+ * lagerliste — ikke bare, at feltet findes.
+ */
+test('collectPlanIndex sender basisvarerne med, så lagerlisten er den samme i browseren', () => {
+  const db = getDb();
+  const now = new Date().toISOString();
+  const { lastInsertRowid: recipeId } = db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at)
+    VALUES (?, 'test', 'Test', 'Hel kylling i ovn', 'da', 4, ?)`)
+    .run('https://test.invalid/lagerliste-test', now);
+  const insertIng = db.prepare(`
+    INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional)
+    VALUES (?, ?, ?, ?, ?, ?, ?)`);
+  // Én købt linje og tre basisvarer — salt to gange, som opskrifter gør.
+  insertIng.run(recipeId, '1,5 kg hel kylling', 'hel kylling', 1, 'hel_kylling', 1.5, 0);
+  insertIng.run(recipeId, '1 tsk salt', 'salt', 2, 'salt', 0.006, 0);
+  insertIng.run(recipeId, 'friskkværnet peber', 'peber', 3, 'peber', null, 0);
+  insertIng.run(recipeId, 'salt til servering', 'salt', 4, 'salt', null, 0);
+  insertIng.run(recipeId, '2 spsk olie', 'olie', 5, 'olie', 0.03, 0);
+
+  try {
+    const { recipeIndex } = collectPlanIndex(quiet);
+    const synced = recipeIndex.find((r) => r.recipe_id === recipeId);
+    assert.ok(synced, 'en ret med én købt linje er med i indekset, som på serveren');
+
+    const salt = synced.items.filter((i) => i.key === 'salt');
+    assert.equal(salt.length, 1, 'én linje pr. basisvare pr. ret');
+    assert.deepEqual(salt[0], { key: 'salt', essential: true },
+      'basisvaren sendes som nøgle og flag — ingen del af motoren læser dens mængde');
+
+    const items = new Map(build.collectItems().map((r) => [r.key, r]));
+    const served = require('../src/mealplan/generate').loadRecipes({})
+      .find((r) => r.id === recipeId);
+    const pantryOf = (recipe) => engine.shoppingList(
+      { days: [{ recipe: { title: 'Hel kylling i ovn', servings: 4, items: recipe.items } }] },
+      { items, chainIds: [] }).pantry.map((p) => p.key);
+
+    assert.deepEqual(pantryOf(synced), ['olie', 'peber', 'salt'].sort((a, b) =>
+      items.get(a).name.localeCompare(items.get(b).name, 'da')),
+    'browserens lagerliste er ikke tom');
+    assert.deepEqual(pantryOf(synced), pantryOf(served),
+      'browserens lagerliste er serverens lagerliste');
+    // Og basisvarerne må ikke begynde at blive købt: isBoughtLine skal stadig
+    // sige nej til dem i browseren.
+    assert.ok(synced.items.filter((i) => i.essential)
+      .every((i) => !engine.isBoughtLine(i, items.get(i.key))));
+  } finally {
+    db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
+  }
+});
+
 test('collectPriceTables har den form, Supabase tager imod', () => {
   const db = getDb();
   const now = '2026-09-15T00:00:00.000Z';

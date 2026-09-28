@@ -195,6 +195,39 @@ function topDeals({ limit = 24, chain = null, minSamples = 3 } = {}) {
   `).all(params);
 }
 
+// ── Madplansflowets data ─────────────────────────────────────────────────────
+//
+// Flowet (de fem trin i public/app.js) kører motoren i BROWSEREN, og browseren
+// henter sine tabeller fra Supabase. Kører man lokalt (npm start), skal de
+// samme tabeller komme herfra — og i PRÆCIS den form, build.js skubber til
+// Supabase. Derfor bygges de af build.js' egne collect-funktioner og ikke af
+// en SELECT her: en kopi af udtrækket ville være et fjerde sted, base_qty,
+// optional og unknown_count kunne falde ud af.
+//
+// build.js kræves først ved kaldet. Den kræver selv denne fil (topDeals), og
+// et require i toppen ville give den et halvt indlæst modul.
+const syncBuild = () => require('./sync/build');
+
+// Indekset tager ~150 ms at bygge og ændrer sig kun, når tilbuddene gør. Det
+// gemmes et kvarter — længe nok til, at flowets fire hentninger deler ét, og
+// kort nok til, at et tilbud, der udløber midt på dagen, falder ud af sig selv.
+const INDEX_TTL_MS = 15 * 60 * 1000;
+let indexCache = null;
+function planIndexRows() {
+  if (!indexCache || Date.now() - indexCache.at > INDEX_TTL_MS) {
+    indexCache = { at: Date.now(), ...syncBuild().collectPlanIndex(() => {}) };
+  }
+  return indexCache;
+}
+
+/** `?chains=a,b` → ['a','b']; mangler den, eller er den `all`, → null = alle kæder. */
+function chainsParam(qs) {
+  const raw = qs.get('chains');
+  if (!raw || raw === 'all') return null;
+  const ids = raw.split(',').filter(Boolean);
+  return ids.length ? ids : null;
+}
+
 // ── Ruter ────────────────────────────────────────────────────────────────────
 
 const planCache = new Map();
@@ -333,6 +366,43 @@ async function handleApi(req, res, url) {
     return json(res, plan);
   }
 
+  // ── Madplansflowet: samme tabeller som Supabase-vejen ────────────────────
+  //
+  // Hver rute svarer med de rækker, Supabase-tabellen af samme navn holder,
+  // så public/data.js kan behandle de to bagender ens efter hentningen.
+
+  // Varekataloget (Supabase: items).
+  if (p === '/api/items') return json(res, syncBuild().collectItems());
+
+  // Opskrifterne, alle spor (Supabase: recipe_index). Sporet vælges i
+  // browseren, som i skyen.
+  if (p === '/api/recipe-index') return json(res, planIndexRows().recipeIndex);
+
+  // Ét billigste tilbud pr. vare pr. kæde (Supabase: offer_index).
+  if (p === '/api/offer-index') return json(res, planIndexRows().offerIndex);
+
+  // Normalpriskortet `vare|kæde → rækker[]`, med REMA's skøn lagt ind.
+  //
+  // Her svarer ruten med det FÆRDIGE kort og ikke med item_prices-rækkerne:
+  // kortet skal bygges af normalPricesFor, den samme funktion madplanen og
+  // recipe_costs regnes med. Supabase-vejen bygger det samme kort i browseren
+  // med samme withEstimates, og test/sync.test.js holder de to op mod
+  // hinanden. En tredje kopi her ville være den, der drev.
+  if (p === '/api/item-prices') {
+    return json(res, Object.fromEntries(plans.normalPricesFor(chainsParam(qs))));
+  }
+
+  // Budget-sporets rangering (Supabase: recipe_costs). Kun de prissætbare
+  // rækker findes i skyen, og kun middage (has_main) er budget-kandidater.
+  if (p === '/api/recipe-costs') {
+    const ids = chainsParam(qs);
+    const allowed = ids ? new Set(ids) : null;
+    return json(res, syncBuild().collectPriceTables(db, () => {}).recipeCosts
+      .filter((r) => r.has_main && (!allowed || allowed.has(r.chain_id)))
+      .map((r) => ({ recipe_id: r.recipe_id, chain_id: r.chain_id,
+                     cost_per_serving: r.cost_per_serving })));
+  }
+
   // ── Følg varer ───────────────────────────────────────────────────────────
   if (p === '/api/watches' && req.method === 'GET') return json(res, watches.listWatches());
 
@@ -399,6 +469,7 @@ async function handleApi(req, res, url) {
     const body = await readBody(req);
     const stats = await ingest({ withStores: !!body.stores, log: () => {} });
     planCache.clear();
+    indexCache = null;          // nye tilbud = nyt tilbudsindeks til flowet
     watches.runWatches();
     return json(res, stats);
   }

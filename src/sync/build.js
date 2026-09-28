@@ -260,8 +260,28 @@ function collectPlanIndex(log) {
       };
     });
 
-  // Basisvarer ryger ud her frem for i browseren: motoren ser alligevel bort
-  // fra dem (isBoughtLine), og de fylder en stor del af nyttelasten.
+  // Basisvarerne står med, men KUN som nøgle: `{ key, essential: true }`.
+  //
+  // De blev skåret helt væk her indtil plan 3, opgave 3, med den begrundelse,
+  // at motoren alligevel ser bort fra dem (isBoughtLine). Det holdt, så længe
+  // ingen i browseren skulle skrive en lagerliste. shoppingList bygger "tjek at
+  // du har" af NETOP de linjer, og uden dem kom listen tom tilbage i browseren,
+  // mens serverens loadRecipes havde dem — samme slags afdrift som base_qty,
+  // optional og unknown_count. Varekataloget (collectItems) løste kun den ene
+  // halvdel: det siger, at salt er en essential, ikke at retten bruger salt.
+  //
+  // Nøglen er nok. Ingen del af motoren læser en basisvares mængde — den
+  // købes ikke, og lagerlisten har ingen pris — og assignRoles lægger linjen
+  // blandt basisvarerne på flaget alene. Hele linjer ville koste ~1 MB mere
+  // (11.475 linjer); nøglerne koster ~0,35 MB. Én pr. vare pr. ret: "salt"
+  // tre steder i samme opskrift er én linje på lagerlisten.
+  //
+  // Og ingen opskrift falder ud for at have for få KØBTE linjer. Her stod et
+  // filter på mindst to, regnet efter basisvarerne var skåret fra; loadRecipes
+  // kræver allerede tre linjer i alt, og serveren har ingen anden grænse. Målt
+  // i data.db holdt filteret 35 opskrifter ude af browseren, som serveren
+  // kunne vælge — fire af dem middage, blandt andet "Hel kylling i airfryer"
+  // og "Ribbensteg med sprød svær".
   //
   // 'drink', 'snack' og 'nonfood' blev skåret væk her indtil denne runde, og
   // begrundelsen var rigtig, da den blev skrevet: dengang var assignRoles
@@ -290,7 +310,6 @@ function collectPlanIndex(log) {
   // ugens HOVEDRET. De skal ikke forhindre, at man køber vinen til gryden.
   // Det ene er et spørgsmål om, hvad der er aftensmad; det andet om, hvad der
   // står på indkøbssedlen.
-  const skip = (i) => i.essential;
   const recipeIndex = plans.loadRecipes({})
     .map((r) => ({
       recipe_id: r.id,
@@ -329,17 +348,21 @@ function collectPlanIndex(log) {
       // stk-vs-kg-forveksling (æg som falsk hovedråvare), som blev fundet og
       // rettet i den lokale sti. De to filer definerer kontrakten sammen –
       // se DEPLOY.md om at deploye dem i samme trin.
-      items: r.items.filter((i) => !skip(i)).map((i) => ({
-        key: i.key, cat: i.cat,
-        amount: i.amount == null ? null : Math.round(i.amount * 1000) / 1000,
-        weight: i.weight == null ? null : Math.round(i.weight * 1000) / 1000,
-        // optional hører til samme kontrakt som weight: indkøbslisten skal
-        // kunne springe "evt."-linjer over, og gør den det kun lokalt, køber
-        // browserens bruger persille, der aldrig blev bedt om.
-        optional: !!i.optional,
-      })),
-    }))
-    .filter((r) => r.items.length >= 2);
+      items: [
+        ...r.items.filter((i) => !i.essential).map((i) => ({
+          key: i.key, cat: i.cat,
+          amount: i.amount == null ? null : Math.round(i.amount * 1000) / 1000,
+          weight: i.weight == null ? null : Math.round(i.weight * 1000) / 1000,
+          // optional hører til samme kontrakt som weight: indkøbslisten skal
+          // kunne springe "evt."-linjer over, og gør den det kun lokalt, køber
+          // browserens bruger persille, der aldrig blev bedt om.
+          optional: !!i.optional,
+        })),
+        // Lagerlistens linjer — se kommentaren over recipeIndex.
+        ...[...new Set(r.items.filter((i) => i.essential).map((i) => i.key))]
+          .map((key) => ({ key, essential: true })),
+      ],
+    }));
 
   log(`  madplans-indeks: ${offerIndex.length} tilbudsrækker · ${taxonomyPrices.length} varetyper · ${recipeIndex.length} opskrifter`);
   return { offerIndex, taxonomyPrices, recipeIndex };
