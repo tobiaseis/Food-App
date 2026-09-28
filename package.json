@@ -37,6 +37,7 @@
     "prices:import": "node scripts/import-prices.js",
     "prices:worklist": "node scripts/price-worklist.js",
     "prices:rema": "node scripts/fetch-rema-prices.js",
+    "prices:import-rema": "node scripts/import-rema-prices.js",
     "costs:recompute": "node scripts/recompute-recipe-costs.js",
     "sync": "node src/sync/build.js",
     "sync:dry": "node src/sync/build.js --dry-run",

@@ -38,6 +38,7 @@ const path = require('node:path');
 const { getDb } = require('../src/db');
 const taxonomy = require('../src/lib/taxonomy');
 const { parseRemaProduct, searchRema, derailingWord, wrongPriceBasis } = require('../src/prices/rema');
+const { writeRemaCsv, storeRemaRows } = require('../src/prices/rema-store');
 const engine = require(path.join(__dirname, '..', 'public', 'engine.js'));
 
 const REMA_SLUG = 'rema1000';
@@ -82,6 +83,10 @@ function rawSource({ fromRaw, saveRaw }) {
               + `${doc.fetched_at || 'ukendt tidspunkt'} — intet netværk)`);
     return {
       offline: true,
+      // Hvornår REMA faktisk blev spurgt — ikke i dag. Genafspilles en
+      // cache fra forrige uge, er prisen set forrige uge, og det er den dato,
+      // udløbet skal regnes fra.
+      fetchedAt: doc.fetched_at || new Date().toISOString(),
       // En vare, der ikke står i filen, er IKKE det samme som en vare uden
       // træf. Den kastes, så en gammel fil ikke stille viser sig som "intet
       // match" på varer, der aldrig blev søgt på.
@@ -96,6 +101,7 @@ function rawSource({ fromRaw, saveRaw }) {
   const doc = { fetched_at: new Date().toISOString(), source: 'api.digital.rema1000.dk', queries: {} };
   return {
     offline: false,
+    fetchedAt: doc.fetched_at,
     async get(item) {
       const products = await searchRema(item.name);
       if (saveRaw) {
@@ -129,44 +135,11 @@ async function main() {
       WHERE class <> 'essential' AND category <> 'nonfood' ORDER BY key`
   ).all();
 
-  const ins = db.prepare(`
-    INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit,
-                             pack_price, unit_price, source, observed_at, valid_until)
-    VALUES (@item_key, @chain_id, @pack_qty, @pack_unit,
-            @pack_price, @unit_price, 'api:rema', @observed_at, @valid_until)
-    ON CONFLICT(item_key, chain_id, pack_qty, pack_unit) DO UPDATE SET
-      pack_price = excluded.pack_price, unit_price = excluded.unit_price,
-      source = excluded.source, observed_at = excluded.observed_at,
-      valid_until = excluded.valid_until,
-      -- En hentet pris er ikke gættet frem. Ramte den et 'derived'-gæt på samme
-      -- (vare, kæde, pakke), ville gættets n_obs blive hængende og få rækken
-      -- til at se ud som et gæt bygget på n observationer. Samme grund som i
-      -- import-prices.js.
-      n_obs = 0
-     -- En indtastet pris er set af et menneske. Den vinder over et API.
-     WHERE item_prices.source <> 'manual'
-  `);
-
-  // Rækker, der ERSTATTER de gamle — ikke rækker, der lægges oven i dem.
-  //
-  // Pakkestørrelsen er en del af nøglen (item_key, chain_id, pack_qty,
-  // pack_unit), så en ren INSERT … ON CONFLICT kan ikke rydde op efter sig:
-  // den dag REMA skifter hakkebøffen fra 400 g til 500 g, skrives den nye
-  // række ved siden af den gamle, og begge bliver stående. effectivePrice
-  // rangerer på (kilde, friskhed, pris) og vælger den BILLIGSTE pr. enhed
-  // inden for niveauet — så den døde 400 g-række vinder, hver gang den var
-  // billigere, og gør det for evigt. Med `packs` (fix-runden) er det ikke
-  // længere kun prisen, der arves: choosePack kan nu vælge en pakke, der
-  // ikke findes i butikken.
-  //
-  // bootstrap-prices.js gør præcis det samme for 'derived' og af præcis den
-  // samme grund (målt dér: 17 af 548 par skifter pakke mellem to vinduer).
-  // Argumentet nåede aldrig herover.
-  const del = db.prepare(
-    "DELETE FROM item_prices WHERE chain_id = ? AND source = 'api:rema'");
+  // Lagringen bor i src/prices/rema-store.js, så hentningen og den natlige
+  // indlæsning af data/rema-prices.csv skriver den SAMME slags række. Hvorfor
+  // gamle rækker ryddes først, står ved storeRemaRows.
 
   const raw = rawSource({ fromRaw, saveRaw });
-  const now = new Date();
   const writes = [];
   let failed = 0;
   let hit = 0, miss = 0, skipped = 0;
@@ -226,11 +199,14 @@ async function main() {
     // enten skulle ske først — på et tidspunkt, hvor vi endnu ikke ved, om
     // der kommer noget at sætte i stedet — eller slet ikke kunne ske.
     writes.push({
-      item_key: item.key, chain_id: chain.id,
-      pack_qty: best.pack_qty, pack_unit: best.pack_unit,
+      item_key: item.key,
+      // Afrundet: 350 g / 1000 er 0.35000000000000003. Det stod i filen, og
+      // som nøgle ville det aldrig ramme en indtastet 0.35 på samme pakke.
+      pack_qty: Math.round(best.pack_qty * 1e6) / 1e6, pack_unit: best.pack_unit,
       pack_price: best.pack_price, unit_price: best.unit_price,
-      observed_at: now.toISOString(),
-      valid_until: engine.validUntilFor(item.class, now),
+      observed_at: raw.fetchedAt,
+      // Står i filen, så et forkert match kan ses i en diff.
+      product: best.name,
     });
     if (!raw.offline) await sleep(PAUSE_MS);
   }
@@ -238,37 +214,29 @@ async function main() {
   raw.done();
 
   if (!dryRun) {
-    // Samme værn som i bootstrap-prices.js: en genopbygning uden noget at
-    // bygge med er bare en sletning. Rammer hver eneste søgning ved siden af
-    // — et ændret API, en tom svarfil — skal basen stå, som den stod.
-    if (!writes.length) {
-      throw new Error('ingen brugbare REMA-priser fundet — afbryder uden at røre basen, '
-                    + 'frem for at slette alle api:rema-rækker og skrive nul nye');
-    }
-
     // Og en ufuldstændig runde rydder ikke op. Fejlede opslag er varer, vi
     // ikke har spurgt om i dag; deres gamle række er det bedste, vi ved, og
-    // en oprydning bygget på en halv sweep ville slette den. Så skrives der
-    // kun oven i, præcis som før — det er ikke perfekt, men det er den
-    // sikre af de to fejl.
-    const run = db.transaction(() => {
-      let dropped = 0;
-      if (!failed) dropped = del.run(chain.id).changes;
-      // .changes og ikke writes.length: en indtastet pris på samme pakke
-      // afviser skrivningen (se ON CONFLICT-guarden ovenfor), og et tal, der
-      // tæller FORSØG, ville påstå, at rækken blev skrevet.
-      let ok = 0;
-      for (const row of writes) ok += ins.run(row).changes;
-      return { dropped, ok };
-    });
-    const { dropped, ok } = run();
-    if (failed) {
+    // en oprydning bygget på en halv sweep ville slette den.
+    //
+    // Af SAMME grund skrives filen kun efter en hel runde. data/rema-prices.csv
+    // er det, den natlige kørsel indlæser med oprydning — manglede de fejlede
+    // varer i filen, ville natten slette deres priser.
+    const clean = !failed;
+    if (clean) writeRemaCsv(writes);
+    // .changes og ikke writes.length: en indtastet pris på samme pakke afviser
+    // skrivningen, og et tal, der tæller FORSØG, ville påstå, at rækken blev skrevet.
+    const { dropped, ok } = storeRemaRows(db, chain.id, writes,
+      { clean, validUntilFor: engine.validUntilFor });
+    if (!clean) {
       console.log(`\n${ok} rækker skrevet · ${failed} opslag fejlede, så de gamle `
-                + 'rækker bliver stående (en halv runde rydder ikke op efter en hel)');
+                + 'rækker bliver stående, og data/rema-prices.csv er IKKE opdateret '
+                + '(en halv runde må ikke blive det, natten indlæser). Kør igen.');
     } else {
       console.log(`\nryddede ${dropped} tidligere api:rema-rækker · skrev ${ok}`
                 + (ok < writes.length
-                  ? ` (${writes.length - ok} afvist: en indtastet pris står på samme pakke)` : ''));
+                  ? ` (${writes.length - ok} afvist: en indtastet pris står på samme pakke)` : '')
+                + `\ndata/rema-prices.csv skrevet med ${writes.length} priser — commit den, `
+                + 'så den natlige kørsel får dem med.');
     }
   }
 
@@ -305,4 +273,11 @@ async function main() {
   }
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+// Kun når scriptet køres direkte. Et require() — fra en test eller et
+// hurtigt tjek af, at filen kan indlæses — må ALDRIG starte et kald til REMA.
+// Det skete under plan 3: et `node -e "require(...)"` startede en rigtig
+// hentning, som kun døde, fordi outputtet blev lukket, før den nåede at
+// skrive. De andre scripts i mappen har vagten af samme grund.
+if (require.main === module) {
+  main().catch((e) => { console.error(e); process.exit(1); });
+}

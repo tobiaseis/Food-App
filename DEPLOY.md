@@ -10,6 +10,7 @@ GitHub Actions  (dagligt 05:10 UTC)
   2. npm run update                                ← ingest mod lokal SQLite, uændret kode
   3. npm run seed:items && npm run backfill:amounts ← varetaksonomi + materialiserede mængder
   4. npm run prices:import                          ← data/item_prices.csv ind i basen
+     npm run prices:import-rema                     ← data/rema-prices.csv (REMA's hyldepriser) ind i basen
      npm run prices:bootstrap                       ← normalpris-gæt af tilbudshistorikken
      npm run costs:recompute                        ← recipe_costs, budget-sporets tabel
   5. node src/sync/build.js                         ← madplaner + prisstatistik regnes HER
@@ -35,11 +36,28 @@ fyldt `items`-tabel, før dette trin har kørt.
 INDTASTEDE priser ind først: de er den højeste tillidskilde i `effectivePrice`
 og skal stå, før gættene bygges. `prices:bootstrap` genopbygger hele
 `derived`-laget ud fra tilbudshistorikken og skal køre EFTER ingesten, så
-nattens tilbud tæller med. `costs:recompute` læser begge dele og kommer
+nattens tilbud tæller med. `prices:import-rema` ligger mellem de to: se
+**REMA-priserne** nedenfor. `costs:recompute` læser begge dele og kommer
 derfor sidst. Springes trinnet over, viser appen nattens tilbud ved siden af
 en `recipe_costs`, der blev regnet, dengang nogen sidst kørte scriptet i
 hånden — og `data/item_prices.csv`, som ligger i git netop for at
 prisændringer kan ses i en diff, bliver aldrig læst ind.
+
+**REMA-priserne.** Version 1 bruger REMA 1000's normalpriser som skøn for
+alle kæder, indtil en kædes egen pris er tastet ind i `data/item_prices.csv`.
+Den natlige kørsel kontakter ALDRIG REMA. Priserne ligger i
+`data/rema-prices.csv`, som hentes lokalt og committes:
+
+```
+npm run prices:rema          # henter fra REMA, skriver filen og din lokale base
+git add data/rema-prices.csv # læs diffen: kolonnen product viser, hvilket
+git commit                   # REMA-produkt hver pris kommer fra
+```
+
+Uden filen havde produktionen 273 fuldt prissatte opskrift-kæde-par i stedet
+for 7.302. Friske varers priser udløber efter 90 dage (appen viser dem så som
+"ældre pris"), så forny filen mindst hvert kvartal. Filen skrives kun efter en
+HEL runde: fejler et opslag, står den gamle fil urørt, og natten indlæser den.
 
 **Hvorfor ikke bare køre alt i Supabase?** Én madplan kræver ~3.200 enkeltopslag.
 Lokalt mod SQLite tager det 183 ms; mod en fjern Postgres ville det tage op mod

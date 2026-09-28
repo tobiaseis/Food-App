@@ -1728,3 +1728,76 @@ test('skønnet er REMA\'s EGEN pris, ikke alle REMA\'s rækker blandet sammen', 
   // Og alderen følger med: en udløbet REMA-pris er også et udløbet skøn.
   assert.equal(est.stale, true, 'appen skal kunne skrive "ældre pris" ved skønnet');
 });
+
+// ── REMA-priserne som fil i repoet ───────────────────────────────────────────
+//
+// Den natlige kørsel kontakter aldrig REMA. Uden filen havde produktionen 273
+// fuldt prissatte opskrift-kæde-par i stedet for 7.302, så filen og dens
+// indlæsning er det, version 1's skøn i alle kæder står på.
+
+const remaStore = require(path.join(__dirname, '..', 'src', 'prices', 'rema-store.js'));
+
+test('rema-prices.csv: et produktnavn med komma overlever turen gennem filen', () => {
+  const file = path.join(fs.mkdtempSync(path.join(os.tmpdir(), 'madplan-remacsv-')), 'r.csv');
+  const rows = [
+    { item_key: 'kartofler', pack_qty: 2, pack_unit: 'kg', pack_price: 15.95, unit_price: 7.975,
+      observed_at: '2026-09-25T08:07:03.130Z', product: 'KARTOFLER, BAGE' },
+    { item_key: 'aeg', pack_qty: 10, pack_unit: 'stk', pack_price: 30, unit_price: 3,
+      observed_at: '2026-09-25T08:07:03.130Z', product: 'ÆG\nFRILAND' },
+  ];
+  remaStore.writeRemaCsv(rows, file);
+  const back = remaStore.readRemaCsv(file);
+  // Sorteret på nøglen, så en ny hentning giver en diff af ændringer.
+  assert.deepEqual(back.map((r) => r.item_key), ['aeg', 'kartofler']);
+  assert.equal(back[1].product, 'KARTOFLER, BAGE');
+  assert.equal(back[1].pack_price, 15.95);
+  assert.equal(back[1].unit_price, 7.975);
+  // Et linjeskift i navnet må ikke kunne splitte en række i to.
+  assert.equal(back[0].product, 'ÆG FRILAND');
+  assert.deepEqual(remaStore.readRemaCsv(path.join(path.dirname(file), 'findes-ikke.csv')), []);
+});
+
+test('storeRemaRows: ingen rækker tømmer ikke REMA\'s priser', () => {
+  const db = freshPriceDb('rema-empty');
+  try {
+    db.prepare(INSERT_PRICE).run('kartofler', '11deC', 2, 'kg', 15.95, 7.975, 'api:rema',
+      '2026-09-25T08:07:03.130Z', '2027-03-24T08:07:03.130Z');
+    assert.throws(() => remaStore.storeRemaRows(db, '11deC', [],
+      { clean: true, validUntilFor: engine.validUntilFor }), /ingen REMA-priser/);
+    assert.equal(db.prepare("SELECT count(*) c FROM item_prices WHERE source = 'api:rema'").get().c, 1);
+  } finally {
+    db.close();
+  }
+});
+
+test('storeRemaRows: indtastet pris vinder, ukendte og essentials springes over, gamle pakker ryddes', () => {
+  const db = freshPriceDb('rema-store');
+  try {
+    db.prepare(`INSERT INTO items (key, name, category, class, keeps, base_unit)
+                VALUES ('salt', 'Salt', 'pantry', 'essential', 'keeps', 'kg')`).run();
+    const ins = db.prepare(INSERT_PRICE);
+    // En indtastet pris på præcis den pakke, REMA også melder.
+    ins.run('aeg', '11deC', 10, 'stk', 32, 3.2, 'manual', '2026-09-15', '2026-12-14');
+    // En pakke, REMA er holdt op med at sælge.
+    ins.run('kartofler', '11deC', 5, 'kg', 30, 6, 'api:rema', '2026-06-01', '2026-11-28');
+
+    const obs = '2026-09-25T08:07:03.130Z';
+    const res = remaStore.storeRemaRows(db, '11deC', [
+      { item_key: 'aeg', pack_qty: 10, pack_unit: 'stk', pack_price: 30, unit_price: 3, observed_at: obs },
+      { item_key: 'kartofler', pack_qty: 2, pack_unit: 'kg', pack_price: 15.95, unit_price: 7.975, observed_at: obs },
+      { item_key: 'salt', pack_qty: 1, pack_unit: 'kg', pack_price: 5, unit_price: 5, observed_at: obs },
+      { item_key: 'forsvundet', pack_qty: 1, pack_unit: 'kg', pack_price: 5, unit_price: 5, observed_at: obs },
+    ], { clean: true, validUntilFor: engine.validUntilFor });
+
+    assert.deepEqual(res, { dropped: 1, ok: 1, unknown: 2 });
+    const all = db.prepare('SELECT item_key, pack_qty, pack_price, source, valid_until FROM item_prices ORDER BY item_key').all();
+    assert.deepEqual(all.map((r) => [r.item_key, r.pack_qty, r.pack_price, r.source]), [
+      ['aeg', 10, 32, 'manual'],
+      ['kartofler', 2, 15.95, 'api:rema'],
+    ]);
+    // Udløbet regnes fra klassen og hentetidspunktet, ikke fra filen.
+    assert.equal(all[1].valid_until, engine.validUntilFor('baseline', new Date(obs)));
+  } finally {
+    db.close();
+  }
+});

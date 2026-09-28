@@ -99,6 +99,13 @@ jobs:
       # Rækkefølgen er ikke valgfri:
       #   prices:import     de indtastede priser ind først. De er den højeste
       #                     tillidskilde og må stå, når gættene bygges.
+      #   prices:import-rema  REMA's hyldepriser fra data/rema-prices.csv. Denne
+      #                     kørsel kontakter ALDRIG REMA; filen hentes lokalt med
+      #                     prices:rema og committes. Uden trinnet havde
+      #                     produktionen 273 fuldt prissatte opskrift-kæde-par i
+      #                     stedet for 7.302 — version 1's skøn i alle kæder
+      #                     bygger på netop disse rækker. En indtastet pris på
+      #                     samme pakke vinder, derfor efter prices:import.
       #   prices:bootstrap  gætter normalpriser ud fra tilbudshistorikken og
       #                     genopbygger hele 'derived'-laget. Skal køre EFTER
       #                     ingesten, så nattens tilbud er med.
@@ -112,6 +119,7 @@ jobs:
       - name: Priser — indtastede, gættede og opskriftspriser
         run: |
           npm run prices:import
+          npm run prices:import-rema
           npm run prices:bootstrap
           npm run costs:recompute
 
