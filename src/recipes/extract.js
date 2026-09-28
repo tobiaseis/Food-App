@@ -15,7 +15,7 @@
  */
 
 const taxonomy = require('../lib/taxonomy');
-const { amountOf } = require('../lib/units');
+const { amountOfLine } = require('../lib/units');
 
 // ── HTML-hjælpere ────────────────────────────────────────────────────────────
 
@@ -281,7 +281,9 @@ function parseIngredient(raw, position = 0) {
     unit,
     ingredient: s || original.toLowerCase(),
     item_key: key,
-    amount: item ? amountOf({ qty, unit }, item) : null,
+    // amountOfLine, ikke amountOf: en vægt i parentes vinder over et bart
+    // antal. Parentesen er skåret væk fra `s` ovenfor, så den rå linje sendes med.
+    amount: item ? amountOfLine({ raw: original, qty, unit, item_key: key }, item) : null,
     optional: OPTIONAL_RE.test(original) ? 1 : 0,
     is_staple: key ? (taxonomy.isEssential(key) ? 1 : 0) : 0,
     position,

@@ -17,7 +17,7 @@
 
 const { getDb } = require('../src/db');
 const taxonomy  = require('../src/lib/taxonomy');
-const { amountOf } = require('../src/lib/units');
+const { amountOfLine } = require('../src/lib/units');
 
 // Kun det, kilden selv har markeret som valgfrit.
 //
@@ -60,7 +60,7 @@ function main() {
       // stykvarer tilbage til 100 g, hvis seedet har misset piece_g — og et
       // løg på 100 g i stedet for 110 fejler ikke, det bliver bare forkert.
       const amount = item
-        ? amountOf({ qty: r.qty, unit: r.unit, item_key: key }, item)
+        ? amountOfLine({ raw: r.raw, qty: r.qty, unit: r.unit, item_key: key }, item)
         : null;
       const opt = OPTIONAL_RE.test(r.raw || '') ? 1 : 0;
 

@@ -11,7 +11,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 
-const { gramsOf, amountOf } = require('../src/lib/units');
+const { gramsOf, amountOf, parenWeight, amountOfLine } = require('../src/lib/units');
 
 const KG   = { base_unit: 'kg' };
 const L    = { base_unit: 'l', density_g_ml: 1.0 };
@@ -91,4 +91,50 @@ test('gramsOf uden vare falder tilbage til stykvægten på ingrediensens nøgle'
 
 test('varen vinder over tabellen, når begge findes', () => {
   near(gramsOf({ qty: 1, unit: null, taxonomy_key: 'loeg' }, { piece_g: 200 }), 200);
+});
+
+// ── Vægten i parentesen ─────────────────────────────────────────────────────
+//
+// "1 kylling (ca. 1200 g)" blev til 0,1 kg, fordi parentesen blev skåret væk,
+// før mængden blev læst. 331 linjer har et bart antal og en vægt i parentes.
+
+
+test('forfatterens vægt i parentes vinder over vores stykvægt', () => {
+  // Uden parentesen er "1 kylling" ét stykke à 100 g.
+  near(amountOfLine({ raw: '1 kylling (ca. 1200 g)', qty: 1, unit: null }, KG), 1.2);
+  near(amountOfLine({ raw: '4 kyllingeoverlår (ca. 1 kg)', qty: 4, unit: null }, KG), 1);
+});
+
+test('en vægt pr. stykke ganges med antallet', () => {
+  near(amountOfLine({ raw: '2 kyllingebryst (á 125 g)', qty: 2, unit: null }, KG), 0.25);
+  near(amountOfLine({ raw: '4 chicken breasts (about 200g each)', qty: 4, unit: null }, KG), 0.8);
+  near(amountOfLine({ raw: '12 prawns (ideally around 60-80g per prawn)', qty: 12, unit: null }, KG), 0.84);
+});
+
+test('et alternativ i parentes er ikke denne vares vægt', () => {
+  // "(or 800-900g trimmed lean leg)" beskriver en anden vare end linjens.
+  assert.equal(parenWeight('1 leg of lamb (or 800-900g trimmed lean leg)'), null);
+});
+
+test('et interval bliver til midtpunktet', () => {
+  near(amountOfLine({ raw: '1 squash (about 300-400g)', qty: 1, unit: null }, KG), 0.35);
+});
+
+test('parentesen tilsidesætter ikke en rigtig enhed eller en stk-vare', () => {
+  // "2 dåser (ca. 800 g)": dåsen er selv en enhed, og amountOf regner den.
+  const daase = amountOfLine({ raw: '2 dåser tomater (ca. 800 g)', qty: 2, unit: 'dåser' }, KG);
+  near(daase, amountOf({ qty: 2, unit: 'dåser' }, KG));
+  // "4 æg (ca. 250 g)" er fire æg — æg tælles i stk, og antallet ER mængden.
+  const STK = { base_unit: 'stk' };
+  near(amountOfLine({ raw: '4 æg (ca. 250 g)', qty: 4, unit: null, item_key: 'aeg' }, STK), 4);
+});
+
+test('vægten må også stå efter et komma — og decimalkommaet deler ikke', () => {
+  // "1 ribbensteg, cirka 1,5 kg." blev gemt som 0,1 kg og lå øverst i
+  // budget-sporet til 1,39 kr pr. portion. Et almindeligt split(',') skar
+  // "1,5" over til "cirka 1" uden enhed.
+  near(amountOfLine({ raw: '1 ribbensteg, cirka 1,5 kg.', qty: 1, unit: null }, KG), 1.5);
+  near(amountOfLine({ raw: '4 gammon steaks, about 300g each', qty: 4, unit: null }, KG), 1.2);
+  // Et kommasegment tæller kun, når det SELV starter med en omtrentlig vægt.
+  assert.equal(parenWeight('2 løg, hakket'), null);
 });
