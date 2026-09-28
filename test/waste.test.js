@@ -1106,3 +1106,34 @@ test('en ret uden score i sporet kommer ikke i puljen', () => {
   assert.equal(pool.length, 0);
   assert.equal(thin, true);
 });
+
+// ── Butiksvalget, når priserne er skøn ─────────────────────────────────────
+//
+// Version 1 bruger REMA's normalpris som skøn i alle kæder, så to butikker
+// koster tit præcis det samme. Før vandt den første favorit, og appen skrev
+// "Alt kan købes i Netto — du behøver ikke i REMA 1000" over en liste, hvor
+// 22 af 22 linjer sagde "pris fra REMA".
+
+const TIE_ITEMS = new Map([
+  ['loeg', { key: 'loeg', name: 'Løg', category: 'veg', class: 'baseline', keeps: 'keeps', base_unit: 'kg' }],
+]);
+const real = { pack_qty: 1, pack_unit: 'kg', pack_price: 12, unit_price: 12, source: 'api:rema' };
+const est = { ...real, source: 'estimate:rema' };
+
+test('ved samme pris sendes man derhen, hvor prisen er rigtig', () => {
+  // N står FØRST i favoritterne og har kun skønnet; R har den rigtige pris.
+  const normals = new Map([['loeg|N', [est]], ['loeg|R', [real]]]);
+  const r = engine.chooseChains(new Map([['loeg', 1]]),
+    { chainIds: ['N', 'R'], items: TIE_ITEMS, offers: new Map(), normals });
+  assert.deepEqual(r.chains, ['R']);
+  assert.equal(r.assignment.get('loeg').price.source, 'api:rema');
+});
+
+test('et rigtigt tilbud vinder stadig over en rigtig normalpris', () => {
+  // Reglen gælder kun ved uafgjort. Er N billigere på et tilbud, er N svaret.
+  const normals = new Map([['loeg|N', [est]], ['loeg|R', [real]]]);
+  const offers = new Map([['loeg|N', { base_qty: 1, base_unit: 'kg', price: 8, unit_price: 8 }]]);
+  const r = engine.chooseChains(new Map([['loeg', 1]]),
+    { chainIds: ['N', 'R'], items: TIE_ITEMS, offers, normals });
+  assert.deepEqual(r.chains, ['N']);
+});

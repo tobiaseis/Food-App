@@ -2228,6 +2228,17 @@
     // en løgn.
     if (!ids.length) return { chains: [], assignment: new Map(), cost: 0, total: 0 };
 
+    // Er prisen et skøn fra en anden kæde (version 1: REMA's normalpris)?
+    const isEstimate = (c) => Boolean(c && c.price && c.price.source === 'estimate:rema');
+    // Vinder (a, aEst) over (b, bEst)? Lavest tal først; ved uafgjort — inden
+    // for en halv øre, fordi totaler er summer af flydende tal — det med færrest
+    // skøn. `aEst`/`bEst` må være tal (antal) eller booleans (0/1).
+    const beats = (a, aEst, b, bEst) => {
+      if (a < b - 0.005) return true;
+      if (a > b + 0.005) return false;
+      return Number(aEst) < Number(bEst);
+    };
+
     // Prisen for én vare i én kæde afhænger ikke af, hvilken delmængde vi
     // prøver. Regnes den inde i mask-løkken, slås det samme par op 31 gange
     // med det samme svar; her regnes det én gang, og løkken bliver rent
@@ -2284,18 +2295,31 @@
         let pick = null;
         for (const c of cands) {
           if (!inSubset.has(c.chainId)) continue;
-          if (!pick || c.score < pick.score) pick = c;
+          if (!pick || beats(c.score, isEstimate(c), pick.score, isEstimate(pick))) pick = c;
         }
         if (pick) { assignment.set(key, pick); cost += pick.cost; }
         else missingKr += (cheapestAnywhere.get(key) || 0) + MISSING_ITEM_NUISANCE;
       }
 
       const total = cost + (subset.length - 1) * EXTRA_STORE_PENALTY + missingKr;
-      // Strengt `<`: ved uafgjort vinder den laveste maske, og det er den med
-      // de FØRSTE og dermed færreste kæder. To kørsler på uændrede data
-      // sender én ud efter den samme butik — samme argument som i choosePack.
-      if (!best || total < best.total) best = { chains: subset, assignment, cost, total };
+      let estimated = 0;
+      for (const p of assignment.values()) if (isEstimate(p)) estimated++;
+      // Ved uafgjort vinder den kombination, der bruger FÆRREST skøn — og kun
+      // dernæst den laveste maske (de første og færreste kæder), så to kørsler
+      // på uændrede data sender én ud efter den samme butik.
+      //
+      // Uden skøn-reglen var svaret selvmodsigende. Version 1 bruger REMA's
+      // pris som skøn i alle kæder, så Netto og REMA koster det samme for hver
+      // vare, og den første favorit vandt. Set med rigtige data: "Alt kan
+      // købes i Netto — du behøver ikke i REMA 1000", og derunder 22 af 22
+      // linjer med "pris fra REMA". Når prisen er den samme, skal man sendes
+      // derhen, hvor den er RIGTIG. Et tilbud, der gør Netto billigere, vinder
+      // stadig: reglen gælder kun, når alt andet står lige.
+      if (!best || beats(total, estimated, best.total, best.estimated)) {
+        best = { chains: subset, assignment, cost, total, estimated };
+      }
     }
+    if (best) delete best.estimated;
 
     return best;
   }
