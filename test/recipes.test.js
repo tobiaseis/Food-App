@@ -242,3 +242,25 @@ test('filnavnet er stabilt og unikt pr. URL', () => {
   assert.match(slugOf(a), /^lammeculotte-[0-9a-f]{6}$/);
   assert.notEqual(slugOf('https://x.test/a/lasagne'), slugOf('https://x.test/b/lasagne'));
 });
+
+const { lineOf, labelOf, UNITS, RECIPE_SCHEMA } = require('../src/recipes/edition');
+
+test('den danske linje læses tilbage til samme vare og mængde', () => {
+  const kb = parseIngredient(lineOf({ amount: 400, unit: 'g', name: 'kyllingebryst', note: 'i strimler', optional: false }));
+  assert.equal(kb.item_key, 'kyllingebryst');
+  near(kb.amount, 0.4);
+  assert.equal(parseIngredient(lineOf({ amount: 1.5, unit: 'dl', name: 'piskefløde', note: null, optional: false })).qty, 1.5);
+  // Valgfri står bagerst: "evt." forrest ville skygge for mængden.
+  const opt = parseIngredient(lineOf({ amount: 100, unit: 'g', name: 'bacon', note: null, optional: true }));
+  assert.equal(opt.optional, 1);
+  near(opt.amount, 0.1);
+  assert.equal(labelOf({ name: 'kyllingebryst', note: 'i strimler' }), 'kyllingebryst, i strimler');
+});
+
+test('skemaet kender kun enheder, parseIngredient kan læse', () => {
+  for (const u of UNITS) {
+    const p = parseIngredient(`2 ${u} løg`);
+    assert.equal(p.unit, u, `enheden ${u} læses ikke`);
+  }
+  assert.equal(RECIPE_SCHEMA.additionalProperties, false);
+});

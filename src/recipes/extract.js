@@ -242,7 +242,7 @@ const PREP_WORDS = /\b(finthakket|hakket fint|groft hakket|i tern|i skiver|i bå
 //
 // Retningen er bevidst: flager vi for lidt, køber man en vare for meget.
 // Flager vi for meget, står man i køkkenet uden burgerboller.
-const OPTIONAL_RE = /\(optional\)|\boptional\b|\bif you like\b|^\s*evt\.?\s|^\s*eventuelt\b|^\s*valgfri/i;
+const OPTIONAL_RE = /\(optional\)|\(valgfri\)|\boptional\b|\bif you like\b|^\s*evt\.?\s|^\s*eventuelt\b|^\s*valgfri/i;
 
 /**
  * "500 g hakket oksekød, finthakket" → { qty: 500, unit: 'g',
