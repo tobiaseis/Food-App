@@ -17,6 +17,9 @@
  *
  * Råmaterialet er tmp/kilder/ (fetch-sources.js); resultatet er
  * data/opskrifter/<kilde>/<slug>.json, som import-da.js læser ind i basen.
+ * Hver udgaves fremgangsmåde måles mod kildens (overlap nedenfor) og
+ * logges i tmp/omskrivning/overlap.jsonl; de, der er for tæt på, listes til
+ * sidst med en færdig `run --force --ids …`-linje.
  */
 
 const fs = require('fs');
@@ -171,6 +174,96 @@ function ask(src, { model = DEFAULT_MODEL } = {}) {
   });
 }
 
+// ── Egne ord, målt ──────────────────────────────────────────────────────────
+//
+// Det er de egne ord i fremgangsmåden, der gør det forsvarligt at udelade
+// kreditering (brugerens beslutning 2026-09-30) — og prompten kan kun BEDE om
+// dem. Derfor måles hver udgave mod kildens trin: hvor stor en del af
+// udgavens 5-ords-sekvenser står også hos kilden, og hvor lang er den længste
+// fælles ordrække. Tallene bliver i tmp/omskrivning/ (gitignoret) og kommer
+// aldrig i udgavens JSON: filen er appens opskrift, ikke et regnskab over kilden.
+
+// Over dette er udgaven for tæt på kilden og skal skrives igen. 15 % fælles
+// 5-ords-sekvenser er langt over, hvad to selvstændige beskrivelser af samme
+// ret deler ("i en gryde ved middel varme"); 12 ord i træk er en sætning.
+const OVERLAP_MAX_SHARE = 0.15;
+const OVERLAP_MAX_RUN = 12;
+const NGRAM = 5;
+
+/** Trinenes ord: små bogstaver, uden tegnsætning. Trin er strenge eller { text }. */
+function wordsOf(steps) {
+  return (steps || [])
+    .map((s) => (typeof s === 'string' ? s : (s && s.text) || ''))
+    .join(' ')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .split(' ')
+    .filter(Boolean);
+}
+
+/**
+ * Hvor meget af udgavens fremgangsmåde står også hos kilden?
+ *
+ *   share    andelen af udgavens 5-ords-sekvenser, der også findes i kildens
+ *            trin (0–1). Trinene læses som én tekst, så en sætning, der er
+ *            flyttet til et andet trin, tæller med.
+ *   longest  den længste ordrække, de to har til fælles.
+ */
+function overlap(sourceSteps, editionSteps) {
+  const a = wordsOf(sourceSteps);
+  const b = wordsOf(editionSteps);
+
+  const grams = new Set();
+  for (let i = 0; i + NGRAM <= a.length; i++) grams.add(a.slice(i, i + NGRAM).join(' '));
+  let total = 0;
+  let shared = 0;
+  for (let i = 0; i + NGRAM <= b.length; i++) {
+    total++;
+    if (grams.has(b.slice(i, i + NGRAM).join(' '))) shared++;
+  }
+
+  // Længste fælles delsekvens af ord, én række ad gangen: et par hundrede ord
+  // på hver side er få tusinde celler.
+  let longest = 0;
+  let prev = new Array(b.length + 1).fill(0);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = new Array(b.length + 1).fill(0);
+    for (let j = 1; j <= b.length; j++) {
+      if (a[i - 1] === b[j - 1]) {
+        cur[j] = prev[j - 1] + 1;
+        if (cur[j] > longest) longest = cur[j];
+      }
+    }
+    prev = cur;
+  }
+  return { share: total ? shared / total : 0, longest };
+}
+
+/** Er udgaven for tæt på kilden til at blive stående? */
+const tooClose = (o) => o.share > OVERLAP_MAX_SHARE || o.longest >= OVERLAP_MAX_RUN;
+
+/**
+ * Målingen for én skrevet udgave: lægges i overlap.jsonl og siges højt, hvis
+ * den er for tæt på. Svarer målingen, så kalderen kan samle listen.
+ */
+function recordOverlap(src, answer) {
+  const o = overlap(src.steps, answer.output && answer.output.steps);
+  const row = { id: src.id, url: src.url, share: Math.round(o.share * 1000) / 1000, longest: o.longest };
+  fs.mkdirSync(STATE_DIR, { recursive: true });
+  fs.appendFileSync(path.join(STATE_DIR, 'overlap.jsonl'), `${JSON.stringify(row)}\n`);
+  if (tooClose(o)) {
+    console.log(`  for tæt på kilden: ${src.id} · ${(o.share * 100).toFixed(0)} % fælles 5-ords-sekvenser · ${o.longest} ord i træk`);
+  }
+  return { ...row, close: tooClose(o) };
+}
+
+/** Listen til sidst: de udgaver, der skal skrives igen, og kommandoen, der gør det. */
+function reportClose(close) {
+  if (!close.length) return;
+  console.log(`\nFor tæt på kilden (${close.length}) — skriv dem igen:`);
+  console.log(`npm run recipes:rewrite -- run --force --ids ${close.join(',')}`);
+}
+
 function writeEdition(src, answer) {
   const ed = {
     url: src.url, source: src.source, source_name: src.source_name,
@@ -216,6 +309,7 @@ async function run(args) {
   const parallel = Math.max(1, Number(argValue(args, '--parallel')) || 1);
   const started = Date.now();
   const failed = [];
+  const close = [];
   let ok = 0;
   let next = 0;
   let stopped = null;
@@ -227,6 +321,7 @@ async function run(args) {
       if (answer.limit) { stopped = answer.error; break; }
       if (answer.error) { failed.push({ id: src.id, why: answer.error }); continue; }
       writeEdition(src, answer);
+      if (recordOverlap(src, answer).close) close.push(src.id);
       if (++ok % 10 === 0) {
         const sec = (Date.now() - started) / 1000 / ok;
         console.log(`  ${ok}/${todo.length} · ${sec.toFixed(0)} s pr. opskrift`);
@@ -243,6 +338,7 @@ async function run(args) {
     fs.writeFileSync(path.join(STATE_DIR, 'fejl.json'), JSON.stringify(failed, null, 2));
     console.log(`Kør dem igen: npm run recipes:rewrite -- run --force --ids ${failed.map((f) => f.id).join(',')}`);
   }
+  reportClose(close);
   if (stopped) {
     console.log(`\nAbonnementets grænse er nået: ${stopped}`);
     console.log('Start samme kommando igen, når grænsen er nulstillet — den fortsætter, hvor den slap.');
@@ -256,6 +352,7 @@ async function one(id, args) {
   const answer = await ask(src, { model: argValue(args, '--model') || DEFAULT_MODEL });
   if (answer.error) throw new Error(`${id}: ${answer.error}`);
   console.log(`Skrevet: ${path.relative(process.cwd(), writeEdition(src, answer))} (${answer.model})`);
+  if (recordOverlap(src, answer).close) reportClose([src.id]);
 }
 
 async function main(argv) {
@@ -269,4 +366,7 @@ if (require.main === module) {
   main(process.argv.slice(2)).catch((e) => { console.error('[FEJL]', e.message); process.exit(1); });
 }
 
-module.exports = { newestClaude, limitHit, generatingModel, systemText, userMessage };
+module.exports = {
+  newestClaude, limitHit, generatingModel, systemText, userMessage,
+  overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN,
+};

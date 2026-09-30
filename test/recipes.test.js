@@ -298,6 +298,38 @@ test('abonnementets grænse genkendes, andre fejl gør ikke', () => {
   assert.equal(limitHit({ is_error: false, result: 'usage limit' }), false);
 });
 
+const { overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN } = require('../src/recipes/rewrite');
+
+test('egne ord måles: fælles 5-ords-sekvenser og den længste fælles ordrække', () => {
+  const kilde = [
+    { section: null, text: 'Heat the oven to 200C. Season the chicken thighs with salt, pepper and paprika.' },
+    { section: null, text: 'Roast for 35 minutes until golden and cooked through, then rest for five minutes.' },
+  ];
+
+  // Samme tekst: alt er fælles. Tegnsætning og store bogstaver tæller ikke,
+  // og trin må gerne være strenge.
+  const samme = overlap(kilde, kilde.map((s) => s.text.toUpperCase().replace(/[.,]/g, ' ; ')));
+  assert.equal(samme.share, 1);
+  assert.equal(samme.longest, 28);            // alle ord i begge trin
+
+  // Skrevet om fra bunden: intet fælles.
+  const egne = overlap(kilde, [
+    'Tænd ovnen på 200 grader. Krydr kyllingeoverlårene godt med salt, peber og paprika.',
+    'Steg dem cirka 35 minutter, til de er gyldne og gennemstegte. Lad dem hvile lidt.',
+  ]);
+  assert.equal(egne.share, 0);
+  assert.ok(egne.longest < 3, `længste fælles række var ${egne.longest}`);
+
+  // En sætning på syv ord taget med: den længste række er syv.
+  const lånt = overlap(kilde, ['Krydr kødet godt.', 'Roast for 35 minutes until golden and — nej, steg det.']);
+  assert.equal(lånt.longest, 7);
+  assert.ok(lånt.share > 0 && lånt.share < 1);
+
+  // Tomme trin giver ingen division med nul.
+  assert.deepEqual(overlap([], []), { share: 0, longest: 0 });
+  assert.ok(OVERLAP_MAX_SHARE === 0.15 && OVERLAP_MAX_RUN === 12);
+});
+
 test('den model, der skrev svaret, er den med flest outputTokens — ikke den første nøgle i modelUsage', () => {
   // En hjælpemodel (fx til selve skema-udtrækket) stod først i modelUsage
   // med få tokens; filens model-felt endte med at pege på den i stedet for
