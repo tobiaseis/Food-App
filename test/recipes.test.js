@@ -31,6 +31,7 @@ test('dyret i et sammensat kødord bestemmer varen', () => {
 });
 
 const { danishMinutes, labelledTimes, pickTimes } = require('../src/recipes/times');
+const { extractRecipe } = require('../src/recipes/extract');
 
 test('timer og minutter på dansk', () => {
   assert.equal(danishMinutes('1 t. 30 min.'), 90);
@@ -64,4 +65,38 @@ test('uden etiketter: tid i alt fra schema.org, arbejdstid fra forberedelsen', (
   assert.deepEqual(pickTimes({ labelled: { total: 20, active: 60 } }),
     { total_minutes: 60, active_minutes: 20 });
   assert.deepEqual(pickTimes({ labelled: none }), { total_minutes: null, active_minutes: null });
+});
+
+test('teaserkasse før opskriften påvirker ikke tiderne', () => {
+  // En side med "Relaterede opskrifter" før selve opskriften. Hvis vi læser hele
+  // siden ufiltreret, får vi teaserens tider (20/10), ikke opskriftens (45/30).
+  // extractRecipe skal scope til Recipe-elementet så teaserens tider ignoreres.
+  const html = `
+    <html>
+    <head><title>Lammeculotte</title></head>
+    <body>
+    <h1>Lammeculotte</h1>
+    <div class="related-recipes">
+      <h2>Relaterede opskrifter</h2>
+      <div class="recipe-teaser">
+        <h3>Kyllingelasagne</h3>
+        <p>Tid i alt 20 min. Arbejdstid 10 min.</p>
+      </div>
+    </div>
+    <div itemtype="http://schema.org/Recipe">
+      <span itemprop="name">Lammeculotte</span>
+      <span itemprop="recipeIngredient">600 g lammeculotte</span>
+      <div class="recipe-info">
+        Tid i alt 45 min. Arbejdstid 30 min.
+        <span itemprop="cookTime">PT45M</span>
+        <span itemprop="totalTime">PT30M</span>
+      </div>
+      <span itemprop="recipeInstructions">Tilbered lammekødet.</span>
+    </div>
+    </body>
+    </html>
+  `;
+  const recipe = extractRecipe(html, 'https://example.com/lammeculotte');
+  assert.equal(recipe.total_minutes, 45, 'tid i alt skal være 45, ikke 20 fra teaseren');
+  assert.equal(recipe.active_minutes, 30, 'arbejdstid skal være 30, ikke 10 fra teaseren');
 });

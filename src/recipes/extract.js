@@ -340,10 +340,16 @@ function extractRecipe(html, url) {
   const n = raw.nutrition || {};
   const servings = parseYield(raw.recipeYield) ?? yieldFromPage(html);
 
+  // Scope tidsletiketter til opskriftens del af siden, så teasere med andre
+  // opskrifter ikke skygger for denne. Hvis siden markerer Recipe med microdata,
+  // starter vi derfra; ellers bruger vi hele siden.
+  const scopeAt = html.search(/itemtype\s*=\s*["']https?:\/\/schema\.org\/Recipe/i);
+  const recipeHtml = scopeAt !== -1 ? html.slice(scopeAt) : html;
+
   // Se src/recipes/times.js: Valdemarsros schema.org-felter er byttet om,
   // så sidens egne etiketter læses først.
   const times = pickTimes({
-    labelled: labelledTimes(stripTags(html)),
+    labelled: labelledTimes(stripTags(recipeHtml)),
     prep: parseDuration(raw.prepTime),
     cook: parseDuration(raw.cookTime),
     total: parseDuration(raw.totalTime),
