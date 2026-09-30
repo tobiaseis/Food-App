@@ -61,6 +61,20 @@ function limitHit(res) {
     || /usage limit|rate limit|limit reached/i.test(String(res.result || ''))));
 }
 
+/**
+ * Den model, der faktisk skrev svaret. modelUsage kan have flere nøgler — en
+ * hjælpemodel (fx til selve skema-udtrækket) står ofte først og har et par
+ * håndfulde tokens; den model, der skrev opskriften, har langt flere
+ * outputTokens. Uden dette blev filens `model`-felt sat til hjælpemodellen
+ * (Haiku), selvom kaldet bad om Sonnet.
+ */
+function generatingModel(modelUsage, fallback) {
+  const entries = Object.entries(modelUsage || {});
+  if (!entries.length) return fallback;
+  entries.sort((a, b) => (b[1].outputTokens || 0) - (a[1].outputTokens || 0));
+  return entries[0][0];
+}
+
 // Brugerens valg 2026-09-30: så lidt om som muligt. Samme ret; mængderne
 // rundet til danske pakninger og runde tal, så de ikke er kildens egne; og
 // fremgangsmåden med egne ord — det er teksten, ophavsretten beskytter.
@@ -72,14 +86,14 @@ INGREDIENSER
 - Skriv på dansk, én vare pr. linje. "Salt og peber" er to linjer.
 - Brug kun disse enheder: ${UNITS.join(', ')} – eller null, når linjen ikke har en mængde. Omregn: cup → dl, oz → g, lb → g, tbsp → spsk, tsp → tsk, stick butter → g.
 - Rund mængderne til det, man køber i Danmark, og til runde tal: hele pakker, hvor det giver mening (450 g hakket oksekød → 500 g; en dåse hakkede tomater er 400 g; et bæger fløde er 2,5 dl), ellers et rundt tal tæt på (180 g → 200 g). Ingen vare må ændres mere end 20 % op eller ned, og retten skal smage som før.
-- name er varen alene, som den hedder i et dansk supermarked ("kyllingebryst", ikke "kyllingebryst uden skind i strimler"). Brug navnene fra varekataloget nedenfor, når de passer. Tilberedning ("finthakket", "i strimler") står i note.
+- name er varen alene, som den hedder i et dansk supermarked ("kyllingebryst", ikke "kyllingebryst uden skind i strimler"). Brug navnene fra varekataloget nedenfor, når de passer. Behold udskæringen, når det er den, man køber (lammeculotte, kyllingeoverlår, svinemørbrad). Tilberedning ("finthakket", "i strimler") står i note.
 - Er en vare svær at få i Netto, REMA 1000, Føtex, Bilka, Lidl eller Coop, så skift den til den nærmeste almindelige danske vare (double cream → piskefløde, courgette → squash, streaky bacon → bacon i skiver, self-raising flour → hvedemel og bagepulver). Skift aldrig rettens hovedråvare ud: lam forbliver lam, laks forbliver laks.
 - optional er kun sand, hvis kilden selv kalder varen valgfri eller "evt.".
 - section er en overskrift som "Til dressingen", eller null.
 - Skriv hver erstatning af en vare som én kort sætning i changes. Afrundinger skal ikke med. Ingen erstatninger: en tom liste.
 
 FREMGANGSMÅDE
-- Skriv den på dansk med dine egne ord, i korte trin i bydeform ("Steg løget blødt i smørret."). Samme ret og samme teknik – men ikke en ordret oversættelse eller afskrift af kildens tekst.
+- Skriv trinene fra bunden ud fra, hvad der skal ske i køkkenet – redigér ikke kildens sætninger. Ingen sætning må følge kildens ordstilling: brug dine egne verber og din egen sætningsbygning, og saml eller del trin, hvor det gør det tydeligere. Retten, teknikken, tiderne og temperaturerne er de samme. Skriv i korte trin i bydeform.
 - Temperaturer i °C for almindelig ovn; skriv varmluft, hvis kilden gør. Gasmærker og °F omregnes.
 - Gentag ikke mængder fra ingredienslisten i trinene – de kan blive justeret i appen. Skriv "halvdelen af hvidløget", ikke "2 fed hvidløg".
 - section som ved ingredienserne.
@@ -97,7 +111,10 @@ VAREKATALOG (foretrukne varenavne)
 function systemText() {
   const catalog = SEED
     .filter((e) => e.cat !== 'nonfood')
-    .map((e) => `- ${e.name}${e.da && e.da.length ? ` (${e.da.slice(0, 6).join(', ')})` : ''}`)
+    // Alle synonymer med, ikke kun de første 6: "lammeculotte" står som
+    // nr. 9 på listen for 'lam', og en afkortning fik modellen til aldrig at
+    // se den — så den skrev "lammekød" (note: "culotte") i stedet.
+    .map((e) => `- ${e.name}${e.da && e.da.length ? ` (${e.da.join(', ')})` : ''}`)
     .sort((a, b) => a.localeCompare(b, 'da'))
     .join('\n');
   return INSTRUCTIONS + catalog;
@@ -122,8 +139,9 @@ function ask(src, { model = DEFAULT_MODEL } = {}) {
   return new Promise((resolve) => {
     const args = ['-p', '--output-format', 'json',
       '--json-schema', JSON.stringify(RECIPE_SCHEMA),
-      // ~13.000 tegn — et godt stykke under Windows' grænse på 32.767 for en
-      // kommandolinje. Vokser kataloget meget, skal den i en fil.
+      // ~12.900 tegn (systemText + skema) — et godt stykke under Windows'
+      // grænse på 32.767 for en kommandolinje. Vokser kataloget meget, skal
+      // den i en fil eller flyttes til stdin-beskeden (se testen for grænsen).
       '--system-prompt', systemText(),
       '--tools', '', '--setting-sources', '', '--strict-mcp-config',
       '--no-session-persistence', '--model', model];
@@ -147,7 +165,7 @@ function ask(src, { model = DEFAULT_MODEL } = {}) {
       if (res.is_error || res.subtype !== 'success' || !res.structured_output) {
         return resolve({ error: String(res.result || res.subtype || 'intet svar').slice(0, 300) });
       }
-      resolve({ output: res.structured_output, model: Object.keys(res.modelUsage || {})[0] || model });
+      resolve({ output: res.structured_output, model: generatingModel(res.modelUsage, model) });
     });
     child.stdin.end(userMessage(src));
   });
@@ -251,4 +269,4 @@ if (require.main === module) {
   main(process.argv.slice(2)).catch((e) => { console.error('[FEJL]', e.message); process.exit(1); });
 }
 
-module.exports = { newestClaude, limitHit, systemText, userMessage };
+module.exports = { newestClaude, limitHit, generatingModel, systemText, userMessage };

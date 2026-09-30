@@ -265,7 +265,7 @@ test('skemaet kender kun enheder, parseIngredient kan læse', () => {
   assert.equal(RECIPE_SCHEMA.additionalProperties, false);
 });
 
-const { newestClaude, limitHit } = require('../src/recipes/rewrite');
+const { newestClaude, limitHit, generatingModel, systemText } = require('../src/recipes/rewrite');
 
 test('den nyeste Claude Code i VS Code-udvidelserne vælges — efter versionsnummer', () => {
   assert.equal(newestClaude([
@@ -281,4 +281,24 @@ test('abonnementets grænse genkendes, andre fejl gør ikke', () => {
   assert.equal(limitHit({ is_error: true, result: 'Claude usage limit reached|1759300000' }), true);
   assert.equal(limitHit({ is_error: true, result: 'Invalid JSON schema' }), false);
   assert.equal(limitHit({ is_error: false, result: 'usage limit' }), false);
+});
+
+test('den model, der skrev svaret, er den med flest outputTokens — ikke den første nøgle i modelUsage', () => {
+  // En hjælpemodel (fx til selve skema-udtrækket) stod først i modelUsage
+  // med få tokens; filens model-felt endte med at pege på den i stedet for
+  // den model, der rent faktisk skrev opskriften.
+  assert.equal(generatingModel({
+    'claude-haiku-4-5-20251001': { inputTokens: 906, outputTokens: 14 },
+    'claude-sonnet-5-5': { inputTokens: 2, outputTokens: 93, cacheCreationInputTokens: 1077 },
+  }, 'sonnet'), 'claude-sonnet-5-5');
+  assert.equal(generatingModel({}, 'sonnet'), 'sonnet');
+});
+
+test('varekataloget i systemprompten har udskæringsnavne, og kommandolinjen er et godt stykke under Windows-grænsen', () => {
+  const st = systemText();
+  // "lammeculotte" stod som nr. 9 i 'lam'-varens da-liste; en afkortning til
+  // de første 6 synonymer fik modellen til aldrig at se den.
+  assert.ok(st.includes('lammeculotte'), 'lammeculotte mangler i kataloget');
+  const size = st.length + JSON.stringify(RECIPE_SCHEMA).length;
+  assert.ok(size < 28000, `--system-prompt + --json-schema er ${size} tegn, for tæt på Windows' grænse på 32.767`);
 });
