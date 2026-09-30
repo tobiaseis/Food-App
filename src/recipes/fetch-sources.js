@@ -75,7 +75,14 @@ async function main(args) {
   await Promise.all([...queues].map(async ([key, list]) => {
     const delay = BY_KEY.get(key)?.delayMs ?? 1000;
     for (const r of list) {
-      const res = await fetchOne(r);
+      // Én fejlende URL må ikke fælde hele køen: uden try/catch afviser et
+      // uventet kast hele Promise.all og standser de andre kilders køer med.
+      let res;
+      try {
+        res = await fetchOne(r);
+      } catch (e) {
+        res = { ok: false, reason: e.message };
+      }
       if (!res.ok) failed.push({ id: r.id, url: r.url, reason: res.reason });
       if (++done % 50 === 0) console.log(`  ${done}/${rows.length}`);
       await sleep(delay);

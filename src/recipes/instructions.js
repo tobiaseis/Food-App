@@ -39,15 +39,60 @@ function stepsFromJsonLd(value, section = null, out = []) {
   return out;
 }
 
-/** Valdemarsro: ét itemprop="recipeInstructions" pr. trin. */
+/**
+ * Den indre HTML af elementet, der starter lige efter dets åbne-tag (ved
+ * openEnd), fundet ved at tælle åbne/luk-tags af SAMME navn (dybde).
+ *
+ * En ikke-grådig backreference-regex ("<TAG ...>([\s\S]*?)</TAG>") stopper
+ * ved det FØRSTE luk-tag med det navn — også når det hører til et indlejret
+ * element med samme tagnavn (fx en billed- eller tipboks i en <div>) — og
+ * afkorter fremgangsmåden midt i. Det er den fejl, denne funktion retter.
+ */
+function innerHtmlOf(html, tagName, openEnd) {
+  const re = new RegExp(`<${tagName}\\b[^>]*>|<\\/${tagName}\\s*>`, 'gi');
+  re.lastIndex = openEnd;
+  let depth = 1;
+  let m;
+  while ((m = re.exec(html))) {
+    if (m[0].startsWith('</')) {
+      if (--depth === 0) return html.slice(openEnd, m.index);
+    } else {
+      depth++;
+    }
+  }
+  return html.slice(openEnd); // ubalanceret markup: tag resten med frem for at tabe trin
+}
+
+/**
+ * Dagens Valdemarsro-markup pakker somme tider flere trin ind i én
+ * recipeInstructions-boks (<p> pr. trin, evt. en <ul><li> midt i en
+ * intervalmetode). Er der <p>/<li> til stede, bliver hver af dem sit eget
+ * trin; ellers er hele elementets tekst ét trin, som før.
+ */
+function stepsFromBlock(inner, out) {
+  const blocks = [...inner.matchAll(/<(p|li)\b[^>]*>([\s\S]*?)<\/\1>/gi)];
+  if (blocks.length) {
+    for (const b of blocks) {
+      const text = stripTags(b[2]);
+      if (text) out.push({ section: null, text });
+    }
+    return;
+  }
+  const text = stripTags(inner);
+  if (text) out.push({ section: null, text });
+}
+
+/** Valdemarsro: recipeInstructions som ét element pr. trin, eller ét element
+ *  der pakker flere <p>/<li> ind. */
 function stepsFromMicrodata(html) {
   const at = String(html).search(/itemtype\s*=\s*["']https?:\/\/schema\.org\/Recipe/i);
   if (at === -1) return [];
-  const re = /<([a-z0-9]+)[^>]*\bitemprop\s*=\s*["']recipeInstructions["'][^>]*>([\s\S]*?)<\/\1>/gi;
+  const scoped = String(html).slice(at);
+  const openTag = /<([a-z0-9]+)[^>]*\bitemprop\s*=\s*["']recipeInstructions["'][^>]*>/gi;
   const out = [];
-  for (const m of String(html).slice(at).matchAll(re)) {
-    const text = stripTags(m[2]);
-    if (text) out.push({ section: null, text });
+  for (const m of scoped.matchAll(openTag)) {
+    const inner = innerHtmlOf(scoped, m[1], m.index + m[0].length);
+    stepsFromBlock(inner, out);
   }
   return out;
 }

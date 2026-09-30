@@ -171,6 +171,43 @@ test('fremgangsmåden fra microdata (Valdemarsro)', () => {
   ]);
 });
 
+test('fremgangsmåden fra microdata: indlejret element med samme tagnavn afkorter ikke', () => {
+  // Dagens Valdemarsro-markup: alt i én <div itemprop="recipeInstructions">.
+  // En ikke-grådig backreference-regex ville stoppe ved boksens </div> og
+  // tabe trinnet efter den.
+  const html = `<div itemscope itemtype="http://schema.org/Recipe">
+    <div itemprop="recipeInstructions">
+      <p>Varm panden op.</p>
+      <div class="tip">Se video her.</div>
+      <p>Vend kødet efter to minutter.</p>
+    </div>
+  </div>`;
+  const steps = stepsFromMicrodata(html);
+  assert.deepEqual(steps.map((s) => s.text),
+    ['Varm panden op.', 'Vend kødet efter to minutter.']);
+});
+
+test('fremgangsmåden fra microdata: <p> og <ul><li> i samme boks bliver hvert sit trin', () => {
+  const html = `<div itemscope itemtype="http://schema.org/Recipe">
+    <div itemprop="recipeInstructions">
+      <p>Krydr kødet.</p>
+      <p>Intervalsteges efter følgende metode:</p>
+      <ul>
+        <li>Steg i 10 minutter.</li>
+        <li>Hvil i 10 minutter.</li>
+      </ul>
+      <p>Skæres i skiver inden servering.</p>
+    </div>
+  </div>`;
+  assert.deepEqual(stepsFromMicrodata(html), [
+    { section: null, text: 'Krydr kødet.' },
+    { section: null, text: 'Intervalsteges efter følgende metode:' },
+    { section: null, text: 'Steg i 10 minutter.' },
+    { section: null, text: 'Hvil i 10 minutter.' },
+    { section: null, text: 'Skæres i skiver inden servering.' },
+  ]);
+});
+
 test('filnavnet er stabilt og unikt pr. URL', () => {
   const a = 'https://www.valdemarsro.dk/lammeculotte/';
   assert.equal(slugOf(a), slugOf(a));
