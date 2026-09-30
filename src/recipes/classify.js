@@ -127,7 +127,9 @@ function scoreTiers(recipe, ingredients) {
   if (uniq.has('vin')) premium += 0.1;
   if (uniq.has('floede') && premiumIng > 0) premium += 0.05;
   if (/confit|sous vide|braiseret|braised|reduktion|terrine|risotto|bouillabaisse|wellington|ragout|velouté|beurre|purée|jus|ballotine|carpaccio|tartare|soufflé/i
-      .test(`${recipe.title} ${recipe.description || ''}`)) premium += 0.2;
+      // description er kildens tekst og nulstilles, når en dansk udgave læses
+      // ind (import-da.js); udgavens egen intro, med egne ord, træder i stedet.
+      .test(`${recipe.title} ${recipe.description || recipe.intro || ''}`)) premium += 0.2;
   premium += SOURCE_PREMIUM_BIAS[recipe.source] || 0;
   // Hverdagsretter skal ikke kunne snige sig ind i gourmetsporet på
   // ingredienstælling alene.

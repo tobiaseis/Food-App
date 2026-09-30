@@ -406,15 +406,30 @@ async function showProduct(productId) {
  * fremgangsmåden. Er en rest af en pakke lagt i netop denne ret (engine:
  * shoppingList.topups), står det ved varen.
  */
+// Hvilken åbning af arket, der er den seneste. Åbner man A, lukker og åbner B,
+// mens A stadig hentes, må A's svar ikke lande i B's ark.
+let recipeTicket = 0;
+
 async function showRecipe(id) {
   const modal = $('#modal');
+  const ticket = ++recipeTicket;
   modal.classList.add('recipe');
   $('#modal-title').textContent = 'Opskrift';
   $('#modal-body').innerHTML = '<div class="loading">Henter opskriften…</div>';
   if (!modal.open) modal.showModal();
 
   let r;
-  try { r = await Data.recipe(id); } catch (err) { r = { error: err.message }; }
+  try {
+    r = await Data.recipe(id);
+  } catch (err) {
+    // "Supabase 404: {…}" er ikke en besked til brugeren. Den rå fejl går i
+    // konsollen, hvor den kan findes.
+    console.warn('Opskriften kunne ikke hentes:', err);
+    r = { error: 'Opskriften kunne ikke hentes lige nu. Tjek forbindelsen, og prøv igen om lidt.' };
+  }
+  // Et nyere ark er åbnet, eller vinduet er lukket eller brugt til noget andet
+  // (de andre visninger fjerner 'recipe'), mens vi ventede.
+  if (ticket !== recipeTicket || !modal.open || !modal.classList.contains('recipe')) return;
   if (r.error) {
     $('#modal-body').innerHTML = `<div class="empty"><h3>Opskriften kan ikke vises</h3><p>${esc(r.error)}</p></div>`;
     return;
@@ -584,9 +599,13 @@ const FRACTIONS = [[0.25, '¼'], [0.5, '½'], [0.75, '¾']];
 function lineAmount(q, unit, factor) {
   if (q == null) return '';
   const n = q * factor;
-  if (unit === 'g' || unit === 'ml') return `${n >= 20 ? Math.round(n / 5) * 5 : Math.round(n)} ${unit}`;
+  // Mindst 1: "0 g safran" til en husstand på én er ikke en mængde, men en
+  // afrunding, der ser ud som en besked om at lade varen være.
+  if (unit === 'g' || unit === 'ml') return `${n >= 20 ? Math.round(n / 5) * 5 : Math.max(1, Math.round(n))} ${unit}`;
   if (unit === 'kg' || unit === 'l' || unit === 'dl') {
-    return `${n.toLocaleString('da-DK', { maximumFractionDigits: 2 })} ${unit}`;
+    // Og af samme grund intet "0 dl": under en hundrededel vises ét betydende ciffer.
+    const digits = n > 0 && n < 0.005 ? { maximumSignificantDigits: 1 } : { maximumFractionDigits: 2 };
+    return `${n.toLocaleString('da-DK', digits)} ${unit}`;
   }
   const quarter = Math.max(0.25, Math.round(n * 4) / 4);
   const whole = Math.floor(quarter);

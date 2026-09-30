@@ -90,19 +90,43 @@ function problems(ed, lines, before) {
   return out;
 }
 
+/**
+ * Én `::warning::`-linje til GitHub Actions: hvor mange udgaver der venter på
+ * eftersyn eller ikke kunne læses, og de første filer. Én linje, fordi en
+ * annotation er én linje; null, når der intet er at sige.
+ */
+function actionsWarning(flagged, errored) {
+  if (!flagged.length && !errored.length) return null;
+  const files = [...errored, ...flagged].map((f) => f.file).slice(0, 10);
+  const more = flagged.length + errored.length - files.length;
+  return `::warning title=Danske opskrifter::${flagged.length} til eftersyn, `
+    + `${errored.length} kunne ikke læses — ${files.join(', ')}${more > 0 ? ` (+${more} flere)` : ''}. `
+    + 'Kør npm run recipes:import -- --report tmp/omskrivning/kontrol.md lokalt.';
+}
+
 function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } = {}) {
   const db = getDb();
   const byUrl = new Map(db.prepare('SELECT id, url, edition_hash FROM recipes').all().map((r) => [r.url, r]));
   const before = db.prepare('SELECT raw, ingredient, item_key, amount, optional FROM recipe_ingredients WHERE recipe_id = ?');
 
   const apply = db.transaction((id, ed, lines, hash) => {
+    // description = NULL: den rummer op til 500 tegn af kildens EGEN tekst
+    // (extract.js), og release-assettets data.db er offentlig, hvis repoet er.
+    // Kildens tekst forlader ikke maskinen — heller ikke via basen. Udgavens
+    // intro, med egne ord, tager dens plads (også i classify.js).
+    //
+    // yield_count udfyldes kun, hvor kilden intet sagde: reclassify regner
+    // portionerne fra det rå tal og faldt ellers tilbage på den allerede
+    // regnede `servings`. Udgavens servings er kildens portionsantal, uændret.
     db.prepare(`
-      UPDATE recipes SET title = @title, intro = @intro, lang = 'da',
+      UPDATE recipes SET title = @title, intro = @intro, lang = 'da', description = NULL,
+             yield_count = COALESCE(yield_count, @servings),
              total_minutes = COALESCE(@total, total_minutes),
              active_minutes = COALESCE(@active, active_minutes),
              edition = @edition, edition_hash = @hash, edited_at = @at, changes = @changes
        WHERE id = @id`).run({
       id, title: ed.title, intro: ed.intro || null,
+      servings: ed.servings > 0 ? ed.servings : null,
       total: ed.total_minutes ?? null, active: ed.active_minutes ?? null,
       edition: ed.edition, hash, at: ed.written_at || new Date().toISOString(),
       changes: JSON.stringify(ed.changes || []),
@@ -161,6 +185,12 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
   // fil ikke blev læst ind.
   for (const f of orphaned.slice(0, 20)) log(`  uden ret i basen: ${f.file} (${f.url})`);
   for (const f of errored.slice(0, 20)) log(`  kunne ikke læses: ${f.file}: ${f.error}`);
+  // I GitHub Actions bliver linjen en advarsel på kørslens forside. Ellers
+  // står det kun dybt i loggen af en kørsel, der lykkedes — og ingen læser den.
+  if (process.env.GITHUB_ACTIONS) {
+    const warning = actionsWarning(flagged, errored);
+    if (warning) log(warning);
+  }
   if (reportPath) {
     const md = ['# Danske udgaver til eftersyn', '',
       ...flagged.map((f) => `- **${f.title}** (${f.id}) \`${f.file}\`\n  - ${f.issues.join('\n  - ')}`)];
@@ -181,4 +211,4 @@ if (require.main === module) {
   importAll({ reportPath: i === -1 ? null : args[i + 1] });
 }
 
-module.exports = { importAll, problems };
+module.exports = { importAll, problems, actionsWarning };

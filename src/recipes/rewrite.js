@@ -34,6 +34,8 @@ const { UNITS, RECIPE_SCHEMA, sourcePath, editionPath } = require('./edition');
 // oversætte og runde mængder af. --model opus, hvis piloten siger andet.
 const DEFAULT_MODEL = 'sonnet';
 const EDITION = 1;
+// Så mange fejl i træk (ikke grænsen), før run() giver op — se drain().
+const MAX_ERRORS_IN_A_ROW = 5;
 const STATE_DIR = path.join(__dirname, '..', '..', 'tmp', 'omskrivning');
 
 const argValue = (args, name) => { const i = args.indexOf(name); return i === -1 ? null : args[i + 1]; };
@@ -301,6 +303,42 @@ function pending(args) {
   return out;
 }
 
+/**
+ * Køen: `parallel` kald ad gangen, til alt er skrevet, grænsen er nået, eller
+ * CLI'en er holdt op med at virke. `ask(src)` svarer som ask(); `onOk(src,
+ * answer)` gemmer en udgave. Svarer `{ failed, stopped, broken }`.
+ *
+ * Fem fejl i træk er ikke fem dårlige opskrifter, men en CLI, der ikke
+ * virker: en ændret grænsebesked, et udløbet login, en ny version. Uden
+ * stoppet fejlede hver eneste resterende opskrift på et sekund, og linjen til
+ * at køre dem igen blev 2.000 id'er lang. En udgave, der lykkes, nulstiller
+ * tællingen; grænsen tæller ikke med — den har sin egen udgang.
+ */
+async function drain(todo, { parallel = 1, ask: askOne, onOk }) {
+  const failed = [];
+  let next = 0;
+  let stopped = null;
+  let broken = null;
+  let errorsInARow = 0;
+
+  async function worker() {
+    while (!stopped && !broken && next < todo.length) {
+      const src = todo[next++];
+      const answer = await askOne(src);
+      if (answer.limit) { stopped = answer.error; break; }
+      if (answer.error) {
+        failed.push({ id: src.id, why: answer.error });
+        if (++errorsInARow >= MAX_ERRORS_IN_A_ROW) broken = answer.error;
+        continue;
+      }
+      errorsInARow = 0;
+      onOk(src, answer);
+    }
+  }
+  await Promise.all(Array.from({ length: parallel }, worker));
+  return { failed, stopped, broken };
+}
+
 async function run(args) {
   const todo = pending(args);
   if (!todo.length) { console.log('Intet at omskrive.'); return; }
@@ -308,27 +346,21 @@ async function run(args) {
   // Et par kald ad gangen går hurtigere, men når grænsen tilsvarende hurtigere.
   const parallel = Math.max(1, Number(argValue(args, '--parallel')) || 1);
   const started = Date.now();
-  const failed = [];
   const close = [];
   let ok = 0;
-  let next = 0;
-  let stopped = null;
 
-  async function worker() {
-    while (!stopped && next < todo.length) {
-      const src = todo[next++];
-      const answer = await ask(src, { model });
-      if (answer.limit) { stopped = answer.error; break; }
-      if (answer.error) { failed.push({ id: src.id, why: answer.error }); continue; }
+  const { failed, stopped, broken } = await drain(todo, {
+    parallel,
+    ask: (src) => ask(src, { model }),
+    onOk: (src, answer) => {
       writeEdition(src, answer);
       if (recordOverlap(src, answer).close) close.push(src.id);
       if (++ok % 10 === 0) {
         const sec = (Date.now() - started) / 1000 / ok;
         console.log(`  ${ok}/${todo.length} · ${sec.toFixed(0)} s pr. opskrift`);
       }
-    }
-  }
-  await Promise.all(Array.from({ length: parallel }, worker));
+    },
+  });
 
   const perRecipe = ok ? ((Date.now() - started) / 1000 / ok).toFixed(0) : '–';
   console.log(`${ok} danske udgaver skrevet · ${failed.length} fejlede · ${perRecipe} s pr. opskrift`);
@@ -339,6 +371,10 @@ async function run(args) {
     console.log(`Kør dem igen: npm run recipes:rewrite -- run --force --ids ${failed.map((f) => f.id).join(',')}`);
   }
   reportClose(close);
+  if (broken) {
+    console.log(`\n${MAX_ERRORS_IN_A_ROW} fejl i træk — kørslen er stoppet. Den sidste: ${broken}`);
+    console.log('Se, om claude virker (login, version), og start samme kommando igen — den fortsætter, hvor den slap.');
+  }
   if (stopped) {
     console.log(`\nAbonnementets grænse er nået: ${stopped}`);
     console.log('Start samme kommando igen, når grænsen er nulstillet — den fortsætter, hvor den slap.');
@@ -368,5 +404,5 @@ if (require.main === module) {
 
 module.exports = {
   newestClaude, limitHit, generatingModel, systemText, userMessage,
-  overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN,
+  overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN, drain, MAX_ERRORS_IN_A_ROW,
 };

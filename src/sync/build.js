@@ -505,18 +505,19 @@ async function syncWatches(db, log) {
  * chains og stores står udenfor: deres id'er kommer fra Tjek og er stabile.
  */
 const DERIVED = [
-  // Nyeste tabel (plan 2026-09-30) — derfor først. Se kommentaren ved items.
+  // Nyeste tabel (plan 2026-09-30) — derfor først. Se kommentaren herunder.
   ['recipe_details', 'recipe_id=not.is.null'],
-  // items STÅR FØRST, og det er ikke tilfældigt. Al sletning sker, før noget
-  // indsættes, og en Supabase uden tabellen svarer 404 på sletningen. Stod
-  // items længere nede, var meal_plans, recipe_index, item_prices og
-  // recipe_costs allerede tømt, når fejlen kom — og appen stod uden madplan,
-  // til schema.sql blev kørt igen og næste synk lykkedes. Målt i reviewet af
-  // plan 3 opgave 1 med en mock uden tabellen: de fire stod med 0 rækker.
+  // De NYESTE tabeller står først — recipe_details, så items — og det er ikke
+  // tilfældigt. Al sletning sker, før noget indsættes, og en Supabase uden
+  // tabellen svarer 404 på sletningen. Stod en af dem længere nede, var
+  // meal_plans, recipe_index, item_prices og recipe_costs allerede tømt, når
+  // fejlen kom — og appen stod uden madplan, til schema.sql blev kørt igen og
+  // næste synk lykkedes. Målt i reviewet af plan 3 opgave 1 med en mock uden
+  // items-tabellen: de fire stod med 0 rækker.
   //
-  // Den ligger først, fordi den er den nyeste tabel og dermed den, en
-  // eksisterende installation mest sandsynligt mangler. Den har ingen
-  // fremmednøgler i nogen retning, så rækkefølgen er fri.
+  // items var den nyeste, før recipe_details kom, og er dermed den næste, en
+  // eksisterende installation kan mangle. Ingen af de to har fremmednøgler i
+  // nogen retning, så rækkefølgen er fri.
   //
   // Nøglen er stabil, så en upsert ville ikke duplikere — men en vare, der er
   // fjernet fra SEED, ville blive liggende i skyen og stå på browserens

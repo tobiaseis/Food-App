@@ -319,7 +319,44 @@ test('abonnementets grænse genkendes, andre fejl gør ikke', () => {
   assert.equal(limitHit({ is_error: false, result: 'usage limit' }), false);
 });
 
-const { overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN } = require('../src/recipes/rewrite');
+const { overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN, drain, MAX_ERRORS_IN_A_ROW } = require('../src/recipes/rewrite');
+
+test('omskrivningen stopper efter fem fejl i træk — ikke efter 2.000', async () => {
+  // En CLI, der er holdt op med at virke (udløbet login, ny version), fejler
+  // hver opskrift på et sekund. Køen skal give op og sige den sidste fejl.
+  const todo = Array.from({ length: 2000 }, (_, i) => ({ id: i + 1 }));
+  const asked = [];
+  const res = await drain(todo, {
+    parallel: 2,
+    ask: async (src) => { asked.push(src.id); return { error: `login udløbet (${src.id})` }; },
+    onOk: () => assert.fail('intet lykkes her'),
+  });
+  assert.equal(MAX_ERRORS_IN_A_ROW, 5);
+  assert.ok(asked.length <= MAX_ERRORS_IN_A_ROW + 1, `${asked.length} kald`);
+  assert.match(res.broken, /login udløbet/);
+  assert.equal(res.failed.length, asked.length);
+  assert.equal(res.stopped, null);
+
+  // En udgave, der lykkes, nulstiller tællingen: fire fejl, én god, fire fejl
+  // stopper ikke.
+  const mixed = [1, 2, 3, 4, 5, 6, 7, 8, 9].map((id) => ({ id }));
+  const done = [];
+  const ok = await drain(mixed, {
+    ask: async (src) => (src.id === 5 ? { output: {} } : { error: 'dårlig opskrift' }),
+    onOk: (src) => done.push(src.id),
+  });
+  assert.equal(ok.broken, null);
+  assert.deepEqual(done, [5]);
+  assert.equal(ok.failed.length, 8);
+
+  // Grænsen er sin egen udgang og tæller ikke som en fejl.
+  const limit = await drain(mixed, {
+    ask: async (src) => (src.id === 3 ? { error: 'usage limit', limit: true } : { output: {} }),
+    onOk: () => {},
+  });
+  assert.equal(limit.stopped, 'usage limit');
+  assert.equal(limit.failed.length, 0);
+});
 
 test('egne ord måles: fælles 5-ords-sekvenser og den længste fælles ordrække', () => {
   const kilde = [
@@ -393,13 +430,15 @@ const EDITION_FIXTURE = {
   changes: [],
 };
 
-function withEdition(edition, fn) {
+// yieldCount og description: det, kilden efterlod på retten før udgaven.
+function withEdition(edition, fn, { yieldCount = 4, description = null } = {}) {
   const db = getDb();
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'opskrifter-'));
   fs.writeFileSync(path.join(dir, 'ret.json'), JSON.stringify(edition));
   const id = Number(db.prepare(`
-    INSERT INTO recipes (url, source, source_name, title, lang, servings, yield_count, fetched_at)
-    VALUES (?, 'test', 'Test', 'Lamb rump', 'en', 4, 4, ?)`).run(edition.url, new Date().toISOString()).lastInsertRowid);
+    INSERT INTO recipes (url, source, source_name, title, description, lang, servings, yield_count, fetched_at)
+    VALUES (?, 'test', 'Test', 'Lamb rump', ?, 'en', 4, ?, ?)`)
+    .run(edition.url, description, yieldCount, new Date().toISOString()).lastInsertRowid);
   const p = parseIngredient('600 g lamb rump', 0);
   db.prepare(`INSERT INTO recipe_ingredients (recipe_id, raw, qty, unit, ingredient, item_key, amount, optional, position)
               VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0)`).run(id, p.raw, p.qty, p.unit, p.ingredient, p.item_key, p.amount, p.optional);
@@ -425,6 +464,25 @@ test('en dansk udgave læses ind: titel, tider, linjer og trin', () => {
     assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_steps WHERE recipe_id = ?').get(id).n, 2);
     // Anden gang er filen uændret og røres ikke.
     assert.equal(importAll({ dir, log: () => {} }).unchanged, 1);
+  });
+});
+
+test('udgaven fjerner kildens description og udfylder et manglende yield_count', () => {
+  // description er op til 500 tegn af kildens egen tekst, og release-assettets
+  // data.db er offentlig, hvis repoet er. Og uden yield_count regner
+  // reclassify portionerne fra en allerede regnet servings.
+  withEdition({ ...EDITION_FIXTURE, servings: 6, yield_count: null }, ({ db, dir, id }) => {
+    assert.equal(importAll({ dir, log: () => {} }).applied, 1);
+    const r = db.prepare('SELECT description, yield_count, intro FROM recipes WHERE id = ?').get(id);
+    assert.equal(r.description, null);
+    assert.equal(r.yield_count, 6);
+    assert.equal(r.intro, 'Mør lam med salvie.');
+  }, { yieldCount: null, description: 'Tender lamb rump with a herb crust, from the source.' });
+
+  // Et yield_count, kilden selv satte, bliver stående.
+  withEdition({ ...EDITION_FIXTURE, servings: 6, yield_count: null }, ({ db, dir, id }) => {
+    importAll({ dir, log: () => {} });
+    assert.equal(db.prepare('SELECT yield_count FROM recipes WHERE id = ?').get(id).yield_count, 4);
   });
 });
 
@@ -476,4 +534,28 @@ test('en ødelagt fil stopper ikke resten af indlæsningen', () => {
     assert.equal(res.applied, 1);
     assert.equal(db.prepare('SELECT title FROM recipes WHERE id = ?').get(id).title, good.title);
   });
+});
+
+test('i GitHub Actions bliver fejl og eftersyn en ::warning::-linje', () => {
+  // En natlig kørsel, der lykkes, læser ingen. Advarslen står på forsiden.
+  const good = { ...EDITION_FIXTURE, url: 'https://test.invalid/da-import-6' };
+  const was = process.env.GITHUB_ACTIONS;
+  process.env.GITHUB_ACTIONS = 'true';
+  try {
+    withEdition(good, ({ dir }) => {
+      fs.writeFileSync(path.join(dir, 'a-bad.json'), '{ dette er ikke json');
+      const lines = [];
+      importAll({ dir, log: (l) => lines.push(l) });
+      const warnings = lines.filter((l) => l.startsWith('::warning'));
+      assert.equal(warnings.length, 1, lines.join('\n'));
+      assert.match(warnings[0], /0 til eftersyn, 1 kunne ikke læses/);
+      assert.match(warnings[0], /a-bad\.json/);
+      assert.ok(!warnings[0].includes('\n'), 'en annotation er én linje');
+    });
+  } finally {
+    if (was === undefined) delete process.env.GITHUB_ACTIONS; else process.env.GITHUB_ACTIONS = was;
+  }
+  // Uden noget at sige: ingen linje.
+  const { actionsWarning } = require('../src/recipes/import-da');
+  assert.equal(actionsWarning([], []), null);
 });
