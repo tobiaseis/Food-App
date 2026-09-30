@@ -391,4 +391,7 @@ function extractRecipe(html, url) {
 module.exports = {
   extractRecipe, parseIngredient, findJsonLdRecipes, findMicrodataRecipe,
   parseDuration, parseYield, yieldFromPage, stripTags, decodeEntities,
+  // scripts/backfill-amounts.js klassificerer linjerne igen hver nat og skal
+  // bruge PRÆCIS denne regel — se kommentaren ved OPTIONAL_RE.
+  OPTIONAL_RE,
 };

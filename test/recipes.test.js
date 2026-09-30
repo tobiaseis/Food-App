@@ -257,6 +257,21 @@ test('den danske linje læses tilbage til samme vare og mængde', () => {
   assert.equal(labelOf({ name: 'kyllingebryst', note: 'i strimler' }), 'kyllingebryst, i strimler');
 });
 
+test('"(valgfri)" overlever den natlige backfill:amounts', () => {
+  // backfill:amounts kører EFTER recipes:import og klassificerer hver linje
+  // igen. Havde den sin egen regel uden "(valgfri)", blev baconnet
+  // obligatorisk hver nat. Scriptets egen funktion, ikke kun regexen.
+  const { lineOptional } = require('../scripts/backfill-amounts');
+  const { OPTIONAL_RE } = require('../src/recipes/extract');
+  const line = lineOf({ amount: 100, unit: 'g', name: 'bacon', note: null, optional: true });
+  assert.equal(line, '100 g bacon (valgfri)');
+  assert.equal(lineOptional(line), 1);
+  assert.ok(OPTIONAL_RE.test(line));
+  assert.equal(lineOptional('100 g bacon'), 0);
+  assert.equal(lineOptional('1 tbsp sesame seeds (optional)'), 1);
+  assert.equal(lineOptional(null), 0);
+});
+
 test('skemaet kender kun enheder, parseIngredient kan læse', () => {
   for (const u of UNITS) {
     const p = parseIngredient(`2 ${u} løg`);
