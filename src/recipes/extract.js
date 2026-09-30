@@ -10,12 +10,14 @@
  *                      (type="application/ld&#x2B;json")
  *   · Valdemarsro    – microdata (itemprop="recipeIngredient")
  *
- * Vi gemmer FAKTA – titel, ingrediensliste, næringsindhold, link – og henter
- * ikke fremgangsmåden. Brugeren sendes til kilden for selve opskriften.
+ * Vi udtrækker fakta – titel, ingredienser, tider, næring. Fremgangsmåden
+ * hentes af instructions.js og bruges kun som råmateriale til appens egen
+ * danske udgave (se src/recipes/rewrite.js).
  */
 
 const taxonomy = require('../lib/taxonomy');
 const { amountOfLine } = require('../lib/units');
+const { labelledTimes, pickTimes } = require('./times');
 
 // ── HTML-hjælpere ────────────────────────────────────────────────────────────
 
@@ -338,8 +340,14 @@ function extractRecipe(html, url) {
   const n = raw.nutrition || {};
   const servings = parseYield(raw.recipeYield) ?? yieldFromPage(html);
 
-  const totalTime = parseDuration(raw.totalTime)
-    || ((parseDuration(raw.prepTime) || 0) + (parseDuration(raw.cookTime) || 0)) || null;
+  // Se src/recipes/times.js: Valdemarsros schema.org-felter er byttet om,
+  // så sidens egne etiketter læses først.
+  const times = pickTimes({
+    labelled: labelledTimes(stripTags(html)),
+    prep: parseDuration(raw.prepTime),
+    cook: parseDuration(raw.cookTime),
+    total: parseDuration(raw.totalTime),
+  });
 
   let title = stripTags(firstString(raw.name) || '');
   if (!title || title.length < 3) {
@@ -361,7 +369,8 @@ function extractRecipe(html, url) {
     description: raw.description ? stripTags(firstString(raw.description)).substring(0, 500) : null,
     image,
     servings,
-    total_minutes: totalTime,
+    total_minutes: times.total_minutes,
+    active_minutes: times.active_minutes,
     kcal:      parseNutritionNumber(n.calories),
     protein_g: parseNutritionNumber(n.proteinContent),
     carbs_g:   parseNutritionNumber(n.carbohydrateContent),
