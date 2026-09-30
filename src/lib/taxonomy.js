@@ -101,12 +101,21 @@ const SEED = [
     da: ['bacon', 'baconskiver', 'bacon i tern'], en: ['bacon', 'pancetta', 'streaky bacon'] },
   { key: 'lam', name: 'Lammekød', cat: 'meat',
     class: 'fresh', keeps: 'perishable', p: 20, kcal: 230, c: 0,
+    // De sammensatte ord SKAL stå her. Uden dem vinder det generiske stykke
+    // bagerst i ordet: "lammeculotte" blev til bøf (culotte) og
+    // "lammemørbrad" til svinemørbrad (mørbrad) — et helt ord slår et, der
+    // kun er forankret i den ene ende (se lookup i src/lib/items.js).
     da: ['lammekølle', 'lammekød', 'lammekoteletter', 'lammefilet',
-         'lammekrone', 'lammebov', 'lammehals', 'lammeskank'],
+         'lammekrone', 'lammebov', 'lammehals', 'lammeskank',
+         'lammeculotte', 'lammeculotter', 'lammemørbrad', 'lammeinderlår',
+         'lammeryg', 'lammekam', 'lammecarré', 'lammeskulder', 'lammesteg',
+         'lammetyndsteg', 'lammeribben', 'lammespyd', 'lammefars', 'hakket lammekød'],
     en: ['lamb', 'rack of lamb', 'leg of lamb'], premium: true },
   { key: 'kalvekoed', name: 'Kalvekød', cat: 'meat',
     class: 'fresh', keeps: 'perishable', p: 21, kcal: 150, c: 0,
-    da: ['kalveculotte', 'kalvekød', 'kalvefilet', 'kalvetykkam', 'kalveschnitzel'],
+    // Samme grund som lam: "kalvemørbrad" må ikke blive svinemørbrad.
+    da: ['kalveculotte', 'kalvekød', 'kalvefilet', 'kalvetykkam', 'kalveschnitzel',
+         'kalvemørbrad', 'kalveinderlår', 'kalvebryst', 'kalvekoteletter', 'hakket kalvekød'],
     en: ['veal'], premium: true },
   { key: 'poelser', name: 'Pølser', cat: 'meat',
     class: 'fresh', keeps: 'perishable', p: 12, kcal: 290, c: 3,
