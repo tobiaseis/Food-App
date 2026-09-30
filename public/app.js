@@ -293,10 +293,10 @@ function sparkline(series, unit) {
   return `<svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet" role="img"
             aria-label="Prisudvikling i kr pr. ${esc(unit)}">
     ${ticks}
-    <polygon points="${band}" fill="var(--bay)" opacity=".13"/>
-    <polyline points="${line}" fill="none" stroke="var(--bay)" stroke-width="2"
+    <polygon points="${band}" fill="var(--accent)" opacity=".13"/>
+    <polyline points="${line}" fill="none" stroke="var(--accent)" stroke-width="2"
               stroke-linejoin="round" stroke-linecap="round"/>
-    ${series.map((s, i) => `<circle cx="${x(i)}" cy="${y(s.median)}" r="3" fill="var(--bay)"><title>${esc(s.period)}: ${num(s.median, 2)} kr/${esc(unit)} (${s.n} tilbud)</title></circle>`).join('')}
+    ${series.map((s, i) => `<circle cx="${x(i)}" cy="${y(s.median)}" r="3" fill="var(--accent)"><title>${esc(s.period)}: ${num(s.median, 2)} kr/${esc(unit)} (${s.n} tilbud)</title></circle>`).join('')}
     ${labels}
   </svg>`;
 }
@@ -415,16 +415,14 @@ async function showProduct(productId) {
  * serverens tal for samme butikker, spor, dage og uge — se test/sync.test.js.
  */
 
+// Navnet og den ene linje, der står på flisen. Linjen skal kunne læses i en
+// flise på halv telefonbredde – derfor kort.
 const TIER_INFO = {
-  budget:  ['Budget', 'Det billigste først – rangeret efter prisen pr. portion i dine butikker.'],
-  healthy: ['Sund & proteinrig', 'Højt proteinindhold og få kulhydrater pr. portion.'],
-  classic: ['Klassisk', 'Almindelig hverdagsmad – hurtig, kendt og til at gå til.'],
-  premium: ['Gourmet', 'Mere ambitiøse retter fra kokke-orienterede kilder.'],
+  budget:  ['Budget', 'Billigst pr. portion i dine butikker.'],
+  healthy: ['Sund', 'Meget protein, få kulhydrater.'],
+  classic: ['Klassisk', 'Kendt hverdagsmad, hurtigt lavet.'],
+  premium: ['Gourmet', 'Mere ambitiøse retter fra kokkene.'],
 };
-
-// Vælgerens korte navne. Fire knapper skal kunne stå på én linje på en
-// 360px-telefon; det fulde navn står i linjen under.
-const TRACK_SHORT = { budget: 'Budget', healthy: 'Sund', classic: 'Klassisk', premium: 'Gourmet' };
 
 // Hovedkategorien, som variationsspærren tæller den (engine.mainCategoryOf).
 // Mærkaten på retten er den samme tælling, så "højst tre fjerkræretter" kan
@@ -511,41 +509,41 @@ async function viewPlan() {
   FLOW.list = null;
   FLOW.hint = '';
 
+  // Hvert trin stiller ét spørgsmål, som i Apples købsflow: emnet i blæk,
+  // spørgsmålet i grå. Trin 2 og 3 har altid et svar (sidste valg eller
+  // standarden), så de står som klaret fra start – det, der mangler, er
+  // butikkerne og retterne, og det kan man se på cirklerne.
+  const step = (n, id, subject, question, done) => `
+      <section class="step ${done ? 'is-done' : ''}" id="step-${id}">
+        <h2 class="step-head"><span class="step-no" aria-hidden="true">${n}</span>
+          <span><b>${subject}</b> ${question}</span></h2>
+        <div id="flow-${id}"></div>
+      </section>`;
+
   app().innerHTML = `
-    <div class="enter">
-      <p class="eyebrow">Uge ${isoWeek()}<i class="sep"></i>Madplan</p>
-      <h1>Ugens aftensmad, fra butikken til indkøbssedlen.</h1>
-      <p class="lede">Vælg dine butikker og din slags mad. Så finder vi tre retter
-      pr. aften, som kan prissættes hos dig – og to forslag, der deler råvarerne,
-      så mindre bliver til overs.</p>
+    <div class="enter hero">
+      <h1>Ugens aftensmad. <span class="dim">Bygget på tilbud.</span></h1>
+      <p class="lede">Vælg dine butikker, og hvad I har lyst til. Så foreslår vi
+      retter, der er billige hos dig lige nu – og skriver indkøbslisten.</p>
     </div>
     <div class="flow">
-      <section class="step" id="step-stores">
-        <h2 class="step-rule"><span class="step-no">1</span>Dine butikker</h2>
-        <div id="flow-stores"></div>
-      </section>
-      <section class="step">
-        <h2 class="step-rule"><span class="step-no">2</span>Slags mad</h2>
-        <div id="flow-track"></div>
-      </section>
-      <section class="step">
-        <h2 class="step-rule"><span class="step-no">3</span>Aftener og personer</h2>
-        <div id="flow-week"></div>
-      </section>
-      <section class="step" id="step-choose">
-        <h2 class="step-rule"><span class="step-no">4</span>Vælg retterne</h2>
-        <div id="flow-choose"></div>
-      </section>
-      <section class="step" id="step-list">
-        <h2 class="step-rule"><span class="step-no">5</span>Indkøbslisten</h2>
-        <div id="flow-list"></div>
-      </section>
+      ${step(1, 'stores', 'Butikker.', 'Hvor handler du?', false)}
+      ${step(2, 'track', 'Slags mad.', 'Hvad har I lyst til?', true)}
+      ${step(3, 'week', 'Ugen.', 'Hvor mange aftener, og hvor mange spiser med?', true)}
+      ${step(4, 'choose', 'Retter.', 'Vælg ugens aftensmad.', false)}
+      ${step(5, 'list', 'Indkøbslisten.', 'Klar til butikken.', false)}
     </div>`;
 
   renderStores();
   renderTrack();
   renderWeek();
   await recompute();
+}
+
+/** Cirklen ved et trin bliver til et flueben, når trinet er klaret. */
+function markStep(id, done) {
+  const el = $(`#step-${id}`);
+  if (el) el.classList.toggle('is-done', Boolean(done));
 }
 
 /* ── Trin 1: butikkerne ───────────────────────────────────────────────────── */
@@ -569,11 +567,12 @@ function renderStores() {
   // regner med, nævnes ved navn — ellers opdages de som varer uden pris.
   const over = FAVORITES.slice(max).map(chainById).filter(Boolean).map((c) => c.name);
 
+  markStep('stores', n > 0 && n <= max);
   el.innerHTML = `
     <div class="chain-picks" role="group" aria-label="Butikker">${picks}</div>
-    <p class="note step-note">${!n ? `Vælg de butikker, du handler i – højst ${max}.`
+    <p class="note step-note">${!n ? `Tryk på de butikker, du handler i – højst ${max}.`
       : n > max ? `${n} valgt – højst ${max}.`
-      : `${n} af højst ${max}. Vi regner alle kombinationer af dem igennem og siger, hvilke du skal i.`}</p>
+      : `${n} af højst ${max} valgt. Vi regner alle kombinationer igennem og siger, hvilke du skal i.`}</p>
     ${over.length ? `<p class="flag">Madplanen regner kun med dine fem første butikker.
       <strong>${esc(listNames(over))}</strong> er ikke med – fravælg ${over.length === 1 ? 'én' : over.length}.</p>` : ''}`;
 
@@ -597,13 +596,12 @@ function renderTrack() {
   const el = $('#flow-track');
   if (!el) return;
   const t = FLOW.settings.track;
-  const [label, blurb] = TIER_INFO[t];
   el.innerHTML = `
-    <div class="seg" role="radiogroup" aria-label="Slags mad">
-      ${Object.keys(TIER_INFO).map((k) => `<button type="button" role="radio" data-track="${k}"
-        aria-checked="${k === t}" class="${k === t ? 'active' : ''}">${TRACK_SHORT[k]}</button>`).join('')}
-    </div>
-    <p class="note step-note"><strong>${esc(label)}.</strong> ${esc(blurb)}</p>`;
+    <div class="tiles" role="radiogroup" aria-label="Slags mad">
+      ${Object.entries(TIER_INFO).map(([k, [label, blurb]]) => `<button type="button" role="radio"
+        class="tile" data-track="${k}" aria-checked="${k === t}">
+        <b>${esc(label)}</b><span>${esc(blurb)}</span></button>`).join('')}
+    </div>`;
 
   el.querySelectorAll('[data-track]').forEach((b) => b.addEventListener('click', () => {
     if (FLOW.settings.track === b.dataset.track) return;
@@ -669,7 +667,9 @@ async function recompute() {
     FLOW.ctx = null;
     FLOW.choice = null;
     choose.innerHTML = `<div class="empty card"><h3>Vælg dine butikker først</h3>
-      <p>Retterne vælges blandt dem, vi kan prissætte i de butikker, du handler i.</p></div>`;
+      <p>Retterne vælges blandt dem, vi kan prissætte i de butikker, du handler i.</p>
+      <div class="row"><button type="button" class="primary" data-goto-stores>Vælg butikker</button></div></div>`;
+    bindGotoStores(choose);
     syncSelection();
     return;
   }
@@ -682,8 +682,7 @@ async function recompute() {
     if (token !== FLOW.token) return;
     choose.innerHTML = `<div class="empty card"><h3>${esc(title)}</h3>
       <p>${esc(err && err.message ? err.message : 'Ukendt fejl.')}</p>
-      <div class="row" style="justify-content:center;margin-top:16px">
-        <button class="primary" id="flow-retry">Prøv igen</button></div></div>`;
+      <div class="row"><button class="primary" id="flow-retry">Prøv igen</button></div></div>`;
     $('#flow-retry').addEventListener('click', recompute);
   };
   let ctx;
@@ -800,9 +799,9 @@ function renderChoose() {
     // A IKKE tog, og målt i den afsluttende gennemgang af plan 3 var B's spild
     // værre end 85 % af alle mulige uger fra puljen. Teksten lovede delingen
     // for begge; nu lover den den dér, hvor den holder.
-    : `<p class="step-lede">Vælg ${days} af de ${pool.length} retter – eller tag et af de to forslag.
-        Forslag A er sat sammen, så retterne deler råvarerne, og det, du køber til den ene, bliver
-        brugt i den næste. Forslag B er et andet bud, lavet af de retter, A ikke tog.</p>`;
+    : `<p class="step-lede">Tag et færdigt forslag, eller vælg selv ${days} af de ${pool.length} retter
+        nedenfor. Forslag A er sat sammen, så retterne deler råvarerne – det, du køber til den ene,
+        bliver brugt i den næste. Forslag B er et andet bud, lavet af de retter, A ikke tog.</p>`;
 
   const inA = new Set((proposals[0]?.picks || []).map((r) => r.id));
   const inB = new Set((proposals[1]?.picks || []).map((r) => r.id));
@@ -817,7 +816,7 @@ function renderChoose() {
       showB && inB.has(r.id) ? '<span class="mark" title="Med i forslag B">B</span>' : ''}`;
     return `<li><label class="pick" data-id="${r.id}">
       <input type="checkbox" class="pick-box" value="${r.id}">
-      ${r.image ? `<img src="${esc(thumb(r.image, 200))}" alt="" width="64" height="64" loading="lazy" decoding="async">`
+      ${r.image ? `<img src="${esc(thumb(r.image, 480))}" alt="" width="480" height="360" loading="lazy" decoding="async">`
                 : '<span class="pick-ph" aria-hidden="true"></span>'}
       <span class="pick-body">
         <span class="pick-title">${esc(r.title)}</span>
@@ -831,6 +830,7 @@ function renderChoose() {
     ${head}
     <div class="docket tally" id="flow-tally" aria-live="polite"></div>
     <div class="proposals">${cards}</div>
+    ${cards ? '<h3 class="picks-head">Eller vælg selv</h3>' : ''}
     <ul class="picks">${rows}</ul>`;
 
   bindGotoStores(el);
@@ -841,7 +841,7 @@ function renderChoose() {
     Native.haptic();
     syncSelection();
     // Ét tryk accepterer – og så er det listen, man skal videre til.
-    $('#step-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    gotoList();
   }));
   el.querySelectorAll('.pick-box').forEach((box) => box.addEventListener('change', () => {
     const id = Number(box.value);
@@ -866,6 +866,11 @@ function renderChoose() {
 function bindGotoStores(root) {
   root.querySelectorAll('[data-goto-stores]').forEach((b) => b.addEventListener('click', () =>
     $('#step-stores').scrollIntoView({ behavior: 'smooth', block: 'start' })));
+}
+
+function gotoList() {
+  const el = $('#step-list');
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /**
@@ -903,21 +908,37 @@ function syncSelection() {
     });
     renderTally(picks.length);
   }
+  markStep('choose', picks.length > 0 && picks.length === FLOW.settings.days);
+  markStep('list', Boolean(FLOW.list));
   renderList(picks);
 }
 
-/** Bonen over retterne: hvad det valgte koster, mens man vælger. */
+/**
+ * Bonen over retterne: hvad det valgte koster, mens man vælger – og hvad der
+ * mangler. Er ugen fuld, står knappen videre til listen her, så man ikke
+ * skal lede efter den under tolv retter.
+ */
 function renderTally(n) {
   const el = $('#flow-tally');
   if (!el) return;
   const days = FLOW.settings.days;
   const l = FLOW.list;
+  // En tynd pulje kan have færre retter end aftener. Så er den fuld, når alt
+  // er valgt – ellers bad bonen om retter, der ikke findes.
+  const missing = Math.min(days, FLOW.choice ? FLOW.choice.pool.length : days) - n;
+  const tail = FLOW.hint
+    ? `<span class="tally-hint warn">${esc(FLOW.hint)}</span>`
+    : missing > 0
+      ? `<span class="tally-hint">Vælg ${missing} ${missing === 1 ? 'ret' : 'retter'} mere</span>`
+      : '<button type="button" class="primary tally-cta" data-goto-list>Se indkøbslisten</button>';
   el.innerHTML = `
     <span class="figure"><b>${n} af ${days}</b> valgt</span>
     <span class="figure"><b>${l ? kr(l.total) : '–'}</b> i alt</span>
     <span class="figure"><b>${l ? kr(Math.round(l.waste_kr)) : '–'}</b> spild</span>
     <span class="figure"><b>${l ? l.chains.length : '–'}</b> ${l && l.chains.length === 1 ? 'butik' : 'butikker'}</span>
-    ${FLOW.hint ? `<span class="tally-hint">${esc(FLOW.hint)}</span>` : ''}`;
+    ${tail}`;
+  const cta = el.querySelector('[data-goto-list]');
+  if (cta) cta.addEventListener('click', gotoList);
 }
 
 /* ── Trin 5: de to lister ─────────────────────────────────────────────────── */
@@ -941,10 +962,13 @@ function sourceNote(b) {
 function buyLine(b) {
   const used = b.used_in.length === 1 ? `til ${esc(b.used_in[0])}` : `til ${b.used_in.length} retter`;
   const left = b.leftover > 0 ? ` · ${qty(b.leftover, b.unit)} til overs` : '';
-  return `<div class="shop-item">
+  // En label om hele rækken: i butikken rammer tommelfingeren varen, ikke en
+  // lille cirkel. Afkrydsningen er kun til turen – den gemmes ikke.
+  return `<label class="shop-item">
+    <input type="checkbox" class="tick" aria-label="${esc(b.name)} er i kurven">
     <span class="n">${esc(b.name)}<small>${packLabel(b)} · ${used}${left}</small></span>
     <span class="p">${b.est_cost != null ? kr(b.est_cost) : '–'}${sourceNote(b) ? `<small>${sourceNote(b)}</small>` : ''}</span>
-  </div>`;
+  </label>`;
 }
 
 function renderList(picks) {
@@ -952,8 +976,9 @@ function renderList(picks) {
   if (!el) return;
   const l = FLOW.list;
   if (!l) {
-    el.innerHTML = `<div class="empty card"><p>Vælg et forslag eller dine egne retter ovenfor,
-      så skriver vi listen – det, du skal købe, og det, du skal tjekke, at du har.</p></div>`;
+    el.innerHTML = `<div class="empty card"><h3>Listen skrives, når retterne er valgt</h3>
+      <p>Tag et forslag eller vælg dine egne retter ovenfor. Så står det her, hvad du skal købe
+      i hvilken butik – og hvad du skal tjekke, at du har.</p></div>`;
     return;
   }
 
@@ -966,7 +991,7 @@ function renderList(picks) {
     const lines = priced.filter((b) => b.chain === id);
     const sum = Math.round(lines.reduce((a, b) => a + b.est_cost, 0) * 100) / 100;
     return `<div class="card shop-chain">
-      <h3><span class="row" style="gap:8px"><i class="chain-dot" style="background:${esc(c?.color || 'var(--ink-3)')}"></i>${esc(c?.name || id)}</span>
+      <h3><span class="row" style="gap:9px"><i class="chain-dot" style="width:10px;height:10px;background:${esc(c?.color || 'var(--ink-3)')}"></i>${esc(c?.name || id)}</span>
         <span class="note">${kr(sum)}</span></h3>
       ${lines.map(buyLine).join('')}
     </div>`;
@@ -994,6 +1019,7 @@ function renderList(picks) {
       <h3>Køb ind</h3>
       <button type="button" id="share-list">Del listen</button>
     </div>
+    <p class="note" style="margin:-6px 0 14px">Tryk på en vare, når den er i kurven.</p>
     <div class="buy-groups ${l.chains.length === 1 ? 'single' : ''}">${groups}</div>
     ${unpriced.length ? `<div class="card shop-chain unpriced">
       <h3><span>Uden pris i dine butikker</span><span class="note">${unpriced.length} ${unpriced.length === 1 ? 'vare' : 'varer'}</span></h3>
@@ -1004,7 +1030,7 @@ function renderList(picks) {
 
     <h3 class="list-head">Tjek at du har</h3>
     ${l.pantry.length ? `<div class="card pantry">
-      ${l.pantry.map((p) => `<label class="pantry-row"><input type="checkbox"> ${esc(p.name)}</label>`).join('')}
+      ${l.pantry.map((p) => `<label class="pantry-row"><input type="checkbox" class="tick"> ${esc(p.name)}</label>`).join('')}
     </div>
     <p class="note">Basisvarer, retterne bruger. Dem regner vi med, du har – de er ikke med i prisen.</p>`
     : '<p class="note">Retterne bruger ingen basisvarer, vi kender til.</p>'}
@@ -1090,11 +1116,10 @@ function favFilterToggle() {
 
 async function viewDeals() {
   app().innerHTML = `
-    <div class="enter">
-      <p class="eyebrow">Uge ${isoWeek()}<i class="sep"></i>Ugens fund</p>
-      <h1>Tilbuddene der holder, når kiloprisen tjekkes efter.</h1>
-      <p class="lede">Skiltet siger rabat. Skalaen på hvert kort siger, hvor prisen
-      ligger i forhold til varens egen normalpris – det er den, du kan handle efter.</p>
+    <div class="enter hero">
+      <h1>Ugens fund. <span class="dim">Tilbud, der holder, når kiloprisen tjekkes.</span></h1>
+      <p class="lede">Skiltet siger rabat. Skalaen på hvert kort viser, hvor prisen
+      ligger i forhold til varens normale kilopris – det er den, du kan handle efter.</p>
       <div class="controls">${favFilterToggle()}</div>
     </div>
     <div id="deals"><div class="loading">Regner på priserne…</div></div>`;
@@ -1145,16 +1170,17 @@ function collapseOffers(rows) {
 
 async function viewOffers() {
   app().innerHTML = `
-    <div class="enter">
-      <p class="eyebrow">Uge ${isoWeek()}<i class="sep"></i>Alle tilbud</p>
-      <h1>${num(STATUS.active_offers)} aktive tilbud fra ${num(STATUS.chains)} kæder.</h1>
-      <p class="lede">Åbn en vare for at se, hvad den har kostet uge for uge, og hvor
+    <div class="enter hero">
+      <h1>Alle tilbud. <span class="dim">${num(STATUS.active_offers)} aktive fra ${num(STATUS.chains)} kæder.</span></h1>
+      <p class="lede">Tryk på en vare for at se, hvad den har kostet uge for uge, og hvor
       den er billigst lige nu.</p>
+    </div>
+    <div class="enter">
       <div class="controls">
-        <input type="text" id="q" class="grow" placeholder="Søg – fx skyr, kyllingebryst, laks…">
-        <select id="chain"><option value="">Alle kæder</option>
+        <input type="search" id="q" class="grow" placeholder="Søg – fx skyr, kyllingebryst, laks…" aria-label="Søg i tilbud">
+        <select id="chain" aria-label="Kæde"><option value="">Alle kæder</option>
           ${CHAINS.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}</option>`).join('')}</select>
-        <select id="sort">
+        <select id="sort" aria-label="Sortér">
           <option value="unit_price">Billigst pr. kg</option>
           <option value="price">Laveste pris</option>
           <option value="newest">Nyeste</option>
@@ -1212,22 +1238,26 @@ async function askForPush() {
 
 async function viewWatch() {
   app().innerHTML = `
+    <div class="enter hero">
+      <h1>Følg varer. <span class="dim">Få besked, når de er reelt billige.</span></h1>
+      <p class="lede">Skriv en vare, som du ville sige den. Vi holder øje i alle
+      kæder og siger til, når kiloprisen er under det normale.</p>
+    </div>
     <div class="enter">
-      <p class="eyebrow">Følg varer</p>
-      <h1>Få besked, når en vare du ofte køber er reelt billig.</h1>
-      <p class="lede">Skriv varen, som du ville sige den. Appen holder øje i alle
-      kæder og siger til, når prisen pr. kg ligger under normalprisen.</p>
-      <div class="controls">
-        <input type="text" id="w-label" class="grow" placeholder="Hvilken vare? fx skyr, hakket oksekød, laks">
-        <input type="number" id="w-disc" placeholder="Min. rabat %" style="width:140px" min="0" max="90">
-        <input type="number" id="w-km" placeholder="Maks. km" style="width:122px" min="1">
-        <button class="primary" id="w-add">Følg vare</button>
-      </div>
+      <form class="controls" id="w-form">
+        <label class="field grow"><span>Vare</span>
+          <input type="text" id="w-label" placeholder="fx skyr, hakket oksekød, laks" required></label>
+        <label class="field" style="width:132px"><span>Mindst rabat</span>
+          <input type="number" id="w-disc" placeholder="%" min="0" max="90"></label>
+        <label class="field" style="width:132px"><span>Højst afstand</span>
+          <input type="number" id="w-km" placeholder="km" min="1"></label>
+        <button type="submit" class="primary" id="w-add">Følg vare</button>
+      </form>
       <div id="w-msg"></div>
     </div>
-    <h2>Dine overvågninger</h2>
+    <h2>Varer du følger</h2>
     <div class="card" id="w-list"><div class="loading">Henter…</div></div>
-    <div class="spread" style="margin:38px 0 14px">
+    <div class="spread" style="margin:48px 0 16px;align-items:center">
       <h2 style="margin:0">Notifikationer</h2>
       <div class="row">
         <button id="w-run">Tjek for nye tilbud</button>
@@ -1252,7 +1282,7 @@ async function viewWatch() {
         </div>
         <button class="ghost" data-del="${w.id}">Fjern</button>
       </div>`).join('')
-      : '<div class="empty"><h3>Ingen overvågninger endnu</h3><p>Skriv en vare ovenfor – fx “skyr” – så holder appen øje med den i alle kæder.</p></div>';
+      : '<div class="empty"><h3>Du følger ingen varer endnu</h3><p>Skriv en vare ovenfor – fx “skyr” – så holder vi øje med den i alle kæder.</p></div>';
 
     $('#w-list').querySelectorAll('[data-del]').forEach((b) =>
       b.addEventListener('click', async () => {
@@ -1276,7 +1306,9 @@ async function viewWatch() {
       : '<div class="empty"><h3>Ingen notifikationer</h3><p>Tilføj en overvågning, eller tryk “Tjek for nye tilbud”.</p></div>';
   };
 
-  $('#w-add').addEventListener('click', async () => {
+  // En formular, så Enter i feltet følger varen – som man forventer.
+  $('#w-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
     const label = $('#w-label').value.trim();
     if (!label) return;
     const disc = parseFloat($('#w-disc').value);
@@ -1290,7 +1322,7 @@ async function viewWatch() {
       home_lng: home.home_lng ?? null,
     });
     if (r.error) {
-      $('#w-msg').innerHTML = `<p class="note" style="color:var(--clay)">${esc(r.error)}</p>`;
+      $('#w-msg').innerHTML = `<p class="note" style="color:var(--poor)">${esc(r.error)}</p>`;
       return;
     }
 
@@ -1333,34 +1365,42 @@ async function viewWatch() {
 async function viewSettings() {
   const home = STATUS.home || {};
   app().innerHTML = `
+    <div class="enter hero">
+      <h1>Indstillinger. <span class="dim">Butikker, adresse og data.</span></h1>
+      <p class="lede">Din placering bruges kun til at finde de nærmeste butikker.</p>
+    </div>
+
     <div class="enter">
-      <p class="eyebrow">Indstillinger</p>
-      <h1>Butikkerne, adressen og de data planen bygger på.</h1>
-      <p class="lede">Placeringen bruges kun til at finde nærmeste butik. Den forlader ikke maskinen.</p>
-    </div>
-
-    <div class="card" style="padding:18px;max-width:660px;margin-bottom:16px">
-      <h3>Mine butikker</h3>
-      <p class="note" style="margin:0 0 14px">${FAVORITES.length
-        ? `Madplanen bygges kun af tilbud fra <strong>${esc(listNames(favoriteNames()))}</strong>.`
-        : 'Ikke valgt endnu – madplanen bygges af alle kæder, også dem langt væk.'}</p>
-      <button class="primary" id="settings-stores">${FAVORITES.length ? 'Skift butikker' : 'Vælg butikker'}</button>
-    </div>
-
-    <div class="card" style="padding:18px;max-width:660px">
-      <h3>Din adresse</h3>
-      <div class="controls" style="margin-bottom:12px">
-        <input type="number" id="lat" step="0.0001" placeholder="Breddegrad" value="${home.lat ?? ''}" style="width:150px">
-        <input type="number" id="lng" step="0.0001" placeholder="Længdegrad" value="${home.lng ?? ''}" style="width:150px">
-        <button id="locate">Brug min placering</button>
-        <button class="primary" id="save-home">Gem</button>
+      <div class="card panel">
+        <h3>Mine butikker</h3>
+        <p class="note">${FAVORITES.length
+          ? `Madplanen bygges kun af tilbud fra <strong>${esc(listNames(favoriteNames()))}</strong>.`
+          : 'Ikke valgt endnu – madplanen bygges af alle kæder, også dem langt væk.'}</p>
+        <button class="primary" id="settings-stores">${FAVORITES.length ? 'Skift butikker' : 'Vælg butikker'}</button>
       </div>
-      <p class="note" id="home-msg" style="margin:0">${home.lat != null ? `Sat til ${num(home.lat, 4)}, ${num(home.lng, 4)}.` : 'Ikke sat endnu.'}</p>
-      <div id="near"></div>
+
+      <!-- Knappen er vejen for de fleste og gemmer selv. Koordinaterne står
+           bag en fold til dem, der vil taste dem ind. -->
+      <div class="card panel">
+        <h3>Din adresse</h3>
+        <p class="note" id="home-msg">${home.lat != null ? `Sat til ${num(home.lat, 4)}, ${num(home.lng, 4)}.` : 'Ikke sat endnu.'}</p>
+        <button class="primary" id="locate">Brug min placering</button>
+        <details class="manual">
+          <summary>Indtast koordinater selv</summary>
+          <div class="controls">
+            <label class="field" style="width:150px"><span>Breddegrad</span>
+              <input type="number" id="lat" step="0.0001" placeholder="55,6761" value="${home.lat ?? ''}"></label>
+            <label class="field" style="width:150px"><span>Længdegrad</span>
+              <input type="number" id="lng" step="0.0001" placeholder="12,5683" value="${home.lng ?? ''}"></label>
+            <button id="save-home">Gem</button>
+          </div>
+        </details>
+        <div id="near"></div>
+      </div>
     </div>
 
     <h2>Data i basen</h2>
-    <div class="grid cols">
+    <div class="grid stats">
       ${[
         ['Tilbud i alt', num(STATUS.offers)],
         ['Aktive tilbud', num(STATUS.active_offers)],
@@ -1370,7 +1410,7 @@ async function viewSettings() {
         ['Opskrifter', num(STATUS.recipes)],
         ['Uger med data', num(STATUS.weeks_of_history)],
         ['Overvågninger', num(STATUS.watches)],
-      ].map(([l, v]) => `<div class="card" style="padding:16px 18px">
+      ].map(([l, v]) => `<div class="card" style="padding:18px 20px">
         <div class="stat"><span class="v">${v}</span><span class="l">${l}</span></div></div>`).join('')}
     </div>
 
@@ -1392,28 +1432,12 @@ async function viewSettings() {
   // Native.getPosition tager den native plugin i appen og browserens API på
   // nettet. Forskellen betyder noget: i appen kommer der en rigtig
   // systemdialog, hvor browseren bare kan tie stille.
-  $('#locate').addEventListener('click', async (e) => {
-    e.target.disabled = true;
-    const before = e.target.textContent;
-    e.target.textContent = 'Finder…';
-    try {
-      const { lat, lng } = await Native.getPosition();
-      $('#lat').value = lat.toFixed(4);
-      $('#lng').value = lng.toFixed(4);
-      $('#home-msg').textContent = 'Placering hentet – tryk Gem.';
-    } catch {
-      $('#home-msg').textContent = 'Kunne ikke hente placering – indtast koordinaterne manuelt.';
-    }
-    e.target.disabled = false;
-    e.target.textContent = before;
-  });
-
-  $('#save-home').addEventListener('click', async () => {
+  const saveHome = async () => {
     const lat = parseFloat($('#lat').value), lng = parseFloat($('#lng').value);
     if (!isFinite(lat) || !isFinite(lng)) { $('#home-msg').textContent = 'Ugyldige koordinater.'; return; }
     await Data.saveSettings({ home_lat: lat, home_lng: lng });
     await loadStatus();
-    $('#home-msg').textContent = 'Gemt.';
+    $('#home-msg').textContent = `Gemt: ${num(lat, 4)}, ${num(lng, 4)}.`;
     const near = await Data.storesNear(lat, lng, 5);
     $('#near').innerHTML = near.length
       ? `<p class="note"><strong>${near.length} butikker</strong> inden for 5 km. Nærmeste:</p>
@@ -1421,7 +1445,29 @@ async function viewSettings() {
            ${near.slice(0, 6).map((s) => `<li>${esc(s.chain_name)} – ${esc(s.street || s.name || '')}, ${esc(s.city || '')} (${num(s.km, 1)} km)</li>`).join('')}
          </ul>`
       : '<p class="note">Ingen butikker fundet inden for 5 km.</p>';
+  };
+
+  // Et tryk på knappen er både "find mig" og "gem det". At hente placeringen
+  // og så bede om et tryk mere på Gem var et trin, ingen forventede.
+  $('#locate').addEventListener('click', async (e) => {
+    const btn = e.currentTarget;
+    btn.disabled = true;
+    const before = btn.textContent;
+    btn.textContent = 'Finder…';
+    try {
+      const { lat, lng } = await Native.getPosition();
+      $('#lat').value = lat.toFixed(4);
+      $('#lng').value = lng.toFixed(4);
+      await saveHome();
+    } catch {
+      $('#home-msg').textContent = 'Kunne ikke hente placering – indtast koordinaterne selv.';
+      $('.manual').open = true;
+    }
+    btn.disabled = false;
+    btn.textContent = before;
   });
+
+  $('#save-home').addEventListener('click', saveHome);
 
   $('#do-ingest').addEventListener('click', async (e) => {
     e.target.disabled = true; e.target.textContent = 'Henter… (kan tage et par minutter)';

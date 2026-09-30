@@ -27,7 +27,9 @@
 // datalag, eller omvendt.
 // v4: sider fra Supabase fik hver deres cache-nøgle (se staleWhileRevalidate).
 // Versionen skal op, så de forkerte, sammenblandede sider fra v3 kasseres.
-const VERSION = 'v4';
+// v5: det lyse design. Ny markup i app.js (fliser, afkrydsning) passer kun
+// til den nye styles.css, så skallen skiftes samlet.
+const VERSION = 'v5';
 const SHELL_CACHE = `madplan-shell-${VERSION}`;
 const DATA_CACHE = `madplan-data-${VERSION}`;
 

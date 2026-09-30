@@ -54,22 +54,20 @@ async function persist(key, value) {
 /* ── Udseende ─────────────────────────────────────────────────────────────── */
 
 async function styleShell() {
-  const dark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
-
   const bar = plugin('StatusBar');
   if (bar) {
     try {
       // Style styrer ikonernes farve, ikke baggrundens: LIGHT betyder lys
-      // baggrund og dermed MØRKE ikoner. Den skal altså følge temaet omvendt
-      // af, hvad navnet lyder som.
-      await bar.setStyle({ style: dark ? 'DARK' : 'LIGHT' });
+      // baggrund og dermed MØRKE ikoner. Appen er kun lys (se styles.css), så
+      // ikonerne er altid mørke – også når telefonen står i mørk tilstand.
+      await bar.setStyle({ style: 'LIGHT' });
 
       // setBackgroundColor er uden virkning fra Android 15, hvor kant-til-kant
       // er obligatorisk for apps med targetSdk 35+. Kaldet bliver stående for
       // de ældre telefoner, minSdk 24 stadig dækker – og farven er headerens,
       // ikke accentens, så mørke ikoner har noget at stå på.
       if (PLATFORM === 'android') {
-        await bar.setBackgroundColor({ color: dark ? '#171c24' : '#ffffff' });
+        await bar.setBackgroundColor({ color: '#f5f5f7' });
       }
     } catch { /* ignoreres */ }
   }
