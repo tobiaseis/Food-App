@@ -365,6 +365,10 @@ function collectPlanIndex(log) {
           // kunne springe "evt."-linjer over, og gør den det kun lokalt, køber
           // browserens bruger persille, der aldrig blev bedt om.
           optional: !!i.optional,
+          // Samme kontrakt igen: påfyldningen af en rest gælder kun linjer,
+          // der vejer eller måler varen, og browserens motor kan kun holde
+          // reglen, hvis flaget følger med. jsonb — ingen ny kolonne.
+          measured: !!i.measured,
         })),
         // Lagerlistens linjer — se kommentaren over recipeIndex.
         ...[...new Set(r.items.filter((i) => i.essential).map((i) => i.key))]

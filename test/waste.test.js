@@ -178,7 +178,11 @@ const W_NORMALS = new Map([
 ]);
 
 const recipe = (id, score, items) => ({ id, title: `Ret ${id}`, score, items });
-const line = (key, amount, optional = false) => ({ key, amount, weight: amount, optional });
+// `measured`: linjen vejer eller måler varen (g, kg, dl …) — sat af loadRecipes ud
+// fra engine.MEASURED_UNITS. Standard sand, så fiksturerne betyder det samme som
+// før reglen kom: en rest kan lægges i retten. En linje i stk sætter den falsk.
+const line = (key, amount, optional = false, measured = true) =>
+  ({ key, amount, weight: amount, optional, measured });
 
 const CANDIDATES = [
   recipe(1, 0.8, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6), line('salt', 0.01)]),
@@ -1211,4 +1215,72 @@ test('kun friske varer, der vejes eller måles, fyldes op', () => {
   const list = engine.shoppingList(plan, CTX);
   for (const b of list.buy) assert.deepEqual(b.topup, [], `${b.key} skal ikke fyldes op`);
   assert.deepEqual(list.topups, {});
+});
+
+// ── Kun linjer, der vejer eller måler varen ──────────────────────────────────
+//
+// Reglen afgøres pr. opskriftsLINJE, ikke pr. vare: citron er en kg-vare i
+// kataloget, men opskrifterne tæller den i stykker (vejet i 4 % af linjerne på
+// data.db), og "1 stk citron + 23 g" er ikke en opskrift, nogen kan følge.
+// Kyllingebryst vejes i halvdelen af linjerne og tælles i resten.
+
+test('enhederne, der vejer eller måler, er motorens egen liste', () => {
+  for (const u of ['g', 'gram', 'Kg', ' dl ', 'l', 'ml', 'cl', 'liter', 'litres', 'ltr']) {
+    assert.ok(engine.isMeasuredUnit(u), `${u} vejer eller måler`);
+  }
+  for (const u of ['stk', 'spsk', 'tsk', 'fed', 'bundt', 'håndfuld', 'dåse', '', null, undefined]) {
+    assert.ok(!engine.isMeasuredUnit(u), `${u} er ikke en vægt eller et rumfang`);
+  }
+  assert.ok(Object.isFrozen(engine.MEASURED_UNITS));
+});
+
+test('en citron i stk får ingen påfyldning, og resten er spild', () => {
+  // 1 citron (0,1 kg) af et 0,5 kg-net til 10 kr: 0,4 kg til overs. Talt i
+  // stk må intet af det lægges i retten — hele resten er spild, 0,4 × 20 kr.
+  const items = new Map([...W_ITEMS,
+    ['citron', { key: 'citron', name: 'Citron', category: 'veg', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }]]);
+  const normals = new Map([...W_NORMALS,
+    ['citron|c1', [{ pack_qty: 0.5, pack_unit: 'kg', pack_price: 10, unit_price: 20, source: 'manual' }]]]);
+  const ctx = { ...CTX, items, normals };
+
+  const talt = recipe(80, 0.8, [line('citron', 0.1, false, false)]);
+  const list = engine.shoppingList({ days: [{ recipe: talt }] }, ctx);
+  const citron = list.buy.find((b) => b.key === 'citron');
+  assert.deepEqual(citron.topup, []);
+  assert.deepEqual(list.topups, {});
+  near(citron.leftover, 0.4);
+  near(list.waste_kr, 8);
+
+  // Ugen regner det samme: dens spild er listens gange WASTE_AVERSION.
+  const week = engine.sharedWeek([talt], { days: 1, ...ctx });
+  near(week.waste, list.waste_kr * engine.WASTE_AVERSION, 0.01);
+
+  // Den samme linje VEJET (100 g citronskal) får sin fjerdedel: 0,025 kg.
+  const vejet = recipe(81, 0.8, [line('citron', 0.1)]);
+  const vList = engine.shoppingList({ days: [{ recipe: vejet }] }, ctx);
+  assert.deepEqual(vList.buy.find((b) => b.key === 'citron').topup,
+    [{ recipe_id: 81, title: 'Ret 81', qty: 0.025 }]);
+  near(vList.waste_kr, 7.5);
+});
+
+test('kun den ret, der vejer varen, får resten — og højst en fjerdedel af sin egen', () => {
+  // 0,6 kg kyllingebryst i stk ("3 stk") og 0,2 kg vejet: 0,8 kg af en 1 kg-
+  // bakke, 0,2 kg til overs. Efter den gamle regel fik den største ret —
+  // stk-retten — 0,15 kg. Nu er kun den vejede ret med, og dens loft er en
+  // fjerdedel af dens egne 0,2 kg: 0,05 kg. Resten, 0,15 kg, er spild.
+  const talt = recipe(82, 0.8, [line('kyllingebryst', 0.6, false, false)]);
+  const vejet = recipe(83, 0.8, [line('kyllingebryst', 0.2)]);
+  const list = engine.shoppingList({ days: [{ recipe: talt }, { recipe: vejet }] }, CTX);
+  const kb = list.buy.find((b) => b.key === 'kyllingebryst');
+  assert.deepEqual(kb.topup, [{ recipe_id: 83, title: 'Ret 83', qty: 0.05 }]);
+  assert.deepEqual(list.topups, { 83: { kyllingebryst: 0.05 } });
+  near(kb.leftover, 0.15);
+  near(list.waste_kr, 14.25);        // 0,15 kg × 95 kr
+
+  // Og ugen, der vælger de samme to retter, regner på den samme påfyldning.
+  const week = engine.sharedWeek([talt, vejet], { days: 2, ...CTX });
+  assert.deepEqual(week.picks.map((p) => p.id).sort(), [82, 83]);
+  const wList = engine.shoppingList({ days: week.picks.map((r) => ({ recipe: r })) }, CTX);
+  near(wList.waste_kr, 14.25);
+  near(week.waste, wList.waste_kr * engine.WASTE_AVERSION, 0.01);
 });

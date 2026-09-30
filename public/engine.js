@@ -706,6 +706,9 @@
    *          mangle — den kan regnes. Se nedenfor: de skal komme fra ÉN kilde.
    *   keeps  `items.keeps`: hvor længe en rest holder. Ukendt værdi vægtes som
    *          'keeps', midt imellem.
+   *   topup_need  den del af `need`, der kommer fra linjer, som vejer eller
+   *          måler varen — grundlaget for påfyldningen (se absorbable).
+   *          Standard 0: ingen påfyldning.
    *
    * **`packs` må kun rumme rækker fra det BEDSTE kildeniveau, der findes for
    * (vare, kæde)** — samme rangorden som effectivePrice: manual > api:rema >
@@ -745,13 +748,43 @@
   // en halv citron er ikke "lidt mere".
   const TOPUP_MAX_SHARE = 0.25;
 
-  /** Hvor meget af resten der kan lægges i retterne i stedet for at gå til spilde. */
-  function absorbable(need, leftover, keeps, baseUnit) {
-    if (keeps !== 'perishable' || (baseUnit !== 'kg' && baseUnit !== 'l')) return 0;
-    return Math.min(leftover, need * TOPUP_MAX_SHARE);
+  // Enhederne, en opskriftslinje VEJER eller MÅLER med. Varens base_unit
+  // rækker ikke til reglen ovenfor: citron, avocado, agurk og peberfrugt er
+  // kg-varer i kataloget, men opskrifterne tæller dem i stykker (målt på
+  // data.db: citron vejes i 4 % af linjerne, avocado 1 %; kyllingebryst 50 %,
+  // fløde 93 %). "1 stk citron + 23 g" er ikke en opskrift, nogen kan følge.
+  // Derfor afgøres det pr. LINJE, af den enhed, opskriften selv skrev.
+  //
+  // Listen står her og ikke i generate.js, fordi motoren også kører i
+  // browseren; loadRecipes slår op i den samme, så der kun er én kopi.
+  // Skeer og teskeer er med vilje ikke med: "1 spsk citronsaft" er et
+  // smagsmål, ikke en mængde, man lægger 25 % til.
+  const MEASURED_UNITS = Object.freeze(['g', 'gram', 'grams', 'gr', 'kg', 'kilo', 'kilos',
+    'ml', 'cl', 'dl', 'l', 'liter', 'liters', 'litre', 'litres', 'ltr']);
+
+  /** Vejer eller måler linjens enhed? Store/små bogstaver og mellemrum tæller ikke. */
+  function isMeasuredUnit(unit) {
+    return typeof unit === 'string' && MEASURED_UNITS.includes(unit.trim().toLowerCase());
   }
 
-  function choosePack(need, packs, { keeps = 'keeps', base_unit = null } = {}) {
+  /**
+   * Hvor meget af resten der kan lægges i retterne i stedet for at gå til spilde.
+   *
+   * `topupNeed` er den del af behovet, der kommer fra linjer, som vejer eller
+   * måler varen (se MEASURED_UNITS) — ikke hele behovet. En ret med "2 stk
+   * kyllingebryst" og en med "400 g kyllingebryst" deler én bakke, men kun
+   * den sidste kan få lidt mere.
+   */
+  function absorbable(topupNeed, leftover, keeps, baseUnit) {
+    if (keeps !== 'perishable' || (baseUnit !== 'kg' && baseUnit !== 'l')) return 0;
+    if (!(topupNeed > 0)) return 0;
+    return Math.min(leftover, topupNeed * TOPUP_MAX_SHARE);
+  }
+
+  // `topup_need` er 0, når kalderen ikke ved, hvilke linjer der vejes: så
+  // fyldes der intet op. Et gæt i den anden retning ville lægge 25 g i en
+  // ret, der tæller citroner.
+  function choosePack(need, packs, { keeps = 'keeps', base_unit = null, topup_need = 0 } = {}) {
     if (!(need > 0) || !packs || !packs.length) return null;
 
     // hasOwn, ikke `[]`: et opslag gennem Object.prototype ville give
@@ -779,7 +812,7 @@
       // Den del af resten, retterne kan tage, er ikke spild. Reglen står HER,
       // så pakkevalget, ugens spildscore og listens waste_kr regner ens —
       // test/waste.test.js holder ugen og listen op mod hinanden.
-      const absorbed = absorbable(need, leftover, keeps, base_unit);
+      const absorbed = absorbable(topup_need, leftover, keeps, base_unit);
       const waste = (leftover - absorbed) * w;
       const cost = n * p.pack_price;
 
@@ -1861,6 +1894,7 @@
     const household = servings > 0 ? servings : DEFAULT_SERVINGS;
     const picks = [];
     const basket = new Map();   // vare → samlet behov i varens base_unit
+    const topupBasket = new Map();   // vare → behovet fra linjer, der vejer/måler den
 
     // Loftet på fem favoritter gælder HER OG SÅ, og ikke først i kædevalget.
     // Prissatte ugen i alle favoritter, mens kædevalget kun så de fem første,
@@ -1879,8 +1913,15 @@
     // dag — se priceLookup, der husker svaret.
     const priceIn = priceLookup({ offers, normals, now });
 
-    /** Rettens behov pr. VARE — ikke pr. linje: samme vare står ofte flere gange. */
-    const needsOf = (rec) => {
+    /**
+     * Rettens behov pr. VARE — ikke pr. linje: samme vare står ofte flere gange.
+     *
+     * `measuredOnly` giver kun behovet fra linjer, der vejer eller måler varen
+     * (`it.measured`, sat af loadRecipes ud fra MEASURED_UNITS). Det er
+     * påfyldningens grundlag: samme filtre og samme skalering som det fulde
+     * behov, så ugen og listen regner den ens.
+     */
+    const needsOf = (rec, { measuredOnly = false } = {}) => {
       const out = new Map();
       // Opskriften skaleres til husstanden. Uden det købes retten, som den er
       // skrevet: målt lå to retter til TI personer i den samme uge som to til
@@ -1892,6 +1933,7 @@
       for (const it of (rec && rec.items) || []) {
         const meta = items.get(it.key);
         if (!isBoughtLine(it, meta)) continue;
+        if (measuredOnly && !it.measured) continue;
         // `amount`, ikke `weight`. `weight` er en ROLLEVÆGT — stykantal
         // omregnet til kilo, så assignRoles kan sammenligne 6 æg med 0,4 kg
         // kylling — mens `amount` er mængden i varens EGEN enhed, og det er
@@ -1901,6 +1943,7 @@
       }
       return out;
     };
+    const MEASURED_ONLY = { measuredOnly: true };
 
     // Oprundingen af stk sker EFTER sammenlægningen og ikke i needsOf — og af
     // den DELTE `wholeUnits`, ikke en kopi. Her stod en egen med et bart
@@ -1929,7 +1972,7 @@
      * sig — med vilje — så sammenligningen mellem kæder regnes her, af de
      * felter, den DA giver.
      */
-    const bestPackFor = (key, meta, need) => {
+    const bestPackFor = (key, meta, need, topupNeed) => {
       const n = wholeUnits(meta, need);
       let best = null;
       for (const chainId of shopIds) {
@@ -1938,7 +1981,8 @@
         // `price.packs` og ikke `[price]`: effectivePrice har allerede
         // filtreret ned til det bedste kildeniveau, og det er DEN liste,
         // choosePack skal vælge pakkestørrelse i.
-        const pack = choosePack(n, price.packs || [price], { keeps: meta.keeps, base_unit: meta.base_unit });
+        const pack = choosePack(n, price.packs || [price],
+          { keeps: meta.keeps, base_unit: meta.base_unit, topup_need: topupNeed });
         if (!pack) continue;
         const kr = pack.waste * unitPriceOf(price) * WASTE_AVERSION;
         const score = pack.cost + kr;
@@ -1948,12 +1992,14 @@
       return best;
     };
 
-    const basketCost = (b) => {
+    // `t` er påfyldningens grundlag pr. vare (needsOf med MEASURED_ONLY), lagt
+    // sammen på samme måde som kurven `b`.
+    const basketCost = (b, t) => {
       let cost = 0; let wasteKr = 0;
       for (const [key, need] of b) {
         const meta = items.get(key);
         if (!meta) continue;
-        const best = bestPackFor(key, meta, need);
+        const best = bestPackFor(key, meta, need, t.get(key) || 0);
         if (best) { cost += best.pack.cost; wasteKr += best.kr; }
       }
       return { cost, wasteKr };
@@ -1987,7 +2033,7 @@
     const priced = withMain.filter((c) => canPrice(c, priceCtx));
     const pool = priced.length ? priced : (withMain.length ? withMain : (candidates || []));
 
-    let current = basketCost(basket);
+    let current = basketCost(basket, topupBasket);
 
     // Variationsspærren, den samme som buildPlan bruger. Den står INDE i den
     // grådige løkke og ikke som et forfilter, fordi hvilken ret der må være
@@ -2020,7 +2066,9 @@
 
           const merged = new Map(basket);
           for (const [k, v] of needsOf(cand)) merged.set(k, (merged.get(k) || 0) + v);
-          const after = basketCost(merged);
+          const mergedTopup = new Map(topupBasket);
+          for (const [k, v] of needsOf(cand, MEASURED_ONLY)) mergedTopup.set(k, (mergedTopup.get(k) || 0) + v);
+          const after = basketCost(merged, mergedTopup);
 
           // Marginal pris + marginalt spild, modregnet sporets score. Begge led
           // er kroner, så der er intet at gange med. Støjen gør, at "Ny plan"
@@ -2046,7 +2094,7 @@
                       + seededNoise(seed, cand.id)
                       - (avoid && avoid.has(cand.id) ? AVOID_PENALTY : 0);
 
-          if (!bestPick || score > bestPick.score) bestPick = { cand, merged, after, score };
+          if (!bestPick || score > bestPick.score) bestPick = { cand, merged, mergedTopup, after, score };
         }
         if (bestPick) break;            // den strenge spærre rakte
       }
@@ -2056,6 +2104,8 @@
       tally.add(keysOf(bestPick.cand));
       basket.clear();
       for (const [k, v] of bestPick.merged) basket.set(k, v);
+      topupBasket.clear();
+      for (const [k, v] of bestPick.mergedTopup) topupBasket.set(k, v);
       current = bestPick.after;
     }
 
@@ -2077,8 +2127,10 @@
       const meta = items.get(key);
       if (meta) finalBasket.set(key, wholeUnits(meta, need));
     }
+    // Påfyldningens grundlag går med, så kædevalget regner resten ens med
+    // indkøbslisten — samme kurv, samme `topupNeeds`, samme spild.
     const chosen = chooseChains(finalBasket,
-      { chainIds: shopIds, items, offers, normals, now });
+      { chainIds: shopIds, items, offers, normals, now, topupNeeds: topupBasket });
 
     // Hvad deles der FAKTISK? Det er forklaringen, brugeren får at se, og
     // den skal kunne holde.
@@ -2113,7 +2165,11 @@
         // Samme pakkeliste, som `together` blev regnet af. Fik den ene sti
         // alle pakkestørrelser og den anden kun vinderen pr. enhed, ville de
         // to pakketal ikke måle det samme, og besparelsen blive et tilfælde.
-        const pack = choosePack(own, pick.price.packs || [pick.price], { keeps: meta.keeps, base_unit: meta.base_unit });
+        // Og samme påfyldning: rettens egne vejede linjer, som i kurven.
+        const pack = choosePack(own, pick.price.packs || [pick.price], {
+          keeps: meta.keeps, base_unit: meta.base_unit,
+          topup_need: needsOf(u, MEASURED_ONLY).get(key) || 0,
+        });
         if (pack) apart += pack.packs;
       }
       const saved = apart - together.packs;
@@ -2287,6 +2343,8 @@
    *   items     `items`-tabellen som Map: class, keeps, base_unit
    *   offers    `vare|kæde` → aktivt tilbud
    *   normals   `vare|kæde` → normalpris-rækker
+   *   topupNeeds  vare → den del af behovet, der kommer fra linjer, som vejer
+   *             eller måler varen (se absorbable). Mangler den, fyldes intet op.
    *
    * Svaret er `{ chains, assignment, cost, total }`. `cost` er kroner for
    * varerne; `total` er den med boderne i og er IKKE en pris, nogen betaler —
@@ -2294,7 +2352,8 @@
    * testene skal kunne regne den efter.
    */
   function chooseChains(basket, { chainIds = [], items = new Map(), offers = new Map(),
-                                  normals = new Map(), now = new Date() } = {}) {
+                                  normals = new Map(), now = new Date(),
+                                  topupNeeds = new Map() } = {}) {
     const { ids } = chainsInPlay(chainIds);
 
     // Ingen butikker, intet valg. Løkken nedenfor kører nul gange, og uden
@@ -2334,7 +2393,10 @@
         if (!price) continue;
         // `price.packs`: se bestPackFor i sharedWeek — ugen og listen skal
         // vælge den samme pose.
-        const pack = choosePack(need, price.packs || [price], { keeps: meta ? meta.keeps : 'keeps', base_unit: meta ? meta.base_unit : null });
+        const pack = choosePack(need, price.packs || [price], {
+          keeps: meta ? meta.keeps : 'keeps', base_unit: meta ? meta.base_unit : null,
+          topup_need: topupNeeds.get(key) || 0,
+        });
         if (!pack) continue;
         // choosePack giver ikke sin interne score fra sig — med vilje, se
         // opgave 5. Sammenligningen mellem kæder regnes derfor her, af de
@@ -2428,6 +2490,7 @@
     const household = servings > 0 ? servings : DEFAULT_SERVINGS;
 
     const basket = new Map();
+    const topupBasket = new Map();   // vare → behovet fra linjer, der vejer/måler den
     const pantry = new Map();
     const usedIn = new Map();
     // Hvor meget hver ret selv bruger af hver vare. Resten af en pakke
@@ -2478,10 +2541,14 @@
         // mængden og skal måle det samme.
         countOnce(it.key);
         basket.set(it.key, (basket.get(it.key) || 0) + need);
+        // Påfyldningens grundlag: kun linjer, der vejer eller måler varen —
+        // samme regel som needsOf(…, MEASURED_ONLY) i sharedWeek.
+        if (it.measured) topupBasket.set(it.key, (topupBasket.get(it.key) || 0) + need);
         if (!perRecipe.has(it.key)) perRecipe.set(it.key, new Map());
         const mine = perRecipe.get(it.key);
-        const own = mine.get(rec.id) || { id: rec.id, title: rec.title, need: 0 };
+        const own = mine.get(rec.id) || { id: rec.id, title: rec.title, need: 0, measured: 0 };
         own.need += need;
+        if (it.measured) own.measured += need;
         mine.set(rec.id, own);
       }
     }
@@ -2497,7 +2564,8 @@
     // ud, så brugeren kan få det at vide frem for at opdage det som en vare
     // uden pris.
     const { ids: shopIds, dropped } = chainsInPlay(chainIds);
-    const chosen = chooseChains(basket, { chainIds: shopIds, items, offers, normals, now });
+    const chosen = chooseChains(basket,
+      { chainIds: shopIds, items, offers, normals, now, topupNeeds: topupBasket });
 
     const buy = [];
     const topups = {};
@@ -2507,16 +2575,21 @@
       const meta = items.get(key);
       if (!pick) unpriced++;
       // choosePack har regnet, hvor meget af resten retterne kan tage. Her
-      // fordeles det: største ret først, og ingen ret mere end sin egen
-      // fjerdedel. Ved samme mængde afgør titlen, så to kørsler er ens.
+      // fordeles det: kun retter, der selv vejer eller måler varen, største
+      // vejede mængde først, og ingen ret mere end en fjerdedel af den. En ret
+      // med "2 stk kyllingebryst" får intet — "+ 60 g" står ikke til at følge
+      // der. Summen af lofterne er præcis choosePacks loft, så alt, den har
+      // regnet som brugt, kan placeres. Ved samme mængde afgør titlen, så to
+      // kørsler er ens.
       const topup = [];
       let rest = pick ? pick.absorbed : 0;
       if (rest > 0) {
         const eaters = [...(perRecipe.get(key) || new Map()).values()]
-          .sort((a, b) => b.need - a.need || String(a.title).localeCompare(String(b.title), 'da'));
+          .filter((e) => e.measured > 0)
+          .sort((a, b) => b.measured - a.measured || String(a.title).localeCompare(String(b.title), 'da'));
         for (const e of eaters) {
           if (!(rest > 1e-9)) break;
-          const give = Math.min(rest, e.need * TOPUP_MAX_SHARE);
+          const give = Math.min(rest, e.measured * TOPUP_MAX_SHARE);
           if (!(give > 0)) continue;
           topup.push({ recipe_id: e.id, title: e.title, qty: roundQty(give) });
           if (!topups[e.id]) topups[e.id] = {};
@@ -2586,7 +2659,8 @@
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
-    WASTE_WEIGHT, WASTE_AVERSION, TOPUP_MAX_SHARE, EXTRA_STORE_PENALTY, MISSING_ITEM_NUISANCE,
+    WASTE_WEIGHT, WASTE_AVERSION, TOPUP_MAX_SHARE, MEASURED_UNITS, isMeasuredUnit,
+    EXTRA_STORE_PENALTY, MISSING_ITEM_NUISANCE,
     MAX_CHOICE_CHAINS,
   };
 }));

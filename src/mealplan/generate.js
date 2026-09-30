@@ -334,7 +334,7 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
   // enhed (kg/l/stk) af backfill-amounts.js/parseIngredient, så der skal ikke
   // længere kaldes gramsOf() her – kolonnen ER facit.
   const ingredients = db.prepare(`
-    SELECT ri.recipe_id, ri.raw, ri.ingredient, ri.item_key, ri.amount, ri.optional
+    SELECT ri.recipe_id, ri.raw, ri.ingredient, ri.item_key, ri.amount, ri.optional, ri.unit
       FROM recipe_ingredients ri
       ${column ? `JOIN recipes r ON r.id = ri.recipe_id WHERE r.${column} >= ?` : ''}
      ORDER BY ri.recipe_id, ri.position
@@ -377,6 +377,12 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
       // browseren — src/sync/build.js lægger det samme felt i sin payload,
       // for motoren kører begge steder og kan kun holde én regel.
       optional: Boolean(ing.optional),
+      // Vejer eller måler linjen varen (g, kg, dl, l …)? Kun da må en rest af
+      // pakken lægges i retten — "1 stk citron + 23 g" kan ingen følge. Afgøres
+      // pr. linje, fordi den samme vare vejes i én opskrift og tælles i en
+      // anden. Enhedslisten er motorens egen (engine.MEASURED_UNITS), så
+      // browseren og serveren ikke kan få hver sin; build.js bærer feltet ud.
+      measured: engine.isMeasuredUnit(ing.unit),
       ingredient: ing.ingredient || entry?.name || ing.item_key,
     });
   }
