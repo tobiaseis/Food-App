@@ -8,8 +8,10 @@ Alle tre er gratis i den nødvendige størrelse. Samlet tid: ~20 minutter.
 GitHub Actions  (dagligt 05:10 UTC)
   1. henter data.db fra release-asset
   2. npm run update                                ← ingest mod lokal SQLite, uændret kode
-  3. npm run seed:items && npm run backfill:amounts ← varetaksonomi + materialiserede mængder
+  3. npm run seed:items                             ← varetaksonomi
      npm run recompute                              ← tilbud kobles til varer med dagens taksonomi
+     npm run recipes:import                         ← de danske udgaver (data/opskrifter/) ind i basen
+     npm run backfill:amounts                       ← materialiserede mængder
      npm run reclassify                             ← portioner, næring og spor-scorer
   4. npm run prices:import                          ← data/item_prices.csv ind i basen
      npm run prices:import-rema                     ← data/rema-prices.csv (REMA's hyldepriser) ind i basen
@@ -32,7 +34,9 @@ det er først herefter, `loadRecipes()` kan se de ~1.546 fuldt prissætbare
 opskrifter. Kør begge, altid, uanset om opskriftscrawlet blev sprunget over:
 en base hentet fra release-assetet kan have `item_key` kopieret videre fra det
 gamle `taxonomy_key` (se `migrate()` i `src/db/index.js`), men har aldrig en
-fyldt `items`-tabel, før dette trin har kørt.
+fyldt `items`-tabel, før dette trin har kørt. `recipes:import` står FØR
+`backfill:amounts` og `reclassify`, fordi de to skal regne på de danske
+linjer og titler, ikke på kildens.
 
 **Rækkefølgen i trin 4 er heller ikke valgfri.** `prices:import` lægger de
 INDTASTEDE priser ind først: de er den højeste tillidskilde i `effectivePrice`
@@ -203,7 +207,27 @@ Appens opskrifter er vores egne danske udgaver i `data/opskrifter/<kilde>/<slug>
    dem, der skal ses efter. En udgave godkendes i hånden med `"accepted": true` i filen.
 
 `recipes_edition_only` (indstilling i `data.db`) holder retter uden dansk udgave ude af
-madplanen. Før første synk med `recipe_details`: kør `supabase/schema.sql` i SQL-editoren.
+madplanen.
+
+### Rækkefølgen, når grenen skal i drift
+
+Den er ikke valgfri — hvert trin fejler på en måde, man ser i appen, hvis det tages
+i en anden rækkefølge:
+
+1. **Kør `supabase/schema.sql` i Supabase' SQL-editor, FØR grenen når `main`.** Den
+   natlige kørsel sletter fra `recipe_details` som det første; uden tabellen svarer
+   Supabase 404, og hele synken stopper.
+2. **Flet til `main` først lige efter planens opgave 14, trin 5** (udgaverne er læst ind
+   på en frisk hentet base, `recipes_edition_only` er sat, synket og lagt i
+   release-assetet — og udgaverne er committet på grenen, trin 6). Flettes der før,
+   viser en frontend uden links "findes ikke på dansk endnu" ved hver ret, fordi
+   `recipe_details` er tom. Og venter fletningen, kører nattens kørsel videre på den
+   gamle `main`, som ikke kender `recipes_edition_only` og lægger retter uden dansk
+   udgave tilbage i madplanen.
+3. **Start workflowet i hånden** (Actions → "Hent tilbud og opdatér Supabase" →
+   *Run workflow*, dvs. `workflow_dispatch`, eller `gh workflow run update.yml`) lige
+   efter fletningen og før næste kørsel kl. 05:10 UTC, så Supabase bygges af den nye
+   kode med det samme.
 
 ---
 

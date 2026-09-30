@@ -2279,7 +2279,7 @@ Expected: `~2.2xx kilder gemt i tmp/kilder/ · N fejlede`. Fejl-listen gemmes; r
 node -e "const db=require('better-sqlite3')('data.db',{readonly:true});const ids=['valdemarsro','arla','bbcgoodfood','greatbritishchefs'].flatMap(s=>db.prepare('select id from recipes where source=? order by random() limit 5').all(s).map(r=>r.id));console.log([...new Set([2178,...ids])].slice(0,21).join(','))"
 npm run recipes:rewrite -- run --ids <listen ovenfor>
 ```
-Expected: `21 danske udgaver skrevet · 0 fejlede · N s pr. opskrift`.
+Expected: `20 danske udgaver skrevet · 0 fejlede · N s pr. opskrift`. Lammeculotten (2178) har allerede en udgave (`data/opskrifter/valdemarsro/lammeculotte-55da61.json`), og `run` springer en skrevet udgave over. Skal den skrives om med den samme prompt som de andre, så kør den for sig med `npm run recipes:rewrite -- run --force --ids 2178` — så er der 21.
 
 - [ ] **Step 4: Læs dem ind og se efter**
 
@@ -2342,15 +2342,21 @@ Expected: `ℹ fail 0`
 
 - [ ] **Step 5: Supabase og release**
 
-Kør `supabase/schema.sql` i Supabase' SQL-editor (ny tabel, ny kolonne, politikken). Så:
+Rækkefølgen er ikke valgfri — se også DEPLOY.md, "Rækkefølgen, når grenen skal i drift".
+
+1. Kør `supabase/schema.sql` i Supabase' SQL-editor (ny tabel, ny kolonne, politikken) — **før grenen når `main`**. Den natlige kørsel sletter fra `recipe_details` som det første og får 404 uden tabellen; den gamle `main` er ligeglad med den nye tabel, så det er sikkert at gøre det først.
+2. Hent nattens base igen og læs udgaverne ind på den **lige før** upload. Basen fra trin 2 er mindst en nat gammel nu, og `gh release upload --clobber` ville overskrive det, en natlig kørsel har lagt i release-assetet i mellemtiden. Kør det i ét stræk og ikke omkring 05:10 UTC:
 
 ```bash
+gh release download db --pattern data.db --clobber
+npm run seed:items
+npm run recipes:import -- --report tmp/omskrivning/kontrol.md   # samme liste som i trin 2
+npm run backfill:amounts && npm run reclassify && npm run costs:recompute
+node -e "require('./src/db').setSetting('recipes_edition_only', true)"
 npm run sync:dry        # recipe_details ≈ antal danske udgaver
 npm run sync
 gh release upload db data.db --clobber
 ```
-
-Åbn den udrullede app: vælg et forslag, åbn tre opskrifter (én fra hver sprogkilde), og bekræft, at ingen ret linker ud, og at fotoerne står med "Foto: …".
 
 - [ ] **Step 6: Commit udgaverne**
 
@@ -2358,6 +2364,16 @@ gh release upload db data.db --clobber
 git add data/opskrifter
 git commit -m "2.2xx opskrifter på dansk — appens egne udgaver (se tallene i beskeden)"
 ```
+
+- [ ] **Step 7: Flet og start kørslen — lige efter trin 5 og 6**
+
+Flet grenen til `main` nu, hverken før eller senere. Før: en frontend uden links, men med en tom `recipe_details`, viser "findes ikke på dansk endnu" ved hver ret. Senere: nattens kørsel på den gamle `main` kender ikke `recipes_edition_only` og lægger retter uden dansk udgave tilbage i madplanen. Start så workflowet i hånden, før næste kørsel kl. 05:10 UTC:
+
+```bash
+gh workflow run update.yml
+```
+
+Åbn den udrullede app, når kørslen er færdig: vælg et forslag, åbn tre opskrifter (én fra hver sprogkilde), og bekræft, at ingen ret linker ud, og at fotoerne står med "Foto: …".
 
 ---
 

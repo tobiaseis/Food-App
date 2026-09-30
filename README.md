@@ -244,6 +244,7 @@ samtidig, og uden den regel trækker én kæde medianen ned mod sig selv.
 | `npm run watch` | Kører overvågninger og danner notifikationer. |
 | `npm run update` | Hele rutinen: tilbud → normalisering → butikker → overvågninger. Skriver til `logs/update.log`. |
 | `npm run seed:items` | Fylder `items`/`item_synonyms` fra taksonomien i `taxonomy.js`. |
+| `npm run recipes:import` | Læser de danske udgaver i `data/opskrifter/` ind i basen (idempotent; se DEPLOY.md). |
 | `npm run backfill:amounts` | Slår hver ingredienslinje op på ny og skriver `item_key`/`amount`/`optional`. |
 | `npm run coverage` | Rapport: hvor mange opskrifter kan prissættes fuldt ud. |
 | `npm run sync` / `sync:dry` | Bygger read-modellen (madplaner, prisstatistik) og sender den til Supabase. |
@@ -254,11 +255,13 @@ Prishistorikken bygges op ved at køre `update` løbende. Databasen er
 `data.db` (SQLite).
 
 **Rækkefølgen betyder noget i den natlige kørsel** (se `.github/workflows/update.yml`
-og [DEPLOY.md](DEPLOY.md)): `update` → `seed:items` → `backfill:amounts` → `sync`.
-Springer man `seed:items`/`backfill:amounts` over efter en ændring i taksonomien,
-falder opslag tilbage til SEED-konstanten i hukommelsen i stedet for basen, og
-`recipe_index`-payloaden til browserens `engine.js` bliver bygget på gamle
-mængder.
+og [DEPLOY.md](DEPLOY.md)): `update` → `seed:items` → `recipes:import` →
+`backfill:amounts` → `sync`. Springer man `seed:items`/`backfill:amounts` over efter
+en ændring i taksonomien, falder opslag tilbage til SEED-konstanten i hukommelsen i
+stedet for basen, og `recipe_index`-payloaden til browserens `engine.js` bliver
+bygget på gamle mængder. `recipes:import` læser de danske udgaver
+(`data/opskrifter/`) ind før `backfill:amounts`, så mængderne regnes på de danske
+linjer.
 
 ---
 
