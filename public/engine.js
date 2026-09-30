@@ -738,7 +738,20 @@
    * `null`, når der ikke er noget at købe: intet behov, eller ingen brugbar
    * pakke. Ikke en tom pose til 0 kr — se effectivePrice for samme skelnen.
    */
-  function choosePack(need, packs, { keeps = 'keeps' } = {}) {
+  // Højst så meget mere af en vare kan lægges i en ret, for at en pakke bliver
+  // brugt op: en fjerdedel af det, retten selv skal bruge. 25 g kyllingebryst
+  // i en ret med 400 g mærkes ikke; en halv pakke fløde gør. Kun friske varer
+  // (keeps: perishable) og kun det, der vejes eller måles — et ekstra æg eller
+  // en halv citron er ikke "lidt mere".
+  const TOPUP_MAX_SHARE = 0.25;
+
+  /** Hvor meget af resten der kan lægges i retterne i stedet for at gå til spilde. */
+  function absorbable(need, leftover, keeps, baseUnit) {
+    if (keeps !== 'perishable' || (baseUnit !== 'kg' && baseUnit !== 'l')) return 0;
+    return Math.min(leftover, need * TOPUP_MAX_SHARE);
+  }
+
+  function choosePack(need, packs, { keeps = 'keeps', base_unit = null } = {}) {
     if (!(need > 0) || !packs || !packs.length) return null;
 
     // hasOwn, ikke `[]`: et opslag gennem Object.prototype ville give
@@ -763,7 +776,11 @@
       // Efter tolerancen kan `bought` lande en flimmer under `need`. En
       // negativ rest er ikke en rest, og den ville tælle som en gevinst.
       const leftover = Math.max(0, bought - need);
-      const waste = leftover * w;
+      // Den del af resten, retterne kan tage, er ikke spild. Reglen står HER,
+      // så pakkevalget, ugens spildscore og listens waste_kr regner ens —
+      // test/waste.test.js holder ugen og listen op mod hinanden.
+      const absorbed = absorbable(need, leftover, keeps, base_unit);
+      const waste = (leftover - absorbed) * w;
       const cost = n * p.pack_price;
 
       // Resten prissættes til det, den er værd — ikke til et fast beløb pr.
@@ -782,7 +799,7 @@
       if (best && score >= bestScore) continue;
       bestScore = score;
       best = { pack_qty: p.pack_qty, pack_price: p.pack_price, packs: n,
-               bought, leftover, waste, cost };
+               bought, leftover, absorbed, waste, cost };
     }
     return best;
   }
@@ -1921,7 +1938,7 @@
         // `price.packs` og ikke `[price]`: effectivePrice har allerede
         // filtreret ned til det bedste kildeniveau, og det er DEN liste,
         // choosePack skal vælge pakkestørrelse i.
-        const pack = choosePack(n, price.packs || [price], { keeps: meta.keeps });
+        const pack = choosePack(n, price.packs || [price], { keeps: meta.keeps, base_unit: meta.base_unit });
         if (!pack) continue;
         const kr = pack.waste * unitPriceOf(price) * WASTE_AVERSION;
         const score = pack.cost + kr;
@@ -2096,7 +2113,7 @@
         // Samme pakkeliste, som `together` blev regnet af. Fik den ene sti
         // alle pakkestørrelser og den anden kun vinderen pr. enhed, ville de
         // to pakketal ikke måle det samme, og besparelsen blive et tilfælde.
-        const pack = choosePack(own, pick.price.packs || [pick.price], { keeps: meta.keeps });
+        const pack = choosePack(own, pick.price.packs || [pick.price], { keeps: meta.keeps, base_unit: meta.base_unit });
         if (pack) apart += pack.packs;
       }
       const saved = apart - together.packs;
@@ -2317,7 +2334,7 @@
         if (!price) continue;
         // `price.packs`: se bestPackFor i sharedWeek — ugen og listen skal
         // vælge den samme pose.
-        const pack = choosePack(need, price.packs || [price], { keeps: meta ? meta.keeps : 'keeps' });
+        const pack = choosePack(need, price.packs || [price], { keeps: meta ? meta.keeps : 'keeps', base_unit: meta ? meta.base_unit : null });
         if (!pack) continue;
         // choosePack giver ikke sin interne score fra sig — med vilje, se
         // opgave 5. Sammenligningen mellem kæder regnes derfor her, af de
@@ -2413,6 +2430,9 @@
     const basket = new Map();
     const pantry = new Map();
     const usedIn = new Map();
+    // Hvor meget hver ret selv bruger af hver vare. Resten af en pakke
+    // fordeles efter det (se topup nedenfor).
+    const perRecipe = new Map();
 
     for (const day of plan.days || []) {
       const rec = (day && day.recipe) || {};
@@ -2458,6 +2478,11 @@
         // mængden og skal måle det samme.
         countOnce(it.key);
         basket.set(it.key, (basket.get(it.key) || 0) + need);
+        if (!perRecipe.has(it.key)) perRecipe.set(it.key, new Map());
+        const mine = perRecipe.get(it.key);
+        const own = mine.get(rec.id) || { id: rec.id, title: rec.title, need: 0 };
+        own.need += need;
+        mine.set(rec.id, own);
       }
     }
 
@@ -2475,11 +2500,30 @@
     const chosen = chooseChains(basket, { chainIds: shopIds, items, offers, normals, now });
 
     const buy = [];
+    const topups = {};
     let unpriced = 0;
     for (const [key, need] of basket) {
       const pick = chosen.assignment.get(key);
       const meta = items.get(key);
       if (!pick) unpriced++;
+      // choosePack har regnet, hvor meget af resten retterne kan tage. Her
+      // fordeles det: største ret først, og ingen ret mere end sin egen
+      // fjerdedel. Ved samme mængde afgør titlen, så to kørsler er ens.
+      const topup = [];
+      let rest = pick ? pick.absorbed : 0;
+      if (rest > 0) {
+        const eaters = [...(perRecipe.get(key) || new Map()).values()]
+          .sort((a, b) => b.need - a.need || String(a.title).localeCompare(String(b.title), 'da'));
+        for (const e of eaters) {
+          if (!(rest > 1e-9)) break;
+          const give = Math.min(rest, e.need * TOPUP_MAX_SHARE);
+          if (!(give > 0)) continue;
+          topup.push({ recipe_id: e.id, title: e.title, qty: roundQty(give) });
+          if (!topups[e.id]) topups[e.id] = {};
+          topups[e.id][key] = roundQty(give);
+          rest -= give;
+        }
+      }
       buy.push({
         key, name: meta.name || key, chain: pick ? pick.chainId : null,
         // roundQty og ikke round2: 3 g hvidløg bliver 0 med to decimaler, og
@@ -2494,9 +2538,10 @@
         pack_qty: pick ? roundQty(pick.pack_qty) : null,
         unit: meta.base_unit,
         est_cost: pick ? round2(pick.cost) : null,
-        leftover: pick ? roundQty(pick.leftover) : null,
+        leftover: pick ? roundQty(pick.leftover - pick.absorbed) : null,
         on_offer: pick ? Boolean(pick.price.on_offer) : false,
         used_in: usedIn.get(key) || [],
+        topup,
       });
     }
     // Dyrest først: det er den linje, der betyder noget for budgettet, og den
@@ -2525,6 +2570,9 @@
       // spildscore bygger på — se basketWasteKr — så ugens tal er præcis dette
       // gange WASTE_AVERSION og ikke et tal, der bare ligner.
       waste_kr: basketWasteKr(chosen.assignment),
+      // `recipe_id → vare → mængde i varens enhed`: det, opskriftsarket
+      // lægger oven i retten.
+      topups,
     };
   }
 
@@ -2538,7 +2586,7 @@
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
-    WASTE_WEIGHT, WASTE_AVERSION, EXTRA_STORE_PENALTY, MISSING_ITEM_NUISANCE,
+    WASTE_WEIGHT, WASTE_AVERSION, TOPUP_MAX_SHARE, EXTRA_STORE_PENALTY, MISSING_ITEM_NUISANCE,
     MAX_CHOICE_CHAINS,
   };
 }));

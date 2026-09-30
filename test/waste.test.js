@@ -63,7 +63,7 @@ test('score er et internt tal og slipper ikke ud', () => {
   const c = engine.choosePack(1.3, PACKS, { keeps: 'keeps' });
   assert.deepEqual(
     Object.keys(c).sort(),
-    ['bought', 'cost', 'leftover', 'pack_price', 'pack_qty', 'packs', 'waste'],
+    ['absorbed', 'bought', 'cost', 'leftover', 'pack_price', 'pack_qty', 'packs', 'waste'],
   );
 });
 
@@ -297,7 +297,7 @@ test('opskrifterne skaleres til husstanden', () => {
   near(uge(4).cost, 80);    // 1,0 kg → én pose
   near(uge(8).cost, 160);   // 2,0 kg → to poser
   near(uge(2).cost, 80);    // 0,5 kg → stadig én pose, halvdelen til overs
-  near(uge(2).waste, 20);   // … og den halve pose tæller som spild
+  near(uge(2).waste, 15);   // … og den halve pose tæller som spild — minus den fjerdedel af 0,5 kg, retten selv kan tage: 0,375 kg × 80 kr × 0,5
 
   // Standard er 4, og en husstand på nul er ikke en husstand.
   near(engine.sharedWeek([tilTi], { days: 1, ...FIXTURE.ctx }).cost, 80);
@@ -691,9 +691,9 @@ test('spildet står i kroner og er vægtet efter holdbarhed', () => {
   //   81 kr       uvægtet: 72 for laksen PLUS 9 for pasta, der ikke bliver
   //               smidt ud. Så er items.keeps uden virkning, og "kartofler
   //               til overs er ikke spild" gælder ikke længere.
-  //   72 kr       vægtet: laksen tæller fuldt, pastaen slet ikke.
+  //   60 kr: 0,6 kg laks til overs, hvoraf 0,1 kg (en fjerdedel af 0,4) lægges i retten — 0,5 × 120.
   const plan = { days: [{ recipe: recipe(63, 0.8, [line('laks', 0.4), line('pasta', 0.25)]) }] };
-  near(engine.shoppingList(plan, CTX).waste_kr, 72);
+  near(engine.shoppingList(plan, CTX).waste_kr, 60);
 });
 
 test('ugens spildscore er halvdelen af listens spild', () => {
@@ -707,9 +707,8 @@ test('ugens spildscore er halvdelen af listens spild', () => {
   // til overs), var forholdet 2,12 og ikke 2 — målt 30,90 mod 65,60.
   const week = engine.sharedWeek([CANDIDATES[2]], { days: 1, ...CTX_2 });
   const list = engine.shoppingList({ days: week.picks.map((r) => ({ recipe: r })) }, CTX_2);
-  // 0,5 kg laks à 120 kr (perishable, fuld vægt) + 0,7 kg kartofler à 8 kr
-  // (keeps, halv vægt af 1,4 kg til overs).
-  near(list.waste_kr, 65.6);
+  // 0,375 kg laks à 120 kr (0,5 til overs minus 0,125 i retten) + 0,7 kg kartofler à 8 kr (keeps, halv vægt).
+  near(list.waste_kr, 50.6);
   // Begge tal er afrundet til øre hver for sig, så forholdet holder til øren og
   // ikke til float-præcision.
   near(week.waste, list.waste_kr * engine.WASTE_AVERSION, 0.01);
@@ -1166,4 +1165,50 @@ test('et rigtigt tilbud vinder stadig over en rigtig normalpris', () => {
   const r = engine.chooseChains(new Map([['loeg', 1]]),
     { chainIds: ['N', 'R'], items: TIE_ITEMS, offers, normals });
   assert.deepEqual(r.chains, ['N']);
+});
+
+test('en lille rest af en frisk vare lægges i den største ret', () => {
+  // 0,4 + 0,5 kg kyllingebryst = 0,9 kg; bakken er 1 kg. De 0,1 kg ville være
+  // spild. Den største ret må få op til en fjerdedel af sine 0,5 kg, altså
+  // 0,125 kg — nok til hele resten. Intet går til spilde.
+  const plan = { days: [
+    { recipe: recipe(70, 0.8, [line('kyllingebryst', 0.4)]) },
+    { recipe: recipe(71, 0.8, [line('kyllingebryst', 0.5)]) },
+  ] };
+  const list = engine.shoppingList(plan, CTX);
+  const kb = list.buy.find((b) => b.key === 'kyllingebryst');
+  near(kb.leftover, 0);
+  assert.deepEqual(kb.topup, [{ recipe_id: 71, title: 'Ret 71', qty: 0.1 }]);
+  assert.deepEqual(list.topups, { 71: { kyllingebryst: 0.1 } });
+  near(list.waste_kr, 0);
+});
+
+test('en rest, der er større end én rets fjerdedel, deles', () => {
+  // 0,4 + 0,4 kg: 0,2 kg til overs, og hver ret kan tage 0,1 kg.
+  const plan = { days: [
+    { recipe: recipe(74, 0.8, [line('kyllingebryst', 0.4)]) },
+    { recipe: recipe(75, 0.8, [line('kyllingebryst', 0.4)]) },
+  ] };
+  const kb = engine.shoppingList(plan, CTX).buy.find((b) => b.key === 'kyllingebryst');
+  assert.deepEqual(kb.topup.map((t) => [t.recipe_id, t.qty]), [[74, 0.1], [75, 0.1]]);
+  near(kb.leftover, 0);
+});
+
+test('mere end en fjerdedel bliver en rest, ikke en større portion', () => {
+  // 0,4 kg laks af en 1 kg-pakke: højst 0,1 kg kan lægges i, 0,5 kg er spild.
+  const plan = { days: [{ recipe: recipe(72, 0.8, [line('laks', 0.4)]) }] };
+  const list = engine.shoppingList(plan, CTX);
+  const laks = list.buy.find((b) => b.key === 'laks');
+  near(laks.leftover, 0.5);
+  assert.deepEqual(laks.topup, [{ recipe_id: 72, title: 'Ret 72', qty: 0.1 }]);
+  near(list.waste_kr, 60);
+});
+
+test('kun friske varer, der vejes eller måles, fyldes op', () => {
+  // Kartofler holder (keeps), æg tælles i stykker. Ingen af dem bliver
+  // "lidt mere" i retten.
+  const plan = { days: [{ recipe: recipe(73, 0.8, [line('kartofler', 0.6), line('aeg', 2)]) }] };
+  const list = engine.shoppingList(plan, CTX);
+  for (const b of list.buy) assert.deepEqual(b.topup, [], `${b.key} skal ikke fyldes op`);
+  assert.deepEqual(list.topups, {});
 });
