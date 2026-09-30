@@ -79,12 +79,16 @@ function innerHtmlOf(html, tagName, openEnd) {
  * FULDE udstrækning via scanToClose (samme dybdelogik som innerHtmlOf), så
  * en under-liste inde i én <li> ikke selv bliver opdelt i flere trin og
  * mister teksten efter den; det er præcis den fejl, en ikke-dybdesporet
- * blok-regex ville reintroducere ét niveau nede. Løs tekst mellem to blokke,
- * der ikke selv sidder i endnu et tag (fx en sætning, siden glemte at pakke
- * i <p>), bliver også sit eget trin — men tekst der SELV sidder i et andet
- * tag mellem to blokke (en billed- eller tipboks) er dekoration, ikke et
- * skridt i metoden, og bliver ikke løftet til et trin. Er der slet ingen
- * <p>/<li>, er hele elementets tekst ét trin, som før.
+ * blok-regex ville reintroducere ét niveau nede.
+ *
+ * Tekst MELLEM to blokke bliver også sit eget trin — både løs tekst (en
+ * sætning, siden glemte at pakke i <p>) og tekst i et andet tag (en <span>,
+ * en tipboks i en <div>, en mellemoverskrift). Her blev tagget tekst før
+ * kasseret som dekoration, men det kan lige så vel være et trin, siden har
+ * pakket anderledes, og fetch-sources kører én gang over alle 2.224 sider:
+ * hvad der tabes her, ser omskrivningen aldrig. Et "Se video her" for meget
+ * skriver modellen selv ud; et manglende trin kan den ikke gætte. Er der
+ * slet ingen <p>/<li>, er hele elementets tekst ét trin, som før.
  */
 function stepsFromBlock(inner, out) {
   const blockOpen = /<(p|li)\b[^>]*>/gi;
@@ -93,11 +97,8 @@ function stepsFromBlock(inner, out) {
   let m;
   while ((m = blockOpen.exec(inner))) {
     any = true;
-    const gap = inner.slice(pos, m.index);
-    if (!/</.test(gap)) {
-      const text = stripTags(gap);
-      if (text) out.push({ section: null, text });
-    }
+    const gap = stripTags(inner.slice(pos, m.index));
+    if (gap) out.push({ section: null, text: gap });
 
     const tagName = m[1];
     const { inner: content, end } = scanToClose(inner, tagName, m.index + m[0].length);
@@ -112,11 +113,9 @@ function stepsFromBlock(inner, out) {
     if (text) out.push({ section: null, text });
     return;
   }
-  const tail = inner.slice(pos);
-  if (!/</.test(tail)) {
-    const text = stripTags(tail);
-    if (text) out.push({ section: null, text });
-  }
+  // Samme regel for teksten efter den sidste blok.
+  const tail = stripTags(inner.slice(pos));
+  if (tail) out.push({ section: null, text: tail });
 }
 
 /** Valdemarsro: recipeInstructions som ét element pr. trin, eller ét element

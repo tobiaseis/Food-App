@@ -183,8 +183,29 @@ test('fremgangsmåden fra microdata: indlejret element med samme tagnavn afkorte
     </div>
   </div>`;
   const steps = stepsFromMicrodata(html);
+  // Tipboksens tekst er med: kildesiderne hentes én gang, og hvad der tabes
+  // her, ser omskrivningen aldrig. Et "Se video her" for meget skriver
+  // modellen selv ud; et manglende trin kan den ikke gætte.
   assert.deepEqual(steps.map((s) => s.text),
-    ['Varm panden op.', 'Vend kødet efter to minutter.']);
+    ['Varm panden op.', 'Se video her.', 'Vend kødet efter to minutter.']);
+});
+
+test('fremgangsmåden fra microdata: tekst i en <span> mellem to blokke tabes ikke', () => {
+  const html = `<div itemscope itemtype="http://schema.org/Recipe">
+    <div itemprop="recipeInstructions">
+      <p>Brun løget.</p>
+      <span class="step">Tilsæt <b>tomaterne</b> og lad det simre i 20 minutter.</span>
+      <p>Smag til.</p>
+      <span>Server med ris.</span>
+      <img src="x.jpg" alt="">
+    </div>
+  </div>`;
+  assert.deepEqual(stepsFromMicrodata(html).map((s) => s.text), [
+    'Brun løget.',
+    'Tilsæt tomaterne og lad det simre i 20 minutter.',
+    'Smag til.',
+    'Server med ris.',
+  ]);
 });
 
 test('fremgangsmåden fra microdata: <p> og <ul><li> i samme boks bliver hvert sit trin', () => {
