@@ -1078,11 +1078,15 @@ function sourceNote(b) {
 function buyLine(b) {
   const used = b.used_in.length === 1 ? `til ${esc(b.used_in[0])}` : `til ${b.used_in.length} retter`;
   const left = b.leftover > 0 ? ` · ${qty(b.leftover, b.unit)} til overs` : '';
+  // Resten, motoren har lagt i en ret (engine: topup). Det er grunden til, at
+  // "til overs" er mindre, end pakken og behovet ellers ville sige.
+  const into = b.topup && b.topup.length
+    ? ` · resten i ${esc(listNames(b.topup.map((t) => t.title)))}` : '';
   // En label om hele rækken: i butikken rammer tommelfingeren varen, ikke en
   // lille cirkel. Afkrydsningen er kun til turen – den gemmes ikke.
   return `<label class="shop-item">
     <input type="checkbox" class="tick" aria-label="${esc(b.name)} er i kurven">
-    <span class="n">${esc(b.name)}<small>${packLabel(b)} · ${used}${left}</small></span>
+    <span class="n">${esc(b.name)}<small>${packLabel(b)} · ${used}${left}${into}</small></span>
     <span class="p">${b.est_cost != null ? kr(b.est_cost) : '–'}${sourceNote(b) ? `<small>${sourceNote(b)}</small>` : ''}</span>
   </label>`;
 }
@@ -1157,6 +1161,8 @@ function renderList(picks) {
     <p class="note list-foot">
       Priserne er hele pakker: har en vare kun én pakkestørrelse, købes den, og resten står
       som "til overs". Spild er den del af resterne, der ikke holder til næste uge, regnet i kroner.
+      Er der en lille rest af en frisk vare, lægges den i en af retterne — højst en fjerdedel
+      mere, end retten selv bruger — så den ikke går til spilde. Det står i opskriften.
       ${estimated ? 'Hvor en butik ikke selv har en pris, bruger vi REMA 1000’s hyldepris som skøn – det står ved varen.' : ''}
     </p>`;
 
