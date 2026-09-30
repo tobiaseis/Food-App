@@ -170,6 +170,7 @@ function listNames(names) {
  */
 function storePicker(onSaved) {
   const modal = $('#modal');
+  modal.classList.remove('recipe');
   $('#modal-title').textContent = 'Mine butikker';
 
   const rows = [...CHAINS]
@@ -350,6 +351,7 @@ function priceRange(b, best, unit) {
 
 async function showProduct(productId) {
   const modal = $('#modal');
+  modal.classList.remove('recipe');
   $('#modal-title').textContent = 'Indlæser…';
   $('#modal-body').innerHTML = '<div class="loading">Henter prishistorik…</div>';
   modal.showModal();
@@ -397,6 +399,72 @@ async function showProduct(productId) {
       : `Følger nu · ${r.new_notifications} træf`;
     loadStatus();
   });
+}
+
+/**
+ * Opskriften i appen: ingredienserne ganget op til husstanden, og
+ * fremgangsmåden. Er en rest af en pakke lagt i netop denne ret (engine:
+ * shoppingList.topups), står det ved varen.
+ */
+async function showRecipe(id) {
+  const modal = $('#modal');
+  modal.classList.add('recipe');
+  $('#modal-title').textContent = 'Opskrift';
+  $('#modal-body').innerHTML = '<div class="loading">Henter opskriften…</div>';
+  if (!modal.open) modal.showModal();
+
+  let r;
+  try { r = await Data.recipe(id); } catch (err) { r = { error: err.message }; }
+  if (r.error) {
+    $('#modal-body').innerHTML = `<div class="empty"><h3>Opskriften kan ikke vises</h3><p>${esc(r.error)}</p></div>`;
+    return;
+  }
+
+  const household = FLOW.settings ? FLOW.settings.servings : (r.servings || 4);
+  const factor = household / (r.servings > 0 ? r.servings : 4);
+  const extra = { ...((FLOW.list && FLOW.list.topups && FLOW.list.topups[id]) || {}) };
+  const unitOf = (key) => FLOW.ctx && FLOW.ctx.items && FLOW.ctx.items.get(key)?.base_unit;
+
+  const grouped = (rows) => rows.reduce((acc, row) => {
+    const last = acc[acc.length - 1];
+    if (!last || last.section !== (row.section || null)) acc.push({ section: row.section || null, rows: [] });
+    acc[acc.length - 1].rows.push(row);
+    return acc;
+  }, []);
+
+  const ingredients = grouped(r.ingredients).map((g) => `
+    ${g.section ? `<h3 class="recipe-sub">${esc(g.section)}</h3>` : ''}
+    <ul class="ingr">${g.rows.map((ing) => {
+      // Resten står kun ved den første linje med varen.
+      const more = ing.key && extra[ing.key] ? extra[ing.key] : 0;
+      if (more) delete extra[ing.key];
+      return `<li><span class="ingr-amt">${esc(lineAmount(ing.qty, ing.unit, factor))}</span>
+        <span>${esc(ing.label)}${ing.optional ? ' <span class="note">(valgfri)</span>' : ''}
+        ${more ? `<small class="topup">+ ${esc(qty(more, unitOf(ing.key)))} — så pakken bliver brugt op</small>` : ''}</span></li>`;
+    }).join('')}</ul>`).join('');
+
+  const steps = grouped(r.steps).map((g) => `
+    ${g.section ? `<h3 class="recipe-sub">${esc(g.section)}</h3>` : ''}
+    <ol class="steps">${g.rows.map((s) => `<li>${esc(s.text)}</li>`).join('')}</ol>`).join('');
+
+  const meta = [
+    r.active_minutes ? `Arbejdstid ${dur(r.active_minutes)}` : '',
+    r.total_minutes ? `I alt ${dur(r.total_minutes)}` : '',
+    `${household} ${household === 1 ? 'person' : 'personer'}`,
+  ].filter(Boolean).join(' · ');
+
+  $('#modal-title').textContent = r.title;
+  $('#modal-body').innerHTML = `
+    ${r.image ? `<figure class="recipe-fig">
+      <img class="recipe-img" src="${esc(thumb(r.image, 1200))}" alt="">
+      ${r.source_name ? `<figcaption>Foto: ${esc(r.source_name)}</figcaption>` : ''}
+    </figure>` : ''}
+    ${r.intro ? `<p class="recipe-intro">${esc(r.intro)}</p>` : ''}
+    <p class="recipe-meta">${esc(meta)}</p>
+    <div class="recipe-cols">
+      <section><h2>Ingredienser</h2>${ingredients}</section>
+      <section><h2>Sådan gør du</h2>${steps}</section>
+    </div>`;
 }
 
 /* ── Visning: madplanen i fem trin ────────────────────────────────────────────
@@ -491,6 +559,50 @@ function qty(n, unit) {
     return Number.isInteger(dl) ? `${dl} dl` : `${t(Math.round(n * 1000))} ml`;
   }
   return `${t(n)} stk`;
+}
+
+/** 45 → "45 min", 90 → "1 t 30 min". */
+function dur(m) {
+  if (!(m > 0)) return '';
+  const h = Math.floor(m / 60), mm = m % 60;
+  return h ? `${h} t${mm ? ` ${mm} min` : ''}` : `${mm} min`;
+}
+
+/** Til kortet: arbejdstiden, og tiden i alt kun når den er en anden. */
+function timeShort(r) {
+  const a = r.active_minutes, t = r.total_minutes;
+  if (a && t && t > a) return `${dur(a)} arbejde · ${dur(t)} i alt`;
+  return dur(t || a);
+}
+
+const FRACTIONS = [[0.25, '¼'], [0.5, '½'], [0.75, '¾']];
+
+/**
+ * Mængden på en ingredienslinje, ganget op til husstanden. Gram rundes til
+ * 5 g, skeer og stykker til nærmeste kvarte — ingen skriver "1,33 spsk".
+ */
+function lineAmount(q, unit, factor) {
+  if (q == null) return '';
+  const n = q * factor;
+  if (unit === 'g' || unit === 'ml') return `${n >= 20 ? Math.round(n / 5) * 5 : Math.round(n)} ${unit}`;
+  if (unit === 'kg' || unit === 'l' || unit === 'dl') {
+    return `${n.toLocaleString('da-DK', { maximumFractionDigits: 2 })} ${unit}`;
+  }
+  const quarter = Math.max(0.25, Math.round(n * 4) / 4);
+  const whole = Math.floor(quarter);
+  const frac = FRACTIONS.find(([f]) => Math.abs(quarter - whole - f) < 1e-9);
+  const text = `${whole || ''}${frac ? frac[1] : ''}`;
+  return unit ? `${text} ${unit}` : text;
+}
+
+/** Knapper med data-recipe åbner opskriftsarket. */
+function bindRecipeLinks(root) {
+  root.querySelectorAll('[data-recipe]').forEach((b) => b.addEventListener('click', (e) => {
+    // Knappen kan stå i en <label> (retterne i trin 4). Uden dette kunne et
+    // klik i nogle browsere også sætte fluebenet.
+    e.preventDefault();
+    showRecipe(Number(b.dataset.recipe));
+  }));
 }
 
 /** Hvor mange pakker af hvad: "2 × 500 g". */
@@ -748,7 +860,7 @@ function proposalCard(week, list, i) {
     </div>
     <p class="note proposal-meta">${week.picks.length} retter${
       shops.length ? ` · ${esc(listNames(shops))}` : ''} · spild ca. ${kr(Math.round(list.waste_kr))}</p>
-    <ol class="proposal-dishes">${week.picks.map((r) => `<li>${esc(r.title)}</li>`).join('')}</ol>
+    <ol class="proposal-dishes">${week.picks.map((r) => `<li><button type="button" class="link" data-recipe="${r.id}">${esc(r.title)}</button></li>`).join('')}</ol>
     <p class="note">${esc(sharedSentence(week))}</p>
     <button type="button" class="${active ? '' : 'primary'}" data-accept="${i}" aria-pressed="${active ? 'true' : 'false'}">
       ${active ? `${name} er valgt` : `Vælg forslag ${'AB'[i]}`}</button>
@@ -762,12 +874,15 @@ function pickMeta(r, track) {
   // Det, sporet er valgt efter, står forrest efter kategorien.
   if (track === 'budget' && r.cost_per_serving != null) parts.push(`ca. ${kr(Math.round(r.cost_per_serving))} pr. portion`);
   if (track === 'healthy' && r.protein_g != null) parts.push(`${num(r.protein_g)} g protein`);
-  if (r.total_minutes) parts.push(`${r.total_minutes} min.`);
-  if (r.source_name) parts.push(esc(r.source_name));
-  // Linket står inde i kortet. Et klik på et link i en <label> sætter ikke
-  // fluebenet (HTML: interaktivt indhold i en label aktiverer den ikke), så
-  // man kan læse opskriften uden at vælge retten.
-  if (r.url) parts.push(`<a class="pick-link" href="${esc(r.url)}" target="_blank" rel="noopener">Opskrift</a>`);
+  const t = timeShort(r);
+  if (t) parts.push(t);
+  // Opskriften åbnes i appen. Knappen står i kortets <label>; et klik på
+  // interaktivt indhold i en label sætter ikke fluebenet, så man kan læse
+  // opskriften uden at vælge retten.
+  parts.push(`<button type="button" class="pick-link" data-recipe="${r.id}">Se opskrift</button>`);
+  // Kildens navn står kun som kreditering af fotoet (brugerens valg
+  // 2026-09-30): billedet er deres, opskriften er vores udgave.
+  if (r.image && r.source_name) parts.push(`<span class="pick-credit">Foto: ${esc(r.source_name)}</span>`);
   return parts.join('<i class="sep"></i>');
 }
 
@@ -834,6 +949,7 @@ function renderChoose() {
     <ul class="picks">${rows}</ul>`;
 
   bindGotoStores(el);
+  bindRecipeLinks(el);
   el.querySelectorAll('[data-accept]').forEach((b) => b.addEventListener('click', () => {
     const w = proposals[Number(b.dataset.accept)];
     FLOW.selected = w.picks.map((r) => r.id);
@@ -1036,14 +1152,15 @@ function renderList(picks) {
     : '<p class="note">Retterne bruger ingen basisvarer, vi kender til.</p>'}
 
     <h3 class="list-head">Ugens retter</h3>
-    <ol class="week-dishes">${picks.map((r) => `<li>${r.url
-      ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a>` : esc(r.title)}</li>`).join('')}</ol>
+    <ol class="week-dishes">${picks.map((r) => `<li><button type="button" class="link" data-recipe="${r.id}">${esc(r.title)}</button></li>`).join('')}</ol>
 
     <p class="note list-foot">
       Priserne er hele pakker: har en vare kun én pakkestørrelse, købes den, og resten står
       som "til overs". Spild er den del af resterne, der ikke holder til næste uge, regnet i kroner.
       ${estimated ? 'Hvor en butik ikke selv har en pris, bruger vi REMA 1000’s hyldepris som skøn – det står ved varen.' : ''}
     </p>`;
+
+  bindRecipeLinks(el);
 
   const share = $('#share-list');
   if (share) share.addEventListener('click', async () => {
