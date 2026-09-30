@@ -2332,6 +2332,33 @@ node -e "const db=require('better-sqlite3')('data.db',{readonly:true});console.l
 ```
 Skriv tallene i commit-beskeden: hvor mange retter har dansk udgave, hvor mange er nu over en time (og dermed ude af madplanen), og hvordan dækningen pr. kæde har ændret sig. Falder et spor under `3 × 7` retter i en kæde, så sig det til brugeren, før indstillingen sættes.
 
+Og — stadig FØR indstillingen sættes i trin 4 — hvad den danske titel har flyttet. `reclassify` regner portioner (`servings.js`), spor (`classify.js`) og om retten er aftensmad (`engine.isDinner`) ud fra titlen, og titlen er nu den danske udgaves. Sammenlign de retter, der har en udgave, før og efter:
+
+```bash
+cp data.db.pre-dansk tmp/foer.db   # migrate() retter i den base, den åbner — ikke i sikkerhedskopien
+for db in tmp/foer.db data.db; do DB_PATH=$db node -e "
+  const E = require('./public/engine.js'), P = require('./src/mealplan/generate');
+  const B = require('./src/sync/build'), { getDb } = require('./src/db');
+  const items = new Map(B.collectItems().map((r) => [r.key, r]));
+  const dinner = new Map(P.loadRecipes().map((r) => [r.id, E.isDinner(r, items)]));
+  const rows = getDb().prepare('SELECT id, title, servings, tier FROM recipes').all();
+  console.log(JSON.stringify(rows.map((r) => ({ ...r, dinner: dinner.get(r.id) || false }))));
+" > tmp/$(basename $db).json; done
+node -e "
+  const foer = new Map(require('./tmp/foer.db.json').map((r) => [r.id, r]));
+  const db = require('better-sqlite3')('data.db', { readonly: true });
+  const ids = new Set(db.prepare('SELECT id FROM recipes WHERE edition IS NOT NULL').all().map((r) => r.id));
+  for (const r of require('./tmp/data.db.json')) {
+    const f = foer.get(r.id);
+    if (!ids.has(r.id) || !f) continue;
+    const d = ['servings', 'tier', 'dinner'].filter((k) => f[k] !== r[k]).map((k) => k + ' ' + f[k] + ' → ' + r[k]);
+    if (d.length) console.log(r.id + '  ' + f.title + ' → ' + r.title + '  ·  ' + d.join(' · '));
+  }
+" | tee tmp/titel-diff.txt
+```
+
+Læs listen igennem: en ret, der mister sin middagsstatus eller skifter portionstal, fordi et ord ikke har sin danske pendant i reglerne, rettes i reglen (med en test) og ikke i udgaven. Skriv de ændrede retter (`tmp/titel-diff.txt`) i commit-beskeden.
+
 - [ ] **Step 4: Kun danske udgaver i madplanen**
 
 ```bash

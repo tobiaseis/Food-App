@@ -131,8 +131,24 @@ function scoreTiers(recipe, ingredients) {
   premium += SOURCE_PREMIUM_BIAS[recipe.source] || 0;
   // Hverdagsretter skal ikke kunne snige sig ind i gourmetsporet på
   // ingredienstælling alene.
-  if (/cottage pie|shepherd|traybake|jacket|fish finger|sandwich|toastie|nuggets|pizza|burger|hotdog/i
-      .test(recipe.title)) premium -= 0.3;
+  //
+  // Titlen er den danske udgaves, når recipes:import har kørt, og reclassify
+  // regner sporet igen ud fra den. Derfor har hvert engelsk ord sit danske
+  // ved siden af — ellers ville "Kylling i bradepande" slippe for straffen,
+  // "Chicken traybake" fik. Ord, der er de samme på dansk (sandwich, nuggets,
+  // pizza, burger, hotdog), står der kun én gang. "toast(?!e)" og ikke
+  // "toast": "med toastede pinjekerner" er ikke en toast. Og "bagt kartoffel"
+  // skal stå alene: "Bagt kartoffelmos" er ikke en jacket potato, og "ovnbagte
+  // kartofler" er tilbehør i hver anden aftensret.
+  if (new RegExp([
+    'cottage pie', 'kødtærte',
+    'shepherd', 'hyrdetærte',
+    'traybake', 'bradepande',
+    'jacket', 'bagekartof', 'bagt kartoffel(?![a-zæøå])',
+    'fish finger', 'fiskefing(?:er|re)',
+    'toastie', 'toast(?!e)',
+    'sandwich', 'nuggets', 'pizza', 'burger', 'hotdog',
+  ].join('|'), 'i').test(recipe.title)) premium -= 0.3;
 
   // ── Klassisk hverdagsmad ──────────────────────────────────────────────────
   let classic = 0.3;

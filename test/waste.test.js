@@ -894,6 +894,16 @@ test('morgenmad og forretter i titlen er ikke aftensmad, selv tagget "Dinner"', 
   assert.equal(engine.isDinner({ ...ret, title: 'Babka ziemniaczana (Polish potato cake)' }, W_ITEMS), true);
 });
 
+test('en dansk sammensat morgenmadstitel falder ud som den engelske', () => {
+  // Titlerne er de danske udgavers nu. "Breakfast burrito" hedder
+  // "Morgenmadsburrito", og et \b efter "morgenmad" lod den slippe igennem.
+  const ret = { ...CANDIDATES[1], keywords: 'Dinner, Main course' };
+  for (const title of ['Morgenmadsburrito', 'Morgenmad med æg og bacon', 'Breakfasts on toast']) {
+    assert.equal(engine.isDinner({ ...ret, title }, W_ITEMS), false, title);
+  }
+  assert.equal(engine.isDinner({ ...ret, title: 'Kylling i fad' }, W_ITEMS), true);
+});
+
 // ── Kandidatpuljen (spec 2.3) ────────────────────────────────────────────────
 //
 // Trin 4 viser tre gange så mange retter som dage, og de to forslag er

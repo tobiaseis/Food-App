@@ -1441,7 +1441,11 @@
   // "Aftensmad"/"Dinner": "Breakfast burrito", "One-pan English breakfast",
   // "Sprøde wontons" (40 stk), "Stenbiderrogn på spinatblinis" (30 stk).
   // Ikke "cake": "Babka ziemniaczana (Polish potato cake)" er en hovedret.
-  const NON_DINNER_TITLE = /\b(breakfast|morgenmad|brunch)\b|blinis\b|\bwontons?\b/i;
+  //
+  // Intet \b EFTER breakfast/morgenmad: titlerne er nu de danske udgavers, og
+  // dansk sætter ord sammen — "Morgenmadsburrito" er "Breakfast burrito" og
+  // skal falde ud på samme måde. Ingen middagsret begynder med de ord.
+  const NON_DINNER_TITLE = /\b(breakfast|morgenmad)|\bbrunch\b|blinis\b|\bwontons?\b/i;
 
   // Brugerens valg 2026-09-28: højst en time i alt, tid i ovnen medregnet.
   // Appens brugere har ikke tid til en langtidssteg på en hverdag. Målt: 287

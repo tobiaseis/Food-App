@@ -19,10 +19,16 @@
 
 // Stk. pr. portion, efter titlen. Første match vinder. Flertal i ordets
 // slutning, så "Bagt frikadellepita" (8 pitaer) ikke er 8 frikadeller.
+//
+// Hvert engelsk ord har sit danske ved siden af: reclassify regner portionerne
+// igen ud fra titlen, og efter recipes:import er titlen den danske udgaves.
+// "Easy healthy falafels" (16 stk) må ikke blive til 16 portioner, fordi den
+// nu hedder "Nemme falafler". Ord, der er de samme på dansk (dumplings,
+// wontons, gyoza, tacos, kebab, sliders), står der kun én gang.
 const PIECE_RULES = [
-  [/(?:deller|kødboller|meatballs|falafels?)(?![a-zæøå])/i, 3.5],
+  [/(?:deller|kødboller|meatballs|falafels?|falafler|fish ?cakes?)(?![a-zæøå])/i, 3.5],
   [/spyd(?![a-zæøå])|skewers?\b|kebabs?\b/i, 3],
-  [/forårsrull?er|spring rolls?\b|summer rolls?\b/i, 4],
+  [/forårsrull?er|spring rolls?\b|summer rolls?\b|sommerrull?er/i, 4],
   [/dumplings?\b|wontons?\b|gyoza\b|potstickers?\b/i, 6],
   [/sliders\b|miniburgere?(?![a-zæøå])/i, 3],
   [/pandekager|pancakes\b|vafler(?![a-zæøå])|waffles\b/i, 3],
