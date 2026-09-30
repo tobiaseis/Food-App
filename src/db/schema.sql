@@ -259,6 +259,16 @@ CREATE TABLE IF NOT EXISTS recipe_ingredients (
 );
 CREATE INDEX IF NOT EXISTS idx_ri_recipe ON recipe_ingredients(recipe_id);
 
+-- Fremgangsmåden i appens danske udgave (data/opskrifter/, import-da.js).
+-- Aldrig kildens tekst: den ligger kun i tmp/kilder/ og forlader ikke maskinen.
+CREATE TABLE IF NOT EXISTS recipe_steps (
+  recipe_id  INTEGER NOT NULL REFERENCES recipes(id) ON DELETE CASCADE,
+  position   INTEGER NOT NULL,
+  section    TEXT,
+  text       TEXT NOT NULL,
+  PRIMARY KEY (recipe_id, position)
+);
+
 -- ── Opskriftspriser ─────────────────────────────────────────────────────────
 -- Forudberegnet, fordi budget-sporet skal kunne sortere 2.224 opskrifter uden
 -- at regne noget. Genberegnes ugentligt, når tilbuddene er hentet.

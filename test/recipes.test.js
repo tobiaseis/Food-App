@@ -100,3 +100,43 @@ test('teaserkasse før opskriften påvirker ikke tiderne', () => {
   assert.equal(recipe.total_minutes, 45, 'tid i alt skal være 45, ikke 20 fra teaseren');
   assert.equal(recipe.active_minutes, 30, 'arbejdstid skal være 30, ikke 10 fra teaseren');
 });
+
+const { getDb, setSetting } = require('../src/db');
+
+test('basen har kolonnerne og tabellen til den danske udgave', () => {
+  const db = getDb();
+  const cols = (t) => db.prepare(`PRAGMA table_info(${t})`).all().map((c) => c.name);
+  for (const c of ['active_minutes', 'intro', 'edition', 'edition_hash', 'edited_at', 'changes']) {
+    assert.ok(cols('recipes').includes(c), `recipes.${c}`);
+  }
+  for (const c of ['section', 'label']) assert.ok(cols('recipe_ingredients').includes(c), `recipe_ingredients.${c}`);
+  assert.deepEqual(cols('recipe_steps'), ['recipe_id', 'position', 'section', 'text']);
+});
+
+test('uden dansk udgave er retten ude af madplanen, når indstillingen er sat', () => {
+  const db = getDb();
+  const plans = require('../src/mealplan/generate');
+  const now = new Date().toISOString();
+  // loadRecipes tager kun retter med mindst tre kendte varer — derfor tre linjer.
+  const line = db.prepare(`INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional)
+                           VALUES (?, ?, ?, ?, ?, ?, 0)`);
+  const add = (url, edition) => {
+    const id = Number(db.prepare(`
+      INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at, edition)
+      VALUES (?, 'test', 'Test', ?, 'da', 4, ?, ?)`).run(url, url, now, edition).lastInsertRowid);
+    [['kyllingebryst', 0.5], ['kartofler', 0.6], ['loeg', 0.1]]
+      .forEach(([key, amount], i) => line.run(id, `${amount} ${key}`, key, i, key, amount));
+    return id;
+  };
+  const a = add('https://test.invalid/edition-ja', 1);
+  const b = add('https://test.invalid/edition-nej', null);
+  try {
+    const ids = () => new Set(plans.loadRecipes({}).map((r) => r.id));
+    assert.ok(ids().has(b), 'uden indstillingen er alle med');
+    setSetting('recipes_edition_only', true);
+    assert.ok(ids().has(a) && !ids().has(b), 'med indstillingen kun de danske');
+  } finally {
+    setSetting('recipes_edition_only', false);
+    db.prepare('DELETE FROM recipes WHERE id IN (?, ?)').run(a, b);
+  }
+});

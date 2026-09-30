@@ -302,12 +302,19 @@ function loadRecipes({ tier = null, minTierScore = 0.35 } = {}) {
   const column = tier ? TIERS[tier].column : null;
   const params = column ? [minTierScore] : [];
 
+  // Når de danske udgaver er læst ind (opgave 14), skal en ret uden udgave
+  // ikke med i madplanen: den har ingen fremgangsmåde at vise, og appen linker
+  // ikke længere til kilden.
+  const editionOnly = getSetting('recipes_edition_only', false) === true;
+  const where = [column ? `${column} >= ?` : null, editionOnly ? 'edition IS NOT NULL' : null]
+    .filter(Boolean);
+
   const rows = db.prepare(`
     SELECT id, title, url, image, source, source_name, lang, servings, total_minutes,
-           kcal, protein_g, carbs_g, nutrition_src, keywords,
+           active_minutes, kcal, protein_g, carbs_g, nutrition_src, keywords,
            score_healthy, score_classic, score_premium
       FROM recipes
-     ${column ? `WHERE ${column} >= ?` : ''}
+     ${where.length ? `WHERE ${where.join(' AND ')}` : ''}
      ${column ? `ORDER BY ${column} DESC` : ''}
   `).all(...params);
 

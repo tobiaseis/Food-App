@@ -75,6 +75,11 @@ async function discoverUrls(source, limit) {
 // ── Lagring ──────────────────────────────────────────────────────────────────
 
 function storeRecipe(db, source, parsed) {
+  // En ret med dansk udgave er vores nu (data/opskrifter/). Et nyt crawl må
+  // hverken skrive kildens titel, tider eller ingredienslinjer hen over den.
+  const kept = db.prepare('SELECT id, edition FROM recipes WHERE url = ?').get(parsed.url);
+  if (kept && kept.edition != null) return { recipeId: kept.id, created: false, tier: null };
+
   // parsed.servings er kildens rå antal — for frikadeller stykker. Se
   // src/recipes/servings.js.
   const servings = servingsFromYield(parsed.title, parsed.servings,
@@ -98,19 +103,20 @@ function storeRecipe(db, source, parsed) {
   const info = db.prepare(`
     INSERT INTO recipes (
       url, source, source_name, title, description, image, lang, servings, yield_count,
-      total_minutes, kcal, protein_g, carbs_g, fat_g, nutrition_src,
+      total_minutes, active_minutes, kcal, protein_g, carbs_g, fat_g, nutrition_src,
       tier, tier_score, score_healthy, score_classic, score_premium,
       keywords, fetched_at
     ) VALUES (
       @url, @source, @source_name, @title, @description, @image, @lang, @servings, @yield_count,
-      @total_minutes, @kcal, @protein_g, @carbs_g, @fat_g, @nutrition_src,
+      @total_minutes, @active_minutes, @kcal, @protein_g, @carbs_g, @fat_g, @nutrition_src,
       @tier, @tier_score, @score_healthy, @score_classic, @score_premium,
       @keywords, @fetched_at
     )
     ON CONFLICT(url) DO UPDATE SET
       title = excluded.title, image = excluded.image, servings = excluded.servings,
       yield_count = excluded.yield_count,
-      total_minutes = excluded.total_minutes, kcal = excluded.kcal,
+      total_minutes = excluded.total_minutes, active_minutes = excluded.active_minutes,
+      kcal = excluded.kcal,
       protein_g = excluded.protein_g, nutrition_src = excluded.nutrition_src,
       tier = excluded.tier, tier_score = excluded.tier_score,
       score_healthy = excluded.score_healthy, score_classic = excluded.score_classic,
@@ -127,6 +133,7 @@ function storeRecipe(db, source, parsed) {
     servings,
     yield_count: parsed.servings,
     total_minutes: parsed.total_minutes,
+    active_minutes: parsed.active_minutes,
     kcal, protein_g: protein,
     carbs_g: carbs, fat_g: site.fat_g,
     nutrition_src: nutritionSrc,
@@ -234,4 +241,4 @@ if (require.main === module) {
     .catch((e) => { console.error('[FEJL]', e.message); process.exit(1); });
 }
 
-module.exports = { crawlAll, crawlSource, discoverUrls, storeRecipe };
+module.exports = { crawlAll, crawlSource, discoverUrls, storeRecipe, fetchText };
