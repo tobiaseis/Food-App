@@ -140,3 +140,40 @@ test('uden dansk udgave er retten ude af madplanen, når indstillingen er sat', 
     db.prepare('DELETE FROM recipes WHERE id IN (?, ?)').run(a, b);
   }
 });
+
+const { stepsFromJsonLd, stepsFromMicrodata } = require('../src/recipes/instructions');
+const { slugOf } = require('../src/recipes/edition');
+
+test('fremgangsmåden fra JSON-LD: trin, afsnit og Arlas "type" uden @', () => {
+  const steps = stepsFromJsonLd([
+    { type: 'HowToSection', name: 'First instruction', itemListElement: [
+      { type: 'HowToStep', text: 'Varm olien.' },
+      { '@type': 'HowToStep', text: 'Brun kyllingen.' }] },
+    { '@type': 'HowToSection', name: 'Til saucen', itemListElement: [
+      { '@type': 'HowToStep', text: 'Rør fløden i.' }] },
+  ]);
+  assert.deepEqual(steps, [
+    { section: null, text: 'Varm olien.' },
+    { section: null, text: 'Brun kyllingen.' },
+    { section: 'Til saucen', text: 'Rør fløden i.' },
+  ]);
+  assert.deepEqual(stepsFromJsonLd('Heat the oil.\nAdd the onions.'),
+    [{ section: null, text: 'Heat the oil.' }, { section: null, text: 'Add the onions.' }]);
+});
+
+test('fremgangsmåden fra microdata (Valdemarsro)', () => {
+  const html = `<div itemscope itemtype="http://schema.org/Recipe">
+    <p itemprop="recipeInstructions">Kom salt og <b>hvidløg</b> i en morter.</p>
+    <p itemprop="recipeInstructions">Steg kødet.</p></div>`;
+  assert.deepEqual(stepsFromMicrodata(html), [
+    { section: null, text: 'Kom salt og hvidløg i en morter.' },
+    { section: null, text: 'Steg kødet.' },
+  ]);
+});
+
+test('filnavnet er stabilt og unikt pr. URL', () => {
+  const a = 'https://www.valdemarsro.dk/lammeculotte/';
+  assert.equal(slugOf(a), slugOf(a));
+  assert.match(slugOf(a), /^lammeculotte-[0-9a-f]{6}$/);
+  assert.notEqual(slugOf('https://x.test/a/lasagne'), slugOf('https://x.test/b/lasagne'));
+});
