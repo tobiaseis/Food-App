@@ -13,6 +13,7 @@
     "recipes:fetch-sources": "node src/recipes/fetch-sources.js",
     "recipes:rewrite": "node src/recipes/rewrite.js",
     "recipes:images": "node src/recipes/backfill-images.js",
+    "recipes:import": "node src/recipes/import-da.js",
     "reclassify": "node src/recipes/reclassify.js",
     "watch": "node src/watch/notify.js",
     "update": "node src/update.js",

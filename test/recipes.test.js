@@ -302,3 +302,93 @@ test('varekataloget i systemprompten har udskæringsnavne, og kommandolinjen er 
   const size = st.length + JSON.stringify(RECIPE_SCHEMA).length;
   assert.ok(size < 28000, `--system-prompt + --json-schema er ${size} tegn, for tæt på Windows' grænse på 32.767`);
 });
+
+const os = require('os');
+const fs = require('fs');
+const path = require('path');
+const { importAll } = require('../src/recipes/import-da');
+
+const EDITION_FIXTURE = {
+  url: 'https://test.invalid/da-import-1', source: 'test', source_name: 'Test',
+  edition: 1, model: 'test', written_at: '2026-09-30T12:00:00.000Z',
+  total_minutes: 90, active_minutes: 15, yield_count: 4,
+  title: 'Lammeculotte med krydderurter', intro: 'Mør lam med salvie.', servings: 4,
+  ingredients: [
+    { section: null, amount: 600, unit: 'g', name: 'lammeculotte', note: null, optional: false },
+    { section: null, amount: 3, unit: 'fed', name: 'hvidløg', note: 'hakket', optional: false },
+    { section: null, amount: null, unit: null, name: 'salt', note: null, optional: false },
+  ],
+  steps: [
+    { section: null, text: 'Gnid kødet med hvidløg og salt.' },
+    { section: null, text: 'Steg det i ovnen ved 180 °C.' },
+  ],
+  changes: [],
+};
+
+function withEdition(edition, fn) {
+  const db = getDb();
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'opskrifter-'));
+  fs.writeFileSync(path.join(dir, 'ret.json'), JSON.stringify(edition));
+  const id = Number(db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, yield_count, fetched_at)
+    VALUES (?, 'test', 'Test', 'Lamb rump', 'en', 4, 4, ?)`).run(edition.url, new Date().toISOString()).lastInsertRowid);
+  const p = parseIngredient('600 g lamb rump', 0);
+  db.prepare(`INSERT INTO recipe_ingredients (recipe_id, raw, qty, unit, ingredient, item_key, amount, optional, position)
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0)`).run(id, p.raw, p.qty, p.unit, p.ingredient, p.item_key, p.amount, p.optional);
+  try { return fn({ db, dir, id }); } finally {
+    db.prepare('DELETE FROM recipes WHERE id = ?').run(id);
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+test('en dansk udgave læses ind: titel, tider, linjer og trin', () => {
+  withEdition(EDITION_FIXTURE, ({ db, dir, id }) => {
+    const first = importAll({ dir, log: () => {} });
+    assert.equal(first.applied, 1);
+    const r = db.prepare('SELECT * FROM recipes WHERE id = ?').get(id);
+    assert.equal(r.title, 'Lammeculotte med krydderurter');
+    assert.equal(r.lang, 'da');
+    assert.equal(r.edition, 1);
+    assert.equal(r.total_minutes, 90);
+    assert.equal(r.active_minutes, 15);
+    const lines = db.prepare('SELECT * FROM recipe_ingredients WHERE recipe_id = ? ORDER BY position').all(id);
+    assert.deepEqual(lines.map((l) => l.item_key), ['lam', 'hvidloeg', 'salt']);
+    assert.equal(lines[1].label, 'hvidløg, hakket');
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_steps WHERE recipe_id = ?').get(id).n, 2);
+    // Anden gang er filen uændret og røres ikke.
+    assert.equal(importAll({ dir, log: () => {} }).unchanged, 1);
+  });
+});
+
+test('en udgave, der har flyttet hovedråvaren mere end 25 %, læses ikke ind', () => {
+  const more = {
+    ...EDITION_FIXTURE,
+    url: 'https://test.invalid/da-import-3',
+    ingredients: [{ section: null, amount: 900, unit: 'g', name: 'lammeculotte', note: null, optional: false },
+                  ...EDITION_FIXTURE.ingredients.slice(1)],
+  };
+  withEdition(more, ({ dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.flagged, 1);
+    assert.match(res.flaggedList[0].issues.join(), /lam: 600 → 900/);
+  });
+});
+
+test('en udgave, der har skiftet hovedråvaren ud, læses ikke ind', () => {
+  const swapped = {
+    ...EDITION_FIXTURE,
+    url: 'https://test.invalid/da-import-2',
+    ingredients: [{ section: null, amount: 600, unit: 'g', name: 'svinemørbrad', note: null, optional: false },
+                  ...EDITION_FIXTURE.ingredients.slice(1)],
+  };
+  withEdition(swapped, ({ db, dir, id }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.applied, 0);
+    assert.equal(res.flagged, 1);
+    assert.equal(db.prepare('SELECT title FROM recipes WHERE id = ?').get(id).title, 'Lamb rump');
+  });
+  // Godkendt i hånden: så læses den ind alligevel.
+  withEdition({ ...swapped, accepted: true }, ({ dir }) => {
+    assert.equal(importAll({ dir, log: () => {} }).applied, 1);
+  });
+});
