@@ -29,7 +29,8 @@
 // Versionen skal op, så de forkerte, sammenblandede sider fra v3 kasseres.
 // v5: det lyse design. Ny markup i app.js (fliser, afkrydsning) passer kun
 // til den nye styles.css, så skallen skiftes samlet.
-const VERSION = 'v5';
+// v6: opskriftsarket (recipe_details) og ny markup i app.js.
+const VERSION = 'v6';
 const SHELL_CACHE = `madplan-shell-${VERSION}`;
 const DATA_CACHE = `madplan-data-${VERSION}`;
 
@@ -49,7 +50,7 @@ const SHELL = [
 ];
 
 /** Tabeller, der kun ændrer sig efter den natlige kørsel. */
-const CACHEABLE_TABLES = /\/rest\/v1\/(offer_index|recipe_index|taxonomy_prices|chains|price_stats|price_series|deals|offers|products|sync_state|meal_plans|stores|items|item_prices|recipe_costs)\b/;
+const CACHEABLE_TABLES = /\/rest\/v1\/(offer_index|recipe_index|recipe_details|taxonomy_prices|chains|price_stats|price_series|deals|offers|products|sync_state|meal_plans|stores|items|item_prices|recipe_costs)\b/;
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {

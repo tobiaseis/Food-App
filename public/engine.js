@@ -1154,6 +1154,7 @@
           source_name: c.recipe.source_name,
           servings: c.recipe.servings,
           total_minutes: c.recipe.total_minutes,
+          active_minutes: c.recipe.active_minutes,
           kcal: c.recipe.kcal,
           protein_g: c.recipe.protein_g,
           carbs_g: c.recipe.carbs_g,

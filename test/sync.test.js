@@ -70,6 +70,11 @@ function makeModel(shift = 0) {
     recipeIndex: [{ recipe_id: s(20), title: 'Frikadeller', url: 'https://valdemarsro.dk/frikadeller/',
                     score_classic: 0.8, unknown_main: false,
                     items: [{ key: 'hakket_svinekoed', cat: 'meat', amount: 0.5 }] }],
+    // recipe_details hænger på recipes, ligesom recipe_index — udskiftes helt
+    // ved hver kørsel, samme grund som recipeIndex ovenfor.
+    recipeDetails: [{ recipe_id: s(20), title: 'Frikadeller', intro: null, image: null,
+                      source_name: 'Test', servings: 4, total_minutes: null, active_minutes: null,
+                      ingredients: [], steps: [] }],
     // Priserne. item_prices hænger på chains; recipe_costs gør også, men
     // BEVIDST ikke på recipes — recipes.id er et lokalt løbenummer, og hele
     // det afledte lag udskiftes i samme kørsel.
@@ -359,6 +364,9 @@ test('collectPlanIndex leverer base_qty på tilbuddene OG unknown_count på rett
     // engine.isDinner laeser dette felt; uden det er hver ret aftensmad.
     assert.ok('keywords' in recipe,
       'keywords mangler i payloaden — isDinner kan ikke skelne dessert fra middag');
+
+    // Femte felt: arbejdstiden. Uden den viser browseren kun tiden i alt.
+    assert.ok('active_minutes' in recipe, 'active_minutes mangler i payloaden');
   } finally {
     db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
     db.prepare('DELETE FROM offers WHERE id = ?').run(offerId);
@@ -912,5 +920,30 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
     db.prepare("DELETE FROM offers WHERE external_id = 't-flow-1'").run();
     db.prepare('DELETE FROM products WHERE id = ?').run(productId);
     db.prepare("DELETE FROM item_prices WHERE chain_id = 'tst'").run();
+  }
+});
+
+test('collectRecipeDetails leverer ingredienser med mængde og fremgangsmåde', () => {
+  const db = getDb();
+  const { collectRecipeDetails } = require('../src/sync/build');
+  const id = Number(db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at,
+                         edition, intro, total_minutes, active_minutes)
+    VALUES ('https://test.invalid/details', 'test', 'Test', 'Lam i ovn', 'da', 4, ?, 1, 'Mørt.', 90, 15)`)
+    .run(new Date().toISOString()).lastInsertRowid);
+  db.prepare(`INSERT INTO recipe_ingredients (recipe_id, raw, qty, unit, ingredient, item_key, amount,
+                                              optional, position, section, label)
+              VALUES (?, '600 g lammeculotte', 600, 'g', 'lammeculotte', 'lam', 0.6, 0, 0, NULL, 'lammeculotte')`).run(id);
+  db.prepare("INSERT INTO recipe_steps (recipe_id, position, section, text) VALUES (?, 0, NULL, 'Steg kødet.')").run(id);
+  try {
+    const [row] = collectRecipeDetails(db, id);
+    assert.deepEqual(row, {
+      recipe_id: id, title: 'Lam i ovn', intro: 'Mørt.', image: null, source_name: 'Test',
+      servings: 4, total_minutes: 90, active_minutes: 15,
+      ingredients: [{ qty: 600, unit: 'g', label: 'lammeculotte', key: 'lam', optional: false, section: null }],
+      steps: [{ section: null, text: 'Steg kødet.' }],
+    });
+  } finally {
+    db.prepare('DELETE FROM recipes WHERE id = ?').run(id);
   }
 });

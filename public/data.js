@@ -269,6 +269,9 @@ function normalMapFor(rows, chainIds, sourceId) {
 
 // ── API ──────────────────────────────────────────────────────────────────────
 
+// Opskrifterne ændrer sig kun ved den natlige kørsel.
+const recipeCache = new Map();
+
 const Data = {
   backend: USE_SUPABASE ? 'supabase' : 'local',
 
@@ -456,6 +459,7 @@ const Data = {
       title: r.title, url: r.url, image: r.image,
       source: r.source, source_name: r.source_name,
       servings: r.servings, total_minutes: r.total_minutes,
+      active_minutes: r.active_minutes ?? null,
       kcal: r.kcal, protein_g: r.protein_g, carbs_g: r.carbs_g,
       nutrition_src: r.nutrition_src,
       tier_score: r[`score_${tier}`],
@@ -593,6 +597,21 @@ const Data = {
     return planIndex.all;
   },
 
+  /**
+   * Én opskrift med ingredienser og fremgangsmåde (recipe_details). Hentes
+   * først, når den åbnes, og huskes resten af sidevisningen.
+   */
+  async recipe(id) {
+    const key = Number(id);
+    if (recipeCache.has(key)) return recipeCache.get(key);
+    const row = USE_SUPABASE
+      ? (await sb(`recipe_details?recipe_id=eq.${key}&select=*`))[0]
+      : await local(`/api/recipes/${key}`);
+    if (!row || row.error) return { error: (row && row.error) || 'Opskriften findes ikke på dansk endnu.' };
+    recipeCache.set(key, row);
+    return row;
+  },
+
   /** Tilbudskortet `vare|kæde → tilbud` for favoritterne (offer_index). */
   async offerMap(chainIds) {
     if (!planIndex.offers) {
@@ -689,6 +708,7 @@ const Data = {
         title: r.title, url: r.url, image: r.image,
         source: r.source, source_name: r.source_name,
         servings: r.servings, total_minutes: r.total_minutes,
+        active_minutes: r.active_minutes ?? null,
         kcal: r.kcal, protein_g: r.protein_g, carbs_g: r.carbs_g,
         nutrition_src: r.nutrition_src,
         score,

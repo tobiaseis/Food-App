@@ -265,6 +265,7 @@ create table if not exists recipe_index (
   lang          text,
   servings      int,
   total_minutes int,
+  active_minutes int,
   kcal          double precision,
   protein_g     double precision,
   carbs_g       double precision,
@@ -294,6 +295,23 @@ alter table recipe_index add column if not exists lang text;
 -- exist", fordi build.js nu sender feltet med.
 alter table recipe_index add column if not exists unknown_count int default 0;
 alter table recipe_index add column if not exists keywords text;
+alter table recipe_index add column if not exists active_minutes int;
+
+-- Opskrifterne, som appen viser dem: den danske udgave med ingredienser og
+-- fremgangsmåde (src/sync/build.js: collectRecipeDetails). Hentes én ad
+-- gangen, når en ret åbnes — derfor ikke en del af recipe_index.
+create table if not exists recipe_details (
+  recipe_id      bigint primary key,
+  title          text not null,
+  intro          text,
+  image          text,
+  source_name    text,             -- krediteres ved fotoet, ikke ved opskriften
+  servings       int,
+  total_minutes  int,
+  active_minutes int,
+  ingredients    jsonb not null,   -- [{qty, unit, label, key, optional, section}]
+  steps          jsonb not null    -- [{section, text}]
+);
 
 create index if not exists idx_recipe_index_healthy on recipe_index(score_healthy);
 create index if not exists idx_recipe_index_classic on recipe_index(score_classic);
@@ -399,6 +417,7 @@ alter table offer_index     enable row level security;
 alter table taxonomy_prices enable row level security;
 alter table items           enable row level security;
 alter table recipe_index    enable row level security;
+alter table recipe_details  enable row level security;
 alter table item_prices     enable row level security;
 alter table recipe_costs    enable row level security;
 alter table deals        enable row level security;
@@ -413,7 +432,7 @@ begin
   -- Offentlig læsning af katalogdata
   foreach t in array array['chains','products','stores','offers','recipes',
                            'price_stats','price_series','meal_plans','deals','sync_state',
-                           'offer_index','taxonomy_prices','recipe_index',
+                           'offer_index','taxonomy_prices','recipe_index','recipe_details',
                            'item_prices','recipe_costs','items']
   loop
     execute format('drop policy if exists read_all on %I', t);
