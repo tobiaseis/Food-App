@@ -264,3 +264,21 @@ test('skemaet kender kun enheder, parseIngredient kan læse', () => {
   }
   assert.equal(RECIPE_SCHEMA.additionalProperties, false);
 });
+
+const { newestClaude, limitHit } = require('../src/recipes/rewrite');
+
+test('den nyeste Claude Code i VS Code-udvidelserne vælges — efter versionsnummer', () => {
+  assert.equal(newestClaude([
+    'anthropic.claude-code-2.1.99-win32-x64',
+    'anthropic.claude-code-2.1.285-win32-x64',
+    'ms-python.python-2026.1.0',
+  ]), 'anthropic.claude-code-2.1.285-win32-x64');
+  assert.equal(newestClaude(['ms-python.python-2026.1.0']), null);
+});
+
+test('abonnementets grænse genkendes, andre fejl gør ikke', () => {
+  assert.equal(limitHit({ is_error: true, api_error_status: 429, result: 'x' }), true);
+  assert.equal(limitHit({ is_error: true, result: 'Claude usage limit reached|1759300000' }), true);
+  assert.equal(limitHit({ is_error: true, result: 'Invalid JSON schema' }), false);
+  assert.equal(limitHit({ is_error: false, result: 'usage limit' }), false);
+});
