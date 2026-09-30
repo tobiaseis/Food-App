@@ -189,6 +189,22 @@ på Vercels build-image. Tom install-kommando springer trinnet helt over.
 Tilføjer du en ny ekstern kilde (fx et CDN eller en font), skal den med i det
 relevante direktiv – ellers blokerer browseren den tavst.
 
+## Opskrifterne på dansk
+
+Appens opskrifter er vores egne danske udgaver i `data/opskrifter/<kilde>/<slug>.json`
+(i git — ret dem i hånden, og næste kørsel læser dem ind). De skrives lokalt:
+
+1. `npm run recipes:fetch-sources` — henter kildesiderne til `tmp/kilder/` (gitignoret;
+   kildens tekst forlader aldrig maskinen).
+2. `npm run recipes:rewrite -- run` — Claude Code skriver udgaverne på Claude-abonnementet
+   (ingen API-nøgle; kører aldrig i CI). Stopper ved abonnementets grænse og fortsætter,
+   hvor den slap, når kommandoen startes igen.
+3. `npm run recipes:import -- --report tmp/omskrivning/kontrol.md` — læser dem ind og lister
+   dem, der skal ses efter. En udgave godkendes i hånden med `"accepted": true` i filen.
+
+`recipes_edition_only` (indstilling i `data.db`) holder retter uden dansk udgave ude af
+madplanen. Før første synk med `recipe_details`: kør `supabase/schema.sql` i SQL-editoren.
+
 ---
 
 ## Android
