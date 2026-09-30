@@ -392,3 +392,20 @@ test('en udgave, der har skiftet hovedråvaren ud, læses ikke ind', () => {
     assert.equal(importAll({ dir, log: () => {} }).applied, 1);
   });
 });
+
+test('en ødelagt fil stopper ikke resten af indlæsningen', () => {
+  // Kørslen er natlig og ubemandet: én fil med ugyldig JSON må ikke vælte de
+  // andre, gyldige udgaver i samme mappe.
+  const good = { ...EDITION_FIXTURE, url: 'https://test.invalid/da-import-5' };
+  withEdition(good, ({ db, dir, id }) => {
+    // 'a-bad.json' sorteres alfabetisk før withEdition's egen 'ret.json', så
+    // den ugyldige fil læses først.
+    fs.writeFileSync(path.join(dir, 'a-bad.json'), '{ dette er ikke json');
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.errored, 1);
+    assert.ok(res.erroredList[0].file.includes('a-bad.json'), res.erroredList[0].file);
+    assert.ok(res.erroredList[0].error, 'fejlteksten mangler');
+    assert.equal(res.applied, 1);
+    assert.equal(db.prepare('SELECT title FROM recipes WHERE id = ?').get(id).title, good.title);
+  });
+});

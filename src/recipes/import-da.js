@@ -11,6 +11,11 @@
  * udgave i basen bliver stående. Er den set efter og i orden, sættes
  * "accepted": true i filen, og så læses den ind.
  *
+ * Én ødelagt fil (ugyldig JSON, en fejl i parseIngredient e.l.) stopper ikke
+ * resten af kørslen: den tælles og nævnes for sig ("errored"), og de øvrige
+ * filer læses videre. Kørslen er natlig og ubemandet, så én fejlfil i
+ * data/opskrifter/ må ikke vælte hele den natlige opdatering.
+ *
  *   npm run recipes:import
  *   npm run recipes:import -- --report tmp/omskrivning/kontrol.md
  *
@@ -114,40 +119,60 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
     ed.steps.forEach((s, i) => step.run(id, i, s.section || null, s.text));
   });
 
-  const stats = { applied: 0, unchanged: 0, flagged: 0, orphan: 0 };
+  const stats = { applied: 0, unchanged: 0, flagged: 0, orphan: 0, errored: 0 };
   const flagged = [];
+  const orphaned = [];
+  const errored = [];
   for (const file of listFiles(dir)) {
-    const text = fs.readFileSync(file, 'utf8');
-    const ed = JSON.parse(text);
-    const row = byUrl.get(ed.url);
-    if (!row) { stats.orphan++; continue; }
-    const hash = crypto.createHash('sha1').update(text).digest('hex');
-    if (row.edition_hash === hash) { stats.unchanged++; continue; }
+    const rel = path.relative(process.cwd(), file);
+    try {
+      const text = fs.readFileSync(file, 'utf8');
+      const ed = JSON.parse(text);
+      const row = byUrl.get(ed.url);
+      if (!row) { stats.orphan++; orphaned.push({ file: rel, url: ed.url }); continue; }
+      const hash = crypto.createHash('sha1').update(text).digest('hex');
+      if (row.edition_hash === hash) { stats.unchanged++; continue; }
 
-    const lines = (ed.ingredients || []).map((ing, i) => {
-      const raw = lineOf(ing);
-      return { ...parseIngredient(raw, i), raw, section: ing.section || null, label: labelOf(ing) };
-    });
-    const issues = problems(ed, lines, before.all(row.id));
-    if (issues.length && !ed.accepted) {
-      stats.flagged++;
-      flagged.push({ file: path.relative(process.cwd(), file), id: row.id, title: ed.title, issues });
-      continue;
+      const lines = (ed.ingredients || []).map((ing, i) => {
+        const raw = lineOf(ing);
+        return { ...parseIngredient(raw, i), raw, section: ing.section || null, label: labelOf(ing) };
+      });
+      const issues = problems(ed, lines, before.all(row.id));
+      if (issues.length && !ed.accepted) {
+        stats.flagged++;
+        flagged.push({ file: rel, id: row.id, title: ed.title, issues });
+        continue;
+      }
+      apply(row.id, ed, lines, hash);
+      stats.applied++;
+    } catch (err) {
+      // apply() er en transaktion, så en fejl undervejs i den ruller kun DEN
+      // ene opskrift tilbage — ikke tidligere filer i samme kørsel.
+      stats.errored++;
+      errored.push({ file: rel, error: err.message });
     }
-    apply(row.id, ed, lines, hash);
-    stats.applied++;
   }
 
-  log(`${stats.applied} læst ind · ${stats.unchanged} uændrede · ${stats.flagged} til eftersyn · ${stats.orphan} uden ret i basen`);
+  log(`${stats.applied} læst ind · ${stats.unchanged} uændrede · ${stats.flagged} til eftersyn · `
+    + `${stats.orphan} uden ret i basen · ${stats.errored} kunne ikke læses`);
   for (const f of flagged.slice(0, 20)) log(`  ${f.id} ${f.title}: ${f.issues.join('; ')}`);
+  // Navngiv også forældreløse og fejlede filer i loggen: i en natlig,
+  // ubemandet kørsel er logudskriften det eneste sted, man kan se HVORFOR en
+  // fil ikke blev læst ind.
+  for (const f of orphaned.slice(0, 20)) log(`  uden ret i basen: ${f.file} (${f.url})`);
+  for (const f of errored.slice(0, 20)) log(`  kunne ikke læses: ${f.file}: ${f.error}`);
   if (reportPath) {
     const md = ['# Danske udgaver til eftersyn', '',
       ...flagged.map((f) => `- **${f.title}** (${f.id}) \`${f.file}\`\n  - ${f.issues.join('\n  - ')}`)];
+    if (errored.length) {
+      md.push('', '## Kunne ikke læses', '',
+        ...errored.map((f) => `- \`${f.file}\`: ${f.error}`));
+    }
     fs.mkdirSync(path.dirname(reportPath), { recursive: true });
     fs.writeFileSync(reportPath, `${md.join('\n')}\n`);
     log(`Eftersynslisten: ${reportPath}`);
   }
-  return { ...stats, flaggedList: flagged };
+  return { ...stats, flaggedList: flagged, erroredList: errored };
 }
 
 if (require.main === module) {
