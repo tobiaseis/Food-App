@@ -208,6 +208,34 @@ test('fremgangsmåden fra microdata: <p> og <ul><li> i samme boks bliver hvert s
   ]);
 });
 
+test('fremgangsmåden fra microdata: en <li> med sin egen under-liste mister ikke tekst', () => {
+  // Samme fejlklasse som boksen i "indlejret element..."-testen ovenfor, men
+  // ét niveau nede: et enkelt trin har sin egen <ul><li> midt i sig (fx en
+  // intervalmetode), og alt efter under-listen skal stadig være med i det
+  // ÉNE trin — ikke splittet op i flere trin, og ikke tabt.
+  const html = `<div itemscope itemtype="http://schema.org/Recipe">
+    <ul itemprop="recipeInstructions">
+      <li>Intervalmetode:<ul><li>Steg i 10 min.</li><li>Hvil i 10 min.</li></ul>Herefter serveres.</li>
+    </ul>
+  </div>`;
+  const steps = stepsFromMicrodata(html);
+  assert.equal(steps.length, 1, 'under-listen må ikke splittes op i egne trin');
+  for (const part of ['Intervalmetode:', 'Steg i 10 min.', 'Hvil i 10 min.', 'Herefter serveres.']) {
+    assert.ok(steps[0].text.includes(part), `mangler "${part}" i: ${steps[0].text}`);
+  }
+});
+
+test('fremgangsmåden fra microdata: løs tekst mellem to blokke bliver også et trin', () => {
+  const html = `<div itemscope itemtype="http://schema.org/Recipe">
+    <div itemprop="recipeInstructions"><p>Et.</p>Mellemtekst.<p>To.</p></div>
+  </div>`;
+  assert.deepEqual(stepsFromMicrodata(html), [
+    { section: null, text: 'Et.' },
+    { section: null, text: 'Mellemtekst.' },
+    { section: null, text: 'To.' },
+  ]);
+});
+
 test('filnavnet er stabilt og unikt pr. URL', () => {
   const a = 'https://www.valdemarsro.dk/lammeculotte/';
   assert.equal(slugOf(a), slugOf(a));
