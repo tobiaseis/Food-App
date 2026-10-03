@@ -586,3 +586,7 @@ test('tre linjer mod én før (+2) udløser ikke ingrediensreglen', () => {
 test('systemprompten forbyder hjemmelavede erstatninger', () => {
   assert.ok(systemText().includes('aldrig med en hjemmelavet version'));
 });
+
+test('systemprompten begrænser genbrugt ordsekvens fra kilder til fire ord i træk', () => {
+  assert.ok(systemText().includes('Genbrug aldrig mere end fire ord i træk'));
+});

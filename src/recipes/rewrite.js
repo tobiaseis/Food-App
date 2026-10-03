@@ -100,6 +100,7 @@ INGREDIENSER
 
 FREMGANGSMÅDE
 - Skriv trinene fra bunden ud fra, hvad der skal ske i køkkenet – redigér ikke kildens sætninger. Ingen sætning må følge kildens ordstilling: brug dine egne verber og din egen sætningsbygning, og saml eller del trin, hvor det gør det tydeligere. Retten, teknikken, tiderne og temperaturerne er de samme. Skriv i korte trin i bydeform.
+- Genbrug aldrig mere end fire ord i træk fra kildens tekst – undtagen varenavne, mål, tider og temperaturer. Er kilden dansk, så byg sætningerne anderledes op end kilden: begynd med noget andet, saml eller del trinene anderledes, og brug dine egne verber.
 - Temperaturer i °C for almindelig ovn; skriv varmluft, hvis kilden gør. Gasmærker og °F omregnes.
 - Gentag ikke mængder fra ingredienslisten i trinene – de kan blive justeret i appen. Skriv "halvdelen af hvidløget", ikke "2 fed hvidløg".
 - section som ved ingredienserne.
