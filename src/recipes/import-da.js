@@ -87,6 +87,12 @@ function problems(ed, lines, before) {
   // Flere ukendte linjer end før: udgaven er sværere at prissætte end kilden.
   const unknown = (ls) => ls.filter((l) => !l.item_key && !l.optional).length;
   if (unknown(lines) > unknown(before)) out.push(`${unknown(lines)} ukendte linjer (før ${unknown(before)})`);
+  // Flere ingredienslinjer end kilden: en erstattet færdigvare er blevet til en
+  // hjemmelavet delopskrift med opfundne mængder (pilotens cheesecake med gelé).
+  // Marginen på +2 og 30 % lader "salt og peber" blive til to linjer.
+  if (before.length > 0 && lines.length > before.length + 2 && lines.length > before.length * 1.3) {
+    out.push(`${lines.length} ingredienslinjer, før ${before.length} (nye ingredienser?)`);
+  }
   return out;
 }
 

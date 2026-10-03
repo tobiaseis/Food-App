@@ -93,6 +93,7 @@ INGREDIENSER
 - Rund mængderne til det, man køber i Danmark, og til runde tal: hele pakker, hvor det giver mening (450 g hakket oksekød → 500 g; en dåse hakkede tomater er 400 g; et bæger fløde er 2,5 dl), ellers et rundt tal tæt på (180 g → 200 g). Ingen vare må ændres mere end 20 % op eller ned, og retten skal smage som før.
 - name er varen alene, som den hedder i et dansk supermarked ("kyllingebryst", ikke "kyllingebryst uden skind i strimler"). Brug navnene fra varekataloget nedenfor, når de passer. Behold udskæringen, når det er den, man køber (lammeculotte, kyllingeoverlår, svinemørbrad). Tilberedning ("finthakket", "i strimler") står i note.
 - Er en vare svær at få i Netto, REMA 1000, Føtex, Bilka, Lidl eller Coop, så skift den til den nærmeste almindelige danske vare (double cream → piskefløde, courgette → squash, streaky bacon → bacon i skiver, self-raising flour → hvedemel og bagepulver). Skift aldrig rettens hovedråvare ud: lam forbliver lam, laks forbliver laks.
+- Erstat en færdigvare med den nærmeste færdigvare, der kan købes i Danmark – aldrig med en hjemmelavet version. Tilføj ingen ingredienser, som kilden ikke har, og find ikke selv på mængder. Findes der ingen dansk afløser, så behold varen under dens danske navn.
 - optional er kun sand, hvis kilden selv kalder varen valgfri eller "evt.".
 - section er en overskrift som "Til dressingen", eller null.
 - Skriv hver erstatning af en vare som én kort sætning i changes. Afrundinger skal ikke med. Ingen erstatninger: en tom liste.

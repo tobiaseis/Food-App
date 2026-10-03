@@ -559,3 +559,30 @@ test('i GitHub Actions bliver fejl og eftersyn en ::warning::-linje', () => {
   const { actionsWarning } = require('../src/recipes/import-da');
   assert.equal(actionsWarning([], []), null);
 });
+
+test('en udgave med flere ingredienslinjer end kilden læses ikke ind', () => {
+  // Kilden har 1 linje; 4 er mere end +2 og mere end 30 %.
+  const many = {
+    ...EDITION_FIXTURE,
+    url: 'https://test.invalid/da-import-7',
+    ingredients: [...EDITION_FIXTURE.ingredients,
+                  { section: null, amount: 2, unit: 'dl', name: 'vand', note: null, optional: false }],
+  };
+  withEdition(many, ({ dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.flagged, 1);
+    assert.match(res.flaggedList[0].issues.join(), /ingredienslinjer/);
+  });
+});
+
+test('tre linjer mod én før (+2) udløser ikke ingrediensreglen', () => {
+  withEdition({ ...EDITION_FIXTURE, url: 'https://test.invalid/da-import-8' }, ({ dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.flagged, 0);
+    assert.equal(res.applied, 1);
+  });
+});
+
+test('systemprompten forbyder hjemmelavede erstatninger', () => {
+  assert.ok(systemText().includes('aldrig med en hjemmelavet version'));
+});
