@@ -206,8 +206,8 @@ Appens opskrifter er vores egne danske udgaver i `data/opskrifter/<kilde>/<slug>
 3. `npm run recipes:import -- --report tmp/omskrivning/kontrol.md` — læser dem ind og lister
    dem, der skal ses efter. En udgave godkendes i hånden med `"accepted": true` i filen.
 
-`recipes_edition_only` (indstilling i `data.db`) holder retter uden dansk udgave ude af
-madplanen.
+Den natlige kørsel slår `recipes_edition_only` til efter importen (`npm run recipes:edition-only`),
+så retter uden dansk udgave holdes ude af madplanen.
 
 ### Rækkefølgen, når grenen skal i drift
 

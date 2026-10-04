@@ -100,12 +100,13 @@ jobs:
       # også, men FØR seed:items, dvs. med gårsdagens taksonomi — en ny vare
       # (fx tunsteak skilt ud fra dåsetun) nåede først tilbuddene en nat for sent.
       #
-      # recipes:import læser de danske udgaver fra data/opskrifter/ (i git) ind i basen. Den skal før backfill:amounts og reclassify, som regner på de danske linjer.
+      # recipes:import læser de danske udgaver fra data/opskrifter/ (i git) ind i basen. Den skal før backfill:amounts og reclassify, som regner på de danske linjer. recipes:edition-only holder retter uden dansk udgave ude af madplanen; den sættes hver nat, fordi release-basen ikke kan uploades lokalt.
       - name: Sørg for varetaksonomi og materialiserede mængder
         run: |
           npm run seed:items
           npm run recompute
           npm run recipes:import
+          npm run recipes:edition-only
           npm run backfill:amounts
           npm run reclassify
 
