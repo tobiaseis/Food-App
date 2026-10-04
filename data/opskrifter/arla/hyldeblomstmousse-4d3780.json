@@ -1,0 +1,146 @@
+{
+  "url": "https://www.arla.dk/opskrifter/hyldeblomstmousse/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:58:55.854Z",
+  "total_minutes": 225,
+  "active_minutes": 45,
+  "yield_count": 6,
+  "source_lines": 11,
+  "title": "Hyldeblomstmousse med jordbær",
+  "intro": "Luftig mousse med hyldeblomst og lime, som sættes i køleskabet og toppes med friske jordbær og limesukker. En let og sommerlig dessert.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Hyldeblomstmousse",
+      "amount": 4,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset limesaft",
+      "optional": false
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "juice",
+      "note": "koncentreret hyldeblomstsaft",
+      "optional": false
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limesukker",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limesukker",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "revet skal af usprøjtet lime",
+      "optional": false
+    },
+    {
+      "section": "Limesukker",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hyldeblomstskærm",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Limesukker",
+      "amount": 100,
+      "unit": "g",
+      "name": "jordbær",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Limesukker",
+      "amount": null,
+      "unit": null,
+      "name": "hyldeblomster",
+      "note": "små blomster fra en hyldeblomstskærm, til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Hyldeblomstmousse",
+      "text": "Udblød husblassen i koldt vand i cirka 5 minutter."
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "text": "Pisk æg og sukker, til massen er luftig og lys."
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "text": "Varm limesaften i en lille gryde. Løft husblassen op af vandet, lad det meste vand dryppe af, og rør den ud i den varme limesaft, til den er smeltet."
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "text": "Tilsæt hyldeblomstsaften i gryden og rør det hele ned i æggemassen."
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "text": "Pisk fløden til et let skum, og vend det forsigtigt ind i æggemassen, mens den begynder at stivne."
+    },
+    {
+      "section": "Hyldeblomstmousse",
+      "text": "Del moussen mellem 6 glas. Dæk dem til og lad dem stå køligt i mindst 2-3 timer."
+    },
+    {
+      "section": "Limesukker",
+      "text": "Gnid sukker og limeskal sammen med fingrene, til sukkeret dufter af lime."
+    },
+    {
+      "section": "Limesukker",
+      "text": "Bland eventuelt små blomster fra hyldeblomstskærmen i limesukkeret, hvis de er i sæson."
+    },
+    {
+      "section": "Limesukker",
+      "text": "Læg jordbærskiver ovenpå moussen, og strø limesukker over. Pynt eventuelt med hyldeblomster."
+    }
+  ],
+  "changes": [
+    "Hyldeblomstsaft er skrevet som juice, da det er varekatalogets navn for saft."
+  ]
+}

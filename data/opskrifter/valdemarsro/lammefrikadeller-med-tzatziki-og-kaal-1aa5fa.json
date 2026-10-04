@@ -1,0 +1,276 @@
+{
+  "url": "https://www.valdemarsro.dk/lammefrikadeller-med-tzatziki-og-kaal/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:53:16.138Z",
+  "total_minutes": 60,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 27,
+  "title": "Lammefrikadeller med tzatziki og marineret spidskål",
+  "intro": "Krydrede lammefrikadeller med spidskommen og koriander, serveret med hjemmelavet tzatziki og mør spidskål. Fetaost, oliven og soltørrede tomater giver en frisk, middelhavsagtig afslutning.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Lammefrikadeller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "frisk mynte",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 5,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk, 10 %",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mør spidskål",
+      "amount": 500,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Mør spidskål",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk",
+      "optional": false
+    },
+    {
+      "section": "Mør spidskål",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mør spidskål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mør spidskål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "tomater",
+      "note": "blommetomater, i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 40,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 80,
+      "unit": "g",
+      "name": "sorte oliven",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "frisk oregano",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Lammefrikadeller",
+      "text": "Bland alle ingredienser til frikadellerne i en skål, og krydr med salt og peber. Sæt gerne farsen på køl i mindst en halv time, så den sætter sig."
+    },
+    {
+      "section": "Lammefrikadeller",
+      "text": "Form farsen til små frikadeller. Varm olie og smør op på en pande, og steg frikadellerne, til de er gennemstegte. Vend dem flere gange undervejs."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Skær agurkerne over på langs, og skrab kernerne ud med en teske."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Riv agurkerne groft i en skål, og bland dem med salt. Lad dem stå i 5-10 minutter, og hæld dem derefter i en sigte, hvor du presser al væden fra."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Rør den afdryppede agurk sammen med yoghurten. Smag til med hvidløg, olivenolie, salt og peber."
+    },
+    {
+      "section": "Mør spidskål",
+      "text": "Riv skallen af citronen, og pres saften. Kom begge dele i en stor skål sammen med spidskål, olivenolie, dijonsennep og honning, og smag til med salt og peber."
+    },
+    {
+      "section": "Mør spidskål",
+      "text": "Ælt kålen med hænderne i omkring et minut, til den er blød og mør."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret frikadellerne med spidskålen, tzatzikien, tomaterne og agurkeskiverne. Drys med oliven, feta, soltørrede tomater og oregano."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,302 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/inari-sushi-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:14:39.490Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 12,
+  "source_lines": 19,
+  "title": "Inari sushi med røget ål",
+  "intro": "Små tofuposer af braiseret abura-age fyldt med sushiris, røget ål, sesam og shiso. Både dashi og sushieddike kan laves dagen før.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Sushiris og fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "sushiris",
+      "note": "japansk kortkornet ris",
+      "optional": false
+    },
+    {
+      "section": "Sushiris og fyld",
+      "amount": 240,
+      "unit": "ml",
+      "name": "vand",
+      "note": "filtreret eller blødt",
+      "optional": false
+    },
+    {
+      "section": "Sushiris og fyld",
+      "amount": 30,
+      "unit": "g",
+      "name": "røget ål",
+      "note": "filet",
+      "optional": false
+    },
+    {
+      "section": "Sushiris og fyld",
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Sushiris og fyld",
+      "amount": 5,
+      "unit": "stk",
+      "name": "shisoblade",
+      "note": "skåret i fine strimler",
+      "optional": false
+    },
+    {
+      "section": "Sushieddike",
+      "amount": 250,
+      "unit": "ml",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sushieddike",
+      "amount": 8,
+      "unit": "g",
+      "name": "kombu",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Sushieddike",
+      "amount": 100,
+      "unit": "g",
+      "name": "kokossukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sushieddike",
+      "amount": 40,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sushieddike",
+      "amount": 30,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sushieddike",
+      "amount": 40,
+      "unit": "ml",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sushieddike",
+      "amount": 20,
+      "unit": "g",
+      "name": "mørk sirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dashi",
+      "amount": 300,
+      "unit": "ml",
+      "name": "vand",
+      "note": "filtreret eller blødt",
+      "optional": false
+    },
+    {
+      "section": "Dashi",
+      "amount": 12,
+      "unit": "g",
+      "name": "kombu",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Braiseret abura-age",
+      "amount": 6,
+      "unit": "stk",
+      "name": "abura-age",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret abura-age",
+      "amount": 50,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "japansk",
+      "optional": false
+    },
+    {
+      "section": "Braiseret abura-age",
+      "amount": 20,
+      "unit": "g",
+      "name": "kokossukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret abura-age",
+      "amount": 15,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret abura-age",
+      "amount": 15,
+      "unit": "ml",
+      "name": "balsamico",
+      "note": "hvid",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dashi",
+      "text": "Dagen før: Læg vand og hel kombu i en beholder af glas eller plast, læg låg på, og stil den i køleskabet natten over. Skær ikke i kombuen, da den ellers bliver slimet."
+    },
+    {
+      "section": "Sushieddike",
+      "text": "Kan også laves dagen før: Læg eddike og kombu i en gryde, og lad det trække 30 minutter ved stuetemperatur."
+    },
+    {
+      "section": "Sushieddike",
+      "text": "Varm eddiken forsigtigt til 65 °C, tag den af varmen, og lad den køle af til stuetemperatur."
+    },
+    {
+      "section": "Sushieddike",
+      "text": "Tag kombuen op, og læg den til side. Varm eddiken til 65 °C igen, og tag gryden af varmen."
+    },
+    {
+      "section": "Sushieddike",
+      "text": "Rør kokossukker, sukker og salt i, til det er opløst. Rør derefter mirin og sirup i."
+    },
+    {
+      "section": "Sushieddike",
+      "text": "Læg kombuen tilbage i eddiken. Opbevar den i en ren, lufttæt beholder i køleskabet, til den skal bruges."
+    },
+    {
+      "section": "Braiseret abura-age",
+      "text": "Skær hver abura-age over på midten. Stik tommelfingeren ind i snittet, og åbn forsigtigt hver halvdel som en pose uden at rive tofuen i stykker."
+    },
+    {
+      "section": "Braiseret abura-age",
+      "text": "Kog poserne i kogende vand i 2-3 minutter, så den overskydende olie går af. Si dem fra, og læg dem i koldt vand, så de holder op med at koge."
+    },
+    {
+      "section": "Braiseret abura-age",
+      "text": "Tag 2-3 poser ad gangen i hånden, og pres dem kraftigt for at få vandet ud. Læg dem i ét lag i en stor, bred pande, så de ligger i samme højde. Brug to pander, hvis det er nødvendigt."
+    },
+    {
+      "section": "Braiseret abura-age",
+      "text": "Bring sojasauce, begge slags sukker og 250 g af dashien i kog i en lille gryde under omrøring. Hæld væsken over poserne."
+    },
+    {
+      "section": "Braiseret abura-age",
+      "text": "Sæt panden på høj varme. Når væsken koger, dækkes poserne med en rund bagepapirlåg, og varmen skrues ned til middel-lav. Lad det simre, til væsken er reduceret til det halve."
+    },
+    {
+      "section": "Braiseret abura-age",
+      "text": "Tag panden af varmen, rør balsamico i, og lad poserne køle af i panden, mens du laver risene."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Kom risene i en skål, og fyld koldt vand fra hanen på. Rør straks kraftigt rundt med hånden i cirkelbevægelser."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Når vandet dækker risene, løsner du kornene med en let bølgebevægelse langs bunden af skålen. Hæld det uklare vand hurtigt fra."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Gentag 2-3 gange, til vandet er tydeligt klarere. Hæld så meget vand fra som muligt, og jævn overfladen."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Vask risene i cirkler: Før højre hånd ind i risene ved klokken 12, og træk kornene mod klokken 10. Vend hånden, og skub risene med håndfladen på skrå tilbage mod 12, så kornene gnides let mod hinanden."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Drej skålen lidt med uret med venstre hånd, så uvasket ris kommer i position. Gentag bevægelsen, og fortsæt, til du har været hele vejen rundt."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Rør hele portionen igennem med en kuppet hånd, så alle korn bliver vasket ens. Skyl med friskt vand for at få klidet af, og gentag, til vandet ikke længere er gulligt."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Kom risene i et dørslag, der står lidt på skrå, og lad dem dryppe af i 10-15 minutter."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Kom de afdryppede ris og vandet i en donabe eller en tyk, tung gryde eller støbejernsgryde. Risene skal ikke udblødes, når de bruges til sushi."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Læg låg på, og kog risene ved middel-lav varme i 10 minutter."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Skru op på høj varme, til vandet koger, og der slipper damp ud. Skru ned på lav varme, og lad det simre i 10 minutter."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Skru op på høj varme i 10-15 sekunder, sluk, og lad risene dampe under låg i 10 minutter."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Vend forsigtigt risene over i en hangiri af træ eller en bred skål af et materiale, der ikke reagerer med eddike. Brug du en hangiri, skal den tørres af med en fugtig klud mindst 10 minutter før."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Afvej 115 g af sushieddiken uden kombu, og dryp den jævnt over risene, så alle korn får et let lag."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Brug en risspatel til at skille store klumper ad fra kanten. Vend risene rundt, så eddiken fordeles, og skær sidelæns med spatelen for at skille de sidste korn uden at knuse dem."
+    },
+    {
+      "section": "Sushiris og fyld",
+      "text": "Luft risene med en vifte, til de er lunkne, omtrent kropstemperatur. Vend dem en gang til, så bunden også køler jævnt, og risene bliver lette og blanke."
+    },
+    {
+      "section": "Samling",
+      "text": "Grill den røgede ål let over kul, til den er varm og duftende, eller varm den igennem på en pande. Skær den i terninger på 5 mm."
+    },
+    {
+      "section": "Samling",
+      "text": "Afvej 420 g sushiris i en skål, og vend ål, sesamfrø og shiso forsigtigt i, uden at risene knuses."
+    },
+    {
+      "section": "Samling",
+      "text": "Pres væsken forsigtigt ud af de afkølede tofuposer uden at rive dem i stykker."
+    },
+    {
+      "section": "Samling",
+      "text": "Del risblandingen i 12 lige store portioner på 40 g, og form dem let, så de passer tæt ned i poserne. Fold åbningen ind over sig selv, så posen lukkes, og server."
+    }
+  ],
+  "changes": [
+    "Palmesukker er skiftet ud med kokossukker.",
+    "Dadelsirup er skiftet ud med mørk sirup.",
+    "Kastorsukker er skiftet ud med almindeligt sukker.",
+    "Havsalt er skiftet ud med almindeligt salt.",
+    "Hvid balsamicoeddike er skiftet ud med balsamico."
+  ]
+}

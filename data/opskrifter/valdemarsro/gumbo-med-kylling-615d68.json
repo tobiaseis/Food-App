@@ -1,0 +1,230 @@
+{
+  "url": "https://www.valdemarsro.dk/gumbo-med-kylling/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:38:40.062Z",
+  "total_minutes": 180,
+  "active_minutes": 60,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Gumbo med kylling",
+  "intro": "En kraftig, krydret ret med mørkt meljævning, chorizo og mør kylling, der simrer længe i tomat og krydderier. Serveres med ris og frisk persille.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "hel kylling",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": "til melbunden",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød peberfrugt",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn peberfrugt",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sød paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret oregano",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 7,
+      "unit": "dl",
+      "name": "hønsebouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": "kogt efter anvisning på pakken",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Del kyllingen i to og skær den i bryst, vinger og overlår. Gnid skindet med salt."
+    },
+    {
+      "section": null,
+      "text": "Varm olivenolien i en pande, og steg chorizoen i et par minutter. Læg den på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Brun kyllingestykkerne i fedtet fra chorizoen, til skindet får farve og bliver sprødt. De skal ikke være færdigstegte. Læg dem over på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Varm rapsolien i en ren gryde ved lav til middel varme, og rør melet i. Rør hele tiden i 15-25 minutter, til blandingen er nøddebrun – et sted mellem en mandel og en hasselnød. Bliv ved gryden, for blandingen brænder let på, og så må du begynde forfra."
+    },
+    {
+      "section": null,
+      "text": "Kom peberfrugt, selleri, hvidløg og løg i gryden, og rør rundt i nogle minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør tomater, alle krydderierne, laurbærblade, bouillon og chorizo i. Læg kyllingen ned i gryden, og lad det simre i mindst 1 time, gerne længere, til kødet falder fra benene."
+    },
+    {
+      "section": null,
+      "text": "Tag kyllingen op, og øs fedtet af overfladen. Pluk kødet af benene, og vend det tilbage i gryden."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt og peber. Anret gumboen med ris og drys med persille."
+    }
+  ],
+  "changes": [
+    "Cayenne peber hedder nu cayennepeber."
+  ]
+}

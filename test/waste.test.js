@@ -63,7 +63,7 @@ test('score er et internt tal og slipper ikke ud', () => {
   const c = engine.choosePack(1.3, PACKS, { keeps: 'keeps' });
   assert.deepEqual(
     Object.keys(c).sort(),
-    ['bought', 'cost', 'leftover', 'pack_price', 'pack_qty', 'packs', 'waste'],
+    ['absorbed', 'bought', 'cost', 'leftover', 'pack_price', 'pack_qty', 'packs', 'waste'],
   );
 });
 
@@ -178,7 +178,11 @@ const W_NORMALS = new Map([
 ]);
 
 const recipe = (id, score, items) => ({ id, title: `Ret ${id}`, score, items });
-const line = (key, amount, optional = false) => ({ key, amount, weight: amount, optional });
+// `measured`: linjen vejer eller måler varen (g, kg, dl …) — sat af loadRecipes ud
+// fra engine.MEASURED_UNITS. Standard sand, så fiksturerne betyder det samme som
+// før reglen kom: en rest kan lægges i retten. En linje i stk sætter den falsk.
+const line = (key, amount, optional = false, measured = true) =>
+  ({ key, amount, weight: amount, optional, measured });
 
 const CANDIDATES = [
   recipe(1, 0.8, [line('hakket_oksekoed', 0.5), line('kartofler', 0.6), line('salt', 0.01)]),
@@ -297,7 +301,7 @@ test('opskrifterne skaleres til husstanden', () => {
   near(uge(4).cost, 80);    // 1,0 kg → én pose
   near(uge(8).cost, 160);   // 2,0 kg → to poser
   near(uge(2).cost, 80);    // 0,5 kg → stadig én pose, halvdelen til overs
-  near(uge(2).waste, 20);   // … og den halve pose tæller som spild
+  near(uge(2).waste, 15);   // … og den halve pose tæller som spild — minus den fjerdedel af 0,5 kg, retten selv kan tage: 0,375 kg × 80 kr × 0,5
 
   // Standard er 4, og en husstand på nul er ikke en husstand.
   near(engine.sharedWeek([tilTi], { days: 1, ...FIXTURE.ctx }).cost, 80);
@@ -691,9 +695,9 @@ test('spildet står i kroner og er vægtet efter holdbarhed', () => {
   //   81 kr       uvægtet: 72 for laksen PLUS 9 for pasta, der ikke bliver
   //               smidt ud. Så er items.keeps uden virkning, og "kartofler
   //               til overs er ikke spild" gælder ikke længere.
-  //   72 kr       vægtet: laksen tæller fuldt, pastaen slet ikke.
+  //   60 kr: 0,6 kg laks til overs, hvoraf 0,1 kg (en fjerdedel af 0,4) lægges i retten — 0,5 × 120.
   const plan = { days: [{ recipe: recipe(63, 0.8, [line('laks', 0.4), line('pasta', 0.25)]) }] };
-  near(engine.shoppingList(plan, CTX).waste_kr, 72);
+  near(engine.shoppingList(plan, CTX).waste_kr, 60);
 });
 
 test('ugens spildscore er halvdelen af listens spild', () => {
@@ -707,9 +711,8 @@ test('ugens spildscore er halvdelen af listens spild', () => {
   // til overs), var forholdet 2,12 og ikke 2 — målt 30,90 mod 65,60.
   const week = engine.sharedWeek([CANDIDATES[2]], { days: 1, ...CTX_2 });
   const list = engine.shoppingList({ days: week.picks.map((r) => ({ recipe: r })) }, CTX_2);
-  // 0,5 kg laks à 120 kr (perishable, fuld vægt) + 0,7 kg kartofler à 8 kr
-  // (keeps, halv vægt af 1,4 kg til overs).
-  near(list.waste_kr, 65.6);
+  // 0,375 kg laks à 120 kr (0,5 til overs minus 0,125 i retten) + 0,7 kg kartofler à 8 kr (keeps, halv vægt).
+  near(list.waste_kr, 50.6);
   // Begge tal er afrundet til øre hver for sig, så forholdet holder til øren og
   // ikke til float-præcision.
   near(week.waste, list.waste_kr * engine.WASTE_AVERSION, 0.01);
@@ -874,13 +877,34 @@ test('engelske kager, tilbehør og forretter er ikke aftensmad', () => {
   assert.equal(engine.looksLikeDinner('Main, chicken traybake, easy'), true);
 });
 
-test('en ret over en time er ikke hverdagsmad', () => {
-  // Brugerens valg: højst 60 minutter i alt.
+test('uden arbejdstid er tiden i alt også arbejdet: over en time er ikke hverdagsmad', () => {
+  // Brugerens valg 2026-10-04: højst en times arbejde og højst to timer i
+  // alt. Kender vi ikke arbejdstiden, må tiden i alt stå for den.
   const ret = { ...CANDIDATES[1], keywords: 'Aftensmad' };
   assert.equal(engine.isDinner({ ...ret, total_minutes: 60 }, W_ITEMS), true);
   assert.equal(engine.isDinner({ ...ret, total_minutes: 61 }, W_ITEMS), false);
+  assert.equal(engine.isDinner({ ...ret, total_minutes: 75 }, W_ITEMS), false,
+    'ingen arbejdstid, 75 min i alt: tiden i alt er arbejdet');
   assert.equal(engine.isDinner({ ...ret, total_minutes: 465 }, W_ITEMS), false, 'slow cooker');
   assert.equal(engine.isDinner({ ...ret, total_minutes: null }, W_ITEMS), true, 'ingen oplysning er ikke et nej');
+});
+
+test('højst en times arbejde og højst to timer i alt', () => {
+  // Valdemarsros "Tid i alt" tæller marinering og hviletid med. En ret med
+  // en halv times arbejde og en time i ovnen er hverdagsmad; en med en halv
+  // times arbejde og tre timers marinade er det ikke.
+  const ret = { ...CANDIDATES[1], keywords: 'Aftensmad' };
+  const dinner = (active_minutes, total_minutes) =>
+    engine.isDinner({ ...ret, active_minutes, total_minutes }, W_ITEMS);
+  assert.equal(dinner(30, 120), true, 'arbejde 30, i alt 120');
+  assert.equal(dinner(30, 180), false, 'arbejde 30, i alt 180');
+  assert.equal(dinner(70, 90), false, 'arbejde 70, i alt 90');
+  assert.equal(dinner(60, 60), true, 'begge grænser er med');
+  assert.equal(dinner(30, null), true, 'tiden i alt mangler: ikke et nej');
+  assert.equal(dinner(null, 75), false, 'ingen arbejdstid: tiden i alt er arbejdet');
+  assert.equal(engine.quickEnough({ active_minutes: 30, total_minutes: 120 }), true);
+  assert.equal(engine.DINNER_MAX_MINUTES, 60);
+  assert.equal(engine.DINNER_MAX_TOTAL_MINUTES, 120);
 });
 
 test('morgenmad og forretter i titlen er ikke aftensmad, selv tagget "Dinner"', () => {
@@ -889,6 +913,16 @@ test('morgenmad og forretter i titlen er ikke aftensmad, selv tagget "Dinner"', 
   assert.equal(engine.isDinner({ ...ret, title: 'Stenbiderrogn på spinatblinis' }, W_ITEMS), false);
   assert.equal(engine.isDinner({ ...ret, title: 'Sprøde wontons' }, W_ITEMS), false);
   assert.equal(engine.isDinner({ ...ret, title: 'Babka ziemniaczana (Polish potato cake)' }, W_ITEMS), true);
+});
+
+test('en dansk sammensat morgenmadstitel falder ud som den engelske', () => {
+  // Titlerne er de danske udgavers nu. "Breakfast burrito" hedder
+  // "Morgenmadsburrito", og et \b efter "morgenmad" lod den slippe igennem.
+  const ret = { ...CANDIDATES[1], keywords: 'Dinner, Main course' };
+  for (const title of ['Morgenmadsburrito', 'Morgenmad med æg og bacon', 'Breakfasts on toast']) {
+    assert.equal(engine.isDinner({ ...ret, title }, W_ITEMS), false, title);
+  }
+  assert.equal(engine.isDinner({ ...ret, title: 'Kylling i fad' }, W_ITEMS), true);
 });
 
 // ── Kandidatpuljen (spec 2.3) ────────────────────────────────────────────────
@@ -1166,4 +1200,118 @@ test('et rigtigt tilbud vinder stadig over en rigtig normalpris', () => {
   const r = engine.chooseChains(new Map([['loeg', 1]]),
     { chainIds: ['N', 'R'], items: TIE_ITEMS, offers, normals });
   assert.deepEqual(r.chains, ['N']);
+});
+
+test('en lille rest af en frisk vare lægges i den største ret', () => {
+  // 0,4 + 0,5 kg kyllingebryst = 0,9 kg; bakken er 1 kg. De 0,1 kg ville være
+  // spild. Den største ret må få op til en fjerdedel af sine 0,5 kg, altså
+  // 0,125 kg — nok til hele resten. Intet går til spilde.
+  const plan = { days: [
+    { recipe: recipe(70, 0.8, [line('kyllingebryst', 0.4)]) },
+    { recipe: recipe(71, 0.8, [line('kyllingebryst', 0.5)]) },
+  ] };
+  const list = engine.shoppingList(plan, CTX);
+  const kb = list.buy.find((b) => b.key === 'kyllingebryst');
+  near(kb.leftover, 0);
+  assert.deepEqual(kb.topup, [{ recipe_id: 71, title: 'Ret 71', qty: 0.1 }]);
+  assert.deepEqual(list.topups, { 71: { kyllingebryst: 0.1 } });
+  near(list.waste_kr, 0);
+});
+
+test('en rest, der er større end én rets fjerdedel, deles', () => {
+  // 0,4 + 0,4 kg: 0,2 kg til overs, og hver ret kan tage 0,1 kg.
+  const plan = { days: [
+    { recipe: recipe(74, 0.8, [line('kyllingebryst', 0.4)]) },
+    { recipe: recipe(75, 0.8, [line('kyllingebryst', 0.4)]) },
+  ] };
+  const kb = engine.shoppingList(plan, CTX).buy.find((b) => b.key === 'kyllingebryst');
+  assert.deepEqual(kb.topup.map((t) => [t.recipe_id, t.qty]), [[74, 0.1], [75, 0.1]]);
+  near(kb.leftover, 0);
+});
+
+test('mere end en fjerdedel bliver en rest, ikke en større portion', () => {
+  // 0,4 kg laks af en 1 kg-pakke: højst 0,1 kg kan lægges i, 0,5 kg er spild.
+  const plan = { days: [{ recipe: recipe(72, 0.8, [line('laks', 0.4)]) }] };
+  const list = engine.shoppingList(plan, CTX);
+  const laks = list.buy.find((b) => b.key === 'laks');
+  near(laks.leftover, 0.5);
+  assert.deepEqual(laks.topup, [{ recipe_id: 72, title: 'Ret 72', qty: 0.1 }]);
+  near(list.waste_kr, 60);
+});
+
+test('kun friske varer, der vejes eller måles, fyldes op', () => {
+  // Kartofler holder (keeps), æg tælles i stykker. Ingen af dem bliver
+  // "lidt mere" i retten.
+  const plan = { days: [{ recipe: recipe(73, 0.8, [line('kartofler', 0.6), line('aeg', 2)]) }] };
+  const list = engine.shoppingList(plan, CTX);
+  for (const b of list.buy) assert.deepEqual(b.topup, [], `${b.key} skal ikke fyldes op`);
+  assert.deepEqual(list.topups, {});
+});
+
+// ── Kun linjer, der vejer eller måler varen ──────────────────────────────────
+//
+// Reglen afgøres pr. opskriftsLINJE, ikke pr. vare: citron er en kg-vare i
+// kataloget, men opskrifterne tæller den i stykker (vejet i 4 % af linjerne på
+// data.db), og "1 stk citron + 23 g" er ikke en opskrift, nogen kan følge.
+// Kyllingebryst vejes i halvdelen af linjerne og tælles i resten.
+
+test('enhederne, der vejer eller måler, er motorens egen liste', () => {
+  for (const u of ['g', 'gram', 'Kg', ' dl ', 'l', 'ml', 'cl', 'liter', 'litres', 'ltr']) {
+    assert.ok(engine.isMeasuredUnit(u), `${u} vejer eller måler`);
+  }
+  for (const u of ['stk', 'spsk', 'tsk', 'fed', 'bundt', 'håndfuld', 'dåse', '', null, undefined]) {
+    assert.ok(!engine.isMeasuredUnit(u), `${u} er ikke en vægt eller et rumfang`);
+  }
+  assert.ok(Object.isFrozen(engine.MEASURED_UNITS));
+});
+
+test('en citron i stk får ingen påfyldning, og resten er spild', () => {
+  // 1 citron (0,1 kg) af et 0,5 kg-net til 10 kr: 0,4 kg til overs. Talt i
+  // stk må intet af det lægges i retten — hele resten er spild, 0,4 × 20 kr.
+  const items = new Map([...W_ITEMS,
+    ['citron', { key: 'citron', name: 'Citron', category: 'veg', class: 'fresh', keeps: 'perishable', base_unit: 'kg' }]]);
+  const normals = new Map([...W_NORMALS,
+    ['citron|c1', [{ pack_qty: 0.5, pack_unit: 'kg', pack_price: 10, unit_price: 20, source: 'manual' }]]]);
+  const ctx = { ...CTX, items, normals };
+
+  const talt = recipe(80, 0.8, [line('citron', 0.1, false, false)]);
+  const list = engine.shoppingList({ days: [{ recipe: talt }] }, ctx);
+  const citron = list.buy.find((b) => b.key === 'citron');
+  assert.deepEqual(citron.topup, []);
+  assert.deepEqual(list.topups, {});
+  near(citron.leftover, 0.4);
+  near(list.waste_kr, 8);
+
+  // Ugen regner det samme: dens spild er listens gange WASTE_AVERSION.
+  const week = engine.sharedWeek([talt], { days: 1, ...ctx });
+  near(week.waste, list.waste_kr * engine.WASTE_AVERSION, 0.01);
+
+  // Den samme linje VEJET (100 g citronskal) får sin fjerdedel: 0,025 kg.
+  const vejet = recipe(81, 0.8, [line('citron', 0.1)]);
+  const vList = engine.shoppingList({ days: [{ recipe: vejet }] }, ctx);
+  assert.deepEqual(vList.buy.find((b) => b.key === 'citron').topup,
+    [{ recipe_id: 81, title: 'Ret 81', qty: 0.025 }]);
+  near(vList.waste_kr, 7.5);
+});
+
+test('kun den ret, der vejer varen, får resten — og højst en fjerdedel af sin egen', () => {
+  // 0,6 kg kyllingebryst i stk ("3 stk") og 0,2 kg vejet: 0,8 kg af en 1 kg-
+  // bakke, 0,2 kg til overs. Efter den gamle regel fik den største ret —
+  // stk-retten — 0,15 kg. Nu er kun den vejede ret med, og dens loft er en
+  // fjerdedel af dens egne 0,2 kg: 0,05 kg. Resten, 0,15 kg, er spild.
+  const talt = recipe(82, 0.8, [line('kyllingebryst', 0.6, false, false)]);
+  const vejet = recipe(83, 0.8, [line('kyllingebryst', 0.2)]);
+  const list = engine.shoppingList({ days: [{ recipe: talt }, { recipe: vejet }] }, CTX);
+  const kb = list.buy.find((b) => b.key === 'kyllingebryst');
+  assert.deepEqual(kb.topup, [{ recipe_id: 83, title: 'Ret 83', qty: 0.05 }]);
+  assert.deepEqual(list.topups, { 83: { kyllingebryst: 0.05 } });
+  near(kb.leftover, 0.15);
+  near(list.waste_kr, 14.25);        // 0,15 kg × 95 kr
+
+  // Og ugen, der vælger de samme to retter, regner på den samme påfyldning.
+  const week = engine.sharedWeek([talt, vejet], { days: 2, ...CTX });
+  assert.deepEqual(week.picks.map((p) => p.id).sort(), [82, 83]);
+  const wList = engine.shoppingList({ days: week.picks.map((r) => ({ recipe: r })) }, CTX);
+  near(wList.waste_kr, 14.25);
+  near(week.waste, wList.waste_kr * engine.WASTE_AVERSION, 0.01);
 });

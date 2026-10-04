@@ -1,0 +1,419 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/halibut-artichoke-beurre-blanc-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:03:22.654Z",
+  "total_minutes": 105,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 37,
+  "title": "Ovnstegt helleflynder med artiskokker og beurre blanc med rogn",
+  "intro": "Sprødstegt helleflynder serveres med mør artiskok, fermenteret og syltet agurk, kartoffelterrine og en cremet smørsauce med fisk-rogn. Retten kræver forberedelse over flere dage, men samles hurtigt til sidst.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fermenteret agurk",
+      "amount": 2,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fermenteret agurk",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fermenteret agurk",
+      "amount": 4,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fermenteret agurk",
+      "amount": 4,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 10,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 10,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "skrællet, uden kerner og i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Purløgsolie",
+      "amount": 200,
+      "unit": "g",
+      "name": "purløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Purløgsolie",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelterrine",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelterrine",
+      "amount": 2,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "melede",
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": 4,
+      "unit": "stk",
+      "name": "artiskokker",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": 2,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust med skræl på",
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": 1,
+      "unit": "stk",
+      "name": "buketgarni",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sort peber",
+      "note": "hele korn",
+      "optional": false
+    },
+    {
+      "section": "Artiskokker",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "en klat, usaltet",
+      "optional": false
+    },
+    {
+      "section": "Beurre blanc",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Beurre blanc",
+      "amount": 2,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kviste",
+      "optional": false
+    },
+    {
+      "section": "Beurre blanc",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Beurre blanc",
+      "amount": 250,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, koldt og i tern",
+      "optional": false
+    },
+    {
+      "section": "Beurre blanc",
+      "amount": 25,
+      "unit": "g",
+      "name": "bulgur",
+      "note": "kogt",
+      "optional": false
+    },
+    {
+      "section": "Beurre blanc",
+      "amount": 5,
+      "unit": "g",
+      "name": "ørredrogn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Beurre blanc",
+      "amount": 5,
+      "unit": "g",
+      "name": "stenbiderrogn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Beurre blanc",
+      "amount": 10,
+      "unit": "g",
+      "name": "purløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 500,
+      "unit": "g",
+      "name": "helleflynder",
+      "note": "4 filetter uden skind",
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": null,
+      "unit": null,
+      "name": "nori",
+      "note": "strimlet, til servering",
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": null,
+      "unit": null,
+      "name": "bulgur",
+      "note": "kogt og stegt sprød, til servering",
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fermenteret agurk (start 10 dage før)",
+      "text": "Tænd grillen, eller varm en grillpande op. Svits begge agurker, til de er sorte på alle sider."
+    },
+    {
+      "section": "Fermenteret agurk (start 10 dage før)",
+      "text": "Kom agurkerne i en vakuumpose sammen med vand, sukker og salt, og vakuumpak på fuld styrke. Lad posen stå ved stuetemperatur i 10 dage. Opbevar den derefter i køleskabet, og brug agurkerne inden for en uge."
+    },
+    {
+      "section": "Fermenteret agurk (start 10 dage før)",
+      "text": "Har du ikke vakuummaskine, så brug et glas med klemlåg. Løft låget hver dag for at lukke trykket ud, så glasset ikke revner."
+    },
+    {
+      "section": "Syltet agurk (dagen før)",
+      "text": "Bring alt til lagen i en gryde, undtagen agurken, og lad den køle af. Hæld lagen over de hakkede agurketern, og lad dem trække i køleskabet i 24 timer. De holder sig 3 dage."
+    },
+    {
+      "section": "Purløgsolie",
+      "text": "Blend purløg og olie i en Thermomix ved 90 °C i 5 minutter. Si blandingen gennem et klæde, og lad den dryppe af."
+    },
+    {
+      "section": "Purløgsolie",
+      "text": "Uden Thermomix: Blancher purløgene, afkøl dem i koldt vand, og pres vandet ud. Kom dem i en foodprocessor, og blend på høj hastighed, mens olien løber ned i en tynd stråle. Fortsæt i 2 minutter. Si gennem et klæde ned i en flaske, og sæt den på hovedet i køleskabet med dysen tildækket. Når vandet har skilt sig fra, presses det ud og kasseres. Olien står koldt, til den skal bruges."
+    },
+    {
+      "section": "Kartoffelterrine (dagen før)",
+      "text": "Varm ovnen op til 180 °C. Beklæd en terrineform på 1 liter med bagepapir. Smelt smørret i en pande, og lad det køle lidt af."
+    },
+    {
+      "section": "Kartoffelterrine (dagen før)",
+      "text": "Skræl kartoflerne, og skær dem i helt tynde skiver, gerne på en mandolin. Vend skiverne i det smeltede smør. Læg dem pænt i lag i formen, og krydr mellem hvert lag."
+    },
+    {
+      "section": "Kartoffelterrine (dagen før)",
+      "text": "Dæk med bagepapir og derefter folie. Bag i 40 minutter, til en kniv glider helt ind uden modstand."
+    },
+    {
+      "section": "Kartoffelterrine (dagen før)",
+      "text": "Tag folien af, og læg en tung vægt oven på kartoflerne. Lad terrinen køle af, og stil den derefter i køleskabet natten over, så den sætter sig."
+    },
+    {
+      "section": "Kartoffelterrine (dagen før)",
+      "text": "Vend terrinen ud næste dag, og skær fire tykke skiver. Læg dem på en bageplade. Resten kan fryses."
+    },
+    {
+      "section": "Artiskokker",
+      "text": "Fyld en stor skål med koldt vand, pres saften fra den ene citron i, og kom de udpressede skaller med. Kom hver artiskok i vandet, så snart den er gjort klar, så den ikke misfarves. Gnid dem desuden med de halve citroner undervejs."
+    },
+    {
+      "section": "Artiskokker",
+      "text": "Skær stilkene af, så der er ca. 6 cm tilbage. Pil de yderste blade af, til du når de bløde inderste. Skræl stilken med en skræller eller en lille skarp kniv, til den møre kerne viser sig. Skær den øverste tredjedel af bladene af. Fjern tæppet i midten, halvér artiskokken på langs, og læg den i citronvandet."
+    },
+    {
+      "section": "Artiskokker",
+      "text": "Kom artiskokhalvdelene i en gryde, og dæk dem med vin og olivenolie. Tilsæt løg, gulerod, hvidløg, buketgarni og peberkorn. Pres saften af den halve citron i, og salt godt. Lad det simre i 10-15 minutter, til artiskokkerne er møre, når du stikker en kniv i dem."
+    },
+    {
+      "section": "Artiskokker",
+      "text": "Tag gryden af varmen, og lad artiskokkerne køle af i væden. Si dem fra, og dup dem tørre. De opbevares i køleskabet, indtil de skal bruges."
+    },
+    {
+      "section": "Beurre blanc",
+      "text": "Kom skalotteløg, timian og eddike i en gryde, og lad det koge langsomt ind til en fjerdedel."
+    },
+    {
+      "section": "Beurre blanc",
+      "text": "Pisk det kolde smør i reduktionen nogle få tern ad gangen, til det er smeltet og saucen er cremet. Hold saucen lun."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm ovnen op til 180 °C, og sæt kartoffelskiverne ind for at blive varme. Skær den fermenterede agurk i fine tern uden kerner, og afvej en tilsvarende mængde syltet agurk."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm lidt olie op på en pande ved middel varme. Salt helleflynderen på alle sider. Steg filetterne i 2-3 minutter med pæne siden nedad i den varme pande, til de er gyldne."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend fiskene, og sæt panden i ovnen i 4 minutter, til kernetemperaturen er 40 °C. Tag panden ud, dryp lidt citronsaft over, og lad fisken hvile."
+    },
+    {
+      "section": "Servering",
+      "text": "Steg artiskokhalvdelene i samme pande, til snitfladerne får farve. Deglacér med en klat smør og lidt citronsaft, og tag dem af panden."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm beurre blanc forsigtigt op. Rør bulgur, ørredrogn og stenbiderrogn i, og tilsæt halvdelen af agurkerne. Rør til sidst purløgene i."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret terrineskiverne på sideTallerkener med snitfladen opad. Top med resten af agurkerne, nori, sprød bulgur og persille."
+    },
+    {
+      "section": "Servering",
+      "text": "Hæld saucen på tallerkenerne, og læg fisken i midten. Dryp purløgsolie rundt om fisken, og læg artiskokkerne øverst."
+    }
+  ],
+  "changes": [
+    "Violette babyartiskokker er skiftet til små artiskokker.",
+    "Røget gedderogn er skiftet til stenbiderrogn.",
+    "Mikropersille eller løvstikke er skiftet til persille.",
+    "Citrontimian er skiftet til almindelig timian.",
+    "Halibut er skiftet til helleflynder.",
+    "Vegetabilsk olie er skiftet til rapsolie."
+  ]
+}

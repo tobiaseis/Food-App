@@ -1,0 +1,142 @@
+{
+  "url": "https://www.valdemarsro.dk/andebryst/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:52:12.975Z",
+  "total_minutes": 60,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Andebryst à l'orange",
+  "intro": "Sprødstegt andebryst med en sirupsagtig appelsinsauce, der er krydret med kanel, kardemomme og timian. Saucen koger ind, mens anden steger, så retten er klar på en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Andebryst",
+      "amount": 2,
+      "unit": "stk",
+      "name": "andebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Andebryst",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Andebryst",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "appelsinjuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "lidt saft herfra",
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "appelsinlikør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang",
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "kardemomme",
+      "note": "stødt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Appelsinsauce",
+      "text": "Kom alt til saucen i en gryde, og kog det ind til cirka 1 dl. Det tager omtrent lige så lang tid, som anden skal bruge på panden."
+    },
+    {
+      "section": "Andebryst",
+      "text": "Rids skindet på andebrysterne i et mønster med en skarp kniv. Skær kun i fedtet og ikke ned i kødet, ellers løber kødsaften ud, og kødet bliver tørt."
+    },
+    {
+      "section": "Andebryst",
+      "text": "Gnid andebrysterne med salt og peber på alle sider."
+    },
+    {
+      "section": "Andebryst",
+      "text": "Læg andebrysterne med skindsiden nedad på en kold, tør pande. Tænd for lav middelvarme, så panden langsomt bliver varm, og fedtet når at smelte ud."
+    },
+    {
+      "section": "Andebryst",
+      "text": "Steg ved lav varme i cirka 20 minutter, til skindet er sprødt. Vend dem derefter, og steg dem cirka 5 minutter på kødsiden."
+    },
+    {
+      "section": "Andebryst",
+      "text": "Sluk for varmen, og tag andebrysterne op. Lad fedtet blive på panden."
+    },
+    {
+      "section": "Appelsinsauce",
+      "text": "Si saucen ned på panden med fedtet, og rør rundt. Smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær andebrysterne i tynde skiver, og læg dem på tallerkener eller et fad. Hæld saucen over."
+    }
+  ],
+  "changes": [
+    "Cointreau er skiftet til appelsinlikør."
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/spiced-chicken-spinach-sweet-potato-stew",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:28:13.252Z",
+  "total_minutes": 55,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Krydret kyllingegryde med spinat og sødkartoffel",
+  "intro": "En solid gryderet med mørke kyllingelår, sødkartoffel og spinat i en krydret tomatsauce med ingefær og chili. Serveres med varmt naanbrød og kan fryses.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "sødkartoffel",
+      "note": "skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "solsikkeolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": "uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "dl",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til krydderipastaen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til krydderipastaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til krydderipastaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til krydderipastaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "et stykke på størrelse med en tommelfinger, revet",
+      "optional": false
+    },
+    {
+      "section": "Til krydderipastaen",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til krydderipastaen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "uden kerner, hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "græskarkerner",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "uden kerner, hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "naanbrød",
+      "note": "varmet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Krydderipasta og sødkartoffel",
+      "text": "Kom sødkartoffelstykkerne i en stor, dyb gryde på høj varme, dæk dem med kogende vand, og kog dem i 10 minutter."
+    },
+    {
+      "section": "Krydderipasta og sødkartoffel",
+      "text": "Blend imens alle ingredienser til krydderipastaen i en foodprocessor, til det er meget fint hakket. Stil til side."
+    },
+    {
+      "section": "Krydderipasta og sødkartoffel",
+      "text": "Læg spinaten i et stort dørslag i vasken, og hæld sødkartoflerne med kogevandet over. Så er kartoflerne drænet, og spinaten er faldet sammen. Lad det dampe tørt."
+    },
+    {
+      "section": "Gryden",
+      "text": "Sæt gryden tilbage på varmen uden at vaske den. Varm olien op, og steg krydderipastaen i cirka 5 minutter, til den er tyknet."
+    },
+    {
+      "section": "Gryden",
+      "text": "Kom kyllingelårene i, og steg dem i 8-10 minutter, til de begynder at tage farve. Hæld fonden over, bring det i kog, og lad retten simre i 10 minutter. Rør af og til."
+    },
+    {
+      "section": "Gryden",
+      "text": "Skær et af lårene over for at tjekke, at kødet er hvidt hele vejen igennem uden rosa. Smag til med peber, og kom sødkartoflerne i. Lad det simre 5 minutter mere."
+    },
+    {
+      "section": "Gryden",
+      "text": "Hak spinaten groft, og rør den i gryden. Vil du fryse retten, så lad den køle af først; den kan holde sig op til 3 måneder i fryseren."
+    },
+    {
+      "section": "Servering",
+      "text": "Drys med græskarkerner og hakket citron, og server med det varme naanbrød ved siden af."
+    }
+  ],
+  "changes": [
+    "Syltede citroner er erstattet med almindelig citron.",
+    "Kyllingefond er erstattet med hønsefond."
+  ]
+}

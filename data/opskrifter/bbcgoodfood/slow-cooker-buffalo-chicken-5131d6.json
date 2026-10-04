@@ -1,0 +1,110 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/slow-cooker-buffalo-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:36:19.061Z",
+  "total_minutes": 255,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Slowcooker buffalo-kylling i burgerboller",
+  "intro": "Mør, pulled kylling i krydret hot sauce, der simrer langsomt i slowcookeren, til kødet falder fra hinanden. Server i bløde burgerboller med salat eller coleslaw.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "hot sauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "kyllingelår",
+      "note": "uden ben og skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "burgerboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salat",
+      "note": "og/eller coleslaw",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Hæld hot sauce i slowcookeren og rør hvidløgspulver og løgpulver i."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingelårene ned i saucen. Stik laurbærbladene ind imellem dem, og fordel smørret i små klatter ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Sæt slowcookeren på høj varme, og lad kyllingen simre i 3-4 timer, til den er mør og gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Løft lårene op på et skærebræt og pluk kødet i strimler med to gafler."
+    },
+    {
+      "section": null,
+      "text": "Kom kødet tilbage i saucen og rør rundt. Fjern laurbærbladene."
+    },
+    {
+      "section": null,
+      "text": "Fyld burgerbollerne med kylling og sauce, og server med salat eller coleslaw."
+    }
+  ],
+  "changes": [
+    "Hvidløgsgranulat og løggranulat er skiftet til hvidløgspulver og løgpulver."
+  ]
+}

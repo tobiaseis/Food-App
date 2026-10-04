@@ -1,0 +1,157 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/tom-kha-gai",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:48:55.869Z",
+  "total_minutes": 20,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Tom kha gai",
+  "intro": "Thailandsk kokossuppe med kylling, champignon og chili, som får frisk syrlighed fra lime og dybde fra ingefær og citrongræs. Serveres med dampet ris ved siden af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 800,
+      "unit": "ml",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kokosmælk",
+      "note": "à 400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": "renset, banket og skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "kaffirlimeblade",
+      "note": "flået over i to stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingelår",
+      "note": "uden skind og ben, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "champignon",
+      "note": "skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "lidt knust; 4-6 stk efter ønsket styrke",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": "3-5 spsk efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "dampede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Hæld fond og kokosmælk i en stor gryde, og varm det op ved middel varme."
+    },
+    {
+      "section": null,
+      "text": "Kom ingefær, citrongræs og kaffirlimeblade i. Lad det komme i et roligt kog i 6-8 minutter."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingen i, mens suppen stadig småkoger stille. Lad den simre i 8-10 minutter, til kødet er mørt og gennemkogt."
+    },
+    {
+      "section": null,
+      "text": "Rør champignon og chili ned i suppen, og lad den simre 3-5 minutter mere, til alt er færdigt."
+    },
+    {
+      "section": null,
+      "text": "Smag til med sukker samt en del af fiskesaucen og limesaften. Smag suppen igennem, og tilsæt resten, hvis den skal have mere."
+    },
+    {
+      "section": null,
+      "text": "Fisk ingefær, citrongræs og kaffirlimeblade op med en hulske."
+    },
+    {
+      "section": null,
+      "text": "Øs suppen i skåle, drys med koriander, og server med ris ved siden af. Resten kan stå afkølet i køleskabet i op til tre dage – lad den køle af, før den stilles ind."
+    }
+  ],
+  "changes": [
+    "Galangalpasta er erstattet med revet ingefær.",
+    "Østershatte er erstattet med champignon.",
+    "Fisk sauce: ingen ændring.",
+    "Hønsefond erstatter chicken stock."
+  ]
+}

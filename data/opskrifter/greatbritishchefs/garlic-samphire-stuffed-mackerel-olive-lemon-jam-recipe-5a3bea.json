@@ -1,0 +1,367 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/garlic-samphire-stuffed-mackerel-olive-lemon-jam-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:42:07.174Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 35,
+  "title": "Fyldt makrel med oliven- og citronmarmelade",
+  "intro": "Mør makrel med fyld af oliven, asparges og chorizo, stegt i hvidløgssmør. Serveres med sød-sur oliven- og citronmarmelade og en frisk kapersdressing.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Oliven- og citronmarmelade",
+      "amount": 500,
+      "unit": "g",
+      "name": "sorte oliven",
+      "note": "uden lage, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Oliven- og citronmarmelade",
+      "amount": 3,
+      "unit": "stk",
+      "name": "citroner",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Oliven- og citronmarmelade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "stort, skrællet og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Oliven- og citronmarmelade",
+      "amount": 300,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oliven- og citronmarmelade",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oliven- og citronmarmelade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 20,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "sorte oliven",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "cornichoner",
+      "note": "små, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.25,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "fiskefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 20,
+      "unit": "g",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "asparges",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kapersdressing",
+      "amount": 20,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kapersdressing",
+      "amount": 0.4,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Kapersdressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kapersdressing",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kapersdressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kapersdressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kapersdressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makrel",
+      "amount": 2,
+      "unit": "stk",
+      "name": "makrel",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Makrel",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Makrel",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makrel",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makrel",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makrel",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Makrel",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Makrel",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "skrællet og knust",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "karse",
+      "note": "vendt i olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal revet, resten i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Oliven- og citronmarmelade",
+      "text": "Kom alle ingredienserne til marmeladen i en gryde. Varm op til en let simren, og rør, til sukkeret er opløst."
+    },
+    {
+      "section": "Oliven- og citronmarmelade",
+      "text": "Lad det simre på lav varme i ca. 30 minutter, til olivenerne er bløde og klæbrige af sukker."
+    },
+    {
+      "section": "Fyld",
+      "text": "Imens: Steg chorizoen på en pande ved middelhøj varme, til den er gennemstegt."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kom oliven, skalotteløg, selleri, dild, cornichoner og hvidløg på panden. Svits, til det er blødt. Tilsæt hvidvinen, og lad den koge ind til det halve."
+    },
+    {
+      "section": "Fyld",
+      "text": "Hæld fiskefond, persille, asparges, rasp og salt på panden. Lad blandingen koge, til den tykner og er tør. Tilsæt lidt mere rasp, hvis den er for våd. Stil fyldet til side."
+    },
+    {
+      "section": "Makrel",
+      "text": "Skær hoved og finner af makrellerne. Læg fisken på et skærebræt, og snit bugen op mod hovedet. Fjern indvolde, og skyl fisken grundigt for blod."
+    },
+    {
+      "section": "Makrel",
+      "text": "Skær fra hovedenden langs bugen for at løsne den ene side af fileten. Vend fisken, og gør det samme på den anden side. Skær langs rygraden, så filet-sidderne hænger sammen som en sommerfugl. Pil ribben og mellemgræder af efter behov. Gør det samme med den anden makrel."
+    },
+    {
+      "section": "Makrel",
+      "text": "Fyld makrellerne med fyldet, og bind dem tæt med køkkengarn. Sørg for, at begge ender er lukkede."
+    },
+    {
+      "section": "Kapersdressing",
+      "text": "Rør alle ingredienserne til dressingen sammen, og smag til med salt og peber."
+    },
+    {
+      "section": "Makrel",
+      "text": "Hæld lidt olie på en pande. Krydr makrellerne med salt og peber, og steg dem et par minutter på hver side."
+    },
+    {
+      "section": "Makrel",
+      "text": "Skru lidt ned for varmen, og kom smør, citronsaft, persille og hvidløg på panden. Øs smørret over fisken i nogle minutter, til den er gennemstegt. Tag panden af varmen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg de bundne makreller på et fad sammen med karse, citronbåde og marmeladen. Hæld rigeligt af kapersdressingen over, og drys med persille."
+    }
+  ],
+  "changes": [
+    "Glasurt er erstattet med asparges.",
+    "Vegetable oil er erstattet med rapsolie."
+  ]
+}

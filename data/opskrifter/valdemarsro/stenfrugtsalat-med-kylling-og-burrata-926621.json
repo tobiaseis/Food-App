@@ -1,0 +1,196 @@
+{
+  "url": "https://www.valdemarsro.dk/stenfrugtsalat-med-kylling-og-burrata/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:55:08.797Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Sommersalat med kylling, stenfrugt og burrata",
+  "intro": "Timiankylling, sprøde croutoner og saftige ferskner og abrikoser på en seng af rucola, toppet med cremet burrata. Hyldeblomstdressingen giver en frisk og let sød afslutning.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Timiankylling",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "med skind",
+      "optional": false
+    },
+    {
+      "section": "Timiankylling",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Timiankylling",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Timiankylling",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Timiankylling",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Timiankylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 2,
+      "unit": "skive",
+      "name": "brød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hyldeblomstdressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Hyldeblomstdressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hyldeblomstsaft",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Hyldeblomstdressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 4,
+      "unit": "stk",
+      "name": "fersken",
+      "note": "eller nektarin, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 4,
+      "unit": "stk",
+      "name": "abrikoser",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 30,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "burrata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Timiankylling",
+      "text": "Tænd ovnen på 200 °C varmluft. Gnid kyllingebrystet med salt, peber, citronskal og timian."
+    },
+    {
+      "section": "Timiankylling",
+      "text": "Læg kyllingen i et smurt ovnfast fad, og fordel smørret ovenpå. Steg i ovnen i ca. 20 minutter, til kødet er helt igennem."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Skær brødet i små tern, og vend dem rundt i olivenolie, salt og peber."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Bag ternene ved 200 °C varmluft i 10-12 minutter, til de er sprøde."
+    },
+    {
+      "section": "Hyldeblomstdressing",
+      "text": "Pisk sennep, hyldeblomstsaft, eddike og en smule olivenolie sammen. Juster smagen, til du er tilfreds."
+    },
+    {
+      "section": "Salat",
+      "text": "Læg fersken, abrikoser og tomater på et stort fad, og top med rucola."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær kyllingen i skiver, og læg dem over salaten. Strø croutoner og pinjekerner ovenpå, og dryp med dressingen."
+    },
+    {
+      "section": "Salat",
+      "text": "Giv hver portion en halv burrata og lidt basilikumblade."
+    }
+  ],
+  "changes": []
+}

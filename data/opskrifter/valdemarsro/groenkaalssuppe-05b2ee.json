@@ -1,0 +1,128 @@
+{
+  "url": "https://www.valdemarsro.dk/groenkaalssuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:56:40.429Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Grønkålssuppe",
+  "intro": "En cremet suppe med kartofler og grønkål, der toppes med sprødt æble og ristede græskarkerner. Den er nem at lave og mættende.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 800,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrællede og skåret i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.2,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "grønkål",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "græskarkerner",
+      "note": "ristede på tør pande",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en gryde ved middelvarme. Svits løg og hvidløg i et par minutter, til løgene er blødt."
+    },
+    {
+      "section": null,
+      "text": "Kom kartofler og fond i gryden. Bring det i kog, læg låg på, og lad det simre, til kartoflerne er møre."
+    },
+    {
+      "section": null,
+      "text": "Rør grønkålen ned i suppen, og kog den med i 3 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld fløden i, og blend suppen, til den er cremet og let. Smag den til med salt og peber."
+    },
+    {
+      "section": "Til toppingen",
+      "text": "Ryst græskarkernerne på en tør pande, til de har fået farve. Anret suppen i skåle, og drys æbletern og kerner over."
+    }
+  ],
+  "changes": []
+}

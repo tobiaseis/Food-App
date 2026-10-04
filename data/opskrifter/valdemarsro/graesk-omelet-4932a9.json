@@ -1,0 +1,224 @@
+{
+  "url": "https://www.valdemarsro.dk/graesk-omelet/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:53:49.608Z",
+  "total_minutes": 25,
+  "active_minutes": 25,
+  "yield_count": 2,
+  "source_lines": 19,
+  "title": "Græsk omelet med tzatziki",
+  "intro": "Luftig omelet fyldt med sprøde søde kartofler, spinat og tomater, toppet med feta, oliven og en frisk tzatziki. En mættende ret med middelhavssmag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk, 10 %",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "sødkartoffel",
+      "note": "i tern på ca. 1 cm",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, i tern",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 10,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Omelet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Omelet",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Omelet",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Omelet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Omelet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 6,
+      "unit": "stk",
+      "name": "oliven",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "pinjekerner",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 30,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tzatziki",
+      "text": "Vend den revne agurk med salt, og lad den stå i 5 minutter. Pres vandet fra agurken."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Rør agurken sammen med hvidløg, yoghurt og peber."
+    },
+    {
+      "section": "Fyld",
+      "text": "Varm olien i en pande, og brun de søde kartofler, til de er sprøde og gyldne."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kom spinat, peberfrugt, hvidløg og soltørrede tomater på panden, og varm det godt igennem."
+    },
+    {
+      "section": "Fyld",
+      "text": "Tag panden af varmen, og vend cherrytomaterne i."
+    },
+    {
+      "section": "Omelet",
+      "text": "Pisk æg og mælk sammen med salt og peber med en gaffel."
+    },
+    {
+      "section": "Omelet",
+      "text": "Hæld æggemassen på en pande med olie, og lad omeletten stivne ved svag varme i 3-4 minutter."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg fyldet på halvdelen af omeletten, og fold den anden halvdel over."
+    },
+    {
+      "section": "Servering",
+      "text": "Top med basilikum, oliven, pinjekerner, feta og tzatziki."
+    }
+  ],
+  "changes": []
+}

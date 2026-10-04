@@ -1,0 +1,160 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/tiramisu-yoghurt-bowl-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:15:04.583Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 14,
+  "title": "Tiramisu-yoghurtbowl",
+  "intro": "En hurtig morgenmadsbowl med græsk yoghurt, kaffechiabudding og en klistret daddelsauce, inspireret af tiramisu. Toppes med frisk frugt, chokolade, müsli og kakao.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Kaffechiabudding",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chiafrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kaffechiabudding",
+      "amount": 1,
+      "unit": "stk",
+      "name": "espresso",
+      "note": "eller 2 tsk instantkaffe rørt op i 1-2 spsk varmt vand",
+      "optional": false
+    },
+    {
+      "section": "Kaffechiabudding",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "mælk",
+      "note": "en sjat",
+      "optional": false
+    },
+    {
+      "section": "Kaffechiabudding",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "lønnesirup",
+      "note": "en sjat",
+      "optional": false
+    },
+    {
+      "section": "Kaffechiabudding",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Klistret toffeesauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mandelsmør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Klistret toffeesauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Klistret toffeesauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "plus mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Klistret toffeesauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "dadler",
+      "note": "Medjool, halveret",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": null,
+      "unit": null,
+      "name": "frisk frugt",
+      "note": "fx kirsebær, blåbær og figner, halveret efter behov",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chokolade",
+      "note": "mørk, 1 tern",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": null,
+      "unit": null,
+      "name": "müsli",
+      "note": "granola",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": null,
+      "unit": null,
+      "name": "kakaopulver",
+      "note": "til drys",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kaffechiabudding",
+      "text": "Pisk chiafrø, espresso, mælk og lønnesirup sammen i en lille skål."
+    },
+    {
+      "section": "Kaffechiabudding",
+      "text": "Pisk yoghurten i, til massen er tyk og cremet. Stil skålen i køleskabet i mindst 15 minutter, så chiafrøene kan svulme op. Den kan også stå natten over."
+    },
+    {
+      "section": "Klistret toffeesauce",
+      "text": "Rør mandelsmør, lønnesirup, mælk og dadler sammen i en lille skål (eller blend), til saucen er glat som toffeesauce. Tilsæt lidt mere mælk, hvis den er for tyk."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Kom så meget yoghurt i en skål, som du har lyst til."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Læg frugten rundt langs kanten, og kom chiabuddingen i midten – lige så meget, du vil."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Hæld toffeesaucen ovenpå, og top med chokolade og müsli. Dryss kakaopulver over til sidst."
+    }
+  ],
+  "changes": [
+    "Linwoods chiafrø er byttet med almindelige chiafrø.",
+    "Granola er byttet med müsli.",
+    "Hele dadler bruges i stedet for færdig toffeesauce – uændret fra kilden."
+  ]
+}

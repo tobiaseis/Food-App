@@ -1,0 +1,322 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/pangasius-fish-curry-coconut-lemongrass-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:29:14.403Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 31,
+  "title": "Pangasiuskarry med kokosmælk og citrongræs",
+  "intro": "Mør fisk i en cremet kokoskarry med citrongræs, ingefær og masser af krydderier. Serveres med jasminris og frisk koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til marinaden",
+      "amount": 800,
+      "unit": "g",
+      "name": "pangasiusfilet",
+      "note": "skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 15,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 15,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": "yderste hårde blade fjernet, midten fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "grøn, fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kokosmælk",
+      "note": "à 400 g",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 150,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "kaffirlimeblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fiskesauce",
+      "note": "plus mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "plus mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften, plus mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "blade plukket og snittet",
+      "optional": false
+    },
+    {
+      "section": "Til karrysaucen",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til grillning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 300,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "nogle blade gemt til pynt, resten fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til marinaden",
+      "text": "Bland alle ingredienserne til marinaden i en stor skål, og vend fiskestykkerne rundt, så de er dækket hele vejen. Sæt skålen tildækket i køleskabet i mindst 30 minutter."
+    },
+    {
+      "section": "Til karrysaucen",
+      "text": "Varm olien i en stor gryde ved middel varme. Svits skalotteløgene i 5 minutter. Tilsæt hvidløg, ingefær og citrongræs, og steg i 2 minutter mere, til det dufter."
+    },
+    {
+      "section": "Til karrysaucen",
+      "text": "Tænd ovnens grill på høj varme, mens løgene simrer, og beklæd en bageplade med bagepapir. Fordel fisken i ét lag, og dryp med lidt olie."
+    },
+    {
+      "section": "Til karrysaucen",
+      "text": "Grill fisken i 5-8 minutter, til den er gylden. Vend stykkerne, og grill dem på samme måde på den anden side."
+    },
+    {
+      "section": "Til karrysaucen",
+      "text": "Kog risene efter anvisningen på posen."
+    },
+    {
+      "section": "Til karrysaucen",
+      "text": "Kom peberfrugt og krydderier i gryden, og lad det stege i 8-10 minutter, til peberfrugten er blød."
+    },
+    {
+      "section": "Til karrysaucen",
+      "text": "Hæld kokosmælken i, og lad saucen simre forsigtigt i 5 minutter."
+    },
+    {
+      "section": "Til karrysaucen",
+      "text": "Rør sukkerærter, kaffirlimeblade, fiskesauce, sukker, limesaft, basilikum og den grillede fisk i. Lad det simre i 3-5 minutter, til fisken lige er gennemkogt, og sukkerærterne er møre, men stadig sprøde. Smag til med fiskesauce, sukker eller lime, til smagen er rund og i balance."
+    },
+    {
+      "section": "Til servering",
+      "text": "Vend den hakkede koriander i risene, og fordel dem i skåle. Top med karryen, og pynt med rød chili og de gemte korianderblade. Server med limebåde."
+    }
+  ],
+  "changes": [
+    "Thai basilikum er skiftet til almindelig basilikum."
+  ]
+}

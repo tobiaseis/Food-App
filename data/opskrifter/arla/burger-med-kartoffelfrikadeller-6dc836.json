@@ -1,0 +1,199 @@
+{
+  "url": "https://www.arla.dk/opskrifter/burger-med-kartoffelfrikadeller/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:05:08.673Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Burger med kartoffelfrikadeller",
+  "intro": "Sprøde kartoffelfrikadeller med soltørrede tomater, serveret i grove burgerboller med friske grøntsager og en cremet ketchupdressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": 25,
+      "unit": "g",
+      "name": "soltørrede tomater",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "kolde, kogte",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": 100,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, knuste",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": 60,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ketchupdressing",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": "tomatketchup, karryketchup eller lignende",
+      "optional": false
+    },
+    {
+      "section": "Ketchupdressing",
+      "amount": 50,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 6,
+      "unit": "stk",
+      "name": "burgerboller",
+      "note": "grove",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 12,
+      "unit": "stk",
+      "name": "salat",
+      "note": "rensede blade",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "cornichoner",
+      "note": "i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelfrikadeller",
+      "text": "Læg de soltørrede tomater i en skål, og overhæld dem med det kogende vand. Lad dem trække i ca. 2 minutter."
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "text": "Mos kartoflerne, og rør dem sammen med tomaterne og vandet fra skålen."
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "text": "Tilsæt creme fraiche, æg, hvidløg, rasp, salt og peber. Rør farsen godt sammen."
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "text": "Form farsen til 9 flade frikadeller af halvdelen af farsen. Brun halvdelen af smørret på en pande, og steg frikadellerne ved middel varme i ca. 5 minutter på hver side."
+    },
+    {
+      "section": "Kartoffelfrikadeller",
+      "text": "Hold de færdige frikadeller varme. Steg resten af farsen på samme måde med det resterende smør."
+    },
+    {
+      "section": "Ketchupdressing",
+      "text": "Rør ketchup og creme fraiche sammen."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Del bollerne på midten, og rist dem på begge sider. Smør dem med ketchupdressingen."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Anret kartoffelfrikadeller, agurk, tomat, rødløg, salat og cornichoner i bollerne, og læg dem sammen."
+    }
+  ],
+  "changes": [
+    "Kvark er erstattet af creme fraiche, som kilden også nævner.",
+    "Syltede agurker er skrevet som cornichoner."
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/fish-chips-tortilla-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:01:17.408Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 17,
+  "title": "Tortilla med fisk og pommes frites",
+  "intro": "En tyk spansk tortilla med sprøde pommes frites, bagt torsk og møre løg, serveret med citronmayonnaise og en frisk urtegremolata.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Tortilla",
+      "amount": 500,
+      "unit": "g",
+      "name": "pommes frites",
+      "note": "tykke",
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "store, meget fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "eddike",
+      "note": "sherryeddike",
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": 300,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "tyk, uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": 8,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store, stuetempereret",
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "stuetempereret",
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "hvid, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Tortilla",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Gremolata og mayonnaise",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gremolata og mayonnaise",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "persille",
+      "note": "glatbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gremolata og mayonnaise",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gremolata og mayonnaise",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "drænet og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gremolata og mayonnaise",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Gremolata og mayonnaise",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til gremolataen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pommes frites",
+      "text": "Tænd ovnen på 200°C. Fordel pommes fritesene i ét lag på en stor bageplade, og bag dem efter anvisningen på posen. Lad dem få et par minutter længere, til de er dybt gyldne og sprøde, og vend dem halvvejs. Den lange tid sørger for, at de holder formen i ægget. Lad dem køle af i 5 minutter."
+    },
+    {
+      "section": "Løg",
+      "text": "Varm olivenolien op i en non-stick pande på 24 cm over lav varme. Kom løg og en lille knivspids salt i, og steg dem forsigtigt i 20-25 minutter under omrøring af og til. De skal være helt bløde og klare uden farve, så tortillaen bliver sød og mild."
+    },
+    {
+      "section": "Løg",
+      "text": "Rør eddiken i, og lad den simre i 30 sekunder. Tag panden af varmen, og lad løgene køle lidt af."
+    },
+    {
+      "section": "Torsk",
+      "text": "Drys torsken med det fine salt, og damp den forsigtigt i 4-5 minutter, til den lige er uigennemsigtig og begynder at falde i flager. Lad den køle lidt af, og pil den i store, skånsomme stykker. Du kan i stedet pochere den i let saltet vand ved 80-85°C."
+    },
+    {
+      "section": "Tortilla",
+      "text": "Pisk æg, fløde, flagesalt og hvid peber sammen i en stor skål, til det lige er blandet. Pisk ikke for meget, ellers bliver tortillaen luftig som en soufflé i stedet for cremet."
+    },
+    {
+      "section": "Tortilla",
+      "text": "Vend løg, lune pommes frites og torsk forsigtigt i æggemassen. Lad den hvile i 5 minutter, så pommes fritesene suger lidt æg til sig og giver en blød kerne."
+    },
+    {
+      "section": "Tortilla",
+      "text": "Tør panden af, og sæt den på middel-lav varme. Smelt smørret, til det skummer let."
+    },
+    {
+      "section": "Tortilla",
+      "text": "Hæld æggemassen i, og fordel den jævnt. Lad den stege uden at røre i 5-6 minutter. Skub de stivnede kanter indad med en spatel, og vip panden, så det rå æg løber ud under."
+    },
+    {
+      "section": "Tortilla",
+      "text": "Når bunden er gylden og siderne er stivnet, men midten stadig er lidt løs, læg en stor flad tallerken over panden. Vend tortillaen hurtigt ud på tallerkenen, og lad den glide tilbage i panden med den stegte side opad. Steg den 3-4 minutter mere, til midten lige er stivnet."
+    },
+    {
+      "section": "Tortilla",
+      "text": "Løft tortillaen over på et bræt, og lad den hvile mindst 10 minutter, før du skærer den."
+    },
+    {
+      "section": "Gremolata og mayonnaise",
+      "text": "Bland persille, purløg, kapers og halvdelen af citronskallen med så meget olivenolie, at gremolataen kan øses med ske. Dryp noget af den over tortillaen."
+    },
+    {
+      "section": "Gremolata og mayonnaise",
+      "text": "Rør lidt citronsaft og citronskal ned i mayonnaisen."
+    },
+    {
+      "section": "Servering",
+      "text": "Drys resten af citronskallen over tortillaen, skær den i stykker, og server med citronmayonnaise, resten af gremolataen og citronbåde."
+    }
+  ],
+  "changes": [
+    "Lamb Weston-pommes frites er erstattet af almindelige tykke pommes frites.",
+    "Sherryeddike er erstattet af almindelig eddike.",
+    "Baby kapers er erstattet af almindelige kapers.",
+    "Double cream er erstattet af piskefløde."
+  ]
+}

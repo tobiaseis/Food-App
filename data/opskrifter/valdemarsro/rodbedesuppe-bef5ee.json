@@ -1,0 +1,172 @@
+{
+  "url": "https://www.valdemarsro.dk/rodbedesuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:04:32.171Z",
+  "total_minutes": 45,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Rødbedesuppe med croutoner",
+  "intro": "Cremet rødbedesuppe med kartofler, ingefær og koriander, toppet med cremefraiche og sprøde croutoner med timian.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 450,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 500,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "l",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 20,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 3,
+      "unit": "skive",
+      "name": "brød",
+      "note": "fx grydebrød",
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Croutoner",
+      "text": "Skær brødet i tern, og vend dem med olivenolie, flagesalt og timian."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Rist ternene sprøde på en pande under hyppig omrøring. Du kan også bage dem i ovnen ved 175 °C varmluft i 15 minutter."
+    },
+    {
+      "section": "Suppe",
+      "text": "Varm olivenolien op i en gryde ved middelvarme. Sauter løg, hvidløg, kartofler og rødbeder under omrøring i 2 minutter."
+    },
+    {
+      "section": "Suppe",
+      "text": "Hæld bouillon i, og rør koriander og ingefær ned i. Læg låg på, og lad suppen simre i 25 minutter."
+    },
+    {
+      "section": "Suppe",
+      "text": "Blend suppen helt glat og cremet. Smag til med salt og peber, og tilsæt evt. mere ingefær."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret suppen i skåle med cremefraiche, persille og de sprøde croutoner ovenpå."
+    }
+  ],
+  "changes": []
+}

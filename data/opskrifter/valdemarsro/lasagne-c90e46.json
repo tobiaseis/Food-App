@@ -1,0 +1,231 @@
+{
+  "url": "https://www.valdemarsro.dk/lasagne/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:08:58.427Z",
+  "total_minutes": 180,
+  "active_minutes": 40,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Lasagne med grøntsagskødsauce og mornaysauce",
+  "intro": "Klassisk lasagne med langtsimret kødsauce fyldt med revne grøntsager og en cremet ostesauce. Toppen får mozzarella og bages gylden i ovnen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 5,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 800,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": "eller grøntsagsfond",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 200,
+      "unit": "g",
+      "name": "lasagneplader",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødsauce",
+      "text": "Svits løg og hvidløg i olivenolien i en stor gryde, til løgene er bløde."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Tilsæt hakkekødet, og brun det ved høj varme."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Sænk varmen, og kom de resterende ingredienser til saucen i gryden."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Lad saucen simre med låg i 2-6 timer – jo længere, jo bedre. Smag den undervejs til med mere krydderi, tomatpuré, hakkede tomater, salt og peber."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Bliver saucen for tør, så tilsæt lidt grøntsagsfond. Vent dog til den har simret cirka en time, for grøntsagerne afgiver selv meget væde."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Smelt smørret i en gryde, og pisk melet i, til det samler sig til en klump."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Pisk mælken i lidt ad gangen, til saucen har en jævn, cremet konsistens."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Smag til med muskatnød, salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Forvarm ovnen til 175 °C varmluft. Smør et ovnfast fad."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld et lag mornaysauce i bunden af fadet. Læg derefter kødsauce og lasagneplader i skiftevis lag, og slut med kødsauce."
+    },
+    {
+      "section": "Samling",
+      "text": "Dæk med et lag mornaysauce, og fordel mozzarellaskiverne ovenpå."
+    },
+    {
+      "section": "Samling",
+      "text": "Bag lasagnen i 20-25 minutter, til pladerne er møre, men stadig har lidt bid."
+    }
+  ],
+  "changes": [
+    "Frisk mozzarella er skiftet til almindelig mozzarella.",
+    "Grøntsagsboullion er skrevet som grøntsagsfond."
+  ]
+}

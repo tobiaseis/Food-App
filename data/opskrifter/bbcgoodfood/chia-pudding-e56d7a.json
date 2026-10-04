@@ -1,0 +1,72 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chia-pudding",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:57:50.580Z",
+  "total_minutes": 5,
+  "active_minutes": 5,
+  "yield_count": null,
+  "source_lines": 4,
+  "title": "Chiapudding",
+  "intro": "Enkel chiapudding, der trækker natten over i køleskabet og er klar til morgenmad. Toppes med frisk frugt og et skvæt lønnesirup.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chiafrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "havredrik",
+      "note": "kan erstattes af mandeldrik, risdrik eller mælk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "lønnesirup",
+      "note": "et skvæt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "frugt",
+      "note": "fx bær, banan, kiwi eller mango",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Rør chiafrø, havredrik og de 2 tsk lønnesirup sammen i et glas eller en skål."
+    },
+    {
+      "section": null,
+      "text": "Sæt låg eller film på, og stil puddingen på køl natten over – mindst 8 timer."
+    },
+    {
+      "section": null,
+      "text": "Server puddingen med frugt ovenpå og et skvæt lønnesirup."
+    }
+  ],
+  "changes": []
+}

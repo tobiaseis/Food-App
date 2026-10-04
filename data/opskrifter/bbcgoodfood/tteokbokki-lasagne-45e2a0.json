@@ -1,0 +1,211 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/tteokbokki-lasagne",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:40:58.404Z",
+  "total_minutes": 55,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 14,
+  "title": "Tteokbokki-lasagne",
+  "intro": "Koreanske riskager i en stærk gochujang-sauce lagt som lasagne med fiskefrikadeller og ost og gratineret med béchamel. Det er street food møder ovnret.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Lasagne",
+      "amount": 350,
+      "unit": "g",
+      "name": "fiskefrikadeller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 500,
+      "unit": "g",
+      "name": "riskager",
+      "note": "flade koreanske riskager, friske eller frosne",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "i tynde strimler, plus lidt til servering",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 100,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 500,
+      "unit": "ml",
+      "name": "vand",
+      "note": "til at dække fiskefrikadellerne",
+      "optional": false
+    },
+    {
+      "section": "Tteokbokki-sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tteokbokki-sauce",
+      "amount": 5,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tteokbokki-sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tteokbokki-sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tteokbokki-sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "gochugaru",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tteokbokki-sauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Béchamel",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Béchamel",
+      "amount": 40,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Béchamel",
+      "amount": 500,
+      "unit": "ml",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Béchamel",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Béchamel",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tteokbokki",
+      "text": "Læg fiskefrikadellerne i en stor, bred gryde, og hæld lige nok vand over til at dække dem. Lad dem trække og blive bløde i 2 minutter."
+    },
+    {
+      "section": "Tteokbokki",
+      "text": "Løft fiskefrikadellerne op med en hulske eller tang, og stil dem til side. Lad vandet blive i gryden."
+    },
+    {
+      "section": "Tteokbokki",
+      "text": "Kom riskager, forårsløg, løg, alle ingredienserne til saucen og lidt peber i gryden. Kog det ved middelvarme i cirka 20 minutter, og rør af og til. Det er færdigt, når riskagerne er bløde, og saucen er tyknet. Tilsæt lidt vand, hvis det bliver for tørt."
+    },
+    {
+      "section": "Béchamel",
+      "text": "Smelt smørret i en kasserolle ved lav varme, mens riskagerne koger."
+    },
+    {
+      "section": "Béchamel",
+      "text": "Pisk melet ud i smørret. Hæld så mælken i lidt ad gangen, og pisk hele tiden, så der ikke kommer klumper."
+    },
+    {
+      "section": "Béchamel",
+      "text": "Lad saucen simre i 6-8 minutter, til den er tyk. Smag til med salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Tænd ovnens grill på medium."
+    },
+    {
+      "section": "Samling",
+      "text": "Kom lidt tteokbokki-sauce med riskager i bunden af et mellemstort ovnfast fad. Drys med noget af basilikummen og osten, og læg et lag fiskefrikadeller ovenpå."
+    },
+    {
+      "section": "Samling",
+      "text": "Gentag lagene, til alt er brugt. Gem lidt ost til toppen."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld béchamelen over, og strø den sidste ost ud over."
+    },
+    {
+      "section": "Samling",
+      "text": "Grill retten under den varme grill i 10-15 minutter, til toppen er dybt gylden og boblende. Server med frisk basilikum drysset over."
+    }
+  ],
+  "changes": [
+    "Fladt koreansk fiskekager er erstattet med fiskefrikadeller.",
+    "Perillablade er erstattet med basilikum."
+  ]
+}

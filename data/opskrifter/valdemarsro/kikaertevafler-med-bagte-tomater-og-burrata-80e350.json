@@ -1,0 +1,224 @@
+{
+  "url": "https://www.valdemarsro.dk/kikaertevafler-med-bagte-tomater-og-burrata/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:12:57.875Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Kikærtevafler med bagte tomater og burrata",
+  "intro": "Sprøde vafler af kikærter og kartofler med ovnbagte tomater, citronricotta og cremet burrata. En vegetarret, der er nem at lave og mættende.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ovnbagte tomater",
+      "amount": 500,
+      "unit": "g",
+      "name": "tomater",
+      "note": "blommetomater",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte tomater",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte tomater",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte tomater",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte tomater",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte tomater",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte tomater",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kikærtevafler",
+      "amount": 100,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kikærtevafler",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": "Kikærtevafler",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kikærtevafler",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Kikærtevafler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kikærtevafler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtevafler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtevafler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtevafler",
+      "amount": 50,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ricottacreme",
+      "amount": 250,
+      "unit": "g",
+      "name": "ricotta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ricottacreme",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal og lidt saft",
+      "optional": false
+    },
+    {
+      "section": "Ricottacreme",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 200,
+      "unit": "g",
+      "name": "burrata",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ovnbagte tomater",
+      "text": "Forvarm ovnen til 200 °C varmluft. Smør et ovnfast fad, og læg tomater og knust hvidløg i det."
+    },
+    {
+      "section": "Ovnbagte tomater",
+      "text": "Dryp olivenolie over, og krydr med rosmarin, timian, salt og peber. Bag tomaterne i 20-25 minutter."
+    },
+    {
+      "section": "Ricottacreme",
+      "text": "Rør ricotta sammen med citronskal, olivenolie og lidt citronsaft. Smag til med salt og peber, og tilsæt mere citronsaft eller olie, hvis cremen mangler noget."
+    },
+    {
+      "section": "Kikærtevafler",
+      "text": "Læg de rivede kartofler i en skål med koldt vand, og lad dem stå i 2-3 minutter. Si vandet fra, pres kartoflerne godt, og tør dem på et rent viskestykke."
+    },
+    {
+      "section": "Kikærtevafler",
+      "text": "Blend kartofler, kikærter, persille, fintrevet hvidløg, løg, rosmarin, timian, æg og rasp i en foodprocessor, til massen er grov."
+    },
+    {
+      "section": "Kikærtevafler",
+      "text": "Varm vaffeljernet, og pensl det med lidt olie eller smør. Bag vaflerne én ad gangen, til de er gyldne og sprøde. Stil dem på en rist undervejs, så de holder sig sprøde."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret vaflerne med ricottacreme, bagte tomater, rucola og basilikum. Læg burrata ved siden af."
+    }
+  ],
+  "changes": []
+}

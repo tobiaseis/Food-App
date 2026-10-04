@@ -1,0 +1,128 @@
+{
+  "url": "https://www.arla.dk/opskrifter/rakostsalat/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:11:37.273Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 9,
+  "title": "Råkostsalat med sojaristede solsikkekerner",
+  "intro": "Sprød råkostsalat af æbler, gulerødder og spidskål med en let dressing. Toppes med solsikkekerner, der er ristet i soja, så de bliver salte og knasende.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Råkostsalat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "fx æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "røde, ca. 250 g",
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevne, ca. 300 g",
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "lilla, fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 1,
+      "unit": "dl",
+      "name": "persille",
+      "note": "bredbladet, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Sojaristede solsikkekerner",
+      "amount": 50,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sojaristede solsikkekerner",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Råkostsalat",
+      "text": "Rør olie, eddike og peber sammen til en dressing i en stor skål."
+    },
+    {
+      "section": "Råkostsalat",
+      "text": "Skær æblerne i tern, og vend dem rundt i dressingen."
+    },
+    {
+      "section": "Råkostsalat",
+      "text": "Bland de revne gulerødder og den snittede spidskål i en anden skål."
+    },
+    {
+      "section": "Råkostsalat",
+      "text": "Hæld æblerne med dressing ud over gulerødderne og spidskålen. Strø persille over."
+    },
+    {
+      "section": "Sojaristede solsikkekerner",
+      "text": "Læg solsikkekernerne på en tør pande, og sæt varmen helt op."
+    },
+    {
+      "section": "Sojaristede solsikkekerner",
+      "text": "Rør rundt, mens kernerne rister i ca. 2 minutter."
+    },
+    {
+      "section": "Sojaristede solsikkekerner",
+      "text": "Træk panden væk fra varmen, og hæld sojasaucen over med det samme. Rør, til væsken er fordampet."
+    },
+    {
+      "section": "Ved serveringen",
+      "text": "Strø en del af de ristede kerner over salaten, og vend den rundt – gerne ved bordet."
+    },
+    {
+      "section": "Ved serveringen",
+      "text": "Sæt de resterende kerner frem i en lille skål."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,349 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/monkfish-jamon-iberico-smoked-mushrooms-agretti-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:44:16.165Z",
+  "total_minutes": 165,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 29,
+  "title": "Havtaske med char siu, jamónsauce, røgede svampe og mojo verde",
+  "intro": "Grillet havtaske med en sticky, karamelliseret glasur, serveret på en intens sauce kogt på skinkeknogler og toppet med svampe, spinat og en grøn koriandersauce. Retten kræver en kulgrill og en fond, der skal simre i tre timer.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Havtaske",
+      "amount": 4,
+      "unit": "stk",
+      "name": "havtaskefilet",
+      "note": "à 200-250 g, uden hud og hinder",
+      "optional": false
+    },
+    {
+      "section": "Havtaske",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Havtaske",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Havtaske",
+      "amount": 250,
+      "unit": "g",
+      "name": "hoisinsauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Havtaske",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingevinger",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hvidt, skrællet og skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "skrællet og skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "skrællet og skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 1,
+      "unit": "kg",
+      "name": "jamónknogler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": "kvist",
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "kvist",
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "usaltet, i tern",
+      "optional": false
+    },
+    {
+      "section": "Jamónsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "saft",
+      "optional": false
+    },
+    {
+      "section": "Mojo verde",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "vasket, tørret og groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Mojo verde",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "skrællet",
+      "optional": false
+    },
+    {
+      "section": "Mojo verde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Mojo verde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mojo verde",
+      "amount": 2,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Mojo verde",
+      "amount": 80,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "rødvinseddike af god kvalitet",
+      "optional": false
+    },
+    {
+      "section": "Mojo verde",
+      "amount": 20,
+      "unit": "g",
+      "name": "salt",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Svampe og spinat",
+      "amount": 300,
+      "unit": "g",
+      "name": "svampe",
+      "note": "blandede vilde",
+      "optional": false
+    },
+    {
+      "section": "Svampe og spinat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Svampe og spinat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Svampe og spinat",
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampe og spinat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Svampe og spinat",
+      "amount": 25,
+      "unit": "g",
+      "name": "jamón ibérico",
+      "note": "i skiver, de Bellota",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Jamónfond",
+      "text": "Tænd ovnen på 200 °C varmluft."
+    },
+    {
+      "section": "Jamónfond",
+      "text": "Vend løg, selleri, gulerod og kyllingevinger med olien på en bageplade. Rist dem i 15-20 minutter, til de er gyldne."
+    },
+    {
+      "section": "Jamónfond",
+      "text": "Kom indholdet af pladen i en stor gryde sammen med jamónknogler, hvidløg, rosmarin, laurbærblad og timian. Fyld vand på, så det lige dækker, og bring det i kog."
+    },
+    {
+      "section": "Jamónfond",
+      "text": "Øs skummet af, og skru ned, så fonden simrer. Lad den simre i 3 timer, og skum af ind imellem."
+    },
+    {
+      "section": "Jamónfond",
+      "text": "Si fonden først gennem en fin si og derefter gennem et klæde."
+    },
+    {
+      "section": "Jamónsauce",
+      "text": "Kog 600 g af fonden ind til en fjerdedel, så der kun er 150 g tilbage, og saucen er tyk og kraftig."
+    },
+    {
+      "section": "Jamónsauce",
+      "text": "Rør fløden i, og lad saucen koge et par minutter mere. Pisk smørret i, og smag til med citronsaft. Hold saucen varm."
+    },
+    {
+      "section": "Mojo verde",
+      "text": "Blend alle ingredienserne til mojo verden, til den er helt glat."
+    },
+    {
+      "section": "Havtaske",
+      "text": "Gør en kulgrill klar til indirekte varme, og lad den blive rigtig varm, før fisken kommer på. Tag havtasken ud af køleskabet 20-30 minutter før grillningen."
+    },
+    {
+      "section": "Havtaske",
+      "text": "Varm hoisinsaucen og citronsaften op på en bred pande, til den bobler. Sæt panden ved siden af grillen."
+    },
+    {
+      "section": "Havtaske",
+      "text": "Gnid havtasken med olie og salt, og læg den på det varmeste sted på grillen. Hold godt øje med fisken og gløderne, så intet brænder på."
+    },
+    {
+      "section": "Havtaske",
+      "text": "Vend filetterne, når de slipper risten uden at hænge fast, og vend dem jævnligt herefter. Du kan flytte dem til et sted med middelhøj varme."
+    },
+    {
+      "section": "Havtaske",
+      "text": "Når fisken er 30 °C, vendes den i saucen, så den er godt dækket. Læg den tilbage på grillen, så saucen får lidt sviende kant. Gentag, til glasuren er sticky, med en flot stegt farve og en smule sort kant."
+    },
+    {
+      "section": "Havtaske",
+      "text": "Tag fisken af varmen, når den er tilpas stegt, og lad den hvile på en rist et lunt sted i 5-8 minutter."
+    },
+    {
+      "section": "Svampe og spinat",
+      "text": "Rens svampene for jord, og skær eventuelle rødder af. Vend dem med olie og salt."
+    },
+    {
+      "section": "Svampe og spinat",
+      "text": "Grill svampe og spinat over høj varme i en fin fiskekurv eller en varmefast metalsi sammen med et rygende stykke træ eller træflis. Vend dem af og til i 10-20 sekunder."
+    },
+    {
+      "section": "Svampe og spinat",
+      "text": "Tag dem af varmen, og vend dem med citronsaften. Smag til med salt, og hold dem varme."
+    },
+    {
+      "section": "Anretning",
+      "text": "Hæld jamónsaucen på et fad. Skær havtasken i skiver, og lad dem trække et øjeblik på køkkenrulle, så overskydende saft suges op."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg fisken på fadet, og top med svampe og spinat. Dryp med mojo verde, og afslut med skiver af jamón ibérico."
+    }
+  ],
+  "changes": [
+    "Char siu sauce er skiftet til hoisinsauce.",
+    "Havtaske bruges i stedet for monkfish.",
+    "Agretti er skiftet til spinat.",
+    "Merlot-eddike er skiftet til rødvinseddike."
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/grilled-mackerel-shallot-chutney-fries-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:48:19.514Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Grillet makrel med skalotteløgschutney og pommes frites",
+  "intro": "Sprød grillet makrel med sødsur løgchutney og hjemmelavede pommes frites, der er friturestegt to gange. Marinaden med eddike og citronskal tager fedmen af fisken.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til chutneyen",
+      "amount": 300,
+      "unit": "g",
+      "name": "løg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 75,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 75,
+      "unit": "ml",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til pommes frites",
+      "amount": 600,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "store, melede",
+      "optional": false
+    },
+    {
+      "section": "Til pommes frites",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Til pommes frites",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til makrellen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "makrel",
+      "note": "hele, filetterede",
+      "optional": false
+    },
+    {
+      "section": "Til makrellen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til makrellen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til makrellen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til makrellen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal",
+      "optional": false
+    },
+    {
+      "section": "Til makrellen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Chutney",
+      "text": "Svits løgene langsomt i olivenolie i 20–25 minutter, til de er gyldne og møre."
+    },
+    {
+      "section": "Chutney",
+      "text": "Rør farin, eddike, sennepsfrø og timian i gryden. Lad det simre i cirka 20 minutter, til chutneyen er tyk. Smag til med salt."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Mens chutneyen simrer, skal kartoflerne skrælles og skæres i tynde stave. Skyl dem og læg dem i koldt vand i 30 minutter."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Hæld vandet fra og tør kartoffelstavene grundigt med rene viskestykker."
+    },
+    {
+      "section": "Makrel",
+      "text": "Bland eddike, salt, farin, citronskal og olivenolie. Vend makrelfileterne i marinaden, og lad dem stå i 20 minutter, mens du steger pommes fritesene."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Varm rapsolie op til 140 °C i en tung gryde med høj kant. Der skal være nok olie til, at kartoflerne kan dække."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Steg kartoflerne i små portioner i 5–6 minutter, til de er bløde og lyse. Løft dem op med en hulske og læg dem forsigtigt til side."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Skru op for olien til 190 °C. Steg kartoflerne igen i portioner, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Tag dem op med hulske, lad dem dryppe af på køkkenrulle, og drys dem med salt, mens de er varme."
+    },
+    {
+      "section": "Makrel",
+      "text": "Grill makrellen med skindsiden opad på en varm grill, et bål eller en pande, til skindet er sprødt, og kødet nemt skiller sig i flager."
+    },
+    {
+      "section": null,
+      "text": "Server makrellen med en klat chutney og rigeligt med pommes frites."
+    }
+  ],
+  "changes": [
+    "Maltseddike er erstattet af almindelig eddike.",
+    "Demerarasukker er erstattet af brun farin.",
+    "Maris Piper-kartofler er erstattet af almindelige kartofler.",
+    "Vegetabilsk olie er erstattet af rapsolie.",
+    "Havsalt er erstattet af salt."
+  ]
+}

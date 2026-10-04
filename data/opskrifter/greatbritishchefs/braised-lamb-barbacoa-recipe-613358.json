@@ -1,0 +1,347 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/braised-lamb-barbacoa-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:18:07.106Z",
+  "total_minutes": 80,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 29,
+  "title": "Langtidsstegt lam barbacoa med stegt spidskål, salsa og fladbrød",
+  "intro": "Lammebov marineret i røget chilipasta og braiseret mør i ovnen, serveret i hjemmebagt fladbrød med syltede rødløg, grillet spidskål og frisk urtesalsa.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til lammet",
+      "amount": 2,
+      "unit": "kg",
+      "name": "lammeskulder",
+      "note": "med ben",
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 3,
+      "unit": "stk",
+      "name": "chipotle",
+      "note": "i adobo",
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "nellike",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "efter behov",
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til lammet",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kålen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "skåret i 6 både",
+      "optional": false
+    },
+    {
+      "section": "Til kålen",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "efter behov",
+      "optional": false
+    },
+    {
+      "section": "Til kålen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødet",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødet",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødet",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "efter behov",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede rødløg",
+      "text": "Kom rødløgsskiverne i en lille skål. Varm eddike, sukker og salt, til det hele er opløst, og hæld det over løgene. Rør rundt, og lad løgene stå og syltes, mens du laver resten."
+    },
+    {
+      "section": "Til lammet",
+      "text": "Tænd ovnen på 150°C varmluft."
+    },
+    {
+      "section": "Til lammet",
+      "text": "Kom hvidløg, chipotle, røget paprika, spidskommen, nellike, oregano, brun farin, limesaft og en lille skvæt olie i en blender. Kør det til en tyk, glat pasta."
+    },
+    {
+      "section": "Til lammet",
+      "text": "Krydr skulderen kraftigt med salt og peber, og gnid derefter pastaen ind over hele kødet."
+    },
+    {
+      "section": "Til lammet",
+      "text": "Læg løgkvartene i bunden af en stor gryde, og anbring lammet ovenpå. Hæld fond og vand ved, og sæt et tætsluttende låg på."
+    },
+    {
+      "section": "Til lammet",
+      "text": "Lad lammet stege i ovnen i 3,5-4 timer, til kødet er helt mørt, og benet nemt glider ud."
+    },
+    {
+      "section": "Til fladbrødet",
+      "text": "Rør mel og salt sammen i en skål. Tilsæt det lune vand og olien, og rør til en ujævn dej. Ælt den glat i 5-6 minutter. Dæk til, og lad dejen hvile, mens lammet står i ovnen, dog mindst 30 minutter."
+    },
+    {
+      "section": "Til lammet",
+      "text": "Løft lammet op af gryden, og fjern benet. Pil kødet i strimler, og vend det i den afkogte sky i gryden. Hold det varmt."
+    },
+    {
+      "section": "Til kålen",
+      "text": "Dryp kålbådene med lidt olie, og drys dem med salt. Varm en grillpande helt op, og brun kålen på de to snitflader. Sæt kålen i ovnen i 8-10 minutter, til den er mør, og hak den derefter i mundrette stykker."
+    },
+    {
+      "section": "Til salsaen",
+      "text": "Bland urter, skalotteløg, chili, citronskal og citronsaft. Smag til med salt, og rør nok olie i til en løs salsa, der kan øses med ske. Juster smagen til sidst."
+    },
+    {
+      "section": "Til fladbrødet",
+      "text": "Del den hvilede dej i 6-8 lige store kugler lige før servering, og rul hver kugle ud til en tynd rund. Varm en tør stegepande op ved middelhøj varme. Bag brødene 1-2 minutter på hver side, til de hæver og får brune pletter. Pak dem ind i et rent viskestykke, så de holder varmen."
+    },
+    {
+      "section": null,
+      "text": "Læg de varme fladbrød på et bræt, og fordel det trevlede lam over dem. Top med syltede løg, kål og rigeligt salsa."
+    }
+  ],
+  "changes": [
+    "Lammefond er erstattet af kyllingefond.",
+    "Strong white bread flour er erstattet af hvedemel.",
+    "Hispi cabbage er erstattet af spidskål.",
+    "Vegetable oil er erstattet af rapsolie.",
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "White wine vinegar er erstattet af hvidvinseddike."
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "url": "https://www.valdemarsro.dk/minestronesuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:45:59.328Z",
+  "total_minutes": 30,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Minestronesuppe",
+  "intro": "En solid grøntsagssuppe med sprød bacon, tomat og små nudler. Serveres med persille og friskrevet parmesan.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "skive",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "suppenudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "i flager",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien i en gryde, og brun baconskiverne, til de er sprøde. Løft dem over på køkkenrulle, og lad dem køle lidt, inden du skærer dem i tern."
+    },
+    {
+      "section": null,
+      "text": "Rør løg, hvidløg, gulerødder og squash ned i det fedt, der er tilbage i gryden. Svits grøntsagerne i nogle minutter ved middelvarme under omrøring."
+    },
+    {
+      "section": null,
+      "text": "Kom baconternene i gryden sammen med tomater, tomatpuré, fond, timian og laurbærblade. Læg låg på, og lad suppen småkoge i 10-15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt suppenudlerne, og kog dem møre i suppen."
+    },
+    {
+      "section": null,
+      "text": "Krydr med salt og peber. Server suppen varm med persille og parmesan strøet over, og tilbyd brød ved siden af."
+    }
+  ],
+  "changes": [
+    "Koncentreret tomatpuré er skrevet som tomatpuré.",
+    "Grøntsagsbouillon er skrevet som grøntsagsfond."
+  ]
+}

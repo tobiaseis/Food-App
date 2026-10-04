@@ -1,0 +1,148 @@
+{
+  "url": "https://www.valdemarsro.dk/pasta-arrabiata/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:47:57.558Z",
+  "total_minutes": 45,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Pasta arrabiata",
+  "intro": "Klassisk italiensk pasta med en skarp tomatsauce, hvor chilien først trækkes i olie, så varmen bliver mild og rund. Frisk basilikum, citronskal og parmesan runder retten af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kerner og skillevægge, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "pasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "flåede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "eddike",
+      "note": "balsamico",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, kun fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, eller oregano",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Hæld olivenolien i en lille gryde sammen med chilien. Varm den langsomt op ved lav til middel varme, til den er lunken – så varm, at en lillefinger lige kan holde til det."
+    },
+    {
+      "section": null,
+      "text": "Lad chilien trække i olien i 30 minutter. Sluk for varmen, og si chilien fra. Olien kan bruges som chiliolie til andre retter. Metoden gør chilien mildere."
+    },
+    {
+      "section": null,
+      "text": "Kog pastaen al dente i rigeligt vand med lidt salt, mens saucen laves."
+    },
+    {
+      "section": null,
+      "text": "Kom den sigtede chili tilbage i gryden med hvidløg, tomater, salt og peber. Bring det i kog, og lad saucen simre med låg i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Smag saucen til med balsamico, sukker, citronskal og den hakkede basilikum. Vend den med den nykogte pasta."
+    },
+    {
+      "section": null,
+      "text": "Anret med parmesan og et drys basilikum."
+    }
+  ],
+  "changes": []
+}

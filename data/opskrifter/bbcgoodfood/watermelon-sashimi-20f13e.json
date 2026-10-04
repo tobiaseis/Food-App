@@ -1,0 +1,108 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/watermelon-sashimi",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:54:54.611Z",
+  "total_minutes": 50,
+  "active_minutes": 10,
+  "yield_count": 6,
+  "source_lines": 8,
+  "title": "Vandmelon-sashimi",
+  "intro": "Ovnbagt vandmelon i skiver, der med sojaen og sesamen minder om rå fisk i konsistensen. Serveres kold med en skarp dip ved siden af.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "vandmelon",
+      "note": "skrællet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "sesamolie",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "blandede",
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olie",
+      "note": "sesamolie",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Del vandmelonen på midten, og skær den i skiver på ½-1 cm."
+    },
+    {
+      "section": null,
+      "text": "Læg skiverne let overlappende i et dybt ovnfad. Hæld sojasauce, eddike og sesamolie over, og vend skiverne, så de er dækket."
+    },
+    {
+      "section": null,
+      "text": "Bag i ovnen i 40 minutter, til melonen er blød. Lad den køle helt af."
+    },
+    {
+      "section": "Til dippen",
+      "text": "Rør ingredienserne til dippen sammen, og hæld den i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Anret den afkølede melon på et fad, og drys med sesamfrø. Server med dippen ved siden af."
+    }
+  ],
+  "changes": []
+}

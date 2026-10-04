@@ -1,0 +1,124 @@
+{
+  "url": "https://www.arla.dk/opskrifter/ovnbagt-laks-med-blomkal-og-peberrodsflode/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:03:14.096Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Ovnbagt laks med blomkål og peberrod",
+  "intro": "Laks og blomkål bages sammen i fad og får til sidst en cremet dildsauce over. Server med kartofler og masser af peberrod.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Laks og blomkål",
+      "amount": 400,
+      "unit": "g",
+      "name": "laks",
+      "note": "laksefilet uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": "Laks og blomkål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "delt i mindre buketter, ca. 600 g",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ved serveringen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "peberrod",
+      "note": "høvlet",
+      "optional": false
+    },
+    {
+      "section": "Ved serveringen",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "kviste til pynt",
+      "optional": false
+    },
+    {
+      "section": "Ved serveringen",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "kogte",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Laks og blomkål",
+      "text": "Skær laksen i fire ens stykker, og læg dem i et ovnfast fad."
+    },
+    {
+      "section": "Laks og blomkål",
+      "text": "Læg blomkålsbuketterne rundt om fisken."
+    },
+    {
+      "section": "Laks og blomkål",
+      "text": "Sæt fadet midt i ovnen, og bag det i ca. 10 minutter ved 225 °C (almindelig ovn)."
+    },
+    {
+      "section": "Dildsauce",
+      "text": "Rør fløde, dild, citronsaft, salt og peber sammen i en skål."
+    },
+    {
+      "section": "Dildsauce",
+      "text": "Tag fadet ud efter de første 10 minutter, og hæld saucen jævnt over laks og blomkål. Sæt det tilbage i ovnen, til retten er færdigbagt."
+    },
+    {
+      "section": "Ved serveringen",
+      "text": "Strø peberrod over laksen, pynt med dildkviste, og server med de kogte kartofler."
+    }
+  ],
+  "changes": []
+}

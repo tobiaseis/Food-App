@@ -1,0 +1,235 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-jalfrezi",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:59:43.296Z",
+  "total_minutes": 70,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Kylling jalfrezi",
+  "intro": "Indisk kyllingeret med en krydret tomatsauce, peberfrugt og friske chilier. Server den med basmatiris eller naanbrød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til saucen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "flåede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, hakket",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "fint hakket",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "hakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "basmatiris",
+      "note": "kogt, eller naanbrød",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til kyllingen",
+      "text": "Vend kyllingeterningerne i spidskommen, koriander og gurkemeje. Stil dem på køl, mens saucen laves."
+    },
+    {
+      "section": "Til saucen",
+      "text": "Brun løg, hvidløg og grøn chili i en stor pande med lidt olie i ca. 5 minutter."
+    },
+    {
+      "section": "Til saucen",
+      "text": "Hæld vandet på løgblandingen, og lad den simre i ca. 20 minutter."
+    },
+    {
+      "section": "Til saucen",
+      "text": "Blend de flåede tomater helt glatte i en foodprocessor, mens løgene simrer."
+    },
+    {
+      "section": "Til saucen",
+      "text": "Varm en anden stor pande, og rist koriander, spidskommen og gurkemeje ved svag varme i lidt olie i ca. 1 minut. Kom de blendede tomater i, og lad det simre i ca. 10 minutter."
+    },
+    {
+      "section": "Til saucen",
+      "text": "Blend løgblandingen glat, og rør den ned i tomatsaucen. Smag til med rigeligt salt og peber, og lad saucen simre i 20 minutter. Saucen kan laves i stor mængde og fryses."
+    },
+    {
+      "section": "Til kyllingen",
+      "text": "Steg den marinerede kylling i olie under konstant omrøring. Skru ned for varmen efter nogle minutter, og tilsæt løgskiver, peberfrugt og rød chili. Rør, til løg og peberfrugt er møre."
+    },
+    {
+      "section": "Til kyllingen",
+      "text": "Hæld saucen over kyllingen, og lad retten simre i 10-20 minutter. Tilsæt en smule vand, hvis den bliver for tyk."
+    },
+    {
+      "section": "Til servering",
+      "text": "Rør garam masala og koriander i lige før servering. Server med ris eller naanbrød."
+    }
+  ],
+  "changes": [
+    "Plum tomatoes er erstattet med flåede tomater.",
+    "Vegetable oil er erstattet med olie."
+  ]
+}

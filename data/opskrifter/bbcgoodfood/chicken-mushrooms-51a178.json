@@ -1,0 +1,148 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-mushrooms",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:04:34.466Z",
+  "total_minutes": 40,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Kylling med champignon og bacon",
+  "intro": "Møre kyllingelår i en sauce af champignon, bacon og skalotteløg, som får et frisk strejf af eddike, ærter og persille til sidst.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingelår",
+      "note": "udbenet, uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "til at vende kyllingen i",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "bacon i tern",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "champignon",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "store, hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm halvdelen af olien på en pande. Krydr kyllingen med salt og peber, og vend den i mel."
+    },
+    {
+      "section": null,
+      "text": "Brun kyllingen på alle sider, og tag den af panden."
+    },
+    {
+      "section": null,
+      "text": "Steg bacon og champignon, til de er bløde. Tag dem af panden."
+    },
+    {
+      "section": null,
+      "text": "Hæld resten af olien på panden, og svits skalotteløgene i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt fond og eddike, og lad det koge kraftigt i 1-2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom kylling, bacon og champignon tilbage på panden, og lad retten simre i 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør ærter og persille i, og lad det koge i 2 minutter. Server straks."
+    }
+  ],
+  "changes": [
+    "Pancetta er erstattet af bacon i tern.",
+    "Hvidvinseddike er skiftet til almindelig eddike (hvidvinseddike angivet i note).",
+    "Kyllingefond er brugt i stedet for chicken stock."
+  ]
+}

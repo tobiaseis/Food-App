@@ -1,0 +1,180 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/pesto-crusted-cod-puy-lentils",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:47:00.042Z",
+  "total_minutes": 25,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 9,
+  "title": "Torsk med pestodække og puylinser",
+  "intro": "Ovnbagt torsk med en sprød skorpe af hjemmelavet basilikumpesto, serveret med varme linser med chili og tomat. Hurtig middag til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til pestoen",
+      "amount": 1,
+      "unit": "pakke",
+      "name": "basilikum",
+      "note": "kun bladene",
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": 25,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "bruges både i pestoen og til linserne",
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": 50,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": "bruges både i pestoen og til linserne",
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til torsken",
+      "amount": 2,
+      "unit": "stk",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til torsken",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til torsken",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til linserne",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Til linserne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "chili",
+      "note": "røde, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til linserne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "store, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til linserne",
+      "amount": 250,
+      "unit": "g",
+      "name": "linser",
+      "note": "puylinser, færdigkogte",
+      "optional": false
+    },
+    {
+      "section": "Til linserne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til linserne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pesto",
+      "text": "Kom basilikum, de hele hvidløgsfed, pinjekerner, saften fra den halve citron, salt og peber i en food processor. Kør det i korte ryk, og hæld det meste af olien i en tynd stråle undervejs. Smag til med salt og peber."
+    },
+    {
+      "section": "Torsk",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft), og beklæd et fad eller en bradepande med folie."
+    },
+    {
+      "section": "Torsk",
+      "text": "Krydr torskefiletterne på begge sider, og smør pestoen tykt ud over dem."
+    },
+    {
+      "section": "Torsk",
+      "text": "Bag fisken i 8-10 minutter, til pestoen har dannet en skorpe, og torsken er gennemstegt."
+    },
+    {
+      "section": "Linser",
+      "text": "Mens fisken bager, varmes den resterende olie i en lille gryde. Svits det knuste hvidløg og chilien et par minutter, så smagen frigives."
+    },
+    {
+      "section": "Linser",
+      "text": "Kom tomaterne i gryden, og lad dem koge med i 1 minut."
+    },
+    {
+      "section": "Linser",
+      "text": "Rør linserne i, pres saften fra den anden halve citron ud over, og smag til med salt og peber. Varm det hele godt igennem."
+    },
+    {
+      "section": "Linser",
+      "text": "Server linserne sammen med den pestobagte torsk."
+    }
+  ],
+  "changes": []
+}

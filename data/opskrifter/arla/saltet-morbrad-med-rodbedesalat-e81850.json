@@ -1,0 +1,203 @@
+{
+  "url": "https://www.arla.dk/opskrifter/saltet-morbrad-med-rodbedesalat/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:28:04.327Z",
+  "total_minutes": 165,
+  "active_minutes": 55,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Saltet svinemørbrad med rødbedesalat",
+  "intro": "Mørbraden saltes i nogle timer og simrer derefter blidt færdig, så den bliver mør og saftig. Den serveres med sennepsdressing, rødbedesalat og ovnstegte kartofler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Mørbrad",
+      "amount": 500,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": "2 stk.",
+      "optional": false
+    },
+    {
+      "section": "Mørbrad",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Mørbrad",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mørbrad",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": "til kogning af kødet",
+      "optional": false
+    },
+    {
+      "section": "Sennepsdressing",
+      "amount": 300,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Sennepsdressing",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "dijonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sennepsdressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sennepsdressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Sennepsdressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 650,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "ca. 5 små, hele",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til kogning af rødbederne",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 50,
+      "unit": "g",
+      "name": "kapers",
+      "note": "hele og halve",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": null,
+      "unit": null,
+      "name": "kapers",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "skrællede og stegt i ovnen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Saltning",
+      "text": "Pil sener og hinder af mørbradene."
+    },
+    {
+      "section": "Saltning",
+      "text": "Rør salt og sukker sammen, og gnid blandingen over kødet. Husk især de tynde steder."
+    },
+    {
+      "section": "Saltning",
+      "text": "Dæk kødet til og lad det ligge i køleskabet i cirka 3 timer."
+    },
+    {
+      "section": "Sennepsdressing",
+      "text": "Rør alle ingredienserne til dressingen sammen, og stil den tildækket i køleskabet i mindst en halv time."
+    },
+    {
+      "section": "Rødbedesalat",
+      "text": "Skyl rødbederne godt. Bring vandet i kog i en gryde med saltet, og læg rødbederne i."
+    },
+    {
+      "section": "Rødbedesalat",
+      "text": "Læg låg på, og lad rødbederne simre ved svag varme i cirka 35 minutter, til de er møre."
+    },
+    {
+      "section": "Rødbedesalat",
+      "text": "Si kogevandet fra, og afkøl rødbederne kort under koldt vand. Skær top og rodende af, og træk skrællen af."
+    },
+    {
+      "section": "Rødbedesalat",
+      "text": "Skær rødbederne i tykke stave. Læg dem i en skål i lag med rødløg og kapers."
+    },
+    {
+      "section": null,
+      "text": "Læg kødet i en gryde, og dæk det med koldt vand. Bring det i kog, sæt låg på, og lad det simre ved svag varme i cirka 12 minutter."
+    },
+    {
+      "section": null,
+      "text": "Øs skummet af. Mål temperaturen midt i kødet med et stegetermometer – den skal være cirka 60 °C."
+    },
+    {
+      "section": null,
+      "text": "Tag gryden af varmen, og lad kødet trække under låg i vandet i cirka 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Er dressingen for tyk, så tynd den med lidt vand. Smag den til."
+    },
+    {
+      "section": null,
+      "text": "Skær mørbraden i skiver, og server den med dressingen, rødbedesalaten og de ovnstegte kartofler."
+    }
+  ],
+  "changes": [
+    "Kvark/græsk yoghurt/fraiche er valgt som græsk yoghurt.",
+    "Kapersbær er skiftet til kapers."
+  ]
+}

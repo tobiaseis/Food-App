@@ -1,0 +1,204 @@
+{
+  "url": "https://www.arla.dk/opskrifter/pasta-med-citronkylling-og-grontsagsflode/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:01:38.383Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Pasta med citronkylling og grøntsagsfløde",
+  "intro": "Fuldkornspasta og kogte grøntsager vendes i en cremet hvidløgsfløde med basilikum og citron. Toppen er sprødt stegt kyllingefilet med citron.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "amount": 4,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "amount": 300,
+      "unit": "g",
+      "name": "pasta",
+      "note": "tørret fuldkornspasta, fx penne",
+      "optional": false
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "amount": 400,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "amount": 300,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "store, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "fintrevet skal, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "amount": 1,
+      "unit": "dl",
+      "name": "basilikum",
+      "note": "hakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Citronkylling",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronkylling",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingeinderfilet",
+      "note": "rensede",
+      "optional": false
+    },
+    {
+      "section": "Citronkylling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Citronkylling",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "store, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Citronkylling",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Citronkylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet 5-peberblanding",
+      "optional": false
+    },
+    {
+      "section": "Citronkylling",
+      "amount": 1,
+      "unit": "dl",
+      "name": "basilikum",
+      "note": "hakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet 5-peberblanding",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "basilikum",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "text": "Bring vandet i kog med saltet i en stor, tykbundet gryde."
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "text": "Kog pastaen i cirka 7 minutter. Læg broccoli og blomkål i gryden, og kog videre i cirka 4 minutter, til pastaen er mør, men ikke blød."
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "text": "Hæld det hele i et dørslag, og lad det dryppe godt af."
+    },
+    {
+      "section": "Pasta og grøntsagsfløde",
+      "text": "Kog fløde og hvidløg op i den tomme gryde. Vend pasta, grøntsager, citronskal og basilikum i fløden."
+    },
+    {
+      "section": "Citronkylling",
+      "text": "Varm en pande op, og lad smørret tage en gylden farve, mens pastaen koger."
+    },
+    {
+      "section": "Citronkylling",
+      "text": "Steg kyllingen ved kraftig varme i cirka 1 minut på hver side, så den får farve."
+    },
+    {
+      "section": "Citronkylling",
+      "text": "Sænk til jævn varme, og steg kødet i cirka 2 minutter. Vend det én gang undervejs."
+    },
+    {
+      "section": "Citronkylling",
+      "text": "Skru op til kraftig varme igen. Hæld citronsaft og hvidløg på panden, krydr med salt og peber, og steg i cirka 2 minutter mere."
+    },
+    {
+      "section": "Citronkylling",
+      "text": "Vend kyllingen i basilikum lige før servering."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret pastaen på 4 varme, dybe tallerkener, og læg kyllingen ovenpå. Pynt med peber og friske basilikumblade."
+    }
+  ],
+  "changes": []
+}

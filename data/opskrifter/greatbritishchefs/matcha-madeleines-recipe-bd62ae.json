@@ -1,0 +1,166 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/matcha-madeleines-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:19:45.174Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 12,
+  "source_lines": 11,
+  "title": "Matcha-madeleines",
+  "intro": "Bløde, luftige madeleines med grøn te-smag og et let drys af matchasukker. Dejen skal hvile i køleskabet natten over, så start dagen før.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Til dejen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 15,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 30,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 90,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 10,
+      "unit": "g",
+      "name": "matcha",
+      "note": "pulver af ceremonial kvalitet",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 8,
+      "unit": "g",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 30,
+      "unit": "g",
+      "name": "malede mandler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til formen",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "blødt, til smøring",
+      "optional": false
+    },
+    {
+      "section": "Til formen",
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "til formen",
+      "optional": false
+    },
+    {
+      "section": "Til matchasukker",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "matcha",
+      "note": "pulver af ceremonial kvalitet",
+      "optional": true
+    },
+    {
+      "section": "Til matchasukker",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dagen før",
+      "text": "Pisk æg, brun farin og sukker i en røremaskine med piskeris på høj hastighed i cirka 8 minutter. Massen skal være lys, luftig og så tyk, at den danner bånd, når du løfter piskeriset."
+    },
+    {
+      "section": "Dagen før",
+      "text": "Smelt smør og honning sammen i en varmefast skål i mikroovnen. Kig til det cirka hvert 10. sekund, og lad det køle lidt af bagefter."
+    },
+    {
+      "section": "Dagen før",
+      "text": "Pisk hvedemel, matcha, bagepulver og malede mandler sammen i en stor skål."
+    },
+    {
+      "section": "Dagen før",
+      "text": "Vend det smeltede smør forsigtigt i æggemassen med en spatel, og vend derefter melblandingen i. Rør så nænsomt som muligt, så luften bliver i dejen."
+    },
+    {
+      "section": "Dagen før",
+      "text": "Dæk dejen til, og stil den i køleskabet i 12 timer."
+    },
+    {
+      "section": "Bagning",
+      "text": "Varm ovnen op til 180 °C. Pensl en madeleineform med 12 eller 24 forme grundigt med blødt smør, så det kommer helt ned i alle render. Drys let med hvedemel, og bank det overskydende af."
+    },
+    {
+      "section": "Bagning",
+      "text": "Rør forsigtigt rundt i dejen med en spatel, og fyld den i en sprøjtepose. Sprøjt dejen i formene, til de er cirka tre fjerdedele fyldt. Er formen lille, så bag i flere omgange."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag madeleinesene i 8-13 minutter. De er færdige, når de er hævede og let gyldne, og en tandstikker kommer ren op. Bliver toppen for mørk, så læg et stykke folie løst over. Tiden afhænger af formens størrelse."
+    },
+    {
+      "section": "Til matchasukker",
+      "text": "Hvis du vil have matchasukker, så rør matcha og flormelis sammen i en lille skål, mens madeleinesene bager."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend madeleinesene ud på en rist, og lad dem køle lidt af. Drys dem eventuelt med matchasukker, og server dem lune."
+    }
+  ],
+  "changes": [
+    "Demerarasukker er erstattet af brun farin."
+  ]
+}

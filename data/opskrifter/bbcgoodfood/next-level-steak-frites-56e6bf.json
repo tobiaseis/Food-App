@@ -1,0 +1,218 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/next-level-steak-frites",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:41:39.919Z",
+  "total_minutes": 75,
+  "active_minutes": 25,
+  "yield_count": 2,
+  "source_lines": 15,
+  "title": "Bøf med pommes frites og peberkorns­sauce",
+  "intro": "Mørt stegte bøffer med hjemmelavede pommes frites og en cremet sauce af grønne peberkorn og cognac. Saucen kan laves i god tid, så resten går hurtigt.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Bøffer",
+      "amount": 400,
+      "unit": "g",
+      "name": "Bøf",
+      "note": "2 stk. af ca. 200 g, f.eks. entrecote",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "Olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "Timian",
+      "note": "nogle kviste",
+      "optional": true
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "Karse",
+      "note": "til servering",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pommes frites",
+      "amount": 700,
+      "unit": "g",
+      "name": "Kartofler",
+      "note": "melede",
+      "optional": false
+    },
+    {
+      "section": "Pommes frites",
+      "amount": null,
+      "unit": null,
+      "name": "Solsikkeolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Peberkornssauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "Smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peberkornssauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Peberkornssauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Grønne peberkorn",
+      "note": "på lage, drænet",
+      "optional": false
+    },
+    {
+      "section": "Peberkornssauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peberkornssauce",
+      "amount": 50,
+      "unit": "ml",
+      "name": "Cognac",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peberkornssauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "Oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peberkornssauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "Piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peberkornssauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Sennep",
+      "note": "Dijon",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Peberkornssauce",
+      "text": "Smelt smørret i en lille gryde ved lav varme. Svits skalotteløgene i cirka 5 minutter, til de er bløde uden at få farve."
+    },
+    {
+      "section": "Peberkornssauce",
+      "text": "Rør peberkorn og mel i gryden, og hæld cognacen ud over. Lad den boble et par minutter, til det danner en tyk masse."
+    },
+    {
+      "section": "Peberkornssauce",
+      "text": "Tilsæt fonden, og lad saucen simre i 10-15 minutter, til den er lidt tykkere. Rør fløde og sennep i, og smag til med salt og peber."
+    },
+    {
+      "section": "Peberkornssauce",
+      "text": "Saucen kan laves på forhånd: Afkøl den, og opbevar den i køleskabet i op til 3 dage eller i fryseren i op til 3 måneder. Tø frosset sauce op i køleskabet natten over, og varm den helt igennem."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Krydr bøfferne med salt og peber, og lad dem stå fremme, mens du laver pommes frites."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Skræl kartoflerne, og skær dem i pinde på tykkelse med en blyant. Skyl dem, og tør dem godt med et rent viskestykke."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Kom kartoffelpindene i en dyb gryde eller lille wok. De må højst fylde en tredjedel af gryden. Hæld så meget olie over, at den lige dækker."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Sæt gryden på medium varme, og bring olien i et let sim. Rør forsigtigt rundt med en træske."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Skru op på høj varme, så olien bobler kraftigt. Steg pommes frites i 15-20 minutter, til de er sprøde og gyldne, og rør af og til, så de ikke sætter sig fast."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Tag dem op med en hulske, og lad dem dryppe af på køkkenpapir. Du kan også bruge frosne pommes frites i en airfryer, hvis du vil spare tid."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Imens: Varm en stor, tung pande op med en smule olie, til den er meget varm. Brun bøfferne 1-2 minutter på hver side, til de er dybt gyldne og stegt, som du bedst kan lide dem."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Kom smør og timian på panden, og øs det varme smør over bøfferne i 30 sekunder. Læg dem på en varm tallerken, og lad dem hvile et par minutter."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Hæld overskydende fedt af panden. Kom peberkornssaucen på, og varm den 1-2 minutter, mens du skraber stegeskyen løs fra bunden. Rør kødsaften fra tallerkenen i."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Server bøfferne med pommes frites, karse og saucen, enten anrettet på tallerkener eller på et bræt med saucen i en lille gryde ved siden af."
+    }
+  ],
+  "changes": [
+    "Sirloin steak er skiftet til bøf (entrecote).",
+    "Maris Piper-kartofler er skiftet til almindelige melede kartofler.",
+    "Brandy er skiftet til cognac.",
+    "Double cream er skiftet til piskefløde.",
+    "Karse erstatter watercress."
+  ]
+}

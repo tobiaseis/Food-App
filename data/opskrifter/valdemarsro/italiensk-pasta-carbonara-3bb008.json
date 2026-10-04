@@ -1,0 +1,103 @@
+{
+  "url": "https://www.valdemarsro.dk/italiensk-pasta-carbonara/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:48:36.506Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Spaghetti carbonara",
+  "intro": "Klassisk romersk pasta med sprød svinekæbe, æg og ost, hvor saucen får sin cremede konsistens af pastavandet. Retten er hurtig at lave og kræver ingen fløde.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet, plus lidt til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bring en gryde med let saltet vand i kog, og kog spaghettien, til den næsten er mør, men stadig har godt bid."
+    },
+    {
+      "section": null,
+      "text": "Sæt en tør pande over middelvarme, og steg baconternene, til de er gyldne og sprøde. Tag panden af varmen, og hæld overskydende fedt fra, hvis der er meget."
+    },
+    {
+      "section": null,
+      "text": "Pisk æggeblommer, æg, parmesan og en generøs sjat peber sammen i en skål, til blandingen er cremet. Rør en smule pastavand i."
+    },
+    {
+      "section": null,
+      "text": "Hæld et par dl af pastavandet i et glas, før du afdrypper spaghettien."
+    },
+    {
+      "section": null,
+      "text": "Kom den afdryppede spaghetti tilbage i gryden sammen med baconen. Tilsæt æggeblandingen, og vend det hurtigt rundt. Tynd saucen med pastavand, til den er cremet."
+    },
+    {
+      "section": null,
+      "text": "Smag til med peber, og anret med det samme. Drys med parmesan og lidt mere peber."
+    }
+  ],
+  "changes": [
+    "Guanciale/pancetta er skiftet til bacon i tern.",
+    "Pecorino er skiftet til parmesan."
+  ]
+}

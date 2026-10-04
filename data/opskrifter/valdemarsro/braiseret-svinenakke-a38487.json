@@ -1,0 +1,236 @@
+{
+  "url": "https://www.valdemarsro.dk/braiseret-svinenakke/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:52:06.008Z",
+  "total_minutes": 150,
+  "active_minutes": 30,
+  "yield_count": 6,
+  "source_lines": 22,
+  "title": "Braiseret svinenakke med æbler og timian",
+  "intro": "Mørt svinenakkefilet, der simrer langsomt i æblemost og mørk øl med løg, gulerødder og krydderurter. Serveres med cremet kartoffelmos og en sauce med friske æbler.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "nakkefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "porre",
+      "note": "skåret i ringe",
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 6,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 5,
+      "unit": "stk",
+      "name": "peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 3,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 4,
+      "unit": "dl",
+      "name": "æblemost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 4,
+      "unit": "dl",
+      "name": "øl",
+      "note": "mørk",
+      "optional": false
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til sidst i gryden",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Til sidst i gryden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Til sidst i gryden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "skåret i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Til sidst i gryden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 2,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Braiseret nakkefilet",
+      "text": "Smelt smørret i en gryde, og brun nakkefileten på alle sider. Læg den over på en tallerken."
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "text": "Svits løg, gulerødder, porre, hvidløg og peberkorn i samme gryde ved middelvarme, til løgene er bløde."
+    },
+    {
+      "section": "Braiseret nakkefilet",
+      "text": "Læg kødet tilbage i gryden, og kom laurbærblade, rosmarin, timian, æblemost og øl i. Læg låg på, og lad det simre ved lav varme i 1½-2 timer."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Kog kartoflerne møre i usaltet vand. Varm mælken i en kasserolle til cirka 50 °C."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Mos de varme kartofler groft sammen med smørret. Pisk dem derefter med håndmixer, og hæld imens mælken i lidt ad gangen, til moset er cremet, luftigt og blødt. Smag til med salt, peber og muskatnød."
+    },
+    {
+      "section": "Til sidst i gryden",
+      "text": "Løft kødet op, og si saucen over i en skål. Kassér grøntsagerne og krydderurterne fra braiseringen."
+    },
+    {
+      "section": "Til sidst i gryden",
+      "text": "Kom kød og sauce tilbage i gryden med de små gulerodstern og porreringene. Lad det simre i 10 minutter, og rør æble og smør i. Smag til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret kødet med sauce og kartoffelmos. Drys med frisk timian og persille."
+    }
+  ],
+  "changes": []
+}

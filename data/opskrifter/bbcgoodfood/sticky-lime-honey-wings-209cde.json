@@ -1,0 +1,159 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/sticky-lime-honey-wings",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:29:36.044Z",
+  "total_minutes": 50,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Klistrede kyllingevinger med lime og honning",
+  "intro": "Ovnbagte kyllingevinger i en sød og syrlig marinade med honning og lime. Serveres med sprød coleslaw af hvidkål og gulerødder samt ris.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "kyllingevinger",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "gerne med reduceret saltindhold",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "flager",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skal og saft til marinaden",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "ris",
+      "note": "kogte, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 300,
+      "unit": "g",
+      "name": "hvidkål",
+      "note": "ca. en lille hel eller en halv stor",
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "limesaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 15,
+      "unit": "g",
+      "name": "koriander",
+      "note": "grofthakket",
+      "optional": true
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 190 °C varmluft (210 °C almindelig ovn)."
+    },
+    {
+      "section": null,
+      "text": "Kom vingerne i en stor skål. Vend dem med sojasauce, chili, honning samt limeskal og -saft, så de er dækket helt. Lad dem trække, mens du laver coleslawen."
+    },
+    {
+      "section": "Til coleslawen",
+      "text": "Skær gulerødderne i lange bånd med en skræller. Snit hvidkål og rødløg helt fint med en skarp kniv eller på en mandolin."
+    },
+    {
+      "section": "Til coleslawen",
+      "text": "Bland grøntsagerne med olivenolie og limesaft i en skål. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Læg vingerne på en bageplade med bagepapir, og bag dem i 35 minutter. Vend dem undervejs, når halvdelen af tiden er gået."
+    },
+    {
+      "section": null,
+      "text": "Vend koriander i coleslawen lige inden servering. Server vingerne med coleslaw og ris."
+    }
+  ],
+  "changes": [
+    "Chiliflager er skrevet som chili.",
+    "Chicken wings er skrevet som kyllingevinger."
+  ]
+}

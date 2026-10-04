@@ -1,0 +1,264 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/pork-caesar-schnitzel-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:10:20.242Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Schnitzel med cæsardressing",
+  "intro": "Sprøde, paneret svineschnitzler toppet med grillet hjertesalat og en cremet cæsardressing med ansjoser og parmesan. En ret, der blander wienerschnitzel og cæsarsalat.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til schnitzlerne",
+      "amount": 4,
+      "unit": "stk",
+      "name": "svinekoteletter",
+      "note": "udbenede",
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 120,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 60,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Cæsardressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblomme",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cæsardressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Cæsardressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Cæsardressing",
+      "amount": 4,
+      "unit": "stk",
+      "name": "ansjosfileter",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Cæsardressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Cæsardressing",
+      "amount": 1.2,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cæsardressing",
+      "amount": 30,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Cæsardressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "hjertesalat",
+      "note": "halveret på langs",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "revet, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ansjosfileter",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Schnitzlerne",
+      "text": "Skær overskydende fedt af koteletterne. Læg dem mellem to stykker bagepapir, og bank dem jævnt ud med en kagerulle eller kødhammer, til de er cirka 3 mm tykke. Krydr begge sider med salt og peber."
+    },
+    {
+      "section": "Schnitzlerne",
+      "text": "Stil tre dybe tallerkener frem. Kom mel på den første. Pisk æg og sennep sammen på den anden. Bland rasp, parmesan og en knivspids salt og peber på den tredje."
+    },
+    {
+      "section": "Schnitzlerne",
+      "text": "Vend hver kotelet i melet, og ryst det overskydende af. Træk den gennem ægget og derefter raspen. Gentag med æg og rasp, så panéringen bliver helt dækkende og tyk. Stil til side."
+    },
+    {
+      "section": "Cæsardressing",
+      "text": "Kom æggeblomme, sennep, hvidløg, ansjoser, citronskal og citronsaft i en morter eller en lille foodprocessor, og arbejd det til en pasta."
+    },
+    {
+      "section": "Cæsardressing",
+      "text": "Rør eller blend det hele, mens du langsomt hælder olivenolien i en tynd stråle, så dressingen emulgerer. Vend parmesanen i, og smag til med rigeligt peber."
+    },
+    {
+      "section": "Stegning",
+      "text": "Sæt en bred stegepande og en grillpande over middelhøj varme. Når begge er varme, tilsættes en god sjat rapsolie på dem."
+    },
+    {
+      "section": "Stegning",
+      "text": "Kom smørret på stegepanden. Læg schnitzlerne i, når smørret skummer – steg dem i portioner, hvis der ikke er plads. Steg 3-4 minutter på hver side, og øs jævnligt det varme fedt over dem."
+    },
+    {
+      "section": "Stegning",
+      "text": "Imens lægges hjertesalaten med snitfladen nedad på den varme grillpande. Lad den ligge urørt, til der er mørke grillstriber, og salaten er lidt faldet sammen. Drys med salt, og stil til side."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret en schnitzel midt på hver tallerken, og læg en halv hjertesalat ovenpå. Rør lidt rundt i dressingen, og tynd den evt. ud med en sjat vand. Dryp den over salaten."
+    },
+    {
+      "section": "Servering",
+      "text": "Afslut med parmesan, persille, peber, ansjoser og et drys olivenolie."
+    }
+  ],
+  "changes": [
+    "Frisk rasp er erstattet med almindelig rasp.",
+    "Baby gem er erstattet med hjertesalat.",
+    "Vegetabilsk olie er erstattet med rapsolie."
+  ]
+}

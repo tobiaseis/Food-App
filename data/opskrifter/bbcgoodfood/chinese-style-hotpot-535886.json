@@ -1,0 +1,347 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chinese-style-hotpot",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:04:49.069Z",
+  "total_minutes": 70,
+  "active_minutes": 30,
+  "yield_count": 8,
+  "source_lines": 37,
+  "title": "Kinesisk hotpot",
+  "intro": "En krydret sichuan-inspireret bouillon midt på bordet, hvor alle selv koger kød, skaldyr og grøntsager og dypper i hjemmerørte saucer. Sjov og social middag til en større gruppe.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Til bordet",
+      "amount": 300,
+      "unit": "g",
+      "name": "tigerrejer",
+      "note": "pillede og uden tarm, med hoved og hale",
+      "optional": false
+    },
+    {
+      "section": "Til bordet",
+      "amount": 250,
+      "unit": "g",
+      "name": "entrecote",
+      "note": "uden overskydende fedt, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bordet",
+      "amount": 300,
+      "unit": "g",
+      "name": "røget tofu",
+      "note": "drænet og skåret i 2,5 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Til bordet",
+      "amount": 300,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": "uden sener, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bordet",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": "uden skind og ben, skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": "Til bordet",
+      "amount": 300,
+      "unit": "g",
+      "name": "blandet skaldyr og fisk",
+      "note": "fx kammuslinger, fiskeboller og blæksprutteringe",
+      "optional": false
+    },
+    {
+      "section": "Til bordet",
+      "amount": 400,
+      "unit": "g",
+      "name": "blandede grøntsager",
+      "note": "fx pak choi, kinakål, broccoli, gulerødder og rød peberfrugt, snittet",
+      "optional": false
+    },
+    {
+      "section": "Til bordet",
+      "amount": 300,
+      "unit": "g",
+      "name": "champignon",
+      "note": "blandede svampe, fx østershatte, shiitake og champignon, halveret eller revet i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Til bordet",
+      "amount": 200,
+      "unit": "g",
+      "name": "tofuskind",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bordet",
+      "amount": 400,
+      "unit": "g",
+      "name": "nudler",
+      "note": "blandede, fx glasnudler, tynde risnudler og æggenudler",
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tørret chili",
+      "note": "lange, tørrede (3-4 stk)",
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 30,
+      "unit": "g",
+      "name": "sichuanpeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chilibønnesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "kyllingefond",
+      "note": "varm; grøntsagsfond kan også bruges",
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 6,
+      "unit": "stk",
+      "name": "tørrede shiitake",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 1,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "tørret mandarinskal",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Suppebund",
+      "amount": 50,
+      "unit": "ml",
+      "name": "chiliolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "ca. 5 cm, skrællet og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "kinakål",
+      "note": "vasket, bladene adskilt og skåret i 2,5 cm brede stykker",
+      "optional": false
+    },
+    {
+      "section": "Suppebund",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "snittet på skrå",
+      "optional": false
+    },
+    {
+      "section": "Dip 1",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "letsaltet, lys",
+      "optional": false
+    },
+    {
+      "section": "Dip 1",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "satésauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip 1",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip 1",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": "ristet",
+      "optional": false
+    },
+    {
+      "section": "Dip 1",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Dip 1",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Dip 1",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dip 1",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fint snittet",
+      "optional": false
+    },
+    {
+      "section": "Dip 1",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblomme",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Dip 1",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamfrø",
+      "note": "ristede, hvide",
+      "optional": false
+    },
+    {
+      "section": "Dip 2",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Dip 2",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dip 2",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "letsaltet, lys",
+      "optional": false
+    },
+    {
+      "section": "Dip 2",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip 2",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "ristet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppebund",
+      "text": "Varm olien op i en stor, dyb wok eller gryde (ca. 2 liter) over høj varme. Rør tørret chili og sichuanpeber rundt i ca. 5 sekunder, til det dufter."
+    },
+    {
+      "section": "Suppebund",
+      "text": "Rør chilibønnesaucen i, og hæld den varme fond over. Kom tørrede shiitake, stjerneanis, mandarinskal (hvis du bruger den), chiliolie og ingefær i, og bring det i kog."
+    },
+    {
+      "section": "Suppebund",
+      "text": "Læg kinakålen i bouillonen, og lad den koge i 2 minutter. Tilsæt derefter forårsløgene."
+    },
+    {
+      "section": "Dip 1",
+      "text": "Rør alle ingredienserne til den første dip sammen i en skål, og stil den til side."
+    },
+    {
+      "section": "Dip 2",
+      "text": "Bland ingredienserne til den anden dip i en anden skål, og stil den til side."
+    },
+    {
+      "section": null,
+      "text": "Stil en induktionsplade midt på spisebordet, og anret de rå ingredienser på tallerkener rundt om den. Sæt woken med bouillon på pladen, så den småkoger."
+    },
+    {
+      "section": null,
+      "text": "Lad hver gæst lægge det, de vil have, i bouillonen og fiske det op med en hulske eller et trådsold. Kog skaldyr, kylling og svinekød, til de er helt uigennemsigtige, mens grøntsagerne koger efter smag. Server med dipperne."
+    }
+  ],
+  "changes": [
+    "Oksemørbrad-udskæringen sirloin er erstattet med entrecote.",
+    "Sort riseddike er erstattet med balsamico."
+  ]
+}

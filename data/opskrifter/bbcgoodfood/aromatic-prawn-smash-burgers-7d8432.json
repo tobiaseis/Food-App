@@ -1,0 +1,294 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/aromatic-prawn-smash-burgers",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:52:50.485Z",
+  "total_minutes": 70,
+  "active_minutes": 30,
+  "yield_count": 2,
+  "source_lines": 24,
+  "title": "Aromatiske rejeburgere med ovnpommes frites",
+  "intro": "Smaskede rejepatties med hjemmeristet krydderiblanding, mangochutney og frisk koriander i brioche-boller. Serveres med sprøde ovnbagte kartoffelstave og limebåde.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kartoffelstave",
+      "amount": 900,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "med skræl, skrubbet og skåret i stave på 1 cm",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelstave",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelstave",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sort peber",
+      "note": "hele peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "annattofrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bukkehornsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanelstang",
+      "note": "lille, ca. 2 g",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "sumak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 300,
+      "unit": "g",
+      "name": "kæmperejer",
+      "note": "rå og pillede",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 60,
+      "unit": "g",
+      "name": "mango chutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 50,
+      "unit": "g",
+      "name": "bacon i tern",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 10,
+      "unit": "g",
+      "name": "krydderiblanding",
+      "note": "fra opskriften ovenfor",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ristet sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, ekstra til formning og spatel",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 2,
+      "unit": "stk",
+      "name": "briocheboller",
+      "note": "til burgere, delt på midten",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 20,
+      "unit": "g",
+      "name": "koriander",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hvidt, halveret og i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "den ene halvdel presses, den anden skæres i både",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 40,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 40,
+      "unit": "g",
+      "name": "mango chutney",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelstave",
+      "text": "Forvarm ovnen til 220 °C (200 °C varmluft). Klæd en stor, flad bageplade med bagepapir."
+    },
+    {
+      "section": "Kartoffelstave",
+      "text": "Vend kartoffelstavene med olivenolie og salt, og fordel dem i ét jævnt lag på pladen."
+    },
+    {
+      "section": "Kartoffelstave",
+      "text": "Bag midt i ovnen i 25 minutter. Rør rundt, og bag videre i 5-10 minutter, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Krydderiblanding",
+      "text": "Mens kartoflerne bager, ristes koriander, spidskommen, peberkorn, annatto, bukkehorn og kanelstang på en middelvarm tør pande i 2-3 minutter, til det dufter."
+    },
+    {
+      "section": "Krydderiblanding",
+      "text": "Kværn krydderierne groft i en krydderikværn. Lidt struktur er godt. Rør sumak, hvidløgspulver og paprika i."
+    },
+    {
+      "section": "Burgere",
+      "text": "Kom rejer, chutney, bacon, krydderiblanding, sesamolie og salt i en foodprocessor. Pulsér til en tyk, klistret farsmasse med lidt struktur."
+    },
+    {
+      "section": "Burgere",
+      "text": "Smør hænderne med olie, og del farsen i fire lige store portioner på ca. 100 g."
+    },
+    {
+      "section": "Burgere",
+      "text": "Rist bollerne på en stor non-stick-pande ved middelhøj varme, til de er gyldne. Læg dem i den varme ovn, så de holder sig lune."
+    },
+    {
+      "section": "Burgere",
+      "text": "Hæld olien på panden, og skru op for varmen. Smør spatelen med olie, så farsen ikke hænger fast."
+    },
+    {
+      "section": "Burgere",
+      "text": "Læg to klatter fars på den meget varme pande, og tryk dem flade med spatelen til tynde patties på ca. 10 cm. Steg 2 minutter på den ene side og 3 minutter på den anden, til de er gennemstegte, sprøde og brunede."
+    },
+    {
+      "section": "Burgere",
+      "text": "Hold de færdige patties varme i ovnen, mens de to sidste steges på samme måde."
+    },
+    {
+      "section": "Samling",
+      "text": "Bland koriander, chili og løg med limesaften."
+    },
+    {
+      "section": "Samling",
+      "text": "Smør mayonnaise og chutney på bundene af bollerne. Læg to patties på hver, og top med korianderblandingen og bollens låg."
+    },
+    {
+      "section": "Samling",
+      "text": "Server med limebåde og kartoffelstave ved siden af."
+    }
+  ],
+  "changes": [
+    "Bacon i tern erstatter pancetta i tern."
+  ]
+}

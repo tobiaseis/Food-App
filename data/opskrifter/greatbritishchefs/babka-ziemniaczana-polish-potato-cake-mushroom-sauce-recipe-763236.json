@@ -1,0 +1,236 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/babka-ziemniaczana-polish-potato-cake-mushroom-sauce-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:23:24.390Z",
+  "total_minutes": 115,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 20,
+  "title": "Polsk kartoffelkage med svampesauce",
+  "intro": "Babka ziemniaczana er en saftig, bagt kartoffelkage med bacon og løg, som serveres med cremet sauce af tørrede og friske svampe. Den er rustik, mættende og kan laves i forvejen.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Kartoffelkage",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "til smøring af formen",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": null,
+      "unit": null,
+      "name": "rasp",
+      "note": "fint, til formen",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": 200,
+      "unit": "g",
+      "name": "bacon",
+      "note": "røget, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "mellemstore, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": 2,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "melede, skrællede",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store, pisket",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "blandede tørrede krydderurter",
+      "note": "tørret merian",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelkage",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sort, stødt",
+      "optional": false
+    },
+    {
+      "section": "Svampesauce",
+      "amount": 30,
+      "unit": "g",
+      "name": "champignon",
+      "note": "tørrede vilde svampe, gerne porcini",
+      "optional": false
+    },
+    {
+      "section": "Svampesauce",
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Svampesauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampesauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Svampesauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Svampesauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "sur fløde, 18 %",
+      "optional": false
+    },
+    {
+      "section": "Svampesauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille & krydderurter",
+      "note": "dild, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "persille & krydderurter",
+      "note": "krøllet persille",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelkage",
+      "text": "Tænd ovnen på 180 °C. Smør en form på 1,5 liter med smørret, drys med rasp, og bank overskuddet af."
+    },
+    {
+      "section": "Svampesauce",
+      "text": "Læg de tørrede svampe i en varmefast skål eller kande, og hæld det kogende vand over. Lad dem trække i 30 minutter."
+    },
+    {
+      "section": "Kartoffelkage",
+      "text": "Steg baconen i lidt olie på middelvarme, til den er gylden, og fedtet er smeltet ud. Kom løgene på panden, og steg dem møre. Lad blandingen køle lidt af."
+    },
+    {
+      "section": "Kartoffelkage",
+      "text": "Riv kartoflerne fint. Hæld dem i et viskestykke eller et klæde over et dørslag og en skål, og vrid væsken ud. Kom de revne kartofler i en stor skål."
+    },
+    {
+      "section": "Kartoffelkage",
+      "text": "Lad væsken i skålen stå, til stivelsen har sat sig i bunden. Hæld vandet forsigtigt fra, og skrab stivelsen over til kartoflerne."
+    },
+    {
+      "section": "Kartoffelkage",
+      "text": "Vend bacon, løg, æg, hvedemel, merian, salt og peber i kartoflerne."
+    },
+    {
+      "section": "Kartoffelkage",
+      "text": "Fyld massen i formen, og glat overfladen. Bag kagen i 75-90 minutter, til den er dybt gylden og fast hele vejen igennem. Lad den hvile på rist i mindst 15 minutter, inden du løsner og skærer den ud."
+    },
+    {
+      "section": "Svampesauce",
+      "text": "Si de udblødte svampe fra, og gem 1 dl af soppen. Hak svampene fint."
+    },
+    {
+      "section": "Svampesauce",
+      "text": "Smelt smørret i en gryde, og svits løget blødt uden at give det farve. Brun de friske svampe let i gryden. Tilsæt de hakkede svampe, og steg i 2 minutter. Hæld den gemte svampesop i, og lad den koge ind til det halve."
+    },
+    {
+      "section": "Svampesauce",
+      "text": "Rør cremefraichen i, og lad saucen simre svagt, til den hænger ved en ske. Smag til med citronsaft, salt og peber, og rør det meste af dillen i. Saucen kan laves i forvejen, men vent med dillen til lige før servering."
+    },
+    {
+      "section": "Til servering",
+      "text": "Vend kagen ud på et bræt, og skær den i tykke skiver. Er den lavet dagen før, kan du varme skiverne på en bageplade med bagepapir i en ovn på 180 °C eller brune dem let i smør på begge sider, til de er sprøde."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld varm svampesauce i dybe tallerkener, og læg en skive kage ovenpå. Top med lidt mere sauce, rigeligt dild og en stilk krøllet persille."
+    }
+  ],
+  "changes": [
+    "Sur fløde er erstattet med creme fraiche.",
+    "Smoked streaky bacon er erstattet med røget bacon.",
+    "Tørrede vilde svampe er erstattet med tørrede champignon.",
+    "Chestnut mushrooms er erstattet med champignon.",
+    "Floury potatoes (Maris Piper) er erstattet med almindelige melede kartofler.",
+    "Plain flour er erstattet med hvedemel.",
+    "Tørret merian er erstattet med blandede tørrede krydderurter."
+  ]
+}

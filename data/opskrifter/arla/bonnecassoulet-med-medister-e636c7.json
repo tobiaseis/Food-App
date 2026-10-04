@@ -1,0 +1,260 @@
+{
+  "url": "https://www.arla.dk/opskrifter/bonnecassoulet-med-medister/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:17:53.548Z",
+  "total_minutes": 600,
+  "active_minutes": 45,
+  "yield_count": 1,
+  "source_lines": 22,
+  "title": "Bønnecassoulet med medister",
+  "intro": "En solid gratineret bønneret med bacon, medisterpølse og tomatsauce, som er kogt på rødvin og friske krydderurter. Bønnerne skal i blød natten over, så start dagen før.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Bønner",
+      "amount": 250,
+      "unit": "g",
+      "name": "tørrede hvide bønner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 3,
+      "unit": "l",
+      "name": "vand",
+      "note": "til udblødning",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 2,
+      "unit": "l",
+      "name": "vand",
+      "note": "til kogning af bønnerne",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "bacon i tern",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "hakkede, ca. 150 g",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, hakkede",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "flåede tomater",
+      "note": "á ca. 400 g",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "grøntsagsbouillon",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "bomuldssnor",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 10,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Medisterpølse",
+      "amount": 600,
+      "unit": "g",
+      "name": "medisterpølse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Medisterpølse",
+      "amount": 2,
+      "unit": "l",
+      "name": "vand",
+      "note": "til kogning af medisteren",
+      "optional": false
+    },
+    {
+      "section": "Medisterpølse",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gratineringsrasp",
+      "amount": 1,
+      "unit": "dl",
+      "name": "persille",
+      "note": "bredbladet, hakket",
+      "optional": false
+    },
+    {
+      "section": "Gratineringsrasp",
+      "amount": 150,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gratineringsrasp",
+      "amount": 100,
+      "unit": "g",
+      "name": "pastaost",
+      "note": "revet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bønner",
+      "text": "Dagen før: Læg bønnerne i en skål med det kolde udblødningsvand og lad dem stå i køleskabet natten over."
+    },
+    {
+      "section": "Bønner",
+      "text": "Si bønnerne fra og skyl dem godt under koldt vand."
+    },
+    {
+      "section": "Bønner",
+      "text": "Kom dem i en gryde med det nye vand og saltet, og bring det i kog med låg på."
+    },
+    {
+      "section": "Bønner",
+      "text": "Sænk varmen og lad bønnerne simre under låg i ca. 50 min. Hæld vandet fra."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Brun baconternene i en bred gryde: først ca. 6 min. på høj varme, derefter ca. 5 min. på middel varme, til de er gyldne."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Rør skalotteløg og hvidløg i og steg dem ca. 1 min."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Hæld rødvinen i og lad den koge ind uden låg på middel varme i ca. 10 min., til den er halveret."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Rør tomater, bouillonpulver, worcestershiresauce, tomatpuré og vand i."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Bind rosmarin og timian sammen med snoren og læg bundtet i gryden."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Lad saucen simre uden låg på lav varme i ca. 10 min. Rør i den ind imellem."
+    },
+    {
+      "section": "Medisterpølse",
+      "text": "Bring vandet i kog i en gryde og lad medisteren simre på lav varme i ca. 5 min."
+    },
+    {
+      "section": "Medisterpølse",
+      "text": "Løft medisteren op og lad den køle af i ca. 5 min. Del den i stykker på ca. 3 cm."
+    },
+    {
+      "section": "Medisterpølse",
+      "text": "Varm olien på en pande og brun medisterstykkerne på høj varme i ca. 6 min. Vend dem engang imellem."
+    },
+    {
+      "section": "Medisterpølse",
+      "text": "Kom bønner, tomatsauce og medisterstykker i et ovnfast fad på ca. 4 x 24 x 28 cm og bland det let."
+    },
+    {
+      "section": "Gratineringsrasp",
+      "text": "Kør persille og rasp i en blender i ca. 20 sek. og rør osten i."
+    },
+    {
+      "section": "Gratineringsrasp",
+      "text": "Fordel raspblandingen over retten og gratiner den midt i ovnen ved 200 °C i ca. 10 min., til toppen er gylden."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,220 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/slow-cooker-lasagne",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:08:48.190Z",
+  "total_minutes": 255,
+  "active_minutes": 75,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Lasagne i slowcooker",
+  "intro": "Kødsovs med masser af grøntsager og fuldkornsplader, der simrer mør i slowcooker under en let mel-bechamel. Den passer sig selv i flere timer og serveres med frisk salat.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kødsovs",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 300,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "magert, max. 5 % fedt",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "grøntsagsfond",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet, rigeligt",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 100,
+      "unit": "g",
+      "name": "lasagneplader",
+      "note": "fuldkorn, ca. 6 stk",
+      "optional": false
+    },
+    {
+      "section": "Hvid sovs",
+      "amount": 4,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvid sovs",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Hvid sovs",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvid sovs",
+      "amount": null,
+      "unit": null,
+      "name": "muskatnød",
+      "note": "friskrevet, rigeligt",
+      "optional": false
+    },
+    {
+      "section": "Hvid sovs",
+      "amount": 15,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salat",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødsovs",
+      "text": "Varm slowcookeren op, hvis den kræver det."
+    },
+    {
+      "section": "Kødsovs",
+      "text": "Varm olien på en stor non-stick-pande. Steg løg, selleri, gulerødder og hvidløg under jævnlig omrøring i 5-10 minutter, til de er møre og begynder at tage farve."
+    },
+    {
+      "section": "Kødsovs",
+      "text": "Kom hakket oksekød på panden, del det ud med en træske, og brun det under omrøring."
+    },
+    {
+      "section": "Kødsovs",
+      "text": "Tilsæt tomater, vand, tomatpuré, fond, balsamico, timian og rigeligt peber. Bring det i kog, og lad det simre i 5 minutter."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel halvdelen af kødsovsen i bunden af slowcookeren. Læg halvdelen af lasagnepladerne ovenpå, og knæk dem, så de dækker kødet mest muligt."
+    },
+    {
+      "section": "Samling",
+      "text": "Gentag med resten af kødsovsen og resten af pladerne. Læg låg på, og sæt slowcookeren på lav, mens du laver den hvide sovs."
+    },
+    {
+      "section": "Hvid sovs",
+      "text": "Pisk mælk og mel sammen i en gryde, og læg laurbærblad og muskatnød i. Varm op under konstant piskning, til sovsen tykner. Lad den koge nogle minutter, så melsmagen forsvinder."
+    },
+    {
+      "section": "Hvid sovs",
+      "text": "Tag laurbærbladet op, og rør parmesan i."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld sovsen over pladerne, og stryg den jævnt ud med en spatel. Læg låg på, og lad retten stå på lav i 3 timer, til kødet er gennemsteget og pladerne er møre."
+    },
+    {
+      "section": "Samling",
+      "text": "Lad lasagnen hvile i 10 minutter, og server den med salat."
+    }
+  ],
+  "changes": []
+}

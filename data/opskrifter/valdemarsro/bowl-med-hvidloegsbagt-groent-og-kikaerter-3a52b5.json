@@ -1,0 +1,239 @@
+{
+  "url": "https://www.valdemarsro.dk/bowl-med-hvidloegsbagt-groent-og-kikaerter/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:51:10.835Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Bowl med hvidløgsbagte grøntsager og sprøde kikærter",
+  "intro": "Sprøde krydrede kikærter og ovnbagt grønt med hvidløg og rosmarin serveres på citronris med kølig hvidløgsyoghurt. En nem vegetarret, hvor alt går i ovnen på samme tid.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Sprøde kikærter",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": "Sprøde kikærter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Sprøde kikærter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde kikærter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "amount": 20,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, i store tern",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "i store tern",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "frisk rosmarin",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 0.5,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, kun fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sprøde kikærter",
+      "text": "Forvarm ovnen til 175 °C varmluft. Dup de skyllede kikærter tørre med et rent viskestykke."
+    },
+    {
+      "section": "Sprøde kikærter",
+      "text": "Rør kikærterne rundt med olien, og tilsæt derefter paprika og salt."
+    },
+    {
+      "section": "Sprøde kikærter",
+      "text": "Bred dem ud på en bageplade med bagepapir, og bag dem i 20-25 minutter, til de er sprøde. Rør evt. rundt en eller to gange undervejs."
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "text": "Bland tomater, peberfrugt, spinat og squash med olie, salt, peber, hvidløg og rosmarin."
+    },
+    {
+      "section": "Hvidløgsbagt grønt",
+      "text": "Læg grøntsagerne i en bradepande med bagepapir, og bag dem i 20 minutter ved 175 °C varmluft."
+    },
+    {
+      "section": "Ris med citron og persille",
+      "text": "Put vand, ris og salt i en gryde, og rør godt rundt. Sæt låg på, og varm langsomt op, til det koger."
+    },
+    {
+      "section": "Ris med citron og persille",
+      "text": "Lad risen simre under låg på svag varme i 10 minutter. Tag gryden af varmen, og lad risen trække under låg i 10 minutter mere."
+    },
+    {
+      "section": "Ris med citron og persille",
+      "text": "Rør citronskal og persille i risen lige før servering."
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "text": "Mos hvidløget med en gaffel i en lille skål, og rør yoghurten i. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Fordel ris, spinat, de bagte grøntsager og kikærterne i dybe tallerkener eller skåle. Top med en klat hvidløgsyoghurt og lidt persille."
+    }
+  ],
+  "changes": [
+    "Baby spinat er skiftet til almindelig spinat.",
+    "Basmati ris er skrevet som basmatiris."
+  ]
+}

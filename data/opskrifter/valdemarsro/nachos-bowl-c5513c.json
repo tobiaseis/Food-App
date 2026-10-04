@@ -1,0 +1,212 @@
+{
+  "url": "https://www.valdemarsro.dk/nachos-bowl/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:45:25.486Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Nachosskåle med grøntsagschili",
+  "intro": "Sprøde tortillaskåle bagt i ovnen og fyldt med en krydret grøntsags- og bønnefyld. Toppes med ristet majs, avocado, ost og lime.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tortillaskåle",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tortillaskåle",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til penslning",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 200,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skåret i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tortillaskåle",
+      "text": "Forvarm ovnen til 175 °C varmluft. Klæd en bageplade med bagepapir, og vend små ovnfaste skåle om på den."
+    },
+    {
+      "section": "Tortillaskåle",
+      "text": "Smør tortillaerne med olivenolie på begge sider, hvis det er nødvendigt, og læg dem over skålene, så de former sig som skåle."
+    },
+    {
+      "section": "Tortillaskåle",
+      "text": "Bag dem i 8-10 minutter, til de er let gyldne."
+    },
+    {
+      "section": "Tortillaskåle",
+      "text": "Lad skålene køle af på formene, så de bliver sprøde."
+    },
+    {
+      "section": "Bønnefyld",
+      "text": "Svits løg i olivenolie i en gryde ved middelvarme, og rør ofte, til de er møre."
+    },
+    {
+      "section": "Bønnefyld",
+      "text": "Kom hvidløg, squash, gulerødder, krydderier, tomatpuré og hakkede tomater i gryden, og bring det i kog."
+    },
+    {
+      "section": "Bønnefyld",
+      "text": "Lad det simre uden låg i 15 minutter."
+    },
+    {
+      "section": "Bønnefyld",
+      "text": "Rør kidneybønnerne i, og lad det koge op igen. Smag til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Smelt smørret på en lille pande. Rist majsen ved høj varme, til den får en smule farve."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fyld tortillaskålene med bønnefyldet. Top med avocado, majs og cheddar, og pres lidt lime over."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,228 @@
+{
+  "url": "https://www.valdemarsro.dk/samosa/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:46:01.721Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Samosa med blomkål og myntedip",
+  "intro": "Sprøde ovnbagte trekanter af filodej med fyld af kartofler, blomkål og ærter, krydret med garam masala og ingefær. Serveres med en frisk dip af yoghurt, mynte og koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "skåret i små buketter",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "kogte, kolde og groft most",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne eller friske",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "frisk mynte",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "pakke",
+      "name": "filodej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til penslning og stegning",
+      "optional": false
+    },
+    {
+      "section": "Myntedip",
+      "amount": 2,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Myntedip",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "frisk mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Myntedip",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Myntedip",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Myntedip",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Myntedip",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk; brug saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skåret i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bring vand i kog i en gryde, og blancher blomkålen i 2 minutter. Hæld vandet fra."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en pande, og svits løg og hvidløg. Rør de tørre krydderier og ingefæren i, og lad det gennemvarme under omrøring."
+    },
+    {
+      "section": null,
+      "text": "Bland kartofler, blomkål, ærter og mynte i panden. Smag fyldet til med salt og peber, og lad det køle lidt af."
+    },
+    {
+      "section": null,
+      "text": "Skær filodejen i rektangler på ca. 12 × 20 cm. Pensl begge sider af hvert ark med olie."
+    },
+    {
+      "section": null,
+      "text": "Kom 2 spsk fyld i et hjørne af et rektangel. Fold dejen over fyldet til en trekant, og fortsæt med at folde trekanten hele vejen ud, til dejen er brugt, og samosaen har flere lag."
+    },
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C varmluft. Læg samosaerne på en bageplade, pensl dem med olie, og bag dem i ca. 15 minutter, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Myntedip",
+      "text": "Blend alle ingredienserne til dippen, til den er helt glat. Smag til med salt, peber og mere lime."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server de varme samosaer med dippen og limebåde."
+    }
+  ],
+  "changes": []
+}

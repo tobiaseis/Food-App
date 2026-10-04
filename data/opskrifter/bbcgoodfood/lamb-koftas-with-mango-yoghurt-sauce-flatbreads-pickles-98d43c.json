@@ -1,0 +1,192 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/lamb-koftas-with-mango-yoghurt-sauce-flatbreads-pickles",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:36:03.173Z",
+  "total_minutes": 40,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Lammekofta med mangoyoghurt, fladbrød og pickles",
+  "intro": "Saftige lammefrikadeller krydret med spidskommen, koriander og za'atar, serveret i varmt fladbrød med sødlig mangoyoghurt og syltet rødkål. Perfekt til en hurtig hverdagsaften.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til den syltede rødkål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kål",
+      "note": "lille rødkål, finsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til den syltede rødkål",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til den syltede rødkål",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den syltede rødkål",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "za'atar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til mangoyoghurten",
+      "amount": 200,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til mangoyoghurten",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mango chutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mangoyoghurten",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 5,
+      "unit": "stk",
+      "name": "brød",
+      "note": "bløde fuldkornsfladbrød eller pitabrød",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "dild",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "syltede rødløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "syltede røde chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "oliven",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Den syltede rødkål",
+      "text": "Kom rødkålen i en skål med eddike, sukker og salt. Ælt det igennem med fingrene, til kålen er dækket af marinaden. Stil skålen i køleskabet."
+    },
+    {
+      "section": "Koftaerne",
+      "text": "Bland lammekød, spidskommen, koriander, za'atar, hvidløg og rødløg i en stor skål. Ælt det godt sammen med hænderne, og form blandingen til 14-15 runde, flade bøffer."
+    },
+    {
+      "section": "Mangoyoghurten",
+      "text": "Rør yoghurt, mango chutney og salt sammen, og stil saucen til side."
+    },
+    {
+      "section": "Stegning",
+      "text": "Varm en stor pande op med en del af olien på middel varme. Læg bøfferne forsigtigt i den varme olie, og steg dem 2-3 minutter på hver side, til de lige akkurat er gennemstegte, så de forbliver saftige."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm fladbrødene. Smør mangoyoghurt på, og læg koftaer, rødkål, dild, syltede rødløg og chili samt oliven ovenpå."
+    }
+  ],
+  "changes": []
+}

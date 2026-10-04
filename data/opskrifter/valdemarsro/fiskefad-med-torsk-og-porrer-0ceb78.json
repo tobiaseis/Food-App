@@ -1,0 +1,188 @@
+{
+  "url": "https://www.valdemarsro.dk/fiskefad-med-torsk-og-porrer/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:25:08.311Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Fiskefad med torsk og porrer",
+  "intro": "Bagt torsk med sprød persille- og citronrasp på et leje af cremede grøntsager. Serveres med nykogte kartofler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Grøntsager",
+      "amount": 3,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "fintstrimlet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 200,
+      "unit": "g",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "økologisk citron",
+      "note": "saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til fadet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Sprød crunch",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": "Sprød crunch",
+      "amount": 75,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød crunch",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "økologisk citron",
+      "note": "fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Sprød crunch",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød crunch",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 600,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, finthakket, til drys",
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 700,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "kogt møre",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grøntsager",
+      "text": "Tænd ovnen på 180 °C varmluft. Smør et ovnfast fad."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Vend porre, spidskål og squash i fadet med fløde, fond, citronskal, citronsaft, salt og peber. Bag midt i ovnen i ca. 10 minutter."
+    },
+    {
+      "section": "Sprød crunch",
+      "text": "Blend persille, rasp, citronskal, salt og peber i en minihakker, til persillen er helt fin."
+    },
+    {
+      "section": "Fisk og servering",
+      "text": "Del torsken i pæne stykker og læg dem oven på de forbagte grøntsager. Fordel crunchen over fisken, og top hvert stykke med en klat smør."
+    },
+    {
+      "section": "Fisk og servering",
+      "text": "Bag fadet i yderligere 15 minutter, til torsken er færdig."
+    },
+    {
+      "section": "Fisk og servering",
+      "text": "Drys med hakket persille, og server med de nykogte kartofler."
+    }
+  ],
+  "changes": []
+}

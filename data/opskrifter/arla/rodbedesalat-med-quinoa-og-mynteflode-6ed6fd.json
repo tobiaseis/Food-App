@@ -1,0 +1,184 @@
+{
+  "url": "https://www.arla.dk/opskrifter/rodbedesalat-med-quinoa-og-mynteflode/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:03:23.992Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Rødbedesalat med quinoa og myntefløde",
+  "intro": "Ovnbagte rødbeder vendes med kogt rød quinoa og serveres med en let pisket fløde med mynte. En flot og mættende salat, der både kan serveres lun og kold.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Rødbedesalat",
+      "amount": 400,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "skrællede, i tern på ca. 2 x 2 cm",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde både (ca. 75 g)",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, hakkede",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "fx kirsebæreddike",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Quinoa",
+      "amount": 85,
+      "unit": "g",
+      "name": "rød quinoa",
+      "note": "ca. 1 dl",
+      "optional": false
+    },
+    {
+      "section": "Quinoa",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoa",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanelstang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoa",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Myntefløde",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Myntefløde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mynte",
+      "note": "finthakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Myntefløde",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Myntefløde",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mynte",
+      "note": "blade, til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rødbedesalat",
+      "text": "Tænd ovnen på 200 °C (almindelig ovn). Vend rødbeder, løg, hvidløg, olie, eddike, salt og peber sammen i en lille bradepande."
+    },
+    {
+      "section": "Rødbedesalat",
+      "text": "Læg låg eller alufolie over bradepanden, og bag rødbederne midt i ovnen i ca. 45 minutter, til de er møre."
+    },
+    {
+      "section": "Quinoa",
+      "text": "Skyl quinoaen i en sigte. Bring vandet i kog i en gryde med salt, kanelstang og hvidløg, og kom quinoaen i."
+    },
+    {
+      "section": "Quinoa",
+      "text": "Lad den koge ved svag varme under tætsluttende låg i ca. 15 minutter. Si den derefter fra."
+    },
+    {
+      "section": "Rødbedesalat",
+      "text": "Lad de bagte rødbeder køle lidt af. Vend quinoaen i, så den trækker af saften og marinaden fra bradepanden. Smag til."
+    },
+    {
+      "section": "Myntefløde",
+      "text": "Pisk fløden let, og rør mynte, salt og peber i."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg salaten på et fad, dryp med myntefløde og drys med friske mynteblade."
+    }
+  ],
+  "changes": []
+}

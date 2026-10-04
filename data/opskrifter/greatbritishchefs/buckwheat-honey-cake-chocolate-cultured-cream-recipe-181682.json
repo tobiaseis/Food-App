@@ -1,0 +1,323 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/buckwheat-honey-cake-chocolate-cultured-cream-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:22:50.712Z",
+  "total_minutes": 165,
+  "active_minutes": null,
+  "yield_count": 12,
+  "source_lines": 28,
+  "title": "Boghvedehonningkage med boghvedechokolade og tecreme",
+  "intro": "En lagkage af tynde, karamelliserede honningkageplader med syrlig creme og en hjemmelavet boghvedechokolade på toppen. Serveres med lun teskum og blomster, men chokoladen skal i gang to dage før.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Boghvedechokolade",
+      "amount": 310,
+      "unit": "g",
+      "name": "kakaosmør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 15,
+      "unit": "g",
+      "name": "te",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 200,
+      "unit": "g",
+      "name": "mandler",
+      "note": "blancherede",
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 90,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 60,
+      "unit": "g",
+      "name": "boghvede",
+      "note": "ristet",
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 40,
+      "unit": "g",
+      "name": "inulinpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 300,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 60,
+      "unit": "g",
+      "name": "kokosmælkspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "vaniljepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boghvedechokolade",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "lecitin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tesauce",
+      "amount": 1,
+      "unit": "l",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tesauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tesauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "te",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tesauce",
+      "amount": 12,
+      "unit": "g",
+      "name": "SOSA Pro Espuma Hot stabilisator",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honningkage",
+      "amount": 5,
+      "unit": "stk",
+      "name": "æg",
+      "note": "piskede",
+      "optional": false
+    },
+    {
+      "section": "Honningkage",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honningkage",
+      "amount": 10,
+      "unit": "g",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honningkage",
+      "amount": 4,
+      "unit": "g",
+      "name": "bagepulver",
+      "note": "glutenfrit",
+      "optional": false
+    },
+    {
+      "section": "Honningkage",
+      "amount": 120,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honningkage",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, i tern",
+      "optional": false
+    },
+    {
+      "section": "Honningkage",
+      "amount": 500,
+      "unit": "g",
+      "name": "glutenfrit hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Creme",
+      "amount": 200,
+      "unit": "g",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Creme",
+      "amount": 60,
+      "unit": "g",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Creme",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": "kornene skrabes ud",
+      "optional": false
+    },
+    {
+      "section": "Creme",
+      "amount": 12,
+      "unit": "g",
+      "name": "SOSA Pro Espuma Hot stabilisator",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Creme",
+      "amount": 500,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "spiselige blomster",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Boghvedechokolade",
+      "text": "Gå i gang mindst 2 dage før servering. Smelt kakaosmørret langsomt i en gryde, og hold temperaturen under 45 °C."
+    },
+    {
+      "section": "Boghvedechokolade",
+      "text": "Kør te, mandler, cashewnødder og boghvede i en foodprocessor til en fin krumme. Kom den i en stor skål sammen med de øvrige tørre ingredienser."
+    },
+    {
+      "section": "Boghvedechokolade",
+      "text": "Rør det smeltede kakaosmør gradvist ned i de tørre ingredienser med en spatel. Hæld massen i en chokoladekværn, og lad den køre i 48 timer, til chokoladen er glat og rund i smagen."
+    },
+    {
+      "section": "Boghvedechokolade",
+      "text": "Sigt chokoladen gennem en finmasket si, og vej 200 g af. Resten kan gemmes i en tæt boks i op til 1 måned."
+    },
+    {
+      "section": "Tesauce",
+      "text": "Bring fløde, sukker og te i kog i en gryde. Tag den af varmen, og lad den trække i 1 time."
+    },
+    {
+      "section": "Honningkage",
+      "text": "Pisk æg og sukker i en røremaskine med piskeris, til massen er lys og luftig og står som et let, stabilt skum. En håndmikser og en varmefast skål fungerer også."
+    },
+    {
+      "section": "Honningkage",
+      "text": "Sæt skålen over et svagt vandbad. Pisk natron og bagepulver i, og pisk derefter honningen i, til den er helt opløst."
+    },
+    {
+      "section": "Honningkage",
+      "text": "Pisk smørret i lidt ad gangen, til massen er glat og samlet."
+    },
+    {
+      "section": "Honningkage",
+      "text": "Vend halvdelen af melet i med hånden, og lad dejen hvile et kort øjeblik. Tag skålen af varmen, og vend resten af melet i. Dejen skal være blød og smidig. Afkøl den hurtigt, og stil den derefter koldt, til den er helt fast."
+    },
+    {
+      "section": "Tesauce",
+      "text": "Si teen gennem en finmasket si over i en stor skål, og pisk stabilisatoren i. Hæld det i en sifon, og sæt én patron på. Stil sifonen i et varmt vandbad, så skummet bliver let og luftigt."
+    },
+    {
+      "section": "Creme",
+      "text": "Pisk fløde, flormelis og vaniljekorn til bløde toppe med en ballonpisker. Pisk derefter stabilisatoren forsigtigt i."
+    },
+    {
+      "section": "Creme",
+      "text": "Vend creme fraichen i med en spatel, så der bevares mest mulig luft. Cremen skal være let, en anelse syrlig og nem at smøre. Lad den stivne kort i køleskabet før brug."
+    },
+    {
+      "section": "Bagning",
+      "text": "Når dejen er kold, tændes ovnen på 180 °C. Del dejen i stykker på 90 g, og rul hvert stykke ud mellem to non-stick bagemåtter til tynde, jævne plader på cirka 3 mm. Gør det i omgange, hvis det er nødvendigt."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag pladerne i 4-5 minutter, til de er let karamelliserede og gennembagte. Pak dem straks ind i film, og lad dem køle helt af."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg kageplader og creme i lag i en dyb bakke på cirka 32,5 x 26,5 cm, til der er 4 lag kage."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel de 200 g boghvedechokolade jævnt over toppen, og glat den ud med en paletkniv. Stil kagen i køleskabet, når den er afkølet, så lagene bliver bløde af cremen, og chokoladen sætter sig."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær kagen i 12 små stykker med en varm udstikker eller kniv."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret et stykke midt i hver dybe tallerken. Chokoladen kan få en blank overflade ved at varme kagen let med en gasbrænder. Sprøjt det lune teskum rundt om kagen, pynt med blomster, og server."
+    }
+  ],
+  "changes": [
+    "Tabucha (fermenteret boghvedete) er erstattet med almindelig te.",
+    "Panela er erstattet med brun farin.",
+    "Boghvedehonning er erstattet med honning.",
+    "Double cream er erstattet med piskefløde.",
+    "Soured cream er erstattet med creme fraiche.",
+    "Kornblomster er erstattet med spiselige blomster."
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "url": "https://www.arla.dk/opskrifter/hybensuppe-med-flodeskum/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:02:38.765Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 10,
+  "title": "Hybensuppe med flødeskum og honningristede havregryn",
+  "intro": "Klassisk hybensuppe, der er let syrlig og sødmefuld, toppet med let flødeskum og sprøde havregryn ristet i honning og smør.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Suppe",
+      "amount": 500,
+      "unit": "g",
+      "name": "hyben",
+      "note": "rensede for stilk, blomst og frø",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til jævningen",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honningristede havregryn",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honningristede havregryn",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honningristede havregryn",
+      "amount": 125,
+      "unit": "g",
+      "name": "havregryn",
+      "note": "grovvalsede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "pisket til flødeskum",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppe",
+      "text": "Kom hyben og vand i en gryde, og bring det i kog. Læg låg på, og lad det simre ved svag varme i ca. 30 minutter."
+    },
+    {
+      "section": "Suppe",
+      "text": "Hæld indholdet gennem en sigte over en skål, og pres hybenmosen igennem, så skallerne bliver tilbage. Smid skallerne ud."
+    },
+    {
+      "section": "Suppe",
+      "text": "Hæld væsken tilbage i gryden, og rør sukker og citronsaft i."
+    },
+    {
+      "section": "Suppe",
+      "text": "Pisk vand og majsstivelse sammen i et glas, og rør det i suppen. Lad suppen simre ved svag varme i ca. 2 minutter, mens du rører. Smag til."
+    },
+    {
+      "section": "Honningristede havregryn",
+      "text": "Varm en pande op ved kraftig varme, og smelt smør og honning, til det er flydende men ikke brunt."
+    },
+    {
+      "section": "Honningristede havregryn",
+      "text": "Kom havregrynene på panden, og rør rundt i ca. 2 minutter ved kraftig varme."
+    },
+    {
+      "section": "Honningristede havregryn",
+      "text": "Sænk til jævn varme, og rist videre under konstant omrøring i ca. 3 minutter, til grynene er lysebrune og sprøde."
+    },
+    {
+      "section": "Honningristede havregryn",
+      "text": "Bred havregrynene ud på bagepapir på en bagerist, og lad dem køle helt af."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server suppen varm, lun eller kold. Top med flødeskum og de ristede havregryn."
+    }
+  ],
+  "changes": []
+}

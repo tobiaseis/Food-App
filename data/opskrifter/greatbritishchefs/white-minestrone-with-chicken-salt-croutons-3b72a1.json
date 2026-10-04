@@ -1,0 +1,239 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/white-minestrone-with-chicken-salt-croutons",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:28:47.416Z",
+  "total_minutes": 80,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 20,
+  "title": "Hvid minestrone med croutoner med kyllingeskindssalt",
+  "intro": "Cremet, citronfrisk suppe med orzo, hvide bønner og mørt kyllingekød. Toppen er sprøde croutoner vendt i et salt lavet af det sprøde kyllingeskind.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kylling og croutoner",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": "med skind og ben",
+      "optional": false
+    },
+    {
+      "section": "Kylling og croutoner",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til bagning",
+      "optional": false
+    },
+    {
+      "section": "Kylling og croutoner",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til krydring af kyllingen",
+      "optional": false
+    },
+    {
+      "section": "Kylling og croutoner",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "til krydring af kyllingen",
+      "optional": false
+    },
+    {
+      "section": "Kylling og croutoner",
+      "amount": 3,
+      "unit": "skive",
+      "name": "brød",
+      "note": "surdejsbrød i tern",
+      "optional": false
+    },
+    {
+      "section": "Kyllingeskindssalt",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "gerne havsalt",
+      "optional": false
+    },
+    {
+      "section": "Kyllingeskindssalt",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hvid peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingeskindssalt",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingeskindssalt",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "orzo",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "bønner",
+      "note": "hvide bønner, afdryppede",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling og croutoner",
+      "text": "Varm ovnen op til 180 °C. Beklæd to bageplader med bagepapir."
+    },
+    {
+      "section": "Kylling og croutoner",
+      "text": "Læg kyllingelårene med skindsiden opad på den ene plade. Dryp med lidt olivenolie, og drys med salt og peber. Steg i ovnen i 40 minutter, til de er gennemstegte og gyldne."
+    },
+    {
+      "section": "Kylling og croutoner",
+      "text": "Træk forsigtigt skindet af lårene, og læg det på den anden, rene plade. Bag det 10 minutter mere, til det er dybt gyldent og sprødt. Kig til det undervejs, og læg det derefter på køkkenrulle."
+    },
+    {
+      "section": "Kylling og croutoner",
+      "text": "Vend imens brødternene i den udsmeltede kyllingefedt på den første plade. Tilsæt lidt olivenolie, hvis de skal dækkes bedre. Fordel dem i ét lag, og bag dem i 12 minutter, til de er gyldne og sprøde. Vend dem undervejs, og læg dem på køkkenrulle."
+    },
+    {
+      "section": "Suppe",
+      "text": "Varm olivenolie og smør op i en stor gryde ved middelvarme. Svits skalotteløg, gulerødder og selleri i 10 minutter, til grøntsagerne er bløde. Rør hvidløg, gurkemeje og tørrede krydderurter i, og svits 2 minutter mere."
+    },
+    {
+      "section": "Kyllingeskindssalt",
+      "text": "Dup det sprøde kyllingeskind tørt med køkkenrulle. Knus det i en mortér sammen med salt, hvid peber, hvidløgspulver og rosmarin. Det skal være groft knust med lidt struktur."
+    },
+    {
+      "section": "Kyllingeskindssalt",
+      "text": "Vend croutonerne i kyllingeskindssaltet, og stil dem til side. Pil kødet af benene, og træk det i stykker."
+    },
+    {
+      "section": "Suppe",
+      "text": "Hæld fonden i gryden, og bring den i kog. Kom orzo i, og lad den simre i 5 minutter under jævnlig omrøring."
+    },
+    {
+      "section": "Suppe",
+      "text": "Tilsæt bønner og kyllingekød, og lad det simre 3-5 minutter, til orzoen er mør. Rør citronsaften i, og smag til med salt og peber. Gem citronskallen til servering."
+    },
+    {
+      "section": "Suppe",
+      "text": "Øs suppen op i dybe tallerkener. Top med croutoner, persille og citronskal, og server med det samme."
+    }
+  ],
+  "changes": [
+    "Surdejsbrød er skrevet som brød (surdejsbrød i noten).",
+    "Haricots blancs er skrevet som en dåse hvide bønner, da kilden kun skriver \"1\"."
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "url": "https://www.arla.dk/opskrifter/tacos-med-stegte-tigerrejer/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:56:51.762Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Tacos med stegte tigerrejer",
+  "intro": "Bløde tortillas fyldt med stegte tigerrejer, varm tomatsauce med sødkartoffel og friske toppings. Alle kan selv samle deres tacos ved bordet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tomatsauce",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "sødkartoffel",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "tomater",
+      "note": "cherrytomater, ca. 800 g i alt",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Stegte rejer",
+      "amount": 300,
+      "unit": "g",
+      "name": "tigerrejer",
+      "note": "pillede, rå",
+      "optional": false
+    },
+    {
+      "section": "Stegte rejer",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegte rejer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, skåret i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Stegte rejer",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Stegte rejer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "dl",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "iskold",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatsauce",
+      "text": "Varm smørret op i en tykbundet gryde ved høj varme. Det må ikke blive brunt."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Rør sødkartoflen i gryden og svits den i ca. 5 min."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Hæld tomaterne i, drys med saltet, og lad saucen simre under låg ved lav varme i ca. 5 min."
+    },
+    {
+      "section": "Stegte rejer",
+      "text": "Tør rejerne godt med køkkenrulle."
+    },
+    {
+      "section": "Stegte rejer",
+      "text": "Brun smørret let i en pande, til det får en gylden farve."
+    },
+    {
+      "section": "Stegte rejer",
+      "text": "Steg rejerne ved høj varme, mens du rører rundt, i ca. 2 min. Kom chili, hvidløg og salt på, sænk varmen, og steg videre i ca. 2 min."
+    },
+    {
+      "section": null,
+      "text": "Varm tortillaerne, som det står på pakken."
+    },
+    {
+      "section": null,
+      "text": "Stil tomatsauce, rejer, spidskål, koriander, limebåde og creme fraiche på bordet, så alle selv kan fylde deres tortillas."
+    }
+  ],
+  "changes": [
+    "Lilla spidskål er skiftet til almindelig spidskål.",
+    "Fraiche er skiftet til creme fraiche."
+  ]
+}

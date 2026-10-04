@@ -1,0 +1,131 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/fresh-salmon-thai-noodle-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:08:26.455Z",
+  "total_minutes": 20,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 10,
+  "title": "Dampet laks med thailandsk nudelsalat",
+  "intro": "Mør dampet laks på en frisk nudelsalat med appelsin, grønne bønner og rød karrypasta. Det er en let ret, der er klar på en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laks",
+      "note": "laksefilet uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "appelsiner",
+      "note": "stor; saft og skal fra halvdelen, resten skrællet og hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "bønner",
+      "note": "franske bønner (haricots verts), trimmet og halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": "skåret i fine strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "nudler",
+      "note": "tynde risnudler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rød karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille & krydderurter",
+      "note": "basilikum eller koriander, hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bring vand i kog i en gryde. Beklæd en dampindsats med bagepapir, læg laksen i, og drys med lidt af appelsinskallen."
+    },
+    {
+      "section": null,
+      "text": "Kom de franske bønner i det kogende vand, sæt dampindsatsen med laksen ovenpå, og damp i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tag laksen af. Er den gennemkogt, stil den til side, og kom ærter og sukkerærter i gryden i 1 minut. Er den ikke helt færdig, lad den blive over grøntsagerne det ekstra minut."
+    },
+    {
+      "section": null,
+      "text": "Hæld grøntsagerne fra, og hold vandet. Kom vandet tilbage i gryden, læg nudlerne i, og lad dem trække i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør karrypasta, fiskesauce, appelsinsaft, lidt af den resterende skal og forårsløg sammen i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Hæld nudlerne fra, og vend dem i dressingen. Tilsæt appelsinstykker, krydderurter og de kogte grøntsager."
+    },
+    {
+      "section": null,
+      "text": "Hæld saften fra laksen i skålen, og vend det hele igen. Server salaten i skåle med laksen ovenpå."
+    }
+  ],
+  "changes": [
+    "Mange tout er erstattet af sukkerærter.",
+    "French beans er erstattet af haricots verts."
+  ]
+}

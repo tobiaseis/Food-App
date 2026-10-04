@@ -1,0 +1,146 @@
+{
+  "url": "https://www.arla.dk/opskrifter/rige-riddere-med-karamelliserede-abler/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:10:59.038Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Rige riddere med karamelliserede æbler",
+  "intro": "Sprødstegt franskbrød i æggeblanding, toppet med bløde, karamelliserede æbler og timian. Serveres med let pisket fløde.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Rige riddere",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rige riddere",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rige riddere",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rige riddere",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Rige riddere",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Rige riddere",
+      "amount": 4,
+      "unit": "skive",
+      "name": "toastbrød",
+      "note": "lyst, uden skorpe",
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede æbler",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede æbler",
+      "amount": 85,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede æbler",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "store, skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede æbler",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Ved serveringen",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "små kviste, frisk, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Ved serveringen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "pisket til flødeskum",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rige riddere",
+      "text": "Fordel æg, mælk, fløde og salt i en skål og pisk det godt sammen."
+    },
+    {
+      "section": "Rige riddere",
+      "text": "Varm smørret op på en pande, til det får en gylden farve."
+    },
+    {
+      "section": "Rige riddere",
+      "text": "Træk brødskiverne gennem æggeblandingen, og steg dem på panden i ca. 4 minutter på hver side, til de er gyldne."
+    },
+    {
+      "section": "Karamelliserede æbler",
+      "text": "Smelt smør og sukker på en pande over kraftig varme, mens du rører rundt, til blandingen er lysebrun."
+    },
+    {
+      "section": "Karamelliserede æbler",
+      "text": "Læg æbleb��dene og timianen i karamellen, og vend dem rundt."
+    },
+    {
+      "section": "Karamelliserede æbler",
+      "text": "Lad det simre i ca. 2 minutter, til æblerne er lysebrune, og sukkeret er flydende."
+    },
+    {
+      "section": "Ved serveringen",
+      "text": "Anret de stegte brødskiver på et fad, og læg de karamelliserede æbler ovenpå. Pynt med timian, og server med iskold flødeskum ved siden af."
+    }
+  ],
+  "changes": [
+    "Sandwichbrød er skiftet til toastbrød."
+  ]
+}

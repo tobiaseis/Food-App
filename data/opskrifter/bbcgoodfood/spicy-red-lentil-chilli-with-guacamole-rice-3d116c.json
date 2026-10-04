@@ -1,0 +1,200 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/spicy-red-lentil-chilli-with-guacamole-rice",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:19:21.435Z",
+  "total_minutes": 70,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Krydret rød linsechili med guacamole og ris",
+  "intro": "En mættende vegetarchili med røde linser, sorte bønner og røget paprika, som serveres med brune ris og frisk guacamole. Retten kan med fordel laves i dobbelt portion, så der er rester til en anden dag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "ris",
+      "note": "brune, hurtigtkogende",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "affrøet og finthakket, gerne i forskellige farver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "dl",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "lavet af 2 tsk bouillonpulver og vand",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "linser",
+      "note": "røde",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "400 g, med lagen",
+      "optional": false
+    },
+    {
+      "section": "Til guacamole",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skrællet, uden sten og moset eller i tern",
+      "optional": false
+    },
+    {
+      "section": "Til guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, affrøet og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til guacamole",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til guacamole",
+      "amount": 10,
+      "unit": "g",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde ved middel varme. Steg peberfrugten i 5 minutter, og rør ofte."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt hvidløg og krydderier, og rør rundt et øjeblik. Hæld passata og fond i."
+    },
+    {
+      "section": null,
+      "text": "Kom linser og timian i, læg låg på, og lad det simre i 15-20 minutter, til linserne er helt møre og næsten most."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt bønnerne sammen med lagen fra dåsen. Sæt låget på igen, og lad chilien simre 10-15 minutter mere."
+    },
+    {
+      "section": null,
+      "text": "Kog imens risene efter anvisningen på pakken."
+    },
+    {
+      "section": "Til guacamole",
+      "text": "Bland avocado, limesaft, rødløg, chili, tomater og koriander i en skål. Lav halvdelen, hvis du kun serverer til to nu."
+    },
+    {
+      "section": null,
+      "text": "Server chilien over risene med guacamole ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Rester: Køl resten af chili og ris hurtigt ned, og opbevar dem i køleskab i op til 4 dage. Varm chilien op i en gryde ved lav varme med en smule vand, til den er gennemvarm. Varm risene i mikrobølgeovn, og rør en ny portion guacamole til."
+    }
+  ],
+  "changes": [
+    "Easy-cook brune ris er erstattet med almindelige brune ris, hurtigtkogende.",
+    "Vine tomatoes er erstattet med almindelige tomater.",
+    "Vegetable bouillon powder er erstattet med grøntsagsfond."
+  ]
+}

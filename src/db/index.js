@@ -52,6 +52,20 @@ function migrate(db) {
     // Kildens rå antal. Tom på en ældre base, hvor servings stadig ER det rå
     // tal; reclassify fylder den derfra, før portionerne regnes om.
     ['recipes', 'yield_count', 'INTEGER'],
+    // Den danske udgave (plan 2026-09-30). active_minutes er arbejdstiden —
+    // total_minutes er tiden i alt. edition er udgavens nummer (NULL = kun
+    // kildens rå data), edition_hash er hashen af filen i data/opskrifter/,
+    // så import-da.js kan se, om den er rettet siden sidst.
+    ['recipes', 'active_minutes', 'INTEGER'],
+    ['recipes', 'intro', 'TEXT'],
+    ['recipes', 'edition', 'INTEGER'],
+    ['recipes', 'edition_hash', 'TEXT'],
+    ['recipes', 'edited_at', 'TEXT'],
+    ['recipes', 'changes', 'TEXT'],
+    // Visningen: afsnittet ("Til dressingen") og varen med tilberedning
+    // ("kyllingebryst, i strimler") uden mængde, så mængden kan ganges op.
+    ['recipe_ingredients', 'section', 'TEXT'],
+    ['recipe_ingredients', 'label', 'TEXT'],
   ];
   for (const [table, column, type] of added) {
     const cols = db.prepare(`PRAGMA table_info(${table})`).all().map((c) => c.name);

@@ -1,0 +1,116 @@
+{
+  "url": "https://www.arla.dk/opskrifter/surdej/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:09:43.970Z",
+  "total_minutes": 65,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 6,
+  "title": "Surdej",
+  "intro": "En hjemmelavet surdejsstarter, som bliver aktiv på fem dage og kan bruges til brød. Den fodres med vand og groft rugmel, indtil den hæver kraftigt.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Dag 1",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent, ca. 30°C",
+      "optional": false
+    },
+    {
+      "section": "Dag 1",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dag 1",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rugmel",
+      "note": "groft, eller anden type groft mel",
+      "optional": false
+    },
+    {
+      "section": "Fodring dag 3, 4 og 5",
+      "amount": 50,
+      "unit": "g",
+      "name": "surdej",
+      "note": "aktiv, ca. 30°C",
+      "optional": false
+    },
+    {
+      "section": "Fodring dag 3, 4 og 5",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Fodring dag 3, 4 og 5",
+      "amount": 50,
+      "unit": "g",
+      "name": "rugmel",
+      "note": "groft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dag 1",
+      "text": "Rør vand, hvedemel og rugmel sammen i et rent glas. Dejen skal være fast og tør."
+    },
+    {
+      "section": "Dag 1",
+      "text": "Brug en dejskraber til at skrabe dejen ned fra glassets kant."
+    },
+    {
+      "section": "Dag 1",
+      "text": "Dæk glasset med et rent stykke stof eller et løst låg. Surdejen skal have ilt, så låget må ikke sidde helt tæt. Stil den ved stuetemperatur i ca. 2 døgn."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Tjek surdejen. Den skal være hævet, have små luftbobler, som kan ses gennem glasset, og dufte syrligt."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Er der kommet skorpe, så fjern og kassér den. Er der ingen tegn på aktivitet, så lad surdejen stå en dag mere."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Læg den aktive surdej i et rent glas. Resten kan kasseres eller bruges som smagsgiver i andet bagværk."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Tilsæt vand og rugmel, og rør, til der ikke er klumper. Skrab dejen ned fra kanterne, så den samles."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Dæk glasset løst til igen, og lad surdejen stå ved stuetemperatur i ca. 1 døgn."
+    },
+    {
+      "section": "Dag 4",
+      "text": "Fodr surdejen på samme måde som dag 3."
+    },
+    {
+      "section": "Dag 5",
+      "text": "Fodr surdejen en tredje gang på samme måde som dag 3. Nu skal den gerne være meget aktiv."
+    },
+    {
+      "section": "Dag 5",
+      "text": "Sæt en elastik om glasset ved surdejens overflade. Er surdejen hævet til dobbelt størrelse inden for 3-5 timer, er den klar til bagning."
+    },
+    {
+      "section": "Dag 5",
+      "text": "Hæver den ikke nok, så lad den stå et døgn mere og fodr den igen som på dag 3."
+    }
+  ],
+  "changes": []
+}

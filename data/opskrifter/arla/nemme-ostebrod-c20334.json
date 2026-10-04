@@ -1,0 +1,80 @@
+{
+  "url": "https://www.arla.dk/opskrifter/nemme-ostebrod/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:26:25.315Z",
+  "total_minutes": 10,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 5,
+  "title": "Ostebrød med hvidløg og rosmarin",
+  "intro": "Sprøde ciabattaboller med et tæt mønster af skæringer, fyldt med ostesmør med hvidløg og rosmarin. Bollerne gratineres kort i ovnen, til osten smelter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "ciabattaboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "ost",
+      "note": "fx lagret cheddar",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "persille & krydderurter",
+      "note": "frisk rosmarin, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 225 °C (almindelig ovn)."
+    },
+    {
+      "section": null,
+      "text": "Snit hver bolle dybt ind på langs og på tværs, men skær ikke helt igennem. Så får bollen et tern-mønster."
+    },
+    {
+      "section": null,
+      "text": "Riv osten og bland den med smør, hvidløg og rosmarin til et ensartet ostesmør."
+    },
+    {
+      "section": null,
+      "text": "Smør ostesmørret ind i snittene på bollerne."
+    },
+    {
+      "section": null,
+      "text": "Sæt bollerne midt i ovnen, og bag dem, til osten er smeltet og gylden, i 4-5 minutter."
+    }
+  ],
+  "changes": []
+}

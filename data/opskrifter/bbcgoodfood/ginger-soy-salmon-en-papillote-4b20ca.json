@@ -1,0 +1,140 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/ginger-soy-salmon-en-papillote",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:01:20.074Z",
+  "total_minutes": 40,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 10,
+  "title": "Laks i papir med ingefær og soja",
+  "intro": "Laks bages sammen med spiralskårne grøntsager i en pakke af bagepapir, så alt bliver mørt og saftigt i sin egen duft af ingefær, soja og hvidløg. En let hverdagsret med meget lidt opvask.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "lys",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "stykke på størrelse med en tommelfinger, fint revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pakkerne",
+      "amount": 300,
+      "unit": "g",
+      "name": "laksefilet",
+      "note": "2 stykker uden skind",
+      "optional": false
+    },
+    {
+      "section": "Pakkerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "enderne skåret af, spiralskåret til tynde nudler",
+      "optional": false
+    },
+    {
+      "section": "Pakkerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællet, enderne skåret af, spiralskåret til tynde nudler",
+      "optional": false
+    },
+    {
+      "section": "Pakkerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "pak choi",
+      "note": "ca. 2 stk, bladene skilt ad",
+      "optional": false
+    },
+    {
+      "section": "Pakkerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "i tynde skiver, kernerne fjernes efter ønske",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "blomkålsris",
+      "note": "thai-style, eller almindelige ris",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft)."
+    },
+    {
+      "section": "Marinade",
+      "text": "Rør sojasauce, eddike, ingefær, hvidløg og peber sammen i en skål. Vend laksestykkerne i marinaden, læg låg eller film over, og lad dem stå i 10 minutter ved stuetemperatur – eller op til 2 timer i køleskabet."
+    },
+    {
+      "section": "Pakkerne",
+      "text": "Riv to store stykker bagepapir af, så hver pakke kan rumme både fisk og grøntsager. Læg dem på en bageplade."
+    },
+    {
+      "section": "Pakkerne",
+      "text": "Fordel squash, gulerod og pak choi midt på de to ark. Læg en marineret laks oven på hver portion og top med chiliskiver."
+    },
+    {
+      "section": "Pakkerne",
+      "text": "Fold papiret op omkring fisken, og hæld resten af marinaden ud over de to stykker laks. Knib papiret tæt sammen, så pakkerne lukker helt."
+    },
+    {
+      "section": "Pakkerne",
+      "text": "Bag pakkerne i 20–25 minutter, til laksen lige er gennemstegt og falder fra hinanden i store flager."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server laksen i papirpakkerne sammen med blomkålsris eller almindelige ris, hvis du har lyst."
+    }
+  ],
+  "changes": [
+    "Risvineddike er erstattet af almindelig eddike.",
+    "Courgette er skiftet til squash.",
+    "Thai cauliflower rice er skiftet til blomkålsris."
+  ]
+}

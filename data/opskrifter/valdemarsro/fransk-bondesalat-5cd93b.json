@@ -1,0 +1,219 @@
+{
+  "url": "https://www.valdemarsro.dk/fransk-bondesalat/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:54:49.498Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Fransk bondesalat med pocherede æg",
+  "intro": "En sprød salat med bacon, grønne asparges, bønner og kartofler, toppet med bløde pocherede æg og en cremet sennepsdressing. Den er mættende nok til at stå alene som frokost eller let aftensmad.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": "til posjeringsvandet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 4,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "udelades, hvis retten skal være vegetarisk",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "skive",
+      "name": "brød",
+      "note": "fx grydebrød, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "asparges",
+      "note": "grønne, skåret i mindre stykker",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "bønner",
+      "note": "haricots verts",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "salat",
+      "note": "grøn",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "rødløg, skåret i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 350,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "babykartofler, kogte og skåret i halve",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 50,
+      "unit": "g",
+      "name": "oliven",
+      "note": "sorte",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "purløg",
+      "note": "fintklippet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Cremet sennepsdressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Cremet sennepsdressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cremet sennepsdressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cremet sennepsdressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cremet sennepsdressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Cremet sennepsdressing",
+      "text": "Rør alle dressingens ingredienser sammen, og smag til med salt og peber."
+    },
+    {
+      "section": "Grøntsager og bacon",
+      "text": "Steg baconen sprød på en pande, og lad skiverne dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Grøntsager og bacon",
+      "text": "Smelt halvdelen af smørret i baconfedtet på panden, og rist brødternene sprøde. Krydr med salt og peber, og stil dem til side."
+    },
+    {
+      "section": "Grøntsager og bacon",
+      "text": "Smelt resten af smørret på panden, og steg aspargesene ved høj varme i ca. 1 minut."
+    },
+    {
+      "section": "Grøntsager og bacon",
+      "text": "Kog bønnerne i 2 minutter. Hæld dem straks i iskoldt vand, så de stopper med at koge."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Bring en gryde vand i kog. Slå æggene ud i hver sin lille skål."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Hæld eddiken i det kogende vand, og tag gryden af varmen. Pisk vandet rundt, så der opstår en hvirvel med et hul i midten."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Lad ét æg glide ned i midten af hvirvlen, og stil gryden tilbage på varmen. Lad ægget simre i ca. 3 minutter, og løft det op med en hulske. Gentag med de øvrige æg."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel salaten på tallerkener, og læg løg, bønner, kartofler, asparges, brødtern, baconstykker og oliven ovenpå. Top med de pocherede æg."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sæt dressingen på salaten i små klatter, og strø purløg over til sidst."
+    },
+    {
+      "section": "Variation med smilende æg",
+      "text": "Vil du undvære pocherede æg, kan du i stedet koge æggene i 8 minutter i kogende vand, så blommen er blød. Pil dem, og del dem forsigtigt i kvarte med en skarp kniv."
+    }
+  ],
+  "changes": [
+    "Grydebrød er beholdt som eksempel på brød.",
+    "Dijon sennep er skiftet til sennep med dijon i noten."
+  ]
+}

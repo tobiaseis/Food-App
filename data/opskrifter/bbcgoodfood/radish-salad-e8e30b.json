@@ -1,0 +1,187 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/radish-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:36:59.135Z",
+  "total_minutes": 35,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Radisesalat med burrata og brødkrummer",
+  "intro": "Ovnbagte radiser møder sprød hjertesalat, cremet burrata og en syrlig honningdressing med syltet rødløg. Gyldne brødkrummer med hvidløg og purløg giver et sprødt knæk til sidst.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 300,
+      "unit": "g",
+      "name": "radiser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "hjertesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "burrata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 75,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": "en del bruges til radiserne",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "honning",
+      "note": "op til 1 spsk efter smag",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brødkrummer",
+      "amount": 2,
+      "unit": "skive",
+      "name": "surdejsbrød",
+      "note": "tørt",
+      "optional": false
+    },
+    {
+      "section": "Brødkrummer",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "stort",
+      "optional": false
+    },
+    {
+      "section": "Brødkrummer",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "purløg",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Brødkrummer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brødkrummer",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Radiser",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Rens radiserne og del dem i halve – eller kvarte, hvis de er store. Hak eventuelle radiseblade groft."
+    },
+    {
+      "section": "Radiser",
+      "text": "Vend radiserne (uden blade) med 1 spsk af olivenolien på en bageplade, og krydr med salt og peber. Bag dem i 10-15 minutter, til de netop er møre."
+    },
+    {
+      "section": "Radiser",
+      "text": "Tag pladen ud, rør bladene i og lad det køle af."
+    },
+    {
+      "section": "Dressing",
+      "text": "Riv skallen af citronen, og pres saften. Kom saften i et syltetøjsglas sammen med eddike, rødløg og salt. Lad løgene syltes let, mens radiserne køler."
+    },
+    {
+      "section": "Brødkrummer",
+      "text": "Pil brødet i stykker, og pulsér det i en foodprocessor nogle gange, så der er både krummer og lidt større stykker."
+    },
+    {
+      "section": "Brødkrummer",
+      "text": "Knus hvidløget med kniven fladt, og hak purløget fint."
+    },
+    {
+      "section": "Brødkrummer",
+      "text": "Varm olien i en stor pande ved middel varme, og steg det knuste hvidløg i 1 minut. Tilsæt brødkrummer og chiliflager, og krydr med salt og peber. Rist i 3-4 minutter, til krummerne er gyldne."
+    },
+    {
+      "section": "Brødkrummer",
+      "text": "Kom krummerne i en skål, og lad dem køle af. Rør purløget i, og fjern hvidløget."
+    },
+    {
+      "section": "Dressing",
+      "text": "Tilsæt honning, resten af olivenolien og eventuelt chiliflager til glasset med løgene, og ryst det godt sammen. Smag til med salt og peber, og tilsæt lidt mere honning, hvis det mangler."
+    },
+    {
+      "section": "Samling",
+      "text": "Pluk salatbladene fra hinanden, hak dem groft, og skyl dem godt. Tør dem i en salatslynge eller i et rent viskestykke."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg salaten på tallerkener eller et fad, og fordel dressingen ovenpå. Lad burrataen dryppe af, og riv den ud over salaten. Drys med radiser, brødkrummer og citronskal."
+    }
+  ],
+  "changes": [
+    "Little Gem er skiftet til hjertesalat.",
+    "Surdejsbrød er beholdt som surdejsbrød, da det kan købes i danske supermarkeder."
+  ]
+}

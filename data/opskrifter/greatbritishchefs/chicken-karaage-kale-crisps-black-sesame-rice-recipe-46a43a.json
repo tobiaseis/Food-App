@@ -1,0 +1,387 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/chicken-karaage-kale-crisps-black-sesame-rice-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:37:54.855Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 39,
+  "title": "Japansk kyllingekarage med karrysauce, sortsesamris og syltet agurk",
+  "intro": "Sprød friturestegt kylling serveres på sesamris med hjemmelavet karrysauce, syrlig agurk og sprøde grønkålschips. Krydderiblandingen ristes og males selv, så saucen får en dyb smag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 4,
+      "unit": "stk",
+      "name": "chili",
+      "note": "tørrede, røde",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 3,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "kapsler",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 3,
+      "unit": "stk",
+      "name": "nelliker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "en bid",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 750,
+      "unit": "ml",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 600,
+      "unit": "g",
+      "name": "kyllingeoverlår",
+      "note": "uden ben, med skind, skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 150,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": "plus mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Sortsesamris",
+      "amount": 300,
+      "unit": "g",
+      "name": "sushiris",
+      "note": "skyllet og udblødt i 15 minutter",
+      "optional": false
+    },
+    {
+      "section": "Sortsesamris",
+      "amount": 400,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sortsesamris",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sorte sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Grønkålschips",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "grønkål",
+      "note": "stilkene fjernet, revet i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Grønkålschips",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "olie",
+      "note": "neutral",
+      "optional": false
+    },
+    {
+      "section": "Grønkålschips",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "forårsløg",
+      "note": "finskåret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Karrypulver",
+      "text": "Rist alle krydderierne på en tør pande, til de dufter. Mal dem til et fint pulver i en krydderikværn."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Varm olien op i en gryde. Svits løg, hvidløg og ingefær ved middel-lav varme i ca. 15 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Rør gulerødder, hvedemel og tomatpuré i, og lad det stege i 2 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Tilsæt karrypulver, fond, sojasauce, mirin og sukker. Lad saucen simre i 20 minutter, og blend den derefter helt glat."
+    },
+    {
+      "section": "Kylling",
+      "text": "Rør sojasauce, vin, ingefær og hvidløg sammen. Vend kyllingestykkerne i marinaden, og lad dem trække i 30 minutter."
+    },
+    {
+      "section": "Sortsesamris",
+      "text": "Imens: Hæld vandet fra risene, og kom dem i en gryde med det friske vand. Bring i kog, skru ned til middel-lav varme, læg et viskestykke og låg over, og lad det koge i ca. 12 minutter."
+    },
+    {
+      "section": "Sortsesamris",
+      "text": "Tag gryden af varmen, og lad risene dampe i 10 minutter under låg. Vend sesamfrøene i."
+    },
+    {
+      "section": "Grønkålschips",
+      "text": "Tænd ovnen på 160 °C varmluft."
+    },
+    {
+      "section": "Syltet agurk",
+      "text": "Vend agurkeskiverne med riseddike, citronsaft, sukker og salt. Lad dem stå i 15 minutter, til de er møre."
+    },
+    {
+      "section": "Grønkålschips",
+      "text": "Gnid grønkålen ind i olie og salt, og læg den på en bageplade med bagepapir. Bag i 12 minutter, til den er sprød."
+    },
+    {
+      "section": "Kylling",
+      "text": "Varm olie op til 170 °C i en høj, tyk gryde, så der er nok til at friturestege kyllingen."
+    },
+    {
+      "section": "Kylling",
+      "text": "Vend kyllingestykkerne i majsstivelse lige før stegning. Steg dem i 4–5 minutter, til de er sprøde, gyldne og gennemstegte. Lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret sesamris i skåle, og læg kyllingen ovenpå. Hæld karrysauce over, og pynt med syltet agurk, grønkålschips og forårsløg."
+    }
+  ],
+  "changes": [
+    "Sake er erstattet af hvidvin.",
+    "Yuzujuice er erstattet af citronsaft."
+  ]
+}

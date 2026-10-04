@@ -1,0 +1,266 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/turbot-citrus-butter-sauce-asparagus-cherry-fig-leaf-oil",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:40:15.248Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Pighvar med citronsmørsauce, asparges, kirsebær og figenbladsolie",
+  "intro": "Pighvarfilet fyldt med fiskemousse og tilberedt sous-vide, serveret på en cremet citronsmørsauce med asparges, kirsebær og syltede rosenblade. En aromatisk olie af figenblade runder retten af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Figenbladsolie",
+      "amount": 200,
+      "unit": "g",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Figenbladsolie",
+      "amount": 100,
+      "unit": "g",
+      "name": "figenblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Figenbladsolie",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rosenblade",
+      "amount": 10,
+      "unit": "g",
+      "name": "spiselige rosenblade",
+      "note": "let svitset over grill",
+      "optional": false
+    },
+    {
+      "section": "Syltede rosenblade",
+      "amount": 20,
+      "unit": "ml",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rosenblade",
+      "amount": 30,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rosenblade",
+      "amount": 10,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": 10,
+      "unit": "g",
+      "name": "kombu",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": 50,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": 350,
+      "unit": "g",
+      "name": "pighvarfilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": 100,
+      "unit": "g",
+      "name": "pighvar",
+      "note": "afskær fra fileterne",
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": 20,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": 80,
+      "unit": "g",
+      "name": "æggehvider",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "blade, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Pighvar",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronsmørsauce",
+      "amount": 50,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronsmørsauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Citronsmørsauce",
+      "amount": 500,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronsmørsauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "hvid asparges",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronsmørsauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "grøn asparges",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronsmørsauce",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kirsebær",
+      "note": "udstenede og hakkede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Figenbladsolie",
+      "text": "Varm olien op til 80 °C."
+    },
+    {
+      "section": "Figenbladsolie",
+      "text": "Blend figenblade, den varme olie og salt i en Thermomix i 8 minutter ved 80 °C."
+    },
+    {
+      "section": "Figenbladsolie",
+      "text": "Si olien gennem en osteklæde og stil den på køl."
+    },
+    {
+      "section": "Syltede rosenblade",
+      "text": "Rør eddike, vand og sukker sammen i en gryde, og varm det op, til sukkeret er opløst."
+    },
+    {
+      "section": "Syltede rosenblade",
+      "text": "Lad lagen køle af, hæld den over rosenbladene, og lad dem stå og køle helt af."
+    },
+    {
+      "section": "Pighvar",
+      "text": "Pisk saltet ud i vandet, til det er helt opløst, og læg kombuen i."
+    },
+    {
+      "section": "Pighvar",
+      "text": "Læg pighvarfileterne i saltlagen i 30 minutter."
+    },
+    {
+      "section": "Pighvar",
+      "text": "Blend fiskeafskæringen helt glat. Tilsæt fløde og æggehvider, og blend igen, til massen er jævn."
+    },
+    {
+      "section": "Pighvar",
+      "text": "Pres mousseen gennem en fin sigte, og fyld den i en sprøjtepose."
+    },
+    {
+      "section": "Pighvar",
+      "text": "Rør timian og citronskal i mousseen, og smag til med salt."
+    },
+    {
+      "section": "Pighvar",
+      "text": "Skær hver pighvarfilet op som en bog. Sprøjt mousse ind i midten, og fold fileten sammen om fyldet."
+    },
+    {
+      "section": "Pighvar",
+      "text": "Vakuumpak fisken, og tilbered den sous-vide ved 55 °C i 8 minutter."
+    },
+    {
+      "section": "Citronsmørsauce",
+      "text": "Kog fløde og citronsaft ind, til det tykner. Pisk smørret i, så saucen emulgerer."
+    },
+    {
+      "section": "Citronsmørsauce",
+      "text": "Vend både de hvide og de grønne asparges samt de friske kirsebær i saucen. Rør derefter de afdryppede rosenblade i, og tilsæt en smule figenbladsolie."
+    },
+    {
+      "section": "Citronsmørsauce",
+      "text": "Anret saucen på tallerkenerne, og læg en portion pighvar ovenpå."
+    }
+  ],
+  "changes": [
+    "Citrontimian er skiftet til almindelig timian."
+  ]
+}

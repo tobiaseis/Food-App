@@ -1,0 +1,139 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/summer-chicken-stew",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:27:52.142Z",
+  "total_minutes": 65,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Sommergryde med kylling og porre",
+  "intro": "En let og grøn gryderet med mørt kyllingelår, nye kartofler, porre, bønner og ærter. Den simrer stille i bouillon og serveres med et stænk citron.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "porre",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kviste, blade plukket af",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": "udbenede og uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "store skåret i kvarte, små i halve",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3.5,
+      "unit": "dl",
+      "name": "hønsebouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "bønner",
+      "note": "grønne, f.eks. haricots verts",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 350,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i både, til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien i en stor gryde ved middel varme. Kom porre, hvidløg og timian i, læg låg på, og lad det stege forsigtigt i 10 minutter. Rør af og til."
+    },
+    {
+      "section": null,
+      "text": "Krydr kyllingen med salt og peber, og læg den i gryden sammen med kartoflerne."
+    },
+    {
+      "section": null,
+      "text": "Skru op for varmen, hæld bouillonen i, og bring det i kog. Skru ned, sæt låg på, og lad retten simre svagt i 35 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom bønner og ærter i gryden, når der er 10 minutter tilbage af simretiden."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt og peber. Øs op i dybe tallerkener, og pres citron over."
+    }
+  ],
+  "changes": [
+    "Udbenede kyllingelår uden skind er skrevet som kyllingelår med note.",
+    "Frosne petit pois er skiftet til frosne ærter."
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/chilled-herby-noodle-soup-brown-sugar-chilli-oil-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:52:58.689Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 27,
+  "title": "Kold urtenudelsuppe med chiliolie og kongeøstershatte",
+  "intro": "Kold, grøn suppe med kokosmælk og masser af friske urter over nudler, toppet med glaserede svampe, brunsukker-chiliolie og blødkogt æg. Det er en frisk og kraftigt krydret ret, hvor det meste kan laves på forhånd.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kokosolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "stk",
+      "name": "jalapeños",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "et stykke, revet",
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 6,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chiliolie",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chiliolie",
+      "amount": 6,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Chiliolie",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chiliolie",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "jordnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chiliolie",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chiliolie",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 7,
+      "unit": "stk",
+      "name": "kongeøstershatte",
+      "note": "delt på langs",
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "østerssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 300,
+      "unit": "g",
+      "name": "nudler",
+      "note": "friske hvedenudler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "blødkogte",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i fine ringe",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppebase",
+      "text": "Varm kokosolien op i en stor gryde ved middelvarme. Rør skalotteløg, jalapeño og ingefær rundt i olien, til det dufter."
+    },
+    {
+      "section": "Suppebase",
+      "text": "Hæld fond og kokosmælk i gryden, og kom citrongræs, koriander og basilikum i."
+    },
+    {
+      "section": "Suppebase",
+      "text": "Lad det komme i kog og simre kort. Tag gryden af varmen, og blend suppen helt glat med en stavblender."
+    },
+    {
+      "section": "Suppebase",
+      "text": "Si suppen gennem en finmasket si over i en ren gryde. Smag til med salt og peber. Lad den køle af, og stil den derefter i køleskabet, til den er helt kold."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog nudlerne møre efter anvisningen på pakken. Si dem fra, og skyl dem i koldt vand. Vend dem med lidt olie, så de ikke klistrer sammen, og stil dem på køl, til de skal bruges."
+    },
+    {
+      "section": "Chiliolie",
+      "text": "Kom chiliflager, hvidløg, farin, jordnødder og sesamfrø i en tykbundet kasserolle eller en stor ildfast skål."
+    },
+    {
+      "section": "Chiliolie",
+      "text": "Varm olien op i en tykbundet kasserolle til 140 °C."
+    },
+    {
+      "section": "Chiliolie",
+      "text": "Hæld forsigtigt den varme olie over krydderierne. Det bruser kraftigt op, så stå på afstand, og hæld evt. olien i flere omgange."
+    },
+    {
+      "section": "Chiliolie",
+      "text": "Lad olien trække, mens resten tilberedes."
+    },
+    {
+      "section": "Svampe",
+      "text": "Varm olien op i en pande ved høj varme. Steg svampene med snitfladen nedad, til de er gyldne."
+    },
+    {
+      "section": "Svampe",
+      "text": "Tilsæt smør, østerssauce, mirin, sukker, sojasauce og sesamolie. Rør rundt, til svampene er blanke og klistrede af sauce."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel nudlerne i skåle, og øs den grønne suppe over. Læg svampe, chiliolie, æg og forårsløg ovenpå, og server straks."
+    }
+  ],
+  "changes": []
+}

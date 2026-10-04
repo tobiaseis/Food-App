@@ -1,0 +1,184 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-broccoli-beetroot-salad-avocado-pesto",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:58:19.810Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Kyllingesalat med broccoli, rødbede og avocadopesto",
+  "intro": "Grillet kylling og broccoli på en bund af rucola med rå rødbede og syrlige rødløg. Salaten serveres med en cremet pesto af avocado, basilikum og valnødder.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "tynde stilke",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 3,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "uden skind",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "rå, skrællet og skåret i tynde strimler eller revet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "nigellafrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadopesto",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadopesto",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadopesto",
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Avocadopesto",
+      "amount": 25,
+      "unit": "g",
+      "name": "valnødder",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Avocadopesto",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadopesto",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saft og skal",
+      "optional": false
+    },
+    {
+      "section": "Avocadopesto",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Broccoli og kylling",
+      "text": "Kog broccolien i rigeligt vand i 2 minutter. Hæld vandet fra, og skyl broccolien i koldt vand."
+    },
+    {
+      "section": "Broccoli og kylling",
+      "text": "Varm en grillpande op. Vend broccolien i ½ tsk af olien, og grill den 2-3 minutter under vending, til den får lidt farve. Stil den til side, så den køler af."
+    },
+    {
+      "section": "Broccoli og kylling",
+      "text": "Pensl kyllingen med resten af olien til salaten, og krydr med salt og peber. Grill den 3-4 minutter på hver side, til den er gennemstegt. Lad den køle af, og skær eller pil den derefter i store stykker."
+    },
+    {
+      "section": "Avocadopesto",
+      "text": "Pluk basilikumbladene af. Gem en håndfuld til pynt, og kom resten i en foodprocessor."
+    },
+    {
+      "section": "Avocadopesto",
+      "text": "Tilsæt avocadoens frugtkød, hvidløg, valnødder, olie, 1 spsk citronsaft, 2-3 spsk koldt vand, salt og peber. Blend til en jævn pesto, og hæld den i en lille skål."
+    },
+    {
+      "section": "Avocadopesto",
+      "text": "Hæld resten af citronsaften over rødløgene, og lad dem trække et par minutter."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg rucolaen på et stort fad. Vend broccoli og løg i med den citronsaft, løgene har trukket i."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg rødbederne ovenpå uden at blande dem i, og læg kyllingen oven på dem. Drys med de gemte basilikumblade, citronskal og nigellafrø. Server med avocadopestoen."
+    }
+  ],
+  "changes": [
+    "Avokadoolie er erstattet af rapsolie.",
+    "Vandkarse er erstattet af rucola.",
+    "Tyndstilket broccoli er erstattet af almindelig broccoli."
+  ]
+}

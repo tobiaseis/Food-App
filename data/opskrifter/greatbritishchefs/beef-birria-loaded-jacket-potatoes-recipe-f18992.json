@@ -1,0 +1,329 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/beef-birria-loaded-jacket-potatoes-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:25:09.533Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 28,
+  "title": "Birria-fyldte bagte kartofler med limecreme",
+  "intro": "Møre, langtidsbraiserede oksespidsbryst i krydret chilisauce, der hældes over sprøde bagekartofler med smeltet cheddar. Syrlige rødløg og kølig limecreme runder retten af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til kartoflerne",
+      "amount": 4,
+      "unit": "stk",
+      "name": "bagekartofler",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "groft revet",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "koriander",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 1.2,
+      "unit": "kg",
+      "name": "oksespidsbryst",
+      "note": "med ben",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tørrede chili",
+      "note": "mild type, afkernet",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 6,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "nelliker",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "hele sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": 750,
+      "unit": "ml",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til brunding",
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til birriaen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i fine halvmåner",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 75,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limecreme",
+      "amount": 125,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limecreme",
+      "amount": 50,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limecreme",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Limecreme",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limecreme",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Birriasauce",
+      "text": "Rist de tørrede chilier på en tør, varm pande i 30 sekunder på hver side, til de dufter og hæver let. Læg dem i en varmefast skål, dæk med kogende vand, og lad dem trække i 15 minutter, til de er bløde."
+    },
+    {
+      "section": "Birriasauce",
+      "text": "Tænd ovnens grill på høj varme. Læg løg, hvidløg og tomater på en bageplade med folie, og grill dem, til de er let forkullede. Det kan også gøres på en tør pande ved høj varme."
+    },
+    {
+      "section": "Birriasauce",
+      "text": "Sluk for grillen, og sæt ovnen på 160 °C."
+    },
+    {
+      "section": "Birriasauce",
+      "text": "Hæld vandet fra chilierne. Blend dem med de grillede grøntsager, tomatpuré, krydderier, eddike, brun farin og 250 ml af oksefonden, til saucen er helt glat. Laurbærblade og peberkorn skal ikke med."
+    },
+    {
+      "section": "Braiseret oksekød",
+      "text": "Krydr oksespidsbrystet med salt og peber. Varm lidt olie op i en stor, tung gryde ved middelhøj varme, og brun kødet på alle sider. Tag det op."
+    },
+    {
+      "section": "Braiseret oksekød",
+      "text": "Kom saucen i gryden sammen med laurbærblade, peberkorn og resten af fonden, og smag til med salt. Bring det i kog, læg kødet tilbage, sæt låg på, og braisér i ovnen i 4 timer, til kødet falder fra hinanden."
+    },
+    {
+      "section": "Syltede rødløg",
+      "text": "Bland alle ingredienserne til rødløgene i en skål, og ælt dem let. Stil dem til side – de er syltede, når kødet er færdigt."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Skru op til 210 °C ca. 75 minutter før kødet er færdigt. Gnid kartoflerne ind i olivenolie og flagesalt, og læg dem på en plade med bagepapir. Bag dem i 1 time og 20 minutter, til skindet er sprødt og kartoflen blød indeni. Tag dem ud."
+    },
+    {
+      "section": "Limecreme",
+      "text": "Pisk creme fraiche, yoghurt, limeskal og limesaft sammen, og smag til med salt og peber. Stil cremen på køl til servering."
+    },
+    {
+      "section": "Samling",
+      "text": "Løft kødet op af braisevæsken, pluk det i strimler, og kassér ben og sener. Lad saucen simre uden låg i 10 minutter, til den er lidt reduceret, og øs overskydende fedt af. Vend lidt af saucen i det trevlede kød, så det holder sig saftigt. Hold resten af saucen varm."
+    },
+    {
+      "section": "Samling",
+      "text": "Skær kartoflerne op, og luft midten med en gaffel. Fordel noget af cheddaren i den varme kartoffel, så den smelter, og top med kødet og resten af osten. Sæt dem tilbage i ovnen i 5-10 minutter, til osten er smeltet og bobler."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld birriasaucen på tallerkener, og anret kartoflerne ovenpå. Top med limecreme, syltede rødløg og korianderblade."
+    }
+  ],
+  "changes": [
+    "Ancho- og guajillochili er erstattet af almindelige tørrede chilier.",
+    "Mexicansk oregano er erstattet af almindelig oregano.",
+    "Sherryeddike er erstattet af almindelig eddike.",
+    "Sour cream er erstattet af creme fraiche."
+  ]
+}

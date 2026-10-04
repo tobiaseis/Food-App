@@ -1,0 +1,188 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/gochujang-chicken-wings",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:52:36.372Z",
+  "total_minutes": 75,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Gochujang kyllingevinger",
+  "intro": "Sprøde ovnbagte kyllingevinger vendt i en sticky glaze af gochujang, honning og sojasauce. Sichuan-pebret giver en let prikkende varme.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til vingerne",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kyllingevinger",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til vingerne",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til vingerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til vingerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til vingerne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "friskkværnet sort peber",
+      "optional": false
+    },
+    {
+      "section": "Til vingerne",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til at pensle risten med",
+      "optional": false
+    },
+    {
+      "section": "Til glazen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "peber",
+      "note": "sort peber, groftknust",
+      "optional": false
+    },
+    {
+      "section": "Til glazen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glazen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Til glazen",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Til glazen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glazen",
+      "amount": 2.5,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glazen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glazen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glazen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "eller lidt mere efter behov",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Vingerne",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Vingerne",
+      "text": "Del hver vinge i to ved leddet, og kassér vingespidserne, hvis de sidder på. Tør vingerne grundigt med køkkenrulle."
+    },
+    {
+      "section": "Vingerne",
+      "text": "Vend vingerne i en skål med bagepulver, hvidløgspulver, salt og peber, så de er dækket jævnt."
+    },
+    {
+      "section": "Vingerne",
+      "text": "Klæd en bradepande med folie, og læg en bageri eller ovnrist ovenpå. Pensl risten med lidt olie, så vingerne ikke hænger fast."
+    },
+    {
+      "section": "Vingerne",
+      "text": "Læg vingerne med skindsiden opad på risten, og sørg for, at de ligger med afstand."
+    },
+    {
+      "section": "Vingerne",
+      "text": "Bag i 1 time, og vend vingerne hver 20. minut."
+    },
+    {
+      "section": "Glazen",
+      "text": "Knus peberkornene i en morter. Rist dem på en stor pande ved middel varme i 2 minutter, og læg dem derefter over i en skål."
+    },
+    {
+      "section": "Glazen",
+      "text": "Sæt panden på blusset igen med olien ved middel varme. Steg hvidløg og ingefær i 2 minutter, til hvidløget er blødt."
+    },
+    {
+      "section": "Glazen",
+      "text": "Rør gochujang, honning og sojasauce i, og lad det simre under omrøring i 2 minutter, til saucen er lidt tykkere."
+    },
+    {
+      "section": "Glazen",
+      "text": "Tilsæt det ristede peber, eddike og vand, så saucen bliver løsere. Tag panden af varmen, mens vingerne bager færdigt."
+    },
+    {
+      "section": "Servering",
+      "text": "Kom de færdige vinger i panden, og vend dem rundt i saucen, til de er dækket. Anret på et stort fad, og server med det samme sammen med masser af servietter."
+    }
+  ],
+  "changes": [
+    "Sichuan-peber er erstattet med sort peber.",
+    "Chicken wings er skrevet som kyllingevinger.",
+    "Garlic granules er erstattet med hvidløgspulver."
+  ]
+}

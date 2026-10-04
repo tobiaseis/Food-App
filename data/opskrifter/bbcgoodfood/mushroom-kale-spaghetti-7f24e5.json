@@ -1,0 +1,147 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/mushroom-kale-spaghetti",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:11:48.989Z",
+  "total_minutes": 40,
+  "active_minutes": 20,
+  "yield_count": 5,
+  "source_lines": 10,
+  "title": "Spaghetti med svampe og grønkål",
+  "intro": "Cremet spaghetti med stegte champignon og grønkål i en blød sauce af smørbønner og miso. Sat sammen med chili og citron, så retten får både dybde og friskhed.",
+  "servings": 5,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "grønkål",
+      "note": "stokke fjernet, groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "bønner",
+      "note": "smørbønner på dåse, skyllet og afdryppet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "miso",
+      "note": "hvid",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog spaghettien al dente i saltet, kogende vand efter anvisningen på pakken. Gem 2,5 dl af kogevandet, og si pastaen fra."
+    },
+    {
+      "section": null,
+      "text": "Varm olivenolien i en stor pande ved middelvarme, mens pastaen koger. Steg hvidløg og chili i 1-2 minutter, til hvidløget begynder at blive gyldent."
+    },
+    {
+      "section": null,
+      "text": "Kom champignon på panden, og steg dem møre i 4-5 minutter. Tilsæt grønkålen, og lad den falde sammen i 3-4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Blend bønner, miso og 1,5 dl af kogevandet til en glat sauce. Tilsæt lidt mere kogevand, hvis den er for tyk."
+    },
+    {
+      "section": null,
+      "text": "Hæld saucen over grønkål og champignon, og lad den simre i 2-3 minutter. Tynd med kogevand, hvis den bliver for tyk."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt, peber og citronsaft. Rør creme fraiche i, hvis du bruger den."
+    },
+    {
+      "section": null,
+      "text": "Vend den afdryppede spaghetti i saucen, og server med det samme."
+    }
+  ],
+  "changes": [
+    "Kastanjechampignon er erstattet af almindelig champignon.",
+    "Smørbønner på dåse står som bønner."
+  ]
+}

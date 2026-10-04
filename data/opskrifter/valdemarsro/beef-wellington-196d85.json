@@ -1,0 +1,206 @@
+{
+  "url": "https://www.valdemarsro.dk/beef-wellington/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:46:18.343Z",
+  "total_minutes": 90,
+  "active_minutes": 60,
+  "yield_count": 6,
+  "source_lines": 14,
+  "title": "Beef Wellington",
+  "intro": "Mørt oksemørbrad med svampefyld og serranoskinke, pakket ind i sprød butterdej. En klassisk festret, som kan forberedes dagen før.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "oksemørbrad",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "grov sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "trøffelolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "serranoskinke",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "butterdej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "sammenpisket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødet",
+      "text": "Fjern sener fra mørbraden, og skær de tynde ender af, så stykket får samme tykkelse hele vejen. Enderne kan bruges i en anden ret."
+    },
+    {
+      "section": "Kødet",
+      "text": "Tør kødet med køkkenrulle, og lad det stå på bordet i en halv time. Tør det igen bagefter."
+    },
+    {
+      "section": "Kødet",
+      "text": "Hold olien varm på en pande, og lad smørret smelte og boble af. Brun mørbraden på alle sider, til den har en fin skorpe."
+    },
+    {
+      "section": "Kødet",
+      "text": "Tag panden af varmen. Krydr kødet med salt og peber, og pensl det med begge slags sennep. Læg det på et skærebræt."
+    },
+    {
+      "section": "Svampefyld",
+      "text": "Tilsæt lidt mere olie på panden. Brun champignonerne ved høj varme, til de er gyldne."
+    },
+    {
+      "section": "Svampefyld",
+      "text": "Skru ned for varmen, og svits løg, hvidløg og timian med svampene, til løgene er bløde."
+    },
+    {
+      "section": "Svampefyld",
+      "text": "Hak blandingen fint. Rør trøffelolie i, og smag til med salt og peber."
+    },
+    {
+      "section": "Indpakning",
+      "text": "Læg et stort stykke husholdningsfilm på bordet. Læg skinkeskiverne på filmen, så de overlapper hinanden med ca. 1 cm."
+    },
+    {
+      "section": "Indpakning",
+      "text": "Smør svampefyldet jævnt ud over skinken, og læg mørbraden øverst. Rul det hele stramt sammen ved hjælp af filmen, og luk enderne med skinke."
+    },
+    {
+      "section": "Indpakning",
+      "text": "Pakken kan køle natten over i filmen, eller du kan gå direkte videre."
+    },
+    {
+      "section": "Butterdej",
+      "text": "Rul butterdejen ud på et stort skærebræt. Tag filmen af kødet, og dup skinken tør."
+    },
+    {
+      "section": "Butterdej",
+      "text": "Læg mørbraden på dejen, og fold dejen stramt rundt om. Tryk samlinger og ender godt sammen."
+    },
+    {
+      "section": "Butterdej",
+      "text": "Anbring pakken med samlingen nedad på bagepapir i et ovnfast fad. Pensl med sammenpisket æg, og skær evt. et mønster i dejen med en skarp kniv."
+    },
+    {
+      "section": "Bagning",
+      "text": "Sæt fadet i en forvarmet ovn på 225 °C varmluft, og skru straks ned på 190 °C."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag i 30-40 minutter, til dejen er gyldenbrun og sprød, og kernetemperaturen er omkring 56 °C."
+    },
+    {
+      "section": "Bagning",
+      "text": "Lad stegen hvile i 15 minutter. Skær den derefter i skiver på ca. 1,5 cm med en skarp kniv."
+    }
+  ],
+  "changes": [
+    "Trøffeltapenade er udeladt til fordel for trøffelolie, som kilden nævner som alternativ."
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "url": "https://www.valdemarsro.dk/tandoori-blomkaal/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:12:38.869Z",
+  "total_minutes": 45,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Tandoori blomkål",
+  "intro": "Ovnbagt blomkål og kikærter i en cremet tandoorimarinade med yoghurt og kokosmælk. Serveres med ris og toppes med ristede cashewnødder, frisk koriander og chili.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 2,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kardemomme",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt nellike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "stødt spidskommen",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sød paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 50,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 25,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tandoori-marinade",
+      "amount": 400,
+      "unit": "ml",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 70,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "flager",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Forvarm ovnen til 180 °C varmluft. Smør et stort ovnfast fad."
+    },
+    {
+      "section": null,
+      "text": "Læg blomkål og kikærter i fadet. Pensl med det smeltede smør, og krydr med salt og peber. Bag i 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kog risene efter anvisningen på posen, mens blomkålen bager."
+    },
+    {
+      "section": "Tandoori-marinade",
+      "text": "Pisk yoghurt, kardemomme, kanel, nellike, spidskommen, koriander, paprika, gurkemeje, sukker, ingefær, hvidløg, tomatpuré og majsstivelse sammen. Smag til med salt og peber. Rør til sidst kokosmælken i, og smag igen til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Tag fadet ud af ovnen, og hæld marinaden over blomkål og kikærter. Bag i yderligere 20 minutter."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret blomkål og kikærter ved siden af risene. Top med cashewnødder, koriander og chiliflager."
+    }
+  ],
+  "changes": []
+}

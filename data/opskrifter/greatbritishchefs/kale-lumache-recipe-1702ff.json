@@ -1,0 +1,134 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/kale-lumache-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:59:09.787Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Rigatoni med grønkål og chili",
+  "intro": "Pasta i en cremet, grøn sauce af blancheret grønkål og hvidløgsolie. Serveres med parmesan og chiliflager.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Grønkålssauce",
+      "amount": 400,
+      "unit": "g",
+      "name": "grønkål",
+      "note": "vasket",
+      "optional": false
+    },
+    {
+      "section": "Grønkålssauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": "extra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Grønkålssauce",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": 400,
+      "unit": "g",
+      "name": "rigatoni",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "saften, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chili",
+      "note": "flager, efter smag",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grønkålssauce",
+      "text": "Skær bladene af grønkålen, og gem stilkene. Bring en stor gryde vand i kog med rigeligt salt."
+    },
+    {
+      "section": "Grønkålssauce",
+      "text": "Varm olie og hvidløg op i en mindre gryde ved lav varme. Lad hvidløget trække og blive blødt uden at brune. Tag hvidløget op og kassér det."
+    },
+    {
+      "section": "Grønkålssauce",
+      "text": "Kog stilkene 2 minutter i det kogende vand. Tilsæt bladene, og kog dem 1-2 minutter, til de lige er møre. Si grønkålen fra, og lad den køle af."
+    },
+    {
+      "section": "Grønkålssauce",
+      "text": "Blend den afkølede grønkål med hvidløgsolien i en kraftig blender, til du har en glat pasta."
+    },
+    {
+      "section": "Pasta",
+      "text": "Kog pastaen efter anvisningen på posen. Si den, og gem 1 dl af kogevandet."
+    },
+    {
+      "section": "Pasta",
+      "text": "Smelt smørret i en stor pande, og rør grønkålspastaen i. Vend den kogte pasta med. Tynd saucen ud med lidt af kogevandet, hvis den er for tyk."
+    },
+    {
+      "section": "Pasta",
+      "text": "Pres citronsaft i efter smag, og smag til med salt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret på tallerkener, og drys med peber, parmesan og chiliflager."
+    }
+  ],
+  "changes": [
+    "Cavolo nero og krølkål er erstattet af grønkål."
+  ]
+}

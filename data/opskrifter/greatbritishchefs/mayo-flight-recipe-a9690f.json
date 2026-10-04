@@ -1,0 +1,376 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/mayo-flight-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:19:59.365Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 12,
+  "source_lines": 29,
+  "title": "Mayonnaiseflight med fem slags mayo",
+  "intro": "Fem hjemmelavede mayonnaiser i små skåle: persille, chorizo, cocktailsauce, karry og klassisk. Server dem med en stor bakke friske grøntsager til dip.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Persillemayonnaise",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "lidt blade gemmes til pynt",
+      "optional": false
+    },
+    {
+      "section": "Persillemayonnaise",
+      "amount": 400,
+      "unit": "ml",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillemayonnaise",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillemayonnaise",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Persillemayonnaise",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Chorizomayonnaise",
+      "amount": 400,
+      "unit": "ml",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chorizomayonnaise",
+      "amount": 200,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Chorizomayonnaise",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chorizomayonnaise",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Chorizomayonnaise",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 400,
+      "unit": "ml",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": "og lidt ekstra til pynt",
+      "optional": false
+    },
+    {
+      "section": "Karrymayonnaise",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrymayonnaise",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Karrymayonnaise",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrymayonnaise",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrymayonnaise",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Karrymayonnaise",
+      "amount": 400,
+      "unit": "ml",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrymayonnaise",
+      "amount": null,
+      "unit": null,
+      "name": "chiliflager",
+      "note": "til pynt på karry- og chorizomayonnaisen",
+      "optional": false
+    },
+    {
+      "section": "Klassisk mayonnaise",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Klassisk mayonnaise",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Klassisk mayonnaise",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Klassisk mayonnaise",
+      "amount": 400,
+      "unit": "ml",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "oliven",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "radiser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ansjoser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "julesalat",
+      "note": "cikorie",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Persillemayonnaise",
+      "text": "Kør persille og olie sammen i en blender eller foodprocessor, til olien er grøn."
+    },
+    {
+      "section": "Persillemayonnaise",
+      "text": "Hæld den grønne olie i en gryde og lad den småkoge, så farven fæstner. Si den derefter gennem en fin si beklædt med osteklæde eller køkkenrulle ned i en skål."
+    },
+    {
+      "section": "Persillemayonnaise",
+      "text": "Lad olien dryppe igennem i sit eget tempo. Presser du på, bliver den uklar."
+    },
+    {
+      "section": "Persillemayonnaise",
+      "text": "Pisk æggeblomme, sennep og citronsaft sammen i en skål. Stil skålen på nogle fugtige viskestykker, så den står stabilt."
+    },
+    {
+      "section": "Persillemayonnaise",
+      "text": "Når olien er sivet igennem og afkølet, pisk den i blommeblandingen i en helt tynd stråle under konstant piskning."
+    },
+    {
+      "section": "Persillemayonnaise",
+      "text": "Når massen begynder at tykne, kan olien komme lidt hurtigere i. Smag til med rigeligt salt og peber, og stil den på køl."
+    },
+    {
+      "section": "Chorizomayonnaise",
+      "text": "Hæld olien i en gryde, og læg chorizoskiverne i. Varm langsomt op, til det syder, og lad det stege, til chorizoen er sprød og olien er rød."
+    },
+    {
+      "section": "Chorizomayonnaise",
+      "text": "Tag chorizoen op med en hulske og stil den til side. Lad olien køle af."
+    },
+    {
+      "section": "Chorizomayonnaise",
+      "text": "Pisk æggeblomme, sennep og citronsaft sammen. Pisk den kolde olie i lidt ad gangen, og smag til med salt og peber. Stil på køl."
+    },
+    {
+      "section": "Cocktailsauce",
+      "text": "Lav en mayonnaise af æggeblomme, sennep, citronsaft og olie på samme måde som før. Rør ketchup, paprika og cayennepeber i, og stil den på køl."
+    },
+    {
+      "section": "Karrymayonnaise",
+      "text": "Pisk æggeblomme, sennep, citronsaft, garam masala og gurkemeje sammen. Pisk olien i lidt ad gangen, smag til med salt og peber, og stil på køl."
+    },
+    {
+      "section": "Klassisk mayonnaise",
+      "text": "Pisk æggeblomme, sennep og citronsaft sammen. Tilsæt olien gradvist under piskning, smag til med salt og peber, og stil på køl."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel de fem mayonnaiser i små skåle. Pynt persillemayonnaisen med persilleblade og chorizomayonnaisen med noget af den sprøde chorizo og lidt chiliflager."
+    },
+    {
+      "section": "Til servering",
+      "text": "Drys cayennepeber over cocktailsaucen, sort peber over den klassiske og en knivspids chiliflager over karrymayonnaisen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Stil skålene på et stort bræt, og læg grøntsagerne rundt om."
+    }
+  ],
+  "changes": []
+}

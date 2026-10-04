@@ -1,0 +1,142 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/runner-bean-tortilla-tomato-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T13:37:03.819Z",
+  "total_minutes": 25,
+  "active_minutes": 10,
+  "yield_count": 3,
+  "source_lines": 11,
+  "title": "Bønnetortilla med tomatsalat",
+  "intro": "En let spansk tortilla med grønne bønner, citron og hvidløg, der serveres med en frisk salat af tomat, rødløg og basilikum.",
+  "servings": 3,
+  "ingredients": [
+    {
+      "section": "Til tortillaen",
+      "amount": 200,
+      "unit": "g",
+      "name": "haricots verts",
+      "note": "skåret i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til tortillaen",
+      "amount": 5,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tortillaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal; ½ citron presses til salaten",
+      "optional": false
+    },
+    {
+      "section": "Til tortillaen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til tortillaen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "oliven",
+      "note": "fyldt med peberfrugt, i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Til tortillaen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tortillaen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tortillaen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "parmesan",
+      "note": "fintrevet, til servering",
+      "optional": true
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 3,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "rucola",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til tortillaen",
+      "text": "Kog bønnerne i vand i ca. 5 minutter, til de lige er møre. Hæld dem i et dørslag og lad vandet løbe fra."
+    },
+    {
+      "section": "Til tortillaen",
+      "text": "Pisk æggene i en skål sammen med citronskal, hvidløg, oliven og peber. Vend bønnerne i."
+    },
+    {
+      "section": "Til tortillaen",
+      "text": "Varm olien i en nonstick-pande på 23 cm. Hæld æggemassen på panden og rør forsigtigt rundt de første par minutter, så det stivnede æg løsnes, og det rå æg løber ned mod bunden."
+    },
+    {
+      "section": "Til tortillaen",
+      "text": "Lad tortillaen stivne i nogle minutter. Sluk for varmen, læg låg på, og lad den stå i 5 minutter, så æggemassen foroven også bliver gennemstegt."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Kom citronsaften i en skål og vend rødløget i. Tilsæt tomater, basilikum og eventuelt rucola, og vend det hele sammen."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Skær tortillaen i både og server den med salaten. Drys eventuelt med parmesan."
+    }
+  ],
+  "changes": [
+    "Løberbønner er erstattet af haricots verts."
+  ]
+}

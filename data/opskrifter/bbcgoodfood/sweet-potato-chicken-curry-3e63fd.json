@@ -1,0 +1,119 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/sweet-potato-chicken-curry",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:04:37.777Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Kylling og sødkartoffel i karry",
+  "intro": "En hurtig gryderet med mør kylling, sødkartoffel og spinat i en mild krydret karrysauce. Server den med ris og naanbrød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "sødkartoffel",
+      "note": "skrællet og skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "uden skind og ben, skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "stort, skåret i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rogan josh karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "store, groft hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "naanbrød",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog sødkartoflerne i letsaltet vand i 5-7 minutter, til de næsten er møre. Si dem fra og stil dem til side."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op på en stor pande, mens kartoflerne koger. Brun kyllingen og løget i 5-6 minutter, til kyllingen er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Rør karrypastaen ind, og lad den stege med i 1 minut. Kom tomaterne på, og lad det simre i endnu 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Hæld 1 MILLILITER kogende vand på og rør rundt."
+    }
+  ],
+  "changes": [
+    "Kyllingebrystfilet i kildens \"chicken thigh fillets\" er skiftet til kyllingeoverlår uden skind og ben.",
+    "Rogan josh curry paste er skiftet til rogan josh karrypasta."
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/varenyky",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:42:40.393Z",
+  "total_minutes": 110,
+  "active_minutes": 80,
+  "yield_count": 30,
+  "source_lines": 12,
+  "title": "Varenyky med surkål og svampe",
+  "intro": "Ukrainske kogte dumplings med fyld af svampe, løg, surkål og kastanjer, serveret med creme fraiche og sprøde stegte skalotteløg. Dejen hviler undervejs, så fyldet når at blive klar og køle af.",
+  "servings": 30,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "let pisket",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 60,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": null,
+      "unit": null,
+      "name": "durummel",
+      "note": "til tilbehør: drys på bakkerne",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "surkål",
+      "note": "drænet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "champignon",
+      "note": "groft revet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "kogte kastanjer",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde skalotteløg",
+      "amount": 1,
+      "unit": "dl",
+      "name": "solsikkeolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde skalotteløg",
+      "amount": 250,
+      "unit": "g",
+      "name": "skalotteløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Sprøde skalotteløg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde skalotteløg",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Kom æg og vand i skålen til en røremaskine. Tilsæt melet og æltemed dejkrogen ved lav hastighed i 2 minutter, til det hænger sammen."
+    },
+    {
+      "section": "Dej",
+      "text": "Dæk skålen til, og lad dejen hvile 10-15 minutter. Ælt den derefter 2 minutter mere, til den er glat og elastisk."
+    },
+    {
+      "section": "Dej",
+      "text": "Dæk til igen, og lad dejen hvile i 30 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Varm halvdelen af olien på en pande ved middel-lav varme. Steg løgene i 12-15 minutter, til de er bløde og klare."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rør surkålen i, og steg den med i 5 minutter. Tilsæt en sjat vand, hvis den brænder på. Hæld blandingen i en skål."
+    },
+    {
+      "section": "Fyld",
+      "text": "Hæld resten af olien på panden, og skru op til middel-høj varme. Steg champignon i 5-7 minutter, til den er brunet hele vejen rundt."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend champignon og kastanjer ned i løgblandingen. Smag til med salt og peber, og lad fyldet køle af."
+    },
+    {
+      "section": "Sprøde skalotteløg",
+      "text": "Varm solsikkeolien i en gryde ved middel-høj varme. Læg et lille stykke skalotteløg i olien – hvis det syder, er olien klar."
+    },
+    {
+      "section": "Sprøde skalotteløg",
+      "text": "Vend skalotteløgene i melet, og steg dem gyldne i omgange. Løft dem op med en hulske, og lad dem dryppe af på køkkenrulle. Drys med salt."
+    },
+    {
+      "section": "Samling",
+      "text": "Drys to store bakker med durummel. Del dejen i to, og rul den ene halvdel ud til en tykkelse på 3-4 mm. Pak den anden halvdel ind i et viskestykke, så den ikke tørrer ud."
+    },
+    {
+      "section": "Samling",
+      "text": "Udstik runde stykker på 8-10 cm. Læg en knap spiseskefuld fyld på hver, og fold dem sammen til halvmåner."
+    },
+    {
+      "section": "Samling",
+      "text": "Pres luften ud, og klem kanterne helt sammen, så de lukker tæt. Du kan lave en snoet kant, hvis du vil. Læg dem på bakkerne undervejs."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul den anden halvdel ud, og gentag, til dej og fyld er brugt op."
+    },
+    {
+      "section": "Servering",
+      "text": "Kog dumplings i en stor gryde med kogende saltet vand i 3-4 minutter, til de flyder op til overfladen."
+    },
+    {
+      "section": "Servering",
+      "text": "Smør creme fraiche ud på tallerkenerne, læg dumplings ovenpå, og top med de sprøde skalotteløg."
+    }
+  ],
+  "changes": [
+    "Hvedemel erstatter strong white bread flour eller ’00’-mel.",
+    "Durummel erstatter semolina eller polenta til at drysse med.",
+    "Skalotteløg erstatter valget mellem skalotteløg og løg til de sprøde løg.",
+    "Surkål bruges i fyldet frem for spidskål."
+  ]
+}

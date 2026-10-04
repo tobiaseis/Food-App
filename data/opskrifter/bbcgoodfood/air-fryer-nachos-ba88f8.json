@@ -1,0 +1,152 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/air-fryer-nachos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:00:44.720Z",
+  "total_minutes": 25,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Nachos fra airfryer",
+  "intro": "Sprøde nachos med sorte bønner og smeltet ost, lavet i airfryeren på få minutter. Serveres med frisk tomatsalsa lavet af revne tomater.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til salsaen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "store, modne og faste",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, pillet",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chili",
+      "note": "stødt",
+      "optional": true
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "400 g, afdryppede og skyllede",
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 200,
+      "unit": "g",
+      "name": "tortillachips",
+      "note": "saltede",
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 75,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "lagret, revet",
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 100,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet, eller hel mozzarella i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "groft hakket",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Salsa",
+      "text": "Riv tomaterne groft ned i en skål, og lad skindet blive tilbage på rivejernet. Riv løget ned i skålen."
+    },
+    {
+      "section": "Salsa",
+      "text": "Rør olivenolie, limesaft, chili og salt i. Stil salsaen til side. Den kan laves dagen før og opbevares i køleskabet."
+    },
+    {
+      "section": "Nachos",
+      "text": "Kom bønnerne i en skål sammen med cajun-krydderiet og limesaften. Mos dem groft med en kartoffelmoser."
+    },
+    {
+      "section": "Nachos",
+      "text": "Beklæd airfryerkurven med bagepapir. Læg halvdelen af chipsene i kurven, og top med halvdelen af bønnerne og halvdelen af osten. Gentag, så der er to lag."
+    },
+    {
+      "section": "Nachos",
+      "text": "Kør nachos i airfryeren ved 200 °C i 8-10 minutter, til osten er smeltet, gylden og boblende."
+    },
+    {
+      "section": "Nachos",
+      "text": "Løft nachos op på et fad i bagepapiret. Kom halvdelen af salsaen over, og drys med koriander. Server resten af salsaen ved siden af."
+    }
+  ],
+  "changes": [
+    "Tortilla chips er skrevet som tortillachips.",
+    "Cajun-style eller fajita-krydderi er blevet til cajun-krydderi.",
+    "Mature cheddar er blevet til lagret cheddar."
+  ]
+}

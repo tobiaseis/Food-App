@@ -1,0 +1,192 @@
+{
+  "url": "https://www.valdemarsro.dk/jordskokkerisotto/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:54:26.584Z",
+  "total_minutes": 60,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Risotto med jordskokker og jordskokkechips",
+  "intro": "Cremet risotto med bløde jordskokker, parmesan og citron, toppet med sprøde jordskokkechips. Friske urter og ost på toppen runder retten af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Risotto",
+      "amount": 400,
+      "unit": "g",
+      "name": "jordskokker",
+      "note": "i meget små tern",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 350,
+      "unit": "g",
+      "name": "risotto ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 1.2,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 75,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "fintrevet skal og en smule saft, gerne økologisk",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkechips og topping",
+      "amount": 150,
+      "unit": "g",
+      "name": "jordskokker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkechips og topping",
+      "amount": 3,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkechips og topping",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkechips og topping",
+      "amount": 0.5,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkechips og topping",
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Jordskokkechips",
+      "text": "Skræl jordskokkerne, og hobl dem i tynde skiver på et mandolinjern."
+    },
+    {
+      "section": "Jordskokkechips",
+      "text": "Hæld olien i en gryde, og opvarm den til 180 °C."
+    },
+    {
+      "section": "Jordskokkechips",
+      "text": "Steg skiverne i små portioner, til de er gyldne og sprøde. Fisk dem op med en hulske, og lad dem løbe af på køkkenrulle. Drys straks med flagesalt."
+    },
+    {
+      "section": "Risotto",
+      "text": "Varm olivenolien i en gryde på middel-lav varme. Svits jordskokketerninger, løg, hvidløg og tørret timian i 5-6 minutter, til alt er blødt. Grøntsagerne må ikke blive brune."
+    },
+    {
+      "section": "Risotto",
+      "text": "Kom risene i gryden, og rør rundt, så de er dækket af olie. Hæld vinen i, og rør, til den er trukket ind."
+    },
+    {
+      "section": "Risotto",
+      "text": "Tilsæt fonden lidt ad gangen under omrøring. Fortsæt, til risene er næsten møre, og risottoen er cremet."
+    },
+    {
+      "section": "Risotto",
+      "text": "Rør parmesanen i. Smag til med citronskal, en smule citronsaft, salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret risottoen med jordskokkechips, revet parmesan og frisk timian."
+    }
+  ],
+  "changes": [
+    "Fritureolie er skiftet til rapsolie.",
+    "Risotto ris er beholdt som risotto ris.",
+    "Grøntsagsbouillon er skrevet som grøntsagsfond."
+  ]
+}

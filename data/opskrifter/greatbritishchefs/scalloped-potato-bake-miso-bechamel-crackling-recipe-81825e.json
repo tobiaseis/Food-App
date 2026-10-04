@@ -1,0 +1,314 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/scalloped-potato-bake-miso-bechamel-crackling-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:36:30.933Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 27,
+  "title": "Flødekartofler med misobechamel og gochujang-svær",
+  "intro": "Mørt kartoffelgratin med cremet misobechamel og tre slags ost, toppet med sprød svær i sød-stærk gochujang og en grøn urtedressing. Et festligt tilbehør, der sagtens kan stå som hovedret.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til den sprøde svær",
+      "amount": 600,
+      "unit": "g",
+      "name": "svinesvær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den sprøde svær",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Til den sprøde svær",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den sprøde svær",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den sprøde svær",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den sprøde svær",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den sprøde svær",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 700,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "i helt tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til misobechamel",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til misobechamel",
+      "amount": 40,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til misobechamel",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvid miso",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til misobechamel",
+      "amount": 5,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": "varmet op, evt. lidt mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Til misobechamel",
+      "amount": 100,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til misobechamel",
+      "amount": 100,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til misobechamel",
+      "amount": 100,
+      "unit": "g",
+      "name": "gruyère",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til misobechamel",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til misobechamel",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 20,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "purløg",
+      "note": "i fine ringe",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sprød svær",
+      "text": "Tænd ovnen på 220 °C varmluft."
+    },
+    {
+      "section": "Sprød svær",
+      "text": "Rids sværen, tør den og gnid den godt ind i salt. Lad den stå i 20 minutter, så saltet trækker væde ud."
+    },
+    {
+      "section": "Sprød svær",
+      "text": "Børst saltet af og tør sværen grundigt med køkkenrulle. Drys den med friskt salt."
+    },
+    {
+      "section": "Sprød svær",
+      "text": "Bag sværen i ovnen i 20–30 minutter, til den er gylden og sprød over det hele. Tag den ud og skru ovnen ned på 190 °C varmluft."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Duppe kartoffelskiverne tørre."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Smelt smørret i en pande, og brun hvidløget let, til det dufter. Pas på, for hvidløg brænder let på."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Pensl et ildfast fad med det smeltede smør. Læg kartoflerne i lag i fadet, og pensl hvert lag med smør og krydr med salt og peber."
+    },
+    {
+      "section": "Misobechamel",
+      "text": "Smelt smørret i en gryde, og rør melet i. Svits det, men lad jævningen forblive lys."
+    },
+    {
+      "section": "Misobechamel",
+      "text": "Rør misoen i, og tilsæt så den varme mælk lidt ad gangen under konstant omrøring."
+    },
+    {
+      "section": "Misobechamel",
+      "text": "Kog saucen, til den tykner. Tag gryden af varmen, rør osten i, og smag til med salt og peber."
+    },
+    {
+      "section": "Bagning",
+      "text": "Hæld bechamelen over kartoflerne. Bag fadet i 30–40 minutter, til kartoflerne er møre og toppen er gyldenbrun."
+    },
+    {
+      "section": "Svær og dressing",
+      "text": "Pisk gochujang, honning, æblecidereddike, sojasauce og olie sammen. Brug en gaffel eller et piskeris."
+    },
+    {
+      "section": "Svær og dressing",
+      "text": "Bræk den bagte svær i stykker, og vend den i gochujangblandingen."
+    },
+    {
+      "section": "Svær og dressing",
+      "text": "Rør honning, hvidvinseddike, olie, persille og basilikum sammen til dressingen, og smag den til med salt."
+    },
+    {
+      "section": "Servering",
+      "text": "Top det varme kartoffelfad med svær, dressing og resten af gochujang-honningblandingen. Dryss med purløg og friskkværnet peber."
+    }
+  ],
+  "changes": [
+    "Nanna Tate-kartofler er skiftet til almindelige kartofler."
+  ]
+}

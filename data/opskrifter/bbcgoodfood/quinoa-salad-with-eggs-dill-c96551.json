@@ -1,0 +1,138 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/quinoa-salad-with-eggs-dill",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:01:44.461Z",
+  "total_minutes": 45,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Quinoasalat med æg og dild",
+  "intro": "Frisk quinoasalat med bløde æg, grønne asparges, cherrytomater og en urtedressing med kapers. Den egner sig godt til madpakken, da den kan stå på køl til dagen efter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 120,
+      "unit": "g",
+      "name": "bulgur / couscous",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "asparges",
+      "note": "de trævlede ender skæres af; store stænger halveres",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 6,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "basilikum",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 15,
+      "unit": "g",
+      "name": "kapers",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "basilikum",
+      "note": "et par blade til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skyl quinoaen, og kog den i rigeligt vand i 20 minutter. Lad den trække af varmen i 5 minutter, og si den derefter fra. Skyl den, og lad den dryppe godt af."
+    },
+    {
+      "section": null,
+      "text": "Kog imens æggene i 7 minutter i en anden gryde med en dampindsats med aspargesene over."
+    },
+    {
+      "section": null,
+      "text": "Er æggene færdige, før aspargesene er møre, så tag æggene op og læg dem i koldt vand. Damp aspargesene et par minutter længere. Pil æggene, og halvér dem."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør olivenolie og æblecidereddike sammen med forårsløg, dild, hakket basilikum og kapers."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend quinoaen i en skål med tre fjerdedele af dressingen og tomaterne."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel salaten i 4 portioner på tallerkener eller i bokse. Læg asparges og æggehalvdele ovenpå, og dryp med resten af dressingen. Pynt med basilikumblade."
+    },
+    {
+      "section": "Samling",
+      "text": "Til madpakken: Luk boksene, og sæt dem på køl. Salaten holder sig en dag i lufttæt beholder i køleskabet."
+    }
+  ],
+  "changes": [
+    "Quinoa er skrevet som bulgur / couscous."
+  ]
+}

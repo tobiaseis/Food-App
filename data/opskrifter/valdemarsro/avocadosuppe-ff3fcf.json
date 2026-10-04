@@ -1,0 +1,156 @@
+{
+  "url": "https://www.valdemarsro.dk/avocadosuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:35:34.935Z",
+  "total_minutes": 120,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 13,
+  "title": "Kold avocadosuppe",
+  "intro": "Cremet, kold suppe af avocado og agurk med frisk smag af lime og koriander. Toppes med ristede kerner og chiliflager.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "uden sten og skal",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i grove stykker",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 6,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "afkølet",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "græskarkerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, saft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppe",
+      "text": "Læg avocado, agurk, koriander, hvidløg og fond i en blender. Blend, til massen er helt glat og cremet."
+    },
+    {
+      "section": "Suppe",
+      "text": "Smag til med limesaft, lidt limeskal, chiliflager, salt og peber."
+    },
+    {
+      "section": "Suppe",
+      "text": "Blend suppen kort igen. Stil den derefter i køleskabet i ca. 3 timer, eller i fryseren i 30-40 minutter, til den er helt kold."
+    },
+    {
+      "section": "Til servering",
+      "text": "Rist græskarkerner, solsikkekerner og pinjekerner på en tør, varm pande, til de får en anelse farve."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld den iskolde suppe i skåle. Top med koriander, chiliflager, et skvæt limesaft og de ristede kerner."
+    },
+    {
+      "section": "Til servering",
+      "text": "Suppen rækker til 4 personer, hvis den serveres som forret."
+    }
+  ],
+  "changes": []
+}

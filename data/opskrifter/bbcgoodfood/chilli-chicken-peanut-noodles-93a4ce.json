@@ -1,0 +1,143 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chilli-chicken-peanut-noodles",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:02:35.856Z",
+  "total_minutes": 25,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 12,
+  "title": "Chilikylling med jordnøddenudler",
+  "intro": "Hurtig wok med kylling, broccoli og peberfrugt, der serveres til fuldkornsnudler vendt i en cremet sauce af jordnøddesmør og lime. Klar på cirka 15 minutter.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Wok",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Wok",
+      "amount": 250,
+      "unit": "g",
+      "name": "kyllingeoverlår",
+      "note": "uden skind og ben, alt fedt skåret væk, skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Wok",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Wok",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "skåret i tændstikker",
+      "optional": false
+    },
+    {
+      "section": "Wok",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Wok",
+      "amount": 200,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "stilkene skråskåret i skiver, buketterne hele",
+      "optional": false
+    },
+    {
+      "section": "Wok",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, uden kerner, hakket",
+      "optional": false
+    },
+    {
+      "section": "Wok",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 2,
+      "unit": "stk",
+      "name": "nudler",
+      "note": "fuldkorn, i nøgler",
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "jordnøddesmør",
+      "note": "uden sukker",
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Wok",
+      "text": "Varm olien op i en wok. Kom kylling, hvidløg, ingefær, chili, broccoli og peberfrugt i – alt undtagen sojasaucen."
+    },
+    {
+      "section": "Wok",
+      "text": "Rør det rundt over høj varme i ca. 1 minut. Læg låg på, skru ned for varmen, og lad det simre i 5 minutter, til kyllingen er mør."
+    },
+    {
+      "section": "Wok",
+      "text": "Vend sojasaucen i til sidst."
+    },
+    {
+      "section": "Nudler",
+      "text": "Kog nudlerne i vand i 5 minutter, mens woksen simrer. Hæld dem af i et dørslag, og gem noget af kogevandet."
+    },
+    {
+      "section": "Nudler",
+      "text": "Rør jordnøddesmør, limesaft, limeskal og spidskommen sammen med 3 spsk af det gemte kogevand. Vend nudlerne i saucen, til de er dækket."
+    },
+    {
+      "section": "Nudler",
+      "text": "Server nudlerne med kyllingewokken."
+    }
+  ],
+  "changes": [
+    "Long-stem broccoli er skiftet til almindelig broccoli.",
+    "Tamari er skiftet til sojasauce."
+  ]
+}

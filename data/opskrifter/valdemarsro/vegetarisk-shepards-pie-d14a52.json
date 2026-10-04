@@ -1,0 +1,255 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetarisk-shepards-pie/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:30:22.216Z",
+  "total_minutes": 90,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Vegetarisk shepherd's pie",
+  "intro": "Fyldig vegetarversion af den klassiske ret med en grøntsags- og linsefyld under et låg af luftig kartoffelmos. Raspen giver en sprød overflade i ovnen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 30,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevne",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "røde linser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt, i små tern",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": "lun",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Varm olien i en gryde ved middelvarme. Svits champignon, løg og hvidløg, til løgene er bløde."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kom soltørrede tomater, gulerødder, squash, bladselleri og aubergine i gryden. Tilsæt hakkede tomater, tomatpuré, fond, linser og alle krydderurter og krydderier."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bring det i kog, læg låg på, og lad det simre i 20 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Fjern låget, og lad fyldet simre videre, til noget af væden er kogt væk. Smag til med salt og peber."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Kog kartoflerne møre, og hæld vandet fra. Kom de varme kartofler i en stor skål med det kolde smør."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Pisk med håndmixer, og tilsæt den lune mælk lidt ad gangen, til moset er cremet og luftigt. Smag til med salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Forvarm ovnen til 175 °C varmluft. Kom fyldet i et smurt ovnfast fad, og fordel kartoffelmosen over som et låg."
+    },
+    {
+      "section": "Samling",
+      "text": "Drys med rasp, og bag retten i 30-45 minutter."
+    }
+  ],
+  "changes": [
+    "Soltørrede tomater i olie er beholdt som i kilden.",
+    "Grøntsagsbouillon er skrevet som grøntsagsfond."
+  ]
+}

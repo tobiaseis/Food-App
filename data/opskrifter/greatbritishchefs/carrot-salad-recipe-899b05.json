@@ -1,0 +1,377 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/carrot-salad-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:23:36.735Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 29,
+  "title": "Gulerodssalat med gulerodspuré, estragonmayo og kartoffelchips",
+  "intro": "En festlig gulerodssalat med kogte og rå gulerødder i forskellige farver på en blød gulerodspuré. Dertil kommer syltede rosiner, estragonmayo, ristede hasselnødder og sprøde chips af lilla kartofler.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Salaten",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "gulerødder",
+      "note": "gerne i forskellige farver og størrelser, toppen plukkes og gemmes",
+      "optional": false
+    },
+    {
+      "section": "Salaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Salaten",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "hasselnødder",
+      "note": "ristede og groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Salaten",
+      "amount": null,
+      "unit": null,
+      "name": "ost",
+      "note": "Cais na Tire, fint barberet, til servering",
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 100,
+      "unit": "g",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 100,
+      "unit": "g",
+      "name": "olie",
+      "note": "neutral olie i stedet for pomace-olie",
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 100,
+      "unit": "g",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "delt i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rosiner",
+      "amount": 50,
+      "unit": "g",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede rosiner",
+      "amount": 50,
+      "unit": "g",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rosiner",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rosiner",
+      "amount": 50,
+      "unit": "g",
+      "name": "rosiner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rosiner",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerodspuré",
+      "amount": 5,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "store, skrællede og i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Gulerodspuré",
+      "amount": 2,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerodspuré",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerodspuré",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Gulerodspuré",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonmayo",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijonsennep",
+      "optional": false
+    },
+    {
+      "section": "Estragonmayo",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Estragonmayo",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonmayo",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonmayo",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "estragon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonmayo",
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonmayo",
+      "amount": 100,
+      "unit": "g",
+      "name": "olie",
+      "note": "neutral olie",
+      "optional": false
+    },
+    {
+      "section": "Estragonmayo",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelchips",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "lilla, skåret i fine skiver på mandolin",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelchips",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral olie til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelchips",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Husets vinaigrette",
+      "text": "Start vinaigretten 3 dage før servering. Rør alle ingredienserne sammen i en skål med en knivspids salt, dæk til og lad den stå ved stuetemperatur, så smagene trækker."
+    },
+    {
+      "section": "Husets vinaigrette",
+      "text": "Si vinaigretten gennem en fin si over i en flaske eller et glas. Ryst eller pisk den, til den bliver samlet, og smag til med mere salt og sukker."
+    },
+    {
+      "section": "Syltede rosiner",
+      "text": "Varm eddike, vand, sukker og en knivspids salt op i en lille gryde, til sukkeret er opløst. Kom rosinerne i, og lad dem koge i 1 minut."
+    },
+    {
+      "section": "Syltede rosiner",
+      "text": "Hæld rosinerne over i en beholder med låg, og stil dem i køleskabet til senere."
+    },
+    {
+      "section": "Estragonmayo",
+      "text": "Blend alle ingredienser undtagen olien til en glat masse i en foodprocessor eller blender."
+    },
+    {
+      "section": "Estragonmayo",
+      "text": "Lad maskinen køre på lav hastighed, og tilsæt olien i en tynd stråle lidt ad gangen. Smag til med salt, fyld mayonnaisen i en sprayflaske, og stil den koldt."
+    },
+    {
+      "section": "Gulerodspuré",
+      "text": "Kom alle ingredienserne til puréen i en gryde med vand til cirka halvt oppe på gulerødderne. Tilsæt en knivspids salt, og bring det i kog."
+    },
+    {
+      "section": "Gulerodspuré",
+      "text": "Læg et rundt stykke bagepapir direkte oven på, skru ned på middel, og lad det simre i 20 minutter. Gulerødderne skal være så møre, at de falder fra hinanden, når man presser dem mellem fingrene."
+    },
+    {
+      "section": "Gulerodspuré",
+      "text": "Fjern stjerneanis. Hæld resten i en blender, og blend på middelhøj hastighed i 3-4 minutter, til massen er helt glat. Tilsæt lidt vand, hvis den er for tyk."
+    },
+    {
+      "section": "Gulerodspuré",
+      "text": "Pass puréen gennem en fin si, og smag til med salt."
+    },
+    {
+      "section": "Kartoffelchips",
+      "text": "Varm olie op til 145 °C i en gryde, der er fyldt to tredjedele. Steg kartoffelskiverne i omgange i 3-4 minutter, mens du rører hele tiden, til de er sprøde."
+    },
+    {
+      "section": "Kartoffelchips",
+      "text": "Lad dem dryppe af på køkkenrulle, og drys dem med salt. Opbevar chipsene i en lufttæt beholder, til de skal bruges."
+    },
+    {
+      "section": "Salaten",
+      "text": "Skræl alle gulerødderne, og sortér dem efter farve. Skær bånd af én af gulerødderne med en skræller, og stil dem til side."
+    },
+    {
+      "section": "Salaten",
+      "text": "Kog gulerødderne i hver sin farve for sig, så farverne ikke løber sammen. Små gulerødder skal bruge omkring 5 minutter, de store 10-15 minutter. De er færdige, når en kniv glider ind, men de stadig har bid."
+    },
+    {
+      "section": "Salaten",
+      "text": "Afkøl de kogte gulerødder under rindende koldt vand med det samme."
+    },
+    {
+      "section": "Salaten",
+      "text": "Rør 1 spsk af vinaigretten sammen med eddiken, og vend gulerodsbåndene i den."
+    },
+    {
+      "section": "Salaten",
+      "text": "Skær de kogte gulerødder i passende stykker: de små halveres på langs, og de store skæres på skrå i skiver. Vend dem i et par skefulde af vinaigretten."
+    },
+    {
+      "section": "Anretning",
+      "text": "Smør et leje af gulerodspuré ud på hver tallerken. Drys med hasselnødder og afdryppede syltede rosiner."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg de marinerede gulerødder ovenpå, og sæt prikker af estragonmayo imellem."
+    },
+    {
+      "section": "Anretning",
+      "text": "Lad gulerodsbåndene dryppe af, rul dem til små rør, og sprøjt mere mayo ind i dem. Afslut med kartoffelchips, barberet ost og de gemte gulerodstopper."
+    }
+  ],
+  "changes": [
+    "Pomace-olie er skiftet til neutral olie.",
+    "Cais na Tire er skiftet til ost.",
+    "Vegetabilsk olie er skiftet til neutral olie.",
+    "Lilla kartofler er skiftet til kartofler."
+  ]
+}

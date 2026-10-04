@@ -1,0 +1,144 @@
+{
+  "url": "https://www.valdemarsro.dk/mini-pizza-med-asparges/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:11:28.476Z",
+  "total_minutes": 90,
+  "active_minutes": 30,
+  "yield_count": 12,
+  "source_lines": 11,
+  "title": "Mini pizzaer med grønne asparges og gedeost",
+  "intro": "Små, sprøde pizzaer med dej af hvedemel og durummel, toppet med grønne asparges og gedeost. Drys med frisk timian, når de kommer ud af ovnen.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 300,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 250,
+      "unit": "g",
+      "name": "durummel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "cirka, til skålen og til at ælte med",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 12,
+      "unit": "stk",
+      "name": "grønne asparges",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 100,
+      "unit": "g",
+      "name": "gedeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": "et dryp",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Opløs gæren i det lunkne vand i en skål."
+    },
+    {
+      "section": "Dej",
+      "text": "Tilsæt olie, salt og hvedemel, og rør sammen. Rør durummelet i lidt ad gangen, til dejen er smidig og kan æltes."
+    },
+    {
+      "section": "Dej",
+      "text": "Læg dejen i en skål med lidt olivenolie, og vend den rundt. Lad den hæve i 1 time."
+    },
+    {
+      "section": "Dej",
+      "text": "Del dejen i lige store stykker, og form dem til små pizzabunde. Læg dem på bagepapir."
+    },
+    {
+      "section": "Topping",
+      "text": "Knæk den seje ende af aspargesene, og smid den ud. Skær resten i mindre stykker."
+    },
+    {
+      "section": "Topping",
+      "text": "Fordel asparges og smuldret gedeost over pizzaerne. Dryp med olivenolie, og drys med flagesalt."
+    },
+    {
+      "section": "Bagning",
+      "text": "Sæt en bageplade i ovnen, og forvarm til 250 °C."
+    },
+    {
+      "section": "Bagning",
+      "text": "Løft bagepapiret med pizzaerne over på den varme plade. Bag dem i 10-12 minutter."
+    },
+    {
+      "section": "Bagning",
+      "text": "Strø frisk timian over de færdige pizzaer."
+    }
+  ],
+  "changes": []
+}

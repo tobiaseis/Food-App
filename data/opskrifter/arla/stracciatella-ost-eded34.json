@@ -1,0 +1,76 @@
+{
+  "url": "https://www.arla.dk/opskrifter/stracciatella-ost/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:22:47.618Z",
+  "total_minutes": 10,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 5,
+  "title": "Hjemmelavet stracciatella",
+  "intro": "Cremet, mild ost lavet af revet mozzarella og fløde. Den er klar på få minutter og smager bedst kold.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "2 friske kugler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "usprøjtet, revet skal",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Pil mozzarellaen i tynde strimler og læg dem i en skål."
+    },
+    {
+      "section": null,
+      "text": "Hæld fløden over lidt efter lidt, mens du blander og mases med en gaffel, til osten er cremet."
+    },
+    {
+      "section": null,
+      "text": "Krydr med salt, peber og citronskal, og smag til."
+    },
+    {
+      "section": null,
+      "text": "Dæk skålen og sæt den på køl, indtil den skal serveres."
+    }
+  ],
+  "changes": []
+}

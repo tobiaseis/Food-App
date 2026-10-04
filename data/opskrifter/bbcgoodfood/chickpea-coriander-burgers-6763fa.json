@@ -1,0 +1,155 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chickpea-coriander-burgers",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:55:05.806Z",
+  "total_minutes": 25,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Kikærteburgere med koriander",
+  "intro": "Sprøde burgere af kikærter, citron og spidskommen, som serveres i grove boller med tomat, agurk og chilisauce. En nem vegetarret, der er klar på under en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Burgere",
+      "amount": 400,
+      "unit": "g",
+      "name": "kikærter",
+      "note": "afdryppede",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal af hele og saft af halvdelen",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 100,
+      "unit": "g",
+      "name": "rasp",
+      "note": "friske brødkrummer",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "halvdelen i tern, halvdelen i skiver",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "brød",
+      "note": "små fuldkornsboller",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "stor, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sweet chilisauce",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Burgere",
+      "text": "Kom kikærter, citronskal, citronsaft, spidskommen, halvdelen af koriander, æg, salt og peber i en foodprocessor, og blend det til en grov masse."
+    },
+    {
+      "section": "Burgere",
+      "text": "Skrab massen over i en skål, og rør 80 g af rasp og løg i tern i."
+    },
+    {
+      "section": "Burgere",
+      "text": "Form 4 burgere. Pres resten af rasp ind i begge sider, og stil dem på køl i mindst 10 minutter."
+    },
+    {
+      "section": "Stegning",
+      "text": "Varm olien op på en pande, til den er varm. Steg burgerne i 4 minutter på hver side ved middelvarme, så de ikke brænder på."
+    },
+    {
+      "section": "Servering",
+      "text": "Del bollerne, og læg tomat, burger, rødløgsskiver og agurk i. Top med chilisauce og resten af korianderen."
+    }
+  ],
+  "changes": [
+    "Friske brødkrummer er erstattet med rasp.",
+    "Chilisauce er erstattet med sweet chilisauce."
+  ]
+}

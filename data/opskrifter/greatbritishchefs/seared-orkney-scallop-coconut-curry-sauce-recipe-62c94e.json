@@ -1,0 +1,345 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/seared-orkney-scallop-coconut-curry-sauce-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:24:34.623Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 31,
+  "title": "Sprødstegte kammuslinger med kokoskarry og korianderemulsion",
+  "intro": "Møre kammuslinger i smørbasting på en cremet kokoskarrysauce, toppet med grøn korianderemulsion og sprøde knas. Korianderolien skal hænge natten over, så start dagen før.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Korianderemulsion",
+      "amount": 40,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korianderemulsion",
+      "amount": 40,
+      "unit": "g",
+      "name": "koriander",
+      "note": "plukket",
+      "optional": false
+    },
+    {
+      "section": "Korianderemulsion",
+      "amount": null,
+      "unit": null,
+      "name": "isvand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korianderemulsion",
+      "amount": 60,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "pillet og i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 5,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "bukkehornsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "stødt sort",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 100,
+      "unit": "ml",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 150,
+      "unit": "ml",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": null,
+      "unit": null,
+      "name": "citronsaft",
+      "note": "efter behov",
+      "optional": false
+    },
+    {
+      "section": "Kammuslinger",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kammuslinger",
+      "note": "store, i skal",
+      "optional": false
+    },
+    {
+      "section": "Kammuslinger",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Kammuslinger",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt, i tern",
+      "optional": false
+    },
+    {
+      "section": "Kammuslinger",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kammuslinger",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 20,
+      "unit": "g",
+      "name": "kokosflager",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 20,
+      "unit": "g",
+      "name": "puffet ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i små stykker til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Korianderemulsion",
+      "text": "Blend olie og koriander sammen til en grøn olie."
+    },
+    {
+      "section": "Korianderemulsion",
+      "text": "Si olien gennem et musselinklæde ned i en engangssprøjtepose. Hæng posen med spidsen nedad i køleskabet natten over."
+    },
+    {
+      "section": "Korianderemulsion",
+      "text": "Næste dag har vandet samlet sig nederst. Klip spidsen af posen, og lad vand og bundfald løbe fra, til olien er klar."
+    },
+    {
+      "section": "Korianderemulsion",
+      "text": "Rør den klare olie sammen med mayonnaisen i en skål, til den bliver en tyk emulsion."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Svits løget i ghee i en gryde, til det er blødt og blankt."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Tilsæt hvidløg og ingefær, og lad det stege i 5 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Rist alle krydderierne, hele og stødte, i en tør pande, til de dufter og får lidt farve."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Kom krydderierne i gryden sammen med tomatpuréen, og lad det simre i 5 minutter. Tilsæt de hakkede tomater, og kog dem ind i 10 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Hæld fonden i, og lad saucen simre svagt i 10 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Rør kokosmælk og creme fraiche i, og kog videre i 10 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Blend saucen helt glat. Smag til med honning og citronsaft."
+    },
+    {
+      "section": "Kammuslinger",
+      "text": "Åbn muslingerne, og skær først den hele muskel fri. Fjern derefter kanten og rognen."
+    },
+    {
+      "section": "Kammuslinger",
+      "text": "Skyl muslingerne i isvand, og dup dem tørre."
+    },
+    {
+      "section": "Kammuslinger",
+      "text": "Varm en støbejernspande op, til den er meget varm. Tilsæt lidt olie, og drys muslingerne med salt."
+    },
+    {
+      "section": "Kammuslinger",
+      "text": "Steg muslingerne med den pæne side nedad i 1 minut. Vend dem, kom smørret på panden, og øs det over muslingerne i endnu 1 minut."
+    },
+    {
+      "section": "Kammuslinger",
+      "text": "Tag muslingerne af panden, og lad dem hvile et par minutter. Lige før servering drysses de med limeskal, limesaft og flagesalt. Skær hver musling i tre skiver."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Hæld karrysaucen på tallerkenerne, og læg muslingerne ovenpå. Sæt prikker af korianderemulsion rundt om."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Pynt med lime, ristede kokosflager, karse og puffet ris."
+    }
+  ],
+  "changes": [
+    "Ghee i stedet for klaret smør.",
+    "Kokosmælk i stedet for kokospuré.",
+    "Lime i stedet for finger lime.",
+    "Puffet ris i stedet for puffet vildris."
+  ]
+}

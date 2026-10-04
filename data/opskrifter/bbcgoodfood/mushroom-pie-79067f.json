@@ -1,0 +1,279 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/mushroom-pie",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:48:28.150Z",
+  "total_minutes": 110,
+  "active_minutes": 40,
+  "yield_count": 8,
+  "source_lines": 19,
+  "title": "Svampetærte med estragon",
+  "intro": "En dybt aromatisk tærte med stegte svampe i cremet fløde-sauce under et smørmørt dejlåg. Fyldet kan laves dagen før, så tærten er hurtig at samle.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Til dejen",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "1 til dejen, 1 til æggepensling",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 130,
+      "unit": "ml",
+      "name": "sødmælk",
+      "note": "kold, plus lidt til æggepensling",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 25,
+      "unit": "g",
+      "name": "tørrede svampe",
+      "note": "blandede",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 750,
+      "unit": "g",
+      "name": "brune champignon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 500,
+      "unit": "g",
+      "name": "portobello",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "hvide",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "plus lidt ekstra efter behov",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "cognac",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 5,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "eller svampefond",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Marmite",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sort peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "estragon",
+      "note": "blade, finthakkede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til dejen",
+      "text": "Pak smørret ind i bagepapir eller i dets eget papir, og læg det i fryseren i nogle timer, gerne natten over, til det er helt hårdt."
+    },
+    {
+      "section": "Til dejen",
+      "text": "Kom melet i en stor skål, og rør timian og salt i. Riv det frosne smør groft ned i melet. Dyp smørstykket i lidt mel undervejs, så det ikke klistrer."
+    },
+    {
+      "section": "Til dejen",
+      "text": "Pisk det ene æg sammen med mælken, hæld det i skålen, og rør hurtigt rundt med en bordkniv. Saml dejen med hænderne, og ælt den i cirka 1 minut til en kugle. Pak den ind, og læg den på køl i 1 time."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Læg de tørrede svampe i en varmefast skål, og hæld det kogende vand over. Lad dem stå, mens du laver resten af fyldet."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Hak halvdelen af de brune champignon og halvdelen af portobelloerne i stykker på 2 cm. Del resten i halve. Lad de hvide champignon være hele."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Varm olien i en stor non-stick-pande på høj varme. Steg halvdelen af svampene i 10 minutter, og rør rundt, til de får gylden farve. Læg dem over på et fad, og steg resten på samme måde. Tilsæt en smule mere olie, hvis det er nødvendigt."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Smelt smørret i den samme pande på lav varme. Svits løget med en knivspids salt i 10-15 minutter, til det er blødt og begynder at tage farve. Rør melet i, og lad det stege med i 2 minutter."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Tilsæt eddike og cognac, og lad det koge næsten helt ind i 1-2 minutter. Rør fonden i lidt ad gangen, og bring saucen i kog, så den simrer."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Rør Marmite, fløde, peber og lidt salt i. Vend de stegte svampe i saucen sammen med de udblødte svampe, som du først har sigtet fra vandet."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Hæld fyldet i en skål, og lad det køle helt af. Vend derefter estragon i. Fyldet kan opbevares på køl i op til 2 dage."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld det afkølede fyld i en riflet ovnfast tærteform på 28 cm."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul dejen ud til en rund plade på 1 cm's tykkelse. Skær flere strimler på ca. 1 x 2 cm fra kanten, og tryk dem let fast hele vejen rundt på formens rand."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul resten af dejen ud igen, hvis det er nødvendigt, så den kan dække fyldet. Læg den over tærten, klem kanten sammen, og skær overskydende dej af."
+    },
+    {
+      "section": "Samling",
+      "text": "Pisk det andet æg med en smule mælk, og pensl tærten med en del af det. Rids dejen let med en skarp kniv. Udstik evt. figurer af dejrester til pynt, og pensl også dem."
+    },
+    {
+      "section": "Samling",
+      "text": "Sæt tærten på køl i 30 minutter, og pensl den så med resten af æggeblandingen."
+    },
+    {
+      "section": "Bagning",
+      "text": "Varm ovnen op til 200 °C (180 °C varmluft). Bag tærten i 40-45 minutter, til den er gyldenbrun."
+    },
+    {
+      "section": "Bagning",
+      "text": "Lad tærten hvile i 15 minutter. Server den med kartoffelmos, grønt og ærter."
+    }
+  ],
+  "changes": [
+    "Brandy er erstattet med cognac.",
+    "Double cream er erstattet med piskefløde.",
+    "Svampefond eller grøntsagsfond er skrevet som grøntsagsfond, som er lettere at få.",
+    "Chestnut mushrooms er erstattet med brune champignon.",
+    "Plain flour er erstattet med hvedemel.",
+    "Whole milk er erstattet med sødmælk."
+  ]
+}

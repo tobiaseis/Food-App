@@ -1,0 +1,243 @@
+{
+  "url": "https://www.valdemarsro.dk/shepards-pie/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:46:36.097Z",
+  "total_minutes": 75,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Shepherd's pie",
+  "intro": "Mør kødsauce med grøntsager og rødvin under et luftigt låg af kartoffelmos med parmesan. Bages gylden i ovnen og toppes med frisk persille.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "eller hakket lammekød",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rosmarin",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "parmesan",
+      "note": "friskrevet, plus lidt ekstra til drys",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødsauce",
+      "text": "Smelt smørret i en gryde, og svits løgene, til de er blødt."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Sæt varmen op, og brun kødet godt, til det er gennemstegt."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Sænk varmen, og rør gulerod, selleri, hvidløg, tomatpuré, rødvin, worcestershiresauce, fond, timian, rosmarin, salt og peber i gryden."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Bring saucen i kog, og lad den simre uden låg i 10 minutter."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Kog kartoflerne møre i rigeligt vand uden salt."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Hæld vandet fra, og kom kartoflerne i en stor skål med smørret. Pisk med håndmixer, til moset er cremet og luftigt."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Rør fløde og parmesan i, og smag til med salt og peber."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Varm ovnen op til 180 °C varmluft."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Smør et ovnfast fad, og fyld kødsaucen i. Læg kartoffelmosen ovenpå som et låg, og glat den med en spatel. Træk en gaffel henover for at lave et mønster."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Strø rasp og lidt ekstra parmesan over, og bag retten i 30-45 minutter."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Server med persille strøet ovenpå."
+    }
+  ],
+  "changes": [
+    "Grøntsagsbouillon er skiftet til grøntsagsfond.",
+    "Worcestershire sauce hedder worcestershiresauce."
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/spinach-muffins",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:44:19.589Z",
+  "total_minutes": 35,
+  "active_minutes": 10,
+  "yield_count": 12,
+  "source_lines": 10,
+  "title": "Salte spinatmuffins",
+  "intro": "Saftige muffins med spinat, ost og timian, som både kan spises lune og kolde. De er gode i madpakken eller som tilbehør til suppe.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "op til 3 spsk efter behov",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til formen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C (varmluft 160 °C)."
+    },
+    {
+      "section": null,
+      "text": "Kør spinaten i en foodprocessor, til den er hakket i stykker, men ikke til puré. Kom den i en skål sammen med osten og timianen."
+    },
+    {
+      "section": null,
+      "text": "Pisk æg og yoghurt sammen i en anden skål. Rør mælken i. Tilsæt lidt mere mælk, hvis dejen virker for tør."
+    },
+    {
+      "section": null,
+      "text": "Sigt begge slags mel og bagepulver ned i skålen med æggemassen, og rør det sammen. Vend spinatblandingen i."
+    },
+    {
+      "section": null,
+      "text": "Smør en muffinform, og fordel dejen i hullerne."
+    },
+    {
+      "section": null,
+      "text": "Bag muffinsene i 20-25 minutter. Lad dem køle af."
+    }
+  ],
+  "changes": [
+    "Plain flour er erstattet med hvedemel.",
+    "Wholemeal flour er erstattet med fuldkornshvedemel."
+  ]
+}

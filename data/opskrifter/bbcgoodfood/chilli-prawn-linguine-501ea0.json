@@ -1,0 +1,176 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chilli-prawn-linguine",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:23:45.082Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 12,
+  "title": "Linguine med chili og rejer",
+  "intro": "Hurtig pasta med rejer, sukkerærter og cherrytomater, vendt med varm chili og hvidløg. Serveres med en frisk salat i limedressing og godt brød til.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "pasta",
+      "note": "linguine",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": "trimmet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, stor, uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 24,
+      "unit": "stk",
+      "name": "rejer",
+      "note": "pillede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 12,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salatblanding",
+      "note": "til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "franskbrød",
+      "note": "lyst, sprødt, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": "let",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Rør creme fraiche, limeskal, limesaft og sukker sammen i en lille skål. Smag til med salt og peber, og stil dressingen til side."
+    },
+    {
+      "section": "Pasta og rejer",
+      "text": "Kog pastaen efter anvisningen på pakken. Kom sukkerærterne i vandet det sidste minut."
+    },
+    {
+      "section": "Pasta og rejer",
+      "text": "Varm olien op i en wok eller stor pande. Rør hvidløg og chili rundt på svag til middel varme i ca. 30 sekunder, så hvidløget ikke bliver brunt."
+    },
+    {
+      "section": "Pasta og rejer",
+      "text": "Skru op for varmen, og steg rejerne under jævnlig omrøring i ca. 3 minutter, til de er lyserøde."
+    },
+    {
+      "section": "Pasta og rejer",
+      "text": "Kom tomaterne på panden, og steg dem i 3 minutter, til de lige begynder at blive bløde."
+    },
+    {
+      "section": "Pasta og rejer",
+      "text": "Si pasta og sukkerærter godt af, og vend dem med rejerne på panden."
+    },
+    {
+      "section": "Pasta og rejer",
+      "text": "Pluk basilikumbladene over, rør rundt, og smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret med salatblandingen, og dryp limedressingen over den. Server med lunt brød ved siden af."
+    }
+  ],
+  "changes": [
+    "Fromage frais er erstattet med let creme fraiche.",
+    "Golden caster sugar er erstattet med almindeligt sukker.",
+    "Sprødt hvidt brød er erstattet med franskbrød."
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "url": "https://www.valdemarsro.dk/tacos-med-torsk/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:26:47.114Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Fisketacos med torsk og mangosalsa",
+  "intro": "Sprødbagt torsk med citron og mynte i bløde tortillas sammen med frisk, syrlig mangosalsa, spinat og avocado. En let og farverig hverdagsret.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Mangosalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "mango",
+      "note": "skåret i små tern",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 5,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Torsk",
+      "amount": 800,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "skåret i flotte stykker",
+      "optional": false
+    },
+    {
+      "section": "Torsk",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Torsk",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Torsk",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mynte",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 60,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mangosalsa",
+      "text": "Bland mango, tomat, agurk, forårsløg og chili med den hakkede koriander. Smag salsaen til med limesaft, limeskal, salt og peber."
+    },
+    {
+      "section": "Torsk",
+      "text": "Varm ovnen op til 175 °C varmluft. Blend rasp, citronskal, mynte, salt og peber i en minihakker, til blandingen er fin."
+    },
+    {
+      "section": "Torsk",
+      "text": "Tør torskestykkerne med køkkenrulle, læg dem i et ovnfast fad, og dæk dem med raspblandingen. Bag dem i 16-18 minutter, og tjek, at fisken er gennemstegt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm tortillaerne på en tør pande eller i ovnen. Fyld dem med fisk, mangosalsa, spinat og avocado, og top med koriander."
+    }
+  ],
+  "changes": []
+}

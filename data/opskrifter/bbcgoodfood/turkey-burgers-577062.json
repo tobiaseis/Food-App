@@ -1,0 +1,210 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/turkey-burgers",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:50:35.597Z",
+  "total_minutes": 40,
+  "active_minutes": 15,
+  "yield_count": 8,
+  "source_lines": 9,
+  "title": "Kalkunburgere med tomatchutney",
+  "intro": "Saftige kalkunburgere med havregryn, abrikoser og revet gulerod, som bages færdige i ovnen. Serveres med hjemmelavet tomatchutney og agurkeskiver.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Til burgerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket kalkun",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "tørrede abrikoser",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "stor, revet",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": null,
+      "unit": null,
+      "name": "agurk",
+      "note": "i skiver, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til burgerne",
+      "text": "Varm halvdelen af olien op på en pande ved lav varme. Steg løget i 5 minutter, til det er blødt."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Tilsæt hvidløget og steg det i 1 minut. Kom havregrynene på og steg dem 2 minutter mere. Hæld blandingen i en skål, og lad den køle af."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Bland kalkun, abrikoser, gulerod og æg i den afkølede blanding med hænderne. Smag til med salt og peber, og form 8 bøffer."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Forvarm ovnen til 200 °C (varmluft 180 °C)."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Varm resten af olien op på en stor non-stick-pande. Brun burgerne 3-4 minutter på hver side, til de har fået god farve."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Læg burgerne på en bageplade, og bag dem i ovnen i 10-15 minutter. Server dem med chutney og agurkeskiver."
+    },
+    {
+      "section": "Til chutneyen",
+      "text": "Varm olien op i en pande, og svits løget i 5 minutter, til det er blødt. Tilsæt hvidløget, og lad det stege 1 minut."
+    },
+    {
+      "section": "Til chutneyen",
+      "text": "Rør tomatpuré, hakkede tomater og sukker i. Lad det simre ved lav varme i 20-25 minutter, til chutneyen er tyk og fyldig."
+    },
+    {
+      "section": "Til chutneyen",
+      "text": "Smag til med salt og peber. Lad chutneyen køle af, inden den serveres."
+    }
+  ],
+  "changes": [
+    "Soltørret tomatpuré er erstattet af almindelig tomatpuré."
+  ]
+}

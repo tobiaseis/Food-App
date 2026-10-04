@@ -1,0 +1,239 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/pork-apple-stew-parsley-thyme-dumplings",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:48:36.979Z",
+  "total_minutes": 120,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Svinegryde med timian-melboller",
+  "intro": "En mør gryderet med svinemørbrad, grøntsager og æble, der bliver toppet med sprøde krydrede melboller fra ovnen. Det er en solid ret i én gryde.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til gryden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "skåret i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "plukkede blade",
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 500,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": "skåret i store tern",
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennepspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "speltmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 8,
+      "unit": "dl",
+      "name": "bouillon",
+      "note": "grøntsags- eller hønsebouillon",
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "Granny Smith, skrællet, udkernet og skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 2,
+      "unit": "stk",
+      "name": "porre",
+      "note": "skåret i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Til gryden",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til melbollerne",
+      "amount": 150,
+      "unit": "g",
+      "name": "speltmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til melbollerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til melbollerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennepspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til melbollerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "fladbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til melbollerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "plukkede blade",
+      "optional": false
+    },
+    {
+      "section": "Til melbollerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til melbollerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til melbollerne",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "et par kviste til pynt",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Gryden",
+      "text": "Varm olien i en gryde, der tåler både komfur og ovn. Svits løg, selleri, laurbærblade og timian i cirka 8 minutter, til løgene er bløde."
+    },
+    {
+      "section": "Gryden",
+      "text": "Vend svinekødet i gryden, og steg det i nogle få minutter, til det ikke længere er rosa. Det skal ikke have farve, ellers bliver det tørt."
+    },
+    {
+      "section": "Gryden",
+      "text": "Rør sennepspulver, hvidløg, mel og eddike i. Hæld bouillonen i lidt ad gangen, og rør hele tiden, så der ikke kommer klumper."
+    },
+    {
+      "section": "Gryden",
+      "text": "Kom æble, porre og gulerødder i. Bring det i kog, og skru ned, så det simrer. Læg låg på, og lad det simre i 1 time, mens du rører af og til, til kød og grøntsager er møre."
+    },
+    {
+      "section": "Melboller",
+      "text": "Tænd ovnen på 190 °C (170 °C varmluft), når gryden næsten er færdig."
+    },
+    {
+      "section": "Melboller",
+      "text": "Bland mel, bagepulver, sennepspulver, persille og timian i en skål."
+    },
+    {
+      "section": "Melboller",
+      "text": "Hæld yoghurten i en målekande, og fyld op til 100 ml med vand. Rør halvdelen af olien i."
+    },
+    {
+      "section": "Melboller",
+      "text": "Rør væsken forsigtigt ned i melblandingen, til du har en blød, let klistret dej. Del den i otte lige store stykker, og rul dem til kugler."
+    },
+    {
+      "section": "Melboller",
+      "text": "Læg kuglerne oven på gryderetten, og dryp resten af olien over dem. Bag i 20 minutter, til melbollerne er gyldne."
+    },
+    {
+      "section": "Melboller",
+      "text": "Drys med ekstra timian, hvis du vil, og server."
+    }
+  ],
+  "changes": [
+    "Cider vinegar er skiftet til æblecidereddike.",
+    "Bio yogurt er skiftet til yoghurt naturel."
+  ]
+}

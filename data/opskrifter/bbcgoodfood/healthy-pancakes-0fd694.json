@@ -1,0 +1,103 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-pancakes",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:14:16.267Z",
+  "total_minutes": 45,
+  "active_minutes": 15,
+  "yield_count": 10,
+  "source_lines": 5,
+  "title": "Sunde pandekager",
+  "intro": "Små, luftige pandekager af hvedemel og fuldkornsmel, hvor æggehviderne piskes stive for at give lethed. Server dem med friske bær og yoghurt.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "bagepulver",
+      "note": "erstatter selvhævende mel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "små, adskilt i blommer og hvider",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "skummetmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "bær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "fedtfattig",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sigt begge slags mel ned i en skål eller en bred kande sammen med bagepulveret. Vend det, der bliver tilbage i neddeleren, ned i skålen."
+    },
+    {
+      "section": null,
+      "text": "Rør æggeblommerne og en sjat af mælken i til en tyk masse. Tilsæt resten af mælken lidt ad gangen, så dejen ikke får klumper."
+    },
+    {
+      "section": null,
+      "text": "Pisk æggehviderne til stive toppe. Vend dem forsigtigt i dejen, så luften bliver i."
+    },
+    {
+      "section": null,
+      "text": "Varm en non-stick-pande op på middel varme. Hæld dej på, så der kommer en pandekage på ca. 10 cm i diameter."
+    },
+    {
+      "section": null,
+      "text": "Steg i knap 1 minut, til der springer bobler på overfladen, og kanterne ser lidt tørre ud. Vend pandekagen forsigtigt. Er toppen stadig våd, kan der løbe lidt dej ud ved vendingen – steg så siden lidt længere."
+    },
+    {
+      "section": null,
+      "text": "Hold pandekagerne varme, mens resten steges. Server med bær og yoghurt."
+    }
+  ],
+  "changes": [
+    "Selvhævende mel er erstattet af hvedemel og bagepulver.",
+    "Fromage frais er udeladt, så der kun bruges yoghurt."
+  ]
+}

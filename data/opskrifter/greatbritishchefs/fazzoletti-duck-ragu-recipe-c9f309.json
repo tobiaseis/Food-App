@@ -1,0 +1,298 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/fazzoletti-duck-ragu-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:59:43.243Z",
+  "total_minutes": 160,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Fazzoletti med anderagù og andefedtsrasp",
+  "intro": "Hjemmelavede pastakvadrater i en rig ragù af langtidsstegte andelår, toppet med sprødt brødkrummedrys ristet i andefedt. Ragùen og drysset giver mere, end du skal bruge, og begge dele kan fryses.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Anderagù",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællet",
+      "optional": false
+    },
+    {
+      "section": "Anderagù",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Anderagù",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Anderagù",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Anderagù",
+      "amount": 4,
+      "unit": "stk",
+      "name": "andelår",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Anderagù",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Anderagù",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Anderagù",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Anderagù",
+      "amount": 4,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": "gerne medium fyldig",
+      "optional": false
+    },
+    {
+      "section": "Anderagù",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fazzoletti",
+      "amount": 350,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "type 00",
+      "optional": false
+    },
+    {
+      "section": "Fazzoletti",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fazzoletti",
+      "amount": 5,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fazzoletti",
+      "amount": null,
+      "unit": null,
+      "name": "durummel",
+      "note": "fint, til drysning",
+      "optional": false
+    },
+    {
+      "section": "Andefedtsrasp",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "timian",
+      "note": "bladene plukket",
+      "optional": false
+    },
+    {
+      "section": "Andefedtsrasp",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Andefedtsrasp",
+      "amount": 200,
+      "unit": "g",
+      "name": "andefedt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Andefedtsrasp",
+      "amount": 250,
+      "unit": "g",
+      "name": "focaccia",
+      "note": "gerne en dag gammel, blendet til krummer",
+      "optional": false
+    },
+    {
+      "section": "Andefedtsrasp",
+      "amount": 4,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "rødvinseddike",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "persille",
+      "note": "fintHakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Anderagù",
+      "text": "Hak gulerod, løg, selleri og hvidløg helt fint, gerne i en kødhakker. Stil det til side."
+    },
+    {
+      "section": "Anderagù",
+      "text": "Drys andelårene med salt. Smelt smørret i en stor pande ved middelhøj varme, til det skummer, og læg lårene med skindsiden nedad."
+    },
+    {
+      "section": "Anderagù",
+      "text": "Skru lidt ned, og lad skindet blive dybt gyldent. Vend lårene, og brun dem på kødsiden. Sænk varmen, hvis smørret begynder at brænde på. Tag lårene op, og stil dem til side."
+    },
+    {
+      "section": "Anderagù",
+      "text": "Skru ned på laveste varme. Kom de hakkede grøntsager og en lille knivspids salt i panden, og lad dem simre i ca. 1 time, til de er meget bløde."
+    },
+    {
+      "section": "Anderagù",
+      "text": "Rør tomatpuréen i, og steg den i 2 minutter. Hæld rødvinen i ved høj varme, og kog den ind til det halve."
+    },
+    {
+      "section": "Anderagù",
+      "text": "Læg andelårene tilbage i panden, og hæld hønsefonden over. Læg låg på, og lad det simre ved lav varme i 1 time."
+    },
+    {
+      "section": "Anderagù",
+      "text": "Tjek, om kødet falder fra benene. Hvis ikke, så simr videre, til det gør. Tag så panden af varmen, og lad lårene køle lidt af i saucen."
+    },
+    {
+      "section": "Anderagù",
+      "text": "Pluk kødet af benene, når lårene kan holdes i hånden. Hak skindet fint, og rør det sammen med kødet i saucen. Smag til med salt. Ragùen rækker til flere gange og kan fryses."
+    },
+    {
+      "section": "Fazzoletti",
+      "text": "Slå melet ud på en ren bordplade, og form en høj banke med et stort hul i midten. Hæld hele æg og blommer i hullet, og pisk dem sammen med en gaffel, mens du langsomt trækker mel ind."
+    },
+    {
+      "section": "Fazzoletti",
+      "text": "Saml dejen med hænderne, når den bliver for tung til gaflen. Ælt den i 10 minutter, til den er glat og smidig. Pak den tæt ind, og lad den hvile i køleskabet i mindst 1 time."
+    },
+    {
+      "section": "Fazzoletti",
+      "text": "Tag dejen ud af køleskabet, og lad den stå ved stuetemperatur i 20-30 minutter."
+    },
+    {
+      "section": "Fazzoletti",
+      "text": "Rul dejen ud i en pastamaskine til den tyndeste indstilling (1,5 mm). Skær pladerne i kvadrater på 8 cm, drys dem rigeligt med durummel, og læg dem på et stort fad."
+    },
+    {
+      "section": "Andefedtsrasp",
+      "text": "Mal timian og hvidløg fint i en kryddermølle eller en mortér."
+    },
+    {
+      "section": "Andefedtsrasp",
+      "text": "Varm andefedtet op i en tykbundet gryde ved middelvarme. Når fedtet er varmt, kommer du timianblanding, focaccia-krummer og salt i. Rør konstant, til krummerne er gyldne."
+    },
+    {
+      "section": "Andefedtsrasp",
+      "text": "Si krummerne fra, og gem fedtet i en skål – det kan bruges til stegning. Lad raspen køle af, og smag til med salt. Resten kan fryses."
+    },
+    {
+      "section": "Til servering",
+      "text": "Bring en stor gryde saltet vand i kog."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm 300 g af ragùen op sammen med smørret og en sjat eddike. Smag til med salt og eddike, rør persillen i, og hold den varm."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog fazzolettierne i det kogende vand i ca. 90 sekunder, og smag dem undervejs. Løft dem over i ragùen sammen med en god sjat pastavand, og vend det hele rundt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel pastaen på fire tallerkener. Top med parmesan og andefedtsrasp, og dryp med olivenolie."
+    }
+  ],
+  "changes": [
+    "Sherryeddike er erstattet af rødvinseddike."
+  ]
+}

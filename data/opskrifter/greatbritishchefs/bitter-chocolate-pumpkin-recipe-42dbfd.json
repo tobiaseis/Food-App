@@ -1,0 +1,389 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/bitter-chocolate-pumpkin-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:04:12.801Z",
+  "total_minutes": 150,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 33,
+  "title": "Bitter chokolade og græskar",
+  "intro": "Et dessertbord i flere dele: græskarkaramelis, luftig mørk chokolademousse, chokoladetuile, græskarkernepralin, chutney og sprøde karamelliserede kerner. Retten kan med fordel laves over to dage.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Græskarkaramel",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskarkaramel",
+      "amount": 500,
+      "unit": "g",
+      "name": "hokkaido græskar",
+      "note": "skrællet og i tern",
+      "optional": false
+    },
+    {
+      "section": "Græskarkaramel",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskarkaramel",
+      "amount": 3,
+      "unit": "g",
+      "name": "salt",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Græskarkaramel",
+      "amount": 40,
+      "unit": "ml",
+      "name": "æbleeddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskaris",
+      "amount": 450,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskaris",
+      "amount": 200,
+      "unit": "g",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskaris",
+      "amount": 1,
+      "unit": "l",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskaris",
+      "amount": 40,
+      "unit": "g",
+      "name": "stabilisator til is",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokolademousse",
+      "amount": 300,
+      "unit": "g",
+      "name": "mørk chokolade",
+      "note": "54 %, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Chokolademousse",
+      "amount": 300,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokolademousse",
+      "amount": 90,
+      "unit": "g",
+      "name": "æggehvider",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokolademousse",
+      "amount": 270,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokolademousse",
+      "amount": 30,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokolademousse",
+      "amount": 130,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokolademousse",
+      "amount": 100,
+      "unit": "g",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladetuile",
+      "amount": 180,
+      "unit": "g",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladetuile",
+      "amount": 80,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladetuile",
+      "amount": 80,
+      "unit": "g",
+      "name": "mørk chokolade",
+      "note": "54 %, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Græskarkernepralin",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskarkernepralin",
+      "amount": 200,
+      "unit": "g",
+      "name": "græskarkerner",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Græskarkernepralin",
+      "amount": 60,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskarkernepralin",
+      "amount": 40,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskarkernepralin",
+      "amount": 3,
+      "unit": "g",
+      "name": "salt",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Græskar-ahornchutney",
+      "amount": 750,
+      "unit": "g",
+      "name": "hokkaido græskar",
+      "note": "skrællet og i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Græskar-ahornchutney",
+      "amount": 350,
+      "unit": "g",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græskar-ahornchutney",
+      "amount": 300,
+      "unit": "g",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde græskarkerner",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Sprøde græskarkerner",
+      "amount": 100,
+      "unit": "g",
+      "name": "græskarkerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde græskarkerner",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde græskarkerner",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "kakaonibs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Græskarkaramel",
+      "text": "Start dagen før. Kom sukkeret i en lille gryde, og varm det op uden at røre, til det er mørkt gyldent."
+    },
+    {
+      "section": "Græskarkaramel",
+      "text": "Tilsæt græskar og vand forsigtigt, da karamellen sprutter. Lad det koge blødt, og rør af og til."
+    },
+    {
+      "section": "Græskarkaramel",
+      "text": "Blend massen helt glat, og si den over i en ren gryde. Smag til med salt og eddike."
+    },
+    {
+      "section": "Græskarkaramel",
+      "text": "Afvej 400 g til isen. Fyld resten i en sprøjtepose, og stil den i køleskabet til servering."
+    },
+    {
+      "section": "Græskaris",
+      "text": "Pisk sukker og æggeblommer sammen i en stor, varmefast skål."
+    },
+    {
+      "section": "Græskaris",
+      "text": "Bring mælk, stabilisator og de 400 g græskarkaramel i kog i en gryde. Hæld det lidt ad gangen ud over æggemassen, mens du pisker hele tiden."
+    },
+    {
+      "section": "Græskaris",
+      "text": "Hæld cremen tilbage i en ren gryde, og varm den under omrøring til 83 °C. Hæld den i en beholder, og lad den køle af."
+    },
+    {
+      "section": "Græskaris",
+      "text": "Blend cremen glat med en stavblender, og si den. Frys den i Pacojet-bøtter i 24 timer ved -20 °C, eller lad den stå i køleskabet natten over og kør den i en ismaskine."
+    },
+    {
+      "section": "Chokolademousse",
+      "text": "Næste dag: Kom chokoladen i en varmefast skål. Bring fløden i kog i en lille gryde, og hæld den over chokoladen. Lad den stå i 30 sekunder, og rør så til en glat ganache."
+    },
+    {
+      "section": "Chokolademousse",
+      "text": "Pisk æggehviderne i en røremaskine til bløde toppe. Varm knap halvdelen af sukkeret med glukosesirup og lidt under en fjerdedel af vandet op til 121 °C. Hæld sirupen i en tynd stråle ned i hviderne under piskning, og pisk, til marengsen er afkølet."
+    },
+    {
+      "section": "Chokolademousse",
+      "text": "Kog resten af sukkeret og vandet til 121 °C. Pisk imens æggeblommerne lyse i røremaskinen. Hæld sirupen forsigtigt ned i blommerne under piskning, og pisk, til massen er kold og falder i bånd."
+    },
+    {
+      "section": "Chokolademousse",
+      "text": "Vend blommemassen i ganachen med en spatel, og vend derefter marengsen i. Hæld mousset i en beholder, og lad det sætte sig i køleskabet i mindst 4 timer. Det kan også laves dagen før og stå natten over."
+    },
+    {
+      "section": "Chokoladetuile",
+      "text": "Varm flormelis og glukosesirup i en gryde til 160 °C. Rør chokoladen i, til massen er glat."
+    },
+    {
+      "section": "Chokoladetuile",
+      "text": "Hæld massen på en silikonemåtte eller en bageplade med bagepapir, og lad den køle helt af."
+    },
+    {
+      "section": "Chokoladetuile",
+      "text": "Forvarm ovnen til 180 °C. Slå den kolde masse i stykker, og blend dem til et fint pulver."
+    },
+    {
+      "section": "Chokoladetuile",
+      "text": "Sigt pulveret jævnt ud på en ny måtte eller bageplade med bagepapir, og bag det, til det er smeltet. Lad tuilen køle af, bryd den i passende stykker, og opbevar den ved stuetemperatur."
+    },
+    {
+      "section": "Græskarkernepralin",
+      "text": "Varm sukkeret i en lille gryde til 165 °C, så det bliver en lys karamel. Hæld den forsigtigt ud på en måtte eller bageplade med bagepapir, og lad den stivne."
+    },
+    {
+      "section": "Græskarkernepralin",
+      "text": "Kom den kolde karamel i en blender sammen med kerner, olie og vand, og blend det til en glat pasta. Rør saltet i, og stil pralinen til side."
+    },
+    {
+      "section": "Græskar-ahornchutney",
+      "text": "Kom alle ingredienserne i en gryde, og lad det koge, til græskarret er mørt, og væsken er kogt ind til en klistret konsistens. Stil chutneyen til side."
+    },
+    {
+      "section": "Sprøde græskarkerner",
+      "text": "Varm olien op til 180 °C i en gryde eller friturekoger."
+    },
+    {
+      "section": "Sprøde græskarkerner",
+      "text": "Kog kerner, vand og sukker op i en anden gryde, og lad det koge ind til en klistret sirup. Si væsken fra."
+    },
+    {
+      "section": "Sprøde græskarkerner",
+      "text": "Friturestég kernerne, til de er sprøde, og lad dem dryppe af på køkkenpapir."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kør isen i Pacojet, hvis den er frosset i bøtter, ellers lad den stå ude et par minutter, til den er blød."
+    },
+    {
+      "section": "Til servering",
+      "text": "Form rochers af mousset med en varm ske, og læg dem midt på hver tallerken. Gør det samme med isen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Drys kakaonibs over mousset. Læg en mindre skefuld chutney ved siden af, og pynt med kerner, pralin, prikker af græskarkaramel og tuile. Afslut med basilikum."
+    }
+  ],
+  "changes": [
+    "Græskar er skiftet til hokkaido græskar.",
+    "Cider vinegar er skiftet til æbleeddike.",
+    "Æblebalsamico er skiftet til balsamico.",
+    "Citronsyre (lemon sorrel) er skiftet til basilikum."
+  ]
+}

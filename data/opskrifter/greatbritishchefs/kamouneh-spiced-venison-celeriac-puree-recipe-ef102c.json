@@ -1,0 +1,564 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/kamouneh-spiced-venison-celeriac-puree-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:34:28.398Z",
+  "total_minutes": 100,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 51,
+  "title": "Krydret hjortekød med selleripuré, borek og kaffejus",
+  "intro": "Langtidsbraiseret hjortebov i sprød filodej og mør hjorteryg serveres med cremet selleripuré med umami, syltede surkirsebær og mørk jus med kaffe. Retten kræver forberedelse over to dage, men det meste kan laves på forhånd.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Syltede surkirsebær",
+      "amount": 100,
+      "unit": "g",
+      "name": "surkirsebær",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": "Syltede surkirsebær",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "rødvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede surkirsebær",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede surkirsebær",
+      "amount": 75,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kommenfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "stang",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 3,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "grønne kapsler",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "hjortebov",
+      "note": "med ben",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "stor, i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 5,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "amount": 5,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Borek",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, hakket",
+      "optional": false
+    },
+    {
+      "section": "Borek",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Borek",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "baharat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Borek",
+      "amount": 50,
+      "unit": "g",
+      "name": "tørrede tranebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Borek",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kødlim",
+      "note": "transglutaminase",
+      "optional": true
+    },
+    {
+      "section": "Borek",
+      "amount": 5,
+      "unit": "stk",
+      "name": "filodej",
+      "note": "ark",
+      "optional": false
+    },
+    {
+      "section": "Borek",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, smeltet",
+      "optional": false
+    },
+    {
+      "section": "Borek",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "usaltet, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Hjorteryg",
+      "amount": 350,
+      "unit": "g",
+      "name": "hjorteryg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hjorteryg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "baharat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hjorteryg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "granatæblemelasse",
+      "note": "og lidt ekstra til penslen",
+      "optional": false
+    },
+    {
+      "section": "Hjorteryg",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "let knust",
+      "optional": false
+    },
+    {
+      "section": "Hjorteryg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kvist",
+      "optional": false
+    },
+    {
+      "section": "Hjorteryg",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "smeltet, til pensling",
+      "optional": false
+    },
+    {
+      "section": "Hjorteryg",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Hjorteryg",
+      "amount": null,
+      "unit": null,
+      "name": "granatæblemelasse",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": "skrællet, i tern på 2,5 cm",
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 1,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kvist",
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Marmite",
+      "note": "eller mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Persilleolie",
+      "amount": 200,
+      "unit": "g",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persilleolie",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jus",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Jus",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Jus",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "usaltet, til stegning og til sidst",
+      "optional": false
+    },
+    {
+      "section": "Jus",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jus",
+      "amount": 3,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "grønne kapsler",
+      "optional": false
+    },
+    {
+      "section": "Jus",
+      "amount": 5,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jus",
+      "amount": 2,
+      "unit": "l",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jus",
+      "amount": 2,
+      "unit": "l",
+      "name": "vildtfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jus",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "espresso",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede surkirsebær",
+      "text": "Gør kirsebærrene klar dagen før. Kom dem i en varmefast, lufttæt beholder."
+    },
+    {
+      "section": "Syltede surkirsebær",
+      "text": "Kog eddike, vand og sukker op, og hæld det varme lage over kirsebærrene. Lad dem køle helt af i lagen, og stil dem derefter i køleskabet i mindst 24 timer."
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "text": "Begynd om morgenen dagen før servering. Varm ovnen op til 95 °C."
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "text": "Rist alle krydderierne tørt i en stor ovnfast gryde, og tag dem op igen."
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "text": "Krydr hjortebovens kød kraftigt med salt og peber, og brun det gyldent i lidt olie. Tag kødet op, og brun grøntsagerne i omgange. Tilsæt lidt vand mellem hver omgang for at løsne bundfaldet, og gem vandet."
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "text": "Læg kød og grøntsager tilbage i gryden sammen med krydderierne, vinen og det gemte vand. Fyld om nødvendigt op med vand, så væsken når to tredjedele op ad kødet."
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "text": "Sæt låg på, og lad det braisere i ovnen i 10-12 timer, til kødet er mørt og falder fra hinanden."
+    },
+    {
+      "section": "Braiseret hjortebov",
+      "text": "Si væsken gennem en fin si over en skål, og gem den. Kassér grøntsagerne, og pil kødet af benet og træk det i strimler. Der skal komme omkring 1 kg."
+    },
+    {
+      "section": "Borek",
+      "text": "Svits løget blødt i lidt olie. Kog imens den gemte braisevæske ind til ca. 2,5 dl."
+    },
+    {
+      "section": "Borek",
+      "text": "Bland det trevlede kød med den indkogte væske, løget, krydderiblandingen, tranebærrene og eventuelt kødlim."
+    },
+    {
+      "section": "Borek",
+      "text": "Rul massen til en tyk pølse i husholdningsfilm, og læg den på køl, til den er fast. Det kan godt være natten over."
+    },
+    {
+      "section": "Hjorteryg",
+      "text": "Gnid hjorteryggen ind i krydderiblandingen og granatæblemelassen."
+    },
+    {
+      "section": "Hjorteryg",
+      "text": "Vakuumpak den med hvidløg og timian, og tilbered den i vandbad ved 52 °C i 2 timer."
+    },
+    {
+      "section": "Hjorteryg",
+      "text": "Uden vakuummaskine og vandbad: Brun ryggen på alle sider i lidt olie ved middelhøj varme, og øs derefter rigeligt smør over, til kødet er tilpas stegt. Gør det først lige inden servering."
+    },
+    {
+      "section": "Selleripuré",
+      "text": "Brun sellerien i en varm pande med lidt olie. Tilsæt smør, løg, hvidløg og timian, og svits det."
+    },
+    {
+      "section": "Selleripuré",
+      "text": "Hæld mælk og fløde på, og lad det småkoge, til grøntsagerne er bløde."
+    },
+    {
+      "section": "Selleripuré",
+      "text": "Blend det glat, og rør Marmite i. Brug mere, hvis du vil have en kraftigere umamismag."
+    },
+    {
+      "section": "Selleripuré",
+      "text": "Kom purérn i en lufttæt beholder, og læg film direkte på overfladen. Lad den køle af, og stil den på køl."
+    },
+    {
+      "section": "Persilleolie",
+      "text": "Blend persille og olie på høj hastighed. Hvis du har en Thermomix, blend til 65 °C. Ellers blend i foodprocessor eller blender i 7 minutter, så olien bliver varm, og den grønne farve fæstner sig."
+    },
+    {
+      "section": "Persilleolie",
+      "text": "Si olien gennem et musselinklæde i en fin si, og lad den dryppe igennem. Opbevar den på køl."
+    },
+    {
+      "section": "Jus",
+      "text": "Brun løget i lidt olie, til det er blødt. Tilsæt en klat smør, hvidløg og kardemomme, skru op for varmen, og lad det karamellisere."
+    },
+    {
+      "section": "Jus",
+      "text": "Hæld rødvinen i, og kog den ind til det halve. Tilsæt begge fonde, og kog ind til en fyldig konsistens."
+    },
+    {
+      "section": "Jus",
+      "text": "Rund af med en klat smør og espresso. Lad juicen køle af, og stil den på køl."
+    },
+    {
+      "section": "Borek",
+      "text": "Når kødrullen er fast, lægges to ark filodej, så de overlapper i midten og danner en bund. Pensl med smeltet smør."
+    },
+    {
+      "section": "Borek",
+      "text": "Læg de øvrige ark ovenpå ét ad gangen, og pensl hvert lag rigeligt med smør. Arkene skal mindst være lige så lange som kødrullen."
+    },
+    {
+      "section": "Borek",
+      "text": "Rul kødrullen stramt ind i dejen, og fold kanterne ind. Stil den på køl, til den er fast."
+    },
+    {
+      "section": "Borek",
+      "text": "Skær rullen i portioner, og pynt eventuelt ved at skære enderne af. Læg portionerne med snitfladen opad på en bageplade, og læg en klat smør på hver. Stil dem på køl, til de skal bruges."
+    },
+    {
+      "section": null,
+      "text": "Når du skal servere, varmes ovnen op til 180 °C, og en grill tændes til direkte varme. Tag de syltede kirsebær ud, så de når stuetemperatur."
+    },
+    {
+      "section": null,
+      "text": "Bag boreken i 10-12 minutter, til den er gylden og gennemvarm."
+    },
+    {
+      "section": null,
+      "text": "Grill hjorteryggen over høj varme, til den får fin farve. Vend den ofte, og pensl med granatæblemelasse og smeltet smør. Lad den hvile bagefter."
+    },
+    {
+      "section": null,
+      "text": "Varm selleripuréen og juicen op imens."
+    },
+    {
+      "section": null,
+      "text": "Anret ved at lægge en portion purée på hver tallerken og trykke en fordybning i midten. Hæld lidt jus i fordybningen, og sæt boreken ovenpå. Skær hjorteryggen i skiver, og læg en skive på hver borek. Pynt med syltede kirsebær, karse, få dråber granatæblemelasse og lidt persilleolie."
+    }
+  ],
+  "changes": [
+    "Blomsterkarse til pynt er erstattet med karse.",
+    "Blomsterkarse til olien er erstattet med persille.",
+    "Kamouneh-krydderiblandingen er erstattet med baharat.",
+    "Tørrede berberis er erstattet med tørrede tranebær.",
+    "Brikdej er erstattet med filodej.",
+    "Hjortefond er erstattet med vildtfond.",
+    "Double cream er erstattet med piskefløde."
+  ]
+}

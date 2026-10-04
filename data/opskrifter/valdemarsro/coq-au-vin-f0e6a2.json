@@ -1,0 +1,268 @@
+{
+  "url": "https://www.valdemarsro.dk/coq-au-vin/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:02:51.562Z",
+  "total_minutes": 120,
+  "active_minutes": 40,
+  "yield_count": 6,
+  "source_lines": 24,
+  "title": "Coq au vin med kartoffelmos",
+  "intro": "Mør kylling, der simrer i rødvin med grøntsager, bacon, champignon og karamelliserede perleløg. Serveres med cremet kartoffelmos.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Coq au vin",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "hel kylling",
+      "note": "i stykker: bryst, overlår og lår",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 5,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 750,
+      "unit": "ml",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 5,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 4,
+      "unit": "stk",
+      "name": "nellike",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 10,
+      "unit": "stk",
+      "name": "peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 100,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 250,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 200,
+      "unit": "g",
+      "name": "perleløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "majsstivelse",
+      "note": "rørt ud i lidt koldt vand",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coq au vin",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, grofthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Coq au vin",
+      "text": "Krydr kyllingestykkerne med salt og peber. Varm smør og olie i en stor gryde, og brun kyllingen, til skindet er gyldent og begynder at blive sprødt. Læg stykkerne over på et fad."
+    },
+    {
+      "section": "Coq au vin",
+      "text": "Rør løg, hvidløg, knoldselleri og halvdelen af gulerødderne i gryden, og svits dem i få minutter."
+    },
+    {
+      "section": "Coq au vin",
+      "text": "Kom kyllingen tilbage i gryden og hæld rødvinen over. Tilsæt timian, laurbærblade, nelliker og peberkorn. Sæt låg på, og lad det simre i 1-1½ time."
+    },
+    {
+      "section": "Coq au vin",
+      "text": "Kort før kyllingen er færdig: Steg baconen sprød på en pande, og tag den af panden. Brug baconfedtet til at riste champignon og resten af gulerødderne. Stil dem til side."
+    },
+    {
+      "section": "Coq au vin",
+      "text": "Tør panden ren. Kom perleløg, en klump af smørret til stegning, sukker, vand og lidt salt på panden. Lad det koge op og rør, til løgene er karamelliserede."
+    },
+    {
+      "section": "Coq au vin",
+      "text": "Løft kyllingen op af gryden og stil den til side. Si væsken gennem en finmasket si ned i en ren gryde, og smid grøntsagerne og krydderierne i sien ud."
+    },
+    {
+      "section": "Coq au vin",
+      "text": "Fjern overskydende fedt fra saucen med en ske, og kog den ind uden låg. Tilsæt den udrørte majsstivelse, så saucen tykner, og smag til med salt og peber."
+    },
+    {
+      "section": "Coq au vin",
+      "text": "Kom kylling, champignon, gulerødder, perleløg og bacon ned i saucen. Varm det hele godt igennem, og drys med persille, inden retten kommer på bordet."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Kog kartoflerne møre i usaltet vand, og afdryp dem."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Varm mælken i en kasserolle til ca. 50 grader."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Mos de varme kartofler groft sammen med smørret. Pisk dem derefter med håndmixer, mens du hælder den lune mælk i lidt ad gangen, til moset er cremet, luftigt og blødt."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Smag til med salt, peber og friskrevet muskatnød."
+    }
+  ],
+  "changes": []
+}

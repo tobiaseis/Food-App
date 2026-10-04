@@ -1,0 +1,211 @@
+{
+  "url": "https://www.valdemarsro.dk/thai-beef-salad/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:50:51.187Z",
+  "total_minutes": 20,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 20,
+  "title": "Thailandsk bøfsalat",
+  "intro": "Sprød salat med friske urter og lune skiver af mørt oksekød i en dressing med lime, chili og soja. En let ret med masser af asiatisk smag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til salaten",
+      "amount": 125,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "grofthakket",
+      "optional": true
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tykstegsfilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "eller anden olie til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, saft og skal",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "saltede peanuts",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "krydderurter",
+      "note": "mynte, koriander og basilikum",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "i ringe",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Pisk alle ingredienserne til dressingen sammen i en skål. Lad den stå og trække, mens du laver resten."
+    },
+    {
+      "section": "Salat",
+      "text": "Læg salatblanding, forårsløg, agurk og de hakkede urter på et stort fad."
+    },
+    {
+      "section": "Bøf",
+      "text": "Varm en grillpande op ved høj varme med smør og olie. Steg bøffen i 2-3 minutter på hver side."
+    },
+    {
+      "section": "Bøf",
+      "text": "Flyt bøffen til et skærebræt og lad den hvile i 4-5 minutter. Smag til med salt og peber, og skær den i tynde skiver."
+    },
+    {
+      "section": "Servering",
+      "text": "Hæld dressingen over salaten og vend det hele godt. Læg kødskiverne ovenpå, og pynt med peanuts, chiliringe og friske urter."
+    }
+  ],
+  "changes": [
+    "Thaibasilikum er skiftet til almindelig basilikum.",
+    "Tykstegsbøf er skiftet til tykstegsfilet."
+  ]
+}

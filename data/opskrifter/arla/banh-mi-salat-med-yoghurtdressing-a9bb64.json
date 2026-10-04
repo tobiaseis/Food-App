@@ -1,0 +1,199 @@
+{
+  "url": "https://www.arla.dk/opskrifter/banh-mi-salat-med-yoghurtdressing/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:19:54.200Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Banh mi-salat",
+  "intro": "En salatskål med vietnamesiske takter: lynsyltede grøntsager, sprødt svinekød i hoisin, ris og en cremet ingefærdressing. Toppet med peanuts og frisk koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "ris",
+      "note": "gerne fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Lynsyltede grøntsager",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Lynsyltede grøntsager",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lynsyltede grøntsager",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Lynsyltede grøntsager",
+      "amount": 300,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "lilla, fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Lynsyltede grøntsager",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tynde stave",
+      "optional": false
+    },
+    {
+      "section": "Lynsyltede grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet, frisk",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Kød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "svinekoteletter",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Kød",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "hoisinsauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kød",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 200,
+      "unit": "g",
+      "name": "agurk",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "peanuts",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "koriander",
+      "note": "bladene",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog risene, som det står på pakken."
+    },
+    {
+      "section": "Lynsyltede grøntsager",
+      "text": "Bring eddike, sukker og salt i kog, og tag det af varmen, når sukkeret er opløst."
+    },
+    {
+      "section": "Lynsyltede grøntsager",
+      "text": "Kom spidskål, gulerødder og rødløg i en skål, og hæld den varme lage over. Lad det stå på køkkenbordet i 15-20 minutter, og vend grøntsagerne en gang imellem."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør yoghurt, ingefær, sukker og salt sammen i en lille skål."
+    },
+    {
+      "section": "Kød",
+      "text": "Varm olien op på en pande ved middel varme, og steg svinekødet i ca. 4 minutter."
+    },
+    {
+      "section": "Kød",
+      "text": "Tilsæt hoisinsauce og hvidløg, og rør rundt. Sluk for varmen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Lad de syltede grøntsager dryppe af i en sigte."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel ris, grøntsager, kød og agurk i 4 skåle, og tilsæt dressingen. Drys med peanuts og korianderblade."
+    }
+  ],
+  "changes": [
+    "Grisekoteletter er byttet til svinekoteletter.",
+    "Hvidvinseddike er byttet til eddike."
+  ]
+}

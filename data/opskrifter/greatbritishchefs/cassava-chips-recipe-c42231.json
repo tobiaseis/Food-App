@@ -1,0 +1,112 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/cassava-chips-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:07:24.397Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 7,
+  "title": "Maniokchips med trøffelmayo",
+  "intro": "Sprøde maniokchips, der koges og friteres og vendes i trøffelolie. De serveres med hvidløgsmayonnaise og eventuelt lidt parmesan.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til maniokchipsene",
+      "amount": 1,
+      "unit": "kg",
+      "name": "maniok",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til maniokchipsene",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til maniokchipsene",
+      "amount": null,
+      "unit": null,
+      "name": "solsikkeolie",
+      "note": "til friture",
+      "optional": false
+    },
+    {
+      "section": "Til maniokchipsene",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "trøffelolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hvidløgsmayonnaisen",
+      "amount": 300,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hvidløgsmayonnaisen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til maniokchipsene",
+      "text": "Fyld en stor gryde med koldt vand."
+    },
+    {
+      "section": "Til maniokchipsene",
+      "text": "Skræl maniokken, og skær den på tværs i stykker på 5-8 cm. Snit med en skarp kniv langs stykket gennem den barklignende yderside og ind i det lyserøde lag under. Stik knivspidsen ind under skindet, løsn det, og træk skind og bark af."
+    },
+    {
+      "section": "Til maniokchipsene",
+      "text": "Skær maniokken i tykke pommes frites-stave. Skyl stavene undervejs, og læg dem i det kolde vand, så de ikke misfarves."
+    },
+    {
+      "section": "Til maniokchipsene",
+      "text": "Tilsæt saltet, når alle stavene er skåret, og bring gryden i kog. Kog i ca. 25 minutter, til maniokken er mør, når du stikker en kniv i. Hæld den i et dørslag, og lad den dampe helt tør."
+    },
+    {
+      "section": "Til hvidløgsmayonnaisen",
+      "text": "Rør mayonnaise og hvidløg grundigt sammen, mens maniokken koger."
+    },
+    {
+      "section": "Til maniokchipsene",
+      "text": "Varm olien op i en dyb gryde med tyk bund, som er højst halvt fyldt. Olien er varm nok, når en lille brødkrumme syder og bliver brun på 20 sekunder. Du kan også bruge en frituregryde indstillet til 180 °C."
+    },
+    {
+      "section": "Til maniokchipsene",
+      "text": "Frit maniokken i små portioner, så gryden ikke bliver overfyldt, til den er gyldne, ca. 5-10 minutter pr. portion. Løft dem op med en hulske, og lad dem dryppe af på en bakke med køkkenrulle. Drys med salt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Vend de friterede maniokchips med trøffelolien. Server dem med hvidløgsmayonnaisen ved siden af og top eventuelt med revet parmesan."
+    }
+  ],
+  "changes": [
+    "Cassava er skiftet til maniok.",
+    "Havsalt er skiftet til almindeligt salt.",
+    "Hvid trøffelolie er skiftet til trøffelolie."
+  ]
+}

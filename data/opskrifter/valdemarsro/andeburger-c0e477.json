@@ -1,0 +1,128 @@
+{
+  "url": "https://www.valdemarsro.dk/andeburger/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:49:55.442Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Andeburger",
+  "intro": "Burger med mørt andekød, rødkål og grønkål, der er en lækker måde at bruge resterne fra juleanden på. Dressing af mayonnaise og julesauce binder det hele sammen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "boller",
+      "note": "burgerboller",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "frisk eller som rødkålssalat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "grønkål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "andelår",
+      "note": "confiteret, eller en rest andekød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i ringe",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "æbler",
+      "note": "i skiver, som kompot eller fra fyldet i anden",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "julesauce",
+      "note": "kold",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "æbler",
+      "note": "kompot (fyld fra andestegen) eller frisk æble",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm bollerne i brødristeren eller i ovnen. Opvarm rødkålssalaten i en lille gryde."
+    },
+    {
+      "section": null,
+      "text": "Rør mayonnaise og julesauce sammen til en dressing, og smag den til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Vend grønkålen med en lille del af dressingen, og massér den let, så den bliver lidt mørkere og mere mør."
+    },
+    {
+      "section": null,
+      "text": "Bred resten af dressingen på de varme bollehalvdele."
+    },
+    {
+      "section": null,
+      "text": "Læg grønkål på underdelene, og top med andekød, rødløg, den varme rødkål og æblekompot. Sæt låget på og server."
+    }
+  ],
+  "changes": []
+}

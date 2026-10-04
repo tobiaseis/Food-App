@@ -1,0 +1,164 @@
+{
+  "url": "https://www.arla.dk/opskrifter/grontsagsfrikasse-og-parmakylling/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:26:00.194Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Parmakylling med grøntsagsfrikassé",
+  "intro": "Møre kyllingestrimler pakket ind i parmaskinke og serveret med en cremet frikassé af rodfrugter og løg i ostesauce. Kartoflerne gør retten mættende.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Parmakylling",
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "renset",
+      "optional": false
+    },
+    {
+      "section": "Parmakylling",
+      "amount": 4,
+      "unit": "skive",
+      "name": "parmaskinke",
+      "note": "tyndt skåret, ca. 50 g",
+      "optional": false
+    },
+    {
+      "section": "Parmakylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Parmakylling",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft, til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": 200,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "i stave, ca. 3 stk.",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": 200,
+      "unit": "g",
+      "name": "persillerødder",
+      "note": "i stave, ca. 3 stk.",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": 200,
+      "unit": "g",
+      "name": "rødløg",
+      "note": "i tykke både, ca. 3 stk.",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": 4,
+      "unit": "dl",
+      "name": "ostesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft, til saucen",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": 1,
+      "unit": "dl",
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "kogte",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Parmakylling",
+      "text": "Dup kyllingefileterne tørre, og skær hver af dem på skrå i strimler, så du får 8 stykker af nogenlunde samme tykkelse."
+    },
+    {
+      "section": "Parmakylling",
+      "text": "Skær parmaskinken over i 8 stykker. Læg et stykke på hver kyllingestrimmel, tryk det godt fast, og krydr med peber."
+    },
+    {
+      "section": "Parmakylling",
+      "text": "Smelt smørret på en pande, til det får en gylden farve. Brun kyllingestykkerne i ca. 1 minut på hver side."
+    },
+    {
+      "section": "Parmakylling",
+      "text": "Sænk til middelvarme, og steg stykkerne færdige i 2-3 minutter på hver side."
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "text": "Imens bringer du vand og det grove salt i kog i en gryde."
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "text": "Læg gulerødder, persillerødder og rødløg i vandet. Lad det koge op igen, og kog i ca. 1 minut. Hæld det i et dørslag, og lad det dryppe godt af."
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "text": "Varm ostesaucen op til kogepunktet i den tomme gryde. Vend grøntsagerne forsigtigt i sammen med persille, salt og peber."
+    },
+    {
+      "section": "Grøntsagsfrikassé",
+      "text": "Smag til, og servér med det samme sammen med de kogte kartofler og parmakyllingen."
+    }
+  ],
+  "changes": []
+}

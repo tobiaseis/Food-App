@@ -1,0 +1,341 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/marinated-leg-lamb-chickpea-puree-courgettes-cacik-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:13:53.091Z",
+  "total_minutes": 75,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Marineret lammeculotte med kikærtepuré, langtidsstegt squash og cacık",
+  "intro": "Mør lammeculotte i krydret marinade serveres med varm kikærtepuré, blød squash og kølig yoghurtsauce med agurk og mynte. Retten kan grilles eller steges i ovn.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Lammekød og marinade",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "lammeculotte",
+      "note": "udbenet, vendt for sene, skind og overskydende fedt",
+      "optional": false
+    },
+    {
+      "section": "Lammekød og marinade",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Lammekød og marinade",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Lammekød og marinade",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Lammekød og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stærk røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammekød og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sød røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammekød og marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Lammekød og marinade",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammekød og marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammekød og marinade",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til krydring af kødet",
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": 1,
+      "unit": "kg",
+      "name": "squash",
+      "note": "i grove stykker, gerne i forskellige farver",
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": 5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mynte",
+      "note": "frisk, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cacık",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "stor, ca. 400 g, uden kerner og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Cacık",
+      "amount": 200,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Cacık",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust med salt",
+      "optional": false
+    },
+    {
+      "section": "Cacık",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Cacık",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mynte",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Cacık",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mynte",
+      "note": "blade, fint snittet, plus ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Cacık",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "chiliflager eller finthakket rød chili, til servering",
+      "optional": false
+    },
+    {
+      "section": "Kikærtepuré",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "à 400 g, skyllede og drænede",
+      "optional": false
+    },
+    {
+      "section": "Kikærtepuré",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtepuré",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kikærtepuré",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kikærtepuré",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "spidskommenfrø",
+      "note": "groft knust",
+      "optional": false
+    },
+    {
+      "section": "Kikærtepuré",
+      "amount": 20,
+      "unit": "stk",
+      "name": "safran",
+      "note": "tråde, udrørt i 2 spsk kogende vand",
+      "optional": true
+    },
+    {
+      "section": "Kikærtepuré",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "til at justere konsistensen",
+      "optional": false
+    },
+    {
+      "section": "Kikærtepuré",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtepuré",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Start mindst 4 timer før servering, gerne op til 2 dage før. Blend hvidløg, citronsaft, rødløg, paprika, spidskommen og en knivspids peber til en glat masse."
+    },
+    {
+      "section": "Marinade",
+      "text": "Fold lammeculotten ud, så den ligger fladt. Den kan blive hel eller deles i 4 stykker. Gnid kødet ind i marinaden, dryp olivenolie over, og stil det koldt i mindst 4 timer. Skal kødet i ovnen, så lad det være i ét stykke."
+    },
+    {
+      "section": "Squash",
+      "text": "Vend squashen med det fine salt, og lad den dryppe af i et dørslag i mindst 10 minutter."
+    },
+    {
+      "section": "Cacık",
+      "text": "Rør alle ingredienserne til cacık sammen, bortset fra chiliflagerne. Smag til, og stil det køligt, til det skal bruges."
+    },
+    {
+      "section": "Squash",
+      "text": "Tag lammet ud af køleskabet 30 minutter før tilberedning, hvis du kan."
+    },
+    {
+      "section": "Squash",
+      "text": "Tør squashen med køkkenrulle. Varm olien i en stor gryde ved middelvarme, og steg squashen under jævnlig omrøring i ca. 10 minutter, til den er blød. Tilsæt hvidløg og halvdelen af myntens, og steg videre i 10-15 minutter, til squashen er meget blød, sød og begynder at falde fra hinanden. Rør resten af myntens i, og smag til med salt og peber."
+    },
+    {
+      "section": "Kikærtepuré",
+      "text": "Blend kikærterne med stavblender eller i foodprocessor, til de er ret glatte, men stadig har lidt struktur. Tilsæt vand, til massen minder om fugtig kartoffelmos."
+    },
+    {
+      "section": "Kikærtepuré",
+      "text": "Varm olien i en mellemstor gryde ved middelhøj varme. Steg løg, hvidløg og spidskommen med en knivspids salt under jævnlig omrøring, til det er gyldent."
+    },
+    {
+      "section": "Kikærtepuré",
+      "text": "Rør kikærtemassen og eventuelt safranvandet i gryden. Lad det simre i 5 minutter, og pas på, for det sprutter. Smag til med salt og peber, og sæt det til side."
+    },
+    {
+      "section": "Lammekød og marinade",
+      "text": "Gør grill eller bål klar til direkte varme. Lammet bliver bedst på grill, men en varm grillpande eller en almindelig pande dur også. Ovn er også en mulighed."
+    },
+    {
+      "section": "Lammekød og marinade",
+      "text": "Salt lammet på alle sider. Grill det i ca. 10-16 minutter, og vend det en eller to gange, til det er medium-rare til medium, eller efter smag. Dæk løst med folie, og lad kødet hvile i 5-10 minutter. I ovnen steges det i stedet i 20-30 minutter ved 220 °C."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm kikærtepuré og squash forsigtigt igen."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær lammet i skiver, og server det med puré, squash og cacık. Drys med ekstra mynte og chili, og hæld kødsaften fra hvilen over kødet."
+    }
+  ],
+  "changes": [
+    "Lårstykke af lam er erstattet med lammeculotte.",
+    "Courgette er erstattet med squash.",
+    "Aleppo-chiliflager er erstattet med almindelige chiliflager.",
+    "Hot smoked paprika og sweet smoked paprika er erstattet med stærk og sød røget paprika."
+  ]
+}

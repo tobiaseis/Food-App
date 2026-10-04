@@ -1,0 +1,186 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-satay-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:59:45.377Z",
+  "total_minutes": 25,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 15,
+  "title": "Kyllingesalat med satay-sauce",
+  "intro": "Marineret kylling serveres på sprød salat med agurk, granatæble og en cremet jordnøddesauce med sweet chili og lime. Retten er hurtig at samle, når kyllingen først har marineret.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "karry",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "kan erstattes af kalkunbryst",
+      "optional": false
+    },
+    {
+      "section": "Satay-sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "jordnøddesmør",
+      "note": "crunchy",
+      "optional": false
+    },
+    {
+      "section": "Satay-sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sweet chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Satay-sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "saften af lime",
+      "optional": false
+    },
+    {
+      "section": "Satay-sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": null,
+      "unit": null,
+      "name": "solsikkeolie",
+      "note": "til panden",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "salat",
+      "note": "hjertesalat, skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skalotteløg, halveret og i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "granatæblekerner",
+      "note": "kernerne fra et halvt granatæble",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Rør sojasauce, karry, spidskommen, hvidløg og honning sammen i et stort fad."
+    },
+    {
+      "section": "Marinade",
+      "text": "Del hvert kyllingebryst i to tynde fileter ved at skære det vandret over. Vend kyllingen i marinaden, og sæt den i køleskabet i mindst 1 time eller natten over."
+    },
+    {
+      "section": "Satay-sauce",
+      "text": "Rør jordnøddesmør, sweet chilisauce, limesaft og vand sammen til en sauce, der kan øses."
+    },
+    {
+      "section": "Til stegning",
+      "text": "Pensl en stor non-stick-pande let med olie, og varm den op på middel varme."
+    },
+    {
+      "section": "Til stegning",
+      "text": "Læg kyllingen på panden, og læg låg på. Steg i 5-6 minutter, og vend filetene det sidste minut, til de er gennemstegte, men stadig saftige."
+    },
+    {
+      "section": "Til stegning",
+      "text": "Dæk kyllingen til, og lad den hvile et par minutter."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend salat, agurk, skalotteløg, koriander og granatæblekerner sammen, og fordel det på tallerkener."
+    },
+    {
+      "section": "Salat",
+      "text": "Drys lidt af saucen over salaten. Skær kyllingen i skiver, læg dem ovenpå, og slut med resten af saucen. Server, mens kyllingen er lun."
+    }
+  ],
+  "changes": [
+    "Tamari er erstattet af sojasauce.",
+    "Medium curry powder er erstattet af karry.",
+    "Sweet chilisauce, jordnøddesmør og hjertesalat er danske betegnelser; Little Gem er erstattet af hjertesalat.",
+    "Banana shallot er erstattet af skalotteløg.",
+    "Lime juice er erstattet af saft fra lime."
+  ]
+}

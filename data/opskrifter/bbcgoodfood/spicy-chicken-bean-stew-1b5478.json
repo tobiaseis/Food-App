@@ -1,0 +1,151 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/spicy-chicken-bean-stew",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:30:11.936Z",
+  "total_minutes": 95,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 12,
+  "title": "Krydret kyllingegryde med bønner",
+  "intro": "En solid gryderet med kyllingelår, bønner og chili, der simrer mør i tomat og fond. Server den med creme fraiche og godt brød.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1.2,
+      "unit": "kg",
+      "name": "kyllingelår",
+      "note": "overlår og underlår",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "chili",
+      "note": "røde, uden kerner, hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "peberfrugt",
+      "note": "frosne, optøede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "bønner",
+      "note": "smørbønner, 400 g pr. dåse, afdryppede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "ml",
+      "name": "kyllingefond",
+      "note": "varm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "sprødt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Træk skindet af kyllingestykkerne og kassér det."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde. Brun kyllingen på alle sider, og tag den op med en hulske."
+    },
+    {
+      "section": null,
+      "text": "Kom løg, hvidløg og chili i gryden. Steg dem i ca. 5 minutter, til de begynder at blive bløde og gyldne."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt peberfrugt, hakkede tomater, begge slags bønner og den varme fond. Læg kyllingen oven på."
+    },
+    {
+      "section": null,
+      "text": "Læg låget halvt på, og lad retten simre i 50 minutter, til kyllingen er mør og gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Rør koriander i lige før servering. Server med creme fraiche og brød."
+    }
+  ],
+  "changes": [
+    "Kidneybønner i chilisauce er skiftet til almindelige kidneybønner.",
+    "Soured cream er skiftet til creme fraiche."
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/slow-cooked-pork-belly-apricot-prunes-apple-silesian-dumplings-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:52:03.265Z",
+  "total_minutes": 240,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 33,
+  "title": "Langtidsstegt svinebryst med abrikoser, svesker, æble og schlesische kartoffelboller",
+  "intro": "Mørt, krydderisaltet svinebryst, der hviler i flere dage og bliver langtidsstegt, serveres med en dyb svinesovs, syltet frugt og bløde kartoffelboller. En ret til en weekend, hvor man har tid til at forberede i god tid.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Svinebryst",
+      "amount": 25,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 25,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 5,
+      "unit": "g",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 5,
+      "unit": "g",
+      "name": "paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 8,
+      "unit": "g",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 1,
+      "unit": "kg",
+      "name": "svinebryst",
+      "note": "uden ben og svær",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 20,
+      "unit": "ml",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 500,
+      "unit": "g",
+      "name": "svinebov",
+      "note": "skåret i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 50,
+      "unit": "g",
+      "name": "løg",
+      "note": "skåret i 2 cm stykker",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 25,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "skåret i 2 cm stykker",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 25,
+      "unit": "g",
+      "name": "porre",
+      "note": "skåret i 2 cm stykker",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 25,
+      "unit": "g",
+      "name": "selleri",
+      "note": "skåret i 2 cm stykker",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 40,
+      "unit": "ml",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 300,
+      "unit": "ml",
+      "name": "hvidvin",
+      "note": "koges ind til ca. 100 ml",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 750,
+      "unit": "ml",
+      "name": "kyllingefond",
+      "note": "brun, koges ind til ca. 500 ml",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 15,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 100,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": 10,
+      "unit": "g",
+      "name": "salvie",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Svinesovs",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Syltet frugt",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "fx Granny Smith eller Gala",
+      "optional": false
+    },
+    {
+      "section": "Syltet frugt",
+      "amount": 150,
+      "unit": "ml",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet frugt",
+      "amount": 300,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet frugt",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet frugt",
+      "amount": 10,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet frugt",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet frugt",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Syltet frugt",
+      "amount": 100,
+      "unit": "g",
+      "name": "tørrede abrikoser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet frugt",
+      "amount": 100,
+      "unit": "g",
+      "name": "svesker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelboller",
+      "amount": 250,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "melede",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelboller",
+      "amount": 60,
+      "unit": "g",
+      "name": "kartoffelmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 18,
+      "unit": "stilk",
+      "name": "broccolini",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svinebryst",
+      "text": "Bland salt, farin og krydderierne i en skål."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Gnid blandingen grundigt ind i svinebrystet på alle sider, og pak det stramt ind i film."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Læg brystet på en bakke, og læg noget tungt ovenpå, fx en stor mælkekarton eller nogle dåser."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Stil det i køleskabet og lad det marinere i 3 dage."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Tag kødet ud, fjern filmen, og dup det tørt. Læg det på en rist og stil det tilbage i køleskabet i 24 timer, så overfladen tørrer."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Har du en røgovn: Varm den op til 110 °C med en svag, jævn røg, gerne fra eg eller æbletræ. Steg i 5 timer eller til kødet er mørt. Efter 3 timer pakkes brystet ind i bagepapir og alufolie, og det kommer tilbage i røgovnen."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Bruger du almindelig ovn: Steg ved 120 °C i 4 timer. Pak kødet ind i bagepapir og alufolie, når der er gået 2 timer."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Lad det færdige kød hvile og køle lidt af."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Varm olien op i en pande, og brun svinebovens tern. Når de begynder at tage farve, tilsættes smørret. Fortsæt, til kødet er brunet hele vejen rundt, i alt ca. 30 minutter."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Tag kødet op, men lad fedtet blive i panden."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Svits løg, gulerod, porre og selleri i fedtet i ca. 15 minutter, til grøntsagerne er bløde og brunede."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Vend to tredjedele af det brunede kød i grøntsagerne, og tag det hele af panden."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Skyl panden med eddiken, og lad den koge ind til en tyk glasur."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Kom grøntsager og kød tilbage i panden sammen med vin, fond og fløde. Bring det i kog, og skum det af."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Skru ned og lad det simre i 40 minutter."
+    },
+    {
+      "section": "Syltet frugt",
+      "text": "Imens skrælles æblerne, og de skæres i otte både. Fjern kernehuset. Hvis du har lyst, kan bådene skæres til små tøndeformer med en skræller eller en tourneringskniv."
+    },
+    {
+      "section": "Syltet frugt",
+      "text": "Kog eddike, vand, sukker og salt op i en gryde."
+    },
+    {
+      "section": "Syltet frugt",
+      "text": "Kom rosmarin, hvidløg, tørret frugt og æbler i. Skru ned på lav varme og læg låg på."
+    },
+    {
+      "section": "Syltet frugt",
+      "text": "Lad det trække i 5 minutter, tag gryden af varmen, og lad den køle helt af med låget på."
+    },
+    {
+      "section": "Syltet frugt",
+      "text": "Tag frugten op af væsken, og skær abrikoser og svesker i kvarte."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Sigt sovsen gennem en fin si efter de 40 minutter, og hæld den tilbage i gryden."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Bring sovsen i kog, og tilsæt champignon, salvie og den sidste tredjedel af kødet. Kog i 20 minutter."
+    },
+    {
+      "section": "Svinesovs",
+      "text": "Si sovsen igen, og kom den tilbage i gryden. Smag til med salt, og kog den evt. lidt mere ind."
+    },
+    {
+      "section": "Kartoffelboller",
+      "text": "Skræl kartoflerne og kog dem møre i saltet vand."
+    },
+    {
+      "section": "Kartoffelboller",
+      "text": "Hæld vandet fra, og lad kartoflerne dampe af i gryden et par minutter."
+    },
+    {
+      "section": "Kartoffelboller",
+      "text": "Pres dem gennem en kartoffelpresser, og lad massen køle lidt af."
+    },
+    {
+      "section": "Kartoffelboller",
+      "text": "Vej massen af, og bland den med kartoffelmel svarende til en fjerdedel af vægten, så dejen lige bliver glat."
+    },
+    {
+      "section": "Kartoffelboller",
+      "text": "Del dejen i stykker på ca. 15 g, og rul dem til glatte kugler. Tryk en fordybning i midten af hver med en finger."
+    },
+    {
+      "section": "Kartoffelboller",
+      "text": "Kog bollerne i kogende saltet vand i ca. 3 minutter, til de flyder op. Lad dem dryppe af."
+    },
+    {
+      "section": "Til servering",
+      "text": "Klip broccolinien i stykker på ca. 5 cm."
+    },
+    {
+      "section": "Til servering",
+      "text": "Blancher dem i kogende saltet vand i ca. 1 minut, til de er møre og grønne."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær seks skiver af svinebrystet, og læg dem i sovsen. Lad sovsen simre, og øs den over kødet, til den er kogt ind, og kødet har en klæbrig glasur."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret kødet på tallerkener. Varm noget af frugten i sovsen, og læg den på kødet. Top med broccolini."
+    },
+    {
+      "section": "Til servering",
+      "text": "Vend kartoffelbollerne i sovsen, og server dem ved siden af med persille drysset over."
+    }
+  ],
+  "changes": [
+    "Tenderstem broccoli er skiftet til broccolini.",
+    "Chardonnayeddike er skiftet til hvidvinseddike.",
+    "Svineskulder er skiftet til svinebov.",
+    "Potato flour er skiftet til kartoffelmel.",
+    "Brown chicken stock er skiftet til kyllingefond."
+  ]
+}

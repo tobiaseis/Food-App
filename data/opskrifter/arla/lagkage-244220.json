@@ -1,0 +1,180 @@
+{
+  "url": "https://www.arla.dk/opskrifter/lagkage/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:23:30.844Z",
+  "total_minutes": 120,
+  "active_minutes": 60,
+  "yield_count": 1,
+  "source_lines": 14,
+  "title": "Lagkage med vaniljecreme og hindbærkompot",
+  "intro": "Klassisk lagkage med lyse bunde, konditorcreme og hindbærkompot, pyntet med friske bær. Kagen skal stå på køl, så start gerne dagen før.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Vaniljecreme",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljecreme",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljecreme",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljecreme",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": "eller majsstivelse",
+      "optional": false
+    },
+    {
+      "section": "Vaniljecreme",
+      "amount": 1,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": "kornene og stangen; kan erstattes af vaniljepasta",
+      "optional": false
+    },
+    {
+      "section": "Hindbærkompot",
+      "amount": 1,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "1 blad",
+      "optional": false
+    },
+    {
+      "section": "Hindbærkompot",
+      "amount": 200,
+      "unit": "g",
+      "name": "hindbær",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Hindbærkompot",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Hindbærkompot",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "amount": 5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "lagkagebunde",
+      "note": "tykke, lyse",
+      "optional": false
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "amount": 100,
+      "unit": "g",
+      "name": "flormelis",
+      "note": "til glasur",
+      "optional": false
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til glasur",
+      "optional": false
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "amount": null,
+      "unit": null,
+      "name": "bær",
+      "note": "friske, blandede, fx jordbær, hindbær og ribs",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Vaniljecreme",
+      "text": "Pisk mælk og æg let sammen i en tykbundet gryde. Tilsæt sukker, mel, vaniljekorn og vaniljestang, og pisk det hele godt sammen."
+    },
+    {
+      "section": "Vaniljecreme",
+      "text": "Varm blandingen op under konstant piskning, til den koger. Lad den småkoge ved jævn varme i ca. 3 minutter, mens du rører, til melsmagen er væk."
+    },
+    {
+      "section": "Vaniljecreme",
+      "text": "Tag vaniljestangen op, og kom cremen i en skål. Læg film direkte på overfladen, så der ikke kommer skind, og stil den på køl, til den er helt kold."
+    },
+    {
+      "section": "Hindbærkompot",
+      "text": "Udblød husblassen i koldt vand i ca. 5 minutter."
+    },
+    {
+      "section": "Hindbærkompot",
+      "text": "Bring hindbær, citronsaft og sukker i kog i en lille gryde, og lad det simre ved svag varme i ca. 5 minutter."
+    },
+    {
+      "section": "Hindbærkompot",
+      "text": "Løft husblassen op af vandet, og rør den ud i den varme kompot, til den er smeltet. Stil kompotten på køl, til den er helt kold."
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "text": "Pisk fløden til skum. Vend ca. en fjerdedel af flødeskummet i vaniljecremen, så du har en konditorcreme."
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "text": "Læg den første bund på et fad. Smør halvdelen af kompotten ud på den, og top med halvdelen af konditorcremen."
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "text": "Læg den næste bund ovenpå, og gentag med resten af kompotten og konditorcremen."
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "text": "Rør flormelis og vand til en glasur. Læg den sidste bund på, tryk den godt ned i cremen, og dæk den med glasuren."
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "text": "Fyld resten af flødeskummet i en sprøjtepose med stjernetud, og sprøjt det rundt langs kagens kant."
+    },
+    {
+      "section": "Sådan samler du lagkagen",
+      "text": "Pynt med de friske bær, og sæt kagen på køl, til den skal serveres."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,222 @@
+{
+  "url": "https://www.valdemarsro.dk/julepizza/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:46:21.836Z",
+  "total_minutes": 120,
+  "active_minutes": 30,
+  "yield_count": 2,
+  "source_lines": 18,
+  "title": "Julepizza med and og rødkål",
+  "intro": "Hjemmelavet pizza med pesto, mozzarella, andebryst, rødkål og æble. Den er et lækkert bud på at bruge resterne af juleanden.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Pizzadej",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": "frisk gær",
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus ekstra til udrulning",
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til at smøre skålen",
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 0.5,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, med stilke",
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 250,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "frisk, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 8,
+      "unit": "spsk",
+      "name": "pesto",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 200,
+      "unit": "g",
+      "name": "andebryst",
+      "note": "stegt, gerne rester fra juleanden",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 100,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "frisk, et drys til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pizzadej",
+      "text": "Rør gæren ud i det lunkne vand i en stor skål. Til en dej, der skal hæve natten over i køleskabet, bruges kun 5 g gær i stedet for 25 g."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Rør halvdelen af melet sammen med olien og saltet, til det er jævnt. Tilsæt resten af melet lidt ad gangen, mens du rører."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Vend dejen ud på et meldrysset bord, og ælt den med hænderne, til den er smidig."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Skyl skålen, og smør den med olie. Læg dejen i, og vend den, så hele overfladen er olieret. Det gør dejen let at arbejde med og skorpen sprødere."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Lad dejen hæve i cirka 60 minutter på køkkenbordet, eller sæt den natten over i køleskabet."
+    },
+    {
+      "section": "Pizzasauce",
+      "text": "Blend alle ingredienserne til sauce, til den er helt jævn. Der bruges 2 spsk sauce pr. pizza. Frys resten i portioner, eller brug den som pastasauce."
+    },
+    {
+      "section": "Topping",
+      "text": "Sæt en bageplade, et bagestål eller en pizzasten øverst i ovnen, og varm ovnen op på den højeste temperatur."
+    },
+    {
+      "section": "Topping",
+      "text": "Lad mozzarellaen dryppe af, og dup den tør med køkkenrulle. Skær den i skiver."
+    },
+    {
+      "section": "Topping",
+      "text": "Del dejen i to, og form to runde pizzaer på et meldrysset bord med hænderne."
+    },
+    {
+      "section": "Topping",
+      "text": "Smør sauce og pesto ud på bundene. Læg andekød, mozzarella, rødkål og æble ovenpå."
+    },
+    {
+      "section": "Topping",
+      "text": "Skru ovnen om til grill. Bag pizzaerne i 4-5 minutter, og hold godt øje med dem."
+    },
+    {
+      "section": "Topping",
+      "text": "Pynt med frisk timian og et lille skvæt olivenolie, før pizzaerne serveres."
+    }
+  ],
+  "changes": [
+    "Frisk mozzarella er skrevet som almindelig mozzarella."
+  ]
+}

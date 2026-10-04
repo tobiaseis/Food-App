@@ -1,0 +1,135 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/dirty-rice",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:29:57.738Z",
+  "total_minutes": 55,
+  "active_minutes": 25,
+  "yield_count": 6,
+  "source_lines": 11,
+  "title": "Dirty rice",
+  "intro": "Krydret risret fra det sydlige USA med hakket oksekød, grøntsager og cajun-krydderi, som koger færdig i én gryde. Drys med forårsløg, før den kommer på bordet.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn peberfrugt",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gul peberfrugt",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "ris",
+      "note": "langkornede, skyllet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 7.5,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "forårsløg",
+      "note": "fint skåret, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde med låg ved middel-lav varme. Steg løg, selleri og peberfrugt i 8-10 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Kom hakket oksekød i gryden, og brun det i 5-6 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløget i, og steg det i 1 minut. Tilsæt cajun-krydderiet, og lad det stege med i 1 minut. Skru derefter op til middelvarme."
+    },
+    {
+      "section": null,
+      "text": "Kom risene i gryden, og hæld fonden over. Læg låg på, og lad retten simre i 15-18 minutter, til risene er møre. Smag på risene efter 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Mangler risene væske, så tilsæt lidt vand eller fond ad gangen."
+    },
+    {
+      "section": null,
+      "text": "Drys forårsløg over, og server."
+    }
+  ],
+  "changes": [
+    "Vegetable or sunflower oil er erstattet med rapsolie.",
+    "Beef stock er erstattet med oksefond."
+  ]
+}

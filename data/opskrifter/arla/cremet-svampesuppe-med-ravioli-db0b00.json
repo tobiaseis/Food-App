@@ -1,0 +1,151 @@
+{
+  "url": "https://www.arla.dk/opskrifter/cremet-svampesuppe-med-ravioli/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:59:59.971Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Cremet svampesuppe med ravioli",
+  "intro": "En fyldig suppe af blandede svampe, hvidvin og fløde, serveret over bløde raviolier med ost. Server den med godt brød til.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Suppen",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 500,
+      "unit": "g",
+      "name": "champignon",
+      "note": "rensede, blandede svampe, fx østershatte, portobello og kantareller",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakkede, bananskalotteløg, i alt ca. 200 g",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "bladene plukkes af",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 5,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 400,
+      "unit": "g",
+      "name": "tortellini",
+      "note": "16 store raviolier med ost",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "enokisvampe",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "friske kviste til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "landbrød, gerne ristet",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppen",
+      "text": "Smelt smørret i en stor gryde på kraftig varme. Det må ikke tage farve."
+    },
+    {
+      "section": "Suppen",
+      "text": "Skær de største svampe i mindre stykker. Steg dem med løg, timianblade, salt og peber i ca. 3 minutter på kraftig varme, til al væde er kogt væk."
+    },
+    {
+      "section": "Suppen",
+      "text": "Hæld hvidvinen i og lad den koge ind i ca. 5 minutter."
+    },
+    {
+      "section": "Suppen",
+      "text": "Rør fond og fløde i, og bring det i kog. Smag suppen til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog raviolierne, som det står på pakken, og læg dem i fire dybe tallerkener."
+    },
+    {
+      "section": "Til servering",
+      "text": "Øs suppen over, og pynt med enokisvampe og timiankviste. Server med brød med det samme."
+    }
+  ],
+  "changes": [
+    "Raviolier med ost er erstattet af tortellini.",
+    "Frisk timian til pynt og i suppen er samlet under timian."
+  ]
+}

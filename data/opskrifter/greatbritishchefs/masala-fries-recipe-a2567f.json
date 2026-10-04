@@ -1,0 +1,266 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/masala-fries-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:00:38.963Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 23,
+  "title": "Masala-pommes frites med karryblade-crunch",
+  "intro": "Sprøde pommes frites vendes i en krydret tomat-masala og toppes med en knasende blanding af ristede frø, karryblade og peanuts. Det er en indisk inspireret snack eller tilbehør med både syrlighed og varme.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 750,
+      "unit": "g",
+      "name": "pommes frites",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 200,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Masalapasta",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften, plus mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Crunch",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "hvide",
+      "optional": false
+    },
+    {
+      "section": "Crunch",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crunch",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crunch",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennepsfrø",
+      "note": "sorte",
+      "optional": false
+    },
+    {
+      "section": "Crunch",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "karryblade",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Crunch",
+      "amount": 40,
+      "unit": "g",
+      "name": "nødder",
+      "note": "ristede, saltede jordnødder, groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Crunch",
+      "amount": null,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "fladbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pommes frites",
+      "text": "Tænd ovnen på 200 °C. Fordel pommes frites i ét lag på en stor bageplade."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Bag dem efter anvisningen på posen, men lad dem blive et par minutter længere, til de er dybt gyldne og sprøde. Så holder de formen, når de vendes i masalaen. Kom dem i en stor skål."
+    },
+    {
+      "section": "Masalapasta",
+      "text": "Varm olien op i en bred pande ved middelvarme. Svits løget i 6-8 minutter, til det er blødt uden at tage farve."
+    },
+    {
+      "section": "Masalapasta",
+      "text": "Rør hvidløg og ingefær i og steg i 1 minut. Tilsæt tomatpuréen og steg 1-2 minutter."
+    },
+    {
+      "section": "Masalapasta",
+      "text": "Hæld passata, krydderier og sukker i, og smag til med salt. Lad det simre 8-10 minutter, til saucen er tyk og blank og hænger fast på pommes fritesene i stedet for at løbe af."
+    },
+    {
+      "section": "Masalapasta",
+      "text": "Pres citronsaft i, og smag til med mere salt eller citron."
+    },
+    {
+      "section": "Crunch",
+      "text": "Rist sesam- og fennikelfrø på en lille tør pande ved middelvarme i 2-3 minutter, til de dufter. Tag dem af panden og stil dem til side."
+    },
+    {
+      "section": "Crunch",
+      "text": "Varm olien op i den samme pande, til den er varm. Kom sennepsfrøene i, og vent til de popper."
+    },
+    {
+      "section": "Crunch",
+      "text": "Tilsæt karrybladene og steg dem 30-45 sekunder, til de er sprøde. Pas på, de sprutter. Løft dem op med en hulske, og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Crunch",
+      "text": "Bland de ristede frø, karryblade, jordnødder og en lille knivspids salt."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend masalapastaen forsigtigt med pommes fritesene, og kom dem over i en serveringsskål."
+    },
+    {
+      "section": "Servering",
+      "text": "Knus crunchen ud over, så karrybladene går i stykker. Top med persille samt citronskal og -saft."
+    }
+  ],
+  "changes": [
+    "Lamb Weston Ziggy Fries er erstattet af almindelige pommes frites.",
+    "Kashmiri chilipulver er erstattet af almindeligt chilipulver.",
+    "Vegetable oil er erstattet af rapsolie.",
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Passata er beholdt som passata."
+  ]
+}

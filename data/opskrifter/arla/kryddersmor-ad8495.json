@@ -1,0 +1,80 @@
+{
+  "url": "https://www.arla.dk/opskrifter/kryddersmor/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:04:10.269Z",
+  "total_minutes": 150,
+  "active_minutes": 10,
+  "yield_count": 1,
+  "source_lines": 5,
+  "title": "Kryddersmør",
+  "intro": "Hjemmelavet smør med friske krydderurter og hvidløg, der passer til grillmad, bøffer og friskbagt brød. Det laves i forvejen og skæres i skiver, når det skal serveres.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "krydderurter",
+      "note": "finthakkede, fx persille, purløg, oregano, timian og rosmarin",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "revet skal af usprøjtet citron",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom det bløde smør i en skål sammen med krydderurter, hvidløg, salt og eventuelt citronskal. Rør det hele sammen med en ske, eller kør det i en blender."
+    },
+    {
+      "section": null,
+      "text": "Smag smørret til, og tilsæt mere salt eller krydderurter, hvis der er behov for det."
+    },
+    {
+      "section": null,
+      "text": "Slå smørret ind i bagepapir eller alufolie, og form det til en rulle."
+    },
+    {
+      "section": null,
+      "text": "Stil rullen i køleskabet i 2-3 timer, til den er fast."
+    },
+    {
+      "section": null,
+      "text": "Skær rullen i skiver, når smørret skal på bordet."
+    }
+  ],
+  "changes": []
+}

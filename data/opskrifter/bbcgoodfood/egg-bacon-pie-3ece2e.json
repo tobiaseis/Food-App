@@ -1,0 +1,215 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/egg-bacon-pie",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:48:08.915Z",
+  "total_minutes": 120,
+  "active_minutes": 60,
+  "yield_count": 6,
+  "source_lines": 12,
+  "title": "Tærte med æg og bacon",
+  "intro": "Sprød tærtedej af kærnemælk fyldes med bacon, løg og en cremet æggemasse med sennep og muskat. Server tærten kold med cornichoner og ekstra sennep.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Tærtedej",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "saltet",
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 300,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus ekstra til udrulning",
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 1,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 6,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "røget, skåret i små stykker",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "smør",
+      "note": "saltet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "muskatnød",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 10,
+      "unit": "g",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til pensling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "cornichoner",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtedej",
+      "text": "Pak smørret ind i bagepapir eller lad det blive i sin egen emballage. Frys det i nogle timer, til det er hårdt, eller lad det ligge natten over."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Kom melet i en stor skål. Riv det frosne smør groft ned i melet, og dyp af og til enden af smørret i lidt mel, så det ikke klumper."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Hæld kærnemælken i, og rør hurtigt sammen med en bordkniv. Vend det ud på bordet, og saml det til en dej med en dejskraber."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Skær en tredjedel fra, og form begge stykker til flade skiver. Pak dem ind, og læg dem på køl, mens du laver fyldet."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg baconen på en kold pande, og varm den op ved middel varme. Steg den i 5-6 minutter, til den er gylden og sprød, og fedtet er smeltet ud. Tag baconen op med en hulske, og læg den i en mellemstor skål."
+    },
+    {
+      "section": "Fyld",
+      "text": "Smelt smørret på panden ved middel-lav varme. Svits løget i 8-10 minutter, til det er blødt og gyldent."
+    },
+    {
+      "section": "Fyld",
+      "text": "Skru lidt op for varmen, tilsæt hvidløget, og steg det 2-3 minutter, til det dufter. Kom løg og hvidløg over til baconen, og lad det køle af i 10 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Sæt en stor bageplade i ovnen, og forvarm til 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rul den store dejskive ud på et let meldrysset bord til ca. 30 cm i diameter, så den kan dække en tærteform på 23 cm. Løft den over i formen, og tryk den forsigtigt til. Rul den lille skive ud til ca. 30 cm, og læg den til side."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk æggene ud i skålen med bacon og løg. Rør sennep, creme fraiche, muskat og purløg i, og smag til med rigeligt peber og lidt salt."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Hæld fyldet i den dækkede form. Fugt kanten af dejen med lidt vand, og læg den anden dejskive ovenpå. Tryk kanten sammen med en gaffel, eller fold den, så tærten lukker tæt."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Skær et lille kryds i midten, så dampen kan slippe ud. Pensl toppen med det sidste piskede æg."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Bag tærten i 40-45 minutter, til den er gylden."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Lad tærten køle helt af. Server den med cornichoner og ekstra sennep, hvis du vil."
+    }
+  ],
+  "changes": [
+    "Plain flour er skiftet til hvedemel.",
+    "Smoked bacon rashers er skiftet til bacon i skiver."
+  ]
+}

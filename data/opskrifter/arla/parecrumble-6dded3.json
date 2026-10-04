@@ -1,0 +1,124 @@
+{
+  "url": "https://www.arla.dk/opskrifter/parecrumble/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:04:56.099Z",
+  "total_minutes": null,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Pærecrumble",
+  "intro": "Lune pærer med frisk ingefær og citron under et sprødt lag crumble af smør, mel og havregryn. Serveres med let pisket vaniljefløde.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pærer",
+      "amount": 4,
+      "unit": "stk",
+      "name": "pærer",
+      "note": "i mindre stykker",
+      "optional": false
+    },
+    {
+      "section": "Pærer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Pærer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pærer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet, frisk",
+      "optional": false
+    },
+    {
+      "section": "Crumble",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "skåret i mindre stykker",
+      "optional": false
+    },
+    {
+      "section": "Crumble",
+      "amount": 150,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crumble",
+      "amount": 50,
+      "unit": "g",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crumble",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": "flormelis",
+      "optional": false
+    },
+    {
+      "section": "Vaniljefløde",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljefløde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljesukker",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pærer",
+      "text": "Tænd ovnen på 225 °C (almindelig ovn). Læg pærestykkerne i fire ovnfaste forme."
+    },
+    {
+      "section": "Pærer",
+      "text": "Drys citronsaft, sukker og ingefær ud over pærerne."
+    },
+    {
+      "section": "Crumble",
+      "text": "Rør smørstykkerne sammen med mel, havregryn og flormelis med fingrene, til det bliver til en smuldret dej."
+    },
+    {
+      "section": "Crumble",
+      "text": "Kom crumblen oven på pærerne, og sæt formene på midterste rille. Bag dem i 20-25 minutter."
+    },
+    {
+      "section": "Vaniljefløde",
+      "text": "Pisk fløden med vaniljesukker, til den er let og luftig."
+    },
+    {
+      "section": "Vaniljefløde",
+      "text": "Anret den lune crumble og top med den kolde vaniljefløde."
+    }
+  ],
+  "changes": []
+}

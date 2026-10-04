@@ -1,0 +1,175 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/fragrant-lemongrass-coconut-chicken-stir-fry",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:07:51.988Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 14,
+  "title": "Wok med citrongræs, kokos og kylling",
+  "intro": "Hurtig wok med kylling, squash og sukkerærter i en frisk sauce med citrongræs, ingefær og lime. Kokosflagerne giver sødme og lidt knas, og retten serveres med fuldkornsris.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": "yderste blade fjernet, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "skrællet og revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "gerne med reduceret saltindhold",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "ml",
+      "name": "vand",
+      "note": "kan erstatte kokosvand",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "finthakket",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": "trimmet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "kokosmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "fuldkornsris",
+      "note": "færdigkogt i pose",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Rør citrongræs, ingefær, hvidløg, limesaft, farin, sojasauce, vand og eventuel chili sammen i en skål. Stil den til side."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en wok eller en stor, høj pande ved høj varme. Brun squash og kylling i 4 minutter under omrøring."
+    },
+    {
+      "section": null,
+      "text": "Kom sukkerærter og kokos i woken. Steg dem 1-2 minutter, og rør godt rundt, så kokosen ikke brænder på."
+    },
+    {
+      "section": null,
+      "text": "Hæld saucen i langs panderanden og rør rundt. Lad det koge ved høj varme i ca. 1-2 minutter, til saucen er reduceret, og kyllingen er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt og peber. Varm risene efter anvisningen på posen, og server dem med woken."
+    }
+  ],
+  "changes": [
+    "Kokosvand er erstattet af vand, som kilden selv tillader.",
+    "Desikkeret kokos er erstattet af kokosmel.",
+    "Bird's-eye chili er erstattet af almindelig chili.",
+    "Mikroovnsris i pose er erstattet af færdigkogt fuldkornsris i pose.",
+    "Sugar snap peas er skiftet til sukkerærter.",
+    "Courgette er skiftet til squash."
+  ]
+}

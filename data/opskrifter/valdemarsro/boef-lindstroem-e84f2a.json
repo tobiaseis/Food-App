@@ -1,0 +1,184 @@
+{
+  "url": "https://www.valdemarsro.dk/boef-lindstroem/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:18:06.806Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Bøf Lindstrøm med rosmarinkartofler og blomkål",
+  "intro": "Klassiske bøffer med rødbeder og kapers, toppet med spejlæg og serveret med sprøde ovnbagte kartofler og blomkål.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "syltede rødbeder",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til farsen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til spejlæg",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rosmarinkartofler med blomkål",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "skåret i halve",
+      "optional": false
+    },
+    {
+      "section": "Rosmarinkartofler med blomkål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Rosmarinkartofler med blomkål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rosmarinkartofler med blomkål",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "karse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "purløg",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rosmarinkartofler med blomkål",
+      "text": "Forvarm ovnen til 220 °C varmluft. Beklæd to bageplader med bagepapir."
+    },
+    {
+      "section": "Rosmarinkartofler med blomkål",
+      "text": "Vend kartoflerne i olie, og krydr dem med salt og rosmarin. Vend blomkålsskiverne i lidt olie sammen med salt og rosmarin."
+    },
+    {
+      "section": "Rosmarinkartofler med blomkål",
+      "text": "Læg kartoflerne på den ene plade og blomkålen på den anden. Sæt kartoflerne i midten af ovnen og blomkålen nederst. Bag i ca. 25 minutter, til kartoflerne er gyldne og sprøde. Vend dem et par gange undervejs."
+    },
+    {
+      "section": "Bøf Lindstrøm",
+      "text": "Bland hakket oksekød, løg, rødbeder, revet kartoffel, kapers, sennep og æg i en skål. Smag til med salt og peber."
+    },
+    {
+      "section": "Bøf Lindstrøm",
+      "text": "Form farsen til bøffer. Varm olie på en pande, og steg bøfferne i 6-7 minutter på hver side."
+    },
+    {
+      "section": "Spejlæg",
+      "text": "Varm olie op på en stor pande. Slå æggene ud på panden, og steg dem, til hviderne er faste, og blommerne stadig er flydende."
+    },
+    {
+      "section": "Server",
+      "text": "Anret bøfferne med hver deres spejlæg, og drys med karse og purløg. Server med kartofler og blomkål ved siden af."
+    }
+  ],
+  "changes": []
+}

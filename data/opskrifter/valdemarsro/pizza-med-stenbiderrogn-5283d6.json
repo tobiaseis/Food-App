@@ -1,0 +1,180 @@
+{
+  "url": "https://www.valdemarsro.dk/pizza-med-stenbiderrogn/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:36:23.541Z",
+  "total_minutes": 120,
+  "active_minutes": 30,
+  "yield_count": 2,
+  "source_lines": 15,
+  "title": "Pizza med stenbiderrogn",
+  "intro": "Sprød hjemmelavet pizza med kartofler, creme fraiche, stenbiderrogn og masser af friske krydderurter. Dejen hæver i køleskabet natten over, så den er let at arbejde med.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Pizzadej",
+      "amount": 10,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 3.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "stuetempereret",
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til skålen",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "38%",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 100,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "i papirstynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 150,
+      "unit": "g",
+      "name": "stenbiderrogn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "karse",
+      "note": "1 bakke",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pizzadej",
+      "text": "Rør gæren ud i vandet i en stor skål. Tilsæt halvdelen af melet sammen med olie og salt, og rør til en jævn masse."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Rør resten af melet i lidt ad gangen. Vend dejen ud på et meldrysset bord, og ælt den med hænderne, til den er smidig."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Skyl skålen, og gnid den ind med olie. Læg dejen i og vend den rundt, så den er helt dækket – olien gør dejen let at arbejde med og skorpen sprødere."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Lad dejen hæve på bordet i 45 minutter. Stil den derefter i køleskabet i mindst 10 timer eller natten over."
+    },
+    {
+      "section": "Bagning og topping",
+      "text": "Sæt en bageplade, et bagestål eller en pizzasten i øverste ovnrille, og varm ovnen op på den højeste temperatur."
+    },
+    {
+      "section": "Bagning og topping",
+      "text": "Del dejen i to på et meldrysset bord, og form hver halvdel til en rund bund."
+    },
+    {
+      "section": "Bagning og topping",
+      "text": "Smør halvdelen af creme fraichen ud på bundene. Læg kartoffelskiverne ovenpå, og krydr med flagesalt og peber."
+    },
+    {
+      "section": "Bagning og topping",
+      "text": "Bag pizzaerne, til de er sprøde. Stil dem på en rist i cirka 5 minutter, så de køler lidt."
+    },
+    {
+      "section": "Bagning og topping",
+      "text": "Hak dilden fint. Rør den resterende creme fraiche med citronskal, salt, peber og halvdelen af dilden, og smag til med citronsaft."
+    },
+    {
+      "section": "Bagning og topping",
+      "text": "Fordel stenbiderrogn, den krydrede creme fraiche og rødløg på pizzaerne. Slut af med karse og resten af dilden."
+    }
+  ],
+  "changes": []
+}

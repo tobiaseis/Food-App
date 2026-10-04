@@ -1,0 +1,167 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/japanese-salmon-avocado-rice",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:24:34.212Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 20,
+  "title": "Sushiskål med laks",
+  "intro": "En nem sushiskål med varm, krydret ris, kogt laks og masser af sprøde grøntsager. Den er hurtig at samle og kræver ingen rullning.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "sushiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 120,
+      "unit": "g",
+      "name": "frosne edamamebønner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "stor",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "radiser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laks",
+      "note": "kogte laksefileter uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "1-2 spsk efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "sushiingefær",
+      "note": "et par stykker",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom risene i en mellemstor gryde med vand og salt. Bring det i kog over høj varme."
+    },
+    {
+      "section": "Ris",
+      "text": "Skru ned på den laveste varme, læg låg på, og lad risene simre i 15 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, luft risene op med en gaffel, og sæt låget på igen. Lad dem trække i 5 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Smag på risene: Vandet skal være optaget, og kornene bløde, men ikke grødede. Vend sukker og riseddike i, og læg låg på, så de holder sig varme."
+    },
+    {
+      "section": "Grøntsager og laks",
+      "text": "Bring en lille gryde med vand i et blidt kog. Kog edamamebønnerne i 3 minutter, og hæld dem fra på et dørslag."
+    },
+    {
+      "section": "Grøntsager og laks",
+      "text": "Pil gulerod, og skræl den derefter i lange bånd med skrælleren."
+    },
+    {
+      "section": "Grøntsager og laks",
+      "text": "Skær radiserne i tynde skiver. Del agurken i stave, og skær dem i tynde strimler på langs."
+    },
+    {
+      "section": "Grøntsager og laks",
+      "text": "Pluk laksen i små stykker med fingrene, og fjern evt. ben undervejs."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel de varme ris i to skåle, og læg edamame, gulerod, radiser, agurk og laks ovenpå."
+    },
+    {
+      "section": "Anretning",
+      "text": "Dryp med sojasauce, og drys med sesamfrø. Server evt. med lidt sushiingefær."
+    }
+  ],
+  "changes": [
+    "Frosne edamamebønner er beholdt som frosne edamamebønner.",
+    "Caster sugar er skiftet til almindeligt sukker."
+  ]
+}

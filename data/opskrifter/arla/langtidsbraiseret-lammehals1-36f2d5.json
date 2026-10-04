@@ -1,0 +1,262 @@
+{
+  "url": "https://www.arla.dk/opskrifter/langtidsbraiseret-lammehals1/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:17:01.013Z",
+  "total_minutes": 65,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Langtidsbraiseret lammehals med rabarberkompot",
+  "intro": "Lammehalsen braiseres meget langsomt i ovnen, til den er mør og saftig. Til serveres syrlig rabarberkompot, stegt blomkål med salatost, frisk gremolata og kogte kartofler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "amount": 1,
+      "unit": "kg",
+      "name": "lammehals",
+      "note": "udbenet",
+      "optional": false
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "revet skal af usprøjtet citron",
+      "optional": false
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "amount": 3,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": "smagsneutral olie",
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "bananskalotteløg, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": 300,
+      "unit": "g",
+      "name": "rabarber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "groftkværnet",
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 1,
+      "unit": "dl",
+      "name": "persille",
+      "note": "bredbladet, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "finthakket skal af usprøjtet citron",
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 25,
+      "unit": "g",
+      "name": "mandler",
+      "note": "saltede, grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Stegt blomkål",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegt blomkål",
+      "amount": 500,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Stegt blomkål",
+      "amount": 50,
+      "unit": "g",
+      "name": "mandler",
+      "note": "saltede, grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Stegt blomkål",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": "salatost i tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "små, kogte",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "text": "Læg lammehalsen på et skærebræt og fold den ud. Skær om nødvendigt nogle længdesnit, så kødet ligger jævnt. Du kan dele den i to mindre stykker."
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "text": "Krydr indersiden med timian, citronskal, salt og peber. Rul kødet sammen, bind det med kødsnor og krydr yderligere med salt og peber udenpå."
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "text": "Varm en pande op og brun smørret let gyldent. Brun lammehalsen på alle sider i alt ca. 3 minutter."
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "text": "Flyt kødet til en lille bradepande og hæld hvidvinen over. Sæt et helt tæt låg på. Braisér midt i ovnen ved 100 °C i ca. 4 timer og 30 minutter."
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "text": "Fjern låget og hæv temperaturen til 160 °C. Steg kødet, til stegetermometeret viser ca. 70 °C i midten."
+    },
+    {
+      "section": "Langtidsbraiseret lammehals",
+      "text": "Si væden fra bradepanden over i en gryde og bring den i kog. Fjern skummet, og lad saucen koge kraftigt ind til ca. ½ dl. Smag til."
+    },
+    {
+      "section": "Rabarberkompot",
+      "text": "Varm olien op i en gryde. Svits løgene ved middel varme, til de er bløde uden at få farve."
+    },
+    {
+      "section": "Rabarberkompot",
+      "text": "Skær rabarberne i stykker på 2-3 cm, og kom dem i gryden sammen med sukkeret. Bring det langsomt i kog ved svag varme, og lad kompotten simre i ca. 3 minutter."
+    },
+    {
+      "section": "Rabarberkompot",
+      "text": "Træk gryden af varmen, og lad kompotten køle lidt. Rør timian, salt og peber i, og smag til."
+    },
+    {
+      "section": "Gremolata",
+      "text": "Bland persille, hvidløg, citronskal og mandler."
+    },
+    {
+      "section": "Stegt blomkål",
+      "text": "Brun smørret gyldent i en pande. Steg blomkål og mandler ved kraftig varme i ca. 4 minutter, mens du rører rundt."
+    },
+    {
+      "section": "Stegt blomkål",
+      "text": "Vend fetaen forsigtigt i til sidst."
+    },
+    {
+      "section": "Servering",
+      "text": "Fjern kødsnoren og skær lammehalsen i tykke skiver. Vend skiverne i den indkogte sauce."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret kødet på tallerkener med rabarberkompot, blomkål og gremolata. Server de kogte kartofler ved siden af."
+    }
+  ],
+  "changes": [
+    "Salatost er skiftet til feta."
+  ]
+}

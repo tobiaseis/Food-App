@@ -1,0 +1,210 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-jalfrezi-with-spinach-brown-rice-quinoa",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:20:23.395Z",
+  "total_minutes": 35,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Kylling jalfrezi med spinat, brune ris og quinoa",
+  "intro": "Mild og krydret indisk kyllingegryde med peberfrugt og spinat i en rød tomatsauce. Serveres med en blanding af brune ris og quinoa.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ris og quinoa",
+      "amount": 100,
+      "unit": "g",
+      "name": "ris",
+      "note": "brune",
+      "optional": false
+    },
+    {
+      "section": "Ris og quinoa",
+      "amount": 100,
+      "unit": "g",
+      "name": "quinoa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris og quinoa",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 140,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 3,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, gul og grøn, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Jalfrezi",
+      "amount": 200,
+      "unit": "g",
+      "name": "spinat",
+      "note": "babyspinat",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris og quinoa",
+      "text": "Skyl de brune ris grundigt i en sigte. Kom dem i en gryde med kogende saltet vand, sænk varmen, og lad dem simre i 20 minutter."
+    },
+    {
+      "section": "Ris og quinoa",
+      "text": "Tilsæt quinoaen, og lad det simre videre i 10 minutter. Sigt derefter vandet fra."
+    },
+    {
+      "section": "Jalfrezi",
+      "text": "Varm olien op i en stor pande ved middelvarme. Steg løgene, til de lige begynder at tage farve."
+    },
+    {
+      "section": "Jalfrezi",
+      "text": "Kom kyllingestrimlerne på panden, og brun dem. Rør spidskommen, hvidløg og ingefær i, og steg under omrøring i ca. 1 minut."
+    },
+    {
+      "section": "Jalfrezi",
+      "text": "Tilsæt tomatpuré, gurkemeje, koriander, chili og en knivspids salt. Rør det godt sammen."
+    },
+    {
+      "section": "Jalfrezi",
+      "text": "Hæld det kogende vand over, og lad retten simre i ca. 10 minutter, til saucen er dyb rød."
+    },
+    {
+      "section": "Jalfrezi",
+      "text": "Rør garam masala, peberfrugt og spinat i. Læg låg på, og lad det koge ved middelvarme i nogle minutter, til spinaten er faldet sammen, og peberfrugterne stadig har lidt bid."
+    },
+    {
+      "section": "Jalfrezi",
+      "text": "Justér konsistensen med lidt vand, hvis saucen er for tyk."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret ris og quinoa på tallerkener, og top med kyllingegryden. Drys med hakket koriander."
+    }
+  ],
+  "changes": [
+    "Kashmiri chilipulver er erstattet af almindeligt chilipulver."
+  ]
+}

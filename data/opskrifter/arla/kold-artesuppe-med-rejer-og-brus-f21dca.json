@@ -1,0 +1,176 @@
+{
+  "url": "https://www.arla.dk/opskrifter/kold-artesuppe-med-rejer-og-brus/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:27:33.530Z",
+  "total_minutes": 270,
+  "active_minutes": 35,
+  "yield_count": 8,
+  "source_lines": 15,
+  "title": "Kold ærtesuppe med rejer og hvidløgscreme",
+  "intro": "En frisk, kold suppe af ærter og avocado med et skvæt mousserende vin. Serveres med rejer, hvidløgscreme og groft brød.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Ærtesuppe",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ærtesuppe",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Ærtesuppe",
+      "amount": 7.5,
+      "unit": "dl",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon",
+      "optional": false
+    },
+    {
+      "section": "Ærtesuppe",
+      "amount": 500,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Ærtesuppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Ærtesuppe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ærtesuppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "moden, i mindre stykker",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscreme",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscreme",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, knuste",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscreme",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscreme",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ved serveringen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vin",
+      "note": "tør mousserende",
+      "optional": false
+    },
+    {
+      "section": "Ved serveringen",
+      "amount": 300,
+      "unit": "g",
+      "name": "rejer",
+      "note": "optøede, frosne eller afdryppede rejer i lage",
+      "optional": false
+    },
+    {
+      "section": "Ved serveringen",
+      "amount": null,
+      "unit": null,
+      "name": "ærter",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Ved serveringen",
+      "amount": 250,
+      "unit": "g",
+      "name": "brød",
+      "note": "groft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ærtesuppe",
+      "text": "Varm smørret op i en stor gryde, til det får en gylden farve."
+    },
+    {
+      "section": "Ærtesuppe",
+      "text": "Svits løgene i cirka 1 minut."
+    },
+    {
+      "section": "Ærtesuppe",
+      "text": "Kom bouillon, ærter, salt og peber i gryden. Bring det i kog uden låg, og lad suppen simre ved svag varme, stadig uden låg, i cirka 5 minutter."
+    },
+    {
+      "section": "Ærtesuppe",
+      "text": "Blend avocadoen med en tredjedel af suppen på højeste hastighed i cirka 40 sekunder."
+    },
+    {
+      "section": "Ærtesuppe",
+      "text": "Blend den resterende suppe, og bland det hele i en skål. Lad suppen køle af i køleskabet i mindst 4 timer."
+    },
+    {
+      "section": "Hvidløgscreme",
+      "text": "Rør creme fraiche med hvidløg, salt og peber."
+    },
+    {
+      "section": "Hvidløgscreme",
+      "text": "Dæk cremen til, og stil den på køl i mindst 15 minutter. Smag den til."
+    },
+    {
+      "section": "Ved serveringen",
+      "text": "Vend den mousserende vin forsigtigt i den kolde suppe."
+    },
+    {
+      "section": "Ved serveringen",
+      "text": "Anret suppen i kolde glas eller tallerkner med rejer og hvidløgscreme. Pynt med ærter, og server med brødet."
+    }
+  ],
+  "changes": []
+}

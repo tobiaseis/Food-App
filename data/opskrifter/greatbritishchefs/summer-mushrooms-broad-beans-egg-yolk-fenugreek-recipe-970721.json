@@ -1,0 +1,364 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/summer-mushrooms-broad-beans-egg-yolk-fenugreek-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:28:01.903Z",
+  "total_minutes": 195,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 28,
+  "title": "Sommersvampe med hestebønner, æggeblommecreme og bukkehorn",
+  "intro": "Grillede sommersvampe hviler i brunet bukkehornssmør og serves med svampepuré, smørkogte hestebønner, røget æggeblommecreme og en luftig bukkehornssauce. Retten laves over to dage, så der er god tid til at trække smag.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Til svampene og bønnerne",
+      "amount": 480,
+      "unit": "g",
+      "name": "svampe",
+      "note": "blandede vilde sommersvampe, fx kantareller, rørhatte eller shiitake",
+      "optional": false
+    },
+    {
+      "section": "Til svampene og bønnerne",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at vende svampene i",
+      "optional": false
+    },
+    {
+      "section": "Til svampene og bønnerne",
+      "amount": 160,
+      "unit": "g",
+      "name": "hestebønner",
+      "note": "pillede, gerne med toppene; andre sarte sommergrøntsager kan bruges",
+      "optional": false
+    },
+    {
+      "section": "Til røget æggeblommecreme",
+      "amount": 1,
+      "unit": "l",
+      "name": "rapsolie",
+      "note": "koldpresset, til at ryge, eller færdigrøget rapsolie",
+      "optional": false
+    },
+    {
+      "section": "Til røget æggeblommecreme",
+      "amount": 12,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "tørrede svampe",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssauce",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "bukkehornsfrø",
+      "note": "ristede og malet fint",
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssauce",
+      "amount": 500,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": "eller solsikkeolie",
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssauce",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "solsikkelecithin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssauce",
+      "amount": 400,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, koldt og i tern",
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssauce",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssmør",
+      "amount": 250,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssmør",
+      "amount": 25,
+      "unit": "g",
+      "name": "bukkehornsfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til bukkehornssmør",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "til smagen",
+      "optional": false
+    },
+    {
+      "section": "Til sort peberpasta",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": "Til sort peberpasta",
+      "amount": 50,
+      "unit": "g",
+      "name": "peber",
+      "note": "hele sorte peberkorn, ristede",
+      "optional": false
+    },
+    {
+      "section": "Til sort peberpasta",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sort peberpasta",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sort peberpasta",
+      "amount": 4,
+      "unit": "ml",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svampepuré",
+      "amount": 500,
+      "unit": "g",
+      "name": "østershatte",
+      "note": "hakkede, ikke for fint",
+      "optional": false
+    },
+    {
+      "section": "Til svampepuré",
+      "amount": 50,
+      "unit": "g",
+      "name": "salvie",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til svampepuré",
+      "amount": 250,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til smøremulsion",
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til smøremulsion",
+      "amount": 600,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, koldt og i tern",
+      "optional": false
+    },
+    {
+      "section": "Til smøremulsion",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "xanthangummi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til smøremulsion",
+      "amount": 15,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til smøremulsion",
+      "amount": 45,
+      "unit": "ml",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dag 1",
+      "text": "Røg rapsolien til æggeblommecremen: Hæld olien i en bakke og koldrøg den i ca. 4 timer over frugttræ eller eg. Har du ingen røgovn, så tænd et stykke træ udendørs et sikkert sted, og læg det glødende i olien. Lad den trække natten over, og si olien næste dag. Kassér træet."
+    },
+    {
+      "section": "Dag 1",
+      "text": "Lav svampefond til saucen: Læg de tørrede svampe i en varmefast skål, og hæld det kogende vand over. Læg låg på, og lad fonden trække i mindst 4 timer, helst natten over."
+    },
+    {
+      "section": "Dag 1",
+      "text": "Lav bukkehornsolie: Rør de malede bukkehornsfrø sammen med olien i en lufttæt beholder. Stil den et lunt sted natten over."
+    },
+    {
+      "section": "Dag 1",
+      "text": "Går ovnen ned på 45-55 °C, kan blandingen i stedet stå i ovnen i 4 timer eller natten over. Det kan også gøres i sous vide. Si derefter olien gennem et fint sigte med musselin, og mål 400 ml af."
+    },
+    {
+      "section": "Dag 1",
+      "text": "Lav bukkehornssmør: Varm en pande op ved svag varme, og drys de ristede frø i. Læg smørret ovenpå, skru op til middel, og lad det smelte og blive brunt."
+    },
+    {
+      "section": "Dag 1",
+      "text": "Når smørret dufter nøddeagtigt, tages panden af varmen, og smørret hældes i en kold, varmefast skål, så det stopper med at stege. Stil det et lunt sted natten over."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Kog æggene: Varm et vandbad op til 64 °C med sous vide. Kog æggene med skal i 90 minutter. Uden sous vide kan en bakke med vand i en lav ovn give samme effekt."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Si svampefonden grundigt gennem et fint sigte, og mål 700 ml af."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Si bukkehornssmørret, og opbevar det i køleskabet, til det skal bruges. Frøene kan bruges i andre retter, fx en karry, hvis det sker med det samme."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Lav den sorte peberpasta: Kom hvidløg og halvdelen af olien i en kold pande. Steg ved middel varme, til hvidløgene er gyldne og sprøde."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Si olien fra, og gem både olie og hvidløg. Blend peberkorn og salt til et pulver i en blender eller kværn."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Tilsæt hvidløgsolien og den resterende olie, og blend på høj hastighed i 10-12 minutter, til massen er varm af friktion. Kom de sprøde hvidløg i, og blend 30 sekunder mere."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Rør eddiken i, og kom pastaen i en lufttæt beholder i køleskabet. Den holder sig meget længe."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Lav svampepuréen: Rist de hakkede østershatte under konstant omrøring på en meget varm, tør pande, til væden er kogt væk, og de er ristede."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Kom salvie og smør på panden, og steg videre, til det er gyldent og duftende. Si smørret fra i en kande."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Blend svampene, og hæld smørret i lidt ad gangen, til du har en glat puré. Smag til, evt. med lidt sort peberpasta. Kom puréen i en beholder eller sprøjtepose, og stil den på køl."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Lav smøremulsionen: Bring vandet i kog i en gryde, og skru ned på lav varme. Pisk xanthangummi i. Pisk smørret i få tern ad gangen, så det emulgerer med vandet. Tag god tid."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Smag til med salt og eddike, når alt smørret er pisket i. Emulsionen kan laves lige før servering og stå ved stuetemperatur, eller laves på forhånd og stå koldt. I så fald varmes den op på panden under forsigtig omrøring."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Lav æggeblommecremen: Afkøl de kogte æg under koldt rindende vand, pil dem, og kassér hviderne. Vej blommerne. Afvej røget rapsolie svarende til 15 % af blommernes vægt, og beregn salt svarende til 1,5 % af blommer og olie tilsammen."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Blend blommerne med saltet. Lad blenderen køre, og hæld olien i en tynd, jævn stråle, til det er en emulsion. Kom cremen i en sprøjtepose, og opbevar den på køl i op til 3 dage. Den er god til det meste."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Gør bukkehornssaucen færdig på serveringsdagen: Varm svampefonden op i en dyb gryde ved svag varme til 55 °C, og hold den på den temperatur. Blend solsikkelecithinen i med stavblender."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Tilsæt smørret ét tern ad gangen, og pas på, at saucen ikke bliver for kold. Tilsæt derefter bukkehornsolien på samme måde, mens du emulgerer med stavblenderen. Smag til med salt og eddike, gerne lidt kraftigere end normalt, for luft fortynder smagen senere. Stil saucen til side ved stuetemperatur."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Varm tallerkenerne, før svampe og grøntsager tilberedes."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Varm bukkehornssmørret op i et fad, der er stort nok til alle svampene. Smag det kraftigt til med eddike, havsalt og lidt sort peberpasta. Stil fadet et lunt sted, så svampene kan trække i det efter stegningen."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Gør grillen klar til direkte varme, og varm en kastanjepande op over gløderne. Vend svampene let i olie, og krydr dem godt med salt. Grill dem på panden, til de er brunede og gyldne, og vend dem af og til. Gør det evt. i flere omgange. Store svampe kan lægges direkte på risten, så skæres de i skiver, og snitfladerne brunes."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Læg de færdige svampe i fadet med smør og eddike, og lad dem hvile."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Kog hestebønnerne: Bring lidt af smøremulsionen i kog i en lille gryde. Kom bønnerne i, og vend dem forsigtigt. Lad det hurtigt koge op igen, tag af varmen, og vend bønnetoppene (eller andre bladgrøntsager) i. Smag til, og juster krydderiet."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Varm bukkehornssaucen forsigtigt til ca. 55 °C. Lav masser af skum med stavblenderen: Hæld gryden på skrå, og hold blenderen i den lave ende, mens du løfter og sænker den, så der kommer mest mulig luft i."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Anret: Smør eller sprøjt svampepuré på tallerknerne. Fordel svampe og hestebønner rundt om, gerne med bladene. Sprøjt små klatter æggeblommecreme rundt omkring."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Øs det skummende sauce over i køkkenet, eller server den ved bordet i en lille varm pande eller kande."
+    }
+  ],
+  "changes": []
+}

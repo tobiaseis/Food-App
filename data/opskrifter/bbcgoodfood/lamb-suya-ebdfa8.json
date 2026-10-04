@@ -1,0 +1,270 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/lamb-suya",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:02:22.472Z",
+  "total_minutes": 40,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 21,
+  "title": "Lammesuya",
+  "intro": "Nigerianske lammespyd, der marineres i løg, hvidløg og krydderier og vendes i en varm blanding af malede jordnødder og krydderier. Serveres med løg og tomater og gerne ris og banan.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til marinaden",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "groft revet, stort",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hønsebouillon",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 500,
+      "unit": "g",
+      "name": "lammeskulder",
+      "note": "uden ben, i tern",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 50,
+      "unit": "g",
+      "name": "jordnødder",
+      "note": "malede",
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hønsebouillon",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "løg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "kogt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "bananer",
+      "note": "stegte",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Bland hvidløg, løg, paprika, koriander, spidskommen, cayennepeber, hvidløgspulver, ingefær og bouillon med olien i en stor skål. Smag til med peber og en knivspids salt."
+    },
+    {
+      "section": "Marinade",
+      "text": "Vend lammetern i marinaden, så alle stykker er dækket. Dæk skålen til og stil den i køleskabet i mindst 2 timer – gerne natten over."
+    },
+    {
+      "section": "Til suyakrydderiet",
+      "text": "Rør malede jordnødder, paprika, ingefær, cayennepeber, løgpulver, hvidløgspulver, spidskommen, timian, bouillon og en knivspids salt sammen i en lille skål. Stil den til side."
+    },
+    {
+      "section": "Grill",
+      "text": "Tænd grillen på middelhøj varme. Brug kul, skal de være hvidglødende."
+    },
+    {
+      "section": "Grill",
+      "text": "Træk lammet på metalspyd med lidt luft mellem stykkerne. Grill spiddene i 6-8 minutter på hver side, til kødet er brunet udenpå og stegt, som du bedst kan lide det. Pensl evt. med lidt marinade undervejs, så kødet holder sig saftigt."
+    },
+    {
+      "section": "Grill",
+      "text": "Tag kødet af spiddene, og drys straks suyakrydderiet over. Tryk det let ind, så det hænger fast."
+    },
+    {
+      "section": "Grill",
+      "text": "Server med løg og tomater. Ris og banan passer godt til."
+    }
+  ],
+  "changes": [
+    "Scotch bonnet-pulver er erstattet af cayennepeber.",
+    "Jollof rice er erstattet af kogte ris.",
+    "Plantain er erstattet af bananer.",
+    "Jordnødpulver er erstattet af malede jordnødder.",
+    "Vegetabilsk olie er erstattet af rapsolie."
+  ]
+}

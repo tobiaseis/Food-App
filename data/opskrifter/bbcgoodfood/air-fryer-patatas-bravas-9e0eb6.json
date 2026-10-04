@@ -1,0 +1,131 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/air-fryer-patatas-bravas",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:53:57.195Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Patatas bravas i airfryer",
+  "intro": "Sprøde kartoffelternninger fra airfryeren med en røget tomatsauce med paprika. En nem version af den spanske tapasklassiker.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 900,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skåret i små tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet eller presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "røget, sød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "små dåse på ca. 227 g; 400 g-dåse kan bruges, hvis saucen koges lidt længere",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "friske blade, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Læg kartoffelternene i en skål, og hæld nykogt vand over. Lad dem stå i 30 minutter. Si vandet fra, og lad kartoflerne lufttørre i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Forvarm airfryeren til 200 °C."
+    },
+    {
+      "section": null,
+      "text": "Vend kartoflerne i en skål med en spiseskefuld af olien, salt og peber, så de er helt dækket. Kom dem i airfryerkurven, og kør dem i 20-30 minutter, til de er sprøde og gyldne."
+    },
+    {
+      "section": null,
+      "text": "Varm imens resten af olien op i en lille pande på middel-lav varme. Svits løget i 8-10 minutter, til det er blødt, men ikke har taget farve."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløget i, og lad det stege i ca. 1 minut. Tilsæt paprikaen, og steg videre i 30 sekunder."
+    },
+    {
+      "section": null,
+      "text": "Rør tomatpuréen i, og steg den i 1 minut. Hæld de hakkede tomater på, og lad saucen simre på middel varme i 5-10 minutter, til den er lidt tykkere."
+    },
+    {
+      "section": null,
+      "text": "Vend de færdige kartofler ud på et fad, og hæld tomatsaucen over. Drys med basilikum, og server."
+    }
+  ],
+  "changes": [
+    "Røget sød paprika er skiftet til paprika (røget, sød) i almindeligt krydderi.",
+    "Tomatpuré er beholdt som tomatpuré; dåsen hakkede tomater på 227 g er skiftet til en almindelig dåse."
+  ]
+}

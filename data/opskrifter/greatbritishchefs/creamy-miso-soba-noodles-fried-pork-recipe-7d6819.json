@@ -1,0 +1,263 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/creamy-miso-soba-noodles-fried-pork-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:52:03.381Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 24,
+  "title": "Cremede soba-nudler med miso og stegt svinekød",
+  "intro": "Soba-nudler i en cremet suppe af mælk, tahin og miso, toppet med sprødt stegt hakket svinekød og blødkogt æg. En hurtig ret med masser af umami og lidt varme fra chiliolie.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Svinekødet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "en lille bid, revet",
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "østerssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekødet",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "forårsløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gochugaru",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 4,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "varm",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hønsebouillon",
+      "note": "varm",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "miso",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 200,
+      "unit": "g",
+      "name": "soba-nudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "isvand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "blødkogte",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chiliolie",
+      "note": "til at dryppe over",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svinekødet",
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Brun det hakkede svinekød, til det er gyldent og sprødt."
+    },
+    {
+      "section": "Svinekødet",
+      "text": "Skru ned for varmen, og rør hvidløg og ingefær i panden. Steg i et par minutter, til det dufter."
+    },
+    {
+      "section": "Svinekødet",
+      "text": "Skru lidt op igen, og hæld fiskesauce, østerssauce, sojasauce og mirin på. Lad det koge ind, smag til med salt, og vend forårsløgene i. Stil kødet til side."
+    },
+    {
+      "section": "Suppen",
+      "text": "Rør hvidløg, gochugaru, tahin og sukker sammen i en skål."
+    },
+    {
+      "section": "Suppen",
+      "text": "Varm mælk og bouillon, til det næsten simrer. Pisk det derefter lidt ad gangen ned i tahinblandingen, til saucen er glat."
+    },
+    {
+      "section": "Suppen",
+      "text": "Hæld suppen over i panden, og bring den i et let kog. Pisk miso og limesaft i, smag til med salt og peber, og tag panden af varmen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog soba-nudlerne møre efter anvisningen på pakken. Si dem, skyl dem, og afkøl dem i isvand."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel nudlerne i to skåle, og hæld den varme suppe over. Top med det stegte svinekød, æg og forårsløg, og dryp rigeligt med chiliolie over."
+    }
+  ],
+  "changes": [
+    "Vegetable oil er skiftet til olie.",
+    "Chicken stock er skiftet til hønsebouillon."
+  ]
+}

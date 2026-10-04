@@ -1,0 +1,244 @@
+{
+  "url": "https://www.valdemarsro.dk/graeske-hakkeboeffer-med-tzaziki-og-krydrede-kartofler/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:21:49.663Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Græske hakkebøffer med tzatziki og krydrede kartofler",
+  "intro": "Saftige hakkebøffer med soltørrede tomater og feta, serveret med ovnbagte urtekartofler, frisk tomatsalat og hjemmelavet tzatziki.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tzatziki",
+      "amount": 5,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Krydrede kartofler",
+      "amount": 1,
+      "unit": "kg",
+      "name": "nye kartofler",
+      "note": "babykartofler",
+      "optional": false
+    },
+    {
+      "section": "Krydrede kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydrede kartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Krydrede kartofler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "rosmarin",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "rosmarin",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "amount": 25,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "amount": 25,
+      "unit": "g",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "amount": 75,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Grønt tilbehør",
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "i halve",
+      "optional": false
+    },
+    {
+      "section": "Grønt tilbehør",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Grønt tilbehør",
+      "amount": 25,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Grønt tilbehør",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grønt tilbehør",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tzatziki",
+      "text": "Vend den revne agurk med lidt salt, og lad den stå og trække i 5-10 minutter. Hæld den i en sigte, så væden løber fra, og pres derefter så meget vand som muligt ud af agurken."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Bland agurken i yoghurten. Rør hvidløg og olivenolie i, og smag til med salt og peber. Stil tzatzikien på køl, til den skal bruges."
+    },
+    {
+      "section": "Krydrede kartofler",
+      "text": "Varm ovnen op til 175 °C. Del kartoflerne på midten, og vend dem med halvdelen af olien og lidt flagesalt. Læg dem på en bageplade med bagepapir, og bag dem i ca. 10 minutter."
+    },
+    {
+      "section": "Krydrede kartofler",
+      "text": "Tag kartoflerne ud, og vend dem med resten af olien, timian, rosmarin og lidt mere salt. Bag dem videre i ca. 15 minutter, til de er møre og gyldne."
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "text": "Ælt alle ingredienserne til hakkebøfferne sammen i en skål, og form dem til bøffer."
+    },
+    {
+      "section": "Græske hakkebøffer",
+      "text": "Varm olie op på en pande ved høj varme, og brun bøfferne i 1 minut på hver side, så de får en fin skorpe. Skru ned til middelvarme, og steg dem 3-5 minutter på hver side."
+    },
+    {
+      "section": "Grønt tilbehør",
+      "text": "Vend cherrytomater, agurk og feta med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Anret hakkebøfferne med kartofler, grønt tilbehør og tzatziki."
+    }
+  ],
+  "changes": []
+}

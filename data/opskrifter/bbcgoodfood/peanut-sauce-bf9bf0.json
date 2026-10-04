@@ -1,0 +1,154 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/peanut-sauce",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:00:30.700Z",
+  "total_minutes": 40,
+  "active_minutes": 15,
+  "yield_count": 1,
+  "source_lines": 11,
+  "title": "Peanutsauce",
+  "intro": "Kraftig, sød og krydret peanutsauce på ristede peanuts og en hjemmeblendet krydderpasta. Den passer til satay og kan holde sig i køleskabet i op til to uger.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "peanuts",
+      "note": "ristede og usaltede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tamarindpasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tørrede røde chilier",
+      "note": "udblødt i lunkent vand i 20 minutter, afdryppet, uden kerner og groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "skrællet og groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": "renset og groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "ca. 1,5 cm stykke, skrællet og groft hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kør peanuts i en foodprocessor, til de er fint hakkede, men stadig har lidt struktur. Hæld dem i en skål, og gør foodprocessoren ren."
+    },
+    {
+      "section": "Krydderpastaen",
+      "text": "Kom chili, hvidløg, skalotteløg, citrongræs og ingefær i foodprocessoren, og blend til en glat pasta. Hvis den ikke samler sig, så tilsæt et par spiseskefulde vand."
+    },
+    {
+      "section": "Saucen",
+      "text": "Varm olien op ved middelvarme i en gryde med slip-let-belægning. Steg krydderpastaen, til den dufter kraftigt."
+    },
+    {
+      "section": "Saucen",
+      "text": "Rør peanuts, tamarind, farin, salt, koriander, sojasauce og vand i gryden. Smag til med salt."
+    },
+    {
+      "section": "Saucen",
+      "text": "Lad saucen simre ved middel-lav varme i 15 minutter, og rør hele tiden, til olien skiller sig fra saucen."
+    },
+    {
+      "section": "Opbevaring",
+      "text": "Tag gryden af varmen, og lad saucen køle helt af. Hæld den på et rent, lufttæt glas eller en tæt boks. Den holder sig i op til to uger i køleskabet."
+    }
+  ],
+  "changes": [
+    "Gula melaka er erstattet med brun farin.",
+    "Kecap manis er erstattet med sojasauce.",
+    "Galangal er erstattet med ingefær.",
+    "Tørrede røde chilier og peanuts er skrevet som almindelige danske varer; tamarindkoncentrat er erstattet med tamarindpasta.",
+    "Vegetabilsk olie er erstattet med rapsolie."
+  ]
+}

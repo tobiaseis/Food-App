@@ -1,0 +1,155 @@
+{
+  "url": "https://www.arla.dk/opskrifter/sennepssild-med-citronsyltede-rodlog/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:05:30.338Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 13,
+  "title": "Sennepssild med citronsyltede rødløg",
+  "intro": "Marinerede sild vendes i en cremet dressing med bløde sennepsfrø og serveres med syrlige rødløg og brøndkarse på rugbrød. En klassisk frokostret med frisk smag.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Sennepssild",
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sennepssild",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "gule sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sennepssild",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "skyr",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sennepssild",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sennepssild",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "honning",
+      "note": "flydende",
+      "optional": false
+    },
+    {
+      "section": "Sennepssild",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Sennepssild",
+      "amount": 300,
+      "unit": "g",
+      "name": "marinerede sild",
+      "note": "i mundrette stykker, ca. 4 stk.",
+      "optional": false
+    },
+    {
+      "section": "Citronsyltede rødløg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i halve, tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Citronsyltede rødløg",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Citronsyltede rødløg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 2,
+      "unit": "dl",
+      "name": "karse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 8,
+      "unit": "skive",
+      "name": "rugbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sennepssild",
+      "text": "Kog vandet op i en gryde, og læg sennepsfrøene i. Lad dem simre under låg ved svag varme i ca. 10 minutter."
+    },
+    {
+      "section": "Sennepssild",
+      "text": "Hæld frøene i en sigte, og lad dem dryppe godt af."
+    },
+    {
+      "section": "Sennepssild",
+      "text": "Rør skyr, dijonsennep, honning og salt sammen i en skål, og vend frøene i."
+    },
+    {
+      "section": "Sennepssild",
+      "text": "Læg sildestykkerne ned i dressingen. Dæk skålen til, og lad den stå koldt i mindst en halv time. Smag til."
+    },
+    {
+      "section": "Citronsyltede rødløg",
+      "text": "Bland rødløg, citronsaft og salt, og lad det trække i mindst 15 minutter."
+    },
+    {
+      "section": "Citronsyltede rødløg",
+      "text": "Smag til, og sæt løgene i en sigte, så væsken løber fra."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg sildene op i en skål, og anret løgene i en anden. Top med karse, og server med rugbrød og smør."
+    }
+  ],
+  "changes": [
+    "Kvark/græsk yoghurt/fraiche er erstattet med skyr.",
+    "Brøndkarse er erstattet med karse."
+  ]
+}

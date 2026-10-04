@@ -1,0 +1,151 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chipotle-chicken-slaw",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:19:54.201Z",
+  "total_minutes": 65,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Kylling med chipotle og coleslaw",
+  "intro": "Kyllingeunderlår i en røget, sød marinade af chipotle og honning, bagt i ovnen og serveret med cremet kålsalat med avocado og lime. Majskolber ved siden af gør måltidet komplet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingeunderlår",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "lille, uden sten",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "græsk yoghurt",
+      "note": "0 % fedt",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 125,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "snittet fint",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 125,
+      "unit": "g",
+      "name": "hvidkål",
+      "note": "snittet fint",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "stor, i tynde stave",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "majs",
+      "note": "majskolber, dampede",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Kylling",
+      "text": "Rør olie, chipotle og honning sammen i en stor skål. Vend underlårene rundt i marinaden, til de er dækket."
+    },
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingen på en bageplade med slip-let-overflade og bag den i 30 minutter. Vend underlårene midt i tiden."
+    },
+    {
+      "section": "Slaw",
+      "text": "Kom limeskal, limesaft, avocadokød, yoghurt og salt i en blender, og blend det til en helt glat dressing."
+    },
+    {
+      "section": "Slaw",
+      "text": "Hæld dressingen i en stor skål, og vend rødkål, hvidkål, gulerod og forårsløg i."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server de bagte underlår med slawen og eventuelt dampede majskolber."
+    }
+  ],
+  "changes": [
+    "Chipotle paste er skrevet som chipotle (pasta).",
+    "Fedtfattig græsk yoghurt er skrevet som græsk yoghurt 0 % fedt."
+  ]
+}

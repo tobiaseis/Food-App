@@ -1,0 +1,263 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/stilton-stuffed-medjool-dates-cranberry-syrup-rosemary-skewers-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:28:54.914Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Fyldte medjooldadler med stilton, tranebærsirup og rosmarinspyd",
+  "intro": "Søde dadler fyldt med en cremet stiltonfyld og serveret på rosmarinspyd over hvidløgsfløde og tranebærsirup. Et flot lille festligt tilbehør med både sødme, salt og sprødt drys.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Dadler og spyd",
+      "amount": 20,
+      "unit": "stk",
+      "name": "dadler",
+      "note": "store, medjool",
+      "optional": false
+    },
+    {
+      "section": "Dadler og spyd",
+      "amount": 8,
+      "unit": "stk",
+      "name": "rosmarin",
+      "note": "store kviste",
+      "optional": false
+    },
+    {
+      "section": "Stiltoncreme",
+      "amount": 150,
+      "unit": "g",
+      "name": "stilton",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stiltoncreme",
+      "amount": 75,
+      "unit": "g",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stiltoncreme",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebærsirup",
+      "amount": 350,
+      "unit": "g",
+      "name": "tranebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebærsirup",
+      "amount": 175,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebærsirup",
+      "amount": 50,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebærsirup",
+      "amount": 20,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Tranebærsirup",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsfløde til bunden",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsfløde til bunden",
+      "amount": 100,
+      "unit": "g",
+      "name": "stilton",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsfløde til bunden",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsfløde til bunden",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsfløde til bunden",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprødt drys",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprødt drys",
+      "amount": 100,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprødt drys",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rosmarin",
+      "note": "kviste, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Sprødt drys",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprødt drys",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": "til at dryppe over",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 50,
+      "unit": "g",
+      "name": "honningkage",
+      "note": "honeycomb, skåret på skrå",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dadler og spyd",
+      "text": "Skær hver dadel næsten helt igennem på langs, så bunden holder sammen, og tag stenen ud."
+    },
+    {
+      "section": "Dadler og spyd",
+      "text": "Klip de 8 rosmarinkviste til samme længde. Træk nålene af, så kun toppen beholder dem. Nu har du 8 spyd."
+    },
+    {
+      "section": "Stiltoncreme",
+      "text": "Pisk stilton, flødeost og fløde med piskeris i en røremaskine på middelhøj hastighed, til cremen er glat og ensartet."
+    },
+    {
+      "section": "Stiltoncreme",
+      "text": "Kom cremen i en sprøjtepose med glat tud."
+    },
+    {
+      "section": "Tranebærsirup",
+      "text": "Kog alle ingredienserne til sirup op og lad dem simre svagt i 20–30 minutter, til massen er tyk og sirupsagtig. Lad den ikke koge kraftigt, for så bliver sukkeret overkogt, og sirupen stivner."
+    },
+    {
+      "section": "Hvidløgsfløde til bunden",
+      "text": "Mens sirupen simrer, pisker du fløde og stilton glat i røremaskinen. Pisk hvidløget i og smag til med salt og peber. Stil cremen i køleskabet."
+    },
+    {
+      "section": "Sprødt drys",
+      "text": "Varm olien op i en pande ved middelhøj varme, til den næsten ryger. Rist panko og hakket rosmarin i olien, til det er gyldent. Smag til med salt og peber, og stil det til side."
+    },
+    {
+      "section": "Samling",
+      "text": "Åbn dadlerne forsigtigt én ad gangen, og sprøjt stiltoncreme pænt i. Drys med salt, peber, lidt timianblade og noget af det ristede panko."
+    },
+    {
+      "section": "Samling",
+      "text": "Træk 5–7 dadler på hvert rosmarinspyd, uden at de går i stykker."
+    },
+    {
+      "section": "Anretning",
+      "text": "Smør hvidløgsfløden ud i bunden af et serveringsfad og dryp sirupen over. Læg dadelspydene ovenpå."
+    },
+    {
+      "section": "Anretning",
+      "text": "Pynt med resten af det ristede panko, tranebær fra sirupen, honning, timian, sort peber og honningkage."
+    }
+  ],
+  "changes": [
+    "Double cream er erstattet af piskefløde.",
+    "Cream cheese er erstattet af flødeost.",
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Vegetable oil er erstattet af rapsolie.",
+    "Honeycomb er erstattet af honningkage.",
+    "Red wine vinegar er erstattet af eddike (rødvinseddike)."
+  ]
+}

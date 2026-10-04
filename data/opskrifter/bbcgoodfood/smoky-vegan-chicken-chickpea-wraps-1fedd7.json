@@ -1,0 +1,172 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smoky-vegan-chicken-chickpea-wraps",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:25:32.763Z",
+  "total_minutes": 35,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Røgede wraps med vegansk kylling og kikærter",
+  "intro": "Fyldige wraps med stegte kyllingestrimler af planteprotein, kikærter og chipotle, som giver en lun røgsmag. Serveres med hjemmelavet guacamole og limefedter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "vegansk kylling",
+      "note": "stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "i adobo",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fajitakrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "afdryppede, 400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "halv, skåret i tynde både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til guacamoleen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "moden, skrællet og uden sten",
+      "optional": false
+    },
+    {
+      "section": "Til guacamoleen",
+      "amount": 10,
+      "unit": "g",
+      "name": "koriander",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til guacamoleen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til guacamoleen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Til guacamoleen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til guacamoleen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Guacamole",
+      "text": "Mos avocadoen i en skål. Rør halvdelen af koriander og limesaften i."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Smag til med chiliflager, salt og peber. Stil den på køl, til den skal bruges."
+    },
+    {
+      "section": "Fyld",
+      "text": "Varm olien op i en stor pande ved middelvarme. Steg den veganske kylling i 2-3 minutter under jævnlig omrøring, til den er gylden på begge sider. Krydr og læg den over i en skål."
+    },
+    {
+      "section": "Fyld",
+      "text": "Steg rødløg og hvidløg på samme pande i 8-10 minutter, til kanterne er gyldne."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rør chipotle og fajitakrydderi i løgene. Kom kikærter og den stegte vegetarkylling tilbage på panden, og vend det hele godt."
+    },
+    {
+      "section": "Fyld",
+      "text": "Lad fyldet simre i 5 minutter, til det er gennemvarmt. Smag til med salt og peber, tag panden af varmen, og pres en limebåd over."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel fyld og guacamole på tortillaerne, og drys med resten af koriander. Server med limebåde, så man selv kan presse lidt over."
+    }
+  ],
+  "changes": [
+    "Vegetabilsk olie er skiftet til olie.",
+    "Fajita seasoning er skiftet til fajitakrydderi.",
+    "Chilli flakes er skiftet til chiliflager."
+  ]
+}

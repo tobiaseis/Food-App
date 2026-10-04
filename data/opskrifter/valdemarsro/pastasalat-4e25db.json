@@ -1,0 +1,132 @@
+{
+  "url": "https://www.valdemarsro.dk/pastasalat/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:47:41.429Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Pastasalat med broccoli, majs og bacon",
+  "intro": "Kold pastasalat med knasende grøntsager og sprød bacon, der vendes i en cremet dressing med parmesan og purløg. Den er nem at lave i forvejen og god til madpakken eller buffeten.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "broccoli",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "majs",
+      "note": "majskolber, eller 1 dåse majskerner",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "purløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 30,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 80,
+      "unit": "g",
+      "name": "bacon",
+      "note": "sprødstegt og skåret i små tern",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog pasta i saltet vand, til den mangler ca. 1 minut i at være helt mør."
+    },
+    {
+      "section": null,
+      "text": "Kom broccolien i gryden, når tiden er gået. Si straks det hele fra, og lad det køle helt af."
+    },
+    {
+      "section": null,
+      "text": "Kog majskolberne møre, og skær kernerne af kolberne."
+    },
+    {
+      "section": null,
+      "text": "Bland pasta, broccoli, majs og spidskål i en stor skål."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør creme fraiche, mayonnaise, purløg, parmesan og bacon sammen. Smag til med salt og peber."
+    },
+    {
+      "section": "Dressing",
+      "text": "Vend dressingen grundigt ind i salaten, og server den."
+    }
+  ],
+  "changes": []
+}

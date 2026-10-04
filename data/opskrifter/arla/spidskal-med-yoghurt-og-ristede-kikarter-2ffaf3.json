@@ -1,0 +1,120 @@
+{
+  "url": "https://www.arla.dk/opskrifter/spidskal-med-yoghurt-og-ristede-kikarter/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:02:40.357Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Grillet spidskål med yoghurt og ristede kikærter",
+  "intro": "Grillede spidskålsbåde med sprøde kikærter og en cremet, let stærk yoghurtdressing. Et nemt tilbehør eller let måltid.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristede kikærter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristede kikærter",
+      "amount": 0.5,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænet",
+      "optional": false
+    },
+    {
+      "section": "Ristede kikærter",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sambal oelek",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Pil de yderste blade af spidskålet, og skyl det. Del det i 4-6 både efter størrelsen."
+    },
+    {
+      "section": null,
+      "text": "Skær den tykkeste del af stokken væk på hver båd, men lad bådene hænge sammen."
+    },
+    {
+      "section": null,
+      "text": "Grill bådene på middelvarm grill med snitfladen nedad, til de er møre. Hold øje med dem, og vend dem et par gange."
+    },
+    {
+      "section": "Ristede kikærter",
+      "text": "Varm olien på en pande, og steg de drænede kikærter ved høj varme, til de er gyldne."
+    },
+    {
+      "section": "Ristede kikærter",
+      "text": "Tag kikærterne op på køkkenrulle, og lad dem køle. Drys dem med flagesalt."
+    },
+    {
+      "section": "Yoghurtdressing",
+      "text": "Rør yoghurten sammen med sambal oelek og citronsaften. Krydr med groft salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Server spidskålen med dressingen og de ristede kikærter."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,281 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/john-dory-chanterelles-meadowsweet-beurre-blanc-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:58:11.737Z",
+  "total_minutes": 105,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 22,
+  "title": "Havbars med kantareller og mjødurtsmørsauce",
+  "intro": "Sprødstegt havbars med kantareller, sukkerærter og en silkeblød smørsauce på mjødurt, dashi og vanilje. Retten kræver forberedelse dagen før, men giver en elegant middagsret.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til mjødurtinfusionen",
+      "amount": 25,
+      "unit": "g",
+      "name": "mjødurtblomster",
+      "note": "stilkene fjernet",
+      "optional": false
+    },
+    {
+      "section": "Til mjødurtinfusionen",
+      "amount": 120,
+      "unit": "ml",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Til mjødurtinfusionen",
+      "amount": 60,
+      "unit": "ml",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dashien",
+      "amount": 175,
+      "unit": "g",
+      "name": "kombu",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dashien",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Til dashien",
+      "amount": 750,
+      "unit": "g",
+      "name": "fiskeben",
+      "note": "fra havbars, inkl. 1 renset hoved; røget let over bål til de er tørre, eller tørret og ristet let i lav ovn, derefter skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til dashien",
+      "amount": 15,
+      "unit": "g",
+      "name": "bonitoflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dashien",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til smørsaucen",
+      "amount": 60,
+      "unit": "g",
+      "name": "skalotteløg",
+      "note": "fintskåret",
+      "optional": false
+    },
+    {
+      "section": "Til smørsaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": "1 cm stykke, frøene skrabet ud og stangen gemt",
+      "optional": false
+    },
+    {
+      "section": "Til smørsaucen",
+      "amount": 5,
+      "unit": "g",
+      "name": "miso",
+      "note": "hvid",
+      "optional": false
+    },
+    {
+      "section": "Til smørsaucen",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, gerne syrnet, i tern",
+      "optional": false
+    },
+    {
+      "section": "Til smørsaucen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "xanthangummi",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til smørsaucen",
+      "amount": null,
+      "unit": null,
+      "name": "mandelolie",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til smørsaucen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fisk og tilbehør",
+      "amount": 6,
+      "unit": "stk",
+      "name": "havbars",
+      "note": "filet, ca. 125 g hver",
+      "optional": false
+    },
+    {
+      "section": "Til fisk og tilbehør",
+      "amount": 100,
+      "unit": "g",
+      "name": "kantareller",
+      "note": "rengjorte",
+      "optional": false
+    },
+    {
+      "section": "Til fisk og tilbehør",
+      "amount": 60,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": "gerne gule, eller andre sprøde, søde sæsongrøntsager som gule haricots verts eller hyvlet fennikel",
+      "optional": false
+    },
+    {
+      "section": "Til fisk og tilbehør",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "usaltet, til stegning og til færdigstegning",
+      "optional": false
+    },
+    {
+      "section": "Til fisk og tilbehør",
+      "amount": null,
+      "unit": null,
+      "name": "solsikkeolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til fisk og tilbehør",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "saft, til at dryppe over",
+      "optional": false
+    },
+    {
+      "section": "Til fisk og tilbehør",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "gerne flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "mandler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "hvide ribs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "mjødurtblomster",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dagen før",
+      "text": "Læg mjødurtblomsterne i en skål med hvidvin og eddike. Stil det koldt i mindst 24 og højst 48 timer."
+    },
+    {
+      "section": "Dagen før",
+      "text": "Sigt væsken fra, og pres blomsterne godt, så al smag kommer med. Mål 150 g af væsken af og stil den køligt."
+    },
+    {
+      "section": "Dashi",
+      "text": "Kom kombu og koldt vand i en gryde. Varm langsomt op ved lav varme til 70 °C. Tag af varmen, læg låg på, og lad trække i 30 minutter."
+    },
+    {
+      "section": "Dashi",
+      "text": "Tag kombuen op (den kan bruges til andre retter). Tilsæt fiskeben og bonitoflager, og varm op til 80 °C igen. Tag af varmen, og lad trække i 1 time under låg."
+    },
+    {
+      "section": "Dashi",
+      "text": "Smag til med lidt salt. Sigt fonden to gange, anden gang gennem et gazebind i sigten. Mål 175 g af og stil den køligt."
+    },
+    {
+      "section": "Smørsauce",
+      "text": "Kom den afmålte mjødurtvæske og skalotteløgene i en lille gryde, og bring det i let kog. Tilsæt vaniljefrø og vaniljestang. Lad det koge ind til det halve – der skal være ca. 75 g tilbage efter sigtning."
+    },
+    {
+      "section": "Smørsauce",
+      "text": "Tilsæt dashien, og varm det hele igennem. Hæld den varme væske i en blender sammen med misoen."
+    },
+    {
+      "section": "Smørsauce",
+      "text": "Kør blenderen på høj hastighed, og tilsæt smørret nogle få tern ad gangen, så saucen emulgerer. Tilsæt eventuelt xanthangummi, og blend i endnu 1 minut. Smag til med salt. Stil til side, og varm blidt op inden servering."
+    },
+    {
+      "section": "Servering",
+      "text": "Steg kantarellerne i lidt smør. Blancher sukkerærterne kort i letsaltet kogende vand, eller grill dem."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm saucen forsigtigt op, og rør nogle få dråber mjødurt- eller mandelolie i. Olien skal ikke emulgeres ind."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm en pande op ved middelvarme med lidt solsikkeolie. Krydr fisken med salt, og steg den med den pæneste side nedad i 2-3 minutter, til undersiden er gylden, og fisken er to tredjedele gennemstegt."
+    },
+    {
+      "section": "Servering",
+      "text": "Tag panden af varmen, og kom en klump smør på. Lad den skumme, og øs smørret over fisken, til den lige er uigennemsigtig, ca. 30 sekunder."
+    },
+    {
+      "section": "Servering",
+      "text": "Løft fisken forsigtigt over på en bakke med den gyldne side opad. Dryp med lidt citronsaft, pensl evt. med smørret fra panden, og drys med flagesalt. Læg fisken på tallerkener."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret sukkerærter, kantareller, mandler og hvide ribs rundt om og på fisken. Pynt med mjødurtblomster, hæld lidt varm smørsauce over, og server straks."
+    }
+  ],
+  "changes": [
+    "Sankt Peters fisk er erstattet af havbars, som kilden selv foreslår.",
+    "Chardonnayeddike er erstattet af hvidvinseddike.",
+    "Marconamandler er erstattet af almindelige mandler.",
+    "Mjødurtolie kan erstattes af mandelolie, som kilden selv nævner; mandelolie er brugt."
+  ]
+}

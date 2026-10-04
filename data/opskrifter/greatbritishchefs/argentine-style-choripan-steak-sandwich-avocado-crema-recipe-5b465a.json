@@ -1,0 +1,248 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/argentine-style-choripan-steak-sandwich-avocado-crema-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:53:33.707Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 22,
+  "title": "Argentinsk choripán med bøf og avocadocreme",
+  "intro": "Sprøde boller fyldt med mørt bøf, stegt chorizo, syrlig rødløg og frisk chimichurri. Avocadocremen og den lune majssalat runder sandwichen af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kød og sandwich",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kød og sandwich",
+      "amount": 2,
+      "unit": "stk",
+      "name": "ribeye",
+      "note": "á ca. 200 g",
+      "optional": false
+    },
+    {
+      "section": "Kød og sandwich",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chorizo",
+      "note": "skåret over på langs",
+      "optional": false
+    },
+    {
+      "section": "Kød og sandwich",
+      "amount": 2,
+      "unit": "stk",
+      "name": "boller",
+      "note": "sprøde",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødløg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødløg",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "rødvinseddike, så løgene er dækket",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": "sur fløde, alternativt yoghurt",
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Majssalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "majskolbe",
+      "note": "kernerne skåret af",
+      "optional": false
+    },
+    {
+      "section": "Majssalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "lille, i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Majssalat",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Majssalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Majssalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Majssalat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltet rødløg",
+      "text": "Læg de tynde rødløg i en skål, og hæld rødvinseddike over, så de er dækket. Lad dem trække, mens resten laves."
+    },
+    {
+      "section": "Kød og sandwich",
+      "text": "Varm olivenolien op på en pande. Steg bøfferne ca. 2 minutter på hver side, til de er medium-rare (kernetemperatur 55 °C). Tag dem af panden, og lad dem hvile."
+    },
+    {
+      "section": "Kød og sandwich",
+      "text": "Steg chorizoen på samme pande, til den er sprød og gennemstegt."
+    },
+    {
+      "section": "Chimichurri",
+      "text": "Rør persille, hvidløg, chili, oregano, eddike og olie sammen. Smag til med salt, og justér med mere salt, olie eller eddike efter behov."
+    },
+    {
+      "section": "Avocadocreme",
+      "text": "Blend avocado, limesaft og creme fraiche glat. Smag til med salt og peber, og stil cremen på køl, til den skal bruges."
+    },
+    {
+      "section": "Majssalat",
+      "text": "Brun majs og squash i olivenolie på en pande, til de er møre og har fået farve. Vend dem med limesaft og koriander, og smag til med salt."
+    },
+    {
+      "section": "Samling",
+      "text": "Del bollerne, og smør avocadocreme på. Fordel chorizo, skåret bøf, syltet rødløg og chimichurri over."
+    },
+    {
+      "section": "Samling",
+      "text": "Server sandwichene med den lune salat og ekstra chimichurri ved siden af."
+    }
+  ],
+  "changes": [
+    "Cooking chorizo er erstattet med chorizo.",
+    "Sour cream er erstattet med creme fraiche.",
+    "Red wine vinegar er erstattet med rødvinseddike under varenavnet eddike."
+  ]
+}

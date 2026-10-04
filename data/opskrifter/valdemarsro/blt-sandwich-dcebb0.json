@@ -1,0 +1,104 @@
+{
+  "url": "https://www.valdemarsro.dk/blt-sandwich/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:39:37.162Z",
+  "total_minutes": 15,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "BLT-sandwich",
+  "intro": "Sprød bacon, saftige tomater og frisk salat mellem ristet brød med en let sennepsdressing. En klassiker, der er klar på få minutter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "skive",
+      "name": "brød",
+      "note": "fx grydebrød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "sprødstegt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "salat",
+      "note": "grøn",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til dressingen",
+      "text": "Bland mayonnaise, sennep og honning i en skål. Smag til med salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Rist brødskiverne, og bred dressingen ud på dem."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg bacon, tomatskiver og salat på halvdelen af brødskiverne, og læg de øvrige skiver ovenpå."
+    }
+  ],
+  "changes": []
+}

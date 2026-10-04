@@ -1,0 +1,179 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/warm-roasted-squash-and-puy-lentil-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:50:02.714Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Varm salat med ovnbagt butternut squash og linser",
+  "intro": "Mørk, sprød salat med varm ovnbagt græskar, lune linser og friske tomater. Den er hurtig at lave og mættende nok til en hverdagsmiddag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til squashen",
+      "amount": 1,
+      "unit": "kg",
+      "name": "butternut squash",
+      "note": "i store tern",
+      "optional": false
+    },
+    {
+      "section": "Til squashen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Til squashen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til squashen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "grov",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "1-2 spsk",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "linser",
+      "note": "puylinser på dåse",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 150,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 40,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "græskarkerner",
+      "note": "ristede, 1-2 spsk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til squashen",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Til squashen",
+      "text": "Vend squashen med olivenolie, hvidløg, timian, salt og peber, og læg den på en bageplade."
+    },
+    {
+      "section": "Til squashen",
+      "text": "Bag den i 25-30 minutter, til den er mør."
+    },
+    {
+      "section": "Til dressingen",
+      "text": "Rør balsamico, olivenolie, sennep og vand sammen."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Hæld væsken fra linserne, og vend dem med dressingen, rødløg, spinat og cherrytomater."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel linsesalaten på fire tallerkener, og læg den bagte squash ovenpå."
+    },
+    {
+      "section": "Til servering",
+      "text": "Smuldr osten ud over, og drys med græskarkerner."
+    }
+  ],
+  "changes": [
+    "Cheshire-ost er erstattet af feta.",
+    "Wholegrain mustard er erstattet af grov sennep."
+  ]
+}

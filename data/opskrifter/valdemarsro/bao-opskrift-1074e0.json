@@ -1,0 +1,251 @@
+{
+  "url": "https://www.valdemarsro.dk/bao-opskrift/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:45:38.329Z",
+  "total_minutes": 240,
+  "active_minutes": 90,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Dampede bao med marineret svinenakke",
+  "intro": "Bløde, dampede bao-boller fyldt med marinerede svinekødsstrimler, friske grøntsager og chili. Dejen kan hæve natten over, og kødet trækker mens du venter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bao-boller",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bao-boller",
+      "amount": 10,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bao-boller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bao-boller",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Bao-boller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bao-boller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret kød",
+      "amount": 250,
+      "unit": "g",
+      "name": "nakkekoteletter",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Marineret kød",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret kød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret kød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hoisinsauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret kød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Marineret kød",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Marineret kød",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "eller bredbladet persille",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i juliennestrimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i juliennestrimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "knivspids",
+      "name": "sriracha",
+      "note": "4 dryp",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i stave",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i stave",
+      "optional": false
+    },
+    {
+      "section": "Til bao-boller",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til pensling",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kød",
+      "text": "Rør alle ingredienserne til marinaden sammen, og vend kødstrimlerne rundt i den. Lad dem trække i mindst 2 timer, gerne op til et døgn."
+    },
+    {
+      "section": "Dej",
+      "text": "Opløs gæren i vandet. Tilsæt sukker, det smeltede smør, salt og halvdelen af melet, og rør det godt sammen."
+    },
+    {
+      "section": "Dej",
+      "text": "Ælt resten af melet i lidt ad gangen, til dejen er glat og smidig."
+    },
+    {
+      "section": "Dej",
+      "text": "Lad dejen hæve på køl natten over, eller 2 timer ved stuetemperatur."
+    },
+    {
+      "section": "Form",
+      "text": "Del dejen i otte lige store stykker, og rul hvert stykke ud til en rund, flad skive."
+    },
+    {
+      "section": "Form",
+      "text": "Pensl den ene side af skiverne med olie, og fold dem sammen, så den olierede side vender indad. Lad dem hæve i 30 minutter."
+    },
+    {
+      "section": "Damp",
+      "text": "Sæt en bambusdamper over en gryde med kogende vand. Klip et stykke bagepapir til bunden, og prik mange huller i det."
+    },
+    {
+      "section": "Damp",
+      "text": "Læg et par boller ad gangen i damperen, og damp dem i 20-25 minutter."
+    },
+    {
+      "section": "Damp",
+      "text": "Har du ingen damper, så brug en sigte over gryden. Læg bagepapir med mange huller i, og sæt låg på."
+    },
+    {
+      "section": "Server",
+      "text": "Steg kødet hurtigt på en varm pande, til det er mørt og gennemstegt."
+    },
+    {
+      "section": "Server",
+      "text": "Fyld bollerne med kød, grøntsager, koriander, sesamfrø og chiliflager. Top med sriracha og server."
+    }
+  ],
+  "changes": [
+    "Fishsauce er skrevet som fiskesauce.",
+    "Hoisin sauce er skrevet som hoisinsauce."
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/steak-burrito-bowl",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:56:12.834Z",
+  "total_minutes": 10,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 8,
+  "title": "Burrito bowl med bøf",
+  "intro": "Hurtig bowl med mørt stegt bøf, krydret mexicansk ris og ristet peberfrugt. Toppes med yoghurt, persille og et skvæt citron.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "bøf",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "pakke",
+      "name": "fajitakrydderi",
+      "note": "1 pose",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "ris",
+      "note": "mexicansk-style, færdigkogt i pose",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "ristet, i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halvdelen presses, halvdelen skæres i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "grofthakket, til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Gnid bøffen ind i halvdelen af fajitakrydderiet og halvdelen af olien."
+    },
+    {
+      "section": null,
+      "text": "Varm en pande op ved høj varme. Steg bøffen 2 minutter på hver side til medium rare, og læg den derefter til side."
+    },
+    {
+      "section": null,
+      "text": "Sænk varmen til middel, og hæld resten af olien på panden. Kom resten af krydderiet, risene og peberfrugterne i, og rør rundt i 2 minutter, til alt er varmt og dækket af krydderi. Sætter det sig fast, så tilsæt en smule vand."
+    },
+    {
+      "section": null,
+      "text": "Rør citronsaften og halvdelen af persillen i risene, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Skær bøffen i strimler. Fordel risene i to skåle, læg bøf ovenpå, og top med en klat yoghurt. Drys med resten af persillen, og server med en citronbåd."
+    }
+  ],
+  "changes": [
+    "Fajita seasoning er skiftet til fajitakrydderi i pose.",
+    "Mexican-style rice pouch er skiftet til færdigkogt mexicansk ris i pose.",
+    "Roasted red peppers er skiftet til ristet peberfrugt."
+  ]
+}

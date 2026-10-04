@@ -1,0 +1,214 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/mediterranean-fish-gratins",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:23:00.503Z",
+  "total_minutes": 80,
+  "active_minutes": 25,
+  "yield_count": 6,
+  "source_lines": 17,
+  "title": "Gratinerede fiskeretter med tomat og fennikel",
+  "intro": "Fisk og rejer i en tomatsauce med fennikel, safran og hvidvin, toppet med sprød parmesanrasp og bagt i individuelle forme. Server med grøn salat.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Tomatsauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "ca. 250 g, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "store, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "korianderfrø",
+      "note": "toppet, let knust",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 150,
+      "unit": "ml",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "à 400 g",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": "en god knivspids",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "lille, bladene grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 900,
+      "unit": "g",
+      "name": "fiskefilet",
+      "note": "blandet, uden skind, i stykker",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 400,
+      "unit": "g",
+      "name": "kæmperejer",
+      "note": "rå, pillede",
+      "optional": false
+    },
+    {
+      "section": "Top",
+      "amount": 75,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Top",
+      "amount": 50,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Top",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salat",
+      "note": "grøn, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatsauce",
+      "text": "Varm olien op i en stor, bred pande eller sauterpande med slip-let-belægning. Svits løg, fennikel, hvidløg og korianderfrø ved svag varme i 15 minutter, mens du rører jævnligt, til grøntsagerne er bløde og har fået lidt farve."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Hæld vinen på, og tilsæt tomater, tomatpuré, safran og laurbærblad. Smag til med salt og peber, og lad det småkoge i ca. 15 minutter under omrøring en gang imellem, til saucen er tyk."
+    },
+    {
+      "section": "Fisk",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Fisk",
+      "text": "Rør citronsaft og det meste af persillen i saucen. Læg fisk og rejer ovenpå, og vend det rundt."
+    },
+    {
+      "section": "Fisk",
+      "text": "Læg låg på, og lad det simre ved middel varme i 4-5 minutter, til fisken næsten er gennemkogt. Rør forsigtigt et par gange, så fisken ikke går i stykker."
+    },
+    {
+      "section": "Gratinering",
+      "text": "Fordel den varme fiskeblanding i 6 individuelle ovnfaste forme, der hver kan rumme ca. 350 ml."
+    },
+    {
+      "section": "Gratinering",
+      "text": "Bland parmesan, panko, resten af persillen og lidt peber, og drys over formene."
+    },
+    {
+      "section": "Gratinering",
+      "text": "Sæt formene på en bageplade, og bag dem i 20 minutter, til toppen er gylden og saucen bobler. Server med grøn salat, hvis du har lyst."
+    }
+  ],
+  "changes": [
+    "Hakkede tomater med krydderurter er skiftet til almindelige hakkede tomater."
+  ]
+}

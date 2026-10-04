@@ -1,0 +1,306 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/mastic-labneh-mousse-pistachio-kataifi-rhubarb-sorbet-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:32:20.580Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Mastiks-labnehmousse med pistaciekataifi og rabarbersorbet",
+  "intro": "En elegant dessert med cremet mousse, syrlig rabarbersorbet og sprøde pistacier og kataifi. Rabarberen skal trække i to dage, så start i god tid.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til den komprimerede rabarber",
+      "amount": 250,
+      "unit": "g",
+      "name": "rabarber",
+      "note": "skåret i stykker på 1 cm",
+      "optional": false
+    },
+    {
+      "section": "Til den komprimerede rabarber",
+      "amount": 250,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabarbersorbet",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabarbersorbet",
+      "amount": 80,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabarbersorbet",
+      "amount": 80,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabarbersorbet",
+      "amount": 2,
+      "unit": "g",
+      "name": "tørret hibiscus",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabarbersorbet",
+      "amount": 300,
+      "unit": "g",
+      "name": "rabarber",
+      "note": "skåret i stykker på 5 cm",
+      "optional": false
+    },
+    {
+      "section": "Til rabarbersorbet",
+      "amount": 1,
+      "unit": "g",
+      "name": "xanthangummi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabarbersorbet",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til labnehmousse",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til labnehmousse",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til labnehmousse",
+      "amount": 2,
+      "unit": "stk",
+      "name": "mastiks",
+      "note": "perler, malet til fint pulver i en mortér og samlet op med en konditorpensel",
+      "optional": false
+    },
+    {
+      "section": "Til labnehmousse",
+      "amount": 150,
+      "unit": "g",
+      "name": "labneh",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pistaciekataifi",
+      "amount": 100,
+      "unit": "g",
+      "name": "kataifi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pistaciekataifi",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "usaltet smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Til pistaciekataifi",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "pistaciepasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pistaciekataifi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pistaciekataifi",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pistacieknas",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pistacieknas",
+      "amount": 100,
+      "unit": "g",
+      "name": "pistacienødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rosentuile",
+      "amount": 100,
+      "unit": "g",
+      "name": "isomalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rosentuile",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørrede rosenblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tørrede rosenblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dianthusblomster",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "pistacienødder",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Komprimeret rabarber",
+      "text": "Start to dage før servering. Kom rabarber og sukker i en lufttæt beholder, og lad det stå i køleskabet i 2 dage. Det kan også stå op til 3 dage."
+    },
+    {
+      "section": "Komprimeret rabarber",
+      "text": "Hæld rabarberen i en vakuumpose, og vakuumpak den. Kog posen i vandbad ved 60°C i cirka 30 minutter, til rabarberen netop er mør."
+    },
+    {
+      "section": "Komprimeret rabarber",
+      "text": "Afkøl posen hurtigt i en skål med isvand, så rabarberen bevarer lidt bid. Uden vakuummaskine kan rabarberen i stedet stå cirka 30 minutter i en meget lav ovn. Stil den derefter på køl."
+    },
+    {
+      "section": "Rabarbersorbet",
+      "text": "Bring vand, sukker og glukosesirup i kog. Tag gryden af varmen, læg hibiscus i, og lad det trække, mens sirupen køler af i cirka 10 minutter."
+    },
+    {
+      "section": "Rabarbersorbet",
+      "text": "Si sirupen, og kassér hibiscus. Stil den på køl."
+    },
+    {
+      "section": "Rabarbersorbet",
+      "text": "Læg rabarberen i en gryde med låg sammen med et skvæt vand. Damp den ved svag varme i cirka 15 minutter, og lad den køle lidt af."
+    },
+    {
+      "section": "Rabarbersorbet",
+      "text": "Blend rabarberen glat med den kolde sirup, xanthangummi og citronsaft. Si massen gennem en finmasket si."
+    },
+    {
+      "section": "Rabarbersorbet",
+      "text": "Kør massen i en ismaskine, og frys sorbeten."
+    },
+    {
+      "section": "Labnehmousse",
+      "text": "Pisk fløde, flormelis og mastikspulver til bløde toppe i en stor skål."
+    },
+    {
+      "section": "Labnehmousse",
+      "text": "Vend labneh forsigtigt i med en spatel. Rør ikke for meget, for så kan mousset skille. Kom mousset i en beholder, og stil det på køl."
+    },
+    {
+      "section": "Pistaciekataifi",
+      "text": "Varm ovnen op til 175°C. Vend kataifi i det smeltede smør, og bag den i 12-15 minutter, til den er jævnt gylden. Vend den undervejs, og lad den køle af."
+    },
+    {
+      "section": "Pistaciekataifi",
+      "text": "Bland den kolde kataifi med pistaciepasta, flormelis og salt. Lad den stå ved stuetemperatur."
+    },
+    {
+      "section": "Pistacieknas",
+      "text": "Smelt sukkeret i en lille tykbundet gryde ved middel-lav varme. Lad det karamellisere til en dyb ravfarve uden at røre i det."
+    },
+    {
+      "section": "Pistacieknas",
+      "text": "Tag gryden af varmen, og vend hurtigt pistacienødderne i, så de dækkes jævnt. Hæld det ud på en non-stick måtte eller bagepapir, og lad det køle helt af."
+    },
+    {
+      "section": "Pistacieknas",
+      "text": "Bryd knasen i stykker, eller kør den groft i en foodprocessor. Opbevar den ved stuetemperatur."
+    },
+    {
+      "section": "Rosentuile",
+      "text": "Varm ovnen op til 100°C uden varmluft. Blitz isomalt og rosenblade fint i en foodprocessor."
+    },
+    {
+      "section": "Rosentuile",
+      "text": "Sigt blandingen i et tyndt, jævnt lag over en non-stick bagemåtte. Sæt den i ovnen, og skru straks op til 200°C. Bag i 3 minutter."
+    },
+    {
+      "section": "Rosentuile",
+      "text": "Lad tuilen køle af, og brug derefter hænderne til at bryde den i skår. Varmluft må ikke bruges, for så blæser blandingen rundt."
+    },
+    {
+      "section": "Servering",
+      "text": "Tag sorbeten ud af fryseren og mousset ud af køleskabet, så de kan blive lidt bløde."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel kataifi i bunden af hver skål, og læg rabarber ovenpå. Sæt en quenelle mousse øverst med en mindre quenelle sorbet ved siden af."
+    },
+    {
+      "section": "Servering",
+      "text": "Drys med pistacieknas, rosenblade, dianthusblomster og eventuelt flere pistacienødder. Slut med skår af rosentuile."
+    }
+  ],
+  "changes": [
+    "Double cream er erstattet af piskefløde."
+  ]
+}

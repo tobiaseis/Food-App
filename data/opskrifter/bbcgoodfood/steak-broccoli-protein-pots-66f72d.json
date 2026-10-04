@@ -1,0 +1,95 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/steak-broccoli-protein-pots",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:00:51.647Z",
+  "total_minutes": 19,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 5,
+  "title": "Oksemørbrad med broccoli og fuldkornsris",
+  "intro": "Madpakkeret med mørt oksemørbrad, broccoli og ris med sushiingefær. Risene varmes i mikroovnen, mens bøffen brunes på panden.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "Ris",
+      "note": "fuldkornsris, færdigkogt, gerne med tang",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Ingefær",
+      "note": "sushiingefær, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "Forårsløg",
+      "note": "det grønne finthakkes, det hvide halveres på langs og skæres i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "Vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "Broccoli",
+      "note": "buketter, skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "Oksemørbrad",
+      "note": "fedtparteret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom risene i en skål og bland sushiingefær, det hakkede grønne af forårsløgene og vandet i."
+    },
+    {
+      "section": null,
+      "text": "Læg broccoli og de hvide stykker forårsløg ovenpå. Hold løgene samlet øverst, da de skal bruges igen om lidt."
+    },
+    {
+      "section": null,
+      "text": "Dæk skålen med film, stik et hul i filmen med spidsen af en kniv, og varm i mikroovnen i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Varm imens en non-stick pande op, og brun oksemørbraden i 2 minutter på hver side. Læg den til side."
+    },
+    {
+      "section": null,
+      "text": "Tag de hvide løg op fra skålen og steg dem på panden i kødsaften, til de får lidt farve, mens kødet hviler."
+    },
+    {
+      "section": null,
+      "text": "Fordel ris og broccoli i 2 store madpakkebokse. Skær kødet i skiver, læg det sammen med løgene ovenpå, og luk boksene."
+    }
+  ],
+  "changes": [
+    "Wholegrain rice mix med tang (Merchant Gourmet) er erstattet af færdigkogt fuldkornsris.",
+    "Fillet steak er erstattet af oksemørbrad."
+  ]
+}

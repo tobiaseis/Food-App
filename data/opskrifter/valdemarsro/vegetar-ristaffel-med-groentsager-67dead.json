@@ -1,0 +1,231 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetar-ristaffel-med-groentsager/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:23:48.187Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Vegetarisk ristaffel med karrysauce",
+  "intro": "Cremet karrysauce med blomkål, squash, gulerødder og æble serveres med ris og en række sprøde og søde toppings. Alle former sig selv ved bordet, så retten er nem at servere.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "mediumstærk",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "rød karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 250,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i små buketter",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 75,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 250,
+      "unit": "g",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 4,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "evt. ekstra til at justere konsistensen",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": "kogt efter anvisning på pakken",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 30,
+      "unit": "g",
+      "name": "kokosflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 30,
+      "unit": "g",
+      "name": "rosiner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "banan",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "peanuts",
+      "note": "saltede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Karrysauce",
+      "text": "Varm en tør gryde op ved middelvarme, og rist karry, spidskommen og koriander, til det begynder at dufte."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Tilsæt olie, løg og hvidløg, og steg det under omrøring, til løgene er blødt."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Rør karrypasta, gurkemeje, blomkål, gulerødder, squash og æble i gryden sammen med fonden. Læg låg på, og lad det simre i ca. 5 minutter, til blomkålen er mør."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Blend det hele til en glat, cremet sauce, og hæld den over i en ren gryde."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Smag saucen til med fløde, citronsaft, salt og peber. Er den for tyk, så tynd den ud med lidt mere fond."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog risene, og anret toppings på et fad. Server ris og karrysauce i skåle, så gæsterne selv kan tilføje toppings."
+    }
+  ],
+  "changes": [
+    "Kokosmel som alternativ til kokosflager er udeladt; der bruges kun kokosflager.",
+    "Grøntsagsbouillon er skrevet som grøntsagsfond."
+  ]
+}

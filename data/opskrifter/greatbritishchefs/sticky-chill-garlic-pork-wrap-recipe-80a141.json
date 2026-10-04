@@ -1,0 +1,252 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/sticky-chill-garlic-pork-wrap-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:47:59.080Z",
+  "total_minutes": 70,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Klistrede wraps med svinekød, chili og hvidløg",
+  "intro": "Hjemmebagte urtetortillas fyldt med stegt svinekød i en sød og skarp glaze af chili og hvidløg. Wrapsene pakkes i papir og folie, så de er nemme at tage med.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til urtetortillaerne",
+      "amount": 300,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til urtetortillaerne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til urtetortillaerne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til urtetortillaerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "finthakket, evt. blandet med koriander og purløg",
+      "optional": false
+    },
+    {
+      "section": "Til urtetortillaerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til urtetortillaerne",
+      "amount": 1.7,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Til svinekødet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svinekødet",
+      "amount": 600,
+      "unit": "g",
+      "name": "svinekød",
+      "note": "fra bov eller nakke, skåret i fine strimler",
+      "optional": false
+    },
+    {
+      "section": "Til svinekødet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svinekødet",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svinekødet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svinekødet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chili- og hvidløgsglaze",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chili- og hvidløgsglaze",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Til chili- og hvidløgsglaze",
+      "amount": 3,
+      "unit": "stk",
+      "name": "chili",
+      "note": "store røde, i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Til chili- og hvidløgsglaze",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "riseddike",
+      "optional": false
+    },
+    {
+      "section": "Til chili- og hvidløgsglaze",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chili- og hvidløgsglaze",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chili- og hvidløgsglaze",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skåret i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Urtetortillaerne",
+      "text": "Bland mel, salt og bagepulver i en skål. Rør urter og olivenolie i."
+    },
+    {
+      "section": "Urtetortillaerne",
+      "text": "Hæld det lune vand i lidt ad gangen, og rør, til dejen er blød og smidig. Ælt den i 5-6 minutter, til den er glat. Dæk til, og lad den hvile i 20 minutter."
+    },
+    {
+      "section": "Svinekødet",
+      "text": "Varm olien op i en varm pande, og brun svinekødet ved høj varme i 6-8 minutter, til kanterne er gyldne."
+    },
+    {
+      "section": "Svinekødet",
+      "text": "Tilsæt sojasauce, farin, salt og peber, og steg i yderligere 1 minut, til kødet er blankt og brunt. Stil det til side, mens du laver glazen."
+    },
+    {
+      "section": "Chili- og hvidløgsglaze",
+      "text": "Varm olien op i en lille pande ved middel varme. Svits hvidløg og chili i 2-3 minutter, til de er møre, men uden at tage farve."
+    },
+    {
+      "section": "Chili- og hvidløgsglaze",
+      "text": "Hæld eddike, sojasauce, fiskesauce og honning i, og lad det simre i 2-3 minutter, til glazen er klistret og lidt reduceret."
+    },
+    {
+      "section": "Chili- og hvidløgsglaze",
+      "text": "Vend svinekødet i den varme glaze, og hold det varmt."
+    },
+    {
+      "section": "Tortillaerne",
+      "text": "Del den hvilede dej i fire kugler. Rul hver kugle ud til en rund plade på ca. 22 cm på et meldrysset bord."
+    },
+    {
+      "section": "Tortillaerne",
+      "text": "Steg pladerne et ad gangen på en varm, tør pande i 1 minut på hver side, til de har bobler og er gyldne. Pak dem ind i et viskestykke, så de holder varmen."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg en varm tortilla på et bræt. Fordel det klistrede svinekød midt på, og top med rødløg, koriander og en sprøjt limesaft."
+    },
+    {
+      "section": "Samling",
+      "text": "Fold højre og venstre side ind over fyldet. Træk den nederste kant stramt over fyldet med tommelfingrene, og rul wrappen fast sammen som en burrito."
+    },
+    {
+      "section": "Samling",
+      "text": "Klip et stykke bagepapir, der er lidt større end tortillaen. Læg wrappen med samlingen nedad midt på papiret, fold siderne ind, og rul den stramt sammen som en knallert."
+    },
+    {
+      "section": "Samling",
+      "text": "Gentag med et stykke alufolie uden om papiret, og tryk enderne sammen. Så holder wrappen varmen, er nem at tage med og ser pæn ud – perfekt til picnic eller servering."
+    }
+  ],
+  "changes": [
+    "Fiskesauce er beholdt som fiskesauce.",
+    "Svinekød fra bov eller nakke erstatter pork shoulder, som hedder svinebov/nakkefilet i Danmark.",
+    "Mel og bagepulver er almindeligt dansk hvedemel og bagepulver i stedet for det engelske mærke."
+  ]
+}

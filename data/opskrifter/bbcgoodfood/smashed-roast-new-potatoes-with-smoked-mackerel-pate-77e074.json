@@ -1,0 +1,172 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smashed-roast-new-potatoes-with-smoked-mackerel-pate",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:08:53.007Z",
+  "total_minutes": 90,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Smadrede ovnkartofler med røget makrelpaté",
+  "intro": "Sprøde, smadrede nye kartofler fra ovnen serveres med en cremet paté af røget makrel, kapers og dild. Patéen kan sagtens laves dagen før.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til kartoflerne",
+      "amount": 750,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til patéen",
+      "amount": 200,
+      "unit": "g",
+      "name": "røget makrel",
+      "note": "uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": "Til patéen",
+      "amount": 150,
+      "unit": "g",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til patéen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "Dijon-sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til patéen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til patéen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "drænet og hakket",
+      "optional": false
+    },
+    {
+      "section": "Til patéen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Til patéen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "plus lidt til servering",
+      "optional": false
+    },
+    {
+      "section": "Til patéen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Patéen",
+      "text": "Læg makrelfileterne i en skål og tilsæt resten af ingredienserne til patéen."
+    },
+    {
+      "section": "Patéen",
+      "text": "Mos det hele med en gaffel, til det er blandet, men stadig lidt grovkornet. Smag til med peber. Makrellen er salt, så ekstra salt er sjældent nødvendigt."
+    },
+    {
+      "section": "Patéen",
+      "text": "Stil patéen på køl. Den kan laves dagen før."
+    },
+    {
+      "section": "Kartoflerne",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Kartoflerne",
+      "text": "Kog kartoflerne i letsaltet vand i en stor gryde. Lad dem simre i 20 minutter, til en kniv glider let ind."
+    },
+    {
+      "section": "Kartoflerne",
+      "text": "Hæld vandet fra, og lad kartoflerne dampe af i nogle minutter."
+    },
+    {
+      "section": "Kartoflerne",
+      "text": "Vend kartoflerne med lidt af olien, og læg dem i ét lag på en stor bageplade."
+    },
+    {
+      "section": "Kartoflerne",
+      "text": "Tryk dem let flade med bagsiden af en gaffel eller en kartoffelmoser. De skal revne, men holde formen."
+    },
+    {
+      "section": "Kartoflerne",
+      "text": "Dryp det meste af den resterende olie over, krydr med salt, peber og evt. paprika, og vend dem rundt."
+    },
+    {
+      "section": "Kartoflerne",
+      "text": "Bag dem i 40 minutter. Vend dem undervejs, og dryp resten af olien over, til de er dybt gyldne og sprøde."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret kartoflerne på et fad, og drys med dild. Server patéen i en skål ved siden af, så den kan øses over."
+    }
+  ],
+  "changes": [
+    "Soft cheese er erstattet med flødeost.",
+    "Dijon mustard er erstattet med Dijon-sennep.",
+    "Smoked mackerel fillets er erstattet med røget makrel."
+  ]
+}

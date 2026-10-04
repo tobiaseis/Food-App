@@ -1,0 +1,158 @@
+{
+  "url": "https://www.valdemarsro.dk/falafelvaffel/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:32:39.339Z",
+  "total_minutes": 15,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Falafelvafler med tahinsauce og friske grøntsager",
+  "intro": "Sprøde vafler af falafelfars toppet med cremet creme fraiche, avocado, friske grøntsager og en hurtig tahinsauce. En nem og anderledes vegetarret.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Vafler",
+      "amount": 400,
+      "unit": "g",
+      "name": "falafelfars",
+      "note": "klar til brug",
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til vaffeljernet",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 75,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 3,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Tahinsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tahinsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "der skal bruges 1 spsk saft",
+      "optional": false
+    },
+    {
+      "section": "Tahinsauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Tahinsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tahinsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Vafler",
+      "text": "Har du falafelfarsen klar i forvejen, kan du fryse den i portioner til to vafler ad gangen."
+    },
+    {
+      "section": "Vafler",
+      "text": "Pensl eller smør vaffeljernet med olivenolie (kokosolie går også). Fordel falafelfarsen i jernet."
+    },
+    {
+      "section": "Vafler",
+      "text": "Luk jernet, og bag vaflerne, til indikatoren skifter til grøn, eller til de er gyldne og sprøde."
+    },
+    {
+      "section": "Tahinsauce",
+      "text": "Pres saften fra citronen. Pisk tahin, citronsaft og koldt vand sammen, og smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Smør creme fraiche på vaflerne. Læg rucola, avocado, agurk og tomat ovenpå."
+    },
+    {
+      "section": "Servering",
+      "text": "Dryp med tahinsauce og sriracha, og drys med hakket koriander."
+    }
+  ],
+  "changes": [
+    "Sriracha chilisauce er skrevet som sriracha."
+  ]
+}

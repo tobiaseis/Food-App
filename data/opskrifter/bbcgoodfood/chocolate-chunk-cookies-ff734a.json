@@ -1,0 +1,120 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chocolate-chunk-cookies",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:11:13.132Z",
+  "total_minutes": 32,
+  "active_minutes": 20,
+  "yield_count": 10,
+  "source_lines": 8,
+  "title": "Chocolate chip cookies",
+  "intro": "Bløde cookies med mørk chokolade, der er nemme at samle og klar på under en halv time. De er sprøde i kanten og bløde i midten.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "medium",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 180,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "chokolade",
+      "note": "mørk, hakket i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft). Klæd to bageplader med bagepapir."
+    },
+    {
+      "section": null,
+      "text": "Pisk smør, brun farin og sukker til en meget lys og luftig masse. Pisk ægget og vaniljen i."
+    },
+    {
+      "section": null,
+      "text": "Vend hvedemel, natron, chokolade og salt i dejen, til det lige er blandet."
+    },
+    {
+      "section": null,
+      "text": "Del dejen i 10 store klatter på pladerne. Sørg for god afstand, da cookiesene breder sig."
+    },
+    {
+      "section": null,
+      "text": "Bag dem i 10-12 minutter, til kanterne er faste, men midten stadig er blød. De bliver lidt fastere, når de køler af."
+    },
+    {
+      "section": null,
+      "text": "Lad cookiesene hvile på pladen i nogle minutter, og server dem lune. Eller læg dem på en rist, til de er helt kolde. De holder sig i 3 dage i en tæt æske."
+    }
+  ],
+  "changes": [
+    "Golden caster sugar er erstattet af almindeligt sukker.",
+    "Plain flour er erstattet af hvedemel.",
+    "Bicarbonate of soda er erstattet af natron."
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/smoked-garlic-biang-biang-noodles-fermented-lemon-salsa-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:49:40.183Z",
+  "total_minutes": 80,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 27,
+  "title": "Biang biang-nudler med røget hvidløgsolie og fermenteret citronsalsa",
+  "intro": "Håndtrukne, brede nudler vendes i varm hvidløgsolie og toppes med knasende gulerodssalat og en syrlig, stærk citronsalsa. Salsaen skal fermentere i fire dage, så start i god tid.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fermenteret citronsalsa",
+      "amount": 4,
+      "unit": "stk",
+      "name": "citroner",
+      "note": "saft og skal",
+      "optional": false
+    },
+    {
+      "section": "Fermenteret citronsalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fermenteret citronsalsa",
+      "amount": null,
+      "unit": null,
+      "name": "ingefær",
+      "note": "1 stykke, revet",
+      "optional": false
+    },
+    {
+      "section": "Fermenteret citronsalsa",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fermenteret citronsalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød peberfrugt",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fermenteret citronsalsa",
+      "amount": 2,
+      "unit": "stk",
+      "name": "chipotle",
+      "note": "tørrede, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fermenteret citronsalsa",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "ca. 6 g",
+      "optional": false
+    },
+    {
+      "section": "Fermenteret citronsalsa",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 375,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til indsmøring",
+      "optional": false
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": "Sichuan",
+      "optional": false
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "amount": null,
+      "unit": null,
+      "name": "ingefær",
+      "note": "2 cm, revet",
+      "optional": false
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "amount": 100,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Revet salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Revet salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Revet salat",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Revet salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Revet salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Revet salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Revet salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fermenteret citronsalsa",
+      "text": "Start fire dage før servering. Kom alle ingredienserne til salsaen i en foodprocessor, og kør dem til en grov salsa."
+    },
+    {
+      "section": "Fermenteret citronsalsa",
+      "text": "Fyld salsaen i et lille, sterilt glas, og tryk den ned, så alt er dækket af væske."
+    },
+    {
+      "section": "Fermenteret citronsalsa",
+      "text": "Sæt låg på, og lad glasset stå mørkt og køligt i 4 dage. Løft låget hver dag, så overskydende luft slipper ud."
+    },
+    {
+      "section": "Nudler",
+      "text": "Start to timer før servering. Bland mel og salt i en stor skål, og rør vandet i lidt ad gangen."
+    },
+    {
+      "section": "Nudler",
+      "text": "Ælt dejen i 5 minutter, til den er glat. Del den i otte lige store stykker, form dem som pølser, og pensl dem tyndt med olie."
+    },
+    {
+      "section": "Nudler",
+      "text": "Dæk dejpølserne til, og lad dem hvile i en time, mens du laver hvidløgsolien."
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "text": "Læg hvidløg, chiliflager, ingefær, cayennepeber og paprika i en mellemstor tykbundet gryde eller en stor varmefast skål."
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "text": "Varm olien op til 140 °C i en mellemstor tykbundet gryde."
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "text": "Hæld forsigtigt den varme olie over krydderierne. Den bruser kraftigt op, så hold afstand og hæld eventuelt i omgange."
+    },
+    {
+      "section": "Røget hvidløgsolie",
+      "text": "Lad olien trække, mens du gør resten klar."
+    },
+    {
+      "section": "Revet salat",
+      "text": "Vend gulerødder, forårsløg, hvidløg, sesamolie, riseddike og fiskesauce sammen, og smag til med salt."
+    },
+    {
+      "section": "Nudler",
+      "text": "Når dejen har hvilet, sættes en stor gryde vand over til kogning. Drys to store bageplader let med mel."
+    },
+    {
+      "section": "Nudler",
+      "text": "Rul hver dejpølse ud på en let olieret bordplade med en smurt kagerulle, til du har en tynd firkant, der er lidt længere og bredere end kagerullen. Tryk en fordybning på langs midt i dejen med en spisepind eller skaftet på en tynd grydeske."
+    },
+    {
+      "section": "Nudler",
+      "text": "Tag fat i de to korte sider, og træk dejen ud, mens du slår den mod bordet. Det er lyden af de slag, der har givet nudlerne deres navn."
+    },
+    {
+      "section": "Nudler",
+      "text": "Riv dejen over i fordybningen, så du får to meget lange, tynde nudler."
+    },
+    {
+      "section": "Nudler",
+      "text": "Læg nudlerne udstrakte på de meldryssede bageplader – ikke i rede, for de klistrer let sammen. Lad dem røre hinanden så lidt som muligt. Du kan også trække og koge nudlerne lige før servering; to dejpølser giver én portion."
+    },
+    {
+      "section": "Nudler",
+      "text": "Kog nudlerne et par minutter, til de er møre. Tiden afhænger af tykkelsen. Kog to nudler ad gangen, og fisk dem op med en si, før næste hold kommer i."
+    },
+    {
+      "section": "Nudler",
+      "text": "Vend de kogte nudler med al hvidløgsolien i en stor varmefast skål, og smag til med salt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel nudlerne i skåle. Top med gulerodssalat, koriander og sesamfrø, og læg en generøs skefuld citronsalsa ovenpå."
+    }
+  ],
+  "changes": [
+    "Brødmel er erstattet af hvedemel.",
+    "Røget hvidløg er erstattet af almindeligt hvidløg.",
+    "Jordnøddeolie er erstattet af rapsolie.",
+    "Sichuan-chiliflager er erstattet af almindelige chiliflager."
+  ]
+}

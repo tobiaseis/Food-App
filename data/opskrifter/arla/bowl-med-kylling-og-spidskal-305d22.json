@@ -1,0 +1,168 @@
+{
+  "url": "https://www.arla.dk/opskrifter/bowl-med-kylling-og-spidskal/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:09:24.763Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Bowl med kylling, spidskål og couscous",
+  "intro": "En nem aftensmadsbowl med lun couscous, stegt kylling, sprød spidskål og friske ærter med mynte. Toppes med hytteost og lidt stærk harissa.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Couscous",
+      "amount": 150,
+      "unit": "g",
+      "name": "couscous",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Kylling og kål",
+      "amount": 250,
+      "unit": "g",
+      "name": "kyllingekød",
+      "note": "stegt, i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": "Kylling og kål",
+      "amount": 300,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": "Kylling og kål",
+      "amount": 100,
+      "unit": "g",
+      "name": "soltørrede tomater",
+      "note": "i strimler, på olie",
+      "optional": false
+    },
+    {
+      "section": "Kylling og kål",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kylling og kål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Bowl",
+      "amount": 300,
+      "unit": "g",
+      "name": "ærter",
+      "note": "friske eller optøede",
+      "optional": false
+    },
+    {
+      "section": "Bowl",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "olie",
+      "note": "fra de soltørrede tomater",
+      "optional": false
+    },
+    {
+      "section": "Bowl",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mynte",
+      "note": "hakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Bowl",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Bowl",
+      "amount": 250,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bowl",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "harissa",
+      "note": "eller anden stærk chilisauce",
+      "optional": false
+    },
+    {
+      "section": "Bowl",
+      "amount": null,
+      "unit": null,
+      "name": "mynte",
+      "note": "blade til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Couscous",
+      "text": "Put couscous og salt i en skål, og overhæld med det kogende vand."
+    },
+    {
+      "section": "Couscous",
+      "text": "Lad den trække i ca. 10 minutter, og luft den et par gange med en gaffel."
+    },
+    {
+      "section": "Kylling og kål",
+      "text": "Varm kyllingestykkerne i en pande, og læg dem over på en tallerken."
+    },
+    {
+      "section": "Kylling og kål",
+      "text": "Svits spidskål, soltørrede tomater, spidskommen og salt i den samme pande ved høj varme i ca. 1 minut, mens du rører hele tiden."
+    },
+    {
+      "section": "Bowl",
+      "text": "Vend ærterne med olie fra tomaterne, hakket mynte og salt."
+    },
+    {
+      "section": "Bowl",
+      "text": "Fordel den lune couscous i 4 skåle lige før servering. Anret kylling, spidskål med tomater og ærter ovenpå."
+    },
+    {
+      "section": "Bowl",
+      "text": "Læg hytteost i hver skål, og dryp harissa over. Pynt med mynteblade."
+    }
+  ],
+  "changes": []
+}

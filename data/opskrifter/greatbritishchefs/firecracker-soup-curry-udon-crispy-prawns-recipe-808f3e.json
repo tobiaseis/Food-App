@@ -1,0 +1,427 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/firecracker-soup-curry-udon-crispy-prawns-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:52:36.957Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 39,
+  "title": "Karrysuppe med udon og sprøde rejer",
+  "intro": "Hjemmelavede udonnudler i en krydret, tyk karrysuppe med gochujang, toppet med sprødstegte rejer i panko. Både karrypulver og nudler laves fra bunden.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til udonnudlerne",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til udonnudlerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til udonnudlerne",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus lidt til henstøvning",
+      "optional": false
+    },
+    {
+      "section": "Til udonnudlerne",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "isvand til afkøling",
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bukkehorn",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kardemomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stjerneanis",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrypulveret",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "et stykke, revet",
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 7,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "varm",
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til karrysuppen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rejerne",
+      "amount": 12,
+      "unit": "stk",
+      "name": "kæmperejer",
+      "note": "pillede, med hale",
+      "optional": false
+    },
+    {
+      "section": "Til rejerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rejerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rejerne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rejerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket med vandet",
+      "optional": false
+    },
+    {
+      "section": "Til rejerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til æggene",
+      "optional": false
+    },
+    {
+      "section": "Til rejerne",
+      "amount": 400,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rejerne",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chiliolie",
+      "note": "til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Udonnudlerne",
+      "text": "Rør saltet ud i vandet i en stor skål, til det er opløst. Kom melet i en anden skål."
+    },
+    {
+      "section": "Udonnudlerne",
+      "text": "Hæld saltvandet i melet i en tynd stråle, og ælt undervejs, så det samler sig til en dej."
+    },
+    {
+      "section": "Udonnudlerne",
+      "text": "Ælt dejen i 5-8 minutter, til den er glat og elastisk. Form den som en rulle, pak den i film eller en tæt æske, og lad den hvile i 30 minutter."
+    },
+    {
+      "section": "Karrypulveret",
+      "text": "Bland alle krydderierne til karrypulveret i en lille skål, mens dejen hviler."
+    },
+    {
+      "section": "Karrysuppen",
+      "text": "Smelt smørret i en mellemstor gryde, og lad skalotteløgene stege ved svag varme i cirka 10 minutter, til de er møre og duftende."
+    },
+    {
+      "section": "Karrysuppen",
+      "text": "Tilsæt ingefær, kartoffel og gulerod, og steg i cirka et minut."
+    },
+    {
+      "section": "Karrysuppen",
+      "text": "Rør 2 spsk af karrypulveret i sammen med gochujang, røget paprika, cayennepeber og chiliflager. Lad det stege et minut ved svag varme."
+    },
+    {
+      "section": "Karrysuppen",
+      "text": "Drys melet over, og rør godt rundt. Pisk den varme fond i, først lidt ad gangen, så der ikke kommer klumper."
+    },
+    {
+      "section": "Karrysuppen",
+      "text": "Skru op til middel varme, og rør sukkeret i. Lad suppen simre i cirka 30 minutter, til den er tyknet. Pisk lidt vand i, hvis den bliver for tyk."
+    },
+    {
+      "section": "Udonnudlerne",
+      "text": "Ælt dejen igen i cirka et minut. Rul den ud på en meldrysset bordplade til ca. 1 cm tykkelse."
+    },
+    {
+      "section": "Udonnudlerne",
+      "text": "Støv dejen let med mel, og rul den videre ud til 3 mm. Skær den i brede strimler, træk dem fra hinanden, og vend dem i lidt mel."
+    },
+    {
+      "section": "Udonnudlerne",
+      "text": "Kog nudlerne i rigeligt kogende vand i 10-13 minutter. Hæld dem i isvand for at stoppe kogningen, og stil dem til side."
+    },
+    {
+      "section": "Rejerne",
+      "text": "Fjern tarmen på rejerne, og skær dem op i midten, så de kan foldes ud som en sommerfugl."
+    },
+    {
+      "section": "Rejerne",
+      "text": "Krydr melet med salt og peber. Vend hver reje i mel, derefter i æggeblandingen og til sidst i panko. Gentag, så hver reje er panerede to gange."
+    },
+    {
+      "section": "Rejerne",
+      "text": "Varm olie op i en tung pande, så den står cirka 1 cm højt. Steg rejerne i den varme olie, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend nudlerne i den varme karrysuppe, og smag til med salt og peber. Anret i skåle, og hæld evt. mere suppe over."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg de sprøde rejer ovenpå, og pynt med forårsløg, chiliolie og chiliflager."
+    }
+  ],
+  "changes": [
+    "Stærkt mel er skiftet til hvedemel.",
+    "Doves Farm-mel er skiftet til almindeligt hvedemel."
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/prawn-salmon-burgers-spicy-mayo",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:32:20.148Z",
+  "total_minutes": 25,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Burgere med rejer og laks og stærk mayo",
+  "intro": "Saftige fiskeburgere af hakket laks og rejer med frisk koriander og citron. De serveres med sprød salat og en mayo med sriracha.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Burgere",
+      "amount": 200,
+      "unit": "g",
+      "name": "rejer",
+      "note": "rå, pillede, groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 4,
+      "unit": "stk",
+      "name": "laksefilet",
+      "note": "uden skind, skåret i små tern",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "pakke",
+      "name": "koriander",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stærk mayo",
+      "amount": 60,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stærk mayo",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "salat",
+      "note": "Little Gem, snittet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "skåret i bånd",
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "boller",
+      "note": "burgerboller med frø, ristede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Burgere",
+      "text": "Kom halvdelen af rejerne, halvdelen af laksen, forårsløgene, citronskallen og halvdelen af koriandrene i en foodprocessor. Kør det kort, til det er en grov masse."
+    },
+    {
+      "section": "Burgere",
+      "text": "Vend massen op i en skål sammen med resten af rejerne og laksen. Smag til med salt og peber, form fire burgere, og stil dem på køl i 10 minutter."
+    },
+    {
+      "section": "Stærk mayo",
+      "text": "Rør mayonnaise og sriracha sammen. Smag til med salt, peber og citronsaft."
+    },
+    {
+      "section": "Salat",
+      "text": "Bland salat og agurk. Vend dem med lidt citronsaft og 1 tsk af olivenolien, og stil salaten til side."
+    },
+    {
+      "section": "Stegning",
+      "text": "Varm den resterende olie op på en stor pande. Steg burgerne 3-4 minutter på hver side, til de har fået en fin skorpe, og fisken er gennemstegt."
+    },
+    {
+      "section": "Servering",
+      "text": "Server burgerne i de ristede boller eller med salaten ved siden af. Top med en generøs klat stærk mayo."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,188 @@
+{
+  "url": "https://www.arla.dk/opskrifter/spidskalswraps/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:19:30.997Z",
+  "total_minutes": 30,
+  "active_minutes": 20,
+  "yield_count": 2,
+  "source_lines": 17,
+  "title": "Spidskålswrap med Green Goddess-salat",
+  "intro": "En low carb-wrap, hvor bunden er bagt af æg, hytteost og spidskål. Den fyldes med cremet grøn salat, kylling og sprødt bacon.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til wrapbunden",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til wrapbunden",
+      "amount": 200,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til wrapbunden",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til wrapbunden",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til wrapbunden",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til wrapbunden",
+      "amount": 100,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til wrapbunden",
+      "amount": null,
+      "unit": null,
+      "name": "chili",
+      "note": "tørrede chiliflager eller andre krydderier",
+      "optional": true
+    },
+    {
+      "section": "Green Goddess-dressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Green Goddess-dressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille & krydderurter",
+      "note": "friske, fx basilikum, estragon og purløg",
+      "optional": false
+    },
+    {
+      "section": "Green Goddess-dressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Green Goddess-dressing",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Green Goddess-dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Green Goddess-dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "salat",
+      "note": "hjertesalat, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "kylling",
+      "note": "stegt, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 4,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "kalkunbacon",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til wrapbunden",
+      "text": "Tænd ovnen på 180 °C varmluft. Kør æg, hytteost, salt og peber i en blender, til det er en tynd dej."
+    },
+    {
+      "section": "Til wrapbunden",
+      "text": "Rør spidskål og gulerod ned i dejen. Smag evt. til med chiliflager eller andre krydderier."
+    },
+    {
+      "section": "Til wrapbunden",
+      "text": "Smør dejen ud på en bageplade med bagepapir. Bag den gyldne i 15-20 minutter."
+    },
+    {
+      "section": "Til wrapbunden",
+      "text": "Lad bunden køle af, og træk bagepapiret forsigtigt af."
+    },
+    {
+      "section": "Green Goddess-dressing",
+      "text": "Blend alle dressingens ingredienser, til den er cremet og glat."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend hjertesalaten i dressingen, og læg den på den afkølede bund."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg tomater, kylling og kalkunbacon ovenpå."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rul bunden sammen fra den lange side, og skær rullen over på midten."
+    }
+  ],
+  "changes": []
+}

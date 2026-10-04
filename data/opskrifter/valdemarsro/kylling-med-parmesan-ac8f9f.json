@@ -1,0 +1,119 @@
+{
+  "url": "https://www.valdemarsro.dk/kylling-med-parmesan/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:29:36.997Z",
+  "total_minutes": 45,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Kylling i fad med parmesan, salvie og linser",
+  "intro": "Kyllingestykker med salvie under skindet og en sprød parmesankant bages ovenpå linser og tomater i ét fad. Linserne trækker bouillon og smager dejligt af kyllingen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "linser",
+      "note": "grønne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "kyllingebryst",
+      "note": "med skind, eller kyllingeoverlår med skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "stk",
+      "name": "salvie",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm ovnen op til 175 °C varmluft."
+    },
+    {
+      "section": null,
+      "text": "Kog linserne i vand i 10 minutter, og hæld dem af i en sigte, så vandet løber fra."
+    },
+    {
+      "section": null,
+      "text": "Indsmør et ovnfast fad rigeligt med smør. Hæld linser og kyllingefond i fadet, og rør rundt."
+    },
+    {
+      "section": null,
+      "text": "Løft skindet let på kyllingestykkerne et par steder, og skub salvieblade og en smule smør ind under det. Smag til med salt og peber, og drys parmesan ovenpå skindet."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingen og tomaterne ovenpå linserne i fadet."
+    },
+    {
+      "section": null,
+      "text": "Bag i ca. 40 minutter, til kyllingen er gennemstegt, og skindet er sprødt."
+    }
+  ],
+  "changes": [
+    "Kyllingebouillon er skiftet til kyllingefond.",
+    "Mængden af cherrytomater er sat op fra 75 g til 250 g, da 75 g virker som en fejl."
+  ]
+}

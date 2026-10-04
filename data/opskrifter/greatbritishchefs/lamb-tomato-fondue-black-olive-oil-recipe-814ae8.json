@@ -1,0 +1,582 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/lamb-tomato-fondue-black-olive-oil-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:25:33.120Z",
+  "total_minutes": 320,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 49,
+  "title": "Lammecarré med tomatfondue, sort olivenolie og lammefrikadeller",
+  "intro": "Pink lammecarré serveres med sprød rösti, små lammefrikadeller i nethinde, squashpuré, tomatfondue og lammesauce. Retten er et større projekt, hvor rösti og olier laves dagen før.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Rösti",
+      "amount": 4,
+      "unit": "stk",
+      "name": "bagekartofler",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Rösti",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rösti",
+      "amount": 1,
+      "unit": "dl",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rösti",
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "til at drysse med",
+      "optional": false
+    },
+    {
+      "section": "Rösti",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Sort olivenolie",
+      "amount": 1,
+      "unit": "kg",
+      "name": "sorte oliven",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": "Sort olivenolie",
+      "amount": 4,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Basilikumolie",
+      "amount": 100,
+      "unit": "g",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Basilikumolie",
+      "amount": 50,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Basilikumolie",
+      "amount": 3,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Basilikumolie",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 250,
+      "unit": "g",
+      "name": "lammeknogler",
+      "note": "og afskær fra lammecarré",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 300,
+      "unit": "g",
+      "name": "løg, selleri, porre, gulerødder og fennikel",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": null,
+      "unit": null,
+      "name": "hvidvinseddike",
+      "note": "efter behov",
+      "optional": false
+    },
+    {
+      "section": "Tomatfondue",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tomatfondue",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatfondue",
+      "amount": 20,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatfondue",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tomatfondue",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatfondue",
+      "amount": null,
+      "unit": null,
+      "name": "hvidvinseddike",
+      "note": "en sjat",
+      "optional": false
+    },
+    {
+      "section": "Tomatfondue",
+      "amount": 6,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "blancherede, pillede, uden kerner og i tern; gem saften",
+      "optional": false
+    },
+    {
+      "section": "Squash- og basilikumpuré",
+      "amount": 1,
+      "unit": "kg",
+      "name": "squash",
+      "note": "uden kerner, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Squash- og basilikumpuré",
+      "amount": 20,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squash- og basilikumpuré",
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squash- og basilikumpuré",
+      "amount": 10,
+      "unit": "g",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 30,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 20,
+      "unit": "g",
+      "name": "lammehjerte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 25,
+      "unit": "g",
+      "name": "lammelever",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": 30,
+      "unit": "g",
+      "name": "medisterfars",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "mælkepulver",
+      "note": "efter behov",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter behov",
+      "optional": false
+    },
+    {
+      "section": "Lammefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "nethinde",
+      "note": "til at pakke i",
+      "optional": false
+    },
+    {
+      "section": "Lammecarré",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lammecarré",
+      "note": "frenched",
+      "optional": false
+    },
+    {
+      "section": "Lammecarré",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "hvidløg",
+      "note": "hel knold",
+      "optional": false
+    },
+    {
+      "section": "Lammecarré",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammecarré",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "i tern, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Lammecarré",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "halveret på langs",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "basilikum",
+      "note": "lilla og grønne blade",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rösti",
+      "text": "Riv kartoflerne groft, skyl dem grundigt i koldt vand, og lad dem dryppe godt af."
+    },
+    {
+      "section": "Rösti",
+      "text": "Vend kartoflerne med salt, og lad dem stå i 10 minutter. Pres derefter vandet ud i et rent viskestykke eller et osteklæde."
+    },
+    {
+      "section": "Rösti",
+      "text": "Bland kartoflerne med ghee, vakuumpak dem, og rul dem jævnt flade med en kagerulle."
+    },
+    {
+      "section": "Rösti",
+      "text": "Damp dem i dampovn ved 100 °C i 20 minutter."
+    },
+    {
+      "section": "Rösti",
+      "text": "Læg et fad eller en bakke oven på de dampede kartofler, og tynge det med noget tungt, fx dåser. Lad det stå i køleskabet natten over."
+    },
+    {
+      "section": "Sort olivenolie",
+      "text": "Tørr olivenerne i en dehydrator ved 70 °C i 12 timer, til de er helt tørre og sprøde."
+    },
+    {
+      "section": "Sort olivenolie",
+      "text": "Blend de tørre oliven glatte med olivenolien i en kraftig blender. Hæld blandingen i en skål, og lad den trække i 6 timer."
+    },
+    {
+      "section": "Sort olivenolie",
+      "text": "Si olien gennem et osteklæde, og stil den i køleskabet."
+    },
+    {
+      "section": "Basilikumolie",
+      "text": "Blend alle ingredienserne i en Thermomix ved 75 °C i 10 minutter, til olien er varm og er skilt."
+    },
+    {
+      "section": "Basilikumolie",
+      "text": "Si olien gennem et osteklæde, og stil den i køleskabet."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Varm ovnen op til 180 °C."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Brun lammeknogler og afskær i en stor ovnfast gryde eller pande, til de er pænt gyldne, men ikke brændte. Hæld overskydende fedt fra."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Flyt gryden over på komfuret ved middel varme. Steg grøntsagerne og hvidløget i cirka 10 minutter, til de har fået farve."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Rør fennikelfrø og tomatpuré i, og lad det stege et par minutter. Hæld hvidvinen i, og kog den ind til en tredjedel."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Tilsæt begge fonder, og bring det i kog. Kom timian i, og lad saucen simre i 40 minutter."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Skru op for varmen, og kog saucen ind med en tredjedel. Skum den jævnligt, så alt snavs og urenheder fjernes."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Si saucen gennem en finmasket si. Smag til med salt, og afslut med eddike."
+    },
+    {
+      "section": "Tomatfondue",
+      "text": "Svits skalotteløg og timian i olivenolien i cirka 5 minutter, til løgene er klare."
+    },
+    {
+      "section": "Tomatfondue",
+      "text": "Tilsæt hvidløget, og steg det 2 minutter mere. Rør tomatpuréen i, og lad den stege et par minutter. Afglas med eddike."
+    },
+    {
+      "section": "Tomatfondue",
+      "text": "Kom halvdelen af tomaterne i, og kog, til saften er væk, og blandingen begynder at se tør ud. Hæld den gemte tomatsaft i, og kog et par minutter mere."
+    },
+    {
+      "section": "Tomatfondue",
+      "text": "Tilsæt resten af tomaterne, og kog et par minutter. Smag til med salt, og tjek balancen mellem syre og sødme."
+    },
+    {
+      "section": "Squash- og basilikumpuré",
+      "text": "Varm olivenolien op i en pande. Steg squash og spinat så hurtigt som muligt, så grøntsagerne beholder deres farve og ikke smager af kogt."
+    },
+    {
+      "section": "Squash- og basilikumpuré",
+      "text": "Pres væsken ud af squashen i en si, så purén ikke bliver for tynd."
+    },
+    {
+      "section": "Squash- og basilikumpuré",
+      "text": "Blend squash og spinat sammen med basilikum til en puré, si den gennem en fin si, og smag til med salt."
+    },
+    {
+      "section": "Lammefrikadeller",
+      "text": "Svits hvidløg og løg med rosmarin, til de er møre. Tag rosmarinen op."
+    },
+    {
+      "section": "Lammefrikadeller",
+      "text": "Bland løgblandingen med alt det hakkede kød og farsen. Vej massen, og ælt mælkepulver (2 % af vægten) og salt (1,5 % af vægten) i."
+    },
+    {
+      "section": "Lammefrikadeller",
+      "text": "Form 8-10 små kugler. Pak dem stramt ind i nethinde og derefter i husholdningsfilm."
+    },
+    {
+      "section": "Lammefrikadeller",
+      "text": "Pochér kuglerne i 7-8 minutter, lad dem dryppe af, og brun dem med en gasbrænder."
+    },
+    {
+      "section": "Rösti",
+      "text": "Varm flere centimeter olie op til 170 °C i en høj, tykbundet gryde."
+    },
+    {
+      "section": "Rösti",
+      "text": "Stik 8-10 runde skiver ud af den pressede rösti med en udstikker på 4 cm. Vend dem let i mel, og friturestek dem i 4 minutter ved 170 °C, til de er sprøde og gyldne."
+    },
+    {
+      "section": "Lammecarré",
+      "text": "Pas fedtet til, og del carréerne i stykker med 2 ribben."
+    },
+    {
+      "section": "Lammecarré",
+      "text": "Rids fedtlaget, så det smelter lettere, og krydr med salt og peber."
+    },
+    {
+      "section": "Lammecarré",
+      "text": "Brun lammet på en varm pande, så noget af fedtet smelter ud. Når kødet er gyldent, tilsæt hvidløg, timian og smør, og ös smørret over kødet, til det er stegt, som du vil have det."
+    },
+    {
+      "section": "Lammecarré",
+      "text": "Lad kødet hvile i 7 minutter. Skær det i skiver, og drys med flagesalt."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Steg squashhalvdelene med snitfladen nedad i lidt olie, til de er gyldne og møre. Skær dem på skrå, og drys med flagesalt."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Pensl lammefrikadellerne med varm lammesauce, og læg hver på en rösti."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Anret frikadeller, skåret lam, stegt squash, squashpuré og tomatfondue rundt langs tallerkenens kant. Sæt lidt indkogt lammesauce i midten, dryp med oliven- og basilikumolie, og pynt med basilikumblade."
+    }
+  ],
+  "changes": [
+    "Clarified butter er skiftet til ghee.",
+    "Lammefond er skiftet til oksefond.",
+    "Chardonnayeddike er skiftet til hvidvinseddike.",
+    "Sausage meat er skiftet til medisterfars.",
+    "Plum tomatoes er skiftet til tomater."
+  ]
+}

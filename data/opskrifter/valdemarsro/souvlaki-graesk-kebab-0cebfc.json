@@ -1,0 +1,222 @@
+{
+  "url": "https://www.valdemarsro.dk/souvlaki-graesk-kebab/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:03:36.202Z",
+  "total_minutes": 120,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Souvlaki med fladbrød og tzatziki",
+  "intro": "Marinerede svinekoteletter på spyd, hjemmebagt fladbrød og kølig tzatziki rullet sammen til en græsk klassiker. Kødet kan marinere hele dagen, så aftensmaden er hurtigt klar.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kebab",
+      "amount": 300,
+      "unit": "g",
+      "name": "svinekoteletter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mynte",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 100,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "plus ekstra til udrulning",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kebab",
+      "text": "Skær svinekoteletterne i mundrette tern, og læg dem i en skål."
+    },
+    {
+      "section": "Kebab",
+      "text": "Rør olie, citronsaft, tørret mynte, oregano, hvidløg, salt og peber sammen til en marinade. Vend kødet rundt i den."
+    },
+    {
+      "section": "Kebab",
+      "text": "Dæk skålen til, og sæt den i køleskabet i et par timer – gerne hele dagen."
+    },
+    {
+      "section": "Kebab",
+      "text": "Træk kødet på grillspyd. Grill dem over høj varme, eller steg kødet med marinaden på en meget varm pande."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Bland vand og olie i en skål. Rør begge slags mel og saltet i, og ælt dejen grundigt sammen."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Lad dejen hvile i ca. en halv time."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Del dejen i 10 lige store stykker, og form dem til kugler. Rul dem meget tynde på et bord, der er smurt med olivenolie i stedet for mel."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Bag fladbrødene et ad gangen på en tør pande ved middelhøj varme."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Kom agurken i en skål, og drys den med salt. Vend rundt, og lad den stå i ca. 15 minutter."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Pres væsken ud af agurken, evt. i en sigte, så den dræner godt."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Rør agurk, hvidløg og yoghurt sammen, og smag til med peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fyld fladbrødene med kødet, tzatziki og friske mynteblade, og rul dem sammen."
+    }
+  ],
+  "changes": [
+    "Koteletter er blevet til svinekoteletter."
+  ]
+}

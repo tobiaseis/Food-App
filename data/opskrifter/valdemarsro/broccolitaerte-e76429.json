@@ -1,0 +1,180 @@
+{
+  "url": "https://www.valdemarsro.dk/broccolitaerte/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:35:15.784Z",
+  "total_minutes": 90,
+  "active_minutes": 45,
+  "yield_count": 1,
+  "source_lines": 15,
+  "title": "Broccolitærte med bacon",
+  "intro": "Sprød tærtebund af to slags mel fyldt med broccoli, bacon og ost i en cremet æggemasse. Tærten er nem at lave og er god både varm og kold.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Tærtedej",
+      "amount": 125,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 50,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": 5,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": 500,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "i små buketter",
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tærtefyld",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "frisk, til drys",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtedej",
+      "text": "Bland begge slags mel med saltet i en skål. Smuldr det kolde smør i melet med fingrene, eller kør det i en foodprocessor."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Tilsæt vandet og æltes sammen til en dej. Lad den helst hvile på køl i 30 minutter."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Tryk dejen ud i en smurt tærteform på 24 cm i diameter. Prik bunden med en gaffel."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Forbag bunden midt i en forvarmet ovn ved 175 °C varmluft i 10 minutter."
+    },
+    {
+      "section": "Tærtefyld",
+      "text": "Steg baconen sprød på en pande. Tag den af varmen, lad den køle af, og hak den groft."
+    },
+    {
+      "section": "Tærtefyld",
+      "text": "Pisk æggene med creme fraiche og fløde, og krydr med salt og peber."
+    },
+    {
+      "section": "Tærtefyld",
+      "text": "Vend broccoli, bacon og ost i æggeblandingen. Hæld det i den forbagte bund."
+    },
+    {
+      "section": "Tærtefyld",
+      "text": "Bag tærten ved 175 °C varmluft i ca. 35 minutter, til den er fast og gylden. Pluk timianbladene og drys dem over inden servering."
+    }
+  ],
+  "changes": []
+}

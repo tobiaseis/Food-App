@@ -1,0 +1,336 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/spiced-duck-leg-confit-pepe-soup-broth-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:06:15.785Z",
+  "total_minutes": 85,
+  "active_minutes": null,
+  "yield_count": null,
+  "source_lines": 29,
+  "title": "Confiteret andelår i pepe soup-bouillon",
+  "intro": "Krydrede andelår langtidsstegt i andefedt, så de bliver møre med sprød skind, og serveret med en sød, salt og skarp vestafrikansk bouillon. Retten skal påbegyndes dagen før.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til andelårene",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til andelårene",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Til andelårene",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "hele korn",
+      "optional": false
+    },
+    {
+      "section": "Til andelårene",
+      "amount": 2,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til andelårene",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Til andelårene",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til andelårene",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til andelårene",
+      "amount": 6,
+      "unit": "stk",
+      "name": "andelår",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til andelårene",
+      "amount": 2,
+      "unit": "l",
+      "name": "andefedt",
+      "note": "til confiteringen",
+      "optional": false
+    },
+    {
+      "section": "Til pepe soup-krydderiblandingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Til pepe soup-krydderiblandingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "muskatnød",
+      "note": "hel",
+      "optional": false
+    },
+    {
+      "section": "Til pepe soup-krydderiblandingen",
+      "amount": 12,
+      "unit": null,
+      "name": "selimkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pepe soup-krydderiblandingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "hele korn",
+      "optional": false
+    },
+    {
+      "section": "Til pepe soup-krydderiblandingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paradiskorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pepe soup-krydderiblandingen",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pepe soup-krydderiblandingen",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til korianderolien",
+      "amount": 50,
+      "unit": "g",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til korianderolien",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til korianderolien",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 1,
+      "unit": "l",
+      "name": "kyllingefond",
+      "note": "gerne af god kvalitet",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "store, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 25,
+      "unit": "g",
+      "name": "ingefær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "uden kerner, hakket, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "østerssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kokossukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": "yderbladene tages af og gemmes",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dagen før: andelårene",
+      "text": "Rist alle hele krydderier til andelårene i en tør, varm pande ved middel varme, til de dufter. Blend eller støb dem til en pasta sammen med salt, hvidløg og korianderstilke."
+    },
+    {
+      "section": "Dagen før: andelårene",
+      "text": "Kom andelårene i en plasticpose med krydderipastaen, og masser den grundigt ind i kødet. Lad dem stå i køleskabet natten over."
+    },
+    {
+      "section": "Confiteringen",
+      "text": "Varm ovnen op til 150 °C. Tag andelårene op af posen, og tør overskydende marinade af."
+    },
+    {
+      "section": "Confiteringen",
+      "text": "Læg dem i ét lag i et dybt ovnfast fad, og dæk dem helt med andefedt. Er fedtet fast, så smelt det forsigtigt først. Confitér i ovnen i 3-4 timer, til kødet er mørt."
+    },
+    {
+      "section": "Krydderiblanding og korianderolie",
+      "text": "Rist alle krydderierne til blandingen let i en tør, varm pande ved middel varme, til de dufter. Lad dem køle af, og kværn dem helt fint i en morter eller krydderikværn. Stil til side."
+    },
+    {
+      "section": "Krydderiblanding og korianderolie",
+      "text": "Kom koriander og en knivspids salt i en foodprocessor. Blend på høj hastighed i 2 minutter, mens olien løbende hældes i i en tynd stråle."
+    },
+    {
+      "section": "Krydderiblanding og korianderolie",
+      "text": "Si olien gennem et musselinklæde ned i en flaske. Sæt flasken på hovedet i køleskabet med låg eller finger over åbningen, så vandet skilles fra. Når det er adskilt, presses vandet ud og kasseres. Opbevar olien koldt, til den skal bruges."
+    },
+    {
+      "section": "Sprøde andelår",
+      "text": "Skru op til 180 °C. Løft andelårene forsigtigt op af fedtet, og skær knoglenderne af. Læg dem med skindsiden nedad på en bageplade, og steg dem i ovnen i 30 minutter."
+    },
+    {
+      "section": "Sprøde andelår",
+      "text": "Vend dem, så skindet vender opad, og steg yderligere 10 minutter, til skindet er sprødt. Hold dem varme."
+    },
+    {
+      "section": "Bouillonen",
+      "text": "Kom kyllingefond, rødløg, ingefær, hvidløg, chili og 1 spsk af krydderiblandingen i en gryde. Bring det i kog, og lad det simre ved svag varme i 30 minutter."
+    },
+    {
+      "section": "Bouillonen",
+      "text": "Smag til med østerssauce, worcestershiresauce, kokossukker og limesaft. Bouillonen skal være sød, salt og skarp med masser af smag."
+    },
+    {
+      "section": "Bouillonen",
+      "text": "Si bouillonen gennem en finmasket si, og kassér det, der bliver tilbage. Hæld den tilbage i gryden, og lad den stå af varmen, til den skal serveres."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm en friturefryser op til 180 °C, eller hæld olie i en bred, dyb pande, så den står mindst 2 cm høj. Frit 6 af pak choiens gemte yderblade, til de er sprøde. Tag dem op, og drys med salt."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm bouillonen op ved middel varme. Del pak choi-hjerterne på midten, kom dem i, og kog dem i 2-3 minutter, til de netop er møre."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel pak choi-hjerterne i seks skåle, og læg et andelår oven på hver med et sprødt pak choi-blad ved siden af. Hæld bouillonen i kander, og dryp korianderolie ud over."
+    },
+    {
+      "section": "Servering",
+      "text": "Hæld bouillonen i skålene ved bordet."
+    }
+  ],
+  "changes": [
+    "Calabash-muskat er erstattet med almindelig muskatnød.",
+    "Scotch bonnet-chili er erstattet med almindelig chili.",
+    "Vegetable oil er erstattet med rapsolie."
+  ]
+}

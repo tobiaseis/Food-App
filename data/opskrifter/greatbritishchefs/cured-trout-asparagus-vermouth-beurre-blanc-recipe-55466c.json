@@ -1,0 +1,180 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/cured-trout-asparagus-vermouth-beurre-blanc-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:20:30.655Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 12,
+  "title": "Gravad ørred med asparges og vermouth-beurre blanc",
+  "intro": "Ørredfilet saltes i to døgn med sukker og dild og bages derefter mørt. Serveres med grønne asparges og en blød smørsauce på vermouth.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til ørreden",
+      "amount": 900,
+      "unit": "g",
+      "name": "ørred",
+      "note": "i ét stykke, renset for ben",
+      "optional": false
+    },
+    {
+      "section": "Til ørreden",
+      "amount": 50,
+      "unit": "g",
+      "name": "salt",
+      "note": "groft havsalt",
+      "optional": false
+    },
+    {
+      "section": "Til ørreden",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til ørreden",
+      "amount": 2,
+      "unit": "bundt",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til ørreden",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til ørreden",
+      "amount": 6,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til aspargesene",
+      "amount": 30,
+      "unit": "stk",
+      "name": "asparges",
+      "note": "endestykkerne skæres af, og nederste 3 cm skrælles",
+      "optional": false
+    },
+    {
+      "section": "Til aspargesene",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "let saltet kogevand",
+      "optional": false
+    },
+    {
+      "section": "Til sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "noilly prat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sauce",
+      "amount": 50,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, i små tern, stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Til sauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grav ørreden",
+      "text": "Start 48 timer før servering. Bland salt, sukker og dild."
+    },
+    {
+      "section": "Grav ørreden",
+      "text": "Gnid blandingen ind i ørreden, og læg fisken i et fad. Dæk fadet tæt, og stil det på køl. Vend fisken en enkelt gang undervejs."
+    },
+    {
+      "section": "Bag ørreden",
+      "text": "Tag fisken op af saltblandingen, og tør den godt med et tørt klæde. Kassér saltblandingen."
+    },
+    {
+      "section": "Bag ørreden",
+      "text": "Del fisken i 6 lige store stykker, og læg dem ved siden af hinanden i et ovnfast fad."
+    },
+    {
+      "section": "Bag ørreden",
+      "text": "Tænd ovnen på 200 °C."
+    },
+    {
+      "section": "Sauce",
+      "text": "Kog skalotteløg, vermouth og eddike ved svag varme i en pande, til der kun er ca. 1 tsk væske tilbage."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld fløden i, og lad den småkoge. Tag panden af varmen, og pisk smørret i lidt ad gangen."
+    },
+    {
+      "section": "Sauce",
+      "text": "Si saucen, og smag den til med citronsaft. Skalotteløgene smides ud. Brug saucen hurtigt, så den ikke skiller."
+    },
+    {
+      "section": "Bag ørreden",
+      "text": "Dryp olie og vand over fisken, og dæk fadet til. Bag i 8-10 minutter, alt efter hvor rosa du vil have fisken."
+    },
+    {
+      "section": "Asparges og servering",
+      "text": "Kog aspargesene i let saltet vand i 3-4 minutter, til de netop er møre."
+    },
+    {
+      "section": "Asparges og servering",
+      "text": "Læg fisken med skindsiden opad på varme tallerkener. Fordel aspargesene ved siden af, og hæld saucen over. Server straks."
+    }
+  ],
+  "changes": [
+    "Noilly Prat er skrevet som vermouth i trinene; varen er Noilly Prat Dry.",
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Havsalt er erstattet af groft salt."
+  ]
+}

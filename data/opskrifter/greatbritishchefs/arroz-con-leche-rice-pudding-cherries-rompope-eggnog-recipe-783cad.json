@@ -1,0 +1,172 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/arroz-con-leche-rice-pudding-cherries-rompope-eggnog-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:12:41.265Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 14,
+  "title": "Arroz con leche med kirsebær og rompope",
+  "intro": "Cremet mexicansk risengrød kogt med kanel og citronskal, serveret med en varm æggelikørcreme og friske kirsebær. Rompope kan røres i grøden eller serveres ved siden af.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Risengrød",
+      "amount": 250,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang, eller 2 g stødt kanel, plus lidt ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal af én, eller appelsinskal",
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 100,
+      "unit": "g",
+      "name": "grødris",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 750,
+      "unit": "ml",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 80,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Rompope",
+      "amount": 250,
+      "unit": "ml",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rompope",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vanilje",
+      "note": "vaniljeekstrakt",
+      "optional": false
+    },
+    {
+      "section": "Rompope",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rompope",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rompope",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rompope",
+      "amount": 25,
+      "unit": "ml",
+      "name": "rom",
+      "note": "eller mezcal",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "kirsebær",
+      "note": "halveret og uden sten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rompope",
+      "text": "Varm mælk og vaniljeekstrakt op i en gryde, til det lige begynder at småkoge. Tag gryden af varmen, og lad mælken hvile i 5 minutter, til den er under 50 °C."
+    },
+    {
+      "section": "Rompope",
+      "text": "Pisk æggeblommerne med sukkeret i en skål, til massen er lidt tykkere. Tilsæt saltet, og pisk igen."
+    },
+    {
+      "section": "Rompope",
+      "text": "Hæld den lune mælk i tynd stråle ned i æggemassen, mens du pisker hele tiden, så æggene ikke skilles."
+    },
+    {
+      "section": "Rompope",
+      "text": "Kom blandingen tilbage i gryden, og rør over svag varme, til den er så tyk, at den dækker bagsiden af en ske. Lad den ikke komme op på kraftig kog – hold den under 70 °C."
+    },
+    {
+      "section": "Rompope",
+      "text": "Tag gryden af varmen, og rør rom eller mezcal i. Si cremen, og hold den varm."
+    },
+    {
+      "section": "Risengrød",
+      "text": "Bring vand, kanel og citronskal i kog i en stor gryde. Kom risene i, og lad dem simre, til vandet er trukket ind: 6-8 minutter for grødris, 8-10 minutter for arborio."
+    },
+    {
+      "section": "Risengrød",
+      "text": "Hæld mælk og salt i. Lad grøden simre ved svag varme og rør hele tiden, til den er tyk og cremet: 20-25 minutter for grødris, 25-30 minutter for arborio."
+    },
+    {
+      "section": "Risengrød",
+      "text": "Rør sukkeret i, og kog videre i 5-10 minutter, til grøden er blank. Tag gryden af varmen, og fjern kanelstang og skal."
+    },
+    {
+      "section": "Til servering",
+      "text": "Rør enten rompopen ud i grøden, eller server den lun ved siden af. Anret den varme grød med kirsebær og lidt kanel, enten revet eller drysset over."
+    }
+  ],
+  "changes": [
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Pudding rice er erstattet af grødris.",
+    "Mezcal er som udgangspunkt erstattet af rom, som kilden også foreslår."
+  ]
+}

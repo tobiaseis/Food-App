@@ -1,0 +1,164 @@
+{
+  "url": "https://www.valdemarsro.dk/rejesalat/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:54:14.201Z",
+  "total_minutes": 30,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Rejesalat med dild og avocado",
+  "intro": "En frisk sommersalat med rejer i cremet dilddressing, lynstegte grønne asparges, kartofler og avocado. Den er nem at anrette på et stort fad.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "pakke",
+      "name": "asparges",
+      "note": "grønne",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 400,
+      "unit": "g",
+      "name": "rejer",
+      "note": "drænet vægt",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 125,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 125,
+      "unit": "g",
+      "name": "feldsalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 500,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "kogte og afkølede, skåret i halve",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "skåret i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk, finthakket, til drys",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dilddressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Dilddressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dilddressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dilddressing",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dilddressing",
+      "text": "Rør creme fraiche, mayonnaise, dild og citronsaft sammen til en jævn dressing."
+    },
+    {
+      "section": "Dilddressing",
+      "text": "Vend to tredjedele af rejerne i dressingen, og gem resten til drys."
+    },
+    {
+      "section": "Salat",
+      "text": "Bræk den trævlede nederste del af aspargesene af."
+    },
+    {
+      "section": "Salat",
+      "text": "Smelt smørret på en varm pande, og steg aspargesene hurtigt i cirka 1 minut. Tag dem af varmen."
+    },
+    {
+      "section": "Salat",
+      "text": "Læg spinat og feldsalat på et stort fad. Fordel kartofler, asparges, avocado og rødløg ovenpå."
+    },
+    {
+      "section": "Salat",
+      "text": "Kom rejerne i dressing på salaten med en ske. Top med de resterende rejer, dild, salt og peber."
+    }
+  ],
+  "changes": []
+}

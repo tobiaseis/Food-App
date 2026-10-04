@@ -1,0 +1,144 @@
+{
+  "url": "https://www.arla.dk/opskrifter/croissanter/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:01:09.651Z",
+  "total_minutes": 120,
+  "active_minutes": 60,
+  "yield_count": 1,
+  "source_lines": 10,
+  "title": "Croissanter",
+  "intro": "Smøragtige, luftige croissanter med mange lag af dej og smør. Dejen skal hvile på køl mellem foldningerne, så lagene holder sig adskilt.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 450,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "iskoldt",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Smørplade",
+      "amount": 250,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Smørplade",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Udrulning og pensling",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "iskoldt, til udrulning",
+      "optional": false
+    },
+    {
+      "section": "Udrulning og pensling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket, til pensling",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Kør alle ingredienser til dejen i en røremaskine i cirka 5 minutter. Kør ikke længere, for ellers bliver dejen for varm."
+    },
+    {
+      "section": "Smørplade",
+      "text": "Vend smørret rundt i melet til smørpladen. Bank det ud til en flad plade på cirka 10 x 20 cm på en meldrysset bordplade, og stil det på køl i cirka 10 minutter."
+    },
+    {
+      "section": "Lagdeling",
+      "text": "Rul dejen ud til en firkant på cirka 20 x 45 cm på en meldrysset bordplade, mens smørret køler."
+    },
+    {
+      "section": "Lagdeling",
+      "text": "Anbring smørpladen midt på dejen, og fold dejen rundt om den, så smørret er lukket inde. Rul ud til 20 x 45 cm igen, og tryk let, så smør og dej bliver i separate lag."
+    },
+    {
+      "section": "Lagdeling",
+      "text": "Fold den ene tredjedel ind over midten, og fold den sidste tredjedel ovenpå. Nu har dejen de første 3 lag."
+    },
+    {
+      "section": "Lagdeling",
+      "text": "Rul ud og fold på samme måde to gange til. Tryk stadig let. Dæk dejen til, og lad den hvile på køl i cirka 15 minutter efter hver udrulning. Til sidst har dejen 27 lag."
+    },
+    {
+      "section": "Formning",
+      "text": "Rul dejen ud til cirka 40 x 60 cm, og skær den på langs i to lige store stykker."
+    },
+    {
+      "section": "Formning",
+      "text": "Skær hvert stykke i 4 firkanter, og del hver firkant diagonalt til 2 trekanter."
+    },
+    {
+      "section": "Formning",
+      "text": "Rul trekanterne sammen fra den brede side, så dejen vikles mindst 3 omgange. Læg dem med spidsen nedad."
+    },
+    {
+      "section": "Bagning",
+      "text": "Læg croissanterne på to bageplader med bagepapir. Dæk dem til, og lad dem hæve i cirka 45 minutter."
+    },
+    {
+      "section": "Bagning",
+      "text": "Varm ovnen op til 200 °C varmluft. Pensl croissanterne med pisket æg, og bag dem midt i ovnen i cirka 18 minutter."
+    }
+  ],
+  "changes": []
+}

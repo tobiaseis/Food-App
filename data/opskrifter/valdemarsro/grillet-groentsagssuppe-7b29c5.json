@@ -1,0 +1,176 @@
+{
+  "url": "https://www.valdemarsro.dk/grillet-groentsagssuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:44:24.824Z",
+  "total_minutes": 45,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Grillet tomatsuppe med peberfrugt og ristede kikærter",
+  "intro": "En cremet suppe af grillede eller ovnbagte grøntsager, som får en dejlig sødme og røgsmag. Toppen af sprøde kikærter, friske krydderurter og creme fraiche gør den til et helt måltid.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Suppen",
+      "amount": 700,
+      "unit": "g",
+      "name": "tomater",
+      "note": "skåret i halve",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, skåret i halve",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til vendning af grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 6,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristede kikærter",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristede kikærter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristede kikærter",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "pakke",
+      "name": "karse",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppen",
+      "text": "Vend tomater, peberfrugt, løg og hvidløg med olivenolie, salt og peber."
+    },
+    {
+      "section": "Suppen",
+      "text": "På grill: Læg grøntsagerne på en grillbakke og grill dem, til de er helt møre. Vend dem et par gange undervejs."
+    },
+    {
+      "section": "Suppen",
+      "text": "I ovn: Fordel grøntsagerne på en bradepande med bagepapir og bag dem ved 180 °C varmluft i 30-35 minutter, til de er møre."
+    },
+    {
+      "section": "Suppen",
+      "text": "Kom de grillede eller bagte grøntsager i en blender sammen med fonden og timianen. Blend glat."
+    },
+    {
+      "section": "Suppen",
+      "text": "Tilsæt fløden til sidst og blend igen, så suppen bliver cremet og fyldig."
+    },
+    {
+      "section": "Ristede kikærter",
+      "text": "Dræn kikærterne og vend dem i olie og røget paprika. Rist dem på en pande eller i ovnen, til de er sprøde."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld suppen i dybe tallerkener. Top med creme fraiche, persille, karse og de ristede kikærter."
+    }
+  ],
+  "changes": []
+}

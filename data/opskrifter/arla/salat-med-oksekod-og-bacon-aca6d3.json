@@ -1,0 +1,188 @@
+{
+  "url": "https://www.arla.dk/opskrifter/salat-med-oksekod-og-bacon/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:02:30.954Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 12,
+  "source_lines": 17,
+  "title": "Salat i glas med stegt oksekød og sprød bacon",
+  "intro": "Lun krydret oksekød med citronskal og forårsløg lægges lagvis med sprød bacon og friske salatblade i glas. Serveres med en sødlig, rød chilidressing og groft flute.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Rød dressing",
+      "amount": 5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rød dressing",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rød dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Rød dressing",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "løg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Rød dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "engelsk sauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rød dressing",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "kg",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "citronskal",
+      "note": "fintrevet, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1.5,
+      "unit": "bundt",
+      "name": "forårsløg",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 16,
+      "unit": "skive",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "l",
+      "name": "hjertesalat",
+      "note": "fintstrimlet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "l",
+      "name": "babysalatblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "babysalatblade",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 400,
+      "unit": "g",
+      "name": "flute",
+      "note": "groft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rød dressing",
+      "text": "Pisk alle ingredienserne til dressingen sammen. Dæk til og stil den på køl i mindst en halv time, og smag den til."
+    },
+    {
+      "section": "Salat",
+      "text": "Tænd ovnen på 200 °C. Beklæd en bageplade med bagepapir og læg baconskiverne på."
+    },
+    {
+      "section": "Salat",
+      "text": "Bag baconen midt i ovnen i ca. 25 minutter, til den er gylden og sprød. Lad den dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Salat",
+      "text": "Smelt halvdelen af smørret i en pande, til det får en gylden farve. Brun halvdelen af oksekødet ved høj varme i ca. 6 minutter, mens du rører i det. Tag det af panden, og gentag med resten af smørret og kødet."
+    },
+    {
+      "section": "Salat",
+      "text": "Put alt kødet tilbage på panden med citronskal og halvdelen af forårsløgene. Krydr med salt og peber, og lad det stege videre i ca. 1 minut. Smag til."
+    },
+    {
+      "section": "Ved serveringen",
+      "text": "Hak den sprøde bacon groft. Bland hjertesalat og babysalatblade med resten af forårsløgene."
+    },
+    {
+      "section": "Ved serveringen",
+      "text": "Fyld halvdelen af salaten i 24 glas à ca. 3 dl, så der er to glas pr. person. Fordel det lune kød og baconen i glassene, og dæk med resten af salaten."
+    },
+    {
+      "section": "Ved serveringen",
+      "text": "Hæld dressingen i en skål, og pynt med lidt sød chilisauce. Server med flute og pynt evt. med babysalatblade."
+    }
+  ],
+  "changes": []
+}

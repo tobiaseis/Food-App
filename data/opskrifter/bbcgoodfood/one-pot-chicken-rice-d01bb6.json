@@ -1,0 +1,139 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/one-pot-chicken-rice",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:15:56.936Z",
+  "total_minutes": 50,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Kylling og ris i én gryde",
+  "intro": "Kyllingelår og fuldkornsris simrer sammen i krydret fond med porre og grøntsager. Hele retten laves i én pande med låg, så der er næsten ingen opvask.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 600,
+      "unit": "g",
+      "name": "kyllingelår",
+      "note": "uden ben og skind, halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 7,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "varm, lavet på 2 tsk bouillonpulver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "brune ris",
+      "note": "hurtigtkogende",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "porre",
+      "note": "skyllet og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "frosne grøntsager",
+      "note": "fx gulerødder i skiver, broccoli og majs",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bland paprika, koriander, hvidløg og olie i en stor skål. Vend kyllingen i marinaden, til alle stykker er dækket."
+    },
+    {
+      "section": null,
+      "text": "Varm en stor slip-let-pande med låg op ved middelhøj varme. Steg kyllingen uden låg og uden ekstra fedtstof i ca. 5 minutter, og vend den undervejs, så begge sider får farve. Læg kyllingen over på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Hæld fonden på panden, og skrab alle de smagfulde rester fra bunden med en ske."
+    },
+    {
+      "section": null,
+      "text": "Rør ris, porre, oregano og eventuelt laurbærblade i. Læg kyllingen ovenpå, sæt låg på, og bring det i kog."
+    },
+    {
+      "section": null,
+      "text": "Skru ned, og lad retten simre under låg i 20 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør de frosne grøntsager ned i panden. Læg låget på igen, og lad det simre ca. 5 minutter, til grøntsagerne er varme."
+    },
+    {
+      "section": null,
+      "text": "Tag panden af varmen, og lad retten trække under låg i 5-10 minutter. Vend forsigtigt rundt, og server."
+    }
+  ],
+  "changes": [
+    "Kyllingelår uden ben og skind er skrevet som kyllingelår med note, da det er det, man køber.",
+    "Hurtigtkogende brune ris er skrevet som brune ris med note."
+  ]
+}

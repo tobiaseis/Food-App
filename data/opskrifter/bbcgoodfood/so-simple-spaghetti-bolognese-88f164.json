@@ -1,0 +1,111 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/so-simple-spaghetti-bolognese",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:12:25.730Z",
+  "total_minutes": 30,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Sund spaghetti bolognese",
+  "intro": "Spaghetti med en glat tomatsauce med gulerod og basilikum, som røres sammen med kødsovs. Drysset af ristet rasp og frisk basilikum giver lidt knas til sidst.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "lille, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "flåede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "plus nogle blade ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Multi mince",
+      "note": "halvdelen af opskriften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": "eller anden lang pasta",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": "ristet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en slip-let-pande, og svits gulerødderne i 5 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Fisk tomaterne op af dåsen, og kom dem på panden. Steg dem i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld tomatsaften fra dåsen på panden sammen med basilikummen. Lad saucen simre i 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Blend saucen helt glat. Den kan fryses og holder sig op til 3 måneder."
+    },
+    {
+      "section": null,
+      "text": "Varm saucen igennem sammen med Multi mince."
+    },
+    {
+      "section": null,
+      "text": "Kog spaghettien efter anvisningen på pakken. Gem lidt af kogevandet, og si derefter pastaen fra."
+    },
+    {
+      "section": null,
+      "text": "Vend pastaen i saucen på panden. Tynd ud med lidt kogevand, hvis den er for tyk."
+    },
+    {
+      "section": null,
+      "text": "Server med ekstra basilikumblade og ristet rasp over."
+    }
+  ],
+  "changes": [
+    "Multi mince er beholdt som i kilden, da der ikke findes en dansk færdigvare til den.",
+    "Plum tomatoes er skiftet til flåede tomater."
+  ]
+}

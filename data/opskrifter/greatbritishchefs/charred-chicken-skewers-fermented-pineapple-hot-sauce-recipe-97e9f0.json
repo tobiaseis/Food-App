@@ -1,0 +1,179 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/charred-chicken-skewers-fermented-pineapple-hot-sauce-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:53:44.143Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Grillspyd med kylling og stærk ananassauce",
+  "intro": "Marinerede kyllingelår på spyd, stegt til de er brændte i kanten og penslet med en blendet, sødlig ananassauce. Serveres med en grøn urtepuré af koriander og mynte.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Spyd",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "kun skallen, fint revet",
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": 700,
+      "unit": "g",
+      "name": "kyllingelår",
+      "note": "uden skind og ben, skåret i store bidder",
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ananassauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ananas",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Ananassauce",
+      "amount": null,
+      "unit": null,
+      "name": "honning",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Spyd",
+      "text": "Bland olie, paprika, spidskommen, hvidløg, limeskal, salt og peber i en stor skål. Vend kyllingen i marinaden, og lad den trække i mindst 20 minutter – eller op til 4 timer i køleskabet."
+    },
+    {
+      "section": "Ananassauce",
+      "text": "Gem et par stykker ananas til pynt. Blend resten, til saucen er helt glat og blank, og smag den til med honning. Hæld lidt af saucen i en lille skål til servering, og lad resten stå klar til at pensle med."
+    },
+    {
+      "section": "Gremolata",
+      "text": "Blitz koriander, mynte, olie og salt i en lille blender eller foodprocessor, til det er en jævn puré. Stil den til side."
+    },
+    {
+      "section": "Spyd",
+      "text": "Træk kyllingestykkerne på spyd, så de sidder tæt og jævnt."
+    },
+    {
+      "section": "Spyd",
+      "text": "Varm en grillpande op på høj varme, eller tænd en kulgrill til direkte grilning."
+    },
+    {
+      "section": "Spyd",
+      "text": "Grill spyddene i 12-15 minutter, og vend dem ofte, til de er brændte i kanten og gennemstegte. Pensl dem med ananassaucen de sidste par minutter, og vend og pensl igen, til de er færdige."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret spyddene på et fad. Hæld lidt ekstra sauce over, og top med gremolataen. Pynt med den gemte ananas, forårsløg og chiliflager."
+    }
+  ],
+  "changes": [
+    "Fermenteret ananas er erstattet af frisk ananas, så fermenteringen og lagen udgår.",
+    "Røget paprika erstatter smoked paprika, og hav-salt er skiftet til almindeligt salt."
+  ]
+}

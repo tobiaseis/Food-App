@@ -1,0 +1,164 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/herb-garlic-baked-cod-romesco-sauce-spinach",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:55:23.396Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 12,
+  "title": "Ovnbagt torsk med urter og romescosauce",
+  "intro": "Saftig torsk med timian, hvidløg og citron, der serveres til en tyk sauce af peberfrugt, porre og mandler. Visnet spinat runder retten af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til fisken",
+      "amount": 300,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "uden skind",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "porre",
+      "note": "skyllet og tyndt skåret",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mandler",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 75,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsfond i pulverform",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby, visnet på pande eller i mikroovn",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fisken",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Læg torskefileterne i et lavt ildfast fad, så de ligger tæt i ét lag."
+    },
+    {
+      "section": "Fisken",
+      "text": "Rør olie, timian og hvidløg sammen. Fordel blandingen over fisken og riv citronskallen ovenpå."
+    },
+    {
+      "section": "Fisken",
+      "text": "Bag i 10-12 minutter, til fisken er saftig og let falder i flager."
+    },
+    {
+      "section": "Saucen",
+      "text": "Imens varmes olien på en non-stick-pande. Steg peberfrugt og porre i 5 minutter, til de er møre."
+    },
+    {
+      "section": "Saucen",
+      "text": "Kom mandlerne på panden og steg yderligere 5 minutter."
+    },
+    {
+      "section": "Saucen",
+      "text": "Rør tomatpuré, vand, bouillonpulver og eddike i. Lad det varme igennem et øjeblik."
+    },
+    {
+      "section": "Saucen",
+      "text": "Pres citronsaft i efter smag, op til en halv citron. Blend med en stavblender til en tyk sauce, der minder om pesto."
+    },
+    {
+      "section": "Servering",
+      "text": "Server fisken med saucen og den visnede spinat."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,84 @@
+{
+  "url": "https://www.arla.dk/opskrifter/hjemmelavet-tykmalk/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:15:05.070Z",
+  "total_minutes": 1140,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 5,
+  "title": "Hjemmelavet tykmælk med rugbrød og brun farin",
+  "intro": "Tykmælk er nem at lave selv af mælk, fløde og kærnemælk, som får lov at sætte sig på køkkenbordet. Server den kold med knasende rugbrødsdrys og brun farin.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tykmælk",
+      "amount": 1,
+      "unit": "l",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tykmælk",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tykmælk",
+      "amount": 1,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 160,
+      "unit": "g",
+      "name": "rugbrød",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tykmælk",
+      "text": "Opvarm mælk og fløde i en gryde til cirka 25 °C."
+    },
+    {
+      "section": "Tykmælk",
+      "text": "Kom den lune blanding i en skål, og lad den køle af til 22-25 °C."
+    },
+    {
+      "section": "Tykmælk",
+      "text": "Rør kærnemælken i."
+    },
+    {
+      "section": "Tykmælk",
+      "text": "Fordel massen i serveringsskåle. Dæk dem til, og lad dem stå ved stuetemperatur i cirka 18 timer."
+    },
+    {
+      "section": "Tykmælk",
+      "text": "Sæt skålene i køleskabet, til tykmælken er helt kold."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server tykmælken med revet rugbrød og brun farin strøet ovenpå."
+    }
+  ],
+  "changes": []
+}

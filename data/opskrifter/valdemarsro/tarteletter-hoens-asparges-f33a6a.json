@@ -1,0 +1,158 @@
+{
+  "url": "https://www.valdemarsro.dk/tarteletter-hoens-asparges/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:45:57.855Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Tarteletter med høns i asparges",
+  "intro": "Klassisk dansk tarteletfyld med mør kogt kylling og asparges i en cremet hvid sauce. Serveres i sprøde, lune tarteletskaller med friskhakket persille.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "asparges",
+      "note": "snittede, på dåse eller glas",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 12,
+      "unit": "stk",
+      "name": "tarteletter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingebryst, fond, gulerod, løg, laurbærblade og et nip salt og peber i en gryde. Lad det simre i 15 minutter."
+    },
+    {
+      "section": "Kylling",
+      "text": "Hæld 3 dl af kogevandet fra til saucen. Tag kyllingen op og skær den i tern."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret i en anden gryde. Pisk melet ud i smørret, så det bliver til en jævn bolle."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tilsæt mælken lidt ad gangen, og pisk hele tiden, til saucen er glat."
+    },
+    {
+      "section": "Sauce",
+      "text": "Bring saucen i kog, og lad den koge i 1-2 minutter under omrøring. Smag til med salt og peber. Tynd den ud med kogevandet, til den har den konsistens, du vil have."
+    },
+    {
+      "section": "Sauce",
+      "text": "Lad aspargesene dryppe af, og vend dem sammen med kyllingen ned i saucen."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm tarteletterne i ovnen, som det står på pakken."
+    },
+    {
+      "section": "Servering",
+      "text": "Fyld skallerne med den varme fyldning. Top med hakket persille, friskkværnet peber og et lille drys flagesalt."
+    }
+  ],
+  "changes": [
+    "Hønsebryst er erstattet af kyllingebryst."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/thai-style-shredded-apple-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:55:24.347Z",
+  "total_minutes": 20,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Thailandsk æblesalat med nudler",
+  "intro": "Frisk og sprød salat med strimlede æbler, gulerødder og radiser, vendt med risnudler og en cremet dressing af jordnøddesmør, lime og fiskesauce.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "risnudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "store, revet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": "strimlet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "forårsløg",
+      "note": "fint snittet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 25,
+      "unit": "g",
+      "name": "koriander",
+      "note": "groft hakket, plus lidt ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 50,
+      "unit": "g",
+      "name": "ristede jordnødder",
+      "note": "groft hakkede, plus lidt ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "Granny Smith, uden kernehus, skåret i tændstikker",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "radiser",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 50,
+      "unit": "g",
+      "name": "jordnøddesmør",
+      "note": "glat",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skal og saft, plus både til servering",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fint revet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Pisk alle ingredienserne til dressingen sammen, til den er helt glat."
+    },
+    {
+      "section": "Salat",
+      "text": "Kom risnudlerne i en varmefast skål og hæld kogende vand over, så de er dækket. Lad dem stå i 3 minutter, til de er lidt bløde, og si dem fra."
+    },
+    {
+      "section": "Salat",
+      "text": "Bland nudler, gulerødder, sukkerærter, forårsløg, koriander, jordnødder, æbler og radiser i en stor skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend dressingen i, så alt er dækket."
+    },
+    {
+      "section": "Salat",
+      "text": "Drys med ekstra koriander og jordnødder, og server med limebåde ved siden af."
+    }
+  ],
+  "changes": [
+    "Mangetout er skiftet til sukkerærter.",
+    "Tamari er udeladt, og der bruges kun sojasauce."
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/japanese-ramen-noodle-soup",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:50:27.309Z",
+  "total_minutes": 40,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Hurtig ramen med nudler og æg",
+  "intro": "En fyldig nudelsuppe med krydret bouillon, stegt kød, spinat og kogte æg. Retten er hurtig at lave og kræver kun almindelige råvarer.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bouillon",
+      "amount": 7,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "plus ekstra til smag",
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Worcestershire sauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "et stykke på størrelse med en tommelfinger, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "five spice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chili",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": 400,
+      "unit": "g",
+      "name": "nudler",
+      "note": "ramennudler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "kogt eller stegt, i skiver (eller kogt svinekød)",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "majs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "hårdkogte, pillede og halverede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "nori",
+      "note": "tørret ark, skåret i fine strimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "forårsløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bouillon",
+      "text": "Kom fond, vand, hvidløg, sojasauce, Worcestershire sauce, ingefær, five spice og chili i en stor gryde. Bring det i kog, skru ned og lad det simre i 5 minutter."
+    },
+    {
+      "section": "Bouillon",
+      "text": "Smag bouillonen til. Tilsæt sukker for mere sødme eller lidt ekstra sojasauce for mere salt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog nudlerne efter anvisningen på pakken. Si dem fra og stil dem til side."
+    },
+    {
+      "section": "Til servering",
+      "text": "Steg kødskiverne i sesamolie på en pande, til de lige begynder at tage farve. Stil dem til side."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel nudlerne i fire skåle. Læg kød, spinat, majs og to æggehalvdele på hver, så alt deles ligeligt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Si bouillonen over i en ren gryde, og bring den i kog igen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld den kogende bouillon over skålene. Drys med nori, forårsløg og sesamfrø. Lad spinaten falde lidt sammen, inden du serverer."
+    }
+  ],
+  "changes": [
+    "Ramennudler er erstattet af almindelige nudler.",
+    "Frisk ingefær angives som et stykke, da kilden ikke opgiver en vægt.",
+    "Chili i pulver er skrevet som stødt chili."
+  ]
+}

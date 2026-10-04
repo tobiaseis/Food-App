@@ -1,0 +1,86 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/tuna-nicoise-protein-pots",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:00:38.957Z",
+  "total_minutes": 20,
+  "active_minutes": 10,
+  "yield_count": 1,
+  "source_lines": 5,
+  "title": "Tunsalat med bønner og æg i madkasse",
+  "intro": "En let og mættende madpakkesalat i klassisk Niçoise-stil med tun, kogt æg, grønne bønner og tomat. Den kan laves aftenen før og er klar i madkassen.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "bønner",
+      "note": "grønne bønner (haricots verts)",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "delt i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "tun",
+      "note": "i vand, ca. 120 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "dressing",
+      "note": "vinaigrette",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog ægget i 8-10 minutter – kortere tid giver blød blomme, længere tid giver fast blomme."
+    },
+    {
+      "section": null,
+      "text": "Damp samtidig de grønne bønner i en si over gryden i 6 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Afkøl æg og bønner under koldt rindende vand. Pil ægget, og del det i både."
+    },
+    {
+      "section": null,
+      "text": "Lad det hele køle helt af."
+    },
+    {
+      "section": null,
+      "text": "Kom bønnerne i en stor madkasse. Læg tomat, drænet tun og ægge både ovenpå, og hæld dressingen over."
+    },
+    {
+      "section": null,
+      "text": "Luk låget, og gem madkassen koldt til spisetid."
+    }
+  ],
+  "changes": [
+    "French dressing er erstattet med dressing (vinaigrette)."
+  ]
+}

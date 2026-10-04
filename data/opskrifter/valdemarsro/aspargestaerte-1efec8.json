@@ -1,0 +1,164 @@
+{
+  "url": "https://www.valdemarsro.dk/aspargestaerte/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:32:12.240Z",
+  "total_minutes": 90,
+  "active_minutes": 45,
+  "yield_count": 1,
+  "source_lines": 13,
+  "title": "Aspargestærte",
+  "intro": "Mørdejstærte med fuldkornsmel og en cremet fyld af æg, sennep og ost, fyldt med friske grønne asparges. Den er god lun eller kold.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Tærtedej",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 125,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 6,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "grov sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "asparges",
+      "note": "grønne",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "gruyère",
+      "note": "groftrevet, eller emmental",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtedej",
+      "text": "Bland begge slags mel med saltet, og smuldr smørret i, til det ligner grove krummer. Du kan også blende det i en foodprocessor."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Ælt dejen sammen med vandet, og lad den evt. hvile på køl i 30 minutter."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Tryk dejen ud i en smurt tærteform på 24 cm i diameter, og prik bunden med en gaffel."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Forbag bunden i 10 minutter ved 175 °C varmluft. Forvarm ovnen først."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk æg, mælk, creme fraiche, begge sennepper, salt og peber sammen."
+    },
+    {
+      "section": "Fyld",
+      "text": "Knæk den seje, nederste ende af aspargesene af, og smid den ud."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg aspargesene i den forbagte tærtebund, og hæld æggeblandingen over. Fordel osten ovenpå."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bag tærten i ca. 35 minutter ved 175 °C varmluft, til fyldet er stivnet."
+    }
+  ],
+  "changes": []
+}

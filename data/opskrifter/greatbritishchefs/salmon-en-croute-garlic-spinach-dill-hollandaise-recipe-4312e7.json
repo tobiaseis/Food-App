@@ -1,0 +1,304 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/salmon-en-croute-garlic-spinach-dill-hollandaise-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:34:18.381Z",
+  "total_minutes": 70,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Laks en croûte med hvidløgsspinat og dildhollandaise",
+  "intro": "Laksefileter pakkes med spinat og sennep i sprød butterdej og serveres med let hvidløgsspinat, ovnkartofler og en lun hollandaise med dild.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Laks en croûte",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Laks en croûte",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Laks en croûte",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Laks en croûte",
+      "amount": 150,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Laks en croûte",
+      "amount": 500,
+      "unit": "g",
+      "name": "butterdej",
+      "note": "med smør",
+      "optional": false
+    },
+    {
+      "section": "Laks en croûte",
+      "amount": 4,
+      "unit": "stk",
+      "name": "laksefilet",
+      "note": "uden skind, ca. 150 g hver",
+      "optional": false
+    },
+    {
+      "section": "Laks en croûte",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Laks en croûte",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblomme",
+      "note": "pisket med 1 tsk mælk til pensling",
+      "optional": false
+    },
+    {
+      "section": "Laks en croûte",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Laks en croûte",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildhollandaise",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildhollandaise",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Dildhollandaise",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet og lunt",
+      "optional": false
+    },
+    {
+      "section": "Dildhollandaise",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Dildhollandaise",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildhollandaise",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Dildhollandaise",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsspinat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsspinat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsspinat",
+      "amount": 250,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsspinat",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsspinat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsspinat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ovnkartofler",
+      "note": "frosne, færdigstegte",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "skal",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "kviste",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Laks en croûte",
+      "text": "Smelt smørret ved svag varme på en pande, og svits skalotteløg og hvidløg, til de er bløde."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Kom spinaten på panden, og lad den falde sammen på 1–2 minutter."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Pres væsken fra spinaten, hak den groft, smag til med salt og peber, og lad den køle helt af."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Rul butterdejen ud på en let meldrysset bordplade til ca. 3–4 mm tykkelse. Del den i 4 lige store rektangler, så hvert stykke kan pakkes helt om en laksefilet med en kant på 2–3 cm."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Læg et dejstykke foran dig, og smør lidt sennep på midten med en bred kant hele vejen rundt. Fordel noget af spinaten som et pænt rektangel, der er lidt mindre end laksefileten."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Læg laksen oven på spinaten, og krydr let med salt og peber."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Pensl dejkanterne med lidt af æggemassen. Slå den ene lange side ind over laksen og den anden ovenpå, så de overlapper lidt. Tryk til, så pakken lukker."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Pres kanterne let ned med bagsiden af en kniv, så de får et bølgemønster, og rids dejen på toppen uden at skære igennem. Gør det samme med de øvrige filetter."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Pensl toppen med æggemassen, og sæt pakkerne på køl i 20 minutter."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Varm ovnen op til 200 °C varmluft."
+    },
+    {
+      "section": "Laks en croûte",
+      "text": "Bag pakkerne i 20–25 minutter, til dejen er dyb gylden og sprød."
+    },
+    {
+      "section": "Til servering",
+      "text": "Sæt ovnkartoflerne i ovnen, mens du laver hollandaisen."
+    },
+    {
+      "section": "Dildhollandaise",
+      "text": "Pisk æggeblommer og eddike i en varmefast skål over en gryde med vand, der næsten ikke simrer. Pisk, til massen er tyk og lys."
+    },
+    {
+      "section": "Dildhollandaise",
+      "text": "Pisk det smeltede smør i, mens du fortsætter med at piske. Begynd med dråber, og øg til en jævn stråle, indtil alt smørret er pisket ind."
+    },
+    {
+      "section": "Dildhollandaise",
+      "text": "Rør citronsaft og cayennepeber i, smag til med salt, og vend den hakkede dild i. Hold saucen lun til servering."
+    },
+    {
+      "section": "Hvidløgsspinat",
+      "text": "Steg hvidløgsskiverne i olivenolie, til de lige er gyldne. Tilsæt spinaten, og rør, til den falder sammen."
+    },
+    {
+      "section": "Hvidløgsspinat",
+      "text": "Smag til med salt, peber og muskatnød, og hæld overskydende væske fra."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret spinat på hver tallerken, og læg en laksepakke ovenpå – gerne skåret over. Server med ovnkartoflerne ved siden af, hæld hollandaise over, og pynt med citronskal og dildkviste."
+    }
+  ],
+  "changes": [
+    "Nanna Tate Super Crunch Roasties er erstattet med frosne, færdigstegte ovnkartofler.",
+    "Hvidvinseddike er skrevet som eddike.",
+    "Cayenne pepper er skrevet som cayennepeber."
+  ]
+}

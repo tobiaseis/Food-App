@@ -1,0 +1,115 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/asian-chicken-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:57:21.145Z",
+  "total_minutes": 20,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 9,
+  "title": "Sund kyllingesalat med lime og fiskesauce",
+  "intro": "En let og frisk salat med kogt, revet kylling, grønt og en syrlig dressing med lime og fiskesauce. Den egner sig godt som madpakke, hvis dressingen holdes for sig.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 100,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "uden kerner, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret på langs og skåret i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Læg kyllingebrystet i en gryde, og dæk det med koldt vand. Bring det i kog, og lad det simre i 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tag kyllingen op, og pil den i strimler med to gafler."
+    },
+    {
+      "section": "Til dressingen",
+      "text": "Rør fiskesauce, limeskal, limesaft og sukker sammen, til sukkeret er opløst."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Fordel salatblanding og koriander i en foldekasse eller skål. Læg kylling, rødløg, chili og agurk ovenpå."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Hæld dressingen i en separat beholder, og vend den i salaten lige før servering."
+    }
+  ],
+  "changes": [
+    "Fiskesauce bruges i stedet for fish sauce (samme vare, dansk navn).",
+    "Sukker bruges i stedet for caster sugar."
+  ]
+}

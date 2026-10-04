@@ -1,0 +1,180 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/mango-lime-chilli-prawn-fishcakes",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:04:45.452Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Rejefrikadeller med mango, lime og chili",
+  "intro": "Sprøde små rejefrikadeller med frisk mango, lime og ingefær. Serveres med ris eller nudler og friske grøntsager.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Rejefrikadeller",
+      "amount": 400,
+      "unit": "g",
+      "name": "rejer",
+      "note": "rå, pillede og uden tarm",
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": 60,
+      "unit": "g",
+      "name": "mango",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket, evt. uden kerner",
+      "optional": true
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejefrikadeller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "klistret, eller nudler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "gulerødder",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mango",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sauce",
+      "note": "satay",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rejefrikadeller",
+      "text": "Kør rejerne i en foodprocessor, til de er en jævn, fin masse."
+    },
+    {
+      "section": "Rejefrikadeller",
+      "text": "Kom rejemassen i en stor skål. Bland mango, limeskal, hvidløg, ingefær, koriander, æg, hvedemel og eventuelt chili i. Krydr med salt og peber, og rør det godt sammen."
+    },
+    {
+      "section": "Rejefrikadeller",
+      "text": "Varm olien op på en pande ved middel varme."
+    },
+    {
+      "section": "Rejefrikadeller",
+      "text": "Læg en spiseskefuld af farsen på panden, og tryk den ud til en rund, flad pandekage med bagsiden af en ske. Steg portionsvis, til de er gyldne på begge sider og gennemstegte, i alt 8-10 minutter. Det giver 12 stk."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret rejefrikadellerne på ris eller nudler. Server med skiver af agurk, mango og gulerod samt satay-sauce ved siden af."
+    }
+  ],
+  "changes": [
+    "Vegetabilsk olie er skrevet som olie.",
+    "Sticky rice er skrevet som ris.",
+    "Satay sauce er skrevet som sauce med satay i noten."
+  ]
+}

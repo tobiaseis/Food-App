@@ -1,0 +1,481 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/chettinad-chicken-curry-cumin-rice-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:34:56.767Z",
+  "total_minutes": 105,
+  "active_minutes": null,
+  "yield_count": null,
+  "source_lines": 48,
+  "title": "Chettinad-kylling med spiced ris og syltede rødløg",
+  "intro": "Kyllingelår i en dyb, krydret sydindisk karry med ristede krydderier og kokos. Serveres med duftende ris med spidskommen, syltede rødløg og friske tilbehør.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "med ben",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kyllingeunderlår",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "æblejuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 5,
+      "unit": "stk",
+      "name": "tørret rød chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "bukkehornsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "valmuefrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sort peber",
+      "note": "hele peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 6,
+      "unit": "stk",
+      "name": "grøn kardemomme",
+      "note": "hele kapsler",
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanelstang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 4,
+      "unit": "stk",
+      "name": "nelliker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 1,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 30,
+      "unit": "g",
+      "name": "kokosflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "karryblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chettinad-masala",
+      "amount": 8,
+      "unit": "stk",
+      "name": "cashewnødder",
+      "note": "udblødt i vand i 30 minutter",
+      "optional": false
+    },
+    {
+      "section": "Karrybase",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrybase",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblad",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrybase",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Karrybase",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrybase",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "karryblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrybase",
+      "amount": 100,
+      "unit": "ml",
+      "name": "vand",
+      "note": "varmt, mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 250,
+      "unit": "ml",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 250,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblad",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "grøn kardemomme",
+      "note": "hele kapsler",
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanelstang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "nelliker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "uden kerner, halveret",
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 300,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": "skyllet og udblødt i 15 minutter",
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 450,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med spidskommen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "friske blade, vendt i olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "hvpasset i meget tynde skiver og vendt i olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Bland alle ingredienserne til marinaden i en stor skål, og vend kyllingen godt rundt i den. Lad den marinere i cirka 1 time."
+    },
+    {
+      "section": "Chettinad-masala",
+      "text": "Varm en stor pande op ved lav til middel varme. Rist chili, korianderfrø, fennikelfrø, spidskommen, bukkehornsfrø, valmuefrø, peberkorn, kardemomme, kanel, nelliker og stjerneanis, til det dufter og har taget let farve. Lad krydderierne køle af på et fad."
+    },
+    {
+      "section": "Chettinad-masala",
+      "text": "Mal de afkølede krydderier til et fint pulver i en kryddermølle, og stil det til side."
+    },
+    {
+      "section": "Chettinad-masala",
+      "text": "Hæld olie, kokos og karryblade på den samme pande. Rist, til kokosen er lysegylden, og tag det af panden."
+    },
+    {
+      "section": "Chettinad-masala",
+      "text": "Kør kokosblandingen, cashewnødderne, krydderipulveret og en sjat koldt vand til en glat pasta i en lille blender. Stil pastaen til side."
+    },
+    {
+      "section": "Karrybase",
+      "text": "Varm ghee og laurbærblad op i en stor stegepande ved middel varme, til laurbærbladet dufter."
+    },
+    {
+      "section": "Karrybase",
+      "text": "Svits løgene i cirka 15 minutter, til de er bløde og let gyldne. Tag dem op af panden."
+    },
+    {
+      "section": "Karrybase",
+      "text": "Tilsæt en sjat olie, og skru op for varmen til det højeste. Brun kyllingelårene, til de er gyldne og har en flot stegeskorpe, og læg dem over på en tallerken."
+    },
+    {
+      "section": "Karrybase",
+      "text": "Kom løgene tilbage på panden, og rør de hakkede tomater i. Lad det simre i cirka 20 minutter, til olien skiller fra og danner pletter på overfladen."
+    },
+    {
+      "section": "Karrybase",
+      "text": "Rør karryblade, masalapastaen og det varme vand i, og læg kyllingen ned i saucen. Kyllingen skal næsten være dækket af saucen."
+    },
+    {
+      "section": "Karrybase",
+      "text": "Læg låg på, og lad retten simre svagt i cirka 20 minutter, til kyllingen er gennemstegt (74 °C, hvor kødet er tykkest). Smag til med salt."
+    },
+    {
+      "section": "Syltede rødløg",
+      "text": "Rør rødløgene sammen med sukker, eddike, vand og salt, til sukker og salt er opløst. Sæt dem i køleskabet i cirka 30 minutter, mens du laver risene."
+    },
+    {
+      "section": "Ris med spidskommen",
+      "text": "Varm ghee op i en gryde, og rist alle krydderierne i omkring et minut, til de dufter."
+    },
+    {
+      "section": "Ris med spidskommen",
+      "text": "Tilsæt chili og de afdryppede ris. Rist dem under omrøring i et par minutter."
+    },
+    {
+      "section": "Ris med spidskommen",
+      "text": "Hæld vand og salt i, og rør rundt. Dæk gryden med et viskestykke og låg, og bring det i kog."
+    },
+    {
+      "section": "Ris med spidskommen",
+      "text": "Skru ned, og lad risene simre i 15 minutter."
+    },
+    {
+      "section": "Ris med spidskommen",
+      "text": "Tag gryden af varmen, men lad låg og viskestykke sidde. Lad risene dampe i 10 minutter, og luk dem derefter op med en gaffel."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret risene i en skål ved siden af en solid portion karry. Server med syltede løg, koriander, agurk, fennikel og limebåde."
+    }
+  ],
+  "changes": [
+    "Frisk revet kokos er erstattet af kokosflager.",
+    "Tørrede Kashmiri-chili er erstattet af almindelig tørret rød chili.",
+    "Almindelig sukker erstatter caster sugar.",
+    "Rapsolie erstatter vegetable oil."
+  ]
+}

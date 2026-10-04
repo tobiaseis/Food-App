@@ -1,0 +1,203 @@
+{
+  "url": "https://www.valdemarsro.dk/fajitas/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:42:57.064Z",
+  "total_minutes": 60,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Fajitas med kylling",
+  "intro": "Kylling, peberfrugt og løg marineres i lime og krydderier og steges hurtigt på en glohed pande. Server med tortillas, avocado, koriander og sriracha.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fajitas",
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Fajitas",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, skåret i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Fajitas",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "grøn, skåret i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Fajitas",
+      "amount": 3,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Fajitas",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, skåret over på midten",
+      "optional": false
+    },
+    {
+      "section": "Fajitas",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fajitas",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fajitas",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Bland limesaft, sukker, olie, krydderier og peber til en marinade."
+    },
+    {
+      "section": "Marinade",
+      "text": "Vend kylling, peberfrugt og løg i marinaden. Lad det trække i mindst 30 minutter, gerne helt op til et døgn."
+    },
+    {
+      "section": "Fajitas",
+      "text": "Hæld overskydende marinade fra og smid den ud."
+    },
+    {
+      "section": "Fajitas",
+      "text": "Sæt en pande på høj varme, til den er meget varm. Tilsæt olie, og læg de halve lime med snitfladen nedad på panden."
+    },
+    {
+      "section": "Fajitas",
+      "text": "Steg kylling, peberfrugt og løg i små portioner, så panden holder varmen og intet brænder på."
+    },
+    {
+      "section": "Fajitas",
+      "text": "Vend det hele hele tiden. Steg et par minutter, til kyllingen er gennemstegt, og grøntsagerne stadig er faste. Smag til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret fajitas med tortillas, avocado, koriander og sriracha. Pres saften fra de grillede lime ud over."
+    }
+  ],
+  "changes": [
+    "Røget paprika er skrevet som paprika.",
+    "Sriracha chilisauce er skrevet som sriracha."
+  ]
+}

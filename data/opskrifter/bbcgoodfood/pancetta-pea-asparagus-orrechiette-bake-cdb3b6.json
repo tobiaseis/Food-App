@@ -1,0 +1,179 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/pancetta-pea-asparagus-orrechiette-bake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:04:32.514Z",
+  "total_minutes": 50,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Ovnbagt orecchiette med bacon, ærter og asparges",
+  "intro": "Pasta i en cremet ostesauce med sprødt bacon, grønne asparges og ærter, gratineret med parmesan og rasp. Retten kan også koldt stilles på fryseren til en anden dag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "pasta",
+      "note": "orecchiette, tørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "asparges",
+      "note": "skåret over i 4 stykker, endestykker fjernet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 75,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 750,
+      "unit": "ml",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 60,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 90,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "revet, 60 g til saucen og resten på toppen",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 20,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pasta",
+      "text": "Kog saltet vand op i en kasserolle. Kog pastaen 4 minutter kortere end angivet på posen."
+    },
+    {
+      "section": "Pasta",
+      "text": "Kom de frosne ærter i vandet det sidste minut. Hæld alt af i et dørslag og stil til side."
+    },
+    {
+      "section": "Bacon og asparges",
+      "text": "Varm olien på en stor pande ved middelvarme. Steg baconen gylden i ca. 6 minutter."
+    },
+    {
+      "section": "Bacon og asparges",
+      "text": "Tilsæt asparges og hvidløg, og steg dem med i 2-3 minutter. Hæld indholdet over i en skål."
+    },
+    {
+      "section": "Sauce og samling",
+      "text": "Smelt smørret på den samme pande. Pisk melet i, og hæld så mælken i lidt ad gangen under konstant piskning, til saucen er glat og cremet."
+    },
+    {
+      "section": "Sauce og samling",
+      "text": "Lad saucen simre i 3-4 minutter, til den er tyk. Tag panden af varmen."
+    },
+    {
+      "section": "Sauce og samling",
+      "text": "Rør cheddar og 60 g af parmesanen i, til osten er smeltet og saucen glat. Smag til med salt og peber."
+    },
+    {
+      "section": "Sauce og samling",
+      "text": "Vend pastaen og baconblandingen i saucen. Fordel det i et ovnfast fad på ca. 25 x 30 cm."
+    },
+    {
+      "section": "Sauce og samling",
+      "text": "Drys panko og den resterende parmesan ovenpå."
+    },
+    {
+      "section": "Gratinering",
+      "text": "Skal retten spises med det samme, så tænd ovnens grill på høj varme. Grillgratinér i 5-6 minutter, til toppen er gylden og boblende."
+    },
+    {
+      "section": "Gratinering",
+      "text": "Skal retten i fryseren, så lad den køle helt af og dæk den tæt til, før den fryses."
+    }
+  ],
+  "changes": [
+    "Pancetta er erstattet med bacon i tern.",
+    "Plain flour er erstattet med hvedemel."
+  ]
+}

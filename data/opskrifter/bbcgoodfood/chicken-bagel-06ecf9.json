@@ -1,0 +1,92 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-bagel",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:28:28.063Z",
+  "total_minutes": 5,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 7,
+  "title": "Bagel med kylling og avocado",
+  "intro": "Ristede sesambagels fyldt med cremet avocado, revet kylling og frisk spinat. Et hurtigt og mættende måltid til frokost.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "moden",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "bagels med sesam",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "kyllingekød",
+      "note": "kogt og revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Mos avocadoen groft i en skål. Rør det meste af olien, limesaften og de hakkede tomater i, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Del bagelsene på midten, og rist dem, til de er lette gyldne."
+    },
+    {
+      "section": null,
+      "text": "Smør avocadoblandingen på den nederste halvdel af hver bagel. Læg kylling og spinat ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Dryp den resterende olie på de øverste halvdele, og læg dem med olien nedad oven på spinaten. Tryk let til."
+    }
+  ],
+  "changes": []
+}

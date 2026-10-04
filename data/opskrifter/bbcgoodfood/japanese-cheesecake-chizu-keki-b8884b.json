@@ -1,0 +1,156 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/japanese-cheesecake-chizu-keki",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:56:17.908Z",
+  "total_minutes": 100,
+  "active_minutes": 20,
+  "yield_count": 10,
+  "source_lines": 9,
+  "title": "Japansk cheesecake",
+  "intro": "Let, luftig og svampet cheesecake, der bages i vandbad, så den bliver ekstra blød. Pynt med friske bær og mynte.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 35,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "ml",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": "adskilt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": "sigtet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "sigtet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "jordbær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "blåbær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "mynte",
+      "note": "nogle få blade",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C varmluft. Beklæd bund og sider af en springform på 18 cm med bagepapir, og pak formens yderside ind i folie, så den bliver tæt."
+    },
+    {
+      "section": "Dej",
+      "text": "Hæld nykogt vand i en lille gryde eller skål. Kom flødeost, smør og mælk i en stor, varmefast skål, og sæt den ovenpå som vandbad."
+    },
+    {
+      "section": "Dej",
+      "text": "Lad det stå nogle minutter, til smørret er smeltet. Rør med en spatel, til blandingen er helt glat, og tag skålen af varmen."
+    },
+    {
+      "section": "Dej",
+      "text": "Rør æggeblommer og citronsaft i. Vend derefter majsstivelse og hvedemel i, til det lige akkurat er blandet."
+    },
+    {
+      "section": "Dej",
+      "text": "Sigt massen over i en anden skål, så dejen bliver helt glat. Stil den på køl, mens du pisker æggehviderne."
+    },
+    {
+      "section": "Marengs",
+      "text": "Pisk æggehvider i en ren skål, og tilsæt sukkeret lidt efter lidt, til de danner bløde toppe. Pas på ikke at piske for meget."
+    },
+    {
+      "section": "Marengs",
+      "text": "Rør en tredjedel af hviderne ind i osteblandingen, så den løsner sig. Vend resten i to omgange forsigtigt i, så dejen forbliver let og luftig."
+    },
+    {
+      "section": "Bagning",
+      "text": "Hæld dejen i den forberedte form. Stil formen i en mellemstor bradepande, og fyld bradepanden halvt med nykogt vand."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag i 20 minutter. Sænk så ovnen til 90 °C varmluft, og bag videre i 1 time, eller til toppen er gylden."
+    },
+    {
+      "section": "Afkøling",
+      "text": "Tag kagen ud af ovnen, og løft formen med det samme op af vandbadet. Fjern folien, og lad kagen køle af i formen, så den ikke falder sammen."
+    },
+    {
+      "section": "Afkøling",
+      "text": "Kagen kan holde sig tildækket i køleskabet i op til fem dage. Pynt med jordbær, blåbær og mynteblade, når den er kold."
+    }
+  ],
+  "changes": [
+    "Yuzujuice er erstattet af citronsaft.",
+    "Almindeligt hvedemel og majsstivelse bruges i stedet for cornflour og plain flour (cornflour er majsstivelse).",
+    "Golden caster sugar er erstattet af almindeligt sukker."
+  ]
+}

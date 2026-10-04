@@ -1,0 +1,274 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/roast-cauliflower-saffron-tahini-cranberry-chilli-oil-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:34:19.120Z",
+  "total_minutes": 75,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Ovnbagt blomkål med safrantahin og tranebær-chiliolie",
+  "intro": "Hel blomkål, der koges kort og bages gylden, serveres med cremet safrantahin og en krydret olie med sprøde løg og søde tranebær. Et flot bord-stykke, der kan stå alene eller som tilbehør.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Blomkål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "stor",
+      "optional": false
+    },
+    {
+      "section": "Blomkål",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blomkål",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Blomkål",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 30,
+      "unit": "g",
+      "name": "tørrede tranebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "nigellafrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget, stærk",
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 1,
+      "unit": "dl",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 100,
+      "unit": "g",
+      "name": "skalotteløg",
+      "note": "halveret på langs og skåret i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, halveret på langs, uden kerner, i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Safrantahin",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": "tråde",
+      "optional": false
+    },
+    {
+      "section": "Safrantahin",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Safrantahin",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Safrantahin",
+      "amount": 150,
+      "unit": "g",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Safrantahin",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Safrantahin",
+      "amount": 70,
+      "unit": "ml",
+      "name": "vand",
+      "note": "koldt, justeres efter konsistens",
+      "optional": false
+    },
+    {
+      "section": "Safrantahin",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tranebær-chiliolie",
+      "text": "Læg tranebærrene i blød i varmt vand i 10 minutter. Si dem fra og hak dem groft."
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "text": "Kom nigellafrø, chiliflager, kanel, paprika, sesamfrø, lønnesirup, sojasauce og salt i en varmefast skål. Sæt en si over skålen."
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "text": "Varm olien op i en mellemstor gryde til 180 °C. Uden termometer er olien klar, når en skive skalotteløg syder, så snart den lægges i."
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "text": "Kom skalotteløg og chili i olien. Rør af og til, og steg i 3 minutter, til løgene er bløde."
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "text": "Tilsæt hvidløg, og steg 3 minutter mere under jævnlig omrøring, til løgene begynder at blive gyldne og sprøde. De bliver mørkere, efter de er taget af olien, så hellere for kort tid end for lang."
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "text": "Hæld olien gennem sien ned over krydderierne. Læg løg, hvidløg og chili på køkkenrulle, så de bliver sprøde."
+    },
+    {
+      "section": "Tranebær-chiliolie",
+      "text": "Når alt er helt afkølet, blandes løgblandingen med den krydrede olie og tranebærrene. Stil til side."
+    },
+    {
+      "section": "Blomkål",
+      "text": "Forvarm ovnen til 240 °C."
+    },
+    {
+      "section": "Blomkål",
+      "text": "Bring en stor gryde letsaltet vand i kog. Klip de fleste af de ydre blade af blomkålen, men lad nogle sidde, for de bliver lækre og sprøde i ovnen."
+    },
+    {
+      "section": "Blomkål",
+      "text": "Læg blomkålen i vandet med stokken opad, og lad den koge sagte i 8 minutter. Løft den over i et dørslag, stadig med stokken opad, og lad den dampe af og dryppe af i cirka 10 minutter."
+    },
+    {
+      "section": "Blomkål",
+      "text": "Læg blomkålen på en bageplade med bagepapir, nu med stokken nedad. Dryp med olivenolie, drys med salt, og gnid det ind over hele blomkålen."
+    },
+    {
+      "section": "Blomkål",
+      "text": "Bag i 25-30 minutter, til blomkålen er gylden og brunet."
+    },
+    {
+      "section": "Safrantahin",
+      "text": "Mens blomkålen bager, knuses safran til pulver i en morter. Rør det ud med det kogende vand, og lad det trække i 10 minutter."
+    },
+    {
+      "section": "Safrantahin",
+      "text": "Pisk salt, tahin og citronsaft ud i safranvandet. Pisk derefter langsomt det kolde vand i, til saucen har samme konsistens som pandekagedej. Er den stadig stiv, tilsættes lidt mere vand. Rør dild i."
+    },
+    {
+      "section": null,
+      "text": "Anret blomkålen på et fad, hæld safrantahinen over, og server med tranebær-chiliolien ved siden af."
+    }
+  ],
+  "changes": [
+    "Aleppo-chiliflager er erstattet af almindelige chiliflager."
+  ]
+}

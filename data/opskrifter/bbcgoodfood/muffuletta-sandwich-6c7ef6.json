@@ -1,0 +1,280 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/muffuletta-sandwich",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:33:45.495Z",
+  "total_minutes": 40,
+  "active_minutes": 35,
+  "yield_count": 6,
+  "source_lines": 24,
+  "title": "Muffuletta-sandwich",
+  "intro": "Et stort rundt brød fyldt med pålæg, ost og en saftig oliven­salat, som trækker i en time under vægt. Syltede grøntsager giver frisk syrlighed, og sandwichen kan sagtens laves i forvejen.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Giardiniera",
+      "amount": 100,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 100,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i tynde stave",
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 100,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i små buketter",
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hele sorte peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Giardiniera",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Olivensalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "grønne oliven",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": "Olivensalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "sorte oliven",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": "Olivensalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "ristet peberfrugt",
+      "note": "fra glas, drænet",
+      "optional": false
+    },
+    {
+      "section": "Olivensalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "drænet",
+      "optional": false
+    },
+    {
+      "section": "Olivensalat",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Olivensalat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "fladbladet, hakket",
+      "optional": false
+    },
+    {
+      "section": "Olivensalat",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Olivensalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Olivensalat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 1,
+      "unit": "stk",
+      "name": "brød",
+      "note": "stort, rundt og hvidt, fx blød focaccia eller rundt landbrød",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 125,
+      "unit": "g",
+      "name": "mortadella",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 125,
+      "unit": "g",
+      "name": "salami",
+      "note": "mild eller sød",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 125,
+      "unit": "g",
+      "name": "skinke i skiver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 150,
+      "unit": "g",
+      "name": "emmental",
+      "note": "i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Giardiniera",
+      "text": "Hæld eddike og vand i en lille gryde. Tilsæt sukker og salt, og lad det simre, til alt er opløst."
+    },
+    {
+      "section": "Giardiniera",
+      "text": "Kom gulerod, selleri, blomkål, chili og hvidløg i et rent lille glas eller en varmefast skål. Drys peberkorn og fennikelfrø over, og hæld den varme lage over."
+    },
+    {
+      "section": "Giardiniera",
+      "text": "Lad det køle helt af, og top med olivenolien. Sæt det på køl i mindst 1 time eller natten over."
+    },
+    {
+      "section": "Olivensalat",
+      "text": "Mos 75 g af grøntsagerne fra giardinieraen sammen med oliven, peberfrugt, kapers, hvidløg og persille i en foodprocessor. Det skal være fint hakket, men stadig have bid."
+    },
+    {
+      "section": "Olivensalat",
+      "text": "Skrab blandingen i en skål, og rør olivenolie, rødvinseddike og 1 spsk af giardinieraens lage i. Smag til med peber, og stil det på køl i 30 minutter eller natten over."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Del brødet i to halvdele på langs af midten. Er krummen meget tyk og luftig, så pil lidt af den ud, så der bliver plads til fyldet."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Pensl snitfladerne med olie, og fordel olivensalaten på begge halvdele, så saften trækker ind i brødet."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Læg mortadella, salami og skinke i lag på bunden, og dæk med osten. Læg låget på, og tryk godt sammen."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Pak sandwichen stramt ind i bagepapir. Læg et bræt eller en bakke ovenpå, og tynge det ned med et par dåser."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Lad den stå i 1 time ved stuetemperatur, før den skæres i stykker og serveres."
+    }
+  ],
+  "changes": [
+    "Prosciutto cotto er erstattet af skinke i skiver.",
+    "Provolone er erstattet af emmental.",
+    "Ristede peberfrugter fra glas er skrevet som ristet peberfrugt på glas."
+  ]
+}

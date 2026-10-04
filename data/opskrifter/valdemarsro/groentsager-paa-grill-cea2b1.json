@@ -1,0 +1,156 @@
+{
+  "url": "https://www.valdemarsro.dk/groentsager-paa-grill/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:42:44.349Z",
+  "total_minutes": 40,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Grillede grøntsager med marinade",
+  "intro": "Farverige grøntsager fra grillen, penslet med en simpel marinade af olivenolie, eddike og røget paprika. Majs og hvidløg får langsom indirekte varme, mens resten grilles hurtigt over direkte varme.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "skåret i halve",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hvidløg",
+      "note": "hel knold",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 0.5,
+      "unit": "pakke",
+      "name": "asparges",
+      "note": "grønne",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "majs",
+      "note": "majskolber",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Forberedelse",
+      "text": "Pisk olie, eddike, røget paprika, salt og peber sammen til marinade."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Skær grøntsagerne som angivet i ingredienslisten, og pensl dem alle med marinaden."
+    },
+    {
+      "section": "Indirekte varme",
+      "text": "Læg majskolberne og det hele hvidløg i kanten af grillen, væk fra kullene, hvor der er lavest temperatur."
+    },
+    {
+      "section": "Indirekte varme",
+      "text": "Lad dem ligge i 30 minutter, til de er møre helt ind i midten."
+    },
+    {
+      "section": "Direkte varme",
+      "text": "Læg tomater, squash, peberfrugt, løg, aubergine, asparges og fennikel direkte over varmen, når majs og hvidløg er næsten færdige."
+    },
+    {
+      "section": "Direkte varme",
+      "text": "Grill grøntsagerne 3-5 minutter på hver side, til de har fået grillstriber og er let møre, men stadig har bid."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,264 @@
+{
+  "url": "https://www.valdemarsro.dk/moussaka/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:08:19.592Z",
+  "total_minutes": 120,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Moussaka",
+  "intro": "Græsk ovnret med kødsauce, kartofler og aubergine under en cremet ostesauce. Den kan sagtens laves i forvejen og bages, når den skal spises.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "soltørrede tomater",
+      "note": "i olie, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "frisk rosmarin",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 3,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sød paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt spidskommen",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 4,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til det ovnfaste fad",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "let kogte og skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødsauce",
+      "text": "Svits løg og hvidløg i olie i en gryde ved middelvarme, til løgene er bløde."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Tilsæt hakket oksekød, og brun det under omrøring ved høj varme."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Sænk varmen. Rør hakkede tomater, soltørrede tomater, tomatpuré, alle krydderierne, rødvin, salt og peber i."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Lad saucen simre uden låg, mens du laver mornaysaucen."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Smelt smørret ved middelvarme i en anden gryde. Pisk hvedemelet i, så det bliver til en smørbolle."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Hæld mælken i lidt ad gangen, og rør hele tiden, til saucen er glat."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Lad saucen koge op under omrøring. Rør halvdelen af mozzarellaen i, til den er smeltet, og smag til med muskatnød, salt og peber. Gem resten af osten til toppen."
+    },
+    {
+      "section": "Samling",
+      "text": "Tænd ovnen på 175 °C varmluft. Smør et ovnfast fad med smør."
+    },
+    {
+      "section": "Samling",
+      "text": "Byg moussakaen i lag: først lidt kødsauce, så kartoffelskiver, derefter aubergine og mere kødsauce. Læg endnu et lag kartofler på."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld mornaysaucen over, og top med resten af mozzarellaen (revet eller i stykker) og rasp."
+    },
+    {
+      "section": "Samling",
+      "text": "Bag i cirka 1 time, til kartoflerne er møre."
+    }
+  ],
+  "changes": []
+}

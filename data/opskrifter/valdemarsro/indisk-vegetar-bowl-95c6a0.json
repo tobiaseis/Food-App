@@ -1,0 +1,299 @@
+{
+  "url": "https://www.valdemarsro.dk/indisk-vegetar-bowl/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:35:11.071Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 25,
+  "title": "Indisk bowl med sprød blomkål og ananassalsa",
+  "intro": "Vegetarisk bowl med krydret rispilaf, sprødbagt blomkål og kikærter, frisk ananassalsa og hvidløgsyoghurt. Det er en farverig ret med både sprødt, cremet og friskt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Blomkål og kikærter",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "amount": 500,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "amount": 100,
+      "unit": "g",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "skyllet og drænet",
+      "optional": false
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Rispilaf",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Rispilaf",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Rispilaf",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Rispilaf",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Rispilaf",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rispilaf",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rispilaf",
+      "amount": 5,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rispilaf",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rispilaf",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "ananas",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Blomkål og kikærter",
+      "text": "Pisk æg, mayonnaise og halvdelen af paprikaen sammen i en skål, til blandingen er ensartet. Bland pankorasp med salt og peber i en anden skål."
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "text": "Vend blomkålsbuketterne først i æggeblandingen og så i raspen. Læg dem på en bageplade med bagepapir."
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "text": "Bag blomkålen i ovnen ved 200 °C varmluft i ca. 10 minutter. Forvarm ovnen først."
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "text": "Vend kikærterne i olie og dernæst i resten af paprikaen. Læg dem på pladen ved siden af blomkålen, og læg de 3 fed hvidløg til yoghurten med."
+    },
+    {
+      "section": "Blomkål og kikærter",
+      "text": "Bag videre i ca. 20 minutter, til blomkålen er sprød udenpå og mør indeni."
+    },
+    {
+      "section": "Rispilaf",
+      "text": "Varm smørret op på en pande ved middelvarme. Svits løg, ingefær, hvidløg, spidskommen og garam masala, til det dufter, og løgene er bløde."
+    },
+    {
+      "section": "Rispilaf",
+      "text": "Rør risene med i et par minutter. Hæld fonden over, læg låg på, og lad det simre ved svag varme i 10 minutter."
+    },
+    {
+      "section": "Rispilaf",
+      "text": "Tag panden af varmen, og lad risene stå under låg i 10 minutter mere. Vend persillen i til sidst."
+    },
+    {
+      "section": "Ananassalsa",
+      "text": "Bland ananas, mynte og koriander i en skål. Smag til med limesaft, limeskal, chili, salt og peber."
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "text": "Pres de bagte hvidløg ud af skallen, og mos dem med en gaffel i en lille skål. Rør yoghurten i, og smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel rispilafen i skåle. Læg blomkål og kikærter ovenpå, og top med ananassalsa og hvidløgsyoghurt."
+    }
+  ],
+  "changes": [
+    "Mayonnaise er skrevet som mayonnaise (varekatalogets navn) uden ændring af mængde.",
+    "Grøntsagsbouillon er skiftet til grøntsagsfond."
+  ]
+}

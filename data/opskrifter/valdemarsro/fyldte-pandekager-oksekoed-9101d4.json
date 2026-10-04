@@ -1,0 +1,256 @@
+{
+  "url": "https://www.valdemarsro.dk/fyldte-pandekager-oksekoed/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:26:01.145Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Fyldte pandekager med oksekød og squash",
+  "intro": "Madpandekager af hvede- og fuldkornsmel rulles om en fyldig oksekødsfyld med grøntsager og gratineres med cheddar i ovnen. Serveres med frisk avocadomos og salat.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pandekager",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 3.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 50,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": "eller grahamsmel",
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 200,
+      "unit": "g",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": "på dåse eller fra frost",
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekødsfyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Avocadomos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadomos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saft og fintrevet skal, gerne økologisk",
+      "optional": false
+    },
+    {
+      "section": "Avocadomos",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Avocadomos",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 125,
+      "unit": "g",
+      "name": "salat",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pandekager",
+      "text": "Pisk æg, mælk og salt sammen med hvedemel og fuldkornsmel til en jævn dej."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Varm en pande med smør eller lidt olie, og steg pandekagerne én ad gangen, til de er lysebrune på begge sider. Stil dem til side."
+    },
+    {
+      "section": "Oksekødsfyld",
+      "text": "Brun oksekødet i olie på en varm pande, mens du rører rundt."
+    },
+    {
+      "section": "Oksekødsfyld",
+      "text": "Sænk varmen, og tilsæt løg, hvidløg, spidskommen og koriander. Svits, til løgene er bløde."
+    },
+    {
+      "section": "Oksekødsfyld",
+      "text": "Rør gulerod, squash, tomater og majs ned i panden. Lad fylden simre uden låg i 5-10 minutter, og smag til med salt og peber."
+    },
+    {
+      "section": "Avocadomos",
+      "text": "Mos avocadoens kød med en gaffel på en tallerken. Smag til med limesaft, limeskal, spidskommen og salt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Tænd ovnen på 200 °C varmluft."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel fylden og lidt af cheddaren på pandekagerne, og rul dem sammen. Læg dem med samlingen nedad i et ovnfast fad, og drys resten af osten over."
+    },
+    {
+      "section": "Til servering",
+      "text": "Bag pandekagerne i ovnen i ca. 10 minutter. Drys med persille, og server med salat og avocadomos."
+    }
+  ],
+  "changes": []
+}

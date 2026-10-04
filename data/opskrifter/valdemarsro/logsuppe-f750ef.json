@@ -1,0 +1,156 @@
+{
+  "url": "https://www.valdemarsro.dk/logsuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:07:12.379Z",
+  "total_minutes": 60,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 12,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 700,
+      "unit": "g",
+      "name": "løg",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsostebrød",
+      "amount": 8,
+      "unit": "skive",
+      "name": "brød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsostebrød",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsostebrød",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "skåret over",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien i en gryde ved middelvarme. Svits løg og hvidløg, til løgene er bløde."
+    },
+    {
+      "section": null,
+      "text": "Drys sukkeret over, og rør løbende, til løgene karamelliserer og får en mørkere farve."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt chili, timian, fond og balsamico. Bring suppen i kog, og lad den simre svagt i 20 minutter."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt og peber, og tilsæt evt. lidt mere balsamico."
+    },
+    {
+      "section": "Hvidløgsostebrød",
+      "text": "Varm ovnen op til 175 °C varmluft og beklæd en bageplade med bagepapir."
+    },
+    {
+      "section": "Hvidløgsostebrød",
+      "text": "Gnid den ene side af hver brødskive med de overskårne hvidløg. Læg skiverne på bagepladen, og top dem med mozzarella."
+    },
+    {
+      "section": "Hvidløgsostebrød",
+      "text": "Bag brødene i cirka 10 minutter, til osten er smeltet."
+    },
+    {
+      "section": null,
+      "text": "Øs suppen op i skåle, og server de varme ostebrød ved siden af."
+    }
+  ],
+  "title": "Fransk løgsuppe med hvidløgsostebrød",
+  "intro": "Sødmefuld løgsuppe med karamelliserede løg, hvidløg og en smule chili. Serveres med sprøde brødskiver med smeltet mozzarella.",
+  "servings": 4,
+  "changes": []
+}

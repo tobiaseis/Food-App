@@ -1,0 +1,172 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/vegan-pasta-bake-2",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:13:25.972Z",
+  "total_minutes": 35,
+  "active_minutes": 15,
+  "yield_count": null,
+  "source_lines": 14,
+  "title": "Vegansk pastaform med linser og cashewsauce",
+  "intro": "Fuldkornspasta og grønne linser simrer i tomatsauce med squash og bages under en cremet cashewsauce. Retten er veganer-venlig, og halvdelen kan gemmes til næste dag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "linser",
+      "note": "tørrede grønne linser",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "fuldkornspenne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "squash",
+      "note": "delt i kvarte på langs og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "basilikum",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillonpulver",
+      "optional": false
+    },
+    {
+      "section": "Til cashewsaucen",
+      "amount": 125,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": "usaltede og ristede ikke",
+      "optional": false
+    },
+    {
+      "section": "Til cashewsaucen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "gærflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til cashewsaucen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillonpulver",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 150,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "håndfuld",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor ovnfast gryde ved middel varme. Steg løgene i 10 minutter, til de begynder at tage farve. Rør af og til."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt hvidløg og linser, og hæld 500 ml vand i. Kog op, læg låg på, og lad det koge 10 minutter ved høj varme."
+    },
+    {
+      "section": null,
+      "text": "Rør passataen i, sæt låg på igen, skru ned på lav varme, og lad det simre 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Bland pasta, squash, tre fjerdedele af basilikummen og bouillonpulveret i gryden. Kog op igen, læg låg på, og lad det koge cirka 15 minutter, til pastaen er mør. Hold øje med gryden, og tilsæt lidt vand, hvis den bliver for tør."
+    },
+    {
+      "section": "Til cashewsaucen",
+      "text": "Tænd ovnen på 200 °C (varmluft 180 °C). Kom cashewnødderne i en varmefast skål, og hæld 200 ml kogende vand over. Tilsæt gærflager og bouillonpulver, og blend med stavblender, til saucen er glat og løs som en hvid sauce."
+    },
+    {
+      "section": null,
+      "text": "Tag gryden af varmen, og jævn overfladen med bagsiden af en ske. Hæld cashewsaucen ovenpå, og fordel cherrytomaterne over."
+    },
+    {
+      "section": null,
+      "text": "Bag i ovnen i 15 minutter, til saucen bobler ved kanten. Drys med den resterende basilikum."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server halvdelen med halvdelen af rucolaen med det samme. Lad resten køle helt af, og stil den i køleskabet. Den holder sig op til fire dage."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm resten på tallerkener i mikroovn, til den er gennemvarm, og server med den sidste rucola."
+    }
+  ],
+  "changes": [
+    "Tomatpassata er erstattet af passata.",
+    "Courgette er erstattet af squash.",
+    "Nutritional yeast er erstattet af gærflager."
+  ]
+}

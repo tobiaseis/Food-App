@@ -1,0 +1,139 @@
+{
+  "url": "https://www.arla.dk/opskrifter/rejesalat-med-asparges/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:10:48.573Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Rejesalat med asparges",
+  "intro": "Frisk salat med rejer, hvide asparges og cherrytomater, toppet med en cremet dressing af fraiche, citron og dild. Serveres med ristet groft brød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til dressingen",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "rørsukker",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "asparges",
+      "note": "hvide, ca. 275 g",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 200,
+      "unit": "g",
+      "name": "rejer",
+      "note": "frosne og optøede eller i lage",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1.75,
+      "unit": "l",
+      "name": "salat",
+      "note": "revet i grove stykker, fx grøn krølsalat og rød egeløvssalat",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "kviste til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 150,
+      "unit": "g",
+      "name": "brød",
+      "note": "groft, ristet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Rør creme fraiche, citronsaft, dild, sukker, salt og peber sammen i en skål."
+    },
+    {
+      "section": "Dressing",
+      "text": "Dæk skålen og lad dressingen trække i køleskabet i mindst en halv time. Smag den til."
+    },
+    {
+      "section": "Salat",
+      "text": "Lad aspargesene og rejerne dryppe af i en si."
+    },
+    {
+      "section": "Salat",
+      "text": "Læg begge slags salat på tallerkenerne, og top med asparges, rejer og cherrytomater."
+    },
+    {
+      "section": "Salat",
+      "text": "Hæld lidt dressing over og pynt med dildkviste. Server resten af dressingen i en skål ved siden af, og tag det ristede brød med."
+    }
+  ],
+  "changes": [
+    "Fraiche er erstattet med creme fraiche.",
+    "Rørsukker er erstattet med almindeligt sukker."
+  ]
+}

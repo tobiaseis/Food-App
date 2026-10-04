@@ -1,0 +1,128 @@
+{
+  "url": "https://www.arla.dk/opskrifter/flaskestegssandwich/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:12:34.520Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Flæskestegssandwich",
+  "intro": "Bløde boller fyldt med skiver af kold flæskesteg, rødkål, sprød salat og en cremet sennepsdressing. En lækker måde at bruge resterne fra julefrokosten eller søndagssteg på.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 3,
+      "unit": "tsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til sandwichene",
+      "amount": 4,
+      "unit": "stk",
+      "name": "burgerboller",
+      "note": "fx smørbagte briocheboller",
+      "optional": false
+    },
+    {
+      "section": "Til sandwichene",
+      "amount": 200,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "lun",
+      "optional": false
+    },
+    {
+      "section": "Til sandwichene",
+      "amount": 8,
+      "unit": "skive",
+      "name": "flæskesteg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sandwichene",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "rødt, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til sandwichene",
+      "amount": 100,
+      "unit": "g",
+      "name": "syltede agurker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sandwichene",
+      "amount": null,
+      "unit": null,
+      "name": "salat",
+      "note": "en rest blandet salat, fx grønkål",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Bland creme fraiche, mayonnaise, sennep, salt og peber i en skål. Smag dressingen til."
+    },
+    {
+      "section": "Samling",
+      "text": "Varm bollerne og rødkålen."
+    },
+    {
+      "section": "Samling",
+      "text": "Skær bollerne over og bred dressing på dem."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel flæskesteg, æbleskiver, rødkål, syltede agurker og salat på bunden, og læg toppen på."
+    },
+    {
+      "section": "Samling",
+      "text": "Server sandwichene med det samme."
+    }
+  ],
+  "changes": []
+}

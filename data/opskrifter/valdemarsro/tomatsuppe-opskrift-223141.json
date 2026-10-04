@@ -1,0 +1,236 @@
+{
+  "url": "https://www.valdemarsro.dk/tomatsuppe-opskrift/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:49:04.658Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Tomatsuppe med suppenudler og ostebrød",
+  "intro": "Cremet tomatsuppe med kartofler og gulerødder, der giver fylde, og små suppenudler. Serveres med sprøde brød med smeltet mozzarella og timian.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "mediumstærk",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 3,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "groftrevne",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevne",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1200,
+      "unit": "g",
+      "name": "flåede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 100,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 100,
+      "unit": "g",
+      "name": "suppenudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Ostebrød",
+      "amount": 8,
+      "unit": "skive",
+      "name": "brød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostebrød",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Ostebrød",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "frisk, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ostebrød",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "frisk, til drys",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppe",
+      "text": "Varm olien i en gryde ved middelvarme. Svits løg, hvidløg og porre, til de er bløde."
+    },
+    {
+      "section": "Suppe",
+      "text": "Rør paprika, spidskommen og karry i, og steg et par minutter under omrøring."
+    },
+    {
+      "section": "Suppe",
+      "text": "Kom kartofler og gulerødder i gryden, og hæld derefter tomater, tomatpuré, tørret timian og fond i. Lad det simre i 15-20 minutter."
+    },
+    {
+      "section": "Suppe",
+      "text": "Blend suppen glat i en kraftig blender, og smag den til med fløde, salt og peber."
+    },
+    {
+      "section": "Suppe",
+      "text": "Hæld suppen tilbage i gryden, og kog nudlerne med i et par minutter, til de er møre."
+    },
+    {
+      "section": "Ostebrød",
+      "text": "Forvarm ovnen til 200 °C. Gnid brødskiverne med den halve hvidløgsfed, og læg mozzarella ovenpå."
+    },
+    {
+      "section": "Ostebrød",
+      "text": "Anret skiverne på en bageplade med bagepapir, og bag dem, til osten er smeltet. Drys med timianblade."
+    },
+    {
+      "section": "Til servering",
+      "text": "Øs den varme suppe op i dybe tallerkener, og top med en klat creme fraiche og timianblade. Server med de varme ostebrød."
+    }
+  ],
+  "changes": []
+}

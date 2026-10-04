@@ -1,0 +1,111 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/egg-foo-yung",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:56:46.965Z",
+  "total_minutes": 10,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 7,
+  "title": "Egg foo yung",
+  "intro": "Kinesisk omelet med rejer, løg, champignon og ærter, der laves hurtigt i wok. Æggene holdes bløde og foldes sammen med fyldet.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral, fx rapsolie",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "rejer",
+      "note": "rå, pillede og uden tarm, eller kogt kylling, kogt char siu-svinekød eller forstegt tofu i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, hvidt, skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "ærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "hvid",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket sammen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm en wok op over middelhøj varme. Hæld olien i, når woken er varm."
+    },
+    {
+      "section": null,
+      "text": "Kom rejerne (eller det valgte alternativ) i og fordel dem i bunden. Lad dem tage farve."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt løgstrimlerne og rør jævnligt, mens de blødgør i 1-2 minutter. Rør derefter champignonskiverne i."
+    },
+    {
+      "section": null,
+      "text": "Når champignonerne begynder at blive bløde, tilsættes ærter, hvid peber og salt. Wok i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Hæld de piskede æg over. Undgå at røre i dem – løft i stedet woken og sving æggene ud mellem de andre ingredienser."
+    },
+    {
+      "section": null,
+      "text": "Når æggene begynder at stivne, foldes de forsigtigt ind i retten. Tag woken af varmen, så snart æggene næsten er gennemstegte."
+    }
+  ],
+  "changes": [
+    "Jordnøddeolie er erstattet af almindelig neutral olie.",
+    "Kongerejer er erstattet af rejer."
+  ]
+}

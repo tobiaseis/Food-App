@@ -1,0 +1,264 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/brined-salmon-seasonal-vegetables-creamy-dill-sauce-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:26:28.899Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Saltlagt laks med grøntsager og cremet dildsauce",
+  "intro": "Laksen får et kort ophold i saltlage, så den bliver mør og saftig, og steges med sprød skind. Den serveres med sprødstegte grøntsager, nye kartofler og en frisk dildsauce med yoghurt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til saltlagen og laksen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "laksefilet",
+      "note": "med skind, skåret let i skindet",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen og laksen",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen og laksen",
+      "amount": 70,
+      "unit": "g",
+      "name": "salt",
+      "note": "groft havsalt",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen og laksen",
+      "amount": 30,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen og laksen",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen og laksen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen og laksen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sorte peberkorn, knuste",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 600,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "bladene plukket og hakket",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "dild",
+      "note": "kviste, bladene plukkes og gemmes til pynt",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildsauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "squash",
+      "note": "skåret i stave",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 200,
+      "unit": "g",
+      "name": "asparges",
+      "note": "trimmet, skåret i tredjedele og halveret på langs (spidserne helt)",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 150,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe over",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Saltlage",
+      "text": "Rør salt og sukker ud i det kolde vand i en beholder. Tilsæt peberkorn og citronskal."
+    },
+    {
+      "section": "Saltlage",
+      "text": "Læg laksen i saltlagen, så den er helt dækket, og sæt den i køleskabet i 20 minutter."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Kom kartoflerne i en stor gryde med koldt, saltet vand. Bring det i kog, og kog dem i ca. 15 minutter, til de er møre."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Hæld vandet fra, og lad kartoflerne dampe af. Vend dem i en skål med smør og mynte, og hold dem varme."
+    },
+    {
+      "section": "Dildsauce",
+      "text": "Pisk alle ingredienserne til saucen sammen i en skål, og smag til med salt og peber. Stil den til side."
+    },
+    {
+      "section": "Laks",
+      "text": "Tag laksen op af saltlagen, og gem 2 spsk af lagen. Tør laksen godt med køkkenrulle."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Smelt smørret i en stor pande, og steg squashen i 2 minutter, til den begynder at blive blød."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Kom aspargesene på panden, og steg dem i yderligere 4 minutter, mens du vender jævnligt."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Tilsæt ærter og den gemte saltlage, og lad det simre i 3 minutter mere. Smag til med lidt salt og peber, og hold det varmt."
+    },
+    {
+      "section": "Laks",
+      "text": "Varm en pande op ved middelhøj varme med lidt olie, mens grøntsagerne laver sig selv."
+    },
+    {
+      "section": "Laks",
+      "text": "Læg laksen på panden med skindsiden nedad, og tryk den let ned, så den ikke krummer sig. Steg den i 5 minutter, til skindet er gyldent og sprødt."
+    },
+    {
+      "section": "Laks",
+      "text": "Vend fileterne, og steg dem 1-2 minutter, til de lige netop er gennemstegte. Lad dem hvile på et fad."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel de varme grøntsager på tallerkener, og top med dildsauce. Læg laksen ovenpå med skindsiden opad."
+    },
+    {
+      "section": "Servering",
+      "text": "Pynt med de gemte dildtoppe, dryp med olivenolie, og drys med peber. Server med de varme kartofler ved siden af."
+    }
+  ],
+  "changes": [
+    "Courgette er skiftet til squash.",
+    "Usaltet smør er skiftet til almindeligt smør.",
+    "Knob smør er skiftet til 1 spsk smør."
+  ]
+}

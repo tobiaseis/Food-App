@@ -1,0 +1,287 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/nihari",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:05:04.678Z",
+  "total_minutes": 260,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 25,
+  "title": "Nihari med lammeskank",
+  "intro": "Nihari er en pakistansk og indisk gryderet, hvor lammeskanke simrer i timevis i en kraftigt krydret sovs, til kødet falder fra benet. Server den med frisk koriander, ingefær, chili og citron.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "lammeskank",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "chili",
+      "note": "stødt chilipulver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": "eller lige nok til at dække kødet",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "hele kapsler",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 2,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "muskatblomme",
+      "note": "stødt, eller 2 blade",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "muskatnød",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "valmuefrø",
+      "note": "blå, ikke sorte",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 15,
+      "unit": "stk",
+      "name": "nelliker",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Nihari-masala",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "varmt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 6,
+      "unit": "spsk",
+      "name": "sprøde løg",
+      "note": "ristede løg",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "naanbrød",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Nihari-masala",
+      "text": "Kom alle krydderierne til masalaen i en krydderikværn eller minihakker sammen med det varme vand. Kør det til en helt fin pasta."
+    },
+    {
+      "section": "Nihari-masala",
+      "text": "Tag 3 tsk af pastaen fra og gem den til servering."
+    },
+    {
+      "section": "Gryderet",
+      "text": "Varm olie og ghee op i en stor, tung gryde ved middelvarme. Steg ingefær og hvidløg i ca. 2 minutter, til det dufter."
+    },
+    {
+      "section": "Gryderet",
+      "text": "Læg lammeskankene i gryden og brun dem hele vejen rundt i ca. 10 minutter."
+    },
+    {
+      "section": "Gryderet",
+      "text": "Rør chilipulver, resten af masalapastaen og saltet i. Steg i 1-2 minutter, til krydderierne dufter. Tilsæt en sjat vand, hvis det sætter sig fast."
+    },
+    {
+      "section": "Gryderet",
+      "text": "Hæld vandet i, så kødet netop er dækket. Bring det i kog, sæt låg på og lad det simre ved middel-lav varme i 45 minutter til 1 time."
+    },
+    {
+      "section": "Gryderet",
+      "text": "Tag 150 ml af væsken op, og pisk den sammen med begge slags mel, til der ikke er klumper. Rør blandingen tilbage i gryden."
+    },
+    {
+      "section": "Gryderet",
+      "text": "Læg låg på og lad retten simre ved lav varme i 2 timer mere, til kødet er så mørt, at det falder fra hinanden."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret nihari med koriander, ingefær, chili, sprøde løg og citronbåde. Drys med den gemte masala, og server naanbrød ved siden af."
+    }
+  ],
+  "changes": [
+    "Vegetable oil er erstattet af rapsolie.",
+    "Kashmiri chilipulver er erstattet af almindeligt chilipulver.",
+    "Sort kardemomme er erstattet af almindelige kardemommekapsler.",
+    "Pippali-peber er udeladt; der bruges kun sorte peberkorn.",
+    "Crispy fried onions er erstattet af sprøde ristede løg.",
+    "Wholewheat flour er erstattet af fuldkornshvedemel."
+  ]
+}

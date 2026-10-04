@@ -1,0 +1,200 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/tuna-tartare-nori-tempura-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:18:55.587Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Tuntatar med nori-tempura",
+  "intro": "Frisk tuntatar i en dressing med sojasauce, sesam og æbleeddike, serveret med radiseroser og sprøde tempurastegte norichips. Retten er hurtig at lave og kræver blot en fisk af sashimikvalitet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tartare",
+      "amount": 500,
+      "unit": "g",
+      "name": "tunsteak",
+      "note": "sashimikvalitet, skåret i tern på 5 mm",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "æbleeddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": "ristet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Radiseroser",
+      "amount": 8,
+      "unit": "stk",
+      "name": "radiser",
+      "note": "skåret i tynde skiver på langs",
+      "optional": false
+    },
+    {
+      "section": "Nori-tempura",
+      "amount": 50,
+      "unit": "g",
+      "name": "tempuramel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nori-tempura",
+      "amount": 1,
+      "unit": "dl",
+      "name": "danskvand",
+      "note": "iskold",
+      "optional": false
+    },
+    {
+      "section": "Nori-tempura",
+      "amount": 3,
+      "unit": "stk",
+      "name": "nori",
+      "note": "ristede ark, skåret i rektangler på 5 x 10 cm",
+      "optional": false
+    },
+    {
+      "section": "Nori-tempura",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Nori-tempura",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "fint, til drys",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": "f.eks. shiso, daikon, kørvel eller amarant",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sorte sesamfrø",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Radiseroser",
+      "text": "Læg radiseskiverne i iskoldt vand i 10-15 minutter, til de krøller let. Hæld vandet fra, og dup skiverne tørre med køkkenrulle."
+    },
+    {
+      "section": "Dressing",
+      "text": "Pisk alle dressingens ingredienser sammen med en knivspids salt. Smag til, og juster krydringen."
+    },
+    {
+      "section": "Tartare",
+      "text": "Vend tunen forsigtigt rundt i dressingen i en stor skål, så alle tern er dækket. Dæk skålen, og stil den på køl i 15-30 minutter – ikke længere, da syren ellers begynder at modne fisken og tage farven."
+    },
+    {
+      "section": "Radiseroser",
+      "text": "Form de tørre radiseskiver til fire roser, og stil dem til side."
+    },
+    {
+      "section": "Nori-tempura",
+      "text": "Varm olien op i en dyb gryde ved middelhøj varme, eller forvarm frituren til 170 °C."
+    },
+    {
+      "section": "Nori-tempura",
+      "text": "Rør tempuramel og iskoldt danskvand sammen i en afkølet skål til en tyk, klumpet dej. Rør ikke for meget, og brug kun så meget vand, som der er brug for."
+    },
+    {
+      "section": "Nori-tempura",
+      "text": "Vend 2-3 noristykker ad gangen i dejen med en tang, så begge sider er dækket, og sænk dem forsigtigt ned i olien. Steg i 30-60 sekunder, til de er gyldne og sprøde, og skil stykker, der klistrer sammen. Læg dem på en bageplade med køkkenrulle, og drys rigeligt med fint salt, mens de er varme. Lad olien nå 170 °C igen mellem hvert hold."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret tunen i skåle, og læg en radisrose på hver portion. Drys med sorte sesamfrø, og top med karse. Server straks med nori-tempuraen ved siden af."
+    }
+  ],
+  "changes": [
+    "Tamari er erstattet med sojasauce.",
+    "Sagwa-shikcho (koreansk æbleeddike) er erstattet med almindelig æbleeddike.",
+    "Mikrokarse er erstattet med karse."
+  ]
+}

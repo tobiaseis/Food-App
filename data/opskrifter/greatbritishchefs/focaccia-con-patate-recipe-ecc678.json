@@ -1,0 +1,202 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/focaccia-con-patate-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:15:28.699Z",
+  "total_minutes": 75,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 14,
+  "title": "Focaccia med kartofler og ansjosløg",
+  "intro": "Luftig focaccia med tynde, sprøde kartoffelskiver og langtidsstegte løg med ansjoser. Til sidst får brødet kapers og persille.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 7,
+      "unit": "g",
+      "name": "tørgær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "gule, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 4,
+      "unit": "stk",
+      "name": "ansjoser",
+      "note": "fileter",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": null,
+      "unit": null,
+      "name": "ansjoser",
+      "note": "et par stykker ekstra til pynt",
+      "optional": true
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 600,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "meget tynde skiver, skåret på mandolin",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rosmarin",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sidst",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sidst",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til sidst",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe over",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Bland mel, gær og salt i en skål. Tilsæt vand og olie, og saml det til en dej."
+    },
+    {
+      "section": "Dej",
+      "text": "Ælt dejen i 8-10 minutter, til den er glat. Dæk skålen til, og lad dejen hæve ved stuetemperatur i 1 time."
+    },
+    {
+      "section": "Topping",
+      "text": "Smelt smørret i en stor gryde. Kog løgene ved svag varme i 15 minutter."
+    },
+    {
+      "section": "Topping",
+      "text": "Rør ansjoser og sukker i gryden, og lad det simre 15 minutter mere, til løgene er bløde og dybt brune."
+    },
+    {
+      "section": "Topping",
+      "text": "Vend kartoffelskiverne med olie, rosmarin og salt, så de er dækket jævnt."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg dejen i en stor bageplade med bagepapir. Tryk fingrene ned i dejen, så der kommer fordybninger."
+    },
+    {
+      "section": "Samling",
+      "text": "Smør et tyndt lag ansjosløg ud over dejen, og fordel kartoflerne jævnt ovenpå."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg et fugtigt viskestykke over, og lad brødet hæve i 20 minutter."
+    },
+    {
+      "section": "Bagning",
+      "text": "Mod slutningen af hævningen tændes ovnen på 250 °C, eller så varm som den kan blive."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag focaccian i 12-15 minutter, til kartoflerne er sprøde og dybt gyldne, og skorpen er brunet."
+    },
+    {
+      "section": "Bagning",
+      "text": "Drys det varme brød med kapers og persille. Læg evt. ekstra ansjoser på, og dryp med lidt olie til sidst."
+    }
+  ],
+  "changes": [
+    "Nanna Tate-kartofler er skiftet til almindelige kartofler."
+  ]
+}

@@ -70,6 +70,11 @@ function makeModel(shift = 0) {
     recipeIndex: [{ recipe_id: s(20), title: 'Frikadeller', url: 'https://valdemarsro.dk/frikadeller/',
                     score_classic: 0.8, unknown_main: false,
                     items: [{ key: 'hakket_svinekoed', cat: 'meat', amount: 0.5 }] }],
+    // recipe_details hænger på recipes, ligesom recipe_index — udskiftes helt
+    // ved hver kørsel, samme grund som recipeIndex ovenfor.
+    recipeDetails: [{ recipe_id: s(20), title: 'Frikadeller', intro: null, image: null,
+                      source_name: 'Test', servings: 4, total_minutes: null, active_minutes: null,
+                      ingredients: [], steps: [] }],
     // Priserne. item_prices hænger på chains; recipe_costs gør også, men
     // BEVIDST ikke på recipes — recipes.id er et lokalt løbenummer, og hele
     // det afledte lag udskiftes i samme kørsel.
@@ -232,7 +237,7 @@ test('overvågninger røres ikke', async () => {
  * Fjernes `weight` fra build.js, bestod hele testsuiten (111/111) alligevel –
  * det er præcis den fejl, denne test findes for at fange.
  */
-test('collectPlanIndex leverer amount, weight OG optional', () => {
+test('collectPlanIndex leverer amount, weight, optional OG measured', () => {
   const db = getDb();
   const now = new Date().toISOString();
 
@@ -248,14 +253,17 @@ test('collectPlanIndex leverer amount, weight OG optional', () => {
   //
   // Fløden er 'evt.' og står der for optional-feltet: uden en linje, hvor
   // flaget er SANDT, ville testen bestå på et felt, der altid var false.
+  //
+  // Enheden står der for measured-feltet: kyllingebrystet VEJES (kg) og må få
+  // en rest af bakken; æggene tælles og må ikke.
   const insertIng = db.prepare(`
-    INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional)
-    VALUES (?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional, unit)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `);
-  insertIng.run(recipeId, '6 æg', 'æg', 1, 'aeg', 6, 0);
-  insertIng.run(recipeId, '0.5 kg kyllingebryst', 'kyllingebryst', 2, 'kyllingebryst', 0.5, 0);
-  insertIng.run(recipeId, '0.6 kg kartofler', 'kartofler', 3, 'kartofler', 0.6, 0);
-  insertIng.run(recipeId, 'evt. et skvæt fløde', 'fløde', 4, 'floede', 0.1, 1);
+  insertIng.run(recipeId, '6 æg', 'æg', 1, 'aeg', 6, 0, null);
+  insertIng.run(recipeId, '0.5 kg kyllingebryst', 'kyllingebryst', 2, 'kyllingebryst', 0.5, 0, 'kg');
+  insertIng.run(recipeId, '0.6 kg kartofler', 'kartofler', 3, 'kartofler', 0.6, 0, 'kg');
+  insertIng.run(recipeId, 'evt. et skvæt fløde', 'fløde', 4, 'floede', 0.1, 1, null);
 
   try {
     const { recipeIndex } = collectPlanIndex(quiet);
@@ -278,11 +286,20 @@ test('collectPlanIndex leverer amount, weight OG optional', () => {
     assert.equal(recipe.items.find((i) => i.key === 'aeg').optional, false,
       'en almindelig linje er ikke optional');
 
+    // measured: kun en linje, der vejer eller måler varen, må få resten af
+    // pakken. Browserens motor holder kun reglen, hvis flaget kommer med —
+    // uden det ville ugen i browseren fylde op, hvor serverens ikke gør.
+    assert.equal(recipe.items.find((i) => i.key === 'kyllingebryst').measured, true,
+      '"0.5 kg kyllingebryst" vejes');
+    assert.equal(egg.measured, false, '"6 æg" tælles');
+
     for (const item of recipe.items) {
       assert.ok('amount' in item, `${item.key} mangler amount`);
       assert.ok('weight' in item, `${item.key} mangler weight`);
       assert.ok('optional' in item, `${item.key} mangler optional`);
       assert.equal(typeof item.optional, 'boolean', `${item.key}.optional er ikke boolsk`);
+      assert.ok('measured' in item, `${item.key} mangler measured`);
+      assert.equal(typeof item.measured, 'boolean', `${item.key}.measured er ikke boolsk`);
     }
   } finally {
     db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
@@ -359,6 +376,9 @@ test('collectPlanIndex leverer base_qty på tilbuddene OG unknown_count på rett
     // engine.isDinner laeser dette felt; uden det er hver ret aftensmad.
     assert.ok('keywords' in recipe,
       'keywords mangler i payloaden — isDinner kan ikke skelne dessert fra middag');
+
+    // Femte felt: arbejdstiden. Uden den viser browseren kun tiden i alt.
+    assert.ok('active_minutes' in recipe, 'active_minutes mangler i payloaden');
   } finally {
     db.prepare('DELETE FROM recipes WHERE id = ?').run(recipeId);
     db.prepare('DELETE FROM offers WHERE id = ?').run(offerId);
@@ -800,17 +820,25 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
       INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at, keywords, score_classic)
       VALUES (?, 'test', 'Test', ?, 'da', 4, ?, 'Aftensmad', ?)`)
       .run(`https://test.invalid/flow-${recipeIds.length}`, title, now, score);
-    const ins = db.prepare(`INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional)
-                            VALUES (?, ?, ?, ?, ?, ?, 0)`);
-    lines.forEach(([key, amount], i) => ins.run(id, `${amount} ${key}`, key, i + 1, key, amount));
+    // Enheden afgør, om en rest må lægges i retten (engine.MEASURED_UNITS).
+    // Uden den ville ingen linje vejes, og påfyldningen slet ikke prøves her.
+    const ins = db.prepare(`INSERT INTO recipe_ingredients (recipe_id, raw, ingredient, position, item_key, amount, optional, unit)
+                            VALUES (?, ?, ?, ?, ?, ?, 0, ?)`);
+    lines.forEach(([key, amount, unit = 'kg'], i) => ins.run(id, `${amount} ${unit} ${key}`, key, i + 1, key, amount, unit));
     recipeIds.push(Number(id));
   };
   // Fire middage i fire kategorier, der deler kartofler, løg og pasta, og
   // som alle bruger salt — lagerlisten skal have noget at vise.
   addRecipe('Kylling med kartofler', 0.9, [['kyllingebryst', 0.5], ['kartofler', 0.6], ['loeg', 0.1], ['salt', 0.005]]);
   addRecipe('Oksekød med pasta', 0.9, [['hakket_oksekoed', 0.5], ['pasta', 0.4], ['loeg', 0.2], ['salt', 0.005]]);
-  addRecipe('Laks med kartofler', 0.8, [['laks', 0.4], ['kartofler', 0.8], ['floede', 0.2], ['salt', 0.005]]);
-  addRecipe('Kylling med ris', 0.7, [['kyllingebryst', 1 / 3], ['ris', 0.3], ['loeg', 0.1], ['salt', 0.005]]);
+  addRecipe('Laks med kartofler', 0.8, [['laks', 0.4], ['kartofler', 0.8], ['floede', 0.2, 'l'], ['salt', 0.005]]);
+  // Kyllingen TÆLLES her ("2 stk"): den ret må ikke få resten af bakken,
+  // og browseren skal vide det lige så vel som serveren.
+  addRecipe('Kylling med ris', 0.7, [['kyllingebryst', 1 / 3, 'stk'], ['ris', 0.3], ['loeg', 0.1], ['salt', 0.005]]);
+  // Et kvarters arbejde og halvanden time i alt: aftensmad efter reglen fra
+  // 2026-10-04 — men KUN hvis arbejdstiden når frem. Taber et led den, står
+  // tiden i alt for arbejdet, retten falder ud, og puljen har tre, ikke fire.
+  db.prepare('UPDATE recipes SET active_minutes = 15, total_minutes = 90 WHERE id = ?').run(recipeIds[2]);
 
   const price = db.prepare(`INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit, pack_price,
                               unit_price, source, observed_at, valid_until)
@@ -855,6 +883,7 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
     const { week, year } = engine.isoWeek(new Date());
     const days = 2;
     const servings = 3;
+    let sawTopup = false;
 
     for (const track of ['classic', 'budget']) {
       const ctx = await Data.flowInputs(track, chainIds);
@@ -903,8 +932,16 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
         assert.deepEqual(lines, plain(s.buy), `${tag}: samme købsliste`);
         // Kilden, skærmen viser, er kædevalgets egen: et tilbud er et tilbud.
         for (const line of b.buy) assert.equal(line.source === 'offer', line.on_offer, `${line.key}: kilde og on_offer`);
+        // Påfyldningen: samme fordeling begge steder, og aldrig i en ret,
+        // der tæller varen.
+        assert.deepEqual(plain(b.topups), plain(s.topups), `${tag}: samme påfyldning`);
+        if (Object.keys(s.topups).length) sawTopup = true;
+        const talt = recipeIds[3];            // 'Kylling med ris', kyllingen i stk
+        assert.ok(!(s.topups[talt] && s.topups[talt].kyllingebryst),
+          `${tag}: en ret, der tæller kyllingen, får ikke resten`);
       });
     }
+    assert.ok(sawTopup, 'påfyldningen skal prøves i mindst ét forslag, ellers måler paritetstesten den ikke');
   } finally {
     await new Promise((r) => server.close(r));
     db.prepare(`DELETE FROM recipe_costs WHERE recipe_id IN (${recipeIds.join(',')})`).run();
@@ -912,5 +949,30 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
     db.prepare("DELETE FROM offers WHERE external_id = 't-flow-1'").run();
     db.prepare('DELETE FROM products WHERE id = ?').run(productId);
     db.prepare("DELETE FROM item_prices WHERE chain_id = 'tst'").run();
+  }
+});
+
+test('collectRecipeDetails leverer ingredienser med mængde og fremgangsmåde', () => {
+  const db = getDb();
+  const { collectRecipeDetails } = require('../src/sync/build');
+  const id = Number(db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at,
+                         edition, intro, total_minutes, active_minutes)
+    VALUES ('https://test.invalid/details', 'test', 'Test', 'Lam i ovn', 'da', 4, ?, 1, 'Mørt.', 90, 15)`)
+    .run(new Date().toISOString()).lastInsertRowid);
+  db.prepare(`INSERT INTO recipe_ingredients (recipe_id, raw, qty, unit, ingredient, item_key, amount,
+                                              optional, position, section, label)
+              VALUES (?, '600 g lammeculotte', 600, 'g', 'lammeculotte', 'lam', 0.6, 0, 0, NULL, 'lammeculotte')`).run(id);
+  db.prepare("INSERT INTO recipe_steps (recipe_id, position, section, text) VALUES (?, 0, NULL, 'Steg kødet.')").run(id);
+  try {
+    const [row] = collectRecipeDetails(db, id);
+    assert.deepEqual(row, {
+      recipe_id: id, title: 'Lam i ovn', intro: 'Mørt.', image: null, source_name: 'Test',
+      servings: 4, total_minutes: 90, active_minutes: 15,
+      ingredients: [{ qty: 600, unit: 'g', label: 'lammeculotte', key: 'lam', optional: false, section: null }],
+      steps: [{ section: null, text: 'Steg kødet.' }],
+    });
+  } finally {
+    db.prepare('DELETE FROM recipes WHERE id = ?').run(id);
   }
 });

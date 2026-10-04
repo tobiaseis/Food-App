@@ -1,0 +1,159 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-chaat",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:44:45.307Z",
+  "total_minutes": 25,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 13,
+  "title": "Chicken chaat",
+  "intro": "Krydret indisk kyllingeret med tamarind, garam masala og chaat masala, toppet med friske tomater, agurk og koriander. Den syrlige, friske smag får et ekstra pift af citron til sidst.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "uden skind og ben, skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset, stort fed",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "tamarind",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "chaat masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": "stor, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "i både, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm halvdelen af gheen op i en stor wok eller pande ved høj varme."
+    },
+    {
+      "section": null,
+      "text": "Brun kyllingen på alle sider i 5-6 minutter. Den skal ikke være gennemstegt. Tag den op på en tallerken med en hulske."
+    },
+    {
+      "section": null,
+      "text": "Skru ned til middel varme, og kom resten af gheen i panden. Steg løget i 2-3 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt hvidløg og chili, og steg videre i 7-9 minutter, til løgene er bløde og klare."
+    },
+    {
+      "section": null,
+      "text": "Kom kyllingen tilbage i panden sammen med tamarind, garam masala og chaat masala. Smag til med salt og peber, og rør så alt er dækket af krydderiblandingen."
+    },
+    {
+      "section": null,
+      "text": "Læg låg på, og lad retten simre i 5 minutter, til kyllingen er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Tag panden af varmen, og lad den stå i 2 minutter. Vend tomat og agurk i."
+    },
+    {
+      "section": null,
+      "text": "Drys med koriander og forårsløg, og server med citronbåde at presse over."
+    }
+  ],
+  "changes": [
+    "Grøn chili erstatter green chillies (samme vare, dansk navn).",
+    "Grøntsagsolie som alternativ til ghee er udeladt; der bruges ghee."
+  ]
+}

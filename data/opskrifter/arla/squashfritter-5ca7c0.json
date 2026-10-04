@@ -1,0 +1,167 @@
+{
+  "url": "https://www.arla.dk/opskrifter/squashfritter/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:01:08.602Z",
+  "total_minutes": 50,
+  "active_minutes": 20,
+  "yield_count": 1,
+  "source_lines": 14,
+  "title": "Squashfritter med dip",
+  "intro": "Sprøde ovnbagte squashstave i en ostepanering, serveret med en cremet dip med citron og purløg. Retten er let at lave og perfekt som snack eller tilbehør.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Til squashfritterne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashfritterne",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashfritterne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til squashfritterne",
+      "amount": 2,
+      "unit": "dl",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashfritterne",
+      "amount": 50,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "lagret, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til squashfritterne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "purløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "løg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til squashfritterne",
+      "text": "Tænd ovnen på 200 °C varmluft, så den er varm, når fritterne skal ind."
+    },
+    {
+      "section": "Til squashfritterne",
+      "text": "Del squashen i stave på ca. 1 cm i tykkelse."
+    },
+    {
+      "section": "Til squashfritterne",
+      "text": "Fordel melet og saltet i en stor skål. Bland pankoraspen med den revne cheddar i en anden stor skål."
+    },
+    {
+      "section": "Til squashfritterne",
+      "text": "Slå æggene ud på en dyb tallerken, og pisk dem løse med en gaffel."
+    },
+    {
+      "section": "Til squashfritterne",
+      "text": "Vend staverne først i melblandingen, så i æg og til sidst i raspblandingen, så de er dækket hele vejen rundt. Det går nemmest, hvis du tager 2-3 stave ad gangen."
+    },
+    {
+      "section": "Til squashfritterne",
+      "text": "Anret staverne på en bageplade med bagepapir, så de ikke rører hinanden."
+    },
+    {
+      "section": "Til squashfritterne",
+      "text": "Sæt pladen i ovnen, og bag fritterne i 20-25 minutter."
+    },
+    {
+      "section": "Til dippen",
+      "text": "Rør alle ingredienserne til dippen sammen i en skål, og smag den til. Drys evt. lidt hakket purløg over som pynt."
+    }
+  ],
+  "changes": [
+    "Grahamsmel er udeladt, og fuldkornshvedemel bruges i stedet.",
+    "Forårsløg er udeladt, og purløg bruges i stedet."
+  ]
+}

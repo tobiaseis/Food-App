@@ -1,0 +1,283 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/topped-flaxseed-crackers-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:42:27.073Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 25,
+  "title": "Hørfrøknækbrød med fire toppings",
+  "intro": "Sprødt hjemmebagt knækbrød af formalede hørfrø, som toppes på fire måder: med røget ørred, figner, skinke og melon eller radiser og smør. Perfekt som lille buffet eller til en let frokost.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Hørfrøknækbrød",
+      "amount": 500,
+      "unit": "g",
+      "name": "formalede hørfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hørfrøknækbrød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hørfrøknækbrød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hørfrøknækbrød",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Hørfrøknækbrød",
+      "amount": 3.2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildflødeost",
+      "amount": 300,
+      "unit": "g",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildflødeost",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildflødeost",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildflødeost",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Balsamicoreduktion",
+      "amount": 3,
+      "unit": "dl",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Balsamicoreduktion",
+      "amount": 20,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Med røget ørred",
+      "amount": 200,
+      "unit": "g",
+      "name": "røget ørred",
+      "note": "pillet i små stykker",
+      "optional": false
+    },
+    {
+      "section": "Med røget ørred",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "kerner",
+      "note": "blanding af frø og kerner",
+      "optional": false
+    },
+    {
+      "section": "Med røget ørred",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Med figen",
+      "amount": 100,
+      "unit": "g",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Med figen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "figner",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Med figen",
+      "amount": null,
+      "unit": null,
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Med figen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "hampefrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Med skinke og melon",
+      "amount": 5,
+      "unit": "skive",
+      "name": "parmaskinke",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Med skinke og melon",
+      "amount": 400,
+      "unit": "g",
+      "name": "cantaloupemelon",
+      "note": "i små stykker",
+      "optional": false
+    },
+    {
+      "section": "Med skinke og melon",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "cornichoner",
+      "note": "skåret på langs i skiver",
+      "optional": false
+    },
+    {
+      "section": "Med radiser",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "saltet, i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Med radiser",
+      "amount": 100,
+      "unit": "g",
+      "name": "radiser",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Med radiser",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Hørfrøknækbrød",
+      "text": "Tænd ovnen på 180 °C varmluft."
+    },
+    {
+      "section": "Hørfrøknækbrød",
+      "text": "Rør hørfrø, olivenolie, salt, peber og vand sammen, til det bliver en ujævn, klistret dej."
+    },
+    {
+      "section": "Hørfrøknækbrød",
+      "text": "Rul dejen ud mellem to ark bagepapir, så den er cirka 2 mm tyk. Løft den over på en bageplade, og tag det øverste ark papir af."
+    },
+    {
+      "section": "Hørfrøknækbrød",
+      "text": "Skær dejen i rektangler eller trekanter af nogenlunde samme størrelse med en skarp kniv. Bag dem i 25 minutter, til de er gyldne hele vejen over."
+    },
+    {
+      "section": "Hørfrøknækbrød",
+      "text": "Tag pladen ud, og løft forsigtigt papiret med knækbrødene over på en rist eller et varmefast underlag. Del dem fra hinanden, og lad dem køle helt af."
+    },
+    {
+      "section": "Dildflødeost",
+      "text": "Blend flødeost og dild sammen, og smag til med salt og peber. Stil den til side."
+    },
+    {
+      "section": "Balsamicoreduktion",
+      "text": "Kog balsamico og farin op ved middel varme. Lad det koge ind i cirka 15 minutter, til det er en tyk glaze. Tag det af varmen, og lad det køle af."
+    },
+    {
+      "section": "Med røget ørred",
+      "text": "Smør dildflødeost på nogle af knækbrødene, og læg ørred ovenpå. Drys med kerner og kapers."
+    },
+    {
+      "section": "Med figen",
+      "text": "Læg flødeost og et stykke figen på nogle knækbrød. Dryp med balsamicoreduktion og honning, og drys med hampefrø."
+    },
+    {
+      "section": "Med skinke og melon",
+      "text": "Læg skinke, melonstykker og cornichoner på nogle knækbrød, og drys med kerner."
+    },
+    {
+      "section": "Med radiser",
+      "text": "Top de sidste knækbrød med en rigelig skive smør, radiser og forårsløg."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret alle knækbrødene på et fad. Dryp med olivenolie, og drys med flagesalt."
+    }
+  ],
+  "changes": [
+    "Linwoods formalede hørfrø er erstattet med almindelige formalede hørfrø.",
+    "Linwoods blanding af hørfrø, solsikke, græskar, chia og goji er erstattet med en blanding af kerner og frø.",
+    "Linwoods formalede hampefrø er erstattet med hampefrø.",
+    "Røget ørred er valgt i stedet for røget ørred i stykker, som er den samme vare.",
+    "Prosciutto er skrevet som parmaskinke.",
+    "Cantaloupe melon er skrevet som cantaloupemelon."
+  ]
+}

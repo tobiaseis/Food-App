@@ -1,0 +1,167 @@
+{
+  "url": "https://www.arla.dk/opskrifter/frugttarte---uden-ovn/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:22:40.462Z",
+  "total_minutes": 60,
+  "active_minutes": 60,
+  "yield_count": 1,
+  "source_lines": 13,
+  "title": "Frugttærte uden ovn",
+  "intro": "En tærte med bund af nødder, kerner og tørret frugt og et let fyld af flødeskum og creme fraiche. Den kræver ingen ovn og pyntes med friske citrusskiver og mynte.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Til bunden",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mandler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "dl",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rosiner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 2,
+      "unit": "dl",
+      "name": "tørrede abrikoser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "appelsinjuice",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "vaniljesukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": 2,
+      "unit": "stk",
+      "name": "appelsin",
+      "note": "1-3 citrusfrugter, fx grapefrugt, appelsin og/eller mandarin",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "mynte",
+      "note": "blade",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bunden",
+      "text": "Varm en pande op ved middel varme, og rist mandler og solsikkekerner i cirka 10 minutter, til de er gyldne. Lad dem køle lidt af."
+    },
+    {
+      "section": "Bunden",
+      "text": "Læg de ristede mandler og kerner i en foodprocessor sammen med rosiner, abrikoser, salt, kanel og appelsinjuice."
+    },
+    {
+      "section": "Bunden",
+      "text": "Blend på høj hastighed i cirka 1 minut, til massen er helt ensartet."
+    },
+    {
+      "section": "Bunden",
+      "text": "Klem et stykke bagepapir fast mellem ringen og bunden på en springform på cirka 22 cm."
+    },
+    {
+      "section": "Bunden",
+      "text": "Pres massen ud i et jævnt lag i formen. Det går nemmere med våde fingre. Sæt formen på køl."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Pisk fløden til et let skum."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Bland creme fraiche med sukker og vaniljesukker, og vend blandingen forsigtigt ned i flødeskummet."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Skær skræl og hvid hinde af citrusfrugterne, så du følger frugtens runding. Skær dem derefter i tynde skiver."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Løsn den kolde bund fra formen, og læg den på et fad. Smør flødeblandingen ovenpå."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Læg citrusskiverne og mynteblade øverst, og server tærten med det samme."
+    }
+  ],
+  "changes": [
+    "Vaniljesukker er skrevet som vaniljesukker, da kataloget ikke har en afløser.",
+    "Citrusfrugter er erstattet med appelsin."
+  ]
+}

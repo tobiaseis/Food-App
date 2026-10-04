@@ -1,0 +1,239 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/braised-italian-sausages-with-red-wine-porcini-mushrooms-creamy-polenta",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:49:04.312Z",
+  "total_minutes": 110,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Braiserede italienske pølser i rødvin med porcini og cremet polenta",
+  "intro": "Saftige pølser får lov at simre en time i tomat, rødvin og svampe, så saucen bliver dyb og fyldig. Server dem med blød, cremet polenta med parmesan.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pølser og sauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "tørrede porcini",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 8,
+      "unit": "stk",
+      "name": "pølser",
+      "note": "italienske svinepølser",
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "flåede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": "blade plukket og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": "fx chianti",
+      "optional": false
+    },
+    {
+      "section": "Pølser og sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dampede grøntsager",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ærter",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "hakket",
+      "optional": true
+    },
+    {
+      "section": "Polenta",
+      "amount": 375,
+      "unit": "g",
+      "name": "hurtigkogende polenta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 80,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 80,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 50,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pølser og sauce",
+      "text": "Læg de tørrede porcini i en varmefast skål, og hæld 150 ml kogende vand over. Lad dem trække, mens du laver resten."
+    },
+    {
+      "section": "Pølser og sauce",
+      "text": "Varm halvdelen af olien i en stor, lav gryde eller sauterpande, der tåler ovn og blus, ved middel varme. Brun pølserne i ca. 3 minutter på hver side, og tag dem op på en tallerken."
+    },
+    {
+      "section": "Pølser og sauce",
+      "text": "Hæld resten af olien i gryden, og skru op til middelhøj varme. Steg champignon i 5-7 minutter, til det meste af væsken er stegt væk."
+    },
+    {
+      "section": "Pølser og sauce",
+      "text": "Tilsæt løg, gulerod, selleri og hvidløg, og steg det under omrøring i 5 minutter."
+    },
+    {
+      "section": "Pølser og sauce",
+      "text": "Kom de udblødte porcini med iblødsætningsvæsken, tomater, rosmarin, laurbærblade, rødvin og sukker i gryden. Bring det i kog, og lad det simre i 10 minutter."
+    },
+    {
+      "section": "Pølser og sauce",
+      "text": "Læg pølserne tilbage, sæt låg på, og skru ned for varmen. Lad retten simre i 1 time."
+    },
+    {
+      "section": "Polenta",
+      "text": "Kog polentaen i mælken efter anvisningen på pakken. Rør parmesan, smør og fløde i, og smag til med salt og peber."
+    },
+    {
+      "section": "Polenta",
+      "text": "Anret polentaen med pølserne og saucen. Server med dampede grøntsager, ærter og hakket persille, hvis du vil."
+    }
+  ],
+  "changes": [
+    "Friske laurbærblade er skiftet til laurbærblade, som er lettere at få fat i.",
+    "Double cream er skiftet til piskefløde."
+  ]
+}

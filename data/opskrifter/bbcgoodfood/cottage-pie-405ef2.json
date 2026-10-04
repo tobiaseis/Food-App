@@ -1,0 +1,236 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cottage-pie",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:11:06.833Z",
+  "total_minutes": 145,
+  "active_minutes": 35,
+  "yield_count": 10,
+  "source_lines": 18,
+  "title": "Cottage pie",
+  "intro": "Klassisk ovnret med kødsauce af hakket oksekød og grøntsager, toppet med flødeagtig kartoffelmos og ost. Opskriften giver mange portioner og er god til en stor familie eller til at fryse ned.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Kødsauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1.2,
+      "unit": "kg",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "rødvin",
+      "note": "et stort glas",
+      "optional": true
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 9,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "Worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "nogle kviste",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 2,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "skrællede og skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 200,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet, kraftig",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "muskatnød",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødsauce",
+      "text": "Varm lidt af olivenolien i en stor gryde. Brun oksekødet, gerne i flere omgange, og læg det til side, efterhånden som det er færdigt."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Hæld resten af olien i samme gryde. Svits løg, gulerødder og selleri ved svag varme, til grøntsagerne er bløde, cirka 20 minutter."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Rør hvidløg, hvedemel og tomatpuré i gryden. Skru op for varmen, og lad det stege nogle minutter. Kom derefter kødet tilbage i gryden."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Hæld rødvinen i, hvis du bruger den, og lad den koge lidt ind. Tilsæt oksefond, Worcestershiresauce, timian og laurbærblade."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Lad saucen simre uden låg i 45 minutter, til den er tyk og omslutter kødet. Tjek efter cirka 30 minutter: Er der meget væske tilbage, så skru lidt op for varmen, så saucen koger ind. Smag til med salt og peber. Fjern laurbærblade og timianstilke."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Mens saucen simrer, kommer du kartoflerne i en stor gryde med koldt, saltet vand. Bring dem i kog, og lad dem simre, til de er møre."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Hæld vandet fra, og lad kartoflerne dampe af i nogle minutter. Mos dem med mælk, smør og tre fjerdedele af osten. Smag til med muskatnød, salt og peber."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Fordel kødsaucen i to ovnfaste fade. Dæk med kartoffelmos, enten sprøjtet eller smurt på med en ske, og drys resten af osten over."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Sæt fadene i ovnen ved 200 °C varmluft (220 °C almindelig ovn) i 25-30 minutter, til toppen er gylden."
+    },
+    {
+      "section": "Variant med slowcooker",
+      "text": "Brun hakket oksekød i omgange, og kom det i slowcookeren. Rør grøntsager, hvedemel, tomatpuré, rødvin, fond, Worcestershiresauce og krydderurter i sammen med salt og peber. Læg låg på, og kog på høj varme i 4-5 timer. Lav kartoffelmosen som ovenfor, og bag retten i ovnen på samme måde."
+    }
+  ],
+  "changes": []
+}

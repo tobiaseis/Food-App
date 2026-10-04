@@ -1,0 +1,251 @@
+{
+  "url": "https://www.valdemarsro.dk/mexicansk-graeskarsuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:53:01.169Z",
+  "total_minutes": 45,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Mexicansk græskarsuppe",
+  "intro": "Cremet suppe af hokkaido, kartofler og sorte bønner, krydret med spidskommen, koriander og chili. Serveres med ovnbagte tortillachips, ristet majs og cheddar.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Suppe",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "hokkaido græskar",
+      "note": "ca. 500 g",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, skåret midt over og uden kerner",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "l",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, 2 spsk. saft herfra",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tortillachips",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tortillachips",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Tortillachips",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 300,
+      "unit": "g",
+      "name": "majs",
+      "note": "fra dåse, frisk eller frost",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "groftrevet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppe",
+      "text": "Skyl græskarret og del det på midten. Fjern kernerne med en ske, og skær resten med skræl i grove tern."
+    },
+    {
+      "section": "Suppe",
+      "text": "Varm olien i en gryde, og svits løg og hvidløg, til de er møre. Tilsæt spidskommen, koriander, chili og ingefær, og rør rundt i ca. 1 minut, til det dufter."
+    },
+    {
+      "section": "Suppe",
+      "text": "Læg kartofler og græskar i gryden, og hæld bouillon over. Sæt låg på, og lad suppen småkoge i 20 minutter."
+    },
+    {
+      "section": "Suppe",
+      "text": "Blend suppen helt glat. Rør fløde og citronsaft i, og smag til med salt og peber."
+    },
+    {
+      "section": "Suppe",
+      "text": "Hæld suppen tilbage i gryden, og kom de sorte bønner i. Varm det hele grundigt igennem."
+    },
+    {
+      "section": "Tortillachips",
+      "text": "Forvarm ovnen til 175 °C varmluft. Smør tortillaerne tyndt med olie på begge sider, og drys dem med flagesalt."
+    },
+    {
+      "section": "Tortillachips",
+      "text": "Skær dem i trekanter, og fordel dem på en bageplade med bagepapir. Bag dem i 10-15 minutter, til de er sprøde."
+    },
+    {
+      "section": "Til servering",
+      "text": "Smelt smørret på en pande ved middelhøj varme, og rist majsen under omrøring, til den får lidt farve. Drys med flagesalt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret suppen med en klat creme fraiche, majs, revet cheddar og frisk koriander. Server tortillachips ved siden af."
+    }
+  ],
+  "changes": [
+    "Hokkaido-græskar er skrevet som hokkaido græskar uden ændring af mængden.",
+    "Tortilla-pandekager er erstattet med almindelige tortillas."
+  ]
+}

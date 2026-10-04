@@ -1,0 +1,120 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smash-burger-tacos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:59:56.220Z",
+  "total_minutes": 60,
+  "active_minutes": 20,
+  "yield_count": 8,
+  "source_lines": 7,
+  "title": "Smash burger tacos",
+  "intro": "Små tortillas med en tynd, sprød bøf af hakket oksekød og smeltet ost, som fyldes med dine yndlingstoppings. Hurtig aftensmad, der smager som en cheeseburger i taco-form.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "ca. 5 % fedt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket, eller ½ lille rødløg",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "skive",
+      "name": "cheddar",
+      "note": "burgerost",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "cornichoner",
+      "note": "eller andre toppings efter smag",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "salat",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Ælt oksekød, skalotteløg og krydderurter sammen i en skål med hænderne, til det er jævnt blandet. Form blandingen til otte kugler."
+    },
+    {
+      "section": null,
+      "text": "Tryk hver kugle flad ovenpå en tortilla, så kødet danner en tynd bøf. Lad en kant på ca. 3 cm være fri."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olie op på en eller to store pander ved middelvarme."
+    },
+    {
+      "section": null,
+      "text": "Læg tortillaerne på panden med kødsiden nedad, og steg dem i 6-8 minutter, mens du trykker dem ned med en paletkniv. Kødet er færdigt, når det er gennemstegt – løft kanten af tortillaen for at tjekke."
+    },
+    {
+      "section": null,
+      "text": "Vend tortillaerne, læg en skive ost på hver, og steg i 1-2 minutter, til osten er smeltet. Steg i flere omgange, hvis panderne er for små."
+    },
+    {
+      "section": null,
+      "text": "Server tacoene med toppings."
+    }
+  ],
+  "changes": [
+    "Vegetable/sunflower oil er skiftet til rapsolie.",
+    "Burger cheese/monterey jack er skiftet til cheddar i skiver.",
+    "Gherkins er skiftet til cornichoner."
+  ]
+}

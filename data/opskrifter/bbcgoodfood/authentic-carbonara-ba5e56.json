@@ -1,0 +1,124 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/authentic-carbonara",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:50:51.847Z",
+  "total_minutes": 34,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 4,
+  "title": "Ægte carbonara",
+  "intro": "Klassisk romersk carbonara med sprødt stegt flæsk og en tyk, cremet sauce af æg og ost, som varmes over vandbad. Ingen fløde – cremetheden kommer fra æggene og pastavandet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "friskrevet, til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "rigatoni",
+      "note": "eller spaghetti",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skær baconen i tykke strimler."
+    },
+    {
+      "section": null,
+      "text": "Steg baconen på en pande ved lav varme i 10-15 minutter, til fedtet er smeltet ud, og baconen er sprød og gylden."
+    },
+    {
+      "section": null,
+      "text": "Tag baconen op med en hulske, og lad den dryppe af på køkkenrulle. Hæld halvdelen af fedtet fra panden, og gem resten. Panden skal ikke vaskes."
+    },
+    {
+      "section": "Sauce",
+      "text": "Pisk æg, æggeblommer og revet ost sammen i en stor, varmefast skål. Tilsæt rigeligt peber og det gemte fedt."
+    },
+    {
+      "section": "Sauce",
+      "text": "Sæt skålen over en gryde med let kogende vand, så bunden ikke rører vandet. Pisk i 2-3 minutter, til saucen er tyk som creme anglaise (ca. 64 °C på et termometer). Vandet må ikke koge, ellers skal æggene stivne."
+    },
+    {
+      "section": "Pasta",
+      "text": "Kog pastaen al dente i rigeligt saltet vand efter anvisningen på pakken, og rør af og til. Si den, og gem en kop af kogevandet."
+    },
+    {
+      "section": "Pasta",
+      "text": "Kom pastaen på panden med baconfedtet, og vend den rundt ved lav varme. Tag panden af varmen."
+    },
+    {
+      "section": "Pasta",
+      "text": "Hæld æggesaucen over, og tilsæt en sjat kogevand, til saucen bliver cremet og glat. Vend pastaen godt, så den er dækket af sauce."
+    },
+    {
+      "section": null,
+      "text": "Vend den sprøde bacon i sammen med masser af peber. Server i dybe tallerkener med ekstra parmesan ovenpå."
+    }
+  ],
+  "changes": [
+    "Guanciale er erstattet med bacon i skiver.",
+    "Pecorino romano er erstattet med parmesan.",
+    "Mezzi rigatoni er erstattet med almindelig rigatoni."
+  ]
+}

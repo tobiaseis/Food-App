@@ -1,0 +1,272 @@
+{
+  "url": "https://www.valdemarsro.dk/fiskekager-i-bowl-med-ris-asiatisk-mayo-og-groent/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:43:03.402Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 27,
+  "title": "Fiskekager med kokosris og asiatisk mayo",
+  "intro": "Krydrede torskefrikadeller med rød karrypasta serveres på kokosris med hvidløgsstegt pak choi, squash og gulerødder. Limemayonnaisen med fiskesauce binder det hele sammen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kokosris",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 400,
+      "unit": "ml",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 500,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 50,
+      "unit": "g",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rød karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgstegte grøntsager",
+      "amount": 400,
+      "unit": "g",
+      "name": "pak choi",
+      "note": "groftstrimlet",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgstegte grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "halveret og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgstegte grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "halveret og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgstegte grøntsager",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgstegte grøntsager",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgstegte grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Asiatisk mayo",
+      "amount": 75,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Asiatisk mayo",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Asiatisk mayo",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kokosris",
+      "text": "Varm sesamolie og ingefær op i en gryde ved lav varme, til det dufter let. Ingefæren må ikke blive brun."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Hæld kokosmælk og vand i gryden, og rør ris og salt i. Læg låg på, og varm langsomt op til det småkoger."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Lad risen simre under låg ved svag varme i 10 minutter. Tag gryden af varmen, og lad risen trække under låg i 10 minutter mere."
+    },
+    {
+      "section": "Fiskekager",
+      "text": "Ælt alle ingredienser til fiskekagerne sammen i en stor skål, til farsen er fast og ensartet."
+    },
+    {
+      "section": "Fiskekager",
+      "text": "Form farsen til små kager. Steg dem i olie på en varm pande ved middelvarme i 5 minutter på hver side, til de er sprøde og gennemstegte."
+    },
+    {
+      "section": "Hvidløgstegte grøntsager",
+      "text": "Steg gulerødder og squash i olie ved middelhøj varme i nogle minutter, til squashen får en gylden skorpe."
+    },
+    {
+      "section": "Hvidløgstegte grøntsager",
+      "text": "Tilsæt pak choi og hvidløg, og rør rundt i ca. 1 minut. Krydr med soja og peber."
+    },
+    {
+      "section": "Asiatisk mayo",
+      "text": "Rør mayonnaisen sammen med fiskesauce og lidt hvidløg og ingefær. Smag til med limeskal og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret ris, grøntsager og fiskekager på tallerkener med mayonnaisen ved siden af. Strø sesamfrø og persille over."
+    }
+  ],
+  "changes": []
+}

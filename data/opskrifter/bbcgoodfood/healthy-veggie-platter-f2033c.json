@@ -1,0 +1,180 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-veggie-platter",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:13:36.346Z",
+  "total_minutes": 45,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 15,
+  "title": "Grøntsagstallerken med hvide bønner og tahin",
+  "intro": "Ovnbagt peberfrugt og squash serveres på en cremet bønnepuré med rødbeder, yoghurt, oliven og mynte. En let og farverig ret, der er nem at samle.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "stor, rød, uden kerner og skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "squash",
+      "note": "i skiver, ca. 3 mm tykke",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "plus en smule til at gnide med",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "hvide bønner",
+      "note": "fra dåse, afdryppet, væsken gemmes",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "kogte, ikke i eddike, i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "oliven",
+      "note": "Kalamata, uden sten, halverede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "hakket, hvis bladene er store",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "ekstra jomfru, til at dryppe med",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt ovnen på 200 °C varmluft. Skær en strimmel skal af citronen og hak den fint."
+    },
+    {
+      "section": null,
+      "text": "Gnid peberfrugt og squash med lidt olivenolie. Læg dem i ét lag på en bageplade, så peberfrugten vender med skindsiden nedad."
+    },
+    {
+      "section": null,
+      "text": "Drys citronskallen over peberfrugten. Bag i 30 minutter, og vend squashen efter halvdelen af tiden."
+    },
+    {
+      "section": null,
+      "text": "Kom imens bønnerne i en skål sammen med lidt af bønnevæsken. Pres saften fra den afskallede citron ned over."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt tahin, olie og hvidløg, og blend med stavblender til en jævn masse. Er den for tyk, så rør lidt mere bønnevæske i. Smag til med salt."
+    },
+    {
+      "section": null,
+      "text": "Fordel bønnecremen på to tallerkener. Læg rødbeder, dild og rødløg ovenpå, og læg den bagte squash over."
+    },
+    {
+      "section": null,
+      "text": "Dryp med yoghurt og drys med paprika. Anret den bagte peberfrugt, oliven og mynte på toppen, og dryp eventuelt med ekstra olivenolie."
+    }
+  ],
+  "changes": [
+    "Butter beans er erstattet med hvide bønner på dåse.",
+    "Naturel yoghurt er skrevet som yoghurt.",
+    "Courgette er erstattet med squash."
+  ]
+}

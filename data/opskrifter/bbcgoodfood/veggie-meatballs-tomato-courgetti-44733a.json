@@ -1,0 +1,195 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/veggie-meatballs-tomato-courgetti",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:58:54.588Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 16,
+  "title": "Vegetarboller med tomatsquashnudler",
+  "intro": "Små ovnbagte boller af kidneybønner, majs og mandler, som serveres med lune squashnudler i frisk tomatsauce. Retten er let og hurtig og er klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til bollerne",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": "plus lidt ekstra til smøring",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, meget fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "kidneybønner",
+      "note": "fra dåse",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver, toppet teskefuld",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 15,
+      "unit": "g",
+      "name": "mandler",
+      "note": "malede",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 40,
+      "unit": "g",
+      "name": "majs",
+      "note": "kogte",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "hakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Til squashnudlerne",
+      "amount": 3,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til squashnudlerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashnudlerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashnudlerne",
+      "amount": 2.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashnudlerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "squash",
+      "note": "skåret i nudler med spiralskærer, julienneskræller eller kniv",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Boller",
+      "text": "Hak hvidløget fint. Varm olien op i en stor pande, og steg løget under jævnlig omrøring i 8 minutter."
+    },
+    {
+      "section": "Boller",
+      "text": "Rør balsamico i løget, og lad det simre 2 minutter længere."
+    },
+    {
+      "section": "Boller",
+      "text": "Imens moses bønnerne glatte i en skål sammen med æg, tomatpuré, chili og koriander."
+    },
+    {
+      "section": "Boller",
+      "text": "Vend mandler, majs, timian, en tredjedel af hvidløget og det afkølede balsamicoløg i massen. Rør det godt sammen."
+    },
+    {
+      "section": "Boller",
+      "text": "Form ca. 8 kugler på størrelse med en valnød, og læg dem på en bageplade med olieret bagepapir."
+    },
+    {
+      "section": "Boller",
+      "text": "Bag bollerne ved 220 °C (200 °C varmluft) i 15 minutter, til de er faste."
+    },
+    {
+      "section": "Squashnudler",
+      "text": "Mens bollerne bager, kommes tomater, tomatpuré, balsamico og vand i en gryde. Lad det koge ind, til tomaterne er bløde og moset."
+    },
+    {
+      "section": "Squashnudler",
+      "text": "Rør resten af hvidløget og squashnudlerne i. Tag gryden af varmen med det samme, for nudlerne skal bare varmes igennem og ikke koges."
+    },
+    {
+      "section": "Squashnudler",
+      "text": "Anret nudlerne med de bagte boller ved siden af."
+    }
+  ],
+  "changes": [
+    "Courgette er skiftet til squash.",
+    "Formalede mandler er skrevet som mandler, malede."
+  ]
+}

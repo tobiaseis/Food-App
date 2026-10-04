@@ -1,0 +1,206 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/whole-baked-fish-with-watercress-chilli-salsa",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:32:43.279Z",
+  "total_minutes": 45,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 14,
+  "title": "Ovnbagt havbars med rucolasalsa",
+  "intro": "Hel havbars bages på et leje af kartofler og tomater og serveres med en frisk, grøn salsa med urter, chili og kapers. En flot ret til bordet, som næsten laver sig selv i ovnen.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Fisk og grøntsager",
+      "amount": 750,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "skåret i skiver på ½ cm",
+      "optional": false
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "havbars",
+      "note": "1 stor eller 2 mindre, renset, skællet og uden gæller",
+      "optional": false
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "med skræl, knust let",
+      "optional": false
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "amount": 350,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "gerne på stilk, halvdelen halveret og halvdelen hele",
+      "optional": false
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 80,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kerner, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fisk og grøntsager",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "text": "Kog kartoffelskiverne i rigeligt kogende saltvand i ca. 5 minutter, til de næsten er møre. Hæld vandet fra, og lad dem dampe af."
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "text": "Skær tre dybe snit på skrå på hver side af fisken, så der kommer et rudemønster. Gnid fisken med olien, og krydr med salt og peber."
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "text": "Put de knuste hvidløg og citronskiverne ind i bugen."
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "text": "Fordel kartofler og alle tomaterne i et ovnfast fad, og krydr dem. Læg fisken ovenpå."
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "text": "Bag i 20-25 minutter. Fisken er færdig, når kødet er uigennemsigtigt ved det tykkeste sted og let slipper benene."
+    },
+    {
+      "section": "Fisk og grøntsager",
+      "text": "Tag fisken op, og dæk den til, så den holder varmen. Lad kartofler og tomater bage videre i 10 minutter."
+    },
+    {
+      "section": "Til salsaen",
+      "text": "Kom rucola, persille, koriander, chili og kapers i en foodprocessor. Kør i korte pulser, til det er fint hakket, og lad lidt af olien løbe ned undervejs."
+    },
+    {
+      "section": "Til salsaen",
+      "text": "Rør resten af olien i sammen med hvidløg og citronsaft. Smag til med salt og peber."
+    },
+    {
+      "section": "Til salsaen",
+      "text": "Anret kartofler og tomater på et fad, læg fisken ovenpå, og dryp salsaen over."
+    }
+  ],
+  "changes": [
+    "Vandkarse er erstattet med rucola, som er lettere at få og har samme peberagtige smag."
+  ]
+}

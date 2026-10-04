@@ -1,0 +1,246 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cardamom-chicken-lime-leaves",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:49:01.197Z",
+  "total_minutes": 105,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Kardemommekylling med kaffirlimeblade",
+  "intro": "Mør kyllingelår i en aromatisk tomatsauce med aubergine, varme krydderier og kaffirlimeblade. Serveres med brun basmatiris kogt med linser og gurkemeje.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til retten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "store, revet",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "frisk, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 12,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "hele kapsler, frøene tages ud og knuses let",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 4,
+      "unit": "stk",
+      "name": "nellike",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hvid peber",
+      "note": "stødt, op til 1 tsk efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, halveret, uden kerner og i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mango chutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon, pulver",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kyllingelår",
+      "note": "udbenede og uden skind, ca. 12 stk",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kaffirlimeblade",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "grøn, halveret, uden kerner og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 125,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": "brun",
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 100,
+      "unit": "g",
+      "name": "linser",
+      "note": "røde, tørrede",
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon, pulver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til retten",
+      "text": "Varm olien op i en stor, bred gryde. Svits løget ved middel varme i 5 minutter, til det er blødt, og rør af og til."
+    },
+    {
+      "section": "Til retten",
+      "text": "Rør hvidløg, ingefær, kardemommefrø, nelliker og kanel i gryden. Steg det i 5 minutter og rør ofte."
+    },
+    {
+      "section": "Til retten",
+      "text": "Tilsæt de øvrige krydderier og chilien, og rør kort rundt. Hæld tomaterne i sammen med en tom tomatdåse fyldt med vand, og tilsæt chutney og bouillon."
+    },
+    {
+      "section": "Til retten",
+      "text": "Kom auberginen i og bring det i kog. Læg låg på, og lad det simre i 15 minutter."
+    },
+    {
+      "section": "Til retten",
+      "text": "Rør godt rundt, og læg kyllingelår og limeblade i gryden. Tryk dem ned under væsken, og drys peberfrugten ovenpå. Sæt låg på og lad retten simre i 40 minutter."
+    },
+    {
+      "section": "Til retten",
+      "text": "Tag kyllingen op, og pil den i mellemstore stykker. Kom kødet tilbage i saucen."
+    },
+    {
+      "section": "Til risen",
+      "text": "Imens kommer du alle ingredienser til risen i en mellemstor gryde med 750 ml vand. Bring det i kog, læg låg på, og lad det koge i 20 minutter."
+    },
+    {
+      "section": "Til risen",
+      "text": "Tag gryden af varmen, og lad den stå under låg i 5 minutter, så den resterende fugt trækkes ind. Server risen til kyllingeretten."
+    }
+  ],
+  "changes": [
+    "Limeblade er skiftet til kaffirlimeblade."
+  ]
+}

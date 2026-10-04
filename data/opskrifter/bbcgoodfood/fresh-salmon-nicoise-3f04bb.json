@@ -1,0 +1,150 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/fresh-salmon-nicoise",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:50:52.638Z",
+  "total_minutes": 38,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Laksesalat niçoise",
+  "intro": "Frisk salat med dampet laks, kartofler, bønner og æg i en dressing af rødløg, oliven og krydderurter. Retten kan laves i en stor portion og nydes kold dagen efter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 12,
+      "unit": "stk",
+      "name": "oliven",
+      "note": "Kalamata uden sten, i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "estragon",
+      "note": "hakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 400,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "små nye kartofler",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 300,
+      "unit": "g",
+      "name": "bønner",
+      "note": "fine grønne bønner (haricots verts), toppet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 4,
+      "unit": "stk",
+      "name": "laksefilet",
+      "note": "à 100-125 g, tøet op hvis frosne",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "salat",
+      "note": "Little Gem, den ene skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "skåret i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Rør løg, eddike, olie, oliven, dild og estragon sammen i en middelstor skål."
+    },
+    {
+      "section": null,
+      "text": "Kog kartoflerne i dampkogerens underste gryde i 10 minutter. Læg derefter æggene i vandet. Er de ikke dækket, så fyld op med kogende vand fra kedlen."
+    },
+    {
+      "section": null,
+      "text": "Kom bønnerne i en gryde, sæt dampkogerens indsats ovenpå, og kog det hele i 8 minutter mere."
+    },
+    {
+      "section": null,
+      "text": "Tag kartofler og æg op, men hold vandet i gryden. Læg laksen i vandet, og kog den i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Vend de lune kartofler i dressingen."
+    },
+    {
+      "section": null,
+      "text": "Fjern skindet fra laksen, og pil æggene. Fordel halvdelen af salaten, bønnerne og tomaterne på to tallerkener eller ét fad. Kom halvdelen af kartoflerne med dressing ovenpå, og pluk halvdelen af laksen i stykker over."
+    },
+    {
+      "section": null,
+      "text": "Halvér det ene æg, og læg en halvdel på hver salat."
+    },
+    {
+      "section": null,
+      "text": "Stil resten tildækket på køl til dagen efter, og server den kold. Den holder sig op til ét døgn."
+    }
+  ],
+  "changes": [
+    "Vild laks er skiftet til almindelig laksefilet."
+  ]
+}

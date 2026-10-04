@@ -1,0 +1,148 @@
+{
+  "url": "https://www.valdemarsro.dk/spinattaerte-med-laks/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:10:25.801Z",
+  "total_minutes": 50,
+  "active_minutes": 20,
+  "yield_count": 1,
+  "source_lines": 11,
+  "title": "Spinattærte med laks",
+  "intro": "Sprød tærtebund med hørfrø og fuldkorn, fyldt med spinat, laks og en blød æggemasse. Server den med en grøn salat ved siden af.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Tærtedej",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hørfrø",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 75,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt, plus lidt til formen",
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laks",
+      "note": "filet, skåret i grove tern",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frossen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtedej",
+      "text": "Bland hørfrø, begge slags mel og salt og peber i en skål. Smuldr smørret i, og tilsæt vand lidt ad gangen, til dejen hænger sammen."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Smør en tærteform, og pres dejen jævnt ud i bunden og op ad kanten."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Forbag bunden i forvarmet ovn ved 175 °C varmluft i 10 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Varm spinaten op i en gryde ved lav varme, til den er tøet. Lad den koge kort op, og smag den til med muskatnød, salt og peber."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk æg og mælk sammen, og hæld blandingen over den forbagte bund."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg spinat og lakseterninger ovenpå."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bag tærten ved 175 °C varmluft i 30 minutter, indtil æggemassen er fast."
+    },
+    {
+      "section": "Fyld",
+      "text": "Server med en grøn salat."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,144 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/bunuelos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:34:28.996Z",
+  "total_minutes": 40,
+  "active_minutes": 30,
+  "yield_count": 18,
+  "source_lines": 9,
+  "title": "Buñuelos",
+  "intro": "Sprøde, friturestegte dejskiver, der vendes i kanelsukker. De er bedst, når de serveres lune lige fra panden.",
+  "servings": 18,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus ekstra til meldrysning",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 25,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1.2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning og kanelsukker",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning og kanelsukker",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning og kanelsukker",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Kom mel, kanel, bagepulver og sukker i røreskålen på en røremaskine med dejkrog, og kør det sammen på middel hastighed."
+    },
+    {
+      "section": "Dej",
+      "text": "Tilsæt smørret, og kør, til blandingen ligner krummer."
+    },
+    {
+      "section": "Dej",
+      "text": "Hæld vanilje og vand i, og kør videre, til det samler sig til en dej."
+    },
+    {
+      "section": "Dej",
+      "text": "Ælt dejen i 5 minutter, til den er glat. Læg den i en skål, dæk med film, og lad den hvile i 15 minutter."
+    },
+    {
+      "section": "Dej",
+      "text": "Del dejen i 18 stykker. Pas på med at bruge mel på bordet, og rul hvert stykke ud til en rund skive på ca. 13 cm."
+    },
+    {
+      "section": "Til stegning og kanelsukker",
+      "text": "Bland kanel og sukker i en lille skål."
+    },
+    {
+      "section": "Til stegning og kanelsukker",
+      "text": "Varm olien op i en tung, dyb pande over middelhøj varme. Den er klar, når en lille klump dej syder og stiger op til overfladen."
+    },
+    {
+      "section": "Til stegning og kanelsukker",
+      "text": "Læg en dejskive forsigtigt i olien, og tryk den under overfladen med en metaltang. Steg den i 2-3 minutter, til den er gylden."
+    },
+    {
+      "section": "Til stegning og kanelsukker",
+      "text": "Løft skiven op på et kølerist over en bakke, så olien kan dryppe af. Drys kanelsukker på begge sider."
+    },
+    {
+      "section": "Til stegning og kanelsukker",
+      "text": "Steg resten af skiverne på samme måde, og server dem med det samme."
+    }
+  ],
+  "changes": [
+    "Vegetabilsk olie er skiftet til rapsolie.",
+    "Plain flour er skiftet til hvedemel.",
+    "Caster sugar er skiftet til almindeligt sukker."
+  ]
+}

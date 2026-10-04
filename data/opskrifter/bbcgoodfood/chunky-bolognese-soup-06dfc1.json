@@ -1,0 +1,167 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chunky-bolognese-soup",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:53:17.518Z",
+  "total_minutes": 45,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Bolognesesuppe med penne",
+  "intro": "En kraftig suppe med smag af klassisk bolognese, fyldt med grøntsager, hakket oksekød og fuldkornspenne. Den er nem at lave i én gryde og kan sagtens laves i forvejen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "store, i fine tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "under 5 % fedt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "bouillon",
+      "note": "pulver, grøntsagsbouillon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kviste, frisk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.3,
+      "unit": "l",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "pasta",
+      "note": "fuldkornspenne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet, plus lidt til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde med slip-let-belægning. Svits løgene i nogle minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom gulerødder, selleri og hvidløg i gryden. Rør rundt og steg i 5 minutter, til grøntsagerne begynder at blive bløde."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt hakkekødet og rør, så det deler sig i små stykker, mens det brunes."
+    },
+    {
+      "section": null,
+      "text": "Hæld passata, bouillon og det kogende vand i. Krydr med paprika, timian og peber."
+    },
+    {
+      "section": null,
+      "text": "Læg låg på og lad suppen simre i 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom pennen i og kog suppen med i 12-15 minutter, til pastaen er mør."
+    },
+    {
+      "section": null,
+      "text": "Rør parmesan i, og øs suppen op i skåle. Server med ekstra parmesan ved bordet."
+    },
+    {
+      "section": null,
+      "text": "Skal resten gemmes: Lad suppen køle af, fjern timiankvistene og stil den i køleskabet, hvor den holder sig op til syv dage. Varm den op i en gryde og tilsæt lidt vand, hvis den er blevet for tyk."
+    }
+  ],
+  "changes": [
+    "Fuldkornspenne er skrevet som pasta med note om fuldkornspenne.",
+    "Hakket oksekød med 5 % fedt er skrevet som hakket oksekød med note om lavt fedtindhold."
+  ]
+}

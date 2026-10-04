@@ -1,0 +1,106 @@
+{
+  "url": "https://www.arla.dk/opskrifter/gronne-asparges-med-cremefraichedip/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:05:19.209Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 8,
+  "title": "Grillede grønne asparges med cremefraichedip",
+  "intro": "Friske grønne asparges grillet helt kort og serveret med en kølig dip af creme fraiche, lakserogn og lime. Fint som forret eller som snack til fingrene.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Asparges",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "asparges",
+      "note": "friske, grønne",
+      "optional": false
+    },
+    {
+      "section": "Asparges",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Asparges",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cremefraichedip",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "38 %",
+      "optional": false
+    },
+    {
+      "section": "Cremefraichedip",
+      "amount": null,
+      "unit": null,
+      "name": "lakserogn",
+      "note": "1 glas",
+      "optional": false
+    },
+    {
+      "section": "Cremefraichedip",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "lime",
+      "note": "fintrevet skal, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Cremefraichedip",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Cremefraichedip",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Asparges",
+      "text": "Bryd de nederste par centimeter af hver asparges og kassér dem."
+    },
+    {
+      "section": "Asparges",
+      "text": "Rør olie og farin sammen, og pensl aspargesene med blandingen."
+    },
+    {
+      "section": "Asparges",
+      "text": "Grill aspargesene meget kort på en varm grillpande eller en god stegepande. De skal kun lige have farve."
+    },
+    {
+      "section": "Cremefraichedip",
+      "text": "Vend creme fraiche med lakserogn, limeskal, salt og peber."
+    },
+    {
+      "section": "Cremefraichedip",
+      "text": "Server aspargesene lune eller kolde med dippen ved siden af, så man kan dyppe dem med fingrene."
+    }
+  ],
+  "changes": [
+    "Muscovadosukker er erstattet af brun farin."
+  ]
+}

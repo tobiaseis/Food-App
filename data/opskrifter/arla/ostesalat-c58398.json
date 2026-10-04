@@ -1,0 +1,134 @@
+{
+  "url": "https://www.arla.dk/opskrifter/ostesalat/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:09:25.778Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Ostesalat med croutoner og sennepsdressing",
+  "intro": "Sprød icebergsalat med cheddar, knasende bacon og ristede croutoner, serveret med en frisk sennepsdressing. Den er nem at sætte sammen og god som let aftensmad eller tilbehør.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Sennepsdressing",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "dijonsennep",
+      "optional": false
+    },
+    {
+      "section": "Sennepsdressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Sennepsdressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Sennepsdressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Sennepsdressing",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 5,
+      "unit": "skive",
+      "name": "toastbrød",
+      "note": "uden skorpe, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "i mindre stykker",
+      "optional": false
+    },
+    {
+      "section": "Ostesalat",
+      "amount": 125,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Ostesalat",
+      "amount": 1,
+      "unit": "l",
+      "name": "icebergsalat",
+      "note": "revet i grove stykker",
+      "optional": false
+    },
+    {
+      "section": "Ostesalat",
+      "amount": 200,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "fintrevet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sennepsdressing",
+      "text": "Rør sennep, salt, peber og eddike sammen med en piskeris."
+    },
+    {
+      "section": "Sennepsdressing",
+      "text": "Pisk olien i en tynd stråle ned i blandingen, og smag dressingen til."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Sæt ovnen på 225 °C varmluft."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Læg brødternene og smørstykkerne i en lille bradepande, og ristes midt i ovnen i cirka 10 minutter. Vend terningerne 2-3 gange undervejs."
+    },
+    {
+      "section": "Ostesalat",
+      "text": "Snit baconen i mindre stykker, og steg dem sprøde på en tør pande ved svag varme."
+    },
+    {
+      "section": "Ostesalat",
+      "text": "Læg baconen på køkkenrulle, så fedtet kan sive fra."
+    },
+    {
+      "section": "Ostesalat",
+      "text": "Læg salat, ost, bacon og croutoner i et dybt fad."
+    },
+    {
+      "section": "Ostesalat",
+      "text": "Sæt dressingen på bordet i en skål, så hver kan hælde selv."
+    }
+  ],
+  "changes": [
+    "Sandwichbrød er skiftet til toastbrød."
+  ]
+}

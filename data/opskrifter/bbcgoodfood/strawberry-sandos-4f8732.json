@@ -1,0 +1,83 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/strawberry-sandos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:09:30.091Z",
+  "total_minutes": 15,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 5,
+  "title": "Jordbærsandwich med fløde",
+  "intro": "Bløde hvide brødskiver med let flødeskum og friske jordbær – perfekt til en picnic. Sandwichene skæres i trekanter og pakkes i bagepapir.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "skive",
+      "name": "franskbrød",
+      "note": "blødt, hvidt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "jordbær",
+      "note": "ensartet store, pillet og halveret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Pisk fløde, flormelis og vanilje med en håndmixer, til skummet danner bløde toppe."
+    },
+    {
+      "section": null,
+      "text": "Smør flødeskummet ud på alle brødskiverne."
+    },
+    {
+      "section": null,
+      "text": "Læg jordbærrene med snitfladen nedad tæt på flødeskummet på de fire af skiverne. Læg de øvrige skiver ovenpå, så de bliver til sandwiches."
+    },
+    {
+      "section": null,
+      "text": "Skær eventuelt skorperne af. Del hver sandwich på midten, så der kommer trekanter."
+    },
+    {
+      "section": null,
+      "text": "Pak sandwichene ind i bagepapir, hvis de skal med på picnic."
+    }
+  ],
+  "changes": [
+    "Double cream er skiftet til piskefløde.",
+    "Soft white bread/milk bread er skiftet til blødt, hvidt franskbrød."
+  ]
+}

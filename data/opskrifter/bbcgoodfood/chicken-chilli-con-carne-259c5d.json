@@ -1,0 +1,243 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-chilli-con-carne",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:31:03.690Z",
+  "total_minutes": 75,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 19,
+  "title": "Kylling-chili con carne",
+  "intro": "En mild og røget chili, hvor kyllingelår simrer mørt i tomat og krydderier, og bønner og lidt mørk chokolade runder smagen af. Server den med ris eller nachos.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "i skiver, gerne røde, gule eller orange",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "stilkene finthakkes, bladene hakkes groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "lille kanelstang",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "uden skind, med ben",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "400 g, med væsken",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "400 g, afdryppet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rødvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "chokolade",
+      "note": "mørk, mindst 70 % kakao",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "kogte, eller chips",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chips",
+      "note": "nachochips, i stedet for ris",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "guacamole",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en gryde ved middel varme. Steg løg og peberfrugt i 10-12 minutter, til de er bløde."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløg, korianderstilke, stødt koriander, spidskommen og chipotlepasta i. Steg det i 2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld hakkede tomater, tomatpuré og fond i gryden, og læg kanelstangen ned i. Placer kyllingelårene i saucen."
+    },
+    {
+      "section": null,
+      "text": "Skru ned på lav varme, læg låg på, og lad det simre i 45 minutter, til kyllingen er mør."
+    },
+    {
+      "section": null,
+      "text": "Tag kyllingen op på et skærebræt, og træk kødet af benene med to gafler. Smid benene ud."
+    },
+    {
+      "section": null,
+      "text": "Kom kødet tilbage i gryden sammen med sorte bønner inklusive væsken, kidneybønner, eddike og chokolade. Rør, til chokoladen er smeltet."
+    },
+    {
+      "section": null,
+      "text": "Skru op til middel varme, og lad chilien simre uden låg i 10-15 minutter, til den er let tyknet."
+    },
+    {
+      "section": null,
+      "text": "Fjern kanelstangen, og smag til med salt og peber. Vend det meste af korianderbladene i, og gem evt. lidt til pynt."
+    },
+    {
+      "section": null,
+      "text": "Server med ris eller chips. Top med guacamole og creme fraiche, hvis du vil, og drys med resten af korianderen."
+    }
+  ],
+  "changes": [
+    "Soured cream er erstattet af creme fraiche.",
+    "Tortilla chips er erstattet af nachochips."
+  ]
+}

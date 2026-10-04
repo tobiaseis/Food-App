@@ -1,0 +1,236 @@
+{
+  "url": "https://www.valdemarsro.dk/roert-tatarsalat/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:24:16.066Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Rørt tatarsalat med syltede sennepsfrø",
+  "intro": "Rørt tatar af oksekød med peberrodscreme, syltede sennepsfrø, friske urter og sprøde chips. Den er klassisk smørrebrød-agtig, men serveret som en let salat.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Syltede sennepsfrø",
+      "amount": 50,
+      "unit": "g",
+      "name": "sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede sennepsfrø",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede sennepsfrø",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede sennepsfrø",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede sennepsfrø",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peberrodscreme",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "38%",
+      "optional": false
+    },
+    {
+      "section": "Peberrodscreme",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peberrodscreme",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "peberrod",
+      "note": "fritrevet",
+      "optional": false
+    },
+    {
+      "section": "Peberrodscreme",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Rørt tatar",
+      "amount": 500,
+      "unit": "g",
+      "name": "okseinderlår",
+      "note": "skåret til tatar",
+      "optional": false
+    },
+    {
+      "section": "Rørt tatar",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rørt tatar",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "estragon",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rørt tatar",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rørt tatar",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "cornichoner",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rørt tatar",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rørt tatar",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Rørt tatar",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rørt tatar",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 125,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "pakke",
+      "name": "karse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "frisk, i stedet for kørvel",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "chips",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede sennepsfrø",
+      "text": "Put alle ingredienserne til sennepsfrøene i en gryde, og bring det i kog. Sænk varmen, læg låg på, og lad det simre ved svag varme i 10-15 minutter."
+    },
+    {
+      "section": "Syltede sennepsfrø",
+      "text": "Hæld frøene i et skoldet glas, og stil dem på køl, til de er kolde."
+    },
+    {
+      "section": "Peberrodscreme",
+      "text": "Rør creme fraiche, mayonnaise og peberrod sammen i en skål. Smag til med citronskal, salt og peber."
+    },
+    {
+      "section": "Rørt tatar",
+      "text": "Rør oksekød, æggeblommer, estragon, kapers, cornichoner og skalotteløg sammen i en stor skål. Smag til med sennep, salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg salat på tallerkenerne, og anret tatar, urter, sennepsfrø og peberrodscreme ovenpå. Drys med chips, ekstra urter og flagesalt, og server straks."
+    }
+  ],
+  "changes": [
+    "Kørvel er erstattet med persille.",
+    "Æblecidereddike er erstattet med eddike.",
+    "Kartoffelchips er erstattet med chips."
+  ]
+}

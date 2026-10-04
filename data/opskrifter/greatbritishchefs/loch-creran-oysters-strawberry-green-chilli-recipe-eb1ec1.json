@@ -1,0 +1,186 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/loch-creran-oysters-strawberry-green-chilli-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:57:36.146Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 10,
+  "source_lines": 16,
+  "title": "Østers med jordbær og grøn chili",
+  "intro": "Friske østers toppet med syrlige, grønne jordbærtern, en klar dressing af tomat og peberrod og dråber af grøn chiliolie. Dressingen og olien laves dagen før, så østersene kun skal åbnes og anrettes til sidst.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Til østersene",
+      "amount": 20,
+      "unit": "stk",
+      "name": "østers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til østersene",
+      "amount": null,
+      "unit": null,
+      "name": "jordbær",
+      "note": "uudmodnede, grønne, skåret i 2 mm tern",
+      "optional": false
+    },
+    {
+      "section": "Til østersene",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "saften, til at vende jordbærrene i",
+      "optional": false
+    },
+    {
+      "section": "Til østersene",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "fugtigt, til servering",
+      "optional": true
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 125,
+      "unit": "g",
+      "name": "tomater",
+      "note": "helst gule og/eller grønne, hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 125,
+      "unit": "g",
+      "name": "jordbær",
+      "note": "uudmodnede, grønne, hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 25,
+      "unit": "g",
+      "name": "løg",
+      "note": "rødløg, hakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 50,
+      "unit": "g",
+      "name": "selleri",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 15,
+      "unit": "g",
+      "name": "peberrod",
+      "note": "frisk, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 50,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "vineddike",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 3,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 3,
+      "unit": "g",
+      "name": "ansjoser",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til den grønne chiliolie",
+      "amount": 50,
+      "unit": "g",
+      "name": "tørrede grønne chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den grønne chiliolie",
+      "amount": 3,
+      "unit": "g",
+      "name": "grøn szechuanpeber",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til den grønne chiliolie",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "olie",
+      "note": "solsikkeolie",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Kom alle ingredienser til dressingen i en bakke eller bøtte. Stil den i køleskabet natten over, så smagene trækker."
+    },
+    {
+      "section": "Dressing",
+      "text": "Næste dag hældes blandingen i en sigte beklædt med et fugtigt klæde. Lad den dryppe af i køleskabet i nogle timer, til væsken er klar. Grøntsagsmassen kan bruges i en suppe eller pastasauce. Afkøl dressingen grundigt."
+    },
+    {
+      "section": "Grøn chiliolie",
+      "text": "Kom chili og eventuel szechuanpeber i en Thermomix. Slå varmen til høj, hæld olien over, og blend på høj i 2 minutter. Lad olien hvile et par minutter, før du tager låget af."
+    },
+    {
+      "section": "Grøn chiliolie",
+      "text": "Uden Thermomix blendes chili, peber og olie i en almindelig blender på høj i 3-5 minutter. Olien bliver måske lidt mindre aromatisk."
+    },
+    {
+      "section": "Grøn chiliolie",
+      "text": "Lad olien køle lidt af, og hæld den så i en varmefast skål eller dyb bakke. Køl helt ned, sigt gennem et klæde, og fyld olien på en klemmeflaske."
+    },
+    {
+      "section": "Anretning",
+      "text": "Vend jordbærternene med få dråber citronsaft. Har du en vakuummaskine, kan du vakuumpakke dem, så de hurtigt tager syren til sig."
+    },
+    {
+      "section": "Anretning",
+      "text": "Åbn østersene, og skær lukkemusklen over, så de løsner sig fra skallen. Fjern skalstumper og snavs."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg østersene på tallerkener, enten i den omvendte overskal eller på små dynger fugtigt salt, så de står stabilt. Top med jordbærtern og dressing, og dryp med lidt grøn chiliolie."
+    }
+  ],
+  "changes": [
+    "Hyldeblomsteddike er udeladt til fordel for citronsaft, som kilden selv nævner.",
+    "Sherryeddike er erstattet af vineddike.",
+    "Fermenteret chilisauce er erstattet af sriracha.",
+    "Ansjosessens eller makrelgarum er erstattet af ansjoser.",
+    "Grønne jordbær er skiftet til uudmodnede jordbær, da grønne er svære at købe."
+  ]
+}

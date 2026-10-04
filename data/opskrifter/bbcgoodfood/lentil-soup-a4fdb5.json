@@ -1,0 +1,106 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/lentil-soup",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:58:08.050Z",
+  "total_minutes": 70,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 5,
+  "title": "Rød linsesuppe med gulerødder og porre",
+  "intro": "En enkel og mættende suppe med røde linser, gulerødder og porre, der simrer til en tyk konsistens. Server den med smørbrød og drys med frisk persille.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "l",
+      "name": "Bouillon",
+      "note": "grøntsagsbouillon eller hønsebouillon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "Linser",
+      "note": "røde",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "Gulerødder",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "Porre",
+      "note": "i skiver, ca. 300 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "Persille",
+      "note": "hakket, til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": "udelades, hvis du bruger hønsebouillon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Brød",
+      "note": "med smør, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Hæld bouillonen i en stor gryde, og kom linserne i."
+    },
+    {
+      "section": null,
+      "text": "Bring det i kog, og lad linserne blive møre i nogle minutter."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt gulerødder og porre, og smag til med peber og eventuelt salt. Brug ikke salt, hvis bouillonen er lavet på skinke, da suppen ellers bliver for salt."
+    },
+    {
+      "section": null,
+      "text": "Bring suppen i kog igen, skru ned, og læg låg på. Lad den simre i 45 minutter til 1 time, til linserne er kogt ud."
+    },
+    {
+      "section": null,
+      "text": "Server suppen med persille på toppen og gerne smørbrød ved siden af."
+    }
+  ],
+  "changes": [
+    "Hønsebouillon i stedet for skinkefond, da skinkefond ikke fås i Danmark."
+  ]
+}

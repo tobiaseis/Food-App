@@ -1,0 +1,216 @@
+{
+  "url": "https://www.valdemarsro.dk/friske-foraarsruller/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:57:34.293Z",
+  "total_minutes": 90,
+  "active_minutes": 60,
+  "yield_count": 4,
+  "source_lines": 20,
+  "title": "Friske forårsruller med svinekød og hoisindip",
+  "intro": "Rispapirruller fyldt med marinerede strimler af nakkekotelet, frisk salat, krydderurter og nektarin. Dyp dem i en sød hoisindip med peanuts.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 3,
+      "unit": "stk",
+      "name": "nakkekoteletter",
+      "note": "skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saft og revet skal, gerne økologisk",
+      "optional": false
+    },
+    {
+      "section": "Rullerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Rullerne",
+      "amount": 12,
+      "unit": "stk",
+      "name": "rispapir",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rullerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "nektarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rullerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hjertesalat",
+      "note": "skyllet og plukket",
+      "optional": false
+    },
+    {
+      "section": "Rullerne",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rullerne",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rullerne",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Rullerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Rullerne",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "saltede peanuts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hoisindip",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "hoisinsauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hoisindip",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hoisindip",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hoisindip",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "saltede peanuts",
+      "note": "finthakkede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Bland alle ingredienserne til marinaden i en skål, og vend kødstrimlerne rundt i den."
+    },
+    {
+      "section": "Marinade",
+      "text": "Lad kødet marinere i mindst 30 minutter. Det kan stå op til et døgn."
+    },
+    {
+      "section": "Hoisindip",
+      "text": "Kog hoisinsauce, vand og sukker op i en lille gryde under omrøring. Lad det simre i 1 minut."
+    },
+    {
+      "section": "Hoisindip",
+      "text": "Hæld dippen i en skål, og top med de hakkede peanuts."
+    },
+    {
+      "section": "Rullerne",
+      "text": "Steg kødstrimlerne hurtigt af på en varm pande med olien."
+    },
+    {
+      "section": "Rullerne",
+      "text": "Fyld et stort fad med vand. Læg et ark rispapir i vandet, til det er blødt, og løft det op på et skærebræt."
+    },
+    {
+      "section": "Rullerne",
+      "text": "Læg lidt kød, salat, krydderurter, nektarin, peanuts og chili i en stribe midt på arket."
+    },
+    {
+      "section": "Rullerne",
+      "text": "Fold siderne ind over fyldet, og rul arket stramt sammen. Gentag med resten af rispapiret."
+    },
+    {
+      "section": "Rullerne",
+      "text": "Anret rullerne med hoisindippen ved siden af."
+    }
+  ],
+  "changes": []
+}

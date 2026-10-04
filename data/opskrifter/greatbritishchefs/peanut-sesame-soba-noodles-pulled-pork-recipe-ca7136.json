@@ -1,0 +1,317 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/peanut-sesame-soba-noodles-pulled-pork-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:52:29.908Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 30,
+  "title": "Pulled pork med jordnøddesoba og braiseret pak choi",
+  "intro": "Langtidsstegt pulled pork serveres på sobanudler i en cremet sauce af jordnøddesmør, tahin og chili. Til sidst kommer braiseret pak choi, æggeblommer og friske toppings på.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pulled pork",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": 2,
+      "unit": "kg",
+      "name": "nakkekam",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "et skvæt",
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": 2,
+      "unit": "dl",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pulled pork",
+      "amount": 1,
+      "unit": "dl",
+      "name": "barbecuesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordnøddesauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "jordnøddesmør",
+      "note": "cremet",
+      "optional": false
+    },
+    {
+      "section": "Jordnøddesauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordnøddesauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordnøddesauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordnøddesauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordnøddesauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordnøddesauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chiliolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordnøddesauce",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "til at løsne saucen",
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 2,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": "delt på midten",
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "sobanudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pulled pork",
+      "text": "Tænd ovnen på 150 °C varmluft."
+    },
+    {
+      "section": "Pulled pork",
+      "text": "Bland paprika, hvidløgspulver, løgpulver, brun farin, salt og peber til en krydderiblanding. Gnid den ind i kødet, så det er dækket hele vejen rundt."
+    },
+    {
+      "section": "Pulled pork",
+      "text": "Varm olivenolie op i et stort ovnfast fad eller en stegepande ved middel varme. Brun kødet på alle sider, og tag det op."
+    },
+    {
+      "section": "Pulled pork",
+      "text": "Hæld æblecidereddike og fond i fadet, og skrab alle stegeskorperne løs fra bunden."
+    },
+    {
+      "section": "Pulled pork",
+      "text": "Læg kødet tilbage i fadet, dæk tæt med alufolie, og steg i ovnen i 6 timer."
+    },
+    {
+      "section": "Jordnøddesauce",
+      "text": "Pisk alle ingredienserne til saucen sammen i en skål, til jordnøddesmørret er helt glat. Tilsæt lidt vand, til saucen er tyndere og lækker at røre i."
+    },
+    {
+      "section": "Pak choi",
+      "text": "Varm en pande op ved middelhøj varme med olien. Steg pak choi med snitfladen nedad, til den er gylden."
+    },
+    {
+      "section": "Pak choi",
+      "text": "Skru ned for varmen, og kom smør, sojasauce, fiskesauce og mirin på panden. Læg låg på, og lad kålen simre i ca. 5 minutter, til den er mør."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog sobanudlerne møre. Vend de varme nudler straks i jordnøddesaucen, så de er dækket af den."
+    },
+    {
+      "section": "Til servering",
+      "text": "Tag kødet ud af ovnen. Træk det i stykker med to gafler eller en tang, og vend det med barbecuesaucen. Smag til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret nudler og sauce i skåle. Top med æggeblommer, pulled pork, pak choi, koriander, gulerod, forårsløg og chiliflager."
+    }
+  ],
+  "changes": [
+    "Svineskulder er erstattet med nakkekam.",
+    "Koreansk bbq-sauce er erstattet med barbecuesauce.",
+    "Soba er beholdt som sobanudler under kataloget 'nudler' – ingen ændring i varen.",
+    "Hønsefond erstatter chicken stock."
+  ]
+}

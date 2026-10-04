@@ -1,0 +1,159 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/omelette-pancakes-tomato-pepper-sauce",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:56:11.431Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 8,
+  "title": "Omelet-pandekager med tomat- og peberfrugtsauce",
+  "intro": "Tynde æggepandekager rulles og serveres med en blød sauce af gul peberfrugt og hakkede tomater. Det er en hurtig og let ret med frisk basilikum på toppen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "gul, delt i kvarte, uden kerner og skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1.3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "vand",
+      "note": "1 tsk pr. æg",
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "en smule til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "fuldkornsbrød, eller salat",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sauce",
+      "text": "Varm olien op i en stor pande. Steg peberfrugt og hvidløg i 5 minutter, til de er blevet bløde."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld eddiken på, og lad den koge væk. Kom de hakkede tomater på panden sammen med vandet."
+    },
+    {
+      "section": "Sauce",
+      "text": "Læg låg på, og lad saucen småkoge i 10-15 minutter, til peberfrugten er mør, og saucen er tyk."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Imens pisker du ét æg med 1 tsk vand, salt og peber. Varm en lille non-stick pande op med et par dråber olie."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Hæld ægget på panden, og steg det i 1-2 minutter, til det har sat sig som en tynd pandekage. Læg den på en tallerken under stanniol."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Lav de tre øvrige pandekager på samme måde."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Rul pandekagerne sammen og læg dem på varme tallerkener. Hæld saucen over, og drys med basilikum."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Server med brød eller salat ved siden af."
+    }
+  ],
+  "changes": [
+    "Cider vinegar er skiftet til eddike (æblecidereddike).",
+    "Wholemeal bread er skiftet til fuldkornsbrød i noten under brød."
+  ]
+}

@@ -706,6 +706,9 @@
    *          mangle — den kan regnes. Se nedenfor: de skal komme fra ÉN kilde.
    *   keeps  `items.keeps`: hvor længe en rest holder. Ukendt værdi vægtes som
    *          'keeps', midt imellem.
+   *   topup_need  den del af `need`, der kommer fra linjer, som vejer eller
+   *          måler varen — grundlaget for påfyldningen (se absorbable).
+   *          Standard 0: ingen påfyldning.
    *
    * **`packs` må kun rumme rækker fra det BEDSTE kildeniveau, der findes for
    * (vare, kæde)** — samme rangorden som effectivePrice: manual > api:rema >
@@ -738,7 +741,50 @@
    * `null`, når der ikke er noget at købe: intet behov, eller ingen brugbar
    * pakke. Ikke en tom pose til 0 kr — se effectivePrice for samme skelnen.
    */
-  function choosePack(need, packs, { keeps = 'keeps' } = {}) {
+  // Højst så meget mere af en vare kan lægges i en ret, for at en pakke bliver
+  // brugt op: en fjerdedel af det, retten selv skal bruge. 25 g kyllingebryst
+  // i en ret med 400 g mærkes ikke; en halv pakke fløde gør. Kun friske varer
+  // (keeps: perishable) og kun det, der vejes eller måles — et ekstra æg eller
+  // en halv citron er ikke "lidt mere".
+  const TOPUP_MAX_SHARE = 0.25;
+
+  // Enhederne, en opskriftslinje VEJER eller MÅLER med. Varens base_unit
+  // rækker ikke til reglen ovenfor: citron, avocado, agurk og peberfrugt er
+  // kg-varer i kataloget, men opskrifterne tæller dem i stykker (målt på
+  // data.db: citron vejes i 4 % af linjerne, avocado 1 %; kyllingebryst 50 %,
+  // fløde 93 %). "1 stk citron + 23 g" er ikke en opskrift, nogen kan følge.
+  // Derfor afgøres det pr. LINJE, af den enhed, opskriften selv skrev.
+  //
+  // Listen står her og ikke i generate.js, fordi motoren også kører i
+  // browseren; loadRecipes slår op i den samme, så der kun er én kopi.
+  // Skeer og teskeer er med vilje ikke med: "1 spsk citronsaft" er et
+  // smagsmål, ikke en mængde, man lægger 25 % til.
+  const MEASURED_UNITS = Object.freeze(['g', 'gram', 'grams', 'gr', 'kg', 'kilo', 'kilos',
+    'ml', 'cl', 'dl', 'l', 'liter', 'liters', 'litre', 'litres', 'ltr']);
+
+  /** Vejer eller måler linjens enhed? Store/små bogstaver og mellemrum tæller ikke. */
+  function isMeasuredUnit(unit) {
+    return typeof unit === 'string' && MEASURED_UNITS.includes(unit.trim().toLowerCase());
+  }
+
+  /**
+   * Hvor meget af resten der kan lægges i retterne i stedet for at gå til spilde.
+   *
+   * `topupNeed` er den del af behovet, der kommer fra linjer, som vejer eller
+   * måler varen (se MEASURED_UNITS) — ikke hele behovet. En ret med "2 stk
+   * kyllingebryst" og en med "400 g kyllingebryst" deler én bakke, men kun
+   * den sidste kan få lidt mere.
+   */
+  function absorbable(topupNeed, leftover, keeps, baseUnit) {
+    if (keeps !== 'perishable' || (baseUnit !== 'kg' && baseUnit !== 'l')) return 0;
+    if (!(topupNeed > 0)) return 0;
+    return Math.min(leftover, topupNeed * TOPUP_MAX_SHARE);
+  }
+
+  // `topup_need` er 0, når kalderen ikke ved, hvilke linjer der vejes: så
+  // fyldes der intet op. Et gæt i den anden retning ville lægge 25 g i en
+  // ret, der tæller citroner.
+  function choosePack(need, packs, { keeps = 'keeps', base_unit = null, topup_need = 0 } = {}) {
     if (!(need > 0) || !packs || !packs.length) return null;
 
     // hasOwn, ikke `[]`: et opslag gennem Object.prototype ville give
@@ -763,7 +809,11 @@
       // Efter tolerancen kan `bought` lande en flimmer under `need`. En
       // negativ rest er ikke en rest, og den ville tælle som en gevinst.
       const leftover = Math.max(0, bought - need);
-      const waste = leftover * w;
+      // Den del af resten, retterne kan tage, er ikke spild. Reglen står HER,
+      // så pakkevalget, ugens spildscore og listens waste_kr regner ens —
+      // test/waste.test.js holder ugen og listen op mod hinanden.
+      const absorbed = absorbable(topup_need, leftover, keeps, base_unit);
+      const waste = (leftover - absorbed) * w;
       const cost = n * p.pack_price;
 
       // Resten prissættes til det, den er værd — ikke til et fast beløb pr.
@@ -782,7 +832,7 @@
       if (best && score >= bestScore) continue;
       bestScore = score;
       best = { pack_qty: p.pack_qty, pack_price: p.pack_price, packs: n,
-               bought, leftover, waste, cost };
+               bought, leftover, absorbed, waste, cost };
     }
     return best;
   }
@@ -1154,6 +1204,7 @@
           source_name: c.recipe.source_name,
           servings: c.recipe.servings,
           total_minutes: c.recipe.total_minutes,
+          active_minutes: c.recipe.active_minutes,
           kcal: c.recipe.kcal,
           protein_g: c.recipe.protein_g,
           carbs_g: c.recipe.carbs_g,
@@ -1390,14 +1441,26 @@
   // "Aftensmad"/"Dinner": "Breakfast burrito", "One-pan English breakfast",
   // "Sprøde wontons" (40 stk), "Stenbiderrogn på spinatblinis" (30 stk).
   // Ikke "cake": "Babka ziemniaczana (Polish potato cake)" er en hovedret.
-  const NON_DINNER_TITLE = /\b(breakfast|morgenmad|brunch)\b|blinis\b|\bwontons?\b/i;
+  //
+  // Intet \b EFTER breakfast/morgenmad: titlerne er nu de danske udgavers, og
+  // dansk sætter ord sammen — "Morgenmadsburrito" er "Breakfast burrito" og
+  // skal falde ud på samme måde. Ingen middagsret begynder med de ord.
+  const NON_DINNER_TITLE = /\b(breakfast|morgenmad)|\bbrunch\b|blinis\b|\bwontons?\b/i;
 
-  // Brugerens valg 2026-09-28: højst en time i alt, tid i ovnen medregnet.
-  // Appens brugere har ikke tid til en langtidssteg på en hverdag. Målt: 287
-  // af 1.362 aftensretter tog længere, heraf 95 over to timer (slow cooker,
-  // flæskesteg, rimmet laks på 24 timer). En ret uden tidsangivelse slipper
-  // igennem — samme regel som nøgleordene: ingen oplysning er ikke et nej.
-  const DINNER_MAX_MINUTES = 60;
+  // Brugerens valg 2026-10-04: højst en times arbejde og højst to timer i
+  // alt. Den gamle regel (højst en time i alt) blev for streng, da tiderne
+  // blev rigtige: Valdemarsros "Tid i alt" tæller marinering, hviletid og
+  // tid i ovnen med, så en ret med et kvarters arbejde og en time i ovnen
+  // faldt ud. Målt på de 1.848 danske udgaver: 488 faldt ud med "højst 60
+  // min i alt", 285 med denne regel. Langtidsstegen (slow cooker, rimmet
+  // laks på 24 timer) er stadig ude på de to timer i alt.
+  //
+  // Kender vi ikke arbejdstiden, står tiden i alt for den: den er aldrig
+  // kortere end arbejdet, så en manglende arbejdstid lukker intet ind, den
+  // gamle regel holdt ude. En ret helt uden tidsangivelse slipper igennem —
+  // samme regel som nøgleordene: ingen oplysning er ikke et nej.
+  const DINNER_MAX_MINUTES = 60;          // arbejdstid
+  const DINNER_MAX_TOTAL_MINUTES = 120;   // tid i alt
 
   /** Kalder kilden selv retten noget andet end aftensmad? */
   function looksLikeDinner(keywords) {
@@ -1409,15 +1472,17 @@
 
   /** Kan den laves på en hverdag? */
   function quickEnough(recipe) {
-    const m = recipe && recipe.total_minutes;
-    return !(m > DINNER_MAX_MINUTES);
+    const total = recipe && recipe.total_minutes;
+    const active = recipe && recipe.active_minutes;
+    const work = typeof active === 'number' ? active : total;
+    return !(work > DINNER_MAX_MINUTES) && !(total > DINNER_MAX_TOTAL_MINUTES);
   }
 
   /**
    * Er retten aftensmad — i denne app, på en hverdag?
    *
    * Har den en hovedråvare, OG kalder kilden den en middag, OG kan den nås på
-   * en time? Det første alene lukkede ærtepuré og Marie Rose sauce ind i
+   * en hverdag (quickEnough)? Det første alene lukkede ærtepuré og Marie Rose sauce ind i
    * madplanen; det andet alene ville lukke en vinaigrette ind, hvis nogen
    * havde tagget den "aftensmad". Tiden står HER og ikke i puljen, så puljen,
    * forslagene og budget-sporets has_main er enige om, hvad der er en ret.
@@ -1843,6 +1908,7 @@
     const household = servings > 0 ? servings : DEFAULT_SERVINGS;
     const picks = [];
     const basket = new Map();   // vare → samlet behov i varens base_unit
+    const topupBasket = new Map();   // vare → behovet fra linjer, der vejer/måler den
 
     // Loftet på fem favoritter gælder HER OG SÅ, og ikke først i kædevalget.
     // Prissatte ugen i alle favoritter, mens kædevalget kun så de fem første,
@@ -1861,8 +1927,15 @@
     // dag — se priceLookup, der husker svaret.
     const priceIn = priceLookup({ offers, normals, now });
 
-    /** Rettens behov pr. VARE — ikke pr. linje: samme vare står ofte flere gange. */
-    const needsOf = (rec) => {
+    /**
+     * Rettens behov pr. VARE — ikke pr. linje: samme vare står ofte flere gange.
+     *
+     * `measuredOnly` giver kun behovet fra linjer, der vejer eller måler varen
+     * (`it.measured`, sat af loadRecipes ud fra MEASURED_UNITS). Det er
+     * påfyldningens grundlag: samme filtre og samme skalering som det fulde
+     * behov, så ugen og listen regner den ens.
+     */
+    const needsOf = (rec, { measuredOnly = false } = {}) => {
       const out = new Map();
       // Opskriften skaleres til husstanden. Uden det købes retten, som den er
       // skrevet: målt lå to retter til TI personer i den samme uge som to til
@@ -1874,6 +1947,7 @@
       for (const it of (rec && rec.items) || []) {
         const meta = items.get(it.key);
         if (!isBoughtLine(it, meta)) continue;
+        if (measuredOnly && !it.measured) continue;
         // `amount`, ikke `weight`. `weight` er en ROLLEVÆGT — stykantal
         // omregnet til kilo, så assignRoles kan sammenligne 6 æg med 0,4 kg
         // kylling — mens `amount` er mængden i varens EGEN enhed, og det er
@@ -1883,6 +1957,7 @@
       }
       return out;
     };
+    const MEASURED_ONLY = { measuredOnly: true };
 
     // Oprundingen af stk sker EFTER sammenlægningen og ikke i needsOf — og af
     // den DELTE `wholeUnits`, ikke en kopi. Her stod en egen med et bart
@@ -1911,7 +1986,7 @@
      * sig — med vilje — så sammenligningen mellem kæder regnes her, af de
      * felter, den DA giver.
      */
-    const bestPackFor = (key, meta, need) => {
+    const bestPackFor = (key, meta, need, topupNeed) => {
       const n = wholeUnits(meta, need);
       let best = null;
       for (const chainId of shopIds) {
@@ -1920,7 +1995,8 @@
         // `price.packs` og ikke `[price]`: effectivePrice har allerede
         // filtreret ned til det bedste kildeniveau, og det er DEN liste,
         // choosePack skal vælge pakkestørrelse i.
-        const pack = choosePack(n, price.packs || [price], { keeps: meta.keeps });
+        const pack = choosePack(n, price.packs || [price],
+          { keeps: meta.keeps, base_unit: meta.base_unit, topup_need: topupNeed });
         if (!pack) continue;
         const kr = pack.waste * unitPriceOf(price) * WASTE_AVERSION;
         const score = pack.cost + kr;
@@ -1930,12 +2006,14 @@
       return best;
     };
 
-    const basketCost = (b) => {
+    // `t` er påfyldningens grundlag pr. vare (needsOf med MEASURED_ONLY), lagt
+    // sammen på samme måde som kurven `b`.
+    const basketCost = (b, t) => {
       let cost = 0; let wasteKr = 0;
       for (const [key, need] of b) {
         const meta = items.get(key);
         if (!meta) continue;
-        const best = bestPackFor(key, meta, need);
+        const best = bestPackFor(key, meta, need, t.get(key) || 0);
         if (best) { cost += best.pack.cost; wasteKr += best.kr; }
       }
       return { cost, wasteKr };
@@ -1969,7 +2047,7 @@
     const priced = withMain.filter((c) => canPrice(c, priceCtx));
     const pool = priced.length ? priced : (withMain.length ? withMain : (candidates || []));
 
-    let current = basketCost(basket);
+    let current = basketCost(basket, topupBasket);
 
     // Variationsspærren, den samme som buildPlan bruger. Den står INDE i den
     // grådige løkke og ikke som et forfilter, fordi hvilken ret der må være
@@ -2002,7 +2080,9 @@
 
           const merged = new Map(basket);
           for (const [k, v] of needsOf(cand)) merged.set(k, (merged.get(k) || 0) + v);
-          const after = basketCost(merged);
+          const mergedTopup = new Map(topupBasket);
+          for (const [k, v] of needsOf(cand, MEASURED_ONLY)) mergedTopup.set(k, (mergedTopup.get(k) || 0) + v);
+          const after = basketCost(merged, mergedTopup);
 
           // Marginal pris + marginalt spild, modregnet sporets score. Begge led
           // er kroner, så der er intet at gange med. Støjen gør, at "Ny plan"
@@ -2028,7 +2108,7 @@
                       + seededNoise(seed, cand.id)
                       - (avoid && avoid.has(cand.id) ? AVOID_PENALTY : 0);
 
-          if (!bestPick || score > bestPick.score) bestPick = { cand, merged, after, score };
+          if (!bestPick || score > bestPick.score) bestPick = { cand, merged, mergedTopup, after, score };
         }
         if (bestPick) break;            // den strenge spærre rakte
       }
@@ -2038,6 +2118,8 @@
       tally.add(keysOf(bestPick.cand));
       basket.clear();
       for (const [k, v] of bestPick.merged) basket.set(k, v);
+      topupBasket.clear();
+      for (const [k, v] of bestPick.mergedTopup) topupBasket.set(k, v);
       current = bestPick.after;
     }
 
@@ -2059,8 +2141,10 @@
       const meta = items.get(key);
       if (meta) finalBasket.set(key, wholeUnits(meta, need));
     }
+    // Påfyldningens grundlag går med, så kædevalget regner resten ens med
+    // indkøbslisten — samme kurv, samme `topupNeeds`, samme spild.
     const chosen = chooseChains(finalBasket,
-      { chainIds: shopIds, items, offers, normals, now });
+      { chainIds: shopIds, items, offers, normals, now, topupNeeds: topupBasket });
 
     // Hvad deles der FAKTISK? Det er forklaringen, brugeren får at se, og
     // den skal kunne holde.
@@ -2095,7 +2179,11 @@
         // Samme pakkeliste, som `together` blev regnet af. Fik den ene sti
         // alle pakkestørrelser og den anden kun vinderen pr. enhed, ville de
         // to pakketal ikke måle det samme, og besparelsen blive et tilfælde.
-        const pack = choosePack(own, pick.price.packs || [pick.price], { keeps: meta.keeps });
+        // Og samme påfyldning: rettens egne vejede linjer, som i kurven.
+        const pack = choosePack(own, pick.price.packs || [pick.price], {
+          keeps: meta.keeps, base_unit: meta.base_unit,
+          topup_need: needsOf(u, MEASURED_ONLY).get(key) || 0,
+        });
         if (pack) apart += pack.packs;
       }
       const saved = apart - together.packs;
@@ -2269,6 +2357,8 @@
    *   items     `items`-tabellen som Map: class, keeps, base_unit
    *   offers    `vare|kæde` → aktivt tilbud
    *   normals   `vare|kæde` → normalpris-rækker
+   *   topupNeeds  vare → den del af behovet, der kommer fra linjer, som vejer
+   *             eller måler varen (se absorbable). Mangler den, fyldes intet op.
    *
    * Svaret er `{ chains, assignment, cost, total }`. `cost` er kroner for
    * varerne; `total` er den med boderne i og er IKKE en pris, nogen betaler —
@@ -2276,7 +2366,8 @@
    * testene skal kunne regne den efter.
    */
   function chooseChains(basket, { chainIds = [], items = new Map(), offers = new Map(),
-                                  normals = new Map(), now = new Date() } = {}) {
+                                  normals = new Map(), now = new Date(),
+                                  topupNeeds = new Map() } = {}) {
     const { ids } = chainsInPlay(chainIds);
 
     // Ingen butikker, intet valg. Løkken nedenfor kører nul gange, og uden
@@ -2316,7 +2407,10 @@
         if (!price) continue;
         // `price.packs`: se bestPackFor i sharedWeek — ugen og listen skal
         // vælge den samme pose.
-        const pack = choosePack(need, price.packs || [price], { keeps: meta ? meta.keeps : 'keeps' });
+        const pack = choosePack(need, price.packs || [price], {
+          keeps: meta ? meta.keeps : 'keeps', base_unit: meta ? meta.base_unit : null,
+          topup_need: topupNeeds.get(key) || 0,
+        });
         if (!pack) continue;
         // choosePack giver ikke sin interne score fra sig — med vilje, se
         // opgave 5. Sammenligningen mellem kæder regnes derfor her, af de
@@ -2410,8 +2504,12 @@
     const household = servings > 0 ? servings : DEFAULT_SERVINGS;
 
     const basket = new Map();
+    const topupBasket = new Map();   // vare → behovet fra linjer, der vejer/måler den
     const pantry = new Map();
     const usedIn = new Map();
+    // Hvor meget hver ret selv bruger af hver vare. Resten af en pakke
+    // fordeles efter det (se topup nedenfor).
+    const perRecipe = new Map();
 
     for (const day of plan.days || []) {
       const rec = (day && day.recipe) || {};
@@ -2457,6 +2555,15 @@
         // mængden og skal måle det samme.
         countOnce(it.key);
         basket.set(it.key, (basket.get(it.key) || 0) + need);
+        // Påfyldningens grundlag: kun linjer, der vejer eller måler varen —
+        // samme regel som needsOf(…, MEASURED_ONLY) i sharedWeek.
+        if (it.measured) topupBasket.set(it.key, (topupBasket.get(it.key) || 0) + need);
+        if (!perRecipe.has(it.key)) perRecipe.set(it.key, new Map());
+        const mine = perRecipe.get(it.key);
+        const own = mine.get(rec.id) || { id: rec.id, title: rec.title, need: 0, measured: 0 };
+        own.need += need;
+        if (it.measured) own.measured += need;
+        mine.set(rec.id, own);
       }
     }
 
@@ -2471,14 +2578,39 @@
     // ud, så brugeren kan få det at vide frem for at opdage det som en vare
     // uden pris.
     const { ids: shopIds, dropped } = chainsInPlay(chainIds);
-    const chosen = chooseChains(basket, { chainIds: shopIds, items, offers, normals, now });
+    const chosen = chooseChains(basket,
+      { chainIds: shopIds, items, offers, normals, now, topupNeeds: topupBasket });
 
     const buy = [];
+    const topups = {};
     let unpriced = 0;
     for (const [key, need] of basket) {
       const pick = chosen.assignment.get(key);
       const meta = items.get(key);
       if (!pick) unpriced++;
+      // choosePack har regnet, hvor meget af resten retterne kan tage. Her
+      // fordeles det: kun retter, der selv vejer eller måler varen, største
+      // vejede mængde først, og ingen ret mere end en fjerdedel af den. En ret
+      // med "2 stk kyllingebryst" får intet — "+ 60 g" står ikke til at følge
+      // der. Summen af lofterne er præcis choosePacks loft, så alt, den har
+      // regnet som brugt, kan placeres. Ved samme mængde afgør titlen, så to
+      // kørsler er ens.
+      const topup = [];
+      let rest = pick ? pick.absorbed : 0;
+      if (rest > 0) {
+        const eaters = [...(perRecipe.get(key) || new Map()).values()]
+          .filter((e) => e.measured > 0)
+          .sort((a, b) => b.measured - a.measured || String(a.title).localeCompare(String(b.title), 'da'));
+        for (const e of eaters) {
+          if (!(rest > 1e-9)) break;
+          const give = Math.min(rest, e.measured * TOPUP_MAX_SHARE);
+          if (!(give > 0)) continue;
+          topup.push({ recipe_id: e.id, title: e.title, qty: roundQty(give) });
+          if (!topups[e.id]) topups[e.id] = {};
+          topups[e.id][key] = roundQty(give);
+          rest -= give;
+        }
+      }
       buy.push({
         key, name: meta.name || key, chain: pick ? pick.chainId : null,
         // roundQty og ikke round2: 3 g hvidløg bliver 0 med to decimaler, og
@@ -2493,9 +2625,10 @@
         pack_qty: pick ? roundQty(pick.pack_qty) : null,
         unit: meta.base_unit,
         est_cost: pick ? round2(pick.cost) : null,
-        leftover: pick ? roundQty(pick.leftover) : null,
+        leftover: pick ? roundQty(pick.leftover - pick.absorbed) : null,
         on_offer: pick ? Boolean(pick.price.on_offer) : false,
         used_in: usedIn.get(key) || [],
+        topup,
       });
     }
     // Dyrest først: det er den linje, der betyder noget for budgettet, og den
@@ -2524,6 +2657,9 @@
       // spildscore bygger på — se basketWasteKr — så ugens tal er præcis dette
       // gange WASTE_AVERSION og ikke et tal, der bare ligner.
       waste_kr: basketWasteKr(chosen.assignment),
+      // `recipe_id → vare → mængde i varens enhed`: det, opskriftsarket
+      // lægger oven i retten.
+      topups,
     };
   }
 
@@ -2532,12 +2668,13 @@
     qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
     choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner, quickEnough, withEstimates,
-    DINNER_MAX_MINUTES,
+    DINNER_MAX_MINUTES, DINNER_MAX_TOTAL_MINUTES,
     canPrice, candidatePool, mainCategoryOf, sharedWeek, twoProposals, explainWeek,
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,
-    WASTE_WEIGHT, WASTE_AVERSION, EXTRA_STORE_PENALTY, MISSING_ITEM_NUISANCE,
+    WASTE_WEIGHT, WASTE_AVERSION, TOPUP_MAX_SHARE, MEASURED_UNITS, isMeasuredUnit,
+    EXTRA_STORE_PENALTY, MISSING_ITEM_NUISANCE,
     MAX_CHOICE_CHAINS,
   };
 }));

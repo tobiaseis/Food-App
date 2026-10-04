@@ -1,0 +1,192 @@
+{
+  "url": "https://www.arla.dk/opskrifter/sursod-nudelsalat-og-sprode-tigerrejer/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:57:12.363Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Sursød nudelsalat med sprøde tigerrejer",
+  "intro": "Kølig nudelsalat med knasende grøntsager i en sursød marinade, serveret med ovnbagte tigerrejer i en sprød panering af rasp og ost. Server med ketjap manis og sød chilisauce.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Nudelsalat",
+      "amount": 250,
+      "unit": "g",
+      "name": "nudler",
+      "note": "tørrede, fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 2,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "ufarvet lagereddike",
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 6,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tynde stave",
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "røde, i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "grøn, i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "amount": 100,
+      "unit": "g",
+      "name": "pastaost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tandoorikrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "amount": 250,
+      "unit": "g",
+      "name": "tigerrejer",
+      "note": "pillede, rå",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ketjap manis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Nudelsalat",
+      "text": "Bring vandet i en stor gryde i kog, og læg nudlerne i. Kog dem under jævnlig omrøring i 3-4 minutter, til de har løsnet sig fra hinanden og er møre, men ikke bløde."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Øs en halv deciliter af kogevandet til side. Hæld nudlerne i et dørslag, og lad dem dryppe godt af."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Rør eddike, det afmålte kogevand, sukker og salt sammen i den tomme gryde. Kom gulerødder og peberfrugt ned i marinaden, og vend nudlerne i."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Dæk gryden og lad salaten trække ved stuetemperatur i mindst 15 minutter. Smag den til."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Tip: Lader du salaten køle helt af, så rør en halv deciliter ekstra kogevand i, så den ikke bliver tør."
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "text": "Forvarm ovnen til 225 °C (almindelig ovn)."
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "text": "Slå ægget ud på en dyb tallerken, og pisk det let. Bland rasp, pastaost, tandoorikrydderi og salt på en anden tallerken."
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "text": "Dyp hver reje i ægget, og rul den derefter i osteblandingen. Tryk panaden fast med fingrene."
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "text": "Anbring rejerne på en bageplade med bagepapir, og drys resten af osteblandingen over dem."
+    },
+    {
+      "section": "Sprøde tigerrejer",
+      "text": "Bag rejerne øverst i ovnen i cirka 10 minutter, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret nudelsalaten med rejerne, og server ketjap manis og sød chilisauce ved siden af."
+    }
+  ],
+  "changes": []
+}

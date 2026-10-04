@@ -1,0 +1,96 @@
+{
+  "url": "https://www.arla.dk/opskrifter/carpaccio/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:09:15.350Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 7,
+  "title": "Carpaccio af oksemørbrad",
+  "intro": "Tyndt skåret rå oksemørbrad med olie, citron og ost, serveret med friske salatblade og ristet brød. En enkel og elegant forret.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Carpaccio",
+      "amount": 100,
+      "unit": "g",
+      "name": "oksemørbrad",
+      "note": "i meget tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Carpaccio",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Carpaccio",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Carpaccio",
+      "amount": 25,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "i flager",
+      "optional": false
+    },
+    {
+      "section": "Carpaccio",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Carpaccio",
+      "amount": null,
+      "unit": null,
+      "name": "salat",
+      "note": "frisé, evt. suppleret med brøndkarse og/eller skovsyre",
+      "optional": false
+    },
+    {
+      "section": "Carpaccio",
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "ristet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Carpaccio",
+      "text": "Bed slagteren skære fileten i skiver, eller skær den selv så tyndt som muligt. Det er nemmest med et lidt større stykke."
+    },
+    {
+      "section": "Carpaccio",
+      "text": "Læg et par skiver ad gangen i en frysepose, og tryk dem ud med håndroden eller med den flade side af en bred kniv, til de er helt tynde."
+    },
+    {
+      "section": "Carpaccio",
+      "text": "Fordel kødet på et fad. Dryp med olie og citronsaft, og strø ostens flager ovenpå."
+    },
+    {
+      "section": "Carpaccio",
+      "text": "Kværn peber over, og læg salat, brøndkarse og/eller skovsyre ved siden af. Server med det ristede brød."
+    }
+  ],
+  "changes": [
+    "Oksefilet er skiftet til oksemørbrad.",
+    "Lagret cheddar eller parmesan er skiftet til parmesan.",
+    "Brøndkarse og skovsyre er skrevet som en note under salat."
+  ]
+}

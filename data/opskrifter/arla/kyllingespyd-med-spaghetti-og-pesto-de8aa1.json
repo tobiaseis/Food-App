@@ -1,0 +1,227 @@
+{
+  "url": "https://www.arla.dk/opskrifter/kyllingespyd-med-spaghetti-og-pesto/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:22:36.064Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Kyllingespyd med spaghetti og pesto",
+  "intro": "Saftige kyllingespyd med peberfrugt og en smagfuld glasur serveres med spaghetti vendt i hjemmelavet persillepesto. Dertil en frisk salat med tomater og broccoli.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kyllingespyd",
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Kyllingespyd",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "gule, skåret i mindre stykker",
+      "optional": false
+    },
+    {
+      "section": "Kyllingespyd",
+      "amount": 1,
+      "unit": "dl",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingespyd",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kyllingespyd",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingespyd",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Kyllingespyd",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kyllingespyd",
+      "amount": 8,
+      "unit": "stk",
+      "name": "bambusspyd",
+      "note": "ca. 20 cm lange",
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 25,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 25,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "pinjekerner",
+      "note": "eller mandler",
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille, knust",
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "hønsebouillon",
+      "note": "afkølet",
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 300,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": "tørret, gerne fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 500,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": "blandet grøn salat",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "broccoli",
+      "note": "dampede og afkølede buketter",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "friskpresset saft til at dryppe over",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kyllingespyd",
+      "text": "Skær kyllingen i tern, og træk dem på spyddene skiftevis med stykkerne af peberfrugt."
+    },
+    {
+      "section": "Kyllingespyd",
+      "text": "Rør ketchup, oregano, sojasauce, salt og peber sammen, og pensl blandingen over spyddene."
+    },
+    {
+      "section": "Kyllingespyd",
+      "text": "Læg spyddene i et ovnfast fad, og sæt dem øverst i ovnen under grillen i ca. 9 minutter. Vend dem midtvejs."
+    },
+    {
+      "section": "Pesto",
+      "text": "Kom persille, mozzarella, pinjekerner, salt, hvidløg og bouillon i en foodprocessor eller blender, og kør det i ca. 30 sekunder."
+    },
+    {
+      "section": "Pesto",
+      "text": "Tilsæt olien, og smag pestoen til med peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog spaghettien, så længe pakken angiver, og vend den med pestoen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Bland salaten med tomater, broccoli og rødløg, og dryp med citronsaft. Server spaghettien med det samme sammen med spyd og salat."
+    }
+  ],
+  "changes": [
+    "Kyllingefileter er skiftet til kyllingebryst.",
+    "Bredbladet persille er skrevet som almindelig persille."
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/pork-chops-leeks-rhubarb-chutney-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:13:06.886Z",
+  "total_minutes": 80,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Svinekoteletter med brændte porrer og rabarberchutney",
+  "intro": "Saftige, smørstegte koteletter med kulsorte porrer og en krydret rabarberchutney. Retten serveres med en mørk sovs af oksefond og grov sennep.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til chutneyen",
+      "amount": 700,
+      "unit": "g",
+      "name": "rabarber",
+      "note": "skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "udkernet og hakket",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 600,
+      "unit": "g",
+      "name": "brun farin",
+      "note": "blød, lys",
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 200,
+      "unit": "g",
+      "name": "rosiner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 4,
+      "unit": "dl",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chutneyen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koteletter og porrer",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til koteletter og porrer",
+      "amount": 2,
+      "unit": "stk",
+      "name": "porre",
+      "note": "halveret på langs",
+      "optional": false
+    },
+    {
+      "section": "Til koteletter og porrer",
+      "amount": 4,
+      "unit": "stk",
+      "name": "svinekoteletter",
+      "note": "fedtkanten indskåret, stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Til koteletter og porrer",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til koteletter og porrer",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koteletter og porrer",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust med skræl på",
+      "optional": false
+    },
+    {
+      "section": "Til koteletter og porrer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koteletter og porrer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sovsen",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til sovsen",
+      "amount": 30,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sovsen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sovsen",
+      "amount": 4,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": "varmet op",
+      "optional": false
+    },
+    {
+      "section": "Til sovsen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "grov",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Chutney",
+      "text": "Kom alle ingredienserne til chutneyen i en stor gryde. Bring det til en blid simren, og rør godt rundt."
+    },
+    {
+      "section": "Chutney",
+      "text": "Lad chutneyen koge i cirka 1 time over medium-lav varme, og rør af og til. Lad den køle af, og hæld den over i en beholder. Den holder sig op til en måned i køleskabet."
+    },
+    {
+      "section": "Koteletter og porrer",
+      "text": "Varm en stor pande op over medium-høj varme med lidt olie. Læg porrerne med snitfladen nedad, og lad dem stå uden at røre, til de er dybt mørke i kanten. Det er helt fint, at de bliver sorte. Tag dem af panden."
+    },
+    {
+      "section": "Koteletter og porrer",
+      "text": "Sæt panden tilbage på medium-høj varme. Krydr koteletterne med salt og peber, og gnid dem ind med lidt olie. Stil dem på højkant med fedtkanten nedad i et minut. Læg dem derefter ned, og brun dem 1-2 minutter på hver side efter tykkelse."
+    },
+    {
+      "section": "Koteletter og porrer",
+      "text": "Kom smør, timian og hvidløg på panden. Øs det skummende smør over koteletterne i 2 minutter."
+    },
+    {
+      "section": "Koteletter og porrer",
+      "text": "Tag koteletterne af panden, når kernetemperaturen er 70 °C. Hæld resten af smørret over dem, og kassér timian og hvidløg. Lad kødet hvile, mens sovsen laves på samme pande."
+    },
+    {
+      "section": "Sovs",
+      "text": "Smelt smørret på panden, og pisk melet i, så der opstår en jævning. Lad den brune i nogle minutter, og rør tomatpuréen i. Steg i endnu et minut."
+    },
+    {
+      "section": "Sovs",
+      "text": "Hæld den varme oksefond i lidt ad gangen, og pisk hele tiden, så der ikke kommer klumper."
+    },
+    {
+      "section": "Sovs",
+      "text": "Pisk sennep i, og lad sovsen simre et par minutter, til den er tyknet. Smag til med salt og peber."
+    },
+    {
+      "section": "Anretning",
+      "text": "Anret koteletter og brændte porrer på tallerkener med en god klat chutney ved siden af. Hæld sovsen over til sidst."
+    }
+  ],
+  "changes": [
+    "Vegetable oil er skiftet til almindelig olie."
+  ]
+}

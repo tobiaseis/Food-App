@@ -1,0 +1,429 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/malt-mousse-blackout-coffee-sponge-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:17:15.752Z",
+  "total_minutes": 80,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 36,
+  "title": "Maltmousse med mørk kaffekage og citron",
+  "intro": "En lagkagelignende dessert med kaffekage, chokolademarquise, maltmousse og en frisk citrongelé. Den pyntes med kaffecurd, ristede hasselnødder og friske krydderurter.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Til kaffekagen",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Til kaffekagen",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffekagen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffekagen",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffekagen",
+      "amount": 50,
+      "unit": "g",
+      "name": "kakaopulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffekagen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffekagen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffekagen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "espresso",
+      "note": "kold",
+      "optional": false
+    },
+    {
+      "section": "Til kaffekagen",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "sødmælk",
+      "optional": false
+    },
+    {
+      "section": "Til kaffekagen",
+      "amount": 80,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chokolademarquisen",
+      "amount": 150,
+      "unit": "g",
+      "name": "mørk chokolade",
+      "note": "70 %, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til chokolademarquisen",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til chokolademarquisen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chokolademarquisen",
+      "amount": 75,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chokolademarquisen",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chokolademarquisen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "kakaopulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffecurden",
+      "amount": 50,
+      "unit": "ml",
+      "name": "espresso",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffecurden",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffecurden",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffecurden",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kaffecurden",
+      "amount": 50,
+      "unit": "g",
+      "name": "mørk chokolade",
+      "note": "70 %",
+      "optional": false
+    },
+    {
+      "section": "Til maltmoussen",
+      "amount": 150,
+      "unit": "g",
+      "name": "hvid chokolade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til maltmoussen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til maltmoussen",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "deles i to lige store dele",
+      "optional": false
+    },
+    {
+      "section": "Til maltmoussen",
+      "amount": 20,
+      "unit": "g",
+      "name": "mørk sirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til maltmoussen",
+      "amount": 30,
+      "unit": "g",
+      "name": "Ovomaltine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til maltmoussen",
+      "amount": 30,
+      "unit": "g",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til citrongeléen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til citrongeléen",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til citrongeléen",
+      "amount": 75,
+      "unit": "ml",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til citrongeléen",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "citronmelisse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til citrongeléen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kaffirlimeblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til citrongeléen",
+      "amount": 25,
+      "unit": "ml",
+      "name": "limoncello",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til citrongeléen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "hasselnødder",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "citronmelisse",
+      "note": "blade",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kaffekagen",
+      "text": "Varm ovnen op til 160°C. Pisk smør og sukker luftigt i en røremaskine med piskeris, og pisk derefter ægget i."
+    },
+    {
+      "section": "Kaffekagen",
+      "text": "Tag skålen fra maskinen, og vend mel, kakao, natron og bagepulver forsigtigt i med en spatel."
+    },
+    {
+      "section": "Kaffekagen",
+      "text": "Sæt skålen på maskinen igen, og rør kold espresso, mælk og creme fraiche i, til dejen er jævn."
+    },
+    {
+      "section": "Kaffekagen",
+      "text": "Beklæd en kvadratisk form på 15 cm med bagepapir eller en silikonemåtte. Fordel dejen jævnt, og bag kagen i 9 minutter, til den er færdig."
+    },
+    {
+      "section": "Kaffekagen",
+      "text": "Læg et nyt stykke bagepapir over den bagte kage, og læg en tung bakke ovenpå. Pres kagen i køleskabet i mindst 1 time."
+    },
+    {
+      "section": "Kaffekagen",
+      "text": "Sæt en kvadratisk moussering på 8 cm midt på kagen, og tryk den ned, så der skæres en firkant ud. Lad ringen blive på – desserten bygges op i den."
+    },
+    {
+      "section": "Chokolademarquisen",
+      "text": "Fyld en mellemstor gryde halvt med vand, og varm det op ved middelvarme. Kom chokolade og smør i en metalskål, dæk med film, og sæt skålen over gryden, så den ikke rører vandet. Lad det smelte."
+    },
+    {
+      "section": "Chokolademarquisen",
+      "text": "Pisk æggeblommer og sukker lyst og cremet i røremaskinen. Pisk fløden til bløde toppe i en anden skål, men pas på ikke at piske den for meget."
+    },
+    {
+      "section": "Chokolademarquisen",
+      "text": "Rør kakao og den smeltede chokolademasse i æggeblandingen, til alt er blandet. Vend fløden forsigtigt i med en spatel, så luften bliver i massen."
+    },
+    {
+      "section": "Chokolademarquisen",
+      "text": "Fyld massen i en sprøjtepose, og sprøjt den ud i ringen oven på den afkølede kage, til laget er ca. 3,5 cm højt. Glat toppen med en paletkniv, og stil den i køleskabet."
+    },
+    {
+      "section": "Kaffecurden",
+      "text": "Kog espresso, smør og sukker op i en lille gryde. Kom chokoladen i en varmefast skål."
+    },
+    {
+      "section": "Kaffecurden",
+      "text": "Pisk æggeblommerne i en anden varmefast skål, og hæld den varme espressoblanding over under piskning, så blommerne tempereres."
+    },
+    {
+      "section": "Kaffecurden",
+      "text": "Hæld det hele tilbage i gryden, og varm det under konstant omrøring, til det tykner og klæber til bagsiden af en ske. Hæld det over chokoladen, og rør, til det er helt glat."
+    },
+    {
+      "section": "Kaffecurden",
+      "text": "Fyld curden i en sprøjtepose, og stil den i køleskabet. Den holder sig op til 3 dage. Tag den ud i god tid før servering, så den når stuetemperatur."
+    },
+    {
+      "section": "Maltmoussen",
+      "text": "Fyld en gryde halvt med vand, og sæt den på lav varme. Smelt den hvide chokolade i en skål over gryden. Brug et stegetermometer, og lad den ikke blive varmere end 52°C."
+    },
+    {
+      "section": "Maltmoussen",
+      "text": "Læg husblasset i en skål med iskoldt vand, og lad det trække, til det er blødt. Pres vandet fra, og læg bladene på en bakke."
+    },
+    {
+      "section": "Maltmoussen",
+      "text": "Bring halvdelen af fløden i kog sammen med sirup og Ovomaltine i en mellemstor gryde. Hæld det over æggeblommerne, pisk godt, og hæld alt tilbage i gryden."
+    },
+    {
+      "section": "Maltmoussen",
+      "text": "Varm massen til 80°C under konstant omrøring, så den ikke brænder på. Rør husblasset i, og rør den smeltede hvide chokolade i. Lad massen stå, mens resten af fløden piskes."
+    },
+    {
+      "section": "Maltmoussen",
+      "text": "Pisk den resterende fløde til bløde toppe i en ren skål, uden at piske den for meget. Vend den forsigtigt i maltmassen med en silikonespatel."
+    },
+    {
+      "section": "Maltmoussen",
+      "text": "Fyld moussen i en sprøjtepose, og sprøjt den ovenpå marquisen. Glat toppen med en paletkniv, så der ikke er luftbobler. Stil den i køleskabet i 2-3 timer, til den er fast."
+    },
+    {
+      "section": "Citrongeléen",
+      "text": "Kog vand, sukker og citronsaft op i en mellemstor gryde. Hæld det over citronmelisse og kaffirlimeblade, og lad det trække i mindst 2 timer."
+    },
+    {
+      "section": "Citrongeléen",
+      "text": "Rør limoncello i væsken, og si den. Mål væsken: der skal bruges ¾ blad husblas pr. 100 ml – ved 400 ml er det 3 blade."
+    },
+    {
+      "section": "Citrongeléen",
+      "text": "Læg husblasset i en skål med koldt vand, og lad det blødgøre."
+    },
+    {
+      "section": "Citrongeléen",
+      "text": "Bring halvdelen af citronvæsken i kog, og rør det udpressede husblas i. Tilsæt resten af væsken, og rør, til alt husblas er opløst. Lad geléen køle helt af."
+    },
+    {
+      "section": "Citrongeléen",
+      "text": "Hæld den afkølede gelé ovenpå maltmoussen, og stil det tilbage i køleskabet, til den er fast. Nu har du fire lag klar til servering."
+    },
+    {
+      "section": "Samling",
+      "text": "Tag curden ud af køleskabet, så den bliver stuetemperet, og tag den store lagdelte ring ud."
+    },
+    {
+      "section": "Samling",
+      "text": "Træk den firkantede ring op og af desserten. Sidder den fast, kan du løsne den med en lille gasbrænder langs kanten eller med en varm kniv. Skær eventuelle ujævne kanter af."
+    },
+    {
+      "section": "Samling",
+      "text": "Skær desserten i skiver på 1 cm og 8 cm i længden med en varm kniv."
+    },
+    {
+      "section": "Samling",
+      "text": "Sprøjt fem toppe curd ovenpå hver kage, og læg ristede hasselnødder imellem. Pynt med blade af citronmelisse."
+    }
+  ],
+  "changes": [
+    "Maltekstrakt er erstattet med mørk sirup.",
+    "Malt powder (Ovaltine) er erstattet med Ovomaltine.",
+    "Citronverbena er erstattet med citronmelisse.",
+    "Citronblade er erstattet med kaffirlimeblade."
+  ]
+}

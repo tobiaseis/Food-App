@@ -1,0 +1,169 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/beetroot-gin-cured-salmon-poached-egg-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:24:00.372Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 13,
+  "ingredients": [
+    {
+      "section": "Til graven laksen",
+      "amount": 300,
+      "unit": "g",
+      "name": "laksefilet",
+      "note": "med skind",
+      "optional": false
+    },
+    {
+      "section": "Til graven laksen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "kogte, skrællede og revet",
+      "optional": false
+    },
+    {
+      "section": "Til graven laksen",
+      "amount": 40,
+      "unit": "g",
+      "name": "salt",
+      "note": "groft havsalt",
+      "optional": false
+    },
+    {
+      "section": "Til graven laksen",
+      "amount": 40,
+      "unit": "g",
+      "name": "sukker",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Til graven laksen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "pink peppercorns",
+      "note": "knuste",
+      "optional": false
+    },
+    {
+      "section": "Til graven laksen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Til graven laksen",
+      "amount": 40,
+      "unit": "ml",
+      "name": "gin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Til graven laksen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "engelske muffins",
+      "note": "delt i halve og ristet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "pink peppercorns",
+      "note": "knuste",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "kviste",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "revet skal",
+      "optional": false
+    },
+    {
+      "section": "Til poaching",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "en sjat",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Gravning",
+      "text": "Rør rødbede, salt, sukker, pink peppercorns, citronskal, gin og dild sammen til en tyk pasta."
+    },
+    {
+      "section": "Gravning",
+      "text": "Læg et stort stykke film på et fad. Smør halvdelen af pastaen ud, læg laksen med skindsiden nedad ovenpå, og dæk den helt med resten af pastaen."
+    },
+    {
+      "section": "Gravning",
+      "text": "Pak laksen stramt ind i filmen. Læg et fad ovenpå med nogle dåser som vægt, og stil det i køleskabet i 48 timer. Vend laksen efter 24 timer, så den graver jævnt."
+    },
+    {
+      "section": "Gravning",
+      "text": "Skyl pastaen af laksen under koldt vand, og dup den helt tør. Skær den i tynde skiver."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Bring en gryde vand i en let simren, og tilsæt eddike."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Slå hvert æg ud i en lille skål, og lad det glide forsigtigt ned i vandet. Pochér i 3 minutter, til hviderne er stivnet, og blommerne stadig er flydende. Tag æggene op med en hulske."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel skiverne af gravad laks på de ristede muffinhalvdele, og læg et pocheret æg på hver."
+    },
+    {
+      "section": "Anretning",
+      "text": "Pynt med knuste pink peppercorns, dildkviste og citronskal."
+    }
+  ],
+  "title": "Rødbedegravad laks med pocherede æg",
+  "intro": "Laksen graves i 48 timer med rødbede, gin og lyserød peber og bliver smuk og aromatisk. Server den på ristede muffins med bløde pocherede æg.",
+  "servings": 4,
+  "changes": [
+    "Caster sugar er skiftet til almindeligt sukker.",
+    "Engelske muffins er beholdt, da de kan købes i danske supermarkeder.",
+    "Pink peppercorns er beholdt som lyserød peber under det engelske navn, da der ikke er en tydelig dansk afløser.",
+    "Freshlay Farms-æg er skiftet til almindelige æg."
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/enchilada-casserole",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:35:32.094Z",
+  "total_minutes": 65,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Enchiladaform med oksekød og sorte bønner",
+  "intro": "Lag af majstortillas, krydret oksekødsfyld, sorte bønner og ost, der bages i hjemmelavet røget enchiladasauce. En nem ret til hele familien, som kan toppes med friske tilbehør.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 25,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "chilipulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "i adobosauce, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til enchiladasaucen",
+      "amount": 700,
+      "unit": "ml",
+      "name": "bouillon",
+      "note": "høns eller grøntsag",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "jalapeños",
+      "note": "friske, uden kerner og hakket",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "magert",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "400 g, afdryppede og skyllede",
+      "optional": false
+    },
+    {
+      "section": "Til samling",
+      "amount": 12,
+      "unit": "stk",
+      "name": "majstortillas",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til samling",
+      "amount": 250,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet, lagret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salsa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "jalapeños",
+      "note": "i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Enchiladasaucen",
+      "text": "Varm olien op i en stor gryde ved middel varme. Rør melet ud i olien og lad det simre ca. 1 minut under konstant omrøring."
+    },
+    {
+      "section": "Enchiladasaucen",
+      "text": "Tilsæt chilipulver, løgpulver, hvidløgspulver, spidskommen og saltet. Steg krydderierne i 2 minutter."
+    },
+    {
+      "section": "Enchiladasaucen",
+      "text": "Rør chipotle, tomatpuré og eddike i, og lad det småputte 1-2 minutter."
+    },
+    {
+      "section": "Enchiladasaucen",
+      "text": "Hæld bouillonen i lidt ad gangen, og pisk, så saucen bliver helt glat. Bring den i kog, skru ned og lad den simre i 5 minutter, til den er tyknet. Tag gryden af varmen og lad saucen køle af."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Tænd ovnen på 180 °C."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Svits løg og jalapeños i olien på en stor pande ved middel varme i 5 minutter, til de er bløde."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Skru op for varmen, og kom oksekødet og saltet på panden. Brun kødet, til det er gennemstegt. Er kødet magert, skal der ikke hældes fedt fra; ellers øs overskydende fedt af."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Bland bønnerne og 250 ml af saucen i fyldet."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Brug et ovnfast fad på ca. 23 x 33 cm. Bred 250 ml sauce ud i bunden."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Vend 6 tortillas i saucen, og læg dem i fadet, så de dækker bunden. Fordel halvdelen af kødfyldet ovenpå, og drys med halvdelen af osten."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Vend de sidste tortillas i saucen, og læg dem som næste lag. Slut med resten af kødfyldet, al den sauce, der er tilbage, og resten af osten."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Bag retten i ovnen i 25 minutter, til den er boblende og gylden."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Server med salsa, creme fraiche, koriander og jalapeños i skiver."
+    }
+  ],
+  "changes": [
+    "Pico de gallo er erstattet med salsa.",
+    "Sour cream er erstattet med creme fraiche.",
+    "Monterey Jack er erstattet med lagret cheddar."
+  ]
+}

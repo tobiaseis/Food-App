@@ -1,0 +1,252 @@
+{
+  "url": "https://www.valdemarsro.dk/torsk-risotto/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:23:02.312Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Torsk med risotto og krydret rasp",
+  "intro": "Mør torsk med sprød urtekrummetop serveres på cremet parmesanrisotto og ovnbagt spidskål. En hel middag, hvor det meste passer sig selv i ovnen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Risotto",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 400,
+      "unit": "g",
+      "name": "risotto ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 9,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "evt. mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risotto",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Bagt spidskål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Bagt spidskål",
+      "amount": 25,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Bagt spidskål",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Bagt spidskål",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bagt spidskål",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagt spidskål",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "amount": 150,
+      "unit": "g",
+      "name": "brød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rosmarin",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "amount": 600,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Risotto",
+      "text": "Svits løg og hvidløg i olie i en gryde, til løgene er bløde."
+    },
+    {
+      "section": "Risotto",
+      "text": "Rør risene med i gryden, og vend dem rundt. Hæld hvidvinen i, og rør, til den er trukket helt ind."
+    },
+    {
+      "section": "Risotto",
+      "text": "Tilsæt grøntsagsfonden, og bring det i kog. Skru ned, så det simrer svagt, læg låg på, og lad risene simre i ca. 25-30 minutter, til de er møre. Rør parmesan i, og smag til med salt og peber."
+    },
+    {
+      "section": "Bagt spidskål",
+      "text": "Læg spidskålskvartene i et ovnfast fad. Pensl med smeltet smør, og drys med parmesan, timian, salt og peber."
+    },
+    {
+      "section": "Bagt spidskål",
+      "text": "Bag ved 175 °C varmluft i ca. 15-20 minutter i en forvarmet ovn."
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "text": "Smuldr brødet på en bageplade med bagepapir, og bag det ved 175 °C varmluft i ca. 8-10 minutter i en forvarmet ovn. Vend krummerne et par gange undervejs."
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "text": "Lad krummerne køle af. Blend dem fint i en minihakker sammen med urterne og en smule salt."
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "text": "Del torsken i passende stykker, læg dem på en bradepande med bagepapir, og tør dem med køkkenrulle. Fordel raspen over fisken, og tryk den let ind, så den hænger fast."
+    },
+    {
+      "section": "Torsk med krydret rasp",
+      "text": "Bag torsken ved 175 °C varmluft i 10-12 minutter i en forvarmet ovn, til den er mør."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret risottoen på tallerkener med torsk og en kvart spidskål. Drys med parmesan og hakket persille."
+    }
+  ],
+  "changes": []
+}

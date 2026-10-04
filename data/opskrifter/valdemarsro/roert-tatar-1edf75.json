@@ -1,0 +1,252 @@
+{
+  "url": "https://www.valdemarsro.dk/roert-tatar/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:00:47.032Z",
+  "total_minutes": 45,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Tatar med ovnbagte kartoffelfritter",
+  "intro": "Rørt tatar af oksekød med estragon, kapers og peberrod, serveret med sprøde ovnfritter og grøn salat. Toppen er en rå æggeblomme.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartoffelfritter",
+      "amount": 1,
+      "unit": "kg",
+      "name": "bagekartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfritter",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfritter",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Salat og vinaigrette",
+      "amount": 125,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og vinaigrette",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og vinaigrette",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Salat og vinaigrette",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og vinaigrette",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Salat og vinaigrette",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og vinaigrette",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 600,
+      "unit": "g",
+      "name": "okseinderlår",
+      "note": "eller oksemørbrad, klargjort til tatar",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 2,
+      "unit": null,
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille & krydderurter",
+      "note": "frisk estragon, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "cornichoner",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": null,
+      "unit": null,
+      "name": "tabasco",
+      "note": "3 dråber",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peberrod",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet, sort",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": null,
+      "name": "æggeblommer",
+      "note": "rå, til toppen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "persille & krydderurter",
+      "note": "frisk estragon, finthakket, til drys",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mayonnaise",
+      "note": "eller aioli",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelfritter",
+      "text": "Varm ovnen op til 175 °C varmluft. Skrub kartoflerne og skær dem i stave."
+    },
+    {
+      "section": "Kartoffelfritter",
+      "text": "Vend staverne med olie og salt på en bageplade. Bag dem i 35-40 minutter, til de er sprøde, og vend dem et par gange undervejs."
+    },
+    {
+      "section": "Salat og vinaigrette",
+      "text": "Pisk alle ingredienserne til vinaigretten sammen, og smag den til. Læg salaten i en skål, og hæld dressingen over lige før servering."
+    },
+    {
+      "section": "Tatar",
+      "text": "Kom kødet i en skål. Rør æggeblommerne, estragon, kapers, cornichoner, worcestershiresauce og tabasco ind i det."
+    },
+    {
+      "section": "Tatar",
+      "text": "Smag til med salt, peber, 1 tsk af dijonsennepen og halvdelen af både peberrod og skalotteløg."
+    },
+    {
+      "section": "Tatar",
+      "text": "Rør godt, og smag igen. Tilsæt resten af sennep, peberrod og skalotteløg og eventuelt mere salt og peber, til smagen passer dig."
+    },
+    {
+      "section": "Tatar",
+      "text": "Del tataren i fire. Form hver portion med en kniv på en tallerken, læg en rå æggeblomme på toppen, og drys med estragon."
+    },
+    {
+      "section": "Tatar",
+      "text": "Server med fritterne, mayonnaise eller aioli og salaten."
+    }
+  ],
+  "changes": []
+}

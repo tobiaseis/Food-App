@@ -1,0 +1,391 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/braised-brisket-chocolate-chilli-crispy-capers-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:08:19.485Z",
+  "total_minutes": 110,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 37,
+  "title": "Braiseret oksebryst med chokolade, chili og sprøde kapers",
+  "intro": "Mørt oksebryst, der får lov at småkoge i timevis i en røget chilisauce med et strejf mørk chokolade. Serveres på cremet polenta med syrlig citrongremolata og sprøde kapers.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "allehånde",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 2,
+      "unit": "kg",
+      "name": "oksebryst",
+      "note": "renset for sener og overskydende fedt",
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællet og groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tørret chili",
+      "note": "udblødt i kogende vand og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 5,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 30,
+      "unit": "g",
+      "name": "mørk chokolade",
+      "note": "70 %, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "ansjoser",
+      "note": "filet, groft hakket",
+      "optional": true
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "amount": null,
+      "unit": null,
+      "name": "majsstivelse",
+      "note": "til jævning efter behov",
+      "optional": false
+    },
+    {
+      "section": "Sprøde kapers",
+      "amount": 125,
+      "unit": "g",
+      "name": "kapers",
+      "note": "drænet og duppet tørre; 1 spsk gemmes til gremolataen",
+      "optional": false
+    },
+    {
+      "section": "Sprøde kapers",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Citrongremolata",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citrongremolata",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citrongremolata",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Citrongremolata",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Citrongremolata",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Citrongremolata",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 1.2,
+      "unit": "l",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 300,
+      "unit": "g",
+      "name": "polenta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "frø, let knust",
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 350,
+      "unit": "g",
+      "name": "taleggio",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 150,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, i tern",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Oksebryst og sauce",
+      "text": "Tænd ovnen på 150 °C."
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "text": "Bland alle krydderierne til rubben, og gnid dem ind i kødet sammen med en knivspids salt."
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "text": "Varm olien op i en stor ovnfast gryde ved middel varme, til den begynder at ryge. Brun kødet på alle sider, til det er dybt gyldent. Tag det op, og skru ned på lav varme."
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "text": "Svits løg, gulerødder og selleri i gryden, til de er bløde uden at få farve. Rør hvidløget i, og lad det stege i 1 minut, til det dufter. Drys melet over, og rør rundt i cirka 1 minut. Tilsæt chilien og chipotlepastaen."
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "text": "Hæld rødvinen i, og skru lidt op for varmen. Lad vinen koge ind til det halve, og rør bunden fri. Kom tomater og oksefond i, bring det i kog, og smag til med salt og peber. Læg kødet tilbage i gryden."
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "text": "Læg låg på, og sæt gryden i ovnen i 4-5 timer, til kødet falder fra hinanden."
+    },
+    {
+      "section": "Sprøde kapers",
+      "text": "Hæld så meget olie i en bred pande, at bunden er dækket. Når olien er meget varm, kommer du kapers i – dog ikke den ene spiseskefuld, der skal gemmes. Steg dem i cirka 3 minutter, til de er sprøde. Løft dem op med en hulske, og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Citrongremolata",
+      "text": "Kør alle ingredienserne undtagen olivenolien i en foodprocessor sammen med de gemte kapers. Rør olivenolien i, og smag til med salt og peber."
+    },
+    {
+      "section": "Polenta",
+      "text": "Start polentaen en time, før maden skal på bordet. Bring fonden i kog ved høj varme. Pisk polenta, spidskommen og hvidløgspulver i, mens du visper godt."
+    },
+    {
+      "section": "Polenta",
+      "text": "Skru ned på lav varme, og lad polentaen simre i 45 minutter. Rør jævnligt, så der ikke dannes klumper."
+    },
+    {
+      "section": "Polenta",
+      "text": "Pisk taleggio og parmesan i, til osten er smeltet ind. Visp mælk og smør i, så polentaen bliver lidt løsere. Smag til med salt og peber."
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "text": "Tag det møre kød op af saucen, og pluk det i tråde med to gafler. Lad det hvile et øjeblik."
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "text": "Sæt saucen tilbage på varmen, og kom chokolade og ansjoser i, hvis du bruger dem. Lad den simre blidt, til den er reduceret og tyk, og rør jævnligt. Er den ikke tyk nok, jævnes den med majsstivelse udrørt i lidt vand. Smag til med salt og peber, vend det pillede kød i saucen, og rør det godt rundt."
+    },
+    {
+      "section": "Oksebryst og sauce",
+      "text": "Anret polentaen i skåle, og top med kødretten. Fordel gremolata og sprøde kapers ovenpå, og afslut med lidt friskkværnet peber."
+    }
+  ],
+  "changes": [
+    "Anchochili er erstattet med tørret chili.",
+    "Chipotleflager og chipotlepasta er erstattet med chipotle."
+  ]
+}

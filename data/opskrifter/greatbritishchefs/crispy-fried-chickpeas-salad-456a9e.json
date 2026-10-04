@@ -1,0 +1,234 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/crispy-fried-chickpeas-salad",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:05:20.972Z",
+  "total_minutes": 50,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Salat med sprøde kikærter, gedeost og forårsgrønt",
+  "intro": "En frisk salat med grillede forårsløg, rå asparges og blomkål, toppet med sprødstegte kikærter og cremet gedeost. Vinaigretten med honning og yoghurt binder det hele sammen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Sprøde kikærter",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde kikærter",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "kogte, skyllet og tørret godt",
+      "optional": false
+    },
+    {
+      "section": "Sprøde kikærter",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde kikærter",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 70,
+      "unit": "g",
+      "name": "gedeost",
+      "note": "blød",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 30,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 0.6,
+      "unit": "dl",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "bundt",
+      "name": "forårsløg",
+      "note": "renset",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "bundt",
+      "name": "asparges",
+      "note": "snittet og hvilet i tynde bånd",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "skåret i små buketter",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "radicchio",
+      "note": "strimlet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "tomater",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 30,
+      "unit": "g",
+      "name": "valnødder",
+      "note": "ristede og grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 30,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 75,
+      "unit": "g",
+      "name": "gedeost",
+      "note": "blød, i stykker",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sprøde kikærter",
+      "text": "Varm olien op i en pande ved middelhøj varme. Steg kikærterne, til de er gyldne og sprøde, og ryst panden jævnligt."
+    },
+    {
+      "section": "Sprøde kikærter",
+      "text": "Løft kikærterne op på køkkenrulle, så de kan dryppe af. Krydr med flagesalt og røget paprika, og stil dem til side."
+    },
+    {
+      "section": "Vinaigrette",
+      "text": "Kom alle ingredienserne til vinaigretten i en lille blender, og kør dem helt glatte."
+    },
+    {
+      "section": "Vinaigrette",
+      "text": "Tynd om nødvendigt med et skvæt koldt vand. Smag til med salt og peber, og stil til side."
+    },
+    {
+      "section": "Salat",
+      "text": "Varm en grillpande af støbejern op på høj varme. Grill forårsløgene, til de er bløde og let sorte i kanterne. Lad dem køle lidt af."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend alle salatens ingredienser undtagen gedeosten sammen med vinaigretten i en stor skål, og anret det på et fad."
+    },
+    {
+      "section": "Salat",
+      "text": "Top med de sprøde kikærter og gedeosten. Dryp med lidt olivenolie, og drys med salt og peber."
+    }
+  ],
+  "changes": [
+    "Romanesco er skiftet til almindelig blomkål."
+  ]
+}

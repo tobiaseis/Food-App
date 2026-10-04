@@ -1,0 +1,108 @@
+{
+  "url": "https://www.arla.dk/opskrifter/belgiske-vafler-med-is-chokoladesauce-og-mandelknas/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:58:08.239Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 7,
+  "title": "Belgiske vafler med is, chokoladesauce og mandelknas",
+  "intro": "Lune vafler med kold softice, varm chokoladesauce og sprød, saltet mandelknas. En hurtig dessert, hvor isen får lov at blive blød, før den piskes luftig.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 450,
+      "unit": "g",
+      "name": "vaniljeis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladesauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladesauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladesauce",
+      "amount": 100,
+      "unit": "g",
+      "name": "chokolade",
+      "note": "mørk",
+      "optional": false
+    },
+    {
+      "section": "Mandelknas",
+      "amount": 100,
+      "unit": "g",
+      "name": "mandler",
+      "note": "smuttede, grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Mandelknas",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "havsalt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 6,
+      "unit": "stk",
+      "name": "belgiske vafler",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tag isen ud af fryseren, og lad den stå i køleskabet i cirka en halv time, så den bliver blød."
+    },
+    {
+      "section": "Chokoladesauce",
+      "text": "Varm fløde og sukker op i en lille gryde, til det koger. Rør undervejs."
+    },
+    {
+      "section": "Chokoladesauce",
+      "text": "Hak chokoladen groft, og rør den ned i den varme fløde. Lad saucen trække på svag varme, og rør, til chokoladen er helt smeltet."
+    },
+    {
+      "section": "Mandelknas",
+      "text": "Rist mandlerne på en tør pande ved middelvarme i cirka 5 minutter, til de får en let gylden farve."
+    },
+    {
+      "section": "Mandelknas",
+      "text": "Lad mandlerne køle af, og vend dem med saltet."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm vaflerne efter vejledningen på pakken."
+    },
+    {
+      "section": "Til servering",
+      "text": "Pisk den bløde is, til den ligner softice. Du kan fylde den i en sprøjtepose med stjernetylle."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg de lune vafler på tallerkener, og top med softice, varm chokoladesauce og mandelknas."
+    }
+  ],
+  "changes": []
+}

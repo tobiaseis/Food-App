@@ -1,0 +1,251 @@
+{
+  "url": "https://www.valdemarsro.dk/frisk-lasagne-med-ragu-og-bagte-tomater/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:14:14.819Z",
+  "total_minutes": 240,
+  "active_minutes": 45,
+  "yield_count": 8,
+  "source_lines": 22,
+  "title": "Lasagne med oksebovsragu og bagte tomater",
+  "intro": "Langtidsstegt ragu af oksebov, der falder fra hinanden, serveres med friske lasagneplader, ovnbagte cherrytomater og cremet burrata. Retten er ekstra frisk med basilikum og parmesan.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Ragu",
+      "amount": 1,
+      "unit": "kg",
+      "name": "oksekød",
+      "note": "oksebov",
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 80,
+      "unit": "g",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "bladselleri, i små tern",
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 2,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 4,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 50,
+      "unit": "g",
+      "name": "soltørrede tomater",
+      "note": "i olie, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ragu",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagte tomater",
+      "amount": 600,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagte tomater",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagte tomater",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagte tomater",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagte tomater",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 400,
+      "unit": "g",
+      "name": "lasagneplader",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 300,
+      "unit": "g",
+      "name": "burrata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ragu",
+      "text": "Skær oksekødet i tykke skiver. Varm olie op i en støbejernsgryde over høj varme, og brun kødet godt på alle sider. Læg det over på en tallerken, og skru ned for varmen."
+    },
+    {
+      "section": "Ragu",
+      "text": "Steg baconen sprød i samme gryde. Tag den op, og hak den fint."
+    },
+    {
+      "section": "Ragu",
+      "text": "Svits løgene ved middelvarme, til de er bløde. Rør hvidløg, selleri og gulerødder i, og svits det yderligere ét minut."
+    },
+    {
+      "section": "Ragu",
+      "text": "Kom kød, bacon, rødvin, oksefond, soltørrede tomater, hakkede tomater, laurbærblade og timian i gryden. Bring det i kog under låg, og sænk derefter varmen, så det kun simrer svagt."
+    },
+    {
+      "section": "Ragu",
+      "text": "Lad ragun simre i 3-4 timer, til kødet er mørt og falder fra hinanden. Lav de bagte tomater i mellemtiden."
+    },
+    {
+      "section": "Bagte tomater",
+      "text": "Fordel cherrytomater og timian i et smurt ovnfast fad. Vend dem med olie, salt og peber, og bag dem ved 225 °C varmluft i 25-30 minutter."
+    },
+    {
+      "section": "Ragu",
+      "text": "Fisk laurbærbladene op, og smid dem ud. Tag kødet op, og pil det i trævler med to gafler. Kom det tilbage i gryden, og smag til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog lasagnepladerne al dente i letsaltet vand efter anvisningen på pakken."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret lasagnepladerne på tallerkener med folder, og læg varm ragu, bagte tomater og parmesan imellem. Top med burrata og basilikum."
+    }
+  ],
+  "changes": [
+    "Soltørrede tomater i olie bevares som soltørrede tomater.",
+    "Frisk basilikum bevares som basilikum."
+  ]
+}

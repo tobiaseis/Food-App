@@ -1,0 +1,131 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/air-fryer-pizza",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:29:14.809Z",
+  "total_minutes": 70,
+  "active_minutes": 10,
+  "yield_count": 3,
+  "source_lines": 10,
+  "title": "Airfryer-pizza",
+  "intro": "Sprød pizza med yoghurtdej, der bages direkte i airfryeren. Dejen er hurtigt rørt sammen, og du kan toppe med det, du bedst kan lide.",
+  "servings": 3,
+  "ingredients": [
+    {
+      "section": "Tomatsauce",
+      "amount": 300,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus ekstra til beklædning",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": "1/2 tsk til almindeligt hvedemel plus 1/2 tsk fra kilden, i alt ca. 2 tsk i stedet for selvhævende mel",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 250,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Top",
+      "amount": 150,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "fast, revet",
+      "optional": false
+    },
+    {
+      "section": "Top",
+      "amount": 100,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Top",
+      "amount": null,
+      "unit": null,
+      "name": "pålæg til topping",
+      "note": "fx pepperoni, skinke, ansjoser og kapers",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatsauce",
+      "text": "Rør passata, hvidløgspulver og krydderurter sammen i en lille skål. Stil den til side."
+    },
+    {
+      "section": "Dej",
+      "text": "Bland hvedemel og bagepulver i en skål. Tilsæt yoghurt og olivenolie, og rør til en blød dej."
+    },
+    {
+      "section": "Dej",
+      "text": "Ælt dejen i nogle minutter på en let meldrysset bordplade. Forvarm airfryeren til 210 °C."
+    },
+    {
+      "section": "Bagning",
+      "text": "Tryk eller rul dejen ud i en tykkelse på ca. 2-3 mm. Form den efter airfryerkurven, og del den i to eller flere stykker, hvis den ikke kan være i ét."
+    },
+    {
+      "section": "Bagning",
+      "text": "Læg bunden på et stykke bagepapir i kurvens størrelse, og bag den i 4-6 minutter, til toppen er gylden. Tag den ud, vend den, og bag den 1 minut mere."
+    },
+    {
+      "section": "Bagning",
+      "text": "Tag bunden ud igen, og smør tomatsauce på med en kant på ca. 1 cm. Drys med ost og topping, og bag i 6-8 minutter, til osten er gylden."
+    },
+    {
+      "section": "Bagning",
+      "text": "Gentag med resten af bundene."
+    }
+  ],
+  "changes": [
+    "Garlic granules er erstattet med hvidløgspulver.",
+    "Self-raising flour er erstattet med hvedemel og ekstra bagepulver."
+  ]
+}

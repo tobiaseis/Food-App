@@ -1,0 +1,216 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/waste-nothing-chicken-dumpling-stew",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:43:50.591Z",
+  "total_minutes": 145,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 13,
+  "title": "Kylling- og melbollegryde",
+  "intro": "En solid gryderet lavet på en færdigstegt kylling, hvor både kødrester og skelet bliver brugt til fond. Gryden toppes med bløde melboller, der hæver i dampen.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Fond og gryde",
+      "amount": 2,
+      "unit": "kg",
+      "name": "hel kylling",
+      "note": "færdigstegt; gem fedtet fra bradepanden",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket; gem skallerne til fonden",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "hele sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til fonden",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "bladselleri, finskåret",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 4,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": 10,
+      "unit": "g",
+      "name": "timian",
+      "note": "friske kviste, blade plukket; del i to",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til smag",
+      "optional": false
+    },
+    {
+      "section": "Fond og gryde",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "til smag",
+      "optional": false
+    },
+    {
+      "section": "Melboller",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Melboller",
+      "amount": null,
+      "unit": null,
+      "name": "bagepulver",
+      "note": "erstatter selvhævende mel",
+      "optional": false
+    },
+    {
+      "section": "Melboller",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, i tern",
+      "optional": false
+    },
+    {
+      "section": "Melboller",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Melboller",
+      "amount": 75,
+      "unit": "ml",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fond",
+      "text": "Pil det kødrester af kyllingen, som kan nås, og læg dem til side. Kom skelettet i en dyb gryde sammen med løgskaller og peberkorn."
+    },
+    {
+      "section": "Fond",
+      "text": "Du kan også tilføje afskæringer fra løg, gulerødder, pastinak og selleri. Drys med salt og hæld koldt vand over, til skelettet lige er dækket."
+    },
+    {
+      "section": "Fond",
+      "text": "Bring det i kog ved middel varme, og lad det derefter småkoge i 45 minutter til 1 time. Fjern skum løbende."
+    },
+    {
+      "section": "Fond",
+      "text": "Mos skelettet med en kartoffelstamper, så det afgiver mere smag. Si fonden gennem en finmasket si over en stor skål, og pres på benene. Kassér det, der bliver i sien. Der skal være omkring 1 liter fond."
+    },
+    {
+      "section": "Gryde",
+      "text": "Smelt fedtet og saften fra bradepanden i en ovnfast gryde ved middel varme. Kom løg, gulerødder, pastinak, selleri og hvidløg i, og steg det under delvist låg ved lav varme i 8-10 minutter, til grøntsagerne er møre."
+    },
+    {
+      "section": "Gryde",
+      "text": "Rør hvedemel, laurbærblade og halvdelen af timianen i, og lad det stege et par minutter. Hæld fonden i, og kom kødresterne ned i gryden."
+    },
+    {
+      "section": "Gryde",
+      "text": "Lad retten småkoge forsigtigt i 15-20 minutter, til alt er mørt. Smag til med salt og peber."
+    },
+    {
+      "section": "Melboller",
+      "text": "Bland hvedemel, bagepulver, smør, resten af timianen og salt i en skål. Gnid smørret ud i melet med fingerspidserne, til det ligner fine rasp."
+    },
+    {
+      "section": "Melboller",
+      "text": "Hæld 60 ml af mælken i, og rør rundt med en kniv, til dejen klumper. Tilsæt lidt mere mælk, hvis den er for tør. Saml dejen med hænderne, og form 12 kugler."
+    },
+    {
+      "section": "Melboller",
+      "text": "Læg kuglerne ovenpå gryden, og sæt låg på. Skru op til middel varme, og lad det koge i 25-30 minutter, til melbollerne er hævede, luftige og gennemkogte."
+    }
+  ],
+  "changes": [
+    "Selvhævende mel er erstattet med hvedemel og bagepulver.",
+    "Pastinak og bladselleri er beholdt som almindelige danske grøntsager.",
+    "Bagepulver står uden mængde, da kilden ikke angiver den; følg pakkens anvisning."
+  ]
+}

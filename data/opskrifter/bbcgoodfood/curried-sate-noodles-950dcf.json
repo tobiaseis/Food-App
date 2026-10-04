@@ -1,0 +1,158 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/curried-sate-noodles",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:15:33.852Z",
+  "total_minutes": 35,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 14,
+  "title": "Karrynudler med peanutbutter",
+  "intro": "Hurtige nudler med sprøde grøntsager og en cremet sauce af peanutbutter og tomat, krydret med karry og spidskommen. Retten er klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "nudler",
+      "note": "tørrede, fuldkorn",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, halveret, uden kerner og i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tændstikker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "uden kerner, finthakket",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "1-2 tsk, efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "peanutbutter",
+      "note": "crunchy",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon, lavet med ½ tsk bouillonpulver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog nudlerne efter anvisningen på pakken. Skyl dem grundigt under koldt vand, så de ikke klistrer sammen, og lad dem dryppe af."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en wok eller dyb pande ved høj varme. Rør peberfrugt, gulerod, ingefær, hvidløg og eventuelt chili rundt i 5 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt spidskommen og karry, og rør i cirka 30 sekunder, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Rør peanutbutter og tomatpuré ud i bouillonen, til saucen er glat."
+    },
+    {
+      "section": null,
+      "text": "Kom nudler og frosne ærter i woken, hæld saucen over, og vend det hele godt sammen. Er det for klistret, så tilsæt en smule vand."
+    },
+    {
+      "section": null,
+      "text": "Pres citronsaften over, vend igen, og server med det samme."
+    }
+  ],
+  "changes": [
+    "Fuldkornsnudler af hvede er skiftet til almindelige tørrede nudler (fuldkorn)."
+  ]
+}

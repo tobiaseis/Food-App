@@ -1,0 +1,127 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/biscoff-cheesecake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:38:18.911Z",
+  "total_minutes": 25,
+  "active_minutes": 20,
+  "yield_count": 10,
+  "source_lines": 6,
+  "title": "Biscoff-cheesecake",
+  "intro": "Kold cheesecake uden ovn med knasende kiksebund og cremet fyld af flødeost og Biscoff-creme. Den skal stå i køleskabet natten over eller i et par timer, før den er klar.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Bund",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "saltet",
+      "optional": false
+    },
+    {
+      "section": "Bund",
+      "amount": 250,
+      "unit": "g",
+      "name": "Lotus Biscoff kiks",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "Lotus Biscoff smørepålæg",
+      "note": "smooth",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 500,
+      "unit": "g",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "Lotus Biscoff kiks",
+      "note": "et par stykker ekstra",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "Lotus Biscoff smørepålæg",
+      "note": "ekstra",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bund",
+      "text": "Beklæd bunden af en springform på 20 cm med bagepapir."
+    },
+    {
+      "section": "Bund",
+      "text": "Smelt smørret i mikrobølgeovnen i omgange på 30 sekunder."
+    },
+    {
+      "section": "Bund",
+      "text": "Kør kiksene til grove krummer i en foodprocessor, og kom dem i en skål. Rør det smeltede smør i, til krummerne ligner fugtigt sand."
+    },
+    {
+      "section": "Bund",
+      "text": "Hæld krummerne i formen, og tryk dem jævnt ud med en ske. Stil formen på køl, mens du laver fyldet."
+    },
+    {
+      "section": "Fyld",
+      "text": "Varm Biscoff-cremen forsigtigt i mikrobølgeovnen i korte omgange i en skål, der tåler det. Lad den køle lidt af."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk flødeosten løs i en stor skål med en elektrisk håndmixer. Hæld fløden i, sigt flormelis over, og tilsæt den afkølede Biscoff-creme."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk på lav hastighed i 2-3 minutter, til massen er tyk og glat."
+    },
+    {
+      "section": "Samling",
+      "text": "Kom fyldet ovenpå den kolde bund, og glat toppen med bagsiden af skeen."
+    },
+    {
+      "section": "Samling",
+      "text": "Stil kagen på køl i 4-5 timer eller natten over."
+    },
+    {
+      "section": "Pynt",
+      "text": "Varm lidt ekstra Biscoff-creme i mikrobølgeovnen på samme måde, og lad den dryppe ud over kagen. Drys til sidst med groft knuste kiks."
+    }
+  ],
+  "changes": [
+    "Soft cheese er erstattet med flødeost.",
+    "Double cream er erstattet med piskefløde."
+  ]
+}

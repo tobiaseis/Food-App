@@ -1,0 +1,188 @@
+{
+  "url": "https://www.valdemarsro.dk/aussie-burger/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:10:02.995Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Aussie burger",
+  "intro": "Saftig oksebøf med ost, bacon, grillet ananas, rødbede og spejlæg på en bolle. En klassisk australsk burger med sødme, syrlighed og masser af fylde.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bøffer",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "abrikosmarmelade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 4,
+      "unit": "skive",
+      "name": "cheddar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgeren",
+      "amount": 4,
+      "unit": "skive",
+      "name": "ananas",
+      "note": "uden skal og stok",
+      "optional": false
+    },
+    {
+      "section": "Til burgeren",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgeren",
+      "amount": 4,
+      "unit": "skive",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgeren",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Til burgeren",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgeren",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgeren",
+      "amount": 8,
+      "unit": "skive",
+      "name": "rødbeder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgeren",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgeren",
+      "amount": 4,
+      "unit": "stk",
+      "name": "burgerboller",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bøffer",
+      "text": "Bland oksekødet med hvidløg, worcestershiresauce, marmelade og røget paprika i en skål. Krydr med salt og peber, og form blandingen til fire bøffer."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm grillen eller en grillpande op. Steg bøfferne 4-5 minutter på første side, og vend dem derefter."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Læg en skive cheddar på hver bøf, så den når at smelte, mens den anden side bliver færdig i 4-5 minutter."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Grill ananasskiverne ved siden af, til de er varme og møre."
+    },
+    {
+      "section": "Til burgeren",
+      "text": "Steg baconen sprød på en pande, og læg den på køkkenrulle."
+    },
+    {
+      "section": "Til burgeren",
+      "text": "Svits løgringene i baconfedtet sammen med smørret, til de er bløde."
+    },
+    {
+      "section": "Til burgeren",
+      "text": "Steg til sidst æggene som spejlæg på den meget varme pande."
+    },
+    {
+      "section": "Til burgeren",
+      "text": "Smør bollerne med mayonnaise. Byg burgerne med rødbeder, rucola, bøf med ost, bacon, ananas, løg og spejlæg."
+    }
+  ],
+  "changes": []
+}

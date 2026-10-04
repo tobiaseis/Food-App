@@ -1,0 +1,84 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/rhubarb-compote",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:41:42.070Z",
+  "total_minutes": 20,
+  "active_minutes": 5,
+  "yield_count": null,
+  "source_lines": 5,
+  "title": "Rabarberkompot",
+  "intro": "Enkel kompot af rabarber, sukker og citron med et strejf af vanilje. Den er perfekt til yoghurt, grød, is eller kage.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "rabarber",
+      "note": "groftskåret, gerne frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "vaniljepasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "udelades, hvis rabarberne er frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "rød konditorfarve",
+      "note": "en enkelt dråbe",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom rabarber, sukker, citronskal, vaniljepasta og vand i en stor gryde. Hvis rabarberne er frosne, skal vandet ikke med."
+    },
+    {
+      "section": null,
+      "text": "Lad det simre ved middel varme i 10-15 minutter, og rør af og til. Kompotten er færdig, når rabarberne er møre og næsten falder fra hinanden, og massen er blevet tyk."
+    },
+    {
+      "section": null,
+      "text": "Frosne rabarber kan have mistet noget af den lyserøde farve. Rør i så fald en dråbe konditorfarve ned i kompotten."
+    },
+    {
+      "section": null,
+      "text": "Hæld kompotten i en skål, og lad den køle helt af."
+    }
+  ],
+  "changes": []
+}

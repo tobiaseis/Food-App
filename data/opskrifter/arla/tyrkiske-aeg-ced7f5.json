@@ -1,0 +1,152 @@
+{
+  "url": "https://www.arla.dk/opskrifter/tyrkiske-aeg/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:34:16.293Z",
+  "total_minutes": 20,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 12,
+  "title": "Tyrkiske æg",
+  "intro": "Bløde pocherede æg på kølig hvidløgsyoghurt med chilismør og frisk dild. Server dem med godt brød til at dyppe i blommen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Pocherede æg",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "tørrede chiliflager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "fx rugbrød",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pocherede æg",
+      "text": "Kom vand, eddike og groft salt i en gryde, og bring det i kog."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Slå hvert æg ud i en kop, så de er klar ved gryden."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Rør rundt i det kogende vand med et piskeris, til der er en hvirvel. Tag piskeriset op."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Lad ét æg ad gangen glide forsigtigt ned i midten af hvirvlen. Lad dem simre i cirka 3 minutter, til hviden er stivnet, og blommen stadig er flydende."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Tag æggene op med en hulske, og læg dem i iskoldt vand i cirka 30 sekunder, så de ikke koger videre."
+    },
+    {
+      "section": null,
+      "text": "Bland yoghurt og hvidløg."
+    },
+    {
+      "section": null,
+      "text": "Varm smørret op i en lille pande eller gryde, til det er smeltet, og rør chiliflagerne i."
+    },
+    {
+      "section": null,
+      "text": "Fordel yoghurten på tallerkener, og læg de pocherede æg ovenpå. Hæld chilismørret over, og top med dild."
+    },
+    {
+      "section": null,
+      "text": "Krydr med flagesalt og peber. Server med brød."
+    }
+  ],
+  "changes": []
+}

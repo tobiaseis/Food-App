@@ -1,0 +1,144 @@
+{
+  "url": "https://www.arla.dk/opskrifter/hytteostdessert-med-bar-og-knas/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:21:55.488Z",
+  "total_minutes": 95,
+  "active_minutes": 30,
+  "yield_count": 6,
+  "source_lines": 12,
+  "title": "Hytteostdessert med perlebyg og hindbærcoulis",
+  "intro": "Kolde perlebyg vendes med hytteost og let pisket fløde til en cremet dessert. Den serveres med hindbærcoulis, sprød mysli og friske bær.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Hytteostdessert",
+      "amount": 0.75,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hytteostdessert",
+      "amount": 100,
+      "unit": "g",
+      "name": "perlebyg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hytteostdessert",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Hytteostdessert",
+      "amount": 150,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hytteostdessert",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vaniljesukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hytteostdessert",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hindbærcoulis",
+      "amount": 200,
+      "unit": "g",
+      "name": "hindbær",
+      "note": "friske eller frosne",
+      "optional": false
+    },
+    {
+      "section": "Hindbærcoulis",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hindbærcoulis",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "honningristet mysli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "g",
+      "name": "jordbær",
+      "note": "i halve",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 25,
+      "unit": "g",
+      "name": "blåbær",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Hytteostdessert",
+      "text": "Kom vand, perlebyg og salt i en gryde, og bring det i kog. Lad det simre under låg ved svag varme i ca. 25 minutter."
+    },
+    {
+      "section": "Hytteostdessert",
+      "text": "Si det overskydende vand fra, og stil perlebyggen tildækket i køleskabet, til den er helt kold."
+    },
+    {
+      "section": "Hytteostdessert",
+      "text": "Bland den kolde perlebyg med hytteost og vaniljesukker."
+    },
+    {
+      "section": "Hytteostdessert",
+      "text": "Slå fløden til et helt let skum, og vend det forsigtigt ind i blandingen. Smag til, og del desserten ud i 6 glas."
+    },
+    {
+      "section": "Hindbærcoulis",
+      "text": "Kom hindbær, sukker og vand i en gryde. Lad det koge ved svag varme i ca. 10 minutter, mens du rører, til det begynder at tykne."
+    },
+    {
+      "section": "Hindbærcoulis",
+      "text": "Passér coulisen gennem en fin sigte."
+    },
+    {
+      "section": "Til servering",
+      "text": "Top desserten med lun eller kold coulis, mysli, jordbær og blåbær."
+    }
+  ],
+  "changes": []
+}

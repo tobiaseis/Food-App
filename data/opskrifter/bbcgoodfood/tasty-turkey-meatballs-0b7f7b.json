@@ -1,0 +1,199 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/tasty-turkey-meatballs",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:12:33.766Z",
+  "total_minutes": 65,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Sunde kalkunkødboller i tomatsauce",
+  "intro": "Magre kalkunkødboller med havregryn og fennikelfrø, der simrer i en grøntsagsrig tomatsauce. Server dem med kogte kartofler og broccoli eller med pasta og salat.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "halveret og skåret i tynde skiver, bladene gemmes",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 500,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket kalkun",
+      "note": "magert, brystkød",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": "knuste",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "rigeligt, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning, gerne som spray",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "kartofler",
+      "note": "eller pasta og salat",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatsauce",
+      "text": "Varm olien i en stor stegepande med låg, gerne non-stick. Kom løg, gulerødder, selleri, hvidløg og fennikel i og rør godt rundt."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Læg låg på og lad grøntsagerne stege ved middel varme i 8 minutter. Rør engang imellem."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Hæld passataen i og smag til med salt og peber. Sæt låg på og lad saucen simre i 20 minutter."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Imens blander du kalkunkødet med havregryn, fennikelfrø, fennikelbladene, hvidløg og rigeligt peber i en stor skål. Ælt det sammen med hænderne."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Form blandingen let til cirka 25 kødboller på størrelse med en valnød."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Pensl eller spray en non-stick pande med lidt olie. Brun kødbollerne nænsomt, til de får lidt farve."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Rør rundt i saucen og læg kødbollerne og persillen i. Læg låg på og lad det simre i 10 minutter, til kødbollerne er gennemstegte og grøntsagerne er møre."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Server med broccoli og kogte kartofler med skræl, eller med pasta og salat."
+    }
+  ],
+  "changes": [
+    "Rapeseed oil er skiftet til rapsolie.",
+    "Hakket kalkunbryst er skiftet til hakket kalkun."
+  ]
+}

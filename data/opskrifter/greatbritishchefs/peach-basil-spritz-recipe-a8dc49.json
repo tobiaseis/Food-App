@@ -1,0 +1,128 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/peach-basil-spritz-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:20:04.479Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 9,
+  "title": "Ferskenspritz med basilikum",
+  "intro": "En let og frisk spritz med tør vermouth, prosecco og basilikuminfunderet ferskenlikør, sødet med en sirup af fersken og basilikum. Sirup og likør skal laves i forvejen, og begge dele rækker til flere drinks.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Til drinken",
+      "amount": 45,
+      "unit": "ml",
+      "name": "vermouth",
+      "note": "Noilly Prat Original Dry",
+      "optional": false
+    },
+    {
+      "section": "Til drinken",
+      "amount": null,
+      "unit": null,
+      "name": "isterninger",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til drinken",
+      "amount": null,
+      "unit": null,
+      "name": "prosecco",
+      "note": "til top-up",
+      "optional": false
+    },
+    {
+      "section": "Til drinken",
+      "amount": null,
+      "unit": null,
+      "name": "fersken",
+      "note": "i skiver, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til sukkersirup",
+      "amount": 500,
+      "unit": "g",
+      "name": "fersken",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til sukkersirup",
+      "amount": 500,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sukkersirup",
+      "amount": 25,
+      "unit": "g",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til basilikumlikør",
+      "amount": 500,
+      "unit": "ml",
+      "name": "ferskenlikør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til basilikumlikør",
+      "amount": 25,
+      "unit": "g",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til sukkersirup",
+      "text": "Start mindst 24 timer før servering. Vend ferskenskiver, sukker og basilikum sammen, så frugten er dækket af sukker."
+    },
+    {
+      "section": "Til sukkersirup",
+      "text": "Dæk blandingen til og sæt den på køl i 24 timer. Rør rundt en gang imellem, så saften trækkes ud."
+    },
+    {
+      "section": "Til sukkersirup",
+      "text": "Si siruppen forsigtigt gennem en fin sigte eller en sigte med musselin, og pres ikke hårdt på frugten. Hæld den på en rengjort, skoldet flaske med en tragt og opbevar den på køl. Der bliver mere, end du skal bruge."
+    },
+    {
+      "section": "Til basilikumlikør",
+      "text": "Start mindst 1 time før servering. Kom ferskenlikør og basilikum i en vakuumpose og vakuumforsegl den."
+    },
+    {
+      "section": "Til basilikumlikør",
+      "text": "Læg posen i vandbad ved 45 °C i 1 time. Så trækker duften fra basilikummen ud, uden at urterne bliver kogt."
+    },
+    {
+      "section": "Til basilikumlikør",
+      "text": "Si likøren gennem et kaffefilter eller en fin sigte, og hæld den på en ren, skoldet flaske med en tragt. Opbevar den på køl. Der bliver mere, end du skal bruge."
+    },
+    {
+      "section": "Til drinken",
+      "text": "Hæld lidt af ferskensiruppen i et spritzglas. Tilsæt basilikumlikør og vermouth."
+    },
+    {
+      "section": "Til drinken",
+      "text": "Fyld glasset med isterninger, top op med prosecco og rør rundt. Pynt med små ferskenskiver og server."
+    }
+  ],
+  "changes": [
+    "Ferskenaperitif er erstattet med ferskenlikør.",
+    "Flade ferskner er erstattet med almindelige ferskner.",
+    "Caster sugar er erstattet med almindeligt sukker."
+  ]
+}

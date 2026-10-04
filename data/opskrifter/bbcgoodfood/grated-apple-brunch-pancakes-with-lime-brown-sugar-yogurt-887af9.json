@@ -1,0 +1,157 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/grated-apple-brunch-pancakes-with-lime-brown-sugar-yogurt",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:55:26.818Z",
+  "total_minutes": 20,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Æblepandekager med lime- og farinyoghurt",
+  "intro": "Små, luftige pandekager med revet æble, toppet med flødecreme med lime og brun farin. Perfekte til en weekendbrunch.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pandekager",
+      "amount": 300,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 5,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "røde, revet",
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "sødmælk",
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral, fx rapsolie eller solsikkeolie",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 3,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 4,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skallen rives fint",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 100,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pandekager",
+      "text": "Bland mel, bagepulver, revet æble, farin og salt i en stor skål."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Pisk æg og mælk sammen i en anden skål. Rør det lidt ad gangen ned i melblandingen, til dejen er helt glat."
+    },
+    {
+      "section": "Topping",
+      "text": "Pisk fløde og farin til stiv flødeskum med en elpisker."
+    },
+    {
+      "section": "Topping",
+      "text": "Vend yoghurt og det meste af limeskallen i skummet. Stil det på køl, til pandekagerne er klar."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Varm halvdelen af olien på en pande ved middel varme. Kom 2 spsk dej på panden, og stryg den ud til en lille rund pandekage. Fyld panden på samme måde."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Steg pandekagerne i 2-3 minutter, til der kommer bobler på overfladen. Vend dem, og steg i 2-3 minutter mere. Steg resten af dejen i omgange, og brug den sidste olie undervejs."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg toppingen på pandekagerne, og drys med den resterende limeskal. Server med limebåde til at presse over."
+    }
+  ],
+  "changes": [
+    "Mel med hævemiddel er erstattet af hvedemel og ekstra bagepulver.",
+    "Light brown soft sugar er erstattet af brun farin.",
+    "Double cream er erstattet af piskefløde.",
+    "Greek-style yogurt er erstattet af græsk yoghurt."
+  ]
+}

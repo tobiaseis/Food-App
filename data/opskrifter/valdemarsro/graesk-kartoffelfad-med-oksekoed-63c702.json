@@ -1,0 +1,276 @@
+{
+  "url": "https://www.valdemarsro.dk/graesk-kartoffelfad-med-oksekoed/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:07:13.617Z",
+  "total_minutes": 60,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Græsk kartoffelfad med oksekød og tzatziki",
+  "intro": "Ovnbagte kartofler og grøntsager toppet med krydret oksekød, feta, oliven og pinjekerner. Serveres med hjemmelavet tzatziki.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til tzatzikien",
+      "amount": 5,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk, 10 %",
+      "optional": false
+    },
+    {
+      "section": "Til tzatzikien",
+      "amount": 2,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tzatzikien",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tzatzikien",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tzatzikien",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tzatzikien",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelfadet",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelfadet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelfadet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelfadet",
+      "amount": 30,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelfadet",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelfadet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelfadet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelfadet",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til oksekødet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til oksekødet",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til oksekødet",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til oksekødet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret oregano",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til oksekødet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til oksekødet",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "på dåse",
+      "optional": false
+    },
+    {
+      "section": "Til oksekødet",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til oksekødet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til oksekødet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 100,
+      "unit": "g",
+      "name": "sorte oliven",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 150,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 30,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelfad",
+      "text": "Tænd ovnen på 220 °C varmluft. Smør et ovnfast fad."
+    },
+    {
+      "section": "Kartoffelfad",
+      "text": "Bland kartofler, peberfrugt, rødløg, soltørrede tomater, timian, rosmarin, olie og flagesalt i fadet, så alt er dækket. Bag i cirka 30 minutter."
+    },
+    {
+      "section": "Oksekød",
+      "text": "Mens fadet er i ovnen, steg løget i lidt olivenolie ved middelvarme, til det er blødt. Tilsæt hvidløg og steg med et kort øjeblik."
+    },
+    {
+      "section": "Oksekød",
+      "text": "Skru op for varmen, og brun hakkekødet godt, mens du rører hele tiden. Skru ned til middelvarme igen."
+    },
+    {
+      "section": "Oksekød",
+      "text": "Kom oregano, timian og hakkede tomater i panden. Smag til med salt og peber, og lad det simre i 5 minutter, til det er kogt lidt ind."
+    },
+    {
+      "section": "Samling",
+      "text": "Tag fadet ud af ovnen. Fordel kødsovsen over grøntsagerne, og drys med feta, pinjekerner og oliven."
+    },
+    {
+      "section": "Samling",
+      "text": "Sæt fadet tilbage i ovnen i cirka 20 minutter, til kartoflerne er møre. Drys med persille."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Del agurkerne på langs, og skrab kernerne ud med en ske. Riv dem groft, vend dem med salt, og lad dem stå i 5-10 minutter."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Hæld agurken i en sigte, og pres alt væde fra med hænderne. Rør den i yoghurten, og smag til med hvidløg, salt, peber og olivenolie."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Server kartoffelfadet med tzatzikien ved siden af."
+    }
+  ],
+  "changes": []
+}

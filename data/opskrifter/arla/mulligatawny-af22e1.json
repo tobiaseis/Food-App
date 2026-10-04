@@ -1,0 +1,192 @@
+{
+  "url": "https://www.arla.dk/opskrifter/mulligatawny/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:07:53.913Z",
+  "total_minutes": 165,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 18,
+  "intro": "Kraftig indisk-inspireret suppe på hjemmekogt kylling med karry, ingefær og fløde. Serveres med ris og groft brød.",
+  "title": "Mulligatawny",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kyllingefond",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hel kylling",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingefond",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "persille & krydderurter",
+      "note": "fx persille eller timian",
+      "optional": false
+    },
+    {
+      "section": "Kyllingefond",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Kyllingefond",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i halve",
+      "optional": false
+    },
+    {
+      "section": "Kyllingefond",
+      "amount": 2,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Kyllingefond",
+      "amount": 10,
+      "unit": "stk",
+      "name": "peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingefond",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "god og stærk",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 150,
+      "unit": "g",
+      "name": "løg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "lille, rød, i ringe",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "dl",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": "koges",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 160,
+      "unit": "g",
+      "name": "brød",
+      "note": "groft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kyllingefond",
+      "text": "Læg kyllingen i en stor gryde sammen med krydderurter, løg, gulerødder, porre, peberkorn og groft salt. Fyld op med koldt vand, så kyllingen er dækket."
+    },
+    {
+      "section": "Kyllingefond",
+      "text": "Bring det i kog, og skru derefter ned, så det simrer i ca. 1 time. Tag gryden af varmen, og lad kyllingen trække i fonden i ca. 1 time."
+    },
+    {
+      "section": "Kyllingefond",
+      "text": "Hæv kyllingen op, og si fonden. Gem fonden. Pil kødet af kyllingen, og del det i trevler."
+    },
+    {
+      "section": "Suppe",
+      "text": "Varm olien godt op i en tykbundet gryde. Rør karry, løg, hvidløg, ingefær og salt i gryden, og svits det i ca. 1 minut."
+    },
+    {
+      "section": "Suppe",
+      "text": "Hæld 1 liter af fonden i gryden, og bring den i kog. Tilsæt fløde, kyllingekød og det meste af chilien. Gem lidt chili til pynt. Lad suppen koge op igen."
+    },
+    {
+      "section": "Suppe",
+      "text": "Smag suppen til. Kog imens risene efter anvisningen på posen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld suppen op, og pynt med koriander og resten af chilien. Server med ris og groft brød ved siden af."
+    }
+  ],
+  "changes": []
+}

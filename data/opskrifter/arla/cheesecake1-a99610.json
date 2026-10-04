@@ -1,0 +1,175 @@
+{
+  "url": "https://www.arla.dk/opskrifter/cheesecake1/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:58:55.007Z",
+  "total_minutes": 600,
+  "active_minutes": 45,
+  "yield_count": 1,
+  "source_lines": 13,
+  "title": "Cheesecake med friske bær",
+  "intro": "Kølig cheesecake på kiksebund med en luftig fromage af fløde, flødeost og creme fraiche. Pyntes med friske bær og skal stå i køleskabet natten over.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Kiksebund",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kiksebund",
+      "amount": 300,
+      "unit": "g",
+      "name": "kiks",
+      "note": "digestive, knuste",
+      "optional": false
+    },
+    {
+      "section": "Kiksebund",
+      "amount": null,
+      "unit": null,
+      "name": "lagkageplast",
+      "note": "ca. 8 cm bredt",
+      "optional": false
+    },
+    {
+      "section": "Fromage",
+      "amount": 4,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Fromage",
+      "amount": 1,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": "kornene; eller vaniljepasta i tilsvarende mængde",
+      "optional": false
+    },
+    {
+      "section": "Fromage",
+      "amount": 125,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fromage",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fromage",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "usprøjtet, skal",
+      "optional": false
+    },
+    {
+      "section": "Fromage",
+      "amount": 200,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Fromage",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fromage",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Pynt",
+      "amount": 300,
+      "unit": "g",
+      "name": "bær",
+      "note": "fx hindbær, blåbær, ribs og/eller brombær",
+      "optional": false
+    },
+    {
+      "section": "Pynt",
+      "amount": null,
+      "unit": null,
+      "name": "citronmelisse",
+      "note": "eller rød skovsyre",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kiksebund",
+      "text": "Smelt smørret i en gryde, og rør de knuste kiks grundigt i."
+    },
+    {
+      "section": "Kiksebund",
+      "text": "Klem et stykke bagepapir fast mellem ring og bund i en springform på ca. 22 cm. Sæt lagkageplast langs indersiden af ringen."
+    },
+    {
+      "section": "Kiksebund",
+      "text": "Tryk kiksemassen fast i bunden og ca. 5 cm op ad siderne. Dæk formen til, og sæt den på køl."
+    },
+    {
+      "section": "Fromage",
+      "text": "Udblød husblassen i koldt vand i ca. 10 minutter."
+    },
+    {
+      "section": "Fromage",
+      "text": "Kradser du vaniljekornene ud af stangen, så bland dem med en smule af sukkeret."
+    },
+    {
+      "section": "Fromage",
+      "text": "Pisk fløden let stiv sammen med vaniljesukkeret, det resterende sukker og citronskallen."
+    },
+    {
+      "section": "Fromage",
+      "text": "Rør flødeost og creme fraiche glat i en anden skål, og vend det forsigtigt ned i flødeskummet."
+    },
+    {
+      "section": "Fromage",
+      "text": "Opvarm citronsaften i en lille gryde."
+    },
+    {
+      "section": "Fromage",
+      "text": "Løft husblassen op af vandet uden at presse den, og rør den ud i den varme citronsaft, til den er opløst."
+    },
+    {
+      "section": "Fromage",
+      "text": "Rør lidt af fromagemassen i husblasblandingen for at køle den ned, og vend den derefter i resten af massen."
+    },
+    {
+      "section": "Fromage",
+      "text": "Hæld fromagen over kiksebunden. Dæk til, og lad kagen stå i køleskabet natten over."
+    },
+    {
+      "section": "Anretning",
+      "text": "Løsn kagen fra formen, træk lagkageplasten af, og sæt kagen på et fad. Pynt med bær og citronmelisse umiddelbart før servering."
+    }
+  ],
+  "changes": [
+    "Rød skovsyre er erstattet af citronmelisse som pynt.",
+    "Smør, kiks og citron er uændrede; vaniljestang kan stadig erstattes af vaniljepasta."
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/marry-me-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:05:11.106Z",
+  "total_minutes": 65,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Marry me chicken",
+  "intro": "Mør kylling i en cremet sauce med soltørrede tomater, hvidløg og parmesan. Retten er kendt for at være så god, at den får en frieri på tungen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "soltørrede tomater",
+      "note": "på olie, afdryppet og groft hakket, 3 spsk af olien gemmes",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": "op til 1 tsk efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kviste, bladene plukkes af; eller oregano, eller 1 tsk blandede tørrede krydderurter",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 35,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "basilikum",
+      "note": "blade, revet i stykker, til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i både, til servering",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bland melet med salt og peber på en tallerken, og vend kyllingebrysterne i blandingen, så de er dækket hele vejen rundt."
+    },
+    {
+      "section": null,
+      "text": "Varm 2 spsk af olien fra de soltørrede tomater op på middel varme i en stor pande med låg. Brun kyllingen i 8-10 minutter, til den er gylden på alle sider, men ikke gennemstegt. Læg den til side på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Hæld den sidste spsk tomatolie på panden, og sænk varmen til middel-lav. Svits løget i 8-10 minutter, til det er blødt uden at have taget farve."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløget i, og lad det stege i ét minut. Tilsæt de soltørrede tomater, chiliflagerne og timian eller oregano, og rør godt rundt."
+    },
+    {
+      "section": null,
+      "text": "Kom kyllingen tilbage på panden, og hæld fløde og fond over. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Læg låg på, og lad retten simre på middel-lav varme i cirka 20 minutter. Vend kyllingen undervejs, så den bliver gennemstegt, og saucen tykner lidt."
+    },
+    {
+      "section": null,
+      "text": "Rør parmesan i saucen. Server med basilikum drysset over og citronbåde ved siden af, hvis du vil have dem."
+    }
+  ],
+  "changes": [
+    "Soltørrede tomater i olie er beholdt som soltørrede tomater.",
+    "Double cream er byttet til piskefløde.",
+    "Self-raising er ikke relevant; plain flour er byttet til hvedemel."
+  ]
+}

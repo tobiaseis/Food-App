@@ -1,0 +1,288 @@
+{
+  "url": "https://www.valdemarsro.dk/vietnamesisk-bowl-ala-bahn-mi/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:54:49.163Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 28,
+  "title": "Vietnamesisk banh mi-bowl",
+  "intro": "Skål med marineret kylling, syltede gulerødder, ingefærris og cremet limemayo, inspireret af den vietnamesiske sandwich banh mi. Fuld af friske og syrlige smage.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Vietnamesisk kylling",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Vietnamesisk kylling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vietnamesisk kylling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vietnamesisk kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vietnamesisk kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Vietnamesisk kylling",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "eller anden olie til stegning",
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i julienne",
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 1,
+      "unit": "dl",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 30,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med ingefær og hvidløg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med ingefær og hvidløg",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Ris med ingefær og hvidløg",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med ingefær og hvidløg",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med ingefær og hvidløg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med ingefær og hvidløg",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Asiatisk mayo-dressing",
+      "amount": 75,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Asiatisk mayo-dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Asiatisk mayo-dressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Asiatisk mayo-dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Asiatisk mayo-dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Asiatisk mayo-dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 200,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintstrimlet",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Vietnamesisk kylling",
+      "text": "Bland sojasauce, fiskesauce, sukker, limesaft og sesamolie til en marinade. Vend kyllingetern i marinaden og lad dem trække i mindst 15 minutter – gerne natten over i køleskabet."
+    },
+    {
+      "section": "Vietnamesisk kylling",
+      "text": "Løft kyllingen op af skålen, men gem marinaden. Varm olie op på en meget varm pande og brun kyllingen under omrøring, til den får en pæn skorpe."
+    },
+    {
+      "section": "Vietnamesisk kylling",
+      "text": "Hæld marinaden på panden og steg, til kyllingen er helt gennemstegt."
+    },
+    {
+      "section": "Syltede gulerødder",
+      "text": "Kog vand, riseddike og sukker kort op i en gryde, indtil sukkeret er opløst. Tag gryden af varmen."
+    },
+    {
+      "section": "Syltede gulerødder",
+      "text": "Læg gulerødderne i den varme lage, fyld dem på glas med låg og stil dem i køleskabet, mens du laver resten."
+    },
+    {
+      "section": "Ris med ingefær og hvidløg",
+      "text": "Varm olivenolie, ingefær og hvidløg op i en gryde ved lav varme. Lad det simre, til det dufter, men uden at det brunes."
+    },
+    {
+      "section": "Ris med ingefær og hvidløg",
+      "text": "Kom basmatiris, vand og salt i gryden og rør rundt. Sæt låg på og bring langsomt i kog."
+    },
+    {
+      "section": "Ris med ingefær og hvidløg",
+      "text": "Lad risene koge under låg ved svag varme i 10 minutter. Tag gryden af varmen og lad den stå med låg på i 10 minutter mere."
+    },
+    {
+      "section": "Asiatisk mayo-dressing",
+      "text": "Rør mayonnaise sammen med fiskesauce, hvidløg og ingefær. Smag til med limeskal og friskkværnet peber."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Fordel risene i skåle og læg kylling, syltede gulerødder, spidskål, agurk og avocado ovenpå."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Top med dressingen og drys med koriander, chiliflager og sesamfrø."
+    }
+  ],
+  "changes": []
+}

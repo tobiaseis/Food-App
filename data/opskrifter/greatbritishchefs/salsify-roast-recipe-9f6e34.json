@@ -1,0 +1,256 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/salsify-roast-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:25:59.572Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Stegt sortrod med podi-krydderiblanding",
+  "intro": "Sortrod koges, vendes i en sprød chilidej og friturestegt, før den smøres ind i en tør, krydret løg- og tomatmasala. Det hele drysses med en hjemmelavet indisk linse- og sesamkrydderiblanding, podi.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til podien",
+      "amount": 50,
+      "unit": "g",
+      "name": "chana dal",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til podien",
+      "amount": 25,
+      "unit": "g",
+      "name": "urad dal",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til podien",
+      "amount": 10,
+      "unit": "g",
+      "name": "toor dal",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til podien",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tørret chili",
+      "note": "hel",
+      "optional": false
+    },
+    {
+      "section": "Til podien",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sorte sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til podien",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til podien",
+      "amount": 2,
+      "unit": "stk",
+      "name": "karryblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sortroden",
+      "amount": 250,
+      "unit": "g",
+      "name": "sortrod",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sortroden",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "hvid, til vandet",
+      "optional": false
+    },
+    {
+      "section": "Til sortroden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til sortroden",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sortroden",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sortroden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chilipulver",
+      "note": "rødt",
+      "optional": false
+    },
+    {
+      "section": "Til sortroden",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Til masalaen",
+      "amount": 50,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til masalaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennepsfrø",
+      "note": "sorte",
+      "optional": false
+    },
+    {
+      "section": "Til masalaen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "karryblade",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Til masalaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til masalaen",
+      "amount": 50,
+      "unit": "g",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til masalaen",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomater",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til masalaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chilipulver",
+      "note": "rødt",
+      "optional": false
+    },
+    {
+      "section": "Til masalaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til masalaen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Podi",
+      "text": "Rist hver af ingredienserne for sig på en tør pande, til de dufter. Kom dem i en kryddermølle og kør dem til et groft pulver."
+    },
+    {
+      "section": "Podi",
+      "text": "Du skal bruge 10 g podi til retten. Resten kan opbevares i en lufttæt beholder i op til 3 måneder."
+    },
+    {
+      "section": "Sortrod",
+      "text": "Fyld en stor skål med koldt vand og en sjat eddike, så roden ikke misfarves."
+    },
+    {
+      "section": "Sortrod",
+      "text": "Skræl sortrødderne én ad gangen, del dem på langs og skær dem i mundrette stykker. Læg stykkerne i eddikevandet undervejs."
+    },
+    {
+      "section": "Sortrod",
+      "text": "Bring vand i en lille gryde i kog med gurkemeje og en knivspids salt. Kog sortroden mør i ca. 10 minutter, og lad den dampe tør i et dørslag."
+    },
+    {
+      "section": "Sortrod",
+      "text": "Bland majsstivelse, chilipulver og en knivspids salt. Tilsæt lidt vand ad gangen, til dejen er tyk som piskefløde. Stil den til side."
+    },
+    {
+      "section": "Sortrod",
+      "text": "Varm olien til friturestegning op i en dyb gryde ved middel-høj varme, eller sæt friteusen på 180 °C."
+    },
+    {
+      "section": "Masala",
+      "text": "Varm olien op i en dyb pande ved middel varme. Rist sennepsfrø, karryblade og grøn chili i nogle minutter, til sennepsfrøene springer."
+    },
+    {
+      "section": "Masala",
+      "text": "Tilsæt løget og svits det blødt. Rør tomater og en knivspids salt i, og lad dem simre under jævnlig omrøring, til de er bløde og falder fra hinanden. Tilsæt en smule vand, hvis det brænder på."
+    },
+    {
+      "section": "Sortrod",
+      "text": "Vend den afkølede sortrod i dejen, så hvert stykke er let dækket. Frituresteg stykkerne i 5 minutter, til de er dybt sprøde, og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Masala",
+      "text": "Rør chilipulver, koriander og gurkemeje i masalaen, og lad den stege, til olien skiller fra. Vend den friturestegte sortrod i, og drys podien over under omrøring. Saucen skal være helt tør og sidde fast på roden."
+    },
+    {
+      "section": null,
+      "text": "Fordel i skåle og server med det samme."
+    }
+  ],
+  "changes": [
+    "Kashmiri-chili er erstattet af tørret chili.",
+    "Vegetabilsk olie er erstattet af rapsolie.",
+    "Hvid eddike er erstattet af almindelig eddike."
+  ]
+}

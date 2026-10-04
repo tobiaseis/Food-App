@@ -321,6 +321,7 @@ function collectPlanIndex(log) {
       lang: r.lang,
       servings: r.servings,
       total_minutes: r.total_minutes,
+      active_minutes: r.active_minutes ?? null,
       kcal: r.kcal,
       protein_g: r.protein_g,
       carbs_g: r.carbs_g,
@@ -364,6 +365,10 @@ function collectPlanIndex(log) {
           // kunne springe "evt."-linjer over, og gør den det kun lokalt, køber
           // browserens bruger persille, der aldrig blev bedt om.
           optional: !!i.optional,
+          // Samme kontrakt igen: påfyldningen af en rest gælder kun linjer,
+          // der vejer eller måler varen, og browserens motor kan kun holde
+          // reglen, hvis flaget følger med. jsonb — ingen ny kolonne.
+          measured: !!i.measured,
         })),
         // Lagerlistens linjer — se kommentaren over recipeIndex.
         ...[...new Set(r.items.filter((i) => i.essential).map((i) => i.key))]
@@ -500,16 +505,19 @@ async function syncWatches(db, log) {
  * chains og stores står udenfor: deres id'er kommer fra Tjek og er stabile.
  */
 const DERIVED = [
-  // items STÅR FØRST, og det er ikke tilfældigt. Al sletning sker, før noget
-  // indsættes, og en Supabase uden tabellen svarer 404 på sletningen. Stod
-  // items længere nede, var meal_plans, recipe_index, item_prices og
-  // recipe_costs allerede tømt, når fejlen kom — og appen stod uden madplan,
-  // til schema.sql blev kørt igen og næste synk lykkedes. Målt i reviewet af
-  // plan 3 opgave 1 med en mock uden tabellen: de fire stod med 0 rækker.
+  // Nyeste tabel (plan 2026-09-30) — derfor først. Se kommentaren herunder.
+  ['recipe_details', 'recipe_id=not.is.null'],
+  // De NYESTE tabeller står først — recipe_details, så items — og det er ikke
+  // tilfældigt. Al sletning sker, før noget indsættes, og en Supabase uden
+  // tabellen svarer 404 på sletningen. Stod en af dem længere nede, var
+  // meal_plans, recipe_index, item_prices og recipe_costs allerede tømt, når
+  // fejlen kom — og appen stod uden madplan, til schema.sql blev kørt igen og
+  // næste synk lykkedes. Målt i reviewet af plan 3 opgave 1 med en mock uden
+  // items-tabellen: de fire stod med 0 rækker.
   //
-  // Den ligger først, fordi den er den nyeste tabel og dermed den, en
-  // eksisterende installation mest sandsynligt mangler. Den har ingen
-  // fremmednøgler i nogen retning, så rækkefølgen er fri.
+  // items var den nyeste, før recipe_details kom, og er dermed den næste, en
+  // eksisterende installation kan mangle. Ingen af de to har fremmednøgler i
+  // nogen retning, så rækkefølgen er fri.
   //
   // Nøglen er stabil, så en upsert ville ikke duplikere — men en vare, der er
   // fjernet fra SEED, ville blive liggende i skyen og stå på browserens
@@ -620,6 +628,7 @@ async function push(model, log) {
   await t('taxonomy_prices', model.taxonomyPrices, { onConflict: 'taxonomy_key' });
   await t('items', model.items, { onConflict: 'key' });
   await t('recipe_index', model.recipeIndex, { onConflict: 'recipe_id', chunk: 200 });
+  await t('recipe_details', model.recipeDetails, { onConflict: 'recipe_id', chunk: 100 });
 
   // Priserne. item_prices og recipe_costs peger begge på chains, så de skal
   // efter dem — de står her, fordi de hører til samme madplans-indeks.
@@ -639,6 +648,34 @@ async function push(model, log) {
   }], { onConflict: 'key' });
 }
 
+/**
+ * Opskrifterne, som appen viser dem: ingredienserne med mængde og enhed, og
+ * fremgangsmåden. Kun de danske udgaver — en ret uden udgave har ingen
+ * fremgangsmåde, vi må vise. Appen henter én ad gangen (Data.recipe): 2.200
+ * fremgangsmåder i recipe_index ville gøre hver sidevisning megabyte tungere.
+ */
+function collectRecipeDetails(db, onlyId = null) {
+  const recipes = db.prepare(`
+    SELECT id, title, intro, image, source_name, servings, total_minutes, active_minutes
+      FROM recipes
+     WHERE edition IS NOT NULL ${onlyId != null ? 'AND id = ?' : ''}
+     ORDER BY id`).all(...(onlyId != null ? [onlyId] : []));
+  const lines = db.prepare(`
+    SELECT qty, unit, label, ingredient, item_key, optional, section
+      FROM recipe_ingredients WHERE recipe_id = ? ORDER BY position`);
+  const steps = db.prepare('SELECT section, text FROM recipe_steps WHERE recipe_id = ? ORDER BY position');
+  return recipes.map((r) => ({
+    recipe_id: r.id, title: r.title, intro: r.intro, image: r.image,
+    source_name: r.source_name, servings: r.servings,
+    total_minutes: r.total_minutes, active_minutes: r.active_minutes,
+    ingredients: lines.all(r.id).map((l) => ({
+      qty: l.qty, unit: l.unit, label: l.label || l.ingredient,
+      key: l.item_key, optional: Boolean(l.optional), section: l.section,
+    })),
+    steps: steps.all(r.id),
+  }));
+}
+
 // ── Hovedkørsel ──────────────────────────────────────────────────────────────
 
 async function build({ dryRun = false, log = console.log } = {}) {
@@ -655,6 +692,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
   const items = collectItems(log);
   const planIndex = collectPlanIndex(log);
   const weekPlans = collectPlans(log);
+  const recipeDetails = collectRecipeDetails(db);
 
   let notifications = [];
   if (!dryRun && sb.isConfigured()) {
@@ -686,6 +724,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
     item_prices: priceTables.itemPrices.length,
     recipe_costs: priceTables.recipeCosts.length,
     items: items.length,
+    recipe_details: recipeDetails.length,
     notifications: notifications.length,
   };
 
@@ -698,6 +737,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
     itemPrices: priceTables.itemPrices,
     recipeCosts: priceTables.recipeCosts,
     items,
+    recipeDetails,
     notifications, summary,
   };
 
@@ -714,6 +754,7 @@ async function build({ dryRun = false, log = console.log } = {}) {
       recipe_index: planIndex.recipeIndex,
       item_prices: priceTables.itemPrices, recipe_costs: priceTables.recipeCosts,
       items,
+      recipe_details: recipeDetails,
     })) log(`  ${k.padEnd(16)} ${v.length}`);
     return { model, pushed: false };
   }
@@ -734,5 +775,5 @@ if (require.main === module) {
 
 module.exports = {
   build, push, collectCatalog, collectPriceModel, collectDeals, collectPlans, collectPlanIndex,
-  collectPriceTables, collectItems,
+  collectPriceTables, collectItems, collectRecipeDetails,
 };

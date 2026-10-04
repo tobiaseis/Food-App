@@ -1,0 +1,143 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/seared-scallops-leeks-lemon-chilli-butter",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:47:14.473Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 9,
+  "title": "Stegte kammuslinger med porrer og krydret smør",
+  "intro": "Gyldne kammuslinger serveres på en rede af dampede porrer med et smør af chili, hvidløg, citron og persille, der smelter til en sauce. En enkel ret, der ser flot ud på tallerkenen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til det krydrede smør",
+      "amount": 250,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Til det krydrede smør",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kerner og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til det krydrede smør",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til det krydrede smør",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Til det krydrede smør",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "bladene hakket, plus lidt ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "amount": 4,
+      "unit": "stk",
+      "name": "porre",
+      "note": "unge, men ikke helt små, renset",
+      "optional": false
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "amount": 12,
+      "unit": "stk",
+      "name": "kammuslinger",
+      "note": "med eller uden rogn",
+      "optional": false
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "i både, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til det krydrede smør",
+      "text": "Rør smør, chili, hvidløg, citronskal og persille sammen i en stor skål. Pisk det med en træske, til der ikke er klumper tilbage."
+    },
+    {
+      "section": "Til det krydrede smør",
+      "text": "Kom smørret på et stort stykke husholdningsfilm og rul det stramt til en pølse. Læg det på køl, til det er fast. Har du travlt, kan det ligge i fryseren."
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "text": "Sæt en gryde klar med dampindsats, eller hæng et varmefast dørslag over gryden. Halvér porrerne på langs og skær dem i lange strimler, omtrent så brede som tagliatelle."
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "text": "Læg låg på og damp porrerne i 6 minutter, til de er møre og ikke knirker mod tænderne. Smag til med salt og peber og stil dem til side."
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "text": "Tør kammuslingerne med køkkenrulle og krydr dem med salt og peber. Varm en tykbundet pande op og hæld olien på."
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "text": "Når olien er varm, lægges kammuslingerne på panden tæt op ad hinanden, så siderne holder sig lige. Steg dem i 2 minutter, til de er karamelliserede, og varmen kan ses trække op ad siden."
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "text": "Vend dem med en paletkniv og steg dem 1 minut mere. Tag panden af varmen, læg nogle gode skiver af det krydrede smør på og øs det smeltede smør over kammuslingerne."
+    },
+    {
+      "section": "Til kammuslinger og porrer",
+      "text": "Anret en rede af varme porrer midt på 4 tallerkener og læg 3 kammuslinger på hver. Hæld smørsaucen over, gerne også rundt om på tallerkenen, og drys med resten af persillen. Server med citronbåde til at klemme over."
+    }
+  ],
+  "changes": [
+    "Kammuslingerne er angivet som stk, som i kilden.",
+    "Husholdningsfilm erstatter cling film i trinnene."
+  ]
+}

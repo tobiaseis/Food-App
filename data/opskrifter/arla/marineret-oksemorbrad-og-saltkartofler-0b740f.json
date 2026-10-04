@@ -1,0 +1,280 @@
+{
+  "url": "https://www.arla.dk/opskrifter/marineret-oksemorbrad-og-saltkartofler/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:24:22.529Z",
+  "total_minutes": 270,
+  "active_minutes": 60,
+  "yield_count": 6,
+  "source_lines": 24,
+  "title": "Marineret oksemørbrad med saltbagte kartofler",
+  "intro": "Mørbraden marinerer i cognac, appelsinskal og grønne peberkorn og steges langsomt, så den bliver mør og lyserød. Serveres med saltkogte og ovnbagte kartofler, sprøde grøntsager og cremet sauce.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Marineret oksemørbrad",
+      "amount": 1200,
+      "unit": "g",
+      "name": "oksemørbrad",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "amount": 1,
+      "unit": "dl",
+      "name": "cognac",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "amount": 3,
+      "unit": "stk",
+      "name": "appelsinskal",
+      "note": "brede strimler, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "grønne peberkorn",
+      "note": "uden lage",
+      "optional": false
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltkartofler",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "små, faste, fx Nix Pille",
+      "optional": false
+    },
+    {
+      "section": "Saltkartofler",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltkartofler",
+      "amount": 300,
+      "unit": "g",
+      "name": "salt",
+      "note": "groft, ca. 2¾ dl",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 300,
+      "unit": "g",
+      "name": "ærter",
+      "note": "slikærter",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "sharonfrugt",
+      "note": "i halve både, kan erstattes af kaki",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "saucejævner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": null,
+      "unit": null,
+      "name": "kulør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "appelsinskal",
+      "note": "usprøjtet, i meget tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marineret oksemørbrad",
+      "text": "Pil hinder og sener af mørbraden, og krydr den med peber."
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "text": "Læg kødet i en frysepose med cognac, appelsinskal og peberkorn. Luk posen og lad den stå i køleskabet i ca. 2 timer. Vend posen et par gange undervejs."
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "text": "Løft kødet op af posen, og dup det tørt. Hæld marinaden i en skål, og gem den til saucen."
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "text": "Varm ovnen op til 100 °C. Brun smørret let gyldent på en pande, drys kødet med salt, og brun det rundt om på alle sider i ca. 3 minutter i alt."
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "text": "Hæld vandet i en bradepande på ca. 22 x 30 cm, og sæt en rist over den. Læg mørbraden på risten, og steg den midt i ovnen i ca. 65 minutter. Hæld lidt mere vand i, hvis bradepanden tørrer ind."
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "text": "Mål kødets kernetemperatur med et stegetermometer efter ca. 1 time. Den skal vise ca. 58 °C. Steg om nødvendigt de sidste 5 minutter."
+    },
+    {
+      "section": "Marineret oksemørbrad",
+      "text": "Dæk mørbraden til, og hold den varm. Gem stegesky fra bradepanden, og skru ovnen op på 250 °C."
+    },
+    {
+      "section": "Saltkartofler",
+      "text": "Skrub kartoflerne, mens kødet steger."
+    },
+    {
+      "section": "Saltkartofler",
+      "text": "Rør vand og salt sammen i en gryde, og bring det i kog, til saltet er opløst. Kom kartoflerne i, læg låg på, og kog dem ved svag varme i ca. 15 minutter."
+    },
+    {
+      "section": "Saltkartofler",
+      "text": "Hæld vandet fra, og lad kartoflerne dampe tør. Fordel dem på en plade med bagepapir, og bag dem midt i ovnen ved 250 °C i ca. 15 minutter."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Smelt smørret på en pande ved kraftig varme. Det må ikke tage farve."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Svits løgene i ca. 2 minutter. Kom ærterne på, og svits i ca. 1 minut mere."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Kom sharonfrugt, salt og peber på panden, og varm det hele godt igennem. Smag til."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld marinaden og stegeskyen i en tykbundet gryde, og kog det op. Lad det koge kraftigt uden låg, til der er ca. 1 dl tilbage."
+    },
+    {
+      "section": "Sauce",
+      "text": "Si væsken, og hæld den tilbage i gryden. Rør fløde, salt og peber i, og bring saucen i kog."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tag gryden af varmen, og pisk saucejævneren ud i saucen. Lad den simre under omrøring i ca. 2 minutter. Smag til, og farv med kulør."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær mørbraden i skiver, og server den med kartofler, grøntsager og sauce. Pynt med appelsinskal og timian."
+    }
+  ],
+  "changes": []
+}

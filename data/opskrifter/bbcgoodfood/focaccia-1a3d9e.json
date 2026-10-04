@@ -1,0 +1,110 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/focaccia",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:56:54.364Z",
+  "total_minutes": 45,
+  "active_minutes": 25,
+  "yield_count": 12,
+  "source_lines": 6,
+  "title": "Focaccia med rosmarin",
+  "intro": "Luftigt italiensk brød med olivenolie, groft salt og friske rosmarinkviste. Det er lige godt lunt og koldt.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus ekstra til meldrys",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 7,
+      "unit": "g",
+      "name": "tørgær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "plus ekstra til formen og til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft flagesalt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "rosmarin",
+      "note": "kviste plukket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 350,
+      "unit": "ml",
+      "name": "vand",
+      "note": "lunkent, op til 400 ml",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom melet i en stor skål. Læg gæren i den ene side af melet og det fine salt i den anden, så saltet ikke slår gæren ihjel. Bland derefter det hele sammen."
+    },
+    {
+      "section": null,
+      "text": "Lav en fordybning i midten. Hæld 2 spsk af olien og noget af det lunkne vand i, og tilsæt resten af vandet lidt ad gangen, til dejen er lidt klistret. Det er ikke sikkert, at du skal bruge alt vandet."
+    },
+    {
+      "section": null,
+      "text": "Drys bordet med mel, og vend dejen ud på det. Ælt den i 5-10 minutter, til den er blød og mindre klistret."
+    },
+    {
+      "section": null,
+      "text": "Læg dejen i en ren skål, dæk med et viskestykke, og lad den hæve i 1 time, til den er dobbelt så stor."
+    },
+    {
+      "section": null,
+      "text": "Smør en lav, rektangulær form på 25 x 35 cm med olie. Vend dejen ud på bordet, træk den ud, så den fylder formen, og læg den i. Dæk med et viskestykke, og lad den hæve igen i 35-45 minutter."
+    },
+    {
+      "section": null,
+      "text": "Varm ovnen op til 220 °C (200 °C varmluft). Tryk fingrene ned i dejen, så der kommer fordybninger over det hele."
+    },
+    {
+      "section": null,
+      "text": "Rør 1½ spsk olivenolie, 1 spsk vand og det grove salt sammen, og dryp blandingen over dejen. Stik rosmarinkvistene ned i fordybningerne."
+    },
+    {
+      "section": null,
+      "text": "Bag brødet i 20 minutter, til det er gyldent. Dryp 1-2 spsk olivenolie over, mens det er varmt. Skær i firkanter, og server lunt eller koldt, gerne med mere olivenolie."
+    }
+  ],
+  "changes": [
+    "Strong bread flour er erstattet med hvedemel."
+  ]
+}

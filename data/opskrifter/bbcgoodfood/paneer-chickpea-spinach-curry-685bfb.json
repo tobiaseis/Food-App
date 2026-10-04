@@ -1,0 +1,208 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/paneer-chickpea-spinach-curry",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:04:40.170Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Paneerkarry med kikærter og spinat",
+  "intro": "En cremet vegetarisk karry med paneer, kikærter og spinat i kokosmælk. Serveres med dampede ris og frisk koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket, evt. uden kerner for mindre styrke",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "paneer",
+      "note": "skåret i tern på 1 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "à 400 g, skyllet og afdryppet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kokosmælk",
+      "note": "400 ml",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frossen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "lavet af 1 bouillonterning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mango chutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "basmatiris",
+      "note": "dampede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket eller hele blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chili",
+      "note": "i skiver",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien i en dyb stegepande på middel varme. Svits løget i 3-4 minutter, til det er blødt."
+    },
+    {
+      "section": null,
+      "text": "Rør ingefær, hvidløg, alle krydderierne og chilien i. Steg 1-2 minutter, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Kom paneer og kikærter i panden, og hæld kokosmælk, spinat og fond over."
+    },
+    {
+      "section": null,
+      "text": "Bring det i kog, skru ned og lad karryen simre i 20 minutter, til saucen er reduceret og tyk."
+    },
+    {
+      "section": null,
+      "text": "Rør mango chutney i, og smag til med salt, peber og citronsaft."
+    },
+    {
+      "section": null,
+      "text": "Anret over ris og top med koriander og eventuelt chili i skiver."
+    }
+  ],
+  "changes": [
+    "Vegetable oil er skiftet til rapsolie.",
+    "Medium curry powder er skiftet til mild karry.",
+    "Vegetable stock cube er skiftet til grøntsagsfond lavet af bouillonterning."
+  ]
+}

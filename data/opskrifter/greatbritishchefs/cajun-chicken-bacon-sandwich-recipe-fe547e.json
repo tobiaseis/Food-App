@@ -1,0 +1,198 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/cajun-chicken-bacon-sandwich-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:08:27.982Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "tsk",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "tsk",
+      "name": "Aromat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "Blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidløg",
+      "note": "presset eller revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "skive",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "skive",
+      "name": "brød",
+      "note": "surdejsbrød med kerner, ristet på den ene side",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "usaltet, til smøring",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "icebergsalat",
+      "note": "strimlet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ristede løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Vend kyllingebryst og løg med Cajun-krydderi, Aromat, krydderurter og hvidløg i en skål. Dryp med olivenolie, tilsæt salt og peber, og rør rundt, så alt er dækket af krydderiet."
+    },
+    {
+      "section": null,
+      "text": "Varm en støbejernsgrillpande op ved middelhøj varme, til den ryger. Grill kyllingen og løgene i 10 minutter, og vend dem undervejs. Det gør ikke noget, at krydderiet brænder lidt på, og at løgene får lidt farve – det giver en røget smag."
+    },
+    {
+      "section": null,
+      "text": "Læg baconen på panden, når der er omkring 5 minutter tilbage af tiden, og steg den sprød. Dryp honningen over de sidste par minutter, så baconen får en glasur."
+    },
+    {
+      "section": null,
+      "text": "Tag kylling og bacon af panden, pres citronsaften over, og lad det hvile, mens du rister brødet."
+    },
+    {
+      "section": null,
+      "text": "Læg den ene brødskive med den ristede side nedad på et skærebræt, og smør tykt med smør. Skær kyllingen i tykke strimler, og stable dem på brødet. Læg bacon, tomatskiver, salat og ristede løg ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Smør den anden brødskive tykt med mayonnaise, og læg den ovenpå som låg."
+    },
+    {
+      "section": null,
+      "text": "Tryk sandwichen let sammen, og pak den stramt ind i bagepapir. Del den på midten med en savtakket kniv, så snittet vises."
+    }
+  ],
+  "title": "Cajun-kyllingesandwich med honningglaseret bacon",
+  "intro": "En sandwich med krydret grillet kylling, sprød honningglaseret bacon og friske grøntsager. Den pakkes i bagepapir og skæres over, så man kan se alle lagene.",
+  "servings": 2,
+  "changes": [
+    "Hvidløgspuré er erstattet med friskpresset hvidløg.",
+    "Surdejsbrød med kerner er erstattet med almindeligt brød.",
+    "Sprøde skalotteløg er erstattet med ristede løg.",
+    "Kewpie-mayonnaise er erstattet med almindelig mayonnaise.",
+    "Aromat er en dansk færdigvare og bruges i stedet for Knorr Original Aromat."
+  ]
+}

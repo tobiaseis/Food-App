@@ -1,0 +1,363 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/beetroot-tart-poppy-seed-cream-cheese-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:16:15.854Z",
+  "total_minutes": 150,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 29,
+  "title": "Rødbedetærter med birkesfrø-flødeost og szechuanpeber",
+  "intro": "Sprøde butterdejstærter fyldt med flødeost med birkes, rødbedetartar og syltede gyldne rødbeder. Serveres med en blank rødbedepuré krydret med szechuanpeber.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Birkesflødeost",
+      "amount": 200,
+      "unit": "g",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Birkesflødeost",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Birkesflødeost",
+      "amount": 15,
+      "unit": "g",
+      "name": "birkes",
+      "note": "lagt i blød i koldt vand i mindst 1 time og tørret grundigt med køkkenrulle",
+      "optional": false
+    },
+    {
+      "section": "Birkesflødeost",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærteskaller",
+      "amount": 600,
+      "unit": "g",
+      "name": "butterdej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærteskaller",
+      "amount": null,
+      "unit": null,
+      "name": "bagespray",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 100,
+      "unit": "ml",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 100,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 100,
+      "unit": "ml",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 100,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 100,
+      "unit": "ml",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": null,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 8,
+      "unit": "g",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 2,
+      "unit": "g",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 1,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "gyldne, rå",
+      "optional": false
+    },
+    {
+      "section": "Rødbedetartar",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "kogte",
+      "optional": false
+    },
+    {
+      "section": "Rødbedetartar",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "i meget små tern",
+      "optional": false
+    },
+    {
+      "section": "Rødbedetartar",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedetartar",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tabasco",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedetartar",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedetartar",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedepuré",
+      "amount": 150,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "kogte",
+      "optional": false
+    },
+    {
+      "section": "Rødbedepuré",
+      "amount": 125,
+      "unit": "ml",
+      "name": "rødbedejuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedepuré",
+      "amount": 25,
+      "unit": "ml",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedepuré",
+      "amount": 100,
+      "unit": "ml",
+      "name": "portvin",
+      "note": "rød",
+      "optional": false
+    },
+    {
+      "section": "Rødbedepuré",
+      "amount": 75,
+      "unit": "ml",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedepuré",
+      "amount": 75,
+      "unit": "ml",
+      "name": "æblejuice",
+      "note": "uklar",
+      "optional": false
+    },
+    {
+      "section": "Rødbedepuré",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "szechuanpeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "friske krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "spiselige blomster",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Birkesflødeost",
+      "text": "Kom flødeosten i en stor skål. Riv citronskallen ned i og vend de tørre birkes i. Frøene skal være så tørre som muligt."
+    },
+    {
+      "section": "Birkesflødeost",
+      "text": "Rør det sammen med en spatel eller træske, og smag til med salt."
+    },
+    {
+      "section": "Birkesflødeost",
+      "text": "Fyld cremen i en sprøjtepose, og luk den med en knude. Den kan holde sig 2 dage i køleskabet."
+    },
+    {
+      "section": "Tærteskaller",
+      "text": "Varm ovnen op til 180 °C. Rul butterdejen ud, og skær den i kvadrater på 7 cm."
+    },
+    {
+      "section": "Tærteskaller",
+      "text": "Spray tærteformene let med bagespray, og tryk en dejplade forsigtigt ned i hver form. Tryk ikke for hårdt, ellers sidder skallerne fast."
+    },
+    {
+      "section": "Tærteskaller",
+      "text": "Sæt endnu en tærteform oven på hver dejplade, så dejen ligger mellem to forme. Stil formene på en bageplade, læg en ekstra bageplade ovenpå, og tyng den med et par gryder."
+    },
+    {
+      "section": "Tærteskaller",
+      "text": "Bag i ovnen i 14 minutter."
+    },
+    {
+      "section": "Tærteskaller",
+      "text": "Tag den øverste plade af. Skallerne skal være flot gyldenbrune og ikke blege. Bag dem videre, hvis de har brug for det. Tag dem ud, og lad dem køle af i ca. 30 minutter."
+    },
+    {
+      "section": "Tærteskaller",
+      "text": "Løft de øverste forme af. Brug om nødvendigt en lille kniv til at løsne dem. Skær den overskydende dej af langs kanten med et zesterjern eller en lille takket køkkenkniv, så skallerne let kan trækkes ud. Sidder de stadig fast, så gå kanten igennem en gang til."
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "text": "Kom eddike, vand, sukker, olivenolie, hvidvin, salt, korianderfrø, fennikelfrø, stjerneanis og skalotteløg i en kasserolle. Bring det i kog ved middelvarme, og pisk, så sukkeret opløses. Stil lagen til side, til den er helt kold og har trukket."
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "text": "Skær de rå gyldne rødbeder i 2 mm tykke skiver på en mandolin. Udstik 6 ens skiver med et rundt udstikkerjern på 10 cm med rillet kant. Udstik 24 små stjerner af resten af skiverne. Læg det hele i en lille skål."
+    },
+    {
+      "section": "Syltede gyldne rødbeder",
+      "text": "Bring lagen i kog igen, og si den over rødbederne. Dæk med film, og lad dem køle i 20 minutter. Stil dem derefter i køleskabet. De kan holde sig 3 dage."
+    },
+    {
+      "section": "Rødbedetartar",
+      "text": "Hak de kogte rødbeder helt fint, men undgå at lave dem til puré – blandingen skal have bid. Vend skalotteløg, mayonnaise, tabasco, worcestershiresauce og salt i, og smag til med mere salt efter behov."
+    },
+    {
+      "section": "Rødbedetartar",
+      "text": "Fyld tartaren i en sprøjtepose, og opbevar den i køleskabet. Den holder sig 3 dage."
+    },
+    {
+      "section": "Rødbedepuré",
+      "text": "Hak de kogte rødbeder groft, og kom dem i en gryde sammen med resten af ingredienserne til puréen. Szechuanpeberen er meget stærk, så vær forsigtig. Kog ved middelvarme, til væsken er blank og tyk."
+    },
+    {
+      "section": "Rødbedepuré",
+      "text": "Blend massen helt glat og blank, og pas den gennem en sigte. Lad den køle af."
+    },
+    {
+      "section": "Rødbedepuré",
+      "text": "Fyld puréen i en sprøjteflaske eller sprøjtepose. Den kan holde sig 3 dage i køleskabet."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sæt tærterne sammen på en bakke, så tallerkenerne holdes rene. Flyt dem bagefter over på tallerkenerne."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sprøjt en god mængde flødeost i hver tærteskal. Top med rigeligt rødbedetartar, så den får en spids. Sæt fem rødbedestjerner i tartaren på hver tærte, og sprøjt små prikker rødbedepuré imellem."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg en rillet skive gylden rødbede midt på hver tallerken, og sæt en stor klat rødbedepuré i midten. Stil tærten ovenpå, og pynt med krydderurter og evt. spiselige blomster. Server med det samme."
+    }
+  ],
+  "changes": [
+    "Birkesfrø er skiftet ud med birkes.",
+    "Butterdej er brugt i stedet for puff pastry.",
+    "Szechuanpeber er brugt i stedet for Sichuan peppercorns.",
+    "Rubinportvin er skiftet til rød portvin.",
+    "Skalotteløg er brugt i stedet for banana shallot.",
+    "Rødbedejuice er angivet i ml i stedet for gram."
+  ]
+}

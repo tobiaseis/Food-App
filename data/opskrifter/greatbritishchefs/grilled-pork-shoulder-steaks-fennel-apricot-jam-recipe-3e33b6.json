@@ -1,0 +1,250 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/grilled-pork-shoulder-steaks-fennel-apricot-jam-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:41:46.666Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 22,
+  "title": "Grillet svinenakke med fennikel-abrikosmarmelade og syltet kålrabi",
+  "intro": "Saftige nakkekoteletter med sødsalt glasur, serveret med en langtidskogt marmelade af fennikel og abrikos og knasende syltet kålrabi. Rucola og rosépeber giver frisk og krydret finish.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Fennikel- og abrikosmarmelade",
+      "amount": 400,
+      "unit": "g",
+      "name": "abrikoser",
+      "note": "udstenede og groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Fennikel- og abrikosmarmelade",
+      "amount": 400,
+      "unit": "g",
+      "name": "fennikel",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fennikel- og abrikosmarmelade",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Fennikel- og abrikosmarmelade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Fennikel- og abrikosmarmelade",
+      "amount": 250,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fennikel- og abrikosmarmelade",
+      "amount": 6,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fennikel- og abrikosmarmelade",
+      "amount": 50,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet kålrabi",
+      "amount": 400,
+      "unit": "g",
+      "name": "kålrabi",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Syltet kålrabi",
+      "amount": 150,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet kålrabi",
+      "amount": 300,
+      "unit": "ml",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet kålrabi",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet kålrabi",
+      "amount": 5,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "nakkekoteletter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekød",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "østerssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekød",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekød",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekød",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekød",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "fennikelgrønt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "rucola",
+      "note": "vendt i olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til rucolaen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "rosépeber",
+      "note": "knust",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fennikel- og abrikosmarmelade",
+      "text": "Kom alle ingredienserne til marmeladen i en stor gryde, og bring dem i let kog."
+    },
+    {
+      "section": "Fennikel- og abrikosmarmelade",
+      "text": "Skru ned på lav varme, og lad det simre i 30–40 minutter, til fennikel og abrikoser er helt bløde og er kogt ud."
+    },
+    {
+      "section": "Syltet kålrabi",
+      "text": "Rør alle ingredienserne til syltningen sammen i en skål, til sukkeret er opløst. Stil skålen tildækket i køleskabet, mens du laver svinekødet."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Vend nakkekoteletterne i en stor skål med brun farin, østerssauce og fiskesauce. Krydr med salt og peber og lidt olie, og lad dem stå i 15 minutter."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Varm en pande op ved middelhøj varme, og tænd ovnen på 180 °C varmluft."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Brun koteletterne gyldne på begge sider i lidt olie. Tilsæt smørret, sænk varmen lidt, og øs smørret over kødet nogle gange."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Læg koteletterne på en bageplade, og steg dem i ovnen, til kernetemperaturen er 74 °C. Lad kødet hvile i 10 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær kødet i skiver, og anret det med rucolaen. Top med den syltede kålrabi, fennikelgrønt og knust rosépeber. Server marmeladen ved siden af."
+    }
+  ],
+  "changes": [
+    "Svineskulder-steaks er erstattet af nakkekoteletter.",
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Unsalted butter er erstattet af almindeligt smør.",
+    "Vegetable oil er erstattet af olie.",
+    "Pink peppercorns er erstattet af rosépeber."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-mushroom-pasta",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:29:02.038Z",
+  "total_minutes": 60,
+  "active_minutes": 15,
+  "yield_count": 3,
+  "source_lines": 12,
+  "title": "Pasta med kylling og champignon i flødesauce",
+  "intro": "Cremet pasta med saftige kyllingelår, brunede champignon og hvidvin. Drys med parmesan og persille til sidst.",
+  "servings": 3,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "penne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": "udbenede og uden skind, skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kviste, blade plukket af",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "parmesan",
+      "note": "et stykke, til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog pasta efter anvisningen på pakken. Hæld vandet fra, men gem en kop af kogevandet."
+    },
+    {
+      "section": null,
+      "text": "Imens steges champignon på en stor, tør pande ved middel varme, til væsken er kogt væk. Det tager cirka 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt olie, smør og kylling. Steg videre i 6-8 minutter, til champignon er gyldne, og kyllingen har fået farve."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløg og timian i panden, og krydr med salt og peber. Steg i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Hæld hvidvinen i, og lad den koge ind til det halve, hvilket tager 2-3 minutter. Tilsæt fonden, og lad det simre i 8-10 minutter, til kyllingen er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Hæld fløden i, og varm den igennem i nogle minutter. Vend pastaen i saucen, og tilsæt lidt af kogevandet, hvis saucen skal være løsere."
+    },
+    {
+      "section": null,
+      "text": "Riv parmesan over, og drys eventuelt med persille."
+    }
+  ],
+  "changes": [
+    "Double cream er erstattet med piskefløde.",
+    "Chestnut mushrooms er erstattet med champignon."
+  ]
+}

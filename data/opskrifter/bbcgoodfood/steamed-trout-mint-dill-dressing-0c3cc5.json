@@ -1,0 +1,153 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/steamed-trout-mint-dill-dressing",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:31:38.528Z",
+  "total_minutes": 35,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 12,
+  "title": "Dampet ørred med mynte- og dilddressing",
+  "intro": "Mør ørred dampet over grøntsager og serveret med kartofler og en frisk yoghurtdressing med mynte og dild. En let ret, der er klar på cirka 20 minutter.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 120,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 170,
+      "unit": "g",
+      "name": "asparges",
+      "note": "de træede ender skåret af",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "pulver, røres ud i 2,25 dl vand",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.25,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til bouillonen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "haricots verts",
+      "note": "trimmet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "ørredfilet",
+      "note": "uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "skive",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sennepspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mynte",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog kartoflerne møre i vand ved svag varme."
+    },
+    {
+      "section": null,
+      "text": "Halvér aspargesstænglerne på tværs, så de bliver kortere."
+    },
+    {
+      "section": null,
+      "text": "Hæld den udrørte bouillon i en bred non-stick pande. Kom asparges og bønner i, læg låg på, og lad det simre i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom ærterne i panden, og læg ørred og citronskiver ovenpå. Læg låg på igen, og damp i 5 minutter mere, til fisken falder let fra hinanden, men stadig er saftig."
+    },
+    {
+      "section": "Til dressingen",
+      "text": "Rør yoghurt, eddike, sennepspulver, mynte og dild sammen. Tilsæt 2-3 spsk af den varme kogelæg fra panden."
+    },
+    {
+      "section": null,
+      "text": "Fordel grøntsagerne og resten af kogelagen i skåle. Læg fisken ovenpå, hæld dressingen over, og server med kartoflerne."
+    }
+  ],
+  "changes": [
+    "Fine green beans er erstattet af haricots verts.",
+    "English mustard powder er erstattet af sennepspulver.",
+    "Bio yogurt er erstattet af yoghurt.",
+    "Trout fillets er erstattet af ørredfilet."
+  ]
+}

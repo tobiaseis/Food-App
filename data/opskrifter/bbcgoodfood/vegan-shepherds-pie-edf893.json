@@ -1,0 +1,236 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/vegan-shepherds-pie",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:21:03.380Z",
+  "total_minutes": 110,
+  "active_minutes": 30,
+  "yield_count": 8,
+  "source_lines": 21,
+  "title": "Vegansk shepherd's pie",
+  "intro": "En fyldig, plantebaseret udgave af den engelske klassiker med svampe, rodfrugter, kikærter og et gyldent låg af kartofler. Den er nem at lave i forvejen og bages først færdig i ovnen.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1.2,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "melede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "tørrede porcini",
+      "note": "udblødt i varmt vand i 15 minutter og afdryppet; gem udblødningsvandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "porre",
+      "note": "store, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "små, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillonterning, vegansk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "butternut squash",
+      "note": "lille, skrællet og i små tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "oregano",
+      "note": "blade plukket og grofthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "timian",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "salvie",
+      "note": "blade plukket og grofthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frossen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "fladbladet, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "ketchup",
+      "note": "til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog de uskrællede kartofler i rigeligt vand i ca. 40 minutter, til skindet begynder at sprække. Hæld vandet fra, og lad dem køle lidt af."
+    },
+    {
+      "section": null,
+      "text": "Varm rapsolien op i en stor, tykbundet sautépande eller en gryde, der tåler blusset. Svits svampe, porre, løg, gulerødder og bouillonterning ved lav varme i ca. 5 minutter, og rør jævnligt. Klistrer det, så skru ned og rør oftere, og skrab bunden fri. Grøntsagerne skal være møre, men ikke bløde som mos."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløg, tomatpuré, paprika, butternut squash og urter (oregano, timian og salvie) i. Skru lidt op for varmen, og steg i 3 minutter. Tilsæt derefter selleri, og lad det simre et par minutter mere."
+    },
+    {
+      "section": null,
+      "text": "Hæld kikærterne i sammen med væden fra dåsen og svampevandet. Kom ærter og spinat i, og rør godt rundt. Lad det koge i 5 minutter under lejlighedsvis omrøring, smag til med salt og peber, og tag panden af varmen. Fyldet skal stadig have rigeligt væde, og grøntsagerne skal være friske i farven og lidt faste."
+    },
+    {
+      "section": null,
+      "text": "Pil kartoflerne, og smid skrællerne ud. Mos 200 g af kartoflerne med en gaffel, og rør dem ned i fyldet. Riv resten af kartoflerne i store stykker, og vend dem med olivenolie og persille. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Fordel fyldet i ovnfaste forme, og læg kartoffelstykkerne ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Bag i ovnen ved 190 °C (170 °C varmluft) i 40-45 minutter, til toppen er gylden, og fyldet er varmt hele vejen igennem. Laver du små portionsretter, så kig til dem efter 20 minutter. Server gerne med ketchup."
+    }
+  ],
+  "changes": [
+    "Frisk merian er byttet med oregano.",
+    "Vegetabilsk olie er byttet med rapsolie.",
+    "Maris Piper og King Edward er byttet med melede kartofler."
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smoky-slow-cooker-pork-with-boston-baked-beans",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:03:49.767Z",
+  "total_minutes": 750,
+  "active_minutes": 30,
+  "yield_count": 8,
+  "source_lines": 16,
+  "title": "Langtidsstegt røget svinebov med baked beans",
+  "intro": "Mør svinebov, der simrer i en røget tomatsauce og trækkes ud i hvide bønner. Toppes med sprød svær og serveres med brød.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1.2,
+      "unit": "kg",
+      "name": "svinebov",
+      "note": "uden ben, med svær",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 700,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 700,
+      "unit": "ml",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mørk sirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "Worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 750,
+      "unit": "g",
+      "name": "hvide bønner",
+      "note": "på glas, afdryppede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "sprødt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tabasco",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "brun farin",
+      "note": "ekstra",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Worcestershiresauce",
+      "note": "ekstra",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svinebov og svær",
+      "text": "Fjern evt. snor på stegen. Skær svinget af i ét stykke med en skarp kniv."
+    },
+    {
+      "section": "Svinebov og svær",
+      "text": "Læg svinget på en bageplade, tør det af og drys med salt. Stil det koldt, mens saucen laves."
+    },
+    {
+      "section": "Sauce",
+      "text": "Varm olien i slowcookeren, hvis den kan brune. Ellers brug en stor gryde ved middel varme."
+    },
+    {
+      "section": "Sauce",
+      "text": "Steg løg og selleri med en knivspids salt i ca. 8 minutter, til de er let gyldne. Tilsæt hvidløg og steg 1 minut."
+    },
+    {
+      "section": "Sauce",
+      "text": "Kom laurbærblade, passata, fond, chipotle, paprika, farin, sirup, balsamico og Worcestershiresauce i, men ikke bønnerne. Bring i kog, lad det simre, og smag til med salt og peber."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hvis du brugte en gryde, så hæld saucen over i slowcookeren."
+    },
+    {
+      "section": "Kødet",
+      "text": "Læg stegen ned i saucen. Kog på høj varme i 6-8 timer eller på lav varme i 10-12 timer, til kødet er helt mørt og falder fra hinanden, når du presser en kniv ned i det."
+    },
+    {
+      "section": "Kødet",
+      "text": "Øs fedtet af saucen, hvis det flyder ovenpå."
+    },
+    {
+      "section": "Bønner",
+      "text": "Pil kødet i strimler med to gafler, og vend det ned i saucen sammen med bønnerne."
+    },
+    {
+      "section": "Bønner",
+      "text": "Lad det simre uden låg i ca. 30 minutter, til saucen er tyk nok. Smag til med salt, peber og gerne lidt mere Worcestershiresauce og farin."
+    },
+    {
+      "section": "Sprød svær",
+      "text": "Varm ovnen til 240 °C eller 220 °C varmluft."
+    },
+    {
+      "section": "Sprød svær",
+      "text": "Tør svinget af igen, og skær tynde strimler i det uden at skære helt igennem. Bag i den varme ovn i 25-30 minutter, til det er pufset og sprødt."
+    },
+    {
+      "section": "Sprød svær",
+      "text": "Bryd svinget i stykker, og drys over bønnerne. Server med brød, creme fraiche og evt. tabasco."
+    }
+  ],
+  "changes": [
+    "Black treacle er erstattet med mørk sirup.",
+    "Soured cream er erstattet med creme fraiche.",
+    "Haricotbønner på glas er erstattet med hvide bønner på glas.",
+    "Vegetable stock er erstattet med grøntsagsfond."
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/jerusalem-artichoke-chocolate-brownie-hazelnut-ice-cream-blackcurrant-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:23:03.214Z",
+  "total_minutes": 155,
+  "active_minutes": null,
+  "yield_count": 14,
+  "source_lines": 38,
+  "title": "Jordskokke-brownie med hasselnøddeis, karamel og solbær",
+  "intro": "En avanceret dessert, hvor jordskokker indgår i både brownie, is, karamel og knas, og hvor hasselnødder, chokolade og syrlige solbær giver kontrast. Bestå af flere dele, der laves hver for sig og samles på tallerkenen til sidst.",
+  "servings": 14,
+  "ingredients": [
+    {
+      "section": "Sortfermenterede jordskokker",
+      "amount": 600,
+      "unit": "g",
+      "name": "jordskokker",
+      "note": "skrællerne fra jordskokkerne",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeis",
+      "amount": 540,
+      "unit": "g",
+      "name": "jordskokker",
+      "note": "skrællede; gem skrællerne til jordskokkeknasen",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeis",
+      "amount": 70,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeis",
+      "amount": 8,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeis",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeis",
+      "amount": 2,
+      "unit": "dl",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeis",
+      "amount": 2,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeis",
+      "amount": 60,
+      "unit": "g",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeis",
+      "amount": 6,
+      "unit": "g",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeis",
+      "amount": 4,
+      "unit": "g",
+      "name": "stabilisator",
+      "note": "Stab 2000",
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "amount": 3,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "amount": 85,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "afskallede og ristede",
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "amount": 45,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "amount": 55,
+      "unit": "g",
+      "name": "hvid chokolade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "amount": 3,
+      "unit": "g",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "amount": 55,
+      "unit": "g",
+      "name": "hasselnøddepraliné",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "amount": 30,
+      "unit": "g",
+      "name": "kakaopulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "amount": 230,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "amount": 90,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "amount": 80,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeknas",
+      "amount": 35,
+      "unit": "g",
+      "name": "chokolade",
+      "note": "mælkechokolade",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeknas",
+      "amount": 12,
+      "unit": "g",
+      "name": "mandelflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeknas",
+      "amount": 25,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeknas",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Solbærgel",
+      "amount": 500,
+      "unit": "g",
+      "name": "solbær",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Solbærgel",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solbærgel",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solbærgel",
+      "amount": 15,
+      "unit": "g",
+      "name": "agar-agar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkekaramel",
+      "amount": 500,
+      "unit": "g",
+      "name": "jordskokker",
+      "note": "skrællede",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkekaramel",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkekaramel",
+      "amount": 20,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkekaramel",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkekaramel",
+      "amount": 30,
+      "unit": "g",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "guldpulver",
+      "note": "spiseligt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sortfermenterede jordskokker",
+      "text": "Kom jordskokkeskrællerne i en vakuumpose, og vakuumpak den. Lad skrællerne fermentere ved konstant 60 °C i 30 dage. Afvej 70 g til brownien; resten bruges ikke her."
+    },
+    {
+      "section": "Jordskokkeis",
+      "text": "Skær de skrællede jordskokker i tern, og brun dem i smørret, til de er gyldne og dufter dejligt."
+    },
+    {
+      "section": "Jordskokkeis",
+      "text": "Bring mælk, fløde, glukosesirup og salt i kog i en lille gryde. Pisk æggeblommerne i en varmefast skål, og pisk den varme mælkeblanding langsomt i, mens du blive ved med at piske."
+    },
+    {
+      "section": "Jordskokkeis",
+      "text": "Hæld cremen tilbage i gryden, og varm den under konstant omrøring til 84 °C."
+    },
+    {
+      "section": "Jordskokkeis",
+      "text": "Rør husblas, stabilisator og de brunede jordskokker i, og blend glat. Afkøl, og stil isbasen køligt i mindst 6 timer."
+    },
+    {
+      "section": "Jordskokkeis",
+      "text": "Frys isbasen i Pacojet-bægre ved -20 °C, eller kør den i en ismaskine."
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "text": "Varm mælken i en gryde, og blend den med hasselnødderne til en jævn masse. Sigt gennem en fin si, og afvej 65 g hasselnøddemælk. Der bliver mælk til overs."
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "text": "Bring fløde, smør og hvid chokolade i kog, og tag gryden af varmen. Rør husblas, praliné og de 65 g hasselnøddemælk i, til det er glat. Lad det køle af, og stil det koldt i mindst 4 timer, til det er helt stivnet."
+    },
+    {
+      "section": "Hasselnøddecreme",
+      "text": "Blend den stivnede creme til en glat, luftig creme, og stil den i køleskabet til servering."
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "text": "Varm ovnen op til 170 °C. Varm vand, kakaopulver og smør (og salt, hvis du bruger det) forsigtigt i en gryde, til det er smeltet og glat."
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "text": "Rør sukker og mel i under omrøring, til massen tykner en smule. Lad den simre svagt i ca. 5 minutter, og hæld den i en stor skål, så den køler lidt af."
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "text": "Blend de 70 g fermenterede jordskokker med æg og creme fraiche, til det er glat. Vend blandingen i chokoladeblandingen til en tyk dej."
+    },
+    {
+      "section": "Jordskokkebrownie",
+      "text": "Fyld dejen i smurte forme med ca. 50 g i hver, og bag i ca. 15 minutter. Lad brownies køle på en rist, tag dem ud af formene, og opbevar dem ved stuetemperatur."
+    },
+    {
+      "section": "Jordskokkeknas",
+      "text": "Varm olie op til 180 °C i en dyb gryde eller friturekoger. Friturestek de gemte jordskokkeskræller sprøde i omgange, og tag dem op med en hulske på køkkenrulle. Lad dem køle, og afvej 25 g; der bliver skræller til overs."
+    },
+    {
+      "section": "Jordskokkeknas",
+      "text": "Smelt chokoladen forsigtigt over vandbad. Vend de stegte skræller, mandelflager og rapsolie i. Smør det ud på en non-stick måtte eller bagepapir, eller form det som du vil, og lad det sætte sig."
+    },
+    {
+      "section": "Solbærgel",
+      "text": "Kog en del af solbærrene med vand og sukker. Rør agar-agar i, og lad det koge kort."
+    },
+    {
+      "section": "Solbærgel",
+      "text": "Tilsæt resten af solbærrene, og si blandingen over i en beholder. Lad den køle af, og stil den i køleskabet, til den er helt stivnet. Blend den til en glat gel, fyld den i en sprøjtepose, og stil den til side."
+    },
+    {
+      "section": "Jordskokkekaramel",
+      "text": "Pres jordskokkerne i en juicer, og kassér frugtkødet. Afvej 2 dl saft, og kog den ind med sukker og glukosesirup, til den er let karamelliseret."
+    },
+    {
+      "section": "Jordskokkekaramel",
+      "text": "Rør smør og fløde i til en blank, glat karamel. Fyld den i en sprøjteflaske, og stil den til side."
+    },
+    {
+      "section": "Samling",
+      "text": "Tag isen ud af fryseren et par minutter før servering, så den bliver blød, eller kør den i Pacojet efter behov."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel hasselnøddecreme i skåle, og stryg den glat med en ske. Sprøjt prikker af solbærgel på, læg brownies ovenpå, og dæk rigeligt med jordskokkekaramel."
+    },
+    {
+      "section": "Samling",
+      "text": "Anret noget jordskokkeknas i bunden af andre skåle. Læg en skefuld is i hver, og sprøjt lidt mere karamel over. Drys brownies med guldpulver."
+    }
+  ],
+  "changes": [
+    "Pulvergelatine er erstattet med husblas i blade.",
+    "Solbærpuré er erstattet med frosne solbær.",
+    "Creme fraiche erstatter soured cream.",
+    "Hvedemel erstatter T45-mel.",
+    "Mandelflager erstatter flaked almonds i samme mængde.",
+    "Piskefløde erstatter double cream.",
+    "Sødmælk erstatter whole milk."
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/grilled-maitake-mushroom-tart-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:16:51.632Z",
+  "total_minutes": 140,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 22,
+  "title": "Grillet svampetærte med svampecreme, purløgspuré og øl-gærsauce",
+  "intro": "Sprøde, parmesanbagte tærtebunde med purløgspuré, cremet svampecreme og grillede østershatte. Serveres med en varm, luftig sauce af øl og gærsmør.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til tærtebundene",
+      "amount": 80,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, i tern",
+      "optional": false
+    },
+    {
+      "section": "Til tærtebundene",
+      "amount": 165,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tærtebundene",
+      "amount": 100,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til tærtebundene",
+      "amount": 15,
+      "unit": "g",
+      "name": "svampepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tærtebundene",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til purløgspuréen",
+      "amount": 100,
+      "unit": "g",
+      "name": "forårsløg",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Til purløgspuréen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til purløgspuréen",
+      "amount": 50,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til purløgspuréen",
+      "amount": 100,
+      "unit": "g",
+      "name": "purløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til purløgspuréen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svampene",
+      "amount": 600,
+      "unit": "g",
+      "name": "østershatte",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Til svampene",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, smeltet",
+      "optional": false
+    },
+    {
+      "section": "Til svampecremen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "stor, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til svampecremen",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til svampecremen",
+      "amount": 150,
+      "unit": "g",
+      "name": "champignon",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Til svampecremen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svampecremen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til øl-gærsaucen",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til øl-gærsaucen",
+      "amount": 12,
+      "unit": "g",
+      "name": "gær",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til øl-gærsaucen",
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "øl",
+      "note": "stout",
+      "optional": false
+    },
+    {
+      "section": "Til øl-gærsaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til øl-gærsaucen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "cornichoner",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtebunde",
+      "text": "Kom smør, hvedemel, parmesan og svampepulver i en røremaskine med fladrører. Kør på middel hastighed, til blandingen ligner grov rasp."
+    },
+    {
+      "section": "Tærtebunde",
+      "text": "Tilsæt ægget, og saml dejen til en kugle. Lad den hvile i køleskabet i mindst 1 time."
+    },
+    {
+      "section": "Purløgspuré",
+      "text": "Steg de hele forårsløg i olie på en pande, til de er helt bløde. Det tager cirka 25 minutter."
+    },
+    {
+      "section": "Purløgspuré",
+      "text": "Kog spinat og purløg i kogende vand i 1 minut. Afkøl dem straks i isvand, og pres vandet fra."
+    },
+    {
+      "section": "Purløgspuré",
+      "text": "Blend spinat, purløg og forårsløg til en glat grøn puré. Smag til med salt, og stil den til side ved stuetemperatur."
+    },
+    {
+      "section": "Svampe",
+      "text": "Varm en grill op til middelhøj varme. Grill østershattene, og pensl dem løbende med det smeltede smør, så de ikke tørrer ud. Uden grill kan du brune dem på en varm pande, til de er gyldne og stadig saftige."
+    },
+    {
+      "section": "Svampe",
+      "text": "Lad svampene køle lidt af, og pil dem i mundrette stykker. Stil dem i køleskabet."
+    },
+    {
+      "section": "Svampecreme",
+      "text": "Svits skalotteløgene i smørret i en lille gryde, til de er bløde uden at få farve."
+    },
+    {
+      "section": "Svampecreme",
+      "text": "Kom champignon i gryden, og lad dem simre i 10 minutter, til al væden er fordampet. Rør eddike i."
+    },
+    {
+      "section": "Svampecreme",
+      "text": "Blend massen glat, og smag til med salt. Dæk overfladen med film, så der ikke dannes skind, og stil cremen køligt."
+    },
+    {
+      "section": "Øl-gærsauce",
+      "text": "Smelt smør og gær i en gryde ved middel varme, til gæren karamelliserer, og smørret brunes let. Tag gryden af varmen, og lad smørret køle af."
+    },
+    {
+      "section": "Tærtebunde",
+      "text": "Varm ovnen op til 200 °C. Rul dejen ud til et rektangel på cirka 1,5 mm."
+    },
+    {
+      "section": "Tærtebunde",
+      "text": "Bag pladen i 3 minutter. Stik straks 6 runde bunde ud med en 3 cm udstikker, mens dejen er varm, og pas på, de ikke knækker."
+    },
+    {
+      "section": "Tærtebunde",
+      "text": "Bag bundene 3-4 minutter mere, til de er gyldne og sprøde. Lad dem køle på en rist, og opbevar dem i en tæt boks ved stuetemperatur."
+    },
+    {
+      "section": "Øl-gærsauce",
+      "text": "Varm øllet i en lille gryde, og rør gærsmørret i. Smag til med citronskal, citronsaft og salt. Når saucen er varm, piskes den luftig med en stavblender."
+    },
+    {
+      "section": "Anretning",
+      "text": "Varm svampene op på grillen, til de er gennemvarme. Varm også svampecremen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Kom en skefuld purløgspuré på hver tallerken, og læg en tærtebund ovenpå. Fordel varm svampecreme på bundene, og læg svampene øverst."
+    },
+    {
+      "section": "Anretning",
+      "text": "Pynt med friske purløg og cornichoner. Top med varm, luftig sauce (pisk den igen om nødvendigt), og server med det samme."
+    }
+  ],
+  "changes": [
+    "Ramsløg er erstattet af purløg, både i puréen og som pynt.",
+    "Ramsløgblomster er udeladt, og syltet ramsløg er erstattet af cornichoner.",
+    "Maitake er erstattet af østershatte.",
+    "Stensvampepulver er erstattet af svampepulver.",
+    "Frosne stenhatte er erstattet af frosne champignon.",
+    "Ølseddike er erstattet af almindelig eddike.",
+    "Vegetabilsk olie er erstattet af rapsolie.",
+    "Plain flour er erstattet af hvedemel."
+  ]
+}

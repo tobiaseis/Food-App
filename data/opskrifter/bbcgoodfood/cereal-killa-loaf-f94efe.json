@@ -1,0 +1,103 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cereal-killa-loaf",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:47:50.209Z",
+  "total_minutes": 70,
+  "active_minutes": 10,
+  "yield_count": 1,
+  "source_lines": 7,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "All-Bran",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "tørret frugt",
+      "note": "rosiner eller blandet tørret frugt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til formen",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Rør morgenmadsprodukter, sukker, tørret frugt og mælk sammen i en stor skål. Lad blandingen stå, til mælken er trukket ind – mindst 1 time."
+    },
+    {
+      "section": null,
+      "text": "Smør en non-stick-brødform på ca. 450 g rigeligt, eller beklæd den med bagepapir."
+    },
+    {
+      "section": null,
+      "text": "Vend hvedemel og bagepulver i skålen med den iblødsatte blanding, til der ikke er mel tilbage."
+    },
+    {
+      "section": null,
+      "text": "Kom dejen i formen, og bag brødet i 1 time."
+    },
+    {
+      "section": null,
+      "text": "Vend brødet ud på en rist, og lad det køle lidt af. Skær det i skiver og server."
+    }
+  ],
+  "title": "Morgenmadsbrød med All-Bran og tørret frugt",
+  "intro": "Et saftigt og nemt brød, hvor All-Bran trækker i mælk sammen med tørret frugt og sukker. Det er let at lave og lækkert i skiver med smør.",
+  "servings": 1,
+  "changes": [
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Plain flour er erstattet af hvedemel."
+  ]
+}

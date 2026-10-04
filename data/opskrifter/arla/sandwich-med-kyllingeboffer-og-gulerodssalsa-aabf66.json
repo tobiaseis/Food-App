@@ -1,0 +1,154 @@
+{
+  "url": "https://www.arla.dk/opskrifter/sandwich-med-kyllingeboffer-og-gulerodssalsa/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:59:09.670Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Kyllingeburgere med gulerodssalsa",
+  "intro": "Saftige bøffer af hakket kylling i bolle med sprød salat og en frisk salsa af gulerod, æble og syltede agurker. Halvdelen af salsaen kommer i burgeren, resten serveres ved siden af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Gulerodssalsa",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "tomatsalsa",
+      "note": "medium",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalsa",
+      "amount": 300,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "groftrevne",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalsa",
+      "amount": 200,
+      "unit": "g",
+      "name": "æbler",
+      "note": "groftrevne",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalsa",
+      "amount": 100,
+      "unit": "g",
+      "name": "syltede agurker",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalsa",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Kyllingebøffer",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket kyllingekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingebøffer",
+      "amount": 25,
+      "unit": "g",
+      "name": "hvidløgssmør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingebøffer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "sandwichboller",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 25,
+      "unit": "g",
+      "name": "hvidløgssmør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "romainesalat",
+      "note": "rensede blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "syltede agurker",
+      "note": "i lange skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Gulerodssalsa",
+      "text": "Rør tomatsalsaen sammen med gulerødder, æbler, hakkede syltede agurker og kapers."
+    },
+    {
+      "section": "Gulerodssalsa",
+      "text": "Dæk skålen og sæt den på køl i mindst 15 minutter. Smag til med salt og peber, hvis det trænger."
+    },
+    {
+      "section": "Kyllingebøffer",
+      "text": "Ælt hakket kylling, hvidløgssmør og salt grundigt sammen."
+    },
+    {
+      "section": "Kyllingebøffer",
+      "text": "Del farsen i 4 lige store portioner, og tryk dem til flade bøffer på cirka 10 cm på tværs."
+    },
+    {
+      "section": "Kyllingebøffer",
+      "text": "Varm grillpanden op ved kraftig varme i cirka 4 minutter."
+    },
+    {
+      "section": "Kyllingebøffer",
+      "text": "Steg bøfferne i cirka 10 minutter, og vend dem undervejs, indtil de er gennemstegte."
+    },
+    {
+      "section": "Til servering",
+      "text": "Rist bollerne let, skær dem igennem, og smør snitfladerne med hvidløgssmør."
+    },
+    {
+      "section": "Til servering",
+      "text": "Byg burgerne med salatblade, halvdelen af salsaen, en kyllingebøf og skiver af syltede agurker."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld resten af salsaen i fire små skåle, og sæt en ved hver tallerken, så alle kan tage mere undervejs."
+    }
+  ],
+  "changes": [
+    "Sandwichboller er angivet i stk i stedet for gram."
+  ]
+}

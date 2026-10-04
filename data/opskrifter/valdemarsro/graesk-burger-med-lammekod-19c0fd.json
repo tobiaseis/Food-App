@@ -1,0 +1,168 @@
+{
+  "url": "https://www.valdemarsro.dk/graesk-burger-med-lammekod/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:12:02.434Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Græsk lammeburger med tzatziki",
+  "intro": "Saftige lammebøffer med feta og urter, serveret i burgerboller med frisk tzatziki, salat og rødløg. En nem hverdagsburger med græsk twist.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Lammebøffer",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammebøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammebøffer",
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Lammebøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Lammebøffer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rosmarin",
+      "note": "frisk, eller 1 tsk tørret",
+      "optional": false
+    },
+    {
+      "section": "Lammebøffer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammebøffer",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Lammebøffer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammebøffer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til agurken",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "burgerboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 125,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tzatziki",
+      "text": "Bland den revne agurk med salt, og lad den dryppe af i en sigte i 30 minutter. Pres derefter vandet ud af agurken."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Rør agurken sammen med yoghurt og hvidløg. Stil tzatzikien på køl, til burgerne skal samles."
+    },
+    {
+      "section": "Lammebøffer",
+      "text": "Ælt lammekød, æg, feta, oregano, rosmarin og olivenolie godt sammen i en skål. Krydr med salt og peber."
+    },
+    {
+      "section": "Lammebøffer",
+      "text": "Form farsen til fire bøffer. Steg dem på en varm pande i smør eller olie, til de er gennemstegte."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær rødløget i tynde skiver. Byg burgerne med bund, salat, lammebøf, rigeligt tzatziki og rødløg, og læg toppen på."
+    }
+  ],
+  "changes": []
+}

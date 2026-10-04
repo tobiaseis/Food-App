@@ -1,0 +1,294 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/sea-bass-chorizo-miso-doenjang-clam-sauce-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:19:41.177Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Stegt havbars med chorizo-muslingesauce og knuste kartofler",
+  "intro": "Sprødstegt havbars på knuste kartofler med citron og purløg, serveret med en dyb sauce af miso, chorizo og muslinger. Toppen er sprød tempura og karse.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til fisken",
+      "amount": 4,
+      "unit": "stk",
+      "name": "havbars",
+      "note": "filet med skind, ca. 150-180 g hver, pudset, uden bensten og skåret over på tværs i 2 stykker, tørret med køkkenrulle",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": "plus lidt mere til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 6,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 100,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "til madlavning, uden skind og skåret i tern på 5 mm",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 4.5,
+      "unit": "dl",
+      "name": "fiskefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "miso",
+      "note": "mørk, plus mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "miso",
+      "note": "hvid",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "kg",
+      "name": "muslinger",
+      "note": "skrubbede",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 20,
+      "unit": "ml",
+      "name": "citronsaft",
+      "note": "plus mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 600,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "store, skrællede",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 30,
+      "unit": "ml",
+      "name": "citronsaft",
+      "note": "plus mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 30,
+      "unit": "g",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til tempuraen",
+      "amount": 75,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tempuraen",
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "danskvand",
+      "note": "iskold",
+      "optional": false
+    },
+    {
+      "section": "Til tempuraen",
+      "amount": 100,
+      "unit": "g",
+      "name": "asparges",
+      "note": "grønne, de træede ender skåret fra, skyllet og tørret",
+      "optional": false
+    },
+    {
+      "section": "Til tempuraen",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "nori",
+      "note": "i fine strimler",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Læg kartoflerne i en stor gryde, og dæk dem med rigeligt saltet vand, så der står ca. 5 cm over. Bring det i kog, og lad dem derefter simre jævnt i 20-25 minutter, til en kniv glider ubesværet ind."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret i en bred, dyb sauterpande med låg ved middelhøj varme. Svits hvidløg og skalotteløg i 1-2 minutter, til de dufter, men ikke har fået farve."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tilsæt chorizoen, og steg den i 3-4 minutter, til den er blød, og fedtet har sat sig i panden."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld hvidvinen i, og lad den koge kraftigt i 30 sekunder, mens du skraber bunden ffri. Tilsæt fiskefond og hønsefond, og bring det i en let kog."
+    },
+    {
+      "section": "Sauce",
+      "text": "Pisk begge slags miso ud i væsken, til de er helt opløst. Lad saucen simre uden låg i 3-4 minutter."
+    },
+    {
+      "section": "Sauce",
+      "text": "Kom muslingerne i, sæt låg på, og kog dem ved middelhøj varme i ca. 3-4 minutter, til skallerne lige har åbnet sig. Tag dem op med en hulske, og læg dem i en varm skål. Kassér muslinger, der er blevet lukkede. Fisk chorizoen op, og læg den til muslingerne."
+    },
+    {
+      "section": "Sauce",
+      "text": "Si fonden gennem en fin si over i en ren gryde, og pres forsigtigt for at få al smagen med. Lad den koge ind i 3-4 minutter. Rør citronsaften i, og smag til med mere miso for dybde eller mere citron for friskhed. Hold saucen varm."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Hæld vandet fra kartoflerne, og sæt dem tilbage i den varme gryde uden varme. Mos dem groft med en gaffel, mens de er varme, så der er både små og store stykker. Vend det bløde smør i, og tilsæt derefter citronsaft og purløg. Smag til, læg låg på, og hold dem varme."
+    },
+    {
+      "section": "Tempura",
+      "text": "Tænd ovnen på 90 °C. Varm olien op i en dyb gryde ved middelhøj varme, eller indstil en frituregryde til 180 °C. Læg køkkenrulle på en bakke til de færdige stykker."
+    },
+    {
+      "section": "Tempura",
+      "text": "Pisk melet med så meget iskold danskvand, at du får en tyk, klumpet dej, i en kold skål. Rør så lidt som muligt – du skal måske ikke bruge alt vandet."
+    },
+    {
+      "section": "Tempura",
+      "text": "Vend aspargesstykkerne i dejen få ad gangen med en tang, og ryst overskuddet af. Frit dem i den varme olie i 1-2 minutter, til de er lysegyldne og sprøde. Lad dem dryppe af på bakken, og hold dem varme i ovnen."
+    },
+    {
+      "section": "Fisk",
+      "text": "Salt havbarsstykkerne på begge sider. Varm olien op i en stor pande ved middelhøj varme, til den blinker, og kom smørret i."
+    },
+    {
+      "section": "Fisk",
+      "text": "Når smørret skummer, lægges fiskene på panden med skindsiden nedad. Tryk hvert stykke fladt med en paletkniv de første 30 sekunder, så skindet hele tiden rører panden."
+    },
+    {
+      "section": "Fisk",
+      "text": "Steg i 3-4 minutter, til skindet er gyldent og sprødt. Vend fiskene, øs det skummende smør over, og steg 30-60 sekunder mere, til de lige er færdige. Lad dem hvile på et varmt fad."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sæt en 6 cm bred ring på hver varm tallerken, fyld den med knuste kartofler, og pres let til. Løft ringen lige op."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg 2 stykker havbars oven på kartoflerne. Hæld saucen rundt om, og fordel muslinger i skallen og chorizo på tallerkenen. Top fisken med tempura, og slut med karse og nori. Server straks."
+    }
+  ],
+  "changes": [
+    "Sake er skiftet ud med hvidvin.",
+    "Muslingefond er skiftet ud med fiskefond.",
+    "Doenjang er skiftet ud med mørk miso.",
+    "Palourdemuslinger er skiftet ud med almindelige muslinger.",
+    "Yuzusaft er skiftet ud med citronsaft.",
+    "Tempuramel er skiftet ud med hvedemel.",
+    "Glasurt er skiftet ud med grønne asparges.",
+    "Mikrokarse er skiftet ud med karse.",
+    "Kizami nori er skiftet ud med nori i fine strimler."
+  ]
+}

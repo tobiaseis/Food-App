@@ -1,0 +1,130 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/scottish-lentil-soup",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:29:56.701Z",
+  "total_minutes": 85,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 9,
+  "title": "Skotsk linsesuppe",
+  "intro": "En solid suppe med røde linser, rodfrugter og kartofler, som koger ind til en tyk og mættende konsistens. Skinkeskank gør den ekstra kraftig, men suppen er også god uden.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "kålroe",
+      "note": "lille, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "røde linser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "groft hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "svineskank",
+      "note": "kogt og røget, kødet groft hakket eller revet",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "groft, sprødt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom fond, gulerødder, løg, kålroe og linser i en stor gryde. Krydr med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Lad suppen småkoge ved middel varme i ca. 40 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt kartoflerne, og kog videre i ca. 20 minutter, til de er møre, og linserne er faldet fra hinanden."
+    },
+    {
+      "section": null,
+      "text": "Vend kødet i, hvis du bruger det, og lad det varme igennem i nogle minutter."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt og peber. Drys med persille, og server med brød ved siden af."
+    }
+  ],
+  "changes": [
+    "Skinkeskank (ham hock) er erstattet med kogt, røget svineskank."
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/blintzes",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:45:56.975Z",
+  "total_minutes": 85,
+  "active_minutes": 55,
+  "yield_count": 6,
+  "source_lines": 12,
+  "title": "Blintzer med ricotta og blåbærkompot",
+  "intro": "Tynde pandekager fyldt med sød ricottacreme og stegt gyldne i smør. Serveres med varm blåbærkompot og flormelis.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Pandekagedej",
+      "amount": 125,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekagedej",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": "M, pisket",
+      "optional": false
+    },
+    {
+      "section": "Pandekagedej",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "solsikkeolie",
+      "note": "plus ekstra til stegning",
+      "optional": false
+    },
+    {
+      "section": "Pandekagedej",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "ricotta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "fuldfed",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "vaniljepasta",
+      "note": "eller vaniljeekstrakt",
+      "optional": false
+    },
+    {
+      "section": "Blåbærkompot",
+      "amount": 200,
+      "unit": "g",
+      "name": "blåbær",
+      "note": "friske eller frosne",
+      "optional": false
+    },
+    {
+      "section": "Blåbærkompot",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Blåbærkompot",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "flormelis",
+      "note": "plus ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pandekagedej",
+      "text": "Blend mel, æg, olie og mælk, til dejen er helt glat. Du kan også piske den i en skål eller med stavblender."
+    },
+    {
+      "section": "Pandekagedej",
+      "text": "Dæk dejen til, og lad den hvile 30 minutter ved stuetemperatur. Skal den laves i forvejen, kan den stå på køl i op til to dage."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rør ricotta, flødeost, sukker og vanilje sammen i en lille skål. Sæt fyldet på køl, til det skal bruges."
+    },
+    {
+      "section": "Blåbærkompot",
+      "text": "Kom bærrene i en lille gryde sammen med en sjat af citronsaften og flormelis. Kog ved middel varme i 10 minutter, og rør af og til, til bærrene falder fra hinanden og afgiver saft."
+    },
+    {
+      "section": "Blåbærkompot",
+      "text": "Smag til med mere sukker eller citronsaft, og stil kompotten til afkøling."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Varm en mellemstor pande op ved middel-høj varme. Find en stor tallerken frem og skær nogle firkanter bagepapir til."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Hæld lidt olie på den varme pande, og fordel den med køkkenrulle. Vil du, kan du også smelte lidt smør og tørre det rundt på samme måde."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Dejen skal nu være glat og have samme konsistens som piskefløde. Er den for tyk, så tynd den med lidt mælk eller vand."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Hæld så meget dej på panden, at bunden dækkes af et tyndt, jævnt lag (ca. 50-60 ml afhængigt af panden). Sving panden hurtigt rundt, så dejen fordeler sig."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Steg uden at røre ved den i 1-2 minutter, til kanten ser tør ud, og undersiden er gylden. Pandekagen skal let slippe panden. Vend den, og steg få sekunder på den anden side, før den lægges på tallerkenen."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Steg resten af dejen på samme måde, og læg bagepapir mellem pandekagerne. Det giver 8-12 stk., og jo tyndere de er, jo flere får du. Afkølede pandekager kan opbevares tildækket på køl i op til to dage."
+    },
+    {
+      "section": "Samling",
+      "text": "Lad pandekagerne køle helt af. Tag én ad gangen, og smør 2 spsk fyld på den nederste tredjedel nærmest dig, så der er ca. 2 cm kant."
+    },
+    {
+      "section": "Samling",
+      "text": "Fold den nederste del op over fyldet, og fold siderne ind, så det danner et rektangel. Rul pandekagen sammen, og gentag med resten."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm smør og olie i en pande ved middel varme. Steg blintzerne i små portioner med samlingen nedad, til de er brune på begge sider."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg dem på et fad, drys med flormelis, og top med blåbærkompot."
+    }
+  ],
+  "changes": [
+    "Golden caster sugar er erstattet af almindeligt sukker.",
+    "Plain flour er erstattet af hvedemel.",
+    "Full-fat soft cheese er erstattet af flødeost."
+  ]
+}

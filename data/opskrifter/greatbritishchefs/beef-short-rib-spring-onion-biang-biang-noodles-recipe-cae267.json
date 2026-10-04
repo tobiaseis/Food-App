@@ -1,0 +1,405 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/beef-short-rib-spring-onion-biang-biang-noodles-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:49:34.955Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 33,
+  "title": "Biang biang-nudler med langtidsstegt oksespidsbryst og syltet agurk",
+  "intro": "Mørt, langtidsbraiseret oksespidsbryst serveres på håndstrakte, brede nudler med forårsløgsolie og en frisk, syrlig agurkesalat. Det er en kinesisk inspireret ret, hvor nudlerne slås mod bordet, så de bliver lange og tynde.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Oksespidsbryst",
+      "amount": 600,
+      "unit": "g",
+      "name": "oksespidsbryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til brunings",
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": 500,
+      "unit": "ml",
+      "name": "oksefond",
+      "note": "plus mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, efter behov",
+      "optional": false
+    },
+    {
+      "section": "Agurkesalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "stor",
+      "optional": false
+    },
+    {
+      "section": "Agurkesalat",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Agurkesalat",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Agurkesalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Agurkesalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Agurkesalat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Agurkesalat",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Forårsløgsolie",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chiliolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Forårsløgsolie",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Forårsløgsolie",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Forårsløgsolie",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Forårsløgsolie",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Forårsløgsolie",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Forårsløgsolie",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Forårsløgsolie",
+      "amount": 100,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chiliolie",
+      "note": "til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Oksespidsbryst",
+      "text": "Sæt ovnen på 140 °C."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Gnid kødet med olie og krydr med salt og peber."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Varm en stor gryde op ved middelhøj varme, og brun kødet på alle sider, til det er gyldent. Tag det op af gryden."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Svits løg og gulerødder i gryden ved middelvarme i ca. 5 minutter. Tilsæt sojasaucen."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Når det bobler, rører du tomatpuréen i og lader den stege et par minutter. Sprøjt derefter melet ned i gryden under omrøring."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Kom laurbærbladet i, og pisk fonden i lidt ad gangen – start med en smule, så melet ikke klumper, og hæld så resten i."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Læg kødet tilbage i gryden, og bring det i kog. Læg låg på, og sæt gryden i ovnen i 6 timer. Kig til væskemængden undervejs, og fyld op med mere fond, hvis der er brug for det."
+    },
+    {
+      "section": "Nudler",
+      "text": "Start nudlerne ca. 90 minutter, før kødet er færdigt. Bland mel og salt i en stor skål, og rør vandet i lidt ad gangen."
+    },
+    {
+      "section": "Nudler",
+      "text": "Ælt dejen i 5 minutter, til den er glat. Del den i otte lige store stykker, rul hvert stykke til en pølse, og pensl dem let med olie."
+    },
+    {
+      "section": "Nudler",
+      "text": "Dæk dejpølserne til, og lad dem hvile i 1 time."
+    },
+    {
+      "section": "Agurkesalat",
+      "text": "Slå agurken let med en kagerulle på langs, så den knuses."
+    },
+    {
+      "section": "Agurkesalat",
+      "text": "Hak agurken i små stykker, og vend den i en stor skål med resten af ingredienserne til salaten. Lad den trække, mens du gør resten klar."
+    },
+    {
+      "section": "Forårsløgsolie",
+      "text": "Kom alle ingredienser undtagen rapsolien i en tykbundet mellemstor kasserolle eller en stor, varmefast skål."
+    },
+    {
+      "section": "Forårsløgsolie",
+      "text": "Varm rapsolien op til 140 °C i en tykbundet kasserolle."
+    },
+    {
+      "section": "Forårsløgsolie",
+      "text": "Hæld den varme olie forsigtigt over de øvrige ingredienser. Det bruser kraftigt op, så hold afstand, og hæld evt. i omgange. Lad olien trække, mens du laver resten."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Tag gryden ud af ovnen, og løft kødet forsigtigt over på en tallerken."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Sigt saucen gennem en fin sigte ned i en skål, og hæld den tilbage i gryden."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Bring saucen i kog, og læg kødet tilbage. Lad saucen koge ind til en blank glaze, og smag til med salt og peber. Stil til side, mens nudlerne laves."
+    },
+    {
+      "section": "Nudler",
+      "text": "Når dejen har hvilet, bringes en stor gryde vand i kog. Drys to store bageplader let med mel."
+    },
+    {
+      "section": "Nudler",
+      "text": "Rul hver dejpølse ud på en let olieret bordplade med en indsmurt kagerulle, til du har en tynd firkant, der er lidt længere og bredere end kagerullen. Tryk en fordybning på langs midt i dejen med en spisepind eller skaftet på en tynd grydeske."
+    },
+    {
+      "section": "Nudler",
+      "text": "Hold i dejens to korte sider, og stræk den ud, mens du slår den mod bordet. Det er lyden, der har givet nudlerne deres navn."
+    },
+    {
+      "section": "Nudler",
+      "text": "Riv dejen over langs fordybningen, så du får to meget lange, tynde nudler."
+    },
+    {
+      "section": "Nudler",
+      "text": "Læg nudlerne udstrakte – ikke i rede – på en meldrysset bageplade. De klistrer let sammen, så de må ikke ligge i en klump. Du kan også strække og koge nudlerne lige før servering: to dejpølser giver én portion."
+    },
+    {
+      "section": "Nudler",
+      "text": "Stræk resten af dejen på samme måde, og læg nudlerne på pladerne, så de rører hinanden mindst muligt."
+    },
+    {
+      "section": "Nudler",
+      "text": "Kog nudlerne i vandet i et par minutter, til de er møre. Tiden afhænger af tykkelsen. Kog to nudler ad gangen, fisk dem op, og lad dem dryppe af i en si."
+    },
+    {
+      "section": "Til servering",
+      "text": "Vend nudlerne i en stor skål med al forårsløgsolien, og fordel dem i skåle."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg et stykke oksespidsbryst oven på hver portion sammen med agurkesalat. Top med koriander, chiliolie, sesamfrø og chiliflager."
+    }
+  ],
+  "changes": [
+    "Bread flour er erstattet af hvedemel.",
+    "Rice vinegar er erstattet af eddike.",
+    "Peanut oil er erstattet af rapsolie.",
+    "Beef short rib er erstattet af oksespidsbryst."
+  ]
+}

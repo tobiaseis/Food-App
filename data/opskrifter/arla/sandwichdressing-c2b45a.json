@@ -1,0 +1,84 @@
+{
+  "url": "https://www.arla.dk/opskrifter/sandwichdressing/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:20:36.086Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 6,
+  "title": "Sandwichdressing",
+  "intro": "En cremet og let krydret dressing af yoghurt, mayonnaise og sød sennep. Den passer godt til sandwich og bagte pitabrød.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "dijon-honningsennep eller anden sød sennep",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "stærk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Hæld yoghurten i en skål."
+    },
+    {
+      "section": null,
+      "text": "Rør mayonnaise, sennep, paprika, salt og peber forsigtigt ned i yoghurten."
+    },
+    {
+      "section": null,
+      "text": "Sæt skålen i køleskabet med låg eller film over i mindst 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt og peber, inden dressingen bruges."
+    }
+  ],
+  "changes": []
+}

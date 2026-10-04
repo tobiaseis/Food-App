@@ -1,0 +1,280 @@
+{
+  "url": "https://www.arla.dk/opskrifter/skaldyrssuppe-med-jomfruhummerspyd/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:05:06.830Z",
+  "total_minutes": 65,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 26,
+  "title": "Skaldyrssuppe med jomfruhummerspyd",
+  "intro": "Cremet suppe på en kraftig fond af skaldyrsskaller, hældt over friske salater og toppet med smørstegte jomfruhummerspyd. Servér med ristet franskbrød.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Skaldyrsfond",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 100,
+      "unit": "g",
+      "name": "skaldyrsskaller",
+      "note": "fx fra grønlandske rejer, jomfruhummere eller tigerrejer",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i grove stykker, ca. 150 g",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i grove stykker, ca. 75 g",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "i grove stykker, ca. 100 g",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 5,
+      "unit": "stilk",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille, pillet",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "fintrevet skal, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 10,
+      "unit": "stk",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 10,
+      "unit": "stk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsfond",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppefyld",
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppefyld",
+      "amount": 5,
+      "unit": "dl",
+      "name": "babyleaf",
+      "note": "renset",
+      "optional": false
+    },
+    {
+      "section": "Suppefyld",
+      "amount": 2,
+      "unit": "dl",
+      "name": "karse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppefyld",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jomfruhummerspyd",
+      "amount": 12,
+      "unit": "stk",
+      "name": "jomfruhummer",
+      "note": "rå, pillede haler",
+      "optional": false
+    },
+    {
+      "section": "Jomfruhummerspyd",
+      "amount": 6,
+      "unit": "stk",
+      "name": "bambusspyd",
+      "note": "ca. 10 cm lange",
+      "optional": false
+    },
+    {
+      "section": "Jomfruhummerspyd",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jomfruhummerspyd",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "fintrevet skal, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Jomfruhummerspyd",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Jomfruhummerspyd",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Færdig suppe",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Færdig suppe",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 6,
+      "unit": "skive",
+      "name": "franskbrød",
+      "note": "tynde, ristede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Skaldyrsfond",
+      "text": "Varm olien op i en stor gryde, til den er rigtig varm."
+    },
+    {
+      "section": "Skaldyrsfond",
+      "text": "Steg tomatpuré, skaller, løg og gulerod over høj varme i ca. 1 minut, mens du rører rundt."
+    },
+    {
+      "section": "Skaldyrsfond",
+      "text": "Kom selleri, persillestilke og de øvrige ingredienser til fonden i gryden."
+    },
+    {
+      "section": "Skaldyrsfond",
+      "text": "Bring det i kog, sæt låg på og lad det simre ved lav varme i ca. 20 minutter."
+    },
+    {
+      "section": "Skaldyrsfond",
+      "text": "Si fonden gennem en sigte, gerne beklædt med et klæde. Kog den derefter ind ved middelvarme, til der er ca. ½ liter tilbage."
+    },
+    {
+      "section": "Suppefyld",
+      "text": "Skær tomaterne i kvarte, fjern kernerne, og hak resten i små tern."
+    },
+    {
+      "section": "Suppefyld",
+      "text": "Fordel salat, tomater, karse og rucola mellem 6 små varmefaste skåle på ca. 3 dl, helst af glas."
+    },
+    {
+      "section": "Jomfruhummerspyd",
+      "text": "Træk to jomfruhummerhaler på hvert bambusspyd."
+    },
+    {
+      "section": "Jomfruhummerspyd",
+      "text": "Smelt smørret i en pande, til det er gyldent. Steg spyddene ved høj varme i ca. 3 minutter, og vend dem undervejs."
+    },
+    {
+      "section": "Jomfruhummerspyd",
+      "text": "Krydr med citronskal, salt og peber, og stil ét spyd i hver skål."
+    },
+    {
+      "section": "Færdig suppe",
+      "text": "Kog den indkogte fond, fløden og saltet op i en tykbundet gryde, og smag til."
+    },
+    {
+      "section": "Færdig suppe",
+      "text": "Hæld den varme suppe over i skålene ved bordet, evt. fra en kande. Server med ristet franskbrød."
+    }
+  ],
+  "changes": [
+    "Feldsalat er erstattet af babyleaf.",
+    "Løgspirer er erstattet af karse.",
+    "Rød skovsyre er erstattet af rucola."
+  ]
+}

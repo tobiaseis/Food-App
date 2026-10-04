@@ -1,0 +1,232 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/jacket-potato-board",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:53:12.609Z",
+  "total_minutes": 90,
+  "active_minutes": 30,
+  "yield_count": 2,
+  "source_lines": 20,
+  "title": "Bagte kartofler med fire fyld",
+  "intro": "Sprøde ovnbagte kartofler med fire forskellige fyld på ét bræt: tun, bagte bønner, coronation-kylling og ost med forårsløg. Perfekt, når man vil have lidt til enhver smag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kartofler",
+      "amount": 8,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "små bagekartofler",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tunfyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "tun på dåse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tunfyld",
+      "amount": 0.25,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tunfyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tunfyld",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tunfyld",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagte bønner og ost",
+      "amount": 100,
+      "unit": "g",
+      "name": "bagte bønner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagte bønner og ost",
+      "amount": null,
+      "unit": null,
+      "name": "Tabasco",
+      "note": "et stænk",
+      "optional": true
+    },
+    {
+      "section": "Bagte bønner og ost",
+      "amount": null,
+      "unit": null,
+      "name": "Worcestershire sauce",
+      "note": "et stænk",
+      "optional": true
+    },
+    {
+      "section": "Bagte bønner og ost",
+      "amount": 30,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet, lagret",
+      "optional": false
+    },
+    {
+      "section": "Coronation-kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "lille, kogt",
+      "optional": false
+    },
+    {
+      "section": "Coronation-kylling",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Coronation-kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mango chutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coronation-kylling",
+      "amount": null,
+      "unit": null,
+      "name": "mango chutney",
+      "note": "lidt ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Coronation-kylling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coronation-kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coronation-kylling",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coronation-kylling",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ost og forårsløg",
+      "amount": 50,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet, lagret",
+      "optional": false
+    },
+    {
+      "section": "Ost og forårsløg",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ost og forårsløg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Vælg de mindste kartofler og læg dem på en bageplade."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Gnid kartoflerne ind i olie, og drys dem med salt og peber."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Bag dem i 50–60 minutter, til de er møre indeni og har sprød skal."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rør hvert fyld sammen i sin egen skål, og smag det til med salt og peber."
+    },
+    {
+      "section": "Fyld",
+      "text": "Til tunfyldet blandes alle ingredienserne under tunfyldet. Gør det samme med de øvrige tre fyld."
+    },
+    {
+      "section": "Anretning",
+      "text": "Skær et kryds i toppen af hver bagt kartoffel, og læg dem på et stort bræt."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fyld to kartofler med hvert fyld, og læg dem sammen to og to."
+    },
+    {
+      "section": "Anretning",
+      "text": "Top kartoflerne med coronation-kyllingen med lidt mere chutney."
+    }
+  ],
+  "changes": [
+    "Maris piper-kartofler er erstattet af bagekartofler.",
+    "Medium curry powder er erstattet af mild karry.",
+    "Gurkemeje erstatter turmeric (samme krydderi, dansk navn)."
+  ]
+}

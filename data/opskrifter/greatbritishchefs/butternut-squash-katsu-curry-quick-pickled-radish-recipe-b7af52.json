@@ -1,0 +1,338 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/butternut-squash-katsu-curry-quick-pickled-radish-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:37:20.322Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 34,
+  "title": "Butternut katsu-karry med hurtigsyltede radiser",
+  "intro": "Panerede skiver af butternut squash serveres på sushiris med en blød, hjemmeblandet japansk karrysauce. Syltede radiser og frisk koriander giver syrlighed og friskhed.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sort peber",
+      "note": "hele peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 4,
+      "unit": "stk",
+      "name": "chili",
+      "note": "tørret, rød",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 3,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "kapsler",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 3,
+      "unit": "stk",
+      "name": "nellike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede radiser",
+      "amount": 150,
+      "unit": "g",
+      "name": "radiser",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede radiser",
+      "amount": 75,
+      "unit": "ml",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede radiser",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede radiser",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "en tommelfingerstor bid, hakket",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 750,
+      "unit": "ml",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Katsu",
+      "amount": 1,
+      "unit": "stk",
+      "name": "butternut squash",
+      "note": "skrællet og skåret i 2 cm tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Katsu",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Katsu",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Katsu",
+      "amount": 150,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Katsu",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Katsu",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 300,
+      "unit": "g",
+      "name": "sushiris",
+      "note": "skyllet og udblødt i 20 minutter",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 400,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "friske blade",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Karrypulver",
+      "text": "Rist alle krydderierne på en tør pande, til de dufter. Mal dem derefter til et fint pulver i en krydderikværn."
+    },
+    {
+      "section": "Syltede radiser",
+      "text": "Vend radiskeskiverne med eddike, sukker og salt. Lad dem stå, mens resten laves."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Varm olien i en gryde, og sæt løg, hvidløg og ingefær over middel-lav varme. Lad dem blive bløde i cirka 15 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Rør gulerødder, mel og tomatpuré i, og lad det stege med i 2 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Tilsæt karrypulveret, fonden, sojasaucen, mirinen og honningen. Lad saucen simre i 20 minutter, og blend den så til den er glat og blank."
+    },
+    {
+      "section": "Katsu",
+      "text": "Vend squashskiverne først i mel, derefter i æg og til sidst i panko. Steg dem i olie på en pande, til de er gyldne på begge sider og møre hele vejen igennem."
+    },
+    {
+      "section": "Katsu",
+      "text": "Læg skiverne på køkkenrulle, så overskydende fedt trækker af, og drys dem med flagesalt."
+    },
+    {
+      "section": "Ris",
+      "text": "Si risene godt fra. Kom dem i en gryde med vandet, og bring det i kog."
+    },
+    {
+      "section": "Ris",
+      "text": "Skru ned til middel-lav varme, læg et viskestykke og et låg over, og lad risene koge i cirka 13 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risene dampe med låg i 10 minutter. Luft dem op med en gaffel."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel risene i skåle, og læg katsu-skiverne ovenpå. Hæld karrysauce over, og top med syltede radiser, forårsløg og koriander."
+    }
+  ],
+  "changes": [
+    "Flagesalt er skiftet til almindeligt salt."
+  ]
+}

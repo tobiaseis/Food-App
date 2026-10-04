@@ -1,0 +1,154 @@
+{
+  "url": "https://www.arla.dk/opskrifter/kylling-og-kartofler-i-ovn/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:12:27.726Z",
+  "total_minutes": 70,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Ovnbagt kylling med kartofler og yoghurtdressing",
+  "intro": "En hel kylling bages delt i to sammen med kartofler, hvidløg og citron på én plade. Serveres med syrlig yoghurtdressing og grøn salat.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kylling og kartofler",
+      "amount": 1.4,
+      "unit": "kg",
+      "name": "hel kylling",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og kartofler",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og kartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og kartofler",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kylling og kartofler",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og kartofler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hvidløg",
+      "note": "hel knold",
+      "optional": false
+    },
+    {
+      "section": "Kylling og kartofler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "oregano",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling og kartofler",
+      "text": "Sæt ovnen på 225 °C (almindelig ovn). Beklæd en bageplade med bagepapir."
+    },
+    {
+      "section": "Kylling og kartofler",
+      "text": "Skær kyllingen over på langs, så den bliver til to halvdele, og læg dem på pladen."
+    },
+    {
+      "section": "Kylling og kartofler",
+      "text": "Smelt smørret og rør paprika, salt og peber i. Pensl blandingen over kyllingen."
+    },
+    {
+      "section": "Kylling og kartofler",
+      "text": "Skær kartofler, hvidløg og citron over på midten. Fordel dem rundt om kyllingen."
+    },
+    {
+      "section": "Kylling og kartofler",
+      "text": "Bag det hele midt i ovnen i ca. 45 minutter."
+    },
+    {
+      "section": "Dressing",
+      "text": "Pres saften fra den bagte citron og rør ca. 2 spsk af den sammen med yoghurt og salt."
+    },
+    {
+      "section": "Dressing",
+      "text": "Anret kyllingen med dressingen ved siden af. Drys med oregano og peber, og server med salat."
+    }
+  ],
+  "changes": [
+    "Frisk oregano er skrevet som oregano uden mængde, som i kilden."
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "url": "https://www.arla.dk/opskrifter/spaghetti-carbonara/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:13:18.778Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Spaghetti carbonara",
+  "intro": "Klassisk romersk pastaret med sprødt bacon, æggeblommer og masser af ost. Saucen bliver cremet af æggene og pastavandet – uden fløde.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon i tern",
+      "note": "lufttørret, gerne pancetta",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "til pynt",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Brun baconternene på en pande ved middel varme, til de er gyldne og sprøde. Læg dem på køkkenrulle, så fedtet løber af, og gem ca. 2 spsk af fedtet."
+    },
+    {
+      "section": null,
+      "text": "Rør æggeblommer, ost, peber og det gemte baconfedt sammen i en skål."
+    },
+    {
+      "section": null,
+      "text": "Bring vandet i kog i en stor gryde, og tilsæt saltet. Kog spaghettien i 8-10 minutter, til den er mør, men stadig fast i biden."
+    },
+    {
+      "section": null,
+      "text": "Øs 2,5 dl af kogevandet fra, og si resten af vandet fra spaghettien."
+    },
+    {
+      "section": null,
+      "text": "Kom spaghettien i en bred sauterpande ved lav varme. Tilsæt æggeblandingen og det afmålte kogevand, og rør rundt med en dejskraber, til saucen er cremet og klæber til pastaen."
+    },
+    {
+      "section": null,
+      "text": "Server med det samme, evt. med persille drysset over."
+    }
+  ],
+  "changes": [
+    "Parmigiano reggiano eller pecorino er skiftet til parmesan.",
+    "Lufttørret bacon i tern er skiftet til almindelig bacon i tern."
+  ]
+}

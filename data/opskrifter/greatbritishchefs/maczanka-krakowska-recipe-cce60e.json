@@ -1,0 +1,316 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/maczanka-krakowska-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:24:14.556Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 24,
+  "title": "Maczanka – krakowsk grisesandwich med sovs",
+  "intro": "Mør, langtidsbagt svinenakke med en kraftig løgsovs, serveret i bløde boller, der er dyppet i sovsen. Dertil hører hjemmesyltede, let gærede asier.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Let gærede asier",
+      "amount": 500,
+      "unit": "g",
+      "name": "agurk",
+      "note": "små, til syltning",
+      "optional": false
+    },
+    {
+      "section": "Let gærede asier",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "let knust",
+      "optional": false
+    },
+    {
+      "section": "Let gærede asier",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Let gærede asier",
+      "amount": 3,
+      "unit": "skive",
+      "name": "peberrod",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Let gærede asier",
+      "amount": 500,
+      "unit": "ml",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Let gærede asier",
+      "amount": 15,
+      "unit": "g",
+      "name": "salt",
+      "note": "havsalt",
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 1.2,
+      "unit": "kg",
+      "name": "nakkekam",
+      "note": "i ét stykke",
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kommen",
+      "note": "hele frø, knuste",
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sorte peberkorn, knuste",
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 750,
+      "unit": "ml",
+      "name": "fond",
+      "note": "svinefond eller hønsefond",
+      "optional": false
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "merian",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Boller",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boller",
+      "amount": 10,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boller",
+      "amount": 7,
+      "unit": "g",
+      "name": "tørgær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boller",
+      "amount": 20,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Boller",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Boller",
+      "amount": 300,
+      "unit": "ml",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Boller",
+      "amount": null,
+      "unit": null,
+      "name": "valmuefrø",
+      "note": "til drys",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Let gærede asier",
+      "text": "Lav asierne mindst 2 dage før. Læg agurk, hvidløg, dild og peberrod i en ren, skoldet krukke eller beholder."
+    },
+    {
+      "section": "Let gærede asier",
+      "text": "Rør saltet ud i det lunkne vand, og hæld lagen over, så agurkerne dækkes helt."
+    },
+    {
+      "section": "Let gærede asier",
+      "text": "Læg et klæde løst over åbningen, eller sæt låget på på klem. Lad krukken stå mørkt ved stuetemperatur i 2-3 dage."
+    },
+    {
+      "section": "Let gærede asier",
+      "text": "Når agurkerne er let syrlige og stadig sprøde, stilles de i køleskabet, til de skal bruges."
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "text": "Varm ovnen op til 150 °C."
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "text": "Krydr kødet rigeligt med salt og peber. Varm olien op i en tykbundet ovnfast gryde ved middelhøj varme, og brun kødet på alle sider, til det er dybt gyldent. Tag det op og stil det til side."
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "text": "Skru ned på lav varme, og lad løgene stege langsomt i gryden i 15-20 minutter, til de er bløde og gyldne."
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "text": "Rør hvidløg, paprika, kommen og peberkorn i, og lad det stege 1 minut, til det dufter. Læg kødet tilbage, og tilsæt laurbærblade, fond og merian."
+    },
+    {
+      "section": "Braiseret svinenakke",
+      "text": "Bring det i let kog. Sæt låg på, og lad kødet braisere i ovnen i 2½-3 timer, til det er så mørt, at det falder fra hinanden med en gaffel."
+    },
+    {
+      "section": "Boller",
+      "text": "Ælt mel, salt, gær og sukker sammen med smør og vand i en røremaskine med dejkrog, til det bliver en dej. Ælt derefter 8-10 minutter, til dejen er glat og elastisk."
+    },
+    {
+      "section": "Boller",
+      "text": "Dæk dejen til, og lad den hæve til dobbelt størrelse. Det tager 1-1½ time, afhængigt af køkkenets temperatur."
+    },
+    {
+      "section": "Boller",
+      "text": "Beklæd 2 bageplader med bagepapir."
+    },
+    {
+      "section": "Boller",
+      "text": "Del den hævede dej i 10 lige store stykker. Rul hvert stykke ud til en lang rulle, og slå en løs knude på midten, så der er et hul i den. Fold enderne ind i hullet, og stik dem ind under. Læg bollerne på pladerne med lidt afstand."
+    },
+    {
+      "section": "Boller",
+      "text": "Dæk bollerne til, og lad dem efterhæve ved stuetemperatur i 30-40 minutter."
+    },
+    {
+      "section": "Sovs og samling",
+      "text": "Tag den møre nakke ud af ovnen, og hæv temperaturen til 220 °C."
+    },
+    {
+      "section": "Sovs og samling",
+      "text": "Løft kødet op af væsken, og hold det varmt. Blend væske og løg glat, eventuelt i omgange, og hæld det tilbage i gryden."
+    },
+    {
+      "section": "Sovs og samling",
+      "text": "Pensl bollerne med lidt vand, og drys dem med valmuefrø. Bag dem i 15-18 minutter, til de er dybt gyldne og gennembagte. Stil dem på rist, så de køler lidt af."
+    },
+    {
+      "section": "Sovs og samling",
+      "text": "Lad sovsen koge ind ved middelvarme, til den er tyk og fyldig. Smag til med salt og peber."
+    },
+    {
+      "section": "Sovs og samling",
+      "text": "Del bollerne på midten, og læg dem med snitfladen nedad i sovsen i 1 minut, så de bliver helt gennemtrukne."
+    },
+    {
+      "section": "Sovs og samling",
+      "text": "Skær eller pluk imens kødet i stykker, og vend det med lidt sovs. Dryp asierne af, og skær dem i skiver."
+    },
+    {
+      "section": "Sovs og samling",
+      "text": "Smør sennep på de gennemtrukne bolleunderdele. Læg kød og lidt mere sovs ovenpå, og slut med bolletoppen. Server med ekstra sovs og asierne ved siden af."
+    }
+  ],
+  "changes": [
+    "Sarepska-sennep erstattes af almindelig sennep.",
+    "Stærkt brødmel erstattes af hvedemel.",
+    "Den polske kolbasz-agtige tradition er uændret; kommenfrø bruges som kommen."
+  ]
+}

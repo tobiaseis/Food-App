@@ -1,0 +1,146 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cashew-chicken-stir-fry",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T13:36:37.488Z",
+  "total_minutes": 20,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 11,
+  "title": "Kylling med cashewnødder og nudler",
+  "intro": "Hurtig wok med kylling, broccoli og gulerod i cremet nøddesauce. Nudlerne vendes med til sidst, og retten toppes med cashewnødder og forårsløg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til sauen",
+      "amount": 100,
+      "unit": "g",
+      "name": "jordnøddesmør",
+      "note": "cremet",
+      "optional": false
+    },
+    {
+      "section": "Til sauen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "gerne med lavt saltindhold",
+      "optional": false
+    },
+    {
+      "section": "Til sauen",
+      "amount": 100,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til woken",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æggenudler",
+      "note": "fuldkorn, i nøster",
+      "optional": false
+    },
+    {
+      "section": "Til woken",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til woken",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til woken",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket – fjern kernerne, hvis den ikke skal være så stærk",
+      "optional": false
+    },
+    {
+      "section": "Til woken",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i strimler på ca. 1 cm",
+      "optional": false
+    },
+    {
+      "section": "Til woken",
+      "amount": 125,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til woken",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i tændstikker",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": "usaltede, grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "skåret på skrå",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sauen",
+      "text": "Rør jordnøddesmør, sojasauce og vand sammen i en lille skål, til det er jævnt. Stil den til side."
+    },
+    {
+      "section": "Woken",
+      "text": "Kog nudlerne efter anvisningen på pakken, så de lige akkurat er møre. Hæld vandet fra, og lad dem stå i en skål med koldt vand, til du skal bruge dem."
+    },
+    {
+      "section": "Woken",
+      "text": "Varm olien op i en wok eller stor pande ved middelhøj varme. Steg hvidløg og chili i 2 minutter, til de er bløde og dufter."
+    },
+    {
+      "section": "Woken",
+      "text": "Kom kylling og broccoli i woken, og steg dem under jævnlig omrøring i 5-6 minutter, til begge dele er møre."
+    },
+    {
+      "section": "Woken",
+      "text": "Hæld vandet fra nudlerne. Vend dem i woken sammen med gulerødderne, og bland det hele med en tang, til nudlerne er varme hele vejen igennem."
+    },
+    {
+      "section": "Woken",
+      "text": "Tag panden af varmen, og rør sauen ud over retten."
+    },
+    {
+      "section": "Servering",
+      "text": "Server straks med cashewnødder og forårsløg drysset ovenpå."
+    }
+  ],
+  "changes": [
+    "Cashewsmør er erstattet af jordnøddesmør."
+  ]
+}

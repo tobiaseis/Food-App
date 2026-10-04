@@ -1,0 +1,262 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/grilled-tiger-prawn-cocktail-wrap-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:47:08.704Z",
+  "total_minutes": 90,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Wraps med grillede tigerrejer og cocktailsauce",
+  "intro": "Hjemmebagt fladbrød med grønt i dejen fyldes med grillede, krydrede tigerrejer, rucola og hjemmelavet cocktailsauce. En frisk og lidt festlig ret, der er nem at samle ved bordet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fladbrød",
+      "amount": 200,
+      "unit": "g",
+      "name": "asparges",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 600,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fladbrød",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 400,
+      "unit": "g",
+      "name": "tigerrejer",
+      "note": "rå, pillede og uden tarm",
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblomme",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": 3,
+      "unit": null,
+      "name": "tabasco",
+      "note": "stænk",
+      "optional": false
+    },
+    {
+      "section": "Cocktailsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe over",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fladbrød",
+      "text": "Kog vand op i en lille gryde. Blancher aspargesene i 30 sekunder, og køl dem af i isvand. Lad dem dryppe godt af, tør dem og hak dem fint."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Bland hvedemel, salt og bagepulver i en stor skål. Rør de hakkede asparges og olivenolien i."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Hæld det lunkne vand i lidt ad gangen, mens du rører med en gaffel eller hænderne, til dejen er blød og smidig. Ælt den i 5-6 minutter, til den er glat. Dæk til, og lad den hvile i 20 minutter."
+    },
+    {
+      "section": "Rejer",
+      "text": "Vend rejerne med hvidløg, røget paprika, olivenolie, salt og peber. Lad dem marinere i 15-20 minutter."
+    },
+    {
+      "section": "Cocktailsauce",
+      "text": "Pisk æggeblomme, eddike, citronsaft og sennep sammen i en ren skål eller en blender."
+    },
+    {
+      "section": "Cocktailsauce",
+      "text": "Tilsæt olien dråbevis under konstant piskning eller blendning, og øg til en jævn tynd stråle, når saucen begynder at binde."
+    },
+    {
+      "section": "Cocktailsauce",
+      "text": "Rør tomatpuré, worcestershiresauce og tabasco i. Smag til med salt og eventuelt mere citronsaft."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Del dejen i fire lige store kugler. Rul hver kugle ud på en meldrysset flade til cirka 20 cm i diameter."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Varm en tør pande eller grillpande op ved middelhøj til høj varme. Steg fladbrødene 1-2 minutter på hver side, til de hæver og får brune pletter. Hold dem varme i et viskestykke."
+    },
+    {
+      "section": "Rejer",
+      "text": "Varm en grillpande, til den ryger. Grill rejerne 1-2 minutter på hver side, til de lige er færdige og har lidt grillmærker. Stil dem til side."
+    },
+    {
+      "section": "Til servering",
+      "text": "Smør cocktailsauce på de varme fladbrød. Læg rucola og de grillede rejer ovenpå."
+    },
+    {
+      "section": "Til servering",
+      "text": "Pres citron over, og dryp eventuelt lidt olivenolie til sidst."
+    }
+  ],
+  "changes": [
+    "Asparges erstatter samphire, som er svær at få i danske supermarkeder."
+  ]
+}

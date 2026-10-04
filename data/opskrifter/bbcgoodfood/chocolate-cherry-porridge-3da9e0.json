@@ -1,0 +1,144 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chocolate-cherry-porridge",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:35:56.390Z",
+  "total_minutes": 20,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 11,
+  "title": "Chokoladegrød med kirsebær",
+  "intro": "Cremet havregrød med kakao og lønnesirup, toppet med varm kirsebærkompot, yoghurt og nødder. Kirsebærrene kan laves på forhånd og holder sig i køleskabet.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kirsebær",
+      "amount": 175,
+      "unit": "g",
+      "name": "kirsebær",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Kirsebær",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kirsebær",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Kirsebær",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grød",
+      "amount": 50,
+      "unit": "g",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grød",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kerner og frø",
+      "note": "formalet frøblanding",
+      "optional": false
+    },
+    {
+      "section": "Grød",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kakaopulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lønnesirup",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Grød",
+      "amount": 2,
+      "unit": "dl",
+      "name": "letmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 15,
+      "unit": "g",
+      "name": "pistaciekerner",
+      "note": "finthakkede, eller valnødder",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kirsebær",
+      "text": "Kom kirsebær, sukker og citronsaft i en lille gryde. Lad det simre ved middel varme i 4-5 minutter, til bærrene er bløde og har afgivet meget saft."
+    },
+    {
+      "section": "Kirsebær",
+      "text": "Hæld ca. 2 tsk af saften i en lille skål, og rør majsstivelsen ud i den, til der ikke er klumper. Rør blandingen tilbage i gryden."
+    },
+    {
+      "section": "Kirsebær",
+      "text": "Bring det i kog, så saften tykner en smule, og tag gryden af varmen. Kirsebærrene holder sig tildækket i køleskabet i op til 4 dage."
+    },
+    {
+      "section": "Grød",
+      "text": "Kom havregryn, frøblanding og salt i en gryde. Sigt kakaoen ovenpå."
+    },
+    {
+      "section": "Grød",
+      "text": "Rør lønnesirup og mælk i. Kog ved middel-lav varme i 4-5 minutter under konstant omrøring, til grøden er tyk og blank."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld grøden i en skål. Top med yoghurt og kirsebær, og drys eventuelt hakkede nødder over."
+    }
+  ],
+  "changes": [
+    "Formalet frøblanding er skrevet som kerner og frø, da den ikke findes som færdigvare i Danmark.",
+    "Letmælk erstatter semi-skimmed milk.",
+    "Majsstivelse erstatter cornflour."
+  ]
+}

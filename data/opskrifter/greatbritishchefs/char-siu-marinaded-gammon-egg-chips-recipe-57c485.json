@@ -1,0 +1,191 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/char-siu-marinaded-gammon-egg-chips-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:45:23.341Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Char siu-marineret skinkesteak med spejlæg og pommes frites",
+  "intro": "Tykke skinkesteaks marineres i en sødsalt asiatisk marinade og stegnes, til de er karamelliserede. De serveres med sprødt spejlæg og krydrede pommes frites.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "skinke",
+      "note": "tykke steaks à ca. 300 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "pommes frites",
+      "note": "til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "svampekrydderi",
+      "note": "i pulverform, efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 400,
+      "unit": "g",
+      "name": "hoisinsauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 4,
+      "unit": "dl",
+      "name": "øl",
+      "note": "lys pilsner",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "risvineddike",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": "lys",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 60,
+      "unit": "g",
+      "name": "sennep",
+      "note": "stærk",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hvidt, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 20,
+      "unit": "g",
+      "name": "peber",
+      "note": "sort, groft knust",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "chiliolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "store, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Pisk hoisinsauce, øl, eddike, sojasauce og sennep sammen i en stor skål, til massen er helt glat. Rør løg, hvidløg og peber i."
+    },
+    {
+      "section": "Marinade",
+      "text": "Læg skinkesteaksene i marinaden, så de er helt dækket. Lad dem trække mindst 6 timer – gerne natten over i køleskabet."
+    },
+    {
+      "section": "Stegning",
+      "text": "Tag steaksene op af marinaden, og lad dem stå ved stuetemperatur i mindst en time."
+    },
+    {
+      "section": "Stegning",
+      "text": "Steg dem på en varm pande, til de er gyldne og karamelliserede, og kernetemperaturen er 60 °C (medium)."
+    },
+    {
+      "section": "Stegning",
+      "text": "Stil steaksene et lunt sted, så kødet kan hvile."
+    },
+    {
+      "section": "Pommes frites og æg",
+      "text": "Tilbered pommes frites, og drys dem med svampekrydderi efter smag."
+    },
+    {
+      "section": "Pommes frites og æg",
+      "text": "Slå æggene ud på en varm pande med lidt smør, og steg dem, til bunden er sprød."
+    },
+    {
+      "section": "Anretning",
+      "text": "Skær steaksene i tykke skiver. Læg spejlæg ovenpå, og server pommes frites ved siden af."
+    },
+    {
+      "section": "Anretning",
+      "text": "Dryp chiliolie over æggene, og top med forårsløg og koriander."
+    }
+  ],
+  "changes": [
+    "Gammon steaks er erstattet med skinke i tykke steaks.",
+    "Char siu-sauce er erstattet med hoisinsauce.",
+    "Mushroom seasoning powder er erstattet med svampekrydderi.",
+    "Lager er erstattet med lys pilsner.",
+    "English mustard er erstattet med stærk sennep.",
+    "Rice wine vinegar er erstattet med risvineddike."
+  ]
+}

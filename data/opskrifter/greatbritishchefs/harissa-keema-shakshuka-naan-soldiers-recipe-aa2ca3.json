@@ -1,0 +1,256 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/harissa-keema-shakshuka-naan-soldiers-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:51:19.876Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Harissa-keema shakshuka med naanstrimler",
+  "intro": "Krydret lammefars i tomatsauce med harissa og sumak, hvor æggene pocheres direkte i panden. Serveres med hvidløgsyoghurt og ristet naanbrød til at dyppe.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Keema",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "stort, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til løget",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 2.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø, knuste",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sumak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 400,
+      "unit": "g",
+      "name": "lammefars",
+      "note": "mindst 10 % fedt",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "store, knust til en pasta",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "frisk, revet",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": "mørk",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Keema",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": 150,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "stort, knust til en pasta",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "naanbrød",
+      "note": "eller 4 mini",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sumak",
+      "note": "plus lidt ekstra til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "harissa",
+      "note": "til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Keema",
+      "text": "Varm en smule olivenolie i en dyb pande. Kom løget i sammen med en knivspids salt, og svits det ved middelvarme i 8-9 minutter, til det er blankt."
+    },
+    {
+      "section": "Keema",
+      "text": "Rør spidskommen og sumak i, og lad det stege under omrøring i 1 minut."
+    },
+    {
+      "section": "Keema",
+      "text": "Tilsæt lammefarsen, og steg den i 7-8 minutter, til det meste af væsken er kogt væk, og kødet lige begynder at tage farve."
+    },
+    {
+      "section": "Keema",
+      "text": "Kom hvidløg, ingefær, harissa og tomatpuré i panden, og steg det i 1 minut."
+    },
+    {
+      "section": "Keema",
+      "text": "Rør brun farin, eddike, salt, hakkede tomater og det kogende vand i. Læg låg på, og lad saucen simre ved middelvarme i 10-12 minutter. Rør af og til, indtil olien begynder at skille fra saucen."
+    },
+    {
+      "section": "Keema",
+      "text": "Tag låget af, og lad saucen koge ind i yderligere 8-10 minutter, til den er tyk."
+    },
+    {
+      "section": "Keema",
+      "text": "Lav fire fordybninger i kødsaucen, og slå et æg ud i hver. Læg låg på, og lad æggene stå ved middelvarme i 7-9 minutter, til hviderne er stivnet, som du bedst kan lide dem."
+    },
+    {
+      "section": "Hvidløgsyoghurt",
+      "text": "Bland yoghurt, hvidløg og salt i en skål, mens æggene gør sig."
+    },
+    {
+      "section": "Til servering",
+      "text": "Rist naanbrødet, smør det let med smør, drys med sumak, og skær det i strimler."
+    },
+    {
+      "section": "Til servering",
+      "text": "Træk hvidløgsyoghurten ud over keemaen i vandrette baner. Top med dild, en stribe harissa og lidt sumak, og server med naanstrimlerne."
+    },
+    {
+      "section": "Tip",
+      "text": "Har du tid, så tag panden af varmen efter lammefarsen er brunet, og lad den stå i 4-5 timer. Smagene trækker så bedre sammen. Varm den op til det simrer, før du fortsætter med hvidløg, ingefær og resten."
+    }
+  ],
+  "changes": []
+}

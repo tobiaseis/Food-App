@@ -1,0 +1,188 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/prawn-cocktail-sandwich-charred-babygem-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:26:52.853Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 14,
+  "title": "Rejemad med stegt babysalat",
+  "intro": "En klassisk rejecocktail på sandwich med hjemmelavet krydret mayonnaise og sprød, ristet salat. Serveres med purløg drysset over.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Til mayonnaisen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mayonnaisen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Til mayonnaisen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "Citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til mayonnaisen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til mayonnaisen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mayonnaisen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "Olie",
+      "note": "neutral",
+      "optional": false
+    },
+    {
+      "section": "Til mayonnaisen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mayonnaisen",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mayonnaisen",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sandwichen",
+      "amount": 200,
+      "unit": "g",
+      "name": "Rejer",
+      "note": "kogte og pillede",
+      "optional": false
+    },
+    {
+      "section": "Til sandwichen",
+      "amount": 2,
+      "unit": "skive",
+      "name": "Brød",
+      "note": "hvidt surdejsbrød",
+      "optional": false
+    },
+    {
+      "section": "Til sandwichen",
+      "amount": null,
+      "unit": null,
+      "name": "Purløg",
+      "note": "fint hakket, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "Olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Salat",
+      "note": "babysalat, delt på langs",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "Eddike",
+      "note": "sherryeddike",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til mayonnaisen",
+      "text": "Rør æggeblomme, sennep, citronsaft, paprika og cayennepeber sammen i en skål."
+    },
+    {
+      "section": "Til mayonnaisen",
+      "text": "Pisk olien i en tynd stråle i blommeblandingen, til du har en jævn mayonnaise."
+    },
+    {
+      "section": "Til mayonnaisen",
+      "text": "Vend ketchup i og smag til med salt og peber."
+    },
+    {
+      "section": "Til sandwichen",
+      "text": "Vend rejerne med så meget af mayonnaisen, som smager dig."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Pensl salatens skåret side med olie og drys med salt."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Brun salaten med snitfladen nedad på en varm pande, og tag den derefter af panden."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Snit salaten fint, vend den med eddiken, og smag til med salt."
+    },
+    {
+      "section": "Til sandwichen",
+      "text": "Læg et stykke brød på et bræt, og fordel rejeblandingen og salaten ovenpå."
+    },
+    {
+      "section": "Til sandwichen",
+      "text": "Læg det andet stykke brød på, og drys med purløg inden servering."
+    }
+  ],
+  "changes": [
+    "Sherryeddike er skiftet til eddike.",
+    "Cayennepeber er beholdt under dansk navn, da der ikke er en bedre afløser.",
+    "Surdejsbrød er skiftet til hvidt brød i skiver."
+  ]
+}

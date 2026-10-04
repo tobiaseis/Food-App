@@ -1,0 +1,267 @@
+{
+  "url": "https://www.valdemarsro.dk/bao-med-asiatiske-koedboller/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:40:20.015Z",
+  "total_minutes": 240,
+  "active_minutes": 90,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Bao med asiatiske kyllingekødboller",
+  "intro": "Bløde, dampede bao-boller fyldt med saftige kyllingekødboller i sticky sauce og friske grøntsager. Dejen hæver i ro og mag, så retten kan forberedes i god tid.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bao",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bao",
+      "amount": 10,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bao",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bao",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Bao",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bao",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bao",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til penslning",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket kyllingekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintsnittede",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sticky sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sticky sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sticky sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sticky sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "æblejuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sticky sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "eller persille",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bao",
+      "text": "Rør gæren ud i vandet. Tilsæt sukker, smeltet smør, salt og halvdelen af melet, og rør, indtil dejen er helt glat."
+    },
+    {
+      "section": "Bao",
+      "text": "Ælt resten af melet i lidt ad gangen. Når dejen er smidig, skal den hæve – enten natten over i køleskabet eller i 2 timer ved stuetemperatur."
+    },
+    {
+      "section": "Bao",
+      "text": "Skær dejen i otte lige store stykker, og rul hvert stykke til en rund, flad plade. Pensl den ene side med olie, og læg pladerne sammen på midten, så den olierede side vender indad. Lad dem hæve i 30 minutter."
+    },
+    {
+      "section": "Bao",
+      "text": "Sæt en dampkurv over en gryde med kogende vand. Klip et stykke bagepapir til bunden, og prik mange huller i det. Damp et par boller ad gangen i 20-25 minutter."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Bland kyllingekød, forårsløg, koriander, ingefær, hvidløg og chili til en fars, og krydr med salt og peber. Chilien kan tilpasses efter smag eller udelades, hvis du ikke vil have det for stærkt."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Rul farsen til små boller, og brun dem i olie på panden i 7-8 minutter. Vend dem ofte, så de bliver runde. Kontrollér, at de er gennemstegte, og stil dem på et fad."
+    },
+    {
+      "section": "Sticky sauce",
+      "text": "Hæld alle ingredienserne til saucen på en ren pande, og bring dem i kog under omrøring. Lad saucen reducere, til den er lidt tykkere."
+    },
+    {
+      "section": "Sticky sauce",
+      "text": "Kom kødbollerne tilbage på panden, og vend dem rundt i saucen. Sænk varmen, og lad dem simre, til saucen klistrer om dem."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fyld baoboller med grøntsager og kødboller. Top med sesamfrø, forårsløg og frisk koriander."
+    }
+  ],
+  "changes": [
+    "Soja er skrevet som sojasauce.",
+    "Hakket kylling er skrevet som hakket kyllingekød."
+  ]
+}

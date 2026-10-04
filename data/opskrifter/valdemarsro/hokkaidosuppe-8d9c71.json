@@ -1,0 +1,214 @@
+{
+  "url": "https://www.valdemarsro.dk/hokkaidosuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:38:22.977Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 20,
+  "title": "Hokkaidosuppe med græskarkerner og æble",
+  "intro": "Cremet suppe af hokkaido, gulerødder og kartofler med lidt varme fra chili og ingefær. Toppen af ristede græskarkerner, friske æbletern og yoghurt giver bid og friskhed.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "hokkaido græskar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, ca. ½ til suppen og ½ til æblerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "dl",
+      "name": "græskarkerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "frisk, bladene",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skyl og skrub græskaret, og del det på midten. Skrab kernerne ud med en ske, og skær græskaret med skræl i grove tern."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en gryde ved middelvarme. Rør græskar, løg, hvidløg, gulerødder, kartofler, chili, spidskommen og ingefær rundt i 1-2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld fonden over, så den dækker cirka to tredjedele af grøntsagerne. Hellere for lidt end for meget – du kan altid tynde suppen ud senere."
+    },
+    {
+      "section": null,
+      "text": "Sæt låg på, og lad suppen simre i 15-18 minutter, til grøntsagerne er møre."
+    },
+    {
+      "section": null,
+      "text": "Blend suppen helt glat. Rør saft fra ½ citron og fløden i, og blend igen. Smag til med salt og peber."
+    },
+    {
+      "section": "Topping",
+      "text": "Rist græskarkernerne i smør på en pande ved middelvarme under omrøring, til de begynder at poppe. Tag dem af panden, og drys dem med lidt salt."
+    },
+    {
+      "section": "Topping",
+      "text": "Pres saften af den anden halve citron, og rør den sammen med honningen. Vend æbleternene i blandingen."
+    },
+    {
+      "section": "Topping",
+      "text": "Server suppen med græskarkerner, timian, æbletern og yoghurt, og afslut med friskkværnet peber."
+    }
+  ],
+  "changes": [
+    "Hokkaido græskar og grøntsagsbouillon er skrevet som hokkaido græskar og grøntsagsfond efter varekataloget."
+  ]
+}

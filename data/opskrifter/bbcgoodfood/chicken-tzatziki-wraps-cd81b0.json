@@ -1,0 +1,110 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-tzatziki-wraps",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:25:45.216Z",
+  "total_minutes": 25,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 6,
+  "title": "Kyllingewraps med tzatziki",
+  "intro": "Sprøde, gyldne kyllingestrimler i fuldkornswraps med cremet tzatziki og friske tomater. En hurtig ret, der er klar på under en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "tre fjerdedele uden kerner og groft revet, resten halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "store, modne, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bland den revne agurk med yoghurten i en skål, og smag til med salt og peber. Stil tzatzikien til side."
+    },
+    {
+      "section": null,
+      "text": "Krydr kyllingen med salt og peber, og vend den med halvdelen af olien."
+    },
+    {
+      "section": null,
+      "text": "Varm resten af olien op på en pande ved middel varme. Steg kyllingen i 8-10 minutter, til den er gennemstegt og gyldenbrun."
+    },
+    {
+      "section": null,
+      "text": "Opvarm wrapsene på en tør pande eller i mikrobølgeovnen."
+    },
+    {
+      "section": null,
+      "text": "Smør 2 spsk tzatziki ud på hver wrap. Læg kylling, tomater og agurkeskiver ovenpå, og drys med lidt ekstra peber, hvis du vil."
+    },
+    {
+      "section": null,
+      "text": "Slå siderne ind over fyldet, rul wrapsene stramt sammen, og server dem straks."
+    }
+  ],
+  "changes": [
+    "Fuldkornswraps er erstattet med almindelige tortillas i fuldkorn."
+  ]
+}

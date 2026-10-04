@@ -1,0 +1,143 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-pesto-eggs-on-toast",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:12:00.300Z",
+  "total_minutes": 20,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 10,
+  "title": "Pesto-æg på rugbrød med tomat og spinat",
+  "intro": "Spejlæg og tomater steges i hjemmelavet basilikumpesto og serveres med lun spinat på ristet rugbrød. En hurtig og let morgenmad eller frokost.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 70,
+      "unit": "g",
+      "name": "rugbrød",
+      "note": "2-4 tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 170,
+      "unit": "g",
+      "name": "tomater",
+      "note": "gerne på stilk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chili",
+      "note": "flager",
+      "optional": true
+    },
+    {
+      "section": "Pesto",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 10,
+      "unit": "g",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pesto",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pesto",
+      "text": "Pil hvidløget og kom det i en lille foodprocessor sammen med basilikum, pinjekerner, rapsolie og vand. Blend, til massen er glat."
+    },
+    {
+      "section": "Pesto",
+      "text": "Rør parmesan i. Har du ikke en foodprocessor, kan du bruge en stavblender."
+    },
+    {
+      "section": null,
+      "text": "Rist rugbrødet og fordel det på to tallerkener."
+    },
+    {
+      "section": null,
+      "text": "Varm pestoen op på en pande ved middelvarme i 30 sekunder, mens du rører rundt."
+    },
+    {
+      "section": null,
+      "text": "Slå æggene ud i den ene side af panden og læg tomaterne i den anden. Steg i pestoen, til æggene er færdige efter din smag."
+    },
+    {
+      "section": null,
+      "text": "Løft æggene op og læg dem på hver sin skive rugbrød."
+    },
+    {
+      "section": null,
+      "text": "Kom spinaten på panden til tomaterne, og skru op på høj varme. Steg i 2-3 minutter, til spinaten er faldet sammen og tomaterne er bløde."
+    },
+    {
+      "section": null,
+      "text": "Fordel grøntsagerne på de øvrige skiver rugbrød, og drys eventuelt med chiliflager."
+    }
+  ],
+  "changes": [
+    "Rugbrød i stedet for rughvedesyrebrød (rye sourdough).",
+    "Spinat i stedet for baby spinat."
+  ]
+}

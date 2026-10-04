@@ -1,0 +1,180 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/besan-chilla",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:45:19.111Z",
+  "total_minutes": 25,
+  "active_minutes": 15,
+  "yield_count": 3,
+  "source_lines": 12,
+  "title": "Besan chilla (indiske kikærtemelspandekager)",
+  "intro": "Tynde, krydrede pandekager af kikærtemel med løg, tomat, chili og koriander. De er hurtige at lave og er gode med chutney og tamarindyoghurt.",
+  "servings": 3,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 120,
+      "unit": "g",
+      "name": "kikærtemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "vand",
+      "note": "plus op til 80 ml efter behov",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "eller ghee, efter behov",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mangochutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tamarindyoghurt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bland kikærtemel, salt og alle krydderierne i en skål."
+    },
+    {
+      "section": null,
+      "text": "Rør løg, tomat, chili, ingefær og koriander i melblandingen."
+    },
+    {
+      "section": null,
+      "text": "Hæld vandet i og rør, til dejen er tyk, men stadig kan hældes. Tilsæt lidt mere vand, hvis den er for tyk."
+    },
+    {
+      "section": null,
+      "text": "Varm en stor non-stick-pande op ved høj varme. Skru ned til middel, når den er varm, og tilsæt lidt af olien eller ghee'en."
+    },
+    {
+      "section": null,
+      "text": "Rør rundt i dejen. Hæld 2 spsk midt på panden, og stryg den ud til en tynd pandekage."
+    },
+    {
+      "section": null,
+      "text": "Steg i 1-2 minutter, til kanten slipper panden. Vend pandekagen, og tryk den let ned med en paletkniv."
+    },
+    {
+      "section": null,
+      "text": "Steg videre i 1-2 minutter, til den har gyldne pletter og er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Steg resten af dejen på samme måde, og tilsæt olie undervejs. Hold panden varm, men ikke så varm, at pandekagerne brænder på."
+    },
+    {
+      "section": null,
+      "text": "Server med mangochutney og tamarindyoghurt."
+    }
+  ],
+  "changes": [
+    "Ajwain er erstattet af tørret timian.",
+    "Gram flour er erstattet af kikærtemel.",
+    "Vegetable oil er erstattet af olie."
+  ]
+}

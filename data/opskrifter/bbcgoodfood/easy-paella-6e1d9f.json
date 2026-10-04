@@ -1,0 +1,148 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/easy-paella",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:58:05.902Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Nem paella med skaldyr",
+  "intro": "En hurtig paella på panden med tomat, røget paprika og frosne skaldyr. Retten er klar på under en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "stærk, røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "risotto ris",
+      "note": "eller paellaris",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 9,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "skaldyrsblanding",
+      "note": "frossen, tøet op",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halvdelen presses til saft, resten skæres i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "fladbladet, groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olivenolien op i en stor pande eller wok, og blød løget i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør paprika, timian og ris i, og rør rundt i 1 minut. Hæld evt. vinen på, og lad den koge væk."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt hakkede tomater og fond, og krydr med salt og peber. Kog uden låg i ca. 15 minutter, og rør af og til, til risene næsten er møre, men stadig står i lidt væske."
+    },
+    {
+      "section": null,
+      "text": "Vend skaldyrene i, læg låg på, og lad det simre i 5 minutter, til skaldyrene er gennemvarme og risene er møre."
+    },
+    {
+      "section": null,
+      "text": "Pres citronsaft over, drys med persille, og server med citronbåde."
+    }
+  ],
+  "changes": [
+    "Hakkede tomater med hvidløg er erstattet af almindelige hakkede tomater.",
+    "Tør sherry er erstattet af hvidvin.",
+    "Frossen seafood mix er erstattet af frossen skaldyrsblanding."
+  ]
+}

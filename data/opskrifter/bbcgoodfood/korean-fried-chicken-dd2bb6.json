@@ -1,0 +1,167 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/korean-fried-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:57:21.686Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Koreansk friturestegt kylling",
+  "intro": "Sprøde kyllingevinger vendt i en sød og lidt stærk sauce med gochujang, soja og hvidløg. Drys med sesamfrø og forårsløg, og server med det samme.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingevinger",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "ingefær",
+      "note": "et stort stykke, skrællet og fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "sesamfrø",
+      "note": "til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "forårsløg",
+      "note": "i skiver, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 6,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "ingefær",
+      "note": "et lille stykke, skrællet og revet",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sauce",
+      "text": "Kom alle ingredienserne til saucen i en lille gryde, og lad den koge ved svag varme, til den er tyk og sirupsagtig. Det tager 3-4 minutter."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tag gryden af varmen, og stil den til side."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Krydr vingerne med salt, peber og den revne ingefær."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Vend dem i majsstivelsen, så de er dækket helt."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Varm ca. 2 cm olie op på en stor pande ved middelhøj varme. Steg vingerne i 8-10 minutter, og vend dem undervejs, til de er sprøde."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Løft vingerne op af olien, og lad dem dryppe af på køkkenrulle i ca. 2 minutter."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm saucen op igen, og vend de sprøde vinger rundt i den."
+    },
+    {
+      "section": "Servering",
+      "text": "Kom vingerne i en skål, og drys med sesamfrø og forårsløg."
+    }
+  ],
+  "changes": [
+    "Cornflour er erstattet med majsstivelse.",
+    "Vegetable oil er erstattet med rapsolie."
+  ]
+}

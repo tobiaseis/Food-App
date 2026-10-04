@@ -1,0 +1,164 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/tamales",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:33:13.235Z",
+  "total_minutes": 90,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Tamales med kylling og salsa verde",
+  "intro": "Dampede majsdejspakker i majsblade, fyldt med saftig kylling i grøn salsa. Server dem med creme fraiche, koriander og hakket løg.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tamales",
+      "amount": 16,
+      "unit": "stk",
+      "name": "tørrede majsblade",
+      "note": "til tamales",
+      "optional": false
+    },
+    {
+      "section": "Tamales",
+      "amount": 125,
+      "unit": "g",
+      "name": "Lard",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Tamales",
+      "amount": 300,
+      "unit": "g",
+      "name": "masa harina",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tamales",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tamales",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tamales",
+      "amount": 3.5,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grillkylling",
+      "note": "færdigstegt",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "salsa verde",
+      "note": "plus ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Majsblade",
+      "text": "Læg majsbladene i en varmefast skål eller gryde, og dæk dem med meget varmt vand. Læg noget tungt oven på, så de hele tiden ligger under vand. Lad dem trække i 30 minutter."
+    },
+    {
+      "section": "Dej",
+      "text": "Pisk lardet i en røremaskine med paddle, eller med håndmixer, ved middel hastighed i ca. 4 minutter, til det er let og glat."
+    },
+    {
+      "section": "Dej",
+      "text": "Tilsæt masa harina, salt og bagepulver, og kør på lav hastighed i ca. 1 minut, til det er blandet."
+    },
+    {
+      "section": "Dej",
+      "text": "Hæld fonden i en tynd stråle i, mens maskinen kører. Fortsæt i ca. 5 minutter, til dejen er samlet og svampet i konsistensen."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pil kødet af grillkyllingen, fjern skind og ben, og pluk kødet i strimler i en skål. Rør salsa verde i."
+    },
+    {
+      "section": "Fyld tamales",
+      "text": "Si majsbladene fra, og tør dem med køkkenrulle eller et rent viskestykke. Læg ét blad ad gangen fladt foran dig med den smalle ende nærmest dig."
+    },
+    {
+      "section": "Fyld tamales",
+      "text": "Smør 2 spsk dej tyndt ud midt på den øvre del af bladet med en lille spatel. Lad ca. 8 cm være fri nederst og ca. 2,5 cm i hver side."
+    },
+    {
+      "section": "Fyld tamales",
+      "text": "Anret 2 spsk kyllingefyld i en lodret stribe midt på dejen."
+    },
+    {
+      "section": "Fyld tamales",
+      "text": "Fold den ene side ind over fyldet til midten, og fold den anden side hen over, så de lige overlapper. Slå den smalle ende op og over, så du får en pakke med åben top. Gentag med resten af bladene, dejen og fyldet."
+    },
+    {
+      "section": "Dampning",
+      "text": "Sæt en dampkurv i en stor gryde, og fyld vand på, så det lige rører bunden af kurven. Bring det i kog."
+    },
+    {
+      "section": "Dampning",
+      "text": "Stil tamalesene op med den åbne ende opad i kurven. Læg låg på, skru ned på lav varme, og damp i 45 minutter til 1 time. Fyld om nødvendigt mere vand på undervejs."
+    },
+    {
+      "section": "Dampning",
+      "text": "Tjek én tamale ved at folde den ud. Slipper dejen bladet, er de færdige. Ellers damp dem 10 minutter mere."
+    },
+    {
+      "section": "Servering",
+      "text": "Lad tamalesene hvile 5 minutter med låg på. Server dem med ekstra salsa verde, creme fraiche, koriander og hakket løg."
+    }
+  ],
+  "changes": [
+    "Crema er erstattet med creme fraiche.",
+    "Rotisserie chicken er erstattet med en færdigstegt grillkylling.",
+    "Vegetable shortening som alternativ til lard er udeladt; der bruges lard."
+  ]
+}

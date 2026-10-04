@@ -1,0 +1,260 @@
+{
+  "url": "https://www.valdemarsro.dk/luksus-stjerneskud/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:00:16.991Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Luksus stjerneskud",
+  "intro": "Klassisk dansk stjerneskud med både dampet og paneret rødspætte på rugbrød, toppet med rejer, asparges og stenbiderrogn. Serveres med en cremet tomatdressing og masser af dild.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fisk",
+      "amount": 8,
+      "unit": "stk",
+      "name": "rødspættefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 50,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": 100,
+      "unit": "g",
+      "name": "rejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": 100,
+      "unit": "g",
+      "name": "stenbiderrogn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": 4,
+      "unit": "stk",
+      "name": "hvide asparges",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": 4,
+      "unit": "stk",
+      "name": "grønne asparges",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "saft",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "paprika",
+      "note": "røget",
+      "optional": true
+    },
+    {
+      "section": "Anretning",
+      "amount": 4,
+      "unit": "skive",
+      "name": "brød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Anretning",
+      "amount": 4,
+      "unit": "håndfuld",
+      "name": "salat",
+      "note": "grøn",
+      "optional": false
+    },
+    {
+      "section": "Anretning",
+      "amount": 12,
+      "unit": "skive",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Anretning",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Anretning",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Anretning",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Bland creme fraiche, mayonnaise og tomatpuré. Krydr med salt, peber, citronsaft og paprika. Den røgede paprika giver ekstra smag."
+    },
+    {
+      "section": "Dampet fisk",
+      "text": "Varm ovnen op til 175 °C varmluft. Krydr fire af fileterne med salt og peber, og rul dem op."
+    },
+    {
+      "section": "Dampet fisk",
+      "text": "Læg rullerne i et smurt ovnfast fad, og hæld hvidvinen over. Læg en ovnfast tallerken over fadet, og bag i 10-15 minutter."
+    },
+    {
+      "section": "Stegt fisk",
+      "text": "Tør de øvrige fileter med køkkenrulle, og vend dem i melet. Pisk ægget i en dyb tallerken, og bland rasp med salt og peber på en anden."
+    },
+    {
+      "section": "Stegt fisk",
+      "text": "Dyp fileterne først i æg og så i rasp. Steg dem gyldne i smør og olie på en pande."
+    },
+    {
+      "section": "Asparges",
+      "text": "Skræl de hvide asparges med en tyndskræller, og skær de trævlede ender af. Kog dem i 3 minutter i letsaltet vand med peber og en citronbåd."
+    },
+    {
+      "section": "Asparges",
+      "text": "Bryd de hårde ender af de grønne asparges. Smelt lidt smør på en varm pande, og steg aspargesene i 1-2 minutter. Smag til med salt og peber."
+    },
+    {
+      "section": "Asparges",
+      "text": "Skær alle aspargesene i passende stykker."
+    },
+    {
+      "section": "Anretning",
+      "text": "Smør brødet, og læg salat på. Fordel dampet og stegt fisk, rejer, asparges og stenbiderrogn ovenpå."
+    },
+    {
+      "section": "Anretning",
+      "text": "Top med dressing, dild, agurk og citronbåde. Drys med flagesalt og friskkværnet peber."
+    }
+  ],
+  "changes": []
+}

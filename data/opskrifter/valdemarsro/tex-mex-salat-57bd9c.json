@@ -1,0 +1,228 @@
+{
+  "url": "https://www.valdemarsro.dk/tex-mex-salat/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:47:01.038Z",
+  "total_minutes": 20,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Tex Mex-salat",
+  "intro": "Farverig salat med krydret bønnemos, cremet guacamole, majs og friske grøntsager. Det hele anrettes i små portioner og toppes med ost, koriander og creme fraiche.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bønnemix",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": "Bønnemix",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnemix",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bønnemix",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bønnemix",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnemix",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bønnemix",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bønnemix",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Bønnemix",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Salat og tilbehør",
+      "amount": 125,
+      "unit": "g",
+      "name": "salat",
+      "note": "efter eget valg",
+      "optional": false
+    },
+    {
+      "section": "Salat og tilbehør",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Salat og tilbehør",
+      "amount": 10,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Salat og tilbehør",
+      "amount": 2,
+      "unit": "stk",
+      "name": "majskolbe",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og tilbehør",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Salat og tilbehør",
+      "amount": 100,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Salat og tilbehør",
+      "amount": 50,
+      "unit": "g",
+      "name": "nachos",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og tilbehør",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": "18 %, rørt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Majs",
+      "text": "Læg majskolberne i en gryde med letsaltet vand, og lad dem koge i 25 minutter."
+    },
+    {
+      "section": "Bønnemix",
+      "text": "Varm olien i en lille gryde, og svits løg og hvidløg under omrøring."
+    },
+    {
+      "section": "Bønnemix",
+      "text": "Rør krydderierne i, og vent til de dufter. Hæld de hakkede tomater i, og lad det simre uden låg i 20 minutter, til væsken er kogt væk."
+    },
+    {
+      "section": "Bønnemix",
+      "text": "Kom bønnerne i, og lad dem simre med i 2-3 minutter. Mos blandingen groft med en stavblender."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Skræl avocadoerne, og fjern stenen. Blend dem cremede med rødløg, limesaft, salt og peber."
+    },
+    {
+      "section": "Salat og tilbehør",
+      "text": "Brug ventetiden til at snitte grøntsagerne og hakke koriander."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel salat, grøntsager, majs, bønnemix, guacamole og nachos i små portioner på hver tallerken."
+    },
+    {
+      "section": "Anretning",
+      "text": "Strø osten over bønnemixen og koriander over det hele. Sæt en klat creme fraiche midt på tallerkenen, og server."
+    }
+  ],
+  "changes": []
+}

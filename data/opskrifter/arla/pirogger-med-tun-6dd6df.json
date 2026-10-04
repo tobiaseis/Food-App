@@ -1,0 +1,228 @@
+{
+  "url": "https://www.arla.dk/opskrifter/pirogger-med-tun/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:21:41.808Z",
+  "total_minutes": 135,
+  "active_minutes": 45,
+  "yield_count": 8,
+  "source_lines": 19,
+  "title": "Pirogger med tun og spinat",
+  "intro": "Lune, hævede dejlommer fyldt med tun, spinat og mozzarella. Serveres med friske grønsager ved siden af.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 12,
+      "unit": "g",
+      "name": "frisk gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1.75,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lillefingervarmt",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "purløg",
+      "note": "klippet",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 50,
+      "unit": "g",
+      "name": "speltmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 175,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "tun i vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "purløg",
+      "note": "klippet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gule peberfrugter",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "strimlede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "salat",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Opløs gæren i det lune vand. Rør ægget, saltet, purløg, persille, olien og speltmelet i."
+    },
+    {
+      "section": "Dej",
+      "text": "Rør hvedemelet i en smule ad gangen, og arbejd dejen godt igennem."
+    },
+    {
+      "section": "Dej",
+      "text": "Vend dejen ud på et bord og ælt den til en samlet klump. Dæk den til og lad den hæve i ca. 1 time."
+    },
+    {
+      "section": "Fyld",
+      "text": "Skyl spinaten og kog den ca. 2 minutter i letsaltet vand. Si vandet fra, og lad spinaten dryppe godt af."
+    },
+    {
+      "section": "Fyld",
+      "text": "Lad tunen løbe af i en sigte, til den er helt tør."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk ægget i en skål, og kom en lille del i et andet kar til pensling. Rør denne del op med lidt vand."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bland det resterende æg med mozzarella, purløg, salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Slå luften ud af dejen og del den i 8 stykker (eller 4 større)."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul hver klump ud til en tynd rund plade på ca. 20 cm."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg spinat, tun og osteblanding på pladerne. Pensl dejkanten med æg."
+    },
+    {
+      "section": "Samling",
+      "text": "Fold dejen over fyldet og luk den tæt. Pynt eventuelt kanten ved at klemme små folder med fingrene, så den bølger."
+    },
+    {
+      "section": "Bagning",
+      "text": "Lad pirogerne hæve igen i ca. 15 minutter."
+    },
+    {
+      "section": "Bagning",
+      "text": "Pensl dem med æggeblandingen og bag dem midt i ovnen i ca. 20 minutter ved 200 °C (almindelig ovn)."
+    },
+    {
+      "section": "Bagning",
+      "text": "Servér pirogerne med peberfrugt, gulerødder og salat."
+    }
+  ],
+  "changes": []
+}

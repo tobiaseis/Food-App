@@ -1,0 +1,258 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/rhubarb-drizzle-cake-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:12:57.557Z",
+  "total_minutes": 90,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 20,
+  "title": "Rabarberkage med mandler og rabarberglasur",
+  "intro": "Saftig mandelkage i et brødform med bidder af rabarber, glaseret med rabarbercreme og serveret med vaniljeflødeskum og syltede rabarberbånd. Rabarberne skal syltes dagen før.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Syltet rabarber",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "rabarber",
+      "note": "skåret i fine bånd",
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 2,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "æbleeddike",
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 150,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 1,
+      "unit": "stk",
+      "name": "appelsin",
+      "note": "1 strimmel skal",
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 175,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 175,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 225,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 50,
+      "unit": "g",
+      "name": "mandler",
+      "note": "stødte",
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 200,
+      "unit": "g",
+      "name": "rabarber",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberglasur",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Rabarberglasur",
+      "amount": 40,
+      "unit": "g",
+      "name": "rabarber",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Rabarberglasur",
+      "amount": 130,
+      "unit": "g",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberglasur",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberglasur",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljeflødeskum",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljeflødeskum",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljeflødeskum",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljepasta",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltet rabarber",
+      "text": "Begynd dagen før. Læg rabarberbåndene i en bøtte eller dyb skål."
+    },
+    {
+      "section": "Syltet rabarber",
+      "text": "Kom eddike, vand, sukker, appelsinskal og salt i en lille kasserolle. Bring det i kog, og lad det simre. Lad lagen køle af til stuetemperatur."
+    },
+    {
+      "section": "Syltet rabarber",
+      "text": "Hæld den afkølede lage over rabarberbåndene, og stil dem i køleskabet natten over."
+    },
+    {
+      "section": "Kage",
+      "text": "Forvarm ovnen til 180 °C. Beklæd en brødform med bagepapir."
+    },
+    {
+      "section": "Kage",
+      "text": "Pisk sukker og smør i en stor skål, til det er lyst og luftigt. Pisk æggene i et ad gangen, og pisk grundigt mellem hvert."
+    },
+    {
+      "section": "Kage",
+      "text": "Vend mel, mandler, bagepulver, mælk og salt i dejen med en spatel. Vend til sidst den hakkede rabarber i."
+    },
+    {
+      "section": "Kage",
+      "text": "Hæld dejen i formen, og bag kagen i 1 time, til en spiseskeen eller en grillpind, der stikkes ned i midten, kommer ren op."
+    },
+    {
+      "section": "Rabarberglasur",
+      "text": "Smelt smørret i en lille kasserolle, mens kagen bager. Kog rabarberne i smørret i 5 minutter, til de er møre."
+    },
+    {
+      "section": "Rabarberglasur",
+      "text": "Tag gryden af varmen, og tilsæt flormelis, fløde og salt. Blend glasuren glat med en stavblender, og stil den til afkøling."
+    },
+    {
+      "section": "Vaniljeflødeskum",
+      "text": "Pisk fløden stiv med el-pisker eller i en røremaskine, og tilsæt sukkeret lidt ad gangen. Vend vaniljepastaen i, når skummet står stift, og stil det til side."
+    },
+    {
+      "section": null,
+      "text": "Lad den bagte kage hvile i formen i 15 minutter. Løft den derefter ud, og lad den køle helt af på en rist."
+    },
+    {
+      "section": null,
+      "text": "Fordel glasuren over hele kagen, og lad den sætte sig lidt. Server skiver af kagen med en rigelig klat flødeskum og syltede rabarberbånd på toppen."
+    }
+  ],
+  "changes": [
+    "Self-raising flour er erstattet med hvedemel; kildens bagepulver bruges til at hæve kagen.",
+    "Caster sugar er erstattet med almindeligt sukker.",
+    "Icing sugar er erstattet med flormelis.",
+    "Double cream er erstattet med piskefløde.",
+    "Vaniljebønnepasta er erstattet med vaniljepasta."
+  ]
+}

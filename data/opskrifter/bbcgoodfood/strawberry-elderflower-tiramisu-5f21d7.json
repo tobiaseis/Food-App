@@ -1,0 +1,187 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/strawberry-elderflower-tiramisu",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:05:39.163Z",
+  "total_minutes": 55,
+  "active_minutes": 25,
+  "yield_count": 8,
+  "source_lines": 10,
+  "title": "Tiramisu med jordbær og hyldeblomst",
+  "intro": "En frisk sommertiramisu med bagte jordbær, luftig mascarponecreme og kiks, der er vendt i hyldeblomst og grøn te. Den skal trække natten over, så den er nem at lave i god tid.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "jordbær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": "flækket på langs, kornene skrabet ud",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "mascarpone",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "te",
+      "note": "grøn te, tepose",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "hyldeblomstsaft",
+      "note": "fortyndes med vandet herunder",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "ml",
+      "name": "vand",
+      "note": "til hyldeblomstsaften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "vand",
+      "note": "varmt, ca. 60 °C, til teen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 36,
+      "unit": "stk",
+      "name": "kiks",
+      "note": "savoiardi / ladyfingers",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "frysetørrede jordbær",
+      "note": "knust til fint pulver",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Jordbærcreme",
+      "text": "Forvarm ovnen til 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Jordbærcreme",
+      "text": "Skær 600 g af jordbærrene i mundrette stykker. Grønne toppe kan blive på. Fordel dem i en bradepande sammen med vaniljestangen og kornene, citronsaften og 50 g af sukkeret."
+    },
+    {
+      "section": "Jordbærcreme",
+      "text": "Bag i 20-25 minutter, til bærrene er helt bløde. Tag vaniljestangen op og smid den ud."
+    },
+    {
+      "section": "Jordbærcreme",
+      "text": "Blend bærrene i en foodprocessor til en jævn masse, og pres den gennem en fin si ned i en bred gryde."
+    },
+    {
+      "section": "Jordbærcreme",
+      "text": "Skær 200 g af de resterende jordbær i skiver, og rør dem ned i massen. Hvis du laver individuelle desserter, er det alle de resterende bær."
+    },
+    {
+      "section": "Jordbærcreme",
+      "text": "Kog op på høj varme, og lad det simre i 4-5 minutter, til det er tykkere og kogt ind. Lad det køle helt af. Kan opbevares i køleskab i tre dage."
+    },
+    {
+      "section": "Mascarponecreme",
+      "text": "Adskil æggene, og kom blommer og hvider i hver sin skål. Tilsæt resten af sukkeret til blommerne."
+    },
+    {
+      "section": "Mascarponecreme",
+      "text": "Pisk blommerne med håndmixer i ca. 5 minutter, til de er tykke, lyse og luftige. Pisk mascarponen i lidt ad gangen, til cremen er glat. Stil til side."
+    },
+    {
+      "section": "Mascarponecreme",
+      "text": "Rens piskeris grundigt, og pisk æggehviderne til stive toppe i ca. 5 minutter."
+    },
+    {
+      "section": "Mascarponecreme",
+      "text": "Rør en stor skefuld hvider ind i blommecremen, så den løsnes. Vend derefter resten af hviderne forsigtigt i med en stor ske."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg teposen i et fladt, varmefast fad, og hæld det varme vand over. Kogende vand ødelægger teens fine smag. Lad den trække i 1-2 minutter, og fjern posen."
+    },
+    {
+      "section": "Samling",
+      "text": "Rør hyldeblomstsaft og vand i teen."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend kiksene i væden i få sekunder på hver side. De skal være gennemfugtede, men ikke bløde og våde."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg halvdelen af kiksene i ét lag i et fad på ca. 30 x 20 cm. Fordel halvdelen af jordbærmassen over, og top med halvdelen af mascarponecremen."
+    },
+    {
+      "section": "Samling",
+      "text": "Gentag med resten af kiksene, jordbærmassen og cremen. Til desserter i glas kan kiksene brydes groft over, så de passer."
+    },
+    {
+      "section": "Samling",
+      "text": "Sæt på køl i mindst 6 timer eller natten over. Holder sig 2 dage i køleskab."
+    },
+    {
+      "section": "Servering",
+      "text": "Drys med knuste frysetørrede jordbær, hvis du bruger dem. Skær de sidste friske jordbær i skiver, læg dem ovenpå, og server."
+    }
+  ],
+  "changes": [
+    "St Germain-hyldeblomstlikør er skiftet ud med hyldeblomstsaft fortyndet med vand.",
+    "Sponge fingers er skiftet ud med savoiardi-kiks (ladyfingers)."
+  ]
+}

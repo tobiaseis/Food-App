@@ -1,0 +1,56 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/spanish-latte-cafe-con-leche",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:39:07.188Z",
+  "total_minutes": 15,
+  "active_minutes": 10,
+  "yield_count": 1,
+  "source_lines": 3,
+  "title": "Spansk café con leche",
+  "intro": "En enkel spansk kaffe med varm mælk og stærk espresso. Mælken varmes op på panden, så den bliver cremet og dampende varm.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "sødmælk eller H-mælk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "sukker",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "espresso",
+      "note": "stærk, helst lavet på friskmalede bønner",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom mælken i en lille kasserolle sammen med sukkeret, hvis du bruger det. Varm den op, til der kommer små bobler langs kanten."
+    },
+    {
+      "section": null,
+      "text": "Varm videre, til mælken damper, og den er 65–70 °C. Pisk let imens."
+    },
+    {
+      "section": null,
+      "text": "Hæld espressoen i en kop, og top med den varme mælk."
+    }
+  ],
+  "changes": []
+}

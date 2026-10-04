@@ -1,0 +1,249 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/moqueca-fish-burgers-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:43:13.936Z",
+  "total_minutes": 90,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Moqueca-fiskeburgere",
+  "intro": "Mør ovnbagt torsk i en cremet braziliansk kokossauce med tomat, peberfrugt og chili, serveret i ristede burgerboller med sprød kålsalat. Saucen kan også dyppes i ved bordet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fisken",
+      "amount": 600,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "4 stykker uden skind",
+      "optional": false
+    },
+    {
+      "section": "Fisken",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisken",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Fisken",
+      "amount": 4,
+      "unit": "stk",
+      "name": "brioche burgerboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kokosmælk",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 150,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "søde",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød eller gul, udkernet og delt i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, skrællet og groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "skrællet",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "udkernet",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "honning",
+      "note": "flydende",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 1.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint havsalt",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Moquecasauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet, ca. 50 hvirvler",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvidkål",
+      "note": "skåret helt tyndt",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 40,
+      "unit": "g",
+      "name": "forårsløg",
+      "note": "kun de grønne dele, skåret i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 2,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "skåret i tynde ringe",
+      "optional": true
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint havsalt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fisken",
+      "text": "Læg torskestykkerne i et højsidet ovnfast fad på ca. 30 × 23 cm. Vend dem med olie og salt, så de er dækket hele vejen rundt."
+    },
+    {
+      "section": "Moquecasauce",
+      "text": "Kom alle ingredienser til saucen i en blender, og blend den helt glat."
+    },
+    {
+      "section": "Moquecasauce",
+      "text": "Hæld saucen over fisken, og vend stykkerne, så de er dækket af sauce. Lad fadet stå ved stuetemperatur og marinere i 30 minutter til 1 time."
+    },
+    {
+      "section": "Fisken",
+      "text": "Tænd ovnen på 240 °C varmluft (eller så varm, som den kan blive). Sæt fadet ind, når ovnen er varm, og bag i 30 minutter, til saucen bobler og er kogt ind og tyknet. Tag fadet ud, og lad det køle lidt af."
+    },
+    {
+      "section": "Coleslaw",
+      "text": "Rør alle ingredienserne til coleslawen sammen i en skål."
+    },
+    {
+      "section": "Samling",
+      "text": "Del burgerbollerne, og rist skæresiderne i en meget varm pande, til de er gyldne."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg et stykke fisk på hver bolleunderdel, og kom rigeligt sauce ovenpå. Fordel en god portion coleslaw over, og læg toppen på."
+    },
+    {
+      "section": "Samling",
+      "text": "Server straks med en skål sauce til dypning og lidt ekstra lime ved siden af."
+    }
+  ],
+  "changes": [
+    "Scotch bonnet-chili er erstattet med almindelig rød chili.",
+    "Rød palmeolie er erstattet med ghee.",
+    "Kewpie-mayonnaise er erstattet med almindelig mayonnaise.",
+    "Grøn kål er erstattet med hvidkål."
+  ]
+}

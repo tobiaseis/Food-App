@@ -1,0 +1,184 @@
+{
+  "url": "https://www.arla.dk/opskrifter/gron-pastasauce-til-kyllingekodboller/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:07:02.219Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Kyllingekødboller i grøn pastasauce",
+  "intro": "Små kyllingekødboller med citron og persille, der vendes i en cremet ostesauce med broccoli, squash og edamamebønner. Serveres over fuldkornsspaghetti med frisk citron til.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kyllingekødboller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket kyllingekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingekødboller",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "hakket, bredbladet",
+      "optional": false
+    },
+    {
+      "section": "Kyllingekødboller",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "fintrevet skal, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Kyllingekødboller",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kyllingekødboller",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Kyllingekødboller",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingekødboller",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft, til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Grøn pastasauce",
+      "amount": 4,
+      "unit": "dl",
+      "name": "ostesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn pastasauce",
+      "amount": 300,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Grøn pastasauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "grøn, i tern, ca. 200 g",
+      "optional": false
+    },
+    {
+      "section": "Grøn pastasauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn pastasauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Grøn pastasauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Grøn pastasauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "persille",
+      "note": "blade af bredbladet persille",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 300,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": "tørret, fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "saften presses",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kyllingekødboller",
+      "text": "Bland hakket kyllingekød med persille, citronskal, hvidløg og det første salt, så farsen bliver ensartet."
+    },
+    {
+      "section": "Kyllingekødboller",
+      "text": "Del farsen i 24 ens, lidt rustikke kugler på ca. 1 spsk hver."
+    },
+    {
+      "section": "Kyllingekødboller",
+      "text": "Bring vandet og det sidste salt i kog i en gryde. Læg kødbollerne i og lad dem koge uden låg på kraftig varme i ca. 3 minutter."
+    },
+    {
+      "section": "Kyllingekødboller",
+      "text": "Hæld ca. 1 dl af kogevandet fra til senere. Si kødbollerne fra og hold dem varme."
+    },
+    {
+      "section": "Grøn pastasauce",
+      "text": "Kog spaghettien efter anvisningen på pakken."
+    },
+    {
+      "section": "Grøn pastasauce",
+      "text": "Hæld det afmålte kogevand tilbage i gryden og rør ostesauce og broccoli i. Bring det i kog under omrøring."
+    },
+    {
+      "section": "Grøn pastasauce",
+      "text": "Kom squash, edamamebønner, chili og salt i. Lad saucen komme i kog igen, mens du rører, og varm den godt igennem."
+    },
+    {
+      "section": "Grøn pastasauce",
+      "text": "Vend persilleblade og kødboller i saucen, og smag til."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret saucen over den nykogte spaghetti, og server med det samme. Stil citronsaften på bordet ved siden af."
+    }
+  ],
+  "changes": []
+}

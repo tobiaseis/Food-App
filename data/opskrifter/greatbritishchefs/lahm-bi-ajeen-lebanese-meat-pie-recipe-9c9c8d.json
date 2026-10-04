@@ -1,0 +1,289 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/lahm-bi-ajeen-lebanese-meat-pie-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:11:44.298Z",
+  "total_minutes": 80,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 25,
+  "title": "Lahm bi ajeen – libanesisk kødtærte med sumakløgsalat",
+  "intro": "Tynde, sprøde brødbunde med krydret kødfyld, bagt på en glohed bageplade. Serveres med syrlig sumakløgsalat, granatæble og ristede pinjekerner.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "stærkt hvidt brødmel, plus ekstra til meldrys",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 7,
+      "unit": "g",
+      "name": "tørgær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "plus ekstra til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "store, groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 600,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "20 % fedt",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "krydderi",
+      "note": "syv-krydderier (baharat)",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "sumak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Løgsalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "skåret meget fint, gerne på mandolin",
+      "optional": false
+    },
+    {
+      "section": "Løgsalat",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "sumak",
+      "note": "plus ekstra til drys",
+      "optional": false
+    },
+    {
+      "section": "Løgsalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Løgsalat",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Løgsalat",
+      "amount": null,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "en stor knivspids",
+      "optional": false
+    },
+    {
+      "section": "Løgsalat",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "granatæblesirup",
+      "note": "til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ristede løg",
+      "note": "sprøde, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "pinjekerner",
+      "note": "ristede, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "granatæblekerner",
+      "note": "til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Kom mel, gær, salt og sukker i en røremaskine med dejkrog. Tilsæt det lunkne vand og olivenolien, og kør dejen på middel hastighed i 8-10 minutter, til den er elastisk og let klistret."
+    },
+    {
+      "section": "Dej",
+      "text": "Læg dejen i en let olieret skål, dæk den til, og lad den hæve det varmt i 45 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Mens dejen hæver, blendes løg, tomater og chili groft i en foodprocessor."
+    },
+    {
+      "section": "Fyld",
+      "text": "Hæld massen i en finmasket sigte, og tryk den let med bagsiden af en ske, så overskydende væske løber fra."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kom massen tilbage i foodprocessoren sammen med resten af ingredienserne til fyldet og rigeligt peber. Blend til en glat, sammenhængende farsmasse, hvor kødet er helt findelt. Stil fyldet på køl."
+    },
+    {
+      "section": "Ovn",
+      "text": "Varm ovnen op til den højeste temperatur med en bagesten eller en tung bageplade vendt på hovedet indeni. Lad den gerne stå 30 minutter efter, ovnen er varm, så underlaget bliver rigtig hedt."
+    },
+    {
+      "section": "Løgsalat",
+      "text": "Bland rødløg, sumak, citronsaft, olivenolie og salt, og ælt dem med hænderne, så løgene blødgøres lidt. Vend det meste af persillen i, og gem lidt til pynt. Stil salaten til side."
+    },
+    {
+      "section": "Samling",
+      "text": "Slå den hævede dej ned, og del den i 8-10 stykker. Form hvert stykke til en stram kugle."
+    },
+    {
+      "section": "Samling",
+      "text": "Meldryp bordet, og rul hver kugle ud til en rund plade på 16-18 cm. Dejen skal være meget tynd i midten og lidt tykkere i kanten."
+    },
+    {
+      "section": "Samling",
+      "text": "Smør et tyndt, jævnt lag kødfyld på hver plade, og lad der være 2 cm frit hele vejen rundt. Fold og knib kanten i små folder som på en galette, så der kommer en hævet rand uden at fyldet lukkes inde."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag tærterne i omgange på den varme bagesten eller plade. Brug evt. bagepapir under, hvis de hænger fast. De skal bruge 8-10 minutter, afhængigt af ovnen, og er færdige, når bunden er sprød og kanten let gylden."
+    },
+    {
+      "section": "Bagning",
+      "text": "Tag tærterne ud, og dryp med granatæblesirup og olivenolie. Top med ristede løg, pinjekerner og granatæblekerner, og server løgsalaten ved siden af. Drys til sidst med den sparede persille."
+    }
+  ],
+  "changes": [
+    "Doves Farm stærkt brødmel er erstattet med almindeligt hvedemel.",
+    "Pomegranate molasses er erstattet med granatæblesirup.",
+    "Fried onions er erstattet med ristede løg.",
+    "Seven spice powder er erstattet med syv-krydderier (baharat)."
+  ]
+}

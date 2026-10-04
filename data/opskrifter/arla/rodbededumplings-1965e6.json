@@ -1,0 +1,239 @@
+{
+  "url": "https://www.arla.dk/opskrifter/rodbededumplings/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:34:04.097Z",
+  "total_minutes": 90,
+  "active_minutes": 45,
+  "yield_count": 16,
+  "source_lines": 22,
+  "title": "Rødbededumplings med feta-gremolata",
+  "intro": "Lyserøde dumplings af rødbededej fyldt med sødkartoffel, rødkål og soltørrede tomater. Serveres med en frisk gremolata af feta, persille og citron.",
+  "servings": 16,
+  "ingredients": [
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 150,
+      "unit": "g",
+      "name": "sødkartoffel",
+      "note": "skrællet, i små tern",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 75,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, knust",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "soltørrede tomater",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 75,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "skrællet, i store tern",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 225,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "ca. 4 dl",
+      "optional": false
+    },
+    {
+      "section": "Til kogning",
+      "amount": 2,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kogning",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gremolataen",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til gremolataen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til gremolataen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citronskal",
+      "note": "fintrevet, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "valnødder",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Varm olien op på en pande, og steg sødkartoflerne ved kraftig varme i ca. 3 minutter. Rør i dem en gang imellem."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kom rødkål, hvidløg, salt og peber på panden. Steg videre ved middelvarme under omrøring i ca. 3 minutter, til kålen er mør."
+    },
+    {
+      "section": "Fyld",
+      "text": "Hæld blandingen i en skål, og vend persille og soltørrede tomater i."
+    },
+    {
+      "section": "Dej",
+      "text": "Blend rødbeder, smør, vand, æg, salt og 175 g af melet i en foodprocessor på højeste hastighed i ca. 2 minutter, til massen er jævn."
+    },
+    {
+      "section": "Dej",
+      "text": "Vend dejen ud på et meldrysset bord, og ælt resten af melet (50 g) grundigt ind i den. Rul den tyndt ud."
+    },
+    {
+      "section": "Dej",
+      "text": "Udstik 16 cirkler på ca. 10 cm med et udstikkerglas eller en form. Læg 1 spsk fyld midt på hver cirkel."
+    },
+    {
+      "section": "Dej",
+      "text": "Pensl den ene halvdel af hver cirkel med lidt vand, og fold dejen sammen til en halvmåne. Tryk kanten tæt med fingrene."
+    },
+    {
+      "section": "Dej",
+      "text": "Bring vand og salt i kog i en stor gryde. Kog dumplings i tre omgange i ca. 2 minutter hver, og rør forsigtigt undervejs. Løft dem op, og hold dem varme i et fad."
+    },
+    {
+      "section": "Gremolata",
+      "text": "Mas fetaen med en gaffel, og rør persille og citronskal i. Dæk til, og stil den på køl, til dumplings skal serveres."
+    },
+    {
+      "section": "Gremolata",
+      "text": "Anret dumplings, og top dem med gremolata. Dryp med olivenolie, og strø valnødder og persille over."
+    }
+  ],
+  "changes": [
+    "Salatost er erstattet med feta.",
+    "Søde kartofler er skrevet som sødkartoffel."
+  ]
+}

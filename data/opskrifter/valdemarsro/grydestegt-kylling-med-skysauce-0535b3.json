@@ -1,0 +1,296 @@
+{
+  "url": "https://www.valdemarsro.dk/grydestegt-kylling-med-skysauce/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:32:56.311Z",
+  "total_minutes": 90,
+  "active_minutes": 90,
+  "yield_count": 4,
+  "source_lines": 25,
+  "title": "Grydestegt kylling med nye kartofler, syltet agurk og rabarberkompot",
+  "intro": "Klassisk dansk søndagsmiddag, hvor en hel kylling simrer mør i gryden og giver en cremet skysauce. Til serveres nykogte kartofler, hurtigsyltet agurk, rabarberkompot og grøn salat med sød-sur fløddressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Grydestegt kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hel kylling",
+      "note": "1,6-2 kg",
+      "optional": false
+    },
+    {
+      "section": "Grydestegt kylling",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grydestegt kylling",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grydestegt kylling",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grydestegt kylling",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grydestegt kylling",
+      "amount": null,
+      "unit": null,
+      "name": "friskkværnet peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skysauce",
+      "amount": null,
+      "unit": null,
+      "name": "stegesky",
+      "note": "fra kyllingen",
+      "optional": false
+    },
+    {
+      "section": "Skysauce",
+      "amount": 30,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skysauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skysauce",
+      "amount": 2,
+      "unit": null,
+      "name": "kulør",
+      "note": "dråber",
+      "optional": false
+    },
+    {
+      "section": "Syltede agurker",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede agurker",
+      "amount": 2,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "æblecidereddike eller lagereddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede agurker",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede agurker",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede agurker",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede agurker",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Syltede agurker",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": 200,
+      "unit": "g",
+      "name": "rabarber",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "vaniljesukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberkompot",
+      "amount": 60,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat med mormordressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "salat",
+      "note": "fx hovedsalat",
+      "optional": false
+    },
+    {
+      "section": "Salat med mormordressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Salat med mormordressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat med mormordressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kogte nye kartofler",
+      "amount": 1,
+      "unit": "kg",
+      "name": "nye kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kogte nye kartofler",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket, til drys",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grydestegt kylling",
+      "text": "Gør kyllingen ren og gnid den ind med salt og peber udvendigt. Put persillen ind i kyllingen."
+    },
+    {
+      "section": "Grydestegt kylling",
+      "text": "Varm smørret i en stegegryde ved middelhøj varme. Brun kyllingen pænt på alle sider i ca. 10 minutter."
+    },
+    {
+      "section": "Grydestegt kylling",
+      "text": "Hæld vandet i gryden og krydr med lidt salt og peber. Sæt låg på og lad kyllingen simre i 45-55 minutter. Vend den et par gange undervejs."
+    },
+    {
+      "section": "Grydestegt kylling",
+      "text": "Lav imens de øvrige retter. Kontrollér til sidst, at kyllingen er helt gennemstegt, før du løfter den op af gryden."
+    },
+    {
+      "section": "Skysauce",
+      "text": "Fjern skum og urenheder fra stegesky­en og hæld den over i en lille kasserolle. Læg kyllingen tilbage i gryden med låg, så den holder sig varm."
+    },
+    {
+      "section": "Skysauce",
+      "text": "Bring stegeskyen i kog. Rør hvedemelet ud med lidt koldt vand til en jævning, og pisk den ned i den kogende stegesky."
+    },
+    {
+      "section": "Skysauce",
+      "text": "Lad saucen koge godt igennem. Rør fløde og kulør i, og smag til med salt og peber."
+    },
+    {
+      "section": "Syltede agurker",
+      "text": "Rør sukker og salt ud i det kogende vand, til sukkeret er opløst. Lad det køle lidt af, og tilsæt derefter eddike, peberkorn og dild."
+    },
+    {
+      "section": "Syltede agurker",
+      "text": "Hyvl eller skær agurken i helt tynde skiver og læg dem i et rent, skoldet glas. Hæld lagen over, og lad det stå og trække i mindst 30 minutter."
+    },
+    {
+      "section": "Rabarberkompot",
+      "text": "Bland rabarber, vaniljesukker og sukker i en gryde. Lad det stå uden varme i en halv time, så der trækker saft."
+    },
+    {
+      "section": "Rabarberkompot",
+      "text": "Varm op under omrøring, til det koger. Lad det simre i 5-10 minutter, og tag gryden af varmen, så snart rabarberen er mør – den må ikke blive til mos."
+    },
+    {
+      "section": "Salat med mormordressing",
+      "text": "Rør citronsaft og sukker sammen, til sukkeret er væk. Tilsæt fløden og rør, til dressingen tykner lidt. Smag til med salt og peber, så den er både sød og syrlig."
+    },
+    {
+      "section": "Salat med mormordressing",
+      "text": "Pil salaten i stykker og vend den med dressingen lige før servering."
+    },
+    {
+      "section": "Kogte nye kartofler",
+      "text": "Skrub kartoflerne og læg dem i en gryde med koldt vand tilsat lidt salt. Bring i kog, sæt låg på og kog i 6-8 minutter, afhængigt af størrelsen."
+    },
+    {
+      "section": "Kogte nye kartofler",
+      "text": "Tag gryden af varmen og lad kartoflerne trække under låg i 5-8 minutter. Stik i en kartoffel for at tjekke, at den er mør, og hæld vandet fra."
+    },
+    {
+      "section": "Kogte nye kartofler",
+      "text": "Lad kartoflerne ligge lunt i gryden under låg, og drys dem med persille lige før servering."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret kyllingen med kartofler, syltet agurk, rabarberkompot, salat og skysauce."
+    }
+  ],
+  "changes": []
+}

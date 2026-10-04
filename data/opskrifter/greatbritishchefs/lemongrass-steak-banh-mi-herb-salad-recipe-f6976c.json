@@ -1,0 +1,274 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/lemongrass-steak-banh-mi-herb-salad-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:53:17.332Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 27,
+  "title": "Bánh mì med citrongræsmarineret flanksteak og urtesalat",
+  "intro": "Vietnamesisk sandwich med mør, marineret flanksteak, syltede grøntsager og masser af friske urter. Serveres med sriracha-mayo og en syrlig dip.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Bøf og marinade",
+      "amount": 500,
+      "unit": "g",
+      "name": "flanksteak",
+      "note": "2 stykker à ca. 250 g",
+      "optional": false
+    },
+    {
+      "section": "Bøf og marinade",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bøf og marinade",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Bøf og marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøf og marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøf og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøf og marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøf og marinade",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "radise",
+      "note": "i tynde strimler; kan erstattes af en lille hvid roe",
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sriracha-mayo",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sriracha-mayo",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nuoc cham",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nuoc cham",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "limesaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nuoc cham",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nuoc cham",
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Nuoc cham",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Urter og servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Urter og servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urter og servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urter og servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urter og servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Urter og servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Urter og servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "flute",
+      "note": "lille, skåret over",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bøf og marinade",
+      "text": "Rør citrongræs, hvidløg, fiskesauce, sojasauce, brun farin og olie sammen. Gnid marinaden ind i bøfferne, og lad dem stå i 1 time."
+    },
+    {
+      "section": "Syltede grøntsager",
+      "text": "Vend gulerod og radise med eddike, sukker og salt. Lad det trække i 20 minutter."
+    },
+    {
+      "section": "Sriracha-mayo",
+      "text": "Rør mayonnaise og sriracha sammen i en skål."
+    },
+    {
+      "section": "Nuoc cham",
+      "text": "Rør alle ingredienserne til nuoc cham sammen i en anden skål."
+    },
+    {
+      "section": "Urter og servering",
+      "text": "Bland basilikum, koriander og mynte i en skål, og sæt persillen til side til servering."
+    },
+    {
+      "section": "Bøf og marinade",
+      "text": "Smelt en rigelig klat smør på en pande. Steg bøfferne 2 minutter på hver side, til de er medium-rare (55 °C), og øs løbende det smeltede smør over dem. Lad kødet hvile i 5 minutter, og skær det derefter i tynde skiver."
+    },
+    {
+      "section": "Urter og servering",
+      "text": "Rist flutten let, og smør den med sriracha-mayo. Fyld den med de syltede grøntsager, bøfskiverne og lidt af urteblandingen."
+    },
+    {
+      "section": "Urter og servering",
+      "text": "Server med agurk og limebåde. Anret resten af urterne ved siden af, og sæt nuoc cham frem som dip."
+    }
+  ],
+  "changes": [
+    "Daikon er erstattet af radise.",
+    "Thai basil er erstattet af almindelig basilikum.",
+    "Risvineddike er beholdt som den nærmeste almindelige eddike, og fiskesauce er beholdt under dansk navn.",
+    "Neutral olie er erstattet af rapsolie.",
+    "Demi-baguette er erstattet af en lille flute."
+  ]
+}

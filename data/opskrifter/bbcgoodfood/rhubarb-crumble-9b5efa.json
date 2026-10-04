@@ -1,0 +1,158 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/rhubarb-crumble",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:07:12.953Z",
+  "total_minutes": 65,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 10,
+  "title": "Rabarbercrumble",
+  "intro": "Sprød, gylden crumble med vaniljesøde rabarber, der bobler under toppen. Server den lun med vaniljesauce eller en kugle is.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til toppen",
+      "amount": 200,
+      "unit": "g",
+      "name": "Hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": null,
+      "unit": null,
+      "name": "Bagepulver",
+      "note": "efter pakkens anvisning til mængden af mel",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 50,
+      "unit": "g",
+      "name": "Vaniljebudding pulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 150,
+      "unit": "g",
+      "name": "Smør",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 125,
+      "unit": "g",
+      "name": "Sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 25,
+      "unit": "g",
+      "name": "Brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabarberne",
+      "amount": 800,
+      "unit": "g",
+      "name": "Rabarber",
+      "note": "skåret i ca. 5 cm stykker",
+      "optional": false
+    },
+    {
+      "section": "Til rabarberne",
+      "amount": 50,
+      "unit": "g",
+      "name": "Sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabarberne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabarberne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Vaniljesauce",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Fløde",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Is",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Toppen",
+      "text": "Kom mel, bagepulver, budding pulver og smør i en stor skål. Gnid det mellem fingrene, til blandingen ligner grove rasp."
+    },
+    {
+      "section": "Toppen",
+      "text": "Rør begge slags sukker i. Toppen kan laves op til 3 dage forud og stå i køleskabet, eller fryses i op til 3 måneder. Smuldr den groft med hænderne, før den bruges. Er den kold, bliver den mere klumpet; ønsker du den løsere, så lad den nå stuetemperatur først."
+    },
+    {
+      "section": "Rabarberne",
+      "text": "Vend rabarber, sukker, vaniljeekstrakt og majsstivelse sammen i en stor skål, så alle stykker er dækket. Lad det stå og trække i 30 minutter."
+    },
+    {
+      "section": "Rabarberne",
+      "text": "Fordel rabarberne jævnt i et stort ildfast fad af keramik. Dæk dem helt med toppen. Fadet kan samles dagen før og stå køligt, eller fryses i op til 3 måneder. Tø det helt op i køleskabet natten over, før det bages."
+    },
+    {
+      "section": "Bagning",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag crumblen i 40-45 minutter, til toppen er gylden og sprød, og rabarberne bobler langs kanten."
+    },
+    {
+      "section": "Bagning",
+      "text": "Lad den hvile i 10 minutter, og server den med vaniljesauce, fløde eller is."
+    }
+  ],
+  "changes": [
+    "Self-raising flour er erstattet med hvedemel og bagepulver.",
+    "Custard powder er erstattet med vaniljebudding pulver.",
+    "Demerara sugar er erstattet med brun farin.",
+    "Golden caster sugar er erstattet med almindeligt sukker.",
+    "Custard er erstattet med vaniljesauce."
+  ]
+}

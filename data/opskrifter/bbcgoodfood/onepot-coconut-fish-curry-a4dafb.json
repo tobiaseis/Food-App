@@ -1,0 +1,154 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/onepot-coconut-fish-curry",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:01:01.172Z",
+  "total_minutes": 30,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Fiskekarry med kokosmælk i én gryde",
+  "intro": "En hurtig karry med fisk, ærter og kokosmælk, som koger sammen i én gryde. Server den med yoghurt, ris og et skvæt lime.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kokosmælk",
+      "note": "400 ml",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde på middel varme. Svits løget med saltet i ca. 10 minutter, til det er blødt og glasagtigt."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløg, gurkemeje, garam masala og chiliflager i. Steg det i et minut, og tilsæt en sjat vand, hvis det sætter sig i bunden."
+    },
+    {
+      "section": null,
+      "text": "Hæld kokosmælken i, rør rundt, og lad karryen simre i 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom fisk og ærter i gryden. Lad det koge i ca. 3 minutter, til ærterne er klart grønne, og fisken lige begynder at falde fra hinanden."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt, peber og limesaft. Øs op i skåle, og server med yoghurt og ris."
+    }
+  ],
+  "changes": [
+    "Fish pie mix er erstattet med torskefilet i tern, da blandingen ikke findes i Danmark."
+  ]
+}

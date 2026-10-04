@@ -378,6 +378,13 @@ async function handleApi(req, res, url) {
   // browseren, som i skyen.
   if (p === '/api/recipe-index') return json(res, planIndexRows().recipeIndex);
 
+  // Én opskrift, som appen viser den (Supabase: recipe_details).
+  const recipeMatch = p.match(/^\/api\/recipes\/(\d+)$/);
+  if (recipeMatch) {
+    const [row] = syncBuild().collectRecipeDetails(db, Number(recipeMatch[1]));
+    return row ? json(res, row) : json(res, { error: 'Opskriften findes ikke på dansk endnu.' }, 404);
+  }
+
   // Ét billigste tilbud pr. vare pr. kæde (Supabase: offer_index).
   if (p === '/api/offer-index') return json(res, planIndexRows().offerIndex);
 

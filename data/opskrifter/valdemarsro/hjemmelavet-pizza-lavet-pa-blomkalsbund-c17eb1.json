@@ -1,0 +1,168 @@
+{
+  "url": "https://www.valdemarsro.dk/hjemmelavet-pizza-lavet-pa-blomkalsbund/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:12:04.876Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Blomkålspizza",
+  "intro": "Sprøde pizzabunde af revet blomkål, ost og æg, toppet med tomatsauce, mozzarella og tomatskiver. En let udgave af pizza, der bages i to omgange.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "fintrevet, evt. i foodprocessor",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 15,
+      "unit": "stk",
+      "name": "mandler",
+      "note": "hakket til mandelmel",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 75,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 60,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "på dåse",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til toppings",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til toppings",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til toppings",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bunden",
+      "text": "Tænd ovnen på 220 °C varmluft. Læg bagepapir på bageplader."
+    },
+    {
+      "section": "Bunden",
+      "text": "Rør alle ingredienserne til bunden sammen i en skål."
+    },
+    {
+      "section": "Bunden",
+      "text": "Fordel massen i et tyndt lag på bagepapiret, og glat den ud med hænderne. Opskriften giver bunde nok til halvanden bageplade."
+    },
+    {
+      "section": "Bunden",
+      "text": "Forbag bundene i 20 minutter, til de netop er sprøde."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Kog hakkede tomater og oregano ind i en gryde, mens bundene bager. Saucen skal være cremet og ikke vandet."
+    },
+    {
+      "section": "Samling",
+      "text": "Skru ovnen ned på 190 °C varmluft."
+    },
+    {
+      "section": "Samling",
+      "text": "Smør et tyndt lag tomatsauce på de forbagte bunde. Læg mozzarella og tomatskiver ovenpå."
+    },
+    {
+      "section": "Samling",
+      "text": "Bag pizzaerne færdige i 16-18 minutter."
+    },
+    {
+      "section": "Samling",
+      "text": "Drys med persille, inden de serveres."
+    }
+  ],
+  "changes": []
+}

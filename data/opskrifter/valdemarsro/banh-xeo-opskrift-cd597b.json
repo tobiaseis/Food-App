@@ -1,0 +1,266 @@
+{
+  "url": "https://www.valdemarsro.dk/banh-xeo-opskrift/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:58:10.506Z",
+  "total_minutes": 60,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Banh xeo – vietnamesiske pandekager",
+  "intro": "Sprøde, gyldne pandekager med rejer, svinekød og bønnespirer, som rulles i rispapir med friske urter og mango. Serveres med en sød og salt dip af fiskesauce.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pandekager",
+      "amount": 25,
+      "unit": "stk",
+      "name": "rejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 150,
+      "unit": "g",
+      "name": "svinekoteletter",
+      "note": "skåret i meget tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 50,
+      "unit": "ml",
+      "name": "kokosolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 2,
+      "unit": "dl",
+      "name": "bønnespirer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dejen",
+      "amount": 5,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Dejen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dejen",
+      "amount": 100,
+      "unit": "ml",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dejen",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dejen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "majsmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dejen",
+      "amount": 5,
+      "unit": "spsk",
+      "name": "rismel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Dejen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dejen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Dejen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 12,
+      "unit": "stk",
+      "name": "rispapir",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "mango",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "salat",
+      "note": "grøn",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dejen",
+      "text": "Pisk æg, kokosmælk, vand, rismel, majsmel, fiskesauce, gurkemeje og salt sammen i en skål, så det bliver en tynd dej."
+    },
+    {
+      "section": "Dejen",
+      "text": "Rør forårsløgene i dejen, og stil den i køleskabet i en halv time."
+    },
+    {
+      "section": "Dip",
+      "text": "Bring vandet i kog, og rør sukkeret i, til det er opløst. Lad det køle helt af."
+    },
+    {
+      "section": "Dip",
+      "text": "Tilsæt fiskesauce, hvidløg og chili, og stil dippen til side."
+    },
+    {
+      "section": "Stegning",
+      "text": "Hæld lidt af kokosolien på en pande, og varm den godt op. Steg rejerne kort og hurtigt, og tag dem af panden."
+    },
+    {
+      "section": "Stegning",
+      "text": "Steg svinekødet hurtigt på begge sider, til det lige er gennemstegt. Læg det til side sammen med rejerne."
+    },
+    {
+      "section": "Stegning",
+      "text": "Kom lidt mere olie på panden, og læg nogle løgskiver på. Hæld en stor øse dej over, og drej panden, så dejen danner et helt tyndt lag."
+    },
+    {
+      "section": "Stegning",
+      "text": "Steg pandekagen sprød på undersiden, og vend den. Fordel lidt rejer, svinekød og bønnespirer på den, og fold den sammen til en halvmåne."
+    },
+    {
+      "section": "Stegning",
+      "text": "Steg, til pandekagen er sprød hele vejen igennem, og læg den på en rist. Gentag med resten af dejen."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret pandekagerne med urter, mango, salat og rispapir. Stil en skål med vand frem, så rispapiret kan blødgøres."
+    },
+    {
+      "section": "Servering",
+      "text": "Riv en bid af pandekagen, og rul den ind i et blødt rispapir med urter, mango og evt. salat. Dyp rullen i dippen."
+    }
+  ],
+  "changes": [
+    "Thaibasilikum er skiftet til almindelig basilikum."
+  ]
+}

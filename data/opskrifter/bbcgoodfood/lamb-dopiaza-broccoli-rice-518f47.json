@@ -1,0 +1,187 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/lamb-dopiaza-broccoli-rice",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:22:22.007Z",
+  "total_minutes": 110,
+  "active_minutes": 20,
+  "yield_count": 2,
+  "source_lines": 14,
+  "title": "Lammedopiaza med broccoliris",
+  "intro": "Mild lammecurry med masser af langtkogte løg, røde linser og spinat. Serveres med fuldkornsris, hvor broccolien koges med til sidst.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "lammeculotte",
+      "note": "fedtkanter skæres af, og kødet skæres i tern på 2,5 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "naturel, fuldfed",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "naturel, til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "mild til medium",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "1 skåret i tynde skiver, 1 skåret i 5 både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "skrællet og finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "lille, rød, finthakket – evt. uden kerner",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "tomater",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "linser",
+      "note": "røde, flækkede, skyllet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "groft hakket, plus lidt til pynt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": "babyspinat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "ris",
+      "note": "fuldkornsris, brune",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "små buketter",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom lammet i en stor skål. Krydr med peber, og vend det med yoghurten (den lille mængde) og halvdelen af karryen."
+    },
+    {
+      "section": null,
+      "text": "Varm halvdelen af olien op i en stor non-stick gryde. Brun løgbådene ved høj varme i 4-5 minutter, til de er let gyldne og næsten møre. Læg dem på en tallerken, og sæt gryden tilbage på varmen."
+    },
+    {
+      "section": null,
+      "text": "Kom resten af olien i gryden sammen med løgskiverne, hvidløg, ingefær og chili. Læg låg på, og lad det stege i 10 minutter under jævnlig omrøring, til alt er helt blødt."
+    },
+    {
+      "section": null,
+      "text": "Tag låget af, skru op for varmen, og steg 2-3 minutter mere, til løgene får lidt farve. Pas på, de ikke brænder på."
+    },
+    {
+      "section": null,
+      "text": "Skru ned igen. Rør tomater og resten af karryen i, og steg i 1 minut. Tilsæt derefter lammet med yoghurten, og steg ved middelhøj varme i 4-5 minutter, mens du rører jævnligt."
+    },
+    {
+      "section": null,
+      "text": "Hæld 300 ml koldt vand i gryden, og rør linser og koriander i. Læg låg på, og lad retten simre ved lav varme i 45 minutter. Rør rundt hver 10.-15. minut, og tilsæt en sjat vand, hvis saucen bliver for tør."
+    },
+    {
+      "section": null,
+      "text": "Når der er en halv time tilbage af karrytiden, koges risene i rigeligt kogende vand i 25 minutter, til de er næsten møre. Kom broccolien i og kog 3 minutter mere. Si fra, og lad dem dryppe godt af."
+    },
+    {
+      "section": null,
+      "text": "Tag låget af karryen, og tilsæt de brunede løgbåde. Lad den simre ved høj varme i yderligere 15 minutter, til lammet er mørt. Rør jævnligt."
+    },
+    {
+      "section": null,
+      "text": "Vend spinaten i en håndfuld ad gangen lige før servering, og lad den falde sammen. Server med yoghurt, koriander og broccoliris."
+    }
+  ],
+  "changes": [
+    "Lammeculotte erstatter lamb leg steaks.",
+    "Karry erstatter medium curry powder."
+  ]
+}

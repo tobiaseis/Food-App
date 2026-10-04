@@ -1,0 +1,279 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/queens-salad-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:32:11.830Z",
+  "total_minutes": 50,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 25,
+  "title": "Dronningesalat med radicchio, dadler og karamelliserede hasselnødder",
+  "intro": "Bitter radicchio møder søde dadler, friske krydderurter og en cremet dressing af konfiteret hvidløg. Drys med knasende karamelnødder til sidst.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 3,
+      "unit": "stk",
+      "name": "radicchio",
+      "note": "bladene skilles ad, gerne en blanding af Treviso, Castelfranco og Chioggia",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "appelsiner",
+      "note": "clementiner, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille rødløg, snittet meget fint",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 5,
+      "unit": "stk",
+      "name": "dadler",
+      "note": "Medjool, uden sten, skåret i stykker på 1 cm",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "granatæblekerner",
+      "note": "plus ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "sumak",
+      "note": "til sidst",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til sidst",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "til sidst",
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": "skrællede fed",
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 500,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede hasselnødder",
+      "amount": 150,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "blancherede",
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede hasselnødder",
+      "amount": 150,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 100,
+      "unit": "ml",
+      "name": "appelsinjuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 40,
+      "unit": "ml",
+      "name": "citron",
+      "note": "saft, plus ekstra efter smag",
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 25,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 5,
+      "unit": "stk",
+      "name": "dadler",
+      "note": "Medjool, uden sten",
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijonsennep",
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sumak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 120,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dronningedressing",
+      "amount": 60,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Konfiteret hvidløg",
+      "text": "Kom hvidløg, rapsolie, timian og salt i en kasserolle. Lad det småputte ved meget svag varme i 45-60 minutter, til hvidløgene er bløde og kan smøres ud."
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "text": "Lad det køle af og opbevar hvidløgene i olien i køleskabet. Der bliver mere, end du skal bruge."
+    },
+    {
+      "section": "Karamelliserede hasselnødder",
+      "text": "Varm ovnen op til 170 °C. Rist hasselnødderne, til de er gyldne og dufter, og lad dem køle af."
+    },
+    {
+      "section": "Karamelliserede hasselnødder",
+      "text": "Smelt sukkeret uden vand i en lille tykbundet pande ved middel-lav varme. Lad det få en dyb ravfarve, men tag det af varmen, lige før det bliver bittert."
+    },
+    {
+      "section": "Karamelliserede hasselnødder",
+      "text": "Vend nødderne hurtigt og forsigtigt i karamellen. Hæld dem ud på en måtte, der ikke klistrer, eller på en bageplade med bagepapir, og lad dem blive helt kolde."
+    },
+    {
+      "section": "Karamelliserede hasselnødder",
+      "text": "Knæk nødderne i stykker og blend dem groft i en foodprocessor. Stil dem ved stuetemperatur. Der bliver mere, end du skal bruge."
+    },
+    {
+      "section": "Dronningedressing",
+      "text": "Kom alle ingredienser undtagen olierne i en blender sammen med 6 fed konfiteret hvidløg. Blend, til massen er helt glat."
+    },
+    {
+      "section": "Dronningedressing",
+      "text": "Bland de to olier i en kande. Hæld dem i en tynd, jævn stråle ned i blenderen, mens den kører, så dressingen emulgerer og bliver stabil."
+    },
+    {
+      "section": "Dronningedressing",
+      "text": "Smag til med salt og citronsaft."
+    },
+    {
+      "section": "Salat",
+      "text": "Læg radicchiobladene i en stor skål. Tilsæt clementiner, rødløg, dadler, krydderurter og granatæblekerner."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend salaten godt med rigeligt dressing, så alle blade er dækket. Smag til med salt og anret på et stort fad eller på tallerkener."
+    },
+    {
+      "section": "Salat",
+      "text": "Top med karamelliserede hasselnødder, ekstra granatæblekerner og lidt af clementinerne. Slut med sumak, en tråd olivenolie og saften fra en halv citron."
+    }
+  ],
+  "changes": [
+    "Kumquats er skiftet til clementiner.",
+    "Riesling-agridulce-eddike er skiftet til hvidvinseddike med en knivspids sukker."
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/salmon-of-knowledge-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:23:06.675Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 27,
+  "title": "Hjertesalat med gribiche og citrongel",
+  "intro": "Små hjertesalater fyldt med en urtet gribichesauce med røget laks, toppet med citrongel og dulsepulver. Husets vinaigrette skal trække i tre dage, så start i god tid.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til salaten",
+      "amount": 6,
+      "unit": "stk",
+      "name": "hjertesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": null,
+      "unit": null,
+      "name": "dulsepulver",
+      "note": "til drys",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "toppe, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": null,
+      "unit": null,
+      "name": "kornblomster",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 100,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 100,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 100,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Husets vinaigrette",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijonsennep",
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 200,
+      "unit": "g",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "hårdkogte og revet",
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "finthakkede og presset tørre",
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "cornichoner",
+      "note": "finthakkede og presset tørre",
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "estragon",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gribiche",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "røget laks",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Citrongel",
+      "amount": 100,
+      "unit": "ml",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citrongel",
+      "amount": 20,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citrongel",
+      "amount": 8,
+      "unit": "g",
+      "name": "agar-agar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citrongel",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Husets vinaigrette",
+      "text": "Rør alle ingredienserne sammen i en skål sammen med en knivspids salt. Dæk skålen til, og lad den stå ved stuetemperatur i 3 dage, så smagen trækker."
+    },
+    {
+      "section": "Husets vinaigrette",
+      "text": "Si væsken gennem en fin sigte og over i en flaske eller et glas. Ryst eller pisk, til den er bundet. Smag til med mere salt og sukker, hvis den har brug for det."
+    },
+    {
+      "section": "Gribiche",
+      "text": "Blend æggeblommer, sennep og hvidløg glatte i en lille foodprocessor. Hold maskinen kørende, og hæld olien i en tynd stråle, til saucen er tyk og emulgeret."
+    },
+    {
+      "section": "Gribiche",
+      "text": "Vend resten af ingredienserne i, og smag til. Stil saucen på køl, til den skal bruges."
+    },
+    {
+      "section": "Citrongel",
+      "text": "Kom alle ingredienserne i en lille gryde, og bring det i kog. Lad massen køle af, og pisk i den ind imellem. Fyld den derefter på en sprøjtepose eller klemmeflaske."
+    },
+    {
+      "section": "Samling",
+      "text": "Pil de yderste 4-5 blade af hver hjertesalat, så kun hjertet er tilbage. Skær rodenden til, og fjern misfarvede dele. Skær toppen af, så lagene åbner sig."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend salaterne i lidt af vinaigretten. Sprøjt gribichen ind mellem bladene, og kom så langt ned mod roden som muligt."
+    },
+    {
+      "section": "Samling",
+      "text": "Drys rigeligt dulsepulver over salaterne, og sprøjt klatter af citrongel udenpå. Pynt med dild og kornblomster."
+    }
+  ],
+  "changes": [
+    "Baby gem er erstattet med hjertesalat.",
+    "Pomace-olie er erstattet med rapsolie.",
+    "Vegetabilsk olie er erstattet med rapsolie."
+  ]
+}

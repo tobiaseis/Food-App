@@ -1,0 +1,112 @@
+{
+  "url": "https://www.arla.dk/opskrifter/coleslaw-med-hytteost/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:19:58.574Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 10,
+  "title": "Coleslaw med hytteost",
+  "intro": "Cremet coleslaw, hvor hytteost og creme fraiche giver en let dressing med sødme fra honning og skarphed fra sennep. Den passer godt til grillmad eller som frisk salat til hverdagsmaden.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til dressingen",
+      "amount": 500,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvidkål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 125,
+      "unit": "g",
+      "name": "knoldselleri",
+      "note": "groft revet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 150,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "groft revet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 200,
+      "unit": "g",
+      "name": "æbler",
+      "note": "groft revet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "purløg",
+      "note": "klippet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressingen",
+      "text": "Vend hytteost, creme fraiche, dijonsennep, honning og salt sammen i en stor skål."
+    },
+    {
+      "section": "Salaten",
+      "text": "Kom kål, selleri, gulerødder og æbler i skålen, og vend det hele rundt i dressingen."
+    },
+    {
+      "section": "Salaten",
+      "text": "Smag coleslawen til, og drys med purløg lige før servering."
+    }
+  ],
+  "changes": []
+}

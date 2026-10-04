@@ -1,0 +1,313 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/gin-beetroot-cured-salmon-blinis-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:26:17.695Z",
+  "total_minutes": 50,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 29,
+  "title": "Ginbetesyltet laks på blinis",
+  "intro": "En hel laksesvaerd graveres i rødbeder, gin og enebær og serveres på små, luftige blinis med syltet agurk og cremet creme fraiche. En festlig ret, hvor laksen skal trække i to dage.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til graveret laks",
+      "amount": 1,
+      "unit": "kg",
+      "name": "laks",
+      "note": "hel side med skind",
+      "optional": false
+    },
+    {
+      "section": "Til graveret laks",
+      "amount": 3,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "skrællede og groft revne",
+      "optional": false
+    },
+    {
+      "section": "Til graveret laks",
+      "amount": 100,
+      "unit": "g",
+      "name": "groft havsalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til graveret laks",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til graveret laks",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "enebær",
+      "note": "stødte",
+      "optional": false
+    },
+    {
+      "section": "Til graveret laks",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal",
+      "optional": false
+    },
+    {
+      "section": "Til graveret laks",
+      "amount": 1,
+      "unit": "dl",
+      "name": "gin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til graveret laks",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til syltet agurk",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "skåret i tynde bånd",
+      "optional": false
+    },
+    {
+      "section": "Til syltet agurk",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til syltet agurk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til syltet agurk",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til syltet agurk",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blinis",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blinis",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blinis",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blinis",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blinis",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blinis",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blinis",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, smeltet",
+      "optional": false
+    },
+    {
+      "section": "Til blinis",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til creme fraiche",
+      "amount": 200,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til creme fraiche",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til creme fraiche",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal",
+      "optional": false
+    },
+    {
+      "section": "Til creme fraiche",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til creme fraiche",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til creme fraiche",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "revet skal",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "små top",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "stenbiderrogn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Graveret laks",
+      "text": "Rør rødbeder, havsalt, sukker, enebær, citronskal, gin og dild sammen til en tyk masse."
+    },
+    {
+      "section": "Graveret laks",
+      "text": "Læg en stor bane husholdningsfilm frem, og fordel halvdelen af massen på den. Læg laksen med skindsiden nedad ovenpå, og dæk kødsiden helt med resten af massen."
+    },
+    {
+      "section": "Graveret laks",
+      "text": "Pak laksen stramt ind, og læg den på en bakke. Læg en ekstra bakke ovenpå som vægt, og sæt den i køleskabet i 48 timer. Vend fisken efter 24 timer."
+    },
+    {
+      "section": "Graveret laks",
+      "text": "Skyl massen af laksen under koldt vand, og dup den tør. Opbevar den i køleskabet til servering."
+    },
+    {
+      "section": "Syltet agurk",
+      "text": "Kog eddike, sukker, salt og sennepsfrø op i en lille gryde."
+    },
+    {
+      "section": "Syltet agurk",
+      "text": "Tag gryden af varmen, og hæld lagen over agurkebåndene. Lad dem stå og syltes i mindst 30 minutter, og stil dem derefter koldt, når de er afkølede."
+    },
+    {
+      "section": "Blinis",
+      "text": "Pisk mel, bagepulver, salt og sukker sammen. Tilsæt mælk og æg, og pisk til en glat dej. Rør det smeltede smør i."
+    },
+    {
+      "section": "Blinis",
+      "text": "Varm en lille pande op, og smør den let med olie. Kom små klatter dej på, og steg dem gyldne og færdige i 1–2 minutter på hver side."
+    },
+    {
+      "section": "Creme fraiche",
+      "text": "Bland alle ingredienserne til cremen, og smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær laksen i tynde skiver. Top hver blini med creme fraiche, en skive laks og en krølle agurk. Pynt med citronskal, dild, stenbiderrogn og kapers."
+    }
+  ],
+  "changes": [
+    "Hvidvinseddike beholdes som hvidvinseddike (eddike i kataloget).",
+    "Kaviar er erstattet med stenbiderrogn.",
+    "Doves Farm-mel er erstattet med almindeligt hvedemel.",
+    "Fuldfed mælk er erstattet med sødmælk."
+  ]
+}

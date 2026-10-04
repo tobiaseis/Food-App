@@ -1,0 +1,164 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/red-thai-curry-crispy-chicken-tacos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:34:16.192Z",
+  "total_minutes": 30,
+  "active_minutes": 20,
+  "yield_count": 2,
+  "source_lines": 10,
+  "title": "Sprøde kyllingetacos med rød thaicurry",
+  "intro": "Paneret kylling med paprika og sprød panko i bløde tortillas med cremet coleslaw og karrymayo. Det er hurtigt og kan stå på bordet på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kyllingen",
+      "amount": 40,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Karrymayo og coleslaw",
+      "amount": 40,
+      "unit": "g",
+      "name": "rød thaicurrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrymayo og coleslaw",
+      "amount": 50,
+      "unit": "ml",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrymayo og coleslaw",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Karrymayo og coleslaw",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrymayo og coleslaw",
+      "amount": 150,
+      "unit": "g",
+      "name": "coleslawmix",
+      "note": "gulerod og kål",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 6,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": "plain",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 5,
+      "unit": "g",
+      "name": "koriander",
+      "note": "grofthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kyllingen",
+      "text": "Bland panko og paprika på en tallerken med en god knivspids salt."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Vend kyllingestrimlerne i lidt olie, og tryk dem derefter ned i pankoblandingen, så de er dækket hele vejen rundt."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Varm en stor, bred non-stick pande med lidt olie op ved middelhøj varme. Steg strimlerne i 5-6 minutter på hver side, til de er gyldne og gennemstegte."
+    },
+    {
+      "section": "Karrymayo og coleslaw",
+      "text": "Rør currypasta, mayonnaise, 1 spsk af vandet, salt og peber sammen i en lille skål, mens kyllingen steger."
+    },
+    {
+      "section": "Karrymayo og coleslaw",
+      "text": "Kom halvdelen af karrymayoen i en stor skål sammen med coleslawmixet, og vend det godt rundt."
+    },
+    {
+      "section": "Karrymayo og coleslaw",
+      "text": "Rør resten af vandet ud i den resterende karrymayo, så den bliver tyndere."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg tortillaerne på en tallerken, og varm dem i mikroovnen på fuld styrke i 20 sekunder, til de er varme."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fyld tortillaerne med coleslaw, sprød kylling og karrymayo. Dryp med sriracha, og drys med koriander."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server resten af karrymayoen ved siden af som dip."
+    }
+  ],
+  "changes": [
+    "Vegetable oil er skiftet til rapsolie.",
+    "Carrot & cabbage slaw mix er skiftet til coleslawmix.",
+    "Red Thai curry paste hedder rød thaicurrypasta."
+  ]
+}

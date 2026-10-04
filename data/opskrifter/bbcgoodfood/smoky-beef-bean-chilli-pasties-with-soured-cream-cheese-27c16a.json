@@ -1,0 +1,260 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smoky-beef-bean-chilli-pasties-with-soured-cream-cheese",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:30:37.971Z",
+  "total_minutes": 270,
+  "active_minutes": 60,
+  "yield_count": 12,
+  "source_lines": 20,
+  "title": "Chilipasties med oksekød og sorte bønner",
+  "intro": "Mundrette dejlommer med langtidsstegt, røget oksechili og sorte bønner i en mør dej med cheddar og creme fraiche. De er gode både lune og kolde, fx på picnic.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Chilifyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 500,
+      "unit": "g",
+      "name": "oksekød",
+      "note": "oksebov i stykker på 4-5 cm",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "plus lidt ekstra efter behov",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "oksebouillon",
+      "note": "terning",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "400 g, afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Chilifyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "1 til dejen og 1 til pensling",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 700,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt, i tern",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 100,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "groft revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Chilifyld",
+      "text": "Bland hvedemel med rigeligt salt, og vend oksekødet i det. Ryst overskydende mel af."
+    },
+    {
+      "section": "Chilifyld",
+      "text": "Varm olien i en stor gryde, der tåler ovn eller komfur, og brun kødet på alle sider i 5-6 minutter, til det er dybt gyldent. Tag kødet op i en skål."
+    },
+    {
+      "section": "Chilifyld",
+      "text": "Hæld 50-70 ml vand i gryden, og skrab den brune bund løs. Smag på væsken: Er den fyldig og kødet i smagen, gemmes den. Smager den brændt og bitter, hældes den ud."
+    },
+    {
+      "section": "Chilifyld",
+      "text": "Tilsæt lidt mere olie i gryden, hvis det er nødvendigt. Svits løgene ved middel varme i 10-12 minutter, til kanterne er let gyldne."
+    },
+    {
+      "section": "Chilifyld",
+      "text": "Rør hvidløg, chipotle, tomatpuré og alle krydderierne i. Lad det stege i 3-4 minutter, til farven er mørkere, og duften er kraftig."
+    },
+    {
+      "section": "Chilifyld",
+      "text": "Hæld de hakkede tomater i sammen med det gemte vand, hvis du bruger det. Skyl dåsen med lidt vand, og hæld det i gryden. Smuldr bouillonterningen ud over, og bring det i kog."
+    },
+    {
+      "section": "Chilifyld",
+      "text": "Kom kødet tilbage i gryden, og skru ned til svag varme. Læg et stykke fugtet bagepapir direkte på overfladen, og lad det simre i 2-3 timer. Rør bønnerne i de sidste 20 minutter. Kødet skal falde fra hinanden. Lad chilien køle helt af."
+    },
+    {
+      "section": "Dej",
+      "text": "Pisk creme fraiche, sennep og 1 æg sammen i en kande."
+    },
+    {
+      "section": "Dej",
+      "text": "Kom mel og en knivspids salt i en foodprocessor, og fordel smørret ovenpå. Pulsér, til det ligner fine krummer. Tilsæt cheddar, og pulsér kort igen."
+    },
+    {
+      "section": "Dej",
+      "text": "Hæld æggeblandingen i, og pulsér kort. Tilsæt 5-6 spsk koldt vand, 1 spsk ad gangen, til dejen er blød."
+    },
+    {
+      "section": "Dej",
+      "text": "Vend dejen ud på bordet, og ælt den let. Del den i to, form to skiver, pak dem ind og stil dem på køl, til de skal bruges."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Varm ovnen op til 200 °C (180 °C varmluft), når chilien er helt kold. Tag dejen ud af køleskabet 30 minutter før brug."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Rul hver dejskive ud til en tynd plade på ca. ½ cm. Udstik 12 cirkler på 16 cm, og saml og rul resterne ud igen, hvis det er nødvendigt."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Arbejd med én cirkel ad gangen. Kom et par spiseskefulde chili på den nederste halvdel af cirklen, og drys med mozzarella. Fold den øverste halvdel ned over fyldet, og luk kanten godt med en gaffel."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Pisk det sidste æg, og pensl pastiesene med det. Læg dem på to bageplader med bagepapir."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Bag i 25-30 minutter, til de er dybt gyldne og gennembagte. Server lune efter en kort afkøling, eller lad dem køle helt af og tag dem med på picnic."
+    }
+  ],
+  "changes": [
+    "Oksebov erstatter beef shin.",
+    "Cheddar erstatter red leicester.",
+    "Creme fraiche erstatter soured cream.",
+    "Sennep erstatter English mustard.",
+    "Hvedemel erstatter plain flour.",
+    "Oksebouillon erstatter beef stock cube.",
+    "Olie erstatter vegetable oil."
+  ]
+}

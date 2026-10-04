@@ -1,0 +1,155 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-stroganoff",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:54:27.890Z",
+  "total_minutes": 45,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Kylling-stroganoff",
+  "intro": "Saftig kylling i en cremet sauce med paprika, sennep og worcestershiresauce. Server den med ris, kartoffelmos eller pasta.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 600,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "dl",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "eller kartoffelmos eller pasta",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm halvdelen af olien op i en stor pande over middelhøj varme. Brun kyllingestykkerne i den, og rør ofte, til de er gyldne. Smag til med salt og peber, og læg dem over på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Hæld resten af olien på panden, og skru ned til middel varme. Svits løgene i 6-8 minutter, til de er bløde, men uden at tage farve."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløg og paprika ned i løgene, og steg dem i cirka 1 minut, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Hæld fonden på, og tilsæt sennep og worcestershiresauce. Kom kyllingen tilbage på panden sammen med saften fra tallerkenen."
+    },
+    {
+      "section": null,
+      "text": "Lad retten simre i 5-6 minutter, til saucen er reduceret lidt, og kyllingen er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Skru ned på lav varme, og rør cremefraichen i, til saucen er jævn og cremet og lige akkurat begynder at simre."
+    },
+    {
+      "section": null,
+      "text": "Drys med persille, og server med ris, kartoffelmos eller pasta."
+    }
+  ],
+  "changes": [
+    "Sur fløde er erstattet af creme fraiche.",
+    "Kyllingefond er skrevet som hønsefond."
+  ]
+}

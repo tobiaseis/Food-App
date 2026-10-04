@@ -1,0 +1,212 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smoky-chilli-con-carne",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:01:23.797Z",
+  "total_minutes": 70,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Chili con carne med chipotle",
+  "intro": "Dyb og let røget chili con carne med hakket oksekød, bønner og chipotle. Server den med ris, creme fraiche og friske toppings.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "solsikkeolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æbleeddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chipotle",
+      "note": "pasta, 1-2 tsk efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Marmite",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "oksebouillon",
+      "note": "terning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner eller kidneybønner",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "kogte",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "jalapeños",
+      "note": "i skiver, fra glas, drænet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en gryde eller en bred kasserolle ved middel varme. Brun oksekødet i ca. 10 minutter, til det har afgivet fedt og får farve."
+    },
+    {
+      "section": null,
+      "text": "Kom løget i og steg det 8-10 minutter, til det er blødt og lige begynder at tage farve. Rør hvidløget i og steg det 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt spidskommen, koriander, oregano og rigeligt peber. Steg et par minutter, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Hæld eddiken i, og rør derefter chipotle og tomatpuré ind."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt hakkede tomater, og fyld tomatdåsen med vand, som hældes i. Rør Marmite i, smul bouillonterningen ud over, og bring det i kog. Lad det simre i 20 minutter, og rør af og til."
+    },
+    {
+      "section": null,
+      "text": "Når chilien er tyknet, tilsættes bønnerne sammen med halvdelen af væsken fra dåsen. Lad den simre 20 minutter mere, og smag til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret chilien med ris, og top med creme fraiche, jalapeños, korianderblade og hakket løg."
+    }
+  ],
+  "changes": [
+    "Gærekstrakt er erstattet af Marmite.",
+    "Soured cream er erstattet af creme fraiche.",
+    "Cider vinegar er erstattet af æbleeddike."
+  ]
+}

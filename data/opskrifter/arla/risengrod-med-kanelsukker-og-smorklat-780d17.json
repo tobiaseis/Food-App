@@ -1,0 +1,100 @@
+{
+  "url": "https://www.arla.dk/opskrifter/risengrod-med-kanelsukker-og-smorklat/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:23:05.513Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 7,
+  "title": "Risengrød med kanelsukker og smør",
+  "intro": "Klassisk dansk risengrød, der simrer langsomt og serveres varm med kanelsukker og en klat smør. Perfekt til en kold dag.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Risengrød",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 200,
+      "unit": "g",
+      "name": "grødris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 1,
+      "unit": "l",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Risengrød",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Risengrød",
+      "text": "Kom vand og grødris i en tykbundet gryde, og varm op til kogepunktet. Lad risene simre ved jævn varme i ca. 2 minutter, mens du rører hele tiden."
+    },
+    {
+      "section": "Risengrød",
+      "text": "Hæld mælken i, og lad det koge op igen. Skru ned for varmen, og lad grøden simre i ca. 10 minutter under omrøring."
+    },
+    {
+      "section": "Risengrød",
+      "text": "Læg låg på gryden, og lad grøden trække i ca. 30 minutter. Rør jævnligt rundt. Er grøden for tynd, så lad den koge 5-10 minutter mere."
+    },
+    {
+      "section": "Risengrød",
+      "text": "Rør saltet i, og smag grøden til."
+    },
+    {
+      "section": "Risengrød",
+      "text": "Bland sukker og kanel i en lille skål."
+    },
+    {
+      "section": "Risengrød",
+      "text": "Øs grøden op i en forvarmet skål, og top med kanelsukker og smør."
+    }
+  ],
+  "changes": []
+}

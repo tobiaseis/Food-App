@@ -1,0 +1,233 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/kadhai-chicken-chargha",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:46:50.485Z",
+  "total_minutes": 55,
+  "active_minutes": 25,
+  "yield_count": 6,
+  "source_lines": 19,
+  "title": "Kadhai-kylling chargha med mynteraita",
+  "intro": "Marinerede kyllingelår, der simrer møre i wok med spidskommen, tørret chili og ingefær. Serveres med kølig raita af mynte og koriander og varmt naanbrød.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til kyllingen",
+      "amount": 7,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "mild chilipulver",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 700,
+      "unit": "g",
+      "name": "kyllingeoverlår",
+      "note": "med ben, uden skind, skåret i mellemstore stykker",
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": 3,
+      "unit": "stk",
+      "name": "tørret chili",
+      "note": "røde",
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": 20,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "naanbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til raitaen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Til raitaen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til raitaen",
+      "amount": 200,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til raitaen",
+      "amount": 40,
+      "unit": "g",
+      "name": "mynte",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til raitaen",
+      "amount": 10,
+      "unit": "g",
+      "name": "koriander",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til raitaen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mariner kyllingen",
+      "text": "Blend hvidløg med halvdelen af den græske yoghurt til en jævn pasta."
+    },
+    {
+      "section": "Mariner kyllingen",
+      "text": "Rør pastaen sammen med chilipulver, koriander, gurkemeje, garam masala og salt i en skål. Vend resten af yoghurten og kyllingestykkerne i, så kødet er dækket hele vejen rundt."
+    },
+    {
+      "section": "Mariner kyllingen",
+      "text": "Stil skålen i køleskabet i 2-3 timer – gerne natten over."
+    },
+    {
+      "section": "Steg kyllingen",
+      "text": "Varm olien op over middelvarme i en wok eller en dyb pande. Kom spidskommen og tørret chili i, og lad dem syde i ca. 10 sekunder, så olien tager smag."
+    },
+    {
+      "section": "Steg kyllingen",
+      "text": "Kom den marinerede kylling i panden og steg den i 5-7 minutter, mens du rører hele tiden."
+    },
+    {
+      "section": "Steg kyllingen",
+      "text": "Skru ned på lav varme, læg låg på, og lad kyllingen simre i 20 minutter, så dampen samler sig i panden."
+    },
+    {
+      "section": "Lav raitaen",
+      "text": "Knus spidskommen og peber til et fint pulver i en morter."
+    },
+    {
+      "section": "Lav raitaen",
+      "text": "Blend pulveret med 2 spsk af yoghurten, mynte, koriander og hvidløg til en glat masse. Hæld den i en serveringsskål, og rør resten af yoghurten i. Sæt raitaen på køl, til den skal på bordet."
+    },
+    {
+      "section": "Server",
+      "text": "Tjek, at kyllingen er mør og gennemstegt. Rør ingefær og rød chili i, og drys med koriander."
+    },
+    {
+      "section": "Server",
+      "text": "Server kyllingen varm med mynteraita og naanbrød."
+    }
+  ],
+  "changes": [
+    "Kashmiri chilipulver er skiftet til mild chilipulver.",
+    "Tørrede røde kashmiri-chili er skiftet til almindelig tørret chili.",
+    "Grøntsagsolie er skiftet til rapsolie.",
+    "Kyllingestykker med ben er skiftet til kyllingeoverlår."
+  ]
+}

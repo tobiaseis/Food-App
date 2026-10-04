@@ -1,0 +1,146 @@
+{
+  "url": "https://www.valdemarsro.dk/flammkuchen/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:31:21.186Z",
+  "total_minutes": 45,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Flammkuchen",
+  "intro": "Sprød, tyndt udrullet tærte med creme fraiche, bacon og rødløg fra Alsace. Bages meget varmt, så bunden bliver knasende.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til dejen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus lidt til udrulning",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 400,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": "38 %",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 250,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Bland hvedemel, bagepulver og salt i en skål."
+    },
+    {
+      "section": "Dej",
+      "text": "Pisk vand og olivenolie sammen i en anden skål. Tilsæt melblandingen lidt ad gangen, og ælt dejen i 7-10 minutter, til den er glat og smidig."
+    },
+    {
+      "section": "Bagning",
+      "text": "Skru ovnen til det højeste. Lad bagepladerne stå i ovnen, så de bliver varme, eller varm en bage- eller pizzasten op sammen med ovnen."
+    },
+    {
+      "section": "Bagning",
+      "text": "Drys bordpladen rigeligt med mel, og del dejen i to. Rul hvert stykke ud, så det er helt tyndt og fylder lige så meget som en bageplade. Læg hver dejplade på sit eget stykke bagepapir."
+    },
+    {
+      "section": "Bagning",
+      "text": "Rør creme fraiche sammen med salt, peber og muskatnød. Smør blandingen over begge dejplader, og fordel løg og bacon ovenpå."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag én flammkuchen ad gangen. Tag den ene glohede plade ud af ovnen, og lad den anden blive i. Træk en flammkuchen med bagepapiret over på pladen, og sæt den straks ind i ovnens øverste rille."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag i ca. 12-15 minutter, til kanten er sprød og gylden. Gentag med den anden. Drys med timianblade inden servering."
+    }
+  ],
+  "changes": [
+    "Tipo 00-mel er erstattet af hvedemel, så al melet i dejen er hvedemel."
+  ]
+}

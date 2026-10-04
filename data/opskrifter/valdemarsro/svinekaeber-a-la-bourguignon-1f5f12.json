@@ -1,0 +1,256 @@
+{
+  "url": "https://www.valdemarsro.dk/svinekaeber-a-la-bourguignon/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:32:34.574Z",
+  "total_minutes": 240,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 20,
+  "title": "Svinekæber bourguignon med kartoffelmos",
+  "intro": "Mørt svinekød, der simrer i rødvin med bacon, løg og gulerødder og får champignon og karamelliserede perleløg til sidst. Serveres med cremet kartoffelmos.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Svinekæber",
+      "amount": 750,
+      "unit": "g",
+      "name": "svinekæber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 20,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 100,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 5,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": "gerne Pinot Noir",
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 4,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 2,
+      "unit": "dl",
+      "name": "grøntsagsbouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 250,
+      "unit": "g",
+      "name": "champignon",
+      "note": "skåret i halve",
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 150,
+      "unit": "g",
+      "name": "perleløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 25,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": null,
+      "unit": null,
+      "name": "friskkværnet peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekæber",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "bredbladet persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "friskkværnet peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svinekæber",
+      "text": "Start ca. 4 timer før servering. Parer kæberne, og tør dem med køkkenrulle."
+    },
+    {
+      "section": "Svinekæber",
+      "text": "Bland hvedemel med salt og peber, og vend kødet rundt i blandingen."
+    },
+    {
+      "section": "Svinekæber",
+      "text": "Steg baconen sprød på en varm pande med lidt olie. Lad den dryppe af på køkkenrulle, og hak den groft."
+    },
+    {
+      "section": "Svinekæber",
+      "text": "Hæld olie i en stor gryde, og varm den op. Smelt smørret, til det holder op med at boble, og brun kæberne godt på alle sider."
+    },
+    {
+      "section": "Svinekæber",
+      "text": "Sænk varmen lidt, og sauter løg og gulerødder sammen med kødet, til løgene er blanke og bløde."
+    },
+    {
+      "section": "Svinekæber",
+      "text": "Kom bacon, rødvin, timian, laurbærblade og bouillon i gryden. Bring det forsigtigt i kog."
+    },
+    {
+      "section": "Svinekæber",
+      "text": "Skru ned på lav varme, sæt låg på, og lad det simre i 3-3½ time."
+    },
+    {
+      "section": "Svinekæber",
+      "text": "Ca. 1 time før servering: Varm en pande op på høj varme med olie, og smelt lidt af smørret. Brun champignonerne, til de har fået en gyldenbrun skorpe."
+    },
+    {
+      "section": "Svinekæber",
+      "text": "Smelt sukker og resten af smørret på en anden pande, og lad det karamellisere. Vend perleløgene i karamellen i 15-30 minutter, til de er gyldne og karamelliserede."
+    },
+    {
+      "section": "Svinekæber",
+      "text": "Rør champignon og perleløg ud i gryden, og smag til med salt og peber. Anret med kartoffelmos og drys med persille."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Kog kartoflerne møre i usaltet vand. Varm mælken i en kasserolle til ca. 50 grader."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Mos de varme kartofler groft med smørret. Pisk dem derefter med håndmixer, og hæld den varme mælk i lidt ad gangen, til moset er cremet, luftigt og blødt."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Smag til med salt, peber og friskrevet muskatnød."
+    }
+  ],
+  "changes": []
+}

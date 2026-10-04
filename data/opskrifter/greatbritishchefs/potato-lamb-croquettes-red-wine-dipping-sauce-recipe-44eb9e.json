@@ -1,0 +1,320 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/potato-lamb-croquettes-red-wine-dipping-sauce-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:32:07.045Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 30,
+  "title": "Lammekroketter med rødvinssauce",
+  "intro": "Sprøde kroketter af kartoffelmos og krydret lammekød, drysset med rosmarinrasp og serveret med en blank rødvinssauce til dyppelse.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kroketter",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrællede og skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "hakket, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kroketter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rosmarinrasp",
+      "amount": 2,
+      "unit": "skive",
+      "name": "surdejsbrød",
+      "note": "tørt, revet i stykker",
+      "optional": false
+    },
+    {
+      "section": "Rosmarinrasp",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rosmarin",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Rosmarinrasp",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rosmarinrasp",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødvinssauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "lille, skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Rødvinssauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødvinssauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødvinssauce",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødvinssauce",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødvinssauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ribsgelé",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "blandet med salt og peber",
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": 150,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": 1,
+      "unit": "l",
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kroketter",
+      "text": "Kog kartoflerne møre i letsaltet vand i 15–20 minutter. Hæld vandet fra."
+    },
+    {
+      "section": "Kroketter",
+      "text": "Mos kartoflerne glatte med smør og fløde. Vend purløg, persille og timian i, smag til med rigeligt salt og peber, og lad moset køle af."
+    },
+    {
+      "section": "Kroketter",
+      "text": "Svits løg og hvidløg i olivenolie på en pande i ca. 10 minutter, til de er bløde. Tilsæt lammekødet og brun det, mens du deler det i småstykker."
+    },
+    {
+      "section": "Kroketter",
+      "text": "Rør tomatpuré, spidskommen og allehånde ind, og hæld fonden over. Lad det simre i ca. 10 minutter, til det er tykt, og kødet er gennemstegt. Smag til med salt og peber, og lad blandingen køle helt af."
+    },
+    {
+      "section": "Kroketter",
+      "text": "Vend lammeblandingen i moset, og stil farsen på køl i 30 minutter, så den bliver fast."
+    },
+    {
+      "section": "Rosmarinrasp",
+      "text": "Tænd ovnen på 180 °C."
+    },
+    {
+      "section": "Rosmarinrasp",
+      "text": "Kør brød, rosmarin, olivenolie og salt i en foodprocessor, til du har grove krummer. Fordel dem på en bageplade og rist dem i ovnen i 8–10 minutter, til de er sprøde."
+    },
+    {
+      "section": "Rødvinssauce",
+      "text": "Svits skalotteløgene i smør, til de er bløde. Hæld rødvinen på og kog den ind til det halve."
+    },
+    {
+      "section": "Rødvinssauce",
+      "text": "Tilsæt fond, timian og ribsgelé, og lad saucen simre, til den er blank. Si den og stil den til side."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Form farsen til kroketter. Vend dem først i det krydrede mel, derefter i æg og til sidst i panko. Læg dem på en bakke og stil dem på køl, til de skal steges."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Varm olien op til 170 °C i en tykbundet gryde med høje kanter. Steg kroketterne i omgange i 3–4 minutter, til de er gyldne og sprøde. Tag dem op med en hulske og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Genopvarm saucen. Anret kroketterne på et fad og drys med rosmarinraspen. Server med saucen i en lille skål til dypning, og top med persille."
+    }
+  ],
+  "changes": [
+    "Double cream er byttet med piskefløde.",
+    "Lammefond er byttet med oksefond.",
+    "Vegetable oil er byttet med rapsolie."
+  ]
+}

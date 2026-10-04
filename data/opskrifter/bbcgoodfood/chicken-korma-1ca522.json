@@ -1,0 +1,163 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-korma",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:04:07.610Z",
+  "total_minutes": 35,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Kylling korma",
+  "intro": "Mild og cremet indisk kyllingegryde med mandler, rosiner og yoghurt. Den er hurtig at lave og passer godt til ris.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "tommelfingerstort stykke, groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "kormapasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mandelmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "mandelmel",
+      "note": "ekstra til servering",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "rosiner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": "0 %",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Blend løg, hvidløg og ingefær til en jævn pasta i en foodprocessor."
+    },
+    {
+      "section": null,
+      "text": "Kom pastaen i en stor, dyb pande sammen med 3 spsk vand, og lad den simre i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør kormapastaen i, og steg i yderligere 2 minutter, til det dufter krydret."
+    },
+    {
+      "section": null,
+      "text": "Vend kyllingestykkerne i saucen. Tilsæt mandelmel, rosiner, fond og sukker, og rør det hele godt sammen."
+    },
+    {
+      "section": null,
+      "text": "Læg låg på, og lad retten simre i 10 minutter, til kyllingen er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Tag panden af varmen, og rør yoghurten i. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Drys med koriander og evt. lidt mandelmel. Server med basmatiris."
+    }
+  ],
+  "changes": [
+    "Sultanas er skiftet til rosiner.",
+    "Golden caster sugar er skiftet til almindeligt sukker."
+  ]
+}

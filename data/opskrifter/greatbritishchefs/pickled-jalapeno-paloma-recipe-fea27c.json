@@ -1,0 +1,110 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/pickled-jalapeno-paloma-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:15:45.521Z",
+  "total_minutes": 5,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 8,
+  "title": "Paloma med syltet jalapeño",
+  "intro": "En syrlig og let krydret cocktail med tequila, lyserød grapefrugt og et skud jalapeñolage. Glassene får en kant af chili og salt.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til glaskanten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chili",
+      "note": "stødt chilipulver",
+      "optional": false
+    },
+    {
+      "section": "Til glaskanten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Til glaskanten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "en bådskåret til glaskanten og to skiver til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til cocktailen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "tequila",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til cocktailen",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "grapefrugtjuice",
+      "note": "lyserød",
+      "optional": false
+    },
+    {
+      "section": "Til cocktailen",
+      "amount": 30,
+      "unit": "ml",
+      "name": "syltede jalapeños",
+      "note": "kun lagen fra glasset",
+      "optional": false
+    },
+    {
+      "section": "Til cocktailen",
+      "amount": 15,
+      "unit": "ml",
+      "name": "agavesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til cocktailen",
+      "amount": null,
+      "unit": null,
+      "name": "tonic",
+      "note": "til påfyldning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Glaskanten",
+      "text": "Bland chili og salt på en lille tallerken."
+    },
+    {
+      "section": "Glaskanten",
+      "text": "Fugt kanten på begge glas med limebåden, og tryk kanten ned i chilisaltet, så den er dækket hele vejen rundt."
+    },
+    {
+      "section": "Glaskanten",
+      "text": "Læg isterninger i glassene, til de er fyldt."
+    },
+    {
+      "section": "Cocktailen",
+      "text": "Fyld en shaker med is. Hæld tequila, grapefrugtjuice, jalapeñolage og agavesirup i."
+    },
+    {
+      "section": "Cocktailen",
+      "text": "Ryst kraftigt i cirka 15 sekunder, så drinken bliver kold og blandet godt. Si den over i de to glas."
+    },
+    {
+      "section": "Cocktailen",
+      "text": "Fyld op med tonic, og sæt en skive lime på kanten af hvert glas."
+    }
+  ],
+  "changes": [
+    "Tajín er erstattet af stødt chilipulver."
+  ]
+}

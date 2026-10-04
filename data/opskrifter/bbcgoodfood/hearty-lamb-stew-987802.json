@@ -1,0 +1,123 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/hearty-lamb-stew",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:59:20.595Z",
+  "total_minutes": 110,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 9,
+  "title": "Lammegryde med bønner",
+  "intro": "En solid gryderet med mør lam, grøntsager og hvide bønner, der simrer langsomt, til kødet er mørt. Server den med godt brød eller kogte kartofler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "lammekød",
+      "note": "i tern, til gryderet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "dl",
+      "name": "bouillon",
+      "note": "varm, af grøntsags- eller hønsefond",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": "eller 1 kvist frisk rosmarin",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hvide bønner",
+      "note": "cannellini, skyllet og afdryppet, 400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "fast, til servering",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "kartofler",
+      "note": "kogte, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde. Brun lammekødet i ca. 5 minutter, til væsken er stegt væk."
+    },
+    {
+      "section": null,
+      "text": "Kom løg, gulerødder og porre i gryden. Rør jævnligt, og steg i ca. 5 minutter, til grøntsagerne begynder at blive bløde."
+    },
+    {
+      "section": null,
+      "text": "Hæld bouillonen over, og tilsæt rosmarin. Læg låg på, og lad det simre ved lav varme i 1 time."
+    },
+    {
+      "section": null,
+      "text": "Vend bønnerne i, og lad retten simre i yderligere 30 minutter. Tilsæt lidt vand, hvis det bliver nødvendigt. Retten er færdig, når lammekødet er mørt og gennemkogt."
+    },
+    {
+      "section": null,
+      "text": "Server gerne med brød eller kogte kartofler."
+    }
+  ],
+  "changes": [
+    "Cannellinibønner er skiftet til hvide bønner på dåse.",
+    "Stewing lamb er skiftet til lammekød i tern."
+  ]
+}

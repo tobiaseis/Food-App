@@ -1,0 +1,219 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cajun-grilled-chicken-lime-black-eyed-bean-salad-guacamole",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:26:32.822Z",
+  "total_minutes": 25,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 19,
+  "title": "Cajun-kylling med hvid bønnesalat og guacamole",
+  "intro": "Grillede kyllingebryster i cajun-marinade med en frisk bønnesalat med lime og hjemmelavet guacamole ved siden af. Retten er hurtigt lavet, og der bliver to bryster til næste dags sandwich.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "gerne røget",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "à ca. 140 g, uden skind",
+      "optional": false
+    },
+    {
+      "section": "Bønnesalat",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvide bønner",
+      "note": "fra dåse, skyllet og drænet",
+      "optional": false
+    },
+    {
+      "section": "Bønnesalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "uden kerner, i tern",
+      "optional": false
+    },
+    {
+      "section": "Bønnesalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "majs",
+      "note": "fra dåse, drænet",
+      "optional": false
+    },
+    {
+      "section": "Bønnesalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bønnesalat",
+      "amount": 25,
+      "unit": "g",
+      "name": "soltørrede tomater",
+      "note": "i olie, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Bønnesalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Bønnesalat",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "uden sten og skal",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling",
+      "text": "Kom olie, krydderurter, krydderier og hvidløg i en stor frysepose, der kan lukkes."
+    },
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingebrysterne i posen, og vend dem, så de er dækket helt af marinaden."
+    },
+    {
+      "section": "Kylling",
+      "text": "Slå brysterne lidt flade med en kagerulle, og lad dem marinere i mindst 15 minutter."
+    },
+    {
+      "section": "Bønnesalat",
+      "text": "Vend alle ingredienserne til salaten sammen i en stor skål, og stil den til side."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Kom avocadoens frugtkød i en skål, og mos det groft med bagsiden af en ske."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Rør de øvrige ingredienser i. Vil du have den mere cremet, så mos avocadoen sammen med olie og limesaft, inden resten røres i."
+    },
+    {
+      "section": "Kylling",
+      "text": "Tænd for grillen, og beklæd en grillbakke med folie."
+    },
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingen på bakken, og grill den i 5 minutter, mens du kigger til den undervejs."
+    },
+    {
+      "section": "Kylling",
+      "text": "Vend brysterne, når de er gyldne, og grill dem 5-7 minutter mere. Tjek midten efter 5 minutter – er kødet gennemstegt, tages det ud."
+    },
+    {
+      "section": null,
+      "text": "Gem to bryster og lidt guacamole til en sandwich på rugbrød en anden dag."
+    },
+    {
+      "section": null,
+      "text": "Anret et varmt kyllingebryst på hver tallerken, og server med bønnesalat og en klat guacamole ved siden af."
+    }
+  ],
+  "changes": [
+    "Sorte øjne-bønner er skiftet til hvide bønner.",
+    "Semi-tørrede tomater i olie er skiftet til soltørrede tomater i olie."
+  ]
+}

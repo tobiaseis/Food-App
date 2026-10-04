@@ -46,6 +46,37 @@ test('scoreTiers ser luksusråvarer', () => {
   assert.ok(s.premium > 0, `premium var ${s.premium} — isPremium ses ikke`);
 });
 
+test('en dansk titel får samme hverdagsstraf som den engelske', () => {
+  // reclassify regner sporet ud fra titlen, og efter recipes:import er det
+  // den danske udgaves. "Kylling i bradepande" skal straffes som "Chicken
+  // traybake" — ellers flytter retten spor, fordi den skiftede sprog.
+  const recipe = { protein_g: 35, kcal: 520, total_minutes: 30 };
+  const lines = [
+    { taxonomy_key: 'oksemoerbrad', qty: 600, unit: 'g' },
+    { taxonomy_key: 'lam',          qty: 200, unit: 'g' },
+  ];
+  const premiumOf = (title) => scoreTiers({ ...recipe, title }, lines).premium;
+  const neutral = premiumOf('Kylling med ris');
+  const pairs = [
+    ['Cottage pie', 'Kødtærte med kartoffelmos'],
+    ["Shepherd's pie", 'Hyrdetærte'],
+    ['Chicken traybake', 'Kylling i bradepande'],
+    ['Jacket potatoes with tuna', 'Bagekartofler med tun'],
+    ['Jacket potato with beans', 'Bagt kartoffel med bønner'],
+    ['Fish fingers with peas', 'Fiskefingre med ærter'],
+    ['Cheese toasties', 'Parisertoast'],
+    ['Chicken nuggets', 'Kyllingenuggets'],
+  ];
+  for (const [en, da] of pairs) {
+    assert.ok(premiumOf(en) < neutral, `${en} straffes ikke`);
+    assert.equal(premiumOf(da), premiumOf(en), `${da} skal straffes som ${en}`);
+  }
+  // Og ikke ord, der blot ligner: tilbehør og tilberedning er ikke retten.
+  for (const t of ['Laks med ovnbagte kartofler', 'Bagt kartoffelmos', 'Salat med toastede pinjekerner']) {
+    assert.equal(premiumOf(t), neutral, `${t} er ikke en hverdagsret`);
+  }
+});
+
 // ── Frikadeller tælles i stykker, ikke portioner ─────────────────────────────
 
 const fs = require('node:fs');
@@ -78,6 +109,30 @@ test('servingsFromYield: spyd, forårsruller, dumplings og pandekager tælles i 
   // Over 250 g pr. "stykke" er tallet personer: 2,5 kg til 8.
   assert.equal(servingsFromYield('Herbed chicken skewers', 8, 2521), 8);
   assert.equal(servingsFromYield('Chicken skewers with tzatziki', 8, 1229), 3);
+});
+
+test('servingsFromYield: den danske titel giver samme portioner som den engelske', () => {
+  // reclassify regner portionerne igen ud fra titlen, og efter recipes:import
+  // er den dansk. "Easy healthy falafels" (16 stk) må ikke blive 16 portioner,
+  // fordi den nu hedder "Nemme falafler".
+  const pairs = [
+    ['Easy healthy falafels', 'Nemme, sunde falafler', 16],
+    ['Chicken & basil meatballs', 'Kyllingekødboller med basilikum', 24],
+    ['Thai fish cakes', 'Thailandske fiskefrikadeller', 12],
+    ['Chicken skewers with tzatziki', 'Kyllingespyd med tzatziki', 8],
+    ['Crispy spring rolls', 'Sprøde forårsruller', 30],
+    ['Prawn summer rolls', 'Sommerruller med rejer', 12],
+    ['Pork dumplings', 'Dumplings med svinekød', 20],
+    ['Fluffy pancakes', 'Luftige pandekager', 10],
+    ['Belgian waffles', 'Belgiske vafler', 9],
+    ['Beef sliders', 'Miniburgere med oksekød', 12],
+    ['Leek & cheese pie', 'Porretærte med ost', 1],
+  ];
+  for (const [en, da, n] of pairs) {
+    const want = servingsFromYield(en, n);
+    assert.notEqual(want, n, `${en}: reglen skal flytte tallet`);
+    assert.equal(servingsFromYield(da, n), want, `${da} skal give ${want} som ${en}`);
+  }
 });
 
 test('portionsantallet læses også fra greatbritishchefs\' egen side-JSON', () => {

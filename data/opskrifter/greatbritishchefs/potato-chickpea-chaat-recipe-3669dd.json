@@ -1,0 +1,228 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/potato-chickpea-chaat-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:21:30.394Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Kartoffel- og kikærtechaat",
+  "intro": "Sprøde ovnbagte kikærter og gyldne krydrede kartofler toppet med frisk myntechutney, yoghurt og en hjemmeblandet chaat-krydderiblanding. En indisk inspireret ret, der både kan være hovedret og tilbehør.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "skyllet og tørret",
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "plus lidt mere til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommenfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 10,
+      "unit": "stk",
+      "name": "karryblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1.2,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "skrællet og skåret i 3 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "naturel, til servering",
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Kartofler og kikærter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Myntechutney",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Myntechutney",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Myntechutney",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Myntechutney",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Myntechutney",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Chaat-krydderi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Chaat-krydderi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chaat-krydderi",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Chaat-krydderi",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chaat masala",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kikærter",
+      "text": "Tænd ovnen på 200 °C."
+    },
+    {
+      "section": "Kikærter",
+      "text": "Vend kikærterne med olie, spidskommen, chili og salt. Læg dem på en bageplade med bagepapir og bag dem sprøde i 20-25 minutter."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Varm lidt olie i en pande. Rist spidskommenfrø og karryblade, til det dufter."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Kom kartofler og gurkemeje på panden, og smag til med salt. Steg i 15-20 minutter, og vend af og til, til kartoflerne er gyldne og møre."
+    },
+    {
+      "section": "Myntechutney",
+      "text": "Blend alle ingredienserne til chutneyen, mens kartoflerne steger."
+    },
+    {
+      "section": "Chaat-krydderi",
+      "text": "Bland krydderierne i en lille skål."
+    },
+    {
+      "section": "Anretning",
+      "text": "Kom de varme kartofler i en skål, og drys de bagte kikærter ovenpå."
+    },
+    {
+      "section": "Anretning",
+      "text": "Top med rødløg, klatter af yoghurt, skefulde af myntechutney og chaat-krydderiblandingen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Pynt med korianderblade og grøn chili."
+    }
+  ],
+  "changes": [
+    "Nanna Tate-kartofler er erstattet af almindelige kartofler.",
+    "Vegetable oil er erstattet af olie.",
+    "Curry leaves hedder karryblade; de kan være svære at finde i almindelige supermarkeder."
+  ]
+}

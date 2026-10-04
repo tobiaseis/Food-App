@@ -1,0 +1,163 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smashed-potato-dill-feta-pickled-red-onion-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:01:25.467Z",
+  "total_minutes": 55,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 9,
+  "title": "Knuste kartofler med feta, dild og syltet rødløg",
+  "intro": "Sprøde, ovnbagte kartofler med salt feta, frisk dild og hurtigsyltede rødløg. Dressingen laves af syltelagen, så alt hænger sammen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Syltet rødløg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødløg",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "rødvins- eller hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødløg",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rødløg",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rødløg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 750,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "lidt ekstra til bagepladen",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet og til krydring",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing og anretning",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Dressing og anretning",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing og anretning",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dressing og anretning",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltet rødløg",
+      "text": "Kom rødløg, eddike, sukker, salt og det kogende vand i en lille skål, der ikke er af metal. Dæk til, og lad løgene trække i mindst 30 minutter."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Kog kartoflerne i letsaltet vand i 15-20 minutter, til en kniv let glider ind. Hæld vandet fra, og lad dem dampe af."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Smør en bageplade let med olie, og læg kartoflerne på den med god afstand."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Tryk hver kartoffel flad med bunden af et glas eller en spatel, der er smurt med lidt olie. De skal ligge i ét lag."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Dryp med olivenolien, og drys med salt og peber. Bag i 20-25 minutter, til kanterne er gyldne og sprøde."
+    },
+    {
+      "section": "Dressing og anretning",
+      "text": "Si løgene, og gem væsken. Pisk olie, sennep og det meste af dilden ned i væsken."
+    },
+    {
+      "section": "Dressing og anretning",
+      "text": "Læg de knuste kartofler på et fad, og smuldr fetaen ovenpå. Hæld dressingen over, og top med resten af dilden og de syltede løg."
+    }
+  ],
+  "changes": [
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Baby potatoes er erstattet af små nye kartofler."
+  ]
+}

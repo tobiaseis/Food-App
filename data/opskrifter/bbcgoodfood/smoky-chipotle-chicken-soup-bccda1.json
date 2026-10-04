@@ -1,0 +1,167 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smoky-chipotle-chicken-soup",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:47:43.085Z",
+  "total_minutes": 30,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Røget chipotlesuppe med kylling",
+  "intro": "En solid suppe med rester af kogt kylling, grøntsager og røget varme fra chipotle. Halvdelen blendes, så suppen bliver cremet, og den toppes med citronfraiche.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "l",
+      "name": "kyllingefond",
+      "note": "letsaltet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta; tag op til 2 spsk efter ønsket styrke",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "kylling",
+      "note": "kogt, revet (rester)",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "gerne røget salt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronfraiche",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": "light",
+      "optional": false
+    },
+    {
+      "section": "Citronfraiche",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Citronfraiche",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien i en stor gryde ved middel varme. Svits løg, gulerødder og selleri i 8 minutter under omrøring, til de er bløde."
+    },
+    {
+      "section": null,
+      "text": "Hæld fonden i, og rør chipotle ud i den. Kog op, og lad det simre i 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom halvdelen af suppen i en blender, og blend den glat. Hæld den tilbage i gryden."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt kylling, ærter og citronsaft, og smag til med salt og peber. Lad suppen simre i 5 minutter, til alt er varmt."
+    },
+    {
+      "section": "Citronfraiche",
+      "text": "Rør citronskallen, hvidløget og lidt vand ind i creme fraichen, til den er letflydende."
+    },
+    {
+      "section": "Til servering",
+      "text": "Øs suppen op i skåle, og rør citronfraichen ud i toppen. Drys med chiliflager, hvis du bruger det."
+    }
+  ],
+  "changes": [
+    "Chipotlepasta er skrevet som chipotle.",
+    "Selleristængler er skrevet som bladselleri."
+  ]
+}

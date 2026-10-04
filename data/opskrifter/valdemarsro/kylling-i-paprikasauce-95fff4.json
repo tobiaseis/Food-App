@@ -1,0 +1,220 @@
+{
+  "url": "https://www.valdemarsro.dk/kylling-i-paprikasauce/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:53:48.855Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Kylling i paprikasauce",
+  "intro": "Mørke kyllingestrimler simrer i en cremet sauce med paprika, tomat og et strejf cayenne. Retten serveres med ris og grønt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til saucen",
+      "amount": 25,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 25,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 3,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i tykke strimler",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "grønne bønner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "broccoli",
+      "note": "i små buketter",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tilbehør",
+      "text": "Kog risene, som der står på posen."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Bring letsaltet vand i kog i en lille kasserolle, og læg bønner og broccoli i. Læg låg på, og kog i højst 2 minutter."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Si vandet fra, og lad grøntsagerne stå lune i gryden med låg på."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret i en gryde. Pisk melet ned i det, til det former en klump."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld fonden i under hurtig piskning, og lad saucen koge op, mens du rører."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør fløde, tomatpuré, hvidløg, løg, paprika, cayennepeber og brun farin i. Smag til med mere farin, salt og peber."
+    },
+    {
+      "section": "Kylling",
+      "text": "Vend kyllingestrimlerne med paprika, salt og peber."
+    },
+    {
+      "section": "Kylling",
+      "text": "Varm smør og olie op på en pande, og brun kyllingen på høj varme."
+    },
+    {
+      "section": "Kylling",
+      "text": "Sænk varmen, og hæld saucen over kødet. Lad det simre i 10 minutter, til kyllingen er gennemstegt."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret kyllingen med ris, broccoli og bønner. Strø persille over."
+    }
+  ],
+  "changes": []
+}

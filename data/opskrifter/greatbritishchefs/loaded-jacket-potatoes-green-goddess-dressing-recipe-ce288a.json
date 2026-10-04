@@ -1,0 +1,288 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/loaded-jacket-potatoes-green-goddess-dressing-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:24:47.130Z",
+  "total_minutes": 95,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Fyldte bagekartofler med grøn guddinde-dressing",
+  "intro": "Sprødbagte kartofler fyldt med cremet kartoffelmos, parmesan og persille og toppet med avocado, burrata og knasende prosciutto. Den friske, grønne urtedressing binder det hele sammen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartofler",
+      "amount": 4,
+      "unit": "stk",
+      "name": "bagekartofler",
+      "note": "store, skrubbede og tørrede",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 6,
+      "unit": "skive",
+      "name": "prosciutto",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 125,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 10,
+      "unit": "g",
+      "name": "purløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 2,
+      "unit": "stk",
+      "name": "ansjosfileter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 25,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 60,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt, usaltet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 40,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "piskefløde",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hjertesalat",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 2,
+      "unit": "stk",
+      "name": "burrata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 40,
+      "unit": "g",
+      "name": "pistaciekerner",
+      "note": "groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skallen, finrevet",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "fint snittet, til servering",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": null,
+      "unit": null,
+      "name": "sort peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 190 °C og beklæd en bageplade med bagepapir."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Læg kartoflerne på pladen, gnid dem ind i olie og flagesalt, og prik dem med en gaffel."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Bag dem i 1 time og 20 minutter, til skindet er sprødt, og kartoflen er blød indeni. Læg prosciuttoen på pladen de sidste 5-6 minutter, så den bliver sprød."
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "text": "Kom alle ingredienserne til dressingen i en foodprocessor. Blend den glat, og tilsæt en sjat vand ad gangen, til konsistensen minder om piskefløde."
+    },
+    {
+      "section": "Grøn guddinde-dressing",
+      "text": "Der bliver mere, end du skal bruge. Stil dressingen på køl, til den skal bruges."
+    },
+    {
+      "section": "Fyld",
+      "text": "Skær de bagte kartofler over på langs. Øs det meste af indmaden ud, og lad en kant på ca. 1 cm blive tilbage i skindet."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kom kartoffelmosen i en skål, og mos den sammen med fyldets ingredienser, til den er jævn. Smag til med salt og peber."
+    },
+    {
+      "section": "Fyld",
+      "text": "Fordel fyldet i skindene, og rids toppen let op med gaflen. Sæt kartoflerne tilbage i ovnen i ca. 10 minutter, til de er varme igennem, og toppen er let sprød."
+    },
+    {
+      "section": "Topping",
+      "text": "Vend den snittede salat med 3 spsk af dressingen. Skær avocadoerne i skiver."
+    },
+    {
+      "section": "Topping",
+      "text": "Anret de varme kartofler på tallerkener med salat, avocado og burrata. Knus den sprøde prosciutto ovenpå, og dryp med mere dressing. Top med pistaciekerner, citronskal, purløg og sort peber."
+    }
+  ],
+  "changes": [
+    "Little gem-salat er erstattet med hjertesalat.",
+    "Double cream er erstattet med piskefløde.",
+    "Nanna Tate-kartofler er erstattet med almindelige bagekartofler."
+  ]
+}

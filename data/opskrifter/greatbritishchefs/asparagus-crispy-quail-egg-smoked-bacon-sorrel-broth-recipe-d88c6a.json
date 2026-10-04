@@ -1,0 +1,415 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/asparagus-crispy-quail-egg-smoked-bacon-sorrel-broth-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T13:36:20.104Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 34,
+  "title": "Asparges med sprøde vagtelæg, bacon og spinatbouillon",
+  "intro": "En elegant forretsret med grønne asparges, knuste kartofler, sprødt bacon og panerede vagtelæg i en cremet, grøn urtebouillon. Bouillonen skal trække længe, så start gerne dagen før.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 3,
+      "unit": "stk",
+      "name": "løg",
+      "note": "pillede og grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "pillede og grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 6,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hvidløg",
+      "note": "hel knold, skåret over på midten",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 10,
+      "unit": "stk",
+      "name": "hvide peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 2,
+      "unit": "l",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "estragon",
+      "note": "bundtet sammen med de andre urter",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Spinatbouillon",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatbouillon",
+      "amount": 10,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatbouillon",
+      "amount": 50,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatbouillon",
+      "amount": 50,
+      "unit": "g",
+      "name": "persille",
+      "note": "kun bladene, helst fladbladet",
+      "optional": false
+    },
+    {
+      "section": "Spinatbouillon",
+      "amount": 200,
+      "unit": "g",
+      "name": "spinat",
+      "note": "bladene",
+      "optional": false
+    },
+    {
+      "section": "Spinatbouillon",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatbouillon",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knuste kartofler",
+      "amount": 300,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "vaskede",
+      "optional": false
+    },
+    {
+      "section": "Knuste kartofler",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knuste kartofler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knuste kartofler",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knuste kartofler",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knuste kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Sprødt bacon",
+      "amount": 50,
+      "unit": "g",
+      "name": "bacon",
+      "note": "røget, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "amount": 6,
+      "unit": "stk",
+      "name": "vagtelæg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "isvand",
+      "optional": false
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "amount": 30,
+      "unit": "ml",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "amount": 20,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "blandet med salt og peber",
+      "optional": false
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "amount": 50,
+      "unit": "g",
+      "name": "rasp",
+      "note": "panko",
+      "optional": false
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Asparges",
+      "amount": 250,
+      "unit": "g",
+      "name": "asparges",
+      "note": "grønne",
+      "optional": false
+    },
+    {
+      "section": "Asparges",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "isvand",
+      "optional": false
+    },
+    {
+      "section": "Asparges",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "citron",
+      "note": "et stænk saft",
+      "optional": false
+    },
+    {
+      "section": "Asparges",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "spinat",
+      "note": "små babyblade til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grøntsagsbouillon",
+      "text": "Kom alle ingredienserne til bouillonen i en stor gryde, og bring dem i kog. Skru ned på lav varme, og lad det småkoge i 25 minutter."
+    },
+    {
+      "section": "Grøntsagsbouillon",
+      "text": "Tag gryden af varmen, læg et tætsluttende låg på, og lad bouillonen trække i mindst 1 time – gerne natten over. Si den i en stor kande, og kasser grøntsagerne."
+    },
+    {
+      "section": "Spinatbouillon",
+      "text": "Smelt smørret i en stor gryde, rør melet i, og lad det simre i 1 minut. Rør lidt af bouillonen i for at løsne smørbollen, og pisk derefter resten i. Kog op, og rør, til det er tykt."
+    },
+    {
+      "section": "Spinatbouillon",
+      "text": "Tag gryden af varmen. Kom creme fraiche, persille og halvdelen af spinaten i, og blend med stavblender, til det er helt glat. Smag til med salt og peber."
+    },
+    {
+      "section": "Spinatbouillon",
+      "text": "Rul resten af spinatbladene stramt sammen, og skær dem i helt fine strimler. Stil dem til side."
+    },
+    {
+      "section": "Knuste kartofler",
+      "text": "Læg kartoflerne i en gryde med koldt, saltet vand sammen med hvidløg, laurbærblad, rosmarin og timian. Bring dem langsomt i kog, og skru derefter ned til en let simren."
+    },
+    {
+      "section": "Knuste kartofler",
+      "text": "Kog kartoflerne, til de lige er møre, og lad dem køle af i kogevandet. Pil skindet af, og tryk kartoflerne let flade."
+    },
+    {
+      "section": "Sprødt bacon",
+      "text": "Forvarm ovnen til 180 °C. Stræk baconskiverne ud, så de bliver meget tynde, ved at stryge over dem med bagsiden af en kniv."
+    },
+    {
+      "section": "Sprødt bacon",
+      "text": "Læg baconen mellem to tunge bageplader, og bag den i ca. 8 minutter, til den er sprød og gylden. Lad den dryppe af på køkkenrulle, så den bliver helt sprød."
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "text": "Bring en gryde vand med et godt nip salt i en hastig kogning. Kog vagtelæggene i 2 minutter, og afkøl dem straks i isvand."
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "text": "Pil æggene forsigtigt, så de ikke går i stykker. Pisk mælk og æg sammen. Vend æggene først i det krydrede mel, så i æggeblandingen og til sidst i panko."
+    },
+    {
+      "section": "Sprøde vagtelæg",
+      "text": "Når du skal servere, varmes et par centimeter olie op til 180 °C i en høj, tykbundet gryde. Steg æggene i ca. 2 minutter, til de er gyldenbrune."
+    },
+    {
+      "section": "Asparges",
+      "text": "Knæk de seje, trævlede ender af aspargesene, og skær de øverste 4 cm af som toppe. Blancher toppene i kogende saltvand i 2 minutter, og afkøl dem i isvand."
+    },
+    {
+      "section": "Asparges",
+      "text": "Hyvl resten af aspargesene i tynde skiver på en mandolin. Vend dem med salt og et stænk citronsaft, og lad dem trække i 5 minutter."
+    },
+    {
+      "section": "Anretning",
+      "text": "Varm de knuste kartofler op, og læg dem midt på hver tallerken. Fordel aspargestoppene ved siden af, og læg en rede af rå aspargesskiver oven på kartoflerne."
+    },
+    {
+      "section": "Anretning",
+      "text": "Halvér de friturestegte vagtelæg, og læg dem på aspargesene sammen med det sprøde bacon. Pynt med babyspinat."
+    },
+    {
+      "section": "Anretning",
+      "text": "Bring spinatbouillonen i kog, og kom de skårne spinatstrimler i. Hæld bouillonen rundt om kartofler og æg, og server straks."
+    }
+  ],
+  "changes": [
+    "Syre er erstattet af spinat, både i bouillonen og til pynt.",
+    "Mikrosyre til pynt er erstattet af babyspinat.",
+    "Kørvel er udeladt og erstattet af ekstra persille i urtebundtet.",
+    "Sour cream er erstattet af creme fraiche.",
+    "Plain flour er erstattet af hvedemel.",
+    "Smoked streaky bacon er erstattet af røget bacon i skiver."
+  ]
+}

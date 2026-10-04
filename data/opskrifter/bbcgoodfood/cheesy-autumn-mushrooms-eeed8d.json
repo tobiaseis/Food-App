@@ -1,0 +1,87 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cheesy-autumn-mushrooms",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:06:22.226Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 6,
+  "title": "Ovnbagte svampe med blåskimmelost og valnødder",
+  "intro": "Store svampe fyldt med smeltet blåskimmelost, sprøde valnødder og timian. Serveres på en seng af rucola.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "champignon",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "blåskimmelost",
+      "note": "smuldret, fx gorgonzola",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "valnødder",
+      "note": "ristede og grofthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kviste",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "skåret i små stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "rucola",
+      "note": "til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (varmluft 180 °C)."
+    },
+    {
+      "section": null,
+      "text": "Læg svampene på en bageplade, og fordel osten, valnødderne, timiankvistene og smørstykkerne ovenpå. Det kan gøres dagen før."
+    },
+    {
+      "section": null,
+      "text": "Bag svampene i ovnen i 10 minutter, til osten er smeltet, og svampene er blevet bløde."
+    },
+    {
+      "section": null,
+      "text": "Anret rucola på tallerkener, og læg de varme svampe ovenpå."
+    }
+  ],
+  "changes": [
+    "Gorgonzola er angivet som blåskimmelost, som kan være gorgonzola eller anden blåskimmelost.",
+    "Field mushrooms er skiftet til store champignon."
+  ]
+}

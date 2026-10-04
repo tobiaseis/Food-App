@@ -1,0 +1,188 @@
+{
+  "url": "https://www.arla.dk/opskrifter/risalamande-cheesecake/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:18:17.231Z",
+  "total_minutes": 240,
+  "active_minutes": 30,
+  "yield_count": 1,
+  "source_lines": 13,
+  "title": "Risalamande cheesecake",
+  "intro": "Kold cheesecake med knasende bund af mandler og kiks, en luftig fromage af risengrød og et lag kirsebærgele på toppen. Den skal stå på køl, så den passer godt til at lave dagen før.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Bund",
+      "amount": 100,
+      "unit": "g",
+      "name": "mandler",
+      "note": "smuttede",
+      "optional": false
+    },
+    {
+      "section": "Bund",
+      "amount": 100,
+      "unit": "g",
+      "name": "kiks",
+      "note": "digestive, knuste",
+      "optional": false
+    },
+    {
+      "section": "Bund",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Bund",
+      "amount": null,
+      "unit": null,
+      "name": "lagkageplast",
+      "note": "ca. 8 cm bred",
+      "optional": false
+    },
+    {
+      "section": "Risalamande fromage",
+      "amount": 1,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": "kornene bruges; kan erstattes af vaniljepasta i tilsvarende mængde",
+      "optional": false
+    },
+    {
+      "section": "Risalamande fromage",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risalamande fromage",
+      "amount": 400,
+      "unit": "g",
+      "name": "risengrød",
+      "note": "kold",
+      "optional": false
+    },
+    {
+      "section": "Risalamande fromage",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risalamande fromage",
+      "amount": 3,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Risalamande fromage",
+      "amount": 200,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Kirsebærgele",
+      "amount": 3,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Kirsebærgele",
+      "amount": 400,
+      "unit": "g",
+      "name": "kirsebærsauce",
+      "note": "fx amarena",
+      "optional": false
+    },
+    {
+      "section": "Kirsebærgele",
+      "amount": null,
+      "unit": null,
+      "name": "mandler",
+      "note": "smuttede, ristede og grofthakkede, til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bund",
+      "text": "Tænd ovnen på 200 °C varmluft. Læg mandlerne på en bageplade og rist dem i cirka 5 minutter."
+    },
+    {
+      "section": "Bund",
+      "text": "Hak mandlerne groft og bland dem med de knuste kiks og det smeltede smør."
+    },
+    {
+      "section": "Bund",
+      "text": "Klem et stykke bagepapir fast mellem ringen og bunden på en springform på cirka 22 cm. Sæt lagkageplast langs indersiden af formen."
+    },
+    {
+      "section": "Bund",
+      "text": "Tryk kiksblandingen jævnt ud i bunden af formen. Stil den på køl i cirka 10 minutter, til den er kold."
+    },
+    {
+      "section": "Risalamande fromage",
+      "text": "Skær vaniljestangen på langs og skrab kornene ud. Gnid dem ud med lidt af sukkeret, så de skilles ad."
+    },
+    {
+      "section": "Risalamande fromage",
+      "text": "Bland risengrøden med vaniljen og resten af sukkeret."
+    },
+    {
+      "section": "Risalamande fromage",
+      "text": "Pisk fløden til et let skum og vend den forsigtigt ned i risengrøden."
+    },
+    {
+      "section": "Risalamande fromage",
+      "text": "Udblød husblassen i koldt vand i cirka 5 minutter. Løft den op og lad kun det vand, der hænger ved, følge med."
+    },
+    {
+      "section": "Risalamande fromage",
+      "text": "Smelt husblassen over vandbad, i en gryde eller i mikroovn. Den må ikke blive for varm, kun lige smelte."
+    },
+    {
+      "section": "Risalamande fromage",
+      "text": "Rør en skefuld flødeost ind i den smeltede husblas, så den køler lidt af. Pisk derefter resten af flødeosten i."
+    },
+    {
+      "section": "Risalamande fromage",
+      "text": "Rør flødeost-blandingen sammen med lidt af risalamanden, så den bliver blød. Vend den derefter ned i resten af fromagen."
+    },
+    {
+      "section": "Risalamande fromage",
+      "text": "Fyld fromagen på den kolde bund, og tryk den helt ud til kanten, så geleen senere ikke kan løbe ned langs siderne. Stil kagen tildækket på køl i mindst 3 timer, gerne længere."
+    },
+    {
+      "section": "Kirsebærgele",
+      "text": "Udblød husblassen i koldt vand i cirka 5 minutter."
+    },
+    {
+      "section": "Kirsebærgele",
+      "text": "Varm kirsebærsaucen op, efter du har fisket kirsebærrene op og lagt dem til side til pynt. Smelt husblassen i saucen og lad den køle i cirka 15 minutter."
+    },
+    {
+      "section": "Kirsebærgele",
+      "text": "Hæld geleen meget forsigtigt ud over fromagen, når den er begyndt at stivne."
+    },
+    {
+      "section": "Kirsebærgele",
+      "text": "Stil kagen på køl i cirka 1 time mere. Pynt langs kanten med kirsebær og ristede mandler, når geleen er stivnet."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,172 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/beef-taco-casserole",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:34:22.808Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Tacogryde med oksekød",
+  "intro": "Mexicansk inspireret ovnret med krydret oksekød, sorte bønner og majs under et lag smeltet ost og sprøde nachos. Server med guacamole, creme fraiche og friske toppings.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "magert",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "terninger",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "krydderi",
+      "note": "tacokrydderi",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "dl",
+      "name": "salsa",
+      "note": "stærk tomatsalsa",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "400 g, afdryppede og skyllede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": "frosne eller på dåse",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "revet ost",
+      "note": "cheddar eller lignende",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "nachos",
+      "note": "let knuste",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "guacamole",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "jalapeños",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "pico de gallo",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en mellemstor pande ved middel varme. Steg løg og hvidløg i 5 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Skru op for varmen og tilsæt kødet. Brun det under omrøring, og hæld overskydende fedt fra."
+    },
+    {
+      "section": null,
+      "text": "Rør tacokrydderi og salsa i, skru ned til middel varme, og lad det simre i 5 minutter. Vend bønner og majs i."
+    },
+    {
+      "section": null,
+      "text": "Kom kødblandingen i et ovnfast fad på ca. 33 x 23 cm eller en rund form. Fordel halvdelen af osten ovenpå, strø nachos over, og dæk med resten af osten."
+    },
+    {
+      "section": null,
+      "text": "Bag i ovnen i 20 minutter, til osten er smeltet og retten bobler."
+    },
+    {
+      "section": null,
+      "text": "Server med creme fraiche, guacamole, jalapeños, koriander og pico de gallo."
+    }
+  ],
+  "changes": [
+    "Mexican crema eller tynd sour cream er erstattet med creme fraiche.",
+    "Monterey jack er erstattet med revet ost (cheddar eller lignende).",
+    "Tortilla chips er erstattet med nachos."
+  ]
+}

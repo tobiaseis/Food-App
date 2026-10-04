@@ -1,0 +1,146 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/spiced-salmon-tomato-traybake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:17:52.134Z",
+  "total_minutes": 30,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 8,
+  "title": "Ovnbagt karrylaks med tomater og kikærter",
+  "intro": "Laks bages sammen med kikærter, tomater og rødløg i karrypasta og serveres med varmt naanbrød og yoghurt. Alt tilberedes i ét fad.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "karrypasta",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "à 400 g, skyllet og afdryppet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laks",
+      "note": "filet uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "naanbrød",
+      "note": "stort",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "naturel, helst fedtfattig",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i både",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "et par blade",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Bland løg, tomater, kikærter og vand i et dybt ovnfad på ca. 20 x 25 cm. Rør det meste af karrypastaen ud i blandingen (spar lidt til laksen)."
+    },
+    {
+      "section": null,
+      "text": "Bag i 15 minutter, til løgene er møre, og tomaterne lige er ved at sprække."
+    },
+    {
+      "section": null,
+      "text": "Rør rundt i fadet, og smag til med salt og peber. Smør den sparede karrypasta på laksen, og krydr med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Læg laksen ned mellem grøntsagerne, og bag videre i 8-10 minutter, til fisken er tilpas stegt."
+    },
+    {
+      "section": null,
+      "text": "Varm imens naanbrødet, f.eks. på risten lige under fadet. Skær det i tern eller kiler."
+    },
+    {
+      "section": null,
+      "text": "Vend yoghurten let ned i grøntsagerne. Server med naanbrødet til at dyppe, og drys evt. med koriander. Server citronbådene ved siden af til at presse over."
+    }
+  ],
+  "changes": [
+    "Fedtfattig yoghurt er skiftet til almindelig yoghurt naturel."
+  ]
+}

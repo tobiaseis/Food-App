@@ -1,0 +1,111 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/breakfast-burrito",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:55:35.897Z",
+  "total_minutes": 15,
+  "active_minutes": 5,
+  "yield_count": 1,
+  "source_lines": 7,
+  "title": "Morgenmadsburrito",
+  "intro": "En hurtig burrito med røræg, grønkål og cherrytomater med et pift af chipotle. Fyldet lander i en lun fuldkornstortilla sammen med avocado.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "grønkål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 7,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "lille, i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "fuldkorn, varmet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Pisk chipotlen sammen med ægget i en kande eller skål, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op på en stor pande ved middelhøj varme. Kom grønkål og cherrytomater på, og steg dem, til kålen er faldet sammen, og tomaterne er blevet bløde."
+    },
+    {
+      "section": null,
+      "text": "Skub grønsagerne ind til den ene side af panden. Hæld det piskede æg på den frie side, og rør det, til det er stivnet som røræg."
+    },
+    {
+      "section": null,
+      "text": "Læg fyldet midt på tortillaen, og top med avocadoskiverne. Rul tortillaen sammen, og spis den med det samme."
+    }
+  ],
+  "changes": [
+    "Chipotlepasta er skrevet som chipotle, som er varens navn i kataloget.",
+    "Grønkål erstatter kale, som er det danske navn."
+  ]
+}

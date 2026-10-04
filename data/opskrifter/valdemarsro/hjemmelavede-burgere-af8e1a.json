@@ -1,0 +1,288 @@
+{
+  "url": "https://www.valdemarsro.dk/hjemmelavede-burgere/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:49:18.302Z",
+  "total_minutes": 120,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Burgere med hjemmebagte olivenboller",
+  "intro": "Saftige oksebøffer med bacon og soltørrede tomater i selvbagte boller med oliven og hørfrø. Burgerne toppes med cheddar, sprød bacon og masser af friske grøntsager.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "hørfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 150,
+      "unit": "g",
+      "name": "oliven",
+      "note": "uden sten, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 100,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Olivenboller (giver 10 stk.)",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 600,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "stegt sprød og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 150,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 4,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "stegt sprød",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 125,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i ringe",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Olivenboller",
+      "text": "Rør vand og gær ud i en skål. Bland olie, hørfrø, oliven, salt og fuldkornshvedemel i."
+    },
+    {
+      "section": "Olivenboller",
+      "text": "Tilsæt hvedemelet lidt ad gangen, til dejen kan æltes på et bord. Den skal være blød og smidig og må gerne klæbe en anelse."
+    },
+    {
+      "section": "Olivenboller",
+      "text": "Lad dejen hæve i skålen i 30 minutter."
+    },
+    {
+      "section": "Olivenboller",
+      "text": "Slå dejen sammen, del den i 10 stykker og form dem til boller. Læg dem på en bageplade med bagepapir, og lad dem hæve i 1½ time."
+    },
+    {
+      "section": "Olivenboller",
+      "text": "Varm ovnen op til 250 °C varmluft. Pensl bollerne med olie og drys flagesalt over."
+    },
+    {
+      "section": "Olivenboller",
+      "text": "Sæt bollerne i ovnen, og skru straks ned til 200 °C varmluft. Bag dem i 15-18 minutter, og lad dem køle af på en rist. Overskydende boller kan fryses."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Ælt alle ingredienserne til bøfferne grundigt sammen i en skål."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Form 4 bøffer, og tryk dem flade."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Steg bøfferne i smør ved middel varme i 4-5 minutter på hver side. Læg ost og sprød bacon på lige før de er færdige."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Del bollerne, og byg burgerne med bøf, ost, bacon, salat, tomat, agurk, rødløgsringe, mayonnaise og ketchup."
+    }
+  ],
+  "changes": [
+    "Soltørrede tomater i olie, worcestershiresauce og flagesalt er beholdt som i kilden.",
+    "Krydderurter til servering er udeladt, da kilden ikke angiver nogen.",
+    "Cheddar i skiver i stedet for osteskive er uændret."
+  ]
+}

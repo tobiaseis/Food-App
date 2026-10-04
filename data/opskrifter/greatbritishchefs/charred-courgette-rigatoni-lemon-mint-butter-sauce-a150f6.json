@@ -1,0 +1,188 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/charred-courgette-rigatoni-lemon-mint-butter-sauce",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:15:56.402Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Grillet squash-rigatoni med citron- og myntesmør",
+  "intro": "Rigatoni vendt i et cremet smør med citron og frisk mynte, toppet med grillet squash og sprøde kapers. En sommerlig pastaret, der kan laves på grillen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Citron- og myntesmør",
+      "amount": 250,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Citron- og myntesmør",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citroner",
+      "note": "skallen rives fra begge, saften presses fra den ene",
+      "optional": false
+    },
+    {
+      "section": "Citron- og myntesmør",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "blade plukket og finthakket; gem lidt små blade til servering",
+      "optional": false
+    },
+    {
+      "section": "Citron- og myntesmør",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Citron- og myntesmør",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": 2,
+      "unit": "stk",
+      "name": "squash",
+      "note": "store, grønne, i 1 cm tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Squash",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": 400,
+      "unit": "g",
+      "name": "pasta",
+      "note": "rigatoni",
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "afdryppede",
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe over",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Citron- og myntesmør",
+      "text": "Pisk det bløde smør sammen med citronskal, citronsaft, mynte, hvidløg og en knivspids salt, til det er jævnt."
+    },
+    {
+      "section": "Squash",
+      "text": "Vend squashskiverne med olie, hvidløg, citronsaft og en knivspids salt i en skål. Lad dem stå til side."
+    },
+    {
+      "section": "Squash",
+      "text": "Gør grillen klar til direkte varme. Grill skiverne 2-3 minutter på hver side, til de har fået tydelige grillstriber."
+    },
+    {
+      "section": "Squash",
+      "text": "Skær den grillede squash i mundrette stykker og stil den til side."
+    },
+    {
+      "section": "Pasta",
+      "text": "Kog rigatoni al dente i rigeligt saltet vand. Gem 2,5 dl af kogevandet, og hæld resten fra."
+    },
+    {
+      "section": "Pasta",
+      "text": "Steg kapers i olien på en pande ved middel varme, til de åbner sig lidt og er sprøde. Tag dem op med en hulske, og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Pasta",
+      "text": "Vend den varme pasta med smørret og en sjat af kogevandet. Du kan bruge mindre smør, men brug mindst 100 g. Rør, til smørret danner en cremet sauce, og vend så squashen i."
+    },
+    {
+      "section": "Pasta",
+      "text": "Fordel pastaen i skåle. Top med sprøde kapers, parmesan, mynteblade og peber, og dryp med lidt olivenolie."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,184 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/herb-garlic-pork-summer-ratatouille",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:09:02.281Z",
+  "total_minutes": 40,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Urtebagt svinemørbrad med sommerratatouille",
+  "intro": "Mør svinemørbrad med hvidløg og timian serveres til en saftig ratatouille med aubergine, squash og peberfrugt. Til retten hører brune ris eller nye kartofler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "i tern, gerne forskellige farver",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "stor, i tern",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "stk",
+      "name": "squash",
+      "note": "store, halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kvist",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "stilkene hakkes, bladene rives og gemmes til sidst",
+      "optional": false
+    },
+    {
+      "section": "Svinemørbrad",
+      "amount": 500,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": "renset for fedt og delt i 2 lige store stykker",
+      "optional": false
+    },
+    {
+      "section": "Svinemørbrad",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Svinemørbrad",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "blade, plus nogle kviste til pynt",
+      "optional": false
+    },
+    {
+      "section": "Svinemørbrad",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinemørbrad",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "brune ris",
+      "note": "eller nye kartofler",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ratatouille",
+      "text": "Varm olien op i en stor non-stick pande, og svits løgene i ca. 5 minutter, til de er bløde."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Kom peberfrugt, aubergine, squash og hvidløg på panden, og rør rundt et par minutter."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Hæld de hakkede tomater i sammen med en dåse vand (brug tomatdåsen). Rør fond, timian og basilikumstilke i."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Læg låg på, og lad det simre i 20 minutter, til grøntsagerne er møre. Vend basilikumbladene i til sidst."
+    },
+    {
+      "section": "Svinemørbrad",
+      "text": "Mens ratatouillen simrer, gnides svinemørbraden med hvidløg. Drys med timian og peber, og tryk krydderierne fast hele vejen rundt."
+    },
+    {
+      "section": "Svinemørbrad",
+      "text": "Varm olien op på en non-stick pande. Steg mørbraden i ca. 12 minutter, og vend den ofte, så den bliver brun på alle sider og mør, men stadig saftig."
+    },
+    {
+      "section": "Svinemørbrad",
+      "text": "Læg låg på, og lad kødet hvile i 5 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær mørbraden i skiver, og server den med ratatouillen og brune ris eller nye kartofler. Pynt med friske timiankviste."
+    }
+  ],
+  "changes": [
+    "Rapsolie er beholdt som i kilden.",
+    "Grøntsagsbouillon er erstattet af grøntsagsfond.",
+    "Brune ris er beholdt som færdigvare i serveringen."
+  ]
+}

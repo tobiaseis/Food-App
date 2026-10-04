@@ -1,0 +1,558 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/king-tilapia-mussels-curry-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:15:12.490Z",
+  "total_minutes": 90,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 48,
+  "title": "Tilapia med blåmuslinger, æble og gul karrysauce",
+  "intro": "Letsaltet tilapia serveres i en cremet muslingesauce med gul karry, syltede havgrøntsager og sprøde toppings. Retten kræver lidt forberedelse over flere dage, men det meste kan laves i forvejen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tilapia",
+      "amount": 800,
+      "unit": "g",
+      "name": "tilapiafilet",
+      "note": "4 fileter",
+      "optional": false
+    },
+    {
+      "section": "Tilapia",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Tilapia",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Tilapia",
+      "amount": 5,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Tilapia",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Tilapia",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til at smøre fisken ind i",
+      "optional": false
+    },
+    {
+      "section": "Tilapia",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "en klump, usaltet",
+      "optional": false
+    },
+    {
+      "section": "Syltede havgrøntsager",
+      "amount": 2,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "æbleeddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede havgrøntsager",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede havgrøntsager",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede havgrøntsager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lyserød peber",
+      "note": "hele kerner",
+      "optional": false
+    },
+    {
+      "section": "Syltede havgrøntsager",
+      "amount": 125,
+      "unit": "g",
+      "name": "samphire",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede havgrøntsager",
+      "amount": 125,
+      "unit": "g",
+      "name": "glasört",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Løvstikkeolie",
+      "amount": 50,
+      "unit": "g",
+      "name": "løvstikke",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Løvstikkeolie",
+      "amount": 50,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Løvstikkeolie",
+      "amount": 150,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Løvstikkeolie",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blækspruttechips",
+      "amount": 50,
+      "unit": "g",
+      "name": "tapioka",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blækspruttechips",
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blækspruttechips",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "blæksprutteblæk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blækspruttechips",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blækspruttechips",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": null,
+      "unit": null,
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": null,
+      "unit": null,
+      "name": "hvid peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": 0.8,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhaji",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "æblecider",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "fiskefond",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 400,
+      "unit": "g",
+      "name": "blåmuslinger",
+      "note": "levende, skyllet og skægget fjernet",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "gul karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "saft, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Porre og emulsion",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Porre og emulsion",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Porre og emulsion",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Porre og emulsion",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "fiskefond",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "havgrøntsager",
+      "note": "fx strandasters og agretti",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "østersurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "Granny Smith, i fine tern",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede havgrøntsager",
+      "text": "Kom eddike, vand, sukker og lyserød peber i en kasserolle. Varm op, til sukkeret er opløst, og lad det køle af til stuetemperatur."
+    },
+    {
+      "section": "Syltede havgrøntsager",
+      "text": "Læg samphire og glasört i en krukke eller en bakke. Hæld den afkølede lage over, og sæt det i køleskabet, til det skal bruges. Det kan sagtens gøres uger i forvejen."
+    },
+    {
+      "section": "Løvstikkeolie",
+      "text": "Lav olien op til 3 dage før. Blancher løvstikke og spinat i kogende vand i 30 sekunder, og afkøl dem straks i isvand."
+    },
+    {
+      "section": "Løvstikkeolie",
+      "text": "Pres så meget væde som muligt ud af bladene. Blend dem med rapsolie og lidt salt i nogle minutter, til olien er skarpt grøn."
+    },
+    {
+      "section": "Løvstikkeolie",
+      "text": "Hæld massen i en sigte, der er beklædt med musselin eller køkkenrulle. Lad olien dryppe igennem i køleskabet natten over."
+    },
+    {
+      "section": "Blækspruttechips",
+      "text": "Chipsene kan laves nogle dage i forvejen. Kog tapioka, vand, blæksprutteblæk og en lille knivspids salt op i en gryde. Lad det simre i ca. 15 minutter, til tapiokaen er klar og gennemsigtig."
+    },
+    {
+      "section": "Blækspruttechips",
+      "text": "Smør massen tyndt ud på en bageplade med bagepapir. Tør den natten over i en dehydrator eller i ovnen ved 50 °C."
+    },
+    {
+      "section": "Blækspruttechips",
+      "text": "Næste dag opvarmes olie i en dyb gryde ved høj varme, eller friturefryseren sættes til 210 °C. Bræk pladen i stykker, og friturestég dem, til de pustes op. Opbevar dem lufttæt."
+    },
+    {
+      "section": "Bhaji",
+      "text": "Pisk alle ingredienserne undtagen olien sammen med en knivspids salt og hvid peber til en tyk dej. Fyld dejen i en sprayflaske."
+    },
+    {
+      "section": "Bhaji",
+      "text": "Varm olie op til 170 °C i en lille gryde. Sprøjt dejen ud i den varme olie, og steg den gyldent og sprødt. Lad den dryppe af på køkkenrulle, og opbevar den lufttæt."
+    },
+    {
+      "section": "Sauce",
+      "text": "Lav saucen på serveringsdagen. Bring cider, laurbærblad, timian og fiskefond i kog i en stor gryde."
+    },
+    {
+      "section": "Sauce",
+      "text": "Kom muslingerne i, læg låg på, og damp dem i nogle minutter. Ryst gryden en gang imellem, til skallerne åbner sig. Smid de muslinger ud, der forbliver lukkede."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld muslingerne i et dørslag over en skål, så du kan gemme væden. Pil kødet ud af skallerne, og stil det på en bakke."
+    },
+    {
+      "section": "Tilapia",
+      "text": "Dup fileterne tørre. Bland salt, citronskal, timian og karry, og gnid blandingen over fisken. Lad den stå i 40 minutter, så den bliver fastere og let saltet."
+    },
+    {
+      "section": "Sauce",
+      "text": "Imens smeltes smørret i en kasserolle ved middel varme. Svits skalotteløgene, til de er bløde."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør karrypastaen i, og lad den stege med i et par minutter. Tilsæt safran, og si den gemte muslingevæde ned i kasserollen."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør kokosmælken i, og lad saucen koge ind i nogle minutter, til den er tyk. Smag til med salt, peber og citronsaft. Hold den varm, eller genopvarm den lige før servering."
+    },
+    {
+      "section": "Porre og emulsion",
+      "text": "Brænd porren sort hele vejen rundt, enten direkte over gasblus eller under en varm grill."
+    },
+    {
+      "section": "Porre og emulsion",
+      "text": "Varm imens vandet op i en lille kasserolle. Pisk smør og fiskefond i, så det bliver en emulsion, og hold den varm til servering."
+    },
+    {
+      "section": "Porre og emulsion",
+      "text": "Når porren er kølet så meget af, at den kan holdes i hænderne, fjernes de sorte lag. Hak det bløde, søde indre i mundrette stykker."
+    },
+    {
+      "section": "Tilapia",
+      "text": "Skyl overskydende salt af fileterne, og dup dem tørre. Pensl dem med rapsolie. Varm en stor pande op ved middel varme."
+    },
+    {
+      "section": "Tilapia",
+      "text": "Steg fileterne i 3 minutter, vend dem, og kom en god klump smør på panden. Steg 2-3 minutter mere, mens du ævler fisken med smørret, til den er gennemstegt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Mens fisken steger, genopvarmes saucen forsigtigt. Varm havgrøntsagerne og de pillede muslinger i emulsionen. Si lidt af de syltede havgrøntsager fra."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel de varme havgrøntsager i dybe tallerkener, og læg en tilapiafilet ovenpå. Hæld saucen i tallerkenen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Pynt med syltede havgrøntsager, muslinger, porre, æbletern, blækspruttechips og bhaji. Dryp med løvstikkeolie, og top med østersurt."
+    }
+  ],
+  "changes": [
+    "Gluten-fri selvhævende mel er skiftet til hvedemel og bagepulver.",
+    "Dashipulver er skiftet til fiskefond.",
+    "Kokoscreme er skiftet til kokosmælk.",
+    "Kornisk cider er skiftet til almindelig tør æblecider.",
+    "Banansjalotteløg er skiftet til skalotteløg."
+  ]
+}

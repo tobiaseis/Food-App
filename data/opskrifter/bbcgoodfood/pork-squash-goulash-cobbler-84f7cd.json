@@ -1,0 +1,212 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/pork-squash-goulash-cobbler",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:21:06.449Z",
+  "total_minutes": 55,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 17,
+  "title": "Svinegullasch med butternut squash og kommenscones",
+  "intro": "En let gullasch af svinemørbrad, grøntsager og røget paprika, der bages med en luftig topping af speltmel og yoghurt. Den er mættende og nem at lave til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til gullashen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 250,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": "renset for fedt og skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 150,
+      "unit": "g",
+      "name": "butternut squash",
+      "note": "skrællet og skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn peberfrugt",
+      "note": "uden kerner, i tern",
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 100,
+      "unit": "g",
+      "name": "champignon",
+      "note": "stilkene brækket af og gemt, store halveres",
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kommenfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 3.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "grøntsagsfond",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gullashen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 100,
+      "unit": "g",
+      "name": "fuldkornsspeltmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 100,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": null,
+      "unit": null,
+      "name": "mælk",
+      "note": "en smule til pensling",
+      "optional": true
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "kommenfrø",
+      "note": "til drys",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "kål",
+      "note": "kogt",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Gullashen",
+      "text": "Varm olien i en ovnfast gryde eller pande med slip-let-belægning. Brun svinekødet under omrøring i 5-7 minutter."
+    },
+    {
+      "section": "Gullashen",
+      "text": "Kom selleri, squash, peberfrugt, champignon og de gemte champignonstilke i. Steg et par minutter."
+    },
+    {
+      "section": "Gullashen",
+      "text": "Rør kommenfrø og paprika ind. Tilsæt det kogende vand, fonden, tomatpuréen og hvidløget."
+    },
+    {
+      "section": "Gullashen",
+      "text": "Læg låg på og lad retten simre i 20 minutter, til grøntsagerne er møre. Tag låget af, og lad den simre 5 minutter mere, så saucen koger lidt ind."
+    },
+    {
+      "section": "Toppen",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Toppen",
+      "text": "Bland mel og bagepulver i en skål. Rør olie og yoghurt sammen, og vend det i melet. Saml det til en dej med en bordkniv."
+    },
+    {
+      "section": "Toppen",
+      "text": "Ælt dejen helt kort på en ren bordplade, og rul den til en pølse på tykkelse med en stor agurk. Skær den i seks lige store skiver, og læg dem oven på gullashen."
+    },
+    {
+      "section": "Toppen",
+      "text": "Pensl eventuelt med mælk, og drys med kommenfrø."
+    },
+    {
+      "section": "Toppen",
+      "text": "Bag i 15-20 minutter, til toppen er gylden og gennemstegt. Løft en skive for at tjekke, at dejen er fast i bunden."
+    },
+    {
+      "section": "Toppen",
+      "text": "Server gerne med den kogte kål ved siden af."
+    }
+  ],
+  "changes": []
+}

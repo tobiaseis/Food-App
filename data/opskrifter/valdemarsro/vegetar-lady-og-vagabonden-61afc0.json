@@ -1,0 +1,275 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetar-lady-og-vagabonden/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:43:13.537Z",
+  "total_minutes": 60,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Vegetarboller med quinoa og linser i tomatsauce",
+  "intro": "Bagte boller af quinoa, linser og feta serveres med spaghetti og en kraftig tomatsauce med timian og æblecidereddike. En vegetarisk udgave af klassikeren spaghetti med kødboller.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "frisk timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 5,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 100,
+      "unit": "g",
+      "name": "quinoa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 50,
+      "unit": "g",
+      "name": "linser",
+      "note": "grønne, fx puy",
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 4,
+      "unit": "dl",
+      "name": "grøntsagsbouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 100,
+      "unit": "g",
+      "name": "champignon",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret oregano",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": 75,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 350,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "frisk timian",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatsauce",
+      "text": "Steg løg og hvidløg i smør i en gryde, til løgene er bløde."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Rør tomater, timian, tomatpuré, eddike og soltørrede tomater i gryden, og smag til med salt og peber. Lad saucen simre uden låg, mens du laver resten."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Blend saucen med en stavblender, hvis du vil have den helt glat."
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "text": "Skyl quinoa og linser i en sigte under koldt vand. Kom dem i en gryde med bouillon, bring det i kog, og læg låg på. Lad det simre i 20 minutter, til linserne næsten er møre."
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "text": "Varm ovnen op til 175 °C."
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "text": "Vend quinoa og linser sammen med champignon, æg, rødløg, hvidløg, persille, spidskommen, timian, oregano og feta i en skål. Smag til med salt og peber."
+    },
+    {
+      "section": "Quinoa- og linseboller",
+      "text": "Rul farsen til små boller, og læg dem på en bageplade med bagepapir. Bag dem i 25-30 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog spaghettien al dente, som det står på pakken."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret spaghetti med boller og varm tomatsauce. Top med rigeligt parmesan og frisk timian."
+    }
+  ],
+  "changes": [
+    "Koncentreret tomatpuré er skrevet som tomatpuré.",
+    "Grønne linser i stedet for puy delikatesselinser er skrevet som linser."
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "url": "https://www.arla.dk/opskrifter/jordbaris/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:08:04.099Z",
+  "total_minutes": 265,
+  "active_minutes": 25,
+  "yield_count": 1,
+  "source_lines": 9,
+  "title": "Jordbæris med limesukker",
+  "intro": "Cremet hjemmelavet jordbæris på æggeblommer, fløde og vanilje, som serveres med syrligt limesukker drysset over.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Jordbæris",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordbæris",
+      "amount": 1,
+      "unit": "dl",
+      "name": "sukker",
+      "note": "til æggeblommerne",
+      "optional": false
+    },
+    {
+      "section": "Jordbæris",
+      "amount": 5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordbæris",
+      "amount": 1,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": "flækket",
+      "optional": false
+    },
+    {
+      "section": "Jordbæris",
+      "amount": 400,
+      "unit": "g",
+      "name": "jordbær",
+      "note": "rensede",
+      "optional": false
+    },
+    {
+      "section": "Jordbæris",
+      "amount": 1,
+      "unit": "dl",
+      "name": "sukker",
+      "note": "til jordbærpuréen",
+      "optional": false
+    },
+    {
+      "section": "Jordbæris",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset limesaft",
+      "optional": false
+    },
+    {
+      "section": "Limesukker",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limesukker",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "fintrevet skal af usprøjtet lime",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Jordbæris",
+      "text": "Pisk æggeblommerne med sukkeret i ca. 2 minutter, til massen er lys og luftig."
+    },
+    {
+      "section": "Jordbæris",
+      "text": "Kog fløden op sammen med vaniljestangen i en lille gryde med tyk bund. Tag gryden af varmen."
+    },
+    {
+      "section": "Jordbæris",
+      "text": "Hæld æggemassen i den varme fløde, mens du pisker."
+    },
+    {
+      "section": "Jordbæris",
+      "text": "Sæt gryden på jævn varme igen, og varm cremen op til lige under kogepunktet i ca. 2 minutter. Pisk hele tiden, og se efter, at cremen bliver tykkere. Den må ikke koge."
+    },
+    {
+      "section": "Jordbæris",
+      "text": "Si cremen, og lad den køle helt af."
+    },
+    {
+      "section": "Jordbæris",
+      "text": "Blend jordbærrene med sukker og limesaft til en glat puré, og rør den ned i den afkølede creme."
+    },
+    {
+      "section": "Jordbæris",
+      "text": "Kom blandingen i en form på ca. 1 liter, dæk til, og stil den i fryseren. Rør rundt i isen 4-5 gange, mens den fryser."
+    },
+    {
+      "section": "Limesukker",
+      "text": "Bland sukker og limeskal i en lille skål."
+    },
+    {
+      "section": "Limesukker",
+      "text": "Server jordbærisen med limesukkeret drysset over."
+    }
+  ],
+  "changes": []
+}

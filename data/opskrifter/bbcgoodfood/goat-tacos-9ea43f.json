@@ -1,0 +1,192 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/goat-tacos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:21:53.571Z",
+  "total_minutes": 350,
+  "active_minutes": 30,
+  "yield_count": 10,
+  "source_lines": 13,
+  "title": "Gedetacos med chipotle- og koriandersauce",
+  "intro": "Langtidsstegt, mørt kød på hjemmelavede majstortillas med røget chipotlecreme og frisk grøn koriandersauce. Retten laves med lammebov i stedet for gedekid.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Kødet",
+      "amount": 2,
+      "unit": "kg",
+      "name": "lammebov",
+      "note": "hel",
+      "optional": false
+    },
+    {
+      "section": "Kødet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tortilladej",
+      "amount": 150,
+      "unit": "g",
+      "name": "majsmel",
+      "note": "finmalet",
+      "optional": false
+    },
+    {
+      "section": "Tortilladej",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "en knivspids",
+      "optional": false
+    },
+    {
+      "section": "Tortilladej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tortilladej",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "ca., det er muligvis ikke det hele, der skal bruges",
+      "optional": false
+    },
+    {
+      "section": "Adobosauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "chipotle",
+      "note": "i adobo, blendet glat",
+      "optional": false
+    },
+    {
+      "section": "Adobosauce",
+      "amount": 100,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn sauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn sauce",
+      "amount": 6,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Grøn sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saft",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "jalapeños",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "kun bladene, lille bundt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødet",
+      "text": "Tænd ovnen på 130 °C (110 °C varmluft). Krydr lammeboven med salt, læg den i et ovnfast fad og dæk med folie."
+    },
+    {
+      "section": "Kødet",
+      "text": "Steg i 5 timer, til kødet er mørt og falder fra benet. Tag det ud og lad det køle lidt af, og pil det derefter i tråde med to gafler."
+    },
+    {
+      "section": "Tortilladej",
+      "text": "Mens kødet steger: Bland majsmel med salt. Rør olivenolie og vand i lidt ad gangen, til du har en glat dej. Måske skal alt vandet ikke bruges."
+    },
+    {
+      "section": "Tortilladej",
+      "text": "Form dejen til en kugle, dæk den og stil den på køl. Den kan holde sig tildækket i køleskabet i 24 timer."
+    },
+    {
+      "section": "Adobosauce",
+      "text": "Rør den blendede chipotle sammen med creme fraiche, til saucen er ensartet."
+    },
+    {
+      "section": "Grøn sauce",
+      "text": "Blend alle ingredienserne til den grønne sauce i en blender eller minihakker, til den er helt glat. Sæt begge saucer til side."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm en slip-let pande eller støbejernspande op ved middelhøj varme. Del dejen i 10 stykker og rul dem til små kugler."
+    },
+    {
+      "section": "Til servering",
+      "text": "Pres eller rul hver kugle ud til en tynd rund plade mellem to stykker bagepapir. Tør-steg pladerne et par stykker ad gangen i 1 minut på hver side, til de har fået lidt farve."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg kødet og avocadoen på tortillaerne, og dryp med limesaft. Hæld adobosauce og grøn sauce over, og server ekstra sauce ved siden af."
+    },
+    {
+      "section": "Til servering",
+      "text": "Top med jalapeño, rødløg og korianderblade."
+    }
+  ],
+  "changes": [
+    "Gedekid er erstattet af lammebov, som er den nærmeste kødtype i danske supermarkeder.",
+    "Masa harina er erstattet af finmalet majsmel.",
+    "Soured cream er erstattet af creme fraiche."
+  ]
+}

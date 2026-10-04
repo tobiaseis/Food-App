@@ -1,0 +1,164 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/nicoise-chicken-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:51:59.121Z",
+  "total_minutes": 25,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 14,
+  "title": "Kyllingesalat med kartofler og bønner",
+  "intro": "En frisk salat i niçoise-stil med saftig stegt kylling, kogte kartofler, bønner, tomater og oliven. Dressingen med citron, hvidløg og basilikum bruges både på kyllingen og til salaten.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "bladene hakket",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 3,
+      "unit": "stk",
+      "name": "sorte oliven",
+      "note": "uden sten, skyllet og hakket",
+      "optional": false
+    },
+    {
+      "section": "Kylling og salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "uden skind",
+      "optional": false
+    },
+    {
+      "section": "Kylling og salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Kylling og salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "haricots verts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "meget fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Kylling og salat",
+      "amount": 14,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Kylling og salat",
+      "amount": 6,
+      "unit": "stk",
+      "name": "romainesalat",
+      "note": "blade, revet i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": "Kylling og salat",
+      "amount": 6,
+      "unit": "stk",
+      "name": "sorte oliven",
+      "note": "uden sten, skyllet og halveret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Rør alle ingredienserne til dressingen sammen i en lille skål med 1 spsk vand."
+    },
+    {
+      "section": "Kylling og salat",
+      "text": "Vend kyllingebrysterne i 1 spsk af dressingen, så de er dækket hele vejen rundt."
+    },
+    {
+      "section": "Kylling og salat",
+      "text": "Varm olien op i en lille non-stick pande med låg. Steg kyllingen under låg i ca. 12 minutter, og vend den undervejs, så den bliver gennemstegt."
+    },
+    {
+      "section": "Kylling og salat",
+      "text": "Kog imens kartoflerne i 7 minutter. Kom bønnerne i og kog dem 5 minutter mere, til både kartofler og bønner er møre. Hæld vandet fra."
+    },
+    {
+      "section": "Kylling og salat",
+      "text": "Læg kyllingen på en tallerken og lad den hvile."
+    },
+    {
+      "section": "Kylling og salat",
+      "text": "Vend kartofler, bønner og resten af salatens ingredienser sammen i en stor skål med halvdelen af dressingen."
+    },
+    {
+      "section": "Kylling og salat",
+      "text": "Skær kyllingen i skiver og læg dem ovenpå salaten. Rør saften fra tallerkenen i resten af dressingen og hæld den over."
+    }
+  ],
+  "changes": [
+    "Fine grønne bønner er skiftet til haricots verts.",
+    "Pakke basilikum er skiftet til et bundt basilikum.",
+    "Kalamata-oliven er skiftet til sorte oliven."
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "url": "https://www.valdemarsro.dk/spinatpandekager-med-laks/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:37:37.746Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 16,
+  "intro": "Grønne pandekager af spinat og fuldkornsmel, serveret med cremet avocadodressing, frisk salat og varmrøget laks. En mættende ret, der er hurtig at lave.",
+  "title": "Spinatpandekager med laks og avocadodressing",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Spinatpandekager",
+      "amount": 125,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatpandekager",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatpandekager",
+      "amount": 50,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatpandekager",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatpandekager",
+      "amount": 3,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatpandekager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Spinatpandekager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadodressing med hytteost",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadodressing med hytteost",
+      "amount": 100,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadodressing med hytteost",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Avocadodressing med hytteost",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadodressing med hytteost",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 80,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 200,
+      "unit": "g",
+      "name": "varmrøget laks",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 25,
+      "unit": "g",
+      "name": "hampefrø",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Spinatpandekager",
+      "text": "Skyl spinaten godt. Kom den i en blender med mel, æg, mælk, peber og olie."
+    },
+    {
+      "section": "Spinatpandekager",
+      "text": "Blend, til dejen er helt glat og letflydende."
+    },
+    {
+      "section": "Spinatpandekager",
+      "text": "Varm en pande med en smule olie. Steg pandekagerne i nogle minutter på hver side."
+    },
+    {
+      "section": "Avocadodressing med hytteost",
+      "text": "Kør avocado, hytteost, citronskal og citronsaft til en cremet masse i en minihakker."
+    },
+    {
+      "section": "Avocadodressing med hytteost",
+      "text": "Smag til med salt og peber, og kør den igen, til dressingen er jævn."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret pandekagerne med rucola, dressing, agurk, rødløg og laks. Drys med hampefrø og top eventuelt med lidt ekstra hytteost."
+    }
+  ],
+  "changes": []
+}

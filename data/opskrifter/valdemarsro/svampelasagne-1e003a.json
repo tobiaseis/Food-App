@@ -1,0 +1,291 @@
+{
+  "url": "https://www.valdemarsro.dk/svampelasagne/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:51:42.414Z",
+  "total_minutes": 75,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Svampelasagne med mornaysauce",
+  "intro": "Lasagne med cremet svampefyld af champignon og tørrede svampe, lagt sammen med ostesauce og bagt gylden under en knasende toplag. Serveres med en frisk salat i sød-syrlig dressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Svampefyld",
+      "amount": 20,
+      "unit": "g",
+      "name": "tørrede svampe",
+      "note": "karl johan svampe",
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 300,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal og lidt saft",
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampefyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 200,
+      "unit": "g",
+      "name": "lasagneplader",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 50,
+      "unit": "g",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet, eller anden hård ost",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 125,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svampefyld",
+      "text": "Udblød de tørrede svampe som angivet på pakken, og lad dem derefter dryppe af i en sigte."
+    },
+    {
+      "section": "Svampefyld",
+      "text": "Varm olie op i en bred pande, og lad smørret smelte, til det holder op med at boble."
+    },
+    {
+      "section": "Svampefyld",
+      "text": "Brun champignonerne ved høj varme, til de har fået en flot gylden skorpe."
+    },
+    {
+      "section": "Svampefyld",
+      "text": "Sænk varmen, og kom løg, hvidløg, rosmarin, spinat og de udblødte svampe i panden. Lad det simre, til løgene er bløde, og spinaten er faldet sammen."
+    },
+    {
+      "section": "Svampefyld",
+      "text": "Hæld hvidvin og fløde i, og lad det koge op kort. Smag til med citronskal, lidt citronsaft, salt og peber."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Smelt smørret i en gryde, og rør melet i. Pisk, til det former en samlet klump."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Hæld mælken i en smule ad gangen under konstant piskning, til saucen er jævn og tyk."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Rør mozzarellaen i, og lad den smelte. Krydr med muskatnød, salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Forvarm ovnen til 200 °C varmluft, og smør et ovnfast fad."
+    },
+    {
+      "section": "Samling",
+      "text": "Bred et lag svampefyld i bunden af fadet, og dæk med lasagneplader og lidt mornaysauce. Gentag lagene, og slut af med mornaysauce øverst."
+    },
+    {
+      "section": "Samling",
+      "text": "Bland pankorasp og parmesan, og strø det over. Bag lasagnen i ca. 15 minutter, til pladerne er møre."
+    },
+    {
+      "section": "Salat",
+      "text": "Rør olie, citronsaft, honning og sennep sammen til en dressing, og smag til med salt og peber."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend salaten i dressingen. Anret lasagnen med timian drysset over, og server salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Karl johan svampe er skrevet som tørrede svampe.",
+    "Dijon sennep er skrevet som sennep."
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/roast-chicken-thighs-cornbread-smoky-tomato-chutney-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:38:45.874Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Ovnbagte kyllingelår med majsbrød og røget tomatchutney",
+  "intro": "Sprøde kyllingelår serveres på et skiver af hjemmebagt majsbrød med sprød fennikelsalat og en sød, røget chutney af tomat og chili.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Røget tomatchutney",
+      "amount": 3,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Røget tomatchutney",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Røget tomatchutney",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Røget tomatchutney",
+      "amount": 2,
+      "unit": "stk",
+      "name": "chili",
+      "note": "røde, uden kerner, hakket",
+      "optional": false
+    },
+    {
+      "section": "Røget tomatchutney",
+      "amount": 300,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget tomatchutney",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "store, uden kerner, hakket",
+      "optional": false
+    },
+    {
+      "section": "Røget tomatchutney",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget tomatchutney",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Røget tomatchutney",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget tomatchutney",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Majsbrød",
+      "amount": 60,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Majsbrød",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Majsbrød",
+      "amount": 250,
+      "unit": "g",
+      "name": "majsmel",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Majsbrød",
+      "amount": 150,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Majsbrød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Majsbrød",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Majsbrød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Majsbrød",
+      "amount": 5,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingelår",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "med ben og skind",
+      "optional": false
+    },
+    {
+      "section": "Kyllingelår",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingelår",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Kyllingelår",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingelår",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingelår",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingelår",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "skåret i helt tynde skiver og pensles med olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "rucola",
+      "note": "vendt i olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe over",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Røget tomatchutney",
+      "text": "Varm lidt olie op i en stor gryde, og steg rødløgene i ca. 15 minutter."
+    },
+    {
+      "section": "Røget tomatchutney",
+      "text": "Rør paprika, chipotle, chili og brun farin ned i løgene."
+    },
+    {
+      "section": "Røget tomatchutney",
+      "text": "Kom tomater og vand i gryden, og bring det i kog under omrøring. Lad det simre."
+    },
+    {
+      "section": "Røget tomatchutney",
+      "text": "Smag til med salt og peber. Lad chutneyen koge ind ved svag varme i 30-40 minutter, til den er tyk og klistret."
+    },
+    {
+      "section": "Majsbrød",
+      "text": "Beklæd en rund kageform på 20 cm med bagepapir, og tænd ovnen på 200 °C varmluft."
+    },
+    {
+      "section": "Majsbrød",
+      "text": "Smelt smørret i en pande, og svits skalotteløget ved svag varme i 10-15 minutter, til det er blødt. Hæld det i en skål, og lad det køle af."
+    },
+    {
+      "section": "Majsbrød",
+      "text": "Pisk majsmel, hvedemel, sukker og bagepulver sammen i en skål."
+    },
+    {
+      "section": "Majsbrød",
+      "text": "Pisk æg og kærnemælk sammen i en anden skål, og rør det afkølede løg i. Vend de tørre ingredienser i, og rør, til dejen er glat."
+    },
+    {
+      "section": "Majsbrød",
+      "text": "Hæld dejen i formen, og bag brødet i 25-30 minutter. Det er færdigt, når en pind eller kniv kommer rent op af midten."
+    },
+    {
+      "section": "Majsbrød",
+      "text": "Skru ovnen ned på 180 °C. Lad majsbrødet køle af på en rist i ca. 30 minutter, mens du gør kyllingen klar."
+    },
+    {
+      "section": "Kyllingelår",
+      "text": "Bland kyllingelårene med olie, paprika, cayennepeber, hvidløgspulver, salt og peber."
+    },
+    {
+      "section": "Kyllingelår",
+      "text": "Læg lårene i ét lag på en bageplade, og steg dem i ovnen i 30-40 minutter. Ose dem med pandesaften ca. hver 10. minut, til skindet er sprødt, og kernetemperaturen er over 74 °C."
+    },
+    {
+      "section": "Kyllingelår",
+      "text": "Tag lårene ud, og lad dem hvile i ca. 10 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret en skive majsbrød på hver tallerken med en klat chutney, og drys med persille. Læg rucola, fennikel og to kyllingelår ved siden af."
+    },
+    {
+      "section": "Til servering",
+      "text": "Dryp med olivenolie, og kværn peber over."
+    }
+  ],
+  "changes": []
+}

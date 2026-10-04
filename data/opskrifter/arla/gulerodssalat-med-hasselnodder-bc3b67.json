@@ -1,0 +1,108 @@
+{
+  "url": "https://www.arla.dk/opskrifter/gulerodssalat-med-hasselnodder/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:23:41.779Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Gulerodssalat med salatost og hasselnødder",
+  "intro": "En frisk og sprød salat af tyndtskårne gulerødder med salatost, ristede hasselnødder og basilikum. Dressingen laves af olien fra salatosten.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Gulerodssalat",
+      "amount": 6,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "gerne i blandede farver",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalat",
+      "amount": 150,
+      "unit": "g",
+      "name": "salatost",
+      "note": "i tern i olie",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalat",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hasselnødder",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalat",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "basilikum",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "fra salatosten",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Gulerodssalat",
+      "text": "Pil gulerødderne, og del dem i helt tynde skiver med en mandolin eller en kartoffelskræller."
+    },
+    {
+      "section": "Gulerodssalat",
+      "text": "Si olien fra salatosten, og gem den til dressingen."
+    },
+    {
+      "section": "Gulerodssalat",
+      "text": "Hak hasselnødderne groft."
+    },
+    {
+      "section": "Dressing",
+      "text": "Pisk den afsiede olie med eddike, salt og peber, og smag dressingen til."
+    },
+    {
+      "section": "Dressing",
+      "text": "Vend gulerodsskiverne i dressingen, og anret dem på et fad. Fordel salatost og hasselnødder ovenpå."
+    },
+    {
+      "section": "Dressing",
+      "text": "Strø basilikumblade over, og server salaten."
+    }
+  ],
+  "changes": []
+}

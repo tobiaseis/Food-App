@@ -1,0 +1,132 @@
+{
+  "url": "https://www.valdemarsro.dk/pasta-alla-norma/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:15:10.095Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Pasta alla Norma",
+  "intro": "Siciliansk pastaret med stegt aubergine, tomatsauce, basilikum og masser af parmesan. Enkel mad, hvor auberginen får en dejlig sprød skorpe.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "skåret i tern på 1x1 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til auberginerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "flåede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, grofthakket, plus lidt til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "pasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bland auberginetern med saltet i en skål, og lad dem stå i 30 minutter, så de afgiver væde. Pres væden fra, og dup ternene tørre."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en pande ved lidt over middelvarme, til den er rigtig varm. Steg auberginerne under konstant omrøring, til de har en fin skorpe. Tilsæt lidt mere olie, hvis det er nødvendigt. Læg dem over på en tallerken med køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Put tomater, hvidløg, salt, peber og den hakkede basilikum på samme pande. Lad saucen simre svagt, til den er reduceret lidt."
+    },
+    {
+      "section": null,
+      "text": "Kog pastaen i saltet vand, til den er lige under mør. Gem lidt af kogevandet, og si resten fra."
+    },
+    {
+      "section": null,
+      "text": "Vend pastaen i tomatsaucen på panden. Tilsæt kogevand lidt ad gangen, til saucen bliver cremet. Smag til med sukker, salt, peber og basilikum."
+    },
+    {
+      "section": null,
+      "text": "Anret pastaen med de stegte auberginer, drys med parmesan, og pynt med frisk basilikum."
+    }
+  ],
+  "changes": []
+}

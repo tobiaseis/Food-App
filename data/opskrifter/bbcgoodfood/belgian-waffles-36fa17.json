@@ -1,0 +1,212 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/belgian-waffles",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:43:31.002Z",
+  "total_minutes": 15,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Belgiske vafler",
+  "intro": "Luftige vafler med sprød overflade, hvor piskede æggehvider gør dejen let. Server dem med dine yndlingstoppings, sødt som salt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Vafler",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 60,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til vaffeljernet",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "bær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "is",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "chokoladesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "jordnøddesmør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "banan",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Pisk kærnemælk, smeltet smør og vanilje sammen i en stor skål."
+    },
+    {
+      "section": "Dej",
+      "text": "Skil ægget, og rør blommen ned i kærnemælksblandingen."
+    },
+    {
+      "section": "Dej",
+      "text": "Pisk æggehviden i en ren skål til stive toppe. Det er den, der gør vaflerne lette og luftige."
+    },
+    {
+      "section": "Dej",
+      "text": "Sigt mel, salt, sukker, bagepulver og natron ned i en anden skål."
+    },
+    {
+      "section": "Dej",
+      "text": "Vend den våde blanding i de tørre ingredienser, og pisk til en jævn dej. Vend derefter æggehviden forsigtigt, men bestemt i. Et par små klumper gør ikke noget."
+    },
+    {
+      "section": "Dej",
+      "text": "Dæk skålen med film, og lad dejen hvile i 30 minutter, hvis du har tid."
+    },
+    {
+      "section": "Bagning",
+      "text": "Pensl vaffeljernet let med olie, og varm det op. Sæt ovnen på lav varme, så de færdige vafler kan holde sig varme."
+    },
+    {
+      "section": "Bagning",
+      "text": "Hæld en fjerdedel af dejen i jernet, luk låget, og bag vaflen i 2–2½ minut, til den er gyldenbrun på begge sider og slipper let."
+    },
+    {
+      "section": "Bagning",
+      "text": "Gentag med resten af dejen, og server vaflerne med de toppings, du bedst kan lide."
+    }
+  ],
+  "changes": [
+    "Streaky bacon er erstattet med bacon i skiver.",
+    "Caster sugar er erstattet med almindeligt sukker.",
+    "Plain flour er erstattet med hvedemel."
+  ]
+}

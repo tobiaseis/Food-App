@@ -1,0 +1,170 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/yogurt-pancakes-with-roasted-strawberries-vanilla-yoghurt",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:35:31.144Z",
+  "total_minutes": 60,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 13,
+  "title": "Yoghurtpandekager med ovnbagte jordbær og vaniljeyoghurt",
+  "intro": "Luftige yoghurtpandekager med bløde, ovnbagte jordbær og en cremet vaniljeyoghurt. Perfekt til en langsom weekendmorgen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ovnbagte jordbær",
+      "amount": 400,
+      "unit": "g",
+      "name": "jordbær",
+      "note": "toppet og halveret",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte jordbær",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte jordbær",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekagerne",
+      "amount": 250,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Pandekagerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekagerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": "1-2 spsk efter smag",
+      "optional": false
+    },
+    {
+      "section": "Pandekagerne",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekagerne",
+      "amount": 175,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekagerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": "1 tsk fra kilden plus ekstra, se ændringer",
+      "optional": false
+    },
+    {
+      "section": "Pandekagerne",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekagerne",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "eller smør til stegning",
+      "optional": false
+    },
+    {
+      "section": "Vaniljeyoghurt",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljeyoghurt",
+      "amount": 100,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "honning",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ovnbagte jordbær",
+      "text": "Forvarm ovnen til 160 °C (140 °C varmluft)."
+    },
+    {
+      "section": "Ovnbagte jordbær",
+      "text": "Læg jordbærrene i ét lag i en bageform med bagepapir. Riv citronskallen over, pres saften ud over bærrene, drys med sukker, og vend det hele rundt."
+    },
+    {
+      "section": "Ovnbagte jordbær",
+      "text": "Bag i 40-45 minutter, til bærrene er mørke og saftige, men stadig holder formen. Lad dem køle lidt af. De kan holdes 3-4 dage i en lufttæt beholder i køleskabet."
+    },
+    {
+      "section": "Pandekagerne",
+      "text": "Mens bærrene bager, pisk yoghurt, æg, sukker og mælk sammen i en stor skål."
+    },
+    {
+      "section": "Pandekagerne",
+      "text": "Sigt hvedemel, bagepulver og salt ned i skålen, og vend det forsigtigt sammen til en tyk dej."
+    },
+    {
+      "section": "Pandekagerne",
+      "text": "Varm 1-2 tsk olie op i en non-stick pande. Når den er varm, hældes 2-3 spsk dej på panden."
+    },
+    {
+      "section": "Pandekagerne",
+      "text": "Steg i 1-2 minutter, til der kommer små bobler på overfladen, og undersiden er gylden. Vend og steg ca. 1 minut mere, til pandekagen er gylden og luftig. Fortsæt med resten af dejen."
+    },
+    {
+      "section": "Vaniljeyoghurt",
+      "text": "Rør vaniljeekstrakten ud i yoghurten."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret pandekagerne med en klat vaniljeyoghurt og skefulde af de ovnbagte jordbær med den safte, der er løbet fra dem. Dryp eventuelt lidt honning over."
+    }
+  ],
+  "changes": [
+    "Self-raising flour er erstattet med hvedemel og bagepulver (ekstra bagepulver tilføjet)."
+  ]
+}

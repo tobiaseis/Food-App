@@ -1,0 +1,184 @@
+{
+  "url": "https://www.arla.dk/opskrifter/spaghetti-med-morbrad-tomat-og-able/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:22:08.991Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Spaghetti med svinemørbrad, tomat og æble",
+  "intro": "Fuldkornsspaghetti med mør svinemørbrad, sprøde æbler, rødløg og cherrytomater i en cremet tomatsauce. Rosmarinen giver retten en duftende, sommerlig smag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Mørbrad",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mørbrad",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Mørbrad",
+      "amount": 400,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": "afpudset, skåret i skiver på 1 cm",
+      "optional": false
+    },
+    {
+      "section": "Tomat, æble og løg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Tomat, æble og løg",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "i tynde både, fx Discovery",
+      "optional": false
+    },
+    {
+      "section": "Tomat, æble og løg",
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret, gerne en blanding af røde og gule",
+      "optional": true
+    },
+    {
+      "section": "Tomat, æble og løg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "frisk rosmarin",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomat, æble og løg",
+      "amount": 1.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "amount": 2.5,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "amount": 2.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "amount": 300,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": "fuldkorn, tørret",
+      "optional": false
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "eller madlavningsfløde",
+      "optional": false
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon i pulverform",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "rosmarin",
+      "note": "bløde kviste",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mørbrad",
+      "text": "Smelt smørret i en stor sauterpande, til det får en gylden farve, og kom hvidløgsskiverne i."
+    },
+    {
+      "section": "Mørbrad",
+      "text": "Steg mørbradskiverne i ca. 3 minutter i alt, til de er brunet hele vejen rundt."
+    },
+    {
+      "section": "Mørbrad",
+      "text": "Løft kød og hvidløg op af panden og stil det til side under låg eller folie, så det holder varmen."
+    },
+    {
+      "section": "Tomat, æble og løg",
+      "text": "Steg rødløgene i panden ved middel varme i ca. 1 minut."
+    },
+    {
+      "section": "Tomat, æble og løg",
+      "text": "Kom æbler, cherrytomater, hakket rosmarin og salt i panden, og steg det i ca. 3 minutter mere."
+    },
+    {
+      "section": "Tomat, æble og løg",
+      "text": "Læg kød og hvidløg tilbage i panden, vend rundt og smag til."
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "text": "Bring vand og salt i kog i en stor gryde, mens grøntsagerne simrer."
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "text": "Kog spaghettien i 10-11 minutter, til den er mør, men stadig fast i det. Si den og lad vandet løbe fra."
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "text": "Hæld hakkede tomater, fløde og bouillonpulver i den tomme gryde, og varm saucen godt igennem."
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "text": "Vend spaghettien i saucen, og anret den i en stor, varm skål."
+    },
+    {
+      "section": "Spaghetti og tomatsauce",
+      "text": "Læg kødet og grøntsagerne ovenpå, pynt med rosmarinkviste, og server med det samme."
+    }
+  ],
+  "changes": []
+}

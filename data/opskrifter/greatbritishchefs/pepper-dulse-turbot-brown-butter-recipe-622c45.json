@@ -1,0 +1,135 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/pepper-dulse-turbot-brown-butter-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:50:40.303Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 10,
+  "title": "Grillet pighvar med brunet smør og tang",
+  "intro": "Grillede pighvarsnit med nøddeagtigt brunet smør og friske havplanter. Smørret serveres ved siden af, så fisken forbliver let og saftig.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "pighvar",
+      "note": "2 snit à ca. 250 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "gerne havsalt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Brunet smør",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Brunet smør",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "saften, et lille stænk",
+      "optional": false
+    },
+    {
+      "section": "Brunet smør",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kapers",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "pebertang",
+      "note": "skyllet og duppet tør",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "strandmælde",
+      "note": "skyllet og duppet tør",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kombu",
+      "note": "strimlet og blancheret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd for grillen, så den bliver rigtig varm."
+    },
+    {
+      "section": null,
+      "text": "Pensl fisken med lidt olie og drys med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Læg fisken på grillen og grill den 6-8 minutter på den første side. Vend den og grill 3-4 minutter mere. Bruger du en robatagrill, skal skindsiden vende nedad til start."
+    },
+    {
+      "section": null,
+      "text": "Fisken er færdig, når skindet let slipper, og kødet er gennemvarmt ved benet. Tiden afhænger af, hvor tyk fisken er. Tag den af grillen og stil den til side."
+    },
+    {
+      "section": "Brunet smør",
+      "text": "Smelt smørret i en lille gryde ved middelvarme. Rør løbende og skrab bunden, så bundfaldet ikke brænder på."
+    },
+    {
+      "section": "Brunet smør",
+      "text": "Når smørret dufter af nødder og har en brun farve efter 4-5 minutter, tages gryden af varmen. Lad det køle lidt af."
+    },
+    {
+      "section": "Brunet smør",
+      "text": "Tilsæt citronsaften, og rør eventuelt kapers i. Hæld smørret i en lille kande eller pande til servering."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg pighvaren på tallerkener og top med pebertang, strandmælde og strimlet kombu. Server straks med det brune smør ved siden af."
+    }
+  ],
+  "changes": [
+    "Kelp eller havspaghetti er erstattet med kombu.",
+    "Fiskesauce som alternativ til kapers er udeladt; kapers bruges alene."
+  ]
+}

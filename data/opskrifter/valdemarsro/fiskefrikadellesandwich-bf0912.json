@@ -1,0 +1,196 @@
+{
+  "url": "https://www.valdemarsro.dk/fiskefrikadellesandwich/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:09:10.166Z",
+  "total_minutes": 15,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Fiskefrikadelle-sandwich med tatarsauce og syltede rødløg",
+  "intro": "Bløde boller med lune fiskefrikadeller, knasende salat og agurk, syrlig tatarsauce og hjemmesyltede rødløg. En klassiker i sandwichform.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "fiskefrikadeller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "boller",
+      "note": "burgerboller eller sandwichbrød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "salat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "cornichoner",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijonsennep",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "fintrevet skal og saft, økologisk",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 0.5,
+      "unit": "håndfuld",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede rødløg",
+      "text": "Del rødløgene i tynde ringe og læg dem i et rent, skoldet patentglas."
+    },
+    {
+      "section": "Syltede rødløg",
+      "text": "Bring eddike, vand og sukker i kog i en gryde med peberkorn og evt. andre krydderier. Lad det koge, til sukkeret er opløst."
+    },
+    {
+      "section": "Syltede rødløg",
+      "text": "Hæld den kogende lage over løgene, sæt låg på glasset, og stil det køligt."
+    },
+    {
+      "section": "Tatarsauce",
+      "text": "Vend alle ingredienserne til saucen sammen, og smag den til med salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Varm fiskefrikadellerne og brødet."
+    },
+    {
+      "section": "Samling",
+      "text": "Skær brødene midt over. Læg tatarsauce, salat, agurk, fiskefrikadelle og syltede rødløg i hver bolle."
+    }
+  ],
+  "changes": []
+}

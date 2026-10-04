@@ -1,0 +1,160 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-basil-meatballs",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:27:26.133Z",
+  "total_minutes": 40,
+  "active_minutes": 20,
+  "yield_count": 24,
+  "source_lines": 13,
+  "title": "Kyllingefrikadeller med basilikum",
+  "intro": "Små, saftige kyllingefrikadeller med basilikum, som serveres i trævlede cikorieblade med sriracha og peanuts eller som spyd med ristet peberfrugt. Perfekte til fingermad og kan laves dagen før.",
+  "servings": 24,
+  "ingredients": [
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 250,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 25,
+      "unit": "g",
+      "name": "brød",
+      "note": "kornbrød",
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 0.33,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 12,
+      "unit": "stk",
+      "name": "cikorieblade",
+      "note": "røde eller grønne",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sriracha",
+      "note": "eller sød chilisauce",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "skåret på langs i fine strimler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 25,
+      "unit": "g",
+      "name": "nødder",
+      "note": "saltede peanuts, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Peberfrugtversion",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "ristet, rød, skåret i 24 stykker",
+      "optional": false
+    },
+    {
+      "section": "Peberfrugtversion",
+      "amount": 24,
+      "unit": "stk",
+      "name": "basilikum",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Peberfrugtversion",
+      "amount": 24,
+      "unit": "stk",
+      "name": "cocktailpinde",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Frikadeller",
+      "text": "Hak skalotteløget groft i en foodprocessor med nogle korte pulseringer."
+    },
+    {
+      "section": "Frikadeller",
+      "text": "Kom kyllingebryst, brød, basilikum og hvidløg i foodprocessoren. Kør det til en blød masse."
+    },
+    {
+      "section": "Frikadeller",
+      "text": "Form 24 små frikadeller med våde hænder."
+    },
+    {
+      "section": "Frikadeller",
+      "text": "Varm en smule rapsolie på en stor non-stick-pande. Steg halvdelen af frikadellerne i 5 minutter, og vend dem undervejs, så de får jævn farve. Tag dem af panden, og steg resten på samme måde."
+    },
+    {
+      "section": "Frikadeller",
+      "text": "Stil frikadellerne på køl, til de skal serveres. De holder sig op til en dag i køleskabet."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm eventuelt frikadellerne i ovnen ved 180 °C (160 °C varmluft) i 10 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg halvdelen af frikadellerne i cikorieblade. Top med sriracha, forårsløg og peanuts."
+    },
+    {
+      "section": "Peberfrugtversion",
+      "text": "Træk de resterende frikadeller på 12 cocktailpinde, to på hver. Sæt et stykke peberfrugt og to basilikumblade på hver side af frikadellerne."
+    }
+  ],
+  "changes": [
+    "Kornbrød er skrevet som brød.",
+    "Røde peberfrugter fra glas er skrevet som ristet peberfrugt.",
+    "Ristet peberfrugt og cikorie er beholdt som i kilden."
+  ]
+}

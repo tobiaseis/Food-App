@@ -1,0 +1,111 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/sweet-pea-martini-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T13:34:57.634Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 7,
+  "title": "Sweet pea martini",
+  "intro": "En grøn martini med ginmacereret på ærter og et strejf tør vermouth. Ærtevand og ærtegin skal laves dagen før.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Ærtevand",
+      "amount": 100,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Ærtevand",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Ærtevand",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ærtegin",
+      "amount": 5,
+      "unit": "dl",
+      "name": "gin",
+      "note": "London dry gin",
+      "optional": false
+    },
+    {
+      "section": "Ærtegin",
+      "amount": 500,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Til drinken",
+      "amount": 50,
+      "unit": "ml",
+      "name": "vin",
+      "note": "Noilly Prat Original Dry",
+      "optional": false
+    },
+    {
+      "section": "Til drinken",
+      "amount": null,
+      "unit": null,
+      "name": "isterninger",
+      "note": "til omrøring",
+      "optional": false
+    },
+    {
+      "section": "Til drinken",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ærteskid",
+      "note": "åbnet, til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ærtevand",
+      "text": "Lav ærtevand og ærtegin dagen før. Blend de frosne ærter med koldt vand og salt til en helt glat masse, og frys den natten over. Det giver mere, end du skal bruge."
+    },
+    {
+      "section": "Ærtegin",
+      "text": "Blend gin og frosne ærter i 30 sekunder, til ærterne er helt neddelt. Hæld blandingen i en beholder, og sæt den i fryseren i 12 timer, så den færdige infusion bliver klarere."
+    },
+    {
+      "section": "Ærtevand",
+      "text": "Næste dag: Lad ærtevandet tø lidt op uden for fryseren. Si det først gennem en fin si og derefter gennem et kaffefilter. Opbevar det på køl."
+    },
+    {
+      "section": "Ærtegin",
+      "text": "Lad ginblandingen tø lidt op, og si den gennem et fint filter, fx en filterpose eller et rent viskestykke. Hæld ginen på en steriliseret flaske med en tragt, og sæt den på køl. Det giver mere, end du skal bruge."
+    },
+    {
+      "section": "Til drinken",
+      "text": "Pres nogle få dråber ærtevand ned i et martiniglas med en pipette. Rør vermouth og 50 ml af ærteginen sammen med isterninger i en shaker eller et rørglas, til drinken er iskold."
+    },
+    {
+      "section": "Til drinken",
+      "text": "Si drinken ned i glasset, og pynt med det åbnede ærteskid."
+    }
+  ],
+  "changes": [
+    "Superbag-filterpose er erstattet af en fin filterpose eller et rent viskestykke.",
+    "Ærteskid til pynt er beholdt som frisk ærteskid; kan udelades, hvis det ikke fås."
+  ]
+}

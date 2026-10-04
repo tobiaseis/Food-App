@@ -1,0 +1,148 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/spanish-chicken-stew",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:09:18.360Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Spansk kyllingegryde",
+  "intro": "En enkel gryderet med mørt kyllingelår, peberfrugt og røget paprika, toppet med oliven og ristede mandler. Server den med ris eller godt brød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingelår",
+      "note": "uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "sorte oliven",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mandler",
+      "note": "flagede, ristede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "kogte, eller brød",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm halvdelen af olien op i en stor gryde. Krydr kyllingen med salt og peber, og brun den i 7-8 minutter, til den er gylden på begge sider. Læg den over på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Hæld resten af olien i gryden, og steg peberfrugt, løg og hvidløg ved middel varme i 8 minutter, til det får lidt farve."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt eddiken, og lad den koge med i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Kom kyllingen tilbage i gryden sammen med paprika og fond. Bring det i kog, skru ned, og lad retten simre i 25 minutter, til kyllingen er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Rør oliven og mandler i lige før servering. Server med kogte ris eller godt brød."
+    }
+  ],
+  "changes": [
+    "Udskåret kyllingebryst er ikke brugt; kyllingelår uden skind og ben bruges som i kilden.",
+    "Hvidvinseddike er skrevet som eddike.",
+    "Couchillo-oliven er skiftet til almindelige sorte oliven."
+  ]
+}

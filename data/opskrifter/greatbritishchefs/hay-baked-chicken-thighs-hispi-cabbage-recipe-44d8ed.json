@@ -1,0 +1,334 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/hay-baked-chicken-thighs-hispi-cabbage-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:26:50.909Z",
+  "total_minutes": 70,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 27,
+  "title": "Hø-bagte kyllingelår med spidskål og kærnemælksdressing",
+  "intro": "Saltlagte kyllingelår bages i hø, så de får en let sød, urtet duft, og penslles med varm honningglasur. Serveres med stegt spidskål og en frisk dressing af kærnemælk.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til kyllingen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "med ben",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 4,
+      "unit": "håndfuld",
+      "name": "hø",
+      "note": "i foderkvalitet, der må spises",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "finthakket, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": null,
+      "unit": null,
+      "name": "chiliflager",
+      "note": "til servering",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen",
+      "amount": 60,
+      "unit": "g",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen",
+      "amount": 40,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "let knust",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skallen af",
+      "optional": false
+    },
+    {
+      "section": "Til saltlagen",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den varme honningglasur",
+      "amount": 80,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den varme honningglasur",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "balsamico",
+      "optional": false
+    },
+    {
+      "section": "Til den varme honningglasur",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tabasco",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den varme honningglasur",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den varme honningglasur",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til den varme honningglasur",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til spidskålen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "renset og skåret i kvarte på langs",
+      "optional": false
+    },
+    {
+      "section": "Til spidskålen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til spidskålen",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til spidskålen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kærnemælksdressingen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kærnemælksdressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kærnemælksdressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon, evt. mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til kærnemælksdressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citronsaft",
+      "note": "evt. mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til kærnemælksdressingen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til kærnemælksdressingen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kærnemælksdressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Saltlage",
+      "text": "Kom alle ingredienserne til saltlagen i en gryde sammen med halvdelen af vandet. Varm op til det småkoger, og rør, til salt og honning er opløst."
+    },
+    {
+      "section": "Saltlage",
+      "text": "Tag gryden af varmen, og tilsæt resten af vandet. Lad saltlagen køle helt af, og hæld den over i en skål eller en bøtte."
+    },
+    {
+      "section": "Saltlage",
+      "text": "Læg kyllingelårene i saltlagen, så de er dækket. Sæt dem tildækket i køleskabet i 4 timer."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Tag lårene op, og dup dem tørre med køkkenrulle. Varm ovnen op til 220 °C."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Fordel høet i et tykt lag i en stor, dyb gryde med tætsluttende låg. Læg lårene med skindsiden op oven på høet, dryp dem med olie, og krydr med salt og peber."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Sæt låget på, og bag lårene i 35-40 minutter, til de er gennemstegte."
+    },
+    {
+      "section": "Glasur",
+      "text": "Imens kommer du alle glasurens ingredienser i en lille gryde. Lad det simre i 2-3 minutter, til det er blankt og lidt tykkere."
+    },
+    {
+      "section": "Glasur",
+      "text": "Pensl det meste af glasuren over de bagte lår. Sæt gryden tilbage i ovnen uden låg i 5-10 minutter, så glasuren sætter sig."
+    },
+    {
+      "section": "Spidskål",
+      "text": "Varm en stor pande eller grillpande op på høj varme, mens lårene står i ovnen."
+    },
+    {
+      "section": "Spidskål",
+      "text": "Gnid spidskålen med olie, og drys rigeligt med salt. Steg den med snitfladen nedad, til begge snitflader er sprættede og let forkullede. Tilsæt smørret, og øs det over kålen, til den er mør."
+    },
+    {
+      "section": "Dressing",
+      "text": "Pisk dressingens ingredienser sammen. Smag til med salt og peber, og justér med mere citronsaft eller sennep efter behov."
+    },
+    {
+      "section": "Servering",
+      "text": "Rør lidt vand i den resterende glasur, så den bliver til en sauce."
+    },
+    {
+      "section": "Servering",
+      "text": "Hæld dressingen på et serveringsfad, og læg spidskål og glaserede kyllingelår ovenpå. Hæld resten af glasuren over, og drys med purløg og lidt chiliflager."
+    }
+  ],
+  "changes": [
+    "Hispi cabbage er erstattet med spidskål.",
+    "Aleppo-chiliflager er erstattet med almindelige chiliflager.",
+    "Hot sauce er erstattet med tabasco.",
+    "Fint havsalt er erstattet med almindeligt fint salt.",
+    "Hø i foderkvalitet kan ikke købes i supermarkedet og er beholdt som hø; det fås i dyrehandlen eller hos nogle gårdbutikker."
+  ]
+}

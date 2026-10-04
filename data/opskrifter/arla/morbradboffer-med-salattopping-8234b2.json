@@ -1,0 +1,146 @@
+{
+  "url": "https://www.arla.dk/opskrifter/morbradboffer-med-salattopping/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:25:28.903Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Mørbradbøffer med salattopping",
+  "intro": "Saftige svinemørbradbøffer toppet med en frisk salat af æble, feta, asparges og koriander. Serveres med nykogte kartofler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": "afpudset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Salattopping",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "røde, fx elstar, i små tern",
+      "optional": false
+    },
+    {
+      "section": "Salattopping",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Salattopping",
+      "amount": 200,
+      "unit": "g",
+      "name": "feta",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Salattopping",
+      "amount": 250,
+      "unit": "g",
+      "name": "asparges",
+      "note": "grønne, dampede, i korte stykker",
+      "optional": false
+    },
+    {
+      "section": "Salattopping",
+      "amount": 100,
+      "unit": "g",
+      "name": "salat",
+      "note": "babyleaf, rensede",
+      "optional": false
+    },
+    {
+      "section": "Salattopping",
+      "amount": 2,
+      "unit": "dl",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Salattopping",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "skrubbede, til at koge",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog kartoflerne møre i letsaltet vand, mens resten laves."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Del mørbraden i 4 lige store stykker, og tryk dem flade med håndfladen eller en kødhammer, til de er ca. 2½ cm tykke."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm smørret op på en pande, til det får en gylden farve. Brun bøfferne ca. 1 minut på hver side."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Skru ned til middel varme, og steg bøfferne i ca. 10 minutter. Vend dem én gang, og brun kanterne de sidste par minutter. Krydr med salt og peber, og hold dem varme."
+    },
+    {
+      "section": "Salattopping",
+      "text": "Rør æbletern og citronsaft sammen, så æblerne ikke misfarves. Sigt saften fra lige før servering."
+    },
+    {
+      "section": "Salattopping",
+      "text": "Lad fetaternene dryppe af i en sigte. Vend dem med æblerne og de øvrige ingredienser til toppingen, og smag til med peber."
+    },
+    {
+      "section": null,
+      "text": "Anret de varme bøffer på et fad, og kom lidt topping oven på hver. Server resten af toppingen i en skål ved siden af, sammen med de nykogte kartofler."
+    }
+  ],
+  "changes": [
+    "Salatost er skiftet til feta."
+  ]
+}

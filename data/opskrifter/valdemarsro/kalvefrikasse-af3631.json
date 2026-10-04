@@ -1,0 +1,224 @@
+{
+  "url": "https://www.valdemarsro.dk/kalvefrikasse/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:35:31.010Z",
+  "total_minutes": 120,
+  "active_minutes": 45,
+  "yield_count": 6,
+  "source_lines": 19,
+  "title": "Kalvefrikassé",
+  "intro": "Mør kalvebov, kogt i hvidvin og urter, bliver til en cremet frikassé med nye grøntsager og masser af dild. Serveres med nye kartofler.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Kødet",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "kalvebov",
+      "note": "med ben",
+      "optional": false
+    },
+    {
+      "section": "Kødet",
+      "amount": 2,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødet",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Kødet",
+      "amount": 10,
+      "unit": "stk",
+      "name": "peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødet",
+      "amount": 10,
+      "unit": "stilk",
+      "name": "dild",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Kødet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødet",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 250,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "nye, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 250,
+      "unit": "g",
+      "name": "asparges",
+      "note": "grønne",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 150,
+      "unit": "g",
+      "name": "asparges",
+      "note": "hvide",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 200,
+      "unit": "g",
+      "name": "ærter",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "kg",
+      "name": "nye kartofler",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødet",
+      "text": "Læg kalvebov og vand i en stor gryde, så kødet er dækket. Bring det i kog ved middelvarme, og øs skum og urenheder af, til bouillonen er klar. Så bliver saucen pæn og ikke grumset."
+    },
+    {
+      "section": "Kødet",
+      "text": "Put hvidvin, løg, peberkorn, salt, dildstængler, laurbærblade og persille i gryden. Skær de trævlede bunde af de grønne og hvide asparges, og kom dem også i gryden. De gode toppe gemmes til senere."
+    },
+    {
+      "section": "Kødet",
+      "text": "Lad det simre med låg på ved lav varme i 1½ time. Skum løbende af."
+    },
+    {
+      "section": "Kødet",
+      "text": "Løft kødet op, og si bouillonen gennem en finmasket sigte over i en skål. Gem den."
+    },
+    {
+      "section": "Kødet",
+      "text": "Skær kødet i store tern, og skær sener og fedt væk."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret i en gryde ved middel til høj varme, og pisk melet i. Hæld lidt efter lidt af bouillonen i, mens du pisker kraftigt, til saucen tykner. Tilsæt mere bouillon, til den har en god konsistens."
+    },
+    {
+      "section": "Sauce",
+      "text": "Lad saucen koge i 7-10 minutter. Er den for tyk, så tynd den med bouillon eller kartoffelvand. Rør fløden i, og smag til med salt og peber."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Kog imens gulerodsternene i letsaltet kogende vand i 5 minutter, og dryp dem af. Kog kartoflerne til servering."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Skær de gode aspargesdele i passende stykker."
+    },
+    {
+      "section": "Til servering",
+      "text": "Vend gulerødder, asparges, ærter og kød i saucen, og varm det igennem i 1-2 minutter. Rør masser af hakket dild i."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret frikasséen på tallerkener eller i et fad med lidt dild drysset over, og server med nye kartofler."
+    }
+  ],
+  "changes": []
+}

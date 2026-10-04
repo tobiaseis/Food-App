@@ -1,0 +1,264 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/asparagus-egg-seaweed-hollandaise-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:02:38.756Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Asparges med perfekt pocheret æg, kartofler og tanghollandaise",
+  "intro": "Grønne asparges og lune kartofler toppes med blødt æg og en hollandaise, der er smagt til med tang. Retten har flere små dele, men de kan næsten alle laves på forhånd.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "Æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "bundt",
+      "name": "Asparges",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": "almindeligt salt og flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 4,
+      "unit": "stk",
+      "name": "Kartofler",
+      "note": "vasket",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Kombu",
+      "note": "tørret ark",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 2,
+      "unit": "fed",
+      "name": "Hvidløg",
+      "note": "let knust",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "Rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tangsmør",
+      "amount": 15,
+      "unit": "g",
+      "name": "Tørret tang",
+      "note": "gerne en blanding af nori, wakame og kombu",
+      "optional": false
+    },
+    {
+      "section": "Tangsmør",
+      "amount": 250,
+      "unit": "g",
+      "name": "Smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Tangolie",
+      "amount": 50,
+      "unit": "g",
+      "name": "Tørret tang",
+      "note": "gerne lige dele nori, wakame og kombu",
+      "optional": false
+    },
+    {
+      "section": "Tangolie",
+      "amount": 200,
+      "unit": "ml",
+      "name": "Rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tangolie",
+      "amount": 50,
+      "unit": "g",
+      "name": "Krydderurter",
+      "note": "gerne en blanding af kørvel, persille, estragon og dild",
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": 3,
+      "unit": "stk",
+      "name": "Æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": 150,
+      "unit": "g",
+      "name": "Ghee",
+      "note": "smeltet og lunken",
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": 100,
+      "unit": "ml",
+      "name": "Hvidvinseddike",
+      "note": "koges ind til 1 spsk",
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": null,
+      "unit": null,
+      "name": "Citron",
+      "note": "saften, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "Hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 75,
+      "unit": "ml",
+      "name": "Olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "Havgrøntsager",
+      "note": "fx strandarve og glasurt, vasket og plukket",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "Purløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "Krydderurter",
+      "note": "fx kørvel, persille, estragon og dild, blade plukket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm et vandbad op til 63 °C. Læg æggene i og lad dem stå i 45 minutter. Køl dem derefter straks ned i isvand. Pocherer du æggene på almindelig vis, skal de først i vandet lige før servering."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Læg kartofler, kombu, hvidløg og rosmarin i en gryde, og dæk med koldt vand. Tilsæt rigeligt salt, og bring det i kog."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Skru ned, så vandet kun småboble, til kartoflerne er møre. Lad dem køle af i kogevandet."
+    },
+    {
+      "section": "Asparges",
+      "text": "Bring en ny gryde med rigeligt saltet vand i kog. Knæk de træagtige ender af aspargesene, og skræl den nederste del af hver stilk."
+    },
+    {
+      "section": "Asparges",
+      "text": "Kog aspargesene i 2 minutter i det kogende vand. Afkøl dem straks i isvand, og lad dem dryppe af."
+    },
+    {
+      "section": "Tangsmør",
+      "text": "Rist nori og wakame let i en tør pande. Blend dem sammen med kombu til et fint pulver."
+    },
+    {
+      "section": "Tangsmør",
+      "text": "Tag en knivspids pulver fra til hollandaisen og lidt mere til drysset til sidst. Rør resten i det bløde smør."
+    },
+    {
+      "section": "Tangolie",
+      "text": "Blend tang og olie i cirka 3 minutter, til olien damper. Tilsæt krydderurterne, og blend i 30 sekunder mere."
+    },
+    {
+      "section": "Tangolie",
+      "text": "Si olien gennem en finmasket si ned i en skål, der står i isvand. Vil du have den helt klar, kan du sigte den igen gennem et osteklæde."
+    },
+    {
+      "section": "Hollandaise",
+      "text": "Pisk æggeblommer og indkogt eddike i en varmefast skål over en gryde med let simrende vand. Pisk uafbrudt, til massen er lys og er vokset lidt i volumen."
+    },
+    {
+      "section": "Hollandaise",
+      "text": "Pisk videre, mens du langsomt tilsætter den lune ghee i en tynd stråle, til saucen er samlet og glat. Smag til med salt og citronsaft, og rør den reserverede tangpulver i. Hold saucen lun."
+    },
+    {
+      "section": "Vinaigrette",
+      "text": "Rør sennep, eddike og olivenolie sammen med en knivspids salt."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sæt en lille gryde med vand på let kog til æggene. Varm en anden gryde med en sjat af kartoflernes kogevand og en klump tangsmør, som du bruger til at varme og glasere resten."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg æggene forsigtigt i det simrende vand, og lad dem stå i 2 minutter. Skær imens kartoflerne i tykke skiver, og varm dem i tangsmørret."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg kartoflerne på bunden af hver tallerken. Varm aspargesene i samme smør, og vend havgrøntsager og purløg med lige før servering, så de blot bliver blanke. Pres lidt citron over, og læg det hele som en krans rundt om kartoflerne."
+    },
+    {
+      "section": "Anretning",
+      "text": "Anbring et pocheret æg midt på kartoflerne, og dæk det med hollandaise. Dryp lidt tangolie over. Vend krydderurterne i lidt vinaigrette, og fordel dem rundt om. Drys til sidst tangpulver og flagesalt over."
+    }
+  ],
+  "changes": [
+    "Vindruekerneolie er erstattet med rapsolie.",
+    "Klarificeret smør er erstattet med ghee.",
+    "Ramsløg er erstattet med purløg."
+  ]
+}

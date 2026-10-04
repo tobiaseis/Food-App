@@ -1,0 +1,288 @@
+{
+  "url": "https://www.valdemarsro.dk/kylling-karry/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:47:28.804Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 28,
+  "title": "Kylling i karry à la ristaffel",
+  "intro": "Mild kyllingekarry med æble og fløde, serveret med kardemommeris og et farverigt tilbehør af frugt, kokos og persille. Sæt det hele på bordet i små skåle, så alle selv kan sammensætte deres tallerken.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kyllingen",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hønsebouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "mediumstærk",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kardemomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kogevand fra kyllingen",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "til jævning",
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysaucen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "kardemomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "stk",
+      "name": "banan",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "stk",
+      "name": "mango",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "dl",
+      "name": "kokosmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rosiner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kyllingen",
+      "text": "Læg kyllingebrysterne i en gryde, og hæld vand og bouillon over. Kog dem i cirka 15 minutter, til de er møre."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Løft kødet op af gryden, og stil det til side. Gem kogevandet til saucen. Skær kødet i skiver eller tern."
+    },
+    {
+      "section": "Ris",
+      "text": "Skyl risene grundigt i en sigte. Kog dem med vand, salt og kardemomme, som det står på pakken."
+    },
+    {
+      "section": "Karrysaucen",
+      "text": "Varm olien i en gryde, og svits løg, hvidløg og alle krydderierne et par minutter, til løgene er blanke og bløde."
+    },
+    {
+      "section": "Karrysaucen",
+      "text": "Tilsæt det revne æble, mælken og kogevandet. Lad saucen simre i nogle minutter."
+    },
+    {
+      "section": "Karrysaucen",
+      "text": "Ryst majsstivelsen sammen med mælken til jævning i et glas med låg. Rør det ned i saucen, og lad den koge op, til den bliver tyk og glat."
+    },
+    {
+      "section": "Karrysaucen",
+      "text": "Rund af med fløde, salt og peber. Kom kyllingen i saucen, og varm den helt igennem."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Anret æble, banan, mango, kokosmel, rosiner og persille i hver sin lille skål."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Sæt karry, ris og tilbehør på bordet, så hver gæst selv kan fylde sin tallerken."
+    }
+  ],
+  "changes": []
+}

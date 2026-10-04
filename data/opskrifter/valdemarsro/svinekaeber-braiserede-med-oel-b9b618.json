@@ -1,0 +1,260 @@
+{
+  "url": "https://www.valdemarsro.dk/svinekaeber-braiserede-med-oel/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:29:27.424Z",
+  "total_minutes": 180,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Øl-braiserede svinekæber med kartoffelmos",
+  "intro": "Møre svinekæber, der simrer i mørk øl med grøntsager og krydderurter, serveret med cremet kartoffelmos. Et frisk drys af hasselnødder, persille og citronskal runder retten af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 750,
+      "unit": "g",
+      "name": "svinekæber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "skåret i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 3,
+      "unit": "dl",
+      "name": "øl",
+      "note": "mørk",
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 3,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 15,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "afkølet",
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddedrys",
+      "amount": 30,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddedrys",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddedrys",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Braiserede svinekæber",
+      "text": "Skær senerne af svinekæberne, og tør kødet godt med køkkenrulle."
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "text": "Varm smørret i en gryde, og brun kæberne på alle sider. Tag dem op på en tallerken."
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "text": "Svits løg, gulerødder og porre i samme gryde ved middelvarme, til løgene er blanke og bløde."
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "text": "Kom kødet tilbage i gryden sammen med øl, tomatpuré, laurbærblade, rosmarin og timian. Krydr med salt og peber."
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "text": "Læg låg på, og lad retten simre svagt ved lav varme i 2 timer."
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "text": "Rør fonden og majsstivelsen sammen, og rør blandingen ned i gryden. Lad det simre videre i 15 minutter."
+    },
+    {
+      "section": "Braiserede svinekæber",
+      "text": "Fisk laurbærbladene op, og smag til med salt og peber."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Kog kartoflerne møre i usaltet vand. Varm mælken i en lille kasserolle til ca. 50 °C."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Mos de varme kartofler groft sammen med smørret. Pisk dem derefter med håndmixer på laveste hastighed, mens du hælder den varme mælk i lidt ad gangen, til moset er cremet, luftigt og blødt."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Smag til med salt, peber og friskrevet muskatnød."
+    },
+    {
+      "section": "Hasselnøddedrys",
+      "text": "Hak hasselnødder, persille og citronskal sammen, til det er helt fint."
+    },
+    {
+      "section": "Hasselnøddedrys",
+      "text": "Anret kæberne med kartoffelmos, og drys med hasselnøddeblandingen."
+    }
+  ],
+  "changes": []
+}

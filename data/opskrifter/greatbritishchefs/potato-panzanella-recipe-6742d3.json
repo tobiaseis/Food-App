@@ -1,0 +1,240 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/potato-panzanella-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:01:58.650Z",
+  "total_minutes": 70,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Kartoffelpanzanella med urtesalsa",
+  "intro": "Knuste, sprøde ovnkartofler bliver blandet med brød, kål og friske grøntsager i en italiensk brødsalat. Til sidst kommer en grøn urtesalsa med kapers og hvidløg ovenpå.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "skrællet og skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "flute",
+      "note": "gerne et par dage gammel, flået i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "radicchio",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "tomater",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 6,
+      "unit": "stk",
+      "name": "radiser",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "fladbladet",
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rødvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal, og lidt saft til salsaen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "basilikum",
+      "note": "fintsnittede blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe med",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 200 °C varmluft."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Kom kartoflerne i en stor gryde med koldt, saltet vand. Bring det i kog, skru ned og lad dem simre i cirka 15 minutter, til de er møre."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Hæld vandet fra, og lad kartoflerne dampe tørre i et dørslag."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Læg kartoflerne i en bradepande, vend dem i olivenolien, og krydr godt med salt og peber. Tryk hver kartoffel let flad med bunden af et glas."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Bag dem i cirka 40 minutter, og vend dem én gang undervejs, til kanterne er sprøde og gyldne. Lad dem køle lidt af."
+    },
+    {
+      "section": "Salsa",
+      "text": "Imens laves salsaen: Kør persille, basilikum, kapers, hvidløg og olie i en lille foodprocessor med korte pulser. Den skal være glat nok til at kunne øses, men stadig have lidt struktur."
+    },
+    {
+      "section": "Salsa",
+      "text": "Smag til med salt og en klem citronsaft, og stil den til side."
+    },
+    {
+      "section": "Vinaigrette",
+      "text": "Pisk olie, eddike, hvidløg og salt sammen."
+    },
+    {
+      "section": "Salat",
+      "text": "Bland brød, spidskål, radicchio, tomater og radiser i en stor skål. Kom de lune kartofler i, hæld vinaigretten over, og vend det forsigtigt, så brød og grøntsager trækker dressingen."
+    },
+    {
+      "section": "Salat",
+      "text": "Anret salaten løst i en serveringsskål, så de knuste kartofler ligger øverst. Fordel salsaen i skefulde over kartoflerne, drys med citronskal og basilikum, og dryp med olivenolie."
+    }
+  ],
+  "changes": [
+    "Spring greens er skiftet til spidskål.",
+    "Baguette er skiftet til flute.",
+    "Nanna Tate-kartofler er skiftet til almindelige kartofler."
+  ]
+}

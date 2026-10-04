@@ -1,0 +1,123 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chipotle-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:30:43.191Z",
+  "total_minutes": 50,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 9,
+  "title": "Kylling i chipotletomatsauce",
+  "intro": "Saftige kyllingelår, der simrer i en røget, let stærk tomatsauce med chipotle. Server med ris og creme fraiche.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "solsikkeolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta; brug op til 2 spsk, hvis saucen skal være stærkere",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": "udbenede og uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en dyb, bred pande. Svits løg og hvidløg, til de er bløde."
+    },
+    {
+      "section": null,
+      "text": "Rør chipotlepastaen i og lad den stege med i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Hæld hakkede tomater og eddike på. Lad saucen simre i 10 minutter med låget halvt på, og rør af og til, så den ikke koger tør."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingen i saucen og lad den simre i ca. 10 minutter, til den er gennemstegt. Vend den én gang undervejs."
+    },
+    {
+      "section": null,
+      "text": "Drys med koriander og server med ris og creme fraiche."
+    }
+  ],
+  "changes": [
+    "Sur fløde er erstattet af creme fraiche.",
+    "Udbenede kyllingelår uden skind (thigh fillets) er skrevet som kyllingelår."
+  ]
+}

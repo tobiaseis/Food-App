@@ -1,0 +1,123 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-bolognese",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:07:30.911Z",
+  "total_minutes": 25,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 9,
+  "title": "Sund bolognese med fuldkornspasta og fennikel",
+  "intro": "En let udgave af bolognese med magert svinekød, fennikel og hele cherrytomater, som revner og bliver til en naturlig sauce. Serveres med fuldkornspasta og masser af frisk basilikum.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "pasta",
+      "note": "fuldkorns-linguine",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": "under 5 % fedt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "grøntsagsfond",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog pastaen i rigeligt vand, til den er mør. Følg tiden på pakken, cirka 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Varm imens olien op i en bred non-stick-pande eller wok. Steg fennikel og hvidløg ved middel varme, og rør af og til, til de er møre, cirka 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom svinekødet på panden, og steg det under omrøring, til det har skiftet farve. Del det i små stykker undervejs, så der ikke bliver store klumper."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt cherrytomater, balsamico og fond. Læg låg på, og lad det simre ved lav varme i 10 minutter, til tomaterne er revnet, og kødet er mørt og gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Vend den afdryppede pasta og basilikum i panden sammen med rigeligt peber. Server straks."
+    }
+  ],
+  "changes": [
+    "Vegetable bouillon powder er skiftet til grøntsagsfond (pulver).",
+    "Wholewheat linguine er skiftet til fuldkorns-linguine som pasta."
+  ]
+}

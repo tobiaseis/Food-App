@@ -1,0 +1,172 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/rasmalai",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:44:48.773Z",
+  "total_minutes": 50,
+  "active_minutes": 20,
+  "yield_count": 10,
+  "source_lines": 12,
+  "title": "Rasmalai",
+  "intro": "Bløde oste­kugler af hjemmelavet ostemasse, der trækker i sirup og hviler i safran- og kardemommemælk. Retten skal stå i mange timer, så start i god tid.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Til ostemassen",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til ostemassen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvid",
+      "optional": false
+    },
+    {
+      "section": "Til rabdi",
+      "amount": 7,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rabdi",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": "strimler",
+      "optional": false
+    },
+    {
+      "section": "Til rabdi",
+      "amount": 20,
+      "unit": "g",
+      "name": "mandler",
+      "note": "i tynde stave",
+      "optional": false
+    },
+    {
+      "section": "Til rabdi",
+      "amount": 20,
+      "unit": "g",
+      "name": "pistaciekerner",
+      "note": "i tynde stave",
+      "optional": false
+    },
+    {
+      "section": "Til rabdi",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kardemomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til rabdi",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sukkersirup",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sukkersirup",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "hele grønne kapsler",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": 20,
+      "unit": "g",
+      "name": "pistaciekerner",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": 20,
+      "unit": "g",
+      "name": "mandler",
+      "note": "finthakkede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ostemassen",
+      "text": "Hæld lidt vand i bunden af en gryde, så mælken ikke brænder på. Tilsæt mælken og varm den op til kogepunktet ved middel varme."
+    },
+    {
+      "section": "Ostemassen",
+      "text": "Rør løbende det skind, der dannes på overfladen og langs kanten, ned i mælken, mens den skummer op. Sluk for varmen, når mælken koger."
+    },
+    {
+      "section": "Ostemassen",
+      "text": "Fortynd eddiken med noget vand. Hæld den i mælken lidt ad gangen, og rør forsigtigt rundt imellem. Lad gryden stå uberørt i 10 minutter, så mælken skiller i store stykker."
+    },
+    {
+      "section": "Ostemassen",
+      "text": "Skiller den ikke, så sæt gryden på lav varme i yderligere 5 minutter."
+    },
+    {
+      "section": "Ostemassen",
+      "text": "Beklæd en stor si med osteklæde, musselin eller et rent viskestykke, og si den skårne mælk igennem. Skyl ostemassen under koldt vand, når al vallen er løbet fra, så smagen af eddike forsvinder. Lad den dryppe af."
+    },
+    {
+      "section": "Ostemassen",
+      "text": "Løft klædet og pres det meste af væsken ud af ostemassen. Bind klædet om hanen, og lad massen hænge, til den er helt tør."
+    },
+    {
+      "section": "Rabdi",
+      "text": "Imens koges rabdien: Bring mælken i kog i en gryde ved middel varme. Skru ned, og tilsæt safran, mandler, pistaciekerner og kardemomme under omrøring."
+    },
+    {
+      "section": "Rabdi",
+      "text": "Rør forsigtigt, indtil mælken begynder at boble, og tilsæt så sukkeret. Lad det koge op og småkoge i ca. 5 minutter. Tag gryden af varmen og stil den til side."
+    },
+    {
+      "section": "Kugler",
+      "text": "Tag den tørre ostemasse ud af klædet og læg den på en ren bordplade. Smuldr den fint, og ælt den med håndballen som en brøddej i 7-8 minutter, til den hænger sammen. Pas på ikke at ælte for meget."
+    },
+    {
+      "section": "Kugler",
+      "text": "Form massen til en pølse og del den i 10-14 lige store stykker. Rul hvert stykke mellem håndfladerne til en glat kugle uden revner, og tryk den let flad. Få små revner i kanten gør ikke noget."
+    },
+    {
+      "section": "Sukkersirup",
+      "text": "Kom sukker, kardemomme og vand i en dyb, bred gryde. Varm op ved middelhøj varme, til sukkeret er opløst. Skru op på fuld varme og bring det i kog."
+    },
+    {
+      "section": "Sukkersirup",
+      "text": "Fisk kardemommekapslerne op, og læg forsigtigt kuglerne i sirupppen. Læg låg på og kog i 10 minutter. Skru ned til middelhøj varme og kog uden låg i 2-3 minutter mere. Tag gryden af varmen og lad kuglerne køle helt af i sirupppen."
+    },
+    {
+      "section": "Samling",
+      "text": "Varm rabdien lidt op og hæld den i en skål. Løft kuglerne op af sirupppen og pres dem forsigtigt mellem håndfladerne, så sirupppen løber af. Pas på, de ikke går i stykker."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg kuglerne i den varme rabdi, dæk til og lad dem trække ved stuetemperatur i 5-6 timer. Drys med de hakkede mandler og pistaciekerner inden servering."
+    }
+  ],
+  "changes": []
+}

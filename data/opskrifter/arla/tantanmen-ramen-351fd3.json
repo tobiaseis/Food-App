@@ -1,0 +1,218 @@
+{
+  "url": "https://www.arla.dk/opskrifter/tantanmen-ramen/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:13:05.723Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 20,
+  "title": "Cremet ramen",
+  "intro": "Nudelsuppe på bouillon og mælk med en kraftig pasta af peanutbutter, soja og chili i bunden af skålen. Toppes med stegt svinekød, æg, pak choi og bønnespirer.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ramen-pasta",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ramen-pasta",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "peanutbutter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ramen-pasta",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sambal oelek",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ramen-pasta",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ramen-pasta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegt kød",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegt kød",
+      "amount": 200,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegt kød",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Stegt kød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Stegt kød",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sambal oelek",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegt kød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegt kød",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "l",
+      "name": "hønsebouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping og anretning",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping og anretning",
+      "amount": 200,
+      "unit": "g",
+      "name": "nudler",
+      "note": "tørrede ramennudler",
+      "optional": false
+    },
+    {
+      "section": "Topping og anretning",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Topping og anretning",
+      "amount": 1,
+      "unit": "pakke",
+      "name": "bønnespirer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping og anretning",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i meget tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Topping og anretning",
+      "amount": null,
+      "unit": null,
+      "name": "chiliolie",
+      "note": "lidt",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ramen-pasta",
+      "text": "Rør sojasauce, peanutbutter, sambal oelek, riseddike og honning sammen til en glat pasta. Del den ligeligt mellem 4 dybe skåle."
+    },
+    {
+      "section": "Stegt kød",
+      "text": "Smelt smørret på en pande, og brun svinekødet ved høj varme i 3-5 minutter, til det har fået god farve."
+    },
+    {
+      "section": "Stegt kød",
+      "text": "Kom hvidløg og ingefær på panden, og steg i cirka 2 minutter mere. Rør sambal oelek, honning og salt i, og tag panden af varmen."
+    },
+    {
+      "section": "Suppe",
+      "text": "Bring bouillon og mælk i kog i en stor gryde. Lad det småkoge, til det skal serveres. Suppen skal være meget varm i skålene."
+    },
+    {
+      "section": "Topping og anretning",
+      "text": "Kog æggene i cirka 7 minutter, så blommen er blød. Pil dem, og skær dem over på midten."
+    },
+    {
+      "section": "Topping og anretning",
+      "text": "Kog nudlerne efter anvisningen på pakken, og lad dem løbe af i en sigte."
+    },
+    {
+      "section": "Topping og anretning",
+      "text": "Læg pak choi i en skål, og overhæld med kogende vand. Lad den stå i 1-2 minutter, og si vandet fra."
+    },
+    {
+      "section": "Topping og anretning",
+      "text": "Øs den varme suppe i skålene, og rør rundt, til pastaen er opløst. Læg nudler i suppen."
+    },
+    {
+      "section": "Topping og anretning",
+      "text": "Top med svinekød, æg, bønnespirer, pak choi og forårsløg. Dryp eventuelt med chiliolie, og server med det samme."
+    }
+  ],
+  "changes": [
+    "Chilipasta er erstattet af sambal oelek, som kilden også nævner."
+  ]
+}

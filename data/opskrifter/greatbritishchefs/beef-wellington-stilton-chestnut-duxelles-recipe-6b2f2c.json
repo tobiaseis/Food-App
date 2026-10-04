@@ -1,0 +1,464 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/beef-wellington-stilton-chestnut-duxelles-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:28:43.672Z",
+  "total_minutes": 240,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 31,
+  "title": "Oksemørbrad Wellington med stilton og kastanjeduxelles",
+  "intro": "Mørt oksemørbrad pakket ind i parmaskinke, svampe-duxelles og sprødt butterdej med et gitter på toppen. Serveres med stiltoncreme, svampe og portvinssauce.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til duxelles",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": 500,
+      "unit": "g",
+      "name": "champignon",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": 60,
+      "unit": "g",
+      "name": "nødder",
+      "note": "kogte kastanjer, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "estragon",
+      "note": "lille bundt",
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": 50,
+      "unit": "g",
+      "name": "stilton",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til duxelles",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": 1,
+      "unit": "kg",
+      "name": "oksemørbrad",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": 800,
+      "unit": "g",
+      "name": "butterdej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": 15,
+      "unit": "skive",
+      "name": "parmaskinke",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket med vandet, til pensling",
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "vand",
+      "note": "til æggene",
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "til meldrysning",
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til Wellington",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stiltoncreme",
+      "amount": 170,
+      "unit": "g",
+      "name": "stilton",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stiltoncreme",
+      "amount": 70,
+      "unit": "g",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stiltoncreme",
+      "amount": 0.8,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stiltoncreme",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stiltoncreme",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til portvinssauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, 20 g til saucen og resten i tern til sidst",
+      "optional": false
+    },
+    {
+      "section": "Til portvinssauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til portvinssauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til portvinssauce",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vin",
+      "note": "portvin",
+      "optional": false
+    },
+    {
+      "section": "Til portvinssauce",
+      "amount": 7.5,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til portvinssauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til portvinssauce",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "timian",
+      "note": "lille bundt",
+      "optional": false
+    },
+    {
+      "section": "Til portvinssauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til portvinssauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svampene",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svampene",
+      "amount": 200,
+      "unit": "g",
+      "name": "kantareller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svampene",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "timian",
+      "note": "lille bundt, plus lidt til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til svampene",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svampene",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "stilton",
+      "note": "smuldret, til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Duxelles",
+      "text": "Smelt smørret i en stor pande ved middel varme, og svits løget blødt. Tilsæt hvidløg og laurbærblad, og steg cirka et minut, til det dufter. Pas på, at hvidløget ikke brænder på."
+    },
+    {
+      "section": "Duxelles",
+      "text": "Kom champignon og kastanjer på panden. Rør hele tiden, og steg, til alt vandet er kogt væk, og blandingen er gyldenbrun. Smag til med salt og peber."
+    },
+    {
+      "section": "Duxelles",
+      "text": "Rør persille og estragon i, og smag igen. Kom duxelles på en bakke, og stil den på køl, til den er kold."
+    },
+    {
+      "section": "Oksemørbrad",
+      "text": "Krydr mørbraden med salt og peber, og bind den med køkkengarn, så den holder formen. Gnid den ind i olie."
+    },
+    {
+      "section": "Oksemørbrad",
+      "text": "Varm en stor pande op ved middelhøj varme med en smule olie, til den ryger. Brun mørbraden i 2 minutter, og vend den, så alle sider får farve."
+    },
+    {
+      "section": "Oksemørbrad",
+      "text": "Læg mørbraden på en bageplade med bagepapir, fjern garnet, og lad den køle af."
+    },
+    {
+      "section": "Stiltoncreme",
+      "text": "Pisk alle ingredienserne til stiltoncremen sammen med piskeris i en køkkenmaskine. Smag til med salt og peber. Når cremen er glat, fyld den i en sprøjtepose med rund tylle, og stil den på køl."
+    },
+    {
+      "section": "Wellington",
+      "text": "Tænd ovnen på 190 °C, og sæt risten i nederste tredjedel."
+    },
+    {
+      "section": "Wellington",
+      "text": "Rul 300 g af butterdejen ud til en firkant på 30 × 30 cm til gitteret. Skær den med en gitterskærer, og skær eventuelle steder igennem med en lille kniv. Træk gitteret lidt fra hinanden, og læg det på en bageplade med bagepapir. Dæk med film, og stil det på køl."
+    },
+    {
+      "section": "Wellington",
+      "text": "Læg et stort stykke film på bordet. Læg parmaskinken i en række på filmen, så skiverne overlapper uden huller."
+    },
+    {
+      "section": "Wellington",
+      "text": "Fordel den kolde duxelles over skinken, men lad en kant på 3 cm være fri hele vejen rundt. Tryk duxelles let fast, og drys stilton over."
+    },
+    {
+      "section": "Wellington",
+      "text": "Smør sennep over hele mørbraden, og læg den ved kanten af duxelles. Brug filmen til at rulle skinken stramt rundt om kødet."
+    },
+    {
+      "section": "Wellington",
+      "text": "Rul mørbraden fremad i filmen, så den strammer og danner en ballotine. Bind enderne sammen, eller luk dem med knive eller elastikker. Stil den på køl i mindst 30 minutter."
+    },
+    {
+      "section": "Portvinssauce",
+      "text": "Smelt 20 g af smørret ved middel varme, og svits skalotteløgene, til de er klare. Skru ned for varmen, hvis de risikerer at brænde på."
+    },
+    {
+      "section": "Portvinssauce",
+      "text": "Tilsæt hvidløget, og steg i cirka et minut, til det dufter. Hæld portvinen i, skru op for varmen, og lad den koge ind til det halve."
+    },
+    {
+      "section": "Portvinssauce",
+      "text": "Kom fond, laurbærblad og timian i, og lad det simre i 20 minutter. Smag til med salt og peber, og si saucen."
+    },
+    {
+      "section": "Portvinssauce",
+      "text": "Kom saucen tilbage i gryden, og lad den simre, til den dækker bagsiden af en ske. Tag den af varmen."
+    },
+    {
+      "section": "Wellington",
+      "text": "Beklæd en stor bageplade med bagepapir, og drys bordet let med hvedemel. Rul den resterende butterdej ud til 30 × 30 cm."
+    },
+    {
+      "section": "Wellington",
+      "text": "Pak mørbraden ud af filmen, og rul den ind i dejen på langs. Pensl den ene side af dejen med æg ved samlingen, og tryk sammen, så den lukker tæt. Fold overskydende dej ind under, og læg samlingen nedad."
+    },
+    {
+      "section": "Wellington",
+      "text": "Fold dejen i enderne ind under, og pensl med æg, så den klistrer. Pensl derefter hele Wellingtonen med æg."
+    },
+    {
+      "section": "Wellington",
+      "text": "Tag gitteret ud af køleskabet, og løft det over på Wellingtonen. Stop dejen ind under kanterne, og pensl gitteret med æg."
+    },
+    {
+      "section": "Wellington",
+      "text": "Sæt Wellingtonen i ovnen med et stegetermometer, og steg, til kernetemperaturen er 45 °C. Det tager cirka 30 minutter."
+    },
+    {
+      "section": "Wellington",
+      "text": "Tag den ud, og lad den hvile i 20 minutter med termometeret i. Temperaturen skal stige til 55-57 °C (medium rare)."
+    },
+    {
+      "section": "Svampe",
+      "text": "Varm olien ved middel varme, mens kødet hviler. Steg kantarellerne i cirka 10 minutter, og rør godt. Skru op for varmen efter behov, så vandet fordamper."
+    },
+    {
+      "section": "Svampe",
+      "text": "Tilsæt timianblade, og krydr med salt og peber. Steg, til svampene er gyldenbrune. Rør 100 ml af portvinssaucen i, og tag panden af varmen, når den er varm."
+    },
+    {
+      "section": "Portvinssauce",
+      "text": "Varm resten af saucen op, og tag den af varmen. Pisk de kolde smørtern i et ad gangen, så saucen får en flot glans (monté au beurre). Smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg Wellingtonen på et skærebræt, og skær den i skiver på 3 cm. Anret en skive med snitfladen opad på hver tallerken, og sæt en quenelle stiltoncreme ved siden af. Hæld svampene med sauce ved siden af, pynt med frisk timian og smuldret stilton, og skeen lidt sauce over."
+    }
+  ],
+  "changes": [
+    "Parmaskinke er beholdt som parmaskinke, da den kan købes i Danmark.",
+    "Kogte kastanjer er skrevet som nødder, da kastanjer ikke altid kan fås; brug kogte kastanjer, hvis du kan finde dem.",
+    "Girolles er skiftet til kantareller.",
+    "Double cream er skiftet til piskefløde.",
+    "Vegetable oil er skiftet til rapsolie.",
+    "Cream cheese er skiftet til flødeost.",
+    "Beef stock er skiftet til oksefond."
+  ]
+}

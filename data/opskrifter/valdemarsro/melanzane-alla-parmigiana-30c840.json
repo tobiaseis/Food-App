@@ -1,0 +1,180 @@
+{
+  "url": "https://www.valdemarsro.dk/melanzane-alla-parmigiana/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:42:25.807Z",
+  "total_minutes": 90,
+  "active_minutes": 60,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Aubergine alla parmigiana",
+  "intro": "Lag på lag af stegte aubergineskiver, tomatsauce og parmesan, bagt gyldne med mozzarella og rasp på toppen. En klassisk italiensk ovnret, der er rigtig god med brød og salat til.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Aubergine",
+      "amount": 3,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "i skiver på 1 cm",
+      "optional": false
+    },
+    {
+      "section": "Aubergine",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Aubergine",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket sammen",
+      "optional": false
+    },
+    {
+      "section": "Aubergine",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til at pensle med",
+      "optional": false
+    },
+    {
+      "section": "Aubergine",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Aubergine",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Aubergine",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 800,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, plus lidt til pynt",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til fadet",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 250,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Aubergine",
+      "text": "Pensl aubergineskiverne med olie. Bland hvedemel med salt og peber, og vend skiverne i blandingen. Stil dem til side på et fad."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Svits hvidløg og løg i olie i en sauterpande, indtil løgene er møre."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Rør passata og basilikum i panden. Lad saucen simre uden låg i 30 minutter, til den er lidt tykkere. Husk at røre i den, så den ikke brænder på. Smag til med salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend de meldryssede skiver i de piskede æg. Steg dem i olie på en pande i nogle få minutter, til de er gyldne på begge sider."
+    },
+    {
+      "section": "Samling",
+      "text": "Tænd ovnen på 175 °C varmluft. Smør et ovnfast fad, og kom lidt tomatsauce i bunden."
+    },
+    {
+      "section": "Samling",
+      "text": "Byg retten i lag: aubergine, tomatsauce og parmesan. Gentag, til aubergine og sauce er brugt op. Slut med tomatsauce, rigeligt parmesan og rasp. Pluk mozzarellaen i stykker, og fordel den over toppen."
+    },
+    {
+      "section": "Samling",
+      "text": "Bag fadet midt i ovnen i 20-25 minutter."
+    },
+    {
+      "section": "Samling",
+      "text": "Lad retten stå et par minutter, før den serveres. Pynt med friske basilikumblade."
+    }
+  ],
+  "changes": []
+}

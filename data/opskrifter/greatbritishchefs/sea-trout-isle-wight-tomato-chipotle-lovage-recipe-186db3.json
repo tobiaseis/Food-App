@@ -1,0 +1,252 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/sea-trout-isle-wight-tomato-chipotle-lovage-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:39:48.219Z",
+  "total_minutes": 270,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Havørred med tomatsalat, chipotle og klar fiskebouillon",
+  "intro": "Saltet havørred, langsomt konfiteret i ghee og serveret på en frisk tomatsalat med ørredrogn og et strejf af chipotle. Til retten hører en røget, klaret bouillon på ørredben, som hældes rundt om fisken.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til curingen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "havørred",
+      "note": "1/2 side, filet uden skind og ben; afskær og ben gemmes",
+      "optional": false
+    },
+    {
+      "section": "Til curingen",
+      "amount": 150,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til curingen",
+      "amount": 60,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": 200,
+      "unit": "g",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": null,
+      "unit": null,
+      "name": "enrisgrene",
+      "note": "til rygning",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 5,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 10,
+      "unit": "g",
+      "name": "kombu",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": null,
+      "unit": null,
+      "name": "ingefær",
+      "note": "ca. 5 cm, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 50,
+      "unit": "g",
+      "name": "æggehvider",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "risvineddike",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 500,
+      "unit": "g",
+      "name": "tomater",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 10,
+      "unit": "g",
+      "name": "bladselleri",
+      "note": "blade, fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "appelsin",
+      "note": "skrællet og skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "korianderfrø",
+      "note": "ristede og knuste",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "sherryeddike, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "puffet boghvede",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "ørredrogn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 10,
+      "unit": "g",
+      "name": "chipotle",
+      "note": "stødt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Cure fisken",
+      "text": "Bland salt og sukker, og vend havørredfileten i blandingen, så den er helt dækket."
+    },
+    {
+      "section": "Cure fisken",
+      "text": "Stil fisken på køl i 4 timer. Skyl derefter curingen af under koldt vand."
+    },
+    {
+      "section": "Røget bouillon",
+      "text": "Læg ben og afskær i en hulbundet, varmefast bakke, og stram film over toppen."
+    },
+    {
+      "section": "Røget bouillon",
+      "text": "Læg enrisgrenene i en brandsikker beholder, tænd dem, og pust flammerne ud, så de kun ulmer."
+    },
+    {
+      "section": "Røget bouillon",
+      "text": "Sæt bakken oven på grenene, og lad det ryge i 10 minutter."
+    },
+    {
+      "section": "Røget bouillon",
+      "text": "Kom de røgede ben i en gryde sammen med forårsløg, kombu og ingefær, og fyld op med vand, så det dækker."
+    },
+    {
+      "section": "Røget bouillon",
+      "text": "Bring det i kog, smag til med salt og lidt eddike, og lad det simre i 3 timer. Køl bouillonen ned i køleskabet."
+    },
+    {
+      "section": "Røget bouillon",
+      "text": "Blend eller hak 50 g af afskæret helt fint, og pisk det ud i æggehviderne."
+    },
+    {
+      "section": "Røget bouillon",
+      "text": "Pisk blandingen ned i den kolde bouillon, og varm op til det simrer. Hviderne binder urenhederne og klarer bouillonen."
+    },
+    {
+      "section": "Røget bouillon",
+      "text": "Når hviderne er stivnet, løfter du dem af som en skorpe og kasserer dem."
+    },
+    {
+      "section": "Tomatsalat",
+      "text": "Ca. 30 minutter før servering blandes alle ingredienserne til salaten. Smag til med salt og eddike."
+    },
+    {
+      "section": "Til fisken",
+      "text": "Varm ghee op til 55 °C, og læg den curede fisk forsigtigt i."
+    },
+    {
+      "section": "Til fisken",
+      "text": "Lad den stå, til den lige er gennemvarm, ca. 10 minutter. Tag den op, og del den i flager."
+    },
+    {
+      "section": "Anretning",
+      "text": "Anret tomatsalat og puffet boghvede på tallerkener. Læg fiskeflager og ørredrogn ovenpå."
+    },
+    {
+      "section": "Anretning",
+      "text": "Drys fisken med chipotle, og hæld den klarede bouillon rundt om."
+    }
+  ],
+  "changes": [
+    "Klaret smør er erstattet med ghee.",
+    "Løvstikke er erstattet med bladselleri.",
+    "Risvineddike og sherryeddike er erstattet med almindelig eddike af samme type, hvor den kan fås."
+  ]
+}
