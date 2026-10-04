@@ -805,3 +805,73 @@ test('cleanSide: varenavne med småt, basisvarer droppes, men en eneste linje be
   assert.deepEqual(only.ingredients.map((i) => i.name), ['smør']);
   assert.equal(sides.cleanSide(null), null);
 });
+
+// ── Tilbehør (meal.side) ─────────────────────────────────────────────────────
+
+const SIDE = {
+  title: 'Kogte kartofler',
+  ingredients: [
+    { section: null, amount: 800, unit: 'g', name: 'kartofler', note: null, optional: false },
+    { section: null, amount: null, unit: null, name: 'salt', note: null, optional: false },
+  ],
+  steps: ['Kog kartoflerne møre i letsaltet vand.', 'Hæld vandet fra og damp dem af.'],
+};
+const withMeal = (n, meal) => ({ ...EDITION_FIXTURE, url: `https://test.invalid/da-side-${n}`, meal });
+
+test('en udgave med tilbehør får afsnittet Tilbehør i linjer og trin', () => {
+  withEdition(withMeal(1, { complete: false, reason: 'x', side: SIDE }), ({ db, dir, id }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.applied, 1, JSON.stringify(res.flaggedList));
+    const lines = db.prepare('SELECT * FROM recipe_ingredients WHERE recipe_id = ? ORDER BY position').all(id);
+    assert.equal(lines.length, 5);
+    assert.deepEqual(lines.slice(3).map((l) => l.section), ['Tilbehør: Kogte kartofler', 'Tilbehør: Kogte kartofler']);
+    assert.equal(lines[3].item_key, 'kartofler');
+    const steps = db.prepare('SELECT * FROM recipe_steps WHERE recipe_id = ? ORDER BY position').all(id);
+    assert.deepEqual(steps.slice(2).map((s) => s.section), ['Tilbehør', 'Tilbehør']);
+    assert.equal(steps[2].text, SIDE.steps[0]);
+    // Tilbehørets 2 linjer tæller ikke med i ingredienslinje-kontrollen (3 + 2 > 1 + 2 og > 30 %).
+    assert.equal(res.flagged, 0);
+  });
+});
+
+test('en udgave med et helt måltid eller uden tilbehør får ingen ekstra linjer', () => {
+  withEdition(withMeal(2, { complete: true, reason: 'x', side: null }), ({ db, dir, id }) => {
+    assert.equal(importAll({ dir, log: () => {} }).applied, 1);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_ingredients WHERE recipe_id = ?').get(id).n, 3);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_steps WHERE recipe_id = ?').get(id).n, 2);
+  });
+  withEdition(withMeal(3, { complete: true, reason: 'x', side: SIDE }), ({ db, dir, id }) => {
+    importAll({ dir, log: () => {} });
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_ingredients WHERE recipe_id = ?').get(id).n, 3);
+  });
+});
+
+test('et tilbehør med ukendt enhed, uden trin eller med for mange linjer holdes tilbage', () => {
+  const bad = [
+    { ...SIDE, ingredients: [{ ...SIDE.ingredients[0], unit: 'bolle' }, SIDE.ingredients[1]] },
+    { ...SIDE, steps: [] },
+    { ...SIDE, ingredients: Array(5).fill(SIDE.ingredients[0]) },
+    { ...SIDE, ingredients: [] },
+    { ...SIDE, ingredients: [{ ...SIDE.ingredients[0], amount: 0 }] },
+  ];
+  bad.forEach((side, i) => {
+    // accepted frigiver ikke et ødelagt tilbehør.
+    withEdition({ ...withMeal(10 + i, { complete: false, reason: 'x', side }), accepted: true }, ({ db, dir, id }) => {
+      const res = importAll({ dir, log: () => {} });
+      assert.equal(res.applied, 0, `tilfælde ${i}`);
+      assert.equal(res.flagged, 1);
+      assert.match(res.flaggedList[0].issues[0], /^tilbehør:/);
+      assert.equal(db.prepare('SELECT title FROM recipes WHERE id = ?').get(id).title, 'Lamb rump');
+    });
+  });
+});
+
+test('en udgave, der får meal tilføjet, læses ind igen', () => {
+  withEdition(EDITION_FIXTURE, ({ db, dir, id }) => {
+    importAll({ dir, log: () => {} });
+    fs.writeFileSync(path.join(dir, 'ret.json'),
+      JSON.stringify({ ...EDITION_FIXTURE, meal: { complete: false, reason: 'x', side: SIDE } }));
+    assert.equal(importAll({ dir, log: () => {} }).applied, 1);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_ingredients WHERE recipe_id = ?').get(id).n, 5);
+  });
+});
