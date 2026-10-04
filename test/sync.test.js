@@ -835,6 +835,10 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
   // Kyllingen TÆLLES her ("2 stk"): den ret må ikke få resten af bakken,
   // og browseren skal vide det lige så vel som serveren.
   addRecipe('Kylling med ris', 0.7, [['kyllingebryst', 1 / 3, 'stk'], ['ris', 0.3], ['loeg', 0.1], ['salt', 0.005]]);
+  // Et kvarters arbejde og halvanden time i alt: aftensmad efter reglen fra
+  // 2026-10-04 — men KUN hvis arbejdstiden når frem. Taber et led den, står
+  // tiden i alt for arbejdet, retten falder ud, og puljen har tre, ikke fire.
+  db.prepare('UPDATE recipes SET active_minutes = 15, total_minutes = 90 WHERE id = ?').run(recipeIds[2]);
 
   const price = db.prepare(`INSERT INTO item_prices (item_key, chain_id, pack_qty, pack_unit, pack_price,
                               unit_price, source, observed_at, valid_until)

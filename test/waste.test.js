@@ -877,13 +877,34 @@ test('engelske kager, tilbehør og forretter er ikke aftensmad', () => {
   assert.equal(engine.looksLikeDinner('Main, chicken traybake, easy'), true);
 });
 
-test('en ret over en time er ikke hverdagsmad', () => {
-  // Brugerens valg: højst 60 minutter i alt.
+test('uden arbejdstid er tiden i alt også arbejdet: over en time er ikke hverdagsmad', () => {
+  // Brugerens valg 2026-10-04: højst en times arbejde og højst to timer i
+  // alt. Kender vi ikke arbejdstiden, må tiden i alt stå for den.
   const ret = { ...CANDIDATES[1], keywords: 'Aftensmad' };
   assert.equal(engine.isDinner({ ...ret, total_minutes: 60 }, W_ITEMS), true);
   assert.equal(engine.isDinner({ ...ret, total_minutes: 61 }, W_ITEMS), false);
+  assert.equal(engine.isDinner({ ...ret, total_minutes: 75 }, W_ITEMS), false,
+    'ingen arbejdstid, 75 min i alt: tiden i alt er arbejdet');
   assert.equal(engine.isDinner({ ...ret, total_minutes: 465 }, W_ITEMS), false, 'slow cooker');
   assert.equal(engine.isDinner({ ...ret, total_minutes: null }, W_ITEMS), true, 'ingen oplysning er ikke et nej');
+});
+
+test('højst en times arbejde og højst to timer i alt', () => {
+  // Valdemarsros "Tid i alt" tæller marinering og hviletid med. En ret med
+  // en halv times arbejde og en time i ovnen er hverdagsmad; en med en halv
+  // times arbejde og tre timers marinade er det ikke.
+  const ret = { ...CANDIDATES[1], keywords: 'Aftensmad' };
+  const dinner = (active_minutes, total_minutes) =>
+    engine.isDinner({ ...ret, active_minutes, total_minutes }, W_ITEMS);
+  assert.equal(dinner(30, 120), true, 'arbejde 30, i alt 120');
+  assert.equal(dinner(30, 180), false, 'arbejde 30, i alt 180');
+  assert.equal(dinner(70, 90), false, 'arbejde 70, i alt 90');
+  assert.equal(dinner(60, 60), true, 'begge grænser er med');
+  assert.equal(dinner(30, null), true, 'tiden i alt mangler: ikke et nej');
+  assert.equal(dinner(null, 75), false, 'ingen arbejdstid: tiden i alt er arbejdet');
+  assert.equal(engine.quickEnough({ active_minutes: 30, total_minutes: 120 }), true);
+  assert.equal(engine.DINNER_MAX_MINUTES, 60);
+  assert.equal(engine.DINNER_MAX_TOTAL_MINUTES, 120);
 });
 
 test('morgenmad og forretter i titlen er ikke aftensmad, selv tagget "Dinner"', () => {

@@ -4,8 +4,9 @@
  * Arbejdstid og tid i alt.
  *
  * To tal, fordi de betyder to ting: en lammeculotte kan tage et kvarters
- * arbejde og halvanden time i alt. Appen viser begge, og "højst en time"
- * (engine.DINNER_MAX_MINUTES) gælder tiden i alt.
+ * arbejde og halvanden time i alt. Appen viser begge, og aftensmaden måles
+ * på begge: højst en times arbejde (engine.DINNER_MAX_MINUTES) og højst to
+ * timer i alt (engine.DINNER_MAX_TOTAL_MINUTES).
  *
  * Valdemarsro mærker felterne omvendt: "Tid i alt" står i itemprop="cookTime"
  * og "Arbejdstid" i itemprop="totalTime" (målt på fire sider 2026-09-30).

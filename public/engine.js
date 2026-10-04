@@ -1447,12 +1447,20 @@
   // skal falde ud på samme måde. Ingen middagsret begynder med de ord.
   const NON_DINNER_TITLE = /\b(breakfast|morgenmad)|\bbrunch\b|blinis\b|\bwontons?\b/i;
 
-  // Brugerens valg 2026-09-28: højst en time i alt, tid i ovnen medregnet.
-  // Appens brugere har ikke tid til en langtidssteg på en hverdag. Målt: 287
-  // af 1.362 aftensretter tog længere, heraf 95 over to timer (slow cooker,
-  // flæskesteg, rimmet laks på 24 timer). En ret uden tidsangivelse slipper
-  // igennem — samme regel som nøgleordene: ingen oplysning er ikke et nej.
-  const DINNER_MAX_MINUTES = 60;
+  // Brugerens valg 2026-10-04: højst en times arbejde og højst to timer i
+  // alt. Den gamle regel (højst en time i alt) blev for streng, da tiderne
+  // blev rigtige: Valdemarsros "Tid i alt" tæller marinering, hviletid og
+  // tid i ovnen med, så en ret med et kvarters arbejde og en time i ovnen
+  // faldt ud. Målt på de 1.848 danske udgaver: 488 faldt ud med "højst 60
+  // min i alt", 285 med denne regel. Langtidsstegen (slow cooker, rimmet
+  // laks på 24 timer) er stadig ude på de to timer i alt.
+  //
+  // Kender vi ikke arbejdstiden, står tiden i alt for den: den er aldrig
+  // kortere end arbejdet, så en manglende arbejdstid lukker intet ind, den
+  // gamle regel holdt ude. En ret helt uden tidsangivelse slipper igennem —
+  // samme regel som nøgleordene: ingen oplysning er ikke et nej.
+  const DINNER_MAX_MINUTES = 60;          // arbejdstid
+  const DINNER_MAX_TOTAL_MINUTES = 120;   // tid i alt
 
   /** Kalder kilden selv retten noget andet end aftensmad? */
   function looksLikeDinner(keywords) {
@@ -1464,15 +1472,17 @@
 
   /** Kan den laves på en hverdag? */
   function quickEnough(recipe) {
-    const m = recipe && recipe.total_minutes;
-    return !(m > DINNER_MAX_MINUTES);
+    const total = recipe && recipe.total_minutes;
+    const active = recipe && recipe.active_minutes;
+    const work = typeof active === 'number' ? active : total;
+    return !(work > DINNER_MAX_MINUTES) && !(total > DINNER_MAX_TOTAL_MINUTES);
   }
 
   /**
    * Er retten aftensmad — i denne app, på en hverdag?
    *
    * Har den en hovedråvare, OG kalder kilden den en middag, OG kan den nås på
-   * en time? Det første alene lukkede ærtepuré og Marie Rose sauce ind i
+   * en hverdag (quickEnough)? Det første alene lukkede ærtepuré og Marie Rose sauce ind i
    * madplanen; det andet alene ville lukke en vinaigrette ind, hvis nogen
    * havde tagget den "aftensmad". Tiden står HER og ikke i puljen, så puljen,
    * forslagene og budget-sporets has_main er enige om, hvad der er en ret.
@@ -2658,7 +2668,7 @@
     qualifies, cheapestPerItem,
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
     choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner, quickEnough, withEstimates,
-    DINNER_MAX_MINUTES,
+    DINNER_MAX_MINUTES, DINNER_MAX_TOTAL_MINUTES,
     canPrice, candidatePool, mainCategoryOf, sharedWeek, twoProposals, explainWeek,
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
