@@ -748,3 +748,48 @@ test('kyllingebryst → hakket kylling er stadig samme hovedråvare', () => {
   assert.equal(editionLines(ed)[0].item_key, 'hakket_kylling');
   assert.deepEqual(problems(ed, editionLines(ed), parsedLines(['500 g chicken breast', '1 tsp salt'])), []);
 });
+
+// ── Tilbehør: vurderingen af måltidet (sides.js) ───────────────────────────
+const { MEAL_SCHEMA } = require('../src/recipes/edition');
+const sides = require('../src/recipes/sides');
+
+test('MEAL_SCHEMA tillader kun UNITS (samme ingrediensskema som udgaven) og er lukket', () => {
+  const side = MEAL_SCHEMA.properties.side.anyOf[0];
+  assert.equal(MEAL_SCHEMA.additionalProperties, false);
+  assert.equal(side.additionalProperties, false);
+  assert.equal(side.properties.ingredients, RECIPE_SCHEMA.properties.ingredients);
+  const unit = side.properties.ingredients.items.properties.unit.anyOf[0];
+  assert.deepEqual(unit.enum, UNITS);
+  assert.deepEqual(MEAL_SCHEMA.required, ['complete', 'reason', 'side']);
+});
+
+test('udvælgelsen: kun aftensretter med udgave, og meal springes over uden --force', () => {
+  const recipes = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
+  const editions = { 1: { title: 'a' }, 2: { title: 'b', meal: { complete: true } }, 3: null, 4: { title: 'd' } };
+  const isDinner = (r) => r.id !== 4; // 4 er ikke aftensmad
+  const read = (r) => editions[r.id];
+  const ids = (o) => sides.pendingMeals(recipes, [], { isDinner, read, ...o }).map((p) => p.recipe.id);
+  assert.deepEqual(ids({}), [1]);
+  assert.deepEqual(ids({ force: true }), [1, 2]);
+  assert.deepEqual(ids({ force: true, limit: 1 }), [1]);
+  assert.deepEqual(ids({ force: true, ids: [2] }), [2]);
+});
+
+test('meal skrives ind i udgaven, og de øvrige felter er uændrede', () => {
+  const ed = { url: 'u', title: 'Stegt tunsteak', servings: 4, ingredients: [{ name: 'tun' }], steps: [{ section: null, text: 'Steg.' }] };
+  const side = { title: 'Kogte kartofler', ingredients: [], steps: ['Kog.'] };
+  const out = sides.withMeal(ed, { output: { complete: false, reason: 'Mangler stivelse.', side }, model: 'claude-haiku-4-5' }, new Date('2026-10-04T10:00:00Z'));
+  const { meal, ...rest } = out;
+  assert.deepEqual(rest, ed);
+  assert.deepEqual(meal, { complete: false, reason: 'Mangler stivelse.', side, model: 'claude-haiku-4-5', checked_at: '2026-10-04T10:00:00.000Z' });
+  assert.equal(ed.meal, undefined, 'den oprindelige udgave røres ikke');
+});
+
+test('sides-prompten er fast og nævner de tilladte enheder; beskeden bruger udgavens linjer', () => {
+  assert.equal(sides.systemText(), sides.systemText());
+  assert.ok(sides.systemText().includes(UNITS.join(', ')));
+  const msg = sides.userMessage({ title: 'T', servings: 2, ingredients: [{ amount: 400, unit: 'g', name: 'tun', note: null, optional: false }], steps: [{ text: 'Steg.' }] });
+  assert.match(msg, /Portioner: 2/);
+  assert.match(msg, /- 400 g tun/);
+  assert.match(msg, /1\. Steg\./);
+});
