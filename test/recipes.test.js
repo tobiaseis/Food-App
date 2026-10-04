@@ -734,3 +734,17 @@ test('systemprompten forbyder hjemmelavede erstatninger', () => {
 test('systemprompten begrænser genbrugt ordsekvens fra kilder til fire ord i træk', () => {
   assert.ok(systemText().includes('Genbrug aldrig mere end fire ord i træk'));
 });
+
+test('en flæskesteg erstattet af lidt bacon er ikke den samme hovedråvare', () => {
+  const before = parsedLines(['1 kg svinekam', '1 tsp salt']);
+  assert.equal(before[0].item_key, 'flaeskesteg');
+  const ed = edOf([[100, 'g', 'bacon'], [1, 'tsk', 'salt']]);
+  const issues = problems(ed, editionLines(ed), before);
+  assert.ok(issues.some((i) => /hovedråvaren .* er væk/.test(i)), issues.join());
+});
+
+test('kyllingebryst → hakket kylling er stadig samme hovedråvare', () => {
+  const ed = edOf([[500, 'g', 'hakket kylling'], [1, 'tsk', 'salt']]);
+  assert.equal(editionLines(ed)[0].item_key, 'hakket_kylling');
+  assert.deepEqual(problems(ed, editionLines(ed), parsedLines(['500 g chicken breast', '1 tsp salt'])), []);
+});

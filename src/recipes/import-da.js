@@ -52,9 +52,13 @@ const ANIMAL_PREFIX = [
 // hele familien; et skift til et andet dyr (lam → svin) fanges som før. En
 // hovedvare, der ikke står her, er sin egen familie.
 const FAMILIES = {
-  kylling: ['kylling', 'hel_kylling', 'kyllingebryst', 'kyllingelaar'],
-  svin: ['flaeskesteg', 'svinemoerbrad', 'svinekoteletter', 'hakket_svinekoed', 'bacon', 'skinke',
-    'paalaeg', 'poelser'],
+  kylling: ['kylling', 'hel_kylling', 'kyllingebryst', 'kyllingelaar', 'hakket_kylling'],
+  // Friskt svinekød og saltet/pålægget kød er to familier: ellers kan en steg,
+  // der er erstattet af lidt bacon, slippe igennem som "hovedråvaren er der
+  // stadig", og en baconpynt lægges sammen med stegen i mængdekontrollen.
+  // Pølser står ikke her og er dermed deres egen familie.
+  svin_friskt: ['flaeskesteg', 'svinemoerbrad', 'svinekoteletter', 'hakket_svinekoed'],
+  svin_paalaeg: ['bacon', 'skinke', 'paalaeg'],
   okse: ['oksekoed', 'boef', 'oksemoerbrad', 'hakket_oksekoed'],
   lam: ['lam'],
   kalv: ['kalvekoed'],
