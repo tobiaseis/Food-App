@@ -30,6 +30,58 @@ test('dyret i et sammensat kødord bestemmer varen', () => {
   for (const [raw, key] of cases) assert.equal(parseIngredient(raw).item_key, key, raw);
 });
 
+// De danske udgavers navne for varer, taksonomien allerede havde (import-runde
+// 2026-10-04). Uden dem talte importen "N ukendte linjer" og holdt udgaven
+// tilbage, selvom den engelske linje var koblet til samme vare.
+const DANISH_SYNONYMS = [
+  ['oksekæber', 'oksekoed'],
+  ['svinebov', 'flaeskesteg'], ['svineskulder', 'flaeskesteg'], ['svinebryst', 'flaeskesteg'],
+  ['svinenakke', 'flaeskesteg'],
+  ['gedeost', 'ost'],
+  ['perleløg', 'loeg'],
+  ['babysalatblade', 'salat'],
+  ['østershatte', 'champignon'],
+  ['kinakål', 'kaal'], ['savoykål', 'kaal'], ['savojkål', 'kaal'],
+  ['brombær', 'baer'], ['stikkelsbær', 'baer'],
+  ['sushiris', 'ris'], ['fuldkornsris', 'ris'],
+  ['speltmel', 'mel'], ['fuldkornsspeltmel', 'mel'], ['grahamsmel', 'mel'], ['kartoffelmel', 'mel'],
+  ['focaccia', 'brod'], ['ciabatta', 'brod'],
+  ['bagespray', 'olie'],
+  ['sherryeddike', 'eddike'],
+  ['glucosesirup', 'glukosesirup'],
+  ['laurbærblad', 'krydderi'], ['kommenfrø', 'krydderi'], ['kommen', 'krydderi'],
+  ['muskatblomme', 'muskatblomme'],
+  ['mandelmel', 'noedder'], ['mandelflager', 'noedder'],
+  ['tonic', 'sodavand'],
+  ['portvin', 'vin'], ['sherry', 'vin'],
+  ['rom', 'spiritus'], ['gin', 'spiritus'], ['tequila', 'spiritus'], ['pernod', 'spiritus'],
+  ['vaniljepulver', 'vanilje'],
+  ['valmuefrø', 'kerner_froe'], ['bukkehornsfrø', 'kerner_froe'], ['blandede kerner', 'kerner_froe'],
+  ['ansjosfilet', 'ansjoser'],
+  ['svesker', 'toerret_frugt'], ['tørret frugt', 'toerret_frugt'],
+  ['stenfrugt', 'stenfrugt'],
+  ['xanthangummi', 'fortykningsmiddel'],
+  ['kaffirlimeblade', 'kaffirblade'],
+  ['tørrede bukkehornsblade', 'fenugreekblade'], ['bukkehornsblade', 'fenugreekblade'],
+];
+for (const [word, key] of DANISH_SYNONYMS) {
+  test(`det danske ord "${word}" kobles til ${key}`, () => {
+    assert.equal(parseIngredient(`200 g ${word}`).item_key, key);
+  });
+}
+
+test('de nye danske ord tager ikke en anden vares match', () => {
+  // Hvert nyt ord er prøvet mod alle linjer i basen, udgaverne, kilderne og
+  // tilbuddene. Her står de tilfælde, der ville være gået galt uden et værn.
+  assert.equal(parseIngredient('2 tbsp sherry vinegar').item_key, 'eddike', "'sherry' tog eddiken");
+  assert.equal(parseIngredient('1 spsk sherryeddike').item_key, 'eddike');
+  assert.equal(parseIngredient('2 tsk spidskommen').item_key, 'krydderi');
+  assert.notEqual(parseIngredient('0,5 dl solbærmarmelade').item_key, 'baer', 'marmelade er ikke bær');
+  assert.notEqual(parseIngredient('6 enebær').item_key, 'baer', 'enebær er et krydderi');
+  assert.notEqual(parseIngredient('1 tsk næringsgær').item_key, 'gaer', 'næringsgær hæver ikke');
+  assert.notEqual(parseIngredient('2 tsk mandelaroma').item_key, 'noedder');
+});
+
 const { danishMinutes, labelledTimes, pickTimes } = require('../src/recipes/times');
 const { extractRecipe } = require('../src/recipes/extract');
 

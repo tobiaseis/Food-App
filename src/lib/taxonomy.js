@@ -82,16 +82,22 @@ const SEED = [
     en: ['ribeye', 'sirloin', 'steak', 'entrecote'], premium: true },
   { key: 'oksekoed', name: 'Oksekød', cat: 'meat',
     class: 'fresh', keeps: 'perishable', p: 21, kcal: 180, c: 0,
+    // 'oksekæber': de danske udgavers ord for "beef cheeks" — et udskæringsnavn
+    // som oksebov og oksebryst, og ukendt for taksonomien indtil importen fangede det.
     da: ['tykstegsfilet', 'oksekød', 'okseklump', 'oksetykkam', 'oksebov',
-         'okseinderlår', 'okseyderlår', 'oksespidsbryst', 'oksebryst'],
+         'okseinderlår', 'okseyderlår', 'oksespidsbryst', 'oksebryst', 'oksekæber'],
     en: ['beef', 'brisket'] },
   { key: 'svinemoerbrad', name: 'Svinemørbrad', cat: 'meat',
     class: 'fresh', keeps: 'perishable', p: 21, kcal: 140, c: 0,
     da: ['svinemørbrad', 'svinefilet', 'mørbrad'], en: ['pork tenderloin', 'pork fillet'] },
   { key: 'flaeskesteg', name: 'Flæskesteg', cat: 'meat',
     class: 'fresh', keeps: 'perishable', p: 20, kcal: 260, c: 0,
+    // Svinebov, -skulder, -bryst og -nakke er de danske udgavers ord for
+    // "pork shoulder"/"pork belly", som allerede står her på engelsk. Uden dem
+    // var hovedråvaren "væk" i udgaven, og importen holdt retten tilbage.
     da: ['flæskesteg', 'svinekam', 'nakkefilet', 'nakkekam', 'ribbensteg', 'ribbenssteg',
-         'spareribs', 'stegeflæsk', 'flæsk i skiver', 'svinekæber', 'svineskank'],
+         'spareribs', 'stegeflæsk', 'flæsk i skiver', 'svinekæber', 'svineskank',
+         'svinebov', 'svineskulder', 'svinebryst', 'svinenakke'],
     en: ['pork roast', 'pork loin', 'pork shoulder', 'pork belly', 'pulled pork'] },
   { key: 'svinekoteletter', name: 'Svinekoteletter', cat: 'meat',
     class: 'fresh', keeps: 'perishable', p: 21, kcal: 200, c: 0,
@@ -213,8 +219,10 @@ const SEED = [
     da: ['smør', 'kærgården', 'smørbar'], en: ['butter'] },
   { key: 'ost', name: 'Ost', cat: 'cheese',
     class: 'fresh', keeps: 'perishable', p: 25, kcal: 350, c: 1,
+    // 'gedeost': "goat's cheese" rammer 'cheese' her; det danske ord skal
+    // stå for sig, fordi 'ost' er for kort til at matche inde i et ord.
     da: ['revet ost', 'skæreost', 'ostehaps', 'jarlsberg', 'myseost', 'danbo', 'havarti', 'cheddar', 'ost',
-         'blåskimmelost', 'taleggio', 'stilton', 'emmental', 'queso fresco', 'stracciatella'],
+         'blåskimmelost', 'taleggio', 'stilton', 'emmental', 'queso fresco', 'stracciatella', 'gedeost'],
     en: ['cheese', 'cheddar', 'blue cheese', 'gorgonzola'] },
   { key: 'flodeost', name: 'Flødeost', cat: 'cheese',
     class: 'fresh', keeps: 'perishable', p: 6, kcal: 250, c: 4,
@@ -248,7 +256,8 @@ const SEED = [
     da: ['kartofler', 'bagekartofler', 'bagekartoffel', 'nye kartofler'], en: ['potatoes', 'potato'] },
   { key: 'loeg', name: 'Løg', cat: 'veg',
     class: 'baseline', keeps: 'keeps', p: 1.1, kcal: 40, c: 9,
-    da: ['løg', 'rødløg', 'skalotteløg', 'zittauerløg', 'løgpulver'],
+    // 'perleløg' som "pearl onions" på engelsk; 'løg' er for kort til delmatch.
+    da: ['løg', 'rødløg', 'skalotteløg', 'zittauerløg', 'løgpulver', 'perleløg'],
     en: ['onion', 'onions', 'shallot', 'red onion', 'onion powder'] },
   // Stod i STAPLE_KEYS, men købes: den bruges i portioner, ikke i teskefulde.
   // Ikke 'baseline' som løg/gulerod ved siden af: prisen svinger som en
@@ -284,13 +293,17 @@ const SEED = [
     // delmatch er tilladt fra fire tegn — og 65 linjer "75 g rucola" blev
     // til sodavand. Det kunne ikke ses, så længe src/sync/build.js skar
     // 'drink' væk af nyttelasten; nu køber indkøbslisten dem.
-    da: ['salat', 'icebergsalat', 'romainesalat', 'salatblanding', 'babyleaf', 'rucola'],
+    // 'babysalatblade' er babyleaf: 'salat' midt i ordet giver intet match.
+    da: ['salat', 'icebergsalat', 'romainesalat', 'salatblanding', 'babyleaf', 'rucola', 'babysalatblade'],
     en: ['lettuce', 'salad', 'rocket', 'mixed leaves', 'radicchio', 'iceberg'] },
   { key: 'spinat', name: 'Spinat', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 2.9, kcal: 23, c: 1.5, da: ['spinat'], en: ['spinach'] },
   { key: 'champignon', name: 'Champignon', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 3, kcal: 22, c: 3,
-    da: ['champignon', 'kantareller', 'markchampignon', 'svampe'], en: ['mushroom', 'mushrooms'] },
+    // 'østershatte' er "oyster mushrooms", som allerede rammer 'mushrooms'.
+    // Kun det hele ord: 'østers' alene er muslingen og står ikke her.
+    da: ['champignon', 'kantareller', 'markchampignon', 'svampe', 'østershatte'],
+    en: ['mushroom', 'mushrooms'] },
   { key: 'squash', name: 'Squash', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 1.2, kcal: 17, c: 3,
     da: ['squash', 'hokkaido græskar'], en: ['courgette', 'zucchini'] },
@@ -327,7 +340,11 @@ const SEED = [
     da: ['ingefær'], en: ['ginger'] },
   { key: 'kaal', name: 'Kål', cat: 'veg',
     class: 'baseline', keeps: 'keeps', p: 1.3, kcal: 25, c: 5,
-    da: ['hvidkål', 'rødkål', 'spidskål', 'grønkål', 'kål'], en: ['cabbage', 'kale'] },
+    // Kinakål og savoykål er kål ("chinese/savoy cabbage" rammer 'cabbage').
+    // Begge stavemåder af savoykål forekommer i de danske udgaver. Rosenkål,
+    // kålrabi og kålroe står IKKE her: det er andre grøntsager, ikke et kålhoved.
+    da: ['hvidkål', 'rødkål', 'spidskål', 'grønkål', 'kål', 'kinakål', 'savoykål', 'savojkål'],
+    en: ['cabbage', 'kale'] },
   { key: 'majs', name: 'Majs', cat: 'veg',
     class: 'fresh', keeps: 'perishable', p: 3.3, kcal: 86, c: 19,
     da: ['majskolbe', 'majs'], en: ['sweetcorn', 'corn'] },
@@ -374,7 +391,11 @@ const SEED = [
     da: ['appelsiner', 'appelsin', 'clementiner'], en: ['orange', 'oranges'] },
   { key: 'baer', name: 'Bær', cat: 'fruit',
     class: 'fresh', keeps: 'perishable', p: 1, kcal: 50, c: 8,
-    da: ['jordbær', 'blåbær', 'hindbær', 'bær'], en: ['strawberries', 'blueberries', 'raspberries', 'berries'] },
+    // 'bær' er for kort til at matche inde i et ord, så hver bærsort skal stå
+    // for sig. ALDRIG 'enebær': det er et krydderi (se krydderi). Heller ikke
+    // 'solbær': som orddel tog det "solbærmarmelade", og marmelade er ikke bær.
+    da: ['jordbær', 'blåbær', 'hindbær', 'bær', 'brombær', 'stikkelsbær'],
+    en: ['strawberries', 'blueberries', 'raspberries', 'berries'] },
   { key: 'druer', name: 'Druer', cat: 'fruit',
     class: 'fresh', keeps: 'perishable', p: 0.7, kcal: 69, c: 17, da: ['druer'], en: ['grapes'] },
 
@@ -387,7 +408,9 @@ const SEED = [
          'spaghetti', 'penne', 'tagliatelle', 'pasta'] },
   { key: 'ris', name: 'Ris', cat: 'grain',
     class: 'baseline', keeps: 'pantry', p: 7, kcal: 355, c: 78,
-    da: ['ris', 'basmatiris', 'jasminris', 'risotto ris', 'grødris'],
+    // 'sushiris' og 'fuldkornsris' som "sushi rice"/"brown rice" på engelsk;
+    // 'ris' er for kort til delmatch.
+    da: ['ris', 'basmatiris', 'jasminris', 'risotto ris', 'grødris', 'sushiris', 'fuldkornsris'],
     en: ['rice', 'basmati rice', 'risotto rice', 'arborio'] },
   { key: 'bulgur', name: 'Bulgur / couscous', cat: 'grain',
     class: 'baseline', keeps: 'pantry', p: 12, kcal: 340, c: 65,
@@ -405,12 +428,20 @@ const SEED = [
     // teskefulde. Uden ordene her matcher sodavandens 'soda' det sidste ord
     // i "bicarbonate of soda" som et HELT ord, og 29 bagelinjer blev til
     // sodavand — på indkøbslisten som en flaske cola.
-    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel', 'bagepulver', 'natron'],
+    //
+    // Speltmel og grahamsmel er almindeligt dansk bagemel som hvedemel og
+    // rugmel ("spelt flour" rammer allerede 'flour'), og kartoffelmel jævner
+    // som majsstivelse. Kikærtemel og rismel står IKKE her: specialmel, man
+    // skal ud og købe — samme grund som kokosmel og durummel fik egne poster.
+    da: ['majsstivelse', 'maizena', 'hvedemel', 'rugmel', 'mel', 'bagepulver', 'natron',
+         'speltmel', 'fuldkornsspeltmel', 'grahamsmel', 'kartoffelmel'],
     en: ['cornflour', 'cornstarch', 'plain flour', 'flour', 'baking powder',
          'bicarbonate of soda', 'baking soda'] },
   { key: 'brod', name: 'Brød', cat: 'bakery',
     class: 'fresh', keeps: 'perishable', base_unit: 'stk', p: 8, kcal: 260, c: 45,
-    da: ['rugbrød', 'brød', 'franskbrød', 'flute', 'boller', 'toastbrød'],
+    // Focaccia og ciabatta er brød. 'surdej' står IKKE her, selvom 'sourdough'
+    // gør: på dansk er surdej grundstoffet, ikke brødet.
+    da: ['rugbrød', 'brød', 'franskbrød', 'flute', 'boller', 'toastbrød', 'focaccia', 'ciabatta'],
     en: ['bread', 'rye bread', 'baguette', 'buns', 'sourdough'] },
   { key: 'tortilla', name: 'Tortilla / wraps', cat: 'bakery',
     class: 'fresh', keeps: 'keeps', base_unit: 'stk', p: 8, kcal: 300, c: 50,
@@ -427,12 +458,16 @@ const SEED = [
     // 'sesam' i sesamfroe på position, og sesamolie bliver til sesamfrø.
     // 'kokosolie' flyttet ud herfra (fix-runde) til egen baseline-post:
     // specialolie, ikke noget der antages i skabet ligesom oliven-/rapsolie.
-    da: ['olivenolie', 'rapsolie', 'solsikkeolie', 'sesamolie', 'olie'],
+    // 'bagespray' er det danske ord for 'baking spray' nedenfor.
+    da: ['olivenolie', 'rapsolie', 'solsikkeolie', 'sesamolie', 'olie', 'bagespray'],
     en: ['olive oil', 'oil', 'vegetable oil', 'sesame oil', 'toasted sesame oil', 'baking spray'] },
   { key: 'eddike', name: 'Eddike', cat: 'pantry',
     class: 'essential', keeps: 'pantry', base_unit: 'l', density_g_ml: 1.01, p: 0, kcal: 20, c: 1,
-    da: ['eddike', 'balsamico'],
-    en: ['apple cider vinegar', 'rice wine vinegar', 'rice vinegar',
+    // 'sherryeddike'/'sherry vinegar' står for sig, så vinens 'sherry' ikke
+    // tager dem: på samme position vinder det længere ord. Uden dem blev 15
+    // engelske linjer "sherry vinegar" til vin (målt mod hele korpus).
+    da: ['eddike', 'balsamico', 'sherryeddike'],
+    en: ['sherry vinegar', 'apple cider vinegar', 'rice wine vinegar', 'rice vinegar',
          'white wine vinegar', 'red wine vinegar', 'cider vinegar',
          'vinegar', 'balsamic'] },
   // 'glukosesirup'/'liquid glucose'/'glucose syrup', 'kokossukker' og
@@ -450,7 +485,8 @@ const SEED = [
   { key: 'sirup_moerk', name: 'Sirup (mørk)', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 0.5, kcal: 290, c: 72, da: ['mørk sirup'], en: ['black treacle', 'treacle'] },
   { key: 'glukosesirup', name: 'Glukosesirup', cat: 'pantry', class: 'baseline', keeps: 'pantry',
-    p: 0, kcal: 320, c: 80, da: ['glukosesirup'], en: ['liquid glucose', 'glucose syrup'] },
+    // 'glucosesirup' er samme vare med c — begge stavemåder står i udgaverne.
+    p: 0, kcal: 320, c: 80, da: ['glukosesirup', 'glucosesirup'], en: ['liquid glucose', 'glucose syrup'] },
   { key: 'durummel', name: 'Durummel / semulje', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 13, kcal: 350, c: 71, da: ['durummel'], en: ['semolina'] },
   { key: 'kokosmel', name: 'Kokosmel', cat: 'pantry', class: 'baseline', keeps: 'pantry',
@@ -540,10 +576,16 @@ const SEED = [
     // ved siden af spidskommen i næsten hver eneste af de opskrifter. Det
     // længere synonym vinder over det bare ord, samme mekanisme som 'tørret
     // rosmarin' ovenfor; frisk koriander bliver på persille.
+    //
+    // 'kommenfrø'/'kommen' er 'caraway seeds' herunder, og 'laurbærblad' er
+    // entalsformen af 'laurbærblade' — de danske udgavers ord for varer, der
+    // allerede står på listen. 'kommen' tager ikke 'spidskommen': det længere,
+    // hele ord vinder. Enebær og anis står IKKE her: de er ikke på den
+    // kuraterede liste over, hvad et dansk køkken har i skabet.
     da: ['krydderi', 'paprika', 'spidskommen', 'karry', 'oregano', 'basilikum', 'chili',
-         'tørret rosmarin', 'tørret timian', 'laurbærblade',
+         'tørret rosmarin', 'tørret timian', 'laurbærblade', 'laurbærblad',
          'stødt kanel', 'kanel', 'muskatnød', 'nellike', 'stødt nellike', 'allehånde',
-         'stødt koriander', 'korianderfrø'],
+         'stødt koriander', 'korianderfrø', 'kommenfrø', 'kommen'],
     en: ['cayenne pepper', 'chilli flakes', 'lemon thyme',
          'chillies', 'chilies', 'paprika', 'cumin', 'curry', 'oregano',
          'basil', 'chilli', 'chili', 'dried rosemary', 'dried thyme',
@@ -565,11 +607,14 @@ const SEED = [
     class: 'baseline', keeps: 'pantry', p: 10, kcal: 280, c: 40,
     da: [], en: ['mixed herbs', 'dried mixed herbs', 'mixed dried herbs'] },
   { key: 'muskatblomme', name: 'Muskatblomme', cat: 'pantry', class: 'baseline', keeps: 'pantry',
-    p: 6, kcal: 475, c: 50, da: [], en: ['ground mace'] },
+    p: 6, kcal: 475, c: 50, da: ['muskatblomme'], en: ['ground mace'] },
   { key: 'noedder', name: 'Nødder', cat: 'snack',
     class: 'baseline', keeps: 'pantry', p: 20, kcal: 600, c: 15,
+    // 'mandelmel' og 'mandelflager' er mandler — "ground almonds" og "flaked
+    // almonds" rammer allerede 'almonds'. 'mandel' alene står ikke her: det
+    // ville tage 'mandelaroma' og 'mandelmælk', som er andre varer.
     da: ['mandler', 'nødder', 'valnødder', 'cashewnødder', 'pistaciekerner', 'pistacienødder',
-         'hasselnødder'],
+         'hasselnødder', 'mandelmel', 'mandelflager'],
     en: ['almonds', 'nuts', 'walnuts', 'cashews', 'peanuts', 'peanut butter', 'peanutbutter',
          'pistachios', 'hazelnuts'] },
   { key: 'safran', name: 'Safran', cat: 'pantry',
@@ -601,7 +646,9 @@ const SEED = [
   // ── Drikkevarer & snacks ──────────────────────────────────────────────────
   { key: 'sodavand', name: 'Sodavand', cat: 'drink',
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 40, c: 10,
-    da: ['sodavand', 'cola', 'pepsi', 'faxe kondi', 'fanta', 'sprite'], en: ['soda', 'cola'] },
+    // 'tonic' er en sodavand, der købes; uden ordet blev "tonic water" til
+    // vand (essential) og forsvandt fra indkøbslisten.
+    da: ['sodavand', 'cola', 'pepsi', 'faxe kondi', 'fanta', 'sprite', 'tonic'], en: ['soda', 'cola'] },
   { key: 'oel', name: 'Øl', cat: 'drink',
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 43, c: 3.5, da: ['øl', 'pilsner'],
     // 'cider' fanger også 'dry cider': ordet står for sig selv med ordgrænse.
@@ -616,14 +663,18 @@ const SEED = [
   // enheden alene.
   { key: 'vin', name: 'Vin', cat: 'drink', base_unit: 'l', density_g_ml: 0.99,
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 83, c: 2.5,
+    // Portvin og sherry er hedvin, som vermouth. 'sherryeddike' står på
+    // eddike, så 'sherry' ikke tager den.
     da: ['rødvin', 'hvidvin', 'lambrusco', 'prosecco', 'champagne', 'vin', 'rosé', 'vermouth',
-         'noilly prat'],
+         'noilly prat', 'portvin', 'sherry'],
     // 'sake' kun som engelsk: den strenge venstregraense forhindrer den i at
     // matche midt inde i et ord (fx "forsake" — ses ikke i korpus, men koster intet at sikre).
     en: ['red wine', 'white wine', 'prosecco', 'champagne', 'wine', 'vermouth', 'sake'] },
   { key: 'spiritus', name: 'Spiritus', cat: 'drink',
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 250, c: 0,
-    da: ['vodka', 'whisky', 'cognac', 'likør', 'snaps', 'spiritus'],
+    // 'rom' og 'gin' er for korte til delmatch og står kun som hele ord ("hvid
+    // rom", "mørk rom") — 'romessens' og 'ingefær' røres ikke.
+    da: ['vodka', 'whisky', 'cognac', 'likør', 'snaps', 'spiritus', 'rom', 'gin', 'tequila', 'pernod'],
     en: ['vodka', 'whisky', 'whiskey', 'liqueur'] },
   { key: 'kaffe', name: 'Kaffe', cat: 'drink',
     class: 'baseline', keeps: 'pantry', p: 0, kcal: 0, c: 0,
@@ -737,7 +788,7 @@ const SEED = [
   // 'vaniljesukker' fra sukker-varen, bar 'kakao' ville tage 'kakaomælk').
   { key: 'vanilje', name: 'Vanilje', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 0.1, kcal: 288, c: 13,
-    da: ['vaniljeekstrakt', 'vaniljestang', 'vaniljepasta', 'vaniljebønnepasta'],
+    da: ['vaniljeekstrakt', 'vaniljestang', 'vaniljepasta', 'vaniljebønnepasta', 'vaniljepulver'],
     en: ['vanilla extract', 'vanilla bean paste', 'vanilla pod', 'vanilla paste'] },
   { key: 'kakao', name: 'Kakaopulver', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 20, kcal: 228, c: 58, da: ['kakaopulver'], en: ['cocoa powder'] },
@@ -766,14 +817,19 @@ const SEED = [
     p: 1.2, kcal: 31, c: 7, da: ['fennikel'], en: ['fennel', 'fennel bulb'] },
   { key: 'kerner_froe', name: 'Kerner & frø', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 20, kcal: 550, c: 20,
-    da: ['hampefrø', 'græskarkerner', 'solsikkekerner', 'chiafrø', 'kokosflager', 'hørfrø'],
+    // Valmuefrø, bukkehornsfrø og blandede kerner er 'poppy seeds',
+    // 'fenugreek seeds' og 'mixed seeds' herunder. Ikke bare 'kerner': det
+    // ville tage rugkerner og speltkerner, som er korn.
+    da: ['hampefrø', 'græskarkerner', 'solsikkekerner', 'chiafrø', 'kokosflager', 'hørfrø',
+         'valmuefrø', 'bukkehornsfrø', 'blandede kerner'],
     en: ['hemp seeds', 'pumpkin seeds', 'sunflower seeds', 'chia seeds', 'desiccated coconut',
          'fenugreek seeds', 'flaxseed', 'poppy seeds', 'mixed seeds'] },
   { key: 'gochujang', name: 'Gochujang', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 5, kcal: 170, c: 34, da: ['gochujang'], en: ['gochujang'] },
   { key: 'ansjoser', name: 'Ansjoser', cat: 'fish', class: 'baseline', keeps: 'pantry',
     p: 20, kcal: 130, c: 0,
-    da: ['ansjoser', 'ansjosfileter'], en: ['anchovy fillets', 'anchovies', 'anchovy fillet', 'anchovy'] },
+    da: ['ansjoser', 'ansjosfileter', 'ansjosfilet'],
+    en: ['anchovy fillets', 'anchovies', 'anchovy fillet', 'anchovy'] },
   { key: 'husblas', name: 'Husblas', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 85, kcal: 335, c: 0,
     da: ['husblas', 'blade husblas', 'blad husblas'],
@@ -818,7 +874,9 @@ const SEED = [
     p: 2, kcal: 300, c: 65,
     // 'dadler' fanger også 'dadler uden sten' og 'grofthakkede tørrede dadler':
     // ordet står for sig selv med ordgrænse i alle tre linjer i korpus.
-    da: ['tørrede tranebær', 'tranebær', 'tørrede abrikoser', 'dadler', 'rosiner'],
+    // 'svesker' er tørrede blommer, og 'tørret frugt' er varens eget navn.
+    da: ['tørrede tranebær', 'tranebær', 'tørrede abrikoser', 'dadler', 'rosiner',
+         'svesker', 'tørret frugt'],
     // 'coconut flakes' fanger også 'toasted coconut flakes' på samme måde —
     // ingen grund til begge. 'dates' fanger 'medjool dates' tilsvarende.
     en: ['dried cranberries', 'dried apricots', 'dried apricot', 'dates', 'raisins',
@@ -866,13 +924,14 @@ const SEED = [
   // korpus. Flertalsformerne 'cherries'/'plums' rammer ikke det problem.
   { key: 'stenfrugt', name: 'Stenfrugt', cat: 'fruit', class: 'fresh', keeps: 'perishable',
     p: 0.8, kcal: 50, c: 11,
-    da: ['nektarin', 'kirsebær', 'blommer', 'fersken'],
+    // 'stenfrugt' er varens eget navn, og de danske udgaver bruger det.
+    da: ['nektarin', 'kirsebær', 'blommer', 'fersken', 'stenfrugt'],
     en: ['cherries', 'peaches', 'peach', 'plums', 'nectarines', 'nectarine'] },
   // Fortykningsmiddel samler agar agar/xanthan gum/ultratex: alle tre bruges
   // i knappenålshoved-mængder og prissættes ens, ligesom husblas.
   { key: 'fortykningsmiddel', name: 'Fortykningsmiddel', cat: 'pantry', class: 'baseline', keeps: 'pantry',
     p: 0, kcal: 0, c: 0,
-    da: ['agar agar', 'agar-agar'], en: ['agar agar', 'xanthan gum', 'ultratex'] },
+    da: ['agar agar', 'agar-agar', 'xanthangummi'], en: ['agar agar', 'xanthan gum', 'ultratex'] },
 
   // ── Fix-runde: flyttet ud af krydderi (essential) ─────────────────────────
   // Samme begrundelse som chaat_masala/gochugaru: specifikke, ikke-danske
@@ -883,9 +942,12 @@ const SEED = [
   // her i stedet for at lade det danske og engelske navn splittes over to
   // forskellige poster/klasser, den fejl der blev fundet i rosmarin/timian.
   { key: 'kaffirblade', name: 'Kaffirlimeblade', cat: 'pantry', class: 'baseline', keeps: 'pantry',
-    p: 3, kcal: 90, c: 15, da: ['kaffirblade'], en: ['lime leaves'] },
+    p: 3, kcal: 90, c: 15, da: ['kaffirblade', 'kaffirlimeblade'], en: ['lime leaves'] },
+  // Varens danske navn stod kun som navn, ikke som synonym, så den danske
+  // udgaves "tørrede bukkehornsblade" fandt den ikke.
   { key: 'fenugreekblade', name: 'Tørrede bukkehornsblade', cat: 'pantry', class: 'baseline', keeps: 'pantry',
-    p: 20, kcal: 320, c: 45, da: [], en: ['dried fenugreek leaves'] },
+    p: 20, kcal: 320, c: 45, da: ['tørrede bukkehornsblade', 'bukkehornsblade'],
+    en: ['dried fenugreek leaves'] },
   // Rispapir til forårsruller. Egen post, fordi linjerne ellers falder ned i
   // to forskellige fejlkoblinger, begge målt i basen:
   //
