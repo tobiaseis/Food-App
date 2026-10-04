@@ -37,9 +37,15 @@ TILBEHØR (kun hvis retten ikke er et helt måltid)
 - Mængderne er til rettens eget antal portioner.
 - Højst 4 ingredienser og højst 3 korte trin i bydeform.
 - Brug kun disse enheder: ${UNITS.join(', ')} – eller null, når linjen ikke har en mængde.
-- Ingen salt-, peber- eller olielinjer, medmindre tilbehøret kræver dem.
+- Skriv varenavnene med småt, som de hedder i et dansk supermarked (kartofler, ris, grøn salat – ikke Kartofler).
+- Skriv ikke salt, peber, olie eller smør som ingredienslinjer – de står i køkkenet i forvejen. Kun hvis tilbehøret ikke kan laves uden, fx smør til kartoffelmos.
 - Ingen mængder i trinene.
 - section og note er null, og optional er false.
+
+EKSEMPEL på et godt tilbehør (4 portioner)
+title: Kogte kartofler og grøn salat
+ingredienser: 1 kg kartofler; 1 stk hovedsalat
+trin: 1. Skræl kartoflerne, og kog dem møre i letsaltet vand. 2. Vask salaten, riv den i stykker, og server den til kartoflerne.
 `;
 
 function systemText() { return INSTRUCTIONS; }
@@ -48,7 +54,7 @@ function systemText() { return INSTRUCTIONS; }
 function userMessage(ed) {
   return [
     `Titel: ${ed.title}`,
-    `Portioner: ${ed.servings ?? ed.yield_count ?? 'ikke oplyst'}`,
+    `Portioner: ${ed.servings ?? 'ikke oplyst'}`,
     '',
     'Ingredienser:',
     ...(ed.ingredients || []).map((i) => `- ${lineOf(i)}`),
@@ -83,10 +89,26 @@ function pendingMeals(recipes, items, { ids = null, force = false, limit = Infin
   return out;
 }
 
+// Basisvarer, modellen alligevel skriver ind: de står i køkkenet og må ikke
+// komme på indkøbslisten. Kun navnet som hele linjen — "smør" i "peanutsmør" rører vi ikke.
+const PANTRY = new Set(['salt', 'peber', 'olie', 'olivenolie', 'smør']);
+
+/**
+ * Retter modellens tilbehør til, før det gemmes: varenavne med småt (modellen
+ * skriver "Kartofler" trods prompten), og basisvarelinjer droppes — medmindre
+ * de er tilbehørets eneste linje. Resten af teksten er uændret.
+ */
+function cleanSide(side) {
+  if (!side) return side;
+  const lines = side.ingredients.map((i) => ({ ...i, name: i.name.toLowerCase() }));
+  const kept = lines.filter((i) => !PANTRY.has(i.name.trim()));
+  return { ...side, ingredients: kept.length ? kept : lines };
+}
+
 /** Udgaven med `meal` sat; alt andet uændret. Nøglens plads bevares ved --force. */
 function withMeal(edition, answer, now = new Date()) {
   const { complete, reason, side } = answer.output;
-  return { ...edition, meal: { complete, reason, side, model: answer.model, checked_at: now.toISOString() } };
+  return { ...edition, meal: { complete, reason, side: cleanSide(side), model: answer.model, checked_at: now.toISOString() } };
 }
 
 function writeMeal(recipe, edition, answer) {
@@ -165,4 +187,4 @@ if (require.main === module) {
   main(process.argv.slice(2)).catch((e) => { console.error('[FEJL]', e.message); process.exit(1); });
 }
 
-module.exports = { systemText, userMessage, pendingMeals, withMeal, DEFAULT_MODEL };
+module.exports = { systemText, userMessage, pendingMeals, withMeal, cleanSide, DEFAULT_MODEL };

@@ -793,3 +793,15 @@ test('sides-prompten er fast og nævner de tilladte enheder; beskeden bruger udg
   assert.match(msg, /- 400 g tun/);
   assert.match(msg, /1\. Steg\./);
 });
+
+test('cleanSide: varenavne med småt, basisvarer droppes, men en eneste linje bevares', () => {
+  const l = (name, extra = {}) => ({ section: null, amount: 1, unit: 'g', name, note: 'Til Vandet', optional: false, ...extra });
+  const side = { title: 'Kartofler', ingredients: [l('Kartofler'), l('Grøn salat'), l('Olivenolie'), l('Salt'), l('Peanutsmør')], steps: ['Kog.'] };
+  const out = sides.cleanSide(side);
+  assert.deepEqual(out.ingredients.map((i) => i.name), ['kartofler', 'grøn salat', 'peanutsmør']);
+  assert.equal(out.ingredients[0].note, 'Til Vandet', 'resten af teksten er uændret');
+  assert.equal(out.title, 'Kartofler');
+  const only = sides.cleanSide({ title: 'x', ingredients: [l('Smør')], steps: [] });
+  assert.deepEqual(only.ingredients.map((i) => i.name), ['smør']);
+  assert.equal(sides.cleanSide(null), null);
+});

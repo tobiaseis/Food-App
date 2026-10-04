@@ -362,13 +362,11 @@ async function drain(todo, { parallel = 1, ask: askOne, onOk }) {
 /** Det, køen siger til sidst, når den stoppede før tid — samme tekst for alle CLI'er. */
 function reportStops({ stopped, broken }) {
   if (broken) {
-    console.log(`
-${MAX_ERRORS_IN_A_ROW} fejl i træk — kørslen er stoppet. Den sidste: ${broken}`);
+    console.log(`\n${MAX_ERRORS_IN_A_ROW} fejl i træk — kørslen er stoppet. Den sidste: ${broken}`);
     console.log('Se, om claude virker (login, version), og start samme kommando igen — den fortsætter, hvor den slap.');
   }
   if (stopped) {
-    console.log(`
-Abonnementets grænse er nået: ${stopped}`);
+    console.log(`\nAbonnementets grænse er nået: ${stopped}`);
     console.log('Start samme kommando igen, når grænsen er nulstillet — den fortsætter, hvor den slap.');
   }
 }
@@ -405,14 +403,7 @@ async function run(args) {
     console.log(`Kør dem igen: npm run recipes:rewrite -- run --force --ids ${failed.map((f) => f.id).join(',')}`);
   }
   reportClose(close);
-  if (broken) {
-    console.log(`\n${MAX_ERRORS_IN_A_ROW} fejl i træk — kørslen er stoppet. Den sidste: ${broken}`);
-    console.log('Se, om claude virker (login, version), og start samme kommando igen — den fortsætter, hvor den slap.');
-  }
-  if (stopped) {
-    console.log(`\nAbonnementets grænse er nået: ${stopped}`);
-    console.log('Start samme kommando igen, når grænsen er nulstillet — den fortsætter, hvor den slap.');
-  }
+  reportStops({ stopped, broken });
 }
 
 async function one(id, args) {
