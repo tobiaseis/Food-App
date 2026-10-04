@@ -1,0 +1,268 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/kundapur-chicken-ghee-roast-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:25:35.591Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Kundapur kylling med ghee",
+  "intro": "Kyllingestykker marineres og vendes i en kraftig, ristet krydderimasala med kokos og cashewnødder. Retten brunes på panden og færdigstekes i ovnen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 25,
+      "unit": "g",
+      "name": "ingefær- og hvidløgspasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 15,
+      "unit": "stk",
+      "name": "tørret chili",
+      "note": "byadgi eller kashmiri",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 25,
+      "unit": "g",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 15,
+      "unit": "g",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 8,
+      "unit": "g",
+      "name": "bukkehornsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 15,
+      "unit": "g",
+      "name": "sort peber",
+      "note": "hele korn",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 15,
+      "unit": "g",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 9,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 12,
+      "unit": "stk",
+      "name": "cashewnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 50,
+      "unit": "g",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 100,
+      "unit": "g",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær- og hvidløgspasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 50,
+      "unit": "g",
+      "name": "tomater",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 5,
+      "unit": "g",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 5,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 5,
+      "unit": "g",
+      "name": "tamarindpasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 3,
+      "unit": "stk",
+      "name": "karryblade",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Masala",
+      "amount": 25,
+      "unit": "g",
+      "name": "kokosflager",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til stegning og servering",
+      "amount": null,
+      "unit": null,
+      "name": "ghee",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til stegning og servering",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": "til pynt",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Kom kyllingestykkerne i en skål sammen med gurkemeje, ingefær- og hvidløgspasta, citronsaft og salt. Vend det godt, og lad kyllingen marinere i 30 minutter."
+    },
+    {
+      "section": "Krydderiblanding",
+      "text": "Rist alle krydderier og hvidløg i en tør pande, til det dufter. Blend dem til en fin pasta i en lille foodprocessor eller krydderimølle."
+    },
+    {
+      "section": "Krydderiblanding",
+      "text": "Mål 30 g af blandingen af til masalaen. Resten kan opbevares i en tæt beholder i køleskabet. Gør panden ren, og sæt den på varmen igen."
+    },
+    {
+      "section": "Masala",
+      "text": "Rist cashewnødderne i panden, til de er let gyldne. Knus eller hak dem fint, og stil dem til side."
+    },
+    {
+      "section": "Masala",
+      "text": "Varm imens ghee op i en lille gryde. Kom løg, ingefær- og hvidløgspasta, tomat og salt i, når fedtet er varmt, og lad det simre nogle minutter. Rør gurkemeje og de 30 g krydderiblanding i."
+    },
+    {
+      "section": "Masala",
+      "text": "Lad det koge, til olien skiller sig fra. Rør brun farin og tamarind i, og lad det simre nogle minutter mere. Fordel massen på en tallerken, og lad den køle helt af."
+    },
+    {
+      "section": "Masala",
+      "text": "Tænd ovnen på 200 °C."
+    },
+    {
+      "section": "Masala",
+      "text": "Bland den afkølede masala med karryblade, kokosflager og knuste cashewnødder. Hæld det over den marinerede kylling, og vend, så alle stykker er dækket."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Varm en stor grillpande op ved middelhøj varme. Tilsæt lidt ghee, og brun kyllingen på alle sider."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Sæt panden i ovnen, og steg kyllingen i 7 minutter, til den er gennemstegt."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Anret kyllingen på tallerkener, og pynt eventuelt med karse."
+    }
+  ],
+  "changes": [
+    "Brun farin erstatter jaggery.",
+    "Karse erstatter ærteskud.",
+    "Tørret chili erstatter byadgi-chili."
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/apple-souffle-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:16:24.781Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Æblesoufflé med valnøddeis og havretopping",
+  "intro": "Luftige varme æblesoufflé med kanelsukker og sprød havretopping, serveret med hjemmelavet is af ristede valnødder og honning. Isen og puréen kan laves i god tid, så soufflékene kun skal piskes og bages til sidst.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til valnød- og honningisen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til valnød- og honningisen",
+      "amount": 80,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til valnød- og honningisen",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til valnød- og honningisen",
+      "amount": 100,
+      "unit": "g",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til valnød- og honningisen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": "kernerne skrabes ud",
+      "optional": false
+    },
+    {
+      "section": "Til valnød- og honningisen",
+      "amount": 40,
+      "unit": "ml",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til valnød- og honningisen",
+      "amount": 100,
+      "unit": "g",
+      "name": "valnødder",
+      "note": "plus lidt ekstra til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til æblepuréen",
+      "amount": 350,
+      "unit": "g",
+      "name": "æbler",
+      "note": "syrlige madlavningsæbler, skrællet",
+      "optional": false
+    },
+    {
+      "section": "Til æblepuréen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "Granny Smith, skrællet",
+      "optional": false
+    },
+    {
+      "section": "Til æblepuréen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "Braeburn, skrællet",
+      "optional": false
+    },
+    {
+      "section": "Til æblepuréen",
+      "amount": 25,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til æblepuréen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til æblepuréen",
+      "amount": 10,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kanelsukkeret",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til kanelsukkeret",
+      "amount": 45,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til havretoppingen",
+      "amount": 100,
+      "unit": "g",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til havretoppingen",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til havretoppingen",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til havretoppingen",
+      "amount": 5,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til soufflé",
+      "amount": 180,
+      "unit": "g",
+      "name": "æggehvider",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til soufflé",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til soufflé",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt, usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "honning",
+      "note": "til at have ved siden af",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Valnød- og honningis",
+      "text": "Varm ovnen op til 180°C. Rist valnødderne i 6 minutter, og lad dem køle af."
+    },
+    {
+      "section": "Valnød- og honningis",
+      "text": "Pisk mælk, fløde, sukker, æggeblommer og vaniljekerner sammen i en gryde, og rør honningen i. Kilden bruger en Thermomix, men det går fint på komfuret."
+    },
+    {
+      "section": "Valnød- og honningis",
+      "text": "Varm cremen langsomt op under konstant piskning, til den når 83°C. Det tager cirka 5-10 minutter. Tag gryden af varmen, og lad de ristede nødder trække i cremen."
+    },
+    {
+      "section": "Valnød- og honningis",
+      "text": "Sæt gryden i et bad af isvand, og køl cremen helt ned. Blend nødderne let ud i cremen med en stavblender, og sigt den gennem en fin si."
+    },
+    {
+      "section": "Valnød- og honningis",
+      "text": "Stil cremen på køl, og kør den derefter i en ismaskine. Opbevar isen i fryseren, til den skal bruges."
+    },
+    {
+      "section": "Æblepuré",
+      "text": "Skræl alle æblerne, og læg dem i koldt vand med citron, så de ikke brunes."
+    },
+    {
+      "section": "Æblepuré",
+      "text": "Skær æblerne i små stykker, og fjern kernehuse og kerner. Kom dem i en stor gryde med sukker og vand, og varm dem op ved høj varme under omrøring."
+    },
+    {
+      "section": "Æblepuré",
+      "text": "Skru ned på lav varme, sæt et tætsluttende låg på, og lad æblerne dampe i 5-10 minutter. De må ikke få farve."
+    },
+    {
+      "section": "Æblepuré",
+      "text": "Blend æblerne helt glatte, og sigt dem gennem en fin si. Afvej 330 g purée i en mellemstor gryde."
+    },
+    {
+      "section": "Æblepuré",
+      "text": "Rør majsstivelsen ud i en smule koldt vand, og rør blandingen i puréen. Kog, til puréen er tyknet og blank. Hæld den i en beholder, og stil den på køl."
+    },
+    {
+      "section": "Kanelsukker",
+      "text": "Bland kanel og sukker grundigt, og kom det i en lufttæt beholder. Det holder sig i et par uger."
+    },
+    {
+      "section": "Havretopping",
+      "text": "Varm ovnen op til 180°C. Kom alle ingredienserne til toppingen på en bageplade, og rør dem godt sammen med en ske. Pres havren lidt sammen, så alt er jævnt blandet."
+    },
+    {
+      "section": "Havretopping",
+      "text": "Bag toppingen i 10 minutter, og rør rundt undervejs. Lad den køle af, og læg den i en beholder med låg. Den holder sig 2 dage ved stuetemperatur."
+    },
+    {
+      "section": "Soufflé",
+      "text": "Afvej 300 g af den kolde æblepuré i en skål. Gør røremaskinen klar med piskeris og æggehvider, og stil sukkeret frem."
+    },
+    {
+      "section": "Soufflé",
+      "text": "Pensl 4 ramekiner på 8 cm med blødt smør. Drys dem med lidt kanelsukker, så bund og sider er dækket, og ryst det overskydende fra. Stil formene på køl."
+    },
+    {
+      "section": "Soufflé",
+      "text": "Pisk æggehviderne, og tilsæt sukkeret lidt ad gangen under piskningen. Fortsæt, til hviderne er luftige som skyer, og skummet er blankt og fast."
+    },
+    {
+      "section": "Soufflé",
+      "text": "Vend en tredjedel af marengsen i æblepuréen, så den bliver let. Vend derefter resten forsigtigt i, til det er jævnt blandet."
+    },
+    {
+      "section": "Soufflé",
+      "text": "Varm ovnen op til 200°C. Fyld ramekinerne helt op, og stryg toppen glat med en paletkniv. Læg tre stykker ristet valnød og lidt havretopping på hver."
+    },
+    {
+      "section": "Soufflé",
+      "text": "Bag soufflékene midt i ovnen i 3-4 minutter."
+    },
+    {
+      "section": "Soufflé",
+      "text": "Server straks med en kugle valnødis på et leje af havretopping og lidt honning ved siden af."
+    }
+  ],
+  "changes": [
+    "Bramley-æble er erstattet af syrlige madlavningsæbler.",
+    "Double cream er erstattet af piskefløde.",
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Cornflour er erstattet af majsstivelse.",
+    "Havregryn erstatter oats."
+  ]
+}

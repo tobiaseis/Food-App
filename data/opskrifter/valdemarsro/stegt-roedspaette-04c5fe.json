@@ -1,0 +1,156 @@
+{
+  "url": "https://www.valdemarsro.dk/stegt-roedspaette/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:27:34.945Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Stegt rødspætte med persillesauce",
+  "intro": "Klassisk dansk hverdagsret med sprødt paneret rødspætte, kartofler og cremet persillesauce med citron. Fisken steges i rugmel, så panden får en dejlig gylden skorpe.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Rødspætte",
+      "amount": 4,
+      "unit": "stk",
+      "name": "rødspætte",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Rødspætte",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket sammen",
+      "optional": false
+    },
+    {
+      "section": "Rødspætte",
+      "amount": 2,
+      "unit": "dl",
+      "name": "rugmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødspætte",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødspætte",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": 5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk; brug saft og skal",
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rødspætte",
+      "text": "Skyl rødspætterne grundigt, og dup dem tørre med køkkenrulle."
+    },
+    {
+      "section": "Rødspætte",
+      "text": "Bland rugmel med salt og peber. Vend fiskene først i det sammenpiskede æg og dernæst i rugmelsblandingen. Lad dem hvile i 10 minutter, så panaden hænger fast."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Læg kartoflerne i en gryde med rigeligt koldt vand og lidt salt. Bring dem i kog, og kog dem i 15-20 minutter, til de er møre – tiden afhænger af størrelsen."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Hæld vandet fra, men gem lidt af kogevandet til saucen."
+    },
+    {
+      "section": "Persillesauce",
+      "text": "Smelt smørret i en lille kasserolle, og rør hvedemelet i, så der kommer en klump. Tilsæt mælk og kartoffelvand lidt ad gangen under konstant piskning, til saucen har en passende tykkelse."
+    },
+    {
+      "section": "Persillesauce",
+      "text": "Lad saucen simre et par minutter, mens du rører. Smag til med citronsaft og revet citronskal, og vend persillen i. Krydr med salt og peber."
+    },
+    {
+      "section": "Rødspætte",
+      "text": "Smelt smør på en pande ved middel varme. Steg fiskene i 7-8 minutter på hver side, til de er gyldne. Vend dem først, når den ene side er helt færdig."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret de nystegte rødspætter med kartofler og persillesauce, og drys med lidt ekstra persille."
+    }
+  ],
+  "changes": []
+}

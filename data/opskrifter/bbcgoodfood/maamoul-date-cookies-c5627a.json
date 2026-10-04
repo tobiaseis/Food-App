@@ -1,0 +1,188 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/maamoul-date-cookies",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:45:55.833Z",
+  "total_minutes": 50,
+  "active_minutes": 30,
+  "yield_count": 24,
+  "source_lines": 12,
+  "title": "Maamoul – dadelkager",
+  "intro": "Mørbagte kager af semuljedej med fyld af sød dadelmasse og et strejf af rosenvand. De holder sig i flere uger og er gode til kaffen.",
+  "servings": 24,
+  "ingredients": [
+    {
+      "section": "Til dejen",
+      "amount": 300,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 150,
+      "unit": "g",
+      "name": "durummel",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mahleb",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 75,
+      "unit": "g",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 5,
+      "unit": "spsk",
+      "name": "solsikkeolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "rosenvand",
+      "note": "op til ½ tsk, afhængigt af styrken",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 450,
+      "unit": "g",
+      "name": "dadler",
+      "note": "medjool, udstenede og grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "rosenvand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "flormelis",
+      "note": "til drys",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Kør mel, durummel, bagepulver, mahleb, flormelis og salt sammen i en foodprocessor."
+    },
+    {
+      "section": "Dej",
+      "text": "Kom smør, olie, vanilje og rosenvand i, og pulsér, til dejen begynder at klumpe."
+    },
+    {
+      "section": "Dej",
+      "text": "Vend dejen ud på bordet, og saml den med hænderne. Den skal være meget blød og smidig. Er den meget klistret, så ælt lidt mel i. Er den smuldrende eller revner, så tilsæt en smule vand."
+    },
+    {
+      "section": "Dej",
+      "text": "Del dejen i to, form hver halvdel til en flad skive, og stil dem på køl i 1 time."
+    },
+    {
+      "section": "Fyld",
+      "text": "Blend dadler, rosenvand, kanel og salt til en jævn masse i foodprocessoren."
+    },
+    {
+      "section": "Samling",
+      "text": "Del den afkølede dej i stykker på 40 g, og rul fyldet til kugler på 20 g."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul hvert dejstykke til en kugle, og tryk den flad. Læg dejen i håndfladen, og placer en fyldkugle midt på."
+    },
+    {
+      "section": "Samling",
+      "text": "Træk dejen op om fyldet, så det er helt lukket inde. Klem kagen til en rund skive på ca. 2 cm i tykkelse."
+    },
+    {
+      "section": "Samling",
+      "text": "Tryk gaflens tænder i toppen i et rudemønster. Gentag med resten, og læg kagerne i fryseren i mindst 1 time."
+    },
+    {
+      "section": "Bagning",
+      "text": "Varm ovnen op til 180 °C (160 °C varmluft)."
+    },
+    {
+      "section": "Bagning",
+      "text": "Læg kagerne på en plade med bagepapir, og bag dem i 15-20 minutter. De er færdige, når overfladen er tør og sandet, og farven er helt lys gylden."
+    },
+    {
+      "section": "Bagning",
+      "text": "Lad kagerne køle helt af på en bagerist, og drys dem med flormelis. De holder sig op til to uger i en lufttæt beholder ved stuetemperatur."
+    }
+  ],
+  "changes": []
+}

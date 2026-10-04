@@ -1,0 +1,256 @@
+{
+  "url": "https://www.valdemarsro.dk/pita-med-kebab/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:25:21.500Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Pita med kebab",
+  "intro": "Mør oksekød i kebabkrydderier, hurtigstegt og proppet i lune pitabrød med frisk grøntsagsfyld og cremet hvidløgsdressing. En nem hjemmelavet udgave af aftenens kebab.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kebab",
+      "amount": 400,
+      "unit": "g",
+      "name": "entrecote",
+      "note": "skåret i tern eller tynde skiver, eller anden udskæring",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "stødt nellike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chili",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kebab",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsdressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %, eller creme fraiche",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsdressing",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsdressing",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk; fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsdressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsdressing",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsdressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsdressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "pitabrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "salat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "skåret i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kebab",
+      "text": "Bland alle krydderierne i en skål, og vend kødet i blandingen, så det er dækket hele vejen rundt."
+    },
+    {
+      "section": "Kebab",
+      "text": "Varm olien op på en pande. Brun kødet hurtigt på alle sider, og tag det straks af panden."
+    },
+    {
+      "section": "Hvidløgsdressing",
+      "text": "Rør alle ingredienserne til dressingen sammen, og smag den til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm pitabrødene, og smør dem indvendigt med dressing."
+    },
+    {
+      "section": "Servering",
+      "text": "Fyld pitabrødene med kød, salat, agurk, rødløg og tomater. Top med lidt ekstra dressing og hakket persille."
+    }
+  ],
+  "changes": []
+}

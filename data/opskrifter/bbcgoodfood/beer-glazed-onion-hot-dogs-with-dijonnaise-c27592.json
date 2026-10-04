@@ -1,0 +1,175 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/beer-glazed-onion-hot-dogs-with-dijonnaise",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:06:03.518Z",
+  "total_minutes": 95,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 11,
+  "title": "Hotdogs med ølglaserede løg og dijonnaise",
+  "intro": "Pølser og løg bages langsomt i øl, til alt er mørkt og blankt. Server dem i hotdogbrød med en cremet sennepsmayo og sprøde løg.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "løg",
+      "note": "store, i fine skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "stor",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "grov",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "pølser",
+      "note": "af svinekød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3.3,
+      "unit": "dl",
+      "name": "øl",
+      "note": "lys ale",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "hotdogbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "ristede løg",
+      "note": "til drys",
+      "optional": true
+    },
+    {
+      "section": "Til dijonnaisen",
+      "amount": 40,
+      "unit": "g",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Til dijonnaisen",
+      "amount": 100,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dijonnaisen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dijonnaisen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Smelt smør og olie i en stor ovnfast stegepande ved middelhøj varme. Tilsæt løg og salt, og hæld det kogende vand over."
+    },
+    {
+      "section": null,
+      "text": "Lad det koge kraftigt i 15-20 minutter, til vandet er helt væk."
+    },
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C varmluft (220 °C almindelig ovn)."
+    },
+    {
+      "section": null,
+      "text": "Rør farin og grov sennep ind i løgene, og tag dem over i en skål."
+    },
+    {
+      "section": null,
+      "text": "Brun pølserne let på alle sider i den samme pande. Kom løgene tilbage, og læg pølserne ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Hæld øllet over, og bring det i kog. Sæt panden i ovnen i 45-50 minutter. Vend pølserne nogle gange, til de er mørkebrune, og væsken er kogt ind."
+    },
+    {
+      "section": "Til dijonnaisen",
+      "text": "Rør Dijon-sennep og mayonnaise sammen, mens retten står i ovnen. Smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær hotdogbrødene op, og smør dijonnaise i bunden af hvert brød. Læg løg og pølse i, og drys eventuelt med ristede løg."
+    }
+  ],
+  "changes": [
+    "Crispy onions er skrevet som ristede løg, som kan købes i Danmark.",
+    "Pale ale er skrevet som almindelig lys øl."
+  ]
+}

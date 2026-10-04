@@ -1,0 +1,530 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/venison-sloe-beetroot-aubergine-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:31:10.187Z",
+  "total_minutes": 200,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 50,
+  "title": "Hjortemørbrad med blommesyltetøj, rødbedesauce og auberginecreme",
+  "intro": "Mør hjortemørbrad serveres med røgede, syrlige saucer af blommer, rødbeder og aubergine, grillede rejer og stegt champignon. Det er en festret med mange dele, der næsten alle kan laves på forhånd.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": 300,
+      "unit": "g",
+      "name": "blommer",
+      "note": "til grillning, stenene fjernes bagefter",
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": "til blommerne",
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": 10,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": 600,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": "til karamellen",
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": 200,
+      "unit": "g",
+      "name": "blommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": 12,
+      "unit": "stk",
+      "name": "peber",
+      "note": "sorte peberkorn, ristede",
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": 20,
+      "unit": "stk",
+      "name": "basilikum",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": 10,
+      "unit": "stk",
+      "name": "figenblade",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "saft, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "rødvinseddike, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 500,
+      "unit": "g",
+      "name": "aubergine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 150,
+      "unit": "g",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "blommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 125,
+      "unit": "g",
+      "name": "rødløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 125,
+      "unit": "g",
+      "name": "skalotteløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 5,
+      "unit": "stk",
+      "name": "peber",
+      "note": "sorte peberkorn, ristede og stødte",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peber",
+      "note": "hvide peberkorn, ristede og stødte",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 2,
+      "unit": "g",
+      "name": "chili",
+      "note": "chiliflager",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 60,
+      "unit": "ml",
+      "name": "øl",
+      "note": "pale ale",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 8,
+      "unit": "stk",
+      "name": "basilikum",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 50,
+      "unit": "ml",
+      "name": "hvidløgsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 25,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "plus lidt ekstra til stegning",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Auberginesauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hibiscusreduktion",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hibiscusreduktion",
+      "amount": 40,
+      "unit": "g",
+      "name": "tørret hibiscus",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hibiscusreduktion",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesauce",
+      "amount": 30,
+      "unit": "g",
+      "name": "kirsebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesauce",
+      "amount": 20,
+      "unit": "ml",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesauce",
+      "amount": 20,
+      "unit": "ml",
+      "name": "kyllingefond",
+      "note": "koncentreret, som erstatning for demi-glace",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesauce",
+      "amount": 60,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesauce",
+      "amount": 150,
+      "unit": "ml",
+      "name": "rødbedesaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peber",
+      "note": "sorte peberkorn, ristede og stødte",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peber",
+      "note": "lyserøde peberkorn, ristede og stødte",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesauce",
+      "amount": 1,
+      "unit": "g",
+      "name": "chili",
+      "note": "chiliflager",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 6,
+      "unit": "stk",
+      "name": "rejer",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 3,
+      "unit": "stk",
+      "name": "champignon",
+      "note": "store, halveret og skåret i tern i overfladen",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 6,
+      "unit": "skive",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "kg",
+      "name": "hjortemørbrad",
+      "note": "skåret i to stykker",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 100,
+      "unit": "g",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 600,
+      "unit": "ml",
+      "name": "fond",
+      "note": "vildtfond, kogt ind til en tyk sauce, der dækker en ske",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chili",
+      "note": "chiliflager",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til stegning og dryp",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "text": "Vend blommerne i sukker og salt. Grill dem langsomt over kul i cirka 30 minutter, til de er forkullede udenpå og helt bløde indeni. Fjern stenene."
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "text": "Tænd ovnen på 190 °C. Gnid rødbederne ind i olivenolie og salt, pak dem i alufolie og bag dem i 1 time og 30 minutter."
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "text": "Skræl rødbederne, når de er kølet så meget af, at de kan håndteres. Læg 100 g til side til syltetøjet og gem resten til rødbedesaucen."
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "text": "Smelt sukkeret tørt i en gryde til en karamel. Tilsæt forsigtigt blommerne, de 100 g rødbede og peberkornene, og lad det simre i 30 minutter."
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "text": "Kom de grillede blommer i gryden og kog yderligere 1 time, til rødbederne er bløde."
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "text": "Blend alt med basilikum og figenblade i en kraftig blender. Lad låget sidde på klem, så dampen kan slippe ud. Sigt massen gennem en fin sigte."
+    },
+    {
+      "section": "Syltetøj af blommer og rødbeder",
+      "text": "Smag til med citronsaft og rødvinseddike, og stil syltetøjet til side."
+    },
+    {
+      "section": "Auberginesauce",
+      "text": "Vend aubergine, tomater, blommer og rødløg med rigeligt olie og salt."
+    },
+    {
+      "section": "Auberginesauce",
+      "text": "Grill grøntsagerne, til de er meget mørke. Læg dem i en beholder med tætsluttende låg eller film, så de damper og bliver helt bløde."
+    },
+    {
+      "section": "Auberginesauce",
+      "text": "Blend grøntsagerne til en pasta i en foodprocessor og stil den til side."
+    },
+    {
+      "section": "Auberginesauce",
+      "text": "Smelt en klat smør i en gryde. Svits skalotteløg og hvidløg meget forsigtigt i cirka 20 minutter, til de er bløde uden at have taget farve."
+    },
+    {
+      "section": "Auberginesauce",
+      "text": "Rør chili og peber i og lad det stege i et par minutter. Hæld hvidvin og øl i og kog op, mens du skraber bunden fri."
+    },
+    {
+      "section": "Auberginesauce",
+      "text": "Tilsæt kyllingefond og kog det ind til det halve."
+    },
+    {
+      "section": "Auberginesauce",
+      "text": "Blend løgreduktionen med basilikum, hvidløgsolie, rapsolie, smør og auberginepastaen. Del det i mindre portioner, hvis det er nødvendigt. Smag til med salt."
+    },
+    {
+      "section": "Hibiscusreduktion",
+      "text": "Bring hibiscus og vand i kog. Tag gryden af varmen og lad det trække under tætsluttende låg i en halv time."
+    },
+    {
+      "section": "Hibiscusreduktion",
+      "text": "Si hibiscus fra. Kog teen op med sukkeret, og rør, til sukkeret er opløst. Lad det koge til 106 °C og tag gryden af varmen."
+    },
+    {
+      "section": "Rødbedesauce",
+      "text": "Tænd ovnen på 190 °C."
+    },
+    {
+      "section": "Rødbedesauce",
+      "text": "Grill kirsebærrene over kul, til de er bløde, og fjern stenene."
+    },
+    {
+      "section": "Rødbedesauce",
+      "text": "Blend de gemte rødbeder med kirsebær og resten af ingredienserne til saucen sammen med 60 g af hibiscusreduktionen."
+    },
+    {
+      "section": "Til retten",
+      "text": "Brun hjortemørbraden på alle sider, og grill den derefter i 3 minutter. Lad kødet hvile i 10 minutter. Gentag grillning og hvile to gange mere, eller til kødet er færdigt efter din smag. Vend kødet ofte, så det bliver brunet hele vejen rundt."
+    },
+    {
+      "section": "Til retten",
+      "text": "Varm auberginesaucen og rødbedesaucen op."
+    },
+    {
+      "section": "Til retten",
+      "text": "Pil rejerne og grill dem 1 minut på hver side. Grill derefter pak choi."
+    },
+    {
+      "section": "Til retten",
+      "text": "Steg de halve champignon i rigeligt olie, og øs olien over dem, til de er gyldne og karamelliserede. Læg en skive bacon på hver, så den smelter under hvilen."
+    },
+    {
+      "section": "Til retten",
+      "text": "Skær hjortekødet i skiver lige før servering."
+    },
+    {
+      "section": "Til retten",
+      "text": "Anret på varme tallerkener. Kom en skefuld rødbedesauce, auberginesauce og syltetøj på hver tallerken. Læg en rejer, hjortekød og pak choi ovenpå. Dryp med den reducerede fond og drys med chiliflager."
+    }
+  ],
+  "changes": [
+    "Slåen er erstattet af blommer.",
+    "Verjus er erstattet af citronsaft.",
+    "Friske blommer, basilikum og champignon erstatter henholdsvis slåen, lilla basilikum/rød shiso og stensvampe.",
+    "Lardo er erstattet af bacon i skiver.",
+    "Komatsuna er erstattet af pak choi.",
+    "De italienske røde rejer er erstattet af almindelige store rejer.",
+    "Kyllingedemi-glace er erstattet af koncentreret kyllingefond.",
+    "Aleppo-, pul biber- og isot-chili er erstattet af almindelige chiliflager.",
+    "Specialpeber (Assam, Malabar, Penja) er erstattet af almindelige sorte, hvide og lyserøde peberkorn."
+  ]
+}

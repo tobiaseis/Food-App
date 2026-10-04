@@ -1,0 +1,140 @@
+{
+  "url": "https://www.valdemarsro.dk/misosuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:06:34.673Z",
+  "total_minutes": 25,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Misosuppe med nudler og svampe",
+  "intro": "Let japansk-inspireret suppe med miso, ingefær og lime, fyldt med nudler, ristede champignon og friske grøntsager. Den er hurtig at lave og serveres varm i skåle.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Suppen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "miso",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 8,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Suppen",
+      "amount": 5,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "champignon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "nudler",
+      "note": "kogte",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "pillede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "bønnespirer",
+      "note": "eller babyspirer",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "spinat",
+      "note": "baby",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "til stegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppen",
+      "text": "Rør miso, ingefær og limesaft sammen i en gryde, til massen er helt glat."
+    },
+    {
+      "section": "Suppen",
+      "text": "Lad det kogende vand køle af til ca. 90 grader, og rør det ud i misoblandingen."
+    },
+    {
+      "section": "Suppen",
+      "text": "Rør bouillonen i. Hold suppen varm på svag varme ved ca. 90 grader – den må ikke koge."
+    },
+    {
+      "section": "Fyld",
+      "text": "Varm en pande op ved høj varme med olien. Steg svampene, til de er gyldenbrune og har fået en flot skorpe."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kog nudlerne efter pakkens anvisning. Er edamamebønnerne frosne, skal de tøes op med kogende vand over dem."
+    },
+    {
+      "section": "Fyld",
+      "text": "Fordel nudler, edamamebønner, svampe, forårsløg, spirer og spinat i skåle. Hæld den varme suppe over, og server med det samme."
+    }
+  ],
+  "changes": []
+}

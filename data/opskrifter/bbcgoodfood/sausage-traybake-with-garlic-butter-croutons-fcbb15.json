@@ -1,0 +1,184 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/sausage-traybake-with-garlic-butter-croutons",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:53:37.534Z",
+  "total_minutes": 45,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Pølsefad med blomkål, broccoli og hvidløgscroutoner",
+  "intro": "Svinepølser bages sammen med blomkål, broccoli og rødløg i en sennepsglasur med honning og fennikelfrø. Til sidst får fadet et knasende topping af croutoner med hvidløgssmør og krydderurter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "pølser",
+      "note": "af svinekød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "mellemstor, skåret i små buketter, bladene hakkes",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "broccoli",
+      "note": "skåret i mellemstore buketter, stokken skrællet og skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "grov",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscroutoner",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscroutoner",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscroutoner",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille & krydderurter",
+      "note": "hakket basilikum, persille og timian",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscroutoner",
+      "amount": 2,
+      "unit": "skive",
+      "name": "brød",
+      "note": "surdej, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscroutoner",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgscroutoner",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Læg pølser, blomkål, broccoli og rødløg i en bageform."
+    },
+    {
+      "section": null,
+      "text": "Pisk eddike, honning, sennep, fennikelfrø og olie sammen. Hæld blandingen over pølser og grøntsager, og krydr med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Rist fadet i 25-30 minutter, til alt er gyldent og blankt af glasur. Vend det hele midtvejs."
+    },
+    {
+      "section": "Hvidløgscroutoner",
+      "text": "Smelt smørret med hvidløg, krydderurter, salt og peber i en skål i mikroovnen eller i en lille gryde."
+    },
+    {
+      "section": "Hvidløgscroutoner",
+      "text": "Vend brødternene i det smeltede smør, til de er dækket hele vejen rundt."
+    },
+    {
+      "section": "Hvidløgscroutoner",
+      "text": "Drys croutonerne over fadet, og bag det i 5-10 minutter mere, til de er gyldne og sprøde. Server evt. med kartofler."
+    }
+  ],
+  "changes": [
+    "Rødvinseddike er skiftet til eddike.",
+    "Wholegrain mustard er skiftet til grov sennep.",
+    "Sourdough er skiftet til surdejsbrød."
+  ]
+}

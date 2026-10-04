@@ -1,0 +1,114 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-milanese",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:02:25.812Z",
+  "total_minutes": 50,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Kyllingeschnitzel milanese",
+  "intro": "Tynde kyllingefileter vendes i mel, æg og sprød rasp med parmesan og steges gyldne på panden. Server dem med citronbåde.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket sammen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "spsk",
+      "name": "solsikkeolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Del hvert kyllingebryst i to tynde fileter på langs, så du får fire i alt."
+    },
+    {
+      "section": null,
+      "text": "Læg filetene på et skærebræt under et stykke bagepapir. Bank dem med en kagerulle, til de har samme tykkelse overalt."
+    },
+    {
+      "section": null,
+      "text": "Kom melet på en dyb tallerken og krydr med salt. Hæld ægget på en anden tallerken. Bland rasp og parmesan, hvis du bruger den, på en tredje."
+    },
+    {
+      "section": null,
+      "text": "Vend filetene én ad gangen først i melet, så i ægget og til sidst i raspblandingen. Læg dem over på et fad, efterhånden som de er panerede."
+    },
+    {
+      "section": null,
+      "text": "De panerede fileter kan dækkes og stå på køl i en dag. De kan også fryses lagt mellem stykker bagepapir og holder sig i tre måneder."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor pande ved middel varme. Steg filetene i 3-4 minutter på hver side, til de er gyldne og sprøde. Steg dem i omgange, hvis panden er for lille. Er de frosne, skal de have ét minut ekstra på hver side."
+    },
+    {
+      "section": null,
+      "text": "Lad filetene dryppe af på køkkenrulle. Server dem med citronbåde ved siden af."
+    }
+  ],
+  "changes": [
+    "Frisk rasp er erstattet af almindelig rasp."
+  ]
+}

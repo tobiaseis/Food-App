@@ -1,0 +1,340 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/haleem-pakistani-haleem",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:01:57.140Z",
+  "total_minutes": 210,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 31,
+  "title": "Pakistansk haleem",
+  "intro": "Haleem er en tyk, langtidskogt gryderet af oksekød, linser og byg, som bliver krydret med varme krydderier. Den toppes med brunet løg og friske krydderurter og serveres med citron.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Haleem",
+      "amount": 30,
+      "unit": "g",
+      "name": "linser",
+      "note": "i stedet for moong daal",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 30,
+      "unit": "g",
+      "name": "linser",
+      "note": "i stedet for urid daal",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 60,
+      "unit": "g",
+      "name": "kikærter",
+      "note": "tørrede, i stedet for chana daal",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 25,
+      "unit": "g",
+      "name": "perlebyg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 500,
+      "unit": "g",
+      "name": "oksebov",
+      "note": "i stykker",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 2,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "hele kapsler",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanelstang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø, ristede",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knuste",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "skrællet og skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": "ca.",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": 10,
+      "unit": "g",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem-masala",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "nigellafrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem-masala",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sorte peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem-masala",
+      "amount": 1,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Haleem-masala",
+      "amount": 1,
+      "unit": "stk",
+      "name": "muskatblomme",
+      "note": "lille blad",
+      "optional": false
+    },
+    {
+      "section": "Haleem-masala",
+      "amount": 1,
+      "unit": "stk",
+      "name": "muskatnød",
+      "note": "lille stykke af hel muskatnød",
+      "optional": false
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "blade og stilke, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "kun blade, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "ca. 2,5 cm, i fine strimler",
+      "optional": false
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chaat masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "amount": 3,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i både, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Haleem",
+      "text": "Læg alle linser, kikærter og perlebyg i blød i rigeligt koldt vand natten over."
+    },
+    {
+      "section": "Haleem",
+      "text": "Hæld vandet fra næste dag, og kom det iblødsatte i en tykbundet gryde sammen med oksekødet, stjerneanis, kardemomme, kanel, korianderfrø, spidskommen, laurbærblade, ingefær, hvidløg og rødløgskvartene."
+    },
+    {
+      "section": "Haleem",
+      "text": "Tilsæt vand, så alt netop er dækket, og tilsæt lidt mere, hvis der er brug for det. Bring det i kog, og øs skummet af overfladen."
+    },
+    {
+      "section": "Haleem",
+      "text": "Skru ned for varmen, og lad det simre med låg på klem i 2 timer og 30 minutter til 2 timer og 45 minutter. Det er færdigt, når linser og byg er møre, og kødet kan moses med bagsiden af en ske."
+    },
+    {
+      "section": "Haleem",
+      "text": "Rør jævnligt rundt, så intet brænder på, og hold øje med væsken, så retten hele tiden har lidt sauce."
+    },
+    {
+      "section": "Haleem-masala",
+      "text": "Mal alle krydderierne til masalaen fint i en krydderikværn, eller støb dem i en mortér."
+    },
+    {
+      "section": "Haleem",
+      "text": "Retten skal nu ligne en tyk grød, og kødet skal falde let fra hinanden. Rør haleem-masalaen, gurkemeje, chiliflager og havregryn i, og lad det koge 10 minutter mere."
+    },
+    {
+      "section": "Haleem",
+      "text": "Tag gryden af varmen, og pisk kraftigt rundt med en grydeske, så kødet trevles. Smag til med salt og peber, læg låg på, og stil til side."
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "text": "Varm ghee op i en lille pande ved middel varme. Steg løg og hvidløg under jævnlig omrøring i 8 minutter, til de er brune."
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "text": "Hæld det stegte løg over haleemen, sæt låget på igen, og lad den trække et minuts tid."
+    },
+    {
+      "section": "Stegt løg og pynt",
+      "text": "Anret haleemen i en skål. Bland koriander, mynte, ingefærstrimler, chaat masala og grøn chili, og drys noget af blandingen over. Sæt resten frem i små skåle, så alle kan tage selv, og server med citronbåde at presse over."
+    }
+  ],
+  "changes": [
+    "Moong daal og urid daal er erstattet af linser.",
+    "Chana daal er erstattet af tørrede kikærter.",
+    "Sort kardemomme er erstattet af almindelig kardemomme."
+  ]
+}

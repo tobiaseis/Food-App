@@ -1,0 +1,228 @@
+{
+  "url": "https://www.valdemarsro.dk/kebab-shawarma/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:09:00.830Z",
+  "total_minutes": 1440,
+  "active_minutes": 30,
+  "yield_count": 6,
+  "source_lines": 21,
+  "title": "Lammeshawarma med pitabrød",
+  "intro": "Mør lammekød marineret i yoghurt og krydderier, stegt på panden og serveret i pitabrød med friske grøntsager og urter.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Kødet og marinaden",
+      "amount": 1,
+      "unit": "kg",
+      "name": "lammekød",
+      "note": "lammekølle eller lammeskank",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 6,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk yoghurt 10 %",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "chiliflager",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kardemomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "nellike",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "muskatnød",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stjerneanis",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kødet og marinaden",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 6,
+      "unit": "stk",
+      "name": "pitabrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "frisk, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, eller koriander, grofthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødet og marinaden",
+      "text": "Skær lammekødet i små strimler og mundrette stykker."
+    },
+    {
+      "section": "Kødet og marinaden",
+      "text": "Bland yoghurt, hvidløg, alle krydderierne, citronskal, citronsaft, salt og peber i en stor skål."
+    },
+    {
+      "section": "Kødet og marinaden",
+      "text": "Vend kødet i marinaden, så det er dækket hele vejen rundt. Sæt låg eller film på, og stil skålen i køleskabet i 12-24 timer."
+    },
+    {
+      "section": "Stegning",
+      "text": "Løft kødet op af skålen med en hulske, og smid resten af marinaden ud."
+    },
+    {
+      "section": "Stegning",
+      "text": "Varm lidt olie på en stor pande. Steg kødet i flere små omgange, så panden ikke fyldes: for meget kød ad gangen giver væde, og så koger det i stedet for at brune."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fyld pitabrødene med det varme kød, agurk, tomater, rødløg, mynte og persille, mens kødet stadig damper."
+    }
+  ],
+  "changes": []
+}

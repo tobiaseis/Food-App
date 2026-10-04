@@ -1,0 +1,135 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/warm-trout-melon-salad-with-lime-chilli-dressing",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:32:03.368Z",
+  "total_minutes": 26,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 11,
+  "title": "Lun ørredsalat med melon og lime-chilidressing",
+  "intro": "Sprødstegt ørred på en frisk salat af melon, bønner og tomater med en syrlig dressing af lime, chili og mynte. En let ret, der er klar på cirka 20 minutter.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "melon",
+      "note": "cantaloupe eller honningmelon, revet eller skåret i fine strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "halvdelen presses, halvdelen skæres i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kerner, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mynte",
+      "note": "hakkede friske blade",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "ørredfilet",
+      "note": "2 stykker med skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bønner",
+      "note": "grønne, evt. afpudset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "delt i kvarte",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "groft hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Kom en lille del af melonen i en skål sammen med limesaft, chili, hvidløg, sojasauce og mynte. Blend med stavblender, til dressingen er helt glat."
+    },
+    {
+      "section": "Fisk og bønner",
+      "text": "Varm olien op i en non-stick pande ved svag varme. Læg ørrederne på med skindsiden nedad, og steg dem i 5 minutter, til skindet er sprødt."
+    },
+    {
+      "section": "Fisk og bønner",
+      "text": "Vend fiskene, og steg dem 3-4 minutter mere, til de er gennemstegte."
+    },
+    {
+      "section": "Fisk og bønner",
+      "text": "Kog imens bønnerne i cirka 7 minutter, til de er møre. Hæld vandet fra."
+    },
+    {
+      "section": "Anretning",
+      "text": "Vend bønner, resten af melonen, tomater og koriander med dressingen, så alt er dækket. Fordel salaten på to tallerkener."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg fisken ovenpå, og hæld stegesky og resterende dressing fra skålen over. Server med limebåde til at presse over."
+    }
+  ],
+  "changes": [
+    "Salmon trout er erstattet med ørredfilet med skind.",
+    "Letsaltet sojasauce er erstattet med almindelig sojasauce."
+  ]
+}

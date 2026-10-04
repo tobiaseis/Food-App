@@ -1,0 +1,160 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-chicken-pasta-bake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:10:17.749Z",
+  "total_minutes": 60,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Pastaret med kylling og tomatsauce",
+  "intro": "Fuldkornspasta og kylling i en kraftig tomatsauce med peberfrugt og squash, toppet med ricotta og ost. Retten bages i ovnen, til toppen er gylden.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "pasta",
+      "note": "fuldkornspenne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "1 gul og 1 orange, uden kerner, i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "stor, groft revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon i pulverform",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "oliven",
+      "note": "Kalamata, ca. 8 stk, i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "hakket, plus lidt ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "ricotta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "lagret, fintrevet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt ovnen på 180 °C (160 °C varmluft). Kog pastaen efter anvisningen på pakken."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en stor pande ved middel varme. Steg peberfrugten i cirka 8 minutter under omrøring, til den begynder at blive blød."
+    },
+    {
+      "section": null,
+      "text": "Rør squash og hvidløg i og steg et par minutter længere. Hæld passataen over, og tilsæt røget paprika, bouillon, chili og oliven. Lad saucen simre i 3-4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Si pastaen, men gem noget af kogevandet. Vend pastaen i saucen sammen med kyllingen, basilikum og en halv krus af kogevandet. Kom det hele i et ovnfast fad."
+    },
+    {
+      "section": null,
+      "text": "Rør ricottaen op med 5 spsk af kogevandet i en skål, og smør den ud over pastaen. Drys med cheddar."
+    },
+    {
+      "section": null,
+      "text": "Bag retten i 35 minutter. Pynt med lidt frisk basilikum inden servering."
+    }
+  ],
+  "changes": [
+    "Courgette er skiftet til squash.",
+    "Grøntsagsbouillonpulver er skiftet til grøntsagsbouillon i pulverform.",
+    "Mature cheddar er skiftet til lagret cheddar."
+  ]
+}

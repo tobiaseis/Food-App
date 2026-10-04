@@ -1,0 +1,174 @@
+{
+  "url": "https://www.valdemarsro.dk/pizza-margherita/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:48:48.175Z",
+  "total_minutes": 420,
+  "active_minutes": 30,
+  "yield_count": 2,
+  "source_lines": 13,
+  "title": "Pizza Margherita",
+  "intro": "Klassisk pizza med lang hævet dej, hjemmelavet tomatsauce, mozzarella og frisk basilikum. Dejen hæver i køleskabet, så bunden bliver luftig og sprød.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til dejen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 15,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 100,
+      "unit": "g",
+      "name": "durummel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "frisk, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til dejen",
+      "text": "Rør gæren ud i det kolde vand. Tilsæt durummel, så salt og olie, og rør dejen glat og ensartet."
+    },
+    {
+      "section": "Til dejen",
+      "text": "Ælt hvedemel i lidt ad gangen, og ælt dejen grundigt igennem. Brug gerne røremaskine og lad den køre i 10-15 minutter."
+    },
+    {
+      "section": "Til dejen",
+      "text": "Sæt dejen i køleskabet til hævning i mindst 6 timer. Den kan med fordel stå 12-18 timer."
+    },
+    {
+      "section": "Til tomatsaucen",
+      "text": "Svits løg og hvidløg i olie i en gryde."
+    },
+    {
+      "section": "Til tomatsaucen",
+      "text": "Tilsæt de hakkede tomater, og krydr med salt og peber. Lad saucen simre i 30 minutter."
+    },
+    {
+      "section": "Til pizzaen",
+      "text": "Sæt ovnen på 250 °C, og lad gerne en bageplade af sten varme med."
+    },
+    {
+      "section": "Til pizzaen",
+      "text": "Del dejen i lige så mange stykker, som der skal bruges pizzaer, og træk eller rul dem ud."
+    },
+    {
+      "section": "Til pizzaen",
+      "text": "Bred tomatsauce ud over bundene, og læg mozzarellaskiver ovenpå."
+    },
+    {
+      "section": "Til pizzaen",
+      "text": "Bag pizzaerne i 10-12 minutter, til bunden er sprød."
+    },
+    {
+      "section": "Til pizzaen",
+      "text": "Drys med friske basilikumblade, inden pizzaerne serveres."
+    }
+  ],
+  "changes": [
+    "Tipo 00-mel er erstattet med hvedemel."
+  ]
+}

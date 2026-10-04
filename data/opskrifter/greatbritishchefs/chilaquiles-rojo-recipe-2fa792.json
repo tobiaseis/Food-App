@@ -1,0 +1,180 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/chilaquiles-rojo-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:33:50.136Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Chilaquiles rojo",
+  "intro": "Mexicansk morgenmadsret med sprøde tortillachips i en frisk, grøn-rød tomatsalsa, toppet med spejlæg, feta og avocado. Salsaen koges kort, så den holder en frisk farve.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salsa rojo",
+      "amount": 500,
+      "unit": "g",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa rojo",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Salsa rojo",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa rojo",
+      "amount": 1,
+      "unit": "stk",
+      "name": "jalapeños",
+      "note": "eller mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Salsa rojo",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa rojo",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "fladbladet",
+      "optional": false
+    },
+    {
+      "section": "Salsa rojo",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa rojo",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften af lime",
+      "optional": false
+    },
+    {
+      "section": "Salsa rojo",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilaquiles",
+      "amount": 250,
+      "unit": "g",
+      "name": "chips",
+      "note": "tortillachips af majs",
+      "optional": false
+    },
+    {
+      "section": "Chilaquiles",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilaquiles",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 80,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "rødløg, lille, i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "blade plukket, lidt finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "lime, i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Salsa rojo",
+      "text": "Kom tomater, løg, hvidløg og jalapeño i en gryde, og fyld med vand, så det dækker. Bring det i kog og lad det småkoge i 8-10 minutter, til grøntsagerne er bløde, men stadig har en frisk farve. Si vandet fra."
+    },
+    {
+      "section": "Salsa rojo",
+      "text": "Kom det hele i en blender sammen med koriander, persille, olivenolie, limesaft og en god knivspids salt. Blend glat, smag til med salt og lad salsaen blive frisk i smagen. Stil den til side."
+    },
+    {
+      "section": "Chilaquiles",
+      "text": "Varm en stor pande op ved middel varme og hæld salsaen på. Lad den småboble, vend så chipsene i, så de er dækket af salsa, og lad dem simre 1-2 minutter. De skal blive lidt møre, men stadig have bid."
+    },
+    {
+      "section": "Chilaquiles",
+      "text": "Varm imens olien i en anden pande og steg æggene. Øs den varme olie hen over hviderne, så de stivner jævnt, mens blommerne forbliver bløde."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret chilaquiles i dybe tallerkener og læg spejlæg ovenpå. Drys med feta, rødløg, avocado og koriander, og server med limebåde."
+    }
+  ],
+  "changes": [
+    "Frisk lime er erstattet af citron, som er lettere at få fat i.",
+    "Vegetable oil er erstattet af rapsolie.",
+    "Corn tortilla chips er erstattet af almindelige tortillachips af majs (chips)."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/masala-frittata-avocado-salsa",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:57:24.502Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 9,
+  "title": "Frittata med karry og avocadosalsa",
+  "intro": "Luftig æggekage med løg, tomater og karry, der færdigbages under grillen. Serveres med en frisk salsa af avocado, tomat og koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "løg",
+      "note": "2½ i tynde skiver, ½ finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "Madras-stil, pasta",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store, pisket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "uden sten og skræl, i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien i en mellemstor, ovnfast stegepande med slip-let-belægning. Steg de skårne løg ved middel varme i ca. 10 minutter, til de er bløde og gyldne."
+    },
+    {
+      "section": null,
+      "text": "Rør karrypastaen i og steg i 1 minut. Tilsæt halvdelen af tomaterne og halvdelen af chilien, og lad det simre, til blandingen er tyk, og tomaterne er faldet helt sammen."
+    },
+    {
+      "section": null,
+      "text": "Tænd ovnens grill på høj. Bland halvdelen af korianderen i de piskede æg, og krydr med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Hæld æggene over løgblandingen i panden, og rør forsigtigt rundt en gang eller to. Lad det stå på lav varme i 8-10 minutter, til det næsten er stivnet."
+    },
+    {
+      "section": null,
+      "text": "Sæt panden under grillen i 3-5 minutter, til frittataen er helt fast."
+    },
+    {
+      "section": "Avocadosalsa",
+      "text": "Vend avocado sammen med resten af tomaterne, chilien og korianderen, det hakkede løg og citronsaften. Smag til med salt og peber, og server ved siden af frittataen."
+    }
+  ],
+  "changes": [
+    "Madras curry paste er erstattet af karry."
+  ]
+}

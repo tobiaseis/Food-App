@@ -1,0 +1,175 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/mexican-chicken-stew-quinoa-beans",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:53:58.822Z",
+  "total_minutes": 55,
+  "active_minutes": 25,
+  "yield_count": 5,
+  "source_lines": 13,
+  "title": "Mexicansk kyllingegryde med quinoa og bønner",
+  "intro": "Mør kylling i en røget tomatsauce med chipotle, serveret på quinoa med bønner og friske krydderurter. En mættende gryderet med en klat yoghurt ved siden af.",
+  "servings": 5,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "røde, uden kerner, i store stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "à 400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "quinoa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "bouillon",
+      "note": "kyllingebouillonterninger",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "400 g, afdryppede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "det meste hakket, nogle få blade hele",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "naturel, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en dyb stegepande. Steg løg og peberfrugt i nogle minutter, til de er bløde."
+    },
+    {
+      "section": null,
+      "text": "Rør chipotlepastaen ned i panden og lad den stege med i 1 minut. Kom derefter de hakkede tomater i."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt vand, indtil kyllingen lige kan dækkes – op til en tom tomatdåse fuld. Bring saucen til en forsigtig simren."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingebrysterne i saucen og lad dem simre ved svag varme i 20 minutter. Vend dem af og til, til de er gennemstegte."
+    },
+    {
+      "section": "Quinoa",
+      "text": "Kog imens en stor gryde vand op og opløs bouillonterningerne i det. Kom quinoaen i og kog den i 15 minutter, til den er mør. Tilsæt bønnerne det sidste minut."
+    },
+    {
+      "section": "Quinoa",
+      "text": "Si vandet fra. Vend den hakkede koriander og limesaften i, smag til med salt og peber, og læg låg på, så den holder varmen."
+    },
+    {
+      "section": "Servering",
+      "text": "Tag kyllingen op på et skærebræt og pluk den i strimler med to gafler. Kom den tilbage i tomatsaucen, rør sukkeret i og smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret gryden sammen med quinoaen. Drys med de hele korianderblade lige før servering, og top med en klat yoghurt."
+    }
+  ],
+  "changes": [
+    "Pintobønner er erstattet af kidneybønner.",
+    "Chipotle paste er beholdt som chipotlepasta."
+  ]
+}

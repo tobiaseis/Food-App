@@ -1,0 +1,436 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/korean-fried-chicken-gochujang-glaze-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:19:24.178Z",
+  "total_minutes": 70,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 43,
+  "title": "Koreansk friturestegt kylling med gochujang-glasur",
+  "intro": "Mørt kyllingelår i sprød dobbeltstegt dej, penslet med sød og skarp gochujang-glasur og serveret med hurtigsyltede radiser. Kyllingen marinerer i et par timer, så planlæg den i god tid.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kylling",
+      "amount": 600,
+      "unit": "g",
+      "name": "kyllingeoverlår",
+      "note": "uden ben og skind, skåret over på midten så der bliver 8 stykker",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 300,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": "til vending",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, fx rapsolie, til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 160,
+      "unit": "ml",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 40,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "saft",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": "ristet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "en knivsspids",
+      "optional": false
+    },
+    {
+      "section": "Hurtigsyltede radiser",
+      "amount": 50,
+      "unit": "ml",
+      "name": "vand",
+      "note": "varmt",
+      "optional": false
+    },
+    {
+      "section": "Hurtigsyltede radiser",
+      "amount": 90,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hurtigsyltede radiser",
+      "amount": 5,
+      "unit": "g",
+      "name": "salt",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Hurtigsyltede radiser",
+      "amount": 65,
+      "unit": "ml",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Hurtigsyltede radiser",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hurtigsyltede radiser",
+      "amount": 160,
+      "unit": "g",
+      "name": "radiser",
+      "note": "delt i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 50,
+      "unit": "g",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gochugaru",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 1,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 80,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": "ristet",
+      "optional": false
+    },
+    {
+      "section": "Gochujang-glasur",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "majsstivelse",
+      "note": "rørt ud med 1 tsk vand",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 140,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 140,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 20,
+      "unit": "g",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 20,
+      "unit": "g",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 4.3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "iskoldt",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1.4,
+      "unit": "dl",
+      "name": "vodka",
+      "note": "iskold",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamfrø",
+      "note": "gerne en blanding af sorte og hvide",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "skåret i stykker, snittet fint på langs og lagt i isvand, så det krøller",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "skåret i små stave",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, i tynde skiver, gerne mere efter smag",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Pisk det lune vand og farin sammen i en stor skål, til sukkeret er helt opløst. Rør resten af marinadens ingredienser i sammen med en smule peber, og lad den køle af."
+    },
+    {
+      "section": "Marinade",
+      "text": "Vend kyllingen rundt i den kolde marinade, dæk til og stil i køleskabet i 3-6 timer. Lad den ikke stå natten over, for så bliver kødet for fast."
+    },
+    {
+      "section": "Hurtigsyltede radiser",
+      "text": "Rør det varme vand, sukker og salt sammen i en skål, til det er opløst. Tilsæt det kolde vand og eddiken, kom radiserne i og tryk dem ned under væsken."
+    },
+    {
+      "section": "Hurtigsyltede radiser",
+      "text": "Dæk til og stil køligt i mindst 30 minutter. De kan holde sig op til 3 dage."
+    },
+    {
+      "section": "Gochujang-glasur",
+      "text": "Kom alt undtagen majsstivelsen i en mellemstor kasserolle. Varm op ved middel varme, og pisk af og til, til sukkeret er smeltet."
+    },
+    {
+      "section": "Gochujang-glasur",
+      "text": "Pisk den udrørte majsstivelse i, og lad glasuren koge kort, mens du pisker, til den er glat. Si den gennem en fin si, så den bliver blank, og hold den varm."
+    },
+    {
+      "section": "Dej",
+      "text": "Bland alle de tørre ingredienser i en stor skål og stil til side. Rør vand og vodka sammen i en anden skål og hold den kold, til du skal stege."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Si marinaden fra, og tør kyllingestykkerne grundigt med køkkenrulle. Kassér marinaden."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Hæld det meste af majsstivelsen til vending på et bredt fad; fyld efter, hvis det behøves. Vend kyllingen i portioner, ryst overskydende af, og læg stykkerne i ét lag på en rist over en bakke."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Forvarm ovnen til 90 °C. Varm olien op i en dyb gryde ved middelhøj varme, eller indstil en frituregryde til 160 °C. Stil endnu en rist over en bakke klar til den færdige kylling."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Hæld først lige før stegning den kolde vand- og vodkablanding ned i de tørre ingredienser. Pisk til en tyndtflydende dej, der minder om maling. Rører du den tidligere, udvikles glutenen, og så bliver panden mindre sprød."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Første stegning: Træk 3-4 stykker ad gangen gennem dejen, og lad overskuddet dryppe af. Læg dem forsigtigt i olien, og hold dem nede under overfladen med en tang i 5-10 sekunder, så dejen sætter sig, og kyllingen ikke hænger fast. Slip dem derefter."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Steg i cirka 4 minutter, til de er dybt gyldne og sprøde, og vend af og til. Tag dem op og lad dem hvile i 2 minutter. Fortsæt, til al kyllingen er stegt første gang."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Andet stegning: Hæv olien til 190 °C. Steg stykkerne igen i portioner i 1-2 minutter, til de er dybt gyldne, eller til et stegetermometer viser 74 °C i den tykkeste del. Hold dem varme på en rist over en bakke i ovnen, mens resten steger."
+    },
+    {
+      "section": "Servering",
+      "text": "Pensl den stegte kylling tyndt og jævnt med den varme glasur. Si radiserne fra."
+    },
+    {
+      "section": "Servering",
+      "text": "Pensl en stribe gochujang over hver tallerken. Er den for stiv, så løsn den med et skvæt vand. Drys sesamfrøene over striben, mens den stadig klistrer."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret 2-3 stykker kylling på hver stribe. Pynt med det krøllede forårsløg og chilien, og læg nogle radiser ved siden af. Afslut med karse og purløgsstave, og server med det samme."
+    }
+  ],
+  "changes": [
+    "Koreansk letsojasauce (guk-ganjang) er erstattet af almindelig sojasauce.",
+    "Matzomel er erstattet af hvedemel.",
+    "Micro cress er erstattet af karse."
+  ]
+}

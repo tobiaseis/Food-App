@@ -1,0 +1,200 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetar-taco/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:26:59.095Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Vegetartaco med ovnbagt blomkål og mangosalsa",
+  "intro": "Små tortillas fyldt med krydret ovnbagt blomkål, frisk mangosalsa, avocado og spinat. En let vegetarisk ret med sødme fra mango og syrlighed fra lime.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Krydret blomkål",
+      "amount": 300,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i små buketter",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sød paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "mango",
+      "note": "skåret i små tern",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 100,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "skåret i små tern",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Mangosalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "økologisk lime",
+      "note": "saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Server",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Server",
+      "amount": 60,
+      "unit": "g",
+      "name": "babyspinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Server",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Server",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Server",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristet på en tør pande",
+      "optional": false
+    },
+    {
+      "section": "Server",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Krydret blomkål",
+      "text": "Forvarm ovnen til 200 °C varmluft og klæd en bageplade med bagepapir."
+    },
+    {
+      "section": "Krydret blomkål",
+      "text": "Kom blomkålsbuketterne i en skål og vend dem først rundt i olien. Tilsæt begge slags paprika samt salt og peber, og vend igen, så krydderierne dækker jævnt."
+    },
+    {
+      "section": "Krydret blomkål",
+      "text": "Fordel blomkålen på bagepladen og bag den i 20-22 minutter."
+    },
+    {
+      "section": "Mangosalsa",
+      "text": "Bland mango, tomat, forårsløg, agurk og chili i en skål sammen med den hakkede koriander."
+    },
+    {
+      "section": "Mangosalsa",
+      "text": "Smag salsaen til med limesaft, limeskal, salt og peber."
+    },
+    {
+      "section": "Server",
+      "text": "Varm tortillaerne på en tør, varm pande eller i ovnen."
+    },
+    {
+      "section": "Server",
+      "text": "Fyld tortillaerne med blomkål, mangosalsa, spinat og avocado. Top med koriander og ristede sesamfrø, og server med limebåde til at presse over."
+    }
+  ],
+  "changes": []
+}

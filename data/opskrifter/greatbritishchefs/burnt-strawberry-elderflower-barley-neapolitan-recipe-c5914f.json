@@ -1,0 +1,312 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/burnt-strawberry-elderflower-barley-neapolitan-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:58:05.111Z",
+  "total_minutes": 135,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 24,
+  "title": "Brændt jordbær, hyldeblomst og byg-neapolitaner",
+  "intro": "En lagdelt isdessert med hyldeblomstparfait, parfait af grillede jordbær og en is med sort bygkoji. Det er en projektret over tre dage, som serveres med sprøde jordbærchips og friske hyldeblomster.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Til byg-isen",
+      "amount": 100,
+      "unit": "g",
+      "name": "tørret sort bygkoji",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til byg-isen",
+      "amount": 1,
+      "unit": "l",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til byg-isen",
+      "amount": 10,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til byg-isen",
+      "amount": 30,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til byg-isen",
+      "amount": 150,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til byg-isen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hyldeblomstparfaiten",
+      "amount": 5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hyldeblomstparfaiten",
+      "amount": 100,
+      "unit": "g",
+      "name": "hyldeblomster",
+      "note": "stilkene fjernet",
+      "optional": false
+    },
+    {
+      "section": "Til hyldeblomstparfaiten",
+      "amount": 5,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til hyldeblomstparfaiten",
+      "amount": 5,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hyldeblomstparfaiten",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hyldeblomstparfaiten",
+      "amount": 75,
+      "unit": "g",
+      "name": "hyldeblomstsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til parfaiten af brændte jordbær",
+      "amount": 400,
+      "unit": "g",
+      "name": "jordbær",
+      "note": "hulstrøet og trukket på spyd",
+      "optional": false
+    },
+    {
+      "section": "Til parfaiten af brændte jordbær",
+      "amount": 1.5,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til parfaiten af brændte jordbær",
+      "amount": 80,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til parfaiten af brændte jordbær",
+      "amount": 45,
+      "unit": "g",
+      "name": "æblejuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til parfaiten af brændte jordbær",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til parfaiten af brændte jordbær",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "pisket til bløde tinder og afkølet",
+      "optional": false
+    },
+    {
+      "section": "Til jordbærchips",
+      "amount": 300,
+      "unit": "g",
+      "name": "jordbærpuré",
+      "note": "af 400 g jordbær, der er renset, blendet og sigtet",
+      "optional": false
+    },
+    {
+      "section": "Til jordbærchips",
+      "amount": 2,
+      "unit": "g",
+      "name": "Ultratex",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til jordbærchips",
+      "amount": 30,
+      "unit": "g",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til jordbærchips",
+      "amount": null,
+      "unit": null,
+      "name": "bagespray",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "jordbær",
+      "note": "renset og skåret i små stykker",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "hyldeblomster",
+      "note": "plukkede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "markjordbær",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dag 1",
+      "text": "Læg kojien i blød i mælken, og lad den stå i køleskabet natten over. Det skal ske to dage før servering."
+    },
+    {
+      "section": "Dag 1",
+      "text": "Varm fløden til lige under kogepunktet, og hæld den over hyldeblomsterne. Læg film direkte på overfladen, lad fløden køle af, og stil den i køleskabet natten over, så den trækker."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Si den kojitrukne mælk gennem en fin si, og smid kojien ud. Kom mælken i en gryde eller Thermomix sammen med æggeblommerne, glukosesirup, sukker og salt. Varm det op til 85 °C under omrøring."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Blend isbasen glat og meget kraftigt. Køl den helt ned, gerne natten over."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Si hyldeblomstfløden, og kassér blomsterne. Udblød husblassen til hyldeblomstparfaiten i koldt vand."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Kom æggeblommerne i en røremaskine med piskeris. Kog sukkeret med to tredjedele af hyldeblomstsaften i en lille gryde op til 110 °C."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Pisk blommerne på middel hastighed til de er lyse, når sukkersirupen nærmer sig 110 °C. Ved 121 °C sænkes hastigheden, og sirupen hældes i en tynd stråle ned langs skålens kant. Pisk videre på middel hastighed i 10 minutter, til massen er kølet af og falder i bånd."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Varm resten af hyldeblomstsaften i en lille gryde, mens der piskes. Pres vandet ud af husblassen, og rør den ud i den varme saft, til den er opløst. Hæld det straks i skålen med den afkølende blommemasse."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Pisk hyldeblomstfløden let til bløde tinder, og vend den forsigtigt i den kolde blommemasse. Hæld parfaiten i en form. Til en lagdelt neapolitaner bruges en stor brødform eller brownieform, foret med bagepapir og stor nok til begge lag. Frys i mindst et par timer, til overfladen er fast."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Lav imens parfaiten af brændte jordbær. Tænd grillen, eller varm en grillpande op. Grill jordbærspyddene ved svag varme, til bærrene har fået fin farve."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Tag bærrene af spyddene, og kom dem i en gryde. Kog dem ved svag varme, til de er smuldret til en puré, der er reduceret til det halve og vejer lidt over 200 g. Lad den køle af, og stil den i køleskabet."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Blend den kolde puré kort, og pres den gennem en fin si for at fjerne kernerne. Mål 200 g puré af."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Udblød husblassen i koldt vand. Varm sukkeret og lidt over halvdelen af æblejuicen op til 117 °C i en gryde ved svag varme. Pisk imens æggeblommerne i røremaskine eller med håndmixer på høj hastighed i 3-4 minutter, til de er lyse og luftige."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Hæld sirupen i ét hug over de piskede blommer, og pisk 5 minutter på middel til høj hastighed, til massen er kølet af. Temperaturen er lidt lavere end til hyldeblomstparfaiten, så saften skånes mere."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Varm resten af æblejuicen i en lille gryde. Pres vandet ud af husblassen, og rør den ud i juicen, til den er opløst. Pisk det ned i blommemassen, og tilsæt derefter de 200 g puré. Pisk, til alt er blandet. Vend til sidst den piskede fløde i tre omgange med piskeriset."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Fyld parfaiten i de forme, du vil bruge. Til den lagdelte version hældes den ovenpå den frosne hyldeblomstparfait. Lad den fryse natten over."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Frys isbasen i Pacojet-bægre ved -20 °C, eller kør den i en ismaskine."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Lav jordbærchips ved at blande alle ingredienserne grundigt. Smør massen ud på non-stick måtter sprayet med bagespray. Tør den i dehydrator ved 80 °C i 1½ time, og tjek ofte. Den kan tage lidt længere, men der må ikke være våde eller klistrede pletter. Bliver den for længe, brunes den. Den er smidig, når den tages ud, og bliver sprød, når den køler af."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær 8-10 skiver parfait, og læg dem på en bakke. Lad dem tine i køleskabet i 30-60 minutter. Pacotisér byg-isen efter behov, eller tag den ud af fryseren et par minutter, så den bliver blødere."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret de skårne jordbær i en lille skål sammen med de plukkede hyldeblomster, så de kan serveres ved siden af."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg en skive parfait på hver tallerken. Top med en lille rocher eller kugle byg-is, drys enkelte hyldeblomster over, og afslut med jordbærchips. Pynt eventuelt med et markjordbær på hver tallerken."
+    }
+  ],
+  "changes": [
+    "Strawberry juice er erstattet med æblejuice, som kilden også foreslår.",
+    "Liquid glucose er erstattet med glukosesirup.",
+    "Double cream er erstattet med piskefløde.",
+    "Elderflower cordial er erstattet med hyldeblomstsaft.",
+    "Gelatine leaves er erstattet med husblas i blade.",
+    "Caster sugar er erstattet med almindeligt sukker.",
+    "Icing sugar er erstattet med flormelis."
+  ]
+}

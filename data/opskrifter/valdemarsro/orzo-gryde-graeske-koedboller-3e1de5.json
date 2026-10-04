@@ -1,0 +1,248 @@
+{
+  "url": "https://www.valdemarsro.dk/orzo-gryde-graeske-koedboller/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:34:19.441Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 25,
+  "title": "Orzogryde med græske kødboller",
+  "intro": "Saftige kødboller med feta, soltørrede tomater og krydderier, der simrer med orzo i tomatsauce. Det hele laves i én gryde og serveres med spinat, oliven og frisk oregano.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Græske kødboller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket kalv og flæsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 40,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 50,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 800,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 5,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 300,
+      "unit": "g",
+      "name": "orzo",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 150,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 80,
+      "unit": "g",
+      "name": "sorte oliven",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "oregano",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Orzogryde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Græske kødboller",
+      "text": "Bland alle ingredienserne til kødbollerne i en stor skål, og sæt farsen på køl i mindst 30 minutter – gerne et par timer."
+    },
+    {
+      "section": "Græske kødboller",
+      "text": "Form farsen til boller. Brun dem i olie og smør på en varm, dyb pande, og vend dem ofte, så de bliver runde. Tag dem af panden og stil dem til side på et fad."
+    },
+    {
+      "section": "Orzogryde",
+      "text": "Hæld lidt mere olie på samme pande. Svits løg, hvidløg og soltørrede tomater ved middelvarme i nogle minutter, til løgene er møre."
+    },
+    {
+      "section": "Orzogryde",
+      "text": "Kom squash, hakkede tomater, fond, timian, rosmarin og orzo i panden, og rør rundt. Læg låg på, og lad retten simre ved lav varme, indtil pastaen er mør. Rør i den med jævne mellemrum."
+    },
+    {
+      "section": "Orzogryde",
+      "text": "Vend spinaten i, og læg kødbollerne ned i retten. Server med smuldret feta, oliven og frisk oregano drysset ovenpå."
+    }
+  ],
+  "changes": []
+}

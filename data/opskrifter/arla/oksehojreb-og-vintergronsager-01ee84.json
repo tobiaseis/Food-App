@@ -1,0 +1,192 @@
+{
+  "url": "https://www.arla.dk/opskrifter/oksehojreb-og-vintergronsager/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:23:41.902Z",
+  "total_minutes": 120,
+  "active_minutes": 45,
+  "yield_count": 12,
+  "source_lines": 15,
+  "title": "Oksehøjreb med vintergrøntsager",
+  "intro": "Mør, rosastegt oksehøjreb med rødvinssauce og svitsede rosenkål, knoldselleri og rødløg med ristede hasselnødder. Serveres med bagt kartoffelmos med hvidløg.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Til stegen",
+      "amount": 2.8,
+      "unit": "kg",
+      "name": "oksehøjreb",
+      "note": "uden ben",
+      "optional": false
+    },
+    {
+      "section": "Til stegen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til stegen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til stegen",
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "l",
+      "name": "rødvinssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vintergrøntsager",
+      "amount": 100,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Vintergrøntsager",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vintergrøntsager",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft, til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Vintergrøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": "i stave",
+      "optional": false
+    },
+    {
+      "section": "Vintergrøntsager",
+      "amount": 600,
+      "unit": "g",
+      "name": "rosenkål",
+      "note": "i halve",
+      "optional": false
+    },
+    {
+      "section": "Vintergrøntsager",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vintergrøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Vintergrøntsager",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft, til svitsningen",
+      "optional": false
+    },
+    {
+      "section": "Vintergrøntsager",
+      "amount": 1,
+      "unit": "dl",
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "bagt kartoffelmos med hvidløg",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Oksehøjreb",
+      "text": "Skær et mønster i fedtkanten på højrebet. Sæt en rist i bradepanden, og læg stegen på den. Hvis stegen vipper, kan du støtte den med noget krøllet alufolie."
+    },
+    {
+      "section": "Oksehøjreb",
+      "text": "Krydr med salt og peber. Sæt bradepanden nederst i ovnen, og brun stegen i ca. 15 minutter ved 250 °C."
+    },
+    {
+      "section": "Oksehøjreb",
+      "text": "Sænk ovnen til 175 °C, og hæld vandet i bradepanden. Steg kødet videre i ca. 1 time, og øs stegesky over det 2-3 gange undervejs."
+    },
+    {
+      "section": "Oksehøjreb",
+      "text": "Tag stegen ud, og stik et stegetermometer ind midt i kødet. Det skal vise ca. 55 °C."
+    },
+    {
+      "section": "Oksehøjreb",
+      "text": "Dæk stegen løst til, men lad fedtkanten være fri. Lad den hvile i ca. 30 minutter, og gem stegeskyen."
+    },
+    {
+      "section": "Sauce",
+      "text": "Øs fedtet af stegeskyen. Kog skyen kraftigt ind, til der er ca. 1 dl tilbage."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør rødvinssaucen i, og varm den godt igennem. Hæld evt. den sky, der er løbet af kødet, i saucen, og smag til."
+    },
+    {
+      "section": "Vintergrøntsager",
+      "text": "Rist nødderne tørt i en stor gryde ved middelvarme i ca. 5 minutter, mens du rører rundt. Tag dem op af gryden."
+    },
+    {
+      "section": "Vintergrøntsager",
+      "text": "Kom vand og salt i samme gryde, og bring det i kog."
+    },
+    {
+      "section": "Vintergrøntsager",
+      "text": "Kog selleri og rosenkål i det kraftigt kogende vand uden låg i ca. 3 minutter. Hæld dem i en sigte, og lad dem dryppe af."
+    },
+    {
+      "section": "Vintergrøntsager",
+      "text": "Smelt smørret i en stor stegegryde ved høj varme, så det ikke tager farve."
+    },
+    {
+      "section": "Vintergrøntsager",
+      "text": "Kom rødløg, selleri, rosenkål og salt i. Svits i ca. 3 minutter."
+    },
+    {
+      "section": "Vintergrøntsager",
+      "text": "Vend nødder og persille i, og smag til. Server med stegen, saucen og kartoffelmosen."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,175 @@
+{
+  "url": "https://www.arla.dk/opskrifter/crepes-suzette/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:14:40.668Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 14,
+  "title": "Crêpes Suzette",
+  "intro": "Tynde, smøragtige pandekager med citronskal, som varmes i en sauce af appelsin og smør og flamberes med appelsinlikør. Serveres med ristede mandler og vaniljeis.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Pandekager",
+      "amount": 60,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "fintrevet skal, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandekager",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 80,
+      "unit": "g",
+      "name": "sukker",
+      "note": "flormelis",
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "appelsinjuice",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "appelsiner",
+      "note": "strimlet skal, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Appelsinsauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "likør",
+      "note": "Grand Marnier",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "nødder",
+      "note": "ristede mandelsplitter",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "is",
+      "note": "vaniljeflødeis",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pandekager",
+      "text": "Rør hvedemel og citronskal sammen. Tilsæt fløde og vand lidt ad gangen under piskning, indtil dejen er glat. Pisk æggene ned i dejen."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Smelt smørret på en pande, og rør det ned i dejen."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Varm en lille pande (ca. 14 cm i diameter), og kom ½ dl dej på. Steg pandekagerne ved middel varme, til de er lysebrune på begge sider."
+    },
+    {
+      "section": "Pandekager",
+      "text": "Fold hver pandekage to gange, og stil dem på et fad. Steg resten af dejen på samme måde."
+    },
+    {
+      "section": "Appelsinsauce",
+      "text": "Smelt smørret på en pande ved høj varme. Lad det ikke brune."
+    },
+    {
+      "section": "Appelsinsauce",
+      "text": "Rør flormelis, appelsinjuice, citronsaft og appelsinskal i. Sænk til middel varme, og lad saucen koge ca. 5 minutter, til den er tyknet."
+    },
+    {
+      "section": "Appelsinsauce",
+      "text": "Læg de foldede pandekager i saucen, og varm dem igennem i ca. 3 minutter. Saucen skal fortsat småkoge."
+    },
+    {
+      "section": "Flambering",
+      "text": "Sluk for emhætten, og hold et låg parat i tilfælde af store flammer. Hæld likøren på panden, og tænd ild i saucen."
+    },
+    {
+      "section": "Flambering",
+      "text": "Lad saucen simre ca. 1 minut endnu."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg to pandekager på hver tallerken, og øs sauce over. Drys med ristede mandelsplitter, og server med vaniljeis ved siden af."
+    }
+  ],
+  "changes": [
+    "Flormelis er skrevet som sukker i varenavnet, med flormelis i noten.",
+    "Grand Marnier er skrevet som likør."
+  ]
+}

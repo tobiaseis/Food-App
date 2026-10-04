@@ -1,0 +1,152 @@
+{
+  "url": "https://www.valdemarsro.dk/quiche-lorraine/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:11:03.413Z",
+  "total_minutes": 40,
+  "active_minutes": 20,
+  "yield_count": 1,
+  "source_lines": 12,
+  "title": "Quiche lorraine med hørfrøbund",
+  "intro": "Klassisk tærte med sprød bacon og ægge-mælkefyld på en sprød bund af hørfrø, rugmel og hvedemel. Den er nem at lave og god til både frokost og aftensmad.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til bunden",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "hørfrø",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "rugmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "start med en del og tilsæt mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bunden",
+      "text": "Forvarm ovnen til 175 °C varmluft. Smør en tærteform."
+    },
+    {
+      "section": "Bunden",
+      "text": "Bland hørfrø, rugmel, hvedemel og salt i en skål. Smuldr smørret ud i de tørre ingredienser."
+    },
+    {
+      "section": "Bunden",
+      "text": "Rør ægget og en del af olien ind i blandingen. Tilsæt resten af olien lidt efter lidt, hvis dejen er for tør."
+    },
+    {
+      "section": "Bunden",
+      "text": "Tryk dejen jævnt ud i formen, så den dækker bund og kanter. Forbag bunden i 10 minutter."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Steg baconen på en pande, til den er sprød og næsten færdig."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Pisk æggene med mælken. Rør bacon, muskatnød og peber i, og smag til med salt."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Hæld fyldet over den forbagte bund. Bag tærten i ovnen i 20-25 minutter, til æggemassen er stivnet."
+    }
+  ],
+  "changes": []
+}

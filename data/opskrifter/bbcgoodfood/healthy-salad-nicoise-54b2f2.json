@@ -1,0 +1,120 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-salad-nicoise",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:14:14.230Z",
+  "total_minutes": 25,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 8,
+  "title": "Salade niçoise",
+  "intro": "Let og frisk salat med tun, ansjoser, æg, kartofler og grønne bønner. Dressingen er en tynd mayonnaise rørt op med vand.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "mellemstore",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "bønner",
+      "note": "haricots verts, trimmet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "romainesalat",
+      "note": "hjerte, bladene skilt og skyllet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "ansjoser",
+      "note": "i olivenolie, godt afdryppede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "tun i vand",
+      "note": "ca. 200 g, afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": "let",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bring en stor gryde vand i kog. Kom kartoffelskiverne og æggene i, og lad dem koge i 7 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tag æggene op med en hulske. Læg bønnerne i gryden, og kog videre i 4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld kartofler og bønner i et dørslag sammen med æggene, og skyl dem under koldt rindende vand, til de er kølige. Lad dem dryppe af."
+    },
+    {
+      "section": null,
+      "text": "Pil æggene, og skær dem i kvarte. Fordel salatbladene i to lave skåle."
+    },
+    {
+      "section": null,
+      "text": "Top med bønner, kartofler, tomater og æggekvarte. Dup ansjoserne tørre med køkkenrulle, og læg dem øverst."
+    },
+    {
+      "section": null,
+      "text": "Del tunen i store stykker, og fordel dem over salaten."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør mayonnaise og koldt vand sammen til en glat dressing. Dryp den over salaten, og server straks."
+    }
+  ],
+  "changes": []
+}

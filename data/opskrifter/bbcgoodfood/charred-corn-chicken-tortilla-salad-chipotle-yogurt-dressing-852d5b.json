@@ -1,0 +1,271 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/charred-corn-chicken-tortilla-salad-chipotle-yogurt-dressing",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:06:12.348Z",
+  "total_minutes": 55,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Grillet majssalat med kylling og chipotleyoghurt",
+  "intro": "Marinerede kyllingelår og majskolber grilles med smag af røg og chili og lægges på en frisk salat med bønner, avocado og sprøde tortillastrimler. Dressingen af yoghurt, lime og chipotle binder det hele sammen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skallen rives fint, saften bruges i dressingen",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "udbenede, uden skind",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "majskolbe",
+      "note": "uden blade",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til pensling og stegning",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "hjertesalat",
+      "note": "delt på langs, bladene plukket fra og revet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "400 g, skyllet og afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "majs",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "blade plukket og grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Rør paprika, oregano, chipotle, kanel, hvidløg, limeskal og olie sammen i en skål. Smag til med salt og peber."
+    },
+    {
+      "section": "Marinade",
+      "text": "Vend kyllingelårene i marinaden, til de er dækket. Læg film over skålen og sæt den på køl i mindst nogle timer, gerne op til 24 timer."
+    },
+    {
+      "section": "Dressing og grill",
+      "text": "Rør yoghurt, limesaft, olie, paprika, chipotle og honning sammen med en knivspids salt. Stil dressingen til side."
+    },
+    {
+      "section": "Dressing og grill",
+      "text": "Tænd grillen og vent, til flammerne har lagt sig, eller varm en grillpande op på høj varme."
+    },
+    {
+      "section": "Dressing og grill",
+      "text": "Pensl majskolberne med lidt olie. Grill dem sammen med kyllingen i cirka 10 minutter, og vend ofte. Kyllingen skal være forkullet, fast at trykke på og gennemstegt hele vejen ind – skær i et af de tykkeste stykker for at tjekke. Majsen skal være skinnende gul og saftig."
+    },
+    {
+      "section": "Dressing og grill",
+      "text": "Læg kylling og majs på et bræt eller fad, og dæk dem til, så de holder varmen."
+    },
+    {
+      "section": "Tortillastrimler",
+      "text": "Skær tortillaerne i strimler eller små stykker. Steg dem i lidt olie på en pande, til de er sprøde og gyldne. Lad dem dryppe af på køkkenpapir, og drys med salt."
+    },
+    {
+      "section": "Salat",
+      "text": "Anret salat, bønner, tomater og avocado på et stort fad eller i en skål. Vent med at vende det sammen til lige før servering, så salatbladene ikke falder sammen."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær kyllingen i strimler på cirka 1 cm, og skær de forkullede kerner af majskolberne. Kom begge dele på salaten."
+    },
+    {
+      "section": "Salat",
+      "text": "Hæld dressingen over sammen med den safte, kyllingen har afgivet, og vend det hele rundt. Top med koriander og tortillastrimler, og server med limebåde ved siden af."
+    }
+  ],
+  "changes": [
+    "Little Gem er erstattet af hjertesalat.",
+    "Chipotlepasta er skrevet som chipotle med note om pasta."
+  ]
+}

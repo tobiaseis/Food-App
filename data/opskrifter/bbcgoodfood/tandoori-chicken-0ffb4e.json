@@ -1,0 +1,139 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/tandoori-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:58:18.232Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 8,
+  "source_lines": 12,
+  "title": "Tandoori kylling",
+  "intro": "Mørt kyllingelår i en marinade af yoghurt, citron og krydderier, grillet til de er let forkullede. Marinaden kan laves dagen før.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 16,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 3,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "stort stykke, skrællet og revet",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinering",
+      "text": "Skær tre snit på tværs i hvert kyllingelår."
+    },
+    {
+      "section": "Marinering",
+      "text": "Rør citronsaft, paprika og rødløg sammen i et stort, fladt fad. Vend kyllingen i blandingen, og lad den stå i 10 minutter."
+    },
+    {
+      "section": "Marinering",
+      "text": "Rør alle ingredienserne til marinaden sammen, og hæld den over kyllingen. Vend det hele godt, dæk fadet til, og stil det på køl i mindst 1 time. Det kan også stå til dagen efter."
+    },
+    {
+      "section": "Grillning",
+      "text": "Tænd ovnens grill. Læg kyllingelårene på en rist over en bakke."
+    },
+    {
+      "section": "Grillning",
+      "text": "Pensl lårene med lidt olie. Grill dem i 8 minutter på hver side, til de er let forkullede og gennemstegte."
+    }
+  ],
+  "changes": [
+    "Vegetable oil er skiftet til almindelig olie.",
+    "Chilli powder er skiftet til stødt chili."
+  ]
+}

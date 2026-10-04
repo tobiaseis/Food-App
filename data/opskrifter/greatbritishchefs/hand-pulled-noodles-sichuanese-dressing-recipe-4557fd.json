@@ -1,0 +1,185 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/hand-pulled-noodles-sichuanese-dressing-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:34:12.140Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Håndtrukne nudler med sichuandressing",
+  "intro": "Seje nudler vendes i en skarp, aromatisk dressing, hvor varm olie får hvidløg, chili og forårsløg til at syde. Retten er hurtig at samle, når dressingen først er lavet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til nudlerne",
+      "amount": 400,
+      "unit": "g",
+      "name": "nudler",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 60,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 20,
+      "unit": "g",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 30,
+      "unit": "g",
+      "name": "rød chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 15,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "olie",
+      "note": "neutral, fx rapsolie",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "riseddike",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 40,
+      "unit": "g",
+      "name": "østerssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 20,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 20,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 15,
+      "unit": "g",
+      "name": "bouillon",
+      "note": "hønsebouillonpulver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Kom hvidløg, forårsløg, rød chili og chiliflager i en varmefast skål."
+    },
+    {
+      "section": "Dressing",
+      "text": "Varm olien op i en gryde, til den ryger."
+    },
+    {
+      "section": "Dressing",
+      "text": "Hæld den rygende olie over blandingen i skålen. Det skal syde kraftigt."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør resten af dressingens ingredienser i, smag til og lad dressingen stå, til nudlerne er klar."
+    },
+    {
+      "section": "Nudler",
+      "text": "Bring en stor gryde letsaltet vand i kog."
+    },
+    {
+      "section": "Nudler",
+      "text": "Kog nudlerne, til de flyder op til overfladen, cirka 90 sekunder. Løft dem op og afkøl dem straks i koldt vand."
+    },
+    {
+      "section": "Nudler",
+      "text": "Få vandet i kog igen. Kog nudlerne i 20 sekunder mere, og lad dem dryppe af."
+    },
+    {
+      "section": "Nudler",
+      "text": "Vend de varme nudler i en skål med dressingen, koriander, det finthakkede forårsløg og sesamfrø. Server med det samme."
+    }
+  ],
+  "changes": [
+    "Friske håndtrukne hvedenudler er erstattet af almindelige friske nudler.",
+    "Sort Chinkiang-risvineddike er erstattet af balsamico.",
+    "Rød risvineddike er erstattet af almindelig riseddike.",
+    "Kyllingepulver er erstattet af hønsebouillonpulver."
+  ]
+}

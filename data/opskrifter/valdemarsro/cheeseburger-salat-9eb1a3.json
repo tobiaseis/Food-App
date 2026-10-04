@@ -1,0 +1,280 @@
+{
+  "url": "https://www.valdemarsro.dk/cheeseburger-salat/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:23:50.545Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Cheeseburgersalat med hvidløgscroutoner",
+  "intro": "Salat med krydret oksekød og smeltet cheddar, friske grøntsager, cornichoner og sprøde croutoner. Det hele samles med en cremet burgerdressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til dressingen",
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 20,
+      "unit": "g",
+      "name": "cornichoner",
+      "note": "meget finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lage fra cornichoner",
+      "note": "fra de syltede cornichoner",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 3,
+      "unit": "skive",
+      "name": "brød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "amount": 150,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "icebergsalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 75,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 50,
+      "unit": "g",
+      "name": "cornichoner",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til dressingen",
+      "text": "Rør alle ingredienserne til dressingen sammen, og smag til med salt og peber."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Gnid brødskiverne med hvidløgsfeddet på begge sider, og smør dem på begge sider. Skær dem i firkanter."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Rist firkanterne på en pande, til de er sprøde hele vejen rundt. Drys med flagesalt, og stil dem til side."
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "text": "Svits løgene i olien på en pande, til de er bløde."
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "text": "Tilsæt oksekødet, og brun det godt ved høj varme, mens du rører rundt. Krydr med røget paprika, spidskommen, salt og peber, og smag til."
+    },
+    {
+      "section": "Krydret kød med cheddar",
+      "text": "Strø cheddaren over kødet, og lad den smelte uden omrøring. Tag panden af varmen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg salat, rucola, tomat, cornichoner, agurk og rødløg på tallerkener. Top med det krydrede kød og den smeltede ost, og afslut med dressing og croutoner."
+    }
+  ],
+  "changes": []
+}

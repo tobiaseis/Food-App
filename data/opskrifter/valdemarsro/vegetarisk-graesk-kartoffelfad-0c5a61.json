@@ -1,0 +1,220 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetarisk-graesk-kartoffelfad/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:50:49.332Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Græsk kartoffelfad med fetacreme",
+  "intro": "Ovnbagte kartofler, aubergine og sprød halloumi serveres med en kølig fetacreme, friske tomater og rucola. Et mættende vegetarfad med græske smage.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 250,
+      "unit": "g",
+      "name": "halloumi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret oregano",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fetacreme",
+      "amount": 250,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fetacreme",
+      "amount": 2,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Fetacreme",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Fetacreme",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Fetacreme",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fetacreme",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 100,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 100,
+      "unit": "g",
+      "name": "sorte oliven",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 70,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Forvarm ovnen til 200 °C varmluft. Beklæd to bradepander med bagepapir."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Bland oregano, timian, rosmarin, hvidløg, salt og peber med olivenolien i en skål."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Læg kartoflerne på den ene bradepande. Læg aubergine, rødløg og halloumi på den anden. Hæld krydderiolien over begge pander, og vend det hele godt rundt."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Bag i 30 minutter med kartoflerne øverst i ovnen. Vend grøntsagerne et par gange undervejs. Tag panden med aubergine og halloumi ud, når halloumien er sprød og auberginen mør."
+    },
+    {
+      "section": "Fetacreme",
+      "text": "Kom fetaen i en minihakker sammen med et par spiseskefulde af yoghurten, og kør, til osten er helt glat."
+    },
+    {
+      "section": "Fetacreme",
+      "text": "Tilsæt den øvrige yoghurt, citronsaft, citronskal, hvidløg og peber. Kør igen, til cremen er luftig og jævn. Smag til med salt."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Vend indholdet fra de to bradepander sammen, og læg det på et stort fad med tomater og rucola."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Sæt fetacremen på i klatter, og drys med oliven og persille."
+    }
+  ],
+  "changes": []
+}

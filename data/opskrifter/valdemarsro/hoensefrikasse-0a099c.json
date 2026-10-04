@@ -1,0 +1,218 @@
+{
+  "url": "https://www.valdemarsro.dk/hoensefrikasse/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:30:13.174Z",
+  "total_minutes": 120,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Hønsefrikasse",
+  "intro": "Klassisk dansk frikasse på suppehøne med grøntsager i en cremet sauce lavet af hønsens egen bouillon. Serveres med nykogte kartofler og masser af dild.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "suppehøne",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 10,
+      "unit": "stk",
+      "name": "peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hønsen og bouillonen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "dild",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "kg",
+      "name": "nye kartofler",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Hønen og bouillonen",
+      "text": "Gør suppehønen klar, og læg den i en stor gryde med vandet. Bring det langsomt i kog på middelvarme, og skum det grundigt af flere gange, så saucen senere bliver klar og fin."
+    },
+    {
+      "section": "Hønen og bouillonen",
+      "text": "Når vandet koger, tilsættes hvidvin, løg, gulerødder, porre, laurbærblade, persille, peberkorn og salt. Læg låg på, og lad det simre svagt på lav varme i 1 time. Skum af med en ske undervejs."
+    },
+    {
+      "section": "Hønen og bouillonen",
+      "text": "Løft hønen op af gryden. Si bouillonen gennem en finmasket si ned i en skål, og smid grøntsager og krydderier ud. Pluk kødet af hønen, og stil det til side."
+    },
+    {
+      "section": "Grøntsager og kartofler",
+      "text": "Kog gulerodstern og porreskiverne i letsaltet vand i 5 minutter, og lad dem dryppe godt af."
+    },
+    {
+      "section": "Grøntsager og kartofler",
+      "text": "Kog kartoflerne i letsaltet vand, til de er helt møre."
+    },
+    {
+      "section": "Saucen",
+      "text": "Smelt smørret i en gryde, og pisk melet ned i det. Hæld bouillonen i lidt ad gangen under konstant piskning, til saucen er glat og cremet."
+    },
+    {
+      "section": "Saucen",
+      "text": "Lad saucen koge et par minutter. Rør fløden i, og smag til med salt og peber. Bring den i kog igen, og tynd den evt. ud med lidt mere bouillon."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend porre, gulerødder, ærter og hønsekød i saucen, og varm det godt igennem i 1-2 minutter. Rør det meste af dilden i."
+    },
+    {
+      "section": "Samling",
+      "text": "Anret frikassen med et drys dild på toppen og de kogte kartofler ved siden af."
+    }
+  ],
+  "changes": [
+    "Friske ærter er skiftet til frosne ærter."
+  ]
+}

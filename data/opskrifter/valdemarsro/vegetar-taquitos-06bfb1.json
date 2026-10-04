@@ -1,0 +1,307 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetar-taquitos/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:33:47.682Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 25,
+  "title": "Vegetariske taquitos med pico de gallo og grøn chilidip",
+  "intro": "Sprøde ovnbagte tortillaruller fyldt med krydret kikærte- og flødeostfyld og smeltet cheddar. Serveres med frisk pico de gallo og cremet grøn chilidip.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pico de gallo",
+      "amount": 300,
+      "unit": "g",
+      "name": "tomater",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, saft og lidt fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 10,
+      "unit": "g",
+      "name": "jalapeños",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 30,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 150,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 16,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 300,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn chilidip",
+      "amount": 30,
+      "unit": "g",
+      "name": "jalapeños",
+      "note": "syltede",
+      "optional": false
+    },
+    {
+      "section": "Grøn chilidip",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Grøn chilidip",
+      "amount": 75,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn chilidip",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Grøn chilidip",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Grøn chilidip",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn chilidip",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pico de gallo",
+      "text": "Bland tomat, agurk, rødløg, chili, hvidløg, koriander, limesaft og lidt limeskal i en stor skål. Start med halvdelen af chilien."
+    },
+    {
+      "section": "Pico de gallo",
+      "text": "Smag til med resten af chilien, mere limesaft og limeskal samt salt og peber."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Svits løg og hvidløg i lidt af olien på en pande, til løgene er møre. Tilsæt oregano, paprika og spidskommen, og varm det godt igennem."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Træk panden af varmen. Rør tomatpuré, jalapeños og flødeost i."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Kør kikærterne kort i en minihakker, så de bliver groft hakket. Vend dem i fyldet, og smag til med salt og peber."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Opvarm tortillaerne på en tør pande, til de er bløde og smidige. Pensl dem med olie på begge sider."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Fordel kikærtefyld og cheddar i en stribe midt på hver tortilla. Slå siderne ind over fyldet, og rul tortillaen stramt."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Læg rullerne med samlingen nedad på en bageplade med bagepapir."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Bag dem ved 225 °C varmluft i 5-7 minutter i en forvarmet ovn. Vend dem, og bag 5 minutter mere, til osten er smeltet, og de er sprøde."
+    },
+    {
+      "section": "Grøn chilidip",
+      "text": "Blend jalapeños, koriander, feta, limesaft, limeskal og creme fraiche glat i en foodprocessor. Smag til med salt, peber og eventuelt mere limesaft."
+    },
+    {
+      "section": null,
+      "text": "Server taquitos med pico de gallo og chilidip."
+    }
+  ],
+  "changes": [
+    "Tortilla pandekager er skrevet som tortilla.",
+    "Koncentreret tomatpuré er skrevet som tomatpuré."
+  ]
+}

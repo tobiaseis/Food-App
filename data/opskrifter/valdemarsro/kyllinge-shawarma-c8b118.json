@@ -1,0 +1,240 @@
+{
+  "url": "https://www.valdemarsro.dk/kyllinge-shawarma/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:58:42.886Z",
+  "total_minutes": 240,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Kyllingeshawarma i tortilla",
+  "intro": "Kyllingestrimler marineres natten over i kærnemælk og krydderier og bages mørt i ovnen. Server dem i tortillas med frisk salat, grøntsager og en sriracha-dip.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kylling og marinade",
+      "amount": 600,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kardemomme",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sød paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt spidskommen",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til fadet",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 125,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "til at presse over",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling og marinade",
+      "text": "Bland kærnemælk, hvidløg, alle krydderierne, limesaft, salt og peber i en stor skål. Vend kyllingestrimlerne i marinaden."
+    },
+    {
+      "section": "Kylling og marinade",
+      "text": "Sæt skålen med låg eller film i køleskabet, og lad kyllingen trække natten over."
+    },
+    {
+      "section": "Kylling og marinade",
+      "text": "Forvarm ovnen til 175 °C varmluft. Smør et ovnfast fad med olivenolie."
+    },
+    {
+      "section": "Kylling og marinade",
+      "text": "Hæld kylling og marinade i fadet, og bag det i 25 minutter."
+    },
+    {
+      "section": "Kylling og marinade",
+      "text": "Tag fadet ud, og hæld væden fra. Pil kødet i fine stykker med to gafler."
+    },
+    {
+      "section": "Dip",
+      "text": "Rør creme fraiche sammen med sriracha og halvdelen af den friske koriander. Pres lidt lime over."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Hak resten af korianderen, og læg den med de øvrige grøntsager i små skåle."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Stil kylling, tortillas, grøntsager og dip på bordet, så hver kan fylde sin egen shawarma."
+    }
+  ],
+  "changes": [
+    "Sød paprika, røget paprika og cayennepeber er skrevet som krydderier uden ændring af mængde.",
+    "Tortillapandekager er skiftet til almindelige tortillas.",
+    "Sriracha chilisauce er skrevet som sriracha."
+  ]
+}

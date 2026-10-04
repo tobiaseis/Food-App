@@ -1,0 +1,188 @@
+{
+  "url": "https://www.arla.dk/opskrifter/dadyrfilet-og-valnoddesauce/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:21:23.089Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Dådyrfilet med valnøddesauce",
+  "intro": "Mør dådyrfilet stegt på panden og serveret med en cremet sauce af valnødder, østershatte og blåskimmelost. Server med kartofler ved siden af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Dådyrfilet",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dådyrfilet",
+      "amount": 500,
+      "unit": "g",
+      "name": "dådyrfilet",
+      "note": "eller anden dyrefilet",
+      "optional": false
+    },
+    {
+      "section": "Dådyrfilet",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Dådyrfilet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "valnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 75,
+      "unit": "g",
+      "name": "østershatte",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hønsebouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "blåskimmelost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "saucejævner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Valnøddesauce",
+      "amount": null,
+      "unit": null,
+      "name": "kulør",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "bagte eller kogte",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dådyrfilet",
+      "text": "Varm smørret op på en pande, til det får en gylden farve. Brun fileten på panden ved middelvarme i cirka 25 minutter."
+    },
+    {
+      "section": "Dådyrfilet",
+      "text": "Stik et stegetermometer ind i midten af kødet. Det er færdigt ved en kernetemperatur på cirka 55 °C."
+    },
+    {
+      "section": "Dådyrfilet",
+      "text": "Krydr kødet med salt og peber, og stil det lunt, mens saucen laves."
+    },
+    {
+      "section": "Valnøddesauce",
+      "text": "Kom vand og valnødder i en gryde, og bring det i kog. Lad det koge hårdt i cirka 2 minutter, og si så nødderne fra vandet."
+    },
+    {
+      "section": "Valnøddesauce",
+      "text": "Lad smørret få en gylden farve på en pande. Svits skalotteløg og østershatte i cirka 3 minutter, og rør indimellem."
+    },
+    {
+      "section": "Valnøddesauce",
+      "text": "Tilsæt nødderne, bouillonen, salt, peber, fløde og ost til svampene. Træk panden væk fra varmen, og pisk saucejævneren i."
+    },
+    {
+      "section": "Valnøddesauce",
+      "text": "Bring saucen i kog igen, og lad den simre ved svag varme i cirka 1 minut under jævnlig omrøring. Rør evt. kulør i, og smag saucen til."
+    },
+    {
+      "section": null,
+      "text": "Skær fileten i skiver, og server den med saucen og kartoflerne."
+    }
+  ],
+  "changes": []
+}

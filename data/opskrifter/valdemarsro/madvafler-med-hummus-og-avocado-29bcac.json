@@ -1,0 +1,260 @@
+{
+  "url": "https://www.valdemarsro.dk/madvafler-med-hummus-og-avocado/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:52:03.126Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Spinatvafler med hummus, avocado og sprød halloumi",
+  "intro": "Grønne vafler af spinat toppes med cremet hummus, avocado, stegt halloumi og knasende rugbrødskrummer. Et mættende måltid med masser af forskellige teksturer.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Hummus",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hummus",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Hummus",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": "Hummus",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Hummus",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt spidskommen",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hummus",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hummus",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hummus",
+      "amount": 1,
+      "unit": "stk",
+      "name": "isterning",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Hummus",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 125,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 75,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 125,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frisk eller frossen",
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til vafler og hummus",
+      "optional": false
+    },
+    {
+      "section": "Vafler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet, til vafler og hummus",
+      "optional": false
+    },
+    {
+      "section": "Halloumi og rugbrødskrummer",
+      "amount": 250,
+      "unit": "g",
+      "name": "halloumi",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Halloumi og rugbrødskrummer",
+      "amount": 150,
+      "unit": "g",
+      "name": "rugbrød",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Halloumi og rugbrødskrummer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi og rugbrødskrummer",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi og rugbrødskrummer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Hummus",
+      "text": "Blend tahin og citronsaft i en blender eller foodprocessor i cirka 1 minut."
+    },
+    {
+      "section": "Hummus",
+      "text": "Tilsæt resten af hummusens ingredienser, og kør i endnu et minut. En isterning gør hummussen ekstra cremet. Er den for tyk, så tilsæt lidt koldt vand."
+    },
+    {
+      "section": "Hummus",
+      "text": "Smag til med citron, olie, salt og peber."
+    },
+    {
+      "section": "Vafler",
+      "text": "Pisk de to slags mel og bagepulver sammen i en skål."
+    },
+    {
+      "section": "Vafler",
+      "text": "Skyl spinaten godt. Blend den med æg, mælk og det afmålte mel, til dejen er helt glat. Lad dejen hvile i 15 minutter, så den tykner lidt. Smag til med salt og peber."
+    },
+    {
+      "section": "Vafler",
+      "text": "Pensl vaffeljernet med lidt olie eller smør, og bag vaflerne, til de er gyldne og færdigbagte."
+    },
+    {
+      "section": "Halloumi og rugbrødskrummer",
+      "text": "Steg halloumien på en pande med lidt olie eller smør. Vend skiverne, så begge sider bliver gyldne og sprøde. Tag dem af panden."
+    },
+    {
+      "section": "Halloumi og rugbrødskrummer",
+      "text": "Pulsér rugbrødet i en minihakker, til det er smuldret fint."
+    },
+    {
+      "section": "Halloumi og rugbrødskrummer",
+      "text": "Rist krummerne i smør på samme pande, og rør ofte. Krydr med fennikelfrø og flagesalt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret vaflerne med hummus, avocado og halloumi. Drys med rugbrødskrummer, og top med rucola og timian."
+    }
+  ],
+  "changes": []
+}

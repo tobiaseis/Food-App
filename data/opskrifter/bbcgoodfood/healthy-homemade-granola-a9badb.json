@@ -1,0 +1,114 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-homemade-granola",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:10:22.604Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 8,
+  "source_lines": 8,
+  "title": "Hjemmelavet müsli med svesker og tahin",
+  "intro": "Sprød, sund müsli, hvor havregrynene bages med en sveskepasta og tahin, så de bliver klistrede og klumpede. Serveres med yoghurt og holder sig i to uger.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "svesker",
+      "note": "udstenede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "appelsin",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 350,
+      "unit": "g",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "mandelflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "græskarkerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 800,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel eller soja, gerne beriget",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Læg bagepapir på en stor bageplade."
+    },
+    {
+      "section": null,
+      "text": "Kom svesker, appelsinskal og appelsinsaft i en lille skål. Tilsæt tahin og mos det hele til en tyk pasta."
+    },
+    {
+      "section": null,
+      "text": "Hæld havregrynene i en stor skål og tilsæt sveskepastaen. Ælt med hænderne som til en crumble, til alle gryn er dækket og klistrede."
+    },
+    {
+      "section": null,
+      "text": "Fordel blandingen på bagepladen og bag den i 20 minutter. Vend grynene hver 5. minut, så de bages jævnt, og dampen slipper væk."
+    },
+    {
+      "section": null,
+      "text": "Tag pladen ud og rør mandelflager, solsikkekerner og græskarkerner ned i müslien. Vend den rundt, så den køler hurtigt af."
+    },
+    {
+      "section": null,
+      "text": "Lad müslien køle helt af og opbevar den i en lufttæt beholder, hvor den holder sig i to uger."
+    },
+    {
+      "section": "Servering",
+      "text": "Server 50 g müsli pr. person sammen med 100 g yoghurt."
+    }
+  ],
+  "changes": [
+    "Svesker på dåse i juice er erstattet med tørrede, udstenede svesker."
+  ]
+}

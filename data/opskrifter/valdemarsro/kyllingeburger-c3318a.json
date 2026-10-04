@@ -1,0 +1,223 @@
+{
+  "url": "https://www.valdemarsro.dk/kyllingeburger/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:11:53.594Z",
+  "total_minutes": 45,
+  "active_minutes": 40,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Kyllingeburger med mango og æble",
+  "intro": "Saftige burgere af hakket kylling med æble, mango og friske krydderurter. Serveres i bolle med sprød salat, agurk og en cremet sennepsdressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bøffer",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket kyllingekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saft og skal, gerne økologisk",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "mango",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mango chutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Stegning",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Stegning",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Stegning",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegning",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "burgerboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 125,
+      "unit": "g",
+      "name": "salat",
+      "note": "grøn",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "mango",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "i tynde skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bøffer",
+      "text": "Kom kyllingekødet i en stor skål sammen med alle ingredienserne til bøfferne, og rør det godt sammen."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Sæt farsen i køleskabet i cirka en halv time."
+    },
+    {
+      "section": "Stegning",
+      "text": "Form farsen til fire bøffer."
+    },
+    {
+      "section": "Stegning",
+      "text": "Varm smør og olie op på en pande ved middel varme, og steg bøfferne, til de er gennemstegte."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør mayonnaise og sennep sammen til en dressing."
+    },
+    {
+      "section": "Til servering",
+      "text": "Smør dressingen på bollerne, og læg salat, bøf, agurk, mango og æble i."
+    }
+  ],
+  "changes": [
+    "Mango chutney er beholdt som færdigvare.",
+    "Burgerboller er beholdt under samme navn."
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "url": "https://www.arla.dk/opskrifter/hummus-med-yoghurt/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:23:22.885Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 12,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænet, ca. 240 g efter afdrypning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "grøntsager",
+      "note": "kogte eller bagte, eller ærter",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "græsk yoghurt; skyr eller creme fraiche kan bruges",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "lidt",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "lidt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sesamfrø",
+      "note": "lidt, som knas",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "pinjekerner",
+      "note": "ristede, lidt, som knas",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Put kikærter, grøntsager, yoghurt, citronsaft, olie, tahin, hvidløg, spidskommen og salt i en foodprocessor."
+    },
+    {
+      "section": null,
+      "text": "Blend, til hummussen er helt glat. Stop et par gange og skrab dejen ned fra siderne."
+    },
+    {
+      "section": null,
+      "text": "Rør lidt vand i, hvis hummussen skal være tyndere."
+    },
+    {
+      "section": null,
+      "text": "Smag til, og kom hummussen i en skål. Dryp med olie, og drys sesamfrø og pinjekerner over."
+    }
+  ],
+  "title": "Hummus med yoghurt og grønt",
+  "intro": "En cremet hummus, hvor yoghurt og kogte eller bagte grøntsager giver ekstra fylde og farve. Toppes med olie og sprødt knas.",
+  "servings": 1,
+  "changes": []
+}

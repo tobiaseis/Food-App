@@ -1,0 +1,280 @@
+{
+  "url": "https://www.valdemarsro.dk/kokosris-med-groent-og-spejlaeg/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:35:34.527Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Kokosris med syltede gulerødder og spejlæg",
+  "intro": "Cremet ingefærduftende kokosris toppes med sprøde spejlæg, sauteret spinat og syrlige syltede gulerødder. Det hele samles med en stærk sriracha-dressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Syltede gulerødder",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 1,
+      "unit": "dl",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 30,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 25,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 400,
+      "unit": "ml",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager og spejlæg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager og spejlæg",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager og spejlæg",
+      "amount": 300,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager og spejlæg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager og spejlæg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager og spejlæg",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 30,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 20,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, grofthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede gulerødder",
+      "text": "Hav gulerødderne i lange, tynde bånd med en skræller."
+    },
+    {
+      "section": "Syltede gulerødder",
+      "text": "Bring vand, riseddike, sukker og chiliflager i kog i en gryde, og rør, til sukkeret er opløst."
+    },
+    {
+      "section": "Syltede gulerødder",
+      "text": "Tag gryden af blusset, og læg gulerodsbåndene i den varme lage. Fyld dem over på glas med låg, og stil dem i køleskabet, mens du laver resten."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Varm sesamolie, sesamfrø og ingefær i en gryde ved lav varme, til det begynder at dufte. Ingefæren må ikke brune."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Hæld vand, kokosmælk, ris og salt i, og rør rundt. Sæt låg på, og lad det langsomt nå kogepunktet."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Lad risen simre under låg ved svag varme i 10 minutter. Træk gryden til side, og lad risen trække med låg på i yderligere 10 minutter."
+    },
+    {
+      "section": "Grøntsager og spejlæg",
+      "text": "Svits løg og hvidløg i lidt af sesamolien på en pande ved middelvarme, til løgene er blødt. Vend spinaten i, og rør, til den falder sammen."
+    },
+    {
+      "section": "Grøntsager og spejlæg",
+      "text": "Læg spinaten over på en tallerken, og drys sojasauce over."
+    },
+    {
+      "section": "Grøntsager og spejlæg",
+      "text": "Gør panden rigtig varm med resten af sesamolien, og slå æggene ud på den. Steg dem, til hviden er stivnet og kanten er sprød, mens blommen stadig er flydende."
+    },
+    {
+      "section": "Dressing",
+      "text": "Pisk mayonnaise, creme fraiche og sriracha sammen i en skål, og krydr med salt og peber."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Anret risen på tallerkener, og læg spinat, syltede gulerødder og spejlæg ovenpå."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Strø sesamfrø, chiliflager og persille over. Server dressingen ved siden af, så hver kan hælde over efter behag."
+    }
+  ],
+  "changes": [
+    "Basmati ris hedder basmatiris.",
+    "Soja er skrevet som sojasauce.",
+    "Sriracha chilisauce er skrevet som sriracha."
+  ]
+}

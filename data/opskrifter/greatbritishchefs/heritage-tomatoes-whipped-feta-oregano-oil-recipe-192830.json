@@ -1,0 +1,277 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/heritage-tomatoes-whipped-feta-oregano-oil-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:57:17.649Z",
+  "total_minutes": 50,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 21,
+  "title": "Tomater med flødeagtig feta og oreganoolie",
+  "intro": "Mange slags tomater ligger på en luftig fetacreme og får selskab af grøn oreganoolie og en glat tomatdressing. En flot sommerret, der kan laves i god tid.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til oreganoolien",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "Persille & krydderurter",
+      "note": "oregano, blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til oreganoolien",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "Olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til oreganoolien",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "Salt",
+      "note": "fint salt",
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": 200,
+      "unit": "g",
+      "name": "Tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Løg",
+      "note": "lille skalotteløg, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fetacremen",
+      "amount": 400,
+      "unit": "g",
+      "name": "Feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fetacremen",
+      "amount": 200,
+      "unit": "g",
+      "name": "Yoghurt",
+      "note": "græsk yoghurt",
+      "optional": false
+    },
+    {
+      "section": "Til fetacremen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "Hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til fetacremen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Citron",
+      "note": "skal og 1 spsk saft",
+      "optional": false
+    },
+    {
+      "section": "Til fetacremen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fetacremen",
+      "amount": 0.8,
+      "unit": "dl",
+      "name": "Olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til tomaterne",
+      "amount": 1.2,
+      "unit": "kg",
+      "name": "Tomater",
+      "note": "gerne i forskellige farver, størrelser og former",
+      "optional": false
+    },
+    {
+      "section": "Til tomaterne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Til tomaterne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomaterne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til tomaterne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "Persille & krydderurter",
+      "note": "oregano, blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "Persille & krydderurter",
+      "note": "basilikum, blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 10,
+      "unit": "g",
+      "name": "Pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Sesamfrø",
+      "note": "sorte",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Oreganoolie",
+      "text": "Kog en lille gryde vand op. Dyk oreganoblade i det kogende vand i 10 sekunder, og læg dem straks i isvand. Pres dem helt tørre."
+    },
+    {
+      "section": "Oreganoolie",
+      "text": "Blend bladene med olivenolie og salt, til olien er helt glat og skinnende grøn. Si den gennem en fin si eller et klæde, og pres forsigtigt, så olien forbliver klar. Stil den på køl."
+    },
+    {
+      "section": "Tomatdressing",
+      "text": "Blend tomater, skalotteløg, eddike og honning glat. Lad olien løbe i en tynd stråle under blendingen, så dressingen bliver cremet."
+    },
+    {
+      "section": "Tomatdressing",
+      "text": "Smag til med salt og peber, og si dressingen fint, så den bliver silkeblød. Stil den på køl."
+    },
+    {
+      "section": "Fetacreme",
+      "text": "Kør feta, yoghurt, hvidløg, citronskal, citronsaft og peber glat i en blender eller foodprocessor. Hæld olien i en tynd stråle under kørslen, så massen bliver let og luftig."
+    },
+    {
+      "section": "Fetacreme",
+      "text": "Smag til – der skal næppe meget salt i, da fetaen er salt. Kom cremen i en skål, dæk til, og stil den på køl i 20 minutter, så den sætter sig lidt."
+    },
+    {
+      "section": "Tomater",
+      "text": "Skær tomaterne i både, skiver og halve efter størrelse. Variationen gør anretningen mere spændende."
+    },
+    {
+      "section": "Tomater",
+      "text": "Vend tomaterne forsigtigt i en stor skål med flagesalt, sukker, eddike og olivenolie. Lad dem trække i 15 minutter."
+    },
+    {
+      "section": "Servering",
+      "text": "Tag oreganoolie, tomatdressing og fetacreme ud af køleskabet en stund før servering, så de bliver lidt lunkne."
+    },
+    {
+      "section": "Servering",
+      "text": "Smør fetacremen ud på et stort fad, og læg de marinerede tomater generøst ovenpå. Fordel tomatdressingen over."
+    },
+    {
+      "section": "Servering",
+      "text": "Top med oregano, basilikum og pinjekerner. Dryp med oreganoolie, og drys med sorte sesamfrø og peber."
+    }
+  ],
+  "changes": [
+    "Rød vinaigre-eddike: rødvinseddike er skiftet til eddike.",
+    "Flagesalt og fint havsalt er skiftet til almindeligt salt.",
+    "Caster sugar er skiftet til almindeligt sukker.",
+    "Heritage-tomater er skiftet til almindelige tomater i forskellige slags."
+  ]
+}

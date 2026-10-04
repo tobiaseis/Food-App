@@ -1,0 +1,199 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/beef-bourguignon",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:48:12.406Z",
+  "total_minutes": 255,
+  "active_minutes": 45,
+  "yield_count": 6,
+  "source_lines": 14,
+  "title": "Boeuf bourguignon",
+  "intro": "Klassisk fransk gryderet med mørt oksekød, der marinerer natten over i rødvin og simrer langsomt i ovnen. Serveres med stegt bacon, løg og champignon.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "oksekød",
+      "note": "i store stykker, fx oksebov eller oksespidsbryst",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "timian",
+      "note": "lille bundt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "l",
+      "name": "rødvin",
+      "note": "almindelig, billig",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i store stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "en lille klump",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "bacon i tern",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "skalotteløg",
+      "note": "små, skrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "champignon",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Læg kødet i en stor skål sammen med laurbærblade, timian, al rødvinen og peber. Dæk skålen til, og lad det marinere i køleskabet natten over."
+    },
+    {
+      "section": null,
+      "text": "Varm ovnen op til 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Hæld kødet i et dørslag over en anden stor skål, så vinen opsamles. Gem vinen, krydderurterne og laurbærbladene."
+    },
+    {
+      "section": null,
+      "text": "Varm halvdelen af olien i en stor pande. Brun kødet i omgange, og læg det over på et fad, efterhånden som det er brunet."
+    },
+    {
+      "section": null,
+      "text": "Hæld en smule af vinen på den tomme pande, og lad den koge, mens du skraber stegeskorpen løs fra bunden."
+    },
+    {
+      "section": null,
+      "text": "Varm resten af olien i en stor gryde. Svits gulerødder og løg, til de tager farve."
+    },
+    {
+      "section": null,
+      "text": "Rør hvedemelet ind, og lad det stege med i 1 minut. Rør derefter tomatpuréen i."
+    },
+    {
+      "section": null,
+      "text": "Kom kødet med dets saft i gryden sammen med vinen fra panden, resten af vinen og urterne. Smag til med salt og peber, og bring det i kog. Rør godt rundt, og sæt låg på."
+    },
+    {
+      "section": null,
+      "text": "Sæt gryden i ovnen i 2 timer, til kødet er helt mørt. Lad retten køle af. Den kan fryses i op til 3 måneder."
+    },
+    {
+      "section": null,
+      "text": "Er retten frosset, så tø den helt op i køleskabet natten over. Varm den derefter igennem ved svag varme."
+    },
+    {
+      "section": null,
+      "text": "Smelt smørret på en pande, og steg bacon og skalotteløg i ca. 10 minutter, til baconen begynder at blive sprød, og løgene er bløde og har fået farve."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt champignon, og steg i 5 minutter mere. Rør det hele ned i gryden, og lad retten varme i yderligere 10 minutter. Drys med hakket persille ved servering."
+    }
+  ],
+  "changes": [
+    "Braising steak er erstattet med oksekød, fx oksebov eller oksespidsbryst.",
+    "Perleløg er erstattet med små skalotteløg."
+  ]
+}

@@ -1,0 +1,691 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/jamaican-spiced-turkish-mixed-grill-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:54:57.141Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 3,
+  "source_lines": 69,
+  "title": "Jamaicansk-krydret tyrkisk mixed grill",
+  "intro": "Grillet lam og kylling i jerk-marinade, med lammespyd i tyrkisk stil, hjemmelavet roti, syltet rødkål og coleslaw. Det er en stor fællesbakke, hvor det meste kan forberedes dagen før.",
+  "servings": 3,
+  "ingredients": [
+    {
+      "section": "Jerk-marinade",
+      "amount": 60,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "hvid",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 120,
+      "unit": "ml",
+      "name": "appelsinjuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 80,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "mørk",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "stødt sort",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 3,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "muskatnød",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 2,
+      "unit": "stk",
+      "name": "chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 5,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "plus 1-2 ekstra efter behov",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "hakket, ca. 5 kviste",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "plus evt. mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jerk-marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fint revet, eller ingefærpasta",
+      "optional": false
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "amount": 240,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvid",
+      "optional": false
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "amount": 5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "hakket, ca. 7 kviste",
+      "optional": false
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "plus 1-2 ekstra efter behov",
+      "optional": false
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "amount": 8,
+      "unit": "stk",
+      "name": "purløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "hakket, glatbladet",
+      "optional": false
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-krydderi",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tørret citronskal",
+      "note": "eller citronskalpulver",
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-krydderi",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-krydderi",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-krydderi",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-krydderi",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "peber",
+      "note": "stødt sort",
+      "optional": false
+    },
+    {
+      "section": "Honning-jerk lammekoteletter",
+      "amount": 6,
+      "unit": "stk",
+      "name": "lammekoteletter",
+      "note": "french-trimmede",
+      "optional": false
+    },
+    {
+      "section": "Honning-jerk lammekoteletter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honning-jerk lammekoteletter",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mynte",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Jerk-kyllingespyd",
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingelår",
+      "note": "udbenede, uden skind",
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-kyllingevinger",
+      "amount": 10,
+      "unit": "stk",
+      "name": "kyllingevinger",
+      "note": "vingefladerne, eller 5 hele vinger",
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-kyllingevinger",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-kyllingevinger",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-kyllingevinger",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "appelsin",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Citronpeber-kyllingevinger",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lamme-adana",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": "mindst 20 % fedt",
+      "optional": false
+    },
+    {
+      "section": "Lamme-adana",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "hakket, glatbladet, plus lidt til pynt",
+      "optional": false
+    },
+    {
+      "section": "Lamme-adana",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Roti",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus lidt til at dryssse på",
+      "optional": false
+    },
+    {
+      "section": "Roti",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Roti",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Roti",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "olie",
+      "note": "neutral, plus lidt til at olie med",
+      "optional": false
+    },
+    {
+      "section": "Roti",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": "lunkent, 150-200 ml efter behov",
+      "optional": false
+    },
+    {
+      "section": "Roti",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, halvdelen blødt og halvdelen smeltet til pensling",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "rødkål",
+      "note": "fintrevet eller snittet",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 170,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 100,
+      "unit": "ml",
+      "name": "citron",
+      "note": "citronsaft",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "hvidkål",
+      "note": "fintrevet eller snittet",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "radiser",
+      "note": "fintrevne",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "løg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 120,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvid",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "limesaft",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "muskatnød",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Coleslaw",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintskåret",
+      "optional": false
+    },
+    {
+      "section": "Peberfrugter og pynt",
+      "amount": 3,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, tyrkisk type (2 hvis store)",
+      "optional": false
+    },
+    {
+      "section": "Peberfrugter og pynt",
+      "amount": 3,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "spidse, søde",
+      "optional": false
+    },
+    {
+      "section": "Peberfrugter og pynt",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "hakket, glatbladet, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Jerk-marinade",
+      "text": "Kom alle ingredienserne i en blender, og kør dem til en glat, lidt løs pasta. Er den for tør, så tilsæt lidt olie. Er den for tyk eller for tør i konsistensen, så tilsæt et ekstra forårsløg. Marinaden kan købes færdig, og den holder en måned på køl i en lufttæt beholder."
+    },
+    {
+      "section": "Grøn krydderiblanding",
+      "text": "Blend ingredienserne på samme måde, og justér med olie eller forårsløg efter behov. Opbevar blandingen lufttæt på køl i op til en måned."
+    },
+    {
+      "section": "Citronpeber-krydderi",
+      "text": "Rør alle ingredienserne sammen i en lille skål. Det, der er til overs, kan stå i et krydderiglas i skabet i flere måneder."
+    },
+    {
+      "section": "Citronpeber-krydderi",
+      "text": "Vil du tørre citronskallen selv, så fordel skallen fra 2 citroner tyndt på en bageplade med bagepapir. Tør den ved 60-70 °C i 30-60 minutter, til den er helt sprød. En airfryer med tørrefunktion kan også bruges."
+    },
+    {
+      "section": "Marinering",
+      "text": "Lammekoteletter: Vend koteletterne med honning, mynte, 2 spsk jerk-marinade og 1 spsk grøn krydderiblanding. Dæk til, og lad dem trække på køl i mindst 1 time, gerne op til 24 timer."
+    },
+    {
+      "section": "Marinering",
+      "text": "Kyllingespyd: Vend kyllingelårene med 2 spsk jerk-marinade og 1 spsk grøn krydderiblanding. Dæk til, og stil dem på køl i mindst 1 time, gerne op til 24 timer."
+    },
+    {
+      "section": "Marinering",
+      "text": "Kyllingevinger: Læg vingerne i en skål, og hæld citron-, lime- og appelsinsaft over, så de er helt dækket. Stil dem tildækket på køl i 30 minutter. Hæld derefter tre fjerdedele af saften fra, og vend vingerne med 2 spsk citronpeber-krydderi og olivenolien. Stil dem på køl igen, op til 24 timer."
+    },
+    {
+      "section": "Marinering",
+      "text": "Lamme-adana: Ælt hakket lammekød, persille, tomatpuré og 2 spsk grøn krydderiblanding sammen i en skål, til farsen bliver klistret og samler sig. Dæk til, og lad den hvile på køl i mindst 30 minutter, gerne op til 24 timer."
+    },
+    {
+      "section": "Spyd",
+      "text": "Tryk adana-farsen jævnt rundt om et fladt spyd. Hold spyddet i den ene hånd, og form kødet med den anden, våde hånd, så det sidder fast og ikke falder af."
+    },
+    {
+      "section": "Spyd",
+      "text": "Træk lammekoteletterne på to tynde spyd, så de sidder fast i to punkter. Læg træspyd i blød først. Træk kyllingelår og kyllingevinger på to flade metalspyd, og stil dem på køl til grillning."
+    },
+    {
+      "section": "Roti",
+      "text": "Bland mel, bagepulver, salt og olie i en stor skål. Tilsæt vandet lidt ad gangen, til dejen er klistret, men stadig kan håndteres. Det er ikke sikkert, at du skal bruge alt vandet."
+    },
+    {
+      "section": "Roti",
+      "text": "Ælt dejen i nogle minutter på en meldrysset flade, til den er elastisk. Smør den med lidt olie, dæk til, og lad den hvile i 45-60 minutter."
+    },
+    {
+      "section": "Syltet rødkål og coleslaw",
+      "text": "Rødkål: Æltes kålen med eddike, citronsaft og salt i en skål, til den får en stærk farve. Kom den i en lufttæt beholder, og lad den syltes på køl i mindst 1 time."
+    },
+    {
+      "section": "Syltet rødkål og coleslaw",
+      "text": "Coleslaw: Bland alle ingredienserne, men gem halvdelen af forårsløget. Vend det hele sammen, kom det i en serveringsskål, og drys med det sidste forårsløg. Dæk til, og sæt det på køl."
+    },
+    {
+      "section": "Roti",
+      "text": "Ælt den hvilede dej et øjeblik på en ren flade, så den bliver lun, og del den i 3 lige store stykker."
+    },
+    {
+      "section": "Roti",
+      "text": "Rul hvert stykke ud til en rund plade på 2-3 mm. Fordel 1 spsk blødt smør over pladen med fingrene, og drys cirka 1 tsk mel over smørret."
+    },
+    {
+      "section": "Roti",
+      "text": "Skær et snit fra kanten ind til midten. Rul dejen sammen til en kegle fra snittet, så smør og mel ligger indeni. Tryk spidsen ind i keglen, så den bliver til en kugle."
+    },
+    {
+      "section": "Roti",
+      "text": "Læg kuglen på en olieret bakke, og gentag med de to andre. Lad dem hvile tildækket på køl i 30 minutter. Tryk dem derefter let flade, og rul dem ud til runde plader på 2-3 mm. Læg dem på en olieret bakke."
+    },
+    {
+      "section": "Grillning",
+      "text": "Gør grillen klar med direkte varme i den ene side og indirekte i den anden. Varmen skal være ca. 280-300 °C, eller en middelhøj flamme. Tag alt ud af køleskabet."
+    },
+    {
+      "section": "Grillning",
+      "text": "Roti: Steg dem direkte på grillen eller på en tawa eller flad pande, der er varmet op i grillens midterzone. Pensl med smeltet smør, og læg dem med den smurte side nedad. Grill i 2 minutter, pensl igen, vend, og grill 2 minutter mere."
+    },
+    {
+      "section": "Grillning",
+      "text": "For et flagende resultat kan du klappe hver roti let sammen mellem hænderne, når den kommer af grillen. Pak de færdige i et rent klæde, mens resten steges."
+    },
+    {
+      "section": "Grillning",
+      "text": "Kyllingen: Læg begge kyllingespyd over direkte varme, og vend dem hvert 1-2 minut, til de har fået god stegeskorpe. Flyt dem så over på indirekte varme med låget på, til kyllingen er gennemstegt."
+    },
+    {
+      "section": "Grillning",
+      "text": "Læg alle peberfrugterne på den indirekte side, så de kan riste."
+    },
+    {
+      "section": "Grillning",
+      "text": "Adana-spyddet: Læg det over direkte varme, og vend det hvert 30. sekund, til kødet har lukket sig og ikke sætter sig fast. Vend det derefter hvert 1-2 minut, til det har fået god farve. Flyt det over til kyllingen på den indirekte side."
+    },
+    {
+      "section": "Grillning",
+      "text": "Lammekoteletterne: Grill dem over direkte varme i 3-4 minutter på hver side, til fedtet er stegt, som du kan lide det."
+    },
+    {
+      "section": "Grillning",
+      "text": "Tjek med stegetermometer, at kødet er færdigt: kylling 75 °C, lammefars 74 °C og lammekoteletter 56 °C for medium rare, 60 °C for medium eller 70 °C for gennemstegt."
+    },
+    {
+      "section": "Servering",
+      "text": "Er peberfrugterne ikke ristet nok, så læg dem 1-2 minutter over direkte varme. Træk kødet af spydene, og anret det på et stort fad sammen med peberfrugterne."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg roti på fadet (de kan skæres i stykker), og drys med persille. Server med syltet rødkål og coleslaw, så alle kan forsyne sig."
+    }
+  ],
+  "changes": [
+    "Scotch bonnet-chili er erstattet med almindelig chili.",
+    "Biber salçası (tyrkisk peberpasta) er erstattet med tomatpuré.",
+    "Mooli er erstattet med radiser.",
+    "Tyrkiske sivri biber er erstattet med grøn chili.",
+    "Tyrkiske kapya biber er erstattet med spidse, søde peberfrugter.",
+    "Mørk sojasauce er erstattet med almindelig sojasauce."
+  ]
+}

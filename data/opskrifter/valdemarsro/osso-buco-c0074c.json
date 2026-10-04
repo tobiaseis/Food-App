@@ -1,0 +1,272 @@
+{
+  "url": "https://www.valdemarsro.dk/osso-buco/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:57:07.227Z",
+  "total_minutes": 180,
+  "active_minutes": 45,
+  "yield_count": 6,
+  "source_lines": 25,
+  "title": "Osso buco med safranrisotto",
+  "intro": "Møre langtidsbrasede okseskanke i tomat- og hvidvinssovs, serveret med cremet safranrisotto og frisk citrongremolata. En klassisk italiensk søndagsret.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Osso buco",
+      "amount": 8,
+      "unit": "stk",
+      "name": "okseskank",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 60,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 3,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 3,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 7,
+      "unit": "dl",
+      "name": "oksebouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osso buco",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Safranrisotto",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Safranrisotto",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Safranrisotto",
+      "amount": 3,
+      "unit": "dl",
+      "name": "risotto ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Safranrisotto",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Safranrisotto",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Safranrisotto",
+      "amount": 5,
+      "unit": "dl",
+      "name": "grøntsagsbouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Safranrisotto",
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Safranrisotto",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "fintrevet skal, økologisk",
+      "optional": false
+    },
+    {
+      "section": "Safranrisotto",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 3,
+      "unit": "dl",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gremolata",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "fintrevet skal, økologisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Osso buco",
+      "text": "Tør skankene godt med køkkenrulle. Bland hvedemel med salt og peber, og vend kødet i blandingen."
+    },
+    {
+      "section": "Osso buco",
+      "text": "Varm olien i en stor gryde. Brun skankene på begge sider få ad gangen, og stil dem på et fad."
+    },
+    {
+      "section": "Osso buco",
+      "text": "Tilsæt lidt ekstra olie i gryden, og svits løg og hvidløg, til de er bløde. Rør gulerødder og selleri i, og svits dem nogle minutter."
+    },
+    {
+      "section": "Osso buco",
+      "text": "Hæld tomater, tomatpuré, hvidvin og laurbærblade i gryden. Læg skankene tilbage, og hæld bouillonen over. Sæt låg på."
+    },
+    {
+      "section": "Osso buco",
+      "text": "Lad retten simre i 3 timer. Begynd på risotto og gremolata, når der er cirka en halv time tilbage."
+    },
+    {
+      "section": "Safranrisotto",
+      "text": "Smelt smørret i en gryde, og svits løg og hvidløg, til løgene er bløde."
+    },
+    {
+      "section": "Safranrisotto",
+      "text": "Rør risene og safranen ned i løgene, og hæld hvidvinen over. Rør, til væsken er optrukket."
+    },
+    {
+      "section": "Safranrisotto",
+      "text": "Tilsæt grøntsagsbouillonen lidt ad gangen, cirka 1 dl ad gangen, og rør, til risene er møre."
+    },
+    {
+      "section": "Safranrisotto",
+      "text": "Rør parmesan i til sidst, og smag til med citronskal, salt og peber."
+    },
+    {
+      "section": "Gremolata",
+      "text": "Bland persille, hvidløg og citronskal i en skål."
+    },
+    {
+      "section": "Gremolata",
+      "text": "Anret osso buco med risotto, og strø gremolata over."
+    }
+  ],
+  "changes": []
+}

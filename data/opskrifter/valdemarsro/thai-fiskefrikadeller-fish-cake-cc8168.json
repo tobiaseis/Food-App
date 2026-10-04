@@ -1,0 +1,244 @@
+{
+  "url": "https://www.valdemarsro.dk/thai-fiskefrikadeller-fish-cake/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:08:47.621Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Thailandske fiskefrikadeller med sød chilidip",
+  "intro": "Saftige frikadeller af torsk og rejer med citrongræs, kaffirlimeblade og karrypasta. Serveres med en frisk dip af agurk, chili og ingefær.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 400,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 150,
+      "unit": "g",
+      "name": "rejer",
+      "note": "frosne og drænede",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 0.5,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kaffirlimeblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rød karrypasta",
+      "note": "eller thai chilipasta",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 150,
+      "unit": "g",
+      "name": "haricots verts",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i fine tern",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dip",
+      "text": "Bland alle ingredienserne til dippen i en skål. Rør rundt et par gange, så sukkeret opløses, og lad dippen stå fremme og trække, mens du laver frikadellerne."
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "text": "Læg alt til frikadellerne i en blender eller foodprocessor, bortset fra bønnerne og forårsløgene."
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "text": "Kør farsen, til den hænger sammen, men stadig er lidt grov og ikke helt glat."
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "text": "Vend de hakkede bønner og forårsløg i farsen med en ske."
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "text": "Form farsen til frikadeller. Varm olie på en pande, og steg frikadellerne i 5-7 minutter på hver side."
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "text": "Server frikadellerne med dippen."
+    }
+  ],
+  "changes": []
+}

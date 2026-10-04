@@ -1,0 +1,151 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/one-pot-garlic-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:07:04.552Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Kylling i hvidløgsfløde",
+  "intro": "Mør kylling og bløde hvidløg i en cremet sauce med parmesan, alt sammen lavet på én pande. Server med ris og grønne bønner.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "uden skind, skåret på tværs i tykke strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 12,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små fed, skrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": "varm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "kogte, til servering",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "bønner",
+      "note": "grønne, dampede, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Læg kyllingestrimlerne i en lav skål, vend dem i melet, og krydr med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor stegepande ved middelhøj varme. Ryst overskydende mel af kyllingen, og brun den let på alle sider i 1-2 minutter. Brug evt. flere omgange."
+    },
+    {
+      "section": null,
+      "text": "Sænk varmen til middel, og kom smørret på panden. Læg hvidløgsfeddene i, og steg dem i 5 minutter, til de er lysegyldne. Rør løbende, så kyllingen ikke brænder på."
+    },
+    {
+      "section": null,
+      "text": "Hæld fonden på, og lad det simre i 10 minutter, til hvidløgene er møre."
+    },
+    {
+      "section": null,
+      "text": "Rør fløde og parmesan i, og lad saucen simre 5 minutter mere, til den er blevet lidt tykkere. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Drys med persille, og server straks med ris og grønne bønner."
+    }
+  ],
+  "changes": [
+    "Double cream er erstattet med piskefløde.",
+    "Parmigiano-Reggiano er erstattet med parmesan."
+  ]
+}

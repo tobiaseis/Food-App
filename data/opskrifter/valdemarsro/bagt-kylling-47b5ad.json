@@ -1,0 +1,112 @@
+{
+  "url": "https://www.valdemarsro.dk/bagt-kylling/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:48:35.973Z",
+  "total_minutes": 60,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Ovnbagt kylling med kartofler og urter",
+  "intro": "Saftig kylling med sprødt skind, bagt på et leje af kartofler og gulerødder med timian og rosmarin. Hele retten laves i ét fad.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "kylling",
+      "note": "kyllingestykker: overlår og evt. bryst med skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 800,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrubbede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællede og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rosmarin",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til fadet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Forvarm ovnen til 175 °C varmluft. Gnid et ovnfast fad godt ind med smør."
+    },
+    {
+      "section": null,
+      "text": "Halvér kartoflerne. Læg dem i fadet sammen med gulerødderne, og hæld bouillonen over. Tilsæt timian og rosmarin, og vend det hele godt rundt."
+    },
+    {
+      "section": null,
+      "text": "Drys kyllingestykkerne rigeligt med salt og peber, og læg dem oven på grøntsagerne."
+    },
+    {
+      "section": null,
+      "text": "Bag fadet i ca. 45 minutter, til kartoflerne er møre, og kyllingen er gennemstegt med sprødt skind."
+    },
+    {
+      "section": null,
+      "text": "Drys med friske krydderurter lige før servering. Server med blandet salat og godt brød."
+    }
+  ],
+  "changes": []
+}

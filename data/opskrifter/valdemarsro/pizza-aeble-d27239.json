@@ -1,0 +1,218 @@
+{
+  "url": "https://www.valdemarsro.dk/pizza-aeble/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:51:12.309Z",
+  "total_minutes": 120,
+  "active_minutes": 30,
+  "yield_count": 2,
+  "source_lines": 17,
+  "title": "Pizza med æble, gorgonzola og parmaskinke",
+  "intro": "Hjemmelavet pizza med sprød skinke, mild mozzarella, syrlige æbleskiver og kraftig blåskimmelost. Rucolaen på toppen giver en frisk bitterhed.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Pizzadej",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "ekstra til udrulning",
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til at smøre skålen",
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 0.5,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzasauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 150,
+      "unit": "g",
+      "name": "parmaskinke",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 100,
+      "unit": "g",
+      "name": "gorgonzola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 250,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 75,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pizzadej",
+      "text": "Rør gæren ud i det lunkne vand i en skål."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Tilsæt halvdelen af melet sammen med olien og saltet, og rør, til det er jævnt. Rør resten af melet i lidt ad gangen."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Vend dejen ud på et meldrysset bord, og ælt den med hænderne, til den er smidig."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Skyl skålen, og gnid den ind med olie. Læg dejen i, og vend den rundt, så den får olie hele vejen rundt. Olien gør dejen let at arbejde med og giver en sprødere bund."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Lad dejen hæve under låg eller klædet i 45-60 minutter. Den kan også koldhæve i køleskabet natten over."
+    },
+    {
+      "section": "Pizzasauce",
+      "text": "Blend alle ingredienserne til sauceholdig, jævn masse. Du skal bruge 1-2 spsk pr. pizza. Resten kan fryses i små portioner."
+    },
+    {
+      "section": "Topping",
+      "text": "Læg parmaskinken på en bageplade med bagepapir, og bag den ved 200 °C i 7-10 minutter, til den er sprød."
+    },
+    {
+      "section": "Topping",
+      "text": "Skru derefter ovnen til den højeste temperatur, og sæt en bageplade, et bagestål eller en pizzasten på øverste rille, så den varmer op."
+    },
+    {
+      "section": "Topping",
+      "text": "Dryp mozzarellaen af, dup den tør med køkkenrulle, og skær den i mindre stykker."
+    },
+    {
+      "section": "Topping",
+      "text": "Del dejen i to, og form to runde pizzabunde på et meldrysset bord. Smør saucen ud over dem."
+    },
+    {
+      "section": "Topping",
+      "text": "Læg et tyndt lag skinke, mozzarella, gorgonzola og æbleskiver på hver pizza."
+    },
+    {
+      "section": "Topping",
+      "text": "Skift ovnen til grill, og bag pizzaerne i 4-5 minutter. Hold øje med dem undervejs."
+    },
+    {
+      "section": "Topping",
+      "text": "Top med rucola, og server straks."
+    }
+  ],
+  "changes": [
+    "Koncentreret tomatpuré er ændret til almindelig tomatpuré."
+  ]
+}

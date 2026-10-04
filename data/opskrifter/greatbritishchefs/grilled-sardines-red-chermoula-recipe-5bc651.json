@@ -1,0 +1,252 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/grilled-sardines-red-chermoula-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:54:27.859Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 20,
+  "title": "Grillede sardiner med rød chermoula",
+  "intro": "Sardiner med hvidløg og røget paprika grilles hurtigt over glød og serveres med en krydret marokkansk urtepasta af harissa, safran og friske krydderurter. Citronen grilles med, så den får en sød, brændt smag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til sardinerne",
+      "amount": 12,
+      "unit": "stk",
+      "name": "sardiner",
+      "note": "renset og tørret",
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": 5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": null,
+      "unit": null,
+      "name": "kapers",
+      "note": "til servering",
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "blade, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "skåret i stykker, derefter i fine strimler på langs og lagt i isvand, så de krøller",
+      "optional": false
+    },
+    {
+      "section": "Til sardinerne",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe over",
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ras el hanout",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "safran",
+      "note": "tråde, udblødt i vandet",
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 20,
+      "unit": "ml",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Til chermoulaen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "plus ekstra efter behov",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til sardinerne",
+      "text": "Læg sardinerne på et fad og gnid dem ind med olivenolie, hvidløg, røget paprika, salt og peber."
+    },
+    {
+      "section": "Til sardinerne",
+      "text": "Anbring fiskene i ét lag i en grillrist til fisk, og stil dem til side."
+    },
+    {
+      "section": "Til sardinerne",
+      "text": "Gør en kulgrill klar til direkte varme."
+    },
+    {
+      "section": "Til chermoulaen",
+      "text": "Imens moses hvidløg og citronskal med lidt af saltet i en mortér."
+    },
+    {
+      "section": "Til chermoulaen",
+      "text": "Rør ras el hanout, resten af saltet, røget paprika, spidskommen og harissa i."
+    },
+    {
+      "section": "Til chermoulaen",
+      "text": "Stød koriander og persille i, til det bliver en pasta. Tynd den ud med safranvandet og olivenolien, så den kan øses med ske."
+    },
+    {
+      "section": "Til chermoulaen",
+      "text": "Smag til med salt og peber, og stil den til side."
+    },
+    {
+      "section": "Til sardinerne",
+      "text": "Læg citronhalvdelene på grillen, så de karamelliserer."
+    },
+    {
+      "section": "Til sardinerne",
+      "text": "Grill sardinerne 2 minutter på hver side over kullene med låg på og ventilerne åbne, til skindet er boblet og fisken er gennemstegt. De går hurtigt. Tag fisk og citron af grillen."
+    },
+    {
+      "section": "Til sardinerne",
+      "text": "Tag sardinerne ud af risten og læg dem på et fad. Fordel chermoulaen ovenpå."
+    },
+    {
+      "section": "Til sardinerne",
+      "text": "Vend kapers, korianderblade og de krøllede forårsløg let sammen og drys over fisken. Dryp med lidt olivenolie, og server med den grillede citron."
+    }
+  ],
+  "changes": [
+    "Kapersbær er erstattet af kapers.",
+    "Syltede citroner er erstattet af friske citroner (skallen).",
+    "Rose harissa er erstattet af harissa."
+  ]
+}

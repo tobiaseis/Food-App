@@ -1,0 +1,192 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cuban-sandwich",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:54:44.442Z",
+  "total_minutes": 160,
+  "active_minutes": 25,
+  "yield_count": 2,
+  "source_lines": 14,
+  "title": "Cubansk sandwich",
+  "intro": "Saftig, langsomt stegt svinekød med citrus- og hvidløgsmarinade, lagt sammen med skinke, ost og asier og grillet i panden, til osten smelter. En klassiker fra Cuba, som kræver lidt tid, men er nem at gå til.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Mojo-svinekød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "appelsiner",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Mojo-svinekød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Mojo-svinekød",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Mojo-svinekød",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "oregano",
+      "note": "små blade, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Mojo-svinekød",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Mojo-svinekød",
+      "amount": 5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Mojo-svinekød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral",
+      "optional": false
+    },
+    {
+      "section": "Mojo-svinekød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mojo-svinekød",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Mojo-svinekød",
+      "amount": 1,
+      "unit": "kg",
+      "name": "svinebov",
+      "note": "uden svær",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 4,
+      "unit": "stk",
+      "name": "paninibrød",
+      "note": "delt på midten",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 6,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 8,
+      "unit": "skive",
+      "name": "skinke",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 100,
+      "unit": "g",
+      "name": "gruyère",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 4,
+      "unit": "stk",
+      "name": "asier",
+      "note": "store, i tynde skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mojo-svinekød",
+      "text": "Kom alt til mojoen i en foodprocessor: appelsin- og limeskal og -saft, koriander, oregano, spidskommen, hvidløg, olie, salt og rigeligt peber. Kør, til det er fint hakket. Du kan også hakke det hele fint med kniv."
+    },
+    {
+      "section": "Mojo-svinekød",
+      "text": "Hæld marinaden i en stor skål eller en frysepose, og vend svinekødet godt rundt i den."
+    },
+    {
+      "section": "Mojo-svinekød",
+      "text": "Lad kødet marinere i køleskabet i mindst 8 timer og op til 24 timer, hvis du kan nå det. Det er ikke et must, men giver mere smag og mørere kød. Har du ikke tid, så spring direkte videre."
+    },
+    {
+      "section": "Mojo-svinekød",
+      "text": "Tænd ovnen på 220 °C (varmluft 200 °C). Læg kødet i et bradepande sammen med resten af marinaden, og dæk tæt med folie."
+    },
+    {
+      "section": "Mojo-svinekød",
+      "text": "Steg i 30 minutter. Sænk derefter temperaturen til 180 °C (varmluft 160 °C), og steg videre i 1 time og 30 minutter."
+    },
+    {
+      "section": "Mojo-svinekød",
+      "text": "Tag kødet ud, og lad det køle af. Skær det herefter i tynde skiver. Har du ikke tid til at vente, kan du pille det i tråde med to gafler, for lunt kød lader sig ikke skære pænt. Afkølet kød kan holde sig 3 dage i køleskabet i en tæt beholder."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Pensl undersiden af hvert brød med lidt af det smeltede smør. Smør sennep ovenpå, og læg svinekød, skinke, ost og asier i lag."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Læg overdelene på, og pensl ydersiden af sandwichene foroven og forneden med det resterende smør."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Læg sandwichene i en stor pande ved lav varme. Pres dem sammen med et fladt grydelåg, og læg en tung gryde eller dåse ovenpå som vægt."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Grill i 4-5 minutter på hver side, til de er gyldne, og osten er smeltet. Skær dem over på midten, og server."
+    }
+  ],
+  "changes": [
+    "Amerikansk gul sennep er erstattet af mild sennep.",
+    "Honningbagt skinke er erstattet af almindelig skinke i skiver.",
+    "Dill pickle spears er erstattet af asier."
+  ]
+}

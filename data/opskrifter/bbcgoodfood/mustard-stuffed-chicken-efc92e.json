@@ -1,0 +1,103 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/mustard-stuffed-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:02:11.842Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 5,
+  "title": "Kyllingebryst fyldt med sennep og ost",
+  "intro": "Saftige kyllingebryster fyldt med mozzarella, cheddar og grov sennep og pakket ind i sprødt bacon. Retten er hurtig at gøre klar og bages i ovnen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet eller flået i små stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "grov",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (varmluft 180 °C)."
+    },
+    {
+      "section": null,
+      "text": "Rør mozzarella, cheddar og sennep sammen til en fyld."
+    },
+    {
+      "section": null,
+      "text": "Skær en lomme i siden af hvert kyllingebryst, og fyld lommerne med osteblandingen."
+    },
+    {
+      "section": null,
+      "text": "Vikl to skiver bacon om hvert bryst, så kødet holder sammen, men uden at baconen strammer."
+    },
+    {
+      "section": null,
+      "text": "Krydr med salt og peber, og læg brysterne på en bageplade."
+    },
+    {
+      "section": null,
+      "text": "Steg dem midt i ovnen i 20-25 minutter."
+    }
+  ],
+  "changes": [
+    "Streaky bacon er skiftet til bacon i skiver.",
+    "Wholegrain mustard er skiftet til grov sennep."
+  ]
+}

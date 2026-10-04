@@ -1,0 +1,194 @@
+{
+  "url": "https://www.valdemarsro.dk/sur-soed-groentsager/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:06:05.292Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Sursøde grøntsager med ris",
+  "intro": "Wokede grøntsager i en blank sursød sauce med ananasjuice og ingefær. Serveres med ris, ristede sesamfrø og frisk koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "ananasjuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 250,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "groft snittet",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, i tern",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "broccoli",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "pillede",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": "kogt efter anvisningen på pakken",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 25,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sauce",
+      "text": "Kom alle ingredienserne til saucen i en gryde og pisk dem sammen. Bring det i kog under omrøring, og lad det småkoge i et par minutter, til saucen er let tyknet. Tag gryden af varmen, og lad saucen køle lidt af."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Varm olien i en wok eller sauterpande, og steg champignonerne ved høj varme, til de har en gyldenbrun skorpe."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Kom løg, porre, spidskål, peberfrugt og broccoli i woken. Rør hele tiden, og steg grøntsagerne i 4-5 minutter, til de er godt varme."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Tilsæt sukkerærter og edamamebønner, hæld saucen over, og vend det hele rundt i cirka et minut."
+    },
+    {
+      "section": "Servering",
+      "text": "Server grøntsagerne med ris, og drys med sesamfrø og koriander."
+    }
+  ],
+  "changes": [
+    "Soja er skiftet til sojasauce."
+  ]
+}

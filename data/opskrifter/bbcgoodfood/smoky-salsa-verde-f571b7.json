@@ -1,0 +1,106 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smoky-salsa-verde",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:35:16.965Z",
+  "total_minutes": 90,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Røget salsa verde",
+  "intro": "Grøn salsa med smag af ristede grøntsager, frisk koriander og lime. Chipotle giver en dyb, røget varme.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 450,
+      "unit": "g",
+      "name": "tomater",
+      "note": "vasket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "med skræl",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, hvidt, i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "jalapeños",
+      "note": "friske, stilken fjernet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "chipotle",
+      "note": "i adobosauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "plus mere efter smag",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnens grill, og sæt en rist øverst i ovnen."
+    },
+    {
+      "section": null,
+      "text": "Læg tomater, hvidløg, løg og jalapeños på en bageplade. Grill dem i ca. 5 minutter, til de er sorte i kanten."
+    },
+    {
+      "section": null,
+      "text": "Tag pladen ud. Pil hvidløgsfeddene, og pres dem ud i en blender eller foodprocessor."
+    },
+    {
+      "section": null,
+      "text": "Kom de øvrige ristede grøntsager fra pladen i sammen med salt, chipotle, koriander og limesaft."
+    },
+    {
+      "section": null,
+      "text": "Blend til en glat salsa. Smag til, og tilsæt mere salt om nødvendigt."
+    }
+  ],
+  "changes": [
+    "Tomatillos er erstattet med tomater."
+  ]
+}

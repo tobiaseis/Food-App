@@ -1,0 +1,218 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/moroccan-chicken-one-pot",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:19:03.256Z",
+  "total_minutes": 70,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 18,
+  "title": "Marokkansk kylling med butternut squash",
+  "intro": "Mør kylling i en krydret sauce med ingefær, butternut squash og søde tørrede frugter. Toppes med frisk mynte, feta og rødløg og serveres med couscous og yoghurt.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "det ene groft hakket, det andet i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "butternut squash",
+      "note": "stor, uden kerner, skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rødvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "tørrede tranebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "frisk mynte",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "couscous",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Krydr kyllingebrysterne med salt og peber. Varm en del af olien i en ovnfast gryde eller sauterpande, og brun kødet på alle sider. Læg det over på et fad."
+    },
+    {
+      "section": null,
+      "text": "Blend det hakkede løg med tomater, ingefær og hvidløg til en grov pasta."
+    },
+    {
+      "section": null,
+      "text": "Svits de skårne løg i resten af olien i samme gryde, til de er bløde. Rør gurkemeje, spidskommen, koriander og kanel i, og steg i 1 minut, til det dufter. Tilsæt pastaen, og steg et par minutter, til den er blød."
+    },
+    {
+      "section": null,
+      "text": "Kom kyllingen tilbage i gryden sammen med butternut squash, fond, brun farin og rødvinseddike."
+    },
+    {
+      "section": null,
+      "text": "Lad retten simre i 30 minutter, til kyllingen er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Tag kyllingen op, og rør tranebærrene i saucen. Lad saucen simre videre og tykne, mens du trækker kyllingen i mundrette stykker med to gafler. Vend kødet tilbage i saucen, og smag til med salt og peber."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Bland rødløg, citronskal, mynte og feta. Drys blandingen over retten, og server med couscous og yoghurt."
+    }
+  ],
+  "changes": [
+    "Tørrede kirsebær er erstattet af tørrede tranebær."
+  ]
+}

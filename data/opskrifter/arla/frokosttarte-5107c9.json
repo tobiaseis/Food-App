@@ -1,0 +1,176 @@
+{
+  "url": "https://www.arla.dk/opskrifter/frokosttarte/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:25:17.711Z",
+  "total_minutes": 120,
+  "active_minutes": 30,
+  "yield_count": 1,
+  "source_lines": 14,
+  "title": "Gulerods- og porretærte med pinjekerner",
+  "intro": "Mørdejstærte med timian, fyldt med cremet æggemasse, gulerødder og porre. Den er god både varm og kold, så den passer fint til frokost.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 175,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "frisk, bladene",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "pastaost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "pinjekerner",
+      "note": "ristede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Kom mel, timianblade og fint salt i en skål."
+    },
+    {
+      "section": "Dej",
+      "text": "Del det kolde smør i små stykker, og gnid dem ud i melet med fingrene, indtil blandingen minder om revet ost."
+    },
+    {
+      "section": "Dej",
+      "text": "Hæld vandet i, og ælt hurtigt dejen sammen."
+    },
+    {
+      "section": "Dej",
+      "text": "Smør en springform på ca. 22 cm, og pres dejen ud i bunden og halvvejs op ad kanten."
+    },
+    {
+      "section": "Dej",
+      "text": "Dæk formen til, og lad den hvile i køleskabet i mindst en halv time."
+    },
+    {
+      "section": "Dej",
+      "text": "Forbag bunden på ovnens midterste rille i ca. 18 minutter ved 200 °C."
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "text": "Varm smørret op på en pande ved kraftig varme. Pas på, at det ikke bliver brunt."
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "text": "Svits gulerødder og porre på panden i ca. 3 minutter."
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "text": "Pisk æg og mælk sammen i en skål, og bland derefter ost, groft salt og peber i. Vend de svitsede grøntsager i."
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "text": "Hæld fyldet over den forbagte bund, og bag tærten på midterste rille i ca. 40 minutter ved 200 °C."
+    },
+    {
+      "section": "Gulerods-porrefyld",
+      "text": "Strø pinjekerner over, og server tærten varm eller kold."
+    }
+  ],
+  "changes": []
+}

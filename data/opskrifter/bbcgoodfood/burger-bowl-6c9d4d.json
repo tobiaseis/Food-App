@@ -1,0 +1,180 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/burger-bowl",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:00:20.242Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Burgerbowl med cajunkartofler",
+  "intro": "Sprøde cajunkartofler og krydret oksekød toppes med salat, tomat, løg og ost og toppes med en hurtig burgerdressing. Det er en burger i skål, uden bolle.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 600,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skåret i grove tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "magert",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "syltede agurker",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lage fra glasset med syltede agurker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "icebergsalat",
+      "note": "strimlet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde ringe, skyllet i koldt vand",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": "med reduceret sukker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": "let",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd airfryeren eller ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Vend kartoflerne med halvdelen af olien, halvdelen af cajunkrydderiet, hvidløgspulveret og salt og peber. Bag dem i airfryeren eller ovnen i 20 minutter, til de er sprøde og møre. Ryst dem eller vend dem halvvejs."
+    },
+    {
+      "section": null,
+      "text": "Varm resten af olien i en pande ved middelhøj varme, når kartoflerne har ca. 10 minutter tilbage."
+    },
+    {
+      "section": null,
+      "text": "Kom oksekødet på panden, og del det i småstykker med en spatel. Drys med resten af cajunkrydderiet og salt og peber. Steg i 7-8 minutter, til kødet er sprødt og gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Rør ketchup, mayonnaise, sennep og lagen fra de syltede agurker sammen i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Fordel kartoflerne i fire skåle. Læg syltede agurker, salat, rødløg, cherrytomater, kød og lidt ost ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Dryp dressingen over, og server med det samme."
+    }
+  ],
+  "changes": [
+    "Amerikansk sennep er erstattet med mild sennep.",
+    "Crinkle cut pickles er erstattet med syltede agurker i skiver.",
+    "Hvidløgsgranulat er erstattet med hvidløgspulver."
+  ]
+}

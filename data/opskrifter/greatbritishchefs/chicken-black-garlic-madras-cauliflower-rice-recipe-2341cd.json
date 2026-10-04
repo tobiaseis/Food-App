@@ -1,0 +1,425 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/chicken-black-garlic-madras-cauliflower-rice-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:35:40.315Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 42,
+  "title": "Kylling madras med sort hvidløg, ristet blomkål og tamarind-kokosris",
+  "intro": "Mør kylling i en dyb, krydret madrassauce med sort hvidløg, serveret med ristet blomkål, syltede rødløg og aromatisk kokosris. Marinér gerne dagen før, så smagen får tid til at trække ind.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "med ben",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingeunderlår",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": null,
+      "unit": null,
+      "name": "ingefær",
+      "note": "en tommelfingerstor bid, revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chilipulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "amount": 6,
+      "unit": "stk",
+      "name": "tørret rød chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "bukkehornsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "grønne kapsler",
+      "optional": false
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang",
+      "optional": false
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "amount": 4,
+      "unit": "stk",
+      "name": "nellike",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "amount": 4,
+      "unit": "fed",
+      "name": "sort hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Madras",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kokosolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Madras",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "stort, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Madras",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Madras",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "karryblade",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Madras",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": "varmt, kan erstattes af hønsebouillon",
+      "optional": false
+    },
+    {
+      "section": "Madras",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Ristet blomkål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "mellemstor, skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Ristet blomkål",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kokosolie",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Ristet blomkål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Ristet blomkål",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "amount": 300,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": "skyllet og udblødt i 20 minutter",
+      "optional": false
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kokosolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennepsfrø",
+      "note": "sorte",
+      "optional": false
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tørret rød chili",
+      "note": "brækket over",
+      "optional": false
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "karryblade",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kokosmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tamarind",
+      "note": "tamarindpasta",
+      "optional": false
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "amount": 4.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Vend kyllingen med resten af marinadens ingredienser i en stor skål, så alle stykker er dækket. Dæk til og sæt i køleskabet mindst 2 timer, gerne natten over."
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "text": "Rist alle krydderierne undtagen det sorte hvidløg på en tør pande ved middel-lav varme, til de dufter. Lad dem køle af, og kværn dem til et fint pulver."
+    },
+    {
+      "section": "Madraskrydderipasta",
+      "text": "Blend pulveret med det sorte hvidløg og en sjat vand til en glat pasta."
+    },
+    {
+      "section": "Madras",
+      "text": "Varm kokosolien op i en stor gryde. Svits løgene i 15-20 minutter, til de er bløde og gyldne."
+    },
+    {
+      "section": "Madras",
+      "text": "Kom tomater og karryblade i, og lad det koge, til olien begynder at skille fra. Rør krydderipastaen og det varme vand eller bouillon i."
+    },
+    {
+      "section": "Madras",
+      "text": "Læg kyllingen i saucen, så den næsten er dækket. Læg låg på, og lad det simre ved lav varme i 25-30 minutter, til kyllingen er gennemstegt og har en kernetemperatur på 74 °C."
+    },
+    {
+      "section": "Syltede rødløg",
+      "text": "Rør alle ingredienserne til de syltede løg sammen, og lad dem trække i køleskabet i mindst 30 minutter."
+    },
+    {
+      "section": "Ristet blomkål",
+      "text": "Forvarm grill eller ovn på den højeste temperatur. Vend blomkålsbådene med kokosolie, røget paprika og salt."
+    },
+    {
+      "section": "Ristet blomkål",
+      "text": "Rist eller grill dem i 15-20 minutter, til de er gyldne og lidt svedne i kanten. Vend dem midtvejs."
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "text": "Hæld vandet fra de udblødte ris. Varm kokosolien i en gryde, og rist sennepsfrøene, til de springer."
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "text": "Tilsæt den tørrede chili og karrybladene, og steg kort, til det dufter."
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "text": "Rør kokosmel og ris i, så kornene får olie på. Tilsæt tamarind, vand og salt, og bring det i kog."
+    },
+    {
+      "section": "Tamarind-kokosris",
+      "text": "Skru ned på lav varme, og læg et viskestykke og et låg over gryden. Kog ved middel varme i ca. 12 minutter, sluk for varmen, og lad risene dampe i 10 minutter. Luft dem op med en gaffel."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret kyllingen med sauce i et fad sammen med noget af risene. Læg den ristede blomkål ved siden af, og top med de syltede rødløg. Pynt med koriander og citronbåde."
+    }
+  ],
+  "changes": [
+    "Kashmiri-chili er erstattet af almindelig tørret rød chili.",
+    "Frisk revet kokos er erstattet af kokosmel.",
+    "Lime i fremgangsmåden er erstattet af citron, som står i ingredienslisten.",
+    "Karryblade og bukkehornsfrø kan være svære at finde og fås bedst i indiske eller asiatiske specialbutikker."
+  ]
+}

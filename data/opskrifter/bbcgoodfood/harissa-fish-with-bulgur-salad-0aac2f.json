@@ -1,0 +1,187 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/harissa-fish-with-bulgur-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:56:01.561Z",
+  "total_minutes": 35,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 12,
+  "title": "Harissafisk med bulgursalat",
+  "intro": "Mør torsk i en krydret harissaglasur, serveret på en frisk bulgursalat med agurk, tomat og oliven. En hurtig ret til hverdag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Bulgursalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "bulgur",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "lille, uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "delt i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat",
+      "amount": 25,
+      "unit": "g",
+      "name": "grønne oliven",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Harissablanding",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Harissablanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Harissablanding",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Harissablanding",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Harissablanding",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "delt i to",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 250,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "2 stykker, uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bulgursalat",
+      "text": "Kog bulgur efter anvisningen på posen. Skyl den i en sigte, lad den dryppe godt af, og kom den i en stor skål."
+    },
+    {
+      "section": "Bulgursalat",
+      "text": "Vend agurk, tomater, oliven og det meste af persillen i bulguren. Smag til med salt og peber."
+    },
+    {
+      "section": "Harissablanding",
+      "text": "Rør harissa, honning, hvidløg, citronsaft og vand sammen i en lille skål. Stil den til side."
+    },
+    {
+      "section": "Fisk",
+      "text": "Varm halvdelen af olien i en non-stick pande ved middel varme. Steg rødløget i 4-5 minutter, til det er blødt og let brunet."
+    },
+    {
+      "section": "Fisk",
+      "text": "Krydr fisken med salt og peber, og læg den på panden. Steg den i 3 minutter, og hæld så harissablandingen over."
+    },
+    {
+      "section": "Fisk",
+      "text": "Vend fisken, og steg den 2-4 minutter mere, afhængigt af tykkelsen. Hæld løbende panden væde over fisken, til den er gennemstegt og kødet er uigennemsigtigt."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel bulgursalaten på to tallerkener. Læg fisk og stegt løg ovenpå, og dryp med pandesaften. Drys med resten af persillen."
+    }
+  ],
+  "changes": [
+    "Hvidfisk er valgt som torskefilet.",
+    "Rose harissa er erstattet af almindelig harissa."
+  ]
+}

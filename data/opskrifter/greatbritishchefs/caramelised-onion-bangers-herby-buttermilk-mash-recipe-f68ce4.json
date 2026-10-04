@@ -1,0 +1,273 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/caramelised-onion-bangers-herby-buttermilk-mash-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:42:48.899Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 22,
+  "title": "Pølser med karamelliserede løg og kartoffelmos med kærnemælk",
+  "intro": "Sprøde pølser med sød løgsovs serveres til cremet kartoffelmos med urter, brunet smørrasp og grøn purløgsolie. En lidt finere udgave af klassisk pølser og mos.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kartoffelmos",
+      "amount": 700,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrællet og skåret i tern på ca. 2,5 cm",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Purløgsolie",
+      "amount": 50,
+      "unit": "g",
+      "name": "purløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Purløgsolie",
+      "amount": 1,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Purløgsolie",
+      "amount": null,
+      "unit": null,
+      "name": "isvand",
+      "note": "til afkøling",
+      "optional": false
+    },
+    {
+      "section": "Brunet smørrasp",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brunet smørrasp",
+      "amount": 250,
+      "unit": "g",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "amount": 6,
+      "unit": "stk",
+      "name": "grillpølser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "amount": 6,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "amount": 75,
+      "unit": "ml",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "amount": 2,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": "evt. lidt mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rosmarin",
+      "note": "kviste, nålene hakkes fint",
+      "optional": false
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "i tern, koldt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelmos",
+      "text": "Kog kartoflerne i rigeligt letsaltet vand i ca. 15 minutter, til en gaffel nemt glider ind. Tiden afhænger af størrelsen."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Hæld vandet fra, put kartoflerne tilbage i gryden, og lad dem dampe af et par minutter."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Mos kartoflerne fint, f.eks. i en kartoffelpresser. Rør kærnemælk, creme fraiche, purløg og persille i, og smag til med salt og peber."
+    },
+    {
+      "section": "Purløgsolie",
+      "text": "Blancher purløgene i saltet kogende vand i 1 minut, og køl dem straks ned i isvand."
+    },
+    {
+      "section": "Purløgsolie",
+      "text": "Dup purløgene tørre i et rent viskestykke."
+    },
+    {
+      "section": "Purløgsolie",
+      "text": "Blend purløg og olivenolie helt glat. Lad blandingen trække i ca. 30 minutter, og sigt den derefter gennem en fin sigte."
+    },
+    {
+      "section": "Brunet smørrasp",
+      "text": "Brun smørret i en gryde ved middelvarme, til det er gyldent og dufter nøddeagtigt. Tilsæt pankoraspen."
+    },
+    {
+      "section": "Brunet smørrasp",
+      "text": "Rør raspen godt rundt i smørret, og rist den, til den er sprød. Smag til med salt og peber."
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "text": "Steg pølserne i rapsolie på en stor pande, til de er gennemstegte. Tag dem af panden og stil dem til side."
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "text": "Hæld overskydende fedt fra panden, hvis der er meget. Svits rødløgene i ca. 10 minutter, til de er begyndt at blive bløde, og rør derefter farin i."
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "text": "Lad løgene stege videre ved lav varme i ca. 15 minutter, til de er flot karamelliserede."
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "text": "Rør melet i løgene, hæld rødvinen i, og lad det koge ind til det halve."
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "text": "Tilsæt fonden lidt ad gangen, og rør godt mellem hver gang. Kom rosmarin i, og smag til med salt og peber."
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "text": "Lad sovsen simre, til den er tyknet og reduceret med ca. en fjerdedel. Tag den af varmen."
+    },
+    {
+      "section": "Pølser og løgsovs",
+      "text": "Pisk det kolde smør i tern ind i sovsen. Det gør den tykkere og giver den en blank overflade."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret mos og tre pølser på hver tallerken. Top med løgsovs, brunet smørrasp og dryp med purløgsolie. Server med persille og friskkværnet peber."
+    }
+  ],
+  "changes": [
+    "Lincolnshire-pølser er erstattet af grillpølser.",
+    "Nanna Tate-kartofler er erstattet af almindelige kartofler.",
+    "Vegetable oil er erstattet af rapsolie.",
+    "Salted butter er erstattet af almindeligt smør."
+  ]
+}

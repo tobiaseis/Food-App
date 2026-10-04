@@ -1,0 +1,216 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/seaweed-salt-crispy-chips-battered-hake",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:43:13.430Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "ingredients": [
+    {
+      "section": "Tangchips",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "mellemstore til store, meget melede",
+      "optional": false
+    },
+    {
+      "section": "Tangchips",
+      "amount": 2,
+      "unit": "stk",
+      "name": "noriark",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tangchips",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tangchips",
+      "amount": null,
+      "unit": null,
+      "name": "solsikkeolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Honning- og eddikedressing",
+      "amount": 20,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honning- og eddikedressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æbleeddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honning- og eddikedressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honning- og eddikedressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honning- og eddikedressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "frisk, hakket",
+      "optional": false
+    },
+    {
+      "section": "Honning- og eddikedressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Honning- og eddikedressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødebollefisk",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kulmulefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødebollefisk",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødebollefisk",
+      "amount": 2,
+      "unit": "dl",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødebollefisk",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødebollefisk",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "danskvand",
+      "note": "med brus",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "rucola",
+      "note": "vendt i olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "revet skal",
+      "optional": false
+    }
+  ],
+  "changes": [
+    "Nanna Tate-kartofler er erstattet af almindelige meget melede kartofler.",
+    "Hake er erstattet af kulmule, som er den nærmeste hvide fisk i danske supermarkeder.",
+    "Nori er beholdt som noriark, da der ikke findes en dansk afløser."
+  ],
+  "intro": "Sprøde pommes frites med nori-salt og en sprød fiskefilet i ølagtig dej, serveret med en sød og syrlig honning-eddikedressing med kapers og persille.",
+  "servings": 2,
+  "steps": [
+    {
+      "section": "Tangchips",
+      "text": "Skræl kartoflerne og skær dem i pommes frites på 1 cm i tykkelse. Skyl dem i koldt vand, og tør dem godt med køkkenpapir."
+    },
+    {
+      "section": "Tangchips",
+      "text": "Tænd ovnen på 180 °C varmluft."
+    },
+    {
+      "section": "Tangchips",
+      "text": "Varm olien op til 130 °C i en tykbundet, høj gryde. Steg kartoflerne i flere omgange i 10 minutter hver. Løft dem op med en hulske, og lad dem dryppe af på en bakke med køkkenpapir."
+    },
+    {
+      "section": "Tangchips",
+      "text": "Tag gryden af varmen, og gem olien til senere."
+    },
+    {
+      "section": "Tangchips",
+      "text": "Rist noriarkene i ovnen i et par minutter på hver side, til de lige er begyndt at blive sprøde. Lad dem køle af, og pil dem i stykker. Kør dem til pulver i en krydderikværn, tilsæt flagesaltet, og kør det sammen. Stil det til side."
+    },
+    {
+      "section": "Honning- og eddikedressing",
+      "text": "Pisk honning og eddike sammen. Pisk olivenolien i, og rør kapers og persille ned. Smag til med salt og peber."
+    },
+    {
+      "section": "Flødebollefisk",
+      "text": "Pisk hvedemel, majsstivelse og salt sammen i en stor skål. Pisk vandet med brus i, til dejen er glat."
+    },
+    {
+      "section": "Flødebollefisk",
+      "text": "Varm olien op til ca. 180 °C. Tør fisken, vend fileterne i dejen, og steg dem i ca. 3-4 minutter, til de er gyldne. Løft dem forsigtigt op med en hulske, lad dem dryppe af på køkkenpapir, og drys med salt."
+    },
+    {
+      "section": "Flødebollefisk",
+      "text": "Varm olien op til 190 °C. Steg de afdryppede pommes frites en sidste gang, til de er gyldne og sprøde. Lad dem dryppe af på køkkenpapir, og vend dem rigeligt i noripulveret."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret fisk og pommes frites på tallerkener med rucola og citronbåde. Drys med citronskal, og top med dressingen. Server resten af dressingen ved siden af til dip."
+    }
+  ],
+  "title": "Fish and chips med nori-salt og honning-eddikedressing"
+}

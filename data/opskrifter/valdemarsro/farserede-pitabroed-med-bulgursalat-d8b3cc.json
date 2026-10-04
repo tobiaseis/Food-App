@@ -1,0 +1,252 @@
+{
+  "url": "https://www.valdemarsro.dk/farserede-pitabroed-med-bulgursalat/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:05:32.543Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Arayes med bulgursalat",
+  "intro": "Pitabrød fyldt med krydret kødfars og stegt sprødt på panden, serveret med frisk bulgursalat og kølig yoghurtdressing med lime.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Farserede pitabrød",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "eller lammekød",
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": 4,
+      "unit": "stk",
+      "name": "pitabrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farserede pitabrød",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "bulgur",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 400,
+      "unit": "g",
+      "name": "tomater",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "økologisk citron",
+      "note": "fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing med lime",
+      "amount": 2,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing med lime",
+      "amount": 1,
+      "unit": "stk",
+      "name": "økologisk lime",
+      "note": "fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing med lime",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bulgursalat med citrondressing",
+      "text": "Kog bulguren efter pakkens anvisning, og lad den køle lidt af."
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "text": "Pisk citronskal, citronsaft, olie, sukker og hvidløg sammen til en dressing. Smag til med salt og peber."
+    },
+    {
+      "section": "Bulgursalat med citrondressing",
+      "text": "Bland bulgur, tomater, agurk, rødløg, forårsløg og mynte i en skål, og vend dressingen i. Lad gerne salaten stå en halv times tid, så den får mere smag."
+    },
+    {
+      "section": "Farserede pitabrød",
+      "text": "Ælt kødet sammen med løg, hvidløg, persille og krydderier, og krydr med salt og peber."
+    },
+    {
+      "section": "Farserede pitabrød",
+      "text": "Del pitabrødene på midten, og put farsen i halvdelene. Pres dem flade, så farsen ligger i et tyndt, jævnt lag."
+    },
+    {
+      "section": "Farserede pitabrød",
+      "text": "Pensl pitabrødene med olie. Varm en pande op ved middelvarme, og steg brødene 4-5 minutter på hver side."
+    },
+    {
+      "section": "Yoghurtdressing med lime",
+      "text": "Rør yoghurt, limeskal, limesaft og koriander sammen, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Server de varme pitabrød med bulgursalat og yoghurtdressing."
+    }
+  ],
+  "changes": []
+}

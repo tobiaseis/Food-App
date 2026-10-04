@@ -1,0 +1,124 @@
+{
+  "url": "https://www.arla.dk/opskrifter/varm-smorsauce-til-kod/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:08:04.938Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Kød med varm smørsauce",
+  "intro": "Stegt kød med en blank, cremet smørsauce, der laves direkte i stegepanden af stegesky og koldt smør. Serveres med kartofler og dampede grøntsager.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": "skåret i tykke bøffer; kan erstattes af svinekoteletter, oksebøffer eller kalvefilet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet, til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Smørsauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Smørsauce",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt, i tern",
+      "optional": false
+    },
+    {
+      "section": "Smørsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tør sherry",
+      "note": "eller cognac",
+      "optional": false
+    },
+    {
+      "section": "Smørsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet, til saucen",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 600,
+      "unit": "g",
+      "name": "grøntsager",
+      "note": "dampede, fx broccoli og gulerødder",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Krydr kødet på begge sider med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Varm panden op, og lad smørret tage gylden farve. Steg kødet i panden, og læg det derefter til side under låg eller staniol, så det holder varmen."
+    },
+    {
+      "section": "Smørsauce",
+      "text": "Hæld vandet på den samme pande, og lad det koge kraftigt ind, mens du skraber stegeskyen løs fra bunden. Fortsæt, til der kun er cirka 1 dl væske tilbage."
+    },
+    {
+      "section": "Smørsauce",
+      "text": "Tag panden af varmen. Rør de kolde smørtern i saucen ét ad gangen med en piskeris. Smørret skal blive cremet og ikke smelte helt ud."
+    },
+    {
+      "section": "Smørsauce",
+      "text": "Smag saucen til med sherry og peber."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Server kødet med saucen sammen med kartofler og dampede grøntsager."
+    }
+  ],
+  "changes": []
+}

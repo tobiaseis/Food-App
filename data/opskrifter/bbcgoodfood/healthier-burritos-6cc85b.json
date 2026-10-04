@@ -1,0 +1,259 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthier-burritos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:08:35.341Z",
+  "total_minutes": 70,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 18,
+  "title": "Sunde burritos med chili og guacamole",
+  "intro": "Fuldkornswraps fyldt med krydret oksekødschili, brune ris og hjemmelavet guacamole. Chilien kan laves på forhånd og fryses.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Chili",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chili",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chili",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Chili",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Chili",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Chili",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chili",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chili",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Chili",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "afdryppet, ikke skyllet",
+      "optional": false
+    },
+    {
+      "section": "Chili",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 300,
+      "unit": "g",
+      "name": "ris",
+      "note": "brune",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 6,
+      "unit": "dl",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "uden sten og skræl",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 6,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "lime",
+      "note": "i både, til at presse over",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "cheddar",
+      "note": "revet",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Chili",
+      "text": "Varm olien i en stegepande ved middel varme. Smuldr oksekødet ud i panden og steg det i 15-20 minutter."
+    },
+    {
+      "section": "Chili",
+      "text": "Kødet afgiver først væske. Når den er kogt væk, begynder kødet at stege i sit eget fedt og få farve. Brug så en grydeske til at hakke det i mindre stykker, så det brunes og karamelliseres hele vejen rundt."
+    },
+    {
+      "section": "Chili",
+      "text": "Rør løget i og steg det i yderligere 10 minutter, til det er blødt."
+    },
+    {
+      "section": "Chili",
+      "text": "Tilsæt hvidløg, chipotle, Cajun-krydderi, farin og eddike, og lad det stege med i 1 minut."
+    },
+    {
+      "section": "Chili",
+      "text": "Hæld bønner og hakkede tomater i, rør rundt og lad chilien simre uden låg i 20 minutter, til den er tyknet."
+    },
+    {
+      "section": "Chili",
+      "text": "Chilien kan opbevares 2 dage i køleskab eller 1 måned i fryseren. Tø den helt op, og varm den gennem, til den er rygende varm."
+    },
+    {
+      "section": "Ris",
+      "text": "Imens kommes risene i en mellemstor gryde sammen med koldt vand og eventuelt lidt salt. Bring det i kog, skru ned på lav varme, læg låg på og lad risene simre ved svag varme i ca. 20 minutter, til vandet er optaget."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen og lad den stå uforstyrret i 10 minutter. Rør derefter risene op og lad dem hvile under låg."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Bland tomat, rødløg, koriander og limesaft med salt og peber. Tilsæt avocadoen og mos det hele groft, så guacamolen bliver lidt stykket."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm tortillaerne. Smør et lag guacamole ud på hver, og læg ris og chili ovenpå."
+    },
+    {
+      "section": "Til servering",
+      "text": "Top med yoghurt, en klem lime og eventuelt revet cheddar. Rul wrapsene stramt sammen, del dem på midten og server."
+    }
+  ],
+  "changes": [
+    "Chipotlepasta er skrevet som chipotle, da den kan være svær at få.",
+    "Æblecidereddike er skrevet som eddike med note om æblecidereddike."
+  ]
+}

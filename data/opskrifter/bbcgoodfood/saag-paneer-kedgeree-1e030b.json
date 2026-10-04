@@ -1,0 +1,127 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/saag-paneer-kedgeree",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:47:58.575Z",
+  "total_minutes": 20,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 8,
+  "title": "Saag paneer kedgeree",
+  "intro": "Krydret risret med paneer, spinat og karry, toppet med bløde kogte æg. Den er hurtigt lavet i én pande og perfekt til en travl hverdag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral, fx rapsolie",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "paneer",
+      "note": "skåret i tern på 2-3 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "mild karrypulver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frost",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "ris",
+      "note": "kogte kokosris i pose",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finskåret",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog vand op i en mellemstor gryde. Læg æggene i og kog dem i 7 minutter. Afkøl dem derefter i en skål med koldt vand."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor non-stick-pande eller en lav gryde. Steg løget ved middel-høj varme i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom paneeren i og steg den i yderligere 5 minutter, til den er jævnt brunet, og løget begynder at karamellisere."
+    },
+    {
+      "section": null,
+      "text": "Rør karryen i og steg i 1 minut. Tilsæt den frosne spinat, læg låg på, og lad den tø op i nogle få minutter."
+    },
+    {
+      "section": null,
+      "text": "Tag låget af, bland risene i, og skru op for varmen. Varm det hele godt igennem, i nogle få minutter. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Pil æggene og del dem i halve. Læg dem oven på retten, og drys eventuelt med chili."
+    }
+  ],
+  "changes": [
+    "Mild karrypulver er erstattet med karry.",
+    "Kogt kokosris i pose er erstattet med kogte ris i pose med kokos, som den nærmeste danske færdigvare."
+  ]
+}

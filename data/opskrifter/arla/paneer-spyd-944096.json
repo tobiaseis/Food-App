@@ -1,0 +1,156 @@
+{
+  "url": "https://www.arla.dk/opskrifter/paneer-spyd/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:20:42.400Z",
+  "total_minutes": 120,
+  "active_minutes": 45,
+  "yield_count": 1,
+  "source_lines": 10,
+  "title": "Paneerspyd",
+  "intro": "Hjemmelavet paneer skæres i tern, marineres i ristede krydderier og steges på spyd med squash og peberfrugt. Osten laves af mælk og citronsaft og skal presses i cirka en time.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Paneer",
+      "amount": 1,
+      "unit": "l",
+      "name": "mælk",
+      "note": "mælk eller sødmælk",
+      "optional": false
+    },
+    {
+      "section": "Paneer",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Paneer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Marinade og spyd",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og spyd",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hel",
+      "optional": false
+    },
+    {
+      "section": "Marinade og spyd",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade og spyd",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade og spyd",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og spyd",
+      "amount": 175,
+      "unit": "g",
+      "name": "squash og peberfrugt",
+      "note": "blandede grøntsager i stykker",
+      "optional": false
+    },
+    {
+      "section": "Marinade og spyd",
+      "amount": 6,
+      "unit": "stk",
+      "name": "grillspyd",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Paneer",
+      "text": "Varm mælken op til kogepunktet i en tykbundet gryde, mens du rører."
+    },
+    {
+      "section": "Paneer",
+      "text": "Sænk varmen, og rør citronsaft og salt i. Rør, til mælken skiller."
+    },
+    {
+      "section": "Paneer",
+      "text": "Beklæd en sigte med et rent, tyndt og fugtigt viskestykke, og stil den over en skål."
+    },
+    {
+      "section": "Paneer",
+      "text": "Hæld den skilte mælk i sigten. Lad den dryppe af og køle i ca. 15 min."
+    },
+    {
+      "section": "Paneer",
+      "text": "Saml viskestykket om osten, og vrid mere væde ud."
+    },
+    {
+      "section": "Paneer",
+      "text": "Form osten til en lille, flad firkant i klædet, og læg den på en tallerken."
+    },
+    {
+      "section": "Paneer",
+      "text": "Sæt en gryde med koldt vand ovenpå som vægt. Lad paneeren trække i køleskabet under pres i ca. 1 time."
+    },
+    {
+      "section": null,
+      "text": "Del paneeren i ca. 18 tern."
+    },
+    {
+      "section": null,
+      "text": "Rist krydderierne på en tør pande ved middel til kraftig varme i ca. 1 min."
+    },
+    {
+      "section": null,
+      "text": "Tag panden af varmen. Knus krydderierne, fx i en morter, og rør olien i."
+    },
+    {
+      "section": null,
+      "text": "Vend ostetern i marinaden i en skål, og lad dem stå i ca. 10 min."
+    },
+    {
+      "section": null,
+      "text": "Træk ostetern og grøntsager på spyddene, så de skifter."
+    },
+    {
+      "section": null,
+      "text": "Varm den resterende marinade godt op på en pande."
+    },
+    {
+      "section": null,
+      "text": "Steg spyddene ved middel varme i ca. 2 min. på hver side, i alt ca. 8 min."
+    }
+  ],
+  "changes": []
+}

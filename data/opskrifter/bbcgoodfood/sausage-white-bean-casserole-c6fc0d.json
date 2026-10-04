@@ -1,0 +1,127 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/sausage-white-bean-casserole",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:18:32.187Z",
+  "total_minutes": 85,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Pølse- og hvidbønnegryde fra ovnen",
+  "intro": "En nem ovnret med pølser, grøntsager og hvide bønner i tomatsovs. Server den med kartofler, pasta eller ris.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød eller gul, uden kerner, i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "pølser",
+      "note": "små pølser, skåret i tredjedele",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "flåede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "bønner",
+      "note": "hvide bønner, 400 g, afdryppede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "bouillon",
+      "note": "kylling, saltreduceret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "kartofler",
+      "note": "til servering, eller pasta eller ris",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Læg peberfrugt, gulerødder og rødløg i et dybt ovnfast fad. Rist dem i ovnen i 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom pølserne i fadet, og rist i 10 minutter mere."
+    },
+    {
+      "section": null,
+      "text": "Skru ovnen ned på 200 °C (180 °C varmluft). Hæld tomater og bønner i fadet, og rør bouillonen ind. Lad retten stå i ovnen i 35 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør sennep og ærter i, og sæt fadet tilbage i ovnen i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Lad retten hvile i 10 minutter, og server den med kartofler, pasta eller ris."
+    }
+  ],
+  "changes": [
+    "Chipolatas er skiftet til små pølser.",
+    "Små kirsebærtomater på dåse er skiftet til flåede tomater."
+  ]
+}

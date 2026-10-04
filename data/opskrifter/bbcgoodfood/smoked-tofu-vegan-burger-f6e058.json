@@ -1,0 +1,290 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/smoked-tofu-vegan-burger",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:48:37.166Z",
+  "total_minutes": 40,
+  "active_minutes": 35,
+  "yield_count": 4,
+  "source_lines": 25,
+  "title": "Vegansk burger med røget tofu",
+  "intro": "Sprøde veganske burgere af røget tofu, sødkartoffel og cashewnødder med frisk rødkålssalat og sriracha-mayo. Perfekt til en hyggelig hverdagsaften.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Burgerbøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "sødkartoffel",
+      "note": "ca. 200 g, skrællet og skåret i små tern",
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgssalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": 200,
+      "unit": "g",
+      "name": "røget tofu",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": 50,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerbøffer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "sojadrik",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 75,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 50,
+      "unit": "g",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgssalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegning",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "rødkål",
+      "note": "finsnittet",
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "vegansk mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "sriracha",
+      "note": "rørt i mayonnaisen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "veganske burgerboller",
+      "note": "halverede og ristede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Burgerbøffer",
+      "text": "Kom sødkartoffelternene i en mikrobølgeegnet skål, dæk med film, og varm dem på fuld styrke i 3 minutter, til de er møre."
+    },
+    {
+      "section": "Burgerbøffer",
+      "text": "Varm olivenolien op på en non-stick pande. Svits løget med en stor knivspids salt i ca. 5 minutter, til det er blødt."
+    },
+    {
+      "section": "Burgerbøffer",
+      "text": "Tilsæt hvidløg, spidskommen, røget paprika og hvidløgssalt. Rør rundt i 2 minutter, og tag panden af varmen."
+    },
+    {
+      "section": "Burgerbøffer",
+      "text": "Kom tofu og cashewnødder i en blender, og kør dem fint. Tilsæt sødkartoffel og løgblandingen, smag til med salt og peber, og blend, til massen er ensartet."
+    },
+    {
+      "section": "Burgerbøffer",
+      "text": "Form massen til fire bøffer. Læg dem på en bageplade med bagepapir, og stil dem i køleskabet, mens du laver salaten."
+    },
+    {
+      "section": "Rødkålssalat",
+      "text": "Bland rødkål, gulerod, koriander, limesaft og sesamfrø i en skål. Stil salaten til side."
+    },
+    {
+      "section": "Panering",
+      "text": "Rør sennep og sojadrik sammen i en dyb tallerken. Bland hvedemel, pankorasp, hvidløgssalt, cayennepeber, flormelis og bagepulver i en anden."
+    },
+    {
+      "section": "Panering",
+      "text": "Vend hver bøf i melblandingen, derefter i sojadrikblandingen og igen i melblandingen. Gentag hele runden en gang til, så panéringen bliver rigtig sprød."
+    },
+    {
+      "section": "Stegning",
+      "text": "Hæld rapsolie i en stor pande, så der står ca. 2 cm op ad siden. Varm den op ved middelhøj varme."
+    },
+    {
+      "section": "Stegning",
+      "text": "Læg bøfferne forsigtigt i den varme olie med en paletkniv. Steg dem 1 minut på hver side, til de er sprøde, og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg bøfferne i burgerbollerne, og top med rødkålssalat. Dryp med sriracha-mayonnaisen."
+    }
+  ],
+  "changes": [
+    "Engelsk sennep er skiftet til almindelig sennep."
+  ]
+}

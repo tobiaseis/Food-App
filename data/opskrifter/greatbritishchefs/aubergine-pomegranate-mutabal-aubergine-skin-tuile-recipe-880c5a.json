@@ -1,0 +1,284 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/aubergine-pomegranate-mutabal-aubergine-skin-tuile-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:33:35.033Z",
+  "total_minutes": 105,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 25,
+  "title": "Aubergine-mutabal med granatæble og aubergine-tuile",
+  "intro": "Cremet, røget auberginecreme med tahin og granatæblemelasse, toppet med syltede rødløg og sprøde tuiler lavet af de brændte aubergineskaller. Husk, at løgene skal syltes mindst et døgn i forvejen.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Syltede rødløg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "store, skåret i 2 mm tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 3,
+      "unit": "g",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": "lille, let knust",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 200,
+      "unit": "ml",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": "fed, pillede",
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 500,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "lille kvist",
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Mutabal",
+      "amount": 8,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mutabal",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til indgnidning",
+      "optional": false
+    },
+    {
+      "section": "Mutabal",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Mutabal",
+      "amount": 50,
+      "unit": "g",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mutabal",
+      "amount": 30,
+      "unit": "g",
+      "name": "granatæblemelasse",
+      "note": "plus ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Mutabal",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mutabal",
+      "amount": 30,
+      "unit": "ml",
+      "name": "citron",
+      "note": "saft",
+      "optional": false
+    },
+    {
+      "section": "Mutabal",
+      "amount": 3,
+      "unit": "g",
+      "name": "salt",
+      "note": "fint salt, plus ekstra efter smag",
+      "optional": false
+    },
+    {
+      "section": "Aubergine-tuile",
+      "amount": 75,
+      "unit": "g",
+      "name": "tapiokastivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Aubergine-tuile",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Aubergine-tuile",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Aubergine-tuile",
+      "amount": null,
+      "unit": null,
+      "name": "sumak",
+      "note": "til krydring",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "granatæblekerner",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mynte",
+      "note": "blade, gerne mikromynte",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede rødløg",
+      "text": "Start mindst 24 timer før servering. Vend løgskiverne med saltet i en varmefast skål, og læg ingefær og citrongræs ovenpå."
+    },
+    {
+      "section": "Syltede rødløg",
+      "text": "Kog eddike, vand og sukker op i en lille gryde. Hæld den varme lage over løgene, og lad det køle af. Sæt skålen i køleskabet i mindst 24 timer."
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "text": "Kom alle ingredienserne i en gryde, og varm dem op ved meget svag varme i 45-60 minutter, til hvidløgene er bløde og kan smøres ud."
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "text": "Lad dem køle af, og opbevar dem i olien i køleskabet. Der bliver mere, end du skal bruge."
+    },
+    {
+      "section": "Mutabal",
+      "text": "Tænd en kulgrill. Prik hul i auberginerne, gnid dem med lidt rapsolie, og grill dem under jævnlig vending, til skallen er helt sort og kødet blødt hele vejen fra stilk til bund."
+    },
+    {
+      "section": "Mutabal",
+      "text": "Uden kulgrill kan du i stedet brænde auberginerne direkte over gasblus, på en grillpande eller i en ovn ved 220°C. Kulgrillen giver dog den bedste smag."
+    },
+    {
+      "section": "Mutabal",
+      "text": "Lad auberginerne hvile på en bakke, så saften samles. Pil dem, når de kan tåle at blive rørt, og gem både skaller og saft til tuilerne."
+    },
+    {
+      "section": "Mutabal",
+      "text": "Vej 400 g auberginekød af (resten bruges ikke her), og kom det i en blender sammen med de øvrige ingredienser til mutabalen. Blend til en helt glat, emulgeret creme."
+    },
+    {
+      "section": "Mutabal",
+      "text": "Smag til: den skal være en god balance mellem røget, syrlig og nøddeagtig, uden at være for sur. Stil den let afkølet, før den serveres."
+    },
+    {
+      "section": "Aubergine-tuile",
+      "text": "Blend 150 g brændte aubergineskaller med 120 ml af den gemte aubergine-saft (fyld evt. op med frisk vand), 10 fed konfiteret hvidløg, tapiokastivelsen og en knivspids salt, til massen er helt glat."
+    },
+    {
+      "section": "Aubergine-tuile",
+      "text": "Hæld massen i en gryde, og kog den ved 100°C i 10-15 minutter under konstant omrøring, til den er tyk, sej og blank."
+    },
+    {
+      "section": "Aubergine-tuile",
+      "text": "Smør massen meget tyndt ud på sildemåtter eller bagepapir på plader, gerne i omgange. Tør den i ovnen eller en dehydrator ved 70°C i ca. 2 timer, til den er helt tør. Vend den undervejs, hvis det er nødvendigt."
+    },
+    {
+      "section": "Aubergine-tuile",
+      "text": "Brud de tørre plader i skår, og opbevar dem lufttæt ved stuetemperatur. Der bliver mere, end du skal bruge, men de holder sig meget længe."
+    },
+    {
+      "section": "Aubergine-tuile",
+      "text": "Før servering: varm olie op til 180°C i en gryde fyldt en tredjedel eller i en frituregryde. Friturestek skårene, til de er sprøde og hævede, og drys straks med salt og sumak. De friturestegte tuiler holder sig op til 3 dage."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret mutabalen på tallerkener, og lav en fordybning i midten med bagsiden af en ske. Læg syltede løg, granatæblekerner og tuileskår ovenpå, dryp med granatæblemelasse, og pynt med mynte."
+    }
+  ],
+  "changes": [
+    "Risvineddike er erstattet af hvidvinseddike.",
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Vegetable oil er erstattet af en neutral olie."
+  ]
+}

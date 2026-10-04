@@ -1,0 +1,208 @@
+{
+  "url": "https://www.arla.dk/opskrifter/gyoza-med-grontsager/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:26:13.242Z",
+  "total_minutes": 60,
+  "active_minutes": 45,
+  "yield_count": 30,
+  "source_lines": 18,
+  "title": "Gyoza med grøntsager",
+  "intro": "Små japanske dumplings fyldt med champignon, spidskål og gulerod, som først steges gyldne og derefter dampes møre. De serveres med en cremet dipsauce med lime og chili.",
+  "servings": 30,
+  "ingredients": [
+    {
+      "section": "Dipsauce",
+      "amount": 5,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dipsauce",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dipsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "limesaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Dipsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dipsauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 200,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 150,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet, frisk",
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "ristet",
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 30,
+      "unit": "stk",
+      "name": "gyozadej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "fx sesamolie, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Gyoza",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dipsauce",
+      "text": "Rør creme fraiche, sojasauce, limesaft, chili og sukker sammen til en jævn dip."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Varm smørret op i en sauterpande, og brun champignonerne ved høj varme i cirka 5 minutter."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Kom spidskål, gulerødder, ingefær, sojasauce og sesamolie i panden. Steg ved middelvarme i cirka 5 minutter, til kålen er sunket sammen."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Rør forårsløg, salt og peber i de sidste par minutter. Smag fyldet til."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Hæld fyldet i en skål, og lad det køle af i cirka 5 minutter."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Læg en lille spiseskefuld fyld midt på hver dejplade."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Pensl dejkanten med lidt vand, fold pladen over fyldet, og tryk kanterne helt sammen. Læg små folder langs kanten, så gyozaen får sin form."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Varm olien godt op i en stor pande med låg. Steg gyozaerne 1-2 minutter, til bunden er gylden. Bevæg panden let, så de ikke hænger fast."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Hæld vandet på panden, og sæt låget på. Lad gyozaerne dampe i cirka 5 minutter, og ryst panden et par gange undervejs."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Tag låget af, og steg videre i cirka 1 minut, til vandet er kogt væk."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Server med det samme sammen med dipsaucen."
+    }
+  ],
+  "changes": []
+}

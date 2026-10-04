@@ -1,0 +1,196 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/rice-paper-dumplings",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:59:45.190Z",
+  "total_minutes": 50,
+  "active_minutes": 25,
+  "yield_count": 20,
+  "source_lines": 15,
+  "title": "Rispapirdumplings med svinekød",
+  "intro": "Sprøde dumplings i rispapir fyldt med svinekød, kål og shiitake, som steges gyldne i panden. Serveres med en let dip af soja, riseddike og sesam.",
+  "servings": 20,
+  "ingredients": [
+    {
+      "section": "Fyld",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "hvidkål",
+      "note": "lille, udskåret og groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "champignon",
+      "note": "shiitake, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 20,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "skrællet og revet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "olie",
+      "note": "sesamolie",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kålen",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Samling og stegning",
+      "amount": 30,
+      "unit": "stk",
+      "name": "rispapir",
+      "note": "20-40 ark",
+      "optional": false
+    },
+    {
+      "section": "Samling og stegning",
+      "amount": 1,
+      "unit": "dl",
+      "name": "olie",
+      "note": "neutral, plus lidt til bræt og tallerken",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "riseddike",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finskåret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Kør kålen i en foodprocessor, til den er fint hakket. Vend den med salt, og lad den stå i 15 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg kålen i et rent viskestykke, og vrid så meget vand ud af den som muligt."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kom kålen i en skål med gulerod, shiitake, hakket svinekød, hvidløg, ingefær, sojasauce, sesamolie og forårsløg. Smag til med peber. Ælt det grundigt sammen med hænderne."
+    },
+    {
+      "section": "Samling og stegning",
+      "text": "Dyp et rispapirark i få sekunder i et fladt fad med lunkent vand. Læg det på et olieret skærebræt."
+    },
+    {
+      "section": "Samling og stegning",
+      "text": "Kom en rigelig spiseskefuld fyld på midten. Fold den nederste kant op over fyldet, derefter toppen og til sidst siderne, så du får en pæn firkantet pakke."
+    },
+    {
+      "section": "Samling og stegning",
+      "text": "Virker pakken skrøbelig, så pak den ind i endnu et vædet ark. Gentag med resten, og læg dumplingsene på en olieret tallerken."
+    },
+    {
+      "section": "Samling og stegning",
+      "text": "Varm olien op i en stor stegepande med slip-let-belægning, så den højst er en tredjedel fyldt. Steg dumplingsene på middelhøj varme i 3-5 minutter, til de er gyldne."
+    },
+    {
+      "section": "Samling og stegning",
+      "text": "Vend dem med en hulske, læg låg på, og steg 3-4 minutter mere. Tag låget af, og steg 1-2 minutter til."
+    },
+    {
+      "section": "Dip",
+      "text": "Rør dipingredienserne sammen i en lille skål, mens dumplingsene steger. Server dem ved siden af dumplingsene."
+    }
+  ],
+  "changes": [
+    "Shiitake er erstattet af champignon.",
+    "Vietnamesiske forårsrulleark er erstattet af rispapir.",
+    "Vegetabilsk olie er erstattet af neutral olie."
+  ]
+}

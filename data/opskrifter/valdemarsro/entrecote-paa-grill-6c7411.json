@@ -1,0 +1,175 @@
+{
+  "url": "https://www.valdemarsro.dk/entrecote-paa-grill/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:07:29.674Z",
+  "total_minutes": 60,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 13,
+  "intro": "Saftige grillede entrecotes med en frisk estragonsmør, serveret med ovnbagte babykartofler og en hurtig salat af grønne asparges, oliven og parmesan.",
+  "servings": 4,
+  "title": "Grillet entrecote med estragonsmør",
+  "ingredients": [
+    {
+      "section": "Entrecote",
+      "amount": 4,
+      "unit": "stk",
+      "name": "entrecote",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Entrecote",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til bøfferne og kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Entrecote",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Entrecote",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Estragonsmør",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "stuetempereret",
+      "optional": false
+    },
+    {
+      "section": "Estragonsmør",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "estragon",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Estragonsmør",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonsmør",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, saft og revet skal",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "kg",
+      "name": "babykartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "hjertesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "asparges",
+      "note": "grønne",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 50,
+      "unit": "g",
+      "name": "sorte oliven",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Estragonsmør",
+      "text": "Hak estragonen helt fint. Rør den sammen med smør, citronsaft og hvidløg, og smag til med citronskal, salt og peber."
+    },
+    {
+      "section": "Estragonsmør",
+      "text": "Kom smørret i en skål, og stil det på køl i mindst 1 time, før det skal serveres."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Varm ovnen op til 200 °C. Skrub kartoflerne grundigt, og tør dem godt."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Vend kartoflerne i olie og salt, og bag dem i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Entrecote",
+      "text": "Tag bøfferne ud af køleskabet ca. 45 minutter før grillning, så de når stuetemperatur."
+    },
+    {
+      "section": "Entrecote",
+      "text": "Pensl bøfferne med lidt olivenolie, og læg dem på den varme grill over direkte varme. Grill dem ca. 2 minutter på hver side."
+    },
+    {
+      "section": "Entrecote",
+      "text": "Er bøfferne meget tykke, eller skal de være mere end medium, så flyt dem over på indirekte varme i 1-2 minutter pr. side."
+    },
+    {
+      "section": "Entrecote",
+      "text": "Smag bøfferne til med flagesalt og friskkværnet peber, og server dem med en skefuld estragonsmør."
+    },
+    {
+      "section": "Salat",
+      "text": "Knæk den hårde ende af aspargesene. Steg dem i 30 sekunder i smør på en varm pande."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend asparges med salat og oliven, og smag til med salt og peber. Drys med parmesan."
+    }
+  ],
+  "changes": [
+    "Hjertesalat er ændret til salat.",
+    "Babykartofler er beholdt som babykartofler."
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/paillard-chicken-lemon-herbs",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:57:48.106Z",
+  "total_minutes": 20,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 11,
+  "title": "Grillet kylling med citron og krydderurter",
+  "intro": "Tyndt bankede kyllingebryst marineres i hvidløg, rosmarin, salvie og citron og grilles hurtigt. Serveres med rucolasalat med parmesan.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Kylling",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": "bladene finthakkes",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 6,
+      "unit": "stk",
+      "name": "salvie",
+      "note": "blade, snittet fint",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal af hel og saft af halv",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 25,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "høvlet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingebrysterne ét ad gangen mellem to lag film eller bagepapir. Bank dem med en kødhammer eller kagerulle, til de er jævnt tykke, cirka 0,5 cm. Læg dem i et fad."
+    },
+    {
+      "section": "Marinade",
+      "text": "Mos hvidløg med en knivspids salt i en mortér. Tilsæt rosmarin og salvie, og mos videre, til det er en grov pasta."
+    },
+    {
+      "section": "Marinade",
+      "text": "Rør citronskal, citronsaft, olivenolie og peber i. Hæld marinaden over kyllingen, og vend, så alle stykker er dækket."
+    },
+    {
+      "section": "Marinade",
+      "text": "Dæk fadet til, og lad kyllingen trække i køleskabet i mindst 2 timer."
+    },
+    {
+      "section": "Kylling",
+      "text": "Tænd grillen. Når flammerne har lagt sig, fordel kullene i et jævnt lag. Grill kyllingen 1-2 minutter på hver side."
+    },
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingen på et bræt, og lad den hvile i nogle minutter."
+    },
+    {
+      "section": "Salat",
+      "text": "Bland olie og balsamico i en stor skål, og vend rucolaen i. Smag til med salt og peber, og høvl parmesan ovenpå."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server kyllingen med salaten og citronbåde, så man kan presse saft over."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,193 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/mustard-apple-glazed-ham",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:07:20.050Z",
+  "total_minutes": 145,
+  "active_minutes": 25,
+  "yield_count": 12,
+  "source_lines": 13,
+  "title": "Glaseret skinke med sennep og æble",
+  "intro": "En saftig, kogt skinke, der får en blank, sprød glasur af sennep, cider og æblejuice. Perfekt til julebordet eller en stor weekendfrokost.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Skinke",
+      "amount": 2.5,
+      "unit": "kg",
+      "name": "skinke",
+      "note": "udbenet, uden røgsmag",
+      "optional": false
+    },
+    {
+      "section": "Skinke",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sennepspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skinke",
+      "amount": 10,
+      "unit": "stk",
+      "name": "nelliker",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Skinke",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "salvie",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Skinke",
+      "amount": 5,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 2.5,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "grov",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 100,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 1,
+      "unit": "dl",
+      "name": "æblejuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 2,
+      "unit": "dl",
+      "name": "cider",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 75,
+      "unit": "ml",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til ovnen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "mild, til at pensle med",
+      "optional": false
+    },
+    {
+      "section": "Til ovnen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "2-3 stk., halveret",
+      "optional": true
+    },
+    {
+      "section": "Til ovnen",
+      "amount": null,
+      "unit": null,
+      "name": "laurbærblade",
+      "note": "et par stk. ekstra til pynt",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sennep",
+      "note": "grov, ekstra til at have ved siden af",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kog skinken",
+      "text": "Læg skinken i den største og dybeste gryde, du har, og fyld med koldt vand, så den er dækket med mindst 5 cm vand."
+    },
+    {
+      "section": "Kog skinken",
+      "text": "Tilsæt sennepspulver, nelliker, salvie og laurbærblade. Læg låg på og bring i kog."
+    },
+    {
+      "section": "Kog skinken",
+      "text": "Lad skinken småkoge i 1 time og 20 minutter, og øs skummet af undervejs. Tag gryden af varmen og lad skinken trække under låg i 1 time."
+    },
+    {
+      "section": "Kog skinken",
+      "text": "Løft skinken forsigtigt op. Sigt evt. kogevandet og frys det til suppe, stuvning eller kogte tørrede bønner."
+    },
+    {
+      "section": "Glasur",
+      "text": "Mens skinken koger, kommer du begge slags sennep, farin, æblejuice, cider og eddike i en lille gryde og bringer det i en let simren."
+    },
+    {
+      "section": "Glasur",
+      "text": "Kog ved middel varme, til sukkeret er opløst. Skru derefter op og lad glasuren koge kraftigt i 15-20 minutter, til den er reduceret og sirupsagtig."
+    },
+    {
+      "section": "Steg skinken",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Steg skinken",
+      "text": "Fjern svær fra skinken, og rids fedtlaget i et tern­mønster med en skarp kniv."
+    },
+    {
+      "section": "Steg skinken",
+      "text": "Læg skinken med fedtsiden opad i et ovnfast fad og pensl med den milde sennep."
+    },
+    {
+      "section": "Steg skinken",
+      "text": "Læg de halverede skalotteløg og evt. ekstra laurbærblade rundt om skinken. Hæld halvdelen af glasuren over."
+    },
+    {
+      "section": "Steg skinken",
+      "text": "Steg i 30-40 minutter, og dryp med resten af glasuren hvert 10. minut, til skinken er klistret, blank og gennemvarm."
+    },
+    {
+      "section": "Steg skinken",
+      "text": "Lad skinken hvile i 5 minutter, og læg den over på et serveringsbræt. Pynt med de klistrede skalotteløg og laurbærblade, og server med ekstra sennep ved siden af."
+    }
+  ],
+  "changes": [
+    "Gammon er erstattet med udbenet skinke.",
+    "Engelsk sennep er erstattet med mild sennep.",
+    "Engelsk sennepspulver er erstattet med sennepspulver.",
+    "Echalion-skalotteløg er erstattet med almindelige skalotteløg."
+  ]
+}

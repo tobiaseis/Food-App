@@ -1,0 +1,160 @@
+{
+  "url": "https://www.valdemarsro.dk/braendende-kaerlighed/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:31:52.671Z",
+  "total_minutes": 40,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Brændende kærlighed",
+  "intro": "Klassisk dansk ret med cremet kartoffelmos, sprødt stegt bacon og bløde løg, serveret med syltede rødbeder og friske krydderurter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartoffelmos",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "lunet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "muskatnød",
+      "note": "et drys",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 300,
+      "unit": "g",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 3,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "rød chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 100,
+      "unit": "g",
+      "name": "syltede rødbeder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelmos",
+      "text": "Skræl kartoflerne og kog dem møre i rigeligt vand uden salt."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Hæld vandet fra, og mos kartoflerne sammen med smørternene."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Pisk moset med håndmixer på laveste hastighed, til det er luftigt. Pisk så den lune mælk i lidt ad gangen, til konsistensen er, som du vil have den."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Krydr med salt, peber og muskatnød."
+    },
+    {
+      "section": "Topping",
+      "text": "Steg baconen sprød på en pande ved middelvarme. Læg den over på køkkenrulle, så fedtet kan sive af."
+    },
+    {
+      "section": "Topping",
+      "text": "Svits løgene bløde i baconfedtet sammen med smørret. Rør chilien i, hvis du vil have lidt ekstra bid og varme, og smag til med peber."
+    },
+    {
+      "section": "Topping",
+      "text": "Anret moset med baconen og løgene. Server med de syltede rødbeder, purløg og persille."
+    }
+  ],
+  "changes": []
+}

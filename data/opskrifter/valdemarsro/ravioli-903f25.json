@@ -1,0 +1,160 @@
+{
+  "url": "https://www.valdemarsro.dk/ravioli/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:11:55.711Z",
+  "total_minutes": 90,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Ravioli med laks og spinat",
+  "intro": "Hjemmelavet ravioli af durummel med en cremet fyldning af ricotta, koldrøget laks og spinat. Dejen hviler i køleskabet, og de små pastapuder koger på få minutter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pastadej",
+      "amount": 150,
+      "unit": "g",
+      "name": "durummel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pastadej",
+      "amount": 150,
+      "unit": "g",
+      "name": "durummel",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Pastadej",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pastadej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pastadej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "ricotta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "koldrøget laks",
+      "note": "hakket fint",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "spinat",
+      "note": "babyspinat, hakket fint",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til kogning",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kogning",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "en smule",
+      "optional": false
+    },
+    {
+      "section": "Til kogning",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pastadej",
+      "text": "Bland begge slags mel med saltet i en stor skål, og lav en fordybning midt i melet."
+    },
+    {
+      "section": "Pastadej",
+      "text": "Slå æggene ud i fordybningen, og pisk dem løst med en gaffel. Når melet begynder at trække æggene til sig, hældes olivenolien i, og du fortsætter med at piske."
+    },
+    {
+      "section": "Pastadej",
+      "text": "Ælt dejen glat med hænderne, når gaflen ikke længere slår til. Læg den i en skål, og lad den hvile i køleskabet i ca. 1 time."
+    },
+    {
+      "section": "Fyld",
+      "text": "Hak laks og spinat fint. Rør dem sammen med ricotta og hvidløg, og smag til med salt og peber."
+    },
+    {
+      "section": "Ravioli",
+      "text": "Rul dejen tyndt ud på et meldrysset bord. Udstik cirkler med et glas."
+    },
+    {
+      "section": "Ravioli",
+      "text": "Læg lidt fyld på midten af hver cirkel, fold den sammen, og luk kanten ved at presse en gaffel langs den."
+    },
+    {
+      "section": "Ravioli",
+      "text": "Kog raviolierne i letsaltet vand med en smule olie i ca. 3-3½ minut."
+    }
+  ],
+  "changes": []
+}

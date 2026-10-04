@@ -1,0 +1,160 @@
+{
+  "url": "https://www.valdemarsro.dk/spinattaerte/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:37:49.898Z",
+  "total_minutes": 90,
+  "active_minutes": 30,
+  "yield_count": 1,
+  "source_lines": 13,
+  "title": "Spinattærte",
+  "intro": "Sprød tærtebund af mørdej fyldt med spinat, hytteost og cremefraiche og toppet med mozzarella og pinjekerner. Fin til frokost eller aftensmad med en grøn salat.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Tærtedej",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 125,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 450,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frossen, optøet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 200,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 30,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtedej",
+      "text": "Bland begge slags mel med saltet. Smuldr smørret ud i melet med fingrene, eller kør det i en foodprocessor."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Tilsæt vandet og æltes sammen til en dej. Lad den gerne hvile på køl i 30 minutter."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Tryk dejen ud i en smurt tærteform på 24 cm, og prik bunden over med en gaffel."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Forbag bunden i 10 minutter i en forvarmet ovn ved 175 °C varmluft."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pres vandet fra den optøede spinat. Rør spinaten sammen med æg, hytteost, creme fraiche og muskatnød i en skål, og smag til med salt og peber."
+    },
+    {
+      "section": "Fyld",
+      "text": "Hæld fyldet i den forbagte bund. Riv eller skær mozzarellaen i stykker, læg den ovenpå, og strø pinjekerner over."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bag tærten ved 175 °C varmluft i cirka 30-35 minutter, til fyldet er stivnet."
+    }
+  ],
+  "changes": []
+}

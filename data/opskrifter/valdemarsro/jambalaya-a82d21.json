@@ -1,0 +1,232 @@
+{
+  "url": "https://www.valdemarsro.dk/jambalaya/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:53:37.204Z",
+  "total_minutes": 40,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Jambalaya med kylling, chorizo og rejer",
+  "intro": "En krydret one-pot-ret med ris, kylling, chorizo og rejer i tomat og bouillon. Den får syrlig friskhed fra lime og lidt bid fra tabasco.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "nellike",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "rejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tabasco",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Hæt olien i en gryde, og brun kylling og chorizo på alle sider."
+    },
+    {
+      "section": null,
+      "text": "Skru lidt ned for varmen. Rør løg, hvidløg, chiliflager, nellike og paprika i gryden, og lad løgene blive bløde."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt timian, oregano, peberfrugt, bladselleri, tomatpuré, hakkede tomater og de rå ris. Steg det i et par minutter under omrøring."
+    },
+    {
+      "section": null,
+      "text": "Hæld fonden over, og bring det i kog. Læg låg på, og lad retten simre i 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tag gryden af varmen, og lad den stå med låg på i 15 minutter, eller til risene er møre."
+    },
+    {
+      "section": null,
+      "text": "Vend rejerne i sammen med limesaft og limeskal. Smag til med salt, peber og tabasco."
+    },
+    {
+      "section": null,
+      "text": "Drys med persille og forårsløg. Server med limebåde og ekstra tabasco på bordet."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,191 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/huevos-rancheros-pancakes-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:12:31.453Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Huevos rancheros-pandekager",
+  "intro": "Små tykke pandekager med koriander toppes med stegte æg, sprød chorizo, avocado og feta samt en frisk tomatsalsa. En mexicansk inspireret brunch, der er nem at samle.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til pico de gallo",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til pico de gallo",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til pico de gallo",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket, evt. ekstra efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til pico de gallo",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til pico de gallo",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til pico de gallo",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": 150,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": 2,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til pandekagerne",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 150,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": null,
+      "unit": null,
+      "name": "hot sauce",
+      "note": "til at dryppe med",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til pico de gallo",
+      "text": "Bland tomat, rødløg, chili, limesaft og koriander. Smag til med salt, og stil skålen i køleskabet, til den skal bruges."
+    },
+    {
+      "section": "Til pandekagerne",
+      "text": "Rør hvedemel, bagepulver og salt sammen i en skål. Pisk æg og mælk i, til dejen er glat, og vend derefter koriander i."
+    },
+    {
+      "section": "Til pandekagerne",
+      "text": "Varm lidt olie på en pande. Steg små pandekager på begge sider, til de er gyldne, og hold dem varme."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Steg chorizoskiverne på panden, til de er sprøde, og tag dem af."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Steg æggene på samme pande, til kanterne er sprøde, og blommen stadig er flydende."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Læg pandekagerne i stakke på tallerkener. Top med pico de gallo, spejlæg, chorizo, avocado og feta, og dryp til sidst med hot sauce."
+    }
+  ],
+  "changes": [
+    "Plain flour er erstattet af hvedemel.",
+    "Whole milk er erstattet af sødmælk."
+  ]
+}

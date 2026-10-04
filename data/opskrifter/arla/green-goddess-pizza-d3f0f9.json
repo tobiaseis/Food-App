@@ -1,0 +1,174 @@
+{
+  "url": "https://www.arla.dk/opskrifter/green-goddess-pizza/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:18:54.075Z",
+  "total_minutes": 30,
+  "active_minutes": 25,
+  "yield_count": 2,
+  "source_lines": 16,
+  "title": "Green goddess-pizza",
+  "intro": "Sprød pizza med creme fraiche og smeltet mozzarella, toppet med en frisk grøn urtedressing, salat og nødder. Dressingen blendes på få minutter og giver pizzaen en cremet friskhed.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften heraf",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "eller zittauerløg",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "krydderurter",
+      "note": "efter eget valg",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 20,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til pizzaerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "pizzabund",
+      "note": "forbagte",
+      "optional": false
+    },
+    {
+      "section": "Til pizzaerne",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pizzaerne",
+      "amount": 300,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 75,
+      "unit": "g",
+      "name": "babyleaf",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "karse",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til toppen",
+      "amount": 40,
+      "unit": "g",
+      "name": "pistacienødder",
+      "note": "usaltede, eller cashewnødder",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Blend alle ingredienserne til dressingen i en blender, til den er jævn og cremet."
+    },
+    {
+      "section": "Dressing",
+      "text": "Smag dressingen til, og justér med salt og peber."
+    },
+    {
+      "section": "Pizzaerne",
+      "text": "Forvarm ovnen til 230 °C varmluft med to bageplader indeni."
+    },
+    {
+      "section": "Pizzaerne",
+      "text": "Anbring pizzabundene på bagepapir. Fordel creme fraiche på dem, og dæk med den revede mozzarella."
+    },
+    {
+      "section": "Pizzaerne",
+      "text": "Skub hver pizza med bagepapiret over på sin varme plade. Bag dem i 7-10 minutter."
+    },
+    {
+      "section": "Pizzaerne",
+      "text": "Anret salat, sesamfrø, karse og nødder på de nybagte pizzaer, og dryp dressingen over. Server straks."
+    }
+  ],
+  "changes": [
+    "Babysalatblade er skiftet til babyleaf."
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/sierra-leone-jollof-rice-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:07:15.860Z",
+  "total_minutes": 80,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 33,
+  "title": "Jollof-ris fra Sierra Leone med stegte grøntsager",
+  "intro": "Krydret tomatris med langtidsstegte løg og en hjemmeblandet vestafrikansk peberblanding. Serveres med glaserede, ovnbagte gulerødder og spidskål samt rispops og purløg.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Vestafrikansk peberblanding",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Vestafrikansk peberblanding",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Peber",
+      "note": "hvide peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Vestafrikansk peberblanding",
+      "amount": 2.5,
+      "unit": "tsk",
+      "name": "Peber",
+      "note": "sorte peberkorn, i stedet for paradiskorn",
+      "optional": false
+    },
+    {
+      "section": "Vestafrikansk peberblanding",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Peber",
+      "note": "sorte peberkorn, i stedet for kubebepeber",
+      "optional": false
+    },
+    {
+      "section": "Vestafrikansk peberblanding",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "Krydderier",
+      "note": "hel allehånde",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 1,
+      "unit": "dl",
+      "name": "Olie",
+      "note": "solsikkeolie",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 500,
+      "unit": "g",
+      "name": "Løg",
+      "note": "rødløg, ca. 2 store, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Krydderier",
+      "note": "spidskommenfrø",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "Krydderier",
+      "note": "korianderfrø",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 4,
+      "unit": "stk",
+      "name": "Peber",
+      "note": "hele sorte peberkorn, i stedet for selimkorn",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "Krydderier",
+      "note": "røget paprika",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Krydderier",
+      "note": "karry",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 15,
+      "unit": "g",
+      "name": "Ingefær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 2,
+      "unit": "fed",
+      "name": "Hvidløg",
+      "note": "store fed",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Krydderier",
+      "note": "rød chili, i stedet for scotch bonnet",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 500,
+      "unit": "g",
+      "name": "Ris",
+      "note": "basmatiris",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 200,
+      "unit": "g",
+      "name": "Tomater",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 40,
+      "unit": "g",
+      "name": "Flåede/hakkede tomater",
+      "note": "tomatpuré",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "Persille & krydderurter",
+      "note": "timian",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 2,
+      "unit": "stk",
+      "name": "Krydderier",
+      "note": "laurbærblade",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": 5,
+      "unit": "dl",
+      "name": "Bouillon",
+      "note": "oksefond, varmet op",
+      "optional": false
+    },
+    {
+      "section": "Jollof-ris",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Rof-sauce",
+      "amount": 20,
+      "unit": "g",
+      "name": "Persille & krydderurter",
+      "note": "fladbladet persille",
+      "optional": false
+    },
+    {
+      "section": "Rof-sauce",
+      "amount": 1,
+      "unit": "fed",
+      "name": "Hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rof-sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Jalapeños",
+      "note": "frisk, uden kerner",
+      "optional": false
+    },
+    {
+      "section": "Rof-sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "havsalt",
+      "optional": false
+    },
+    {
+      "section": "Rof-sauce",
+      "amount": 50,
+      "unit": "ml",
+      "name": "Olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 8,
+      "unit": "stk",
+      "name": "Gulerødder",
+      "note": "gerne i flere farver, rensede og halveret på langs",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "Kål",
+      "note": "spidskål, delt i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "Shito sauce",
+      "note": "købt, til glasering",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "Olie",
+      "note": "olivenolie, til at vende grøntsagerne i",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Rispops",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Persille & krydderurter",
+      "note": "purløg, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Vestafrikansk peberblanding",
+      "text": "Rist alle peberkornene på en tør pande ved middelvarme, til de dufter. Lad dem køle af, og mal dem fint i en kryddermølle eller morter."
+    },
+    {
+      "section": "Vestafrikansk peberblanding",
+      "text": "Opbevar blandingen i en tæt lukket glasbeholder, og brug den inden for tre måneder."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Varm solsikkeolien i en stor, tykbundet gryde med låg. Svits rødløgene ved lav varme i 20-30 minutter, til de er bløde og gyldenbrune. Rør af og til."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Imens ristes spidskommen, koriander og de hele peberkorn på en varm, tør pande, til de dufter. Mal dem i morter eller foodprocessor, og bland dem med paprika og karry samt 1 tsk af peberblandingen. Stil til side."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Blend ingefær, hvidløg og chili til en pasta. Stil til side."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Kom risene i en stor skål, dæk dem med koldt vand, og skyl dem med hænderne. Hæld vandet fra, og gentag 2-3 gange, til vandet er klart. Lad dem dryppe af."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Tænd ovnen på 200 °C."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Rør pastaen ned i de gyldne løg, og steg den i 2-3 minutter. Skru ned for varmen, hvis det brænder på."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Tilsæt krydderiblandingen, og steg 1-2 minutter mere. Kom tomater, tomatpuré, timian og laurbærblade i, og lad det simre i 3-5 minutter, så smagene smelter sammen."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Rør risene i, så alle korn er dækket af tomatbunden, og lad dem stege 5-10 minutter ved lav varme."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Hæld fonden på lidt ad gangen, og læg låg på mellem hver omgang. Lad risene optage væsken, før du tilsætter mere. Tjek efter 5 minutter, og kom mere fond i efter behov. Risene skal være møre og luftige. Det tager omkring 30 minutter og kan ikke skyndes på."
+    },
+    {
+      "section": "Jollof-ris",
+      "text": "Smag til med salt, når risene er kogt, men stadig lidt faste i biddet."
+    },
+    {
+      "section": "Rof-sauce",
+      "text": "Blend persille, hvidløg, jalapeño, havsalt og 1 tsk af peberblandingen til en glat masse. Rør olivenolien i."
+    },
+    {
+      "section": "Rof-sauce",
+      "text": "Tynd saucen med lidt koldt vand, hvis du vil have den løsere, eller undlad vandet. Stil til side."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Varm en ovnfast pande op ved høj varme, mens risene simrer. Vend gulerødder og spidskål i lidt olie og salt."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Brun grøntsagerne på alle sider, til de har fået god farve. Sæt panden i ovnen i 10 minutter, så de bliver færdige."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Tag panden ud af ovnen. Pensl spidskålen med shito sauce og gulerødderne med rof-sauce."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret jollof-risene i skåle, og drys med rispops og purløg. Læg de glaserede grøntsager ovenpå."
+    }
+  ],
+  "changes": [
+    "Paradiskorn er erstattet af sorte peberkorn.",
+    "Kubebepeber er erstattet af sorte peberkorn.",
+    "Selimkorn er erstattet af hele sorte peberkorn.",
+    "Scotch bonnet er erstattet af rød chili.",
+    "Røget salt er erstattet af almindeligt salt.",
+    "Puffet ris er erstattet af rispops.",
+    "Friske laurbærblade er erstattet af laurbærblade."
+  ]
+}

@@ -1,0 +1,401 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/wild-line-caught-sea-bass-wild-fennel-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:36:25.919Z",
+  "total_minutes": 240,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 34,
+  "title": "Grillet havbars med fennikel",
+  "intro": "Havbarsfileter grillet over glødende kul og serveret med fennikelpuré, en silkeblød fennikelsmørsauce, fennikelolie og let skum. Retten er arbejdskrævende, og fennikelolien skal trække natten over.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Til fisken",
+      "amount": 1,
+      "unit": "stk",
+      "name": "havbars",
+      "note": "hel, 2-3 kg; fileteres i 8 stykker, ben, afskær og hoved gemmes til fonden",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "brunet og smeltet",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": null,
+      "unit": null,
+      "name": "fennikelfrø",
+      "note": "stødt, til drys",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "blomster, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til fisken",
+      "amount": null,
+      "unit": null,
+      "name": "fennikelgrønt",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelolien",
+      "amount": 100,
+      "unit": "g",
+      "name": "fennikel",
+      "note": "stilkene, groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelolien",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til havbarsfonden",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til havbarsfonden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til havbarsfonden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til havbarsfonden",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelpuréen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelpuréen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "tyndt skåret",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelpuréen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "tyndt skåret",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelpuréen",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelpuréen",
+      "amount": null,
+      "unit": null,
+      "name": "is",
+      "note": "isterninger til afkøling",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "fennikel",
+      "note": "stilkene, groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsauce",
+      "amount": 5,
+      "unit": "dl",
+      "name": "fiskefond",
+      "note": "af havbarsfonden",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsauce",
+      "amount": 50,
+      "unit": "ml",
+      "name": "pernod",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsauce",
+      "amount": 150,
+      "unit": "g",
+      "name": "fennikelgrønt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsauce",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "i tern, koldt; vægten justeres efter væsken, se fremgangsmåden",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til fennikeleddike",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikeleddike",
+      "amount": 2,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Til fennikeleddike",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikeleddike",
+      "amount": 5,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikeleddike",
+      "amount": 200,
+      "unit": "g",
+      "name": "fennikel",
+      "note": "stilkene",
+      "optional": false
+    },
+    {
+      "section": "Til fennikeleddike",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelskum",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelskum",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelskum",
+      "amount": 75,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fennikelolie",
+      "text": "Kom alle ingredienserne til olien i en blender, og kør dem i ca. 5 minutter, til massen er helt glat og svagt lun."
+    },
+    {
+      "section": "Fennikelolie",
+      "text": "Lad olien stå natten over. Sigt den næste dag gennem et gazefilter. Den holder 2 dage i køleskab eller flere måneder i fryser."
+    },
+    {
+      "section": "Havbarsfond",
+      "text": "Fileter havbarsen i 8 portioner, hvis det ikke allerede er gjort. Gem ben, afskær og hoved."
+    },
+    {
+      "section": "Havbarsfond",
+      "text": "Læg alle ingredienserne til fonden i en stor gryde sammen med 400 g af havbarsbenene. Fyld op med vand, så alt er dækket, og bring det i kog."
+    },
+    {
+      "section": "Havbarsfond",
+      "text": "Fjern skummet, skru ned, og lad fonden simre i 2 timer. Si den derefter gennem et fint sigte, og stil den til side."
+    },
+    {
+      "section": "Fennikelpuré",
+      "text": "Svits fennikel, løg og hvidløg i smørret ved lav varme i ca. 40 minutter, til det er meget blødt og sødt."
+    },
+    {
+      "section": "Fennikelpuré",
+      "text": "Hæld 150 ml af havbarsfonden i, og lad det koge videre i 20 minutter."
+    },
+    {
+      "section": "Fennikelpuré",
+      "text": "Blend massen, og dryp 25 ml fennikelolie i under blendingen. Si den gennem et fint sigte, og afkøl den hurtigt over isterninger."
+    },
+    {
+      "section": "Fennikeleddike",
+      "text": "Kog vand og eddike op. Rør de øvrige ingredienser i, og tag gryden af varmen. Stil den til side, til sukkeret er opløst og blandingen er kold. Opbevar eddiken i et glas i køleskabet."
+    },
+    {
+      "section": "Fennikelsauce",
+      "text": "Rist fennikelfrø og stjerneanis i olien, til de dufter. Tilsæt fennikelstilkene, og lad dem falme et par minutter."
+    },
+    {
+      "section": "Fennikelsauce",
+      "text": "Hæld pernod i, og lad den koge ind til en sirup. Tilsæt fonden, og lad det simre i ca. 20 minutter, til væsken er reduceret lidt."
+    },
+    {
+      "section": "Fennikelsauce",
+      "text": "Tilsæt fennikelgrønt, og tag gryden af varmen. Lad det trække i 30 minutter, og si derefter væsken gennem et fint sigte."
+    },
+    {
+      "section": "Fennikelsauce",
+      "text": "Vej den si'ede væske. Afvej lige så meget koldt smør, og skær det i små tern."
+    },
+    {
+      "section": "Fennikelsauce",
+      "text": "Kom væsken tilbage i gryden, og pisk smørret i få tern ad gangen under konstant piskning. Når alt smørret er blandet i, og saucen er blank og silkeblød, tilsættes fennikelfrø og en sjat fennikeleddike."
+    },
+    {
+      "section": "Fennikelsauce",
+      "text": "Saucen skal være emulgeret og så tyk, at den dækker bagsiden af en ske. Den skal smage rigt af smør med en frisk anisnote."
+    },
+    {
+      "section": "Fennikelskum",
+      "text": "Kog eddiken ind til det halve. Varm den med 50 g havbarsfond, 50 g fennikeleddike, smør og creme fraiche."
+    },
+    {
+      "section": "Fennikelskum",
+      "text": "Pisk blandingen til skum med en stavblender."
+    },
+    {
+      "section": "Grillning",
+      "text": "Tænd kulgrillen, og lad den blive meget varm."
+    },
+    {
+      "section": "Grillning",
+      "text": "Træk et spyd jævnt gennem hver filet, så fisken holdes samlet under grillningen."
+    },
+    {
+      "section": "Grillning",
+      "text": "Grill fileterne med skindsiden nedad først. Vend dem hvert 30. sekund, til de lige er gennemstegt, og skindet er blæret og stærkt farvet. En kageprøver skal glide let gennem midten af filetten."
+    },
+    {
+      "section": "Grillning",
+      "text": "Tag fisken af grillen, og lad den hvile et par minutter. Pensl med brunet smør, drys med flagesalt og stødte fennikelfrø."
+    },
+    {
+      "section": "Anretning",
+      "text": "Kom en solid skefuld fennikelpuré i den ene side af tallerkenen og en skefuld fennikelsauce i midten. Dryp lidt fennikelolie ovenpå saucen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg fisken midt på tallerkenen, og pynt med dildblomster og fennikelgrønt."
+    },
+    {
+      "section": "Anretning",
+      "text": "Pisk skummet op igen, og øs det lette skum fra overfladen. Anret rigeligt over hver portion."
+    }
+  ],
+  "changes": [
+    "Vilde fennikelstilke er erstattet med almindelig fennikel.",
+    "Fennikelpollen er erstattet med stødte fennikelfrø.",
+    "Vilde fennikelblomster er erstattet med dildblomster.",
+    "Vegetabilsk olie er erstattet med rapsolie."
+  ]
+}

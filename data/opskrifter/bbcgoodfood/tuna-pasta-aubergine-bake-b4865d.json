@@ -1,0 +1,179 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/tuna-pasta-aubergine-bake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:16:54.651Z",
+  "total_minutes": 55,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Pastaform med tun og aubergine",
+  "intro": "Fuldkornspenne i tomatsauce med tun og aubergine, toppet med en cremet skyrblanding og parmesan og bagt gylden i ovnen. Det er en mættende ret, der kan nå at stå i ovnen, mens man dækker bord.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, uden kerner og i tern",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 500,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "i små stykker",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "ikke saltlagte",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 30,
+      "unit": "g",
+      "name": "basilikum",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 200,
+      "unit": "g",
+      "name": "tun på dåse",
+      "note": "i vand, afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Pasta og topping",
+      "amount": 300,
+      "unit": "g",
+      "name": "pasta",
+      "note": "fuldkornspenne",
+      "optional": false
+    },
+    {
+      "section": "Pasta og topping",
+      "amount": 250,
+      "unit": "g",
+      "name": "skyr",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og topping",
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Pasta og topping",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret, til toppen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sauce",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Sauce",
+      "text": "Varm olien op i en stor pande, og steg peberfrugten ved middelvarme i nogle minutter, til den er blød. Tilsæt hvidløget, og steg det i ca. 1 minut. Pas på, at det ikke brænder på."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld passataen i panden. Rør oregano, chili, aubergine, kapers og halvdelen af basilikummen i."
+    },
+    {
+      "section": "Sauce",
+      "text": "Læg tunen ovenpå, og rør kun forsigtigt, så den ikke går helt i stykker. Læg låg på, og lad det simre ved lav varme i 15 minutter, til auberginen er mør. Rør forsigtigt et par gange undervejs."
+    },
+    {
+      "section": "Pasta og topping",
+      "text": "Kog pastaen efter anvisningen på posen, mens saucen simrer."
+    },
+    {
+      "section": "Pasta og topping",
+      "text": "Pisk skyr, æg og tre fjerdedele af parmesanen sammen i en skål."
+    },
+    {
+      "section": "Pasta og topping",
+      "text": "Si pastaen fra, og bland den med saucen. Kom det hele i et dybt ovnfast fad på ca. 30 x 20 cm."
+    },
+    {
+      "section": "Pasta og topping",
+      "text": "Fordel skyrblandingen over, så hele overfladen er dækket. Drys med det meste af den resterende parmesan og den sidste oregano."
+    },
+    {
+      "section": "Pasta og topping",
+      "text": "Bag i 15-20 minutter, til toppen har sat sig. Drys med resten af basilikummen og parmesanen, og server evt. med salat."
+    }
+  ],
+  "changes": [
+    "Quark er erstattet af skyr.",
+    "Chiliflager er erstattet af chili (krydderi)."
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/gluten-free-victoria-sponge",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:56:47.497Z",
+  "total_minutes": 45,
+  "active_minutes": 20,
+  "yield_count": 12,
+  "source_lines": 10,
+  "title": "Glutenfri victoriakage",
+  "intro": "Klassisk engelsk lagkage med to luftige glutenfri kagebunde, syltetøj og let flødeskum. Den er bedst samme dag, den bliver samlet.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Kagebunde",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til formene",
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "mellemstore",
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 200,
+      "unit": "g",
+      "name": "glutenfrit mel",
+      "note": "gerne med xanthangummi",
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": "glutenfrit",
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "flormelis",
+      "note": "til drys",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "jordbærsyltetøj",
+      "note": "eller hindbærsyltetøj",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kagebunde",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft). Smør to runde forme på 20 cm, og beklæd bunden med bagepapir."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Pisk smør og sukker sammen i en stor skål med el-piskeris i 5-6 minutter, til massen er lys og luftig."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Tilsæt æggene ét ad gangen, og pisk grundigt efter hvert. Kom en skefuld af melet i sammen med hvert æg, så dejen ikke skiller."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Vend resten af melet og bagepulveret i med en spatel. Rør mælk og vanilje i."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Fordel dejen i de to forme, og jævn overfladen."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Bag kagebundene i 20-25 minutter, til de er gyldne og fjedrer tilbage ved et let tryk. En grillpind stukket i midten skal komme ren op. Hænger der våd dej på pinden, skal bundene tilbage i ovnen i 5 minutter, før du tjekker igen."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Lad bundene hvile i formene i 5 minutter. Vend dem ud på en rist, fjern bagepapiret, og lad dem køle helt af."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "De afkølede bunde kan pakkes ind og fryses i op til en måned. Tø dem op ved stuetemperatur inden samling."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk fløde og flormelis med el-piskeris, til flødeskummet lige akkurat kan stå."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg den ene kagebund på et fad eller en kagestand. Smør syltetøjet ud over den, og læg flødeskummet ovenpå."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg den anden bund over, og sigt flormelis ovenpå. Kagen er bedst samme dag, den er samlet."
+    }
+  ],
+  "changes": [
+    "Glutenfrit selvhævende mel med xanthangummi er erstattet af glutenfrit mel.",
+    "Double cream er erstattet af piskefløde.",
+    "Golden caster sugar er erstattet af almindeligt sukker.",
+    "Jam er erstattet af jordbærsyltetøj."
+  ]
+}

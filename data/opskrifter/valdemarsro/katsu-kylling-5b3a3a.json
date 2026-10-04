@@ -1,0 +1,260 @@
+{
+  "url": "https://www.valdemarsro.dk/katsu-kylling/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:19:29.879Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Katsu-kylling med karrysauce",
+  "intro": "Paneret kyllingebryst, stegt sprødt og gyldent og serveret med en cremet karrysauce af grøntsager, æble og kokosmælk. Det spises med ris og frisk, mør spidskål.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "mediumstærk",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 300,
+      "unit": "g",
+      "name": "squash",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 400,
+      "unit": "ml",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hønsebouillon",
+      "note": "lidt mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Sprød kylling",
+      "amount": 600,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød kylling",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød kylling",
+      "amount": 75,
+      "unit": "g",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød kylling",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "sesamolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sprød kylling",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød kylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": "koges efter anvisning på emballagen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "fintstrimlet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "et nip til spidskålen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Karrysauce",
+      "text": "Varm karryen op i en tør gryde, til den begynder at dufte."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Kom sesamolie, squash, gulerødder, løg, hvidløg, æble og gurkemeje i gryden, og rør rundt i et par minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Hæld kokosmælken i, læg låg på, og lad det simre i ca. 15 minutter, til gulerødderne er møre."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Blend saucen helt glat og cremet. Tynd den evt. ud med lidt hønsebouillon, og smag til med sojasauce og peber."
+    },
+    {
+      "section": "Sprød kylling",
+      "text": "Bank kyllingebrysterne lidt flade, så de steges hurtigere og bliver saftige, uden at panaden bliver for mørk."
+    },
+    {
+      "section": "Sprød kylling",
+      "text": "Pisk æggene i en dyb tallerken, og hæld pankoraspen på en anden."
+    },
+    {
+      "section": "Sprød kylling",
+      "text": "Drys kyllingen med hvedemel, salt og peber. Vend den først i æg og derefter i pankorasp."
+    },
+    {
+      "section": "Sprød kylling",
+      "text": "Varm sesamolien op på en pande ved middelvarme, og steg kyllingen i ca. 6 minutter på hver side, til den er sprød og gylden. Kontrollér, at den er gennemstegt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kom spidskålen i en skål med et nip salt, og ælt den med hænderne i ca. 1 minut, til den bliver mør."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server kyllingen med karrysaucen, ris og spidskål. Top med forårsløg, sesamfrø og chiliflager."
+    }
+  ],
+  "changes": []
+}

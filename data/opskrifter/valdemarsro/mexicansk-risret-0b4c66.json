@@ -1,0 +1,240 @@
+{
+  "url": "https://www.valdemarsro.dk/mexicansk-risret/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:44:44.474Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Mexicansk risret",
+  "intro": "En farverig one-pot med ris, grøntsager, sorte bønner og varme krydderier. Serveres med avocado, ost, koriander og lime, så alle kan toppe efter smag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i små tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kernehus, finthakket; tilsæt mere efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "på dåse",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 140,
+      "unit": "g",
+      "name": "majs",
+      "note": "fra dåse eller frost",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, skåret i små tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "skåret i tynde både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 125,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sriracha",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skåret i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en gryde ved middelvarme. Svits løg, hvidløg og gulerødder, indtil løgene er bløde."
+    },
+    {
+      "section": null,
+      "text": "Rør squash, chili, spidskommen, koriander, kanel og røget paprika i gryden, og rør det godt sammen."
+    },
+    {
+      "section": null,
+      "text": "Skyl risene grundigt i en sigte under koldt vand, til vandet er næsten klart."
+    },
+    {
+      "section": null,
+      "text": "Rør de skyllede ris i gryden sammen med fonden og de hakkede tomater. Bring det i kog under omrøring, skru ned, læg låg på og lad det simre i 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Vend bønner, majs og peberfrugt i, og bring det i kog igen. Læg låg på, tag gryden af varmen, og lad den stå i 15 minutter, så risene bliver møre og smagen trækker."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt og peber, og vend cherrytomaterne i."
+    },
+    {
+      "section": null,
+      "text": "Anret risretten på et fad, og server den med avocado, koriander, ost, sriracha og limebåde ved siden af."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,270 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/brixham-crab-jerusalem-artichoke-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:04:18.641Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Krabbe med jordskokker",
+  "intro": "En festlig forret med to slags krabbekød, jordskokker i flere teksturer og sprøde krabbechips. Retten samles af flere små dele, som kan laves forud.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Jordskokkeknus",
+      "amount": 8,
+      "unit": "stk",
+      "name": "jordskokker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeknus",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "brunet",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeknus",
+      "amount": 15,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkeknus",
+      "amount": 10,
+      "unit": "g",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Krabbetuile",
+      "amount": 50,
+      "unit": "g",
+      "name": "æggehvider",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krabbetuile",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "brunet",
+      "optional": false
+    },
+    {
+      "section": "Krabbetuile",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krabbetuile",
+      "amount": 200,
+      "unit": "g",
+      "name": "fiskefond",
+      "note": "koges ind til 50 g, så den er tyk som gærekstrakt",
+      "optional": false
+    },
+    {
+      "section": "Krabbetuile",
+      "amount": 100,
+      "unit": "g",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krabbetuile",
+      "amount": 25,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Hvid krabbe",
+      "amount": 150,
+      "unit": "g",
+      "name": "krabbekød",
+      "note": "hvidt, pillet",
+      "optional": false
+    },
+    {
+      "section": "Hvid krabbe",
+      "amount": 15,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvid krabbe",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "hasselnøddeolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brun krabbepâté",
+      "amount": 100,
+      "unit": "g",
+      "name": "krabbekød",
+      "note": "brunt",
+      "optional": false
+    },
+    {
+      "section": "Brun krabbepâté",
+      "amount": 20,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brun krabbepâté",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkepuré",
+      "amount": 10,
+      "unit": "stk",
+      "name": "jordskokker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordskokkepuré",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Jordskokkepuré",
+      "amount": 100,
+      "unit": "g",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 25,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "ristede, halverede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Jordskokkeknus",
+      "text": "Læg de otte jordskokker i en gryde med vand, kog dem og lad dem simre, til de er bløde."
+    },
+    {
+      "section": "Jordskokkeknus",
+      "text": "Lad dem køle lidt af, træk skrællen af, og kassér den. Mos kødet groft."
+    },
+    {
+      "section": "Jordskokkeknus",
+      "text": "Vend det brunede smør og sojasaucen forsigtigt i, og lad massen køle helt af. Rør purløg i, og smag til med salt og peber. Stil det på køl."
+    },
+    {
+      "section": "Krabbetuile",
+      "text": "Varm ovnen op til 150 °C. Blend alle ingredienser til tuilen glatte, undtagen hasselnødderne."
+    },
+    {
+      "section": "Krabbetuile",
+      "text": "Smør dejen ud i et meget tyndt lag på en non-stick bagemåtte eller på bagepapir på en bageplade. Drys hasselnødderne jævnt ovenpå."
+    },
+    {
+      "section": "Krabbetuile",
+      "text": "Bag i 3 minutter, til tuilen er gyldenbrun. Lad den køle af, og bræk den i skår."
+    },
+    {
+      "section": "Hvid krabbe",
+      "text": "Gennemgå det hvide krabbekød for skalrester, og kom det i en skål."
+    },
+    {
+      "section": "Hvid krabbe",
+      "text": "Rør mayonnaise og hasselnøddeolie sammen, så smagen af hasselnød kun er svag. Vend det i krabbekødet, smag til med salt og peber, og stil det på køl."
+    },
+    {
+      "section": "Brun krabbepâté",
+      "text": "Tjek det brune krabbekød for skalrester. Blend det glat med panko og paprika."
+    },
+    {
+      "section": "Brun krabbepâté",
+      "text": "Fyld pâtéen i en sprøjtepose, og stil den på køl."
+    },
+    {
+      "section": "Jordskokkepuré",
+      "text": "Varm ovnen op til 180 °C. Læg de hele jordskokker på en bageplade, og bag dem, til de er bløde."
+    },
+    {
+      "section": "Jordskokkepuré",
+      "text": "Lad dem køle lidt af, del dem på midten, og skrab kødet ud. Skindet skal være helt, og der skal blive så lidt kød tilbage som muligt. Gem skindet."
+    },
+    {
+      "section": "Jordskokkepuré",
+      "text": "Blend kødet med smør og fløde til en glat puré, og smag til med salt og peber. Fyld den i en sprøjtepose."
+    },
+    {
+      "section": "Til servering",
+      "text": "Tag krabbekødet ud af køleskabet i god tid, så det når stuetemperatur."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld olie i en gryde, så den er en tredjedel fyldt, eller brug en frituregryde, og varm den til 190 °C. Friturestég jordskokkeskindet, til det er sprødt, og drys med salt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Form to nøder af den hvide krabbe pr. person med to skeer, og anret dem ved siden af en nøde jordskokkeknus. Sprøjt prikker af puré og krabbepâté rundt om, og fordel hasselnødder og karse på tallerkenen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg tuileskårene og de friturestegte skind på lige før servering."
+    }
+  ],
+  "changes": [
+    "Ponzu er erstattet med sojasauce.",
+    "Skaldyrsfond er erstattet med fiskefond.",
+    "Double cream er erstattet med piskefløde.",
+    "Vegetable oil er erstattet med rapsolie.",
+    "Lemon sorrel er erstattet med karse."
+  ]
+}

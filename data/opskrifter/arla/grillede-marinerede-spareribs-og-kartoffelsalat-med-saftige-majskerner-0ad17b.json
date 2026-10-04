@@ -1,0 +1,226 @@
+{
+  "url": "https://www.arla.dk/opskrifter/grillede-marinerede-spareribs-og-kartoffelsalat-med-saftige-majskerner/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:22:27.819Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 20,
+  "title": "Grillede spareribs med kartoffel-majssalat",
+  "intro": "Forkogte spareribs får en sød og syrlig tomatmarinade og bliver færdige på grillen. Til serveres en kartoffelsalat med majs, peberfrugt og cherrytomater samt en cremet dressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Spareribs",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "spareribs",
+      "note": "12 revelsben",
+      "optional": false
+    },
+    {
+      "section": "Spareribs",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spareribs",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spareribs",
+      "amount": 10,
+      "unit": "stk",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Spareribs",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Marinade til pensling",
+      "amount": 0.5,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade til pensling",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Marinade til pensling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade til pensling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "majs",
+      "note": "majskolber",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": "til kogning af majs",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft, til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "kogte, små",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "peberfrugt",
+      "note": "syltede røde, i strimler",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": "koldpresset",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelsalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "salat",
+      "note": "hjertesalat, skyllede blade",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Spareribs",
+      "text": "Læg spareribs og vand i en gryde, og bring det i kog. Fjern skummet fra overfladen."
+    },
+    {
+      "section": "Spareribs",
+      "text": "Tilføj laurbærblade, peberkorn og salt. Lad ribsene simre under låg ved svag varme i ca. ½ time, og løft dem derefter op af bouillonen."
+    },
+    {
+      "section": "Marinade til pensling",
+      "text": "Blend tomater, løg, chilisauce og salt, til massen er helt glat. Hæld 3 spsk fra til dressingen."
+    },
+    {
+      "section": "Marinade til pensling",
+      "text": "Vend de kogte spareribs i den resterende marinade."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør creme fraiche sammen med de 3 spsk marinade, og smag til. Sæt skålen i køleskabet med låg eller film, til maden skal serveres."
+    },
+    {
+      "section": "Kartoffelsalat",
+      "text": "Bring vand og salt i kog i en gryde, og læg majskolberne i. Kog dem under låg ved middel varme i ca. 7 min."
+    },
+    {
+      "section": "Kartoffelsalat",
+      "text": "Lad kolberne køle lidt af. Skær derefter kernerne af, helst så de sidder sammen i flager."
+    },
+    {
+      "section": "Kartoffelsalat",
+      "text": "Bland majs, kartofler, cherrytomater, peberfrugt, olie, salt og peber. Lad salaten stå og trække i mindst 15 min., og smag til."
+    },
+    {
+      "section": "Kartoffelsalat",
+      "text": "Pluk salatbladene i mindre stykker, og læg dem i lag sammen med kartoffelsalaten."
+    },
+    {
+      "section": null,
+      "text": "Varm grillen godt op. Grill ribsene i 6-8 min., og vend dem undervejs. Pensl med resten af marinaden, mens de griller."
+    },
+    {
+      "section": null,
+      "text": "Server spareribs med kartoffel-majssalaten og dressingen."
+    }
+  ],
+  "changes": [
+    "Syltet peppadew er erstattet af syltede røde peberfrugter, som kilden også nævner."
+  ]
+}

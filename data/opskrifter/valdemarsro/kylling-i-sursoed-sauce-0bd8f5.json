@@ -1,0 +1,175 @@
+{
+  "url": "https://www.valdemarsro.dk/kylling-i-sursoed-sauce/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:25:03.820Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Kylling i sursød sauce",
+  "intro": "Mørke kyllingestykker og peberfrugt i en blank sursød sauce med ananasjuice og ingefær, serveret på ris med broccoli. En hurtig hverdagsret med asiatisk præg.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Sursød sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "ananasjuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kylling og grøntsager",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kylling og grøntsager",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Kylling og grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rød peberfrugt",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Kylling og grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "broccoli",
+      "note": "skåret i buketter",
+      "optional": false
+    },
+    {
+      "section": "Kylling og grøntsager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "skåret i ringe",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristet på en tør pande",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sauce",
+      "text": "Pisk alle ingredienserne til saucen sammen i en skål, så majsstivelsen opløses."
+    },
+    {
+      "section": "Ris og broccoli",
+      "text": "Kog risene som anvist på pakken. Damp broccolien samtidig, hvis du vil."
+    },
+    {
+      "section": "Kylling og grøntsager",
+      "text": "Varm olien op i en stor pande, og svits løg og hvidløg."
+    },
+    {
+      "section": "Kylling og grøntsager",
+      "text": "Tilsæt kyllingen, og brun den under omrøring. Kom peberfrugten på, og lad det blive varmt igennem et par minutter."
+    },
+    {
+      "section": "Kylling og grøntsager",
+      "text": "Hæld saucen over, og rør rundt. Lad retten simre i 10 minutter, og rør i den ind imellem."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret ris og broccoli i skåle, og top med kylling i sauce. Drys med forårsløg og ristede sesamfrø."
+    }
+  ],
+  "changes": [
+    "Riseddike er erstattet med eddike.",
+    "Ketchup, soja og majsstivelse er skrevet som ketchup, sojasauce og majsstivelse."
+  ]
+}

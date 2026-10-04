@@ -1,0 +1,188 @@
+{
+  "url": "https://www.valdemarsro.dk/bradepandepizza-med-kartofler/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:28:10.781Z",
+  "total_minutes": 180,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Bradepandepizza med kartoffel og oliven",
+  "intro": "Sprød pizza på bradepande med tynde kartoffelskiver, rødløg, oliven og mozzarella. Den færdigbagte pizza får et drys hvidløgsolie med friske krydderurter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 3.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 125,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 325,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizza",
+      "amount": 100,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Pizza",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Pizza",
+      "amount": 200,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Pizza",
+      "amount": 50,
+      "unit": "g",
+      "name": "oliven",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizza",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Pizza",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizza",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizza",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsolie",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsolie",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsolie",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "bredbladet; kan erstattes af timian, oregano eller basilikum",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Rør gæren ud i vandet i en skål. Tilsæt olien og fuldkornsmelet, og rør det til en lind dej."
+    },
+    {
+      "section": "Dej",
+      "text": "Tilsæt hvedemelet lidt ad gangen, og ælt dejen i 10 minutter, gerne i røremaskine. Rør saltet i til sidst."
+    },
+    {
+      "section": "Dej",
+      "text": "Læg dejen i en ren skål, dæk den til, og lad den hæve på køkkenbordet i 1 time."
+    },
+    {
+      "section": "Dej",
+      "text": "Træk dejen ud, så den passer til en stor bradepande, og læg den over på bagepapir i bradepanden. Lad den hæve i 45 minutter."
+    },
+    {
+      "section": "Pizza",
+      "text": "Lad mozzarellaen dryppe godt af. Skær den i skiver, og tør dem let med køkkenrulle."
+    },
+    {
+      "section": "Pizza",
+      "text": "Smør creme fraichen forsigtigt ud over dejen. Fordel kartoffelskiver, rødløg, oliven og mozzarella ovenpå. Krydr med salt og peber, og dryp med olivenolie."
+    },
+    {
+      "section": "Pizza",
+      "text": "Bag pizzaen i en forvarmet ovn ved 180 °C varmluft i 25-30 minutter."
+    },
+    {
+      "section": "Hvidløgsolie",
+      "text": "Bland olivenolie, presset hvidløg og hakkede krydderurter. Dryp olien over den bagte pizza, inden den serveres."
+    }
+  ],
+  "changes": []
+}

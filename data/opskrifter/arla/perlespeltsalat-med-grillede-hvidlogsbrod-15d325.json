@@ -1,0 +1,172 @@
+{
+  "url": "https://www.arla.dk/opskrifter/perlespeltsalat-med-grillede-hvidlogsbrod/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:01:25.831Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Perlespeltsalat med hvidløgsbrød",
+  "intro": "Frisk salat af perlespelt, blomkål, grønne asparges og edamamebønner med cremet hytteost. Serveres med lunt, grillet brød med hvidløg.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Perlespeltsalat",
+      "amount": 250,
+      "unit": "g",
+      "name": "perlespelt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Perlespeltsalat",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til speltkernerne",
+      "optional": false
+    },
+    {
+      "section": "Perlespeltsalat",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft, til speltkernerne",
+      "optional": false
+    },
+    {
+      "section": "Perlespeltsalat",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Perlespeltsalat",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft, til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Perlespeltsalat",
+      "amount": 400,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i små buketter",
+      "optional": false
+    },
+    {
+      "section": "Perlespeltsalat",
+      "amount": 250,
+      "unit": "g",
+      "name": "asparges",
+      "note": "grønne, i korte stykker",
+      "optional": false
+    },
+    {
+      "section": "Perlespeltsalat",
+      "amount": 200,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "optøede",
+      "optional": false
+    },
+    {
+      "section": "Perlespeltsalat",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "persille",
+      "note": "bredbladet, hakket",
+      "optional": false
+    },
+    {
+      "section": "Perlespeltsalat",
+      "amount": 500,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "amount": 300,
+      "unit": "g",
+      "name": "ciabattabrød",
+      "note": "i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "stort, pillet",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "fintrevet skal",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Perlespeltsalat",
+      "text": "Skyl perlespelten grundigt i en sigte."
+    },
+    {
+      "section": "Perlespeltsalat",
+      "text": "Kom speltkernerne i en gryde med vand og salt, og bring det i kog. Læg låg på, skru ned på lav varme, og lad dem simre i ca. 16 minutter. Lad dem derefter køle en smule af."
+    },
+    {
+      "section": "Perlespeltsalat",
+      "text": "Bring vand og salt til grøntsagerne i kog i en ny gryde. Kog blomkålen under låg i ca. 2 minutter."
+    },
+    {
+      "section": "Perlespeltsalat",
+      "text": "Fjern låget, læg asparges og edamamebønner i, og kog videre i ca. 1 minut. Si grøntsagerne fra, og skyl dem med koldt vand."
+    },
+    {
+      "section": "Perlespeltsalat",
+      "text": "Bland de lunkne speltkerner med grøntsagerne, persillen og halvdelen af hytteosten."
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "text": "Rist eller grill brødskiverne på begge sider, til de er gyldne."
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "text": "Gnid skiverne med det halverede hvidløg, og pensl dem med olivenolie."
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "text": "Anret salaten med det varme brød og den resterende hytteost ved siden af. Drys evt. med citronskal og peber."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,144 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chinese-poached-chicken-rice",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:29:37.712Z",
+  "total_minutes": 60,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 9,
+  "title": "Kinesisk pocheret kylling med ris",
+  "intro": "Kyllingelår trækker møre i en duftende bouillon med ingefær, hvidløg og sojasauce. Serveres med pak choi, ris og en varm forårsløgsrelish.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "ingefær",
+      "note": "resten af et stort stykke, i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sort peber",
+      "note": "hele korn",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "bundt",
+      "name": "forårsløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": "ekstra, til servering",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "kogte, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom ingefær i skiver, hvidløg, peberkorn og halvdelen af sojasaucen i en stor gryde sammen med kyllingelårene."
+    },
+    {
+      "section": null,
+      "text": "Fyld op med vand, så kødet er dækket, og smag til med lidt salt. Bring det i kog, skru ned til svag varme, læg låg på, og lad kyllingen simre i 30 minutter."
+    },
+    {
+      "section": "Forårsløgsrelish",
+      "text": "Varm imens en pande op med sesamolien, og blød forårsløgene i 1 minut. Tag panden af varmen, og rør den revne ingefær og resten af sojasaucen i."
+    },
+    {
+      "section": "Anretning",
+      "text": "Løft kyllingen op af gryden. Læg 4 af lårene til side i køleskabet til i morgen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Kom pak choi i bouillonen, og kog den i 3-4 minutter. Si derefter bouillonen, og gem væsken. Kassér ingefær, hvidløg og peberkorn."
+    },
+    {
+      "section": "Anretning",
+      "text": "Træk skindet af de 4 resterende lår, og smid det ud. Pluk kødet af i store stykker."
+    },
+    {
+      "section": "Anretning",
+      "text": "Anret ris, kylling og pak choi i skåle. Hæld en øse varm bouillon over, og top med forårsløgsrelishen. Server evt. med ekstra sojasauce."
+    }
+  ],
+  "changes": []
+}

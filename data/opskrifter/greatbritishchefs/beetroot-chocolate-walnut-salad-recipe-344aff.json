@@ -1,0 +1,265 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/beetroot-chocolate-walnut-salad-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:07:46.551Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "title": "Ovnbagte rødbeder med chilichokoladevinaigrette og urtecreme af gedeost",
+  "intro": "Bløde ovnbagte rødbeder på en luftig urtecreme af gedeost, toppet med sprøde valnødder og en varm vinaigrette af mørk chokolade, honning og chili. Sød, syrlig og lidt stærk i samme skål.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Rødbeder",
+      "amount": 4,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "store, gerne i forskellige farver, vasket",
+      "optional": false
+    },
+    {
+      "section": "Rødbeder",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbeder",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "julesalat",
+      "note": "bladene",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til dressing",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "balsamico",
+      "note": "til dressing",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "valnødder",
+      "note": "ristede og grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Chilichokoladevinaigrette",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mørk chokolade",
+      "note": "chokoladechips",
+      "optional": false
+    },
+    {
+      "section": "Chilichokoladevinaigrette",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilichokoladevinaigrette",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilichokoladevinaigrette",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilichokoladevinaigrette",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilichokoladevinaigrette",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilichokoladevinaigrette",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "amount": 300,
+      "unit": "g",
+      "name": "gedeost",
+      "note": "blød",
+      "optional": false
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "purløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "fladbladet",
+      "optional": false
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "amount": 20,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "amount": 20,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rødbeder",
+      "text": "Tænd ovnen på 190 °C. Vend rødbederne i olie og salt, og pak hver rødbede ind i sit eget stykke folie."
+    },
+    {
+      "section": "Rødbeder",
+      "text": "Bag dem i ca. 45 minutter, til de er møre, når man stikker en gaffel i dem. Pak dem ud, og lad dem køle af."
+    },
+    {
+      "section": "Rødbeder",
+      "text": "Pil skrællen af, skær rødbederne i både, og stil dem til side."
+    },
+    {
+      "section": "Chilichokoladevinaigrette",
+      "text": "Smelt chokoladen i en skål over en gryde med vand, der kun lige simrer. Tag skålen af varmen, og lad chokoladen køle lidt."
+    },
+    {
+      "section": "Chilichokoladevinaigrette",
+      "text": "Rør balsamico, olie, honning og chiliflager i, og smag til med salt og peber."
+    },
+    {
+      "section": "Urtecreme af gedeost",
+      "text": "Kom alle ingredienserne til urtecremen i en foodprocessor, og kør dem glatte. Smag til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Pisk lidt balsamico og olie sammen med salt og peber. Vend rødbeder, julesalat og rucola i dressingen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel urtecremen i to skåle, og læg de dressede rødbeder og salat ovenpå. Drys med valnødder, og hæld chilichokoladevinaigretten over til sidst."
+    }
+  ],
+  "changes": [
+    "Double cream er skiftet til piskefløde.",
+    "Chicory er skiftet til julesalat.",
+    "Soft goat's cheese er skiftet til blød gedeost.",
+    "Rocket er skiftet til rucola."
+  ]
+}

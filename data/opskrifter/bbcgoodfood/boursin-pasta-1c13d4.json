@@ -1,0 +1,100 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/boursin-pasta",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:30:47.986Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Ovnbagt pasta med Boursin og cherrytomater",
+  "intro": "Cremet pasta, hvor Boursin, tomater og spinat smelter sammen i ovnen til en nem sauce. Retten kræver næsten ingen arbejde, og alt bliver færdigt på under en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "pakke",
+      "name": "Boursin",
+      "note": "à 150 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "et par kviste",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frossen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "pasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Læg Boursin i et ovnfast fad, og fordel tomater, rødløg og timian rundt om osten. Bag i 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom den frosne spinat i fadet, og bag videre i 15 minutter, til osten er blød, og spinaten er tøet helt op."
+    },
+    {
+      "section": null,
+      "text": "Kog imens pastaen efter anvisningen på pakken, ca. 10-12 minutter. Gem en kop af kogevandet, før du hælder vandet fra."
+    },
+    {
+      "section": null,
+      "text": "Tag fadet ud af ovnen, og rør et par spiseskefulde af kogevandet ind. Tryk tomaterne ud, mens du rører, så osten og vandet bliver til en cremet sauce."
+    },
+    {
+      "section": null,
+      "text": "Vend pastaen i saucen sammen med parmesan, enten i fadet eller i gryden. Server straks i dybe tallerkener."
+    }
+  ],
+  "changes": []
+}

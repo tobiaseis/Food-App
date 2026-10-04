@@ -1,0 +1,176 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/luscious-lemon-cake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:10:42.710Z",
+  "total_minutes": 55,
+  "active_minutes": 30,
+  "yield_count": 10,
+  "source_lines": 10,
+  "title": "Citronkage med flødefyld",
+  "intro": "To luftige citronbundter lagt sammen med lemon curd og flødeskum. Kagen får frisk citronsmag, fordi skallen gnides ind i sukkeret, og bundene pensles med citronsirup.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Kagen",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Kagen",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til formene",
+      "optional": false
+    },
+    {
+      "section": "Kagen",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologiske, da skallen bruges",
+      "optional": false
+    },
+    {
+      "section": "Kagen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagen",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "op til 2 spsk efter behov",
+      "optional": false
+    },
+    {
+      "section": "Citronsirup",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld og pynt",
+      "amount": 3,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld og pynt",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld og pynt",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "lemon curd",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld og pynt",
+      "amount": null,
+      "unit": null,
+      "name": "flormelis",
+      "note": "til drys",
+      "optional": false
+    },
+    {
+      "section": "Fyld og pynt",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "lidt skalstrimler til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kagebunde",
+      "text": "Tænd ovnen på 180 °C (varmluft 160 °C). Smør to springforme på 18 cm, og beklæd bunden med bagepapir."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Kom sukkeret i en skål, og riv skallen fra begge citroner fint ned i det. Gnid skallen ind i sukkeret med fingrene, så citronolien trækker ud."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Tilsæt smørret, og pisk med elpisker i 2-3 minutter, til massen er lys og luftig."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Pisk æggene i et ad gangen, og vend hvedemel og bagepulver i, til dejen er glat."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Pres saft fra den ene halvdel af en af de revne citroner, og rør den i dejen. Tilsæt lige nok mælk til, at dejen kan hældes med en ske."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Fordel dejen i de to forme. Bag kagebundene i 20-25 minutter, til de er gyldne og hævede, og de springer tilbage, når man trykker let på dem."
+    },
+    {
+      "section": "Citronsirup",
+      "text": "Pres saften af de resterende citroner i en skål, og rør sukkeret i. Pensl noget af siruppen over de varme kagebunde, mens de stadig er i formene. Lad dem køle helt af."
+    },
+    {
+      "section": "Samling",
+      "text": "Gem samlingen, til kagen snart skal serveres. Læg den ene bund på et fad, og dryp en skefuld sirup over."
+    },
+    {
+      "section": "Samling",
+      "text": "Pisk fløde og flormelis til bløde toppe. Smør lemon curd ud på bunden, og læg flødeskummet ovenpå, så det går helt ud til kanten."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg den anden bund ovenpå med den flade side opad. Sigt flormelis over, og pynt med citronskal. Kagen kan holde sig tre dage på køl."
+    }
+  ],
+  "changes": [
+    "Golden caster sugar er erstattet med almindeligt sukker.",
+    "Self-raising flour er erstattet med hvedemel og bagepulver.",
+    "Double cream er erstattet med piskefløde."
+  ]
+}

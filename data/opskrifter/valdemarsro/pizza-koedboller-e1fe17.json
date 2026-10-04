@@ -1,0 +1,219 @@
+{
+  "url": "https://www.valdemarsro.dk/pizza-koedboller/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:11:41.662Z",
+  "total_minutes": 360,
+  "active_minutes": 45,
+  "yield_count": 2,
+  "source_lines": 18,
+  "title": "Pizza med kødboller",
+  "intro": "Hjemmelavet pizza med sprød bund af hvedemel og durummel, toppet med små krydrede kødboller, mozzarella og rødløg. Dejen hæver langsomt i køleskabet, så den er nem at forberede i god tid.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Pizzadej",
+      "amount": 5,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzadej",
+      "amount": 100,
+      "unit": "g",
+      "name": "durummel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 100,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 40,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Pizzaen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "passata",
+      "note": "eller pizzasauce",
+      "optional": false
+    },
+    {
+      "section": "Pizzaen",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pizzaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i ringe",
+      "optional": false
+    },
+    {
+      "section": "Pizzaen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pizzadej",
+      "text": "Opløs gæren i vandet. Tilsæt hvedemel, olie og salt, og rør i nogle minutter, til dejen er glat og smidig."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Kom durummelet i lidt ad gangen, og ælt dejen grundigt igennem. Har du en røremaskine, kan den køre i 10-15 minutter."
+    },
+    {
+      "section": "Pizzadej",
+      "text": "Stil dejen til hævning i køleskabet i op til 18 timer."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Bland alle ingredienserne til kødbollerne i en skål, og form farsen til små boller."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Brun bollerne i få minutter i olie på en varm pande. Vend dem ofte."
+    },
+    {
+      "section": "Pizzaen",
+      "text": "Tænd ovnen på 250 °C, gerne med en pizzasten indeni."
+    },
+    {
+      "section": "Pizzaen",
+      "text": "Del dejen i to, og form to runde pizzabunde. Smør passata ud over dem, og top med mozzarella, kødboller og rødløgsringe."
+    },
+    {
+      "section": "Pizzaen",
+      "text": "Bag pizzaerne i 10-12 minutter, til bunden er sprød."
+    },
+    {
+      "section": "Pizzaen",
+      "text": "Strø timian over, før pizzaerne serveres."
+    }
+  ],
+  "changes": [
+    "Frisk mozzarella er skiftet til mozzarella.",
+    "Tomat passata er skiftet til passata."
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/halawet-el-jibn-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:32:58.261Z",
+  "total_minutes": 160,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 39,
+  "title": "Labneh-halawet el jibn med appelsin, mandler og olivenolie",
+  "intro": "Libanesisk ostedessert af mozzarelladej fyldt med labnehmousse, serveret med appelsinsorbet, olivenoliegel, sprød tuile og mandelcrumble. Retten har mange små dele, som kan laves hver for sig dagen før.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til appelsinsorbeten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "appelsin",
+      "note": "skal, finrevet",
+      "optional": false
+    },
+    {
+      "section": "Til appelsinsorbeten",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sumak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til appelsinsorbeten",
+      "amount": 25,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til appelsinsorbeten",
+      "amount": 1,
+      "unit": "g",
+      "name": "sorbetstabilisator",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til appelsinsorbeten",
+      "amount": 20,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til appelsinsorbeten",
+      "amount": 120,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til appelsinsorbeten",
+      "amount": 2,
+      "unit": "dl",
+      "name": "appelsinjuice",
+      "note": "friskpresset af ca. 3 appelsiner, sigtet. Gem skallerne",
+      "optional": false
+    },
+    {
+      "section": "Til olivenoliegelen",
+      "amount": 70,
+      "unit": "g",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Til olivenoliegelen",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til olivenoliegelen",
+      "amount": 0.5,
+      "unit": "skive",
+      "name": "husblas",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til olivenoliegelen",
+      "amount": 25,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til olivenoliegelen",
+      "amount": 30,
+      "unit": "g",
+      "name": "isomalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til olivenoliegelen",
+      "amount": 22,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til olivenoliegelen",
+      "amount": 8,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til olivenoliegelen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til appelsinsirup",
+      "amount": 130,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til appelsinsirup",
+      "amount": 65,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til appelsinsirup",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Til labnehmousse",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til labnehmousse",
+      "amount": 20,
+      "unit": "g",
+      "name": "flormelis",
+      "note": "mere eller mindre efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til labnehmousse",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "appelsinblomstvand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til labnehmousse",
+      "amount": 250,
+      "unit": "g",
+      "name": "labneh",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til halawet el jibn-dejen",
+      "amount": 100,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til halawet el jibn-dejen",
+      "amount": 25,
+      "unit": "g",
+      "name": "durummel",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Til halawet el jibn-dejen",
+      "amount": 10,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til halawet el jibn-dejen",
+      "amount": 80,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "med lavt vandindhold, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til honningtuilen",
+      "amount": 40,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til honningtuilen",
+      "amount": 40,
+      "unit": "g",
+      "name": "æggehvider",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til honningtuilen",
+      "amount": 30,
+      "unit": "g",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til honningtuilen",
+      "amount": 8,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til honningtuilen",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, smeltet",
+      "optional": false
+    },
+    {
+      "section": "Til mandelcrumblen",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelcrumblen",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Til mandelcrumblen",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelcrumblen",
+      "amount": 50,
+      "unit": "g",
+      "name": "mandelmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelcrumblen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sumak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "appelsin",
+      "note": "i flåede både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mandelflager",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sumak",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Appelsinsorbet",
+      "text": "Gnid appelsinskal, sumak, sukker og sorbetstabilisator sammen i en skål."
+    },
+    {
+      "section": "Appelsinsorbet",
+      "text": "Kom blandingen i en lille gryde med glukosesirup og vand. Varm op under omrøring, til sukkeret er opløst og massen er 85 °C."
+    },
+    {
+      "section": "Appelsinsorbet",
+      "text": "Køl massen ned til under 25 °C, og rør appelsinjuicen i. Smag til, og tilsæt lidt mere juice, hvis den mangler syrlighed. Gem skallerne til olien og sirupen."
+    },
+    {
+      "section": "Appelsinsorbet",
+      "text": "Stil massen helt afkølet i køleskabet i 4-6 timer. Kør den derefter i en ismaskine, og læg sorbeten i fryseren."
+    },
+    {
+      "section": "Olivenoliegel",
+      "text": "Læg nogle af de gemte appelsinskaller i en gryde (en halv appelsins skaller skal gemmes til sirupen) med olivenolie og timian. Varm op til 60 °C, eller til olien lige er gennemvarm."
+    },
+    {
+      "section": "Olivenoliegel",
+      "text": "Lad olien trække, mens den køler af. Si den, og kassér skaller og timian. Afvej 55 g af den aromatiserede olie."
+    },
+    {
+      "section": "Olivenoliegel",
+      "text": "Læg husblassen i blød i koldt vand. Bring vand, isomalt, sukker og glukosesirup i kog i en gryde. Tag den af varmen, og pisk den udblødte husblas i."
+    },
+    {
+      "section": "Olivenoliegel",
+      "text": "Kør den aromatiserede olie langsomt i med en stavblender, så det emulgerer. Smag let til med salt. Lad køle helt af, og stil det i køleskabet, til det er fast."
+    },
+    {
+      "section": "Appelsinsirup",
+      "text": "Kog sukker, vand, timian og skallerne fra en halv appelsin op i en lille gryde. Tag den af varmen, og lad sirupen køle af og trække."
+    },
+    {
+      "section": "Labnehmousse",
+      "text": "Pisk fløde, flormelis og appelsinblomstvand til bløde toppe i en stor skål."
+    },
+    {
+      "section": "Labnehmousse",
+      "text": "Vend labneh forsigtigt i med en spatel, og rør ikke mere end nødvendigt, da cremen ellers kan skille. Fyld mousset i en sprøjtepose, og stil den på køl."
+    },
+    {
+      "section": "Halawet el jibn",
+      "text": "Kog vand, durummel og sukker i en kasserolle over middel varme under konstant omrøring, til massen er tyk, og durummelen er færdigkogt. Den kan sætte sig lidt i bunden."
+    },
+    {
+      "section": "Halawet el jibn",
+      "text": "Vend mozzarellaen i, til dejen er elastisk og sej."
+    },
+    {
+      "section": "Halawet el jibn",
+      "text": "Si sirupen, og kassér timian og skaller. Pensl et stykke husholdningsfilm let med sirup, og gem resten til senere."
+    },
+    {
+      "section": "Halawet el jibn",
+      "text": "Rul den varme dej ud på filmen til et rektangel på ca. 10 × 20 cm og ca. 3 mm tykt."
+    },
+    {
+      "section": "Halawet el jibn",
+      "text": "Sprøjt en stribe mousse, ca. 3 cm bred, langs en af de lange kanter. Rul dejen sammen til en tube ved hjælp af filmen, uden at rulle for stramt, og skær overskydende dej af undervejs. Stil tuben på køl, til den er helt kold."
+    },
+    {
+      "section": "Honningtuile",
+      "text": "Rør hvedemel, æggehvider, flormelis og honning sammen til en glat dej. Rør det smeltede smør i lidt ad gangen. Lad dejen hvile i 30 minutter."
+    },
+    {
+      "section": "Honningtuile",
+      "text": "Forvarm ovnen til 175 °C. Smør dejen ud i formene, og bag i flere omgange, hvis du ikke har forme nok."
+    },
+    {
+      "section": "Honningtuile",
+      "text": "Bag tuilerne i 3 minutter, drej formen, og bag dem 1 minut mere. Tag dem af formene, mens de er varme, og lad dem køle af."
+    },
+    {
+      "section": "Mandelcrumble",
+      "text": "Forvarm ovnen til 175 °C. Blend sukker og smør sammen i en foodprocessor. Tilsæt hvedemel, mandelmel og sumak, og pulsér til det danner krummer."
+    },
+    {
+      "section": "Mandelcrumble",
+      "text": "Fordel krummerne på en bageplade, og bag dem i 20 minutter, til de er gyldne. Vend dem af og til. Lad dem køle af."
+    },
+    {
+      "section": "Samling",
+      "text": "Skær den faste olivenoliegel i stykker, og blend dem til en glat gel, der kan sprøjtes. Fyld den i en sprøjtepose."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul halawet el jibn ud af filmen, skær den i stykker på ca. 5 cm, og hæld lidt mere sirup over."
+    },
+    {
+      "section": "Samling",
+      "text": "Sprøjt olivenoliegel på tallerkenen, og drys crumble ved siden af. Læg halawet el jibn ovenpå, og anret appelsinbåde rundt om kanten. Læg tuilen over, og sæt en klat sorbet på. Top med ristede mandelflager, karse og et drys sumak."
+    }
+  ],
+  "changes": [
+    "Blodappelsin er skiftet til almindelig appelsin.",
+    "Citronmelisse-karse er skiftet til karse.",
+    "Gold grade-gelatineblad er skiftet til husblas."
+  ]
+}

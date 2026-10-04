@@ -1,0 +1,160 @@
+{
+  "url": "https://www.arla.dk/opskrifter/brandende-karlighed/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:07:36.923Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Brændende kærlighed",
+  "intro": "Klassisk dansk ret med cremet kartoffelmos, sprød bacon og møre løg. Serveres med syltede rødbeder og rugbrød ved siden af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "skrællede",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "varm",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Bacon og løg",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bacon og løg",
+      "amount": 250,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Bacon og løg",
+      "amount": 6,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i halve skiver, ca. 500 g",
+      "optional": false
+    },
+    {
+      "section": "Bacon og løg",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Bacon og løg",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "hakket, eller klippet purløg",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 300,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "syltede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 240,
+      "unit": "g",
+      "name": "rugbrød",
+      "note": "groft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelmos",
+      "text": "Del kartoflerne i mindre stykker, og kog dem i usaltet vand i cirka 20 minutter, til de er helt møre."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Si vandet fra, og mas kartoflerne med en kartoffelmoser eller et piskeris."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Rør smørret ud i den varme mos, til det er smeltet."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Pisk den varme mælk i lidt ad gangen, til mosen har den konsistens, du bedst kan lide."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Krydr med salt, og lad mosen blive gennemvarm. Smag til."
+    },
+    {
+      "section": "Bacon og løg",
+      "text": "Smelt smørret i en pande, til det får en gylden farve."
+    },
+    {
+      "section": "Bacon og løg",
+      "text": "Kom baconternene på panden, og steg dem ved høj varme i cirka 2 minutter. Skru ned til middel varme, og steg videre i cirka 15 minutter, til de er gyldne og sprøde. Rør i dem ind imellem."
+    },
+    {
+      "section": "Bacon og løg",
+      "text": "Tag baconen op, og lad den dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Bacon og løg",
+      "text": "Steg løgene i fedtet fra baconen ved høj varme i cirka 5 minutter. Skru ned til middel varme, og steg i yderligere 5 minutter, mens du rører af og til. Smag til med salt og peber."
+    },
+    {
+      "section": "Bacon og løg",
+      "text": "Kom baconen tilbage på panden, og rør den sammen med løgene."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret mosen med bacon og løg, og drys med persille eller purløg. Server med rødbeder og rugbrød."
+    }
+  ],
+  "changes": []
+}

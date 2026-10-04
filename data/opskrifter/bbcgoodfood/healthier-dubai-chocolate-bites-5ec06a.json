@@ -1,0 +1,103 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthier-dubai-chocolate-bites",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:56:59.071Z",
+  "total_minutes": 20,
+  "active_minutes": 20,
+  "yield_count": 12,
+  "source_lines": 6,
+  "title": "Dubai-chokoladebites",
+  "intro": "Små chokoladebites med fyld af pistaciecreme, tahin og kokos, inspireret af den populære Dubai-chokolade. De er hurtige at lave og skal bare køle ned, før de er klar.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "chokolade",
+      "note": "mørk, hakket i små stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kokosolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "pistaciesmør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "kokosmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "pistacienødder",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Smelt chokolade og kokosolie sammen i en varmefast skål over en gryde med let kogende vand, og rør, til massen er jævn. Du kan også varme den i mikroovn i omgange på 30 sekunder. Tag den væk fra varmen, og lad den køle lidt af."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Rør pistaciesmør, tahin og kokosmel sammen i en lille skål. Massen skal være tyk, men stadig kunne øses. Er den for tør, så tilsæt lidt mere pistaciesmør."
+    },
+    {
+      "section": null,
+      "text": "Læg en teskefuld smeltet chokolade i hver af 12-16 små silikoneforme eller mini-muffinsforme. Vip formene, så chokoladen dækker siderne. Sæt dem 5 minutter i fryseren, så chokoladen sætter sig lidt."
+    },
+    {
+      "section": null,
+      "text": "Kom en lille klat fyld i hver form, og tryk det forsigtigt fladt med bagsiden af en ske. Dæk med resten af den smeltede chokolade."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Drys med hakkede pistacienødder og lidt salt. Stil bitsene 20 minutter i køleskabet, til de er helt faste."
+    },
+    {
+      "section": null,
+      "text": "Tryk bitsene ud af formene, og server. De kan holdes en uge i en tæt æske i køleskabet."
+    }
+  ],
+  "changes": [
+    "Desiccated coconut er erstattet med kokosmel.",
+    "Pistachio butter er skrevet som pistaciesmør."
+  ]
+}

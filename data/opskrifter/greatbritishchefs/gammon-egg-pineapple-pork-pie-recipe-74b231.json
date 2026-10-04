@@ -1,0 +1,552 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/gammon-egg-pineapple-pork-pie-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:10:11.902Z",
+  "total_minutes": 300,
+  "active_minutes": null,
+  "yield_count": 16,
+  "source_lines": 44,
+  "title": "Pie med røget skinke, langt æg og ananas",
+  "intro": "En stor, flerdages pâté en croûte med mør dej, krydret svinefars, røget skinke og et langt æg i midten. Ananassen giver syrlig sødme, og pien afsluttes med gelé gennem skorstene i låget.",
+  "servings": 16,
+  "ingredients": [
+    {
+      "section": "Syltet ananas",
+      "amount": 300,
+      "unit": "g",
+      "name": "ananas",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Syltet ananas",
+      "amount": 90,
+      "unit": "ml",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet ananas",
+      "amount": 15,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skinkefond",
+      "amount": 1,
+      "unit": "stk",
+      "name": "røget svineskank",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skinkefond",
+      "amount": 200,
+      "unit": "g",
+      "name": "selleri",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Skinkefond",
+      "amount": 100,
+      "unit": "g",
+      "name": "løg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Skinkefond",
+      "amount": 5,
+      "unit": "stk",
+      "name": "sorte peberkorn",
+      "note": "groft knust",
+      "optional": false
+    },
+    {
+      "section": "Skinkefond",
+      "amount": 5,
+      "unit": "stk",
+      "name": "hvide peberkorn",
+      "note": "groft knust",
+      "optional": false
+    },
+    {
+      "section": "Skinkefond",
+      "amount": 5,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skinkefond",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "til dækning",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 50,
+      "unit": "g",
+      "name": "Lard",
+      "note": "svinefedt, i tern",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 15,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 15,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 110,
+      "unit": "ml",
+      "name": "sødmælk",
+      "note": "stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 90,
+      "unit": "g",
+      "name": "æg",
+      "note": "pisket og sigtet, stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus ekstra til meldrys",
+      "optional": false
+    },
+    {
+      "section": "Langt æg",
+      "amount": 12,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Langt æg",
+      "amount": 225,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Langt æg",
+      "amount": 5,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Langt æg",
+      "amount": 2.5,
+      "unit": "g",
+      "name": "natriumtripolyphosphat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Langt æg",
+      "amount": 7,
+      "unit": "g",
+      "name": "methocel F50",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Langt æg",
+      "amount": 15,
+      "unit": "g",
+      "name": "kartoffelmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Langt æg",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "hvid peber",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Langt æg",
+      "amount": 100,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": "kold",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 550,
+      "unit": "g",
+      "name": "svineskulder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 250,
+      "unit": "g",
+      "name": "svinebryst",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 150,
+      "unit": "g",
+      "name": "rygspæk",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 50,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver, hakket",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 20,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 5,
+      "unit": "g",
+      "name": "hvid peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 5,
+      "unit": "g",
+      "name": "salvie",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 2.5,
+      "unit": "g",
+      "name": "nitritsalt",
+      "note": "Cure No.1",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 2.2,
+      "unit": "g",
+      "name": "sort peber",
+      "note": "groft malet",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 1.5,
+      "unit": "g",
+      "name": "muskatnød",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 1,
+      "unit": "g",
+      "name": "muskatblomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 0.4,
+      "unit": "g",
+      "name": "laurbærblade",
+      "note": "tørret, malet til pulver",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 2.8,
+      "unit": "g",
+      "name": "natriumtripolyphosphat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 90,
+      "unit": "g",
+      "name": "brødkrummer",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 50,
+      "unit": "g",
+      "name": "tørrede løgflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 90,
+      "unit": "g",
+      "name": "lardo",
+      "note": "finthakket og frosset",
+      "optional": false
+    },
+    {
+      "section": "Fars",
+      "amount": 240,
+      "unit": "g",
+      "name": "pancetta",
+      "note": "i tern. Kan erstattes af konfit svinetunge, kogt svinekind, rå skinke eller guanciale",
+      "optional": false
+    },
+    {
+      "section": "Gelé og samling",
+      "amount": null,
+      "unit": null,
+      "name": "husblas",
+      "note": "blade, efter behov",
+      "optional": false
+    },
+    {
+      "section": "Gelé og samling",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "usaltet, til pensling",
+      "optional": false
+    },
+    {
+      "section": "Gelé og samling",
+      "amount": 100,
+      "unit": "g",
+      "name": "æggeblommer",
+      "note": "pisket og sigtet gennem en fin si",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dag 1",
+      "text": "Kom ananassen i en vakuumpose eller et fladt fad. Rør eddike og sukker sammen, og hæld det over ananassen. Luk posen eller dæk fadet, så al ananas er dækket af væsken, og lad den syltes i køleskabet natten over."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Si ananassen fra, og læg stykkerne i en dehydrator eller i en 50 °C varm ovn med åben låge. Tør dem i omkring 6 timer, til de er tørre og lidt klistrede. Opbevar dem i køleskabet, til de skal bruges."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Skinkefond: Tænd ovnen på 165 °C. Læg alle fondens ingredienser i et stort ovnfast fad, og fyld vand på, så knoklen står 2 cm under. Sæt et tætsluttende låg på, og lad fonden stå i ovnen i 6 timer."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Tag fadet ud, og lad det køle i 1 time. Løft knoklen op, og pil kødet af i så store stykker som muligt. Gem skind, fedt og brusk for sig, og smid ikke kogevæsken ud."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Vej skind, fedt og brusk, og regn 30 % af vægten ud. Si kogevæsken, og kom den udregnede mængde i en blender sammen med skind, fedt og brusk. Blend glat, læg film direkte på overfladen, og stil det på køl. Det er \"skinkesyltetøjet\". Gem resten af den sigtede kogevæske, da den skal bruges senere."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Dejen: Smelt smør og svinefedt i mikroovn, til ca. 80 % er smeltet. Lad det køle af, men holde sig flydende."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Pisk salt og sukker ud i mælken, til alt er opløst, og rør det sammen med æggene."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Kom smørblandingen i en røremaskine med piskeris, og kør ved middel-lav hastighed, til den begynder at emulgere. Lad maskinen køre, og hæld æg-mælkeblandingen i en tynd stråle, som når man laver mayonnaise. Sluk, tilsæt halvdelen af melet, og pisk på laveste hastighed, til det er blandet ind."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Skift piskeriset ud med dejkrog, og tilsæt resten af melet. Ælt ved lav hastighed i 5-10 minutter, til dejen er glat og slipper skålen. Pak den tæt ind i film (eller vakuumpak), og lad den hvile i køleskabet natten over."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Langt æg: Kog æggene sous vide ved 65 °C i 70 minutter. Kom imens kyllingen i foodprocessorens skål, og stil skålen i fryseren i 45 minutter."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Læg æggene i isvand. Når de er kolde, knækkes de forsigtigt, og det bløde hvide fjernes, så blommerne er tilbage."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Skyl blommerne forsigtigt under koldt rindende vand, og læg dem til tørre på et klæde. Børst genstridige rester af hvide af med et tørt klæde."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Pensl et stykke film let med olie. Læg blommerne i række på filmen, så de danner en ca. 40 cm lang linje. Rul filmen om blommerne, og drej enderne let, så der kommer en pæn, jævn cylinder med samme diameter som en blomme. Rul ikke for stramt, så konsistensen ikke ødelægges. Frys blomme-pølsen helt fast."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Tag skålen med den halvfrosne kylling ud af fryseren, og pulsér i korte stød, til den er groft hakket. Tilsæt salt, natriumtripolyphosphat, methocel F50, kartoffelmel og hvid peber. Kør maskinen i 4 minutter, og skrab ned ad siderne undervejs."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Tilsæt 50 g af skinkens kogevæske, og blend igen. Kom creme fraiche i, og blend endnu en gang. Det er \"æggehviden\". Fyld massen i en sprøjtepose."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Spænd et nyt stykke film ud, og sprøjt en tyk bane hvide på ca. 45 cm. Tag den frosne blommepølse ud af sin film, og læg den ovenpå. Sprøjt endnu en bane over blommerne, og rul det forsigtigt til en cylinder. Brug fingrene til at forme pølsen, så blommen er helt dækket."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Rul det lange æg tæt ind i filmen, og knyt enderne, så den er vandtæt. Kog det i et vandbad på 64 °C i 25 minutter, og køl det i isvand. Pak ægget ud af filmen, rul det forsigtigt i bagepapir, og frys det natten over."
+    },
+    {
+      "section": "Dag 2",
+      "text": "Primær fars: Kom alt kødet i en stor skål. Pisk alle salte og krydderier sammen (undtagen natriumtripolyphosphat), så de er jævnt blandet. Ælt krydderiblandingen ind i kødet, så hvert stykke er dækket. Dæk til, og lad det hvile i køleskabet natten over. Læg også kødhakkeren (eller dens metaldele) i fryseren til i morgen. Du skal bruge et hulskive med 18 mm huller."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Sæt den frosne kødhakker sammen med 18 mm-skiven, og kør kødblandingen igennem. Kom den i en røremaskine med padleomrører, og kør ved lav hastighed i 5 minutter. Tilsæt natriumtripolyphosphat, og kør 5 minutter mere."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Nu bruges resterne fra skinkeknoklen. Rør 80 g af skinkesyltetøjet, 100 g af kogevæsken og brødkrummerne ind i farsen ved lav hastighed, til det er blandet."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Kom løgflagerne i en varmefast skål. Bring lidt ekstra skinkefond i kog, og hæld den over løgene, så de trækker. Rør rundt, lad det køle i køleskabet, og rør det derefter ind i farsen, til det lige er blandet."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Vend det udpillede skinkekød, lardoen og pancettaen (eller de andre kødtern) i farsen med hænderne, ét ad gangen, og bland imellem. Kødet skal fordeles jævnt uden at gå i stykker. Slut med 120 g af den tørrede ananas. Farsen er nu færdig – opbevar den i køleskabet."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Gelé: Vej den resterende sigtede kogevæske af i en gryde, og varm den til en let simren. Udregn 2,5 % af vægten, og læg så mange husblade i blød i koldt vand i 5 minutter."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Pres vandet ud af husblassen, og rør den ned i den varme fond. Tag gryden af varmen. Udregn 5 % af vægten, og læg så meget af den tørrede ananas i fonden. Lad den trække i 10 minutter, si den, og stil geléen på køl."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Saml piens form (pâté en croûte-form), og pensl indersiderne jævnt med blødt smør. Stil den til side."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Pak dejen ud, og drys bordet med mel. Rul den ud til ca. 3 mm tykkelse, og skær 4 stykker: ét på 35 x 30 cm, ét på 40 x 13 cm og to på 9 x 13 cm. Gem dejresterne til pynt og skorstene."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Læg det største stykke i formen, og tryk det ind i hjørner og sider, så kanterne er lige og de indvendige vinkler skarpe. Lad overskydende dej hænge ud over kanten."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Pensl kanterne på de to små stykker med vand, og beklæd formens korte sider med dem. Tryk dem fast mod formen, og smør samlingerne ud mod det store stykke med en finger, så dejen hænger sammen."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Fyld to tredjedele af farsen i formen, og pres den godt ned i hjørner og bund, så der ikke er luftlommer. Fordel en tredjedel i bunden, og resten op ad de lange sider og enderne."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Tag det frosne lange æg ud af papiret, og læg det i formen. Skær enderne til, så det passer tæt mod dejen. Pres det let ned i farsen, og form farsen rundt om ægget. Fyld den sidste tredjedel af farsen på, og pres luftlommer ud, så der dannes en kuppel."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Pensl den overhængende dej med lidt æggeblomme. Læg det sidste stykke dej (40 x 13 cm) over fyldet, og form det forsigtigt, så låget sidder stramt og jævnt."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Klem kanterne let sammen, så dejen lukker. Klip eller skær overskuddet af med en skarp kniv, så der er 1 cm tilbage. Kanten kan klemmes mønstret eller bare lades som den er."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Pensl toppen med et tyndt, jævnt lag æggeblomme, og stil pien på køl i 30 minutter, så glasuren tørrer. Gentag højst 3 gange, til toppen er pæn og gul uden striber eller tykke pletter."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Rids dejen med en skarp kniv i et mønster efter eget valg. Det er vigtigt, da ridserne aflaster spændingen, så dejen ikke revner og pien ikke sprænger. Skær kun 1-2 mm ned i dejen."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Brug en 10 mm sprøjtetylle til at stikke 3 runde skiver ud af dejresterne. Stik et hul i midten af hver skive med tyllens smalle ende, så de bliver til skorstene. Lav 3 huller i pien, og sæt skorstenene ovenpå. Pensl med mere æggeblomme. Pynt eventuelt med mere dej, også glaseret med æggeblomme."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Varm ovnen op på den højeste temperatur. Sæt pien på midterste rille, og skru straks ned til 210 °C. Bag i 5 minutter, skru ned til 180 °C, og bag 5 minutter mere."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Drej pien 180°, og bag i 10 minutter. Drej igen, og bag 10 minutter mere. Fortsæt, og drej pien hvert 10.-15. minut, til kernetemperaturen er 55-57 °C."
+    },
+    {
+      "section": "Dag 3",
+      "text": "Tag pien ud, og lad den hvile ved stuetemperatur i 3 timer. Stil den derefter i køleskabet natten over."
+    },
+    {
+      "section": "Dag 4",
+      "text": "Varm geléen forsigtigt, til den er flydende, men ikke varm. Hæld den ned i pien gennem de 3 skorstene med en tragt (eller en sprøjtetylle), til den når toppen. Stil pien på køl i 45 minutter, så geléen trækker ind og stivner."
+    },
+    {
+      "section": "Dag 4",
+      "text": "Fyld skorstenene op med mere flydende gelé, da kødet har suget noget til sig, og stil pien på køl i yderligere 45 minutter. Gentag, til den stivnede gelé bliver stående i toppen af skorstenen."
+    },
+    {
+      "section": "Dag 4",
+      "text": "Pien er nu klar. Skær den i skiver på ca. 2 cm med en skarp kniv med takker og lange, lette træk. Lad den gerne stå ved stuetemperatur i 30 minutter før servering."
+    }
+  ],
+  "changes": [
+    "Hvedemel T55 er skiftet til almindeligt hvedemel.",
+    "Caster sugar er skiftet til almindeligt sukker.",
+    "Streaky bacon er skiftet til bacon i skiver.",
+    "Bronze gelatine er skiftet til husblasblade.",
+    "Sea salt er skiftet til almindeligt salt.",
+    "Pork back fat er skiftet til rygspæk.",
+    "Cure No.1 er skiftet til nitritsalt."
+  ]
+}

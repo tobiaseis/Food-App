@@ -1,0 +1,372 @@
+{
+  "url": "https://www.valdemarsro.dk/kalkunsteg-med-fyld/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:50:30.802Z",
+  "total_minutes": 1440,
+  "active_minutes": 180,
+  "yield_count": 6,
+  "source_lines": 33,
+  "title": "Fyldt kalkunsteg med knuste kartofler",
+  "intro": "Saltlagt kalkunbryst fyldt med svinekødsfars, abrikos og nødder og pakket ind i bacon. Det serveres med appelsinglace, knuste kartofler, gulerødder og sauce.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Saltlage",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "kalkunbryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 250,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 175,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 3.5,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 10,
+      "unit": "stk",
+      "name": "peber",
+      "note": "peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 300,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 15,
+      "unit": "g",
+      "name": "abrikosmarmelade",
+      "note": "bruges både i fyld og glace",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "tørrede abrikoser",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "brød",
+      "note": "smuldret til krummer",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "appelsin",
+      "note": "økologisk, fintrevet skal; gem saften til glacen",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "pistaciekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 25,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Steg",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Steg",
+      "amount": 125,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Glace",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "appelsinjuice",
+      "note": "saften fra appelsinen i fyldet",
+      "optional": false
+    },
+    {
+      "section": "Glace",
+      "amount": 30,
+      "unit": "ml",
+      "name": "Grand Marnier",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fond og sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Fond og sauce",
+      "amount": 6,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Fond og sauce",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "i grove stykker",
+      "optional": false
+    },
+    {
+      "section": "Fond og sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fond og sauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fond og sauce",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fond og sauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fond og sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kulør",
+      "note": "eller efter behov",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dagen før",
+      "text": "Bring salt, sukker, krydderier og vand i kog under omrøring, til salt og sukker er opløst. Lad lagen køle helt af til ca. 20 °C."
+    },
+    {
+      "section": "Dagen før",
+      "text": "Læg kalkunbrystet i lagen. Det skal være helt dækket, så tilsæt lidt koldt vand, hvis det er nødvendigt. Stil det i køleskabet til næste dag."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Rør løg, svinekød, brødkrummer, abrikosmarmelade, tørrede abrikoser, rosmarin, timian, appelsinskal og fløde sammen i en skål, til farsen er ensartet."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Vend pinjekerner og pistaciekerner i, og krydr med salt og peber. Lad farsen hvile i køleskabet i 1 time."
+    },
+    {
+      "section": "Stegen",
+      "text": "Tag kalkunbrystet op af lagen, og dup det grundigt tørt. Læg det på et skærebræt med den glatte side nedad."
+    },
+    {
+      "section": "Stegen",
+      "text": "Skær to dybe snit på langs fra midten og ud mod hver side, så brystet kan foldes ud som en bog."
+    },
+    {
+      "section": "Stegen",
+      "text": "Form farsen til en lang pølse, og læg den midt på kødet. Fold den ene side stramt ind over farsen, og fold derefter den anden side over. Fastgør med kødnåle."
+    },
+    {
+      "section": "Stegen",
+      "text": "Vend stegen, så sømmen vender nedad. Smør den tyndt med smør, og pak den ind i overlappende baconskiver. Læg den i et smurt ovnfast fad."
+    },
+    {
+      "section": "Stegen",
+      "text": "Fordel løg, gulerødder, bladselleri, laurbærblad, peber og vand omkring stegen. Steg ved 200 °C i 1½ time, eller til kernetemperaturen er 70 °C."
+    },
+    {
+      "section": "Kartofler og glace",
+      "text": "Kog kartoflerne i letsaltet vand, til de lige er møre."
+    },
+    {
+      "section": "Kartofler og glace",
+      "text": "Varm appelsinjuice, Grand Marnier og marmelade op i en kasserolle under omrøring, til du har en glat glace. Pensl stegen med glacen."
+    },
+    {
+      "section": "Kartofler og glace",
+      "text": "Løft stegen over på en bradepande med bagepapir. Si væsken fra fadet gennem en finmasket si ned i en skål. Skum fedtet af, og gem det til kartoflerne. Tag gulerødderne op, og hæld fonden i en kasserolle."
+    },
+    {
+      "section": "Kartofler og glace",
+      "text": "Lad kartoflerne dampe af, og læg dem ved siden af stegen. Tryk hver kartoffel let, så den revner uden at blive mast. Pensl med det afskummede fedt, og drys med flagesalt og peber. Læg gulerødderne på bradepanden."
+    },
+    {
+      "section": "Færdigbagning",
+      "text": "Bag stegen og kartoflerne ved 200 °C varmluft, til stegen er 72 °C i midten. Tag stegen ud, og lad den hvile under folie på et skærebræt."
+    },
+    {
+      "section": "Færdigbagning",
+      "text": "Skru ovnen op på 210 °C, og bag kartoflerne videre, til de er sprøde og gyldne."
+    },
+    {
+      "section": "Sauce",
+      "text": "Bring fonden i kasserollen i kog. Rør majsstivelsen ud i lidt kold fond eller vand, og pisk den i saucen. Lad den koge godt igennem i nogle minutter."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smag til med salt og peber, og tilsæt et par dråber kulør."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær stegen i skiver, og anret dem på et fad med de knuste kartofler og gulerødderne. Server saucen ved siden af i en skål."
+    }
+  ],
+  "changes": []
+}

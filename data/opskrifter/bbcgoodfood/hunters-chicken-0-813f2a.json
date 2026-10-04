@@ -1,0 +1,164 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/hunters-chicken-0",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:57:10.456Z",
+  "total_minutes": 60,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 11,
+  "title": "Jægerkylling med baconsvøb og kartoffelmos",
+  "intro": "Kyllingebryst svøbt i sprødt bacon og toppet med bbq-sauce og parmesan, serveret med cremet kartoffelmos, gulerødder og bønner. En nem hverdagsret i ovn.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "plus lidt til bagepladen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "skive",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i halve skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bønner",
+      "note": "snittet og skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællet og i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "ketchup",
+      "note": "bbq-sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrællet og i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Smør en bageplade med lidt olie."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingebrysterne på pladen, og krydr dem med salt og peber. Læg to skiver bacon over hvert bryst."
+    },
+    {
+      "section": null,
+      "text": "Bag kyllingen i 20-25 minutter, til den er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Steg imens løgene i olien på en pande, til de er bløde og gyldenbrune. Stil dem til side."
+    },
+    {
+      "section": null,
+      "text": "Kog kartoflerne i rigeligt vand i 10-15 minutter, til de er bløde."
+    },
+    {
+      "section": null,
+      "text": "Bring vand i kog i en mindre gryde. Kog først bønnerne og dernæst gulerødderne, 8-10 minutter hver, til de er møre, men stadig har lidt bid."
+    },
+    {
+      "section": null,
+      "text": "Hæld vandet fra kartoflerne, og kom dem tilbage i gryden sammen med mælk og flødeost. Smag til med salt og peber, og mos dem glatte. Vend de stegte løg i moset."
+    },
+    {
+      "section": null,
+      "text": "Når kyllingen er færdig, hæld bbq-sauce over, og drys med parmesan. Sæt den tilbage i ovnen i 2 minutter, til osten er smeltet."
+    },
+    {
+      "section": null,
+      "text": "Server kyllingen med kartoffelmos, gulerødder og bønner."
+    }
+  ],
+  "changes": [
+    "Runner beans er erstattet med almindelige bønner.",
+    "Soft cheese er erstattet med flødeost.",
+    "BBQ-sauce er erstattet med ketchup/sauce i kataloget, så brug bbq-sauce."
+  ]
+}

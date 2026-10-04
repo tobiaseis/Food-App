@@ -1,0 +1,110 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/classic-california-roll",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:54:24.806Z",
+  "total_minutes": 40,
+  "active_minutes": 30,
+  "yield_count": 2,
+  "source_lines": 7,
+  "title": "California roll med laks og avocado",
+  "intro": "Klassisk inside-out sushirulle med rå laks, avocado og krabbekød, rullet så risene vender udad og er drysset med sesamfrø. Den er sjovere at lave, end den ser ud.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "laks",
+      "note": "sushikvalitet, frisk filet uden skind og ben, ca. 1 cm tyk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "noriark",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "sushiris",
+      "note": "kogt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "sorte eller hvide",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "wasabi",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "uden sten og skræl, skåret i stave på ca. 1 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "krabbekød",
+      "note": "hvidt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skær laksen på langs i strimler på ca. 1 cm i bredden."
+    },
+    {
+      "section": null,
+      "text": "Dæk sushimåtten med husholdningsfilm, og læg noriarket ovenpå, så arkets linjer løber på tværs af måtten. Det er ligegyldigt, hvilken side der vender opad, da nori ikke kommer til at ses på den færdige rulle."
+    },
+    {
+      "section": null,
+      "text": "Fugt fingerspidserne let, så risene ikke klistrer. Frasæt en kant på 3-4 cm nederst på arket, og fordel risene i et jævnt lag på ca. 2 mm over resten med let hånd. Tryk dem ikke fast."
+    },
+    {
+      "section": null,
+      "text": "Drys sesamfrøene over risene. De ender på ydersiden af rullen."
+    },
+    {
+      "section": null,
+      "text": "Vend forsigtigt noriarket om på måtten, så risene vender nedad, og nori vender opad."
+    },
+    {
+      "section": null,
+      "text": "Læg wasabi (hvis du bruger den) og laks i én række på den frie kant nederst. Læg avocadoen ved siden af og krabbekødet i en række tættest på avocadoen. Det hele skal kunne være på den bare kant lige under risene."
+    },
+    {
+      "section": null,
+      "text": "Hold fyldet på plads med pegefingrene, og begynd at rulle måtten fra nederste kant op mod risenes kant. Rul 3-4 gange, mens du holder rullen på plads og strammer, så der ikke er mellemrum mellem fyld og nori."
+    },
+    {
+      "section": null,
+      "text": "Læg rullen på et rent, tørt skærebræt. Skær den i 8 stykker med en skarp, våd kniv i jævne, hurtige træk. Hold fingrene fugtige, og tør kniven af efter hvert snit, så risene ikke hænger fast."
+    }
+  ],
+  "changes": [
+    "Tobiko (flyvefiskerogn) er udeladt til fordel for sesamfrø, som kilden selv nævner som alternativ."
+  ]
+}

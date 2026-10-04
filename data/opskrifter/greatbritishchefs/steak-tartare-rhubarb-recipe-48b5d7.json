@@ -1,0 +1,260 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/steak-tartare-rhubarb-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:13:22.041Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "title": "Tatar af oksemørbrad med syltet rabarber og MSG-chips",
+  "intro": "Mør oksetatar med syrlig, syltet rabarber, cornichoner og kapers, serveret med sprøde hjemmelavede kartoffelchips. Æggeblommen øverst gør den cremet.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Syltet rabarber",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rabarber",
+      "note": "halvdelen skæres i fine tern, resten skrælles i lange bånd",
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 1,
+      "unit": "dl",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 25,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "havsalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rabarber",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "lyserød peber",
+      "note": "hele kerner",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 350,
+      "unit": "g",
+      "name": "oksemørbrad",
+      "note": "uden fedt",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "cornichoner",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 30,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": null,
+      "unit": null,
+      "name": "hvidvinseddike",
+      "note": "et stænk",
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatar",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "MSG-chips",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "MSG-chips",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "skrællede og skåret i meget tynde skiver på mandolin",
+      "optional": false
+    },
+    {
+      "section": "MSG-chips",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "MSG (mononatriumglutamat)",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "MSG-chips",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltet rabarber",
+      "text": "Kom rabarbertern i én skål og rabarberbåndene i en anden."
+    },
+    {
+      "section": "Syltet rabarber",
+      "text": "Pisk vand, eddike, sukker, havsalt og lyserød peber sammen, og fordel lagen mellem de to skåle."
+    },
+    {
+      "section": "Syltet rabarber",
+      "text": "Dæk skålene til, og lad rabarberne syltes i køleskabet i mindst 2 timer – gerne natten over."
+    },
+    {
+      "section": "MSG-chips",
+      "text": "Varm olie op til 170 °C i en gryde."
+    },
+    {
+      "section": "MSG-chips",
+      "text": "Tør kartoffelskiverne godt med køkkenrulle, og steg dem i omgange, til de er gyldne og sprøde."
+    },
+    {
+      "section": "MSG-chips",
+      "text": "Lad chipsene dryppe af på køkkenrulle. Vend dem derefter i en skål med MSG og salt."
+    },
+    {
+      "section": "Tatar",
+      "text": "Læg oksemørbraden i fryseren i 20 minutter, så den stivner og bliver lettere at skære."
+    },
+    {
+      "section": "Tatar",
+      "text": "Skær kødet på tværs af fibrene i skiver på 0,5 cm, og skær skiverne i tern af samme størrelse."
+    },
+    {
+      "section": "Tatar",
+      "text": "Bland kødet med cornichoner, persille, kapers, skalotteløg, purløg og 1 spsk af de afdryppede rabarbertern."
+    },
+    {
+      "section": "Tatar",
+      "text": "Rør mayonnaise, sennep, hvidvinseddike, worcestershiresauce og 2 af æggeblommerne i. Smag til med salt og peber."
+    },
+    {
+      "section": "Tatar",
+      "text": "Sæt en bagering på hver tallerken, og fyld halvdelen af tataren i hver. Fjern ringen."
+    },
+    {
+      "section": "Tatar",
+      "text": "Pynt med syltede rabarberbånd og purløg. Læg en æggeblomme øverst på hver tatar, og server chipsene ved siden af."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,214 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-turkish-meatloaf",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:08:14.591Z",
+  "total_minutes": 105,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 18,
+  "title": "Tyrkisk kødbrød med ovnbagte grøntsager",
+  "intro": "Et saftigt kødbrød af lammekød, aubergine og ris med kanel og allehånde, bagt over hakkede tomater. Det serveres med ovnstegte grøntsager vendt i mynte og hvidløg.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Kødbrød",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til formen",
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 300,
+      "unit": "g",
+      "name": "aubergine",
+      "note": "skåret i skiver på langs og derefter i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 250,
+      "unit": "g",
+      "name": "ris",
+      "note": "kogte brune ris, fx i pose",
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillonpulver",
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": "ca. 10 % fedt",
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødbrød",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 3,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "i forskellige farver, uden kerner, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 500,
+      "unit": "g",
+      "name": "squash",
+      "note": "halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æbleeddike",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "hakket, til drys",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødbrød",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft). Beklæd en brødform på ca. 900 g med bagepapir, og pensl papiret let med olie."
+    },
+    {
+      "section": "Kødbrød",
+      "text": "Kom løg, aubergine, ris, tomatpuré, bouillonpulver, dild, kanel, allehånde og lammekød i en stor skål. Ælt det godt sammen med hænderne, tilsæt æggene, og ælt igen."
+    },
+    {
+      "section": "Kødbrød",
+      "text": "Hæld de hakkede tomater i bunden af formen. Fordel kødblandingen ovenpå, og tryk den let fast."
+    },
+    {
+      "section": "Kødbrød",
+      "text": "Dæk formen med folie, og bag kødbrødet i 1 time og 40 minutter. Tag folien af de sidste 15 minutter."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Når kødbrødet har bagt i 1 time, vendes peberfrugt, squash og rødløg med olien i en bradepande."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Sæt bradepanden i ovnen ved siden af kødbrødet i 40 minutter, til grøntsagerne er møre og lidt svedne."
+    },
+    {
+      "section": "Servering",
+      "text": "Tag kødbrød og grøntsager ud af ovnen. Lad kødbrødet hvile i 5 minutter, og vend det derefter ud på et fad eller bræt. Fjern bagepapiret, og drys eventuelt med dild."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend de bagte grøntsager med eddike, hvidløg og mynte, og server dem til kødbrødet."
+    }
+  ],
+  "changes": [
+    "Courgette er skiftet til squash."
+  ]
+}

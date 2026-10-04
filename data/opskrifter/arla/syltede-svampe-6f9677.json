@@ -1,0 +1,110 @@
+{
+  "url": "https://www.arla.dk/opskrifter/syltede-svampe/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:06:04.535Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 1,
+  "source_lines": 9,
+  "intro": "Syltede svampe på lage af eddike, sukker og krydderier med dild og chili. De holder sig køligt opbevaret i et par måneder.",
+  "title": "Syltede svampe",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 750,
+      "unit": "g",
+      "name": "champignon",
+      "note": "blandede svampe, fx bøgehatte, champignon, enoki, kejserhatte og shiitake",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "dild",
+      "note": "dildkrone eller friske dildkviste",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "chili",
+      "note": "hele røde, én pr. glas (1-3 stk.)",
+      "optional": false
+    },
+    {
+      "section": "Lage",
+      "amount": 4.5,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "ufarvet lagereddike",
+      "optional": false
+    },
+    {
+      "section": "Lage",
+      "amount": 4.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lage",
+      "amount": 3,
+      "unit": "dl",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lage",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Lage",
+      "amount": 15,
+      "unit": "stk",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Lage",
+      "amount": 3,
+      "unit": "stk",
+      "name": "krydderier",
+      "note": "laurbærblade, ét pr. glas (1-3 stk.)",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Gør svampene rene, og pak dem tæt i ét stort sylteglas eller flere små sammen med dild og chili."
+    },
+    {
+      "section": null,
+      "text": "Bring eddike, vand, sukker, salt, peberkorn og laurbærblade i kog i en gryde."
+    },
+    {
+      "section": null,
+      "text": "Hæld den varme lage over svampene i glassene, så de er dækket."
+    },
+    {
+      "section": null,
+      "text": "Sæt glassene et køligt sted hen. Svampene kan holde sig et par måneder."
+    }
+  ],
+  "changes": [
+    "Blandede svampe er skrevet som champignon, som er nemmest at få i supermarkedet."
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/manchurian-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:06:52.421Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Manchurian-kylling",
+  "intro": "Sprøde kyllingestrimler i en sprød panering, vendt i en sød og skarp sauce med ingefær, hvidløg og forårsløg. Server dem gerne med nudler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggehvide",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 350,
+      "unit": "g",
+      "name": "kyllingelår",
+      "note": "uden ben, skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 6,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket eller presset",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sød chilisauce",
+      "note": "tilsæt ½ tsk sukker, hvis saucen ikke er sød",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning og servering",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til stegning og servering",
+      "amount": null,
+      "unit": null,
+      "name": "æggenudler",
+      "note": "kogte, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Pisk æggehvide, sojasauce og majsstivelse sammen i en stor skål. Vend kyllingestrimlerne grundigt i blandingen."
+    },
+    {
+      "section": "Panering",
+      "text": "Bland alle ingredienserne til paneringen i en anden skål, og stil den til side."
+    },
+    {
+      "section": "Sauce",
+      "text": "Varm olien op i en pande ved middel varme. Rør ingefær, hvidløg og hovedparten af forårsløgene rundt i 1 minut. Gem lidt forårsløg til pynt."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tilsæt ketchup, sojasauce, chilisauce og 3 spsk vand, og lad det koge 1 minut."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør majsstivelsen ud i 1 spsk koldt vand, og hæld det i saucen. Skru ned på lav varme, og lad den småkoge et minuts tid, til den tykner. Tag panden af varmen."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Hæld en god sjat olie i en stor, bred pande, og varm den ved middel varme."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Løft kyllingestykkerne op af marinaden, lad overskuddet dryppe af, og vend dem i paneringen. Ryst overskydende mel af."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Læg stykkerne i den varme olie i ét lag. Steg dem 4-5 minutter på hver side, til de er sprøde, lysegyldne og gennemstegte."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Lad dem dryppe af i et dørslag over en skål. Steg resten af kyllingen på samme måde."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Varm saucen op ved lav varme, mens du steger. Vend al kyllingen forsigtigt i saucen, og drys med de sidste forårsløg. Server gerne med nudler."
+    }
+  ],
+  "changes": [
+    "Cornflour er skiftet til majsstivelse.",
+    "Sweet chilli sauce er skiftet til sød chilisauce.",
+    "Neutral olie er skiftet til rapsolie.",
+    "Plain flour er skiftet til hvedemel."
+  ]
+}

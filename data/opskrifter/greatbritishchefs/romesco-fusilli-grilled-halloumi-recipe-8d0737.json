@@ -1,0 +1,168 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/romesco-fusilli-grilled-halloumi-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:29:36.954Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Romescopasta med grillet halloumi",
+  "intro": "Fusilli i en cremet sauce af ristede mandler og peberfrugt, toppet med gyldne halloumiterninger. Citronskal og persille giver friskhed.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "pasta",
+      "note": "fusilli",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "halloumi",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Til romescosaucen",
+      "amount": 150,
+      "unit": "g",
+      "name": "mandler",
+      "note": "med skal",
+      "optional": false
+    },
+    {
+      "section": "Til romescosaucen",
+      "amount": 250,
+      "unit": "g",
+      "name": "peberfrugt",
+      "note": "ristet, på glas, drænet",
+      "optional": false
+    },
+    {
+      "section": "Til romescosaucen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til romescosaucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "sherryeddike, evt. lidt ekstra efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til romescosaucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": "plus lidt til servering",
+      "optional": false
+    },
+    {
+      "section": "Til romescosaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "krydderi",
+      "note": "røget paprika",
+      "optional": false
+    },
+    {
+      "section": "Til romescosaucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Til romescosaucen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til romescosaucen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Romescosauce",
+      "text": "Rist mandlerne på en tør pande ved middel varme i ca. 5 minutter, til de er let gyldne. Vend dem jævnligt."
+    },
+    {
+      "section": "Romescosauce",
+      "text": "Læg det meste af mandlerne i en blender eller foodprocessor (ca. 120 g), og gem resten til servering."
+    },
+    {
+      "section": "Romescosauce",
+      "text": "Tilsæt de øvrige ingredienser til saucen sammen med et nip salt og peber, og blend, til saucen er helt glat. Smag til med salt og mere eddike, hvis den skal have mere syrlighed. Stil den til side."
+    },
+    {
+      "section": "Pasta og halloumi",
+      "text": "Kog fusilli i rigeligt letsaltet vand efter anvisningen på pakken. Si pastaen, og gem ca. 2,5 dl af kogevandet. Kom pastaen tilbage i gryden."
+    },
+    {
+      "section": "Pasta og halloumi",
+      "text": "Varm imens en grillpande op ved middelhøj varme, og pensl den med lidt olivenolie. Grill halloumien i 2-3 minutter på hver side, til den har fået gyldne grillstriber. Stil den til side."
+    },
+    {
+      "section": "Pasta og halloumi",
+      "text": "Hak de gemte mandler groft."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld romescosaucen over pastaen i gryden, og vend rundt. Tynd ud med lidt af kogevandet, til saucen dækker pastaen jævnt."
+    },
+    {
+      "section": "Samling",
+      "text": "Anret pastaen i skåle med halloumi ovenpå. Drys med persille, citronskal og de hakkede mandler, og dryp med lidt olivenolie."
+    }
+  ],
+  "changes": [
+    "Garofalo High Protein Fusilli er erstattet af almindelig fusilli.",
+    "Sherryeddike er erstattet af eddike.",
+    "Ristet peberfrugt på glas er skrevet som peberfrugt (ristet, på glas)."
+  ]
+}

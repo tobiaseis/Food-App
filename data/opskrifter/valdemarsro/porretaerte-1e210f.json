@@ -1,0 +1,160 @@
+{
+  "url": "https://www.valdemarsro.dk/porretaerte/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:44:54.343Z",
+  "total_minutes": 90,
+  "active_minutes": 15,
+  "yield_count": 1,
+  "source_lines": 11,
+  "title": "Porretærte med bacon",
+  "intro": "En klassisk tærte med sprød bund af hvede- og fuldkornsmel og en fyldig fyldning af porre, bacon og æggemasse. Den smager dejligt både varm og kold.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Tærtedej",
+      "amount": 50,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 125,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt, plus lidt til formen",
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtedej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "stk",
+      "name": "porre",
+      "note": "skåret i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 70,
+      "unit": "g",
+      "name": "bacon",
+      "note": "sprødstegt og grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "sammenpisket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "kan bruges i stedet for baconfedtet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtedej",
+      "text": "Bland de to slags mel med saltet i en skål. Smuldr smørret ud i melet med fingrene."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Æl dejen sammen med vandet, og stil den afdækket på køl i 30 minutter."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Rul dejen ud, og læg den i en smurt tærteform. Tryk den ind til kanten."
+    },
+    {
+      "section": "Tærtedej",
+      "text": "Prik bunden med en gaffel. Forbag den i en forvarmet ovn ved 175 °C varmluft i 10 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Steg baconen på en pande, til den er sprød. Tag den af panden."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend porrerne rundt i baconfedtet ved middelvarme, til de er møre. Har du ikke fedt nok, så brug olivenolie."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rør æg, mælk, muskatnød og peber sammen i en skål, og vend bacon og porrer i. Smag til med salt."
+    },
+    {
+      "section": "Fyld",
+      "text": "Hæld fyldet i den forbagte tærtebund."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bag tærten i ovnen ved 175 °C varmluft i cirka 25-30 minutter, til æggemassen er stivnet."
+    }
+  ],
+  "changes": []
+}

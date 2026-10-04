@@ -1,0 +1,265 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/loaded-crab-thermidor-jacket-potatoes-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:24:33.051Z",
+  "total_minutes": 90,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Bagte kartofler med krabbe thermidor",
+  "intro": "Sprøde bagekartofler fyldt med brunet smør, kartoffelmos, krabbekød og en cremet thermidorsauce. Det hele gratineres med parmesan, til toppen bobler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartofler",
+      "amount": 4,
+      "unit": "stk",
+      "name": "bagekartofler",
+      "note": "store, skrubbede og tørrede",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Krabbeblanding",
+      "amount": 300,
+      "unit": "g",
+      "name": "krabbekød",
+      "note": "hvidt",
+      "optional": false
+    },
+    {
+      "section": "Krabbeblanding",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft, plus extra både til servering",
+      "optional": false
+    },
+    {
+      "section": "Krabbeblanding",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": "plus ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Krabbeblanding",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Brunet smør til fyldet",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Brunet smør til fyldet",
+      "amount": 60,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brunet smør til fyldet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "meget fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 100,
+      "unit": "ml",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 150,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Worcestershire sauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 30,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet, plus ekstra til gratinering",
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 15,
+      "unit": "g",
+      "name": "gruyère",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Thermidorsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "fintklippet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 190 °C."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Læg kartoflerne på en bageplade med bagepapir. Gnid dem ind i olivenolie og salt, og prik dem med en gaffel."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Bag dem i 1 time og 20 minutter, til skindet er sprødt, og kødet er blødt. Tag dem ud."
+    },
+    {
+      "section": "Brunet smør til fyldet",
+      "text": "Smelt smørret i en lille pande på middelvarme, og lad det simre ca. 8 minutter, til det er mørkt gyldent og dufter af nødder. Hæld det i en stor skål, som senere skal bruges til at made kartoflerne. Stil til side."
+    },
+    {
+      "section": "Thermidorsauce",
+      "text": "Smelt smørret til saucen i den samme pande. Svits skalotteløg i 2-3 minutter, til de er møre. Tilsæt hvidløg, og steg yderligere 1 minut."
+    },
+    {
+      "section": "Thermidorsauce",
+      "text": "Hæld hvidvinen i, og kog den ind til det halve. Rør fløde, sennep, Worcestershire sauce, parmesan, gruyère og cayennepeber i. Lad saucen simre svagt i 3 minutter, til den er lidt tykkere."
+    },
+    {
+      "section": "Thermidorsauce",
+      "text": "Vend persillen i, og smag til med salt og peber. Hold saucen varm."
+    },
+    {
+      "section": "Krabbeblanding",
+      "text": "Vend krabbekødet forsigtigt med citronskal, citronsaft, cayennepeber og peber. Stil det på køl, til det skal bruges."
+    },
+    {
+      "section": "Samling",
+      "text": "Skær de bagte kartofler over på langs, og skrab kødet ud. Kom det i skålen med brunet smør sammen med fløde og sennep til fyldet, og mos det til en jævn masse."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend krabbeblandingen og thermidorsaucen i moset. Fyld det tilbage i kartoffelskallerne."
+    },
+    {
+      "section": "Samling",
+      "text": "Riv ekstra parmesan over, og gratinér under grillen i ca. 5 minutter, til toppen bobler og er let sprød i kanten."
+    },
+    {
+      "section": "Samling",
+      "text": "Top med purløg, peber og lidt cayennepeber. Server med citronbåde ved siden af."
+    }
+  ],
+  "changes": [
+    "Nanna Tate-kartofler er skiftet til bagekartofler.",
+    "Double cream er skiftet til piskefløde.",
+    "Hvid krabbekød er skiftet til krabbekød.",
+    "Flagesalt er skiftet til almindeligt salt."
+  ]
+}

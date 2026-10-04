@@ -1,0 +1,267 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-shawarma-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:26:59.636Z",
+  "total_minutes": 40,
+  "active_minutes": 30,
+  "yield_count": 6,
+  "source_lines": 23,
+  "title": "Kylling-shawarmasalat med tahindressing",
+  "intro": "Grillet kylling i en krydret marinade serveres over en frisk salat af rødkål, agurk og tomat med en cremet tahindressing. Den er god med varme pitabrød og syltede chilier ved siden af.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Kylling og marinade",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "stor",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Kylling og marinade",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "banket let flade med en kagerulle",
+      "optional": false
+    },
+    {
+      "section": "Tahindressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tahindressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Tahindressing",
+      "amount": 200,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Tahindressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommenfrø",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 500,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "ca. ½ hoved, snittet fint",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "lille, skrællet, halveret, uden kerner og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hjertesalat",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "pitabrød",
+      "note": "eller fladbrød, ristet",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "jalapeños",
+      "note": "syltede",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling og marinade",
+      "text": "Rør hvidløg, olie og citronsaft sammen i en skål eller en plastboks med låg."
+    },
+    {
+      "section": "Kylling og marinade",
+      "text": "Tilsæt alle krydderierne, oregano, salt og yoghurt, og rør det til en tyk marinade."
+    },
+    {
+      "section": "Kylling og marinade",
+      "text": "Vend kyllingen rundt i marinaden, til den er helt dækket. Sæt den tildækket i køleskabet i mindst 1 time – gerne natten over."
+    },
+    {
+      "section": "Tahindressing",
+      "text": "Rør tahin, citronsaft, yoghurt og spidskommenfrø sammen i en lille skål. Smag til, dæk til og stil på køl. Dressingen kan laves op til 2 dage i forvejen."
+    },
+    {
+      "section": "Salat",
+      "text": "Bland rødkål, rødløg, agurk, tomater og hjertesalat i en stor skål. Den kan stå afdækket på køl i 1-2 timer, inden den skal bruges."
+    },
+    {
+      "section": "Kylling og marinade",
+      "text": "Gør grillen klar, eller varm en grillpande op på høj varme. Steg kyllingen i 5 minutter på hver side, til den er let forkullet og gennemstegt. Læg den på et bræt og lad den hvile."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld citronsaft og olie over salaten, drys med salt og vend det hele rundt. Anret salaten på et stort fad eller i en stor skål."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær kyllingen i skiver og læg den ovenpå salaten. Til vegetarer kan kyllingen serveres ved siden af."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server tahindressingen i en skål ved siden af, så den kan drysses over. Tilbehør er ristede pitabrød eller fladbrød til at fylde kyllingen i og syltede jalapeños, hvis man vil."
+    }
+  ],
+  "changes": [
+    "Syltede chilier er erstattet af syltede jalapeños.",
+    "Little gem-salat er erstattet af hjertesalat."
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/malteser-cheesecake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:31:38.396Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 10,
+  "source_lines": 11,
+  "title": "Maltesers-cheesecake",
+  "intro": "Kold cheesecake uden bagning med kiksebund, cremet maltfyld og knasende Maltesers på toppen. Den skal stå på køl, så den er nem at lave i god tid.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Bund",
+      "amount": 250,
+      "unit": "g",
+      "name": "kiks",
+      "note": "mælkekiks med malt",
+      "optional": false
+    },
+    {
+      "section": "Bund",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, smeltet og afkølet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "naturel, fuldfed, stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 75,
+      "unit": "g",
+      "name": "Ovomaltine",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "mørk chokolade",
+      "note": "smeltet og afkølet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 75,
+      "unit": "g",
+      "name": "mælkechokolade",
+      "note": "smeltet og afkølet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 175,
+      "unit": "g",
+      "name": "sukker",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 4,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Ovomaltine",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 50,
+      "unit": "g",
+      "name": "Maltesers",
+      "note": "groft hakket eller knust",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bund",
+      "text": "Beklæd en springform på 20 cm med bagepapir."
+    },
+    {
+      "section": "Bund",
+      "text": "Kør kiksene til fine krummer i en foodprocessor. Hæld det smeltede smør over, og pulsér, til massen ligner fugtigt sand."
+    },
+    {
+      "section": "Bund",
+      "text": "Pres krummerne ud i formen, og glat overfladen med en ske. Stil formen på køl, mens du laver fyldet."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk flødeost, Ovomaltine, begge slags chokolade, sukker og fløde sammen, til massen er fast og danner toppe."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend fyldet ud på bunden, og glat det jævnt med en spatel."
+    },
+    {
+      "section": "Fyld",
+      "text": "Lad kagen stå på køl i mindst 3 timer. Den holder sig op til fire dage på køl."
+    },
+    {
+      "section": "Topping",
+      "text": "Pisk fløde og Ovomaltine til bløde toppe."
+    },
+    {
+      "section": "Topping",
+      "text": "Løsn kagen fra formen, og lad den stå ca. 10 minutter, så den får stuetemperatur."
+    },
+    {
+      "section": "Topping",
+      "text": "Læg flødeskummet ovenpå, og træk det ud i bølger. Drys med Maltesers, og skær kagen i skiver. Den smager bedst samme dag, som den er pyntet."
+    }
+  ],
+  "changes": [
+    "Malted milk biscuits er erstattet af mælkekiks med malt.",
+    "Horlicks-maltpulver er erstattet af Ovomaltine."
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/breakfast-egg-wraps",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:00:53.969Z",
+  "total_minutes": 12,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Morgenmadswraps med æggepandekager og champignon",
+  "intro": "Tynde æggepandekager med havregryn og persille, fyldt med stegte champignon og tomat og med et strejf sennep. Et mættende og nemt morgenmåltid.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "champignon",
+      "note": "kun halvdelen bruges i fyldet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": "plus lidt ekstra til stegning af pandekagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skær halvdelen af champignonerne i tykke skiver."
+    },
+    {
+      "section": null,
+      "text": "Varm en del af rapsolien i en non-stick pande. Kom champignonerne på, rør kort rundt, og læg låg på. Steg dem i 6-8 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt halvdelen af tomaterne, og steg 1-2 minutter uden låg, til tomaterne er bløde. Stil fyldet til side."
+    },
+    {
+      "section": null,
+      "text": "Pisk æg, persille og havregryn grundigt sammen til en jævn masse."
+    },
+    {
+      "section": null,
+      "text": "Varm en dråbe olie på en stor non-stick pande. Hæld en fjerdedel af æggemassen på, og steg i 1 minut, til den næsten er stivnet. Vend den som en pandekage."
+    },
+    {
+      "section": null,
+      "text": "Læg æggepandekagen på et bræt. Smør en fjerdedel af sennepen ud over den, læg en fjerdedel af fyldet ned ad midten, og rul den sammen."
+    },
+    {
+      "section": null,
+      "text": "Lav de næste wraps på samme måde med resten af æggemassen, fyldet og sennepen. Rester kan gemmes til dagen efter."
+    }
+  ],
+  "changes": [
+    "Engelsk sennepspulver er erstattet med almindelig sennep."
+  ]
+}

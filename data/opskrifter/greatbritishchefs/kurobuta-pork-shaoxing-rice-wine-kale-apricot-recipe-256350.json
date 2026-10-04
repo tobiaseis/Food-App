@@ -1,0 +1,461 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/kurobuta-pork-shaoxing-rice-wine-kale-apricot-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:47:14.535Z",
+  "total_minutes": 270,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 38,
+  "title": "Langtidsstegt svinebryst med Shaoxing-glaze, grønkål og abrikos",
+  "intro": "Mørt, langtidsbraiseret svinebryst glaseret med Shaoxing-vin og serveret med sprød grønkål, braiseret grisetunge og abrikoser i flere udgaver. En stor restaurantret med mange komponenter, som med fordel laves over to dage.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Svinebryst",
+      "amount": 1,
+      "unit": "stk",
+      "name": "flæsk i skiver",
+      "note": "hel side svinebryst med ribben",
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 80,
+      "unit": "g",
+      "name": "sojasauce",
+      "note": "tamari",
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 250,
+      "unit": "g",
+      "name": "juice",
+      "note": "æblecider",
+      "optional": false
+    },
+    {
+      "section": "Braiseret grisetunge",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "krydderier",
+      "note": "nelliker",
+      "optional": false
+    },
+    {
+      "section": "Braiseret grisetunge",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, hvidt, i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Braiseret grisetunge",
+      "amount": 1,
+      "unit": "stk",
+      "name": "persille & krydderurter",
+      "note": "kvist rosmarin",
+      "optional": false
+    },
+    {
+      "section": "Braiseret grisetunge",
+      "amount": 3,
+      "unit": "stk",
+      "name": "krydderier",
+      "note": "laurbærblade",
+      "optional": false
+    },
+    {
+      "section": "Braiseret grisetunge",
+      "amount": 4,
+      "unit": "stk",
+      "name": "hakket svinekød",
+      "note": "grisetunger",
+      "optional": false
+    },
+    {
+      "section": "Shaoxing-glaze",
+      "amount": 400,
+      "unit": "ml",
+      "name": "vin",
+      "note": "Shaoxing-risvin",
+      "optional": false
+    },
+    {
+      "section": "Shaoxing-glaze",
+      "amount": 150,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Shaoxing-glaze",
+      "amount": 150,
+      "unit": "g",
+      "name": "sojasauce",
+      "note": "tamari",
+      "optional": false
+    },
+    {
+      "section": "Shaoxing-glaze",
+      "amount": 75,
+      "unit": "g",
+      "name": "sojasauce",
+      "note": "mørk",
+      "optional": false
+    },
+    {
+      "section": "Shaoxing-glaze",
+      "amount": 700,
+      "unit": "g",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød grønkål",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kål",
+      "note": "grønkål",
+      "optional": false
+    },
+    {
+      "section": "Sprød grønkål",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sprød grønkål",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød grønkål",
+      "amount": 50,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød grønkål",
+      "amount": null,
+      "unit": null,
+      "name": "krydderier",
+      "note": "togarashi",
+      "optional": false
+    },
+    {
+      "section": "Pocherede abrikoser",
+      "amount": 10,
+      "unit": "stk",
+      "name": "tørret frugt",
+      "note": "tørrede abrikoser",
+      "optional": false
+    },
+    {
+      "section": "Pocherede abrikoser",
+      "amount": 100,
+      "unit": "g",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pocherede abrikoser",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pocherede abrikoser",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": "isomalt",
+      "optional": false
+    },
+    {
+      "section": "Pocherede abrikoser",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Abrikospuré",
+      "amount": 600,
+      "unit": "g",
+      "name": "stenfrugt",
+      "note": "abrikoser, halverede og uden sten",
+      "optional": false
+    },
+    {
+      "section": "Abrikospuré",
+      "amount": 50,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Abrikospuré",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Abrikosgel",
+      "amount": 100,
+      "unit": "g",
+      "name": "stenfrugt",
+      "note": "abrikospuré fra ovenfor",
+      "optional": false
+    },
+    {
+      "section": "Abrikosgel",
+      "amount": 1,
+      "unit": "g",
+      "name": "fortykningsmiddel",
+      "note": "agar-agar",
+      "optional": false
+    },
+    {
+      "section": "Svinesauce",
+      "amount": null,
+      "unit": null,
+      "name": "flæsk i skiver",
+      "note": "ribben fra svinebrystet",
+      "optional": false
+    },
+    {
+      "section": "Svinesauce",
+      "amount": 12,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinesauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Svinesauce",
+      "amount": 20,
+      "unit": "g",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinesauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinesauce",
+      "amount": 500,
+      "unit": "ml",
+      "name": "vin",
+      "note": "Shaoxing-risvin",
+      "optional": false
+    },
+    {
+      "section": "Svinesauce",
+      "amount": 6,
+      "unit": "l",
+      "name": "bouillon",
+      "note": "fond af gris og kylling",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille & krydderurter",
+      "note": "purløgsblomster",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille & krydderurter",
+      "note": "anisisop",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille & krydderurter",
+      "note": "purløg, fintklippet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svinebryst",
+      "text": "Forvarm ovnen til 160 °C varmluft."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Skær ribbenene fra svinebrystet og gem dem til saucen. Svid svor og skind med en gasbrænder, så eventuelle børster brændes af."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Læg det udbenede bryst i et fad med tamari og cider, og fyld op med vand, til kødet er dækket. Dæk fadet med et lag bagepapir og et lag alufolie."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Steg i ovnen i 1 time. Skru derefter op på 180 °C, og steg i yderligere 1 time. Skru til sidst op på 200 °C, og steg en tredje og sidste time."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Tag fadet ud, og lad kødet køle af i fadet. Hæld væsken fra, læg et andet fad oven på kødet, og tyng det ned med noget tungt. Stil det på køl natten over."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Fjern vægtene næste dag. Kødet skal nu have ens tykkelse. Skær det i skiver på 3 cm, og trim de uens kanter væk."
+    },
+    {
+      "section": "Braiseret grisetunge",
+      "text": "Rist nelliker på en tør pande, til de dufter."
+    },
+    {
+      "section": "Braiseret grisetunge",
+      "text": "Kom dem i en stor gryde sammen med løg, rosmarin, laurbærblade og grisetunger, og dæk med vand."
+    },
+    {
+      "section": "Braiseret grisetunge",
+      "text": "Bring i kog, og skum af undervejs. Skru ned, og lad småkoge i 4-5 timer, til tungerne er møre."
+    },
+    {
+      "section": "Braiseret grisetunge",
+      "text": "Tag tungerne op, og træk den tykke yderhinde af, mens de stadig er varme. Lad dem køle af, og skær dem i tern på ½ cm."
+    },
+    {
+      "section": "Shaoxing-glaze",
+      "text": "Kom alle ingredienserne i en gryde, og varm forsigtigt op, til sukkeret er helt opløst. Tag gryden af varmen, når det koger, og lad glazen køle af."
+    },
+    {
+      "section": "Pocherede abrikoser",
+      "text": "Skær de tørrede abrikoser i tern på 1 cm, og læg dem i en varmefast skål."
+    },
+    {
+      "section": "Pocherede abrikoser",
+      "text": "Bring vand, sukker, isomalt og safran i kog i en gryde. Hæld den kogende sirup over abrikoserne, og lad dem køle af i den."
+    },
+    {
+      "section": "Abrikospuré",
+      "text": "Kog abrikoserne med honning og sukker ved svag varme, til frugten falder fra hinanden til en tyk masse. Det tager 15-20 minutter."
+    },
+    {
+      "section": "Abrikospuré",
+      "text": "Pres massen gennem en fin sigte, så skindet bliver tilbage. Er den meget tyk, så rør en skvæt vand i. Den skal ligne glat æblemos. Stil til afkøling."
+    },
+    {
+      "section": "Abrikosgel",
+      "text": "Kom den afmålte puré i en gryde sammen med agar-agar."
+    },
+    {
+      "section": "Abrikosgel",
+      "text": "Varm det op til lige under kogepunktet, mens du pisker hele tiden. Når det er lige ved at koge, hældes det på en kold bageplade, hvor det stivner til et tyndt lag gelé."
+    },
+    {
+      "section": "Abrikosgel",
+      "text": "Skrab den afkølede gelé ned i en kryddermølle, og blend den til en gel, der kan sprøjtes. Fyld den på en klemmeflaske."
+    },
+    {
+      "section": "Svinesauce",
+      "text": "Brun ribbenene i lidt olie i en stor gryde, og vend dem ofte, så de får en jævn farve."
+    },
+    {
+      "section": "Svinesauce",
+      "text": "Rist imens krydderierne på en tør pande, til de dufter. Kom dem i en kasserolle med sukker og Shaoxing-vin, og kog blandingen ind til det halve."
+    },
+    {
+      "section": "Svinesauce",
+      "text": "Slå ribbenene op med en smule af fonden, og skrab de sprøde bundfald løs fra panden. Hæld resten af fonden og vinreduktionen i."
+    },
+    {
+      "section": "Svinesauce",
+      "text": "Kog ind, til saucen er blank, tyk og velsmagende. Det tager et par timer. Sigt ben og krydderier fra; du får omkring 2 liter sauce."
+    },
+    {
+      "section": "Sprød grønkål",
+      "text": "Skær bladene af grønkålen med en skarp kniv, og kassér stænglerne. Prøv at beholde bladene så store som muligt."
+    },
+    {
+      "section": "Sprød grønkål",
+      "text": "Varm et par centimeter olie op til 160 °C i en tung gryde med høje sider. Steg bladene, til de er sprøde og let gennemsigtige."
+    },
+    {
+      "section": "Sprød grønkål",
+      "text": "Bland sukker og salt, og drys det over den varme kål sammen med lidt togarashi."
+    },
+    {
+      "section": "Anretning",
+      "text": "Forvarm ovnen til 150 °C varmluft."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sprøjt en stribe abrikospuré langs den ene side af tallerkenen. Pynt med purløgsblomster, anisisop og to stykker pocheret abrikos."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg et stykke svinebryst på en pande, og hæld så meget glaze på, at den når halvvejs op ad kødet. Kog glazen ind til den er tyk og klistret, og vend kødet ofte."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg kødet på en bageplade, hæld lidt af den tykke glaze over, og sæt det i ovnen i 5 minutter."
+    },
+    {
+      "section": "Anretning",
+      "text": "Varm 1 spsk purløg, 1 spsk grisetunge og 6 spsk svinesauce op på kogepladen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Tag kødet ud af ovnen, og vær forsigtig, for det er meget blødt. Læg det på tallerkenen, lidt forskudt fra abrikospuréen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg den sprøde grønkål oven på kødet, og hæld saucen over ved bordet."
+    }
+  ],
+  "changes": [
+    "Svinebryst med ribben er skrevet som flæsk i skiver, den nærmeste almindelige danske vare.",
+    "Grisetunger er skrevet som hakket svinekød, da tunger sjældent kan købes i supermarkedet; bestil dem evt. hos slagteren.",
+    "Isomalt er erstattet med almindeligt sukker.",
+    "Tamari og mørk soja er erstattet med sojasauce.",
+    "Shaoxing-vin er skrevet som vin; køb Shaoxing-risvin i en asiatisk butik.",
+    "Anisisop og purløgsblomster er skrevet som krydderurter og kan udelades, hvis de ikke kan fås.",
+    "Fond af gris og kylling er skrevet som bouillon.",
+    "Togarashi er skrevet som krydderier."
+  ]
+}

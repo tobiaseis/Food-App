@@ -1,0 +1,144 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/bourekas",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:45:35.394Z",
+  "total_minutes": 45,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 9,
+  "title": "Bourekas med ost og sesam",
+  "intro": "Sprøde trekanter af butterdej fyldt med salt ostecreme. Server dem varme eller åbn dem og fyld med æg, harissa og syltede agurker.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Fyld",
+      "amount": 75,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet, lagret",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "adskilt og pisket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 300,
+      "unit": "g",
+      "name": "butterdej",
+      "note": "udrullet, færdigrullet plade",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "hårdkogte",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "syltede agurker",
+      "note": "i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Rør feta, hytteost og cheddar sammen med en gaffel. Krydr med peber. Smag til og tilsæt kun salt, hvis det er nødvendigt, da osten er salt i forvejen."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend halvdelen af det sammenpiskede æg i fyldet og stil det til side."
+    },
+    {
+      "section": "Dej",
+      "text": "Sæt ovnen på 200 °C (180 °C varmluft). Beklæd en bageplade eller to med bagepapir."
+    },
+    {
+      "section": "Dej",
+      "text": "Læg butterdejen på et skærebræt. Den måler ca. 35 x 23 cm. Skær en strimmel på 2 cm af den ene ende og kasser den. Del resten i 15 firkanter på ca. 7 x 7 cm."
+    },
+    {
+      "section": "Dej",
+      "text": "Kom en lidt knap spiseskefuld fyld i det ene hjørne af hver firkant og tryk det let flad. Fold det modsatte hjørne ind over fyldet, så der opstår en trekant."
+    },
+    {
+      "section": "Dej",
+      "text": "Tryk kanterne godt sammen og pres luften ud. Hvis dejen ikke klistrer, så pensl kanten med lidt af det andet æg eller med vand. Tryk til sidst langs kanten med en gaffel, så de lukker helt og får mønster."
+    },
+    {
+      "section": "Bagning",
+      "text": "Pensl trekanterne med resten af ægget og drys med sesamfrø."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag i 20-25 minutter, til de er gyldne, hævede og gennembagte. Lad dem køle lidt af på bagepladerne på en rist."
+    },
+    {
+      "section": "Servering",
+      "text": "Server dem lune, eller lad dem køle helt af. Skær dem derefter delvist op på tværs, så den foldede side holder dem samlet."
+    },
+    {
+      "section": "Servering",
+      "text": "Fyld med skiver af hårdkogt æg, harissa og syltede agurker."
+    }
+  ],
+  "changes": [
+    "Cottage cheese er erstattet af hytteost.",
+    "Mature cheddar er erstattet af cheddar.",
+    "Pickled cucumbers er erstattet af syltede agurker."
+  ]
+}

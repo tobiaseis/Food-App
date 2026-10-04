@@ -1,0 +1,334 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/fried-egg-smash-burgers-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:30:32.194Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Smash burgers med spejlæg og rødløgsmarmelade",
+  "intro": "Tynde, sprøde smashede bøffer med bacon, smeltet ost, sprødstegt spejlæg og sej rødløgsmarmelade. Det hele samles i brioche-boller med hjemmelavet burgersauce.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Rødløgsmarmelade",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Rødløgsmarmelade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødløgsmarmelade",
+      "amount": 3,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "store, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Rødløgsmarmelade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": "mørk",
+      "optional": false
+    },
+    {
+      "section": "Rødløgsmarmelade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødløgsmarmelade",
+      "amount": 15,
+      "unit": "g",
+      "name": "timian",
+      "note": "frisk, bladene plukket af",
+      "optional": false
+    },
+    {
+      "section": "Rødløgsmarmelade",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "syltede agurker",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "lage fra agurkeglasset",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgersauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 600,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "gerne 20 % fedt",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 4,
+      "unit": "skive",
+      "name": "taleggio",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 8,
+      "unit": "skive",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til æggene",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 4,
+      "unit": "stk",
+      "name": "brioche burgerboller",
+      "note": "skåret over",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "syltede agurker",
+      "note": "i skiver, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rødløgsmarmelade",
+      "text": "Varm smør og olivenolie i en gryde ved middel-lav varme. Kom løgene i sammen med en knivspids salt, og lad dem simre langsomt i 20-25 minutter. Rør af og til, til de er bløde og gyldne."
+    },
+    {
+      "section": "Rødløgsmarmelade",
+      "text": "Rør brun farin og balsamico i, og kog videre i 5-10 minutter, til løgene er karamelliserede og som marmelade. Tilsæt timian det sidste minut."
+    },
+    {
+      "section": "Rødløgsmarmelade",
+      "text": "Smag til med salt og peber, og stil til side. Marmeladen kan holde sig op til 3 dage i køleskabet."
+    },
+    {
+      "section": "Burgersauce",
+      "text": "Rør mayonnaise, sennep og ketchup sammen i en skål. Vend resten af sauceingredienserne i med salt og peber, til saucen er glat."
+    },
+    {
+      "section": "Burgersauce",
+      "text": "Stil saucen i køleskabet i mindst 20 minutter, så smagene når at trække."
+    },
+    {
+      "section": "Burgere",
+      "text": "Krydr hakket oksekød med salt og peber, og form det til 8 kugler. Ælt ikke kødet for meget."
+    },
+    {
+      "section": "Burgere",
+      "text": "Varm en tung pande op ved middel-høj varme med lidt rapsolie."
+    },
+    {
+      "section": "Burgere",
+      "text": "Steg baconen sprød og gennemstegt, og vend den ind imellem. Lad den dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Burgere",
+      "text": "Steg bøfferne i omgange, så panden ikke bliver overfyldt. Læg 2 kugler på panden ved siden af baconen, og tryk hver af dem helt flad med en burgerpresser."
+    },
+    {
+      "section": "Burgere",
+      "text": "Steg i 1-2 minutter, til kanten er sprød. Tryk igen, hvis bøfferne krøller op."
+    },
+    {
+      "section": "Burgere",
+      "text": "Vend bøfferne, og drys dem let med salt. Læg en skive ost på hver anden bøf, tilsæt vandet, og læg låg på. Lad det stå i et minut, til osten er smeltet."
+    },
+    {
+      "section": "Burgere",
+      "text": "Stil bøfferne et lunt sted, og gentag med resten. Fjern kødrester og baconstumper fra panden undervejs, så intet brænder på."
+    },
+    {
+      "section": "Burgere",
+      "text": "Skru ned til middel varme, når alle bøffer og al bacon hviler. Hæld olivenolie på panden til det udsmeltede fedt, slå æggene ud, og steg dem, til kanten er sprød og blommen stadig flydende. Salt dem, og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Burgere",
+      "text": "Brun bollernes snitflader let i fedtet på panden, til de er gyldne."
+    },
+    {
+      "section": "Burgere",
+      "text": "Smør burgersauce på bunden af bollerne. Læg 2 bøffer ovenpå, én uden ost og én med, og fordel rigeligt rødløgsmarmelade over."
+    },
+    {
+      "section": "Burgere",
+      "text": "Læg agurkeskiver og 2 skiver bacon på hver burger, og top med et sprødt spejlæg. Sæt toppen på, og server med det samme."
+    }
+  ],
+  "changes": [
+    "Streaky bacon er skiftet til bacon i skiver."
+  ]
+}

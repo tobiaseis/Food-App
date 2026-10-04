@@ -1,0 +1,111 @@
+{
+  "url": "https://www.arla.dk/opskrifter/toast-med-sprod-ablesalat-/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:11:27.160Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Toast med figen, blåskimmelost og sprød æblesalat",
+  "intro": "Sprøde toast med sød figenpålæg og kraftig blåskimmelost, serveret med en frisk æblesalat med ingefær og sesam.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Sprød æblesalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "store, i tynde skiver, fx jonagored",
+      "optional": false
+    },
+    {
+      "section": "Sprød æblesalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefærmarmelade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprød æblesalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Sprød æblesalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Toast",
+      "amount": 8,
+      "unit": "skive",
+      "name": "toastbrød",
+      "note": "groft, fx fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Toast",
+      "amount": 75,
+      "unit": "g",
+      "name": "figenpålæg",
+      "note": "4 skiver",
+      "optional": false
+    },
+    {
+      "section": "Toast",
+      "amount": 150,
+      "unit": "g",
+      "name": "blåskimmelost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toast",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sprød æblesalat",
+      "text": "Rør æbleskiverne sammen med ingefærmarmelade, citronsaft og sesamfrø, så de er dækket af marmeladen."
+    },
+    {
+      "section": "Toast",
+      "text": "Skær hver skive figenpålæg i tre lange strimler."
+    },
+    {
+      "section": "Toast",
+      "text": "Fordel figenpålæg og blåskimmelost på halvdelen af brødskiverne, og læg de resterende skiver ovenpå, så der bliver 4 toast."
+    },
+    {
+      "section": "Toast",
+      "text": "Varm toastmaskinen godt op, og pensl den med smør."
+    },
+    {
+      "section": "Toast",
+      "text": "Grill toastene to ad gangen i cirka 3 minutter, til de er gyldne."
+    },
+    {
+      "section": "Toast",
+      "text": "Server de varme toast med det samme sammen med æblesalaten."
+    }
+  ],
+  "changes": [
+    "Figenpålæg er beholdt som færdigvare, da kilden ikke angiver en anden.",
+    "Ingefærmarmelade er beholdt under dets danske navn."
+  ]
+}

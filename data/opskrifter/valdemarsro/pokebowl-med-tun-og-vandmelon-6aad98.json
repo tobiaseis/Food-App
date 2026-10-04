@@ -1,0 +1,184 @@
+{
+  "url": "https://www.valdemarsro.dk/pokebowl-med-tun-og-vandmelon/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:45:34.150Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Poke bowl med tun og vandmelon",
+  "intro": "Skåle med marineret tun, sushiris, avocado og sprød, sød vandmelon. Toppes med krydret chilimayo og et skvæt lime.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tun og marinade",
+      "amount": 400,
+      "unit": "g",
+      "name": "tunsteak",
+      "note": "sushikvalitet",
+      "optional": false
+    },
+    {
+      "section": "Tun og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "teriyakisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tun og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tun og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Tun og marinade",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologiske, saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Tun og marinade",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tun og marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Chilimayo",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilimayo",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sriracha",
+      "note": "chilisauce",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 200,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "pillede",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "sushiris",
+      "note": "kogt efter anvisningen på pakken",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 300,
+      "unit": "g",
+      "name": "vandmelon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 25,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tun og marinade",
+      "text": "Skær tunen i tern eller tynde skiver. Det går lettest, hvis den stadig er lidt frossen."
+    },
+    {
+      "section": "Tun og marinade",
+      "text": "Rør teriyakisauce, sesamolie, ingefær, limesaft og limeskal sammen i en skål. Smag til med salt og peber."
+    },
+    {
+      "section": "Tun og marinade",
+      "text": "Vend tunen i marinaden, og lad den stå og trække i 10-15 minutter."
+    },
+    {
+      "section": "Chilimayo",
+      "text": "Rør mayonnaise og sriracha sammen. Tilsæt mere sriracha, hvis du vil have den stærkere."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Kom edamamebønnerne i en skål, og overhæld dem med kogende vand, så de bliver varme og tøer op. Si vandet fra."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Fordel ris, edamamebønner, agurk, avocado, vandmelon og den marinerede tun i skåle."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Strø forårsløg og sesamfrø over, og dryp med chilimayo. Server limebådene ved siden af, så hver kan presse efter smag."
+    }
+  ],
+  "changes": []
+}

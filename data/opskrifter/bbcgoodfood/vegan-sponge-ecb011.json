@@ -1,0 +1,153 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/vegan-sponge",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:58:20.266Z",
+  "total_minutes": 55,
+  "active_minutes": 20,
+  "yield_count": 10,
+  "source_lines": 10,
+  "title": "Vegansk lagkage med jordbærsyltetøj",
+  "intro": "En let vegansk sandwichkage med to luftige bunde, vaniljesmørcreme og syltetøj imellem. Den er lavet med plantemargarine og havredrik og passer til kaffebordet.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Kagebunde",
+      "amount": 150,
+      "unit": "g",
+      "name": "plantemargarine",
+      "note": "plus lidt ekstra til formene",
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 3,
+      "unit": "dl",
+      "name": "havredrik",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æbleeddike",
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 1,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": "frøene skrabes ud",
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 300,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagebunde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Smørcreme og fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "plantemargarine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Smørcreme og fyld",
+      "amount": 200,
+      "unit": "g",
+      "name": "flormelis",
+      "note": "plus lidt til drys",
+      "optional": false
+    },
+    {
+      "section": "Smørcreme og fyld",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "jordbærsyltetøj",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kagebunde",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft). Beklæd bunden af to forme på 20 cm med bagepapir, og smør kanterne og bunden med lidt plantemargarine."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Rør havredrikken sammen med eddiken i en kande. Lad den stå nogle minutter, til den er let klumpet."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Kom halvdelen af vaniljefrøene sammen med margarine, mel, bagepulver, sukker og natron i en stor skål. Hæld havredrikblandingen over."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Pisk dejen glat med håndmixer eller træske."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Fordel dejen i de to forme, og bag kagerne midt i ovnen i 30-35 minutter. De er færdige, når en spiddet pind fra midten kommer ren ud."
+    },
+    {
+      "section": "Kagebunde",
+      "text": "Lad bundene hvile i formene, til de kan holdes i hånden. Vend dem forsigtigt ud på en rist, og lad dem køle helt af."
+    },
+    {
+      "section": "Smørcreme og fyld",
+      "text": "Pisk margarine, flormelis og resten af vaniljefrøene lyst og luftigt, mens bundene køler. Er margarinen blød, så rør cremen i hånden i stedet, så den ikke bliver overpisket."
+    },
+    {
+      "section": "Smørcreme og fyld",
+      "text": "Er cremen derimod for fast, så brug håndmixer og tilsæt 1-2 spsk havredrik under piskningen."
+    },
+    {
+      "section": "Smørcreme og fyld",
+      "text": "Smør syltetøjet ud på den ene kolde bund, og læg smørcremen ovenpå."
+    },
+    {
+      "section": "Smørcreme og fyld",
+      "text": "Læg den anden bund øverst, og drys kagen med flormelis, før den skæres ud."
+    }
+  ],
+  "changes": [
+    "Self-raising flour er erstattet med hvedemel og bagepulver.",
+    "Golden caster sugar er erstattet med almindeligt sukker.",
+    "Dairy-free spread er erstattet med plantemargarine.",
+    "Jordbærsyltetøj står i stedet for jam, som kilden angiver som jordbær."
+  ]
+}

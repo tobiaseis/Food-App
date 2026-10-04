@@ -1,0 +1,354 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/west-coast-langoustine-croustade-plum-nori-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:40:53.326Z",
+  "total_minutes": 150,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 30,
+  "title": "Jomfruhummer-croustade med blomme og nori",
+  "intro": "Sprøde, sorte croustade-kopper af blæksprutteblæk fyldt med noricreme, jomfruhummer og frisk blomme. Toppes med blommegelé og blommegel og serveres med det samme.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til croustade-dejen",
+      "amount": 100,
+      "unit": "g",
+      "name": "glutenfri mel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til croustade-dejen",
+      "amount": 150,
+      "unit": "ml",
+      "name": "danskvand",
+      "note": "med brus",
+      "optional": false
+    },
+    {
+      "section": "Til croustade-dejen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til croustade-dejen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til croustade-dejen",
+      "amount": 2,
+      "unit": "pakke",
+      "name": "blæksprutteblæk",
+      "note": "á 4 g",
+      "optional": false
+    },
+    {
+      "section": "Til croustade-dejen",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Til noricremen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "nori",
+      "note": "ark",
+      "optional": false
+    },
+    {
+      "section": "Til noricremen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til noricremen",
+      "amount": 75,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til noricremen",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Til noricremen",
+      "amount": 30,
+      "unit": "g",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til noricremen",
+      "amount": 10,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til noricremen",
+      "amount": 10,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til noricremen",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommegeléen",
+      "amount": 50,
+      "unit": "ml",
+      "name": "juice",
+      "note": "æblejuice",
+      "optional": false
+    },
+    {
+      "section": "Til blommegeléen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommegeléen",
+      "amount": 1,
+      "unit": "ml",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommegeléen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommegeléen",
+      "amount": 0.5,
+      "unit": "g",
+      "name": "agar-agar",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til blommegelen",
+      "amount": 50,
+      "unit": "ml",
+      "name": "juice",
+      "note": "æblejuice",
+      "optional": false
+    },
+    {
+      "section": "Til blommegelen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommegelen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommegelen",
+      "amount": 1,
+      "unit": "ml",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommegelen",
+      "amount": null,
+      "unit": null,
+      "name": "Ultratex",
+      "note": "efter behov, en teskefuld ad gangen",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "jomfruhummer",
+      "note": "halerne, uden skal",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "blommer",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og servering",
+      "amount": null,
+      "unit": null,
+      "name": "risvineddike",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og servering",
+      "amount": null,
+      "unit": null,
+      "name": "blommer",
+      "note": "i skiver, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og servering",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Croustade-dej",
+      "text": "Blend alle dejens ingredienser undtagen det smeltede smør til en jævn masse."
+    },
+    {
+      "section": "Croustade-dej",
+      "text": "Pisk det smeltede smør i en tynd stråle ned i dejen, så den emulgerer. Lad dejen hvile i 2 timer."
+    },
+    {
+      "section": "Noricreme",
+      "text": "Rist noriarket let med gasbrænder eller på åben gasflamme. Blend det til et fint pulver."
+    },
+    {
+      "section": "Noricreme",
+      "text": "Varm mælk, fløde og citronskal op i en gryde, til det simrer."
+    },
+    {
+      "section": "Noricreme",
+      "text": "Pisk æggeblommer, sukker og majsstivelse sammen i en skål. Hæld den varme mælkeblanding over under omrøring."
+    },
+    {
+      "section": "Noricreme",
+      "text": "Hæld massen tilbage i en ren gryde og varm den op til 90 °C, mens du rører konstant med en spatel."
+    },
+    {
+      "section": "Noricreme",
+      "text": "Tag gryden af varmen. Pisk smør og noripulver i cremen, til det er blandet."
+    },
+    {
+      "section": "Noricreme",
+      "text": "Fordel cremen på en bakke og lad den køle af. Fyld den derefter i en sprøjtepose."
+    },
+    {
+      "section": "Blommegelé",
+      "text": "Bring juice, sukker, risvineddike og salt i kog i en gryde med rund bund."
+    },
+    {
+      "section": "Blommegelé",
+      "text": "Tilsæt agar-agar og pisk i 30 sekunder under kogning."
+    },
+    {
+      "section": "Blommegelé",
+      "text": "Hæld geléen ud på en plan metalbakke i et så jævnt lag som muligt, ca. 1 mm tykt. Lad den sætte sig."
+    },
+    {
+      "section": "Blommegelé",
+      "text": "Stil geléen i køleskabet. Udstik derefter runde skiver med et metaludstikker, der er lidt smallere end åbningen på croustaden."
+    },
+    {
+      "section": "Blommegel",
+      "text": "Smag juicen til med salt, sukker og risvineddike."
+    },
+    {
+      "section": "Blommegel",
+      "text": "Blend Ultratex i med stavblender, en teskefuld ad gangen, til massen tykner. Stop, når den er lidt tyndere end ønsket."
+    },
+    {
+      "section": "Blommegel",
+      "text": "Lad massen stå i 5 minutter, så Ultratex når at svulme op. Blend igen, til geléen er glat og blank, men ikke sej og klistret i munden."
+    },
+    {
+      "section": "Blommegel",
+      "text": "Fyld gelen i en sprøjtepose."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bland jomfruhummer og blommetern. Smag til med salt og risvineddike."
+    },
+    {
+      "section": "Friturestegning",
+      "text": "Varm olie op til 150 °C i en tung gryde med høj kant. Der skal være nok til, at croustaderne kan dækkes."
+    },
+    {
+      "section": "Friturestegning",
+      "text": "Varm croustadejernet i olien. Dyp det varme jern to gange i dejen, og sænk det så ned i olien i 3 minutter."
+    },
+    {
+      "section": "Friturestegning",
+      "text": "Løft jernet op af olien. Skub croustadekoppen af og lad den dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sprøjt noricreme i koppen, til den er halvt fyldt. Fyld resten op med hummerblandingen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg en skive blommegelé på toppen og sæt en klat blommegel ved siden af. Pynt med en skive frisk blomme."
+    },
+    {
+      "section": "Anretning",
+      "text": "Server straks, så croustaden ikke bliver blød."
+    }
+  ],
+  "changes": [
+    "Blommejuice er erstattet af æblejuice, fordi blommejuice er svær at finde i almindelige supermarkeder."
+  ]
+}

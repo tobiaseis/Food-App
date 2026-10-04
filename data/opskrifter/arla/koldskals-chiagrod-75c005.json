@@ -1,0 +1,88 @@
+{
+  "url": "https://www.arla.dk/opskrifter/koldskals-chiagrod/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:56:10.344Z",
+  "total_minutes": 480,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 7,
+  "title": "Chiagrød med koldskål",
+  "intro": "Cremet chiagrød, der hviler natten over i koldskål og får en frisk smag af citron. Server den med skyr, frugt og knas til morgenmad.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "koldskål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "chiafrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Til topping",
+      "amount": null,
+      "unit": null,
+      "name": "skyr",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til topping",
+      "amount": null,
+      "unit": null,
+      "name": "bær",
+      "note": "eller kompot eller frisk frugt",
+      "optional": false
+    },
+    {
+      "section": "Til topping",
+      "amount": null,
+      "unit": null,
+      "name": "peanutbutter",
+      "note": "eller mandelsmør",
+      "optional": false
+    },
+    {
+      "section": "Til topping",
+      "amount": null,
+      "unit": null,
+      "name": "kammerjunkere",
+      "note": "eller granola",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bland koldskål, chiafrø og citronsaft i en skål med en ske."
+    },
+    {
+      "section": null,
+      "text": "Del massen mellem 2 skåle, dæk dem til og sæt dem på køl natten over."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kom skyr oven på grøden næste morgen, og tilføj bær eller frugt, peanutbutter eller mandelsmør og kammerjunkere eller granola efter smag."
+    }
+  ],
+  "changes": []
+}

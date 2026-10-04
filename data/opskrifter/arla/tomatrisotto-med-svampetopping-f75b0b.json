@@ -1,0 +1,170 @@
+{
+  "url": "https://www.arla.dk/opskrifter/tomatrisotto-med-svampetopping/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:03:41.283Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Tomatrisotto med svampetopping",
+  "intro": "Cremet risotto med tomater og løg, toppet med stegte svampe, frisk timian og rucola. Pastaosten giver fylde og smag til sidst.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tomatrisotto",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "friskkværnet 5-peberblanding",
+      "optional": false
+    },
+    {
+      "section": "Tomatrisotto",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatrisotto",
+      "amount": 4,
+      "unit": "dl",
+      "name": "risotto ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatrisotto",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatrisotto",
+      "amount": 6,
+      "unit": "dl",
+      "name": "grøntsagsbouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatrisotto",
+      "amount": 400,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Tomatrisotto",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Svampetopping",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampetopping",
+      "amount": 250,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Svampetopping",
+      "amount": 200,
+      "unit": "g",
+      "name": "kantareller",
+      "note": "rensede",
+      "optional": false
+    },
+    {
+      "section": "Svampetopping",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "frisk, hakket",
+      "optional": false
+    },
+    {
+      "section": "Svampetopping",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "pastaost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "rucola",
+      "note": "renset",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatrisotto",
+      "text": "Varm en tykbundet gryde op på høj varme, og rist peberblandingen i cirka 1 minut."
+    },
+    {
+      "section": "Tomatrisotto",
+      "text": "Kom smør, ris og løg i gryden, og svits det i cirka 1 minut."
+    },
+    {
+      "section": "Tomatrisotto",
+      "text": "Hæld bouillonen i, læg et tætsluttende låg på, og lad risene simre på svag varme i cirka 10 minutter."
+    },
+    {
+      "section": "Tomatrisotto",
+      "text": "Rør tomater og salt ned i risottoen, og lad den koge videre i cirka 5 minutter."
+    },
+    {
+      "section": "Svampetopping",
+      "text": "Imens: Smelt smørret i en pande, og lad det blive gyldent."
+    },
+    {
+      "section": "Svampetopping",
+      "text": "Steg champignonerne på høj varme i cirka 3 minutter, og rør i dem engang imellem."
+    },
+    {
+      "section": "Svampetopping",
+      "text": "Kom kantareller, timian og salt på panden, og steg i cirka 3 minutter mere."
+    },
+    {
+      "section": "Til servering",
+      "text": "Rør det meste af osten i risottoen, og smag til."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret risottoen i en varm skål med svampene ovenpå og rucola drysset over. Server med resten af osten ved siden af, så hver kan tage efter smag."
+    }
+  ],
+  "changes": [
+    "Bøgehatte er skiftet til kantareller."
+  ]
+}

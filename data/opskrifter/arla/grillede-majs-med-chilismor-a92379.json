@@ -1,0 +1,107 @@
+{
+  "url": "https://www.arla.dk/opskrifter/grillede-majs-med-chilismor/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:04:03.815Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Grillede majskolber med chilismør",
+  "intro": "Grillede majskolber med syrligt chilismør og salte stykker feta. Et nemt tilbehør til grillaftenen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Chilismør",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Chilismør",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "koriander",
+      "note": "frisk, hakket; kan erstattes af persille",
+      "optional": false
+    },
+    {
+      "section": "Chilismør",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "fintrevet skal af usprøjtet lime",
+      "optional": false
+    },
+    {
+      "section": "Chilismør",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "friskpresset limesaft",
+      "optional": false
+    },
+    {
+      "section": "Chilismør",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Chilismør",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Grillede majs",
+      "amount": 4,
+      "unit": "stk",
+      "name": "majs",
+      "note": "majskolber med blade",
+      "optional": false
+    },
+    {
+      "section": "Grillede majs",
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret, i tern",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Chilismør",
+      "text": "Bland det bløde smør med koriander, limeskal, limesaft, chili og salt, til det er jævnt."
+    },
+    {
+      "section": "Grillede majs",
+      "text": "Fold bladene og majsskægget ned mod stilken på hver kolbe, og bind dem evt. sammen med en knude."
+    },
+    {
+      "section": "Grillede majs",
+      "text": "Grill kolberne ved høj varme, og vend dem, så alle sider får farve."
+    },
+    {
+      "section": "Grillede majs",
+      "text": "Fold nogle af bladene op igen, så de danner et håndtag omkring kolben."
+    },
+    {
+      "section": "Grillede majs",
+      "text": "Server majsene varme med chilismør og feta."
+    }
+  ],
+  "changes": [
+    "Salatost er erstattet af feta.",
+    "Lime er skrevet som citron efter varekataloget."
+  ]
+}

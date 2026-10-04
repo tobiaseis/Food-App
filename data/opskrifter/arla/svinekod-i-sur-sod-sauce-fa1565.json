@@ -1,0 +1,252 @@
+{
+  "url": "https://www.arla.dk/opskrifter/svinekod-i-sur-sod-sauce/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:59:26.555Z",
+  "total_minutes": 65,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Sur-sød svinemørbrad med ananas",
+  "intro": "Mør svinemørbrad i marinade, stegt og vendt i en sur-sød sauce med ananas og peberfrugt. Serveres med løse ris.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": "fx maizena",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 400,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Løse ris",
+      "amount": 4,
+      "unit": "dl",
+      "name": "ris",
+      "note": "parboiled, ca. 320 g",
+      "optional": false
+    },
+    {
+      "section": "Løse ris",
+      "amount": 6,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Løse ris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Stegning af kød",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": "fx maizena",
+      "optional": false
+    },
+    {
+      "section": "Stegning af kød",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Stegning af kød",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "ananas",
+      "note": "ringe i egen lage, ca. 340 g",
+      "optional": false
+    },
+    {
+      "section": "Stegning af kød",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Stegning af kød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "grofthakkede, ca. 150 g",
+      "optional": false
+    },
+    {
+      "section": "Stegning af kød",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Stegning af kød",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "gul, ca. 125 g",
+      "optional": false
+    },
+    {
+      "section": "Sur-sød sauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "majsstivelse",
+      "note": "fx maizena",
+      "optional": false
+    },
+    {
+      "section": "Sur-sød sauce",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sur-sød sauce",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "ananaslage",
+      "note": "fra dåsen",
+      "optional": false
+    },
+    {
+      "section": "Sur-sød sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sur-sød sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sur-sød sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sur-sød sauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": "kinesisk",
+      "optional": false
+    },
+    {
+      "section": "Sur-sød sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "engelsk sauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sur-sød sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Pisk sojasauce, æggeblomme og majsstivelse til marinaden sammen i et fad."
+    },
+    {
+      "section": "Marinade",
+      "text": "Skær svinemørbraden i skiver på 1 cm, og bank dem tynde. Del dem i stykker på ca. 2 x 3 cm."
+    },
+    {
+      "section": "Marinade",
+      "text": "Vend kødet i marinaden, dæk fadet til, og stil det på køl i ca. 1 time."
+    },
+    {
+      "section": "Løse ris",
+      "text": "Bring vandet i kog med saltet, og rør risene i. Lad dem koge under låg ved svag varme i ca. 12 minutter."
+    },
+    {
+      "section": "Løse ris",
+      "text": "Tag gryden af varmen, og lad risene stå med låg på i ca. 12 minutter."
+    },
+    {
+      "section": "Stegning af kød",
+      "text": "Vend kødstykkerne i majsstivelsen."
+    },
+    {
+      "section": "Stegning af kød",
+      "text": "Brun smørret i en stegegryde, og steg kødet i portioner i ca. 1 minut ad gangen. Tag kødet op."
+    },
+    {
+      "section": "Stegning af kød",
+      "text": "Si ananasringene fra, og gem saften. Skær ananassen i mindre stykker."
+    },
+    {
+      "section": "Stegning af kød",
+      "text": "Smelt det andet smør i gryden, og svits hvidløg og løg."
+    },
+    {
+      "section": "Stegning af kød",
+      "text": "Hak peberfrugten, og svits den med i ca. 1 minut. Kom ananasstykkerne i."
+    },
+    {
+      "section": "Sur-sød sauce",
+      "text": "Rør alle ingredienserne til saucen sammen, og hæld dem i gryden."
+    },
+    {
+      "section": "Sur-sød sauce",
+      "text": "Kog saucen op under omrøring. Kom kødet tilbage i, og lad det blive varmt hele vejen igennem. Smag til, og server med risene."
+    }
+  ],
+  "changes": []
+}

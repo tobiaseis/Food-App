@@ -1,0 +1,74 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/venom-cocktail",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:29:26.774Z",
+  "total_minutes": 5,
+  "active_minutes": 5,
+  "yield_count": 1,
+  "source_lines": 5,
+  "title": "Venom-cocktail",
+  "intro": "En flot blå og meget sød drink med vodka, Southern Comfort og alcopop, som toppes op med appelsinjuice. Den serveres i et stort glas med masser af is.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "isterninger",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "ml",
+      "name": "vodka",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "ml",
+      "name": "Southern Comfort",
+      "note": "kan erstattes af whisky",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 275,
+      "unit": "ml",
+      "name": "blå alcopop",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "ml",
+      "name": "appelsinjuice",
+      "note": "eller så meget, at glasset bliver fyldt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Læg isterninger i et stort ølglas, så det er fyldt."
+    },
+    {
+      "section": null,
+      "text": "Hæld vodka, Southern Comfort og alcopop over isen, og rør rundt."
+    },
+    {
+      "section": null,
+      "text": "Top op med appelsinjuice, til glasset er fuldt. Server med det samme."
+    }
+  ],
+  "changes": [
+    "WKD Blue er skiftet ud med en blå alcopop, som kan købes i Danmark."
+  ]
+}

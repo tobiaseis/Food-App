@@ -1,0 +1,168 @@
+{
+  "url": "https://www.arla.dk/opskrifter/kanelsnegle/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:20:29.332Z",
+  "total_minutes": 70,
+  "active_minutes": 40,
+  "yield_count": 1,
+  "source_lines": 14,
+  "title": "Kanelsnegle",
+  "intro": "Bløde kanelsnegle af gærdej med kardemomme og en sprød remonce af smør, farin og kanel. Pyntes med glasur og eventuelt lidt kakao.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 600,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "kardemomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Remonce",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Remonce",
+      "amount": 200,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Remonce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til bagning",
+      "amount": null,
+      "unit": null,
+      "name": "æg",
+      "note": "sammenpisket, til pensling",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 2,
+      "unit": "dl",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": null,
+      "unit": null,
+      "name": "kakaopulver",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Smelt smørret, og rør det sammen med mælken. Opløs gæren i blandingen."
+    },
+    {
+      "section": "Dej",
+      "text": "Bland æg, hvedemel, kardemomme og salt i. Gem lidt af melet til sidst, så dejen bliver fugtig."
+    },
+    {
+      "section": "Dej",
+      "text": "Ælt dejen godt sammen. Dæk den til, og lad den hæve et lunt sted i cirka en halv time."
+    },
+    {
+      "section": "Remonce",
+      "text": "Rør smør, farin og kanel sammen til en jævn remonce."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend dejen ud på et bord med lidt mel, og rul den til en firkant på cirka 30 x 50 cm. Fordel remoncen over hele dejen."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul dejen sammen fra den lange side, så der kommer en pølse. Skær den i cirka 25 skiver."
+    },
+    {
+      "section": "Samling",
+      "text": "Anbring sneglene på en bradepande med bagepapir, og stik dejenden ind under hver snegl. Dæk til, og lad dem hæve i 15 minutter."
+    },
+    {
+      "section": "Samling",
+      "text": "Pensl sneglene med sammenpisket æg. Bag dem midt i ovnen ved 225 °C (almindelig ovn) i 10-12 minutter."
+    },
+    {
+      "section": "Glasur",
+      "text": "Rør flormelis og vand sammen til en glasur, og del evt. en del ud med kakao. Pynt kanelsneglene, når de er lidt afkølede."
+    }
+  ],
+  "changes": []
+}

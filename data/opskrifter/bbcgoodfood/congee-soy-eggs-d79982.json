@@ -1,0 +1,167 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/congee-soy-eggs",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:55:41.897Z",
+  "total_minutes": 35,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 12,
+  "title": "Congee med sojaæg",
+  "intro": "Cremet risgrød på hønsefond med kylling, ingefær og smør, toppet med æg, der har trukket i sojamarinade. Serveres med peanuts, forårsløg, koriander og sriracha.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Sojaæg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sojaæg",
+      "amount": 3,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sojaæg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sojaæg",
+      "amount": 0.75,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Congee",
+      "amount": 100,
+      "unit": "g",
+      "name": "ris",
+      "note": "sushiris",
+      "optional": false
+    },
+    {
+      "section": "Congee",
+      "amount": 5,
+      "unit": "dl",
+      "name": "hønsefond",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Congee",
+      "amount": 100,
+      "unit": "g",
+      "name": "kylling",
+      "note": "kogt og revet, gerne lårkød",
+      "optional": false
+    },
+    {
+      "section": "Congee",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Congee",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "et stykke på størrelse med en tommelfinger, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Congee",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 25,
+      "unit": "g",
+      "name": "nødder",
+      "note": "ristede peanuts, knuste",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sojaæg",
+      "text": "Kog æggene i vand i 6 minutter. Hæv dem op med en hulske, læg dem i koldt vand, og lad dem køle af. Pil dem derefter."
+    },
+    {
+      "section": "Sojaæg",
+      "text": "Rør sojasaucen og sukkeret sammen i en skål, til sukkeret er opløst. Tilsæt vandet, og læg æggene ned i marinaden."
+    },
+    {
+      "section": "Sojaæg",
+      "text": "Lad æggene trække i mindst 2 timer. Læg en lille tallerken oven på, så de holdes under overfladen."
+    },
+    {
+      "section": "Congee",
+      "text": "Skyl risene i koldt rindende vand, til vandet er klart og ikke længere mælkehvidt."
+    },
+    {
+      "section": "Congee",
+      "text": "Kom ris og hønsefond i en mellemstor gryde, og bring det i kog. Lad det simre ved svag varme i 25 minutter. Tilsæt lidt vand, hvis det bliver for tykt. Congeen skal være suppeagtig, omtrent som en våd risotto."
+    },
+    {
+      "section": "Congee",
+      "text": "Smag til med salt. Rør kylling og ingefær i, og tilsæt smørret. Rør, til det er smeltet og helt blandet ind."
+    },
+    {
+      "section": "Til servering",
+      "text": "Tag æggene op af marinaden, og del dem på midten. Fordel congeen i to skåle."
+    },
+    {
+      "section": "Til servering",
+      "text": "Drys med forårsløg og peanuts. Læg æggehalvdelene og lidt koriander ovenpå, dryp med sriracha, og afslut med en skefuld af sojamarinaden."
+    }
+  ],
+  "changes": [
+    "Sushiris er erstattet med almindelig ris.",
+    "Ristede peanuts er skrevet som nødder med peanuts i noten."
+  ]
+}

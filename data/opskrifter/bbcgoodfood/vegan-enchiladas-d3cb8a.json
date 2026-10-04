@@ -1,0 +1,243 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/vegan-enchiladas",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:13:04.974Z",
+  "total_minutes": 95,
+  "active_minutes": 50,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Veganske enchiladas med sorte bønner",
+  "intro": "Hjemmelavede fuldkornstortillas fyldes med krydrede sorte bønner og peberfrugt, bages i tomatsauce og toppes med frisk guacamole. En sund, mættende ret uden animalske råvarer.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til tortillaerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "speltmel",
+      "note": "fuldkorn, plus lidt ekstra til bordet",
+      "optional": false
+    },
+    {
+      "section": "Til tortillaerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tortillaerne",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnefyldet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "orange eller gul, delt i kvarte på langs, uden kerner og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bønnefyldet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnefyldet",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Til bønnefyldet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til bønnefyldet",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnefyldet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "grøntsagsbouillon",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til bønnefyldet",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "à 400 g",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": "habanero",
+      "optional": true
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsaucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til guacamolen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "små, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til guacamolen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til guacamolen",
+      "amount": 15,
+      "unit": "g",
+      "name": "koriander",
+      "note": "frisk, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til guacamolen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skrællet, uden sten og grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til guacamolen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "limesaft",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tortillaer",
+      "text": "Kom melet i en skål. Rør olie og vand sammen, hæld det over melet, og rør med en kniv, til det begynder at klumpe."
+    },
+    {
+      "section": "Tortillaer",
+      "text": "Ælt dejen sammen med hænderne til en kugle, del den i fire stykker, og læg et viskestykke over. Lad den hvile, mens du laver resten."
+    },
+    {
+      "section": "Bønnefyld",
+      "text": "Kom peberfrugt og olie i en stor non-stick-pande ved middel varme. Læg låg på, og lad det stege i 10 minutter. Rør af og til."
+    },
+    {
+      "section": "Bønnefyld",
+      "text": "Tilsæt hvidløg, spidskommen, koriander og bouillonpulver. Si den ene dåse bønner, og kom bønnerne i panden. Hæld den anden dåse i med hele væsken."
+    },
+    {
+      "section": "Bønnefyld",
+      "text": "Lad det koge ind i nogle minutter under omrøring. Mos bønnerne let et par gange med en grydeske, så fyldet bliver tykt."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Kom passata, tomater, laurbærblad, chiliflager, hvidløg og vand i en lille gryde. Læg låg på, og lad det simre ved lav varme i 5 minutter."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Bland rødløg, tomater, koriander, avocado og limesaft i en skål. Stil den til side."
+    },
+    {
+      "section": "Bagning",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Varm en stor tør pande op ved middel varme."
+    },
+    {
+      "section": "Bagning",
+      "text": "Rul et af dejstykkerne tyndt ud på et let meldrysset bord, til en cirkel på ca. 21 cm. Læg den på panden, og bag den i 1 minut. Vend den, og bag et par sekunder, til den er gennemstegt og lysebrun."
+    },
+    {
+      "section": "Bagning",
+      "text": "Gentag med resten af dejen, så du får fire tortillaer."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel bønnefyldet ligeligt på tortillaerne, og rul dem sammen. Læg dem tæt i et ovnfast fad."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld tomatsaucen over, og dæk fadet med folie. Bag i 15 minutter. Tag folien af, og bag 5 minutter mere, til kanterne er sprøde."
+    },
+    {
+      "section": "Samling",
+      "text": "Top enchiladasene med guacamolen, og server straks."
+    }
+  ],
+  "changes": [
+    "Habanero-chiliflager er erstattet med almindelige chiliflager.",
+    "Fuldkornsspeltmel er erstattet med fuldkornsspeltmel fra supermarkedets mel-hylde (speltmel)."
+  ]
+}

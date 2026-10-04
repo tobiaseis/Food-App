@@ -1,0 +1,132 @@
+{
+  "url": "https://www.arla.dk/opskrifter/tangsuppe-med-ostebrod/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:03:42.690Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Tangsuppe med ostebrød",
+  "intro": "Letkogt fiskesuppe med tang, rejer, ingefær og chili, som serveres med sprøde flutes overbagt med ost. Den er klar på under en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tangsuppe",
+      "amount": 0.75,
+      "unit": "dl",
+      "name": "tørret tang",
+      "note": "letknust, fx wakame",
+      "optional": false
+    },
+    {
+      "section": "Tangsuppe",
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "koldt, til iblødsætning",
+      "optional": false
+    },
+    {
+      "section": "Tangsuppe",
+      "amount": 1,
+      "unit": "l",
+      "name": "fiskefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tangsuppe",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "chili",
+      "note": "mild rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tangsuppe",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "frisk, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Tangsuppe",
+      "amount": 250,
+      "unit": "g",
+      "name": "tigerrejer",
+      "note": "rå, pillede",
+      "optional": false
+    },
+    {
+      "section": "Tangsuppe",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "forårsløg",
+      "note": "i tynde ringe, ca. 100 g",
+      "optional": false
+    },
+    {
+      "section": "Tangsuppe",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Tangsuppe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ostebrød",
+      "amount": 100,
+      "unit": "g",
+      "name": "pastaost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostebrød",
+      "amount": 8,
+      "unit": "skive",
+      "name": "flute",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tangsuppe",
+      "text": "Lad tangen trække i det kolde vand i cirka 10 minutter. Pres vandet ud af den, og snit den i stykker, der er nemme at spise."
+    },
+    {
+      "section": "Tangsuppe",
+      "text": "Varm fiskefond, chili og ingefær op i en gryde, til det koger."
+    },
+    {
+      "section": "Tangsuppe",
+      "text": "Kom rejerne i, og lad suppen komme i kog igen."
+    },
+    {
+      "section": "Tangsuppe",
+      "text": "Rør tang, forårsløg, salt og peber i. Lad suppen simre uden låg ved middel varme i cirka 1 minut, og smag den til."
+    },
+    {
+      "section": "Ostebrød",
+      "text": "Varm ovnen op til 225 °C. Læg flutescivene på en bageplade, og fordel pastaosten ovenpå."
+    },
+    {
+      "section": "Ostebrød",
+      "text": "Bag ostebrødene midt i ovnen i cirka 6 minutter, til osten er gylden. Server dem til suppen."
+    }
+  ],
+  "changes": []
+}

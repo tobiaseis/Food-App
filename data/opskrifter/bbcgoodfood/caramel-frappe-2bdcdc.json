@@ -1,0 +1,88 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/caramel-frappe",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:56:28.140Z",
+  "total_minutes": 5,
+  "active_minutes": 5,
+  "yield_count": null,
+  "source_lines": 6,
+  "title": "Caramel frappé",
+  "intro": "Kold, cremet iskaffe med karamel, som blendes glat og toppes med flødeskum. Den er hurtig at lave og dejlig en varm dag.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "ml",
+      "name": "espresso",
+      "note": "2 shots",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "plantedrik kan bruges",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "isterninger",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "karamelsauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "karamelsauce",
+      "note": "ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "flødeskum",
+      "note": "til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom espresso, mælk, isterninger, karamelsauce og vaniljeekstrakt i en kraftig blender."
+    },
+    {
+      "section": null,
+      "text": "Blend, til drikken er helt glat."
+    },
+    {
+      "section": null,
+      "text": "Hæld den i et glas. Top med flødeskum og en tynd stribe karamelsauce, hvis du vil."
+    }
+  ],
+  "changes": []
+}

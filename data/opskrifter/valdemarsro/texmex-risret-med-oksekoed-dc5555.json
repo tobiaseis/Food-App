@@ -1,0 +1,271 @@
+{
+  "url": "https://www.valdemarsro.dk/texmex-risret-med-oksekoed/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:11:45.312Z",
+  "total_minutes": 45,
+  "active_minutes": 35,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Texmex-risret med oksekød",
+  "intro": "Én gryde med hakket oksekød, ris, sorte bønner og majs, krydret med spidskommen og røget paprika. Retten toppes med avocado, cremefraiche, cheddar og sprøde nachos.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 7,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "skåret i tynde både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": "fra dåse eller frost",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "jalapenos",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 25,
+      "unit": "g",
+      "name": "jalapenos",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 125,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "g",
+      "name": "nachos",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "lime, skåret i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde ved middelvarme. Steg løg, hvidløg og gulerod, til løgene er bløde."
+    },
+    {
+      "section": null,
+      "text": "Skru op for varmen, og brun oksekødet godt, mens du rører rundt."
+    },
+    {
+      "section": null,
+      "text": "Rør squash, alle krydderierne og risene i gryden, så alt er blandet. Hæld fonden over, og tilføj de soltørrede og de hakkede tomater. Bring det i kog under omrøring."
+    },
+    {
+      "section": null,
+      "text": "Læg låg på, og lad retten simre ved svag varme i 17-18 minutter."
+    },
+    {
+      "section": null,
+      "text": "Vend bønner, cherrytomater og majs i, og bring retten i kog igen. Læg låg på, og lad den småputte ved lav varme i cirka 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tag gryden af varmen, og lad den stå med låg på i cirka 10 minutter, så risene bliver møre, og smagene trækker."
+    },
+    {
+      "section": null,
+      "text": "Rør halvdelen af cheddaren og de finthakkede jalapenos i, og smag til med salt og peber. Er nogen ved bordet ikke til stærk mad, kan jalapenos serveres ved siden af i stedet."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret i dybe tallerkener. Top med avocado, koriander, jalapenos, resten af cheddaren og cremefraiche. Server med limebåde at presse over og nachos ved siden af."
+    }
+  ],
+  "changes": [
+    "Tortillachips er skiftet til nachos.",
+    "Basmatiris og grøntsagsbouillon er skrevet som basmatiris og grøntsagsfond."
+  ]
+}

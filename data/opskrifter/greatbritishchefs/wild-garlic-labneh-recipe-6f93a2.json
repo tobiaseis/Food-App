@@ -1,0 +1,250 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/wild-garlic-labneh-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:33:31.469Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Labneh med grøn shatta, konfiteret hvidløg og za'atar-rasp",
+  "intro": "Cremet labneh med ramsløgsagtig grøn farve toppes med skarp, syrlig shatta, blødt konfiteret hvidløg og sprød za'atar-rasp. Retten skal forberedes tre dage i forvejen, fordi chilierne skal stå i salt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Labneh",
+      "amount": 600,
+      "unit": "g",
+      "name": "labneh",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Labneh",
+      "amount": 50,
+      "unit": "g",
+      "name": "forårsløg",
+      "note": "skyllet og tørret godt",
+      "optional": false
+    },
+    {
+      "section": "Labneh",
+      "amount": 25,
+      "unit": "g",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn shatta",
+      "amount": 200,
+      "unit": "g",
+      "name": "grønne chilier",
+      "note": "skyllet og fintskåret",
+      "optional": false
+    },
+    {
+      "section": "Grøn shatta",
+      "amount": 12,
+      "unit": "g",
+      "name": "fint salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn shatta",
+      "amount": 35,
+      "unit": "ml",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn shatta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn shatta",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dække",
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 5,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Za'atar-rasp",
+      "amount": 80,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Za'atar-rasp",
+      "amount": 15,
+      "unit": "g",
+      "name": "za'atar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Za'atar-rasp",
+      "amount": 2,
+      "unit": "g",
+      "name": "fint salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Za'atar-rasp",
+      "amount": 2,
+      "unit": "g",
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vallekaramel",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "valle",
+      "note": "fra fremstillingen af labneh",
+      "optional": true
+    },
+    {
+      "section": "Vallekaramel",
+      "amount": 40,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Vallekaramel",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": true
+    },
+    {
+      "section": "Vallekaramel",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sumak",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grøn shatta",
+      "text": "Begynd tre dage før servering. Vend chilierne med saltet i en renset beholder, læg låg på, og sæt den i køleskabet i 3 dage."
+    },
+    {
+      "section": "Grøn shatta",
+      "text": "Chilierne er nu blevet lidt møre, og skarpheden er dæmpet. Mix dem med eddike og citronsaft til en grov pasta."
+    },
+    {
+      "section": "Grøn shatta",
+      "text": "Kom shattaen i en beholder, og hæld olivenolie ud over, så overfladen er dækket. Opbevar den med låg i køleskabet. Du får mere, end du skal bruge."
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "text": "Kom alle ingredienserne i en gryde, og lad dem simre ved meget svag varme i 45-60 minutter, til hvidløgene er bløde og kan smøres ud."
+    },
+    {
+      "section": "Konfiteret hvidløg",
+      "text": "Lad hvidløgene køle af i olien, og opbevar dem i den i køleskabet. Du får mere, end du skal bruge."
+    },
+    {
+      "section": "Labneh",
+      "text": "Blend forårsløg og rapsolie glat i en blender eller foodprocessor. Vend 30 g af puréen i labnehen, og stil den til side. Resten af puréen kan gemmes."
+    },
+    {
+      "section": "Za'atar-rasp",
+      "text": "Varm 20 g af olien fra det konfiterede hvidløg op på en pande. Rist panko i olien, til den er gylden og sprød."
+    },
+    {
+      "section": "Za'atar-rasp",
+      "text": "Rør za'atar og begge slags salt i, tag panden af varmen, og lad raspen køle helt af."
+    },
+    {
+      "section": "Vallekaramel",
+      "text": "Springes over, hvis du ikke vil lave den. Kom valle, sukker og citronskal i en gryde, og lad det koge langsomt ind til en tyk, blank, karamelagtig konsistens, der næsten ligner vaseline."
+    },
+    {
+      "section": "Vallekaramel",
+      "text": "Tag gryden af varmen, og rør citronsaften i."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel labnehen på tallerkener, og lav en fordybning i midten af hver med bagsiden af en ske."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg konfiteret hvidløg, shatta og eventuelt vallekaramel i fordybningen, og dryp med lidt af hvidløgsolien."
+    },
+    {
+      "section": "Servering",
+      "text": "Top med za'atar-rasp, koriander og en knivspids sumak."
+    }
+  ],
+  "changes": [
+    "Ramsløg er erstattet af forårsløg."
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/honey-mustard-prawns-chickpea-sundal-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:20:59.652Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 26,
+  "title": "Grillede kæmperejer med honningsennep og kikærtesundal",
+  "intro": "Store kæmperejer marineres i ingefær, chili og gurkemeje og grilles med en sødt-skarp glasur af honning og sennep. De serveres på spinatpuré med krydret kikærtesalat.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Rejer",
+      "amount": 12,
+      "unit": "stk",
+      "name": "kæmperejer",
+      "note": "med skal og hoved, så store som muligt",
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 50,
+      "unit": "g",
+      "name": "ingefær- og hvidløgspasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 10,
+      "unit": "ml",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 50,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 15,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 10,
+      "unit": "g",
+      "name": "grøn chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 5,
+      "unit": "g",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Rejer",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 100,
+      "unit": "g",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 100,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 10,
+      "unit": "g",
+      "name": "grøn chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 10,
+      "unit": "g",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 10,
+      "unit": "g",
+      "name": "karryblade",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatolie",
+      "amount": 200,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby, vasket",
+      "optional": false
+    },
+    {
+      "section": "Spinatolie",
+      "amount": 20,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatolie",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatolie",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sundal",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sundal",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Sundal",
+      "amount": 10,
+      "unit": "g",
+      "name": "grøn chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Sundal",
+      "amount": 15,
+      "unit": "g",
+      "name": "karryblade",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Sundal",
+      "amount": 25,
+      "unit": "g",
+      "name": "koriander",
+      "note": "stilke, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Sundal",
+      "amount": 5,
+      "unit": "g",
+      "name": "sorte sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sundal",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "à 400 g, afdryppede",
+      "optional": false
+    },
+    {
+      "section": "Sundal",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "karryblade",
+      "note": "friturestegte",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "kokosflager",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "lime",
+      "note": "i både, vendt i chilipulver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chilipulver",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rejer",
+      "text": "Drej hovedet af hver reje, men lad skallen på halen sidde. Klip skallen op langs den ene side med en køkkensaks, fjern tarmen, og fold rejen ud som en sommerfugl. Læg dem i en stor skål. Hovederne kan fryses og bruges til fond."
+    },
+    {
+      "section": "Rejer",
+      "text": "Rør resten af rejernes ingredienser sammen med salt, undtagen karryblade, kokos og lime. Vend rejerne grundigt i marinaden, dæk skålen til, og lad dem trække i køleskabet i 1-2 timer."
+    },
+    {
+      "section": "Glasur",
+      "text": "Bland alle glasurens ingredienser med salt, og stil den til side."
+    },
+    {
+      "section": "Spinatolie",
+      "text": "Kør spinaten i en blender til en glat puré, og tilsæt lidt vand undervejs, hvis den er for tyk. Kom salt, olie og citronsaft i, og blend igen. Opbevar køligt, til den skal bruges."
+    },
+    {
+      "section": "Sundal",
+      "text": "Varm en rigelig skvæt olie op i en gryde ved middel varme. Rør alle ingredienser undtagen kikærterne i, og svits under omrøring, til det dufter."
+    },
+    {
+      "section": "Sundal",
+      "text": "Tilsæt kikærter og salt, og lad det simre i 5 minutter, mens du rører jævnligt. Stil til side."
+    },
+    {
+      "section": "Grillning",
+      "text": "Gør grillen klar til direkte varme."
+    },
+    {
+      "section": "Grillning",
+      "text": "Læg rejerne med skalsiden nedad på grillen. Pensl dem rigeligt med glasuren, mens de grilles, og vend dem ind imellem. De er færdige, når de er lyserøde hele vejen igennem."
+    },
+    {
+      "section": "Anretning",
+      "text": "Smør et godt lag spinatpuré ud på hver tallerken. Læg kikærtesundal ovenpå, og anbring rejerne øverst. Pynt med friturestegte karryblade og ristede kokosflager, og server med limebåde vendt i chilipulver."
+    }
+  ],
+  "changes": [
+    "Kasundi-sennep er skiftet til almindelig sennep.",
+    "Vegetabilsk olie er skiftet til rapsolie."
+  ]
+}

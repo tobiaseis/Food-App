@@ -1,0 +1,160 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/slow-cooker-meatballs",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:57:18.917Z",
+  "total_minutes": 360,
+  "active_minutes": 60,
+  "yield_count": 5,
+  "source_lines": 12,
+  "title": "Kalkunboller i tomatsauce fra slowcooker",
+  "intro": "Små kalkunboller med havregryn simrer langsomt i en grøntsagsrig tomatsauce. Server dem med ris, pasta eller en grøn salat.",
+  "servings": 5,
+  "ingredients": [
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 500,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket kalkun",
+      "note": "magert",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "rigeligt, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatsauce",
+      "text": "Forvarm slowcookeren, hvis den har brug for det."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Varm olien op i en non-stick pande. Svits løg, gulerødder, selleri og hvidløg ved svag varme i cirka et minut."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Hæld passataen over, kom persillen i og rør rundt. Overfør det hele til slowcookeren."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Kom kalkunfarsen i en stor skål sammen med havregryn, paprika, hvidløg og rigeligt peber. Ælt det godt sammen med hænderne."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Del farsen i 20 stykker på størrelse med en valnød, og rul dem til runde boller."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Pensl eller sprøjt en non-stick pande let med olie. Brun bollerne forsigtigt, til de begynder at tage farve."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Læg bollerne ned i tomatsaucen, og lad dem simre på lav varme i 5 timer."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Server med ris, pasta eller grøn salat."
+    }
+  ],
+  "changes": [
+    "Rapsolie i sprayflaske til stegning er skiftet til almindelig olie.",
+    "Porridge oats er skiftet til havregryn.",
+    "Selleristængler er angivet som stilk selleri."
+  ]
+}

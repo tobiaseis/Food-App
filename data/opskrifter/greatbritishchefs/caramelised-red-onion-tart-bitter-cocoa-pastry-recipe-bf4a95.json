@@ -1,0 +1,232 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/caramelised-red-onion-tart-bitter-cocoa-pastry-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:08:37.487Z",
+  "total_minutes": 110,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 18,
+  "title": "Tærte med karamelliserede rødløg, ansjoser og kakao",
+  "intro": "En sprød kakaomørdej fyldt med langsomt stegte, søde rødløg og salte ansjoser. Serveres med creme fraiche og bitre salatblade ved siden af.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Til kakaomørdejen",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "sigtet",
+      "optional": false
+    },
+    {
+      "section": "Til kakaomørdejen",
+      "amount": 20,
+      "unit": "g",
+      "name": "kakaopulver",
+      "note": "sigtet",
+      "optional": false
+    },
+    {
+      "section": "Til kakaomørdejen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kakaomørdejen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kakaomørdejen",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt, i tern",
+      "optional": false
+    },
+    {
+      "section": "Til kakaomørdejen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kakaomørdejen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "koldt, op til 3 spsk",
+      "optional": false
+    },
+    {
+      "section": "Til løgfyldet",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til løgfyldet",
+      "amount": 60,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til løgfyldet",
+      "amount": 8,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til løgfyldet",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til løgfyldet",
+      "amount": 8,
+      "unit": "stk",
+      "name": "ansjosfileter",
+      "note": "fint hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til løgfyldet",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til løgfyldet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til løgfyldet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 200,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 8,
+      "unit": "stk",
+      "name": "ansjosfileter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salat",
+      "note": "bitre blade, gerne radicchio, vendt i olivenolie",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kakaomørdej",
+      "text": "Pisk mel, kakao, sukker og salt sammen i en skål. Smuldr det kolde smør i med fingerspidserne, til det ligner fine brødkrummer."
+    },
+    {
+      "section": "Kakaomørdej",
+      "text": "Tilsæt æggeblommen og lidt af vandet, og ælt dejen sammen. Det er ikke sikkert, at du skal bruge alt vandet. Pak dejen ind i film, og lad den hvile på køl i 30 minutter."
+    },
+    {
+      "section": "Løgfyld",
+      "text": "Varm olivenolie og smør op i en bred pande ved lav varme. Kom løg og salt i, og steg dem forsigtigt i 35-40 minutter, til de er dybt gyldne og som marmelade. Rør jævnligt."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Tænd ovnen på 180 °C. Rul dejen ud i en tykkelse på ca. 0,5 cm, og læg den i tærteformen. Sæt den på køl i 15 minutter."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Læg bagepapir i bunden, fyld med bagekugler, og forbag i 20 minutter. Tag kugler og papir af, og bag bunden 5-10 minutter mere, til dejen er fast og tør."
+    },
+    {
+      "section": "Løgfyld",
+      "text": "Rør ansjoser, timian og balsamico i løgene, og lad det simre et par minutter, til det blanke. Smag til med peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld løgblandingen i tærtebunden, og glat overfladen. Bag i 20-25 minutter, til fyldet er stivnet. Lad tærten køle af til stuetemperatur."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær tærten med en varm kniv, og læg stykkerne på små tallerkener. Top med creme fraiche, purløg, timian og ansjoser. Dryp med olivenolie, og kværn peber over. Server med de bitre salatblade ved siden af."
+    }
+  ],
+  "changes": [
+    "Soured cream er erstattet med creme fraiche.",
+    "Caster sugar er erstattet med almindeligt sukker.",
+    "Usaltet smør er erstattet med smør."
+  ]
+}

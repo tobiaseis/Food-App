@@ -1,0 +1,280 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/aubergine-schnitzel-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:09:24.402Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Shawarmakrydret aubergineschnitzel med toum",
+  "intro": "Sprøde aubergineschnitzler i en krydret panering, serveret på fladbrød med kraftig hvidløgscreme og syltede rødløg. En vegetarret med masser af smag og tekstur.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til schnitzlerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 120,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "stødt spidskommen",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": "plus lidt til servering",
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt allehånde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "fladbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mynte",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "rødvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toum",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hvidløg",
+      "note": "hele hvidløg, fedene grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til toum",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toum",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "olie",
+      "note": "neutral",
+      "optional": false
+    },
+    {
+      "section": "Til toum",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toum",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "koldt vand",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til de syltede løg",
+      "text": "Kom rødløgene i en stor skål. Rør eddike, vand, sukker og salt sammen, og hæld det over løgene."
+    },
+    {
+      "section": "Til de syltede løg",
+      "text": "Dæk skålen og lad løgene stå ved stuetemperatur i mindst 30 minutter."
+    },
+    {
+      "section": "Til schnitzlerne",
+      "text": "Skær top og bund af auberginerne. Skær de runde sider af, så hver aubergine bliver en rektangulær klods. Del klodserne på langs, så du får 4 tykke skiver i alt."
+    },
+    {
+      "section": "Til schnitzlerne",
+      "text": "Salt skiverne på begge sider, og lad dem stå i 20 minutter, så de afgiver væde."
+    },
+    {
+      "section": "Til toum",
+      "text": "Blend hvidløg og salt fint i en lille blender eller foodprocessor."
+    },
+    {
+      "section": "Til toum",
+      "text": "Lad maskinen køre, og tilsæt olien i en helt tynd stråle – først dråbevis, så blandingen emulgerer og tykner."
+    },
+    {
+      "section": "Til toum",
+      "text": "Når saucen begynder at binde, kan olien komme i en jævn stråle. Skift indimellem til lidt citronsaft og koldt vand, så emulsionen holder."
+    },
+    {
+      "section": "Til toum",
+      "text": "Fortsæt, til toumen er tyk, glat og blank. Smag til med salt og citronsaft, og sæt den på køl."
+    },
+    {
+      "section": "Til schnitzlerne",
+      "text": "Stil tre tallerkener frem: mel på den første, sammenpisket æg på den anden, og panko blandet med alle krydderierne på den tredje."
+    },
+    {
+      "section": "Til schnitzlerne",
+      "text": "Tør aubergineskiverne grundigt med køkkenrulle. Vend dem i melet og ryst overskuddet af, træk dem derefter gennem ægget og tryk dem til sidst ned i den krydrede panko."
+    },
+    {
+      "section": "Til schnitzlerne",
+      "text": "Læg schnitzlerne på en bakke, og lad dem hvile i 10 minutter, så panaden sætter sig."
+    },
+    {
+      "section": "Til schnitzlerne",
+      "text": "Varm en stor pande op over middel varme med olie nok til, at bunden er rigeligt dækket. Steg schnitzlerne i omgange i 4-5 minutter på hver side, til de er dybt gyldne og sprøde."
+    },
+    {
+      "section": "Til schnitzlerne",
+      "text": "Lad dem dryppe af på køkkenrulle, og drys dem let med salt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm fladbrødene, og læg et på hver tallerken. Smør rigeligt toum ovenpå, og læg en schnitzel på."
+    },
+    {
+      "section": "Til servering",
+      "text": "Top med syltede løg, og drys med paprika, persille og nogle mynteblade."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,450 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/smoked-beef-cheek-oyster-sauce-bordelaise-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:27:40.178Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 38,
+  "title": "Røget oksekind med østersbordelaise, blomkålspuré og palmier",
+  "intro": "Møre, langtidsbraiserede oksekinder i en mørk sauce med østerssauce, serveret med silkeblød blomkålspuré, syltede skalotteløg og sprød palmier af butterdej. Det er en retsammensætning i flere led, hvor det meste kan laves dagen i forvejen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "oksekæber",
+      "note": "parerede",
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 8,
+      "unit": "g",
+      "name": "MSG (mononatriumglutamat)",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 15,
+      "unit": "g",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 10,
+      "unit": "g",
+      "name": "svampepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "marvben",
+      "note": "halve",
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "skrællede",
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 2,
+      "unit": "l",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 4,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 650,
+      "unit": "ml",
+      "name": "østerssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "timian",
+      "note": "bundet sammen med køkkengarn",
+      "optional": false
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "amount": null,
+      "unit": null,
+      "name": "usaltet smør",
+      "note": "en klat til færdigretten",
+      "optional": false
+    },
+    {
+      "section": "Blomkålspuré",
+      "amount": 350,
+      "unit": "g",
+      "name": "usaltet smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blomkålspuré",
+      "amount": 1,
+      "unit": "kg",
+      "name": "blomkål",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Blomkålspuré",
+      "amount": 14,
+      "unit": "g",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Blomkålspuré",
+      "amount": 5,
+      "unit": "g",
+      "name": "svampepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blomkålspuré",
+      "amount": 5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede skalotteløg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "fintHakkede",
+      "optional": false
+    },
+    {
+      "section": "Syltede skalotteløg",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede skalotteløg",
+      "amount": 10,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede skalotteløg",
+      "amount": 65,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede skalotteløg",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede skalotteløg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kvist",
+      "optional": false
+    },
+    {
+      "section": "Glaserede broccolibuketter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "broccoli",
+      "note": "delt i 20 små buketter",
+      "optional": false
+    },
+    {
+      "section": "Glaserede broccolibuketter",
+      "amount": 10,
+      "unit": "g",
+      "name": "usaltet smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glaserede broccolibuketter",
+      "amount": 45,
+      "unit": "g",
+      "name": "østerssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glaserede broccolibuketter",
+      "amount": 50,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glaserede broccolibuketter",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Palmier og frø",
+      "amount": 1,
+      "unit": "stk",
+      "name": "butterdej",
+      "note": "plade på 30x30 cm",
+      "optional": false
+    },
+    {
+      "section": "Palmier og frø",
+      "amount": 10,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Palmier og frø",
+      "amount": 75,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Palmier og frø",
+      "amount": 20,
+      "unit": "g",
+      "name": "sorte sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Palmier og frø",
+      "amount": 15,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": "hvide",
+      "optional": false
+    },
+    {
+      "section": "Palmier og frø",
+      "amount": 2,
+      "unit": "g",
+      "name": "peber",
+      "note": "friskkværnet, sort",
+      "optional": false
+    },
+    {
+      "section": "Palmier og frø",
+      "amount": null,
+      "unit": null,
+      "name": "oksetalg",
+      "note": "udsmeltet, til stegning og pensling",
+      "optional": false
+    },
+    {
+      "section": "Til anretning",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "fintklippet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Oksekinder og sauce",
+      "text": "Gør en røger klar, eller tænd et meget lille bål med nogle få småstykker træ, der har ligget i blød i vand."
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "text": "Krydr oksekinderne med MSG, salt og svampepulver. Koldrøg dem forsigtigt i 2 timer."
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "text": "Forvarm imens ovnen til 180 °C. Læg marvbenene med snitfladen opad i et bradefad og rist dem i 10 minutter."
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "text": "Skrab den bløde marv og fedtet ned i en stor gryde. Gem benene."
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "text": "Sæt gryden over middel varme. Rør skalotteløg, gulerødder, selleri og hvidløg rundt i marven, og steg under jævnlig omrøring, til grøntsagerne er dybt karamelliserede."
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "text": "Kom de røgede kinder i gryden sammen med fond, rødvin, østerssauce og timian. Rør rundt, og læg marvbenene tilbage."
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "text": "Læg folie over gryden, og lad det simre meget svagt i 12 timer. Prøv at holde væsken på 95 °C."
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "text": "Lad kødet køle af, og tag det op af saucen. Stil det i køleskabet, til det skal varmes igen."
+    },
+    {
+      "section": "Oksekinder og sauce",
+      "text": "Kog saucen ind til det halve, og stil den til side."
+    },
+    {
+      "section": "Blomkålspuré",
+      "text": "Smelt smørret i en bred gryde over middel varme, og lad det brune til nøddebrunt smør."
+    },
+    {
+      "section": "Blomkålspuré",
+      "text": "Kom blomkål og salt i. Skru ned for varmen, og steg under jævnlig omrøring, til blomkålen er helt gylden."
+    },
+    {
+      "section": "Blomkålspuré",
+      "text": "Tilsæt svampepulver og fløde. Bring det i kog, og lad det simre i 2 minutter under konstant piskning."
+    },
+    {
+      "section": "Blomkålspuré",
+      "text": "Blend det helt glat, og sigt det gennem en fin sigte. Smag til med salt, og opbevar tildækket i køleskabet."
+    },
+    {
+      "section": "Syltede skalotteløg",
+      "text": "Kom alle ingredienserne i en gryde, og kog dem ind over middel varme, til gryden næsten er tør, og væsken er sirupsagtig."
+    },
+    {
+      "section": "Syltede skalotteløg",
+      "text": "Hold øje med den mod slutningen, for den brænder let på. Stil den til side."
+    },
+    {
+      "section": "Glaserede broccolibuketter",
+      "text": "Blancher buketterne i 20 sekunder i kogende vand med rigeligt salt. Si dem fra, og afkøl dem i isvand."
+    },
+    {
+      "section": "Glaserede broccolibuketter",
+      "text": "Kom de øvrige ingredienser i en gryde, og lad det simre svagt i 5 minutter, til det er lidt reduceret til en glasur. Stil buketter og glasur til side."
+    },
+    {
+      "section": "Palmier og frø",
+      "text": "Rul butterdejspladen sammen fra den ene side, til du når halvvejen. Rul derefter fra den anden side, til de to ruller mødes på midten. Lad dejen hvile i køleskabet i 1 time."
+    },
+    {
+      "section": "Palmier og frø",
+      "text": "Forvarm ovnen til 200 °C. Skær dejen i 4 lige store stykker, og læg dem på en stor bageplade med bagepapir."
+    },
+    {
+      "section": "Palmier og frø",
+      "text": "Pensl rigeligt med oksetalg, og drys med sukker."
+    },
+    {
+      "section": "Palmier og frø",
+      "text": "Dæk med endnu et stykke bagepapir og en bageplade ovenpå, og tryk hårdt ned. Bag i 15 minutter."
+    },
+    {
+      "section": "Palmier og frø",
+      "text": "Fjern øverste plade og papir, og bag videre i 2-3 minutter, til palmierne er helt karamelliserede. Lad dem dryppe af på køkkenrulle, og drys med salt."
+    },
+    {
+      "section": "Palmier og frø",
+      "text": "Varm noget oksetalg i en gryde til 160 °C. Kom alle frø og peber forsigtigt i fedtet."
+    },
+    {
+      "section": "Palmier og frø",
+      "text": "Steg, til de er lysegyldne, og tag dem ikke længere, for de tager farve efter. Si dem fra i en fin sigte, og salt dem."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Nu er alle dele klar, og de skal blot varmes op. Brun oksekinderne over en varm grill, vend dem ofte, og pensl dem med den reducerede sauce."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Kom kinderne i en lille sauterpande med et par øser sauce og en klat smør. Lad dem simre ved middel varme, til de er blanke af glasur."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Grill imens broccolibuketterne på en varm grill. Vend dem ca. hvert 30. sekund, og pensl med glasuren, til de er forkullede og gennemvarme."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Varm blomkålspuréen forsigtigt op. Tilsæt en sjat koldt vand, hvis den begynder at skille. Varm palmierne i 1 minut i en varm ovn."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Kom en rigelig skefuld puré i bunden af hver tallerken, og læg en oksekind ovenpå med lidt af den reducerede sauce. Top med de syltede skalotteløg og de stegte frø."
+    },
+    {
+      "section": "Til anretning",
+      "text": "Anret broccolibuketterne rundt om, og drys rigeligt med purløg. Stil en palmier op i hver portion."
+    }
+  ],
+  "changes": [
+    "Romanesco er erstattet af broccoli.",
+    "Double cream er erstattet af piskefløde.",
+    "Rice wine vinegar er erstattet af risvineddike.",
+    "Dark brown sugar er erstattet af brun farin, og caster sugar af almindeligt sukker.",
+    "Porcini-pulver er erstattet af svampepulver."
+  ]
+}

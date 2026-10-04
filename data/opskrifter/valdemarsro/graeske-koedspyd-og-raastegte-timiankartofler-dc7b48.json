@@ -1,0 +1,264 @@
+{
+  "url": "https://www.valdemarsro.dk/graeske-koedspyd-og-raastegte-timiankartofler/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:36:38.250Z",
+  "total_minutes": 45,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Græske lammespyd med timiankartofler og græsk salat",
+  "intro": "Krydrede lammekødboller med feta og soltørrede tomater, serveret med sprøde ovnbagte timiankartofler og en frisk græsk salat. Kødet kan steges på panden eller grilles på spyd.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kødspyd",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "feta",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "kun bladene",
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kødspyd",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Timiankartofler",
+      "amount": 800,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Timiankartofler",
+      "amount": 5,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Timiankartofler",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Timiankartofler",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saft og fintrevet skal, gerne økologisk",
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "oregano",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": 300,
+      "unit": "g",
+      "name": "tomater",
+      "note": "blommetomater, i halve",
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i ringe",
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": 80,
+      "unit": "g",
+      "name": "oliven",
+      "note": "sorte",
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græsk salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Timiankartofler",
+      "text": "Varm ovnen op til 200 °C."
+    },
+    {
+      "section": "Timiankartofler",
+      "text": "Skrub eller skræl kartoflerne, og del dem i store både. Vend dem med olie, timian og flagesalt."
+    },
+    {
+      "section": "Timiankartofler",
+      "text": "Fordel kartoflerne på en bageplade med bagepapir, og bag dem i 30-40 minutter, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Kødspyd",
+      "text": "Læg lammekød, æg, hvidløg, rødløg, feta, soltørrede tomater, timianblade, salt og peber i en skål. Pisk det sammen med en håndmixer i 1-2 minutter."
+    },
+    {
+      "section": "Kødspyd",
+      "text": "Rul farsen til kugler. Brun dem på en varm pande i olie og smør, til de er gennemstegte."
+    },
+    {
+      "section": "Kødspyd",
+      "text": "Træk kuglerne på spyd lige før servering. Du kan også grille dem på spyd."
+    },
+    {
+      "section": "Græsk salat",
+      "text": "Rør olie, sukker, citronskal, citronsaft, salt, peber og oregano sammen, til sukkeret har opløst sig."
+    },
+    {
+      "section": "Græsk salat",
+      "text": "Kom tomater, agurk og rødløg i en stor skål, og vend dem med dressingen."
+    },
+    {
+      "section": "Græsk salat",
+      "text": "Smuldr fetaen ovenpå, og strø oliven og lidt ekstra oregano over."
+    }
+  ],
+  "changes": []
+}

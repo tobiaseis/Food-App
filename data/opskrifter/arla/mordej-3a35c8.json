@@ -1,0 +1,116 @@
+{
+  "url": "https://www.arla.dk/opskrifter/mordej/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:58:04.036Z",
+  "total_minutes": 45,
+  "active_minutes": 15,
+  "yield_count": 1,
+  "source_lines": 4,
+  "title": "Mørdej",
+  "intro": "Grunddej til både salte og søde tærter eller små mørdejsmedaljer. Den laves med få ingredienser og kan tilpasses ved at vælge salt eller sukker.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 175,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft, til salt mørdej",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": "til sød mørdej i stedet for saltet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "kan erstattes af en æggeblomme",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "æggeblomme",
+      "note": "i stedet for vandet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dejen",
+      "text": "Bland melet med enten salt (til salt dej) eller sukker (til sød dej)."
+    },
+    {
+      "section": "Dejen",
+      "text": "Snit det kolde smør i små stykker, og gnid det ud i melblandingen, til det smuldrer."
+    },
+    {
+      "section": "Dejen",
+      "text": "Tilsæt vand eller æggeblomme, og æl dejen hurtigt sammen til en klump."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Tryk eller rul dejen ud i en tærteform på ca. 22 cm i diameter eller en aflang form på ca. 10 x 33 cm. Pres den helt op ad kanterne."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Dæk formen til, og lad den hvile i køleskabet i mindst en halv time."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Forbag bunden midt i en traditionel ovn ved 200 °C i ca. 12 minutter."
+    },
+    {
+      "section": "Medaljer",
+      "text": "Rul dejen ud til en tykkelse på ca. ½ cm mellem to stykker bagepapir."
+    },
+    {
+      "section": "Medaljer",
+      "text": "Sæt dejpladen i fryseren i ca. 15 minutter. Kold dej er lettere at stikke ud."
+    },
+    {
+      "section": "Medaljer",
+      "text": "Fjern det øverste stykke bagepapir, og stik 12 runde medaljer ud med et glas eller en udstikker på ca. 8 cm i diameter."
+    },
+    {
+      "section": "Medaljer",
+      "text": "Løft medaljerne forsigtigt over på en bageplade med bagepapir, f.eks. med en paletkniv."
+    },
+    {
+      "section": "Medaljer",
+      "text": "Bag dem øverst i en traditionel ovn ved 200 °C i ca. 6 minutter, til de er let gyldne."
+    },
+    {
+      "section": "Medaljer",
+      "text": "Lad medaljerne køle af på en rist."
+    }
+  ],
+  "changes": []
+}

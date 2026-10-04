@@ -1,0 +1,190 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/blistered-greens-whipped-ricotta-toast-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:17:20.639Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Ristede grønne grøntsager med pisket ricotta på surdejsbrød",
+  "intro": "Sprødt grillede grønne grøntsager på ristet surdejsbrød med luftig citronricotta. Toppes med basilikum, chili og ristede pinjekerner.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til grøntsagerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "broccolini",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 150,
+      "unit": "g",
+      "name": "asparges",
+      "note": "trimmet",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 150,
+      "unit": "g",
+      "name": "squash",
+      "note": "skåret i bånd med en kartoffelskræller",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til penslning",
+      "optional": false
+    },
+    {
+      "section": "Til den piskede ricotta",
+      "amount": 250,
+      "unit": "g",
+      "name": "ricotta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den piskede ricotta",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den piskede ricotta",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "piskefløde",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til den piskede ricotta",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til den piskede ricotta",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "skive",
+      "name": "brød",
+      "note": "surdejsbrød",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "bladene skåret fint",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "skåret i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "pinjekerner",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "havsalt",
+      "note": "flagesalt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pisket ricotta",
+      "text": "Pisk ricotta, olivenolie, fløde, hvidløg og halvdelen af citronens skal og saft kraftigt sammen, til massen er glat og luftig. Stil den på køl, til den skal bruges."
+    },
+    {
+      "section": "Grøntsagerne",
+      "text": "Kog en stor gryde vand op med salt."
+    },
+    {
+      "section": "Grøntsagerne",
+      "text": "Kog broccolini, asparges og sukkerærter i 1 minut. Hæld dem derefter straks i en skål med isvand."
+    },
+    {
+      "section": "Grøntsagerne",
+      "text": "Tag grøntsagerne op, når de er kolde, og dup dem tørre med køkkenrulle."
+    },
+    {
+      "section": "Grøntsagerne",
+      "text": "Varm en stor grillpande eller bageplade op på høj varme med lidt rapsolie. Skru ned til middelhøj varme, når den er varm."
+    },
+    {
+      "section": "Grøntsagerne",
+      "text": "Læg de blancherede grøntsager og squashbåndene i ét lag på panden. Lad dem stå uden at røre i 2-4 minutter, til undersiden er sort og blæret."
+    },
+    {
+      "section": "Grøntsagerne",
+      "text": "Vend grøntsagerne og steg dem 2-4 minutter mere, til de er møre og har fået flot farve."
+    },
+    {
+      "section": "Servering",
+      "text": "Rist imens brødet, og smør et generøst lag pisket ricotta på hver skive."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg de stegte grøntsager ovenpå. Dryp med olivenolie og resten af citronskal og citronsaft, og top med basilikum, chili, pinjekerner og lidt flagesalt."
+    }
+  ],
+  "changes": [
+    "Tenderstem broccoli er erstattet af broccolini.",
+    "Sugar snap peas er erstattet af sukkerærter.",
+    "Vegetable oil er erstattet af rapsolie.",
+    "Double cream er erstattet af piskefløde.",
+    "Sourdough er erstattet af surdejsbrød."
+  ]
+}

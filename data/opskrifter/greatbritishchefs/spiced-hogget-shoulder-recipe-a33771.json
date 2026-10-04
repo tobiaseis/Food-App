@@ -1,0 +1,257 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/spiced-hogget-shoulder-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:05:40.575Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 19,
+  "title": "Langtidsbraiseret lammebov med krydderirub, harissa og artiskokker",
+  "intro": "Lammeboven braiseres i mange timer på et leje af artiskokker, rødløg og vin, til kødet falder fra hinanden. Krydderirubben af ristede frø og røget paprika giver en dyb, varm smag.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Krydderirub",
+      "amount": 3,
+      "unit": "tsk",
+      "name": "kommenfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Lammet",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Lammet",
+      "amount": 2,
+      "unit": "kg",
+      "name": "lammebov",
+      "note": "fedtet trimmet og skåret i med snit",
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 500,
+      "unit": "g",
+      "name": "artiskokhjerter",
+      "note": "afdryppede",
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseringen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "efter smag",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Krydderirub",
+      "text": "Varm en stor gryde med låg op ved middelvarme. Rist alle frøene med salt og peber, til de dufter kraftigt."
+    },
+    {
+      "section": "Krydderirub",
+      "text": "Tag frøene af gryden, og stød dem til pulver i en mortér. Bland med den røgede paprika, og stil til side."
+    },
+    {
+      "section": "Lammet",
+      "text": "Varm ovnen op til 140 °C. Smør lammeboven over det hele med sennep, og gnid den derefter ind i krydderiblandingen."
+    },
+    {
+      "section": "Braiseringen",
+      "text": "Sæt gryden tilbage på middelhøj varme med olien. Når olien ryger, brunes artiskokhjerterne til de er gyldne."
+    },
+    {
+      "section": "Braiseringen",
+      "text": "Skru ned for varmen, og svits rødløgene, til de er bløde uden at få farve."
+    },
+    {
+      "section": "Braiseringen",
+      "text": "Rør hvidløget i, og steg det et minut. Drys melet over, og rør rundt i et halvt minut. Rør harissaen ind."
+    },
+    {
+      "section": "Braiseringen",
+      "text": "Skru op for varmen, hæld rødvinen i, og lad den koge ind til det halve."
+    },
+    {
+      "section": "Braiseringen",
+      "text": "Tilsæt fonden sammen med rosmarin, timian og laurbærblad. Læg lammeboven oven på, sæt låg på, og stil gryden i ovnen i ca. 5 timer."
+    },
+    {
+      "section": "Braiseringen",
+      "text": "Tag låget af, og lad kødet stå i ovnen i endnu en time. Det er færdigt, når det falder fra hinanden."
+    },
+    {
+      "section": "Braiseringen",
+      "text": "Øs det meste af det udsmeltede fedt af saucen. Fjern og kassér derefter knogler og urtestilke."
+    },
+    {
+      "section": "Braiseringen",
+      "text": "Pluk kødet i stykker med to gafler, og fjern sener. Vend det tilbage i saucen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Smag til med salt og peber, og drys med hakket koriander."
+    }
+  ],
+  "changes": [
+    "Hogget-bov er erstattet med lammebov.",
+    "Rose harissa er erstattet med almindelig harissa.",
+    "Lammefond er erstattet med oksefond.",
+    "Vegetabilsk olie er erstattet med rapsolie."
+  ]
+}

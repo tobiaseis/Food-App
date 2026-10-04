@@ -1,0 +1,224 @@
+{
+  "url": "https://www.valdemarsro.dk/nudelsalat-med-peanutbutterdressing/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:40:45.380Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Nudelsalat med peanutbutterdressing",
+  "intro": "Kold nudelsalat med masser af grønt, mango og avocado, vendt med en cremet dressing af peanutbutter, lime og ingefær. Den er god som frisk hovedret.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "nudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "grønkål",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "pillede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 75,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "mango",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 25,
+      "unit": "g",
+      "name": "peanuts",
+      "note": "saltede, grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "amount": 75,
+      "unit": "g",
+      "name": "peanutbutter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Peanutbutterdressing",
+      "text": "Læg hvidløget i en skål, og hæld det kogende vand over. Lad det stå i 5 minutter."
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "text": "Tilsæt sukker, chiliflager og peanutbutter, og pisk det sammen, til dressingen er cremet og glat."
+    },
+    {
+      "section": "Peanutbutterdressing",
+      "text": "Rør limesaft, limeskal, sesamolie og ingefær i, og smag til med lidt af sojaen."
+    },
+    {
+      "section": "Salat",
+      "text": "Kog nudlerne som anvist på posen. Hæld vandet fra, og skyl dem straks i iskoldt vand, så de stopper med at koge og ikke klistrer."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend nudlerne med sesamolien og halvdelen af sojaen."
+    },
+    {
+      "section": "Salat",
+      "text": "Masser grønkålen med resten af sojaen i en skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Læg edamamebønnerne i en skål, og dæk dem med kogende vand. Lad dem stå i 1-2 minutter, og si dem derefter."
+    },
+    {
+      "section": "Salat",
+      "text": "Fordel grønkål, rødkål, edamamebønner, rødløg og spinat på et stort fad eller i en stor skål. Læg nudler og dressing ovenpå."
+    },
+    {
+      "section": "Salat",
+      "text": "Pynt med avocado og mango, og strø koriander, sesamfrø, peanuts og lidt chiliflager over lige før servering."
+    }
+  ],
+  "changes": []
+}

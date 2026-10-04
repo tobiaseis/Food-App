@@ -1,0 +1,204 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/easy-chicken-fricassee",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:57:55.099Z",
+  "total_minutes": 85,
+  "active_minutes": 25,
+  "yield_count": 2,
+  "source_lines": 16,
+  "title": "Kyllingefrikassé",
+  "intro": "Mør kylling og grøntsager i en cremet hvidvinssauce med ærter og persille. Serveres med ris.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "hele sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne, tøede",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 30,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "kruspersille, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom grøntsagerne og kyllingelårene i en stor gryde. Drys med peberkorn og salt, og hæld koldt vand over, så alt netop er dækket (ca. 7-8 dl)."
+    },
+    {
+      "section": null,
+      "text": "Bring det i kog ved middel varme, og øs skummet af undervejs."
+    },
+    {
+      "section": null,
+      "text": "Lad det simre svagt i 30 minutter. Tag kyllingen op på en tallerken, og lad den køle af."
+    },
+    {
+      "section": null,
+      "text": "Sigt bouillonen gennem en fin sigte, og gem gulerødderne og de øvrige grøntsager."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret i en pande ved middel varme, til det bobler. Rør melet i."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør godt rundt, og lad det gå i 1-2 minutter, til det er lyst. Hæld hvidvinen i, og lad den koge helt ind. Tilsæt bouillonen lidt ad gangen under omrøring, og rør fløden og laurbærbladet i."
+    },
+    {
+      "section": "Sauce",
+      "text": "Lad saucen simre i 5 minutter, til den er glat og sammetsblød. Smag til med et skvæt citronsaft, peber og muskatnød."
+    },
+    {
+      "section": "Sauce",
+      "text": "Pil kødet af kyllingelårene, og vend det i saucen sammen med ærterne og de kogte gulerødder. Varm det forsigtigt igennem i få minutter."
+    },
+    {
+      "section": null,
+      "text": "Drys med persille. Server gerne med ris og de gemte grøntsager."
+    }
+  ],
+  "changes": [
+    "Double cream er erstattet med piskefløde.",
+    "Plain flour er erstattet med hvedemel.",
+    "Unsalted butter er erstattet med smør."
+  ]
+}

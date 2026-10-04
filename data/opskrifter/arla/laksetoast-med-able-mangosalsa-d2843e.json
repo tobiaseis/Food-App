@@ -1,0 +1,132 @@
+{
+  "url": "https://www.arla.dk/opskrifter/laksetoast-med-able-mangosalsa/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T13:33:02.094Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 12,
+  "title": "Laksetoast med æble-mangosalsa",
+  "intro": "Sprødt toast med letsaltet laks, smeltet cheddar og en frisk salsa af æble og mango. Det er en hurtig ret med både sødme og syre.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "laks",
+      "note": "frisk filet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "lime",
+      "note": "revet skal, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "lime",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "i små tern, ca. 100 g",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "mango",
+      "note": "i små tern, ca. 100 g",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, i meget tynde skiver, ca. 50 g",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Til toasten",
+      "amount": 4,
+      "unit": "skive",
+      "name": "brød",
+      "note": "langtidshævet hvedebrød",
+      "optional": false
+    },
+    {
+      "section": "Til toasten",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toasten",
+      "amount": 4,
+      "unit": "skive",
+      "name": "cheddar",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skær laksen i tynde skiver og læg dem på et fad. Drys limeskal, limesaft, salt og sukker jævnt udover alle skiverne. Dæk fadet til, og sæt det på køl i ca. 15 minutter."
+    },
+    {
+      "section": "Salsa",
+      "text": "Kom æble, mango, rødløg og eddike i en skål, og vend det godt sammen. Dæk skålen til, og stil den i køleskabet i ca. 10 minutter."
+    },
+    {
+      "section": "Toast",
+      "text": "Smør brødskiverne på den ene side. Læg to skiver med smørsiden nedad, og fordel laks, salsa og cheddar ovenpå. Læg de sidste to skiver ovenpå med smørsiden opad, så du har 2 toast."
+    },
+    {
+      "section": "Toast",
+      "text": "Varm toastmaskinen godt op. Rist toastene i ca. 5 minutter, til brødet er gyldent, og osten er smeltet."
+    }
+  ],
+  "changes": []
+}

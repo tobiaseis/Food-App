@@ -1,0 +1,248 @@
+{
+  "url": "https://www.valdemarsro.dk/graesk-inspireret-risret/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T13:32:45.150Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Græsk risret med grøntsagsdeller",
+  "intro": "Ovnbagte grøntsagsdeller med kikærter og halloumi serveres på en one pot-risret med tomat, squash og spinat. Feta, oliven og frisk oregano giver den græske smag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket sammen",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": 20,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "halloumi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 50,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 800,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "på dåse",
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 3,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 150,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 80,
+      "unit": "g",
+      "name": "oliven",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "frisk oregano",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risretten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til grøntsagsdellerne",
+      "text": "Pisk æggene sammen med hvedemel i en skål. Vend spidskål, timian, soltørrede tomater og hvidløg i, og krydr med salt og peber. Lad farsen hvile i 15 minutter, og rør den igennem igen."
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "text": "Hak kikærterne groft i en foodprocessor eller minihakker. Vend dem i farsen sammen med halloumien, som du smuldrer fint."
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "text": "Smør lidt olie på hænderne, så farsen ikke klistrer. Form farsen til runde deller på størrelse med golfbolde."
+    },
+    {
+      "section": "Til grøntsagsdellerne",
+      "text": "Læg dellerne på en bageplade med bagepapir. Bag dem ved 175 °C varmluft i 15-18 minutter, og vend dem et par gange undervejs."
+    },
+    {
+      "section": "Til risretten",
+      "text": "Varm olien op i en sauterpande ved middelvarme. Steg løg, hvidløg og soltørrede tomater i nogle minutter, til de er bløde."
+    },
+    {
+      "section": "Til risretten",
+      "text": "Tilsæt squash, hakkede tomater, fond, timian, rosmarin og ris, og rør godt rundt. Læg låg på, og lad retten simre ved lav varme, til risen er mør."
+    },
+    {
+      "section": "Til risretten",
+      "text": "Rør spinaten i. Læg grøntsagsdellerne ovenpå, smuldr fetaen over, og fordel oliven og frisk oregano til sidst."
+    }
+  ],
+  "changes": []
+}

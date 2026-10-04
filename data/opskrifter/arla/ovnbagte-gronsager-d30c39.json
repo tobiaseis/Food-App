@@ -1,0 +1,148 @@
+{
+  "url": "https://www.arla.dk/opskrifter/ovnbagte-gronsager/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:16:10.947Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Ovnbagte grøntsager med linsedressing",
+  "intro": "Sprøde ovnristede rod- og andre grøntsager med rosmarin og salatost, serveret med en cremet, let stærk dressing af linser og sambal oelek.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "kg",
+      "name": "blandede grøntsager og rodfrugter",
+      "note": "skåret i mindre stykker",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "rosmarin",
+      "note": "små kviste",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": 100,
+      "unit": "g",
+      "name": "salatost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "basilikum",
+      "note": "frisk, til pynt",
+      "optional": true
+    },
+    {
+      "section": "Linsedressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Linsedressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sambal oelek",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Linsedressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Linsedressing",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "linser",
+      "note": "grønne, i vand, drænet (ca. 240 g)",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Forvarm ovnen til 200 °C varmluft."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Gør grøntsagerne rene, og skær dem i mindre stykker. Anret dem på en bageplade."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Rør det smeltede smør sammen med hvidløg, salt og peber."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Hæld smørblandingen over grøntsagerne, tilsæt rosmarinkvistene, og vend det hele grundigt."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Bag grøntsagerne midt i ovnen i cirka 25 minutter."
+    },
+    {
+      "section": "Ovnbagte grøntsager",
+      "text": "Smuld salatosten ud over de bagte grøntsager, og drys eventuelt med basilikumblade."
+    },
+    {
+      "section": "Linsedressing",
+      "text": "Mens grøntsagerne bager, kan du blande creme fraiche med sambal oelek, salt og de drænede linser. Smag dressingen til."
+    },
+    {
+      "section": "Linsedressing",
+      "text": "Server dressingen ved siden af grøntsagerne."
+    }
+  ],
+  "changes": []
+}

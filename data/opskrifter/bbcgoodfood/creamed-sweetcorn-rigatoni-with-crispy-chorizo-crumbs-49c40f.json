@@ -1,0 +1,146 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/creamed-sweetcorn-rigatoni-with-crispy-chorizo-crumbs",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:01:05.547Z",
+  "total_minutes": 50,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 10,
+  "title": "Rigatoni med cremet majs og sprød chorizodrys",
+  "intro": "Rigatoni i en blød sauce af majs, fløde og smeltet mozzarella, toppet med knasende chorizo og rasp. Citronskallen i drysset giver frisk kontrast til den cremede sauce.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Chorizodrys",
+      "amount": 100,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "pellen fjernet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Chorizodrys",
+      "amount": 30,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chorizodrys",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Chorizodrys",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ristede løg",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "majskolbe",
+      "note": "kernerne skåret af",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "rigatoni",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Chorizodrys",
+      "text": "Varm en lille pande op ved middel varme. Steg chorizoen i nogle minutter, til den har afgivet sin olie og er sprød."
+    },
+    {
+      "section": "Chorizodrys",
+      "text": "Rør panko i og steg i 30 sekunder til 1 minut, til det lige er blevet gyldent."
+    },
+    {
+      "section": "Chorizodrys",
+      "text": "Bland citronskallen i, og de ristede løg, hvis du bruger dem. Stil panden til side."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Smelt smørret i en pande ved middel varme. Svits løget i 5 minutter."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Tilsæt majskernerne og steg i 1 minut. Hæld vandet på, skru ned for varmen, læg låg på og lad det simre i 10 minutter."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Kog imens pastaen efter anvisningen på pakken, og si den fra."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Hæld fløden over majsene, smag til med salt og peber, og lad det koge i 3-5 minutter."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Rør mozzarellaen i, og lad den smelte i 1 minut. Vend pastaen i saucen, og varm det hele igennem i 1 minut."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Anret retten og drys med chorizodrysset. Server med det samme."
+    }
+  ],
+  "changes": [
+    "Double cream er skiftet til piskefløde."
+  ]
+}

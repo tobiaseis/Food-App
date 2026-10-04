@@ -1,0 +1,148 @@
+{
+  "url": "https://www.valdemarsro.dk/banh-mi-burger/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:10:38.722Z",
+  "total_minutes": 90,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Banh mi-burger",
+  "intro": "Vietnamesisk inspireret burger med tynde skiver culotte, friske grøntsager og en cremet dressing med tabasco, lime og fiskesauce. Den er hurtig at samle og lige så god i en baguette.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "boller",
+      "note": "burgerboller eller baguettes",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "culotte",
+      "note": "tilberedt og skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i tynde juliennestrimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "skåret i tynde juliennestrimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "eller bredbladet persille",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "38%",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tabasco",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Bland alle ingredienserne til dressingen i en skål, og juster smagen, til den er rigtig god."
+    },
+    {
+      "section": "Samling",
+      "text": "Skær bollerne eller baguetterne op, og kom et generøst lag dressing på begge sider."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg gulerødder og agurk nederst, og top med mere dressing."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg kødskiverne ovenpå, og slut med en rigelig portion koriander. Bredbladet persille passer fint, hvis man ikke bryder sig om koriander."
+    }
+  ],
+  "changes": []
+}

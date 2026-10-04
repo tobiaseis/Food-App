@@ -1,0 +1,179 @@
+{
+  "url": "https://www.valdemarsro.dk/blomkaal-og-halloumi-i-sursoed-sauce/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:22:05.147Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Sursød blomkål med halloumi",
+  "intro": "Sprød halloumi og mør blomkål i en sursød sauce med ananas og ingefær, serveret over ris. En nem hverdagsret uden kød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Sursød sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "ananasjuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sursød sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ret",
+      "amount": 250,
+      "unit": "g",
+      "name": "halloumi",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ret",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ret",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ret",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rød peberfrugt",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Ret",
+      "amount": 400,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Ret",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "skåret i ringe",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristet på en tør pande",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sursød sauce",
+      "text": "Pisk ananasjuice, eddike, ketchup, farin, ingefær, sojasauce og majsstivelse sammen i en skål."
+    },
+    {
+      "section": "Sursød sauce",
+      "text": "Kog risene, som der står på pakken."
+    },
+    {
+      "section": "Ret",
+      "text": "Varm olien op på en pande og steg halloumien, til skiverne er gyldne og sprøde på begge sider. Læg dem over på en tallerken."
+    },
+    {
+      "section": "Ret",
+      "text": "Svits løg og hvidløg på samme pande, til løgene er bløde. Tilsæt peberfrugt og blomkål, og lad det blive godt varmt i nogle minutter."
+    },
+    {
+      "section": "Ret",
+      "text": "Hæld saucen over grøntsagerne og rør rundt. Læg låg på og lad det simre i ca. 15 minutter, mens du rører af og til. Blomkålen skal være netop mør og stadig have lidt bid."
+    },
+    {
+      "section": "Ret",
+      "text": "Vend halloumien i panden."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret risene i skåle og top med blomkål, halloumi og sauce. Drys med forårsløg og ristede sesamfrø."
+    }
+  ],
+  "changes": [
+    "Ananasjuice, æblecidereddike og soja er skrevet som ananasjuice, æblecidereddike og sojasauce.",
+    "Smør til stegning af halloumi er udeladt, da det ikke står i ingredienslisten; olien bruges i stedet."
+  ]
+}

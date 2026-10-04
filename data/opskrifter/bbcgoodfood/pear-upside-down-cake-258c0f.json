@@ -1,0 +1,174 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/pear-upside-down-cake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:49:20.564Z",
+  "total_minutes": 100,
+  "active_minutes": 30,
+  "yield_count": 10,
+  "source_lines": 13,
+  "intro": "Saftig omvendt kage med modne pærer på et lag karamel, og med kanel i dejen. Den bages i en springform og vendes ud, når den er kold.",
+  "title": "Omvendt pærekage med karamel",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Kage",
+      "amount": 3,
+      "unit": "stk",
+      "name": "pærer",
+      "note": "modne, skrællede, uden kernehus og delt i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt, usaltet",
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 120,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 100,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "fx 18 %",
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 220,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kage",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karamel",
+      "amount": 75,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "gerne havsalt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Forberedelse",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft). Beklæd bunden af en høj springform på 20 cm med bagepapir, og lad papiret række cirka 1 cm op ad kanten, så karamellen bliver i formen."
+    },
+    {
+      "section": "Karamel",
+      "text": "Fordel sukkeret jævnt i en lille stegepande, og varm det ved lav varme, til det begynder at smelte. Sving panden, til sukkeret får en gyldenbrun farve."
+    },
+    {
+      "section": "Karamel",
+      "text": "Pisk straks smør, lønnesirup og salt ned i karamellen. Hæld den i bunden af formen, og læg pærekvartene i en cirkel ovenpå."
+    },
+    {
+      "section": "Dej",
+      "text": "Pisk smør, sukker og brun farin med håndmixer i 6-8 minutter, til det er lyst og luftigt."
+    },
+    {
+      "section": "Dej",
+      "text": "Pisk æggene i ét ad gangen, og pisk grundigt efter hvert. Rør derefter cremefraichen i."
+    },
+    {
+      "section": "Dej",
+      "text": "Tilsæt hvedemel, bagepulver, natron og kanel, og pisk i cirka 10 sekunder, til det lige er blandet."
+    },
+    {
+      "section": "Bagning",
+      "text": "Kom dejen over pærerne, og glat overfladen forsigtigt. Bag kagen i 1 time, til en tandstik i midten kommer ren op."
+    },
+    {
+      "section": "Bagning",
+      "text": "Sidder der våde krummer på tandstikken, så bag kagen 5-10 minutter mere."
+    },
+    {
+      "section": "Servering",
+      "text": "Lad kagen køle helt af i formen. Vend den ud på et fad, og fjern bagepapiret, inden den skæres ud."
+    }
+  ],
+  "changes": [
+    "Soured cream er erstattet med creme fraiche.",
+    "Golden caster sugar og caster sugar er erstattet med almindeligt sukker.",
+    "Light brown soft sugar er erstattet med brun farin.",
+    "Plain flour er erstattet med hvedemel.",
+    "Bicarbonate of soda er erstattet med natron."
+  ]
+}

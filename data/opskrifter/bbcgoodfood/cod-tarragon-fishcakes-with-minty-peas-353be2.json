@@ -1,0 +1,204 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cod-tarragon-fishcakes-with-minty-peas",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:00:01.160Z",
+  "total_minutes": 40,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Torskefrikadeller med estragon og ærtemos med mynte",
+  "intro": "Ovnbagte kartoffel- og torskekager med estragon, kapers og ansjoser, serveret på en bund af ærter og porre. Retten kan med fordel laves til to dage.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fiskekager",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til bagepladen",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 900,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrællet og skåret i mellemstore stykker",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "stødt sennepspulver",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 10,
+      "unit": "g",
+      "name": "ansjoser",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 5,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "estragon",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 560,
+      "unit": "g",
+      "name": "torsk",
+      "note": "uden skind, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 8,
+      "unit": "tsk",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskekager",
+      "amount": 90,
+      "unit": "g",
+      "name": "nødder",
+      "note": "hakkede mandler, malede",
+      "optional": false
+    },
+    {
+      "section": "Ærter og porre",
+      "amount": 320,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Ærter og porre",
+      "amount": 320,
+      "unit": "g",
+      "name": "porre",
+      "note": "halveret og skåret i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Ærter og porre",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mynte",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ærter og porre",
+      "amount": 50,
+      "unit": "g",
+      "name": "salat",
+      "note": "rucola",
+      "optional": false
+    },
+    {
+      "section": "Ærter og porre",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "saft",
+      "optional": false
+    },
+    {
+      "section": "Ærter og porre",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": "extra jomfru",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fiskekager",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft) og smør en bageplade med olie."
+    },
+    {
+      "section": "Fiskekager",
+      "text": "Kog kartoflerne i vand i 15-20 minutter, til de er møre. Hæld vandet fra, og kom dem tilbage i gryden."
+    },
+    {
+      "section": "Fiskekager",
+      "text": "Mas kartoflerne med sennepspulver, ansjoser, forårsløg, kapers og estragon. Vend den rå torsk i."
+    },
+    {
+      "section": "Fiskekager",
+      "text": "Form 8 kager, og vend dem let i hvedemel – cirka 1-2 tsk til hver. Pisk æggene i en dyb tallerken."
+    },
+    {
+      "section": "Fiskekager",
+      "text": "Vend kagerne i æg, og drys med mandler på oversiden. Læg dem på bagepladen."
+    },
+    {
+      "section": "Fiskekager",
+      "text": "Bag kagerne i 20 minutter. Vend dem undervejs, og tag dem ud, når de begynder at blive gyldne."
+    },
+    {
+      "section": "Ærter og porre",
+      "text": "Kom ærter og porre i en gryde, og dæk med vand. Læg låg på, og kog i 10 minutter."
+    },
+    {
+      "section": "Ærter og porre",
+      "text": "Si vandet fra, og rør mynten i."
+    },
+    {
+      "section": "Ærter og porre",
+      "text": "Fordel halvdelen af ærteblandingen på to tallerkener, og læg 2 fiskekager på hver. Vend halvdelen af rucolaen med halvdelen af citronsaften og olivenolien, og læg den øverst."
+    },
+    {
+      "section": "Ærter og porre",
+      "text": "Stil de resterende 4 fiskekager og resten af ærteblandingen køligt i hver sin beholder. De holder sig 2 dage i køleskabet."
+    },
+    {
+      "section": "Ærter og porre",
+      "text": "Varm fiskekagerne på en bageplade ved 200 °C (180 °C varmluft) i 15-20 minutter, og ærteblandingen i mikroovn. Vend resten af rucolaen med dressingen lige før servering."
+    }
+  ],
+  "changes": [
+    "Engelsk sennepspulver er erstattet med sennep.",
+    "Stødte mandler er erstattet med nødder.",
+    "Fuldkornshvedemel er erstattet med hvedemel."
+  ]
+}

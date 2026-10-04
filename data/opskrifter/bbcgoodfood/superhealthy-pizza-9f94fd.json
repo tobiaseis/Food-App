@@ -1,0 +1,159 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/superhealthy-pizza",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:14:00.737Z",
+  "total_minutes": 50,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 12,
+  "title": "Sund pizza med squash og oliven",
+  "intro": "En tynd og sprød pizza med fuldkorn i dejen og masser af grønt på toppen. Den er hurtig at lave og klar på cirka en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til dejen",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 7,
+      "unit": "g",
+      "name": "tørgær",
+      "note": "1 pose",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 125,
+      "unit": "ml",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 200,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "afdryppet for saft",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "stor, skåret i tynde bånd med en skræller",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 25,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kapers",
+      "note": "afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 8,
+      "unit": "stk",
+      "name": "grønne oliven",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Kom begge slags mel, gær og salt i en foodprocessor med dejkrog. Hæld vandet i, og kør, til dejen er blød. Ælt den derefter i 1 minut i maskinen."
+    },
+    {
+      "section": "Dej",
+      "text": "Tag dejen op, og kævl den på en let meldrysset bordplade ud til en rund bund på ca. 30 cm. Læg den over på en olieret bageplade."
+    },
+    {
+      "section": "Topping",
+      "text": "Fordel de hakkede tomater på bunden, men lad en kant på 2 cm være fri. Læg cherrytomater og squashbånd ovenpå, og drys mozzarella over."
+    },
+    {
+      "section": "Topping",
+      "text": "Bland kapers, oliven og hvidløg, og strø blandingen over pizzaen. Dryp olien jævnt henover."
+    },
+    {
+      "section": "Hævning og bagning",
+      "text": "Lad pizzaen hæve i 20 minutter. Sæt imens ovnen på 240 °C (220 °C varmluft) eller på dens højeste indstilling."
+    },
+    {
+      "section": "Hævning og bagning",
+      "text": "Bag pizzaen i 10-12 minutter, til kanten er sprød og gylden. Server med persille drysset over."
+    }
+  ],
+  "changes": [
+    "Strong white flour er erstattet af almindeligt hvedemel, og strong wholewheat flour af hvedemel i fuldkorn.",
+    "Courgette er skiftet til squash."
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "url": "https://www.arla.dk/opskrifter/nytarskage/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:26:34.102Z",
+  "total_minutes": 900,
+  "active_minutes": 90,
+  "yield_count": 1,
+  "source_lines": 14,
+  "title": "Nytårskage med kransekagebund, passionsganache og champagnemousse",
+  "intro": "Festlig, frossen nytårskage med en bund af kransekagedej, et lag passionsfrugtganache og en let champagnemousse. Kagen laves dagen før og tør langsomt op i køleskabet inden servering.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Kransekagebund",
+      "amount": 200,
+      "unit": "g",
+      "name": "marcipan",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kransekagebund",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æggehvider",
+      "note": "ca. 60 g",
+      "optional": false
+    },
+    {
+      "section": "Kransekagebund",
+      "amount": 100,
+      "unit": "g",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Passionsfrugtganache",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Passionsfrugtganache",
+      "amount": 100,
+      "unit": "g",
+      "name": "passionsfrugt",
+      "note": "frossen",
+      "optional": false
+    },
+    {
+      "section": "Passionsfrugtganache",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvid chokolade",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Champagnemousse",
+      "amount": 5,
+      "unit": "stk",
+      "name": "husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Champagnemousse",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "hyldeblomstsaft",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Champagnemousse",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Champagnemousse",
+      "amount": 2,
+      "unit": "dl",
+      "name": "champagne",
+      "note": "eller anden mousserende vin",
+      "optional": false
+    },
+    {
+      "section": "Champagnemousse",
+      "amount": 1,
+      "unit": "stk",
+      "name": "vaniljestang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Champagnemousse",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Champagnemousse",
+      "amount": 5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pyntning",
+      "amount": null,
+      "unit": null,
+      "name": "hvid velvet spray",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kransekagebund",
+      "text": "Rør marcipan, æggehvider og flormelis sammen til en jævn dej."
+    },
+    {
+      "section": "Kransekagebund",
+      "text": "Kom dejen i en silikoneform på ca. 16 cm i diameter. Bag den ved 200 °C (almindelig ovn) i ca. 20 minutter, til den er gylden og helt bagt igennem."
+    },
+    {
+      "section": "Kransekagebund",
+      "text": "Lad bunden køle af i formen."
+    },
+    {
+      "section": "Passionsfrugtganache",
+      "text": "Varm fløde og passionsfrugt op i en lille gryde under omrøring, til det koger."
+    },
+    {
+      "section": "Passionsfrugtganache",
+      "text": "Hæld blandingen over den hakkede chokolade, og lad den stå i 1-2 minutter uden at røre i den."
+    },
+    {
+      "section": "Passionsfrugtganache",
+      "text": "Rør herefter, til ganachen er glat og ensartet. En lille dejskraber er god til det. Lad den køle lidt af."
+    },
+    {
+      "section": "Passionsfrugtganache",
+      "text": "Smør ganachen ud over kransekagebunden. Dæk formen til, og frys den i 3-4 timer, til den er frosset helt igennem."
+    },
+    {
+      "section": "Champagnemousse",
+      "text": "Læg husblassen i koldt vand i ca. 5 minutter."
+    },
+    {
+      "section": "Champagnemousse",
+      "text": "Varm hyldeblomstsaft og citronsaft op, til det næsten koger. Tag gryden af varmen."
+    },
+    {
+      "section": "Champagnemousse",
+      "text": "Tag husblassen op af vandet, så der følger lidt vand med, og rør den ud i den varme saft, til den er smeltet. Rør champagnen i."
+    },
+    {
+      "section": "Champagnemousse",
+      "text": "Del vaniljestangen på langs, skrab kornene ud, og bland dem med en smule af sukkeret."
+    },
+    {
+      "section": "Champagnemousse",
+      "text": "Pisk fløden med vaniljesukkeret og resten af sukkeret til et let flødeskum."
+    },
+    {
+      "section": "Champagnemousse",
+      "text": "Rør en smule af flødeskummet ud i champagneblandingen, så den køler ned. Vend den derefter forsigtigt i resten af flødeskummet."
+    },
+    {
+      "section": "Champagnemousse",
+      "text": "Fyld moussen i en silikoneform på ca. 18 cm i diameter, og sæt den i fryseren i 5-10 minutter, til den er let stivnet."
+    },
+    {
+      "section": "Champagnemousse",
+      "text": "Læg den frosne kransekagebund på moussen med ganachen nedad, og tryk den let ned. Dæk formen til, og lad kagen stå i fryseren til næste dag."
+    },
+    {
+      "section": "Pyntning",
+      "text": "Tag den frosne kage ud af formen, og sprøjt den med hvid velvet spray."
+    },
+    {
+      "section": "Pyntning",
+      "text": "Løft kagen over på et fad, fx med en paletkniv. Lad den tø op i køleskabet i 4-5 timer."
+    },
+    {
+      "section": "Pyntning",
+      "text": "Pynt eventuelt med stjernekastere, som tændes, når kagen kommer på bordet."
+    }
+  ],
+  "changes": []
+}

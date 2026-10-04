@@ -1,0 +1,86 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/inside-out-chicken-kiev",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:30:45.007Z",
+  "total_minutes": 25,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 3,
+  "title": "Kylling Kiev på bageplade",
+  "intro": "Kyllingebryst grillet i ovnen og toppet med sprødt hvidløgssmør med rasp. Det giver Kiev-smag uden panering og stegning i fedt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "hvidløgssmør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnens grill. Læg kyllingebrysterne på en bageplade, og smør dem med en smule af hvidløgssmørret. Krydr med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Grill kyllingen i cirka 15 minutter, og vend den undervejs én gang, til den er helt gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Rør resten af hvidløgssmørret sammen med raspen."
+    },
+    {
+      "section": null,
+      "text": "Tag pladen ud, og fordel raspsmørret som et tyndt lag oven på hvert kyllingebryst."
+    },
+    {
+      "section": null,
+      "text": "Sæt pladen under grillen igen i 3-5 minutter, til raspen er gylden, og smørret er smeltet."
+    },
+    {
+      "section": null,
+      "text": "Hæld den smørede stegesaft over kyllingen ved servering. Det passer godt med nye kartofler og ærter eller hestebønner."
+    }
+  ],
+  "changes": [
+    "Crispy breadcrumbs er erstattet med almindeligt rasp."
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/roasted-aloo-gobi",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:20:26.406Z",
+  "total_minutes": 65,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Ovnbagt aloo gobi",
+  "intro": "Kartofler og blomkål bages med varme krydderier og samles i en let tomatsauce med karryblade og chili. Server med ris, naan og yoghurt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "melede, skåret i mellemstore tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "stor, skåret i buketter",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "nigellafrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "karryblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "små, prikket med en gaffel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "naan",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Kom kartoflerne i en stor gryde med koldt vand, og bring dem i kog. Lad dem simre i 5-6 minutter, til de er begyndt at blive møre, men stadig holder formen. Hæld vandet fra."
+    },
+    {
+      "section": null,
+      "text": "Vend kartofler og blomkål på en stor bageplade med alle krydderierne og halvdelen af olien. Krydr med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Bag grøntsagerne i 45 minutter. Vend dem halvvejs, og tag dem ud, når de er møre og begynder at få farve."
+    },
+    {
+      "section": null,
+      "text": "Varm imens resten af olien op i en stor gryde. Steg karrybladene og hvidløget i 1 minut, og pas på, at hvidløget ikke bruner."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt tomater, chili, sukker, limesaft, salt og peber. Læg låg på, og lad saucen simre i 15 minutter, til tomaterne er faldet fra hinanden."
+    },
+    {
+      "section": null,
+      "text": "Vend de bagte grøntsager ned i saucen, og lad retten simre i 5 minutter. Tilsæt en sjat vand, hvis den bliver for tyk."
+    },
+    {
+      "section": null,
+      "text": "Rør koriander i, og server med ris, varm naan og yoghurt."
+    }
+  ],
+  "changes": [
+    "Vegetable oil, sunflower oil og rapeseed oil er samlet til rapsolie.",
+    "Golden caster sugar er skiftet til sukker.",
+    "Chilli powder er skiftet til stødt chili.",
+    "Floury potatoes (Maris Piper/King Edward) er skiftet til almindelige kartofler, helst melede."
+  ]
+}

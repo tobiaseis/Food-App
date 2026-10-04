@@ -1,0 +1,198 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-fish-korma",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:08:19.816Z",
+  "total_minutes": 55,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Sund fisk-korma med torsk",
+  "intro": "Mild, cremet korma med torsk, der trækker i en blendet sauce af løg, squash og krydderier. Serveres med brune basmatiris og en frisk salat af rødløg, banan og koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Korma",
+      "amount": 250,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": "brune",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 200,
+      "unit": "g",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 25,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "skrællet og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "stor, ca. 260 g, skrællet og i tern",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon i pulverform",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til bouillonen",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mandler",
+      "note": "malede",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 1,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "kokosyoghurt eller naturel",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 600,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "4 stykker",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "bananer",
+      "note": "små, i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Korma",
+      "text": "Kog risene i ca. 25 minutter, til de er møre."
+    },
+    {
+      "section": "Korma",
+      "text": "Varm olien op på en bred, belagt pande ved middelvarme. Steg løg og ingefær under låg i 8-10 minutter, til de er bløde."
+    },
+    {
+      "section": "Korma",
+      "text": "Rør squash, gurkemeje, koriander og spidskommen i. Opløs bouillonpulveret i vandet og hæld det på panden. Læg låg på og lad det småkoge i 10 minutter, til squashen er mør. Tag panden af varmen."
+    },
+    {
+      "section": "Korma",
+      "text": "Blend saucen glat direkte i panden med en stavblender. Sæt panden på lav varme og rør mandler og yoghurt i."
+    },
+    {
+      "section": "Korma",
+      "text": "Læg torsken ned i saucen, sæt låg på og lad den gennemvarme i 8-10 minutter, til fisken let falder i flager."
+    },
+    {
+      "section": "Salat",
+      "text": "Bland rødløg, citronsaft, koriander, chili og banan i en skål, mens fisken simrer. Del det i to, hvis du vil gemme halvdelen."
+    },
+    {
+      "section": "Servering",
+      "text": "Server halvdelen af risene med halvdelen af kormaen og salaten."
+    },
+    {
+      "section": "Servering",
+      "text": "Lad resten køle helt af og sæt det i køleskabet i en lufttæt beholder med den resterende salat. Det holder sig i to dage. Varm det op igen i en pande ved lav varme eller i mikroovn, til det er helt gennemvarmt."
+    }
+  ],
+  "changes": [
+    "Courgette er skiftet til squash."
+  ]
+}

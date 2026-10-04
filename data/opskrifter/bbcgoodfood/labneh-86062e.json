@@ -1,0 +1,80 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/labneh",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:45:00.943Z",
+  "total_minutes": 10,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 3,
+  "title": "Labneh",
+  "intro": "Labneh er cremet, mild yoghurtost, som laves ved at lade yoghurten dryppe af i et klæde. Den er fin som dip eller smørepålæg med olie og za'atar.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1000,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "fuldfed, naturel eller græsk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft havsalt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "za'atar",
+      "note": "til drys",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Rør saltet ud i yoghurten."
+    },
+    {
+      "section": null,
+      "text": "Stil en stor si over en kande eller skål, og læg et osteklæde eller et rent viskestykke i sien."
+    },
+    {
+      "section": null,
+      "text": "Hæld yoghurten ned i klædet. Saml kanterne, og bind dem stramt sammen med køkkengarn. Lad en lang ende af garnet stå, så du kan hænge posen op."
+    },
+    {
+      "section": null,
+      "text": "Lav en løkke af garnenden, og hæng posen i vandhanen over køkkenvasken. Sæt kanden eller skålen under, så væsken kan dryppe ned i den."
+    },
+    {
+      "section": null,
+      "text": "Lad yoghurten dryppe af i 12-24 timer, til al væsken er løbet fra. Er det varmt i vejret, skal den i stedet stå i si over skål i køleskabet."
+    },
+    {
+      "section": null,
+      "text": "Labneh'en er færdig, når den er fast. Jo længere tid den drypper af, desto fastere bliver den, så stop lidt tidligere, hvis den skal bruges som dip."
+    },
+    {
+      "section": null,
+      "text": "Skrab labneh'en over i en skål eller æske. Server med et skvæt olivenolie og et drys za'atar."
+    }
+  ],
+  "changes": []
+}

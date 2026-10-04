@@ -1,0 +1,258 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/wild-garlic-freekeh-risotto-asparagus-jameed-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:31:43.362Z",
+  "total_minutes": 75,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Bulgur-\"risotto\" med grillet asparges og purløgspuré",
+  "intro": "Cremet kornret på bulgur, hvor purløgspuré og urtesmør giver friskhed. Serveres med grillede asparges, ristede pistaciekerner og revet parmesan.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til bulgurbunden",
+      "amount": 50,
+      "unit": "g",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til bulgurbunden",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "en klump, usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til bulgurbunden",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til bulgurbunden",
+      "amount": 250,
+      "unit": "g",
+      "name": "bulgur",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": "Til bulgurbunden",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bulgurbunden",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bulgurbunden",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bulgurbunden",
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bulgurbunden",
+      "amount": null,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til purløgspuréen",
+      "amount": 50,
+      "unit": "g",
+      "name": "purløg",
+      "note": "vasket og tørret godt",
+      "optional": false
+    },
+    {
+      "section": "Til purløgspuréen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til purløgssmørret",
+      "amount": 50,
+      "unit": "g",
+      "name": "purløg",
+      "note": "vasket og tørret godt",
+      "optional": false
+    },
+    {
+      "section": "Til purløgssmørret",
+      "amount": 250,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 12,
+      "unit": "stk",
+      "name": "asparges",
+      "note": "trimmet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "en klump, usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "saft, til smag",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "nødder",
+      "note": "grønne pistaciekerner, ristede og groft knuste",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "til rivning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bulgurbunden",
+      "text": "Sæt en stor gryde med låg over varmen. Svits skalotteløgene i smørret, til de er bløde og klare."
+    },
+    {
+      "section": "Bulgurbunden",
+      "text": "Rør hvidløget i og steg det i 1 minut, til det dufter. Tilsæt bulgur og steg under omrøring i 3 minutter."
+    },
+    {
+      "section": "Bulgurbunden",
+      "text": "Kom timian, fond, vand, vin og salt i. Bring det i kog, læg låg på, og lad det simre ved lav varme i 18 minutter."
+    },
+    {
+      "section": "Bulgurbunden",
+      "text": "Tag gryden af varmen og lad den stå med låg på i 10 minutter. Bred bulgur ud på en bakke, lad den køle helt af, og opbevar den i en tæt beholder i køleskabet, til den skal bruges."
+    },
+    {
+      "section": "Purløgspuréen",
+      "text": "Blend purløg og rapsolie, til massen er helt glat. Stil den på køl."
+    },
+    {
+      "section": "Purløgssmørret",
+      "text": "Blitz purløg og blødt smør i en foodprocessor, til alt er hakket fint og blandet. Der bliver mere, end du skal bruge – resten kan fryses."
+    },
+    {
+      "section": "Til servering",
+      "text": "Sæt en stor pande over middelvarme. Gør samtidig grillen klar til direkte varme, eller varm en grillpande op."
+    },
+    {
+      "section": "Til servering",
+      "text": "Grill aspargesene, og vend dem ofte, til de har fået flot farve og er møre. Flyt dem til en køligere del af grillen, hvis de brunes for hurtigt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Svits imens skalotteløg i smør på panden, til de begynder at blive bløde. Tilsæt porre og forårsløg og sauter, til de er møre."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kom bulgurbunden og vinen på panden. Rør ofte, mens vinen koger ind, og bulgur bliver varm igen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Vend purløgspuréen og 100 g af purløgssmørret i den varme ret. Smag til med salt og citronsaft."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret i dybe tallerkener og drys med pistaciekerner. Læg de grillede asparges ved siden af, og riv parmesan fint over."
+    }
+  ],
+  "changes": [
+    "Freekeh er erstattet af bulgur.",
+    "Ramsløg er erstattet af purløg.",
+    "Jameed er erstattet af parmesan.",
+    "Trekantet løg er erstattet af forårsløg.",
+    "Blomsterpynten er udeladt, da blomsterne ikke kan købes."
+  ]
+}

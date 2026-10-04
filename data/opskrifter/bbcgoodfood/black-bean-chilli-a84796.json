@@ -1,0 +1,155 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/black-bean-chilli",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:05:39.011Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 6,
+  "source_lines": 10,
+  "title": "Chili sin carne med sorte bønner",
+  "intro": "En hurtig, røget og krydret grøntsagschili på sorte bønner og tomater. Server den med ris og et udvalg af friske toppings i små skåle.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "store, hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "à 400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "à 400 g, skyllet og afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Til servering (vælg en eller flere)",
+      "amount": null,
+      "unit": null,
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Til servering (vælg en eller flere)",
+      "amount": null,
+      "unit": null,
+      "name": "forårsløg",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til servering (vælg en eller flere)",
+      "amount": null,
+      "unit": null,
+      "name": "radiser",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering (vælg en eller flere)",
+      "amount": null,
+      "unit": null,
+      "name": "avocado",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering (vælg en eller flere)",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde. Steg hvidløg og løg i 5 minutter, til de næsten er bløde."
+    },
+    {
+      "section": null,
+      "text": "Rør paprika og spidskommen i, og lad det stege et par minutter."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt eddike, farin og tomater, og krydr med salt og peber. Lad det simre i 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom bønnerne i gryden, og lad chilien simre 10 minutter mere."
+    },
+    {
+      "section": null,
+      "text": "Server med ris og sæt toppings frem i små skåle, så alle kan tage efter smag."
+    }
+  ],
+  "changes": [
+    "Creme fraiche erstatter soured cream.",
+    "Sød paprika erstatter pimenton."
+  ]
+}

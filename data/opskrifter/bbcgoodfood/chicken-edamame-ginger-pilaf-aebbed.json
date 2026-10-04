@@ -1,0 +1,139 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-edamame-ginger-pilaf",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:29:13.546Z",
+  "total_minutes": 27,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 9,
+  "title": "Kyllingepilaf med edamame og ingefær",
+  "intro": "En hurtig one-pot ret med mør kylling, basmatiris og edamamebønner, der får frisk smag af ingefær og chili. Server den med koriander og en klat yoghurt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "et stykke på størrelse med en tommelfinger, revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kerner og i fine skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 450,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "dl",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "græsk yoghurt",
+      "note": "fedtfri",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en mellemstor gryde. Rør løg, ingefær og chili i gryden sammen med salt og peber, og lad det stege i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom kyllingen og risene i gryden, og rør rundt i 2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld bouillonen i, og bring det i kog. Skru ned på lav varme, læg låg på, og lad retten simre i 8-10 minutter, til risene lige er møre."
+    },
+    {
+      "section": null,
+      "text": "Kom edamamebønnerne i gryden de sidste 3 minutter."
+    },
+    {
+      "section": null,
+      "text": "Drys med korianderblade, og server med en klat yoghurt, hvis du har lyst."
+    }
+  ],
+  "changes": [
+    "Vegetable stock er skiftet til grøntsagsbouillon.",
+    "Edamame/soyabønner er skrevet som edamamebønner."
+  ]
+}

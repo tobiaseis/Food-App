@@ -1,0 +1,158 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-sweetcorn-soup",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:53:53.408Z",
+  "total_minutes": 145,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 11,
+  "title": "Kylling- og majssuppe",
+  "intro": "Klar suppe på kyllingekrop med sødmen fra majs, ingefær og forårsløg. Til sidst røres æg i, så der kommer fine tråde i suppen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "kyllingekrop",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "skive",
+      "name": "ingefær",
+      "note": "tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "majs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "de hvide dele i tynde skiver, de grønne på skrå",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "kyllingekød",
+      "note": "kogt og strimlet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket sammen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "sesamolie",
+      "note": "nogle få dråber til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog vand i en elkedel. Brug imens en stor, belagt gryde: knæk kyllingekroppen i stykker, og læg dem i gryden sammen med ingefærskiverne, løgene og to tredjedele af hvidløget."
+    },
+    {
+      "section": null,
+      "text": "Rør rundt over varmen i ca. 2 minutter. Kødet sætter sig fast i bunden, og det giver ekstra smag."
+    },
+    {
+      "section": null,
+      "text": "Hæld 1,5 l kogende vand i, og tilsæt eddiken. Læg låg på, og lad det småkoge i 2 timer."
+    },
+    {
+      "section": null,
+      "text": "Sæt en stor sigte over en skål, og si indholdet fra gryden. Mål bouillonen op: der skal være ca. 450 ml. Er der mere, så hæld den tilbage i gryden, og kog den ind uden låg."
+    },
+    {
+      "section": null,
+      "text": "Kom løgene fra sigten over i en skål sammen med tre fjerdedele af majsen. Blend det glat med en stavblender."
+    },
+    {
+      "section": null,
+      "text": "Hæld bouillonen tilbage i gryden. Tilsæt majspuréen, resten af majsen og hvidløget, den revne ingefær, de hvide dele af forårsløgene og kyllingekødet. Lad det småkoge i 5 minutter, og rør sojasaucen i."
+    },
+    {
+      "section": null,
+      "text": "Tag gryden af varmen. Hæld hurtigt de piskede æg i en tynd stråle, mens du rører let, så der dannes tråde. Smag til med peber."
+    },
+    {
+      "section": null,
+      "text": "Øs suppen op i skåle, og top med de grønne forårsløg og eventuelt dråber af sesamolie."
+    }
+  ],
+  "changes": [
+    "Tamari er erstattet af sojasauce."
+  ]
+}

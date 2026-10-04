@@ -1,0 +1,348 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/chocolate-hazelnut-tart-100s-1000s-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:00:23.735Z",
+  "total_minutes": 70,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 30,
+  "title": "Chokoladetærte med hasselnødder og vallekaramel",
+  "intro": "Mørdejstærter af kakao fyldt med silkeblød chokoladecremoso og vallekaramel. Toppen er knasende hasselnøddekrokant, kakaonibs og knitrende popping candy.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Chokoladecremoso",
+      "amount": 7,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladecremoso",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladecremoso",
+      "amount": 200,
+      "unit": "g",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladecremoso",
+      "amount": 200,
+      "unit": "g",
+      "name": "chokolade",
+      "note": "70 % mørk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kakaomørdej",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Kakaomørdej",
+      "amount": 120,
+      "unit": "g",
+      "name": "flormelis",
+      "note": "sigtet",
+      "optional": false
+    },
+    {
+      "section": "Kakaomørdej",
+      "amount": 4,
+      "unit": "g",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Kakaomørdej",
+      "amount": 70,
+      "unit": "g",
+      "name": "æggeblommer",
+      "note": "ca. 5 blommer",
+      "optional": false
+    },
+    {
+      "section": "Kakaomørdej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kakaomørdej",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "sigtet",
+      "optional": false
+    },
+    {
+      "section": "Kakaomørdej",
+      "amount": 60,
+      "unit": "g",
+      "name": "kakaopulver",
+      "note": "sigtet",
+      "optional": false
+    },
+    {
+      "section": "Vallekaramel",
+      "amount": 5,
+      "unit": "dl",
+      "name": "valle",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vallekaramel",
+      "amount": 100,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vallekaramel",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "amount": 80,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "amount": 30,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "amount": 200,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "blancherede",
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "amount": 10,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "amount": 5,
+      "unit": "g",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 65,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 25,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 150,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "blancherede",
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 7,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 4,
+      "unit": "g",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 80,
+      "unit": "g",
+      "name": "feuilletine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 70,
+      "unit": "g",
+      "name": "kakaonibs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Knitrende topping",
+      "amount": 70,
+      "unit": "g",
+      "name": "popping candy",
+      "note": "med chokolade",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Chokoladecremoso",
+      "text": "Varm fløden op til lige under kogepunktet. Pisk imens sukker og æggeblommer godt sammen. Kom den hakkede chokolade i en stor skål."
+    },
+    {
+      "section": "Chokoladecremoso",
+      "text": "Hæld den varme fløde i æggemassen lidt ad gangen, mens du pisker. Kom det hele tilbage i gryden, og varm under konstant piskning til 83 °C, så blandingen ikke skiller."
+    },
+    {
+      "section": "Chokoladecremoso",
+      "text": "Si cremen gennem en fin si ned over chokoladen, og pisk, til chokoladen er smeltet. Smag til med lidt salt, og stil den kold, til den er stivnet."
+    },
+    {
+      "section": "Kakaomørdej",
+      "text": "Sæt ovnen på 170 °C. Pisk smørret luftigt i en røremaskine. Tilsæt flormelis og salt lidt efter lidt, og pisk, til det er lyst og let."
+    },
+    {
+      "section": "Kakaomørdej",
+      "text": "Pisk æggeblommer og vaniljeekstrakt i, til massen er glat. Tag skålen af maskinen."
+    },
+    {
+      "section": "Kakaomørdej",
+      "text": "Bland mel og kakao i en anden skål. Ælt det tørre sammen med smørblandingen med hænderne, til det hele er ensartet. Form dejen til en rulle, og lad den hvile i køleskabet i mindst 30 minutter."
+    },
+    {
+      "section": "Kakaomørdej",
+      "text": "Rul dejen ud i 0,5 cm tykkelse, og beklæd 8 små tærteforme eller 1 stor form. Bag i 10-15 minutter, til bunden er tør og mør at røre ved. Lad tærteskallerne køle helt af."
+    },
+    {
+      "section": "Vallekaramel",
+      "text": "Kog vallen op i en bred mellemstor gryde, og lad den koge ind til det halve."
+    },
+    {
+      "section": "Vallekaramel",
+      "text": "Rør farin og smør i, og kog videre, til karamellen når 112-113 °C. Si den over i en stor skål."
+    },
+    {
+      "section": "Vallekaramel",
+      "text": "Lad karamellen køle af, og pisk jævnligt i den, så den ikke skiller. Smag til, når den er kold, og fyld den i en sprøjtepose. Stil den i køleskabet."
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "text": "Bring sukker, smør, glukosesirup og vand i kog ved middel varme."
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "text": "Kom hasselnødderne i, og kog, til massen er lys karamel. Tag af varmen, og rør straks salt og natron i."
+    },
+    {
+      "section": "Hasselnøddekrymmel",
+      "text": "Hæld massen ud på bagepapir på et varmefast underlag, og lad den køle helt af. Hak den groft."
+    },
+    {
+      "section": "Knitrende topping",
+      "text": "Lav først en hasselnødkrokant: Bring sukker, smør, glukosesirup og vand i kog ved middel varme. Kom hasselnødderne i, og kog, til det er lys karamel."
+    },
+    {
+      "section": "Knitrende topping",
+      "text": "Tag af varmen, og rør salt og natron i. Hæld ud på bagepapir på et varmefast underlag, og lad den køle helt af."
+    },
+    {
+      "section": "Knitrende topping",
+      "text": "Hak den kolde krokant fint. Afvej lidt over halvdelen, og gem resten til en anden ret. Bland med feuilletine, kakaonibs og popping candy, og opbevar i en tæt beholder."
+    },
+    {
+      "section": "Anretning",
+      "text": "Tag vallekaramel og cremoso ud af køleskabet 20-30 minutter før servering, så de får lidt temperatur. Cremosoen kan blive ret fast."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sæt tærteskallerne på tallerkener, og fastgør dem med en klat karamel. Sprøjt karamel i bunden af hver skal, og glat overfladen med en paletkniv."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sprøjt eller kom cremosoen i skallerne. Drys rigeligt med den knitrende topping og hasselnøddekrymmel, og server."
+    }
+  ],
+  "changes": [
+    "Double cream er skiftet til piskefløde.",
+    "Liquid glucose er skiftet til glukosesirup.",
+    "Bicarbonate of soda er skiftet til natron."
+  ]
+}

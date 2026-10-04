@@ -1,0 +1,195 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-lemon-skewers",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:53:42.361Z",
+  "total_minutes": 45,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Kyllingespyd med citron og mynte",
+  "intro": "Mør kylling marineret i yoghurt, citron, mynte og krydderier, der grilles på spyd og serveres i brød med salat og rødløg. Dejligt friskt og nemt at lave.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "2 cm stykke, revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "hvert skåret i 6 stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "brød",
+      "note": "fuldkornsflatbread eller pitabrød",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "salat",
+      "note": "Little Gem, skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille rødløg i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "ekstra",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "kål",
+      "note": "syltet rødkål",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sauce",
+      "note": "chilisauce",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "hummus",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "grillspyd",
+      "note": "metal eller træ",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Hak halvdelen af myntebladene, og rør dem sammen med yoghurt, halvdelen af citronsaften, al citronskallen, krydderierne og ingefæren."
+    },
+    {
+      "section": "Marinade",
+      "text": "Smag til med rigeligt peber og en knivspids salt."
+    },
+    {
+      "section": "Marinade",
+      "text": "Vend kyllingestykkerne i marinaden, og lad dem trække i køleskabet i 20-30 minutter."
+    },
+    {
+      "section": "Marinade",
+      "text": "Hvis du bruger trææspyd, så læg dem i blød i vand i mindst 20 minutter."
+    },
+    {
+      "section": "Grill",
+      "text": "Sæt grillen på middelvarme, og beklæd bakken med alufolie."
+    },
+    {
+      "section": "Grill",
+      "text": "Træk kyllingen på spyddene, og grill dem i 15-20 minutter. Vend dem undervejs, til kødet er gyldent og gennemstegt."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm brødene få sekunder under grillen."
+    },
+    {
+      "section": "Servering",
+      "text": "Fyld dem med salat, kylling og rødløg, og dryp med resten af citronsaften. Drys med resten af mynten."
+    },
+    {
+      "section": "Servering",
+      "text": "Server eventuelt med ekstra yoghurt, syltet rødkål, chilisauce og hummus."
+    }
+  ],
+  "changes": [
+    "Little Gem-salat er erstattet af almindelig salat.",
+    "Fuldkornsflatbread eller pita er erstattet af brød."
+  ]
+}

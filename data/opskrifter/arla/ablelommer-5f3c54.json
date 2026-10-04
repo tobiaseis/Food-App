@@ -1,0 +1,164 @@
+{
+  "url": "https://www.arla.dk/opskrifter/ablelommer/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:03:57.486Z",
+  "total_minutes": 75,
+  "active_minutes": 45,
+  "yield_count": 1,
+  "source_lines": 12,
+  "title": "Æblelommer",
+  "intro": "Mørke lommer af fedtet dej med æblemos indeni, drysset med perlesukker. De er bedst friskbagte og serveres med flødeskum.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Æblemos",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "fx coxorange",
+      "optional": false
+    },
+    {
+      "section": "Æblemos",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æblemos",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 350,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "ca. 6 dl",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljesukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Til pensling og pynt",
+      "amount": null,
+      "unit": null,
+      "name": "æg",
+      "note": "sammenpisket",
+      "optional": false
+    },
+    {
+      "section": "Til pensling og pynt",
+      "amount": null,
+      "unit": null,
+      "name": "perlesukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "pisket til flødeskum",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Æblemos",
+      "text": "Skræl æblerne, skær dem i fire tykke både, og skær kernehusene væk. Hak bådene i små stykker."
+    },
+    {
+      "section": "Æblemos",
+      "text": "Læg æblestykkerne i en lille gryde med vandet. Læg låg på, og lad dem simre ved middel varme i ca. 5 minutter, til de er bløde."
+    },
+    {
+      "section": "Æblemos",
+      "text": "Tag låget af, og pisk æblerne til en jævn mos. Lad den koge i ca. 5 minutter mere, mens du rører af og til, til den er tør. Rør sukkeret i, og smag til."
+    },
+    {
+      "section": "Dej",
+      "text": "Opløs gæren i mælken. Bland hvedemel, sukker og vaniljesukker i en skål."
+    },
+    {
+      "section": "Dej",
+      "text": "Skær det kolde smør i små tern, og smuldr det ned i melet med fingrene."
+    },
+    {
+      "section": "Dej",
+      "text": "Hæld gærmælken ned i skålen, og rør det hele sammen med en grydeske."
+    },
+    {
+      "section": "Dej",
+      "text": "Vend dejen ud på en meldrysset bordplade, og ælt den forsigtigt sammen."
+    },
+    {
+      "section": "Dej",
+      "text": "Del dejen i to. Rul hver halvdel til en firkant på ca. 20 x 30 cm, og skær hver plade i 6 firkanter, så du får 12 i alt."
+    },
+    {
+      "section": "Dej",
+      "text": "Kom æblemos på midten af firkanterne. Pensl kanterne med sammenpisket æg."
+    },
+    {
+      "section": "Dej",
+      "text": "Fold firkanterne over mosen til trekanter, og luk kanterne med en gaffel. Pensl lommerne med æg, og drys dem med perlesukker."
+    },
+    {
+      "section": "Dej",
+      "text": "Sæt lommerne midt i ovnen, og bag dem ved 200 °C i ca. 15 minutter. Lad dem køle af på en bagerist."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server æblelommerne med flødeskum."
+    }
+  ],
+  "changes": []
+}

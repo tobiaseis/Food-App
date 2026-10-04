@@ -1,0 +1,176 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/slow-cooker-chicken-casserole",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:06:31.832Z",
+  "total_minutes": 445,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 14,
+  "title": "Gryderet med kylling i slowcooker",
+  "intro": "Mørk, saftig kyllingegryde med kartofler, rodfrugter og svampe, som langsomt trækker i slowcookeren. Dijonsennep på siden giver en frisk skarphed til.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 650,
+      "unit": "g",
+      "name": "kyllingelår",
+      "note": "udbenede, uden skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knuste",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "nye kartofler",
+      "note": "små, halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "tørrede svampe",
+      "note": "porcini, udblødt i 50 ml kogende vand",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "dl",
+      "name": "hønsebouillon",
+      "note": "lavet på 2 bouillonterninger med lavt saltindhold",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon, plus ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm smør og olie op på en stor pande. Svits løget i 8-10 minutter, til det er blødt og begynder at tage farve."
+    },
+    {
+      "section": null,
+      "text": "Bland mel, salt og peber i en skål, og vend kyllingen i blandingen, mens løget steger."
+    },
+    {
+      "section": null,
+      "text": "Kom hvidløg og den meljævnede kylling på panden. Steg i 4-5 minutter, til kødet begynder at brune."
+    },
+    {
+      "section": null,
+      "text": "Hæld indholdet over i slowcookeren. Tilsæt kartofler, selleri, gulerødder, champignon, de udblødte svampe med deres iblødsætningsvand, bouillon, sennep og laurbærblade."
+    },
+    {
+      "section": null,
+      "text": "Rør godt rundt. Lad retten simre på lav varme i 7 timer eller på høj varme i 4 timer."
+    },
+    {
+      "section": null,
+      "text": "Fjern laurbærbladene, og server gryderetten med lidt ekstra sennep ved siden af."
+    }
+  ],
+  "changes": [
+    "Rapsolie i stedet for 'rapeseed or olive oil' (kilden tillader begge).",
+    "Kyllingelår i stedet for 'boneless, skinless chicken thigh fillets'.",
+    "Hønsebouillon i stedet for fond lavet på kyllingebouillonterninger med meget lavt saltindhold."
+  ]
+}

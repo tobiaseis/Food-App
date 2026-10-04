@@ -1,0 +1,184 @@
+{
+  "url": "https://www.valdemarsro.dk/kartoffelblinis/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:44:55.799Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Kartoffelblinis med røget laksemousse",
+  "intro": "Små, luftige blinis af kolde kogte kartofler, serveret med en cremet mousse af varmrøget laks, purløg og citron. Pyntet med dild og rogn.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartoffelblinis",
+      "amount": 350,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "kogt møre og afkølet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelblinis",
+      "amount": 150,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": "38 %",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelblinis",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "adskilt i hvider og blommer",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelblinis",
+      "amount": 40,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelblinis",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelblinis",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelblinis",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelblinis",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Røget laksemousse",
+      "amount": 125,
+      "unit": "g",
+      "name": "varmrøget laks",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget laksemousse",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget laksemousse",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "38 %",
+      "optional": false
+    },
+    {
+      "section": "Røget laksemousse",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "purløg",
+      "note": "fintklippet",
+      "optional": false
+    },
+    {
+      "section": "Røget laksemousse",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, saft og lidt revet skal",
+      "optional": false
+    },
+    {
+      "section": "Røget laksemousse",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget laksemousse",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "stenbiderrogn",
+      "note": "eller ørredrogn",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelblinis",
+      "text": "Mos de kolde kartofler, og bland dem med creme fraiche og æggeblommer."
+    },
+    {
+      "section": "Kartoffelblinis",
+      "text": "Bland hvedemel og bagepulver med salt og peber, og rør det ned i kartoffelmassen."
+    },
+    {
+      "section": "Kartoffelblinis",
+      "text": "Pisk æggehviderne til stive toppe, og vend dem forsigtigt ind i dejen."
+    },
+    {
+      "section": "Kartoffelblinis",
+      "text": "Varm smørret op på en stor pande eller blinispande ved middelvarme. Sæt 12 små klatter dej på panden, og steg dem gyldne på begge sider."
+    },
+    {
+      "section": "Røget laksemousse",
+      "text": "Mos laksen med mayonnaise og creme fraiche med en gaffel, til det er en cremet mousse."
+    },
+    {
+      "section": "Røget laksemousse",
+      "text": "Rør purløg i moussen, og smag den til med citronsaft, citronskal, salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg moussen på blinisene, og pynt med dild og eventuelt stenbiderrogn."
+    }
+  ],
+  "changes": []
+}

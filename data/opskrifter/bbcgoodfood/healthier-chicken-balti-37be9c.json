@@ -1,0 +1,259 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthier-chicken-balti",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:24:24.334Z",
+  "total_minutes": 55,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Kylling balti",
+  "intro": "Mør kylling i en aromatisk tomatsauce med krydderier, peberfrugt og spinat. Server den med ris eller brød til at tage saucen med.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i mundrette stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "saft af lime",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "stærk, stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "solsikkeolie eller rapsolie",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "hele kapsler, flækket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "lille til mellemstor, grøn, hel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "mellemstort, groft revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "revet, ca. 2,5 cm stykke",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, uden kerner, i små stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "mellemstor, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "basmatiris",
+      "note": "eller chapatis, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Vend kyllingen i en skål med limesaft, paprika, chili og peber. Lad den marinere i mindst 15 minutter – gerne lidt længere."
+    },
+    {
+      "section": null,
+      "text": "Varm halvdelen af olien op i en stor wok eller en bred pande med slip-let-belægning. Rør kanelstang, kardemomme, hel chili og spidskommenfrø rundt et øjeblik, til de får farve og dufter."
+    },
+    {
+      "section": null,
+      "text": "Kom løg, hvidløg og ingefær på panden. Steg ved middelhøj varme i 3-4 minutter, til løgene begynder at blive brune."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt resten af olien og kyllingen. Rør rundt i 2-3 minutter, til kødet ikke længere er råt."
+    },
+    {
+      "section": null,
+      "text": "Bland gurkemeje, stødt spidskommen, koriander og garam masala, og drys det over kyllingen. Sænk til middelvarme og steg i 2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld passata og vand på panden, og kom peberfrugt i. Lad det komme i kog, skru ned og lad det simre i 15-20 minutter, til kyllingen er mør."
+    },
+    {
+      "section": null,
+      "text": "Rør tomat i og lad det simre 2-3 minutter. Vend spinaten i, til den lige er faldet sammen."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt. Er saucen for tyk, så tilsæt lidt mere vand. Fisk om ønsket kanelstang, chili og kardemomme op inden servering."
+    },
+    {
+      "section": null,
+      "text": "Drys med frisk koriander og server med varme chapatis eller basmatiris."
+    }
+  ],
+  "changes": [
+    "Sunflower eller groundnut oil er skiftet til olie (solsikke- eller rapsolie).",
+    "Chapatis er sat sammen med basmatiris som valgfrit tilbehør."
+  ]
+}

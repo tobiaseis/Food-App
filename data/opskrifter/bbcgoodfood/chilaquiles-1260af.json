@@ -1,0 +1,215 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chilaquiles",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:34:38.866Z",
+  "total_minutes": 25,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Chilaquiles",
+  "intro": "Sprøde tortillachips i varm, røget tomatsalsa med spejlæg, feta, avocado og rødløg. En mexicansk morgenmadsklassiker, der også fungerer som hurtig aftensmad.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salsa og chips",
+      "amount": 225,
+      "unit": "g",
+      "name": "chips",
+      "note": "naturel tortillachips uden smag",
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": 450,
+      "unit": "g",
+      "name": "tomater",
+      "note": "modne, halveret",
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, skåret i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": 2,
+      "unit": "stk",
+      "name": "jalapeños",
+      "note": "friske, skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chipotle",
+      "note": "i adobosauce",
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften af 1 lime",
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa og chips",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til drysning over grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Æg og pynt",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral",
+      "optional": false
+    },
+    {
+      "section": "Æg og pynt",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æg og pynt",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æg og pynt",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æg og pynt",
+      "amount": 60,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Æg og pynt",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "lille, hakket",
+      "optional": false
+    },
+    {
+      "section": "Æg og pynt",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skrællet, uden sten, i tern",
+      "optional": false
+    },
+    {
+      "section": "Æg og pynt",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Salsa",
+      "text": "Tænd ovnens grill. Beklæd en bageplade med alufolie."
+    },
+    {
+      "section": "Salsa",
+      "text": "Læg tomaterne med snitfladen opad på pladen sammen med løgskiverne, jalapeños og de uskrællede fed hvidløg. Drys med salt."
+    },
+    {
+      "section": "Salsa",
+      "text": "Grill i 8 minutter, til det hele er sort i kanterne."
+    },
+    {
+      "section": "Salsa",
+      "text": "Kom grøntsagerne i en blender – dog ikke hvidløget. Tilsæt chipotle, vand, salt, limesaft og koriander."
+    },
+    {
+      "section": "Salsa",
+      "text": "Pil hvidløget, og kom det i blenderen. Blend til en jævn salsa, og hæld den i en stegepande."
+    },
+    {
+      "section": "Chips og æg",
+      "text": "Skru ovnen til 200 °C. Fordel tortillachipsene på en bageplade, og varm dem i 5 minutter."
+    },
+    {
+      "section": "Chips og æg",
+      "text": "Imens: Varm olien i en anden stegepande over høj varme, til den er meget varm."
+    },
+    {
+      "section": "Chips og æg",
+      "text": "Slå æggene ud i panden, og steg dem som spejlæg, til hviden er stivnet. Smag til med salt og peber, og tag panden af varmen."
+    },
+    {
+      "section": "Chips og æg",
+      "text": "Varm salsaen op ved lav varme. Vend de varme chips i, til de er dækket af salsa, og hold dem varme ved lav varme."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel chilaquilesene på fire tallerkener. Læg et spejlæg på hver, og top med feta, koriander, avocado og rødløg."
+    }
+  ],
+  "changes": [
+    "Queso fresco er udeladt til fordel for feta, som kilden også nævner.",
+    "Lime er skrevet som citron efter varekataloget."
+  ]
+}

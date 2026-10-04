@@ -1,0 +1,351 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/romanian-mici-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:55:21.497Z",
+  "total_minutes": 90,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 31,
+  "title": "Rumænske mici med fladbrød og dild-agurkesalat",
+  "intro": "Saftige grillede kødpølser af okse og lam, serveret med hjemmebagt fladbrød, en knasende kålsalat med syltede agurker og en varm sennepssauce. Kødblandingen skal hvile, så start gerne dagen før.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til mici",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mici",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mici",
+      "amount": 6,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til mici",
+      "amount": 4,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kviste",
+      "optional": false
+    },
+    {
+      "section": "Til mici",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mici",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til mici",
+      "amount": 2,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mici",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mici",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødene",
+      "amount": 450,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus ekstra til beskæring",
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødene",
+      "amount": 7,
+      "unit": "g",
+      "name": "tørgær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødene",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødene",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødene",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødene",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til fladbrødene",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 50,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 100,
+      "unit": "g",
+      "name": "syltede agurker",
+      "note": "i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lage fra syltede agurker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 500,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "i tynde skiver, ca. en halv",
+      "optional": false
+    },
+    {
+      "section": "Til dild-agurkesalaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "store, i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til sennepssaucen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "grov sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sennepssaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Til sennepssaucen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til sennepssaucen",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe med",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mici",
+      "text": "Kom kød, hvidløg, timian, koriander og spidskommen i en stor skål. Ælt det grundigt med hænderne, til det begynder at ligne en pasta."
+    },
+    {
+      "section": "Mici",
+      "text": "Tilsæt ca. en femtedel af fonden, og ælt til en pasta. Ælt så natron i."
+    },
+    {
+      "section": "Mici",
+      "text": "Ælt resten af fonden i lidt ad gangen, til alt er optaget. Stil blandingen i køleskabet i mindst 1 time, gerne natten over."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Bland mel, gær, sukker og salt i en skål. Tilsæt vand, yoghurt og olie, og rør til en blød dej."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Ælt dejen på en ren bordplade i 8-10 minutter, til den er glat og elastisk. Du kan også bruge røremaskine med dejkrog. Den skal være blød, men ikke klistret, så drys med lidt mel efter behov."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Dæk dejen til, og lad den hæve et lunt sted i 45 minutter, til den er lettere luftig."
+    },
+    {
+      "section": "Mici",
+      "text": "Skyl hænderne i koldt vand, og form blandingen forsigtigt til 12 små pølser på 2-3 cm i tykkelse. Stil dem koldt, til de skal bruges."
+    },
+    {
+      "section": "Fladbrød",
+      "text": "Del den hævede dej i 6 lige store stykker, og rul hvert stykke til en kugle. Rul dem ud på et let meldrysset bord til runde brød på ca. 0,5 cm. Læg dem klar til grillen."
+    },
+    {
+      "section": "Dild-agurkesalat",
+      "text": "Rør alle ingredienserne sammen undtagen rødkål og gulerødder."
+    },
+    {
+      "section": "Dild-agurkesalat",
+      "text": "Vend kål og gulerødder i dressingen, til alt er dækket. Stil salaten køligt. Der bliver mere, end du skal bruge."
+    },
+    {
+      "section": "Sennepssauce",
+      "text": "Kom alle ingredienserne i en lille gryde ved svag varme. Rør, mens saucen varmer, og tilsæt små stænk vand, til den får en løs pestoagtig konsistens. Varm den op igen lige før servering. Du kan også lave den til sidst i en ovnfast gryde på grillen."
+    },
+    {
+      "section": null,
+      "text": "Gør en grill klar til direkte varme. Tag micierne ud af køleskabet 20 minutter, før de skal på grillen."
+    },
+    {
+      "section": null,
+      "text": "Grill fladbrødene 2-3 minutter på hver side, til de får sorte mærker. Flyt dem til et køligere sted på grillen, hvis de brunes for hurtigt. Grill dem evt. i omgange, og hold dem varme i et rent viskestykke."
+    },
+    {
+      "section": null,
+      "text": "Pensl micierne med lidt olivenolie, og grill dem med låg på og ventilerne åbne i 10 minutter, til de er gennemstegte. Vend dem undervejs, og flyt dem til et køligere sted, hvis de brunes for hurtigt."
+    },
+    {
+      "section": null,
+      "text": "Server micierne med fladbrød, dild-agurkesalat og varm sennepssauce. Dryp med olivenolie, og drys med hakket koriander."
+    }
+  ],
+  "changes": [
+    "Bicarbonate of soda er erstattet med natron.",
+    "Dill pickles er erstattet med syltede agurker.",
+    "Wholegrain mustard er erstattet med grov sennep.",
+    "Fast-action dried yeast er erstattet med tørgær.",
+    "Caster sugar er erstattet med sukker.",
+    "Fine sea salt er erstattet med salt."
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "url": "https://www.valdemarsro.dk/fiskesuppe/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:48:21.255Z",
+  "total_minutes": 50,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Fiskesuppe med hjemmelavet fiskefond",
+  "intro": "Cremet fiskesuppe med torsk, laks og tynde strimler af grøntsager, smagt til med citron og dild. Fonden koges først på fiskeben og kan laves i forvejen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til fiskefonden",
+      "amount": 1,
+      "unit": "kg",
+      "name": "fiskeben",
+      "note": "eller torskehoveder",
+      "optional": false
+    },
+    {
+      "section": "Til fiskefonden",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fiskefonden",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til fiskefonden",
+      "amount": 3,
+      "unit": "stk",
+      "name": "porre",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fiskefonden",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fiskefonden",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fiskefonden",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fiskefonden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fiskefonden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 8,
+      "unit": "dl",
+      "name": "fiskefond",
+      "note": "gerne hjemmelavet, se ovenfor",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "squash",
+      "note": "skåret i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "skåret i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød peberfrugt",
+      "note": "skåret i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 300,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "fx sej eller kulmule, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 150,
+      "unit": "g",
+      "name": "laks",
+      "note": "filet, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk, grofthakket, gem lidt til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "lidt til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til fiskefonden",
+      "text": "Læg alle fondens ingredienser i en stor gryde, og bring det i kog."
+    },
+    {
+      "section": "Til fiskefonden",
+      "text": "Fjern skummet med en ske, så snart det samler sig på overfladen. Ellers bliver fonden uklar."
+    },
+    {
+      "section": "Til fiskefonden",
+      "text": "Lad fonden simre i 20 minutter, og skum løbende af. Si den derefter gennem en finmasket si, og kassér fisk og grøntsager."
+    },
+    {
+      "section": "Til fiskefonden",
+      "text": "Fonden kan laves på forhånd. Den holder sig 2 dage i køleskabet eller 2 måneder i fryseren."
+    },
+    {
+      "section": "Til suppen",
+      "text": "Svits løg og hvidløg i lidt olie i en gryde ved middelvarme, til de er bløde."
+    },
+    {
+      "section": "Til suppen",
+      "text": "Hæld fiskefond og hvidvin i gryden, og varm det op, til det småkoger."
+    },
+    {
+      "section": "Til suppen",
+      "text": "Rør fløde, gulerod, squash, porre og peberfrugt i. Kom fisketerningerne i, og lad suppen simre i 2 minutter."
+    },
+    {
+      "section": "Til suppen",
+      "text": "Rør smørret i. Smag suppen til med citronsaft, citronskal, salt, peber og dild, og tilsæt evt. lidt mere fløde. Pynt med resten af dilden."
+    }
+  ],
+  "changes": []
+}

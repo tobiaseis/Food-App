@@ -1,0 +1,247 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/summery-beans-herby-green-aioli",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:03:46.219Z",
+  "total_minutes": 170,
+  "active_minutes": 25,
+  "yield_count": 3,
+  "source_lines": 19,
+  "title": "Sommerbønner med grøn aïoli",
+  "intro": "Møre hvide bønner, langsomt kogt med urter, hvidløg og citron, og vendt med sprødt stegt squash, tomater og basilikum. Serveres med en cremet aïoli fyldt med friske krydderurter.",
+  "servings": 3,
+  "ingredients": [
+    {
+      "section": "Bønner",
+      "amount": 1,
+      "unit": "kg",
+      "name": "bønner",
+      "note": "tørrede cannellini-, butter- eller pintobønner",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 1,
+      "unit": "stk",
+      "name": "parmesan",
+      "note": "krydderi: parmesanskorpe",
+      "optional": true
+    },
+    {
+      "section": "Bønner",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "lille bundt",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "oregano",
+      "note": "lille bundt",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 1,
+      "unit": "stk",
+      "name": "hvidløg",
+      "note": "hel hvidløgsknold, fedene knust og pillet",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 75,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint havsalt, til iblødsætning og kogning",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til smag",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 700,
+      "unit": "g",
+      "name": "squash",
+      "note": "halveret og skåret i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 500,
+      "unit": "g",
+      "name": "tomater",
+      "note": "små halveres, store skæres i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Grøn aïoli",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn aïoli",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Grøn aïoli",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijonsennep",
+      "optional": false
+    },
+    {
+      "section": "Grøn aïoli",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Grøn aïoli",
+      "amount": 4,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": "eller solsikkeolie",
+      "optional": false
+    },
+    {
+      "section": "Grøn aïoli",
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "persille & krydderurter",
+      "note": "bløde urter som basilikum, purløg og persille, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bønner",
+      "text": "Kom bønnerne i en stor gryde, og dæk dem med flere centimeter koldt vand. Lad dem trække i mindst 8 og op til 14 timer."
+    },
+    {
+      "section": "Bønner",
+      "text": "Rør 2 tsk salt i gryden. Bring bønnerne i kog ved middelhøj varme, og skru derefter ned, så de netop småkoger. De må ikke koge hårdt, for så revner de. Fjern skum, der samler sig på overfladen."
+    },
+    {
+      "section": "Bønner",
+      "text": "Læg parmesanskorpen i, hvis du bruger den, sammen med urterne, hvidløget, løget, citronen og den ekstra jomfruolivenolie. Krydr med endnu en stor knivspids salt og peber."
+    },
+    {
+      "section": "Bønner",
+      "text": "Lad det simre i 1-2 timer, og rør af og til, til bønnerne er møre. Tjek vandstanden undervejs: der skal stå cirka 2-3 cm vand over bønnerne."
+    },
+    {
+      "section": "Bønner",
+      "text": "Fisk citron, løg, urtekviste og parmesanskorpe op med en hulske, og smid dem ud. Lad bønnerne køle af."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Varm olien i en pande ved middel varme. Svits rødløget med en knivspids salt i 5-7 minutter, til det begynder at blive blødt."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Tilsæt squashen, og steg den i 10-15 minutter, til den er mør, men stadig har bid, og er let brunet. Lad den køle af."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Vend squash, tomater og basilikum i bønnerne, og smag til med salt og peber. Bønnerne kan opbevares afkølet i op til fem dage."
+    },
+    {
+      "section": "Grøn aïoli",
+      "text": "Kom æggeblommer, hvidløg, sennep, 2 tsk af citronsaften og 1 spsk koldt vand i en foodprocessor. Kør det sammen."
+    },
+    {
+      "section": "Grøn aïoli",
+      "text": "Lad olien løbe ned i en meget tynd, jævn stråle, mens maskinen kører, til alt er blevet til en cremet emulsion."
+    },
+    {
+      "section": "Grøn aïoli",
+      "text": "Tilsæt urterne, og blend, til de er helt fine. Hæld evt. lidt mere olie i for en tyndere konsistens."
+    },
+    {
+      "section": "Grøn aïoli",
+      "text": "Smag til med resten af citronsaften, salt og peber. Aïolien kan opbevares afkølet i op til fire dage."
+    }
+  ],
+  "changes": [
+    "Parmesanskorpen er skrevet som parmesan, da skorper sjældent sælges alene.",
+    "Cannellini-, butter- eller pintobønner er skrevet som tørrede bønner."
+  ]
+}

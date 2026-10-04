@@ -1,0 +1,237 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/spiced-broccoli-paneer-peas-garam-masala-cashews",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:47:46.235Z",
+  "total_minutes": 45,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Krydret broccoli med paneer, ærter og garam masala-cashewnødder",
+  "intro": "Broccoli, rosenkål og marineret paneer bliver gyldne under grillen og toppes med ristede cashewnødder og en grøn koriander-yoghurtsauce. Server med mango chutney og lunt naanbrød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marinade og paneer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "fx rapsolie",
+      "optional": false
+    },
+    {
+      "section": "Marinade og paneer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "stykke på ca. 4 cm, revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade og paneer",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Marinade og paneer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Marinade og paneer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og paneer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og paneer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og paneer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og paneer",
+      "amount": 225,
+      "unit": "g",
+      "name": "paneer",
+      "note": "skåret i tern på 2 cm",
+      "optional": false
+    },
+    {
+      "section": "Koriandersauce",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "lille bundt, hakket",
+      "optional": false
+    },
+    {
+      "section": "Koriandersauce",
+      "amount": 100,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel, fedtfri",
+      "optional": false
+    },
+    {
+      "section": "Koriandersauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cashewnødder",
+      "amount": 50,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cashewnødder",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cashewnødder",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "havsalt",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "broccoli",
+      "note": "stort hoved, skåret i buketter, stokken i tern på 2 cm",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 400,
+      "unit": "g",
+      "name": "rosenkål",
+      "note": "halveret eller kvartet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 250,
+      "unit": "g",
+      "name": "ærter",
+      "note": "optøede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften, plus både til servering",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mango chutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "naanbrød",
+      "note": "varmt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade og paneer",
+      "text": "Rør halvdelen af olien sammen med ingefær, hvidløg, spidskommen, gurkemeje, 1 spsk garam masala, salt og peber i en skål."
+    },
+    {
+      "section": "Marinade og paneer",
+      "text": "Vend paneren i marinaden, så alle tern er dækket. Sæt skålen i køleskabet i mindst 2 timer eller natten over."
+    },
+    {
+      "section": "Koriandersauce",
+      "text": "Blend koriander, yoghurt og salt med en stavblender eller i en lille food processor, til saucen er helt grøn. Stil den på køl, til den skal bruges."
+    },
+    {
+      "section": "Cashewnødder",
+      "text": "Sæt grillen på medium. Vend cashewnødderne med garam masala og havsalt i et fladt ovnfast fad."
+    },
+    {
+      "section": "Cashewnødder",
+      "text": "Grill dem i 2 minutter, til de er gyldne, og vend dem undervejs. Kom dem over i en skål og stil dem til side."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Vend broccoli og rosenkål med resten af olien, og krydr med salt og peber. Fordel dem i det samme fad, som cashewnødderne lå i."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Grill i 10 minutter, til grøntsagerne lige begynder at blive møre, og vend dem en enkelt gang undervejs."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Bland paneren med al marinaden ned til grøntsagerne, og grill igen i 10 minutter, til det er gyldent og let svedet."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Strø ærterne ud over og vend det hele godt. Varm igennem under grillen i 1-2 minutter – ikke længere, ellers skrumper ærterne."
+    },
+    {
+      "section": "Til servering",
+      "text": "Drys med de krydrede cashewnødder og pres limesaften ud over."
+    },
+    {
+      "section": "Til servering",
+      "text": "Dryp med koriandersaucen. Server med mango chutney, varmt naanbrød og limebåde."
+    }
+  ],
+  "changes": [
+    "Groundnut oil er skiftet til olie (fx rapsolie).",
+    "Brussels sprouts er skiftet til rosenkål.",
+    "Rotis er udeladt; der serveres kun naanbrød.",
+    "Paneer beholdes som paneer, da der ikke er en tilsvarende dansk vare."
+  ]
+}

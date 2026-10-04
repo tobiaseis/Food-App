@@ -1,0 +1,183 @@
+{
+  "url": "https://www.valdemarsro.dk/frikadellesandwich/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:09:16.256Z",
+  "total_minutes": 45,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Frikadellesandwich",
+  "intro": "Saftige frikadeller med timian i en blød bolle med rødkål, cornichoner og en cremet sennepsdressing. En lidt anderledes sandwich, der er nem at lave.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Frikadeller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sandwichen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "burgerboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sandwichen",
+      "amount": 50,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "fintstrimlet",
+      "optional": false
+    },
+    {
+      "section": "Til sandwichen",
+      "amount": 0.5,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til sandwichen",
+      "amount": 50,
+      "unit": "g",
+      "name": "salat",
+      "note": "feldsalat",
+      "optional": false
+    },
+    {
+      "section": "Til sandwichen",
+      "amount": 50,
+      "unit": "g",
+      "name": "cornichoner",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Frikadeller",
+      "text": "Pisk alle ingredienser til frikadellerne sammen med en håndmixer i 2-3 minutter. Lad farsen hvile i køleskabet i mindst en halv time, hvis du har tid."
+    },
+    {
+      "section": "Frikadeller",
+      "text": "Form farsen til frikadeller. Brun smør og olie på en pande ved middelvarme, og steg frikadellerne, til de er helt gennemstegte."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør mayonnaise, sennep og honning sammen, og smag dressingen til med salt og peber."
+    },
+    {
+      "section": "Til sandwichen",
+      "text": "Varm burgerbollerne. Smør dem med dressing, og læg frikadeller, frisk timian, rødkål, feldsalat og cornichoner imellem."
+    }
+  ],
+  "changes": [
+    "Akaciehonning er skiftet til almindelig honning.",
+    "Feldsalat er skiftet til salatblanding."
+  ]
+}

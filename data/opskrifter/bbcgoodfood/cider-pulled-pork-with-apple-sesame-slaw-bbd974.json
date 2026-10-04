@@ -1,0 +1,195 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cider-pulled-pork-with-apple-sesame-slaw",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:04:31.881Z",
+  "total_minutes": 285,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Pulled pork med cider og æble-dild-coleslaw",
+  "intro": "Mør svineskulder, langtidsstegt med cider og krydderier og serveret i ristede ciabattaboller. Den friske slaw af æble, dild og creme fraiche klarer det fede kød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "svineskulder",
+      "note": "med ben",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i grove skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": "toppet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "tsk",
+      "name": "kommenfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "tør cider",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "ciabattaboller",
+      "note": "ristede, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til slawen",
+      "amount": 80,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til slawen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Dijonsennep",
+      "note": "toppet",
+      "optional": false
+    },
+    {
+      "section": "Til slawen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til slawen",
+      "amount": 10,
+      "unit": "g",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til slawen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "Granny Smith-æbler",
+      "note": "uden kernehus, skåret i tændstikker",
+      "optional": false
+    },
+    {
+      "section": "Til slawen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til slawen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Tør svineskulderen godt af med køkkenrulle. Skær små snit i kødet, så krydderierne kan trænge ind – og i svorden, hvis den ikke allerede er snittet."
+    },
+    {
+      "section": null,
+      "text": "Læg løgene i bunden af en bradepande, der lige akkurat har plads til svineskulderen."
+    },
+    {
+      "section": null,
+      "text": "Bland paprika, peber, kommenfrø, hvidløgspulver, farin og salt i en lille skål. Drys en lille del over løgene, og vend dem rundt, til de er dækket."
+    },
+    {
+      "section": null,
+      "text": "Gnid resten af krydderiblandingen ind over hele skulderen og ned i snittene. Læg kødet oven på løgene, og steg det i 20 minutter, til svorden er boblet op."
+    },
+    {
+      "section": null,
+      "text": "Hæld cideren i bradepanden rundt om kødet, og skrab de karamelliserede rester fri fra bunden. Dæk panden helt tæt med folie."
+    },
+    {
+      "section": null,
+      "text": "Sænk ovnen til 160 °C (140 °C varmluft), og steg kødet i 4 til 4½ time, til det falder fra hinanden."
+    },
+    {
+      "section": null,
+      "text": "Tag folien af, og træk kødet i strimler med to gafler. Skru op til 220 °C (200 °C varmluft), og sæt panden tilbage i ovnen i 5 minutter, så saucen koger lidt ind."
+    },
+    {
+      "section": "Til slawen",
+      "text": "Rør creme fraiche, sennep, citronsaft og dild sammen, mens kødet steger. Smag til med salt og peber, og vend æblerne i."
+    },
+    {
+      "section": null,
+      "text": "Fyld de ristede ciabattaboller med pulled pork og æbleslaw, og server straks."
+    }
+  ],
+  "changes": [
+    "Hvidløgsgranulat er erstattet af hvidløgspulver.",
+    "Soured cream er erstattet af creme fraiche."
+  ]
+}

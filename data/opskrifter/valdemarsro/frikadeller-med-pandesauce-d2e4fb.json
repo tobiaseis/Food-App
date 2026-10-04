@@ -1,0 +1,243 @@
+{
+  "url": "https://www.valdemarsro.dk/frikadeller-med-pandesauce/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:10:22.410Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Frikadeller med pandesauce, agurkesalat og kartofler",
+  "intro": "Klassiske svinefrikadeller med sauce lavet på stegeskindet, kogte kartofler, hurtigt syltet agurk og mør spidskål. Det er hverdagsmad med alle de kendte tilbehør.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Frikadeller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 25,
+      "unit": "g",
+      "name": "havregryn",
+      "note": "finvalsede",
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 20,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Frikadeller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandesauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandesauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kartoffelvand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandesauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandesauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pandesauce",
+      "amount": 2,
+      "unit": null,
+      "name": "dråber kulør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 2,
+      "unit": "dl",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 75,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spidskål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "fintstrimlet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltet agurk",
+      "text": "Rør sukker og en smule salt ud i det kogende vand, til sukkeret er opløst. Lad lagen køle lidt af, og rør så eddike og dild i."
+    },
+    {
+      "section": "Syltet agurk",
+      "text": "Skær agurken i helt tynde skiver og læg dem i et rent, skoldet glas. Hæld lagen over, og lad det stå og trække i mindst 20 minutter – gerne længere."
+    },
+    {
+      "section": "Frikadeller og kartofler",
+      "text": "Pisk alle ingredienserne til frikadellerne sammen med en håndmixer i 2-3 minutter. Stil farsen i køleskabet i mindst en halv time."
+    },
+    {
+      "section": "Frikadeller og kartofler",
+      "text": "Kog kartoflerne i letsaltet vand i cirka 16-20 minutter, afhængigt af størrelsen. Stik en kødnål i en kartoffel for at tjekke, at den er mør. Gem 2 dl af kogevandet til saucen, hæld resten fra, og lad kartoflerne stå varme med låg på."
+    },
+    {
+      "section": "Frikadeller og kartofler",
+      "text": "Form farsen til frikadeller. Brun smør og olie på en pande ved middelvarme, og steg frikadellerne i cirka 5 minutter på hver side, til de er gennemstegte. Tag dem af panden."
+    },
+    {
+      "section": "Pandesauce",
+      "text": "Lad fedtet og smuldret blive på panden. Hæld fond og kartoffelvand på, og skrab bunden ren med en træspatel, så alt det brune opløses i væsken."
+    },
+    {
+      "section": "Pandesauce",
+      "text": "Rør majsstivelsen ud i fløden, og hæld blandingen i panden under omrøring. Lad saucen koge i et par minutter. Smag til med salt og peber, og giv den farve med kulør."
+    },
+    {
+      "section": "Spidskål",
+      "text": "Vend spidskålen med 1-2 spsk af lagen fra agurkerne, og ælt den med hænderne i cirka et minut, til den er faldet sammen og mør. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Server frikadellerne med de varme kartofler, sauce, syltet agurk og spidskål."
+    }
+  ],
+  "changes": [
+    "Grøntsagsbouillon er skrevet som grøntsagsfond.",
+    "Kogende vand er skrevet som vand, som skal koges først."
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/green-chilli-chicken-nachos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:06:22.735Z",
+  "total_minutes": 32,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Nachos med kylling og grøn chili",
+  "intro": "Ovnbagte nachos med lag af krydret kylling, ost og sorte bønner. Server dem varme med guacamole, salsa og creme fraiche til at dyppe i.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kylling",
+      "note": "kogt og revet i strimler, f.eks. rester af stegt kylling eller grillkylling",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "store, finthakkede, kernerne fjernes for mindre styrke; nogle skiver gemmes til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": "toppede, eller græsk yoghurt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "nachochips",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "revet ost",
+      "note": "cheddar og mozzarella blandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "afdryppede og skyllede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "guacamole",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salsa",
+      "note": "eller pico de gallo",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": "ekstra",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kyllingeblanding",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Kyllingeblanding",
+      "text": "Rør kylling, hakket chili, creme fraiche, spidskommen, hvidløgspulver og limesaft sammen i en skål. Smag til med salt og peber."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Fordel halvdelen af nachochipsene i et stort ovnfast fad eller på en bageplade."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Kom halvdelen af kyllingeblandingen og osten udover, og drys med lidt sorte bønner og rødløg."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Læg endnu et lag på med resten af chipsene, kyllingeblandingen, osten og toppingen."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Bag i 20 minutter, til osten er smeltet og bobler."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Strø koriander og de reserverede chiliskiver over. Server med guacamole, salsa og ekstra creme fraiche ved siden af til dypning."
+    }
+  ],
+  "changes": [
+    "Soured cream er erstattet med creme fraiche.",
+    "Tortilla chips er erstattet med nachochips.",
+    "Garlic granules er erstattet med hvidløgspulver.",
+    "Cheddar- og mozzarellablandingen er erstattet med revet ost."
+  ]
+}

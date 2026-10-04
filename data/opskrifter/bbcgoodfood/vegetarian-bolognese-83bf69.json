@@ -1,0 +1,180 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/vegetarian-bolognese",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:06:22.027Z",
+  "total_minutes": 70,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Vegetarbolognese",
+  "intro": "Cremet tomatsauce med grøntsager og vegetarfars, der koger ind til en rig sauce. Serveres med spaghetti og kan fint fryses ned i portioner.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "mellemstort, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "helt fint hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "helt fint hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 350,
+      "unit": "g",
+      "name": "vegetarfars",
+      "note": "frossen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": "1 blad",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøntsagsfond",
+      "note": "terning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "lille, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": "tørret, kogt efter anvisning på pakken",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en gryde ved svag varme. Steg løg, gulerødder og selleri, til løget begynder at blive blødt."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløg og vegetarfars i gryden. Farsen skal ikke tø op først. Steg det et par minutter."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt laurbærblad, passata, bouillonterning og vand. Bring det i kog."
+    },
+    {
+      "section": null,
+      "text": "Skru ned og lad saucen simre i 30 minutter, til grøntsagerne er møre og næsten er opløst i saucen."
+    },
+    {
+      "section": null,
+      "text": "Hæld mælken i, læg låg på, og lad det koge i 10 minutter. Smag til med salt og peber. Er saucen for tynd, så lad den koge ind, til den er tyk nok."
+    },
+    {
+      "section": null,
+      "text": "Rør basilikum i saucen, og server den over spaghettien. Riv evt. parmesan over."
+    },
+    {
+      "section": null,
+      "text": "Saucen kan fryses i portioner og varmes op igen."
+    }
+  ],
+  "changes": [
+    "Vegetarisk hård ost er skiftet til parmesan.",
+    "Frossen vegetarian mince er skiftet til frossen vegetarfars.",
+    "Grøntsagsbouillonterning er skrevet som grøntsagsfond."
+  ]
+}

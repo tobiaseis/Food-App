@@ -1,0 +1,236 @@
+{
+  "url": "https://www.valdemarsro.dk/gyros/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:26:14.033Z",
+  "total_minutes": 180,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Gyros i fladbrød med tzatziki",
+  "intro": "Tynde skiver marineret svinekød steges hurtigt og lægges i lune fladbrød med frisk tzatziki og masser af grønt. Kødet får mest smag, hvis det marinerer natten over.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Gyros",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "chiliflager",
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": 400,
+      "unit": "g",
+      "name": "nakkekoteletter",
+      "note": "skåret i meget tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gyros",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "fladbrød",
+      "note": "lune",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "salat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Gyros",
+      "text": "Bland hvidløg og alle krydderier i en skål (uden salt og peber). Vend kødet i blandingen, og lad det trække i køleskabet i mindst 2 timer – gerne op til et døgn."
+    },
+    {
+      "section": "Gyros",
+      "text": "Varm en pande op, til den ryger. Steg kødet i olien under konstant omrøring, til det er helt gennemstegt. Krydr med salt og peber."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Skær agurken over på langs, og skrab kernerne ud med en ske. Riv den groft."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Vend den revne agurk med salt, og lad den stå i 5-10 minutter. Hæld den i en sigte, og pres og vrid vandet grundigt ud."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Rør agurken i yoghurten. Smag til med hvidløg, olivenolie, salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Smør tzatziki på fladbrødene. Fyld dem med gyros, salat, tomat, agurk og rødløg, og drys med persille."
+    }
+  ],
+  "changes": []
+}

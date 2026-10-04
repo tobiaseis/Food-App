@@ -1,0 +1,456 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/south-indian-style-chicken-korma-cavolo-nero-chutney-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:35:32.884Z",
+  "total_minutes": null,
+  "active_minutes": null,
+  "yield_count": null,
+  "source_lines": 47,
+  "title": "Sydindisk kyllingekorma med grønkålschutney",
+  "intro": "Mør kylling marineret i yoghurt og krydderier, der simrer i en cremet korma af løg, kokos og cashewnødder. Retten serveres med gurkemejeris og en frisk grønkålschutney.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marinade og kylling",
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "udbenede og uden skind",
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": 400,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "ca. 5 cm, revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chilipulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og kylling",
+      "amount": null,
+      "unit": null,
+      "name": "kokosolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kokosolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "fintskåret",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "en tommelfingerstor bid, revet",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "grønne bælge",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "stang",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 4,
+      "unit": "stk",
+      "name": "nellike",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 100,
+      "unit": "g",
+      "name": "kokosflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 50,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": "udblødt i vand i 30 minutter",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 2,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn",
+      "optional": false
+    },
+    {
+      "section": "Kormapasta",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 1,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Korma",
+      "amount": null,
+      "unit": null,
+      "name": "ghee",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Grønkålschutney",
+      "amount": 200,
+      "unit": "g",
+      "name": "grønkål",
+      "note": "uden stilke",
+      "optional": false
+    },
+    {
+      "section": "Grønkålschutney",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grønkålschutney",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sorte sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grønkålschutney",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, uden kerner, hakket",
+      "optional": false
+    },
+    {
+      "section": "Grønkålschutney",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Grønkålschutney",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Grønkålschutney",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 300,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": "skyllet og udblødt i 20 minutter",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 5,
+      "unit": "dl",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "kokosflager",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade og kylling",
+      "text": "Rør alle ingredienserne til marinaden sammen i en stor skål. Vend kyllingen i marinaden, og stil den på køl i mindst 1 time."
+    },
+    {
+      "section": "Kormapasta",
+      "text": "Smelt kokosolien i en stor pande. Brun løgene ved svag varme, til de er gyldne, ca. 15 minutter. Tilsæt hvidløg og ingefær, og steg i cirka 1 minut mere."
+    },
+    {
+      "section": "Kormapasta",
+      "text": "Rist korianderfrø, spidskommen, kardemomme, kanel og nellike på en tør pande, til de dufter. Mal dem derefter helt fint i en krydderikværn."
+    },
+    {
+      "section": "Kormapasta",
+      "text": "Kom løgblandingen, kokos, cashewnødder, de malede krydderier, tomater, chili og laurbærblade i en blender. Blend til en glat pasta, og tilsæt et skvæt vand, hvis den er for tyk."
+    },
+    {
+      "section": "Grønkålschutney",
+      "text": "Blancher grønkålen i kogende vand i 2 minutter, og afkøl den straks i iskoldt vand. Lad den dryppe af, og pres det meste af vandet ud."
+    },
+    {
+      "section": "Grønkålschutney",
+      "text": "Varm rapsolien op i en pande. Lad sennepsfrøene springe, og rør chili og grønkål i. Steg i cirka 1 minut."
+    },
+    {
+      "section": "Grønkålschutney",
+      "text": "Kom blandingen i en blender sammen med koriander og limesaft. Blend glat, og smag til med salt."
+    },
+    {
+      "section": "Ris",
+      "text": "Smelt ghee i en gryde, og rist korianderfrø og spidskommen heri i cirka 1 minut, til de dufter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tilsæt de afdryppede ris og gurkemeje. Vend dem rundt i ghee, og rist i endnu et minut. Hæld fond og salt i, og bring det i kog."
+    },
+    {
+      "section": "Ris",
+      "text": "Skru ned til lav varme. Læg et viskestykke over gryden, sæt låg på, og kog i 14 minutter. Tag gryden af varmen, og lad risene trække under låg i 10 minutter."
+    },
+    {
+      "section": "Korma",
+      "text": "Imens: Varm en stor pande op ved høj varme med kokosolie. Brun kyllingen, til den er let forkullet på ydersiden, og tag den derefter af panden."
+    },
+    {
+      "section": "Korma",
+      "text": "Smelt ghee i panden, og hæld kormapastaen i. Lad den simre ved svag varme, til olien skiller sig ud ved kanterne. Rør fond, kokosmælk og honning i."
+    },
+    {
+      "section": "Korma",
+      "text": "Smag til med salt, og kom kyllingen tilbage i panden. Læg låg på, og lad det simre i 25–30 minutter, til kyllingen er gennemstegt (74°C), og saucen er tyknet."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server risene med rigeligt korma. Top med chutney, ristede kokosflager, frisk koriander og limebåde."
+    }
+  ],
+  "changes": [
+    "Cavolo nero er erstattet af grønkål.",
+    "Frisk revet kokos er erstattet af kokosflager.",
+    "Grønne kardemommebælge, kanelstang og hele nelliker er skrevet som almindelige krydderier."
+  ]
+}

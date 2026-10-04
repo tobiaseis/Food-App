@@ -1,0 +1,160 @@
+{
+  "url": "https://www.arla.dk/opskrifter/salat-med-vilde-ris-bonner-og-citron/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:23:03.634Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Salat med vilde ris, grønne bønner og citron",
+  "intro": "En solid sommersalat med nøddeagtige vilde ris, sprøde bønner, salatost og soltørrede tomater. Den serveres med grillet kød og friskt brød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vilde ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 6,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "romainesalat",
+      "note": "revet i grove stykker",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 300,
+      "unit": "g",
+      "name": "grønne bønner",
+      "note": "kolde, dampede og skåret over på midten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "salatost",
+      "note": "afdryppet, i tern",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 80,
+      "unit": "g",
+      "name": "soltørrede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "havsalt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "grillstegt; kan erstattes af svinekoteletter eller oksebøffer",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "flute",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Salat",
+      "text": "Bring vandet i kog i en gryde med det grove salt. Tilsæt de vilde ris, læg låg på, og lad dem simre ved svag varme i ca. 35 minutter, til de er møre, men stadig har lidt bid."
+    },
+    {
+      "section": "Salat",
+      "text": "Si risene, og lad dem dampe af, så de bliver tørre. Stil dem til afkøling."
+    },
+    {
+      "section": "Salat",
+      "text": "Skrub citronen, og skær den i kvarte. Skær kvartene i stykker på 1-2 cm."
+    },
+    {
+      "section": "Salat",
+      "text": "Byg salaten op i lag på et fladt fad: romainesalat nederst, så de afkølede ris, bønnerne og til sidst løget."
+    },
+    {
+      "section": "Salat",
+      "text": "Dryp olivenolie over, og fordel salatost og soltørrede tomater ovenpå. Læg citronstykkerne på, og krydr med havsalt og friskkværnet peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server salaten med det grillstegte kød og fluten."
+    }
+  ],
+  "changes": [
+    "Salatløg er skiftet til almindeligt løg.",
+    "Det grillstegte kød er valgt som kyllingebryst; svinekoteletter eller oksebøffer kan bruges i stedet.",
+    "Havsalt er skiftet til almindeligt salt."
+  ]
+}

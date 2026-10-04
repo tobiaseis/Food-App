@@ -1,0 +1,252 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/crab-burritos-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:13:14.806Z",
+  "total_minutes": 100,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Burritos med krabbesalat og sorte bønner",
+  "intro": "Ristede tortillas fyldt med krabbesalat, cremede sorte bønner, guacamole og estragon. Den stærke habanerosalsa og den røgede chipotlecreme giver retten sin kraft.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bønnemos",
+      "amount": 250,
+      "unit": "g",
+      "name": "sorte bønner",
+      "note": "tørrede",
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 3,
+      "unit": "l",
+      "name": "vand",
+      "note": "1 l til udblødning og 2 l til kogning",
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "hvidløg",
+      "note": "hel hvidløgsknold skåret over på tværs",
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chipotle",
+      "note": "meco, evt. 2 efter smag",
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "og mere efter smag",
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 25,
+      "unit": "g",
+      "name": "lard",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnemos",
+      "amount": 20,
+      "unit": "g",
+      "name": "queso fresco",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Habanerosalsa",
+      "amount": 14,
+      "unit": "stk",
+      "name": "chili",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Habanerosalsa",
+      "amount": 3,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften, og mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Habanerosalsa",
+      "amount": 50,
+      "unit": "ml",
+      "name": "appelsinjuice",
+      "note": "og mere efter behov",
+      "optional": false
+    },
+    {
+      "section": "Chipotlecreme",
+      "amount": 100,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chipotlecreme",
+      "amount": 5,
+      "unit": "g",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Krabbesalat",
+      "amount": 200,
+      "unit": "g",
+      "name": "kålrabi",
+      "note": "skrællet og skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Krabbesalat",
+      "amount": 300,
+      "unit": "g",
+      "name": "krabbekød",
+      "note": "hvidt",
+      "optional": false
+    },
+    {
+      "section": "Krabbesalat",
+      "amount": 6,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "hvede, ca. 15 cm i diameter",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 350,
+      "unit": "g",
+      "name": "guacamole",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 5,
+      "unit": "g",
+      "name": "estragon",
+      "note": "friske blade",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bønnemos",
+      "text": "Kom de tørrede bønner i en beholder, og dæk dem med 1 liter vand. Læg låg eller folie på, og lad dem trække i køleskabet natten over."
+    },
+    {
+      "section": "Bønnemos",
+      "text": "Hæld vandet fra bønnerne, og kom dem i en stor gryde med 2 liter frisk vand. Tilsæt hvidløg, løg, tomat, oregano, laurbærblad og én chipotle."
+    },
+    {
+      "section": "Bønnemos",
+      "text": "Lad det småkoge i 1 time, til bønnerne er helt møre. Smag til med salt."
+    },
+    {
+      "section": "Bønnemos",
+      "text": "Tag gryden af varmen, og fisk laurbærbladet og hvidløgsskallerne op. Lad bønnerne køle af til stuetemperatur, og blend dem derefter helt glatte med en stavblender. Smag til, og kom den anden chipotle i, hvis du vil have mere varme."
+    },
+    {
+      "section": "Bønnemos",
+      "text": "Smelt lard i en stor gryde ved middelvarme. Rør bønnepuréen i, og lad den stege i 10 minutter, mens du rører hele tiden, så den ikke brænder på. Smag til med salt, og drys queso fresco over."
+    },
+    {
+      "section": "Habanerosalsa",
+      "text": "Rist halvdelen af chilierne hele over gasblus eller i ovnen ved 220 °C i 10 minutter, til skindet er sort og næsten brændt."
+    },
+    {
+      "section": "Habanerosalsa",
+      "text": "Kom de ristede chili i en foodprocessor sammen med de rå chili, limesaft og appelsinjuice. Blend det glat, og tilsæt en smule ekstra juice, hvis det er for tykt."
+    },
+    {
+      "section": "Habanerosalsa",
+      "text": "Salsaen kan holde sig 3 dage i køleskab. Den kan gære, så tjek lukkede beholdere, for de kan sprænge. Rør rundt inden brug. Den er meget stærk, så få dråber er nok."
+    },
+    {
+      "section": "Chipotlecreme",
+      "text": "Rør creme fraiche og chipotle sammen i en skål, til det er jævnt. Mål 75 g af og stil til side."
+    },
+    {
+      "section": "Krabbesalat",
+      "text": "Bland kålrabi, krabbekød, limesaft, 1 spsk habanerosalsa og chipotlecremen i en skål."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg en tortilla på bordet. Fordel 1 skefuld bønnemos, 4 skefulde krabbesalat og 1 skefuld guacamole på den, og top med 4 estragonblade."
+    },
+    {
+      "section": "Samling",
+      "text": "Fold tortillaens top og bund ind over fyldet. Hold dem på plads med den ene hånd, og fold siderne ind og under med den anden, så stramt du kan. Rul den sammen til en burrito, og gør det samme med de øvrige tortillas."
+    },
+    {
+      "section": "Samling",
+      "text": "Varm en tør pande op ved middelvarme. Rist burritoerne i 2-3 minutter på hver side, til de er gyldne."
+    }
+  ],
+  "changes": [
+    "Epazote er erstattet med tørret oregano.",
+    "Habanero er erstattet med almindelig frisk chili.",
+    "Jicama-alternativet er udeladt, og kålrabi bruges."
+  ]
+}

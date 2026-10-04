@@ -1,0 +1,188 @@
+{
+  "url": "https://www.arla.dk/opskrifter/shepherds-pie/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:10:54.310Z",
+  "total_minutes": 65,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Shepherd's pie",
+  "intro": "Klassisk shepherd's pie med lammekød i en fyldig sauce, gulerødder og ærter under et lag luftig kartoffelmos. Bages gylden i ovnen og er en solid hverdagsret til hele familien.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kødsauce",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "oksefond",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "i grove tern",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "groftkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødsauce",
+      "text": "Varm smørret op i en gryde, til det får en gylden farve. Rør løgene og hvidløget i det i cirka 1 minut."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Kom lammekødet og saltet i gryden. Brun kødet under omrøring i cirka 10 minutter, til væsken er kogt helt væk."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Drys melet over, og rør rundt. Hæld worcestershiresauce, tomatpuré, oksefond og vand i. Lad saucen koge uden låg ved middel varme i cirka 10 minutter, og rør indimellem. Smag den til."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Kom kødsaucen i et ovnfast fad, og strø gulerødder og ærter ovenpå."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Skræl kartoflerne, mens saucen simrer, og skær dem i mindre stykker. Kog dem helt møre i usaltet vand i en tykbundet gryde i cirka 20 minutter."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Hæld kogevandet fra, og lad kartoflerne dampe tørre i den varme gryde."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Mos kartoflerne med en kartoffelstøder, eller pisk dem med et piskeris. Rør mælken i lidt ad gangen, mens du pisker. Pisk smørret i, og smag mosen til med salt og peber."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Smør mosen ud over fadet, så den ser indbydende ud. Bag retten midt i ovnen ved 225 °C i cirka 20 minutter."
+    }
+  ],
+  "changes": []
+}

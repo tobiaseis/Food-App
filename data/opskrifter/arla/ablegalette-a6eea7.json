@@ -1,0 +1,154 @@
+{
+  "url": "https://www.arla.dk/opskrifter/ablegalette/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:17:19.373Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 11,
+  "title": "Æblegalette",
+  "intro": "Sprød mørdejsgalette med tynde æbleskiver og mandelsukker, bagt med en gylden kant. Server den lun med en klat creme fraiche.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Tærtebund",
+      "amount": 175,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 75,
+      "unit": "g",
+      "name": "mandler",
+      "note": "som mandelmel",
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 25,
+      "unit": "g",
+      "name": "mandler",
+      "note": "som mandelmel",
+      "optional": false
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "amount": 375,
+      "unit": "g",
+      "name": "æbler",
+      "note": "røde, i tynde både (ca. 5)",
+      "optional": false
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "sammenpisket, til pensling",
+      "optional": false
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "amount": null,
+      "unit": null,
+      "name": "perlesukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtebund",
+      "text": "Bland hvedemel, mandelmel og sukker i en skål."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Skær det kolde smør i små tern, og smuldr det ud i melblandingen med fingrene."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Tilsæt ægget, og samle dejen hurtigt, uden at ælte den for meget."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Rul dejen til en rund bund på ca. 40 cm i diameter mellem to stykker bagepapir. Løft bunden med det nederste papir over på en bageplade, og stil den på køl."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bland sukker og mandelmel i en lille skål."
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "text": "Forvarm ovnen til 200 °C (almindelig ovn)."
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "text": "Strø sukkerblandingen over dejen, så der er en kant på ca. 5 cm uden fyld."
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "text": "Læg æbleskiverne jævnt ud oven på sukkeret."
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "text": "Frigør dejkanten fra papiret med en lille skarp kniv, og fold den ind over æblerne."
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "text": "Pensl den foldede kant med sammenpisket æg, og drys perlesukker over."
+    },
+    {
+      "section": "Sådan samler du æblegaletten",
+      "text": "Bag galetten midt i ovnen i ca. 15 minutter, til kanten er gylden og sprød. Server den lun med creme fraiche."
+    }
+  ],
+  "changes": [
+    "Mandelmel er erstattet med mandler, som males fint, da mandelmel kan være svært at finde."
+  ]
+}

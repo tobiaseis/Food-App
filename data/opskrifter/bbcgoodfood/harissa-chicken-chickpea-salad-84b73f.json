@@ -1,0 +1,127 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/harissa-chicken-chickpea-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:27:23.272Z",
+  "total_minutes": 23,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 8,
+  "title": "Harissakylling med kikærtesalat",
+  "intro": "Grillet kylling med skarp harissa serveres på en frisk salat af kikærter, tomat og persille. Retten er hurtig og mættende og passer godt til en hverdagsaften.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kikærtesalat",
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Kikærtesalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "hakket, lille",
+      "optional": false
+    },
+    {
+      "section": "Kikærtesalat",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "à 400 g, skyllet og drænet",
+      "optional": false
+    },
+    {
+      "section": "Kikærtesalat",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "lille, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Kikærtesalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Kikærtesalat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtesalat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "uden skind, delt på langs i to tynde stykker",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "naturel, fedtfattig",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "fuldkorns-pitabrød, lunet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kikærtesalat",
+      "text": "Bland tomater, løg og kikærter i en skål. Vend persille og citronsaft i, og smag til med salt og peber."
+    },
+    {
+      "section": "Kylling",
+      "text": "Gnid kyllingestykkerne ind i harissa, så de er dækket hele vejen rundt."
+    },
+    {
+      "section": "Kylling",
+      "text": "Varm en grillpande, en stegepande eller en grill op. Steg kyllingen 3-4 minutter på hver side, til den er let forkullet og gennemstegt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel salaten på to tallerkener og læg kyllingen ovenpå. Server med en klat yoghurt og lunet pitabrød ved siden af."
+    }
+  ],
+  "changes": [
+    "Fuldkorns-pitabrød er skrevet som brød.",
+    "Fedtfattig naturel yoghurt er skrevet som yoghurt."
+  ]
+}

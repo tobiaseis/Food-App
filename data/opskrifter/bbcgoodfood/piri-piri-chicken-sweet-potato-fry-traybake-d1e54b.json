@@ -1,0 +1,198 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/piri-piri-chicken-sweet-potato-fry-traybake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:32:48.958Z",
+  "total_minutes": 55,
+  "active_minutes": 10,
+  "yield_count": 6,
+  "source_lines": 16,
+  "title": "Piri-piri-kylling med sødkartoffelpommes frites i bradepande",
+  "intro": "Kyllingelår og peberfrugt marineres i en krydret piri-piri-marinade og bages sammen med sprøde sødkartoffelpommes frites på samme bradepande. En nem hverdagsret med meget smag.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skal og saft; plus ekstra både til servering",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "rødvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bagningen",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kyllingeoverlår",
+      "note": "med ben og skind, ca. 6 store",
+      "optional": false
+    },
+    {
+      "section": "Til bagningen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød og gul, i tykke strimler",
+      "optional": false
+    },
+    {
+      "section": "Til bagningen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til bagningen",
+      "amount": 500,
+      "unit": "g",
+      "name": "sødkartoffelpommes frites",
+      "note": "frost",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Marinade",
+      "text": "Rør krydderierne, honning, limeskal og -saft, eddike, hvidløg og olie sammen i en stor skål. Smag til med salt og peber."
+    },
+    {
+      "section": "Marinade",
+      "text": "Vend kyllingelår, peberfrugt og rødløg rundt i marinaden, så alt er dækket. Lad det stå køligt i 1 time, hvis du har tid."
+    },
+    {
+      "section": "Bagning",
+      "text": "Læg kylling og grøntsager på den ene halvdel af en stor bradepande, og bag dem i 25 minutter."
+    },
+    {
+      "section": "Bagning",
+      "text": "Fordel sødkartoffelpommes fritesene på den frie halvdel, og bag videre i 20-25 minutter. Kyllingen skal være gennemstegt, grøntsagerne bløde og let brændte i kanterne, og pommes fritesene sprøde."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend kylling og grøntsager forsigtigt ned i pommes fritesene lige før servering, så de trækker lidt sauce uden at blive bløde."
+    },
+    {
+      "section": "Servering",
+      "text": "Drys med koriander, og top med klatter yoghurt. Server straks med limebåde at presse over."
+    }
+  ],
+  "changes": [
+    "Røget paprika er skrevet som paprika med note om røget.",
+    "Rødvinseddike er skiftet til eddike (rødvinseddike).",
+    "Løgpulver erstatter onion granules.",
+    "Chiliflager er skrevet som chili med note om flager.",
+    "Frosne sødkartoffelpommes frites erstatter sweet potato fries."
+  ]
+}

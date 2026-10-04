@@ -1,0 +1,196 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/jamaican-chicken-rice-peas",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:09:15.922Z",
+  "total_minutes": 45,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Kylling med ris og sorte øjne-bønner",
+  "intro": "Mør kylling i en krydret tomatsauce med karry og allehånde, serveret med brune basmatiris og bønner. Det hele laves i to gryder og er nemt at gøre klar til flere måltider.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kyllingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "halveret og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "ca. 1 kg i alt, uden skind",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "madras",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "store, hakkede",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kerner, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsfond",
+      "optional": false
+    },
+    {
+      "section": "Kyllingen",
+      "amount": 4.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risene",
+      "amount": 125,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": "brune",
+      "optional": false
+    },
+    {
+      "section": "Risene",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Risene",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Risene",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "timian",
+      "note": "friske blade, plus lidt ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Risene",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": "grøntsagsfond",
+      "optional": false
+    },
+    {
+      "section": "Risene",
+      "amount": 6,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Risene",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "bønner",
+      "note": "sorte øjne-bønner, 400 g, afdryppede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kyllingen",
+      "text": "Varm olien op i en meget stor non-stick pande, og steg rødløgene i ca. 5 minutter, til de er bløde."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Vend kyllingen i timian, karry og allehånde, så den er helt dækket."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Brun kyllingen kort i panden. Tilsæt tomater, chili, hvidløg og bouillon, og hæld vandet over."
+    },
+    {
+      "section": "Kyllingen",
+      "text": "Læg låg på, og lad retten småkoge i ca. 30 minutter, til kyllingen er mør."
+    },
+    {
+      "section": "Risene",
+      "text": "Kom imens ris, løg, hvidløg, timian og bouillon i en mellemstor gryde, og hæld vandet i."
+    },
+    {
+      "section": "Risene",
+      "text": "Læg låg på, og kog i ca. 25 minutter, til risene er møre, og væsken er optaget. Kig til dem mod slutningen, så de ikke brænder på."
+    },
+    {
+      "section": "Risene",
+      "text": "Rør bønnerne i, og varm dem igennem. Server risene med kyllingen, og drys med lidt ekstra timian."
+    }
+  ],
+  "changes": [
+    "Madras-karry er erstattet af almindelig karry.",
+    "Rapsolie er beholdt som rapsolie.",
+    "Grøntsagsbouillonen er skrevet som bouillon."
+  ]
+}

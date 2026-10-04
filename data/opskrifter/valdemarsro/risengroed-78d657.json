@@ -1,0 +1,124 @@
+{
+  "url": "https://www.valdemarsro.dk/risengroed/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:06:17.618Z",
+  "total_minutes": 60,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Risengrød med kanel og smør",
+  "intro": "Cremet risengrød, der enten kan stå og blive færdig i ovnen eller koges på komfuret. Serveres varm med sukker, kanel og en klat smør.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "grødris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "l",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "I ovnen",
+      "text": "Forvarm ovnen til 125 °C (almindelig ovn eller varmluft)."
+    },
+    {
+      "section": "I ovnen",
+      "text": "Put risene og vandet i en gryde med tætsluttende låg, og bring det i kog på komfuret, mens du rører."
+    },
+    {
+      "section": "I ovnen",
+      "text": "Når vandet er kogt ind, skal mælken i. Rør, og varm grøden op til lige under kogepunktet."
+    },
+    {
+      "section": "I ovnen",
+      "text": "Sæt låget på, og stil gryden i ovnen i 35-40 minutter. Tiden afhænger lidt af gryden."
+    },
+    {
+      "section": "I ovnen",
+      "text": "Tag gryden ud 1-2 gange undervejs, løft låget med grydelappen, rør rundt, og sæt den ind igen med låg på."
+    },
+    {
+      "section": "I ovnen",
+      "text": "Tag gryden ud af ovnen. Pas på, for både gryde og låg er meget varme. Rør grøden godt igennem, læg låget på igen, og lad den trække i 5 minutter."
+    },
+    {
+      "section": "I ovnen",
+      "text": "Er der meget væske tilbage, så lad grøden simre uden låg et par minutter på komfuret."
+    },
+    {
+      "section": "På komfuret",
+      "text": "Skyl risene i koldt vand, og kom dem i en gryde med dobbelt så meget vand som angivet i ingredienslisten. Grøden skal bruge lidt ekstra vand, når den koges på komfuret."
+    },
+    {
+      "section": "På komfuret",
+      "text": "Bring det i kog under omrøring. Når vandet er fordampet, hældes mælken i. Rør i nogle minutter, mens grøden varmes op til lige under kogepunktet."
+    },
+    {
+      "section": "På komfuret",
+      "text": "Skru ned på lav varme, og rør i cirka et minut. Læg derefter låg på, og lad grøden stå på lav varme."
+    },
+    {
+      "section": "På komfuret",
+      "text": "Rør rundt hver 10-15 minut, til risene er møre og grøden er cremet."
+    },
+    {
+      "section": "Servering",
+      "text": "Smag til med salt. Server grøden varm med en klat smør og kanelsukker."
+    }
+  ],
+  "changes": []
+}

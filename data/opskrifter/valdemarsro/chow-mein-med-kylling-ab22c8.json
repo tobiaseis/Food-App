@@ -1,0 +1,192 @@
+{
+  "url": "https://www.valdemarsro.dk/chow-mein-med-kylling/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:06:42.460Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 18,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "nudler",
+      "note": "fx æggenudler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "i små buketter",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i julienne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "pillede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Chow mein-sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chow mein-sauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "østersauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chow mein-sauce",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chow mein-sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chow mein-sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sauce og nudler",
+      "text": "Rør saucens ingredienser sammen i en skål og stil den til side."
+    },
+    {
+      "section": "Sauce og nudler",
+      "text": "Kog nudlerne, så de er lige knap møre. Hæld det kogende vand fra med det samme, og fyld gryden med iskoldt vand. Så holder nudlerne op med at koge og klistrer ikke sammen. Lad dem dryppe af."
+    },
+    {
+      "section": "Wok",
+      "text": "Varm olien op i en stor wok eller pande. Steg champignonerne, til de har fået en flot skorpe, og tag dem eventuelt op."
+    },
+    {
+      "section": "Wok",
+      "text": "Brun kyllingestrimlerne, skru ned for varmen, og svits løgene, til de er bløde."
+    },
+    {
+      "section": "Wok",
+      "text": "Kom ingefær, hvidløg, spidskål og broccoli i woken, og vend det hele, til spidskålen er faldet sammen og mør."
+    },
+    {
+      "section": "Wok",
+      "text": "Kom champignonerne tilbage i woken sammen med gulerødder, edamamebønner og nudler. Vend i 1-2 minutter, hæld saucen over, og vend rundt."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret i dybe skåle, og drys med sesamfrø og forårsløg."
+    }
+  ],
+  "title": "Chow mein med kylling",
+  "intro": "Wokret med nudler, kylling og masser af grøntsager, vendt i en sød og salt sauce med soja og østersauce. Den er hurtig at lave og god til hverdag.",
+  "servings": 4,
+  "changes": []
+}

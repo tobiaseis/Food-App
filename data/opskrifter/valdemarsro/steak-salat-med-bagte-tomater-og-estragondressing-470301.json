@@ -1,0 +1,204 @@
+{
+  "url": "https://www.valdemarsro.dk/steak-salat-med-bagte-tomater-og-estragondressing/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:05:10.038Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Bøfsalat med bagte tomater og estragondressing",
+  "intro": "Sprød salat med mør flanksteak i skiver, lune ovnbagte tomater og en cremet dressing med frisk estragon og citron.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bagte tomater",
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Bagte tomater",
+      "amount": 200,
+      "unit": "g",
+      "name": "tomater",
+      "note": "blommetomater, halveret",
+      "optional": false
+    },
+    {
+      "section": "Bagte tomater",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragondressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "estragon",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Estragondressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragondressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "grov",
+      "optional": false
+    },
+    {
+      "section": "Estragondressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal og en smule saft",
+      "optional": false
+    },
+    {
+      "section": "Estragondressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Estragondressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Steaks",
+      "amount": 600,
+      "unit": "g",
+      "name": "flanksteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Steaks",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "krølsalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 75,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde både",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "estragon",
+      "note": "frisk, finthakket, til drys",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bagte tomater",
+      "text": "Varm ovnen op til 200 °C varmluft. Læg tomathalvdelene på en bageplade med snitfladen opad, og dryp med olivenolie. Krydr med salt og peber."
+    },
+    {
+      "section": "Bagte tomater",
+      "text": "Bag tomaterne i 25 minutter. Lad dem derefter hvile på bagepladen, til de kun er lune."
+    },
+    {
+      "section": "Estragondressing",
+      "text": "Bland estragon, løgpulver, sennep, citronskal, creme fraiche og mayonnaise i en skål. Smag til med salt, peber og lidt citronsaft."
+    },
+    {
+      "section": "Estragondressing",
+      "text": "Stil dressingen til side, så den kan trække, mens du laver resten."
+    },
+    {
+      "section": "Steaks",
+      "text": "Smelt smørret på en varm pande, til det holder op med at bruse. Krydr flanksteaken med salt og peber, og steg den 2-3 minutter på hver side."
+    },
+    {
+      "section": "Steaks",
+      "text": "Lad kødet hvile på et skærebræt i 5 minutter, og skær det så i skiver."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel krølsalat og rucola på tallerkenerne, og dryp med lidt dressing. Læg bagte tomater, agurk, rødløg og avocado ovenpå."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg kødskiverne på salaten. Drys med salt, peber og estragon, og top med lidt mere dressing. Server med det samme."
+    }
+  ],
+  "changes": []
+}

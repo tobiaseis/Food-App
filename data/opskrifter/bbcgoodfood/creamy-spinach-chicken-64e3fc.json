@@ -1,0 +1,126 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/creamy-spinach-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:55:37.791Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": null,
+  "source_lines": 7,
+  "title": "Cremet spinatkylling",
+  "intro": "Mørt kylling i en cremet sauce med spinat, hvidløg og parmesan. Retten er hurtig at lave og passer godt til ris eller kartofler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "uden skind, skåret på tværs i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket eller revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "kogte",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "kartofler",
+      "note": "kogte",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Smelt halvdelen af smørret i en stor pande ved middelvarme. Vend spinaten i panden i 2-3 minutter, til den falder sammen. Smag til med salt og peber, og hæld den i et dørslag, så vandet løber fra."
+    },
+    {
+      "section": null,
+      "text": "Hæld evt. væske ud af panden, og tør den tør. Smelt det resterende smør ved middelvarme, og svirp panden rundt, så bunden er dækket."
+    },
+    {
+      "section": null,
+      "text": "Steg kyllingestrimlerne i 1-2 minutter under omrøring, til de er lysegyldne. Krydr med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt hvidløget, og steg det med i 1 minut. Hæld fløden over, og lad det simre i 15 minutter. Rør ofte, og pas på, at fløden ikke koger."
+    },
+    {
+      "section": null,
+      "text": "Pres overskydende væske ud af spinaten. Rør den ned i panden sammen med det meste af parmesanen, og lad retten simre 5 minutter mere, til osten er smeltet, og kyllingen er gennemstegt. Stik i det tykkeste stykke kød: Saften skal løbe klar."
+    },
+    {
+      "section": null,
+      "text": "Strø resten af parmesanen over. Server kyllingen med rigeligt sauce og evt. ris eller kartofler ved siden af."
+    }
+  ],
+  "changes": [
+    "Double cream er byttet med piskefløde."
+  ]
+}

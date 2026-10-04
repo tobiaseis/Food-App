@@ -1,0 +1,207 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-koftas-with-hummus-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:50:54.969Z",
+  "total_minutes": 45,
+  "active_minutes": 35,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Kyllingekofta med hummus og salat",
+  "intro": "Saftige koftaer af hakket kylling med citron og krydderier, serveret med cremet hummus og en frisk salat med hurtigsyltet rødløg. Kan med fordel laves i dobbelt portion, så der er til to dage.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til koftaerne",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket kyllingekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "hakket, fra persillen til salaten",
+      "optional": false
+    },
+    {
+      "section": "Til koftaerne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til hummussen",
+      "amount": 800,
+      "unit": "g",
+      "name": "kikærter",
+      "note": "2 dåser à 400 g, afdryppet – gem lagen",
+      "optional": false
+    },
+    {
+      "section": "Til hummussen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hummussen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften, ca. 3 spsk",
+      "optional": false
+    },
+    {
+      "section": "Til hummussen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til hummussen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "store, halverede og i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 30,
+      "unit": "g",
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 200,
+      "unit": "g",
+      "name": "agurk",
+      "note": "i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Koftaerne",
+      "text": "Ælt alle ingredienserne til koftaerne sammen med hænderne, men vent med olien. Stil blandingen til side."
+    },
+    {
+      "section": "Hummussen",
+      "text": "Kom kikærter, tahin, citronsaft, hvidløg og olivenolie i en skål. Tilsæt 3 spsk af kikærtelagen, og blend med en stavblender, til massen er helt jævn."
+    },
+    {
+      "section": "Hummussen",
+      "text": "Vil du have en løsere hummus, så rør mere kikærtelage i og blend igen."
+    },
+    {
+      "section": "Salaten",
+      "text": "Læg rødløgene i en skål med citronsaften, og æl dem med fingrene, til de bliver bløde. Vend persillen i, og stil skålen til side."
+    },
+    {
+      "section": "Koftaerne",
+      "text": "Form 16 små boller af farsen. Varm rapsolien op i en stor non-stick pande ved middelvarme. Steg koftaerne i 5 minutter på hver side, til de er gyldne og gennemstegte."
+    },
+    {
+      "section": "Koftaerne",
+      "text": "Skal koftaerne på grill, så grill dem, til de lige kan holde formen. Træk dem derefter på spyd, og grill dem 4 minutter på hver side. Rå koftaer kan opbevares i en lufttæt beholder i køleskabet i op til en dag."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel halvdelen af hummussen på to tallerkener. Bland halvdelen af løgene med halvdelen af agurk og tomat, og server salaten med koftaer og hummus."
+    },
+    {
+      "section": "Servering",
+      "text": "Resten kan stå tildækket i køleskabet i op til to dage."
+    }
+  ],
+  "changes": [
+    "Havregryn i stedet for oats.",
+    "Rapsolie bruges til stegning som i kilden."
+  ]
+}

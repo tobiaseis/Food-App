@@ -1,0 +1,187 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/super-greens-chicken-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:28:40.602Z",
+  "total_minutes": 35,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 15,
+  "title": "Grøn salat med grillet kylling og bulgur",
+  "intro": "En frisk og mættende salat med masser af grønt og urter, bulgur og grillet kylling. Den fyldige dressing med parmesan og dijonsennep binder det hele sammen.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "bulgur",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "haricots verts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "dild",
+      "note": "stilke og top adskilt, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "persille",
+      "note": "blade og stilke adskilt, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "hjertesalat",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "agurk",
+      "note": "halveret på langs og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "skrællet, uden sten og skåret i små stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "revet, til drys",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 25,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "dijonsennep",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Gnid kyllingebrysterne ind i olien og krydr dem godt med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Varm en grillpande op over høj varme. Steg kyllingen i 10-15 minutter på hver side, til den er gennemstegt og har fået grillstriber. Læg den på et skærebræt og lad den hvile."
+    },
+    {
+      "section": null,
+      "text": "Kog bulguren efter anvisningen på pakken og lad den køle af."
+    },
+    {
+      "section": null,
+      "text": "Kog de grønne bønner i 2-3 minutter i en gryde med kogende vand, til de er møre. Hæld vandet fra."
+    },
+    {
+      "section": "Til dressingen",
+      "text": "Kom alle ingredienserne til dressingen i en lille foodprocessor sammen med stilkene fra dild og persille. Blend, til stilkene er helt fine, og dressingen er ensartet."
+    },
+    {
+      "section": null,
+      "text": "Bland dildtoppe, persilleblade, purløg, hjertesalat, agurk, avocado, bulgur og bønner i en stor skål eller på et stort fad. Hæld dressingen over og vend det hele rundt."
+    },
+    {
+      "section": null,
+      "text": "Skær kyllingen i skiver og læg dem ovenpå salaten. Drys med lidt mere revet parmesan."
+    }
+  ],
+  "changes": [
+    "Little Gem er skiftet til hjertesalat.",
+    "Grana Padano er skiftet til parmesan."
+  ]
+}

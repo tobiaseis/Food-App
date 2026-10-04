@@ -1,0 +1,243 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/korean-bbq-style-ribs-radish-slaw",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:10:31.119Z",
+  "total_minutes": 80,
+  "active_minutes": 20,
+  "yield_count": 8,
+  "source_lines": 19,
+  "title": "Koreansk BBQ-spareribs med radisesalat",
+  "intro": "Møre spareribs, der bliver glaseret med en sød og skarp sauce af gochujang, ingefær og hvidløg. Serveres med en frisk, knasende salat af agurk og radiser og dampende ris.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Til ribs",
+      "amount": 2,
+      "unit": "kg",
+      "name": "spareribs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til ribs",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til ribs",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til ribs",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glasuren",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glasuren",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til glasuren",
+      "amount": 20,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til glasuren",
+      "amount": 40,
+      "unit": "g",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glasuren",
+      "amount": 0.6,
+      "unit": "dl",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glasuren",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glasuren",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glasuren",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glasuren",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til radisesalaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til radisesalaten",
+      "amount": 200,
+      "unit": "g",
+      "name": "radiser",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til radisesalaten",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til radisesalaten",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til radisesalaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "lys",
+      "optional": false
+    },
+    {
+      "section": "Til radisesalaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til radisesalaten",
+      "amount": 0.75,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til radisesalaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "kogte",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ribs",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft). Bland salt, peber og hvidløgspulver."
+    },
+    {
+      "section": "Ribs",
+      "text": "Træk den tynde hinde af på undersiden af ribsene med en lille kniv. Gnid derefter kødet ind i krydderiblandingen på alle sider."
+    },
+    {
+      "section": "Ribs",
+      "text": "Læg ribsene i et enkelt lag i et fladt ildfast fad eller en bradepande, og steg dem i 1 time, til de er møre og færdige. De kan laves på forhånd og holder sig op til to dage i køleskabet."
+    },
+    {
+      "section": "Radisesalat",
+      "text": "Lav salaten, mens ribsene står i ovnen. Vend agurk og radiser grundigt med saltet, så alt er dækket, og lad dem stå i 30 minutter."
+    },
+    {
+      "section": "Radisesalat",
+      "text": "Hæld grøntsagerne i en sigte, skyl dem og pres vandet godt ud med hænderne. Kom dem i en skål."
+    },
+    {
+      "section": "Radisesalat",
+      "text": "Rør sesamolie, sojasauce, riseddike, farin og sesamfrø sammen i en lille skål, til sukkeret er opløst. Vend dressingen i agurk og radiser."
+    },
+    {
+      "section": "Glasur",
+      "text": "Varm olien i en lille gryde ved middel varme. Rør hvidløg og ingefær i, og svits dem i 2 minutter, til det dufter, men ikke har taget farve."
+    },
+    {
+      "section": "Glasur",
+      "text": "Tilsæt resten af glasurens ingredienser, og lad det simre få minutter mere."
+    },
+    {
+      "section": "Samling",
+      "text": "Tag ribsene ud af ovnen, og hæld glasuren over dem."
+    },
+    {
+      "section": "Samling",
+      "text": "Sæt ribsene tilbage i ovnen i 10-15 minutter, til de er klistrede. Alternativt kan de grilles i 5 minutter."
+    },
+    {
+      "section": "Samling",
+      "text": "Del ribsene i portioner, og server dem med radisesalaten og ris."
+    }
+  ],
+  "changes": [
+    "Hvidløgsgranulat er erstattet med hvidløgspulver.",
+    "Fiskesauce og riseddike er beholdt under danske navne."
+  ]
+}

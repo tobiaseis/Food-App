@@ -1,0 +1,196 @@
+{
+  "url": "https://www.arla.dk/opskrifter/wok-med-blomkalsris/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:20:53.007Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Wok med blomkålsris",
+  "intro": "Sprød wokede grøntsager med kokosmælk og sambal oelek, serveret på stegt blomkålsris med en frisk yoghurtdressing. Naanbrød til giver lidt mere mæthed.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til dressingen",
+      "amount": 250,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet, frisk",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "friskpresset saft",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blomkålsrisen",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blomkålsrisen",
+      "amount": 750,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Til blomkålsrisen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til blomkålsrisen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til wokken",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til wokken",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "store, i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til wokken",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "røde og gule, i strimler",
+      "optional": false
+    },
+    {
+      "section": "Til wokken",
+      "amount": 3,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i ringe",
+      "optional": false
+    },
+    {
+      "section": "Til wokken",
+      "amount": 150,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "bælgede",
+      "optional": false
+    },
+    {
+      "section": "Til wokken",
+      "amount": 1,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": "light",
+      "optional": false
+    },
+    {
+      "section": "Til wokken",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sambal oelek",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til wokken",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "naanbrød",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Rør yoghurt, ingefær, citronsaft og salt sammen, og tynd dressingen med vandet, til den er blød."
+    },
+    {
+      "section": "Dressing",
+      "text": "Sæt den tildækket i køleskabet i mindst 15 minutter, og smag den til bagefter."
+    },
+    {
+      "section": "Blomkålsris",
+      "text": "Smelt smørret i en sauterpande, til det får en gylden farve."
+    },
+    {
+      "section": "Blomkålsris",
+      "text": "Kom blomkål og salt i panden, og rør rundt under kraftig varme i cirka 10 minutter. Krydr med peber."
+    },
+    {
+      "section": "Wok",
+      "text": "Varm woken godt op, og hæld olien i."
+    },
+    {
+      "section": "Wok",
+      "text": "Rør gulerødderne ved kraftig varme i cirka ½ minut, og løft dem ud. Rør derefter peberfrugterne i cirka 1 minut, og tag dem også op."
+    },
+    {
+      "section": "Wok",
+      "text": "Wok porrerne i cirka 1 minut. Kom gulerødder og peberfrugt tilbage i woken sammen med edamamebønner, kokosmælk, sambal oelek og salt."
+    },
+    {
+      "section": "Wok",
+      "text": "Lad det koge igennem, og smag til. Server med det samme sammen med blomkålsris, dressing og naanbrød."
+    }
+  ],
+  "changes": []
+}

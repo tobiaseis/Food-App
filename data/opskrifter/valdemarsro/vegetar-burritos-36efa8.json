@@ -1,0 +1,284 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetar-burritos/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:17:32.843Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Vegetariske burritos med hvidløgsris",
+  "intro": "Ovnbagte burritos fyldt med krydrede kidneybønner, majs, avocado og ost, serveret med duftende hvidløgsris og en frisk limedressing. En mættende ret uden kød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bønnefyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "på dåse",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "drænede og skyllede",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønnefyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Burritos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, i tern",
+      "optional": false
+    },
+    {
+      "section": "Burritos",
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burritos",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Burritos",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burritos",
+      "amount": 200,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Limedressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Limedressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Limedressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limedressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bønnefyld",
+      "text": "Varm olien i en pande ved middelvarme, og steg løget, til det er blødt. Rør spidskommen, paprika, koriander, oregano og hvidløg i, så krydderierne dækker løget."
+    },
+    {
+      "section": "Bønnefyld",
+      "text": "Hæld bønner og hakkede tomater på panden, og bring det i kog. Lad saucen simre uden låg, til den er tyk, og rør af og til."
+    },
+    {
+      "section": "Bønnefyld",
+      "text": "Tag panden af varmen. Mos en del af bønnerne groft med bagsiden af en ske, og rør flødeosten i. Smag til med salt og peber."
+    },
+    {
+      "section": "Burritos",
+      "text": "Tænd ovnen på 200 °C. Varm tortillaerne på en tør pande, til de er bløde og smidige, og gnid begge sider af hver tortilla med lidt olie."
+    },
+    {
+      "section": "Burritos",
+      "text": "Læg en stribe majs, peberfrugt, avocado og cheddar ned ad midten af hver tortilla. Top med 4-5 spiseskefulde af bønnefyldet."
+    },
+    {
+      "section": "Burritos",
+      "text": "Fold siderne ind over fyldet, og rul tortillaen stramt sammen. Læg burritoerne med samlingen nedad på en bradepande med bagepapir."
+    },
+    {
+      "section": "Burritos",
+      "text": "Bag burritoerne i ca. 15 minutter, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Hvidløgsris",
+      "text": "Varm olie og hvidløg i en gryde ved lav til middel varme, til det begynder at dufte."
+    },
+    {
+      "section": "Hvidløgsris",
+      "text": "Tilsæt vand, ris og salt, og rør rundt. Sæt låg på, og bring langsomt i kog. Lad risene koge under låg ved svag varme i 10 minutter."
+    },
+    {
+      "section": "Hvidløgsris",
+      "text": "Træk gryden af varmen, og lad risene stå med låg på i 10 minutter mere. Vend koriander i lige før servering."
+    },
+    {
+      "section": "Limedressing",
+      "text": "Rør creme fraiche sammen med limesaft og -skal, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Server de sprøde burritos med hvidløgsris og limedressing."
+    }
+  ],
+  "changes": []
+}

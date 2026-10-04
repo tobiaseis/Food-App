@@ -1,0 +1,113 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cheese-tomato-ham-turnovers",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:09:17.817Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Butterdejshorn med ost, skinke og tomat",
+  "intro": "Sprøde butterdejsfirkanter fyldt med ost, skinke og tomat, som brettes sammen og bages gyldne. Gode til frokost, madpakken eller en picnic.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "pakke",
+      "name": "butterdej",
+      "note": "udrullet, ca. 320 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "ost",
+      "note": "mild cheddar, revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "skive",
+      "name": "skinke",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i tykke skiver, eller 4 soltørrede tomater",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "til pensling",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Beklæd en bageplade med bagepapir."
+    },
+    {
+      "section": null,
+      "text": "Rul butterdejen ud og skær den i fire lige store rektangler."
+    },
+    {
+      "section": null,
+      "text": "Smør flødeosten midt på hvert rektangel, så der er en kant på ca. 1 cm hele vejen rundt. Smør sennep ovenpå, hvis du bruger den."
+    },
+    {
+      "section": null,
+      "text": "Fordel revet ost, skinke og tomat over fyldet."
+    },
+    {
+      "section": null,
+      "text": "Løft to modsatte hjørner af hver firkant ind over fyldet, og klem dem sammen i midten, så hornet lukker."
+    },
+    {
+      "section": null,
+      "text": "Pensl al blottet dej med mælk, og læg hornene på bagepladen."
+    },
+    {
+      "section": null,
+      "text": "Bag i 20 minutter, til de er gyldne og hævede. Du kan i stedet bruge airfryer på 200 °C i 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Lad hornene køle af i 5–10 minutter før servering. Skal de med på picnic, så lad dem køle helt af først."
+    }
+  ],
+  "changes": [
+    "Soft cheese er skiftet til flødeost.",
+    "Dijon mustard er skiftet til sennep.",
+    "Mild cheddar er skiftet til ost (revet).",
+    "Sundried tomatoes er skiftet til soltørrede tomater under tomater."
+  ]
+}

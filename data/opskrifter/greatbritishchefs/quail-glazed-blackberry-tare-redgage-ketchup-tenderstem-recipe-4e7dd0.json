@@ -1,0 +1,499 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/quail-glazed-blackberry-tare-redgage-ketchup-tenderstem-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:41:23.736Z",
+  "total_minutes": 360,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 43,
+  "title": "Grillede vagtler med brombærtare, fyldte confiterede lår og blommeketchup",
+  "intro": "Saltlagte vagtelkroner glaseres med en brombærtare og grilles over kul, mens de fyldte lår confiteres og friturestegges sprøde. Blommeketchup og grillet broccolini runder retten af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Lage til vagtlerne",
+      "amount": 1,
+      "unit": "l",
+      "name": "pilsner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lage til vagtlerne",
+      "amount": 12,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lage til vagtlerne",
+      "amount": 150,
+      "unit": "ml",
+      "name": "wokssauce",
+      "note": "vegetarisk",
+      "optional": false
+    },
+    {
+      "section": "Lage til vagtlerne",
+      "amount": 3,
+      "unit": "g",
+      "name": "fennikelfrø",
+      "note": "ristede og stødte",
+      "optional": false
+    },
+    {
+      "section": "Lage til vagtlerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": "ristede og groft knuste",
+      "optional": false
+    },
+    {
+      "section": "Lage til vagtlerne",
+      "amount": 6,
+      "unit": "g",
+      "name": "szechuanpeber",
+      "note": "ristet og groft knust",
+      "optional": false
+    },
+    {
+      "section": "Lage til vagtlerne",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Vagtler",
+      "amount": 4,
+      "unit": "stk",
+      "name": "vagtler",
+      "note": "ca. 180 g hver",
+      "optional": false
+    },
+    {
+      "section": "Fennikelsalamifyld",
+      "amount": 200,
+      "unit": "g",
+      "name": "spegepølse",
+      "note": "med fennikel, uden skind, i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Fennikelsalamifyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fennikelsalamifyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "lardo",
+      "note": "uden svær, i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Fennikelsalamifyld",
+      "amount": 20,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": "ristet, uden skræl",
+      "optional": false
+    },
+    {
+      "section": "Fennikelsalamifyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "i meget fine tern, confiteret i fedtet fra lårene",
+      "optional": false
+    },
+    {
+      "section": "Fennikelsalamifyld",
+      "amount": 10,
+      "unit": "g",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Confiterede lår",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Confiterede lår",
+      "amount": 500,
+      "unit": "g",
+      "name": "andefedt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Confiterede lår",
+      "amount": 2,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Confiterede lår",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "lille stykke",
+      "optional": false
+    },
+    {
+      "section": "Confiterede lår",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grapefrugtskal",
+      "note": "1 strimmel",
+      "optional": false
+    },
+    {
+      "section": "Confiterede lår",
+      "amount": 3,
+      "unit": "stk",
+      "name": "tørret chili",
+      "note": "ristede og groft knuste",
+      "optional": false
+    },
+    {
+      "section": "Blommeketchup",
+      "amount": 250,
+      "unit": "g",
+      "name": "skalotteløg",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Blommeketchup",
+      "amount": 5,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blommeketchup",
+      "amount": 35,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blommeketchup",
+      "amount": 300,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blommeketchup",
+      "amount": 150,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blommeketchup",
+      "amount": 300,
+      "unit": "ml",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blommeketchup",
+      "amount": 1,
+      "unit": "kg",
+      "name": "blommer",
+      "note": "uden sten, i tern",
+      "optional": false
+    },
+    {
+      "section": "Brombærtare",
+      "amount": 150,
+      "unit": "g",
+      "name": "brombær",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Brombærtare",
+      "amount": 80,
+      "unit": "g",
+      "name": "wokssauce",
+      "note": "vegetarisk",
+      "optional": false
+    },
+    {
+      "section": "Brombærtare",
+      "amount": 50,
+      "unit": "ml",
+      "name": "pilsner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brombærtare",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "mørk",
+      "optional": false
+    },
+    {
+      "section": "Brombærtare",
+      "amount": 35,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 200,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 200,
+      "unit": "g",
+      "name": "klæbrigt rismel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1,
+      "unit": "g",
+      "name": "szechuanpeber",
+      "note": "ristet og finmalet",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 3,
+      "unit": "g",
+      "name": "peber",
+      "note": "sort, ristet og finmalet",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 8,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 100,
+      "unit": "g",
+      "name": "æggehvider",
+      "note": "pisket kraftigt i et par minutter",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 12,
+      "unit": "stk",
+      "name": "broccolini",
+      "note": "trimmet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "ghee",
+      "note": "til broccolien",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "ghee",
+      "note": "til vagtlerne",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Lage og vagtler",
+      "text": "Varm alle ingredienserne til lagen op til en svag simren. Tag af varmen og lad lagen køle helt af."
+    },
+    {
+      "section": "Lage og vagtler",
+      "text": "Skær lår og gaffelben af vagtlerne, så kun kronen er tilbage. Gem lårene. Klip rygraden af med en skarp saks."
+    },
+    {
+      "section": "Lage og vagtler",
+      "text": "Klip et lille snit i siden, hvor brystbenet møder brystpladen. Så ligger vagtlen fladere og tilberedes mere jævnt på grillen."
+    },
+    {
+      "section": "Lage og vagtler",
+      "text": "Læg kronerne i lagen og stil dem på køl i 2 timer. Tag dem derefter op, dup dem tørre og køl dem ned, til de skal bruges."
+    },
+    {
+      "section": "Fyld",
+      "text": "Blend alle ingredienserne til fyldet i en foodprocessor, til det er næsten helt glat. Fyld det i sprøjtreposer og stil det på køl."
+    },
+    {
+      "section": "Confiterede lår",
+      "text": "Drys de otte vagtellår med salt. Smelt fedtet i en gryde sammen med de øvrige ingredienser til confiten, og varm det op til 120 °C."
+    },
+    {
+      "section": "Confiterede lår",
+      "text": "Læg forsigtigt lårene i fedtet. Bring temperaturen tilbage på 120 °C, og confiter dem i 1 time ved samme temperatur."
+    },
+    {
+      "section": "Confiterede lår",
+      "text": "Tag lårene op af fedtet og lad dem køle, til du kan holde på dem."
+    },
+    {
+      "section": "Confiterede lår",
+      "text": "Træk forsigtigt lårbenet ud og fjern al brusk. Sprøjt fyldet ind i lårene."
+    },
+    {
+      "section": "Confiterede lår",
+      "text": "Læg lårene på køkkenrulle eller et rent viskestykke og stil dem på køl i mindst 2 timer, så de bliver helt kolde og faste."
+    },
+    {
+      "section": "Blommeketchup",
+      "text": "Sved skalotteløgene med salt og olie ved svag varme i 15–20 minutter, uden at de tager farve. Stil dem til side."
+    },
+    {
+      "section": "Blommeketchup",
+      "text": "Smelt sukker og honning til en lys karamel i en tykbundet gryde med høje kanter. Sving gryden, så sukkeret opløses."
+    },
+    {
+      "section": "Blommeketchup",
+      "text": "Hæld forsigtigt eddiken i. Det sprutter, og karamellen er meget varm, så stå på afstand. Kog et par minutter, til karamellen er blank."
+    },
+    {
+      "section": "Blommeketchup",
+      "text": "Kom skalotteløg og blommer i og kog under jævnlig omrøring ved middel varme, til massen er tyk og som marmelade. Lad den køle i 20 minutter."
+    },
+    {
+      "section": "Blommeketchup",
+      "text": "Blend ketchuppen helt glat og smag til med mere syre eller sødme, hvis den mangler det."
+    },
+    {
+      "section": "Brombærtare",
+      "text": "Kog alle ingredienserne til taren i en gryde ved middel varme i 5–7 minutter under konstant piskning, til brombærrene er faldet fra hinanden, og safterne er kogt ind."
+    },
+    {
+      "section": "Brombærtare",
+      "text": "Blend taren glat og sigt den. Stil den til side ved stuetemperatur."
+    },
+    {
+      "section": "Panering",
+      "text": "Bland ingredienserne til panaden. Stil æggehviderne i ét fad og panaden i et andet, og sæt et bagegitter i en bageplade."
+    },
+    {
+      "section": "Panering",
+      "text": "Vend de fyldte lår ét ad gangen i æggehviderne, så de er helt dækket. Vend dem derefter i panaden med den anden hånd og læg dem på gitteret, så overskydende mel falder af."
+    },
+    {
+      "section": "Panering",
+      "text": "Varm en frituregryde eller en tykbundet gryde med rigeligt olie op til 180 °C. Steg lårene i 4–5 minutter, til de er gennemstegte."
+    },
+    {
+      "section": "Panering",
+      "text": "Lad lårene dryppe af på køkkenrulle og drys dem med lidt salt."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Gør en kulgrill klar til indirekte varme. Brug så mange kul, at den direkte side kun har middel-lav varme."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Lad broccolinien ligge i vand i 15 minutter. Hæld vandet fra og vend den med salt og ghee."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Sæt en grillkurv over kullene, så den bliver rimelig varm. Pensl de saltlagte vagtelkroner let med ghee."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Tag kurven af kullene og læg kronerne i med lidt afstand. Luk kurven og sæt den tilbage på kullene med skindsiden nedad."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Grill i ca. 1 minut, til skindet får let farve, vend og grill 1 minut mere."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Tag kurven fra den direkte varme og pensl kronerne over det hele med taren. Grill 30 sekunder på hver side."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Flyt kronerne til den indirekte side eller et varmt sted over kullene og lad dem hvile i 3–5 minutter, alt efter hvor gennemstegte du vil have dem."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Børst kurven ren, mens vagtlerne hviler. Læg broccolinien i, luk kurven og grill 2 minutter på hver side."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Skær brysterne rent af kronerne. Pensl skindsiden med lidt mere tare blandet med lidt af kødsaften."
+    },
+    {
+      "section": "Grill og servering",
+      "text": "Server brysterne med de sprøde lår, broccolinien og blommeketchuppen ved siden af."
+    }
+  ],
+  "changes": [
+    "Vegetarisk stir-fry sauce er skiftet til wokssauce.",
+    "Fennikelsalami er skiftet til spegepølse.",
+    "Kyllingefedt er skiftet til andefedt, som kilden selv nævner som alternativ.",
+    "Lager er skiftet til pilsner.",
+    "Rødblommer (redgage) er skiftet til blommer.",
+    "Tenderstem broccoli er skiftet til broccolini.",
+    "Clarified butter er skiftet til ghee.",
+    "Grapefrugtskal er beholdt, men hvidløgspurløg er skiftet til almindeligt purløg.",
+    "Tørrede 'facing heaven'-chili er skiftet til almindelig tørret chili.",
+    "Glutinøst rismel er beholdt som klæbrigt rismel, da der ikke findes en almindelig dansk afløser."
+  ]
+}

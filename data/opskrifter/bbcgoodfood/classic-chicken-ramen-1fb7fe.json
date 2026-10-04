@@ -1,0 +1,111 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/classic-chicken-ramen",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:53:30.819Z",
+  "total_minutes": 15,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 7,
+  "title": "Ramen med kylling",
+  "intro": "Klassisk ramen med stegt kyllingebryst, wokgrøntsager og en blødkogt æggehalvdel i varm bouillon. Retten er hurtig at lave og perfekt til en hverdagsaften.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "wokgrøntsager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "nudler",
+      "note": "ramennudler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm en grillpande eller en stor stegepande op ved middel varme. Steg kyllingebrysterne i 5-7 minutter, til de er gyldne."
+    },
+    {
+      "section": null,
+      "text": "Vend kyllingen, og steg den 4-5 minutter mere, til den er gennemstegt. Tag den af panden, skær den i tynde skiver, og stil den til side."
+    },
+    {
+      "section": null,
+      "text": "Rør wokgrøntsagerne på samme pande i 2 minutter, til de er lidt bløde."
+    },
+    {
+      "section": null,
+      "text": "Kog imens nudlerne i vand efter anvisningen på pakken. Læg ægget i samme gryde, og kog det 5-6 minutter, alt efter hvor blød blommen skal være."
+    },
+    {
+      "section": null,
+      "text": "Hæld nudlerne af, og pil ægget. Del det på midten."
+    },
+    {
+      "section": null,
+      "text": "Varm fonden op i en lille gryde ved middel varme, til den er rygende hed. Lad den ikke koge."
+    },
+    {
+      "section": null,
+      "text": "Fordel nudlerne i to dybe skåle. Læg grøntsager, kyllingeskiver og æggehalvdele ovenpå, og hæld den varme fond over."
+    },
+    {
+      "section": null,
+      "text": "Drys med purløg og chiliflager, og server med det samme."
+    }
+  ],
+  "changes": [
+    "Ramenbouillon er erstattet af kyllingefond.",
+    "Stir-fry-grøntsager er erstattet af wokgrøntsager."
+  ]
+}

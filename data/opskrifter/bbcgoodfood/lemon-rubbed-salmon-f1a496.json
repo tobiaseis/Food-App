@@ -1,0 +1,96 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/lemon-rubbed-salmon",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:57:59.171Z",
+  "total_minutes": 25,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 5,
+  "title": "Citronmarineret laks med estragon",
+  "intro": "Laksefilet med en frisk marinade af citron, hvidløg og estragon, som kan tilberedes på grillen eller under ovngrillen. Server med couscous og rucola.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft, stor",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "pakke",
+      "name": "estragon",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "laksefilet",
+      "note": "uden ben",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Rør citronskal, citronsaft, hvidløg, estragon og olivenolie sammen i et lavt fad af glas, keramik eller plast. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Vend laksen i marinaden, og gnid den godt ind i fisken. Dæk fadet til, og lad laksen trække i 10 minutter."
+    },
+    {
+      "section": "På grillen",
+      "text": "Tag laksen op af marinaden, og pak den ind i alufolie. Grill pakkerne over varme kul i 5-8 minutter, til fisken netop er gennemstegt."
+    },
+    {
+      "section": "Under ovngrillen",
+      "text": "Tænd ovnens grill på højeste trin. Læg laksen på en bageplade, og grill den i 7-10 minutter, til den netop er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Server laksen med couscous og rucola."
+    }
+  ],
+  "changes": []
+}

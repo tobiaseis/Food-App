@@ -1,0 +1,156 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/vanilla-spiced-cookies",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:46:58.495Z",
+  "total_minutes": 32,
+  "active_minutes": 20,
+  "yield_count": 30,
+  "source_lines": 9,
+  "title": "Krydrede vaniljekager til pynt",
+  "intro": "Mørdejskager med vanilje, ingefær og kanel, der kan stikkes ud i alle former og pyntes med glasur. De egner sig til at dekorere en kage eller et lille kagehus med døre, vinduer, stjerne og krans.",
+  "servings": 30,
+  "ingredients": [
+    {
+      "section": "Kagerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Kagerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagerne",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagerne",
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "til udrulning",
+      "optional": false
+    },
+    {
+      "section": "Kagerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt ingefær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kagerne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pynt",
+      "amount": 75,
+      "unit": "g",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pynt",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "lidt",
+      "optional": false
+    },
+    {
+      "section": "Pynt",
+      "amount": null,
+      "unit": null,
+      "name": "metallisk drys",
+      "note": "til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dejen",
+      "text": "Tænd ovnen på 190 °C (170 °C varmluft). Pisk smør, sukker og vaniljeekstrakt sammen med håndmixer eller røremaskine, til det er samlet."
+    },
+    {
+      "section": "Dejen",
+      "text": "Tilsæt ægget, og pisk det ind. Skrab dejen ned fra skålens sider undervejs, hvis det er nødvendigt."
+    },
+    {
+      "section": "Dejen",
+      "text": "Bland hvedemel, salt, ingefær og kanel i en anden skål. Vend det tørre i smørblandingen, og kør på lav hastighed, til der ikke er mel at se."
+    },
+    {
+      "section": "Udstikning",
+      "text": "Rul dejen ud til 6 mm på en let meldrysset bordplade. Stik først de dele ud, der skal bruges til huset, og brug resten af dejen til kager i former efter eget valg."
+    },
+    {
+      "section": "Udstikning",
+      "text": "Døren skal måle 9 x 6 cm. Brug et rektangulært udstikkerudstyr, og læg evt. en bue på toppen med en stor rund udstikker. Vinduerne er 4 x 4 cm, og stjernen er ca. 5,5 cm. Til krandsen stikkes en rund skive på 4 cm ud, og derefter et hul på 1,5 cm i midten."
+    },
+    {
+      "section": "Bagning",
+      "text": "Læg kagerne på bageplader med lidt afstand imellem. Bag dem i 12-15 minutter, til kanterne er gyldne. De små kager er hurtigere færdige, så hold øje med dem."
+    },
+    {
+      "section": "Bagning",
+      "text": "Lad kagerne hvile på pladerne i 10 minutter, og flyt dem derefter over på en rist, til de er helt kolde."
+    },
+    {
+      "section": "Pynt",
+      "text": "Rør flormelis op med lige akkurat nok vand til en tyk glasur. Fyld den i en sprøjtepose med lille rund tylle, eller klip hjørnet af posen, og pynt kagerne."
+    },
+    {
+      "section": "Pynt",
+      "text": "Drys med metallisk drys, og lad glasuren tørre i et par timer, før kagerne sættes fast på kagen. Kagerne holder sig i en lufttæt beholder i op til to dage."
+    }
+  ],
+  "changes": [
+    "Royal icing sugar er erstattet med flormelis.",
+    "Golden caster sugar er erstattet med almindeligt sukker.",
+    "Plain flour er erstattet med hvedemel."
+  ]
+}

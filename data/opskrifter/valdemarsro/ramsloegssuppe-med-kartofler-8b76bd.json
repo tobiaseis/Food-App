@@ -1,0 +1,174 @@
+{
+  "url": "https://www.valdemarsro.dk/ramsloegssuppe-med-kartofler/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:37:10.443Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Ramsløgssuppe med kartofler",
+  "intro": "Cremet kartoffelsuppe med masser af ramsløg og et strejf af citron. Serveres med grøn ramsløgsolie, creme fraiche, ristede pinjekerner og godt brød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1.3,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 300,
+      "unit": "g",
+      "name": "ramsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk; fintrevet skal og lidt saft",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ramsløgsolie",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "ramsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ramsløgsolie",
+      "amount": 1,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ramsløgsolie",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "et par dråber saft og lidt fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 30,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "skive",
+      "name": "brød",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Suppe",
+      "text": "Rør løgene i olien i en gryde ved middel varme, til de er bløde."
+    },
+    {
+      "section": "Suppe",
+      "text": "Kom kartofler og fond i gryden, og lad det koge, til kartoflerne er møre."
+    },
+    {
+      "section": "Suppe",
+      "text": "Tilsæt ramsløg og fløde, og blend suppen, til den er glat og cremet."
+    },
+    {
+      "section": "Suppe",
+      "text": "Krydr med salt, peber, citronskal og lidt citronsaft."
+    },
+    {
+      "section": "Ramsløgsolie",
+      "text": "Blend ramsløg, olie, citronsaft og citronskal med en stavblender til en jævn grøn olie."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld suppen op, og top med creme fraiche, et par dryp ramsløgsolie, pinjekerner og peber. Server brødet ved siden af."
+    }
+  ],
+  "changes": [
+    "Grøntsagsbouillon er skiftet til grøntsagsfond."
+  ]
+}

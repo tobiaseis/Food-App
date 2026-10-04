@@ -1,0 +1,190 @@
+{
+  "url": "https://www.valdemarsro.dk/pizza-stromboli/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:37:23.845Z",
+  "total_minutes": 1440,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Stromboli",
+  "intro": "Rullede pizzaroulader med tomatsauce, mozzarella, rødløg og oliven på en dej, der hæver langsomt i køleskabet. Bages sprøde og gyldne på en varm plade.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 10,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "stuetemperet",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "plus lidt til skålen",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 450,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus lidt til hævebordet",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 30,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "oliven",
+      "note": "uden sten, i skiver eller grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Rør gæren ud i vandet i en stor skål. Tilsæt hvedemel, olivenolie og salt."
+    },
+    {
+      "section": "Dej",
+      "text": "Ælt dejen i røremaskinen ved middelhastighed i 10 minutter, til den er glat, blød og smidig."
+    },
+    {
+      "section": "Dej",
+      "text": "Smør en skål med olivenolie, læg dejen i og vend den rundt, så den er helt dækket af olie."
+    },
+    {
+      "section": "Dej",
+      "text": "Dæk skålen og lad dejen hæve på køkkenbordet i 30 minutter. Sæt den derefter i køleskabet i 10-24 timer."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Mix tomater, tomatpuré, hvidløg, basilikum og oregano jævnt sammen. Smag til med salt og peber."
+    },
+    {
+      "section": "Bagning",
+      "text": "Sæt ovnen på dens højeste temperatur en time før bagning, og lad bagestål eller bageplade varme med."
+    },
+    {
+      "section": "Bagning",
+      "text": "Mel køkkenbordet let og skær dejen over i to lige store stykker. Rul hvert stykke ud til en firkant på 30×30 cm."
+    },
+    {
+      "section": "Bagning",
+      "text": "Smør tomatsauce ud på begge firkanter, og top med mozzarella, rødløg, oliven og presset hvidløg. Lad en kant på ca. 2 cm langs den ene side være fri."
+    },
+    {
+      "section": "Bagning",
+      "text": "Rul hver firkant sammen til en rulle, og klem samlingen sammen på den frie kant. Læg rullerne med samlingen nedad på bagepapir."
+    },
+    {
+      "section": "Bagning",
+      "text": "Sænk ovnen til 200 °C varmluft. Skub rullerne med papiret ind på den varme plade, og bag dem i ca. 15 minutter, til de er gyldne og sprøde."
+    }
+  ],
+  "changes": [
+    "Flagesalt er skiftet til almindeligt salt."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/sweet-potato-soup",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:37:38.706Z",
+  "total_minutes": 55,
+  "active_minutes": 20,
+  "yield_count": 8,
+  "source_lines": 10,
+  "title": "Sødkartoffelsuppe",
+  "intro": "En cremet, mild suppe af sødkartofler og gulerødder, krydret med spidskommen og koriander. Den serveres med godt brød.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "solsikkeolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "og mere efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groft hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "sødkartofler",
+      "note": "skrællede og groft hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "piskefløde",
+      "note": "3-4 spsk efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "fast, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde ved middel-lav varme. Kom løgene og saltet i, og steg dem i 10-12 minutter, til de er bløde, men ikke gyldne."
+    },
+    {
+      "section": null,
+      "text": "Rør spidskommen, koriander og hvidløg ned i gryden, og steg i ca. 1 minut, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Kom gulerødderne i, og lad dem stege et par minutter, til de begynder at blive møre. Tilsæt derefter sødkartoflerne, og steg et par minutter mere."
+    },
+    {
+      "section": null,
+      "text": "Hæld fonden over, og bring suppen i kog under omrøring. Skru evt. op til middel varme. Lad den simre i 20-25 minutter, til sødkartofler og gulerødder er møre."
+    },
+    {
+      "section": null,
+      "text": "Blend suppen glat med en stavblender, eller hæld den i en blender. Rør fløden i, og smag til med salt."
+    },
+    {
+      "section": null,
+      "text": "Server suppen med brød, hvis du har lyst."
+    }
+  ],
+  "changes": [
+    "Double cream er erstattet af piskefløde."
+  ]
+}

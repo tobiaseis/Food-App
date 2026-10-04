@@ -1,0 +1,78 @@
+{
+  "url": "https://www.valdemarsro.dk/kyllingestykker-med-nachos/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:48:04.240Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 4,
+  "title": "Kyllingenuggets med nachos",
+  "intro": "Sprøde kyllingenuggets med en knasende overflade af knuste nachos. De kan bages i ovnen eller steges på panden.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i grove stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "sammenpisket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "nachos",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning på pande",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt tre dybe tallerkener frem: mel i den første, sammenpisket æg i den næste og knuste nachos i den sidste."
+    },
+    {
+      "section": null,
+      "text": "Rul kyllingestykkerne først i melet, så i ægget og til sidst i nachosknasen, så de er dækket hele vejen rundt."
+    },
+    {
+      "section": null,
+      "text": "Ovn: Varm ovnen op til 175 °C varmluft. Læg nuggets på en bageplade, og bag dem i 20 minutter."
+    },
+    {
+      "section": null,
+      "text": "Pande: Varm olie op ved middelvarme, og steg nuggets, til de er gennemstegte. Vend dem undervejs."
+    }
+  ],
+  "changes": [
+    "Fuldkornshvedemel er skiftet til almindeligt hvedemel."
+  ]
+}

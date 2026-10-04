@@ -1,0 +1,150 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/peanut-butter-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:06:38.125Z",
+  "total_minutes": 50,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Kylling i jordnøddesmør-karry",
+  "intro": "Mørke kyllingestykker simrer i en cremet sauce af jordnøddesmør, kokosmælk og tomat, krydret med garam masala. Server med blomkålsris og ristede jordnødder.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "uden skind og ben, skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "chili",
+      "note": "røde, fint skåret, evt. uden kerner",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "frisk, revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "jordnøddesmør",
+      "note": "smooth",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "ml",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "halvdelen groft hakket, resten som blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "ristede jordnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "blomkålsris",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm halvdelen af olien i en dyb pande ved middel varme. Brun kyllingen i omgange, til den er gylden, og stil den til side."
+    },
+    {
+      "section": null,
+      "text": "Steg løget i 8 minutter, til det er blødt. Tilsæt resten af olien sammen med hvidløg, chili og ingefær, og steg i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Rør garam masala i og steg endnu 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt jordnøddesmør, kokosmælk og tomater, og lad det komme i kog, så det simrer."
+    },
+    {
+      "section": null,
+      "text": "Kom kyllingen tilbage i panden sammen med den hakkede koriander. Lad retten simre i 30 minutter, til saucen er tyknet, og kyllingen er gennemstegt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Top med de resterende korianderblade og ristede jordnødder. Server med blomkålsris, hvis du har lyst."
+    }
+  ],
+  "changes": [
+    "Avocadoolie er skiftet til rapsolie."
+  ]
+}

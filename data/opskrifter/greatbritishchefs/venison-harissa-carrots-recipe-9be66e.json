@@ -1,0 +1,593 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/venison-harissa-carrots-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:05:16.982Z",
+  "total_minutes": 225,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 53,
+  "title": "Hjorteryg med harissa og gulerødder",
+  "intro": "Mør hjorteryg penslet med krydret harissaglasur, serveret med gulerødder i flere udgaver, en lille tærte med langtidsbraiseret hjortekød og en dyb jus. Retten består af mange små dele, som med fordel laves i forvejen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til retten",
+      "amount": 80,
+      "unit": "g",
+      "name": "grønkål",
+      "note": "renset og skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 500,
+      "unit": "g",
+      "name": "hjorteryg",
+      "note": "parteret",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": null,
+      "unit": null,
+      "name": "basilikum",
+      "note": "små blade, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hjortejus",
+      "amount": 1,
+      "unit": "kg",
+      "name": "hjorteknogler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hjortejus",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Hjortejus",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Hjortejus",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Hjortejus",
+      "amount": 5,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hjortejus",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hjortejus",
+      "amount": 1,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kvist",
+      "optional": false
+    },
+    {
+      "section": "Hjortejus",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rosmarin",
+      "note": "kvist",
+      "optional": false
+    },
+    {
+      "section": "Persilleolie",
+      "amount": 200,
+      "unit": "g",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persilleolie",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 25,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede gulerødder",
+      "amount": 300,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "skrællede, gerne i flere farver",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": 800,
+      "unit": "g",
+      "name": "hjortekølle",
+      "note": "parteret og skåret i store tern",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til brunning",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": 1.25,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "buketgarni",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": 5,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til jævning, i lige dele med mel",
+      "optional": false
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "amount": null,
+      "unit": null,
+      "name": "mel",
+      "note": "til jævning, i lige dele med smør",
+      "optional": false
+    },
+    {
+      "section": "Tærteskaller",
+      "amount": 400,
+      "unit": "g",
+      "name": "butterdej",
+      "note": "udrullet",
+      "optional": false
+    },
+    {
+      "section": "Tærteskaller",
+      "amount": null,
+      "unit": null,
+      "name": "bagespray",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerodspuré",
+      "amount": 1,
+      "unit": "kg",
+      "name": "gulerødder",
+      "note": "skrællede",
+      "optional": false
+    },
+    {
+      "section": "Gulerodspuré",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til svitsning",
+      "optional": false
+    },
+    {
+      "section": "Gulerodspuré",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt, usaltet",
+      "optional": false
+    },
+    {
+      "section": "Confiterede gulerødder",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "store, skrællede",
+      "optional": false
+    },
+    {
+      "section": "Confiterede gulerødder",
+      "amount": 100,
+      "unit": "g",
+      "name": "andefedt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Confiterede gulerødder",
+      "amount": 2,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kviste",
+      "optional": false
+    },
+    {
+      "section": "Confiterede gulerødder",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rosmarin",
+      "note": "kvist",
+      "optional": false
+    },
+    {
+      "section": "Confiterede gulerødder",
+      "amount": 10,
+      "unit": "stk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Confiterede gulerødder",
+      "amount": 20,
+      "unit": "stk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Harissaglasur",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Harissaglasur",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Harissaglasur",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til svitsning",
+      "optional": false
+    },
+    {
+      "section": "Harissaglasur",
+      "amount": 100,
+      "unit": "g",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Harissaglasur",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": "let",
+      "optional": false
+    },
+    {
+      "section": "Harissaglasur",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Harissaglasur",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "risvineddike",
+      "optional": false
+    },
+    {
+      "section": "Harissaglasur",
+      "amount": 75,
+      "unit": "g",
+      "name": "farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frøknas",
+      "amount": 10,
+      "unit": "g",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Frøknas",
+      "amount": 100,
+      "unit": "g",
+      "name": "græskarkerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frøknas",
+      "amount": 8,
+      "unit": "g",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frøknas",
+      "amount": 100,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frøknas",
+      "amount": 5,
+      "unit": "g",
+      "name": "tørrede rosenblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Frøknas",
+      "amount": 8,
+      "unit": "g",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Hjortejus",
+      "text": "Varm ovnen op til 200 °C. Læg knoglerne på et rist over en bradepande, og rist dem i ovnen, til de er gyldne. Tag dem ud."
+    },
+    {
+      "section": "Hjortejus",
+      "text": "Brun løg, gulerod og selleri kort i en gryde med lidt olie. Hæld rødvinen på, og lad den koge ind til en tredjedel."
+    },
+    {
+      "section": "Hjortejus",
+      "text": "Kom knogler, fond og krydderurter i gryden. Bring det i kog, og lad det simre i 4 timer, mens du skummer af jævnligt."
+    },
+    {
+      "section": "Hjortejus",
+      "text": "Si jussen gennem et osteklæde over i en ren gryde, og kog den ind til en sirupsagtig konsistens. Hæld den på en beholder, og stil den på køl. Der bliver mere, end du skal bruge, men resten kan fryses."
+    },
+    {
+      "section": "Persilleolie",
+      "text": "Blancher persillen, og afkøl den i isvand. Pres den tør for væde, og kom den i en foodprocessor."
+    },
+    {
+      "section": "Persilleolie",
+      "text": "Blend på høj hastighed i 2 minutter, mens olien løber i en tynd stråle ned i processoren. Si massen gennem et osteklæde over i en flaske."
+    },
+    {
+      "section": "Persilleolie",
+      "text": "Sæt flasken på hovedet i køleskabet med en prop i åbningen, så vandet skilles fra olien. Pres vandet ud og kassér det. Opbevar olien på køl."
+    },
+    {
+      "section": "Syltede gulerødder",
+      "text": "Rør sukkeret ud i eddike og vand i en gryde ved middel varme. Lad lagen køle af."
+    },
+    {
+      "section": "Syltede gulerødder",
+      "text": "Skær gulerødderne i fine tændstikker, og læg dem i lagen i mindst 2 timer."
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "text": "Varm ovnen op til 150 °C. Krydr kødet med salt, og brun det i portioner i lidt olie i en stor ovnfast gryde, til det er gyldent. Hæld lidt vand i mellem portionerne for at løsne stegeskorpen, og gem væsken."
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "text": "Steg grøntsagerne i lidt olie i samme gryde, til de er let gyldne. Tilsæt rødvinen, og lad den koge lidt ind."
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "text": "Kom kødet tilbage, og læg buketgarni, fond og den gemte væske i, så kødet er dækket til to tredjedele. Læg låg på, og braiser i ovnen i 1½-2 timer, til kødet falder fra hinanden."
+    },
+    {
+      "section": "Braiseret hjortekød til tærterne",
+      "text": "Si kød og grøntsager fra over i en ren gryde. Kog saucen ind, til den er tyk, og jævn evt. med smør og mel æltet sammen. Vend kødet i saucen, smag til med salt og peber, og stil det på køl. Der bliver mere, end du skal bruge."
+    },
+    {
+      "section": "Tærteskaller",
+      "text": "Varm ovnen op til 180 °C. Skær butterdejen i 4 firkanter på 7 cm. Spray tærteformene let med bagespray, og tryk en firkant dej ned i hver."
+    },
+    {
+      "section": "Tærteskaller",
+      "text": "Sæt en ekstra form oven på hver, så dejen ligger mellem to forme. Stil dem på en bageplade, læg en plade mere ovenpå, og tynd den ned med et par gryder som vægt."
+    },
+    {
+      "section": "Tærteskaller",
+      "text": "Bag i 14 minutter, til dejen er let gyldenbrun. Lad formene hvile i ca. 30 minutter, før du tager skallerne ud. Lad dem køle helt af ved stuetemperatur."
+    },
+    {
+      "section": "Gulerodspuré",
+      "text": "Pres halvdelen af gulerødderne i en juicer, og kassér frugtkødet. Skær resten i tynde skiver, og svits dem i lidt olie, til de begynder at blive bløde."
+    },
+    {
+      "section": "Gulerodspuré",
+      "text": "Hæld gulerodsjuicen over, og kog, til gulerødderne er møre. Blend dem med smørret til en glat puré, og smag til med salt. Si den over i en sprøjtepose, luk den helt tæt, og stil den på køl."
+    },
+    {
+      "section": "Confiterede gulerødder",
+      "text": "Smelt fedtet i en lille gryde sammen med krydderurter, frø og en knivspids salt og peber. Læg gulerødderne i fedtet, så de er dækket, og kog dem ved lav varme, til de er møre hele vejen igennem."
+    },
+    {
+      "section": "Confiterede gulerødder",
+      "text": "Lad dem køle af, og opbevar dem i en beholder på køl."
+    },
+    {
+      "section": "Harissaglasur",
+      "text": "Svits skalotteløg og hvidløg i lidt olie, til de er bløde."
+    },
+    {
+      "section": "Harissaglasur",
+      "text": "Kom de øvrige ingredienser i gryden, og kog, til det meste af væsken er væk. Blend glasuren glat, si den over i en beholder, og stil den på køl."
+    },
+    {
+      "section": "Frøknas",
+      "text": "Rist alle frøene og kernerne, til de er gyldne og dufter. Vend rosenblade og fennikelfrø i. Hak det groft, eller blend det til en grov krumme. Stil til side."
+    },
+    {
+      "section": "Til servering",
+      "text": "Blancher grønkålen i rigeligt kogende saltvand, og afkøl den i isvand. Tør den godt, og stil den på køl."
+    },
+    {
+      "section": "Til servering",
+      "text": "Salt hjorterygen, og steg den i en varm pande med lidt olie efter ønsket stegegrad. Til rosa kød skal kernetemperaturen være ca. 53 °C. Pensl med harissaglasur, og lad kødet hvile."
+    },
+    {
+      "section": "Til servering",
+      "text": "Brun de confiterede gulerødder i en pande for at varme dem og give dem farve. Skær top og bund af, så de står stabilt. Pensl dem med glasur, og vend dem i frøknasen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm 2 dl af jussen og lidt af det braiserede kød op hver for sig. Varm sprøjteposen med gulerodspuré i en gryde med varmt, men ikke simrende vand."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kom grønkålen i det kogende vand igen for at varme den, og svits den kort i en pande, til den får lidt farve."
+    },
+    {
+      "section": "Til servering",
+      "text": "Sprøjt lidt puré på en lille tallerken, og fæst tærteskallerne ovenpå. Fyld dem med braiseret kød, pensl med glasur, og pynt med syltede gulerødder, karse og basilikum."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær hjorterygen i skiver, og anret den på tallerkner med gulerødder og resten af purén. Rør stegesaft fra hvilen i jussen, og hæld den på tallerknerne. Dryp persilleolie i jussen, og læg grønkål, karse og basilikum ved siden af. Resten af persilleolien kan bruges til andre retter."
+    }
+  ],
+  "changes": [
+    "Brøndkarse (nasturtium) er erstattet af karse.",
+    "Lilla mikrobasilikum er erstattet af basilikum.",
+    "Fennikelpollen er erstattet af fennikelfrø.",
+    "Hjorte- eller andefedt er erstattet af andefedt."
+  ]
+}

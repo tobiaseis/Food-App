@@ -1,0 +1,204 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-full-english",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:11:00.205Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Sund full english",
+  "intro": "En lettere udgave af den engelske morgenmad med ovnbagte svampe og tomater, pølser, pocherede æg og hvide bønner i krydret tomatsauce. Retten egner sig lige så godt til brunch som til aftensmad.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bønner i tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bønner i tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Bønner i tomatsauce",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Bønner i tomatsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": "sød, toppet teskefuld",
+      "optional": false
+    },
+    {
+      "section": "Bønner i tomatsauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hvide bønner",
+      "note": "à 400 g, skyllet og drænet",
+      "optional": false
+    },
+    {
+      "section": "Bønner i tomatsauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "med krydderurter",
+      "optional": false
+    },
+    {
+      "section": "Bønner i tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "HP sauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager og pølser",
+      "amount": 300,
+      "unit": "g",
+      "name": "champignon",
+      "note": "brune, halverede",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager og pølser",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager og pølser",
+      "amount": 400,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "på stilk",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager og pølser",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager og pølser",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte grøntsager og pølser",
+      "amount": 8,
+      "unit": "stk",
+      "name": "grillpølser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "friske, til drys",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bønner i tomatsauce",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Varm olien til bønnerne i en lille gryde."
+    },
+    {
+      "section": "Bønner i tomatsauce",
+      "text": "Steg løget ved middel varme i 8-10 minutter, til det er blødt og begynder at blive gyldenbrunt."
+    },
+    {
+      "section": "Bønner i tomatsauce",
+      "text": "Rør det knuste hvidløg og paprikaen i og steg i 1 minut. Tilsæt bønner, hakkede tomater og HP sauce, og bring det i kog."
+    },
+    {
+      "section": "Bønner i tomatsauce",
+      "text": "Skru ned og lad det simre i 10-12 minutter, mens du rører af og til. Sæt låg på og stil til side."
+    },
+    {
+      "section": "Ovnbagte grøntsager og pølser",
+      "text": "Vend champignon, timian, cherrytomater og de hele hvidløg med olien i et ovnfast fad."
+    },
+    {
+      "section": "Ovnbagte grøntsager og pølser",
+      "text": "Bag i ovnen i 12 minutter, til svampe og tomater er bløde. Tag fadet ud og dæk det til, så det holder varmen."
+    },
+    {
+      "section": "Ovnbagte grøntsager og pølser",
+      "text": "Sæt grillen på den højeste indstilling. Læg pølserne på en bageplade med folie, og grill dem i 4-5 minutter på hver side, til de er gyldne og gennemstegte."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Slå æggene ud i en lille skål. Kog letsaltet vand op i en gryde, og lav en kraftig hvirvel i vandet med en grydeske."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Når hvirvlen næsten er stilnet af, glider du ét æg ned i vandet. Skru ned for varmen, og lad ægget simre forsigtigt i 3 minutter."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Tag ægget op med en hulske og læg det på en tallerken. Gentag med de øvrige æg."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret de bagte grøntsager med pølser, æg og bønner. Smag til med salt og peber, og drys med timianblade."
+    }
+  ],
+  "changes": [
+    "Cannellinibønner er erstattet af hvide bønner.",
+    "Reduced-salt brown sauce er erstattet af HP sauce.",
+    "Chipolatas er erstattet af grillpølser."
+  ]
+}

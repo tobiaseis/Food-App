@@ -1,0 +1,406 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/korean-rice-bowls-mayak-eggs-soy-glazed-chicken-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:30:47.481Z",
+  "total_minutes": 50,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 37,
+  "title": "Koreanske risskåle med mayak-æg og soja-glaseret kylling",
+  "intro": "Bløde æg trukket i sojamarinade, glaseret kylling, chilliris og cremet gochujang-mayo samles i en mættende skål. Æggene skal marinere natten over, så start dagen før.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Mayak-æg",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "kolde",
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 1.2,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": "lys",
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 0.6,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 50,
+      "unit": "g",
+      "name": "pære",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Mayak-æg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "lys",
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "miso",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": 600,
+      "unit": "g",
+      "name": "kyllingeoverlår",
+      "note": "udbenede, uden skind, i strimler",
+      "optional": false
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Chilliris",
+      "amount": 300,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilliris",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chiliolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilliris",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chilliris",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-mayo",
+      "amount": 6,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-mayo",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-mayo",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "limesaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-mayo",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-mayo",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-mayo",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille, revet",
+      "optional": false
+    },
+    {
+      "section": "Gochujang-mayo",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gochujang-mayo",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "gerne sorte og hvide",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "revet skal",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mayak-æg",
+      "text": "Lav æggene dagen før. Bring en gryde vand i let kog, og læg æggene forsigtigt i. Kog dem i 6 minutter."
+    },
+    {
+      "section": "Mayak-æg",
+      "text": "Flyt æggene straks over i isvand, og lad dem køle helt af."
+    },
+    {
+      "section": "Mayak-æg",
+      "text": "Rør alle de øvrige ingredienser til mayak-æggene sammen i en skål eller en beholder til en marinade."
+    },
+    {
+      "section": "Mayak-æg",
+      "text": "Pil æggene, og læg dem helt ned i marinaden. Sæt låg på, og stil dem på køl natten over – mindst 6 timer. Jo længere de ligger, jo mere trækker soja ind i blommen, og jo blødere bliver den."
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "text": "Rør alle ingredienser til glaseringen sammen i en skål – kyllingen venter. Vend derefter kyllingestrimlerne i, og lad dem marinere i 20 minutter."
+    },
+    {
+      "section": "Chilliris",
+      "text": "Kog risene efter anvisningen på pakken. Vend chiliolie, sesamolie og salt i, og hold risene varme."
+    },
+    {
+      "section": "Syltet agurk",
+      "text": "Rør eddike, sukker og salt sammen i en lille skål, til sukker og salt er opløst. Vend agurkeskiverne i, og stil dem til side."
+    },
+    {
+      "section": "Gochujang-mayo",
+      "text": "Rør alle ingredienserne til mayoen sammen, og smag til med salt og peber. Stil den til side."
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "text": "Varm en pande op ved middelhøj til høj varme med en smule olie. Si kyllingen fra marinaden, men gem marinaden."
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "text": "Læg kyllingen i ét lag på panden, og steg den i 10-15 minutter. Vend den halvvejs, til den er gennemstegt."
+    },
+    {
+      "section": "Soja-glaseret kylling",
+      "text": "Hæld den gemte marinade over, og lad den simre ind til en blank glasur, der hænger ved kødet."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel ris i skåle, og hæld lidt af mayak-marinaden over (resten kan bruges til andre retter). Læg kylling, avocadoskiver og syltet agurk ovenpå."
+    },
+    {
+      "section": "Servering",
+      "text": "Dryp med gochujang-mayo, og drys med forårsløg, sesamfrø og limeskal. Skær mayak-æggene over, og læg dem på."
+    },
+    {
+      "section": "Servering",
+      "text": "Lad blommen løbe ud og blande sig med chiliolien og glasuren, så der opstår en rig sauce."
+    }
+  ],
+  "changes": [
+    "Chilli crisp er erstattet af chiliolie."
+  ]
+}

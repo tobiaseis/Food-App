@@ -1,0 +1,228 @@
+{
+  "url": "https://www.valdemarsro.dk/sushi-bowl/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:27:28.130Z",
+  "total_minutes": 60,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Sushibowl",
+  "intro": "Sushiris med rå laks, edamamebønner, avocado og friske grøntsager, toppet med en cremet wasabidip. En sushisalat i skål, der er nem at samle.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "sushiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "laks",
+      "note": "i sushikvalitet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "pillede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i julienne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "tangsalat",
+      "note": "kan købes hos fiskehandler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "noritang",
+      "note": "klippet i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saft og både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "til at dryppe over",
+      "optional": false
+    },
+    {
+      "section": "Marinade til risene",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "riseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade til risene",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade til risene",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Marinade til risene",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Wasabidip",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Wasabidip",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Wasabidip",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "wasabi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Wasabidip",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Wasabidip",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saft og fintrevet skal, økologisk",
+      "optional": false
+    },
+    {
+      "section": "Wasabidip",
+      "amount": null,
+      "unit": null,
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Wasabidip",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog risene, som det står på pakken. Lav imens marinaden og wasabidippen."
+    },
+    {
+      "section": "Marinade til risene",
+      "text": "Rør riseddike, sukker, ingefær og limesaft sammen."
+    },
+    {
+      "section": "Wasabidip",
+      "text": "Blend avocado, mayonnaise, wasabi, hvidløg, limesaft og limeskal med et skvæt soja og peber i en minihakker, til dippen er helt glat. Smag til."
+    },
+    {
+      "section": null,
+      "text": "Skær den frosne laks i meget tynde skiver."
+    },
+    {
+      "section": null,
+      "text": "Læg edamamebønnerne i en skål, og overhæld dem med kogende vand."
+    },
+    {
+      "section": null,
+      "text": "Vend marinaden i risene, mens de stadig er lune."
+    },
+    {
+      "section": null,
+      "text": "Fordel risene i 4 skåle. Læg edamamebønner, agurk, avocado, gulerod, tangsalat, noritang og laks ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Top hver skål med en skefuld wasabidip og drys med sesamfrø. Server med limebåde og sojasauce til at dryppe over."
+    }
+  ],
+  "changes": []
+}

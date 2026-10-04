@@ -1,0 +1,316 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/gin-brined-salmon-dill-picnic-traybake-pie-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:45:00.600Z",
+  "total_minutes": 140,
+  "active_minutes": null,
+  "yield_count": 10,
+  "source_lines": 29,
+  "title": "Ginlagret laksetærte med dild",
+  "intro": "En stor picnictærte i bradepande med ginlagret laks, ovnbagt fennikel, kartofler og dild under et gyldent låg af butterdej. Server den kold med agurkeraita og rødbedesalat.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Lagen",
+      "amount": 400,
+      "unit": "g",
+      "name": "laks",
+      "note": "uden skind, i stykker",
+      "optional": false
+    },
+    {
+      "section": "Lagen",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lagen",
+      "amount": 50,
+      "unit": "ml",
+      "name": "spiritus",
+      "note": "gin",
+      "optional": false
+    },
+    {
+      "section": "Lagen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Lagen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lagen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "groft havsalt",
+      "optional": false
+    },
+    {
+      "section": "Lagen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "enebær",
+      "note": "knuste",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "faste, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 150,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 200,
+      "unit": "g",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "dild",
+      "note": "lille, hakket",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 3,
+      "unit": "stk",
+      "name": "butterdej",
+      "note": "udrullede plader",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "til bestøvning",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 10,
+      "unit": "stk",
+      "name": "æg",
+      "note": "mellemstore, pisket",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "nigellafrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Raita",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "revet og drænet",
+      "optional": false
+    },
+    {
+      "section": "Raita",
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Raita",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Raita",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Raita",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "kogte, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æbleeddike",
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedesalat",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "havsalt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærten",
+      "text": "Rør vand, gin, citronskal, sukker, salt og enebær sammen i en skål. Læg laksen i lagen, og stil den på køl i 30 minutter. Hæld lagen fra, og dup laksen tør med køkkenrulle."
+    },
+    {
+      "section": "Tærten",
+      "text": "Tænd ovnen på 200 °C (varmluft 180 °C)."
+    },
+    {
+      "section": "Tærten",
+      "text": "Vend fennikel og rødløg i olivenolien, og bag dem i ovnen i 20 minutter, til de er møre og karamelliserede."
+    },
+    {
+      "section": "Tærten",
+      "text": "Kog kartoffelskiverne i 8 minutter, så de lige er møre. Si dem fra, og lad dem køle af."
+    },
+    {
+      "section": "Tærten",
+      "text": "Skru ovnen ned på 180 °C (varmluft 160 °C). Beklæd en form på 20 × 30 cm med bagepapir."
+    },
+    {
+      "section": "Tærten",
+      "text": "Læg to af dejpladerne, så de overlapper hinanden et par centimeter. Brug lidt vand som lim, hvis det er nødvendigt, og rul dem sammen på et meldrysset bord til én stor plade på ca. 3 mm. Den skal kunne dække både bund og kanter i formen. Pres dejen ned i formen."
+    },
+    {
+      "section": "Tærten",
+      "text": "Drys raspen over bunden. Fordel derefter lag på lag: de bagte grøntsager, kartoffelskiverne, laksen, ærterne, klatter af flødeost og rigeligt dild. Krydr med salt og peber mellem lagene."
+    },
+    {
+      "section": "Tærten",
+      "text": "Tag nogle spiseskefulde af de piskede æg fra til pensling. Hæld resten forsigtigt over fyldet."
+    },
+    {
+      "section": "Tærten",
+      "text": "Læg den sidste dejplade over som låg, og klem kanterne sammen. Pensl med det afsatte æg, drys med nigellafrø, og rids et pænt mønster i låget."
+    },
+    {
+      "section": "Tærten",
+      "text": "Bag tærten i 1 time og 20 minutter, til den er dybt gylden. Lad den køle helt af, før den serveres."
+    },
+    {
+      "section": "Raita",
+      "text": "Rør agurk, yoghurt, dild, hvidløgspulver og salt sammen."
+    },
+    {
+      "section": "Rødbedesalat",
+      "text": "Vend rødbederne med eddike, lønnesirup, olivenolie og salt. Lad dem trække i mindst 20 minutter inden servering."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,276 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/cajun-fried-rabbit-carrot-slaw-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:28:23.226Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 3,
+  "source_lines": 24,
+  "title": "Cajun-stegt kanin med gulerodssalat",
+  "intro": "Mør kanin marineret i kærnemælk og krydderier, rullet i krydret mel og friturestegt, til den er sprød og gylden. Serveres med en frisk salat af gulerod, fennikel og krydderurter.",
+  "servings": 3,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanin",
+      "note": "parteret i 6 stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både, til servering",
+      "optional": false
+    },
+    {
+      "section": "Cajun-krydderiblanding",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Cajun-krydderiblanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajun-krydderiblanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajun-krydderiblanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajun-krydderiblanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Cajun-krydderiblanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Cajun-krydderiblanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Cajun-krydderiblanding",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "stødt sort",
+      "optional": false
+    },
+    {
+      "section": "Marinade og krydret mel",
+      "amount": 5,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og krydret mel",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tabasco",
+      "note": "gerne Louisiana-style, plus ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Marinade og krydret mel",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade og krydret mel",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vinaigrette",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalat",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i bånd med skræller",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "lille, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalat",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "blade hakket fint",
+      "optional": false
+    },
+    {
+      "section": "Gulerodssalat",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "dild",
+      "note": "hakket fint",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Cajun-krydderiblanding",
+      "text": "Bland alle krydderierne i en stor skål. Del blandingen i to, og læg den ene halvdel i et fad eller en bakke."
+    },
+    {
+      "section": "Marinade og krydret mel",
+      "text": "Pisk kærnemælk og tabasco ud i krydderiblandingen i skålen. Vend kaninstykkerne rundt i marinaden, dæk til og lad dem trække i køleskabet natten over."
+    },
+    {
+      "section": "Marinade og krydret mel",
+      "text": "Rør hvedemel og majsstivelse ned i krydderiblandingen på fadet. Det kan sagtens laves i forvejen og opbevares i en tæt beholder."
+    },
+    {
+      "section": "Marinade og krydret mel",
+      "text": "Løft kaninen op af marinaden, og lad overskydende kærnemælk dryppe af. Vend stykkerne grundigt i melblandingen, og tryk til, så panéringen sidder fast. Læg dem på en rist, og lad dem hvile 15-20 minutter. Så hæfter melet bedre, og skorpen bliver mere ujævn og sprød."
+    },
+    {
+      "section": "Vinaigrette",
+      "text": "Pisk eddike, sennep og honning sammen. Hæld olivenolien i en tynd stråle, mens du pisker konstant, til dressingen er emulgeret. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en dyb gryde over middelhøj varme, eller forvarm en frituregryde til 180 °C. Steg kaninen i portioner, så gryden ikke bliver overfyldt. Sænk stykkerne forsigtigt ned, og steg dem 8-10 minutter, og vend dem undervejs. De skal være gennemstegte, dybt gyldne og sprøde, og kernetemperaturen skal nå 71 °C."
+    },
+    {
+      "section": null,
+      "text": "Læg den stegte kanin på en rist over en bageplade, så olien kan løbe af. Drys med lidt salt."
+    },
+    {
+      "section": "Gulerodssalat",
+      "text": "Mens kaninen steger, vend gulerødder, fennikel, skalotteløg og det meste af krydderurterne forsigtigt med vinaigretten. Gem lidt af urterne til pynt. Læg salaten på et stort fad."
+    },
+    {
+      "section": null,
+      "text": "Anret kaninen oven på salaten, og drys med de sidste krydderurter. Server med citronbåde og ekstra tabasco."
+    }
+  ],
+  "changes": [
+    "Hot sauce er erstattet med tabasco.",
+    "Garlic granules er erstattet med hvidløgspulver.",
+    "Onion granules er erstattet med løgpulver.",
+    "Vegetable oil er erstattet med rapsolie.",
+    "Cornflour er erstattet med majsstivelse.",
+    "Cayenne pepper er skrevet som cayennepeber.",
+    "Doves Farm plain white flour er erstattet med hvedemel.",
+    "Cider vinegar er erstattet med æblecidereddike.",
+    "Dijon mustard er erstattet med Dijon-sennep.",
+    "Shallot er erstattet med skalotteløg.",
+    "Rabbit er beholdt som kanin."
+  ]
+}

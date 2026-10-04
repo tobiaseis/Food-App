@@ -1,0 +1,156 @@
+{
+  "url": "https://www.arla.dk/opskrifter/lagkage-med-kakaobunde/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:27:41.813Z",
+  "total_minutes": 100,
+  "active_minutes": 40,
+  "yield_count": 1,
+  "source_lines": 12,
+  "title": "Lagkage med kakaobunde",
+  "intro": "Luftig kakaokage delt i tre bunde og lagt sammen med flødeskum, frisk frugt og hakket mørk chokolade. Pyntes med resten af flødeskummet og chokoladespåner.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Kakaobunde",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Kakaobunde",
+      "amount": 250,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kakaobunde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljesukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kakaobunde",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kakaobunde",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kakaobunde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kakaobunde",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kakaopulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kakaobunde",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 300,
+      "unit": "g",
+      "name": "frisk frugt",
+      "note": "i mindre stykker, fx nektariner, ananas eller banan",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "mørk chokolade",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "mørk chokolade",
+      "note": "spåner til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kakaobunde",
+      "text": "Tænd ovnen på 175 °C, og smør en springform på ca. 22 cm."
+    },
+    {
+      "section": "Kakaobunde",
+      "text": "Rør smør, sukker og vaniljesukker sammen. Tilsæt det ene æg, og pisk grundigt. Pisk derefter det andet æg i, til massen minder om æggesnaps."
+    },
+    {
+      "section": "Kakaobunde",
+      "text": "Bland hvedemel, bagepulver og kakaopulver, og si det over æggemassen i omgange. Vend skiftevis mælk i, så dejen bliver jævn."
+    },
+    {
+      "section": "Kakaobunde",
+      "text": "Hæld dejen i formen, og bag kagen midt i ovnen i ca. 50 minutter."
+    },
+    {
+      "section": "Kakaobunde",
+      "text": "Læg evt. bagepapir over kagen efter ca. 30 minutter, så toppen ikke bliver for mørk."
+    },
+    {
+      "section": "Kakaobunde",
+      "text": "Lad kagen køle helt af, og del den forsigtigt i 3 tynde bunde med en lang kniv."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk fløden til et let skum. Tag 2 dl fra til pynt, og stil det koldt."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend frugt og hakket chokolade forsigtigt i den resterende flødeskum."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg den nederste bund på et fad, og smør halvdelen af fyldet ovenpå. Læg den midterste bund over, og top med resten af fyldet."
+    },
+    {
+      "section": "Fyld",
+      "text": "Afslut med den sidste bund. Pynt med det afsatte flødeskum og chokoladespåner."
+    }
+  ],
+  "changes": []
+}

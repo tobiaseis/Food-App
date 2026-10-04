@@ -1,0 +1,142 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/double-fried-karaage-chicken",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:00:40.854Z",
+  "total_minutes": 34,
+  "active_minutes": 10,
+  "yield_count": 3,
+  "source_lines": 10,
+  "title": "Dobbeltstegt karaage-kylling",
+  "intro": "Japansk friturestegt kylling, der er mørbanet i sojamarinade og vendt i kartoffelmel. Den steges to gange, så den bliver mør indeni og sprød udenpå.",
+  "servings": 3,
+  "ingredients": [
+    {
+      "section": "Til kyllingen",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingelår",
+      "note": "udbenede, uden skind",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "kartoffelmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 500,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "togarashi",
+      "note": "japansk syvkrydderiblanding, til at drysse over mayonnaisen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinering",
+      "text": "Rør alle ingredienser til marinaden sammen i en stor skål."
+    },
+    {
+      "section": "Marinering",
+      "text": "Skær kyllingelårene i tern på ca. 4 cm, og vend dem i marinaden. Sæt skålen på køl i mindst 30 minutter – gerne natten over."
+    },
+    {
+      "section": "Panering",
+      "text": "Løft kyllingen op af marinaden med en hulske, og lad overskydende marinade dryppe af. Læg stykkerne på en tallerken, og sigt kartoffelmel over, så alle stykker er dækket hele vejen rundt."
+    },
+    {
+      "section": "Første stegning",
+      "text": "Varm olien op til 170 °C i en dyb gryde eller en wok. Du kan teste den med en lille brødterning, der skal blive brun på 30 sekunder."
+    },
+    {
+      "section": "Første stegning",
+      "text": "Læg forsigtigt fire-fem stykker kylling i olien, og steg dem i 3-4 minutter. Tag dem op på en rist med køkkenrulle under, og steg resten på samme måde."
+    },
+    {
+      "section": "Anden stegning",
+      "text": "Skru op for varmen, til olien er 180-190 °C. En brødterning skal her blive brun på 15-20 sekunder."
+    },
+    {
+      "section": "Anden stegning",
+      "text": "Kom al kyllingen tilbage i olien, og steg den i 1-2 minutter, til den er sprød og helt gennemstegt."
+    },
+    {
+      "section": "Servering",
+      "text": "Lad kyllingen dryppe af på risten i 1-2 minutter. Rør mayonnaisen med lidt togarashi, og server den sammen med kyllingen og citronbådene til at presse over."
+    }
+  ],
+  "changes": [
+    "Sake er erstattet med hvidvin."
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "url": "https://www.valdemarsro.dk/graesk-vegetar-bowl-med-groentsagsdeller/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:17:14.161Z",
+  "total_minutes": 60,
+  "active_minutes": 60,
+  "yield_count": 4,
+  "source_lines": 27,
+  "title": "Græsk bowl med grøntsagsdeller",
+  "intro": "Sprøde grøntsagsdeller med kikærter og halloumi serveres med citronris, tzatziki, friske grøntsager, oliven og feta. En mættende vegetarret med græske smage.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 20,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 100,
+      "unit": "g",
+      "name": "halloumi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 5,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 2,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "økologisk citron",
+      "note": "fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Ris med citron og persille",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "halloumi",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 300,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "halveret og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, i strimler",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i ringe",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 80,
+      "unit": "g",
+      "name": "sorte oliven",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grøntsagsdeller",
+      "text": "Rør æg, hvedemel og spidskål sammen i en skål. Tilsæt timian, soltørrede tomater og hvidløg, og rør det hele godt igennem. Lad farsen hvile i 15 minutter, og rør den igennem igen."
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "text": "Hak kikærterne groft i en foodprocessor eller minihakker. Smuldr halloumien fint, og vend begge dele i farsen. Smag til med salt og peber."
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "text": "Varm olien op på en pande. Læg små portioner fars på panden med en spiseske, og steg dem i ca. 5 minutter, til de er så faste, at de kan vendes. Steg dem derefter færdige på den anden side."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Del agurkerne på langs, og skrab kernerne ud med en ske. Riv dem groft, og vend dem med lidt salt. Lad dem trække i 5-10 minutter."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Hæld agurken i en sigte, og pres alt vandet fra med hænderne. Rør den derefter i yoghurten, og smag til med hvidløg, salt, peber og olivenolie."
+    },
+    {
+      "section": "Ris med citron og persille",
+      "text": "Kom vand, ris og salt i en gryde, og rør rundt. Læg låg på, og bring langsomt i kog. Kog under låg ved svag varme i 10 minutter."
+    },
+    {
+      "section": "Ris med citron og persille",
+      "text": "Tag gryden af varmen, og lad risen hvile under låg i 10 minutter. Vend citronskal og persille i, inden den skal serveres."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær halloumien i skiver på ca. 0,5 cm, og pensl dem med olie. Grill dem på en grillpande, almindelig pande eller grill ved middelvarme, til de er gyldne og sprøde på begge sider."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret ris, grøntsagsdeller, tomater, agurk, peberfrugt og rødløg i skåle. Top med tzatziki og grillet halloumi, og fordel oliven og feta over."
+    }
+  ],
+  "changes": []
+}

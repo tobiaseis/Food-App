@@ -1,0 +1,59 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/homemade-whipped-cream",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:33:58.432Z",
+  "total_minutes": 5,
+  "active_minutes": 5,
+  "yield_count": null,
+  "source_lines": 2,
+  "title": "Flødeskum",
+  "intro": "Hjemmelavet flødeskum er hurtigt lavet og smager af ren fløde. Pisk det blødt til at hælde over desserter, eller stift, hvis det skal kunne stå fast.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "kold",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "vaniljeekstrakt",
+      "note": "eller anden smagsgiver efter ønske",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Hæld den kolde fløde i en afkølet skål."
+    },
+    {
+      "section": null,
+      "text": "Pisk fløden, på middel hastighed hvis du bruger håndmixer eller køkkenmaskine. Den får først små luftbobler og bliver derefter en smule tykkere."
+    },
+    {
+      "section": null,
+      "text": "Pisk videre, til der bliver stående tydelige spor i fløden, når du løfter piskeris eller piskeris ud. Så er den næsten klar."
+    },
+    {
+      "section": null,
+      "text": "Pisk, til toppene på fløden bøjer over, når du løfter piskerisene. Det er blød top. Vend vaniljeekstrakt eller anden smagsgiver i nu."
+    },
+    {
+      "section": null,
+      "text": "Skal flødeskummet være tykkere og mere fast, så pisk videre på lav hastighed, til toppene står lige op og holder formen. Stop her, ellers bliver fløden til smør."
+    }
+  ],
+  "changes": [
+    "Double cream eller piskefløde er erstattet af piskefløde.",
+    "Rosenvand er udeladt, og vaniljeekstrakt er beholdt som smagsgiver."
+  ]
+}

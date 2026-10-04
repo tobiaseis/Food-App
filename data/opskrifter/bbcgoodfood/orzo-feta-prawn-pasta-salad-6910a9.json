@@ -1,0 +1,131 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/orzo-feta-prawn-pasta-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:09:08.442Z",
+  "total_minutes": 20,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 10,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "pasta",
+      "note": "orzo",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "evt. 2 spsk olivenolie og 2 spsk olie fra de soltørrede tomater",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "soltørrede tomater",
+      "note": "på olie, i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "rejer",
+      "note": "kogte og pillede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "håndfuld",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    }
+  ],
+  "intro": "En frisk pastasalat med orzo, salte feta, rejer og dild. Den er nem at tage med på picnic.",
+  "servings": 4,
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog orzo i letsaltet vand i 8-10 minutter, til den er mør."
+    },
+    {
+      "section": null,
+      "text": "Si pastaen fra, skyl den under koldt vand, til den er kølet af, og lad den dryppe godt af."
+    },
+    {
+      "section": null,
+      "text": "Kom orzo i en skål, og bland den med olie, citronsaft og dild."
+    },
+    {
+      "section": null,
+      "text": "Vend forårsløg, agurk, soltørrede tomater, feta og rejer forsigtigt i."
+    },
+    {
+      "section": null,
+      "text": "Server salaten i en skål. Skal den med på picnic, så pak den i en lufttæt boks og vend rucolaen i lige før servering."
+    }
+  ],
+  "title": "Orzosalat med feta og rejer",
+  "changes": [
+    "Extra virgin olivenolie er skiftet til almindelig olivenolie.",
+    "Soltørrede tomater er angivet som stk på olie, som i kilden."
+  ]
+}

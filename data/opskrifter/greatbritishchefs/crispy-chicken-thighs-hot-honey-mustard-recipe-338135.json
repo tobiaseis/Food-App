@@ -1,0 +1,315 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/crispy-chicken-thighs-hot-honey-mustard-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:17:41.614Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 27,
+  "title": "Sprøde kyllingelår med hot honey-sennep",
+  "intro": "Ovnbagte kyllingeoverlår med sprød skind, penslet med en sød og stærk glaze af honning, sennep og sriracha. Serveres på citronyoghurt med hurtigt syltede skalotteløg og dild.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "skåret i fine halvmåner",
+      "optional": false
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skallen skåret af i strimler",
+      "optional": false
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "amount": 75,
+      "unit": "ml",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "amount": 75,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sorte peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gule sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "med ben, duppet tørre med køkkenrulle",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "stødt sort",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronyoghurt",
+      "amount": 250,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronyoghurt",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal af hele citronen og saft fra den halve",
+      "optional": false
+    },
+    {
+      "section": "Citronyoghurt",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Citronyoghurt",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronyoghurt",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronyoghurt",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hot honey-sennepsglaze",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hot honey-sennepsglaze",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hot honey-sennepsglaze",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "grov sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hot honey-sennepsglaze",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hot honey-sennepsglaze",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hot honey-sennepsglaze",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hot honey-sennepsglaze",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Hot honey-sennepsglaze",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "en god knivspids",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "ekstra toppe plukket af",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C. Har din ovn damp, så vælg lav damp (25 % fugtighed). Klæd en bradepande med bagepapir."
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "text": "Kom skalotteløg, citronskal og dild i en skål."
+    },
+    {
+      "section": "Hurtigt syltede skalotteløg",
+      "text": "Varm eddike, vand, honning, salt, peberkorn og sennepsfrø forsigtigt i en lille kasserolle i 2 minutter, og rør, til salt og honning er opløst. Hæld lagen over skalotteløgene, og lad dem stå og trække."
+    },
+    {
+      "section": "Kylling",
+      "text": "Bland olie, salt, peber, hvidløgspulver, paprika og løgpulver i en stor skål. Vend kyllingen rundt i blandingen, så den er dækket hele vejen rundt."
+    },
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingen i bradepanden, og steg den i ovnen i 30 minutter."
+    },
+    {
+      "section": "Citronyoghurt",
+      "text": "Rør alle ingredienserne sammen, og smag til med salt og peber. Stil yoghurten på køl, til den skal bruges."
+    },
+    {
+      "section": "Hot honey-sennepsglaze",
+      "text": "Varm alle ingredienserne forsigtigt i en lille gryde, og hold glazen varm."
+    },
+    {
+      "section": null,
+      "text": "Når kyllingen er sprød og gennemstegt, pensl den rigeligt med glaze. Sæt den tilbage i ovnen i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Smør yoghurten ud på et fad, og læg kyllingen ovenpå. Top med dildtoppe, flagesalt og de syltede skalotteløg."
+    }
+  ],
+  "changes": [
+    "Banana shallots er erstattet af skalotteløg.",
+    "Dried garlic granules er erstattet af hvidløgspulver."
+  ]
+}

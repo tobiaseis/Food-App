@@ -1,0 +1,204 @@
+{
+  "url": "https://www.valdemarsro.dk/cheeseburger-tacos/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:11:24.004Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Cheeseburger tacos",
+  "intro": "Små tortillas med et tyndt lag stegt hakket oksekød og smeltet ost, toppet med frisk salat og cremet burgerdressing. Smager som en cheeseburger, men spises som taco.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Burgerdressing",
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "gerne sød",
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 20,
+      "unit": "g",
+      "name": "cornichoner",
+      "note": "meget finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lage fra cornichoner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sød paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tacos",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Tacos",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tacos",
+      "amount": 100,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Tacos",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "icebergsalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 50,
+      "unit": "g",
+      "name": "cornichoner",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde ringe",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Burgerdressing",
+      "text": "Bland alle ingredienserne til dressingen i en skål, og smag til med salt og peber."
+    },
+    {
+      "section": "Tacos",
+      "text": "Del oksekødet i lige store portioner, én til hver tortilla."
+    },
+    {
+      "section": "Tacos",
+      "text": "Tryk hver portion ud i et tyndt lag over hele tortillaen helt ud til kanten. Krydr kødet med salt og peber."
+    },
+    {
+      "section": "Tacos",
+      "text": "Varm olien i en eller to store pander. Steg tortillaerne med kødsiden nedad i 1-2 minutter."
+    },
+    {
+      "section": "Tacos",
+      "text": "Vend tortillaerne, læg osten på kødet, og steg i endnu 1 minut, til osten er smeltet."
+    },
+    {
+      "section": "Topping",
+      "text": "Fyld tortillaerne med icebergsalat, tomat, agurk, cornichoner og rødløg. Dryp med burgerdressing, og server som tacos."
+    }
+  ],
+  "changes": []
+}

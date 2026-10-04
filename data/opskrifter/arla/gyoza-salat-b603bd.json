@@ -1,0 +1,212 @@
+{
+  "url": "https://www.arla.dk/opskrifter/gyoza-salat/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:19:12.057Z",
+  "total_minutes": 20,
+  "active_minutes": 20,
+  "yield_count": 2,
+  "source_lines": 21,
+  "title": "Gyozasalat med peanutdressing",
+  "intro": "Sprøde, dampede gyoza vendes med friske grøntsager og en cremet dressing af skyr, peanutbutter og lime. En hurtig og mættende salat til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Stegte gyoza",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegte gyoza",
+      "amount": 16,
+      "unit": "stk",
+      "name": "gyoza",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegte gyoza",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "skyr",
+      "note": "naturel, eller græsk yoghurt",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "peanutbutter",
+      "note": "grov",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet, frisk",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "limesaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "tomater",
+      "note": "i mindre stykker",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i mindre stykker",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "dl",
+      "name": "koriander",
+      "note": "hakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "i ringe",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "blade",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Gyoza",
+      "text": "Opvarm olien på en pande over høj varme. Læg gyozaerne med den flade side nedad, og brun dem i 1-2 minutter."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Hæld vandet på panden, og sæt låg på med det samme. Lad gyozaerne dampe i 3-5 minutter, til de er varme hele vejen igennem. Stil dem til side."
+    },
+    {
+      "section": "Dressing",
+      "text": "Pisk skyr, peanutbutter, vand, soja, chilisauce, ingefær, limesaft og salt sammen i en skål, mens gyozaerne damper."
+    },
+    {
+      "section": "Salat",
+      "text": "Kom gyozaerne i en stor skål sammen med spidskål, tomat, agurk, forårsløg, koriander, sesamfrø og flagesalt, og vend det forsigtigt."
+    },
+    {
+      "section": "Salat",
+      "text": "Hæld dressingen over, og vend salaten igennem. Smag den til. Pynt med chili og evt. koriander, og server med limebåde ved siden af."
+    }
+  ],
+  "changes": [
+    "Gyozaer er skrevet som gyoza.",
+    "Sød chilisauce er beholdt som den er.",
+    "Peanutbutter er beholdt som grov peanutbutter."
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "url": "https://www.valdemarsro.dk/svampe-og-avocado/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:51:58.437Z",
+  "total_minutes": 25,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Champignon og avocado på surdejsbrød",
+  "intro": "Ristede svampe i fløde, cremet avocadomos og bløde pocherede æg på godt knasende surdejsbrød. Det er en mættende brunch, der er klar på under en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "skive",
+      "name": "brød",
+      "note": "fx surdejsbrød, ristet",
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 500,
+      "unit": "g",
+      "name": "champignon",
+      "note": "eller blandede svampe, rensede",
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Avocadomos",
+      "amount": 4,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadomos",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadomos",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "røget paprika",
+      "note": "eller chiliflager",
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svampe",
+      "text": "Varm en pande godt op. Steg svampene i smørret under konstant omrøring, til de er brunede og har fået en fin skorpe."
+    },
+    {
+      "section": "Svampe",
+      "text": "Hæld fløden på panden, og lad den koge ind og bruse af. Tag panden af varmen, og smag til med salt og peber."
+    },
+    {
+      "section": "Avocadomos",
+      "text": "Mos avocadoerne groft med en gaffel. Smag til med citronsaft, paprika, salt og peber."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Bring en gryde vand i kog. Slå imens hvert æg ud i en lille skål."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Skru ned for varmen, og rør eddiken i vandet. Lav en hvirvel med en ske eller en piskeris, så der opstår et hul midt i gryden."
+    },
+    {
+      "section": "Pocherede æg",
+      "text": "Lad et æg glide ned i midten af hvirvlen, og skru op for varmen igen. Pochér ægget i ca. 2 minutter, og løft det op med en hulske. Gentag med de øvrige æg."
+    },
+    {
+      "section": "Til servering",
+      "text": "Smør avocadomos på det ristede brød, og læg svampe og et pocheret æg ovenpå. Strø med persille, og krydr med lidt salt og peber."
+    }
+  ],
+  "changes": []
+}

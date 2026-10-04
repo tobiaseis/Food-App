@@ -1,0 +1,195 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cod-prawn-pie-with-saffron-potatoes",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:16:34.483Z",
+  "total_minutes": 70,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Fiskepie med torsk, rejer og safrankartofler",
+  "intro": "En rustik fiskegryde med torsk og rejer i tomat- og paprikasauce, dækket af tynde kartoffelskiver penslet med safran. Serveres med dampet broccoli ved siden af.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "1 gul og 1 rød, uden kerner og fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "lavet af 2 tsk bouillonpulver og vand",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 500,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "rejer",
+      "note": "rå, pillede og optøede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 600,
+      "unit": "g",
+      "name": "torsk",
+      "note": "skindfri loin, skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 9,
+      "unit": "stk",
+      "name": "grønne oliven",
+      "note": "udstenede og skåret i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "fladbladet, hakket",
+      "optional": true
+    },
+    {
+      "section": "Safrankartofler",
+      "amount": 3,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Safrankartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Safrankartofler",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Safrankartofler",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Safrankartofler",
+      "amount": 700,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "store, skrællede og skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 300,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "buketter, eller haricots verts",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Varm olien i en stor, non-stick pande ved middel varme."
+    },
+    {
+      "section": "Fyld",
+      "text": "Svits peberfrugt, hvidløg og laurbærblade i 10 minutter, og rør ofte, til peberfrugten er blød."
+    },
+    {
+      "section": "Safrankartofler",
+      "text": "Imens lægger du safran i en lille, varmefast skål sammen med det kogende vand, olien og hvidløget. Rør, til væsken er blevet gul, og stil skålen til side."
+    },
+    {
+      "section": "Safrankartofler",
+      "text": "Bring en stor gryde vand i kog. Kog kartoffelskiverne i 5 minutter, så de er møre, men stadig holder formen. Hæld vandet fra, og lad dem dryppe godt af."
+    },
+    {
+      "section": "Fyld",
+      "text": "Drys paprika over peberfrugterne, og rør rundt et øjeblik. Hæld fond og passata i, og lad det koge i 5 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Tag panden af varmen, og vend rejer, torsk, oliven og eventuelt persille i saucen. Kom det hele i et stort, fladt ildfast fad (cirka 30 x 20 cm og 6,5 cm dybt)."
+    },
+    {
+      "section": "Safrankartofler",
+      "text": "Fordel kartoffelskiverne i et jævnt lag oven på fisken – de behøver ikke ligge pænt. Pensl dem rigeligt med safranblandingen."
+    },
+    {
+      "section": "Safrankartofler",
+      "text": "Bag i 30-35 minutter, til fadet bobler i kanten, og fisken er gennemstegt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Kog eller damp broccolien, så den er færdig, når fadet næsten er klar. Server den ved siden af."
+    }
+  ],
+  "changes": [
+    "Grønne Amfissa-oliven er erstattet af almindelige grønne oliven.",
+    "Grøntsagsbouillonpulver og vand er erstattet af grøntsagsfond."
+  ]
+}

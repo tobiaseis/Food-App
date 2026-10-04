@@ -1,0 +1,267 @@
+{
+  "url": "https://www.valdemarsro.dk/taquitos-med-kylling/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:36:23.678Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Taquitos med kylling, ananassalsa og avocadocreme",
+  "intro": "Sprøde ovnbagte tortillaruller fyldt med krydret kylling og ost. Serveres med frisk ananassalsa og cremet avocadodip.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ananassalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ananas",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket kyllingekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 10,
+      "unit": "g",
+      "name": "jalapeños",
+      "note": "finthakket, mængde efter smag",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "på dåse",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 12,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 200,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Avocadocreme",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ananassalsa",
+      "text": "Bland ananas, avocado, mynte og basilikum i en skål. Tilsæt limesaft, limeskal og chili, og smag til med salt og peber."
+    },
+    {
+      "section": "Avocadocreme",
+      "text": "Blend avocado, creme fraiche, citronsaft og citronskal i en minihakker, til det er en glat dip. Krydr med chiliflager, salt og peber, og kør den igen, så alt er blandet."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Varm en pande op med lidt af olivenolien, og steg hakkekødet under omrøring, til det er gennemstegt."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Kom løg, oregano, begge slags paprika, spidskommen og jalapeños i panden. Skru ned på middelvarme, og lad det simre et par minutter."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Rør majsstivelsen ud i de hakkede tomater, og hæld det på panden. Lad fyldet simre under omrøring i et par minutter, til det er tyknet."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Varm tortillaerne på en tør pande, til de er bløde og smidige. Pensl dem med olivenolie på begge sider. Forvarm ovnen til 225 °C varmluft."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Læg en stribe kyllingefyld og ost ned ad midten af hver tortilla. Fold siderne ind, og rul dem stramt. Læg dem med samlingen nedad på en bageplade med bagepapir."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Bag taquitos i 5-7 minutter. Vend dem, og bag dem 5 minutter mere, til osten er smeltet, og de er sprøde."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Server de varme taquitos med ananassalsa og avocadocreme."
+    }
+  ],
+  "changes": [
+    "Hakket kylling er skiftet til hakket kyllingekød.",
+    "Tortillapandekager er skiftet til tortillas."
+  ]
+}

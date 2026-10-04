@@ -1,0 +1,264 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/taleggio-chicken-schnitzel-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:09:53.800Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Schnitzel fyldt med taleggio og salvie",
+  "intro": "Mør kyllingebryst med en smeltende fyld af taleggio og salvie, paneret og stegt gylden. Serveres med en sprød salat af hvidkål, fennikel og persille.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fyld og schnitzel",
+      "amount": 250,
+      "unit": "g",
+      "name": "taleggio",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "amount": 40,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "amount": 12,
+      "unit": "stk",
+      "name": "salvie",
+      "note": "blade, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "amount": null,
+      "unit": null,
+      "name": "salvie",
+      "note": "nogle få hele blade til pynt",
+      "optional": false
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": 120,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": 200,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": 40,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": null,
+      "unit": null,
+      "name": "parmesan",
+      "note": "fintrevet, ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Panering og stegning",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "hvidkål",
+      "note": "lille, fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "lille, i tynde skiver (gerne på mandolin)",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "glatbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld og schnitzel",
+      "text": "Kør taleggio, fløde og salvie i en lille foodprocessor med korte pulsslag, til det bliver en tyk masse. Smag til med salt og peber."
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "text": "Fyld massen i en sprøjtepose, og læg den i køleskabet, så den bliver lidt fastere, mens kyllingen gøres klar."
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "text": "Skær en dyb lomme i den tykkeste side af hvert kyllingebryst med en meget skarp kniv. Skær ikke helt igennem."
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "text": "Læg brystene ét ad gangen mellem to stykker bagepapir, og bank dem forsigtigt flade med en kagerulle, så lommen holder. Det vigtigste er, at kødet har samme tykkelse overalt – det behøver ikke være helt tyndt. Krydr begge sider med salt og peber."
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "text": "Sprøjt fyldet langt ind i midten af lommerne, så de bliver så fyldte som muligt, men lad en kant på ca. 2 cm ved åbningen være tom. Fordel fyldet jævnt med fingrene."
+    },
+    {
+      "section": "Fyld og schnitzel",
+      "text": "Stil de fyldte bryster på en bakke i køleskabet i 10 minutter, så fyldet stivner."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Hæld hvedemel på en dyb tallerken, pisket æg på en anden, og bland rasp og parmesan på en tredje."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Vend hvert bryst i mel, og ryst det overskydende af. Vend det derefter i æg og rasp, og tryk især godt omkring lommens åbning. Gentag med æg og rasp endnu en gang, så åbningen er helt lukket. Stil brystene tilbage i køleskabet, mens du laver salaten."
+    },
+    {
+      "section": "Salat",
+      "text": "Kom hvidkål, fennikel og persille i en skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Pisk eddike, sennep, sukker og olivenolie sammen i en anden skål med en knivspids salt og peber. Vend først salaten i dressingen lige før servering."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Varm en stor pande op ved middelvarme, og hæld så meget olie på, at bunden er rigeligt dækket. Smelt smørret, og vent til det skummer."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Steg schnitzlerne i 5 minutter på hver side, gerne i flere omgange. Ös jævnligt smør og olie over dem. Skru ned for varmen, hvis panéringen bliver for mørk."
+    },
+    {
+      "section": "Panering og stegning",
+      "text": "Læg schnitzlerne på køkkenrulle, når de er gyldne hele vejen rundt."
+    },
+    {
+      "section": "Salat",
+      "text": "Server hver schnitzel med salaten ved siden af. Steg et par salvieblade sprøde i panden, og læg dem på schnitzlerne sammen med lidt revet parmesan."
+    }
+  ],
+  "changes": [
+    "Double cream er skiftet til piskefløde.",
+    "Friske brødkrummer er skiftet til rasp.",
+    "Vegetable oil er skiftet til rapsolie."
+  ]
+}

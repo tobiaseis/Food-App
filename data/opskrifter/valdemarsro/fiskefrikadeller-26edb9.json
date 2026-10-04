@@ -1,0 +1,271 @@
+{
+  "url": "https://www.valdemarsro.dk/fiskefrikadeller/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:19:30.200Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 25,
+  "title": "Fiskefrikadeller med remoulade og råkostsalat",
+  "intro": "Saftige frikadeller af torsk og laks serveres med ovnbagte kartoffelbåde, hjemmerørt remoulade og en sprød råkostsalat med æble og gulerod.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 300,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 300,
+      "unit": "g",
+      "name": "laks",
+      "note": "uden skind",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 40,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Remoulade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Remoulade",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "38%",
+      "optional": false
+    },
+    {
+      "section": "Remoulade",
+      "amount": 1,
+      "unit": "dl",
+      "name": "syltede agurker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Remoulade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "mediumstærk",
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Råkostsalat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rosiner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelbåde",
+      "text": "Forvarm ovnen til 200 °C varmluft."
+    },
+    {
+      "section": "Kartoffelbåde",
+      "text": "Del kartoflerne i både, og vend dem med olie, salt og paprika."
+    },
+    {
+      "section": "Kartoffelbåde",
+      "text": "Bag bådene i 30-35 minutter, til de er gyldne og sprøde. Rør rundt i dem et par gange undervejs."
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "text": "Blend løg og squash i en foodprocessor, til det er hakket helt fint."
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "text": "Kom fisk, æg, dild, mel og fløde i, og smag til med salt og peber. Pulsér kort, til farsen hænger sammen og har en konsistens, du kan lide."
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "text": "Lad farsen hvile på køl i cirka en halv time."
+    },
+    {
+      "section": "Fiskefrikadeller",
+      "text": "Varm smør og olie op på panden ved middelvarme. Form frikadeller af farsen, og steg dem gyldne og sprøde på begge sider, til de er helt gennemstegte."
+    },
+    {
+      "section": "Remoulade",
+      "text": "Rør alle ingredienser sammen, og smag remouladen til."
+    },
+    {
+      "section": "Råkostsalat",
+      "text": "Rør citronsaft og honning sammen, og vend de revne æbler i blandingen."
+    },
+    {
+      "section": "Råkostsalat",
+      "text": "Bland gulerødder, solsikkekerner og rosiner i, og server med det samme."
+    }
+  ],
+  "changes": [
+    "Pickles er skiftet til syltede agurker.",
+    "Flagesalt er skiftet til salt."
+  ]
+}

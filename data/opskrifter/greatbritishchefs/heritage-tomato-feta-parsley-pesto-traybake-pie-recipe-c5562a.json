@@ -1,0 +1,350 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/heritage-tomato-feta-parsley-pesto-traybake-pie-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:44:30.794Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 10,
+  "source_lines": 31,
+  "title": "Bagt grøntsagstærte med tomat, feta og persillepesto",
+  "intro": "En stor bakketærte med butterdej, fyldt med lag af grøntsager, feta og urtepesto og bagt med æggeblanding. Serveres med yoghurtdip og frisk squashsalat.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Til fyldet",
+      "amount": 500,
+      "unit": "g",
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "stort, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "faste, skrællede, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 300,
+      "unit": "g",
+      "name": "squash",
+      "note": "hoblet i bånd",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 400,
+      "unit": "g",
+      "name": "peberfrugt",
+      "note": "ristet, fra glas, drænet og i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 200,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 150,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": 30,
+      "unit": "g",
+      "name": "persille",
+      "note": "fladbladet",
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": 30,
+      "unit": "g",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pestoen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tærten",
+      "amount": 3,
+      "unit": "pakke",
+      "name": "butterdej",
+      "note": "færdigudrullet",
+      "optional": false
+    },
+    {
+      "section": "Til tærten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tærten",
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "til beskyttelse af bordet",
+      "optional": false
+    },
+    {
+      "section": "Til tærten",
+      "amount": 10,
+      "unit": "stk",
+      "name": "æg",
+      "note": "medium, pisket",
+      "optional": false
+    },
+    {
+      "section": "Til tærten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtdip",
+      "amount": 150,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtdip",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtdip",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halvdelen af skallen revet, plus saft",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtdip",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille, revet",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtdip",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtdip",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashsalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "squash",
+      "note": "hoblet i bånd",
+      "optional": false
+    },
+    {
+      "section": "Til squashsalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til squashsalat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashsalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashsalat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashsalat",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "lille, bladene revet i stykker",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Forberedelse",
+      "text": "Tænd ovnen på 200°C (180°C varmluft)."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Vend tomatskiverne i olivenolie og krydr dem godt. Læg dem i ét lag på en bageplade og rist dem i 20 minutter. Lad dem køle af."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Svits rødløget i lidt olie ved svag varme i 10-15 minutter, til det er blødt og gyldent."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Kog kartoffelskiverne i 8 minutter, til de næsten er møre. Hæld vandet fra, og lad dem køle af."
+    },
+    {
+      "section": "Pesto",
+      "text": "Kør alle pestoens ingredienser i en foodprocessor til en løs pesto, der kan øses. Stil den til side."
+    },
+    {
+      "section": "Samling",
+      "text": "Sænk ovnen til 180°C (160°C varmluft)."
+    },
+    {
+      "section": "Samling",
+      "text": "Beklæd en form på 20 × 30 cm med bagepapir, så papiret stikker op over kanten og kan bruges som håndtag til at løfte tærten ud."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg to dejplader et par centimeter over hinanden, og rul dem sammen til én plade. Brug lidt vand som lim, hvis det er nødvendigt. Rul pladen ud til cirka 3 mm tykkelse, så den dækker både bund og sider af formen. Tryk den ned i formen."
+    },
+    {
+      "section": "Samling",
+      "text": "Drys raspen over dejbunden. Læg grøntsagerne i lag i denne rækkefølge: squash, peberfrugt, ristede tomater, løg, feta, kartofler og ærter. Dryp pesto over og krydr mellem hvert lag."
+    },
+    {
+      "section": "Samling",
+      "text": "Tag 2-3 spiseskefulde af de piskede æg fra til pensling. Hæld resten forsigtigt over fyldet."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg den sidste dejplade som låg over tærten. Beskær kanten, og luk den godt. Pensl låget med det tilbageholdte æg, drys med sesamfrø, og skær let 12 felter i overfladen."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag tærten i 1 time og 20 minutter, til den er dyb gyldenbrun og sprød. Lad den køle helt af, før du skærer i den."
+    },
+    {
+      "section": "Dip og salat",
+      "text": "Rør dipens ingredienser sammen, og stil den på køl til servering."
+    },
+    {
+      "section": "Dip og salat",
+      "text": "Vend squashbåndene med citronskal og -saft, olie, honning, salt og basilikum. Stil salaten på køl, til den skal serveres."
+    }
+  ],
+  "changes": [
+    "Heritage-tomater er erstattet af almindelige tomater i blandede farver."
+  ]
+}

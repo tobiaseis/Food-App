@@ -1,0 +1,232 @@
+{
+  "url": "https://www.valdemarsro.dk/kylling-vindaloo/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:52:56.810Z",
+  "total_minutes": 720,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Kylling vindaloo",
+  "intro": "Kryddergryde med kylling i en kraftig, syrlig marinade af ristede krydderier og eddike. Marinaden skal trække natten over, så kødet bliver mørt og smagen dyb.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kardemomme",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt nellike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt spidskommen",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennepsfrø",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til retten",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": "kogt efter anvisning på pakken",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk; kan erstattes af bredbladet persille",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Rist kardemomme, kanel, nellike, koriander, spidskommen, fennikelfrø og peber på en tør pande, til det dufter."
+    },
+    {
+      "section": "Marinade",
+      "text": "Kom de ristede krydderier i en blender sammen med chili, ingefær, hvidløg, sennepsfrø, paprika, gurkemeje, sukker og eddike. Kør det til en tyk pasta."
+    },
+    {
+      "section": "Marinade",
+      "text": "Rør kyllingetern og marinade sammen. Stil det tildækket på køl i 12-24 timer."
+    },
+    {
+      "section": "Tilberedning",
+      "text": "Varm olien op i en gryde ved middelvarme, og svits løgene, til de er bløde."
+    },
+    {
+      "section": "Tilberedning",
+      "text": "Tilsæt den marinerede kylling, og skru lidt ned for varmen. Lad det blive godt varmt hele vejen igennem."
+    },
+    {
+      "section": "Tilberedning",
+      "text": "Rør fond og tomatpuré ned i gryden. Læg låg på, og lad retten simre i cirka 20 minutter, til kyllingen er mør. Smag til med salt."
+    },
+    {
+      "section": "Servering",
+      "text": "Server med kogt basmatiris og drys med hakket koriander eller persille. Godt brød passer fint ved siden af."
+    }
+  ],
+  "changes": []
+}

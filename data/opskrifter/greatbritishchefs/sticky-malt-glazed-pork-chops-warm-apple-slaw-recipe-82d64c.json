@@ -1,0 +1,260 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/sticky-malt-glazed-pork-chops-warm-apple-slaw-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:48:01.151Z",
+  "total_minutes": 90,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Klistrede svinekoteletter med varm æbleslaw",
+  "intro": "Mørke svinekoteletter marineres i soja, sennep og timian og penslés med en tyk, sød glasur. Til serveres en varm slaw af løg, gulerod og æble.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Koteletter og marinade",
+      "amount": 4,
+      "unit": "stk",
+      "name": "svinekoteletter",
+      "note": "med ben, ca. 250 g pr. stk",
+      "optional": false
+    },
+    {
+      "section": "Koteletter og marinade",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koteletter og marinade",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koteletter og marinade",
+      "amount": 3,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koteletter og marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "grov",
+      "optional": false
+    },
+    {
+      "section": "Koteletter og marinade",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Koteletter og marinade",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "timian",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Koteletter og marinade",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koteletter og marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Klistret glasur",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Klistret glasur",
+      "amount": 2,
+      "unit": "dl",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Klistret glasur",
+      "amount": 2,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Klistret glasur",
+      "amount": 1,
+      "unit": "dl",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Klistret glasur",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Varm slaw",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Varm slaw",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Varm slaw",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "bladselleri",
+      "note": "stilke, strimlet",
+      "optional": false
+    },
+    {
+      "section": "Varm slaw",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Varm slaw",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Varm slaw",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Varm slaw",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Varm slaw",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Varm slaw",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Koteletter og marinade",
+      "text": "Læg koteletterne i en stor skål sammen med alle marinadens ingredienser. Dæk skålen til, og sæt den i køleskabet i 30 minutter."
+    },
+    {
+      "section": "Klistret glasur",
+      "text": "Kom glasurens ingredienser i en gryde, og bring dem i kog under omrøring."
+    },
+    {
+      "section": "Klistret glasur",
+      "text": "Skru ned på lav varme, og lad glasuren koge ind i ca. 15 minutter. Den er klar, når den hænger tykt på bagsiden af en ske."
+    },
+    {
+      "section": "Koteletter og marinade",
+      "text": "Tag koteletterne op af køleskabet, og varm en pande op ved middel-høj varme."
+    },
+    {
+      "section": "Koteletter og marinade",
+      "text": "Steg koteletterne i 3-4 minutter på hver side, til de er gennemstegte, og kernetemperaturen er 74 °C."
+    },
+    {
+      "section": "Koteletter og marinade",
+      "text": "Pensl koteletterne med glasur, vend dem, og lad glasuren sætte sig i panden. Gentag på den anden side."
+    },
+    {
+      "section": "Koteletter og marinade",
+      "text": "Tag panden af varmen, og pensl koteletterne med lidt mere glasur. Læg dem på et fad under stanniol, og lad dem hvile."
+    },
+    {
+      "section": "Varm slaw",
+      "text": "Varm olivenolien op i en lille pande ved middelvarme, og svits løgene møre i 10-15 minutter."
+    },
+    {
+      "section": "Varm slaw",
+      "text": "Tilsæt selleri, gulerødder og æble, og lad det stege blødt i cirka 10 minutter."
+    },
+    {
+      "section": "Varm slaw",
+      "text": "Rør eddike og farin i. Lad eddiken koge ind, smag til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær koteletterne på tværs af fibrene, og anret dem med slawen. Dryp med resten af glasuren, og drys med purløg."
+    }
+  ],
+  "changes": [
+    "Maltseddike er erstattet af almindelig eddike.",
+    "Mangoldstilke er erstattet af bladselleri.",
+    "Bramley-æble er erstattet af et almindeligt æble."
+  ]
+}

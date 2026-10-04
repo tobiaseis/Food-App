@@ -1,0 +1,130 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/thai-chicken-mushroom-broth",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:58:29.129Z",
+  "total_minutes": 15,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Thailandsk kyllingesuppe med champignon",
+  "intro": "En hurtig, aromatisk suppe med rød karrypasta, lime og fiskesauce, hvor rester af kylling får nyt liv. Alle kan justere smagen ved bordet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "l",
+      "name": "kyllingefond",
+      "note": "varm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rød karrypasta",
+      "note": "thailandsk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": "thailandsk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "forårsløg",
+      "note": "i skiver, hvide og grønne dele hver for sig",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "kyllingekød",
+      "note": "kogt, revet (rester)",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "fiskesauce",
+      "note": "ekstra",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sukker",
+      "note": "ekstra",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "lime",
+      "note": "ekstra saft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Hæld fonden i en gryde, og rør karrypasta, fiskesauce, sukker, limesaft og det meste af limeskallen i."
+    },
+    {
+      "section": null,
+      "text": "Bring det i kog. Kom champignon og de hvide dele af forårsløgene i, læg låg på, og lad det simre i 2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Vend kyllingekødet og det meste af det grønne fra forårsløgene i, og lad suppen varme igennem ved lav varme."
+    },
+    {
+      "section": null,
+      "text": "Øs suppen op i skåle, og drys med resten af limeskallen."
+    },
+    {
+      "section": null,
+      "text": "Sæt ekstra fiskesauce, sukker og limesaft på bordet, så enhver kan smage sin egen skål til."
+    }
+  ],
+  "changes": [
+    "Portobello-svampe er skiftet til champignon."
+  ]
+}

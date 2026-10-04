@@ -1,0 +1,219 @@
+{
+  "url": "https://www.arla.dk/opskrifter/cremet-citron-kikaertegryde/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:25:34.540Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Kikærtegryde med citron og dild",
+  "intro": "Cremet gryde med kikærter, blomkål og spinat, smagt til med frisk dild og citron. Serveres med sprødt ovnbagte kyllingeoverlår ovenpå.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ovnstegt kylling",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnstegt kylling",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Ovnstegt kylling",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "citronpeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "tørrede flager",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 350,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i små buketter",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 2,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 75,
+      "unit": "g",
+      "name": "pastaost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænede",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "usprøjtet, fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 75,
+      "unit": "g",
+      "name": "spinat",
+      "note": "babyspinat",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "kviste",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "usprøjtet, fintrevet skal",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ovnstegt kylling",
+      "text": "Varm ovnen op til 200 °C (almindelig ovn). Læg kyllingeoverlårene i et ovnfast fad og krydr dem med salt og citronpeber."
+    },
+    {
+      "section": "Ovnstegt kylling",
+      "text": "Bag lårene i ca. 40 minutter, til kødet er mørt."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Hæld olien i en dyb sautépande ved middel varme. Svits løg, hvidløg, gurkemeje og chili i 3-5 minutter, til løgene er blanke."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Kom blomkål, fløde, fond og pastaost i panden. Skru ned på lav varme og lad det simre i ca. 10 minutter, mens du rører engang imellem."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Hæld kikærterne i, og lad gryden simre videre i ca. 5 minutter, til blomkålen er mør."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Rør dild, persille, citronskal, citronsaft, salt og peber i, og smag til. Vend spinaten ned i gryden, til den falder sammen."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Anret de bagte kyllingelår i gryden, og pynt med dildkviste og revet citronskal."
+    }
+  ],
+  "changes": [
+    "Grøntsagsbouillon er skrevet som grøntsagsfond.",
+    "Tørrede chiliflager er skrevet som chili med note om flager."
+  ]
+}

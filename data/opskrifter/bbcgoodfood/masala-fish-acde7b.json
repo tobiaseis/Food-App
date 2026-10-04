@@ -1,0 +1,285 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/masala-fish",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:54:09.620Z",
+  "total_minutes": 70,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Masalafisk med pommes frites og ærtepuré",
+  "intro": "Sprød torsk i krydret kikærtemelsdej med ovnbagte pommes frites og frisk ærtepuré med feta og mynte. En lidt anderledes udgave af fish and chips.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pommes frites",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "bagekartofler",
+      "optional": false
+    },
+    {
+      "section": "Pommes frites",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pommes frites",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pommes frites",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og marinade",
+      "amount": 600,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "cirka 4 store filetter",
+      "optional": false
+    },
+    {
+      "section": "Fisk og marinade",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Fisk og marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og marinade",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Fisk og marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tandoori masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og marinade",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 90,
+      "unit": "g",
+      "name": "kikærtemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 30,
+      "unit": "g",
+      "name": "rismel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "stærk",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "frø, knust",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "korianderfrø",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, udkernet og finthakket",
+      "optional": true
+    },
+    {
+      "section": "Dej",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1.75,
+      "unit": "dl",
+      "name": "vand",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Ærtepuré",
+      "amount": 300,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Ærtepuré",
+      "amount": 60,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ærtepuré",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Ærtepuré",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Ærtepuré",
+      "amount": 10,
+      "unit": "stk",
+      "name": "mynte",
+      "note": "blade, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Ærtepuré",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til stegning og servering",
+      "amount": 300,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning og servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pommes frites",
+      "text": "Skrub eller skræl kartoflerne, og skær dem i pommes frites på 1,5 cm i tykkelsen."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Kom dem i en gryde med koldt vand og salt. Bring det i kog, og lad kartoflerne koge i 4-5 minutter. Hæld vandet fra, og læg dem på et rent viskestykke, så de kan tørre."
+    },
+    {
+      "section": "Pommes frites",
+      "text": "Læg kartoflerne på en bageplade med bagepapir. Vend dem med olivenolie, salt og peber. Bag dem ved 220 °C (200 °C varmluft) i 35 minutter, til de er gyldne hele vejen rundt. Vend dem undervejs efter halvdelen af tiden."
+    },
+    {
+      "section": "Fisk og marinade",
+      "text": "Skær hver fiskefilet over på langs, så der bliver to stykker. Så steger de mere jævnt."
+    },
+    {
+      "section": "Fisk og marinade",
+      "text": "Pisk marinadens ingredienser sammen i en lille skål, og pensl fisken med den på begge sider. Stil fisken på køl, til den skal steges."
+    },
+    {
+      "section": "Dej",
+      "text": "Pisk alle dejens tørre ingredienser og saltet sammen i en stor skål. Hæld det kolde vand i lidt ad gangen under konstant piskning, til dejen er glat og som tyk piskefløde. Lad den hvile, mens du laver ærtepuréen."
+    },
+    {
+      "section": "Ærtepuré",
+      "text": "Kog ærterne i vand i 2 minutter, til de netop er møre. Hæld vandet fra, og kom ærterne i en skål."
+    },
+    {
+      "section": "Ærtepuré",
+      "text": "Tilsæt resten af ingredienserne til puréen. Blend med en stavblender, eller mos med en gaffel eller kartoffelmoser, til konsistensen er ret grov."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Varm olien op til 180 °C i en dyb stegepande, så den står cirka 2 cm højt. Olien er varm nok, når en smule dej flyder op til overfladen."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Vend fiskestykkerne i dejen, og læg dem forsigtigt i den varme olie. Steg dem i cirka 3 minutter, vend dem, og steg dem 2-3 minutter mere. Steg kun et par stykker ad gangen, så panden ikke bliver overfyldt."
+    },
+    {
+      "section": "Til stegning og servering",
+      "text": "Lad den færdige fisk dryppe af på køkkenpapir, mens resten steges. Server fisk, pommes frites og ærtepuré med citronbåde og de tilbehør, du bedst kan lide."
+    }
+  ],
+  "changes": [
+    "Hvid fisk er erstattet med torskefilet.",
+    "Vegetabilsk olie er erstattet med rapsolie.",
+    "Kikærtemel (gram flour) og rismel er beholdt, da de ikke har en nær dansk afløser.",
+    "Valgfri naturel yoghurt til ærtepuréen er udeladt, så kun feta er med."
+  ]
+}

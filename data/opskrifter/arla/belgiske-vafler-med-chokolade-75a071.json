@@ -1,0 +1,166 @@
+{
+  "url": "https://www.arla.dk/opskrifter/belgiske-vafler-med-chokolade/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:28:02.104Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Belgiske chokoladevafler med bærflødeskum",
+  "intro": "Luftige kakaovafler, der serveres lune med let flødeskum vendt med hjemmekogt bærmarmelade og en skvæt chokoladesauce.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bærflødeskum",
+      "amount": 150,
+      "unit": "g",
+      "name": "Bær",
+      "note": "frosne skovbær",
+      "optional": false
+    },
+    {
+      "section": "Bærflødeskum",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "rørsukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bærflødeskum",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "Fløde",
+      "note": "piskefløde",
+      "optional": false
+    },
+    {
+      "section": "Chokoladevafler",
+      "amount": 3,
+      "unit": "stk",
+      "name": "Æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladevafler",
+      "amount": 125,
+      "unit": "g",
+      "name": "rørsukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladevafler",
+      "amount": 150,
+      "unit": "g",
+      "name": "Mel",
+      "note": "hvedemel",
+      "optional": false
+    },
+    {
+      "section": "Chokoladevafler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Kakaopulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladevafler",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "Mel",
+      "note": "bagepulver",
+      "optional": false
+    },
+    {
+      "section": "Chokoladevafler",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Chokoladevafler",
+      "amount": 50,
+      "unit": "g",
+      "name": "Chokolade",
+      "note": "mørk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Chokoladevafler",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kakaomælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chokoladevafler",
+      "amount": 100,
+      "unit": "g",
+      "name": "Smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "chokoladesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Mynte",
+      "note": "blade, til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bærflødeskum",
+      "text": "Put bær og sukker i en tykbundet gryde, og lad det koge under omrøring i cirka 3 minutter, til sukkeret er smeltet, og massen minder om marmelade."
+    },
+    {
+      "section": "Bærflødeskum",
+      "text": "Hæld bærmassen ud på en flad tallerken, og stil den i køleskabet, til den er helt kold."
+    },
+    {
+      "section": "Chokoladevafler",
+      "text": "Pisk æg og sukker, til blandingen er lys og luftig."
+    },
+    {
+      "section": "Chokoladevafler",
+      "text": "Bland mel, kakao, bagepulver, salt og hakket chokolade i en anden skål."
+    },
+    {
+      "section": "Chokoladevafler",
+      "text": "Vend de tørre ingredienser i æggemassen i omgange, og skift med kakaomælken. Rør til sidst det smeltede smør i, til dejen er jævn."
+    },
+    {
+      "section": "Chokoladevafler",
+      "text": "Lad vaffeljernet blive rigtig varmt. Hæld en passende portion dej i jernet (cirka ¾ dl), og bag vaflen i 4-5 minutter. Gentag, til dejen er brugt."
+    },
+    {
+      "section": "Bærflødeskum",
+      "text": "Pisk fløden til et let skum, og vend den kolde bærmarmelade i."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret de varme vafler med bærflødeskummet og chokoladesauce, og drys med mynteblade."
+    }
+  ],
+  "changes": [
+    "Citronmelisseblade er skiftet til mynte."
+  ]
+}

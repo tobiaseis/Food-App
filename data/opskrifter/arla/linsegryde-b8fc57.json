@@ -1,0 +1,223 @@
+{
+  "url": "https://www.arla.dk/opskrifter/linsegryde/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:04:16.097Z",
+  "total_minutes": 70,
+  "active_minutes": 25,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Linsedhal med mynte-raita",
+  "intro": "Cremet dhal af røde linser med karry, ingefær og tomat, serveret med kølig raita og varmt naanbrød. En nem og mættende ret til hverdag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Dhal",
+      "amount": 15,
+      "unit": "g",
+      "name": "Smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 2,
+      "unit": "stk",
+      "name": "Løg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 4,
+      "unit": "fed",
+      "name": "Hvidløg",
+      "note": "små, knuste",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Ingefær",
+      "note": "frisk, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Karry",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "Koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 300,
+      "unit": "g",
+      "name": "Gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 250,
+      "unit": "g",
+      "name": "Linser",
+      "note": "tørrede røde, skyllede og afdryppede",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 6,
+      "unit": "dl",
+      "name": "Grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "Hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 250,
+      "unit": "g",
+      "name": "Cherrytomater",
+      "note": "i halve",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Æble",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Dhal",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Mynte-raita",
+      "amount": 2,
+      "unit": "dl",
+      "name": "Græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mynte-raita",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "Agurk",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Mynte-raita",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Mynte",
+      "note": "hakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Mynte-raita",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "Naanbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Mynte",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dhal",
+      "text": "Varm en gryde op ved kraftig varme, og lad smørret smelte uden at brune."
+    },
+    {
+      "section": "Dhal",
+      "text": "Skru ned for varmen. Svits løg, hvidløg, ingefær og chili i cirka 4 minutter."
+    },
+    {
+      "section": "Dhal",
+      "text": "Rør karry, spidskommen og koriander i, og svits i cirka 1 minut."
+    },
+    {
+      "section": "Dhal",
+      "text": "Kom gulerødder, linser, fond, hakkede tomater, cherrytomater, æble og salt i gryden. Læg låg på, og lad det simre ved svag varme i cirka 45 minutter, til konsistensen passer dig. Rør indimellem, og smag til til sidst."
+    },
+    {
+      "section": "Mynte-raita",
+      "text": "Rør yoghurt, agurk, mynte og salt sammen, og smag til."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret den varme dhal med raita og naanbrød. Drys med friske blade af koriander og mynte."
+    }
+  ],
+  "changes": [
+    "Grøntsagsbouillon er skiftet til grøntsagsfond.",
+    "Rød chilipeber er skiftet til chili."
+  ]
+}

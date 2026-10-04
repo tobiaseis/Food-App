@@ -1,0 +1,160 @@
+{
+  "url": "https://www.arla.dk/opskrifter/coq-au-vin-blanc/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:28:17.869Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Coq au vin blanc med timiankartofler",
+  "intro": "Mør kylling med løg og gulerødder i en cremet hvidvinssauce, serveret med ovnbagte kartofler. En let og hurtig version af den franske klassiker.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Timiankartofler",
+      "amount": 750,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Timiankartofler",
+      "amount": null,
+      "unit": null,
+      "name": "smørspray",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Timiankartofler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "amount": 600,
+      "unit": "g",
+      "name": "kyllingelårfilet",
+      "note": "ca. 6 stk.",
+      "optional": false
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "amount": 5,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "i halve",
+      "optional": false
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i grove stykker",
+      "optional": false
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "groft salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": "eller madlavningsfløde",
+      "optional": false
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "lys saucejævner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Timiankartofler",
+      "text": "Læg kartoflerne på en bageplade med bagepapir. Giv dem et tyndt lag smørspray, drys med salt, og vend dem."
+    },
+    {
+      "section": "Timiankartofler",
+      "text": "Bag kartoflerne midt i ovnen ved 200 °C varmluft i cirka 40 minutter, til de er gyldne."
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "text": "Varm en sauterpande op ved kraftig varme, og lad smørret smelte, uden at det tager farve."
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "text": "Brun kyllingen på begge sider sammen med løg og gulerødder i cirka 5 minutter."
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "text": "Hæld vand og hvidvin i panden, og drys med salt. Læg låg på, og lad det simre ved svag varme i cirka 15 minutter."
+    },
+    {
+      "section": "Kylling og cremet sauce",
+      "text": "Rør fløde og saucejævner i, og lad saucen koge med i cirka 5 minutter mere."
+    },
+    {
+      "section": "Servering",
+      "text": "Smag saucen til, og anret med de bagte kartofler. Top med timian og peber."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,625 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/squash-prawns-marigold-bisque-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:23:47.771Z",
+  "total_minutes": 320,
+  "active_minutes": null,
+  "yield_count": 12,
+  "source_lines": 58,
+  "title": "Squash og rejer med tagetesbisque og brislingecremedonut",
+  "intro": "En avanceret restaurantret med rejegarum, squashespuma, syltet dulse og en luftig donut fyldt med røget fiskecreme. Garummen skal gære i to uger, så start i god tid.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Rejegarum",
+      "amount": 1,
+      "unit": "kg",
+      "name": "rejer",
+      "note": "med skal og hoved",
+      "optional": false
+    },
+    {
+      "section": "Rejegarum",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejegarum",
+      "amount": 225,
+      "unit": "g",
+      "name": "bygkoji",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejegarum",
+      "amount": 220,
+      "unit": "g",
+      "name": "salt",
+      "note": "uden jod",
+      "optional": false
+    },
+    {
+      "section": "Rejegarum",
+      "amount": 100,
+      "unit": "g",
+      "name": "estragon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squash- og appelsinpulver",
+      "amount": 400,
+      "unit": "g",
+      "name": "butternut squash",
+      "note": "skræller og afskær duer",
+      "optional": false
+    },
+    {
+      "section": "Squash- og appelsinpulver",
+      "amount": 250,
+      "unit": "g",
+      "name": "appelsiner",
+      "note": "kun skallen",
+      "optional": false
+    },
+    {
+      "section": "Syltet dulse",
+      "amount": 150,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet dulse",
+      "amount": 30,
+      "unit": "ml",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet dulse",
+      "amount": 30,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet dulse",
+      "amount": 2,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet dulse",
+      "amount": 2,
+      "unit": "g",
+      "name": "kombu",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Syltet dulse",
+      "amount": 10,
+      "unit": "g",
+      "name": "wakame",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Syltet dulse",
+      "amount": 200,
+      "unit": "g",
+      "name": "dulse",
+      "note": "frisk tang",
+      "optional": false
+    },
+    {
+      "section": "Squashespuma",
+      "amount": 1,
+      "unit": "kg",
+      "name": "butternut squash",
+      "note": "skrællet, uden kerner, i tern",
+      "optional": false
+    },
+    {
+      "section": "Squashespuma",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Squashespuma",
+      "amount": 100,
+      "unit": "ml",
+      "name": "appelsinjuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squashespuma",
+      "amount": 1,
+      "unit": "g",
+      "name": "safran",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squashespuma",
+      "amount": 20,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Squashespuma",
+      "amount": 3,
+      "unit": "g",
+      "name": "xanthangummi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 750,
+      "unit": "g",
+      "name": "rejer",
+      "note": "kun skaller",
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 200,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 200,
+      "unit": "g",
+      "name": "fennikel",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 100,
+      "unit": "g",
+      "name": "løg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 200,
+      "unit": "g",
+      "name": "porre",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 40,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 5,
+      "unit": "g",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 5,
+      "unit": "g",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 250,
+      "unit": "ml",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "fiskefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 50,
+      "unit": "g",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 100,
+      "unit": "g",
+      "name": "estragon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 100,
+      "unit": "g",
+      "name": "kørvel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 100,
+      "unit": "g",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 2,
+      "unit": "g",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 1,
+      "unit": "l",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 500,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Rejebisque",
+      "amount": 50,
+      "unit": "g",
+      "name": "peruvianske tagetesblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": 20,
+      "unit": "g",
+      "name": "frisk gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": 200,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": 100,
+      "unit": "ml",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": 10,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": 15,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "stort",
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": 30,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "ekstra, til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": null,
+      "unit": null,
+      "name": "honning",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": null,
+      "unit": null,
+      "name": "tangpulver",
+      "note": "til drys",
+      "optional": false
+    },
+    {
+      "section": "Donuts",
+      "amount": null,
+      "unit": null,
+      "name": "baby skovsyre",
+      "note": "gerne lilla, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Brislingecreme",
+      "amount": 150,
+      "unit": "g",
+      "name": "brisling",
+      "note": "røgede, på dåse",
+      "optional": false
+    },
+    {
+      "section": "Brislingecreme",
+      "amount": 350,
+      "unit": "g",
+      "name": "flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brislingecreme",
+      "amount": 2,
+      "unit": "g",
+      "name": "dashipulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brislingecreme",
+      "amount": 60,
+      "unit": "g",
+      "name": "stenbiderrogn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlagte rejer",
+      "amount": 60,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlagte rejer",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlagte rejer",
+      "amount": 800,
+      "unit": "g",
+      "name": "tigerrejer",
+      "note": "så store som muligt, pillede og uden tarm",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rejegarum",
+      "text": "Start 2 uger før servering. Rengør en beholder på 3 liter med kogende vand, så den er steril."
+    },
+    {
+      "section": "Rejegarum",
+      "text": "Blend alle ingredienserne til garummen glatte i en foodprocessor – også hoveder og skaller."
+    },
+    {
+      "section": "Rejegarum",
+      "text": "Hæld massen i beholderen, og lad den gære ved konstant 60 °C i 2 uger. Garummen er færdig, når den smager som en salt bisque og dufter kraftigt af jod."
+    },
+    {
+      "section": "Rejegarum",
+      "text": "Sigt væsken gennem en fin si, og gem den."
+    },
+    {
+      "section": "Squash- og appelsinpulver",
+      "text": "Tør squashskræller og appelsinskal i en dehydrator ved 60 °C i 3 dage, til de er helt tørre."
+    },
+    {
+      "section": "Squash- og appelsinpulver",
+      "text": "Blend de tørre skræller og skaller hver for sig til et fint pulver, og sigt det. Afvej 50 g squashpulver og 50 g appelsinpulver, og stil dem til side."
+    },
+    {
+      "section": "Syltet dulse",
+      "text": "Bring alt til lagen undtagen dulsen i kog i en gryde, og lad det køle af."
+    },
+    {
+      "section": "Syltet dulse",
+      "text": "Hæld lagen over dulsen i en lufttæt beholder. Stil den i køleskabet i mindst 1 uge før brug – den holder op til 2 uger."
+    },
+    {
+      "section": "Squashespuma",
+      "text": "Kom squash, smør, appelsinjuice, safran og salt i en vakuumpose, og vakuumpak den."
+    },
+    {
+      "section": "Squashespuma",
+      "text": "Kog posen i vandbad ved 84 °C i 10 timer, til squashen er helt mør."
+    },
+    {
+      "section": "Squashespuma",
+      "text": "Blend posens indhold glat sammen med xanthangummien, og fyld det på en sifon. Giv én patron, og hold sifonen varm i et vandbad ved 60 °C. Skummet skal være let, luftigt og aromatisk."
+    },
+    {
+      "section": "Rejebisque",
+      "text": "Varm lidt olie op i en gryde, og brun rejeskallerne dybt. Tag dem op."
+    },
+    {
+      "section": "Rejebisque",
+      "text": "Steg gulerødder og fennikel i samme gryde, til de er bløde og karamelliserede. Tilsæt resten af grøntsagerne og krydderierne, og svits dem blødt ved lav varme."
+    },
+    {
+      "section": "Rejebisque",
+      "text": "Hæld hvidvinen på, og lad den koge ind til en sirupsagtig konsistens."
+    },
+    {
+      "section": "Rejebisque",
+      "text": "Kom skallerne tilbage i gryden med fiskefond og krydderurter. Lad det simre i 2½ time."
+    },
+    {
+      "section": "Rejebisque",
+      "text": "Blend bisquebasen grundigt, og pres den gennem en fin si, så al smagen kommer med. Hæld den i en ren gryde, tilsæt piskefløden, og lad den simre svagt i 20 minutter."
+    },
+    {
+      "section": "Donuts",
+      "text": "Kom gær, creme fraiche, mælk, salt, sukker, mel og æg i en røremaskine. Ælt dejen i 5 minutter, og lad den hvile i 5 minutter."
+    },
+    {
+      "section": "Donuts",
+      "text": "Tilsæt smør og rapsolie, og kør videre i 2 minutter, til dejen er glat og elastisk."
+    },
+    {
+      "section": "Donuts",
+      "text": "Lad dejen hæve et lunt sted i 1½ time, til den er fordoblet."
+    },
+    {
+      "section": "Donuts",
+      "text": "Del dejen i stykker á 35 g, og rul dem til runde boller. Det giver dobbelt så mange, som du skal bruge – resten kan fryses nu. Tø dem op i køleskabet, og lad dem efterhæve lidt før stegning."
+    },
+    {
+      "section": "Donuts",
+      "text": "Læg bollerne på en bageplade med bagepapir, dæk dem til, og lad dem hæve i 30 minutter mere. Stil dem derefter i køleskabet, til de skal steges."
+    },
+    {
+      "section": "Brislingecreme",
+      "text": "Blend brisling, flødeost og dashipulver glat. Vend rognen forsigtigt i, så den bevarer sin struktur."
+    },
+    {
+      "section": "Brislingecreme",
+      "text": "Fyld cremen i en sprøjtepose, og stil den på køl."
+    },
+    {
+      "section": "Saltlagte rejer",
+      "text": "Opløs saltet i vandet ved middel varme, og lad lagen køle af."
+    },
+    {
+      "section": "Saltlagte rejer",
+      "text": "Læg rejerne i lagen i 15 minutter. Skyl dem, dup dem tørre, og skær dem i ens stykker. Stil dem på køl, og tag dem ud i god tid, så de når stuetemperatur før tilberedning."
+    },
+    {
+      "section": "Donuts",
+      "text": "Varm rapsolie op i en dyb gryde ved middel-høj varme, eller forvarm en friturekoger til 165 °C. Steg donuts i portioner i 4 minutter, til de er gyldne."
+    },
+    {
+      "section": "Donuts",
+      "text": "Løft dem op med en hulske, og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Rejebisque",
+      "text": "Blend smør og tagetesblade glat i en foodprocessor. Pisk eller stavblend blandingen ned i bisquen."
+    },
+    {
+      "section": "Samling",
+      "text": "Stik et hul i donuts, og sprøjt brislingecreme i. Pensl med honning, og drys med tangpulver. Hold dem varme."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend rejerne let i rejegarum, og steg dem ved middel varme i ca. 30 sekunder. Tilsæt tagetesbisquen, og varm den forsigtigt igennem, så rejerne forbliver møre."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel rejerne i bunden af serveringsskålene, og top med varm squashespuma. Drys med squashpulver."
+    },
+    {
+      "section": "Samling",
+      "text": "Sprøjt lidt brislingecreme oven på donuten, og pynt med syltet dulse og lilla baby skovsyre."
+    }
+  ],
+  "changes": [
+    "Creme fraiche i stedet for sour cream.",
+    "Hvedemel i stedet for T45-mel.",
+    "Stenbiderrogn i stedet for røget gedderogn.",
+    "Røgede brislinger i stedet for sprats på dåse."
+  ]
+}

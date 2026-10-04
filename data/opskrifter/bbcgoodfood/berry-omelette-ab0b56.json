@@ -1,0 +1,88 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/berry-omelette",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:56:29.959Z",
+  "total_minutes": 7,
+  "active_minutes": 5,
+  "yield_count": 1,
+  "source_lines": 6,
+  "title": "Omelet med bær og hytteost",
+  "intro": "En let og frisk omelet, der steges på panden uden vending og fyldes med hytteost og friske bær. Den er hurtig at lave og passer godt til morgenmad.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "stort",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "skummetmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "knivspids",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 175,
+      "unit": "g",
+      "name": "bær",
+      "note": "jordbær, blåbær og hindbær, hakkede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Pisk ægget sammen med mælken og kanelen."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op på en non-stick pande på 20 cm. Hæld æggeblandingen på panden, og vip den rundt, så bunden dækkes jævnt."
+    },
+    {
+      "section": null,
+      "text": "Steg omeletten i nogle minutter, til den er stivnet og gylden på undersiden. Den skal ikke vendes."
+    },
+    {
+      "section": null,
+      "text": "Læg omeletten over på en tallerken. Smør hytteosten ud over den, og drys bærrene ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Rul omeletten sammen, og server den med det samme."
+    }
+  ],
+  "changes": []
+}

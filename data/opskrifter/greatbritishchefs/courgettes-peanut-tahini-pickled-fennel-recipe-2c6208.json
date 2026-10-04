@@ -1,0 +1,190 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/courgettes-peanut-tahini-pickled-fennel-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:30:54.929Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 16,
+  "title": "Stegt squash med jordnøddetahin og syltet fennikel",
+  "intro": "Squash stegt dybt gylden og serveret på en tyk jordnøddetahin med syrlig, røget fennikel og jalapeños. En kraftigt smagende ret med både cremethed, syre og varme.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til fennikelsalaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "top, hårde yderblade og kerne fjernet, finthakket (ca. 200 g)",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsalaten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "limesaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsalaten",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kaffirlimeblade",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsalaten",
+      "amount": 75,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsalaten",
+      "amount": 60,
+      "unit": "g",
+      "name": "jalapeños",
+      "note": "syltede, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsalaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lage fra syltede jalapeños",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fennikelsalaten",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til jordnøddetahinen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til jordnøddetahinen",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "miso",
+      "note": "hvid",
+      "optional": false
+    },
+    {
+      "section": "Til jordnøddetahinen",
+      "amount": 150,
+      "unit": "g",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til jordnøddetahinen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til jordnøddetahinen",
+      "amount": 2.5,
+      "unit": "spsk",
+      "name": "jordnøddesmør",
+      "note": "smooth",
+      "optional": false
+    },
+    {
+      "section": "Til jordnøddetahinen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "limesaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til jordnøddetahinen",
+      "amount": 75,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashen",
+      "amount": 750,
+      "unit": "g",
+      "name": "squash",
+      "note": "delt i halve på langs og derefter på tværs",
+      "optional": false
+    },
+    {
+      "section": "Til squashen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til squashen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fennikelsalaten",
+      "text": "Varm en tør, non-stick gryde op på høj varme. Rist fennikel uden olie i 4-5 minutter, til den er sveden i kanterne. Vend ofte, så den får farve hele vejen rundt."
+    },
+    {
+      "section": "Fennikelsalaten",
+      "text": "Hæld limesaften på og rør i ca. 30 sekunder, til væsken er optaget, og fennikel virker lidt klistret. Kom den over i en skål."
+    },
+    {
+      "section": "Fennikelsalaten",
+      "text": "Blend kaffirlimeblade og olie med en kraftig blender, til olien er varm at røre ved (eller 85 °C på termometer). Det tager ca. 3 minutter. Du kan også bruge en almindelig blender: kør, til bladene er helt fine, og olien er blevet lysegrøn."
+    },
+    {
+      "section": "Fennikelsalaten",
+      "text": "Si den grønne olie ned over fennikel. Tilsæt jalapeños, lagen og salt, og stil skålen til side."
+    },
+    {
+      "section": "Jordnøddetahinen",
+      "text": "Pisk alle ingredienser undtagen vandet sammen i en lille skål. Pisk derefter vandet i lidt ad gangen, til saucen minder om tyk pandekagedej. Den skal være lidt tykkere end almindelig tahinsauce, fordi fennikelsalaten tynder den ud ved servering."
+    },
+    {
+      "section": "Squashen",
+      "text": "Læg squashstykkerne med snitfladen opad og drys med salt. Lad dem stå i 5 minutter, og dup dem derefter tørre."
+    },
+    {
+      "section": "Squashen",
+      "text": "Varm olien op i en stor non-stick pande på høj varme. Steg squashen med snitfladen nedad i 8-10 minutter, til den er dybt gyldenbrun. Vend og steg 2 minutter mere. Den bliver al dente – steg den længere, hvis du vil have den blødere."
+    },
+    {
+      "section": "Servering",
+      "text": "Smør tahinsaucen ud på et fad. Læg squash ovenpå, og top med fennikelsalaten."
+    }
+  ],
+  "changes": [
+    "Agavesirup er erstattet med lønnesirup."
+  ]
+}

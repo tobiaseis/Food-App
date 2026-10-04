@@ -1,0 +1,219 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/bhel-puri",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:48:34.113Z",
+  "total_minutes": 29,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 20,
+  "title": "Bhel puri",
+  "intro": "Indisk street food-snack med sprød puffet ris, kartoffel, løg og agurk, som vendes med syrlige og friske chutneys. Server den med det samme, så den bliver ved med at knase.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Bhel puri",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "lille, i små tern",
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 50,
+      "unit": "g",
+      "name": "Rice Krispies",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 40,
+      "unit": "g",
+      "name": "indisk snackmix",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "saltede jordnødder",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chaat masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennepsolie",
+      "note": "til konsum",
+      "optional": true
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "tamarindchutney",
+      "note": "1 spsk til salaten og 1 tsk til at servere ved siden af",
+      "optional": false
+    },
+    {
+      "section": "Bhel puri",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "stor, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 10,
+      "unit": "stk",
+      "name": "mynte",
+      "note": "blade, groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 25,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "skrællet og groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 2,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "saltede jordnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøn chutney",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grøn chutney",
+      "text": "Kom alle ingredienserne til den grønne chutney i en kraftig blender, og kør dem til en helt glat pasta. Stil den til side."
+    },
+    {
+      "section": "Bhel puri",
+      "text": "Kog kartoffelstykkerne i letsaltet vand i en lille gryde, til de er møre, så der går 7-9 minutter. Hæld vandet fra, lad kartoflerne køle af, og hak dem fint."
+    },
+    {
+      "section": "Bhel puri",
+      "text": "Vend Rice Krispies, kartoffel, chili, snackmix, rødløg, agurk, jordnødder, koriander og chaat masala sammen i en stor skål. Tilsæt sennepsolie, hvis du bruger den, 1 spsk tamarindchutney og 2 spsk af den grønne chutney, og rør det hele godt sammen."
+    },
+    {
+      "section": "Bhel puri",
+      "text": "Rør resten af tamarindchutneyen med 1 tsk grøn chutney i en lille skål, og smag til med limesaft."
+    },
+    {
+      "section": "Bhel puri",
+      "text": "Anret bhel puri i små skåle. Server tamarindblandingen og resten af den grønne chutney ved siden af."
+    }
+  ],
+  "changes": [
+    "Bombay mix er erstattet med indisk snackmix.",
+    "Kilden bruger fødevaregodkendt sennepsolie, som beholdes under dansk navn, da den er svær at finde."
+  ]
+}

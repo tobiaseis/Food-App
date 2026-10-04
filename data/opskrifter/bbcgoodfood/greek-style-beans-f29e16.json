@@ -1,0 +1,171 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/greek-style-beans",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:24:59.333Z",
+  "total_minutes": 25,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Græske bønner i tomatsauce",
+  "intro": "Smørbønner simrer i en tomatsauce med oregano og røde løg og toppes med feta og dild. Server med ristet brød til.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "stort, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "letsaltet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "bønner",
+      "note": "smørbønner à 400 g, skyllet og afdryppet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "ristet surdejsbrød, til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til løgene, plus efter smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en dyb stegepande ved middelhøj varme. Kom løg og en knivspids salt i, og steg dem i 5 minutter, til de bliver bløde og får gyldne kanter."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløg, oregano og tomatpuré i. Skru ned til middel, og steg under omrøring i 3-4 minutter, til puréen er mørkerød."
+    },
+    {
+      "section": null,
+      "text": "Hæld hakkede tomater, fond og sukker i. Skyl dåsen med en sjat vand, og hæld det i panden."
+    },
+    {
+      "section": null,
+      "text": "Lad saucen simre ved lav til middel varme i 10-12 minutter."
+    },
+    {
+      "section": null,
+      "text": "Vend bønnerne i, og lad dem simre med i 2-3 minutter under omrøring."
+    },
+    {
+      "section": null,
+      "text": "Smag til med salt, peber og lidt citronsaft."
+    },
+    {
+      "section": null,
+      "text": "Drys feta og dild over retten, og server med ristet brød ved siden af."
+    }
+  ],
+  "changes": [
+    "Surdejsbrød er erstattet af almindeligt brød, ristet.",
+    "Smørbønner er skrevet som bønner med smørbønner i noten."
+  ]
+}

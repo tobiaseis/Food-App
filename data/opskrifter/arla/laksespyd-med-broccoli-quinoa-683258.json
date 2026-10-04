@@ -1,0 +1,168 @@
+{
+  "url": "https://www.arla.dk/opskrifter/laksespyd-med-broccoli-quinoa/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:12:09.513Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Laksespyd med broccoli-quinoa",
+  "intro": "Ovnbagte laksespyd serveres med sort quinoa vendt med fintsnittet broccoli, bagte rødløg og citron samt varm karrysauce. Det hele tilberedes nemt på én plade og i gryden.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Broccoli-quinoa",
+      "amount": 250,
+      "unit": "g",
+      "name": "quinoa",
+      "note": "sort",
+      "optional": false
+    },
+    {
+      "section": "Broccoli-quinoa",
+      "amount": 6,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Broccoli-quinoa",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Broccoli-quinoa",
+      "amount": 400,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "renset",
+      "optional": false
+    },
+    {
+      "section": "Løg og citron",
+      "amount": 4,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Løg og citron",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "usprøjtet, i tykke både",
+      "optional": false
+    },
+    {
+      "section": "Løg og citron",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Laksespyd",
+      "amount": 400,
+      "unit": "g",
+      "name": "laks",
+      "note": "filet uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": "Laksespyd",
+      "amount": 4,
+      "unit": "stk",
+      "name": "bambusspyd",
+      "note": "ca. 20 cm lange",
+      "optional": false
+    },
+    {
+      "section": "Laksespyd",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Laksespyd",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 5,
+      "unit": "dl",
+      "name": "karrysauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i halve, tynde ringe",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Broccoli-quinoa",
+      "text": "Skyl quinoaen i en sigte. Bring vand og salt i kog, og tilsæt quinoaen."
+    },
+    {
+      "section": "Broccoli-quinoa",
+      "text": "Lad quinoaen simre under tæt låg på svag varme i ca. 15 min."
+    },
+    {
+      "section": "Broccoli-quinoa",
+      "text": "Hak broccolien helt fint, for eksempel i en foodprocessor."
+    },
+    {
+      "section": "Broccoli-quinoa",
+      "text": "Bland broccoli og quinoa, og hæld det i en sigte, så overskydende vand løber fra."
+    },
+    {
+      "section": "Løg og citron",
+      "text": "Varm ovnen op til 250 °C. Beklæd en bageplade med bagepapir, og anbring rødløgs- og citronbådene på den ene halvdel. Drys med salt."
+    },
+    {
+      "section": "Løg og citron",
+      "text": "Sæt pladen øverst i ovnen, og bag løg og citron i ca. 16 min."
+    },
+    {
+      "section": "Laksespyd",
+      "text": "Skær laksen i tern, og træk dem på bambusspyddene. Krydr med salt og peber."
+    },
+    {
+      "section": "Laksespyd",
+      "text": "Læg spyddene på pladen ved siden af løg og citron, når der er ca. 6 min. tilbage af bagetiden. Bag dem i 6 min. ved 250 °C."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Varm karrysaucen op i en lille tykbundet gryde, til den koger. Rør undervejs."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Rør rødløgsringene i lige før servering, og smag saucen til."
+    },
+    {
+      "section": null,
+      "text": "Server laksespyd og bagte løg og citron med broccoli-quinoa og karrysauce."
+    }
+  ],
+  "changes": []
+}

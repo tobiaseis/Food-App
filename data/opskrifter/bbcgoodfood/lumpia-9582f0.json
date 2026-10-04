@@ -1,0 +1,155 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/lumpia",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:42:02.516Z",
+  "total_minutes": 80,
+  "active_minutes": 40,
+  "yield_count": null,
+  "source_lines": 9,
+  "title": "Lumpia",
+  "intro": "Sprøde filippinske forårsruller fyldt med krydret oksekød, gulerod og kål. Serveres med en sød og syrlig dip af sweet chili og æblecidereddike.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Fyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "mellemstore, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 6,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "store, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "mellemstore, groft revet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.33,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "findelt i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rullerne",
+      "amount": 25,
+      "unit": "stk",
+      "name": "vårrulleplader",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": "Til rullerne",
+      "amount": 500,
+      "unit": "ml",
+      "name": "solsikkeolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 6,
+      "unit": "spsk",
+      "name": "sweet chili sauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dip",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Ælt oksekød, løg, hvidløg, gulerod, spidskål, salt og peber sammen med hænderne i en stor skål. Fyldet kan dækkes til og stå på køl op til et døgn."
+    },
+    {
+      "section": "Til rullerne",
+      "text": "Tag pladerne ud af fryseren og lad dem ligge ved stuetemperatur i 10 minutter. Tæl 25 plader op, og læg resten tilbage i fryseren."
+    },
+    {
+      "section": "Til rullerne",
+      "text": "Del hver plade i to lige store trekanter. Pak dem ind i et fugtigt viskestykke, så de ikke tørrer ud."
+    },
+    {
+      "section": "Dip",
+      "text": "Rør sweet chili sauce og æblecidereddike sammen, og stil dippen til side."
+    },
+    {
+      "section": "Rul",
+      "text": "Beklæd en stor bageplade med bagepapir. Stil en skærebræt og en lille skål vand frem."
+    },
+    {
+      "section": "Rul",
+      "text": "Læg én trekant ad gangen på brættet med den brede side mod dig. Kom en generøs teskefuld fyld på midten, ca. 1,5 cm fra kanten. Fold kanten over fyldet, og stryg fyldet jævnt ud over ca. 5 cm af pladen."
+    },
+    {
+      "section": "Rul",
+      "text": "Fold først den ene side ind og derefter den anden. Rul op igen, til fyldet er ca. 1,5 cm fra spidsen. Fugt spidsen med lidt vand, så den klistrer fast."
+    },
+    {
+      "section": "Rul",
+      "text": "Gentag med resten af pladerne og fyldet. Læg bagepapir mellem lagene af ruller, så de ikke hænger sammen."
+    },
+    {
+      "section": "Steg",
+      "text": "Når der er ca. fem ruller tilbage at lave, hældes olien i en lille, dyb stegepande. Varm den op til ca. 180 °C ved middel varme."
+    },
+    {
+      "section": "Steg",
+      "text": "Steg rullerne i portioner à fem til syv, afhængigt af panden. Begynd at vende dem efter ét minut, og steg dem i alt 2-3 minutter, til de er gennemstegte."
+    },
+    {
+      "section": "Steg",
+      "text": "Lad rullerne dryppe af i en dyb skål med køkkenrulle. Anret dem varme på et fad, og server med dippen i små skåle."
+    }
+  ],
+  "changes": [
+    "Sweetheart cabbage er skiftet til spidskål.",
+    "Spring roll wrappers er skiftet til vårrulleplader."
+  ]
+}

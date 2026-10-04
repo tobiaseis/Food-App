@@ -1,0 +1,220 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/scallop-sheep-cheese-tomato-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:18:35.716Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Kulstegte kammuslinger med fåreostesauce og tomat",
+  "intro": "Kammuslinger stegt hårdt af og serveret i skallen med en cremet ostesauce og en varm tomatdressing med syltede korianderfrø. En elegant forret med både røgsmag, syre og sødme.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Syltede korianderfrø",
+      "amount": 10,
+      "unit": "g",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede korianderfrø",
+      "amount": 50,
+      "unit": "g",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede korianderfrø",
+      "amount": 25,
+      "unit": "g",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede korianderfrø",
+      "amount": 25,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostesauce",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostesauce",
+      "amount": 200,
+      "unit": "ml",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostesauce",
+      "amount": 100,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostesauce",
+      "amount": 15,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostesauce",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostesauce",
+      "amount": 5,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostesauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": "groftmalet sort peber",
+      "optional": false
+    },
+    {
+      "section": "Kammuslinger",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kammuslinger",
+      "note": "renset, lufttørret i køleskabet; gem skallerne",
+      "optional": false
+    },
+    {
+      "section": "Kammuslinger",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kammuslinger",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatdressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": "stor",
+      "optional": false
+    },
+    {
+      "section": "Tomatdressing",
+      "amount": 50,
+      "unit": "ml",
+      "name": "smør",
+      "note": "brunet",
+      "optional": false
+    },
+    {
+      "section": "Tomatdressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede korianderfrø",
+      "text": "Varm eddike, vand og sukker op i en gryde, til sukkeret er opløst. Hæld væsken over korianderfrøene, læg låg på, og lad dem stå ved stuetemperatur i mindst 24 timer."
+    },
+    {
+      "section": "Ostesauce",
+      "text": "Kom fetaosten, kærnemælken og vandet i en gryde, og bring det i kog ved svag varme. Blend det glat, og sigt det gennem en fin si. Mål 300 ml af væsken af, og hæld den i en ren gryde."
+    },
+    {
+      "section": "Ostesauce",
+      "text": "Bring væsken i kog, og pisk majsstivelsen i, så den tykner. Tilsæt parmesan og salt, og blend saucen igen."
+    },
+    {
+      "section": "Ostesauce",
+      "text": "Rør peberen i, og lad saucen trække i 10 minutter. Si den derefter gennem en fin si, og hold den varm."
+    },
+    {
+      "section": "Tomatdressing",
+      "text": "Bring en lille gryde vand i kog. Rids tomaten i bunden, og kog den 10 sekunder i vandet. Afkøl den straks i isvand, og træk skindet af."
+    },
+    {
+      "section": "Tomatdressing",
+      "text": "Hak tomaten til en grov puré, og lad den dryppe lidt af i en si."
+    },
+    {
+      "section": "Kammuslinger",
+      "text": "Varm en støbejernspande op over meget høj varme (gerne over kul), til den ryger. Tilsæt lidt olie, drys kammuslingerne med salt, og steg dem uden at røre i dem, til de har en mørk gylden skorpe."
+    },
+    {
+      "section": "Kammuslinger",
+      "text": "Vend kammuslingerne, og lad dem hvile blidt ved siden af varmen, mens de gennemvarmes."
+    },
+    {
+      "section": "Tomatdressing",
+      "text": "Kom den afdryppede tomat i en lille gryde sammen med det brunede smør, skalotteløget og de afdryppede korianderfrø. Varm det forsigtigt igennem."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær hver kammusling i 2-3 skiver. Hæld en skefuld ostesauce i hver skal, og læg kammuslingerne ovenpå. Top med en rigelig skefuld tomatdressing, og pynt med purløg og karse."
+    }
+  ],
+  "changes": [
+    "Fåreost er erstattet med feta.",
+    "Valle er erstattet med kærnemælk.",
+    "Gul ærtemel er erstattet med majsstivelse.",
+    "Spenwood er erstattet med parmesan.",
+    "Morgenfrueblade er erstattet med karse.",
+    "Great White-tomat er erstattet med almindelig tomat.",
+    "Caster sugar er erstattet med almindeligt sukker."
+  ]
+}

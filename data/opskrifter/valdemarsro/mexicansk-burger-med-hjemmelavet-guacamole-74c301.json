@@ -1,0 +1,274 @@
+{
+  "url": "https://www.valdemarsro.dk/mexicansk-burger-med-hjemmelavet-guacamole/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:04:55.305Z",
+  "total_minutes": 120,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Mexicansk burger med guacamole",
+  "intro": "Hjemmebagte burgerboller med saftige oksebøffer, cheddar, salsa og jalapeños. Toppes med hjemmelavet guacamole og serveres med krydrede kartoffelbåde.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Burgerboller",
+      "amount": 250,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerboller",
+      "amount": 5,
+      "unit": "g",
+      "name": "gær",
+      "note": "50 g, hvis dejen kun hæver en halv time i stedet for 10 timer",
+      "optional": false
+    },
+    {
+      "section": "Burgerboller",
+      "amount": 300,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerboller",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerboller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerboller",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "evt. 2 fed efter smag",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "1 spsk saft bruges",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "formet til 4 bøffer",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 4,
+      "unit": "skive",
+      "name": "cheddar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 75,
+      "unit": "g",
+      "name": "salsa",
+      "note": "tomatsalsa",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 30,
+      "unit": "g",
+      "name": "jalapeños",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 125,
+      "unit": "g",
+      "name": "salat",
+      "note": "salatblade",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "med skræl, vaskede",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Burgerboller",
+      "text": "Rør vand og gær sammen i en skål, og bland derefter mel og salt i. Rør dejen godt."
+    },
+    {
+      "section": "Burgerboller",
+      "text": "Dæk skålen med film, og lad dejen stå på køkkenbordet i 10-12 timer."
+    },
+    {
+      "section": "Burgerboller",
+      "text": "Form dejen til boller, og lad dem hæve i 1 time."
+    },
+    {
+      "section": "Burgerboller",
+      "text": "Pensl bollerne med mælk, og strø sesamfrø over. Bag dem i forvarmet ovn ved 230 °C varmluft i 15-18 minutter."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Kør løg, hvidløg og avocado i en minihakker, til massen er cremet."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Smag til med spidskommen, citronsaft og salt."
+    },
+    {
+      "section": "Kartoffelbåde",
+      "text": "Skær kartoflerne i både. Læg dem i en pose sammen med paprika, salt og olie, og ryst posen, så de er dækket godt."
+    },
+    {
+      "section": "Kartoffelbåde",
+      "text": "Bag kartoffelbådene i forvarmet ovn ved 220 °C varmluft i 25-35 minutter."
+    },
+    {
+      "section": "Burgere",
+      "text": "Drys bøfferne med salt og peber, og steg dem i smør og olie på en varm pande eller på grillen."
+    },
+    {
+      "section": "Burgere",
+      "text": "Læg cheddar på bøfferne, så den smelter let."
+    },
+    {
+      "section": "Burgere",
+      "text": "Del bollerne, og byg burgerne med bøf, jalapeños, salat, tomatskiver, guacamole, mayonnaise og salsa."
+    }
+  ],
+  "changes": [
+    "Ølandshvede er erstattet med hvedemel, så den samlede melmængde er 300 g."
+  ]
+}

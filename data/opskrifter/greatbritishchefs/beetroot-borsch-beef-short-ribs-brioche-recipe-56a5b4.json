@@ -1,0 +1,582 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/beetroot-borsch-beef-short-ribs-brioche-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:22:18.401Z",
+  "total_minutes": 225,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 51,
+  "title": "Rødbedesuppe (borsjtj) med oksespidsbryst og brioche med sort hvidløg",
+  "intro": "Dyb, sødsyrlig rødbedesuppe med langtidsstegt, presset oksespidsbryst, æblefedt og luftig brioche med sort hvidløg. Det er en festlig ret, hvor ribbenene skal i gang to dage før servering.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Oksespidsbryst",
+      "amount": 1,
+      "unit": "kg",
+      "name": "oksespidsbryst",
+      "note": "parteret, med ben",
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": 2,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksespidsbryst",
+      "amount": 200,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 10,
+      "unit": "g",
+      "name": "sichuanpeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 4,
+      "unit": "g",
+      "name": "enebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 5,
+      "unit": "g",
+      "name": "peber",
+      "note": "sorte hele korn",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 4,
+      "unit": "g",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 4,
+      "unit": "g",
+      "name": "spidskommen",
+      "note": "hele frø",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 4,
+      "unit": "g",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": 50,
+      "unit": "g",
+      "name": "sort hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": 25,
+      "unit": "g",
+      "name": "frisk gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": 50,
+      "unit": "ml",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": 75,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": 12,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": 250,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, koldt og i tern, plus lidt til formene",
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": "pisket, til pensling",
+      "optional": false
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgskonfit",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgskonfit",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgskonfit",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glaze til oksespidsbryst",
+      "amount": 75,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Glaze til oksespidsbryst",
+      "amount": 45,
+      "unit": "g",
+      "name": "paprika",
+      "note": "røget, stødt",
+      "optional": false
+    },
+    {
+      "section": "Glaze til oksespidsbryst",
+      "amount": 25,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "sherryeddike",
+      "optional": false
+    },
+    {
+      "section": "Glaze til oksespidsbryst",
+      "amount": 75,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æblefedt",
+      "amount": 50,
+      "unit": "g",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Æblefedt",
+      "amount": 125,
+      "unit": "g",
+      "name": "oksefedt",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Æblefedt",
+      "amount": 50,
+      "unit": "g",
+      "name": "æbler",
+      "note": "grønt, skrællet og hakket",
+      "optional": false
+    },
+    {
+      "section": "Æblefedt",
+      "amount": 175,
+      "unit": "g",
+      "name": "lard",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rødbedepuré",
+      "amount": 350,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 320,
+      "unit": "g",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 1,
+      "unit": "kg",
+      "name": "gulerødder",
+      "note": "udstukket med kugleudstikker, så der bliver 320 g",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 650,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "udstukket med kugleudstikker, så der bliver 320 g",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 1.2,
+      "unit": "kg",
+      "name": "rødbeder",
+      "note": "udstukket med kugleudstikker, så der bliver 650 g",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 65,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 130,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 160,
+      "unit": "g",
+      "name": "pastinak",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 320,
+      "unit": "g",
+      "name": "hvidkål",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 2.6,
+      "unit": "l",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 65,
+      "unit": "ml",
+      "name": "juice",
+      "note": "rødbedejuice",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 12,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 4,
+      "unit": "g",
+      "name": "peber",
+      "note": "sorte hele korn",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 160,
+      "unit": "g",
+      "name": "tørrede pærer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 20,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 15,
+      "unit": "g",
+      "name": "jalapeños",
+      "note": "syltede",
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 15,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Borsjtj",
+      "amount": 30,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Peberrodssauce",
+      "amount": 100,
+      "unit": "g",
+      "name": "peberrod",
+      "note": "revet, på glas",
+      "optional": false
+    },
+    {
+      "section": "Peberrodssauce",
+      "amount": 12,
+      "unit": "ml",
+      "name": "juice",
+      "note": "rødbedejuice",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sennep",
+      "note": "mild, i sprøjtepose",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "forårsløg",
+      "note": "strimlet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Oksespidsbryst",
+      "text": "Start mindst 2 dage før servering. Kog vand og salt op, og rør, til saltet er opløst. Lad saltlagen køle helt af."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Læg kødet i en bakke, og dæk det med saltlagen. Lad det stå i køleskabet i 3 timer."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Mal alle krydderierne til et fint pulver i en krydderikværn eller en mortér."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Tag kødet op af saltlagen, tør det og gnid det ensartet ind i krydderiblandingen. Vakuumpak det, og kog det sous vide i vandbad ved 84 °C i 24 timer, til det er mørt."
+    },
+    {
+      "section": "Hvidløgskonfit",
+      "text": "Varm hvidløg, olie og salt op i en sauterpande ved svag varme. Lad det småkoge i 3 timer, til hvidløgene er bløde. Lad det køle af, og opbevar det i olien i køleskabet. Tag ca. 60 g konfit til side til borsjtjen. Der bliver rester."
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "text": "Kom melet i en røremaskineskål. Blend sort hvidløg, gær, mælk, æg og sukker glat i en foodprocessor."
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "text": "Rør blandingen gradvist i melet ved lav hastighed, til det samler sig til en dej. Ælt i ca. 7 minutter, til dejen får struktur."
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "text": "Tilsæt saltet. Pisk derefter det kolde smør i dejen lidt ad gangen, og vent med mere, til hvert hold er blandet helt ind."
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "text": "Læg dejen i en skål, og lad den hæve ved stuetemperatur i 30 minutter. Slå den ned, og lad den hæve 30 minutter mere. Stil den derefter i køleskabet i 3-8 timer."
+    },
+    {
+      "section": "Glaze til oksespidsbryst",
+      "text": "Når kødet er færdigt, hæld 500 ml af kogesaften i en gryde, og kog den ind til det halve. Tilsæt smør, paprika, eddike og honning, og lad det simre sammen til en blank, rig glaze med balance mellem sødme og syre."
+    },
+    {
+      "section": "Oksespidsbryst",
+      "text": "Tag benene fra kødet, og pres kødet mellem to bakker. Læg en vægt ovenpå, og lad det trække i køleskabet natten over. Skær det næste dag i terninger på 3 cm, og opbevar dem koldt."
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "text": "Smør bageformene godt ind med smør. Del den hvilede dej i 4 stykker, og del hvert stykke i 9. Rul dem til runde boller."
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "text": "Læg 8 boller langs kanten af hver form og 1 i midten. Lad dem efterhæve køligt, til de er hævede, og dejen ikke springer helt tilbage ved et let tryk."
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "text": "Stil formene i køleskabet i 10-15 minutter, så smørret stivner. Pensl med æggeblomme."
+    },
+    {
+      "section": "Brioche med sort hvidløg",
+      "text": "Forvarm ovnen til 200 °C. Drys brødene med flagesalt, og bag dem i 40-45 minutter, til de er gyldne, hævede og gennembagte. Sænk temperaturen eller dæk med folie, hvis de brunes for hurtigt."
+    },
+    {
+      "section": "Æblefedt",
+      "text": "Steg løget svagt i lidt af oksefedtet i ca. 10 minutter, til det er blødt. Tilsæt æblet, og steg 5 minutter mere."
+    },
+    {
+      "section": "Æblefedt",
+      "text": "Kom resten af fedtet i, og lad det simre ved svag varme i ca. 2 timer. Rør jævnligt."
+    },
+    {
+      "section": "Æblefedt",
+      "text": "Hæld det meste af fedtet i en foodprocessor, og lad lidt blive tilbage i panden, så resten kan blive sprødt. Tag de sprøde stykker op, og gem dem til servering."
+    },
+    {
+      "section": "Æblefedt",
+      "text": "Pulsér fedtet i processoren til en grov, ske-venlig konsistens. Afkøl helt, og stil det koldt."
+    },
+    {
+      "section": "Rødbedepuré",
+      "text": "Blend de hakkede rødbeder i en kraftig blender på fuld hastighed i 5 minutter, til de er helt glatte. Mål 250 g puré af til suppen."
+    },
+    {
+      "section": "Borsjtj",
+      "text": "Svits løg og gulerødder i olie i en stor gryde, til de er let karamelliserede. Rør tomatpuréen i, og lad den stege med i 2 minutter."
+    },
+    {
+      "section": "Borsjtj",
+      "text": "Kom de øvrige grøntsager og hvidløgskonfitten i, og lad det stege og blødgøres i 5 minutter."
+    },
+    {
+      "section": "Borsjtj",
+      "text": "Hæld oksefond, rødbedejuice og de 250 g rødbedepuré i. Tilsæt laurbærblade, peberkorn, tørrede pærer, begge slags eddike, jalapeños, sukker og salt."
+    },
+    {
+      "section": "Borsjtj",
+      "text": "Lad suppen simre svagt i ca. 1 time, så smagene samler sig, og suppen forbliver klar og afbalanceret."
+    },
+    {
+      "section": "Peberrodssauce",
+      "text": "Blend peberrod og rødbedejuice glat i en kraftig blender i 3 minutter. Fyld saucen i en sprøjtepose, og stil den til side."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm suppen forsigtigt op, så balancen mellem sødt, surt og dybde bevares, og øs den i skåle."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm oksekødsterningerne i glazen, til de er helt varme og dækket af den. Server 1 terning pr. person."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm æblefedtet blidt op, og kom det i en lille skål. Top med de sprøde stykker."
+    },
+    {
+      "section": "Servering",
+      "text": "Sprøjt prikker af peberrodssauce og sennep på en tallerken. Kom creme fraiche, forårsløg, persille og dild i små skåle. Server suppen med kødet og brioche-brødene, hvor hvert brød rækker til 2 personer. Kom varmt æblefedt på suppen, så det smelter ud."
+    }
+  ],
+  "changes": [
+    "Hvedemel erstatter T65-mel.",
+    "Røget paprika erstatter Urfa-peber.",
+    "Tørrede pærer erstatter de røgede tørrede pærer.",
+    "Creme fraiche erstatter soured cream.",
+    "Revet peberrod på glas erstatter peberrodspasta."
+  ]
+}

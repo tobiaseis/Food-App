@@ -1,0 +1,204 @@
+{
+  "url": "https://www.valdemarsro.dk/pho-nudelsuppe-med-med-oksekoed/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:09:59.505Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Pho med oksekød",
+  "intro": "Aromatisk vietnamesisk nudelsuppe med krydret bouillon, mørt skåret entrecote og masser af friske urter. Færdig på under en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til bouillonen",
+      "amount": 1,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 5,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "five spice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "riseddike",
+      "optional": false
+    },
+    {
+      "section": "Til bouillonen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 400,
+      "unit": "g",
+      "name": "entrecote",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "sesamolie, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen og servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "nudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen og servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til suppen og servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "bønnespirer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen og servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til suppen og servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Til suppen og servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, i ringe",
+      "optional": false
+    },
+    {
+      "section": "Til suppen og servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "lime, skåret i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bouillon",
+      "text": "Bring grøntsagsfond, oksefond, five spice, ingefær, hvidløg, fiskesauce, eddike og peber i kog i en gryde. Skru derefter ned på laveste varme, og læg låg på."
+    },
+    {
+      "section": "Bøf",
+      "text": "Gnid entrecoten med salt og peber. Varm olien i en pande, og steg bøfferne 1 minut på hver side på høj varme."
+    },
+    {
+      "section": "Bøf",
+      "text": "Sænk varmen, og kom smørret i panden. Steg bøfferne 1½ minut mere på hver side, så de er medium. Tag dem af panden, og lad dem hvile i 2 minutter. Skær dem i tynde skiver."
+    },
+    {
+      "section": "Suppe",
+      "text": "Smag bouillonen til, og bring den i kog igen. Kog nudlerne direkte i den, som det står på pakken."
+    },
+    {
+      "section": "Servering",
+      "text": "Øs suppe og nudler op i skåle. Læg bøfskiverne, bønnespirer, forårsløg, mynte, koriander og chili ovenpå. Server med limebåde at klemme over."
+    }
+  ],
+  "changes": [
+    "Riseddike er skrevet som eddike.",
+    "Fishsauce er skrevet som fiskesauce.",
+    "Grøntsagsbouillon er skrevet som grøntsagsfond."
+  ]
+}

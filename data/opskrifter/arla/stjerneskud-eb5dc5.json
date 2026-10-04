@@ -1,0 +1,220 @@
+{
+  "url": "https://www.arla.dk/opskrifter/stjerneskud/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:16:25.564Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 20,
+  "title": "Stjerneskud",
+  "intro": "Klassisk dansk stjerneskud med sprødstegt rødspætte på ristet brød, toppet med rejer, lakserogn og friske asparges. Serveres med en cremet tomatdressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til tomatdressingen",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til tomatdressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til tilbehør",
+      "amount": 6,
+      "unit": "stk",
+      "name": "asparges",
+      "note": "tykke, grønne",
+      "optional": false
+    },
+    {
+      "section": "Til tilbehør",
+      "amount": 8,
+      "unit": "stk",
+      "name": "salat",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til de stegte rødspætter",
+      "amount": 2,
+      "unit": "dl",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de stegte rødspætter",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Til de stegte rødspætter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til de stegte rødspætter",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket sammen",
+      "optional": false
+    },
+    {
+      "section": "Til de stegte rødspætter",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de stegte rødspætter",
+      "amount": 8,
+      "unit": "stk",
+      "name": "rødspættefilet",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Til de stegte rødspætter",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "skive",
+      "name": "brød",
+      "note": "landbrød, ristet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lakserogn",
+      "note": "glas",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "rejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "cherrytomater, halveret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "kviste",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatdressing",
+      "text": "Bland creme fraiche med ketchup, tomatpuré, salt og peber. Sæt dressingen tildækket på køl, til den skal bruges."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Del aspargesene i tynde bånd på langs med en tyndskræller. Læg båndene i isvand sammen med salatbladene, og lad dem ligge dér til servering."
+    },
+    {
+      "section": "Stegte rødspætter",
+      "text": "Stil tre skåle frem: Rør rasp, salt og peber sammen i den første, pisk æggene i den anden, og hæld hvedemelet i den tredje."
+    },
+    {
+      "section": "Stegte rødspætter",
+      "text": "Vend hver filet i melet, derefter i æggene og til sidst i raspblandingen."
+    },
+    {
+      "section": "Stegte rødspætter",
+      "text": "Bruns halvdelen af smørret gyldent på en stor pande. Steg fileterne ved middel varme i ca. 2 minutter."
+    },
+    {
+      "section": "Stegte rødspætter",
+      "text": "Kom resten af smørret på panden, og vend fileterne. Steg dem ca. 2 minutter ved middel varme og herefter ca. 2 minutter ved lav varme. Brug to pander, eller steg fisken i to omgange."
+    },
+    {
+      "section": "Servering",
+      "text": "Hæld aspargesbåndene og salaten af i et dørslag, så vandet løber fra."
+    },
+    {
+      "section": "Servering",
+      "text": "Smør de ristede brødskiver med lidt dressing, og læg dem på tallerkener."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg salat på hvert brød, og top med to stegte rødspætter. Fordel dressing, lakserogn og rejer ovenpå."
+    },
+    {
+      "section": "Servering",
+      "text": "Pynt med aspargesbånd, cherrytomater, citronbåde og dild, og server straks."
+    }
+  ],
+  "changes": []
+}

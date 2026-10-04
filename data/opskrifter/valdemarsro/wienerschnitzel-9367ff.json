@@ -1,0 +1,216 @@
+{
+  "url": "https://www.valdemarsro.dk/wienerschnitzel/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:27:49.416Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Wienerschnitzel med ristede kartoffelskiver og smørærter",
+  "intro": "Paneret kalveschnitzel, stegt gylden i smør og olie, serveret med sild, kapers og peberrod. Dertil ovnristede kartoffelskiver og lynristede ærter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Wienerschnitzel",
+      "amount": 600,
+      "unit": "g",
+      "name": "kalveschnitzel",
+      "note": "4 stykker à ca. 150 g",
+      "optional": false
+    },
+    {
+      "section": "Wienerschnitzel",
+      "amount": 1,
+      "unit": "dl",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Wienerschnitzel",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Wienerschnitzel",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Wienerschnitzel",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "sammenpiskede",
+      "optional": false
+    },
+    {
+      "section": "Wienerschnitzel",
+      "amount": 2,
+      "unit": "dl",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Wienerschnitzel",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Wienerschnitzel",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sild",
+      "note": "benfri",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "peberrod",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristede kartoffelskiver",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristede kartoffelskiver",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at vende kartoflerne i",
+      "optional": false
+    },
+    {
+      "section": "Ristede kartoffelskiver",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ærter",
+      "amount": 300,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne, optøede",
+      "optional": false
+    },
+    {
+      "section": "Ærter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ærter",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ærter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ristede kartoffelskiver",
+      "text": "Forvarm ovnen til 200 °C varmluft. Skær kartoflerne i skiver på 1 cm, og vend dem i olie og salt."
+    },
+    {
+      "section": "Ristede kartoffelskiver",
+      "text": "Fordel skiverne på en bradepande med bagepapir, og bag dem i 30 minutter."
+    },
+    {
+      "section": "Wienerschnitzel",
+      "text": "Bank schnitzlerne ud med en kagerulle eller kødhammer, til de er ca. 1/2 cm tykke."
+    },
+    {
+      "section": "Wienerschnitzel",
+      "text": "Sæt tre skåle frem: hvedemel blandet med salt og peber, sammenpiskede æg, og rasp blandet med salt og peber. Vend hver schnitzel først i melet, så i ægget og til sidst i raspen, så begge sider er dækket."
+    },
+    {
+      "section": "Wienerschnitzel",
+      "text": "Steg schnitzlerne én ad gangen. Varm olie op på en stor pande, tilsæt en klat smør, og lad det bruse af. Steg schnitzlen 1-2 minutter på hver side, og stil den på en rist over bagepapir."
+    },
+    {
+      "section": "Wienerschnitzel",
+      "text": "Tør panden ren med køkkenrulle mellem hver schnitzel, og brug frisk smør og olie til den næste. Det giver en pænere stegning på dem alle."
+    },
+    {
+      "section": "Wienerschnitzel",
+      "text": "Sæt de brunede schnitzler nederst i ovnen de sidste 5 minutter af kartoflernes bagetid."
+    },
+    {
+      "section": "Ærter",
+      "text": "Lad smør bruse af på en ren pande. Rist ærterne ved høj varme i ét minut under omrøring, og smag til med salt og peber. Server dem straks, mens de er rygende varme."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret schnitzlerne med en citronskive, og top med sild, kapers og peberrod. Server med kartoffelskiver, ærter og lidt flagesalt."
+    }
+  ],
+  "changes": []
+}

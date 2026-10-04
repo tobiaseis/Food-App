@@ -1,0 +1,206 @@
+{
+  "url": "https://www.valdemarsro.dk/roedbedetaerte/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:15:07.376Z",
+  "total_minutes": 90,
+  "active_minutes": 30,
+  "yield_count": 1,
+  "source_lines": 18,
+  "title": "Rødbedetærte med feta og valnødder",
+  "intro": "Sprød tærtebund med fennikelfrø fyldt med rødbeder, feta og valnødder i en cremet æggemasse. Toppes med timian og flere nødder.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Tærtebund",
+      "amount": 125,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": "knuste",
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 300,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "valnødder",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": 20,
+      "unit": "g",
+      "name": "valnødder",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "bladene plukkes af",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtebund",
+      "text": "Bland begge slags mel med fennikelfrø og salt. Smuldr smørret ud i melblandingen med fingrene, eller kør det i en foodprocessor."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Tilsæt vandet, og saml det til en dej. Lad den gerne hvile på køl i 30 minutter."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Tænd ovnen på 175 °C varmluft. Tryk dejen ud i en smurt tærteform på 27 cm og prik bunden med en gaffel."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Forbag bunden i 10 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk æg, creme fraiche, honning, rosmarin, fennikelfrø, salt og peber godt sammen i en skål."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend rødbeder, rødløg, feta og valnødder i æggemassen."
+    },
+    {
+      "section": "Fyld",
+      "text": "Hæld fyldet i den forbagte bund, og bag tærten ved 175 °C varmluft i cirka 35 minutter, til æggemassen er stivnet."
+    },
+    {
+      "section": "Til pynt",
+      "text": "Drys tærten med de hakkede valnødder og timianbladene."
+    }
+  ],
+  "changes": [
+    "Akaciehonning er skiftet til almindelig honning."
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/next-level-baked-strawberry-cheesecake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:01:56.137Z",
+  "total_minutes": 100,
+  "active_minutes": 30,
+  "yield_count": null,
+  "source_lines": 14,
+  "title": "Bagt cheesecake med jordbær",
+  "intro": "Cremet bagt cheesecake på kiksebund med friske jordbær i blank syltetøjsglasur. Den skal køle af og trække i mange timer, så den er perfekt at lave dagen før.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Til bunden",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet, plus lidt ekstra til formen",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 300,
+      "unit": "g",
+      "name": "kiks",
+      "note": "digestivekiks",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 25,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 750,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "fuldfed",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vanilje",
+      "note": "vaniljeekstrakt",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 400,
+      "unit": "g",
+      "name": "bær",
+      "note": "jordbær, halveret",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 25,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 100,
+      "unit": "g",
+      "name": "bær",
+      "note": "jordbærsyltetøj",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "citronsaft",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til bunden",
+      "text": "Tænd ovnen på 160 °C (140 °C varmluft). Smør en springform på 20 cm, og læg bagepapir i bunden."
+    },
+    {
+      "section": "Til bunden",
+      "text": "Kværn kiksene til fine krummer i en foodprocessor. Du kan også lægge dem i en pose og knuse dem med en kagerulle. Kom krummerne i en skål."
+    },
+    {
+      "section": "Til bunden",
+      "text": "Bland smør og sukker i, til det ligner fugtigt sand. Tryk massen hårdt ned i formens bund, og pres den op ad siderne i et jævnt lag med bagsiden af en ske eller et glas."
+    },
+    {
+      "section": "Til bunden",
+      "text": "Stil formen på køl i 20 minutter, så bunden bliver fast."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Pisk flødeost og sukker glat og cremet med el-piskeris i en stor skål."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Pisk æggene i ét ad gangen, og pisk grundigt mellem hvert."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Rør creme fraiche, vanilje og citronskal i. Sigt melet ned i skålen, og vend det forsigtigt i, til det netop er blandet."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Hæld fyldet på kiksebunden, og glat overfladen med en spatel."
+    },
+    {
+      "section": "Bagning",
+      "text": "Sæt kagen på en bageplade, og bag den i ca. 1 time og 10 minutter. Midten skal lige akkurat være stivnet og ryste en smule."
+    },
+    {
+      "section": "Bagning",
+      "text": "Sluk ovnen, og lad kagen køle i den i 1 time med ovndøren på klem. Det forhindrer, at kagen revner."
+    },
+    {
+      "section": "Bagning",
+      "text": "Stil den afkølede kage i køleskabet i mindst 4 timer eller natten over."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Læg jordbærrene i en sigte over en skål, og vend dem med sukkeret. Lad dem trække i ca. 1 time."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Hæld saften fra skålen i en lille gryde sammen med syltetøj og citronsaft. Varm det over lav varme, til syltetøjet er smeltet, og blandingen er blank."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Vend jordbærrene i syltetøjsblandingen, og fordel dem oven på den kolde cheesecake. Kagen kan holde sig på køl i op til to dage."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Løsn kagen forsigtigt fra formen, og anret den på et fad. Skær den i stykker."
+    }
+  ],
+  "changes": [
+    "Soured cream er erstattet med creme fraiche.",
+    "Golden caster sugar er erstattet med almindeligt sukker.",
+    "Digestive biscuits er erstattet med digestivekiks.",
+    "Strawberry jam er erstattet med jordbærsyltetøj."
+  ]
+}

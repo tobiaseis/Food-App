@@ -1,0 +1,354 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/beef-brisket-ragu-potato-gratin-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:48:48.789Z",
+  "total_minutes": 90,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 32,
+  "title": "Langtidsstegt oksebryst-ragù med flødekartofler og urtekrummer",
+  "intro": "Mør ragù af oksebryst, der har simret i timevis i ovnen, serveres på cremede kartofler med ost og brie. Et knasende drys af brød, nødder og urter giver bid til hele retten.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ragù",
+      "amount": 1,
+      "unit": "kg",
+      "name": "oksebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællet og i tern",
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 2,
+      "unit": "dl",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 2,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 5,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ragù",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "bagekartofler, skrællet",
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 3,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 3,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 150,
+      "unit": "g",
+      "name": "gruyère",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 150,
+      "unit": "g",
+      "name": "brie",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "saltet",
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": 1,
+      "unit": "skive",
+      "name": "brød",
+      "note": "tyk skive surdejsbrød, revet i små stykker",
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "blandede kerner",
+      "note": "fx græskarkerner og solsikkekerner",
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "valnødder",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "oregano",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtekrummer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ragù",
+      "text": "Tænd ovnen på 140°C. Gnid oksebrystet godt ind i salt og peber."
+    },
+    {
+      "section": "Ragù",
+      "text": "Varm olien op i en tykbundet gryde, og brun kødet på alle sider, til det er gyldent. Tag det op og stil det til side."
+    },
+    {
+      "section": "Ragù",
+      "text": "Svits løg, gulerødder og selleri i samme gryde ved middel varme i ca. 10 minutter, til grøntsagerne er bløde og tager lidt farve. Rør hvidløget i, og lad det stege med i 2 minutter."
+    },
+    {
+      "section": "Ragù",
+      "text": "Hæld eddiken i, og skrab alt det fastbrændte fra bunden. Tilsæt rødvinen, og lad det koge ind til det halve."
+    },
+    {
+      "section": "Ragù",
+      "text": "Rør hakkede tomater, tomatpuré og fond i. Læg laurbærblade, rosmarin og kødet i gryden, sæt låg på, og lad det stege i ovnen i 5–6 timer, til kødet er mørt."
+    },
+    {
+      "section": "Ragù",
+      "text": "Pil kødet i stykker med to gafler direkte i saucen."
+    },
+    {
+      "section": "Flødekartofler",
+      "text": "Skru ovnen op på 175°C varmluft. Skær kartoflerne i meget tynde skiver, gerne på en mandolin."
+    },
+    {
+      "section": "Flødekartofler",
+      "text": "Kom kartofler, mælk, fløde, hvidløg, salt og peber i en gryde. Bring det i kog, og lad det simre ved lav varme i ca. 10 minutter."
+    },
+    {
+      "section": "Flødekartofler",
+      "text": "Tag gryden af varmen, og rør gruyèren i, til den er helt smeltet."
+    },
+    {
+      "section": "Flødekartofler",
+      "text": "Hæld blandingen i et smurt ovnfast fad. Fordel brie og smør ovenpå, og bag i 40 minutter, til gratinen er gylden og boblende."
+    },
+    {
+      "section": "Urtekrummer",
+      "text": "Rist brød, kerner og valnødder på en tør pande, til de er gyldne."
+    },
+    {
+      "section": "Urtekrummer",
+      "text": "Kør det sammen med de øvrige ingredienser til krummerne i en foodprocessor, til konsistensen er grov. Smag til med salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret gratinen i en stor skål, og top med ragù og urtekrummer. Slut af med friskkværnet peber."
+    }
+  ],
+  "changes": [
+    "Maltseddike er skiftet til almindelig eddike."
+  ]
+}

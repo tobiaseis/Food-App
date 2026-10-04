@@ -1,0 +1,168 @@
+{
+  "url": "https://www.arla.dk/opskrifter/kampe-kanelsnurre/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:24:32.519Z",
+  "total_minutes": 180,
+  "active_minutes": 50,
+  "yield_count": 1,
+  "source_lines": 13,
+  "title": "Kæmpe kanelsnurre",
+  "intro": "En stor, saftig kanelsnurre bagt i springform, hvor den snoede gærdej gemmer et lag kanelsmør. Den penslas med sukkerlage og toppes med perlesukker.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Dej",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "lun",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 575,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Remonce",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Remonce",
+      "amount": 200,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Remonce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Sukkerlage",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Sukkerlage",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": null,
+      "unit": null,
+      "name": "perlesukker",
+      "note": "svensk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dej",
+      "text": "Rør gæren ud i den lune mælk i en stor skål."
+    },
+    {
+      "section": "Dej",
+      "text": "Tilsæt sukker, æg, hvedemel, salt og smørtern. Ælt det hele til en blank, smidig dej, gerne i røremaskine."
+    },
+    {
+      "section": "Dej",
+      "text": "Dæk skålen til, og lad dejen hæve til dobbelt størrelse, ca. 1 time."
+    },
+    {
+      "section": "Remonce",
+      "text": "Rør smør, brun farin og kanel sammen til en jævn remonce."
+    },
+    {
+      "section": "Sukkerlage",
+      "text": "Rør sukker i det kogende vand, til det er helt opløst."
+    },
+    {
+      "section": "Sådan laver du kanelsnurren",
+      "text": "Rul dejen ud til en firkant på ca. 40 x 40 cm, og fordel remoncen jævnt over hele fladen."
+    },
+    {
+      "section": "Sådan laver du kanelsnurren",
+      "text": "Rul dejen sammen til en lang rulle. Skær den på langs midt over, men stop før enden, så de to halvdele stadig hænger sammen foroven."
+    },
+    {
+      "section": "Sådan laver du kanelsnurren",
+      "text": "Sno de to strimler om hinanden, og læg snoningen i en snegl. Stik enden ind under."
+    },
+    {
+      "section": "Sådan laver du kanelsnurren",
+      "text": "Klem bagepapir fast mellem ring og bund i en springform på ca. 22 cm. Læg sneglen i formen."
+    },
+    {
+      "section": "Sådan laver du kanelsnurren",
+      "text": "Bag midt i ovnen ved 175 °C (almindelig ovn) i 1 time, til kanelsnurren er gylden og gennembagt."
+    },
+    {
+      "section": "Sådan laver du kanelsnurren",
+      "text": "Pensl straks med sukkerlagen, og drys perlesukker over, mens den er varm. Stil den til afkøling på en rist."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,124 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/gluten-free-white-chocolate-raspberry-cheesecake",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:44:09.573Z",
+  "total_minutes": 26,
+  "active_minutes": 25,
+  "yield_count": 12,
+  "source_lines": 7,
+  "title": "Glutenfri cheesecake med hvid chokolade og hindbær",
+  "intro": "Cremet cheesecake med hvid chokolade og hindbær på en knasende bund af glutenfri kiks. Den skal stå i køleskabet natten over eller i mindst seks timer, så den kan skæres pænt.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Bund",
+      "amount": 300,
+      "unit": "g",
+      "name": "kiks",
+      "note": "glutenfri, fx digestivekiks",
+      "optional": false
+    },
+    {
+      "section": "Bund",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, smeltet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvid chokolade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 500,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "fuldfed",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "hindbær",
+      "note": "en lille del gemmes til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "hvid chokolade",
+      "note": "til at rive over",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Forberedelse",
+      "text": "Tag alle varerne ud af køleskabet en time før, så de når stuetemperatur. Beklæd bunden af en springform på 23 cm og 7 cm i højden med bagepapir."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Smelt den hvide chokolade i en varmefast skål i mikroovnen i 1 minut, og rør undervejs efter ca. 30 sekunder. Er den ikke helt smeltet, så varm den yderligere 10 sekunder ad gangen. Du kan også smelte den over en gryde med vand, der kun lige simrer – skålen må ikke røre vandet. Lad chokoladen køle af, mens du laver bunden."
+    },
+    {
+      "section": "Bund",
+      "text": "Kør kiksene til smuler i en foodprocessor, eller put dem i en skål og knus dem med enden af en kagerulle. Vend det smeltede smør i, til smulerne ligner fugtig sand."
+    },
+    {
+      "section": "Bund",
+      "text": "Hæld smulerne i formen, og tryk dem ud til et jævnt lag. Sæt formen på køl, mens du laver fyldet."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk flødeost, vaniljeekstrakt og fløde med en elektrisk håndmixer, til massen er tyk og cremet."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend den afkølede chokolade i massen. Klumper den, så varm skålen 10 sekunder i mikroovnen og pisk den sammen igen."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rør hindbærrene i, så nogle af dem går i stykker og giver marmorering."
+    },
+    {
+      "section": "Samling",
+      "text": "Kom fyldet ovenpå kiksebunden, og glat toppen. Stil cheesecaken på køl i mindst 6 timer eller natten over. Den holder sig 2 dage i køleskab."
+    },
+    {
+      "section": "Servering",
+      "text": "Løsn kagen forsigtigt fra formen, og drys de sidste hindbær ovenpå. Riv eventuelt noget hvid chokolade over."
+    }
+  ],
+  "changes": [
+    "Glutenfri digestive-kiks er byttet med glutenfri kiks.",
+    "Double cream er byttet med piskefløde.",
+    "Soft cheese er byttet med flødeost."
+  ]
+}

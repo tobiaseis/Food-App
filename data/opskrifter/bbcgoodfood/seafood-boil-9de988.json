@@ -1,0 +1,183 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/seafood-boil",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:51:52.890Z",
+  "total_minutes": 50,
+  "active_minutes": 20,
+  "yield_count": 6,
+  "source_lines": 13,
+  "title": "Skaldyrsgryde med chorizo, majs og kartofler",
+  "intro": "Skaldyr, kartofler og majs koger i en krydret bouillon med chorizo og citron og serveres på et stort fad med hvidløgssmør. En festlig ret, man spiser med fingrene.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 200,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "til madlavning, i tykke skiver",
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "stort, skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 3,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 2,
+      "unit": "stk",
+      "name": "hønsebouillon",
+      "note": "bouillonterninger",
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "blade og stilke adskilt, bladene finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 1,
+      "unit": "kg",
+      "name": "nye kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 4,
+      "unit": "stk",
+      "name": "majskolber",
+      "note": "hver skåret i 2-3 stykker",
+      "optional": false
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "blandede skaldyr",
+      "note": "optøet, hvis frosne, fx hummerhaler, krabber og store rå rejer med skal",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgssmør",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgssmør",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgssmør",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgssmør",
+      "amount": null,
+      "unit": null,
+      "name": "tabasco",
+      "note": "et par stænk, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bouillon og skaldyr",
+      "text": "Varm olien op ved middel varme i en stor gryde. Steg chorizoen i 6-8 minutter, til den er sprød, og fedtet er smeltet ud. Tag den op på en tallerken, og lad olien blive i gryden."
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "text": "Svits løgbådene i gryden i nogle minutter, til de er blevet bløde. Drys Cajun-krydderiet over, og rør rundt i 1 minut."
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "text": "Hæld vandet i, og smuldr bouillonterningerne ud i det. Pres saften fra citronen i gryden, og læg citronhalvdelene og persillestilkene ned i. Bring det i kog, og lad det småsimre."
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "text": "Kom kartoflerne i bouillonen, og lad dem simre i 10 minutter. Tilsæt majs og eventuelle hummerhaler, og simre videre i 5 minutter."
+    },
+    {
+      "section": "Bouillon og skaldyr",
+      "text": "Læg krabber og rejer i til sidst. Er krabberne rå, kommer de i sammen med hummeren. Lad det simre 5 minutter mere, til rejerne er lyserøde og gennemkogte, og kartoflerne er møre."
+    },
+    {
+      "section": "Hvidløgssmør",
+      "text": "Smelt smørret i en lille pande ved lav varme, mens skaldyrene koger. Rør hvidløget i, og varm det forsigtigt i 1-2 minutter."
+    },
+    {
+      "section": "Hvidløgssmør",
+      "text": "Tilsæt Cajun-krydderi, tabasco og lidt kogevæske fra gryden, så smørret bliver lidt tyndere. Rør den hakkede persille i, og tag panden af varmen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Løft skaldyr, kartofler og majs op med en hulske, og læg dem på et stort fad. Kassér løg, citron og persillestilke. Fordel chorizoen over, og dryp med urtesmørret. Server med citronbåde."
+    }
+  ],
+  "changes": [
+    "Hot sauce er skiftet til tabasco.",
+    "Cooking chorizo er skiftet til chorizo."
+  ]
+}

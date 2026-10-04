@@ -1,0 +1,163 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/tuna-chopped-salad-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:55:41.856Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Hakket salat med tun, bønner og oliven",
+  "intro": "En frisk, finthakket salat med tun, grønne bønner og oliven i en skarp dressing med citron og sennep. Server den med ristet brød.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 250,
+      "unit": "g",
+      "name": "bønner",
+      "note": "grønne bønner, trimmet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "oliven",
+      "note": "fyldt med jalapeño",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 30,
+      "unit": "g",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 360,
+      "unit": "g",
+      "name": "tun",
+      "note": "i olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "brød",
+      "note": "surdejsbrød, ristet, til servering",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Salat",
+      "text": "Kog saltet vand op i en gryde. Kog bønnerne i 2 minutter, til de er møre. Hæld vandet fra, og skyl dem i koldt vand."
+    },
+    {
+      "section": "Salat",
+      "text": "Hak bønner, oliven, agurk, tomater, løg og persille fint, så stykkerne er lige store. Kom det hele i en stor skål."
+    },
+    {
+      "section": "Dressing",
+      "text": "Pisk olivenolie, citronsaft, sennep, honning og hvidløg sammen, til dressingen er cremet og samlet. Smag til med salt og peber."
+    },
+    {
+      "section": "Salat",
+      "text": "Pil tunen i flager over de hakkede grøntsager. Hæld dressingen over, og vend salaten grundigt, så alt er dækket."
+    },
+    {
+      "section": "Salat",
+      "text": "Lad salaten trække i 10 minutter, så smagene når at blande sig. Server den med ristet brød."
+    }
+  ],
+  "changes": [
+    "Oliven fyldt med jalapeño fra et bestemt mærke er erstattet af almindelige oliven fyldt med jalapeño.",
+    "Surdejsbrød er skrevet som brød med surdej i noten."
+  ]
+}

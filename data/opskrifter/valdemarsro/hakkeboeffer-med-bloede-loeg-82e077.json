@@ -1,0 +1,184 @@
+{
+  "url": "https://www.valdemarsro.dk/hakkeboeffer-med-bloede-loeg/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:29:32.864Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Hakkebøffer med bløde løg",
+  "intro": "Saftige hakkebøffer med brun svampesauce, bløde løg og agurkesalat. Serveres med kogte kartofler.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Bløde løg og svampe",
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Bløde løg og svampe",
+      "amount": 100,
+      "unit": "g",
+      "name": "kantareller",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": "Bløde løg og svampe",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bløde løg og svampe",
+      "amount": 3,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i ringe",
+      "optional": false
+    },
+    {
+      "section": "Bløde løg og svampe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bløde løg og svampe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bløde løg og svampe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hakkebøffer",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hakkebøffer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hakkebøffer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kartoffelvand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": "røres ud i en smule vand",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 200,
+      "unit": "g",
+      "name": "syltede agurker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "kogte",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Lav agurkesalaten først. Kog kartoflerne, mens resten af retten laves, og gem noget af kogevandet til saucen."
+    },
+    {
+      "section": "Bløde løg og svampe",
+      "text": "Varm en pande op med olien og halvdelen af smørret. Brun svampene og timianen ved høj varme under omrøring, til de får lidt farve. Læg dem over på en tallerken."
+    },
+    {
+      "section": "Bløde løg og svampe",
+      "text": "Skru ned til middelvarme. Smelt resten af smørret på panden, og svits løgringene, til de er bløde. Dryp med balsamico, og stil løgene til side sammen med svampene."
+    },
+    {
+      "section": "Hakkebøffer",
+      "text": "Form farsen til 4 lige store bøffer, og krydr dem med salt og peber. Steg dem 2-3 minutter på hver side på samme pande som svampene og løgene. Tag dem af panden."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld fond og kartoffelvand på panden. Skrab alt det brune fra bunden med en træspatel, så det koger ud i saucen, og rør godt rundt."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smag til med fløde, worcestershiresauce og eventuelt mere peber. Tyk saucen med majsstivelsen, og rør lidt i ad gangen. Lad den koge godt igennem, og tilsæt eventuelt lidt sovsekulør efter smag."
+    },
+    {
+      "section": null,
+      "text": "Læg bøfferne tilbage i saucen, og top med løg og svampe. Server med agurkesalat og kartofler."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,185 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/jammy-berry-granola-crisp",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:09:54.327Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 8,
+  "source_lines": 15,
+  "title": "Bagt bærcrumble med havregryn",
+  "intro": "Saftige ovnbagte bær med en sprød, gylden topping af havregryn og mandler. Server den lune crumble med tyk yoghurt.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Bærfyld",
+      "amount": 1,
+      "unit": "kg",
+      "name": "bær",
+      "note": "blandede, f.eks. blåbær, hindbær, brombær eller jordbær, friske eller frosne",
+      "optional": false
+    },
+    {
+      "section": "Bærfyld",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "marmelade",
+      "note": "jordbær- eller hindbærmarmelade",
+      "optional": false
+    },
+    {
+      "section": "Bærfyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bærfyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citron",
+      "note": "saft",
+      "optional": false
+    },
+    {
+      "section": "Bærfyld",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bærfyld",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 300,
+      "unit": "g",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 50,
+      "unit": "g",
+      "name": "mandler",
+      "note": "flagede, knust med hænderne",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 5,
+      "unit": "spsk",
+      "name": "honning",
+      "note": "eller lønnesirup",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "en god knivspids",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "græsk yoghurt",
+      "note": "eller labneh",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bærfyld",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Bærfyld",
+      "text": "Vend bærrene i et stort ovnfast fad sammen med marmelade, vanilje, citronsaft og sukker."
+    },
+    {
+      "section": "Bærfyld",
+      "text": "Bag i 10 minutter, til bærrene er bløde, men stadig har deres form."
+    },
+    {
+      "section": "Bærfyld",
+      "text": "Rør majsstivelsen ud med et par spiseskefulde af saften fra fadet i en lille skål. Vend blandingen i bærrene, og rør godt rundt."
+    },
+    {
+      "section": "Topping",
+      "text": "Bland alle ingredienserne til toppingen i en stor skål, og husk saltet."
+    },
+    {
+      "section": "Topping",
+      "text": "Pres blandingen sammen i hånden, så der dannes klumper."
+    },
+    {
+      "section": "Topping",
+      "text": "Fordel toppingen over bærrene, og sæt fadet tilbage i ovnen i 20 minutter, til overfladen er sprød og gylden."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server med tyk græsk yoghurt eller labneh."
+    }
+  ],
+  "changes": [
+    "Mixed berries er skrevet som bær, og golden caster sugar er skiftet til almindeligt sukker.",
+    "Cornflour er skiftet til majsstivelse.",
+    "Plain flour er skiftet til hvedemel.",
+    "Porridge oats er skiftet til havregryn."
+  ]
+}

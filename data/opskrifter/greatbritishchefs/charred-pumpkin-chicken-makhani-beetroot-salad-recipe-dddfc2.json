@@ -1,0 +1,610 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/charred-pumpkin-chicken-makhani-beetroot-salad-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:35:00.218Z",
+  "total_minutes": 150,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 56,
+  "title": "Kylling makhani med ristet hokkaido, rødbedesalat og gurkemejeris",
+  "intro": "Mør kylling i cremet tomat- og cashewsauce med ristet græskar, serveret med sprød, stærk rødbedesalat og duftende gurkemejeris. Retten kræver lidt tid, men det meste kan laves, mens de andre dele står og koger.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marineret kylling",
+      "amount": 800,
+      "unit": "g",
+      "name": "kyllingeoverlår",
+      "note": "uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": 300,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "en tommelfingerstor bid, revet",
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørrede bukkehornsblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marineret kylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristet græskar",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristet græskar",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Ristet græskar",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristet græskar",
+      "amount": 400,
+      "unit": "g",
+      "name": "hokkaido græskar",
+      "note": "i store tern",
+      "optional": false
+    },
+    {
+      "section": "Ristet græskar",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ristet græskar",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": 3,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i helt tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "skrællede og skåret i helt tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chaat masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "à 400 g",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 40,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": "udblødt i det varme vand i 30 minutter",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "varmt, til udblødning af cashewnødderne",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "grønne kapsler",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 3,
+      "unit": "stk",
+      "name": "nellike",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "ingefær",
+      "note": "en tommelfingerstor bid, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "revet til en pasta",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "chilipulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "tørrede bukkehornsblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 80,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Makhani-sauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gurkemejeris",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ghee",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gurkemejeris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Gurkemejeris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Gurkemejeris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gurkemejeris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "stødt sort peber",
+      "optional": false
+    },
+    {
+      "section": "Gurkemejeris",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Gurkemejeris",
+      "amount": 300,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": "skyllet og udblødt i 15 minutter",
+      "optional": false
+    },
+    {
+      "section": "Gurkemejeris",
+      "amount": 450,
+      "unit": "ml",
+      "name": "hønsebouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gurkemejeris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "blade, vendt med lidt olivenolie",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marineret kylling",
+      "text": "Tænd ovnen på 190 °C varmluft."
+    },
+    {
+      "section": "Marineret kylling",
+      "text": "Rør yoghurt, ingefær, hvidløg, gurkemeje, garam masala, spidskommen, bukkehornsblade, citronsaft og olie sammen til en marinade, og smag til med salt og peber."
+    },
+    {
+      "section": "Marineret kylling",
+      "text": "Skær overskydende fedt af kyllingelårene, og del dem i store stykker. Vend dem i marinaden, og lad dem trække i køleskabet i 1–2 timer."
+    },
+    {
+      "section": "Ristet græskar",
+      "text": "Vend græskarternene med olie, spidskommen, koriander, salt og peber i et ildfast fad."
+    },
+    {
+      "section": "Ristet græskar",
+      "text": "Rist dem i ovnen i 30–40 minutter, til de er møre og har fået lidt farve i kanterne."
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "text": "Bland løg, rødbeder, chili og koriander med chaat masala, cayennepeber og stødt koriander."
+    },
+    {
+      "section": "Rødbede- og løgsalat",
+      "text": "Tilsæt citronsaft, smag til med salt og peber, og vend det hele igen. Dæk salaten, og sæt den på køl til servering."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Svits løget i halvdelen af olien ved middel varme i 10–15 minutter, til det er blødt og let gyldent."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Kom løg, tomater og cashewnødder i en blender, og kør dem til en glat masse. Tilsæt lidt af udblødningsvandet, hvis massen er for tyk."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Varm en stor pande op ved middel varme med resten af olien. Brun kyllingestykkerne et par minutter på hver side. De skal ikke være gennemstegte endnu. Læg dem over på en tallerken."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Sæt panden tilbage på varmen med en smule olie. Når olien er varm, kommer de hele krydderier i."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Når krydderierne syder, tilsættes hvidløg, ingefær og chili. Sænk varmen, og steg i ca. 2 minutter, uden at hvidløget tager farve."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Tag panden af varmen, og rør de stødte krydderier i. Lad dem stege med i et minuts tid, og hæld så tomat- og cashewmassen i."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Rør godt rundt, og tilsæt sukker, salt og peber. Lad saucen simre med låget halvt på i 15–20 minutter, til den er tyknet og reduceret. Tilsæt en sjat vand, hvis den koger for hurtigt ind."
+    },
+    {
+      "section": "Gurkemejeris",
+      "text": "Smelt ghee ved middel varme i en gryde, og steg ingefær og hvidløg i ca. 1 minut. Hvidløget må ikke brune."
+    },
+    {
+      "section": "Gurkemejeris",
+      "text": "Rist garam masala, peber og gurkemeje i fedtstoffet. Hæld vandet fra risene, og kom dem i gryden. Skru op til middelhøj varme, og rør forsigtigt i ca. 2 minutter, så kornene holder sig hele."
+    },
+    {
+      "section": "Gurkemejeris",
+      "text": "Hæld bouillon og salt i, og bring det i kog. Læg et viskestykke og et låg over gryden. Kog ved middel varme i ca. 10 minutter, og sluk så for varmen. Lad risene dampe i yderligere 10 minutter."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Fisk de hele krydderier op af saucen, og smid dem ud."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Kom den forstegte kylling tilbage i saucen. Tilsæt lidt vand, hvis saucen er meget tyk."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Læg låg på, og lad retten simre i 5–7 minutter, til kyllingen er mør og gennemstegt."
+    },
+    {
+      "section": "Makhani-sauce",
+      "text": "Vend det ristede græskar i, og varm det igennem. Rør bukkehornsbladene i, og smag til med salt og peber. Tag gryden af varmen, og rør fløde, smør og koriander i."
+    },
+    {
+      "section": "Til servering",
+      "text": "Luft risene op med en gaffel. Server dem med kylling makhani, græskar og rødbedesalat. Top med en klat yoghurt og korianderbladene."
+    }
+  ],
+  "changes": [
+    "Græskar er erstattet af hokkaido græskar.",
+    "Peanutolie er erstattet af rapsolie.",
+    "Kashmiri chilipulver er erstattet af almindeligt chilipulver.",
+    "Double cream er erstattet af piskefløde.",
+    "Kyllingefond er erstattet af hønsebouillon."
+  ]
+}

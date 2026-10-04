@@ -1,0 +1,200 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/green-goddess-nachos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:07:34.766Z",
+  "total_minutes": 50,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Green goddess nachos",
+  "intro": "Sprøde nachos med smeltet ost, sorte bønner med chipotle og honning og syrlige radiser. Til sidst får de en grøn sauce af avocado, yoghurt, lime og koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til saucen",
+      "amount": 150,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "moden",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skallen rives, og saften presses",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 25,
+      "unit": "g",
+      "name": "jalapeños",
+      "note": "plus en sjat af lagen",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til radiserne",
+      "amount": 8,
+      "unit": "stk",
+      "name": "radiser",
+      "note": "skåret i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Til radiserne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften presses",
+      "optional": false
+    },
+    {
+      "section": "Til bønnerne",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "400 g, afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Til bønnerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Til bønnerne",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 200,
+      "unit": "g",
+      "name": "nachochips",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 200,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    },
+    {
+      "section": "Til nachos",
+      "amount": 200,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "jalapeños",
+      "note": "et par stykker ekstra",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sauce",
+      "text": "Kom alle ingredienserne til saucen i en blender sammen med en god knivspids salt. Blend, til den er helt glat."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tynd om nødvendigt ud med en sjat vand, så saucen kan dryppe fra en ske. Smag til med mere salt eller lime."
+    },
+    {
+      "section": "Radiser og bønner",
+      "text": "Vend radiserne med limesaften og en knivspids salt i en skål. Lad dem stå og syrne let, mens du laver resten."
+    },
+    {
+      "section": "Radiser og bønner",
+      "text": "Rør bønnerne sammen med chipotle, honning og en knivspids salt i en anden skål."
+    },
+    {
+      "section": "Nachos",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Nachos",
+      "text": "Læg halvdelen af nachochipsene i et stort ovnfast fad. Fordel halvdelen af fetaen, mozzarellaen og bønnerne over."
+    },
+    {
+      "section": "Nachos",
+      "text": "Læg resten af chipsene, mozzarellaen og bønnerne ovenpå, og bag nachos i 20 minutter, til osten er smeltet og gylden."
+    },
+    {
+      "section": "Servering",
+      "text": "Dryp lidt af saucen over de varme nachos, og hæld resten i en skål til at dyppe i."
+    },
+    {
+      "section": "Servering",
+      "text": "Drys med den resterende feta, de syrnede radiser, jalapeños og rigeligt koriander."
+    }
+  ],
+  "changes": []
+}

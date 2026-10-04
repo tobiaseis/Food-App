@@ -1,0 +1,132 @@
+{
+  "url": "https://www.arla.dk/opskrifter/sandwich-med-serrano-skinke-og-syltede-rodlog/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T13:33:17.253Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Sandwich med serranoskinke og syltede rødløg",
+  "intro": "Sprød sandwich med flødeost, tomat og serranoskinke, hvor de hurtigt syltede rødløg giver friskhed og syrlighed. Den er nem at lave og pæn at servere på små spyd.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Syltede rødløg",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rødløg",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 4,
+      "unit": "skive",
+      "name": "brød",
+      "note": "surdejsbrød, ristet",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 100,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 2,
+      "unit": "stk",
+      "name": "salat",
+      "note": "salatblade",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 4,
+      "unit": "skive",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 2,
+      "unit": "skive",
+      "name": "serranoskinke",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "basilikum",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": 2,
+      "unit": "stk",
+      "name": "træspyd",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sandwich",
+      "amount": null,
+      "unit": null,
+      "name": "basilikum",
+      "note": "frisk, til pynt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede rødløg",
+      "text": "Bland eddike og sukker, og lad det stå, indtil sukkeret er opløst."
+    },
+    {
+      "section": "Syltede rødløg",
+      "text": "Kom løgringene i væsken, og lad dem stå og trække i cirka 10 minutter."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Dæk alle brødskiverne med et lag flødeost."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Læg salat, tomat, serranoskinke, de syltede rødløg og basilikumblade på to af skiverne."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Læg de to øvrige skiver ovenpå, og pres sandwichene let sammen."
+    },
+    {
+      "section": "Sandwich",
+      "text": "Skær sandwichene over på midten, og sæt en halv træspyd gennem hver halvdel. Pynt med frisk basilikum, og server."
+    }
+  ],
+  "changes": []
+}

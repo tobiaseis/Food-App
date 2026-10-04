@@ -1,0 +1,80 @@
+{
+  "url": "https://www.arla.dk/opskrifter/mormordressing/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:18:01.800Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 6,
+  "title": "Mormordressing",
+  "intro": "Cremet, sødt-syrlig fløderessing, der klassisk serveres til hovedsalat. Den er hurtigt lavet og trækker i køleskabet, mens salaten gøres klar.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Mormordressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mormordressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mormordressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Mormordressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Mormordressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Mormordressing",
+      "amount": 300,
+      "unit": "g",
+      "name": "hovedsalat",
+      "note": "revet i mindre stykker",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mormordressing",
+      "text": "Hæld fløde, flormelis, citronsaft, salt og peber i et glas med låg, og ryst det grundigt, til det er blandet."
+    },
+    {
+      "section": "Mormordressing",
+      "text": "Stil dressingen tildækket i køleskabet i cirka 10 minutter."
+    },
+    {
+      "section": "Mormordressing",
+      "text": "Smag dressingen til, og fordel den over salaten lige før servering."
+    }
+  ],
+  "changes": []
+}

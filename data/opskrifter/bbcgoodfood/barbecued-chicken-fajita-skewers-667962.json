@@ -1,0 +1,195 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/barbecued-chicken-fajita-skewers",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:29:55.353Z",
+  "total_minutes": 40,
+  "active_minutes": 30,
+  "yield_count": 6,
+  "source_lines": 13,
+  "title": "Grillede kyllingefajitaspyd",
+  "intro": "Saftige kyllingespyd med peberfrugt og rødløg, marineret i lime, hvidløg og krydderier. Serveres i varme tortillas med hjemmelavet guacamole.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til spyd",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til spyd",
+      "amount": 3,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "i forskellige farver",
+      "optional": false
+    },
+    {
+      "section": "Til spyd",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til guacamolen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "modne",
+      "optional": false
+    },
+    {
+      "section": "Til guacamolen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til guacamolen",
+      "amount": 6,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tortilla",
+      "note": "varmede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "yoghurt",
+      "note": "kan bruges i stedet for creme fraiche",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chilisauce",
+      "note": "til de voksne",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Pres saften fra begge limefrugter i en stor skål. Rør oregano, spidskommen, paprika, olivenolie og hvidløg i."
+    },
+    {
+      "section": "Marinade",
+      "text": "Skær kyllingen i tern, vend dem i marinaden, og stil skålen til side."
+    },
+    {
+      "section": "Spyd",
+      "text": "Fjern kernerne i peberfrugterne, og skær dem i stykker. Del rødløget i både eller stykker."
+    },
+    {
+      "section": "Spyd",
+      "text": "Træk kylling, peberfrugt og løg på spyd, så de skiftes. Spydene kan laves flere timer i forvejen og står så på køl, til de skal på grillen."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Fjern sten og skræl fra avocadoerne. Kom dem i en skål sammen med lime og cherrytomater, og mos det hele med en kartoffelmoser. Hæld guacamolen i en serveringsskål."
+    },
+    {
+      "section": "Tilberedning",
+      "text": "Varm grillen eller en grillpande op. Grill spydene i 10-12 minutter, og vend dem undervejs, til kyllingen er gennemstegt."
+    },
+    {
+      "section": "Tilberedning",
+      "text": "Server spydene på varme tortillas med guacamole, creme fraiche eller yoghurt og hakket koriander. Sæt limebåde på bordet, og tilbyd chilisauce til dem, der vil have lidt hede."
+    }
+  ],
+  "changes": [
+    "Creme fraiche i stedet for soured cream.",
+    "Tortilla i stedet for warmed tortillas er uændret; chilisauce beholdes som chilisauce."
+  ]
+}

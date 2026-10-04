@@ -1,0 +1,123 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/pasta-salmon-peas",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:06:09.696Z",
+  "total_minutes": 17,
+  "active_minutes": 5,
+  "yield_count": 2,
+  "source_lines": 8,
+  "title": "Pasta med laks og ærter",
+  "intro": "Cremet fuldkornspasta med mør laks, søde ærter og friske purløg. Retten er hurtig at lave og klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "pasta",
+      "note": "fuldkorns fusilli",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "stor, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laks",
+      "note": "filet uden skind, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "light",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "bouillon",
+      "note": "grøntsagsbouillonterning, saltreduceret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille & krydderurter",
+      "note": "purløg, små, klippet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog pastaen i vand efter anvisningen på pakken, mens du laver saucen."
+    },
+    {
+      "section": null,
+      "text": "Smelt smørret i en gryde, og svits skalotteløget i ca. 5 minutter, til det er blødt."
+    },
+    {
+      "section": null,
+      "text": "Kom ærter, laks, creme fraiche og vand i gryden, og smuldr bouillonterningen ud over."
+    },
+    {
+      "section": null,
+      "text": "Lad det simre i 3-4 minutter, til laksen er gennemstegt. Rør purløg og peber i."
+    },
+    {
+      "section": null,
+      "text": "Vend den afdryppede pasta i saucen, så den er dækket hele vejen rundt. Server i dybe tallerkener."
+    }
+  ],
+  "changes": [
+    "Fuldkornsfusilli er skiftet til almindelig pasta i fuldkorn.",
+    "Low-fat crème fraîche er skiftet til creme fraiche light."
+  ]
+}

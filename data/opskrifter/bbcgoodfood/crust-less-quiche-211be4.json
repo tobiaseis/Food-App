@@ -1,0 +1,119 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/crust-less-quiche",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:53:16.112Z",
+  "total_minutes": 55,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 7,
+  "title": "Quiche uden bund",
+  "intro": "En luftig æggetærte med bacon, løg og grønt, som bages helt uden tærtedej. Den er nem at lave og god både varm og kold.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "plus ekstra til formen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "asparges",
+      "note": "endestykker skåret af; kan erstattes med broccoli",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "gruyère",
+      "note": "kan erstattes med parmesan",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt ovnen på 180 °C (160 °C varmluft). Smør en dyb springform på 23 cm, og beklæd den med bagepapir, så papiret står 2-3 cm op ad kanten."
+    },
+    {
+      "section": null,
+      "text": "Smelt smørret på en pande. Svits løg og bacon ved lav varme i ca. 10 minutter, til løgene er bløde og klare."
+    },
+    {
+      "section": null,
+      "text": "Bring en gryde letsaltet vand i kog. Del eventuel broccoli i små buketter, mens asparges bruges hele. Kog grøntsagerne i 2 minutter, hæld vandet fra, og lad dem dampe af."
+    },
+    {
+      "section": null,
+      "text": "Pisk æg, fløde og to tredjedele af osten sammen i en skål. Krydr med salt og peber, og rør løg- og baconblandingen i."
+    },
+    {
+      "section": null,
+      "text": "Hæld æggemassen i formen. Læg grøntsagerne ovenpå, og drys med resten af osten."
+    },
+    {
+      "section": null,
+      "text": "Bag i 25-30 minutter, til quichen er gyldenbrun og kun vakler en smule i midten."
+    }
+  ],
+  "changes": [
+    "Pancetta er udeladt, og bacon i tern bruges i stedet.",
+    "Double cream er erstattet med piskefløde."
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "url": "https://www.valdemarsro.dk/gnocchi/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:45:18.567Z",
+  "total_minutes": 120,
+  "active_minutes": 60,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Gnocchi med salviesmør og ovnbagte tomater",
+  "intro": "Hjemmelavede kartoffelgnocchi vendt i brunet smør med sprød salvie, parmesan og langsomt bagte tomater. Dejen skal blot samles, så gnocchierne bliver luftige.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tomater",
+      "amount": 400,
+      "unit": "g",
+      "name": "tomater",
+      "note": "blommetomater, skåret i halve",
+      "optional": false
+    },
+    {
+      "section": "Tomater",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomater",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "melede",
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 275,
+      "unit": "g",
+      "name": "durummel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salviesmør",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salviesmør",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "salvie",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Salviesmør",
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": "Salviesmør",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomater",
+      "text": "Læg tomathalvdelene på en bageplade med bagepapir, med snitfladen opad. Dryp med olie og drys med flagesalt."
+    },
+    {
+      "section": "Tomater",
+      "text": "Sæt pladen i en kold ovn, og indstil den på 100 °C varmluft. Bag tomaterne i 45 minutter."
+    },
+    {
+      "section": "Gnocchi",
+      "text": "Kog kartoflerne med skræl i usaltet vand, til de er møre. Pil dem, mens de stadig er varme."
+    },
+    {
+      "section": "Gnocchi",
+      "text": "Mos kartoflerne med en gaffel. Bland med æg, salt og durummel, så dejen netop hænger sammen. Den skal være meget blød og må ikke æltes, og brug ikke mere mel end nødvendigt."
+    },
+    {
+      "section": "Gnocchi",
+      "text": "Drys køkkenbordet med durummel, og rul dejen til pølser på tykkelse med en finger. Skær dem i stykker på 1 cm."
+    },
+    {
+      "section": "Gnocchi",
+      "text": "Tril hvert stykke hen over gaffelens tænder, så der kommer riller. Fordel gnocchierne på et rent viskestykke uden at de rører hinanden eller ligger i lag, og lad dem tørre i luften i 15 minutter."
+    },
+    {
+      "section": "Gnocchi",
+      "text": "Kog gnocchierne i en stor gryde med let saltet vand. Fisk dem op med en hulske, så snart de flyder op til overfladen."
+    },
+    {
+      "section": "Salviesmør",
+      "text": "Smelt smørret på en pande ved svag varme, og læg salvien i. Lad det simre, til det dufter dejligt, og smørret er blevet lidt brunt."
+    },
+    {
+      "section": "Salviesmør",
+      "text": "Rør parmesan og de bagte tomater i smørret. Vend de kogte gnocchi med, og anret på tallerkener."
+    },
+    {
+      "section": "Salviesmør",
+      "text": "Top med peber og lidt ekstra friskrevet parmesan."
+    }
+  ],
+  "changes": []
+}

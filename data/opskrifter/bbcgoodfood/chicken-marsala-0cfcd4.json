@@ -1,0 +1,166 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-marsala",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:31:28.613Z",
+  "total_minutes": 60,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Kylling i marsalasauce",
+  "intro": "Mør kylling og gyldne champignon i en cremet sauce med skalotteløg og vin. Serveres med ris, kartoffelmos eller pasta.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "hakket, til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "i både, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Læg kyllingebrysterne mellem to stykker bagepapir, og bank dem med en kagerulle til en tykkelse på 1-1,5 cm."
+    },
+    {
+      "section": null,
+      "text": "Bland mel, salt og peber på en tallerken, og vend kyllingen i blandingen, så den er dækket hele vejen rundt."
+    },
+    {
+      "section": null,
+      "text": "Varm 1 spsk af olien og smørret i en stor pande ved middel til middellav varme. Brun kyllingen på alle sider i ca. 4-6 minutter, og læg den over på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Kom champignon på panden, og steg dem i 8-10 minutter, til væsken er kogt væk. Tilsæt endnu 1 spsk olie, og steg, til svampene er gyldne. Tag dem af panden og stil dem til side."
+    },
+    {
+      "section": null,
+      "text": "Hæld resten af olien på panden, og blød skalotteløgene i 6-8 minutter, til de er møre, men ikke brune. Rør hvidløget i, og steg i 2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld vinen i, skru op til middel varme, og lad den koge ind til det halve."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt fonden, og kom svampe og kylling tilbage på panden. Lad det simre i 10-15 minutter, til kyllingen er gennemstegt, og saucen er ret tyk. Skru ned og læg låg på, hvis saucen koger for hurtigt ind."
+    },
+    {
+      "section": null,
+      "text": "Rør fløden i, og drys med persille. Server med citronbåde til at presse over samt ris, kartoffelmos eller pasta."
+    }
+  ],
+  "changes": [
+    "Marsala er erstattet af hvidvin."
+  ]
+}

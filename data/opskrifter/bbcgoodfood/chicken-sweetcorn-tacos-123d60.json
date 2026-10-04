@@ -1,0 +1,203 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-sweetcorn-tacos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:20:03.727Z",
+  "total_minutes": 60,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Kyllingetacos med hjemmebagte tortillas",
+  "intro": "Tacos med krydret kylling, stegt majs, sorte bønner og syltet rødkål i friskbagte tortillas. Alle kan samle deres egne ved bordet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tortillas",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus lidt til udrulning",
+      "optional": false
+    },
+    {
+      "section": "Tortillas",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": "halvdelen af olien",
+      "optional": false
+    },
+    {
+      "section": "Tortillas",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tortillas",
+      "amount": 150,
+      "unit": "ml",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": "resten af olien",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tacokrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 4,
+      "unit": "stk",
+      "name": "majskolber",
+      "note": "kernerne skåret af, eller 400 g frossen majs",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til majsene",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "sorte bønner",
+      "note": "på dåse, skyllet og drænet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Syltet kål",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "rødkål",
+      "note": "finsnittet",
+      "optional": false
+    },
+    {
+      "section": "Syltet kål",
+      "amount": 3,
+      "unit": "stk",
+      "name": "lime",
+      "note": "1 presset, 2 delt i både",
+      "optional": false
+    },
+    {
+      "section": "Syltet kål",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Syltet kål",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet kål",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chilisauce",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tortillas",
+      "text": "Rør mel, den første halvdel af olien og salt sammen i en skål. Tilsæt det lune vand og ælt dejen med hænderne, til den er blød."
+    },
+    {
+      "section": "Tortillas",
+      "text": "Del dejen i seks lige store stykker. Halvér de fire af dem, så du får otte små og to store. Rul alle stykkerne så tynde som muligt på et meldrysset bord."
+    },
+    {
+      "section": "Tortillas",
+      "text": "Varm en tør pande op ved middelhøj til høj varme. Bag tortillaerne én ad gangen i 2-3 minutter på hver side, til de er gyldne og lidt ristede."
+    },
+    {
+      "section": "Tortillas",
+      "text": "Lad de store tortillas køle af, dæk dem til og gem dem til madpakker. Pak de små ind i folie, så de holder varmen."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend kyllingeskiverne med tacokrydderiet i en skål. Bland i en anden skål rødkålen med limesaften, halvdelen af koriander, salt og peber, og lad den trække."
+    },
+    {
+      "section": "Fyld",
+      "text": "Sæt to pander på høj varme og fordel resten af olien mellem dem. Steg majsen med salt i den ene pande under omrøring af og til, til den syder og får gylden farve. Lad den gerne ligge stille et stykke tid, så den brænder lidt på kanten og får mere smag."
+    },
+    {
+      "section": "Fyld",
+      "text": "Steg imens kyllingen i den store pande, til den er gennemstegt og gylden. Brug om nødvendigt flere omgange."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kom bønner og hvidløg i majspanden, og rør, til det er varmt. Pres to af limebådene ud over."
+    },
+    {
+      "section": "Servering",
+      "text": "Tag lidt kylling og majsblanding fra til madpakkerne. Server resten i skåle med rødkål, yoghurt, limebåde, resten af koriander, chilisauce og de små tortillas, så alle kan bygge deres egne tacos."
+    }
+  ],
+  "changes": [
+    "Fedtfri yoghurt er skiftet til yoghurt naturel.",
+    "Taco- eller fajitakrydderi er skiftet til tacokrydderi."
+  ]
+}

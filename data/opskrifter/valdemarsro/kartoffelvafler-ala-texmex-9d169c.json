@@ -1,0 +1,236 @@
+{
+  "url": "https://www.valdemarsro.dk/kartoffelvafler-ala-texmex/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:04:45.750Z",
+  "total_minutes": 45,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Kartoffelvafler med pico de gallo og limedressing",
+  "intro": "Sprøde kartoffelvafler med tex-mex-krydderi, serveret med frisk pico de gallo, cremet limedressing og avocado. Kan laves i et almindeligt vaffeljern.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartoffelvafler",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelvafler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelvafler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelvafler",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelvafler",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelvafler",
+      "amount": 75,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelvafler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelvafler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelvafler",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelvafler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 300,
+      "unit": "g",
+      "name": "tomater",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, finthakket; kan erstattes af persille",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, skal finrevet og saft",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limedressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Limedressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limedressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, skal finrevet og en smule saft",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelvafler",
+      "text": "Vend de revne kartofler med lidt salt i en skål, og lad dem stå i cirka et kvarter, så de afgiver væske."
+    },
+    {
+      "section": "Kartoffelvafler",
+      "text": "Hæld kartoflerne i en sigte, og pres så meget væde ud af dem som muligt."
+    },
+    {
+      "section": "Kartoffelvafler",
+      "text": "Bland de afdryppede kartofler med de øvrige ingredienser til vaflerne i en skål, til det hænger godt sammen."
+    },
+    {
+      "section": "Kartoffelvafler",
+      "text": "Smør vaffeljernet med lidt olie, og bag vaflerne én ad gangen, til de er gyldne og sprøde. Stil dem på en rist eller i ovnen, så de holder sig lune, mens du bager resten."
+    },
+    {
+      "section": "Pico de gallo",
+      "text": "Vend alle ingredienserne til pico de gallo sammen i en stor skål. Brug kun halvdelen af chilien i starten."
+    },
+    {
+      "section": "Pico de gallo",
+      "text": "Smag til med resten af chilien, mere limesaft og limeskal samt salt og peber."
+    },
+    {
+      "section": "Limedressing",
+      "text": "Rør creme fraiche og mayonnaise sammen, og smag til med limeskal, en smule limesaft, salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret de varme vafler med pico de gallo, avocadoskiver og limedressing. Dryp med koriander og chiliflager til sidst."
+    }
+  ],
+  "changes": []
+}

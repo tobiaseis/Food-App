@@ -1,0 +1,200 @@
+{
+  "url": "https://www.valdemarsro.dk/ratatouille/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:56:55.874Z",
+  "total_minutes": 60,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Ratatouille",
+  "intro": "Klassisk ratatouille med skiver af sommergrøntsager, der bages i fad over en kraftig tomatsauce. Server den som ret for sig selv eller som tilbehør.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": "kan erstattes af frisk timian",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 3,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til fadet",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, til anretning og servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatsauce",
+      "text": "Smelt smørret i en gryde ved middelvarme. Svits løg og hvidløg, indtil løgene er møre."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Kom de hakkede tomater, tomatpuré, soltørrede tomater, timian og oregano i gryden. Krydr med salt og peber, og lad saucen simre i 20 minutter."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Smag saucen af med æblecidereddike og sukker, som får tomatsmagen til at træde frem. Justér med salt og peber."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Forvarm ovnen til 175 °C varmluft."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Smør et ovnfast fad godt ind med smør, og fordel tomatsaucen over bunden."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Læg skiverne af squash, peberfrugt, aubergine, rødløg og tomat skiftevis oven på saucen. Lav en cirkel i et rundt fad eller rækker på langs i et firkantet."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Bag i ovnen i 30-40 minutter. Pynt med basilikum, og server."
+    }
+  ],
+  "changes": []
+}

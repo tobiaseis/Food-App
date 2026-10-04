@@ -1,0 +1,287 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/kingfish-tiradito-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:14:44.841Z",
+  "total_minutes": 80,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 27,
+  "title": "Havbars-tiradito med leche de tigre og skaldyrsolie",
+  "intro": "Tyndt skåret rå fisk i en syrlig, krydret leche de tigre med to farvestrålende olier, appelsin, nødder og labneh. Oliene laves med fordel dagen før.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fisk og bejdse",
+      "amount": 400,
+      "unit": "g",
+      "name": "havbars",
+      "note": "filet, uden skind",
+      "optional": false
+    },
+    {
+      "section": "Fisk og bejdse",
+      "amount": 100,
+      "unit": "g",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Fisk og bejdse",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Leche de tigre",
+      "amount": 250,
+      "unit": "ml",
+      "name": "limesaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Leche de tigre",
+      "amount": 175,
+      "unit": "ml",
+      "name": "fiskefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Leche de tigre",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Leche de tigre",
+      "amount": null,
+      "unit": null,
+      "name": "ingefær",
+      "note": "et stykke, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Leche de tigre",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Leche de tigre",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Leche de tigre",
+      "amount": 50,
+      "unit": "g",
+      "name": "koriander",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Leche de tigre",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sambal oelek",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Leche de tigre",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Purløgsolie",
+      "amount": 50,
+      "unit": "g",
+      "name": "purløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Purløgsolie",
+      "amount": 100,
+      "unit": "g",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsolie",
+      "amount": 250,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsolie",
+      "amount": 250,
+      "unit": "g",
+      "name": "rejer",
+      "note": "med skal og hoved",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsolie",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsolie",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsolie",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Skaldyrsolie",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "tørret, knust",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "ristede og halverede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "appelsiner",
+      "note": "i flåede både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "jalapeños",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "gerne små skud",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "radiser",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "labneh",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Purløgsolie",
+      "text": "Start med oliene, gerne dagen før. Blend purløg og rapsolie på høj hastighed i 5 minutter, til olien er skarpt grøn."
+    },
+    {
+      "section": "Purløgsolie",
+      "text": "Sigt olien over en skål med et musselinklæde eller et stykke køkkenrulle i sigten."
+    },
+    {
+      "section": "Skaldyrsolie",
+      "text": "Varm lidt af rapsolien i en gryde ved middel varme. Svits skalotteløg, hvidløg og rejer, til skallerne er blevet røde."
+    },
+    {
+      "section": "Skaldyrsolie",
+      "text": "Hæld resten af olien i, og tilsæt røget paprika og tørret chili. Lad det simre svagt i 30 minutter, til olien er dybrød."
+    },
+    {
+      "section": "Skaldyrsolie",
+      "text": "Sigt olien gennem musselinklæde eller køkkenrulle over en skål."
+    },
+    {
+      "section": "Fisk og bejdse",
+      "text": "Læg fiskefileten på en bakke. Bland salt og sukker, og gnid blandingen ind over hele fisken. Lad den bejdse i 30 minutter."
+    },
+    {
+      "section": "Leche de tigre",
+      "text": "Kom alle ingredienserne til leche de tigre i en blender, og blend dem helt glatte. Smag til: mere sambal oelek giver mere styrke, og lidt ekstra sukker tager skarpheden af."
+    },
+    {
+      "section": "Leche de tigre",
+      "text": "Si væsken fint over i en sprøjteflaske eller kande, og stil den på køl, til den skal bruges."
+    },
+    {
+      "section": "Fisk og bejdse",
+      "text": "Skyl bejdsen af fisken, og dup den tør. Skær den på tværs i mundrette skiver."
+    },
+    {
+      "section": "Til servering",
+      "text": "Dæk bunden af hver tallerken med leche de tigre. Sæt pletter af skaldyrsolie og purløgsolie ovenpå – det er lettest med sprøjteflasker, men en ske går også."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg fiskeskiverne ovenpå, og pynt med hasselnødder, appelsin, jalapeño, koriander, karse og radiser. Afslut med klatter af labneh."
+    }
+  ],
+  "changes": [
+    "Yellowtail kingfish er erstattet af havbars.",
+    "Skaldyrsfond er erstattet af fiskefond.",
+    "Aji amarillo-pasta er erstattet af sambal oelek.",
+    "Tørret aji amarillo-chili er erstattet af almindelig tørret chili.",
+    "Skaldyrshoveder og -skaller er erstattet af rejer med skal og hoved.",
+    "Rød sennepskarse er erstattet af karse."
+  ]
+}

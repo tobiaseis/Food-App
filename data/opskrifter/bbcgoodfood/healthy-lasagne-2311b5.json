@@ -1,0 +1,184 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/healthy-lasagne",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:11:35.195Z",
+  "total_minutes": 90,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Lasagne med grøntsager og fuldkorn",
+  "intro": "En lettere lasagne med masser af gulerod og selleri i kødsaucen, fuldkornsplader og en hvid sauce på letmælk. Den bages gylden i fadet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 250,
+      "unit": "g",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 300,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": "det ene til kødsaucen, det andet til den hvide sauce",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": "3-7 % fedt",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": "svarer til en dåse tomater fyldt med vand",
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsauce",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "grøntsagsfond",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Hvid sauce",
+      "amount": 4,
+      "unit": "dl",
+      "name": "letmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvid sauce",
+      "amount": 30,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": "Hvid sauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "rigelig",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 6,
+      "unit": "stk",
+      "name": "lasagneplader",
+      "note": "fuldkorn, ca. 125 g",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 25,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødsauce",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft)."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Varm olien i en stor pande ved middel varme. Steg løg, gulerod, selleri og ét laurbærblad i 8-10 minutter, til grøntsagerne er bløde og begynder at tage farve."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Kom oksekød og hvidløg i panden og rør rundt i ca. 5 minutter, til kødet er brunet."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Hæld tomater, vand, tomatpuré og grøntsagsfond i. Bring det i kog, læg låg på og lad det simre i 20 minutter. Tag låget af efter de første 10 minutter, så saucen koger lidt ind."
+    },
+    {
+      "section": "Hvid sauce",
+      "text": "Mens kødsaucen simrer, piskes mælk og mel sammen i en mellemstor gryde ved lav varme, til der ikke er klumper."
+    },
+    {
+      "section": "Hvid sauce",
+      "text": "Kom det andet laurbærblad og muskatnød i. Lad saucen koge under omrøring i 8-10 minutter, til den er tyk."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Fjern laurbærbladene fra begge saucer."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Fordel en tredjedel af kødsaucen i bunden af et ovnfast fad på ca. 19 x 24 cm og læg to lasagneplader ovenpå. Top med halvdelen af resten af kødsaucen og to plader mere. Afslut med den sidste kødsauce og de sidste to plader."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Hæld den hvide sauce over og drys med parmesan. Bag lasagnen i 40 minutter, til den bobler og er gylden."
+    }
+  ],
+  "changes": []
+}

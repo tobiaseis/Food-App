@@ -1,0 +1,304 @@
+{
+  "url": "https://www.valdemarsro.dk/bowl-med-spicy-blomkaal/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:36:05.526Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Bowl med krydret blomkål og hvidløgsris",
+  "intro": "Ovnbagt blomkål og kikærter med varme krydderier serveres på persilleris med spinat, mango og en frisk dressing af ingefær og lime. Det er en mættende bowl med både knas, sødme og syrlighed.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Hvidløgsris med persille",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris med persille",
+      "amount": 3,
+      "unit": "dl",
+      "name": "ris",
+      "note": "basmati",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris med persille",
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris med persille",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris med persille",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris med persille",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 300,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænede og skyllede",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret blomkål",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ingefær- og limedressing",
+      "amount": 30,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ingefær- og limedressing",
+      "amount": 2,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Ingefær- og limedressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ingefær- og limedressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Ingefær- og limedressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Ingefær- og limedressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ingefær- og limedressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "g",
+      "name": "spinat",
+      "note": "baby",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "mango",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Hvidløgsris med persille",
+      "text": "Varm olien i en gryde ved middel-lav varme. Svits hvidløget, til det begynder at dufte."
+    },
+    {
+      "section": "Hvidløgsris med persille",
+      "text": "Hæld vand, ris og salt i gryden, og rør rundt. Sæt låg på, og bring langsomt i kog."
+    },
+    {
+      "section": "Hvidløgsris med persille",
+      "text": "Lad risene simre ved svag varme i 10 minutter. Tag gryden af varmen, og lad den stå med låg på i 10 minutter mere."
+    },
+    {
+      "section": "Hvidløgsris med persille",
+      "text": "Vend persillen i risene lige før servering."
+    },
+    {
+      "section": "Krydret blomkål",
+      "text": "Tænd ovnen på 180 °C varmluft."
+    },
+    {
+      "section": "Krydret blomkål",
+      "text": "Bland blomkål og kikærter med olie, og vend dem rundt i alle krydderierne. Smag til med salt og peber."
+    },
+    {
+      "section": "Krydret blomkål",
+      "text": "Læg det på en bradepande sammen med løg og hvidløg. Bag i 15-20 minutter, til blomkålen er mør og saftig."
+    },
+    {
+      "section": "Ingefær- og limedressing",
+      "text": "Rør mayonnaise og creme fraiche sammen med hvidløg og ingefær. Smag til med limeskal, limesaft, salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Rist sesamfrøene på en tør, varm pande."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel risene i dybe tallerkener. Læg spinat, mango og den bagte blomkål med kikærter ovenpå, og hæld dressingen over."
+    },
+    {
+      "section": "Til servering",
+      "text": "Strø sesamfrø, forårsløg, chiliflager og persille over til sidst."
+    }
+  ],
+  "changes": []
+}

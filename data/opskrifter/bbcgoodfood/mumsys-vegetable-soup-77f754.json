@@ -1,0 +1,224 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/mumsys-vegetable-soup",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:12:19.309Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Sund grøntsagssuppe med kommencrutoner",
+  "intro": "En let grøntsagssuppe med tomat, blomkål og hvidkål, serveret med sprøde crutoner af surdejsbrød med kommen. Suppen er hurtig at lave og fuld af smag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til crutonerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "brød",
+      "note": "surdejsbrød, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Til crutonerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kommenfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til crutonerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "gerne groft havsalt",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "halvdelen bruges til crutonerne",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 600,
+      "unit": "ml",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 100,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": "bindes sammen med rosmarin og timian med snor til en buket",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": "bindes sammen med laurbærblade og timian",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "bindes sammen med laurbærblade og rosmarin",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 200,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "delt i buketter",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 150,
+      "unit": "g",
+      "name": "hvidkål",
+      "note": "strimlet",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Crutoner",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft)."
+    },
+    {
+      "section": "Crutoner",
+      "text": "Vend brødternene på en bageplade med kommenfrø, halvdelen af olien og et nip salt. Bag dem i 10-15 minutter, til de er gyldne og sprøde. Stil dem til side."
+    },
+    {
+      "section": "Suppe",
+      "text": "Varm resten af olien op i en stor gryde ved middelvarme, mens crutonerne bager."
+    },
+    {
+      "section": "Suppe",
+      "text": "Rør hvidløg, gulerod og kartoffel ned i gryden, og svits under hyppig omrøring i 5 minutter, til de er lidt bløde."
+    },
+    {
+      "section": "Suppe",
+      "text": "Hæld fond og hakkede tomater i, og kom cherrytomater, sukker, urtebuketten og selleri i sammen med salt og peber. Bring suppen i et kraftigt kog."
+    },
+    {
+      "section": "Suppe",
+      "text": "Skru ned, og lad den simre i 10 minutter. Tilsæt blomkål og hvidkål, og kog videre i 15 minutter, til grøntsagerne er møre."
+    },
+    {
+      "section": "Suppe",
+      "text": "Rør worcestershiresauce og sojasauce i. Fjern urtebuketten."
+    },
+    {
+      "section": "Suppe",
+      "text": "Øs suppen op i skåle, og top med kommencrutonerne."
+    }
+  ],
+  "changes": [
+    "Svampeketchup er erstattet med sojasauce.",
+    "Surdejsbrød er skrevet som brød.",
+    "Golden caster sugar er erstattet med almindeligt sukker."
+  ]
+}

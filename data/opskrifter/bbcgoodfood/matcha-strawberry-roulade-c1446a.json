@@ -1,0 +1,160 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/matcha-strawberry-roulade",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:10:53.191Z",
+  "total_minutes": 42,
+  "active_minutes": 30,
+  "yield_count": 10,
+  "source_lines": 10,
+  "title": "Matcharulle med jordbær",
+  "intro": "Let og luftig roulade af matchabiskuit, fyldt med letpisket fløde og jordbær, der har trukket i sukker og matchate. Kagen skal køle lidt, før den skæres i tykke skiver.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Til kagen",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til formen",
+      "optional": false
+    },
+    {
+      "section": "Til kagen",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Til kagen",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kagen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": "til at drysse på bagepapiret",
+      "optional": false
+    },
+    {
+      "section": "Til kagen",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kagen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "matcha",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til kagen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 100,
+      "unit": "g",
+      "name": "jordbær",
+      "note": "toppen skåret af",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "stk",
+      "name": "te",
+      "note": "pose med matcha",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kagen",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Pensl bunden af en rulletærteform på ca. 32 cm let med olie, og beklæd den med bagepapir."
+    },
+    {
+      "section": "Kagen",
+      "text": "Pisk æg og 100 g-sukkeret med elpisker i 6 minutter, til massen er lys, tyk og har fordoblet sit rumfang. Den er klar, når den danner et bånd, der bliver liggende på overfladen, når du løfter piskeris op."
+    },
+    {
+      "section": "Kagen",
+      "text": "Sigt mel, matcha og bagepulver ned i æggemassen. Vend det forsigtigt i med en spatel, så du skærer gennem massen i stedet for at røre. På den måde bevarer du så meget luft som muligt."
+    },
+    {
+      "section": "Kagen",
+      "text": "Hæld dejen i formen fra lav højde, og stryg den blidt ud i hjørnerne. Bag i 10-12 minutter, til kagen er gylden og fjedrer tilbage ved et let tryk."
+    },
+    {
+      "section": "Kagen",
+      "text": "Mens kagen bager, lægger du et rent viskestykke på bordet og et ark bagepapir ovenpå. Drys papiret med de 3 spsk sukker."
+    },
+    {
+      "section": "Kagen",
+      "text": "Vend den bagte kage ud på det sukrede papir, og træk det bagepapir af, den har bagt på. Rul kagen sammen fra den lange side med hjælp fra viskestykket, og lad den køle af."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Kom jordbær, sukker og tepose i en skål, og hæld det kogende vand over. Dæk til, og lad stå ved stuetemperatur i 2 timer. Sukkeret trækker saft ud af bærrene og danner en let matchasirup."
+    },
+    {
+      "section": "Fyldet",
+      "text": "Si sirupen fra jordbærrene, og kassér teposen. Pisk fløden med 2 spsk af sirupen til bløde toppe."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul kagen forsigtigt ud, og smør fløden jævnt udover med en paletkniv. Læg jordbærrene i en række ned langs midten, og skær enderne til, hvis de er for lange."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul kagen sammen igen med hjælp fra bagepapiret, så jordbærrene ligger i midten. Læg den på et fad med samlingen nedad, så den ikke ruller op. Stil den på køl i mindst 15 minutter, og skær den i tykke skiver."
+    }
+  ],
+  "changes": [
+    "Caster sugar er erstattet af almindeligt sukker.",
+    "Plain flour er erstattet af hvedemel.",
+    "Double cream er erstattet af piskefløde."
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "url": "https://www.valdemarsro.dk/graeske-groentsagsdeller-med-tzaziki/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T12:35:04.053Z",
+  "total_minutes": 40,
+  "active_minutes": 40,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Græske grøntsagsdeller med tzatziki",
+  "intro": "Sprøde grøntsagsdeller med kikærter, spidskål og halloumi serveres på kold tzatziki med ovnbagte kartofler og en frisk tomatsalat. Det er en vegetarret med masser af græsk smag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Tzatziki",
+      "amount": 5,
+      "unit": "dl",
+      "name": "græsk yoghurt",
+      "note": "10 %",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Græske kartofler",
+      "amount": 1,
+      "unit": "kg",
+      "name": "babykartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske kartofler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Græske kartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": "sammenpisket",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 20,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "drænet og skyllet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 125,
+      "unit": "g",
+      "name": "halloumi",
+      "note": "fintsmuldret",
+      "optional": false
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Halloumisalat",
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Halloumisalat",
+      "amount": 80,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumisalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumisalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tzatziki",
+      "text": "Del agurkerne på langs, og skrab kernerne ud med en ske. Riv dem groft."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Vend agurken med salt, og lad den stå i 5-10 minutter. Hæld den i en sigte, og pres så meget væde ud som muligt."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Rør agurken i yoghurten. Smag til med hvidløg, olivenolie, salt og peber, og stil tzatzikien på køl."
+    },
+    {
+      "section": "Græske kartofler",
+      "text": "Skær kartoflerne over på midten. Vend dem med halvdelen af olien og lidt salt, og læg dem på en bageplade med bagepapir."
+    },
+    {
+      "section": "Græske kartofler",
+      "text": "Bag kartoflerne ved 175 °C i cirka 10 minutter. Tag dem ud, og vend dem med resten af olien, lidt mere salt, timian og rosmarin. Bag dem igen i yderligere 15 minutter, til de er møre og gyldne."
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "text": "Bland æg, hvedemel og spidskål i en skål. Tilsæt timian, soltørrede tomater og hvidløg, og rør det godt sammen. Lad farsen hvile i 15 minutter, og rør den igen."
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "text": "Hak kikærterne groft i en foodprocessor eller minihakker. Vend dem i farsen sammen med halloumien, og smag til med salt og peber."
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "text": "Sæt spiseskefulde af farsen på en bageplade med bagepapir. Smør hænderne med lidt olie, og form dellerne runde."
+    },
+    {
+      "section": "Grøntsagsdeller",
+      "text": "Bag dellerne sammen med kartoflerne ved 175 °C varmluft i cirka 15 minutter i alt. Vend dem efter cirka 10 minutter."
+    },
+    {
+      "section": "Halloumisalat",
+      "text": "Skær halloumien i skiver. Steg dem i olie på en pande, eller pensl dem med olie og grill dem, til de er gyldne og sprøde i kanten."
+    },
+    {
+      "section": "Halloumisalat",
+      "text": "Bryd den stegte halloumi i grove stykker. Vend den med tomater og rucola, og drys med peber og timian."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret tzatzikien på tallerkener, og læg grøntsagsdellerne ovenpå. Server tomatsalaten og kartoflerne ved siden af."
+    }
+  ],
+  "changes": []
+}

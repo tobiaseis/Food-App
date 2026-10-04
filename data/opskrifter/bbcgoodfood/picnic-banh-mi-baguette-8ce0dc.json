@@ -1,0 +1,189 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/picnic-banh-mi-baguette",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:55:08.197Z",
+  "total_minutes": 32,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Banh mi-baguetter til picnic",
+  "intro": "Sprøde baguetter fyldt med leverpostej, svinekam, syltede grøntsager og en frisk dressing med lime og fiskesauce. Perfekt som madpakke eller til picnic.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Syltede grøntsager",
+      "amount": 6,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "riseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 3,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 100,
+      "unit": "g",
+      "name": "radiser",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i tændstikker",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "lime, saften",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, i tern",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Baguetter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "baguette",
+      "note": "bagefærdig surdejsbaguette til afbagning",
+      "optional": false
+    },
+    {
+      "section": "Baguetter",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Baguetter",
+      "amount": 100,
+      "unit": "g",
+      "name": "leverpostej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Baguetter",
+      "amount": 8,
+      "unit": "skive",
+      "name": "svinekam",
+      "note": "kogt",
+      "optional": false
+    },
+    {
+      "section": "Baguetter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fint snittet",
+      "optional": false
+    },
+    {
+      "section": "Baguetter",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Baguetter",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltede grøntsager",
+      "text": "Varm eddike, vand, sukker og salt op i en lille gryde ved lav varme, til det damper."
+    },
+    {
+      "section": "Syltede grøntsager",
+      "text": "Kom radiser og gulerødder i en skål af glas eller keramik. Hæld den varme lage over, og lad det trække i mindst 30 minutter."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør fiskesauce, limesaft, chili og sukker sammen. Smag til, og tilsæt mere sukker, lime eller fiskesauce efter behov."
+    },
+    {
+      "section": "Baguetter",
+      "text": "Bag baguetterne efter anvisningen på pakken."
+    },
+    {
+      "section": "Baguetter",
+      "text": "Del baguetterne på langs, og smør dem med smør og derefter leverpostej."
+    },
+    {
+      "section": "Baguetter",
+      "text": "Læg svinekam, afdryppede syltede grøntsager, forårsløg, agurk og koriander ovenpå. Dryp med lidt af dressingen."
+    },
+    {
+      "section": "Baguetter",
+      "text": "Server med resten af dressingen ved siden af til at dyppe i."
+    }
+  ],
+  "changes": [
+    "Surdejsbaguetter til afbagning er erstattet af almindelige bagefærdige baguetter.",
+    "Pâté er erstattet af leverpostej.",
+    "Cooked pork loin er erstattet af kogt svinekam.",
+    "Caster sugar er erstattet af almindeligt sukker."
+  ]
+}

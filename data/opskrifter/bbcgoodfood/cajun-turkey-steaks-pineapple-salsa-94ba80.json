@@ -1,0 +1,146 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/cajun-turkey-steaks-pineapple-salsa",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:03:59.317Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Cajun-kalkun med ananassalsa",
+  "intro": "Krydrede kalkunschnitzler serveres med frisk ananassalsa og ris med kidneybønner. En nem og farverig hverdagsret med lidt sødme og varme.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "solsikkeolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød peberfrugt",
+      "note": "uden kerner, i tern",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 200,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 450,
+      "unit": "ml",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "400 g, skyllet og drænet",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kalkun",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kalkunschnitzel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kalkun",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 150,
+      "unit": "g",
+      "name": "ananas",
+      "note": "frisk eller på dåse, drænet",
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Tag lidt af det hakkede løg fra til salsaen. Del peberfrugten i to, og gem den ene halvdel til salsaen."
+    },
+    {
+      "section": "Ris",
+      "text": "Varm olien op i en gryde. Svits det resterende løg og den ene halvdel af peberfrugten i 4 minutter, til det er blødt og har fået farve."
+    },
+    {
+      "section": "Ris",
+      "text": "Rør risene ud i gryden, og hæld fonden over. Kom kidneybønner og salt i, og bring det i kog."
+    },
+    {
+      "section": "Ris",
+      "text": "Rør én gang, læg låg på, og skru ned til svag varme. Lad det simre i 15 minutter, til risene er møre, og væsken er optaget."
+    },
+    {
+      "section": "Kalkun",
+      "text": "Vend kalkunschnitzlerne i Cajun-krydderiet. Steg dem på en grillpande eller nonstick-pande i 4-6 minutter på hver side, til de er gennemstegte."
+    },
+    {
+      "section": "Salsa",
+      "text": "Skær ananassen i små tern. Bland dem med det afsatte løg og peberfrugt, chilien og limesaften."
+    },
+    {
+      "section": "Salsa",
+      "text": "Anret kalkunen med salsa ovenpå og ris ved siden af."
+    }
+  ],
+  "changes": [
+    "Kalkunsteaks er skiftet til kalkunschnitzel."
+  ]
+}

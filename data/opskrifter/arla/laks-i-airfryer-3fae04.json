@@ -1,0 +1,92 @@
+{
+  "url": "https://www.arla.dk/opskrifter/laks-i-airfryer/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:27:07.559Z",
+  "total_minutes": 15,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Laks i airfryer med sojamarinade",
+  "intro": "Saftig laks med en sød og salt marinade af soja, farin og hvidløg, der er klar på ca. 10 minutter i airfryeren. En hurtig hverdagsret.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Sojamarinade",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sojamarinade",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sojamarinade",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Sojamarinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sojamarinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "laksefilet",
+      "note": "4 stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sojamarinade",
+      "text": "Pisk sojasauce, farin, hvidløg, sesamfrø og citronsaft sammen i en skål."
+    },
+    {
+      "section": "Sojamarinade",
+      "text": "Læg bagepapir i airfryerkurven, og placér laksestykkerne på det. Hæld marinaden jævnt over fisken."
+    },
+    {
+      "section": "Sojamarinade",
+      "text": "Tilbered laksen i airfryeren ved 180° i 8-10 minutter."
+    },
+    {
+      "section": "Sojamarinade",
+      "text": "Stryg flagesalt over, inden laksen kommer på bordet."
+    }
+  ],
+  "changes": []
+}

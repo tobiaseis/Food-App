@@ -1,0 +1,247 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/lasagne-jackets",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:53:08.770Z",
+  "total_minutes": 135,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 19,
+  "title": "Lasagnekartofler",
+  "intro": "Bagte kartofler fyldt med kødsovs, béchamel og smeltet ost – alle smagene fra lasagne i en bagt kartoffel.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartofler",
+      "amount": 4,
+      "unit": "stk",
+      "name": "bagekartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ost",
+      "amount": 150,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Ost",
+      "amount": 30,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 4,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": "eller oksefond",
+      "optional": false
+    },
+    {
+      "section": "Kødsovs",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Béchamel",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Béchamel",
+      "amount": 25,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Béchamel",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Béchamel",
+      "amount": null,
+      "unit": null,
+      "name": "muskatnød",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Prik kartoflerne med en gaffel hele vejen rundt, og gnid skindet ind i olien."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Bag dem i 1-1½ time, til de giver let efter ved tryk, og skindet er sprødt."
+    },
+    {
+      "section": "Kødsovs",
+      "text": "Mens kartoflerne bager, varmes olien i en stor gryde med låg ved middel varme. Svits løg, selleri og gulerod med en knivspids salt i 10 minutter, til de er bløde."
+    },
+    {
+      "section": "Kødsovs",
+      "text": "Rør hvidløget i, og lad det stege i 1 minut. Skru lidt op for varmen, tilsæt kødet, og brun det i 10 minutter, mens du deler det i små stykker med en ske."
+    },
+    {
+      "section": "Kødsovs",
+      "text": "Rør tomatpuréen i, og steg den i 1 minut, til den bliver mørkere. Hæld vinen i, lad den koge et par minutter, og kom laurbærbladene i."
+    },
+    {
+      "section": "Kødsovs",
+      "text": "Lad det simre, til væsken er halveret. Tilsæt hakkede tomater og fond, og bring det i kog."
+    },
+    {
+      "section": "Kødsovs",
+      "text": "Skru ned på lav varme, læg låg på, og lad kødsovsen koge i 50-60 minutter. Tag låget af de sidste 20 minutter, hvis den skal tykkere. Smag til med salt og peber."
+    },
+    {
+      "section": "Béchamel",
+      "text": "Smelt smørret i en anden gryde ved middel varme. Rør melet i, så det bliver en tyk smøre, og lad det koge i 2 minutter."
+    },
+    {
+      "section": "Béchamel",
+      "text": "Tilsæt mælken lidt ad gangen under konstant omrøring. Når al mælken er rørt i, tilsættes muskatnød. Lad saucen simre i 3-4 minutter, til den hænger på bagsiden af en ske. Smag til med salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæv ovnens temperatur til 220 °C (200 °C varmluft). Skær et kryds i toppen af hver kartoffel, og tryk forsigtigt siderne sammen, så de åbner sig. Stil dem på en bageplade med kant eller i et ovnfast fad."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel halvdelen af mozzarellaen i kartoflerne. Top med en rigelig øse kødsovs og en skefuld béchamel."
+    },
+    {
+      "section": "Samling",
+      "text": "Drys resten af mozzarellaen og parmesanen over. Bag i 12 minutter, til osten er smeltet og begynder at blive gylden."
+    }
+  ],
+  "changes": [
+    "Tomatpuré er beholdt som tomatpuré.",
+    "Plain flour er skiftet til hvedemel."
+  ]
+}

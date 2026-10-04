@@ -1,0 +1,324 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/black-treacle-orange-pork-pie-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:28:35.295Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 25,
+  "title": "Mørbradbøf-agtig svinepie med mørk sirup og appelsin",
+  "intro": "Engelsk pork pie med sprødt dej, saftigt fyld af svinekød og bacon sødet med mørk sirup og appelsin og en glinsende gelé. Den skal køle helt af og sætte sig, før den skæres.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "Vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 80,
+      "unit": "g",
+      "name": "Lard",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "Rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 5,
+      "unit": "g",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 250,
+      "unit": "g",
+      "name": "Hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "Æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Æggeblomme",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 150,
+      "unit": "g",
+      "name": "Hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 100,
+      "unit": "g",
+      "name": "Svinebov",
+      "note": "skåret i tern på 2 cm",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 50,
+      "unit": "g",
+      "name": "Bacon",
+      "note": "røget, hakket",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 25,
+      "unit": "g",
+      "name": "Løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 12,
+      "unit": "g",
+      "name": "Honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 25,
+      "unit": "g",
+      "name": "Mørk sirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 5,
+      "unit": "g",
+      "name": "Hvidløgspuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 20,
+      "unit": "g",
+      "name": "Succade",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 2,
+      "unit": "g",
+      "name": "Timian",
+      "note": "friske blade, hakket",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 20,
+      "unit": "g",
+      "name": "Rasp",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "Peber",
+      "note": "groftkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til gelé",
+      "amount": 6,
+      "unit": "stk",
+      "name": "Husblas",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til gelé",
+      "amount": 3,
+      "unit": "dl",
+      "name": "Hønsefond",
+      "note": "varm",
+      "optional": false
+    },
+    {
+      "section": "Til gelé",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gelé",
+      "amount": 1,
+      "unit": "dl",
+      "name": "Appelsinjuice",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gelé",
+      "amount": 60,
+      "unit": "g",
+      "name": "Sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gelé",
+      "amount": 25,
+      "unit": "ml",
+      "name": "Appelsinlikør",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til dejen",
+      "text": "Kom vand, lard, rosmarin og salt i en mellemstor gryde. Kog op, og lad det småkoge, til fedtet er helt smeltet. Tag gryden af varmen."
+    },
+    {
+      "section": "Til dejen",
+      "text": "Kør mel og æg sammen i røremaskinen med fladpisker på middel hastighed i 2-3 minutter, til ægget er jævnt fordelt."
+    },
+    {
+      "section": "Til dejen",
+      "text": "Bring vandblandingen i kog igen, og fjern rosmarinen. Hæld den langsomt ned i melet under omrøring. Stop maskinen, når halvdelen er hældt i, og skrab skålens sider ned, så der ikke kommer klumper."
+    },
+    {
+      "section": "Til dejen",
+      "text": "Hæld resten af væsken i, og ælt i 3 minutter, til dejen slipper skålens kanter."
+    },
+    {
+      "section": "Til dejen",
+      "text": "Læg dejen mellem to stykker bagepapir, og lad den køle i 10 minutter. Pak den derefter ind, og stil den på køl i mindst 1 time."
+    },
+    {
+      "section": "Til fyldet",
+      "text": "Bland alle ingredienserne til fyldet grundigt med hænderne, til det er ensartet. Lad fyldet hvile i køleskabet i 30 minutter."
+    },
+    {
+      "section": "Til gelé",
+      "text": "Læg husblasen i blød i rigeligt koldt vand i 10 minutter."
+    },
+    {
+      "section": "Til gelé",
+      "text": "Bring fonden i kog, og rør salt, appelsinjuice, sukker og appelsinlikør i. Lad det simre under forsigtig omrøring, til alt er opløst."
+    },
+    {
+      "section": "Til gelé",
+      "text": "Pres vandet ud af husblasen, og pisk den ned i den varme fond. Si væsken tilbage i gryden, og sæt den til side."
+    },
+    {
+      "section": "Samling",
+      "text": "Tag dejen ud af køleskabet, og del den i en kugle på 250 g til bunden og en mindre på 50 g til låget. Gem resten af dejen."
+    },
+    {
+      "section": "Samling",
+      "text": "Ælt dejen kort med hænderne, så den bliver lidt blødere og lettere at arbejde med."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul begge kugler ud til cirkler på 5 mm på en meldrysset bordplade."
+    },
+    {
+      "section": "Samling",
+      "text": "Beklæd tærteformen med den store cirkel, og tryk dejen forsigtigt helt ned i kanterne, uden at den revner. Lad 2 cm hænge ud over kanten. Sæt formen i fryseren i 15 minutter, så dejen stivner."
+    },
+    {
+      "section": "Samling",
+      "text": "Pak fyldet i dejskålen, til den er helt fyldt. Overskydende fyld kan bruges til en anden pie eller som farce."
+    },
+    {
+      "section": "Samling",
+      "text": "Pensl dejkanten med æggeblomme, og læg låget på. Klem kanterne sammen, så de slutter tæt, og skær overskydende dej af med en skarp kniv. Knib kanten til en pæn rand."
+    },
+    {
+      "section": "Samling",
+      "text": "Rul en smule af den gemte dej ud, og skær en cirkel. Udstik et hul i midten med en mindre udstikker, så du får en ring."
+    },
+    {
+      "section": "Samling",
+      "text": "Udstik et hul midt i pielåget med den samme udstikker, og læg dejringen oven på hullet. Tryk den fast."
+    },
+    {
+      "section": "Samling",
+      "text": "Skær buede ridser i låget fra hullet og ud til kanten med en skarp kniv. Stil pien på køl i en halv time."
+    },
+    {
+      "section": "Bagning",
+      "text": "Forvarm ovnen til 200 °C (180 °C varmluft) mod slutningen af afkølingen."
+    },
+    {
+      "section": "Bagning",
+      "text": "Pensl låget med æggeblomme, og bag pien på en bageplade i 1 time."
+    },
+    {
+      "section": "Bagning",
+      "text": "Lad pien køle på pladen i mindst 1 time, før du tager den ud af formen. Stil den derefter på køl, til den er under 30 °C."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bring gelén i kog, og tag den af varmen. Hæld den varme gelé gennem hullet i låget med en tragt, til pien er fyldt helt op. Stil pien på køl i mindst 1 time før servering."
+    }
+  ],
+  "changes": [
+    "Black treacle er skiftet til mørk sirup.",
+    "Hvidløgspasta er skiftet til hvidløgspuré.",
+    "Kandiseret appelsinskal er skiftet til succade.",
+    "Røget salt er skiftet til almindeligt salt.",
+    "Svinefond er skiftet til hønsefond.",
+    "Udbenet svineskulder er skiftet til svinebov.",
+    "Havsalt er skiftet til almindeligt salt."
+  ]
+}

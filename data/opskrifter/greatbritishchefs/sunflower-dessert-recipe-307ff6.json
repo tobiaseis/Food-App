@@ -1,0 +1,440 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/sunflower-dessert-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:46:12.441Z",
+  "total_minutes": 240,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 39,
+  "title": "Solsikken – solsikkeis med chokolade, karamel og sambalknas",
+  "intro": "En avanceret dessert med solsikkeis på chokolade-namelaka, toppet med misokarameller, fudge, limegele og et krydret knas af solsikkekerner. Mange små dele, der kan laves i god tid og samles til sidst.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Solsikkeis",
+      "amount": 200,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 700,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 7,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 3,
+      "unit": "g",
+      "name": "johannesbrødkernemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 2,
+      "unit": "g",
+      "name": "guarkernemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 1,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 2,
+      "unit": "g",
+      "name": "husblas",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 120,
+      "unit": "g",
+      "name": "chokolade",
+      "note": "mørk, ca. 64 %",
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "sødmælk",
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 20,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeis",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkefudge",
+      "amount": 100,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkefudge",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkefudge",
+      "amount": 250,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkefudge",
+      "amount": 2,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkefudge",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Solsikkefudge",
+      "amount": 20,
+      "unit": "g",
+      "name": "glukosesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Limegele",
+      "amount": 1,
+      "unit": "dl",
+      "name": "citron",
+      "note": "limesaft",
+      "optional": false
+    },
+    {
+      "section": "Limegele",
+      "amount": 4,
+      "unit": "g",
+      "name": "agar agar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel med miso",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel med miso",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "sødmælk",
+      "optional": false
+    },
+    {
+      "section": "Karamel med miso",
+      "amount": 125,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel med miso",
+      "amount": 85,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Karamel med miso",
+      "amount": 30,
+      "unit": "g",
+      "name": "miso",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sambal",
+      "amount": 100,
+      "unit": "g",
+      "name": "tørrede rejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sambal",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kaffirblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sambal",
+      "amount": 30,
+      "unit": "g",
+      "name": "gochugaru",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sambal",
+      "amount": 20,
+      "unit": "g",
+      "name": "tamarind",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Sambal",
+      "amount": 20,
+      "unit": "g",
+      "name": "sort hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sambal",
+      "amount": 30,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "skrællet",
+      "optional": false
+    },
+    {
+      "section": "Sambal",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sambal",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "farin",
+      "note": "brun",
+      "optional": false
+    },
+    {
+      "section": "Solsikkeknas",
+      "amount": 100,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeknas",
+      "amount": 100,
+      "unit": "g",
+      "name": "kakaonibs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeknas",
+      "amount": 6,
+      "unit": "g",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Solsikkeknas",
+      "amount": 30,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Solsikkeknas",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, kun den revne skal",
+      "optional": false
+    },
+    {
+      "section": "Solsikkeknas",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Solsikkeis",
+      "text": "Læg solsikkekernerne i blød i rigeligt vand i 30 minutter."
+    },
+    {
+      "section": "Solsikkeis",
+      "text": "Kom imens vand, salt, johannesbrødkernemel og guarkernemel i Thermomixen. Varm blandingen op til 60 °C på hastighed 2."
+    },
+    {
+      "section": "Solsikkeis",
+      "text": "Hæld iblødsætningsvandet fra kernerne, og kom dem i Thermomixen. Tilsæt olien, og blend på høj hastighed, til massen er så glat som muligt. Den behøver ikke blive helt perfekt."
+    },
+    {
+      "section": "Solsikkeis",
+      "text": "Hæld massen i en pacojetbeholder, og frys den natten over."
+    },
+    {
+      "section": "Chokolade-namelaka",
+      "text": "Rør gelatinepulveret ud med en teskefuld vand i en lille skål, og lad det stå, til det er en tyk pasta."
+    },
+    {
+      "section": "Chokolade-namelaka",
+      "text": "Læg chokoladen i en varmefast skål. Varm mælk og glukosesirup i en gryde ved lav varme, og pisk, til sirupen er opløst. Lad mælken nå lige til kogepunktet, hvor den begynder at småboble."
+    },
+    {
+      "section": "Chokolade-namelaka",
+      "text": "Hæld den varme mælk over chokoladen, og tilsæt gelatinen. Pisk, til massen er tyk, blank og glat. Vend derefter fløden i."
+    },
+    {
+      "section": "Solsikkefudge",
+      "text": "Beklæd en varmefast form med bagepapir."
+    },
+    {
+      "section": "Solsikkefudge",
+      "text": "Rist kernerne på en pande under jævnlig omrøring, til de er dybt brune. Kværn dem med salt i en krydderikværn, til de afgiver deres olie og ligner jordnøddesmør. Stil til side."
+    },
+    {
+      "section": "Solsikkefudge",
+      "text": "Kom sukker, fløde, smør og glukosesirup i en høj gryde, og varm op til 116 °C. Tag gryden af varmen, og pisk en lille del af solsikkesmørret i. Hold afstand, da massen kan sprøjte. Resten af smørret kan bruges som jordnøddesmør."
+    },
+    {
+      "section": "Solsikkefudge",
+      "text": "Hæld fudgen i formen, og lad den stivne i køleskabet."
+    },
+    {
+      "section": "Limegele",
+      "text": "Bring limesaft og agar agar i kog under konstant piskning, og lad det simre. Hæld massen i en plastikbeholder på 1 liter."
+    },
+    {
+      "section": "Limegele",
+      "text": "Lad gelen sætte sig, ca. 15 minutter til et tyndt lag og ca. 30 minutter til et tykkere. Skær den i tern på ½ cm, og stil til side."
+    },
+    {
+      "section": "Karamel med miso",
+      "text": "Kom sukkeret i en høj gryde, og karamellisér det langsomt ved lav varme. Sving gryden af og til, så farven bliver jævn. Stop, når karamellen har farve som lønnesirup."
+    },
+    {
+      "section": "Karamel med miso",
+      "text": "Tag gryden af varmen, og hæld forsigtigt mælk, fløde, smør og miso i. Det bobler kraftigt og sprøjter. Pisk til en tyk karamelsauce, lad den køle af, og fyld den i en sprøjtepose."
+    },
+    {
+      "section": "Sambal",
+      "text": "Overhæld rejer og kaffirblade med kogende vand, og lad dem trække i 15 minutter."
+    },
+    {
+      "section": "Sambal",
+      "text": "Kom de øvrige sambalingredienser i en foodprocessor, og blend dem. Si vandet fra rejerne og bladene, tilsæt dem, og blend igen til en glat pasta."
+    },
+    {
+      "section": "Sambal",
+      "text": "Steg pastaen på en tør pande, til farven bliver mørkere, massen tørrer lidt ind og dufter krydret. Stil til side."
+    },
+    {
+      "section": "Solsikkeknas",
+      "text": "Forvarm ovnen til 130 °C varmluft."
+    },
+    {
+      "section": "Solsikkeknas",
+      "text": "Varm kernerne i en pande ved høj varme sammen med en del af sambalen og en sjat koldt vand. Når væsken bliver varm, klæber den sig til kernerne. Lad al væsken koge væk."
+    },
+    {
+      "section": "Solsikkeknas",
+      "text": "Fordel kernerne i ét lag på en bageplade, og tør dem i ovnen i 20-30 minutter."
+    },
+    {
+      "section": "Solsikkeknas",
+      "text": "Lad kernerne køle af, og bland dem med kakaonibs, chilipulver, sukker og limeskal. Smag til med flagesalt."
+    },
+    {
+      "section": "Anretning",
+      "text": "Hæld en lille portion namelaka i hver skål, og stil dem koldt i 1 time, til den er stivnet."
+    },
+    {
+      "section": "Anretning",
+      "text": "Sprøjt en spiral af karamel ovenpå. Drys knas rundt langs kanten. Læg en teskefuld limegele og 5 stykker fudge i midten."
+    },
+    {
+      "section": "Anretning",
+      "text": "Kør isen i pacojetten, og sæt en quenelle ovenpå hver portion. Afslut med lidt mere karamel."
+    }
+  ],
+  "changes": [
+    "Valrhona Manjari 64 % er skiftet til mørk chokolade.",
+    "Double cream er skiftet til piskefløde.",
+    "Vegetable oil er skiftet til rapsolie.",
+    "Citronmelisse er skiftet til mynte.",
+    "Maldon-salt er skiftet til flagesalt.",
+    "Liquid glucose er skiftet til glukosesirup.",
+    "Limesaft er angivet som citron (lime)."
+  ]
+}

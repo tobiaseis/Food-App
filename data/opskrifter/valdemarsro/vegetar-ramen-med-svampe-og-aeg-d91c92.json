@@ -1,0 +1,196 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetar-ramen-med-svampe-og-aeg/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:16:46.568Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Vegetarisk ramen med svampe og æg",
+  "intro": "En gedigen skål ramen med misobouillon, stegte svampe, friske grøntsager og bløde æg. Limesaft og chiliflager giver en frisk og let skarp afslutning.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "nudler",
+      "note": "ramen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "shiitake",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 30,
+      "unit": "g",
+      "name": "soltørrede tomater i olie",
+      "note": "meget finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "miso",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillon",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til skålene",
+      "amount": 200,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til skålene",
+      "amount": 200,
+      "unit": "g",
+      "name": "pak choi",
+      "note": "groft strimlet",
+      "optional": false
+    },
+    {
+      "section": "Til skålene",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "fintsnittet i julienne",
+      "optional": false
+    },
+    {
+      "section": "Til skålene",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til skålene",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til skålene",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til skålene",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skåret i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Nudler og æg",
+      "text": "Kog nudlerne i letsaltet vand, men tag dem op et minut før tiden på pakken. Si dem og skyl dem under koldt vand, så de ikke klistrer sammen."
+    },
+    {
+      "section": "Nudler og æg",
+      "text": "Læg æggene i kogende vand i 7 minutter, så blommen bliver blød. Afkøl dem under koldt vand, og pil dem."
+    },
+    {
+      "section": "Svampe",
+      "text": "Rist sesamfrøene på en tør pande, og stil dem til side."
+    },
+    {
+      "section": "Svampe",
+      "text": "Skru op for varmen på panden, og tilsæt lidt olie. Steg champignon, til de er gyldenbrune og har fået en flot skorpe. Kom shiitake på, vend rundt, og skru ned til middelvarme."
+    },
+    {
+      "section": "Bouillon",
+      "text": "Bring fond, tomater, ingefær og hvidløg i kog i en gryde. Tag gryden af varmen, rør misoen ud i bouillonen, og smag til med sojasauce."
+    },
+    {
+      "section": "Anretning",
+      "text": "Del nudler, svampe, spinat, pak choi, gulerødder, forårsløg og koriander ud i fire skåle. Hæld den varme misobouillon over."
+    },
+    {
+      "section": "Anretning",
+      "text": "Halvér æggene, og læg dem i skålene. Drys med chiliflager og sesamfrø, og server med limebåde til at presse over."
+    }
+  ],
+  "changes": [
+    "Ramen-nudler er skiftet til almindelige nudler.",
+    "Soja er skiftet til sojasauce.",
+    "Baby spinat er skiftet til spinat."
+  ]
+}

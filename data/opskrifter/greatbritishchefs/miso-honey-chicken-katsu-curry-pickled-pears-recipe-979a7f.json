@@ -1,0 +1,366 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/miso-honey-chicken-katsu-curry-pickled-pears-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:38:17.080Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 37,
+  "title": "Katsu curry med miso-honningkylling og syltede pærer",
+  "intro": "Sprød panérede kyllingelår med sødsalt miso og honning serveres på jasminris med en blød, hjemmelavet karrysauce. Friske syltede pærer med chili giver syre og knas.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 4,
+      "unit": "stk",
+      "name": "chili",
+      "note": "tørrede røde",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kanel",
+      "note": "kanelstang",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 3,
+      "unit": "stk",
+      "name": "kardemomme",
+      "note": "kapsler",
+      "optional": false
+    },
+    {
+      "section": "Karrypulver",
+      "amount": 3,
+      "unit": "stk",
+      "name": "nelliker",
+      "note": "hele",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "neutral",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": null,
+      "unit": null,
+      "name": "ingefær",
+      "note": "et stykke",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 750,
+      "unit": "ml",
+      "name": "hønsefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrysauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 6,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": "udbenede og uden skind",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "miso",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 150,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Syltede pærer",
+      "amount": 2,
+      "unit": "stk",
+      "name": "pærer",
+      "note": "modne, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede pærer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Syltede pærer",
+      "amount": 75,
+      "unit": "ml",
+      "name": "eddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede pærer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede pærer",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 300,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 450,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "forårsløg",
+      "note": "i tynde skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Karrypulver",
+      "text": "Rist alle krydderierne på en tør pande, til de dufter. Mal dem derefter til et fint pulver i en krydderikværn."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Varm olien op i en gryde. Svits løg, hvidløg og ingefær ved middel-lav varme i ca. 15 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Rør gulerødder, mel og tomatpuré i gryden, og lad det stege med i 2 minutter."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Tilsæt karrypulver, fond, sojasauce, mirin og sukker. Lad saucen simre i 20 minutter, og blend den derefter helt glat og blank."
+    },
+    {
+      "section": "Kylling",
+      "text": "Gnid kyllingelårene ind i miso og honning, og lad dem marinere i 15 minutter."
+    },
+    {
+      "section": "Kylling",
+      "text": "Vend lårene først i mel, så i æg og til sidst i panko, så de er helt dækket."
+    },
+    {
+      "section": "Kylling",
+      "text": "Steg lårene i rigeligt varm olie i 4-5 minutter på hver side, til de er gyldne og gennemstegte. Lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Syltede pærer",
+      "text": "Vend pæreskiverne med chili, eddike, sukker og salt. Lad dem trække i 15 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Kog ris og vand op. Skru ned til middel-lav varme, læg et viskestykke og låg over, og lad risene koge i ca. 12 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risene dampe færdige i 10 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær den stegte kylling i tykke skiver."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret kyllingen på risene, og hæld karrysauce over. Top med syltede pærer, ristede sesamfrø, koriander og forårsløg."
+    }
+  ],
+  "changes": [
+    "Risvineddike er skiftet til almindelig eddike."
+  ]
+}

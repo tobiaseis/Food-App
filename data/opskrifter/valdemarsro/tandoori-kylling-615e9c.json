@@ -1,0 +1,244 @@
+{
+  "url": "https://www.valdemarsro.dk/tandoori-kylling/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:54:42.671Z",
+  "total_minutes": 240,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 23,
+  "title": "Tandoori-kylling med yoghurtdressing",
+  "intro": "Mørke kyllingelår marineret i yoghurt og varme krydderier og bagt i ovnen. Serveres med ris, broccoli og en frisk yoghurtdressing med urter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kardemomme",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "stødt nellike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 3,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 50,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingeoverlår",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 3,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk, 10 %",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "stk",
+      "name": "broccoli",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 3,
+      "unit": "dl",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Pisk alle krydderierne sammen med yoghurt, citronsaft, olivenolie, hvidløg og tomatpuré i en skål."
+    },
+    {
+      "section": "Kylling",
+      "text": "Gnid kyllingelårene grundigt ind i marinaden. Løft skindet, og smør også marinade ind under det."
+    },
+    {
+      "section": "Kylling",
+      "text": "Stil kyllingen køligt og lad den marinere i 2-3 timer, eller lad den stå natten over."
+    },
+    {
+      "section": "Kylling",
+      "text": "Smør et ovnfast fad. Læg kyllingen i fadet med al marinaden, og bag den i 40-45 minutter ved 175 °C varmluft."
+    },
+    {
+      "section": "Yoghurtdressing",
+      "text": "Rør græsk yoghurt sammen med de hakkede krydderurter og hvidløg. Smag til med salt og peber."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Kog risene, som der står på posen."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Bring letsaltet vand i kog i en kasserolle. Kog broccolien med låg på i 1 minut, og hæld vandet fra."
+    },
+    {
+      "section": null,
+      "text": "Anret kyllingelårene med ris og broccoli. Server med yoghurtdressing, limebåde og korianderblade."
+    }
+  ],
+  "changes": []
+}

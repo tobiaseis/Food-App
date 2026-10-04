@@ -1,0 +1,108 @@
+{
+  "url": "https://www.arla.dk/opskrifter/burgerdressing/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:13:52.588Z",
+  "total_minutes": 10,
+  "active_minutes": null,
+  "yield_count": 1,
+  "source_lines": 9,
+  "title": "Burgerdressing",
+  "intro": "En cremet dressing med syltede agurker, sennep og tomat, som passer til burgere. Den er hurtigt lavet og kan stå på køl, til den skal bruges.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Burgerdressing",
+      "amount": 3,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "syltede agurker",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijonsennep",
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Burgerdressing",
+      "amount": null,
+      "unit": null,
+      "name": "syltede agurker",
+      "note": "til pynt, hakkede",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Burgerdressing",
+      "text": "Bland creme fraiche, mayonnaise, de hakkede agurker, ketchup, sennep, tomatpuré, salt og peber, til det er helt ensartet."
+    },
+    {
+      "section": "Burgerdressing",
+      "text": "Smag dressingen til, og juster med salt og peber."
+    },
+    {
+      "section": "Burgerdressing",
+      "text": "Dæk skålen og sæt den på køl, til dressingen skal på bordet."
+    },
+    {
+      "section": "Burgerdressing",
+      "text": "Drys evt. lidt hakkede syltede agurker over lige før servering."
+    }
+  ],
+  "changes": []
+}

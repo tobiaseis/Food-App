@@ -1,0 +1,244 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/denver-steak-pink-onion-salsa-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:14:43.963Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "title": "Culottesteak med salsa af syltede rødløg",
+  "intro": "Mør, rosastegt bøf med smørbasting og friske urter, serveret med en frisk salsa af hurtigsyltede lyserøde løg, rødbeder og tomat. Løgene skal trække i mindst en time, så start i god tid.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til bøffen",
+      "amount": 600,
+      "unit": "g",
+      "name": "culotte",
+      "note": "2 bøffer à 300 g, duppet tørre og i stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 20,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 40,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "timian",
+      "note": "lille bundt",
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "let knust med skræl på",
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "lyserød peber",
+      "note": "til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøffen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i fine skiver",
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 2,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "hvidvinseddike eller æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "lyserød peber",
+      "note": "små kerner",
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 100,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "fint hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 100,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "kogte, fint hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "stor, uden kerner, fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salsaen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til de syltede løg",
+      "text": "Læg de tynde løgskiver i en skål. Pisk eddike, vand, salt, sukker og lyserød peber sammen, og hæld det over løgene."
+    },
+    {
+      "section": "Til de syltede løg",
+      "text": "Stil skålen i køleskabet, og lad løgene syltes i mindst 1 time."
+    },
+    {
+      "section": "Til salsaen",
+      "text": "Afmål 200 g af de syltede løg, og bland dem i en skål med tomat, rødbeder, chili, persille og hvidløg."
+    },
+    {
+      "section": "Til salsaen",
+      "text": "Smag til med salt og peber. Rør olivenolien i lidt ad gangen, til salsaen har den konsistens, du kan lide. Hvis du vil have den tyk, skal du ikke bruge det hele. Stil den til side."
+    },
+    {
+      "section": "Til bøffen",
+      "text": "Varm olien i en pande over middelhøj varme. Krydr bøfferne rigeligt med salt og peber."
+    },
+    {
+      "section": "Til bøffen",
+      "text": "Når panden ryger, lægger du bøfferne forsigtigt i. Steg dem i 2 minutter uden at røre ved dem."
+    },
+    {
+      "section": "Til bøffen",
+      "text": "Vend bøfferne, og kom smør, rosmarin, timian og hvidløg på panden. Øs det smeltede smør over kødet i cirka 1 minut."
+    },
+    {
+      "section": "Til bøffen",
+      "text": "Mål kernetemperaturen med et stegetermometer. Ved 55°C tager du bøfferne op på et bræt eller fad og lader dem hvile i 5 minutter."
+    },
+    {
+      "section": "Til bøffen",
+      "text": "Skær bøfferne i skiver på tværs af fibrene. Anret med salsaen ovenpå, og drys med lyserød peber."
+    }
+  ],
+  "changes": [
+    "Denver steak er erstattet af culotte, som er nemmere at få i Danmark.",
+    "Vegetabilsk olie er erstattet af rapsolie.",
+    "Lyserøde peberkorn hedder lyserød peber."
+  ]
+}

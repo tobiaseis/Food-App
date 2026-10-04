@@ -1,0 +1,178 @@
+{
+  "url": "https://www.arla.dk/opskrifter/rabarbertarte/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:20:09.463Z",
+  "total_minutes": 90,
+  "active_minutes": 35,
+  "yield_count": 1,
+  "source_lines": 13,
+  "title": "Rabarbertærte med mandelfyld",
+  "intro": "Mørdejstærte med blødt mandelfyld, friske rabarber og gitter af dej på toppen. Den smager både lun og kold, og passer godt til en klat creme fraiche.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Tærtebund",
+      "amount": 275,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 75,
+      "unit": "g",
+      "name": "mandelmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "koldt",
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærtebund",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "en lille smule, kun hvis dejen ikke samler sig",
+      "optional": true
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 100,
+      "unit": "g",
+      "name": "mandelmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "fintrevet skal, usprøjtet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "rabarber",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": "eller letpisket fløde",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tærtebund",
+      "text": "Bland hvedemel, mandelmel, sukker og salt i en skål."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Smuldr det smør, du har skåret i stykker, ned i melblandingen. Ælt hurtigt dejen sammen med ægget. Tilsæt lidt vand, hvis den er for tør."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Del dejen i to: ca. to tredjedele og en tredjedel. Rul den største del ud mellem to stykker bagepapir, så den bliver 2-3 cm bredere end tærteformen (ca. 22 cm i diameter)."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Løft dejen over i formen, og tryk den ind i bunden og helt op ad kanten."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Rul resten af dejen ud i samme tykkelse, og skær den i strimler til gitteret. Lad strimlerne ligge på bagepapiret. Sæt dem og tærtebunden på køl i ca. 30 min."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Stik huller i bunden og kanten med en gaffel. Forbag bunden i ca. 10 min. ved 175 °C i almindelig ovn."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk smør og sukker luftigt. Tilsæt æggene ét ad gangen, og pisk godt mellem hvert. Vend mandelmel og citronskal i."
+    },
+    {
+      "section": "Fyld",
+      "text": "Fordel fyldet i den forbagte bund, og læg rabarbertern ovenpå."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg dejstrimlerne i et gitter over rabarberne, og klip overskydende dej af."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bag tærten i ca. 30 min. ved 175 °C i almindelig ovn."
+    },
+    {
+      "section": "Fyld",
+      "text": "Lad tærten køle af. Server den lun eller kold med creme fraiche eller fløde."
+    }
+  ],
+  "changes": [
+    "Flødeskum er ændret til letpisket fløde."
+  ]
+}

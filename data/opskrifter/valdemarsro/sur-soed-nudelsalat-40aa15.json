@@ -1,0 +1,199 @@
+{
+  "url": "https://www.valdemarsro.dk/sur-soed-nudelsalat/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:08:05.111Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Sur-sød nudelsalat med ananas og edamamebønner",
+  "intro": "Frisk nudelsalat med knasende grøntsager, ananas og avocado i en blank sur-sød dressing. Toppes med peanuts, sesam og koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til sur-sødsaucen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "juice",
+      "note": "ananasjuice",
+      "optional": false
+    },
+    {
+      "section": "Til sur-sødsaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "riseddike",
+      "optional": false
+    },
+    {
+      "section": "Til sur-sødsaucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sur-sødsaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": "brun farin",
+      "optional": false
+    },
+    {
+      "section": "Til sur-sødsaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til sur-sødsaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sur-sødsaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 200,
+      "unit": "g",
+      "name": "nudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 100,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "pillede",
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 200,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "i julienne",
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 125,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "ananas",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 25,
+      "unit": "g",
+      "name": "peanuts",
+      "note": "saltede",
+      "optional": false
+    },
+    {
+      "section": "Til nudelsalaten",
+      "amount": 25,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sur-sødsauce",
+      "text": "Pisk alle ingredienserne til saucen sammen i en gryde. Bring det i kog, og lad det simre et par minutter, til saucen er lidt tykkere."
+    },
+    {
+      "section": "Sur-sødsauce",
+      "text": "Tag gryden af varmen, og lad saucen køle af."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Kog nudlerne efter anvisningen på pakken. Kom edamamebønnerne i til nudlerne i det sidste minut af kogetiden."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Si nudler og bønner med det samme, og skyl dem med iskoldt vand, så de ikke bliver ved med at koge og klistrer sammen."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Vend nudler og bønner med halvdelen af saucen."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Læg gulerødder og spidskål i bunden af en stor skål, og top med nudler og bønner."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Fordel sukkerærter, forårsløg, ananas og avocado ovenpå, og dryp med resten af saucen."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Hak koriander og peanuts, og drys dem sammen med sesamfrøene over salaten lige før servering."
+    }
+  ],
+  "changes": [
+    "Riseddike er erstattet af eddike (riseddike) som den nærmeste almindelige vare – navnet er beholdt i noten.",
+    "Pillede edamamebønner er beholdt som edamamebønner, da der ikke er nogen mere almindelig afløser."
+  ]
+}

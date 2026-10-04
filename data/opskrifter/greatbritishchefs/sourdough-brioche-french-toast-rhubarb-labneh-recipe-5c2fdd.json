@@ -1,0 +1,304 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/sourdough-brioche-french-toast-rhubarb-labneh-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:39:16.130Z",
+  "total_minutes": 180,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 27,
+  "title": "French toast af surdejsbrioche med rabarberchutney og labneh",
+  "intro": "Luftig brioche bagt på surdej og stegt som french toast, serveret med hjemmelavet labneh, sprød rabarberchutney og syltede rabarberstrimler. Retten kræver tid, men det meste af den går med at hæve.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Labneh",
+      "amount": 700,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Labneh",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Surdejsbrioche",
+      "amount": 250,
+      "unit": "g",
+      "name": "surdejsstarter",
+      "note": "aktiv",
+      "optional": false
+    },
+    {
+      "section": "Surdejsbrioche",
+      "amount": 400,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "stærkt hvedemel",
+      "optional": false
+    },
+    {
+      "section": "Surdejsbrioche",
+      "amount": 70,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Surdejsbrioche",
+      "amount": 50,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Surdejsbrioche",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Surdejsbrioche",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "sammenpisket, til pensling",
+      "optional": false
+    },
+    {
+      "section": "Surdejsbrioche",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Surdejsbrioche",
+      "amount": 1.3,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Surdejsbrioche",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, i tern, stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Rabarberchutney",
+      "amount": 600,
+      "unit": "g",
+      "name": "rabarber",
+      "note": "fintHakket",
+      "optional": false
+    },
+    {
+      "section": "Rabarberchutney",
+      "amount": 400,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberchutney",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rabarberchutney",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kardemomme",
+      "note": "grønne kapsler",
+      "optional": false
+    },
+    {
+      "section": "Rabarberchutney",
+      "amount": 3,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Rabarberchutney",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Rabarberchutney",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rabarberchutney",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rabarberstrimler",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "rabarber",
+      "note": "skåret i tynde skiver på mandolin",
+      "optional": false
+    },
+    {
+      "section": "Syltede rabarberstrimler",
+      "amount": 200,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede rabarberstrimler",
+      "amount": 2,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "æblecidereddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede rabarberstrimler",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "French toast",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "French toast",
+      "amount": 20,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "French toast",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "French toast",
+      "amount": 30,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Labneh (aftenen før)",
+      "text": "Rør yoghurten sammen med saltet. Hæld den i et osteklæde over en fin sigte, der står over en skål."
+    },
+    {
+      "section": "Labneh (aftenen før)",
+      "text": "Slå osteklædet om yoghurten, og lad den dryppe af natten over. Kom den derefter i en æske med låg, og sæt den i køleskabet."
+    },
+    {
+      "section": "Surdejsbrioche",
+      "text": "Start tidligt om morgenen, for briochen skal bruge ca. 13 timer til at hæve. Kom alle ingredienser til briochen i en røremaskine med dejkrog, og kør dem sammen ved lav-middel hastighed i ca. 10 minutter. Dejen bliver meget klistret, men samler sig til sidst."
+    },
+    {
+      "section": "Surdejsbrioche",
+      "text": "Læg et fugtigt viskestykke over skålen, og lad dejen hæve i ca. 6 timer, til den er fordoblet. Stil den derefter køligt i mindst 1 time."
+    },
+    {
+      "section": "Rabarberchutney",
+      "text": "Mens dejen køler, kommer du alle ingredienserne til chutneyen i en stor gryde og bringer dem i kog. Rør, til sukkeret er opløst."
+    },
+    {
+      "section": "Rabarberchutney",
+      "text": "Lad chutneyen småkoge ved svag varme i ca. 1 time, til den er tyk og klistret. Lad den køle lidt af, og kom den på rene glas i køleskabet."
+    },
+    {
+      "section": "Surdejsbrioche",
+      "text": "Beklæd en brødform med bagepapir, eller smør den grundigt."
+    },
+    {
+      "section": "Surdejsbrioche",
+      "text": "Del dejen i otte lige store kugler, og læg dem i formen. Dæk til, og lad dem hæve i yderligere 6 timer, til de er fordoblet."
+    },
+    {
+      "section": "Surdejsbrioche",
+      "text": "Varm ovnen op til 180 °C, når hævningen nærmer sig enden. Pensl kuglerne med det sammenpiskede æg, og bag briochen i 25-30 minutter, til den er gylden."
+    },
+    {
+      "section": "Syltede rabarberstrimler",
+      "text": "Rør sukker, eddike og vand sammen, til sukkeret er opløst. Vend de tynde rabarberskiver i lagen, dæk til, og lad dem trække i køleskabet, mens du laver french toasten."
+    },
+    {
+      "section": "French toast",
+      "text": "Pisk æg, sukker og kærnemælk sammen. Skær briochen i tykke skiver."
+    },
+    {
+      "section": "French toast",
+      "text": "Smelt lidt smør på en pande. Vend brioche-skiverne i æggeblandingen, og steg dem på begge sider ved middel varme, til de er brune udenpå og varme hele vejen igennem."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg labneh, chutney og en håndfuld syltede rabarberstrimler oven på hver skive french toast. Dryp med olivenolie, og drys med flagesalt."
+    }
+  ],
+  "changes": []
+}

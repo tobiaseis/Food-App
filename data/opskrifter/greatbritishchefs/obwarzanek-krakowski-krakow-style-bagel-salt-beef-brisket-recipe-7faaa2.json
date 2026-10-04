@@ -1,0 +1,289 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/obwarzanek-krakowski-krakow-style-bagel-salt-beef-brisket-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:24:21.514Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 25,
+  "title": "Krakow-bagels med saltet oksebryst",
+  "intro": "Hjemmelagret oksebryst i saltlage, kogt mørt og lagt i polske flettede bagels med sennep, salat og syltede agurker. Kødet skal ligge i lage i en uges tid, så start i god tid.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Oksebryst",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "oksebryst",
+      "note": "hård fedt og sener skåret fra",
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 120,
+      "unit": "g",
+      "name": "salt",
+      "note": "groft havsalt",
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 25,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 30,
+      "unit": "g",
+      "name": "nitritsalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "peber",
+      "note": "hele sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 2,
+      "unit": "l",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Kogevand",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Kogevand",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftskåret",
+      "optional": false
+    },
+    {
+      "section": "Kogevand",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "groftskåret",
+      "optional": false
+    },
+    {
+      "section": "Kogevand",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kogevand",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "hele sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Bagels",
+      "amount": 500,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagels",
+      "amount": 7,
+      "unit": "g",
+      "name": "tørgær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagels",
+      "amount": 10,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagels",
+      "amount": 15,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagels",
+      "amount": 300,
+      "unit": "ml",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Bagels",
+      "amount": null,
+      "unit": null,
+      "name": "sesamfrø",
+      "note": "til drys",
+      "optional": false
+    },
+    {
+      "section": "Bagels",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt, til drys",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "salat",
+      "note": "nogle få blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "syltede agurker",
+      "note": "i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Saltlage",
+      "text": "Begynd mindst 5 dage før servering. Kom alle ingredienser til saltlagen undtagen vandet i en stor gryde eller en varmefast beholder, og hæld det kogende vand over."
+    },
+    {
+      "section": "Saltlage",
+      "text": "Rør, til salt, farin og nitritsalt er opløst. Lad lagen køle helt af, til den er stuetempereret eller kold fra køleskabet."
+    },
+    {
+      "section": "Saltlage",
+      "text": "Mål, hvor tyk oksebrystet er på det tykkeste sted. Læg kødet helt ned i den kolde lage, dæk til og stil det i køleskabet i 5-7 dage. Det skal blot være helt dækket – du behøver ikke vende det."
+    },
+    {
+      "section": "Saltlage",
+      "text": "Kødet er klar, når det føles fastere hele vejen igennem. Skær en lille skive fra det tykkeste sted: Farven skal være slået igennem uden råt udseende kerne. Ved ca. 5 cm tykkelse går der 5-7 dage, ved tykkere stykker 7-10 dage eller mere."
+    },
+    {
+      "section": "Kogning",
+      "text": "Tag kødet op af lagen og skyl det grundigt under koldt vand. Smid lagen ud."
+    },
+    {
+      "section": "Kogning",
+      "text": "Læg kødet i en stor, dyb gryde sammen med alle ingredienserne til kogevandet, og fyld op med frisk vand, så det dækker. Bring langsomt i kog, og lad det simre i 3-4 timer, til kødet er mørt, så en gaffel glider ind."
+    },
+    {
+      "section": "Kogning",
+      "text": "Kig til gryden jævnligt: Fyld vand på og justér varmen, så kødet hele tiden er dækket, og vandet simrer."
+    },
+    {
+      "section": "Bagels",
+      "text": "Ælt mel, salt, gær og sukker sammen med vandet i en røremaskine med dejkrog, til det bliver en dej. Ælt i 8-10 minutter, til dejen er glat og elastisk."
+    },
+    {
+      "section": "Bagels",
+      "text": "Dæk dejen og lad den hæve til dobbelt størrelse, ca. 1-1½ time afhængigt af køkkenets temperatur."
+    },
+    {
+      "section": "Bagels",
+      "text": "Tænd ovnen på 190 °C, og beklæd 2 bageplader med bagepapir."
+    },
+    {
+      "section": "Bagels",
+      "text": "Del dejen i stykker à 50 g, og rul hvert stykke til en line på ca. 20 cm. Flet to liner om hinanden, snoet, og saml enderne til en ring. Gør det samme med resten."
+    },
+    {
+      "section": "Bagels",
+      "text": "Læg ringene på pladerne, dæk dem og lad dem hæve ved stuetemperatur i 40 minutter."
+    },
+    {
+      "section": "Bagels",
+      "text": "Bring en stor, dyb gryde vand i et let simren. Kog hver ring 30 sekunder på hver side, lad den dryppe af og læg den på pladerne. Drys med sesamfrø og flagesalt."
+    },
+    {
+      "section": "Bagels",
+      "text": "Bag i 15-18 minutter, til de er dybt gyldne og sprøde. Sæt dem på en rist, så de køler lidt af."
+    },
+    {
+      "section": "Til servering",
+      "text": "Lad kødet hvile lidt i kogevandet, når det er færdigt. Tag det op og skær det i tynde skiver på tværs af fibrene – regn med 120-150 g pr. person. Del bagelsene på midten."
+    },
+    {
+      "section": "Til servering",
+      "text": "Smør rigeligt sennep på begge snitflader. Læg salat, varmt kød og skiver af syltede agurker på bunden, sæt toppen på, og server straks."
+    }
+  ],
+  "changes": [
+    "Prague powder #1 er erstattet af nitritsalt.",
+    "Polsk Sarepska-sennep er erstattet af almindelig sennep.",
+    "Strong bread flour er erstattet af hvedemel.",
+    "Dill pickles er erstattet af syltede agurker."
+  ]
+}

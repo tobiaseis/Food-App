@@ -1,0 +1,180 @@
+{
+  "url": "https://www.valdemarsro.dk/halloumi-hotdog/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:14:17.122Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Halloumi-hotdogs med pico de gallo",
+  "intro": "Sprødpanerede halloumistave i hotdogbrød med frisk tomatsalsa, cremet avocado og jalapeños. En vegetarisk hotdog med masser af smag og friskhed.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pico de gallo",
+      "amount": 300,
+      "unit": "g",
+      "name": "tomater",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, finthakket – gem lidt til servering",
+      "optional": false
+    },
+    {
+      "section": "Pico de gallo",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 200,
+      "unit": "g",
+      "name": "halloumi",
+      "note": "i stave",
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 20,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 50,
+      "unit": "g",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk, skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 8,
+      "unit": "stk",
+      "name": "hotdogbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "jalapeños",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pico de gallo",
+      "text": "Bland tomater, rødløg, hvidløg, koriander og limeskal og -saft fra de to limefrugter i en stor skål. Tilsæt kun halvdelen af chilien til at begynde med."
+    },
+    {
+      "section": "Pico de gallo",
+      "text": "Smag til med salt, peber og efter behov mere chili, limesaft og limeskal."
+    },
+    {
+      "section": "Halloumi",
+      "text": "Vend halloumistavene først i hvedemel, så i sammenpisket æg og til sidst i pankorasp. Lad dem hvile på en tallerken et par minutter, så panaden hæfter."
+    },
+    {
+      "section": "Halloumi",
+      "text": "Varm olien i en pande, og steg stavene på alle sider, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Servering",
+      "text": "Lun hotdogbrødene i ovnen. Mos imens avocadoen med lidt limesaft og -skal, salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel avocadocremen i brødene, og læg halloumistave i. Top med pico de gallo og jalapeños, og drys med groft hakket koriander."
+    }
+  ],
+  "changes": []
+}

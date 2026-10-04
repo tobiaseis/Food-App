@@ -1,0 +1,168 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/egyptian-egg-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:51:07.444Z",
+  "total_minutes": 15,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 12,
+  "title": "Egyptisk æggesalat med bønner",
+  "intro": "Kogte æg serveres på en varm, cremet bønnemos med spidskommen og hvidløg, og toppes med tahindressing og friske grøntsager. En nem og mættende ret til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "hel, frø",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "gem lagen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "salat",
+      "note": "hjertesalat, skåret i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "chiliflager",
+      "note": "tørrede, til drys",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "grofthakket",
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog æggene i 8 minutter i vand i en gryde. Hæld vandet fra, skyl dem under koldt vand, pil dem og del dem på midten."
+    },
+    {
+      "section": null,
+      "text": "Rør en spiseskefuld citronsaft og tre spiseskefulde vand ud med tahinen til en dressing."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en pande, og steg løg og hvidløg i 5 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Rør både stødt og hel spidskommen i og lad det stege et øjeblik. Kom bønnerne på, og mos nogle af dem let under opvarmningen. Tilsæt lidt af bønnelagen, til konsistensen bliver cremet, men lad en del af bønnerne være hele."
+    },
+    {
+      "section": null,
+      "text": "Smag til med citronsaft, salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Anret bønnemosen på tallerkener sammen med salaten. Læg æg og tomater ovenpå, og dryp med tahindressingen. Drys eventuelt med chiliflager og persille."
+    }
+  ],
+  "changes": [
+    "Borlotti- eller favabønner er erstattet med kidneybønner.",
+    "Little Gem er erstattet med hjertesalat.",
+    "Flad persille er erstattet med almindelig persille."
+  ]
+}

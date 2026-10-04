@@ -1,0 +1,214 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/pumpkin-spice-cookies",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:49:48.038Z",
+  "total_minutes": 30,
+  "active_minutes": 15,
+  "yield_count": 20,
+  "source_lines": 15,
+  "title": "Græskarkrydderi-cookies med flødeostfyld",
+  "intro": "Bløde, krydrede cookies med græskar, som vendes i kanelsukker og samles med en cremet flødeostfyld. Dejen skal hvile i køleskabet, så start i god tid.",
+  "servings": 20,
+  "ingredients": [
+    {
+      "section": "Krydderiblanding",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Krydderier",
+      "note": "stødt kanel",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Ingefær",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Krydderier",
+      "note": "muskatnød, stødt",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Krydderier",
+      "note": "allehånde, stødt",
+      "optional": false
+    },
+    {
+      "section": "Krydderiblanding",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Krydderier",
+      "note": "stødt nellike",
+      "optional": false
+    },
+    {
+      "section": "Cookies",
+      "amount": 100,
+      "unit": "g",
+      "name": "Squash",
+      "note": "hokkaido græskar, kogt og moset til puré",
+      "optional": false
+    },
+    {
+      "section": "Cookies",
+      "amount": 250,
+      "unit": "g",
+      "name": "Mel",
+      "note": "hvedemel",
+      "optional": false
+    },
+    {
+      "section": "Cookies",
+      "amount": null,
+      "unit": null,
+      "name": "Mel",
+      "note": "bagepulver, så det svarer til selvhævende mel",
+      "optional": false
+    },
+    {
+      "section": "Cookies",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Cookies",
+      "amount": 175,
+      "unit": "g",
+      "name": "Smør",
+      "note": "usaltet, blødt",
+      "optional": false
+    },
+    {
+      "section": "Cookies",
+      "amount": 175,
+      "unit": "g",
+      "name": "Sukker",
+      "note": "brun farin",
+      "optional": false
+    },
+    {
+      "section": "Cookies",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Æg",
+      "note": "mellemstort",
+      "optional": false
+    },
+    {
+      "section": "Cookies",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "Vanilje",
+      "note": "vaniljeekstrakt",
+      "optional": false
+    },
+    {
+      "section": "Cookies",
+      "amount": 50,
+      "unit": "g",
+      "name": "Sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 60,
+      "unit": "g",
+      "name": "Smør",
+      "note": "usaltet, stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 40,
+      "unit": "g",
+      "name": "Flødeost",
+      "note": "fuldfed, stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 120,
+      "unit": "g",
+      "name": "Sukker",
+      "note": "flormelis",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Krydderiblanding",
+      "text": "Bland alle krydderierne i en stor skål."
+    },
+    {
+      "section": "Cookies",
+      "text": "Fordel græskarpuréen på et lag køkkenrulle, og læg et nyt lag ovenpå. Lad den trække, så den afgiver overskydende væde."
+    },
+    {
+      "section": "Cookies",
+      "text": "Rør en del af krydderiblandingen sammen med mel, bagepulver og salt."
+    },
+    {
+      "section": "Cookies",
+      "text": "Pisk smør og farin med håndmixer i 2-3 minutter, til det er lyst og luftigt. Pisk ægget i, og derefter græskarpuréen og vaniljen."
+    },
+    {
+      "section": "Cookies",
+      "text": "Vend melblandingen i, til dejen lige netop er samlet og blød. Sæt den på køl i 1-2 timer, så den bliver lidt fastere."
+    },
+    {
+      "section": "Cookies",
+      "text": "Beklæd en stor bageplade med bagepapir. Form kugler af dejen med fugtige hænder, tryk dem let flade, og læg dem på pladen. Det giver 10-12 stk. Stil dem på køl i mindst 1 time, eller frys dem natten over."
+    },
+    {
+      "section": "Cookies",
+      "text": "Varm ovnen op til 200 °C (180 °C varmluft), og beklæd to-tre store bageplader med bagepapir."
+    },
+    {
+      "section": "Cookies",
+      "text": "Bland sukkeret med det meste af den resterende krydderiblanding. Gem lidt til fyldet."
+    },
+    {
+      "section": "Cookies",
+      "text": "Tryk hver dejskive lidt fladere mellem håndfladerne, og vend begge sider og kanten i kanelsukkeret. Læg dem med god afstand på bagepladerne."
+    },
+    {
+      "section": "Cookies",
+      "text": "Bag i 12-14 minutter. Byt rundt på pladerne halvvejs, til midten er hævet og kanten lige akkurat gylden."
+    },
+    {
+      "section": "Cookies",
+      "text": "Lad cookiesene hvile på pladerne i 10 minutter, og flyt dem derefter over på en rist, til de er helt kolde. De holder sig 3 dage i en lufttæt dåse."
+    },
+    {
+      "section": "Fyld",
+      "text": "Pisk smør og flødeost glat. Tilsæt flormelis og den sidste krydderiblanding, og pisk til fyldet er lyst og luftigt."
+    },
+    {
+      "section": "Fyld",
+      "text": "Smør fyld på fladsiden af halvdelen af cookiesene, og læg de øvrige ovenpå som låg. De holder sig nogle dage på køl i en lufttæt dåse."
+    }
+  ],
+  "changes": [
+    "Græskarpuré erstattes af hokkaido græskar, kogt og moset.",
+    "Selvhævende mel erstattes af hvedemel og bagepulver.",
+    "Light brown soft sugar erstattes af brun farin.",
+    "Caster sugar erstattes af almindeligt sukker.",
+    "Icing sugar erstattes af flormelis."
+  ]
+}

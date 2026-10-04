@@ -1,0 +1,152 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/super-quick-beef-noodles",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:58:23.506Z",
+  "total_minutes": 15,
+  "active_minutes": 5,
+  "yield_count": null,
+  "source_lines": 9,
+  "title": "Hurtige nudler med oksekød",
+  "intro": "En hurtig nudelsuppe til én, hvor tynde skiver oksekød bliver færdige i den varme bouillon. Toppes med syltet agurk, chiliolie og forårsløg.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": "Syltet agurk",
+      "amount": 4,
+      "unit": "skive",
+      "name": "agurk",
+      "note": "skrællet",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "eddike",
+      "note": "risvineddike",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudelsuppe",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudelsuppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "miso",
+      "note": "til suppen",
+      "optional": false
+    },
+    {
+      "section": "Nudelsuppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "miso",
+      "note": "til oksekødet",
+      "optional": false
+    },
+    {
+      "section": "Nudelsuppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "nudler",
+      "note": "1 rede eller portion, fx æggenudler eller risnudler",
+      "optional": false
+    },
+    {
+      "section": "Nudelsuppe",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "spinat",
+      "note": "eller grønkål, pak choi eller kål",
+      "optional": false
+    },
+    {
+      "section": "Nudelsuppe",
+      "amount": 100,
+      "unit": "g",
+      "name": "bøf",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chiliolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "forårsløg",
+      "note": "i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Syltet agurk",
+      "text": "Kom agurk, eddike og sukker i en skål af glas, keramik eller plast. Lad det stå og trække lidt, mens du laver nudlerne."
+    },
+    {
+      "section": "Nudelsuppe",
+      "text": "Bring vandet i kog i en gryde. Rør den største del af misoen ud i det, og kom nudlerne i."
+    },
+    {
+      "section": "Nudelsuppe",
+      "text": "Bruger du grønkål, så læg den i den ene side af gryden, for den skal koge længere end de andre grønsager. Læg låg på, og kog nudlerne 1 minut kortere, end der står på pakken."
+    },
+    {
+      "section": "Nudelsuppe",
+      "text": "Vend de tynde oksekødsskiver i resten af misoen. Læg dem i gryden, og tag den af varmen. Lad den stå i 1 minut, så restvarmen gør kødet færdigt."
+    },
+    {
+      "section": "Nudelsuppe",
+      "text": "Skal der spinat, pak choi eller kål i, så læg det i den ene side nu. Sæt låg på, og lad det stå i yderligere 30 sekunder, til bladene er faldet sammen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld nudler og så meget bouillon, som du vil have, i en dyb skål. Dryp med sesamolie, chiliolie og sojasauce, og drys forårsløg over. Læg den syltede agurk ovenpå sammen med noget af lagen fra skålen."
+    }
+  ],
+  "changes": [
+    "Ramenpasta er erstattet med miso.",
+    "Risvineddike er erstattet med almindelig eddike.",
+    "Caster sugar er erstattet med almindeligt sukker."
+  ]
+}

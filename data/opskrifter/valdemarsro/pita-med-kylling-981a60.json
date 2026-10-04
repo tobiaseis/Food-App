@@ -1,0 +1,204 @@
+{
+  "url": "https://www.valdemarsro.dk/pita-med-kylling/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:40:51.958Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Pita med krydret kylling og parmesandressing",
+  "intro": "Pitabrød fyldt med marineret kylling, sprøde grøntsager og en cremet parmesandressing med pesto og citron. En hurtig hverdagsret med masser af smag.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Krydret kylling",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Krydret kylling",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saft og fintrevet skal, gerne økologisk",
+      "optional": false
+    },
+    {
+      "section": "Krydret kylling",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sød paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret kylling",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Krydret kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Krydret kylling",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret kylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Parmesandressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Parmesandressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Parmesandressing",
+      "amount": 50,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Parmesandressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "pesto",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Parmesandressing",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saft og fintrevet skal, gerne økologisk",
+      "optional": false
+    },
+    {
+      "section": "Parmesandressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Parmesandressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "pitabrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i tern",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Krydret kylling",
+      "text": "Bland citronsaft og citronskal med begge slags paprika, hvidløg, olivenolie, salt og peber i en skål."
+    },
+    {
+      "section": "Krydret kylling",
+      "text": "Vend kyllingen i marinaden, og lad den stå og trække, mens du laver dressingen og skærer grøntsagerne."
+    },
+    {
+      "section": "Parmesandressing",
+      "text": "Rør creme fraiche, mayonnaise og parmesan sammen. Smag til med pesto, citronsaft, citronskal, salt og peber."
+    },
+    {
+      "section": "Krydret kylling",
+      "text": "Varm en pande op til middel varme med lidt olie, og steg kyllingen, til den er mør og gennemstegt."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm pitabrødene i ovnen eller i brødristeren."
+    },
+    {
+      "section": "Servering",
+      "text": "Fyld pitabrødene med salat, rucola, tomat og agurk. Top med kyllingen og parmesandressingen."
+    }
+  ],
+  "changes": []
+}

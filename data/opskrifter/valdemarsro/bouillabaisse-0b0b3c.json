@@ -1,0 +1,339 @@
+{
+  "url": "https://www.valdemarsro.dk/bouillabaisse/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:42:30.228Z",
+  "total_minutes": 150,
+  "active_minutes": 120,
+  "yield_count": 4,
+  "source_lines": 30,
+  "title": "Bouillabaisse med rouille",
+  "intro": "Fransk fiskesuppe med skaldyr, fisk og kartofler, som serveres med flute og en krydret hvidløgscreme. Suppen trækker på fiskeben og skaller og får dyb smag af safran, fennikel og hvidvin.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Rouille",
+      "amount": 2,
+      "unit": "skive",
+      "name": "brød",
+      "note": "lyst, i små tern",
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "krydderi",
+      "note": "cayennepeber",
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "krydderi",
+      "note": "røget paprika",
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 1,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 3,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 200,
+      "unit": "g",
+      "name": "muslinger",
+      "note": "blåmuslinger, hjertemuslinger eller lignende",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 500,
+      "unit": "g",
+      "name": "fiskeben",
+      "note": "gerne med skaller fra de skaldyr, der bruges i suppen",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 1,
+      "unit": "l",
+      "name": "fiskefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 400,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 300,
+      "unit": "g",
+      "name": "torsk",
+      "note": "kuller eller anden hvid torskefisk",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 4,
+      "unit": "stk",
+      "name": "jomfruhummer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 100,
+      "unit": "g",
+      "name": "rejer",
+      "note": "med skal",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 8,
+      "unit": "stk",
+      "name": "kammuslinger",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bouillabaisse",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "flute",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rouille",
+      "text": "Blend brødternene fint i en minihakker sammen med cayennepeber, safran, røget paprika og hvidløg. Tilsæt citronskal og lidt af saften."
+    },
+    {
+      "section": "Rouille",
+      "text": "Hæld olivenolien i en tynd stråle under blendingen, til massen er cremet. Smag til med salt og mere citronsaft, hvis det trænger."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Pil alle skaldyrene. Gem skallerne til suppen og kødet til senere."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Skrub muslingerne og skyl dem. Bank let på dem og smid dem ud, der ikke lukker sig."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Damp muslingerne under låg i hvidvinen i ca. 5 minutter, til skallerne er åbnet. Smid de lukkede ud."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Hæld indholdet gennem en sigte over en stor skål, så du opsamler vinvæden til suppen. Lad muslingerne køle af i skallerne, til de skal serveres."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Svits løg, hvidløg, porre, fennikel og bladselleri i olivenolie i en stor gryde ved middelvarme, til grøntsagerne er bløde og klare."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Læg timian, safran, peberkorn, fiskeben og skaldyrsskaller i gryden. Rør rundt og varm det godt igennem i nogle minutter."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Hæld fiskefond, vinvæden og tomatpuré i. Lad det simre i ca. 20 minutter, og fjern skum undervejs."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Lad suppen køle lidt af, og si den derefter gennem et rent klæde, så den bliver klar."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Kassér fyldet, og hæld suppen i en ren gryde. Varm den op, og simr kartoflerne deri i 10 minutter, til de er næsten møre. Smag til med citronsaft, citronskal, salt og peber."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Steg kammuslingerne i smør på en varm pande i 1 minut på hver side, til de har fået en fin skorpe. Krydr med salt og peber."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Sænk varmen under suppen til lige under kogepunktet. Lad fisken og jomfruhummerne trække ved svag varme i ca. 3 minutter."
+    },
+    {
+      "section": "Bouillabaisse",
+      "text": "Læg til sidst muslinger og rejer i, så de lige når at blive varme."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel kartofler, fisk, skaldyr og kammuslinger i dybe tallerkener, og øs den varme suppe over. Top med persille, og server med flute og rouille."
+    }
+  ],
+  "changes": [
+    "Fiskeben og kuller er beholdt, men kuller er skrevet som torsk (nærmeste varenavn).",
+    "Koncentreret tomatpuré er skrevet som tomatpuré."
+  ]
+}

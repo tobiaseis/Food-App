@@ -1,0 +1,244 @@
+{
+  "url": "https://www.valdemarsro.dk/fiskefilet-med-tatarsauce/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:22:18.997Z",
+  "total_minutes": 35,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Rødspættefilet med tatarsauce og ovnbagte kartofler",
+  "intro": "Sprøde, gyldne rødspættefileter med hjemmerørt tatarsauce, ovnbagte kartoffelbåde og friske agurkestave. En klassisk hverdagsret med masser af friske krydderurter.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartoffelbåde",
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "med skræl, skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelbåde",
+      "amount": null,
+      "unit": null,
+      "name": "flagesalt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "cornichoner",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijonsennep",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "fintrevet skal og saft, gerne økologisk",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "dild",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tatarsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 8,
+      "unit": "stk",
+      "name": "rødspættefilet",
+      "note": "eller anden fladfisk",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "sammenpiskede",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 20,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 30,
+      "unit": "g",
+      "name": "fuldkornshvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "skåret i stave",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både, gerne økologisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelbåde",
+      "text": "Varm ovnen op til 200 °C varmluft. Beklæd en bradepande med bagepapir."
+    },
+    {
+      "section": "Kartoffelbåde",
+      "text": "Vend kartoffelbådene med olivenolie og flagesalt, og læg dem udover bradepanden."
+    },
+    {
+      "section": "Kartoffelbåde",
+      "text": "Bag kartoflerne i cirka 30 minutter, og vend dem et par gange undervejs."
+    },
+    {
+      "section": "Tatarsauce",
+      "text": "Bland alle ingredienserne til saucen i en skål, og smag den til med salt og peber."
+    },
+    {
+      "section": "Fisk",
+      "text": "Pisk æggene i en dyb tallerken. Bland begge slags mel med salt og peber på en anden tallerken."
+    },
+    {
+      "section": "Fisk",
+      "text": "Vend fiskefileterne først i æg og så i melblandingen, så de er dækket hele vejen rundt."
+    },
+    {
+      "section": "Fisk",
+      "text": "Varm smør og olivenolie på en pande ved middel varme. Steg fileterne i cirka 4-5 minutter på hver side, til de er gyldenbrune."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret fisken med kartoffelbåde, tatarsauce, agurkestave og citronbåde."
+    }
+  ],
+  "changes": []
+}

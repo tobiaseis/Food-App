@@ -1,0 +1,172 @@
+{
+  "url": "https://www.arla.dk/opskrifter/rodtunger-og-tyk-flode-med-citronmelisse/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:57:58.758Z",
+  "total_minutes": null,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Rødtunge med cremet citronmelissesauce og jordbærsalat",
+  "intro": "Dampede rødtunger serveres med en tyk, cremet fløde-sauce med citronmelisse og nye kartofler. Til retten hører en frisk salat med ovngrillede jordbær.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Jordbærkompot",
+      "amount": 500,
+      "unit": "g",
+      "name": "jordbær",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Jordbærkompot",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Jordbærkompot",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Rødtunger",
+      "amount": 4,
+      "unit": "stk",
+      "name": "rødtunger",
+      "note": "flåede, i alt ca. 900 g",
+      "optional": false
+    },
+    {
+      "section": "Rødtunger",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Tyk fløde med citronmelisse",
+      "amount": 5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tyk fløde med citronmelisse",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Tyk fløde med citronmelisse",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Tyk fløde med citronmelisse",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": "friskpresset",
+      "optional": false
+    },
+    {
+      "section": "Tyk fløde med citronmelisse",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "citronmelisse",
+      "note": "hakkede blade",
+      "optional": false
+    },
+    {
+      "section": "Salat med jordbærkompot",
+      "amount": 75,
+      "unit": "g",
+      "name": "hovedsalat",
+      "note": "blade, ca. 1 liter",
+      "optional": false
+    },
+    {
+      "section": "Salat med jordbærkompot",
+      "amount": 200,
+      "unit": "g",
+      "name": "agurk",
+      "note": "i meget tynde skiver, ca. ¾ agurk",
+      "optional": false
+    },
+    {
+      "section": "Salat med jordbærkompot",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "kg",
+      "name": "nye kartofler",
+      "note": "kogte og skrabede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Jordbærkompot",
+      "text": "Tænd ovnens grill. Læg jordbærrene i en bradepande på ca. 18 x 25 cm, og drys dem med sukker og peber."
+    },
+    {
+      "section": "Jordbærkompot",
+      "text": "Grill jordbærrene øverst i ovnen i ca. 5 min. Vend dem, og stil dem til afkøling, hvis du har tid. Skru derefter ovnen ned til 200 °C (traditionel ovn)."
+    },
+    {
+      "section": "Rødtunger",
+      "text": "Skyl rødtungerne grundigt ude og inde, og fjern blodrester. Dup dem tørre, og klip eller træk eventuelle ben langs kanterne af."
+    },
+    {
+      "section": "Rødtunger",
+      "text": "Læg bagepapir i en bradepande, og anbring fiskene på det. Drys med salt, og læg alufolie stramt over panden."
+    },
+    {
+      "section": "Rødtunger",
+      "text": "Damp rødtungerne midt i ovnen ved 200 °C i ca. 20 min."
+    },
+    {
+      "section": "Tyk fløde med citronmelisse",
+      "text": "Hæld fløde, salt og peber i en pande, og bring det i kog under omrøring."
+    },
+    {
+      "section": "Tyk fløde med citronmelisse",
+      "text": "Lad fløden simre ved jævn varme i ca. 10 min., mens du rører, til den er tyk og cremet. Si den eventuelt."
+    },
+    {
+      "section": "Tyk fløde med citronmelisse",
+      "text": "Rør citronsaft og citronmelisse i, og varm saucen igennem. Smag til med salt og peber."
+    },
+    {
+      "section": "Salat med jordbærkompot",
+      "text": "Læg salatblade og agurkeskiver i lag i et fad. Kom jordbærkompotten ovenpå, og drys med salt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server rødtungerne med saucen, salaten og de kogte kartofler."
+    }
+  ],
+  "changes": []
+}

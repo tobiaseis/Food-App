@@ -1,0 +1,210 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/mexican-chicken-casserole",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:34:50.095Z",
+  "total_minutes": 40,
+  "active_minutes": 15,
+  "yield_count": 4,
+  "source_lines": 18,
+  "title": "Mexicansk kyllingegratin med nachos",
+  "intro": "En sprød og ostet ovnret med kylling, bønner og majs i en cremet tomatsauce, toppet med knuste tortillachips. Server den med friske toppings som avocado, koriander og creme fraiche.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tacokrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "champignonsuppe",
+      "note": "kondenseret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "grillkylling",
+      "note": "revet kød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "afdryppede og skyllede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 350,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "chips",
+      "note": "tortillachips",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "avocado",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "rødløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tabasco",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "Tajín",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor pande ved middelvarme. Steg løg og hvidløg med saltet i 4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør tacokrydderi, suppe, hakkede tomater og fond i, og bring det i kog."
+    },
+    {
+      "section": null,
+      "text": "Kom kylling, majs og bønner i panden. Skru ned, og lad det simre i 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld blandingen i et ovnfast fad på ca. 33 x 23 cm, og drys halvdelen af osten over."
+    },
+    {
+      "section": null,
+      "text": "Knus chipsene let, og fordel dem ovenpå. Dæk med resten af osten."
+    },
+    {
+      "section": null,
+      "text": "Bag retten i 25 minutter, til den bobler og er gylden."
+    },
+    {
+      "section": null,
+      "text": "Anret i skåle, og server med creme fraiche, avocado, rødløg, koriander, tabasco og Tajín."
+    }
+  ],
+  "changes": [
+    "Kondenseret champignonsuppe på dåse erstattes af champignonsuppe.",
+    "Grillkylling (revet) bruges i stedet for rotisserie-kylling.",
+    "Cheddar bruges i stedet for monterey jack.",
+    "Creme fraiche erstatter crema.",
+    "Tabasco erstatter hot sauce."
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/stuffed-courgette-flowers-with-olive-dressing",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:02:50.050Z",
+  "total_minutes": 35,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 11,
+  "title": "Fyldte squashblomster med olivendressing",
+  "intro": "Sprøde, friturestegte squashblomster fyldt med smeltet mozzarella og serveret med en frisk dressing af oliven, tomat og basilikum.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "grønne oliven",
+      "note": "uden sten, hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "uden kerner, i tern",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 100,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "danskvand",
+      "note": "iskold",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og stegningen",
+      "amount": 300,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "2 kugler",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og stegningen",
+      "amount": 12,
+      "unit": "stk",
+      "name": "squashblomster",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og stegningen",
+      "amount": null,
+      "unit": null,
+      "name": "solsikkeolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og stegningen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet og stegningen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Bland oliven, tomater og eddike med salt og peber. Tilsæt lige nok olivenolie til, at det hænger sammen. Stil til side."
+    },
+    {
+      "section": "Dej",
+      "text": "Sigt hvedemel og majsstivelse sammen med salt ned i en stor skål, og lav en fordybning i midten. Hæld danskvandet i og rør det sammen. Rør kun, til det lige er blandet – dejen må gerne have et par klumper."
+    },
+    {
+      "section": "Fyld",
+      "text": "Hæld mozzarellaen af, og dup den tør. Riv den i små stykker, og krydr med salt og peber. Åbn blomsterne, læg lidt ost i hver, og drej kronbladene let sammen, så de lukker."
+    },
+    {
+      "section": "Steg",
+      "text": "Varm solsikkeolien op i en stor gryde, til en brødterning bruner på 20 sekunder. Vend blomsterne i dejen, og lad overskydende dej dryppe af. Steg 2-3 ad gangen, til de er svagt gyldne."
+    },
+    {
+      "section": "Steg",
+      "text": "Lad dem dryppe af på køkkenrulle, og drys med salt. Hold dem varme i en lav ovn, mens resten steges."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend basilikum i dressingen lige inden servering. Anret blomsterne på et fad, og dryp dressingen over."
+    }
+  ],
+  "changes": [
+    "Squashblomster beholdes, da der ikke findes en almindelig afløser; de kan evt. bestilles hos grønthandleren.",
+    "Hvidvinseddike er skrevet som eddike med hvidvinseddike i note.",
+    "Cornflour er skiftet til majsstivelse.",
+    "Kold danskvand erstatter kold sparkling water."
+  ]
+}

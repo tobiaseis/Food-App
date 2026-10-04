@@ -1,0 +1,194 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/almond-croissant-muffins",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:51:13.051Z",
+  "total_minutes": 35,
+  "active_minutes": 15,
+  "yield_count": 6,
+  "source_lines": 16,
+  "title": "Mandelcroissant-muffins",
+  "intro": "Veganske muffins med en fyldig mandelfyld i midten, der smager lidt som en mandelcroissant. De er bløde indeni og pyntet med sprøde mandelflager og flormelis.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Til dejen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hørfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 100,
+      "unit": "ml",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 80,
+      "unit": "g",
+      "name": "mandelsmør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "mandelaroma",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 100,
+      "unit": "g",
+      "name": "sojayoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 50,
+      "unit": "ml",
+      "name": "plantedrik",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 180,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": null,
+      "unit": null,
+      "name": "bagepulver",
+      "note": "mængde efter pakkens anvisning til 180 g mel",
+      "optional": false
+    },
+    {
+      "section": "Til dejen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelfyldet",
+      "amount": 50,
+      "unit": "g",
+      "name": "malede mandler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelfyldet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hørfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelfyldet",
+      "amount": 30,
+      "unit": "g",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelfyldet",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "mandelaroma",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelfyldet",
+      "amount": 30,
+      "unit": "ml",
+      "name": "plantedrik",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "mandelflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pynt",
+      "amount": null,
+      "unit": null,
+      "name": "flormelis",
+      "note": "til at drysse med",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C varmluft, og sæt 6 muffinforme i en muffinbakke."
+    },
+    {
+      "section": "Dej",
+      "text": "Rør hørfrøene ud i vandet i en lille skål, og lad dem stå i 5 minutter, til blandingen er tyk og geleagtig."
+    },
+    {
+      "section": "Dej",
+      "text": "Pisk hørfrøgelen sammen med lønnesirup, mandelsmør, mandelaroma, sojayoghurt og plantedrik i en stor skål."
+    },
+    {
+      "section": "Dej",
+      "text": "Vend mel, bagepulver og salt i med en spatel, indtil der ikke er mere tørt mel. Rør ikke mere end nødvendigt."
+    },
+    {
+      "section": "Mandelfyld",
+      "text": "Bland alle ingredienserne til fyldet i en anden skål, til det danner en tyk pasta."
+    },
+    {
+      "section": "Bagning",
+      "text": "Fordel halvdelen af dejen i formene. Læg en klat mandelfyld på hver, og dæk med resten af dejen."
+    },
+    {
+      "section": "Bagning",
+      "text": "Drys med mandelflager, og bag muffinsene i 20 minutter, til de er gyldne, og en spids pind kommer ren op af dem."
+    },
+    {
+      "section": "Bagning",
+      "text": "Lad dem køle lidt af, og sigt flormelis over, før de serveres."
+    }
+  ],
+  "changes": [
+    "Selvhævende mel er erstattet af hvedemel og bagepulver.",
+    "Mandelekstrakt er erstattet af mandelaroma.",
+    "Linwoods Sprouted Flax er erstattet af almindelige hørfrø.",
+    "Ground almonds er erstattet af malede mandler.",
+    "Flaked almonds er erstattet af mandelflager."
+  ]
+}

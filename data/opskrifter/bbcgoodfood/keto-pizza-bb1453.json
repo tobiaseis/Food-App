@@ -1,0 +1,236 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/keto-pizza",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:58:48.403Z",
+  "total_minutes": 95,
+  "active_minutes": 35,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Keto pizza med blomkålsbund",
+  "intro": "En kulhydratfattig pizza, hvor bunden er lavet af blomkålsris, æg og kokosmel. Den toppes med ovnbagte cherrytomater, oliven og rucola.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til toppingen",
+      "amount": 150,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": null,
+      "unit": null,
+      "name": "vegansk ost",
+      "note": "eller mandelcreme, se nedenfor",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "sorte oliven",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til toppingen",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Til mandelcremen",
+      "amount": 150,
+      "unit": "g",
+      "name": "mandler",
+      "note": "blancherede, udblødt i saltvand i mindst 6-8 timer",
+      "optional": false
+    },
+    {
+      "section": "Til mandelcremen",
+      "amount": 8,
+      "unit": "g",
+      "name": "næringsgær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelcremen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mandelcremen",
+      "amount": 60,
+      "unit": "ml",
+      "name": "vand",
+      "note": "evt. lidt mere, op til 40 ml",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 300,
+      "unit": "g",
+      "name": "blomkålsris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "basilikum",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 25,
+      "unit": "g",
+      "name": "kokosmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 12,
+      "unit": "g",
+      "name": "hørfrø",
+      "note": "malede",
+      "optional": false
+    },
+    {
+      "section": "Til bunden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "næringsgær",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mandelcreme",
+      "text": "Hvis du vil lave din egen creme: Kør mandler, næringsgær, salt og vand glatte i en kraftig blender. Tilsæt lidt ekstra vand, hvis konsistensen skal være løsere."
+    },
+    {
+      "section": "Tomater",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Vend tomaterne med olie og salt på en bageplade, og fordel dem i ét lag."
+    },
+    {
+      "section": "Tomater",
+      "text": "Bag dem i 20-25 minutter, til de er bløde."
+    },
+    {
+      "section": "Bund",
+      "text": "Mens tomaterne bager, varmer du blomkålsrisen i mikrobølgeovn i 5 minutter, eller du varmer den forsigtigt på en pande under jævnlig omrøring."
+    },
+    {
+      "section": "Bund",
+      "text": "Pak den varme (men ikke brandvarme) blomkål i et nøddemælkspose, osteklæde eller viskestykke, og pres vandet ud med hænderne, så hårdt du kan. Lad den hvile et par minutter, og pres derefter endnu en gang."
+    },
+    {
+      "section": "Bund",
+      "text": "Varm en pande op ved middel varme. Rør olie, krydderurter og blomkål sammen på panden i 5 minutter, og tag den af varmen."
+    },
+    {
+      "section": "Bund",
+      "text": "Pisk æggene med salt i en skål. Bland blomkålsris, kokosmel, hørfrø og næringsgær i, til det hænger sammen."
+    },
+    {
+      "section": "Bund",
+      "text": "Form dejen til et rektangel på ca. 18 x 20 cm på en bageplade med bagepapir. Gør den ikke for tynd, for så revner den."
+    },
+    {
+      "section": "Bund",
+      "text": "Bag bunden i 15-20 minutter, til den er gylden og føles tør."
+    },
+    {
+      "section": "Samling",
+      "text": "Tag bunden ud, og læg ost eller mandelcreme, de bagte tomater og oliven på."
+    },
+    {
+      "section": "Samling",
+      "text": "Bag pizzaen videre i 5-10 minutter, til kanterne er let gyldne, og toppingen er rygende varm."
+    },
+    {
+      "section": "Samling",
+      "text": "Top med rucola og friskkværnet peber, og dryp med olivenolie."
+    }
+  ],
+  "changes": []
+}

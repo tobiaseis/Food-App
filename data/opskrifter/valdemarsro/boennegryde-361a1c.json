@@ -1,0 +1,252 @@
+{
+  "url": "https://www.valdemarsro.dk/boennegryde/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:31:05.631Z",
+  "total_minutes": 60,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 25,
+  "title": "Bønnegryde med toppings",
+  "intro": "En krydret grøntsags- og bønnegryde med karry, spidskommen og et strejf af mørk chokolade. Serveres med nachos, avocado, creme fraiche og andre toppings, så alle kan sætte deres egen tallerken sammen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Gryde",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "mediumstærk",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kardemomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "koriander",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 3,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "på dåse",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 3,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "drænede og skyllede",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, i tern",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 250,
+      "unit": "g",
+      "name": "majs",
+      "note": "frisk, frost eller fra dåse",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 25,
+      "unit": "g",
+      "name": "chokolade",
+      "note": "mørk",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gryde",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, eller bredbladet persille",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": 125,
+      "unit": "g",
+      "name": "nachos",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": null,
+      "unit": null,
+      "name": "rødløg",
+      "note": "i ringe, gerne syltede",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Toppings",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Gryde",
+      "text": "Rist alle krydderierne i en tør gryde under omrøring, til det dufter kraftigt."
+    },
+    {
+      "section": "Gryde",
+      "text": "Sænk varmen. Tilsæt olie, løg, hvidløg og ingefær, og svits, til løgene er blødt."
+    },
+    {
+      "section": "Gryde",
+      "text": "Rør squash, bladselleri, hakkede tomater og fond i. Læg låg på, og lad det simre i mindst 30 minutter – gerne en hel time."
+    },
+    {
+      "section": "Gryde",
+      "text": "Vend kidneybønner, peberfrugt og majs i, og lad gryden blive gennemvarm i 5 minutter."
+    },
+    {
+      "section": "Gryde",
+      "text": "Rør chokoladen i, og smag til med salt og peber."
+    },
+    {
+      "section": "Toppings",
+      "text": "Anret creme fraiche, koriander, nachos, rødløg, ristet majs og avocado i små skåle, og sæt dem på bordet ved siden af gryden, så alle kan tage selv."
+    }
+  ],
+  "changes": []
+}

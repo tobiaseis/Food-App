@@ -1,0 +1,107 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/brown-bread-ice-cream",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:47:40.118Z",
+  "total_minutes": 20,
+  "active_minutes": 10,
+  "yield_count": 6,
+  "source_lines": 7,
+  "title": "Brune brødis",
+  "intro": "Cremet flødeis med sprødt ristet brødkrummel og hasselnødder, som ikke skal røres under frysning. Server den gerne mellem to småkager.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "brød",
+      "note": "fuldkornsbrød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 65,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "æggehvider",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "småkager",
+      "note": "til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Stil ovnens grill på middel. Blend brødet til rasp i en foodprocessor eller blender."
+    },
+    {
+      "section": null,
+      "text": "Kom brødkrummerne på en bageplade sammen med hasselnødderne og den brune farin, og bland det godt."
+    },
+    {
+      "section": null,
+      "text": "Rist blandingen under grillen i cirka 10 minutter, til den er let gylden. Rør jævnligt, og pas på, at den ikke brænder på. Lad den køle helt af."
+    },
+    {
+      "section": null,
+      "text": "Pisk æggehviderne stive i en skål. Tilsæt sukkeret lidt ad gangen, og pisk, til marengsen er blank og glat."
+    },
+    {
+      "section": null,
+      "text": "Pisk fløden i en anden skål, til den danner bløde toppe. Vend den forsigtigt ned i marengsen sammen med den afkølede nøddeblanding."
+    },
+    {
+      "section": null,
+      "text": "Hæld massen i en stor, tætsluttende beholder, og frys den i cirka 4 timer. Isen skal ikke røres undervejs, da æggehvider og fløde holder den luftig."
+    },
+    {
+      "section": null,
+      "text": "Tag isen ud af fryseren 15-20 minutter før servering, så den bliver lidt blødere. Server den evt. mellem to småkager."
+    }
+  ],
+  "changes": [
+    "Demerarasukker er erstattet af brun farin.",
+    "Double cream er erstattet af piskefløde."
+  ]
+}

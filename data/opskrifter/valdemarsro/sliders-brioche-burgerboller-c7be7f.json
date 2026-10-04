@@ -1,0 +1,256 @@
+{
+  "url": "https://www.valdemarsro.dk/sliders-brioche-burgerboller/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:08:37.858Z",
+  "total_minutes": 240,
+  "active_minutes": 60,
+  "yield_count": 20,
+  "source_lines": 25,
+  "title": "Sliders med hjemmebagte boller",
+  "intro": "Små, bløde kardemommeboller med sesam fyldt med saftige oksebøffer, sprød bacon og friske grøntsager. Gode til fest, og bollerne kan fryses.",
+  "servings": 20,
+  "ingredients": [
+    {
+      "section": "Til bollerne",
+      "amount": 3,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 25,
+      "unit": "g",
+      "name": "gær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "kardemomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 550,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "i tern, stuetempereret",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Til bollerne",
+      "amount": null,
+      "unit": null,
+      "name": "sesamfrø",
+      "note": "et drys",
+      "optional": false
+    },
+    {
+      "section": "Til bøfferne",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøfferne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøfferne",
+      "amount": null,
+      "unit": null,
+      "name": "tabasco",
+      "note": "et dryp",
+      "optional": false
+    },
+    {
+      "section": "Til bøfferne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": "Til bøfferne",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": "Til bøfferne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "løgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bøfferne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Til bøfferne",
+      "amount": null,
+      "unit": null,
+      "name": "worcestershire sauce",
+      "note": "2 dryp",
+      "optional": false
+    },
+    {
+      "section": "Til bøfferne",
+      "amount": 1,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "sprødstegt og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "skive",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 5,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "blommetomater, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i ringe",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 10,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "sprødstegt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "til cheeseburgere",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Boller",
+      "text": "Varm mælken, til den er lunken, og hæld den i en skål. Rør gæren ud i den."
+    },
+    {
+      "section": "Boller",
+      "text": "Tilsæt honning, salt, kardemomme, æg, smør og to tredjedele af melet. Rør, gerne i røremaskine, til dejen er glat og ensartet."
+    },
+    {
+      "section": "Boller",
+      "text": "Ælt resten af melet i, til dejen er smidig og elastisk. Dæk skålen med et rent viskestykke, og lad dejen hæve i 2 timer."
+    },
+    {
+      "section": "Boller",
+      "text": "Del dejen i 20 stykker, rul dem til runde boller, og læg dem på en bageplade med bagepapir. Lad dem hæve i 1 time og 30 minutter."
+    },
+    {
+      "section": "Boller",
+      "text": "Varm ovnen op til 175 °C varmluft. Pisk ægget til pensling, pensl bollerne, og drys dem med sesamfrø."
+    },
+    {
+      "section": "Boller",
+      "text": "Bag bollerne i 12-14 minutter. Lad dem køle af på en rist. De kan fryses."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Bland alle ingredienserne til bøfferne i en skål. Form 20 små bøffer."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Brun bøfferne i olie og smør på en pande i 3-4 minutter på hver side. Læg et lille stykke cheddar på hver til sidst, hvis de skal være cheeseburgere."
+    },
+    {
+      "section": "Samling",
+      "text": "Del bollerne på midten. Læg salat, agurk, tomat, løgring, mayonnaise, ketchup, bacon, evt. smeltet cheddar og en bøf i hver."
+    }
+  ],
+  "changes": []
+}

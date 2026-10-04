@@ -1,0 +1,484 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/beef-cheek-dumplings-oxtail-broth-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:22:11.516Z",
+  "total_minutes": 230,
+  "active_minutes": null,
+  "yield_count": 12,
+  "source_lines": 45,
+  "title": "Dumplings med oksekæber, oksehalebouillon og røget skalotteløgsmayonnaise",
+  "intro": "Møre, langtidsstegte oksekæber i hjemmelavede dumplings, serveret i en duftende urtebouillon med krydrede olier og røget mayonnaise. Retten kræver tid, og garummen skal sættes mindst to uger før.",
+  "servings": 12,
+  "ingredients": [
+    {
+      "section": "Svampegarum",
+      "amount": 1.3,
+      "unit": "kg",
+      "name": "svampe",
+      "note": "blandede, gerne skovsvampe",
+      "optional": false
+    },
+    {
+      "section": "Svampegarum",
+      "amount": 800,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svampegarum",
+      "amount": 240,
+      "unit": "g",
+      "name": "salt",
+      "note": "uden jod",
+      "optional": false
+    },
+    {
+      "section": "Svampegarum",
+      "amount": 225,
+      "unit": "g",
+      "name": "tørret riskoji",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekæber",
+      "amount": 50,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekæber",
+      "amount": 1,
+      "unit": "kg",
+      "name": "oksekæber",
+      "note": "parerede",
+      "optional": false
+    },
+    {
+      "section": "Oksekæber",
+      "amount": 100,
+      "unit": "g",
+      "name": "gulerødder",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Oksekæber",
+      "amount": 100,
+      "unit": "g",
+      "name": "løg",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Oksekæber",
+      "amount": 5,
+      "unit": "g",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekæber",
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekæber",
+      "amount": 150,
+      "unit": "ml",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekæber",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": "saltet",
+      "optional": false
+    },
+    {
+      "section": "Oksekæber",
+      "amount": 10,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Infunderet bouillon",
+      "amount": 1,
+      "unit": "l",
+      "name": "oksefond",
+      "note": "gerne af oksehale",
+      "optional": false
+    },
+    {
+      "section": "Infunderet bouillon",
+      "amount": 5,
+      "unit": "ml",
+      "name": "tabasco",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Infunderet bouillon",
+      "amount": 75,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "lys",
+      "optional": false
+    },
+    {
+      "section": "Infunderet bouillon",
+      "amount": 50,
+      "unit": "g",
+      "name": "citronmelisse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Infunderet bouillon",
+      "amount": 1,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Infunderet bouillon",
+      "amount": 5,
+      "unit": "g",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "amount": 150,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": "til konfitering",
+      "optional": false
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "amount": 150,
+      "unit": "g",
+      "name": "skalotteløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "amount": 10,
+      "unit": "g",
+      "name": "salt",
+      "note": "til konfitering",
+      "optional": false
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "amount": 250,
+      "unit": "ml",
+      "name": "mayonnaise",
+      "note": "vegansk",
+      "optional": false
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "amount": 4,
+      "unit": "g",
+      "name": "røgpulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "amount": 25,
+      "unit": "ml",
+      "name": "lage fra syltede jalapeños",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "amount": 5,
+      "unit": "ml",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "amount": 5,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "amount": 20,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dumplingdej",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store",
+      "optional": false
+    },
+    {
+      "section": "Dumplingdej",
+      "amount": 50,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dumplingdej",
+      "amount": 300,
+      "unit": "ml",
+      "name": "kefir",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dumplingdej",
+      "amount": 900,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dumplingdej",
+      "amount": 2,
+      "unit": "g",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dumplingdej",
+      "amount": 15,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgskonfit",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgskonfit",
+      "amount": 250,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 25,
+      "unit": "g",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 5,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 5,
+      "unit": "g",
+      "name": "sort peber",
+      "note": "hele korn, finmalet",
+      "optional": false
+    },
+    {
+      "section": "Persilleolie",
+      "amount": 200,
+      "unit": "g",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persilleolie",
+      "amount": 150,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronmelisseolie",
+      "amount": 200,
+      "unit": "g",
+      "name": "citronmelisse",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Citronmelisseolie",
+      "amount": 150,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "karse",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citronmelisse",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Frituring",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til stegning af dumplings",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svampegarum",
+      "text": "Start garummen mindst 2 uger før servering. Sterilisér en beholder på 3 liter."
+    },
+    {
+      "section": "Svampegarum",
+      "text": "Røg svampene let over kirsebærtræ. Uden røger brunes de i en varm, tør pande. Kom dem i en gryde med vandet, lad det småkoge få minutter, og lad det køle af."
+    },
+    {
+      "section": "Svampegarum",
+      "text": "Bland svampe og vand med salt og riskoji i den sterile beholder. Lad massen fermentere ved konstant 60 °C i 2 uger, til den får en dyb, krydret smag."
+    },
+    {
+      "section": "Svampegarum",
+      "text": "Si garummen gennem en fin si. Resten af svampene kan tørres og males til krydderi."
+    },
+    {
+      "section": "Oksekæber",
+      "text": "Varm olien op i en stor, bred pande ved middelhøj varme. Brun kæberne let, og del dem i portioner, hvis panden er for lille."
+    },
+    {
+      "section": "Oksekæber",
+      "text": "Kom kæberne i en vakuumpose sammen med de øvrige ingredienser til kæberne, og vakuumpak. Tilbered i vandbad ved 84 °C i 12 timer, så kollagenet bliver helt mørt."
+    },
+    {
+      "section": "Infunderet bouillon",
+      "text": "Bring fonden lige akkurat i kog, og tag gryden af varmen. Tilsæt de øvrige ingredienser til bouillonen og 40 ml af garummen, hvis du har lavet den. Læg et tæt låg på, og lad bouillonen trække i 4 timer."
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "text": "Kom olie, skalotteløg og en knivspids salt i en sauterpande. Konfitér ved lav varme i 3 timer, til løgene er bløde, og lad dem køle af."
+    },
+    {
+      "section": "Hvidløgskonfit",
+      "text": "Kom olie, hvidløg og en knivspids salt i en sauterpande, og konfitér ved lav varme i 3 timer, til hvidløgene er bløde. Lad det køle af, og opbevar hvidløgene i olien i køleskabet. Der bliver mere end nok."
+    },
+    {
+      "section": "Dumplingdej",
+      "text": "Kom alle ingredienserne til dejen i en røremaskine, og ælt dem til en glat, elastisk dej. Stil den i køleskabet i mindst 2 timer, så glutenen slapper af, og dejen bliver blødere."
+    },
+    {
+      "section": "Persilleolie",
+      "text": "Blend persille og olie i en Thermomix ved 70 °C i 1 minut. Sluk for varmen, og blend videre i 2 minutter. Lad det dryppe gennem et osteklæde."
+    },
+    {
+      "section": "Persilleolie",
+      "text": "Uden Thermomix: Blancher persillen, afkøl den i koldt vand, og pres den tør. Kør den i en foodprocessor på høj hastighed i 2 minutter, mens olien løber i en tynd stråle. Si gennem osteklæde ned i en flaske. Sæt flasken på hovedet i køleskabet med låg på åbningen, så vandet skilles fra olien. Tryk vandet ud og kassér det. Opbevar olien i køleskabet."
+    },
+    {
+      "section": "Citronmelisseolie",
+      "text": "Kom citronmelisseblade i en foodprocessor, og kør på høj hastighed i 2 minutter, mens olien løber i en tynd stråle. Si gennem osteklæde ned i en flaske, og gem den i køleskabet."
+    },
+    {
+      "section": "Dumplingdej",
+      "text": "Rul den hvilede dej ud i en pastamaskine til middel tykkelse (ca. trin 5). Stik jævne cirkler på ca. 12 cm ud. Pak dem godt ind, og opbevar dem koldt."
+    },
+    {
+      "section": "Røget skalotteløgsmayonnaise",
+      "text": "Kom 100 g af de afkølede konfiterede skalotteløg i en blender eller foodprocessor sammen med resten af ingredienserne til mayonnaisen. Blend til en helt glat masse, og si den for en fin konsistens. Smagen skal være let røget, sød og rund."
+    },
+    {
+      "section": "Oksekæber",
+      "text": "Når kæberne er færdige, skilles de fra væsken. Pil kødet i strimler, mens det er varmt."
+    },
+    {
+      "section": "Oksekæber",
+      "text": "Si imens væsken fra posen og kassér grøntsagerne. Kog den ind til en blank, smagfuld glace."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bland det pillede kød med 25 g hvidløgskonfit, 50 g af skalotteløgsmayonnaisen, persille, salt og peber. Ælt grundigt med hænderne, til fyldet hænger sammen og er krydret. Stil det køligt et stykke tid, så det stivner, før du former dumplingerne."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg ca. 20 g fyld (omtrent 1 spsk) på hver dejcirkel, og luk dem stramt med folder. Brug lidt vand, hvis dejen ikke klistrer."
+    },
+    {
+      "section": "Infunderet bouillon",
+      "text": "Si bouillonen forsigtigt efter 4 timers trækketid, og hold den varm. Undgå at varme den for hårdt op, så duften ikke går tabt. Smag til med garum, hvis du har den."
+    },
+    {
+      "section": "Frituring",
+      "text": "Varm ovnen op til 180 °C."
+    },
+    {
+      "section": "Frituring",
+      "text": "Kog dumplingerne ca. 2 minutter i kogende saltet vand, til de er møre. Varm samtidig en pande op med rigeligt olie. Steg dumplingerne på panden, til de er sprøde på alle sider. Sæt dem i ovnen i 2 minutter, til de er gyldne og gennemvarme."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld varm bouillon i dybe tallerkener, og anret dumplingerne i midten. Dryp lidt persilleolie og citronmelisseolie over, og pynt med karse og frisk citronmelisse."
+    }
+  ],
+  "changes": [
+    "Citronverbena er erstattet af citronmelisse.",
+    "Citrontimian er erstattet af timian.",
+    "Shisokarse er erstattet af karse."
+  ]
+}

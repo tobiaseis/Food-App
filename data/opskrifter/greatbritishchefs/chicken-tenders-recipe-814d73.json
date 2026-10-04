@@ -1,0 +1,308 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/chicken-tenders-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:02:29.145Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Citron- og paprikakyllingestrimler med cajunremoulade",
+  "intro": "Sprøde, friturestegte kyllingestrimler marineret i kærnemælk, citron og røget paprika. Serveres med en hjemmerørt, krydret remoulade og ristet citron.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kylling",
+      "amount": 600,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "skåret i tykke strimler",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 3,
+      "unit": "dl",
+      "name": "kærnemælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "cornichoner",
+      "note": "finthakkede, til pynt",
+      "optional": true
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "finthakket, til pynt",
+      "optional": true
+    },
+    {
+      "section": "Kylling",
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret, snitfladen svitset, til servering",
+      "optional": true
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblomme",
+      "note": "rumtempereret",
+      "optional": false
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "dijonsennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "grov sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tabasco",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": 2,
+      "unit": "dl",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Cajunremoulade",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "blade, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til hvedemelet",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "til hvedemelet",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 80,
+      "unit": "g",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 2.5,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "groft kværnet sort peber",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling",
+      "text": "Kom kyllingestrimlerne i en skål, og drys dem let med salt. Vend dem med kærnemælk, røget paprika, Cajun-krydderi, citronsaft og peber."
+    },
+    {
+      "section": "Kylling",
+      "text": "Dæk skålen til, og lad kyllingen trække i mindst 20 minutter. Den kan også stå op til 24 timer i køleskabet."
+    },
+    {
+      "section": "Cajunremoulade",
+      "text": "Pisk æggeblomme, begge slags sennep, hvidløg, Cajun-krydderi, røget paprika, tabasco og citronsaft sammen i en skål."
+    },
+    {
+      "section": "Cajunremoulade",
+      "text": "Hæld olien i en tynd stråle, mens du pisker konstant, til saucen bliver tyk og blank."
+    },
+    {
+      "section": "Cajunremoulade",
+      "text": "Smag til med salt og peber, og tilsæt mere tabasco eller citron, hvis den skal være skarpere eller sprødere i smagen. Sæt remouladen tildækket i køleskabet til servering."
+    },
+    {
+      "section": "Panering",
+      "text": "Bland hvedemel, majsstivelse, peber, røget paprika og Cajun-krydderi i en skål. Pisk æg og mælk sammen i en anden."
+    },
+    {
+      "section": "Panering",
+      "text": "Tag kyllingestykkerne op af kærnemælken, og lad overskuddet dryppe af. Vend dem i melblandingen, og tryk, så den sidder fast hele vejen rundt."
+    },
+    {
+      "section": "Panering",
+      "text": "Træk stykkerne gennem æggeblandingen, og vend dem derefter i melblandingen igen, så panéringen bliver tyk og ujævn."
+    },
+    {
+      "section": "Panering",
+      "text": "Læg de panerede strimler på en bakke, og lad dem hvile i 10 minutter. Varm imens olie op til 170 °C i en dyb gryde, der er fyldt til to tredjedele."
+    },
+    {
+      "section": "Stegning og servering",
+      "text": "Steg strimlerne portionsvis i 3-4 minutter, og vend dem undervejs, til de er dybt gyldne og sprøde hele vejen rundt."
+    },
+    {
+      "section": "Stegning og servering",
+      "text": "Løft dem op med hulske, lad dem dryppe af på køkkenrulle, og drys let med salt."
+    },
+    {
+      "section": "Stegning og servering",
+      "text": "Anret strimlerne med en skål remoulade. Pynt remouladen med persille, og strø cornichoner og purløg over kyllingen. Server med svitset citron til at presse over."
+    }
+  ],
+  "changes": []
+}

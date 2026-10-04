@@ -1,0 +1,94 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/brown-sugar-cinnamon-glazed-popcorn",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:44:11.757Z",
+  "total_minutes": 25,
+  "active_minutes": 10,
+  "yield_count": 8,
+  "source_lines": 5,
+  "title": "Karamelpopcorn med brun farin og kanel",
+  "intro": "Hjemmelavet popcorn vendt i en blød karamel af brun farin, fløde og kanel. Det er hurtigt at lave og perfekt til filmaftenen.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Karamel",
+      "amount": 50,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamel",
+      "amount": null,
+      "unit": null,
+      "name": "kanel",
+      "note": "stødt, et drys",
+      "optional": false
+    },
+    {
+      "section": "Popcorn",
+      "amount": 100,
+      "unit": "g",
+      "name": "popcornmajs",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Karamel",
+      "text": "Kom farin og vand i en lille gryde, og varm det op ved lav varme, til sukkeret er opløst."
+    },
+    {
+      "section": "Karamel",
+      "text": "Lad det koge op, og rør ikke i det. Kog, til karamellen har en mørk gylden farve."
+    },
+    {
+      "section": "Karamel",
+      "text": "Pisk smørret i karamellen, og tag gryden af varmen."
+    },
+    {
+      "section": "Karamel",
+      "text": "Hæld fløden i, mens du holder afstand, for karamellen kan sprøjte. Rør kraftigt, og tilsæt derefter kanelen."
+    },
+    {
+      "section": "Popcorn",
+      "text": "Poppe majsen i en gryde med tætsluttende låg i 4 minutter."
+    },
+    {
+      "section": "Popcorn",
+      "text": "Tag gryden af varmen, og hæld karamellen over popcornene. Vend dem rundt, til alle er dækket jævnt."
+    }
+  ],
+  "changes": [
+    "Double cream er erstattet med piskefløde."
+  ]
+}

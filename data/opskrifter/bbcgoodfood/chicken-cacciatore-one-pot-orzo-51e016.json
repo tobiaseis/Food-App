@@ -1,0 +1,191 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-cacciatore-one-pot-orzo",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:23:59.303Z",
+  "total_minutes": 60,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Kylling cacciatore med orzo i ét fad",
+  "intro": "Sprødstegte kyllingelår bages sammen med orzo i en tomatsauce med vin, urter og oliven. Det hele laves i ét fad i ovnen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": "med skind og ben",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "timian",
+      "note": "kviste",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "rosmarin",
+      "note": "kviste",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "stilke og blade adskilt, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "à 400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "bouillonterning",
+      "note": "høns",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "grønne oliven",
+      "note": "uden sten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "orzo",
+      "note": "skyllet, så den ikke klistrer under bagningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C varmluft. Gnid kyllingen ind i halvdelen af olien, og krydr den godt med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Læg lårene med skindsiden opad i et ovnfast fad eller en bradepande. Bag dem i 20-25 minutter, til skindet er gyldent og sprødt, men kødet endnu ikke er gennemstegt. Tag kyllingen op på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Rør resten af olien ud i fedtet i fadet. Vend løg og hvidløg i fadet, og bag dem i 5-8 minutter, til løgene er møre."
+    },
+    {
+      "section": null,
+      "text": "Hæld rødvinen i fadet, og rør rundt. Lad den dampe lidt af i fadets varme."
+    },
+    {
+      "section": null,
+      "text": "Kom laurbærblade, timian, rosmarin, persillestilkene og tomaterne i fadet. Opløs bouillonterningen i 300 ml kogende vand, og hæld det over."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt balsamico, kapers, oliven og orzo. Rør godt rundt, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingen tilbage i fadet med skindsiden opad. Bag den i 20 minutter, til saucen er tyknet, orzoen er mør, og kødet er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Rør rundt, og lad retten hvile i 10 minutter, så orzoen suger den sidste væske til sig. Drys med persilleblade, og server."
+    }
+  ],
+  "changes": [
+    "Cherrytomater på dåse er erstattet med hakkede tomater.",
+    "Hønsebouillonterning er brugt i stedet for kyllingefond-terning."
+  ]
+}

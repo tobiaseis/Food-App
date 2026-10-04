@@ -1,0 +1,219 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/scotch-pies",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:38:13.344Z",
+  "total_minutes": 100,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Skotske lammepaier",
+  "intro": "Små lukkede paier med sprød, lun dej og saftig lammefyld krydret med muskatblomme. Server dem med kartoffelmos og grønt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "muskatblomme",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "brun saucejævner",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 150,
+      "unit": "ml",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 800,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 350,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus ekstra til meldrys",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 100,
+      "unit": "g",
+      "name": "svinefedt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 125,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til formene",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "kartoffelmos",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "grøntsager",
+      "note": "grønne, dampede",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Varm olien i en pande på middel varme. Steg løget i 10 minutter under jævnlig omrøring, til det er blødt."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rør muskatblomme og krydderurter i, og steg 1 minut, til det dufter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rør saucejævneren ud i det kogende vand, hæld det i panden, og rør rundt. Tag panden af varmen, kom blandingen i en stor skål, og lad den køle helt af."
+    },
+    {
+      "section": "Dej",
+      "text": "Pensl fire springforme på 12 cm og mindst 4 cm i højden med olie. Du kan bruge ramekins af samme størrelse i stedet."
+    },
+    {
+      "section": "Dej",
+      "text": "Blend mel og salt sammen i en foodprocessor. Smelt svinefedtet med vandet i en lille gryde på lav varme, skru op på høj varme, og lad det koge op."
+    },
+    {
+      "section": "Dej",
+      "text": "Hæld den varme væske i med processoren kørende, og blend, til dejen lige netop samler sig. Vend den ud på bordet, og ælt den glat uden at meldryse."
+    },
+    {
+      "section": "Dej",
+      "text": "Del dejen i en tredjedel og to tredjedele. Pak den lille klump ind, og lad den hvile ved stuetemperatur."
+    },
+    {
+      "section": "Dej",
+      "text": "Del den store klump i fire. Rul hver del ud til en rund plade på et let meldrysset bord, så den lige kan dække bund og sider i formene. Løft pladerne forsigtigt ned i formene, tryk dem til, og lad overskydende dej hænge ud over kanten. Stil formene på køl i 10 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft), og sæt en bageplade ind for at blive varm."
+    },
+    {
+      "section": "Fyld",
+      "text": "Ælt lammekødet sammen med løgblandingen og rigeligt salt og peber med hænderne. Fordel fyldet i de kølede dejskåle, og jævn det med bagsiden af en ske."
+    },
+    {
+      "section": "Dej",
+      "text": "Del den resterende dej i fire, og rul hver del ud til en rund låg, der dækker en tærte. Læg låg på fyldet, skær overskydende dej af, og klem kanterne sammen med fingrene, så de lukker tæt."
+    },
+    {
+      "section": "Dej",
+      "text": "Pensl lågene med lidt af ægget, og skær et par små lufthuller i hvert låg med en skarp kniv."
+    },
+    {
+      "section": "Dej",
+      "text": "Stil paierne på den varme bageplade, og bag dem i 20 minutter. Tag forsigtigt formenes kanter af, hvis du bruger springforme."
+    },
+    {
+      "section": "Dej",
+      "text": "Pensl siderne med lidt mere æg. Sæt paierne tilbage i ovnen på bunden og pladen, og bag dem 20 minutter mere, til dejen er dyb gylden, og fyldet er gennemstegt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Lad paierne hvile på pladen i mindst 5 minutter. Server dem lune eller lunkne med kartoffelmos og dampet grønt."
+    }
+  ],
+  "changes": [
+    "Gravy granules er erstattet af brun saucejævner i pulverform.",
+    "Lard er erstattet af svinefedt."
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/panko-pesto-fish",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:17:35.788Z",
+  "total_minutes": 70,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Fisk med pesto og pankokrummer samt ovnkartofler",
+  "intro": "Mør hvid fisk med sprød top af pesto, panko og parmesan, serveret med ovnbagte kartoffelbåde og en frisk dip med kapers og dild. En nem hverdagsret, hvor alt bliver lavet i ovnen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "melede, skåret i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "plus lidt ekstra til bagepladen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "torskefilet",
+      "note": "uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "pesto",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "pinjekerner",
+      "note": "hakkede",
+      "optional": true
+    },
+    {
+      "section": "Til dippen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": 0.25,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Til dippen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "ærter",
+      "note": "kogte, til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C varmluft. Vend kartoffelbådene med halvdelen af olien på en bageplade."
+    },
+    {
+      "section": null,
+      "text": "Bag kartoflerne i 50-55 minutter, til de er gyldne. Vend dem undervejs. Har du en airfryer, kan de i stedet ristes ved 200 °C i 40-45 minutter, hvor du ryster kurven af og til."
+    },
+    {
+      "section": null,
+      "text": "Når kartoflerne har bagt i 35 minutter, smøres en anden plade let med olie. Læg fiskestykkerne på den."
+    },
+    {
+      "section": null,
+      "text": "Smør pestoen ud over fisken, og drys panko over. Dryp med resten af olien. Fordel parmesan og pinjekerner over fisken, eller drys dem kun på nogle af stykkerne, hvis ikke alle ønsker nødder. Brug en separat plade ved nøddeallergi."
+    },
+    {
+      "section": null,
+      "text": "Bag fisken i 10-12 minutter, til toppen er gylden og sprød, og fisken falder i flager. Med airfryer steges fisken, når kartoflerne er færdige."
+    },
+    {
+      "section": "Til dippen",
+      "text": "Rør kapers, dild, mayonnaise, citronskal og citronsaft sammen i en lille skål. Smag til med peber."
+    },
+    {
+      "section": null,
+      "text": "Server fisken med kartoffelbådene, ærterne og dippen ved siden af."
+    }
+  ],
+  "changes": [
+    "Hvide fiskefileter er erstattet med torskefilet.",
+    "Cornichoner er udeladt som alternativ; kun kapers bruges.",
+    "Persille er udeladt som alternativ; kun dild bruges."
+  ]
+}

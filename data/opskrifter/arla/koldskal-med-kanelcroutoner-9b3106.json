@@ -1,0 +1,92 @@
+{
+  "url": "https://www.arla.dk/opskrifter/koldskal-med-kanelcroutoner/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:07:25.127Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Koldskål med kanelcroutoner",
+  "intro": "Kold, frisk koldskål toppet med sprøde rugbrødscroutoner, der er vendt i kanel og brun farin. Croutonerne giver en sød og knasende kontrast til den cremede skål.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kanelcroutoner",
+      "amount": 4,
+      "unit": "skive",
+      "name": "rugbrød",
+      "note": "ca. 200 g",
+      "optional": false
+    },
+    {
+      "section": "Kanelcroutoner",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kanelcroutoner",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kanelcroutoner",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "fint",
+      "optional": false
+    },
+    {
+      "section": "Kanelcroutoner",
+      "amount": 10,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "l",
+      "name": "koldskål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "spiselige blomster",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kanelcroutoner",
+      "text": "Del rugbrødet i små tern, og læg dem på en tør pande. Rist dem under omrøring i cirka 10 minutter."
+    },
+    {
+      "section": "Kanelcroutoner",
+      "text": "Bland kanel, farin og salt i en skål, og strø blandingen over det ristede brød."
+    },
+    {
+      "section": "Kanelcroutoner",
+      "text": "Kom smørret på panden, og steg videre i cirka 2 minutter, til croutonerne er gyldne."
+    },
+    {
+      "section": "Servering",
+      "text": "Hæld den iskolde koldskål i skåle, og fordel croutonerne ovenpå. Pynt med spiselige blomster."
+    }
+  ],
+  "changes": []
+}

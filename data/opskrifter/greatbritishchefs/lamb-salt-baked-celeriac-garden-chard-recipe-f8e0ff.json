@@ -1,0 +1,669 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/lamb-salt-baked-celeriac-garden-chard-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:17:15.136Z",
+  "total_minutes": 360,
+  "active_minutes": null,
+  "yield_count": 8,
+  "source_lines": 57,
+  "title": "Lammeryg med saltbagt knoldselleri og mangold",
+  "intro": "En festlig menu med langtidsbrasseret lammehals, mør lammeryg, selleri i tre udgaver, urteolie og en dyb lammesauce. Retten kræver tid, og meget kan laves dagen før.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Lage til lammehals",
+      "amount": 1,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lage til lammehals",
+      "amount": 100,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lage til lammehals",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lage til lammehals",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lage til lammehals",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lage til lammehals",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 5,
+      "unit": "stk",
+      "name": "lammehals",
+      "note": "uden ben",
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 1,
+      "unit": "l",
+      "name": "kalvefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 5,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "store, i skiver",
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 50,
+      "unit": "g",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 50,
+      "unit": "g",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 5,
+      "unit": "g",
+      "name": "korianderfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 2,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "rosenpeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brasseret lammehals",
+      "amount": 100,
+      "unit": "g",
+      "name": "tørrede abrikoser",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "amount": 25,
+      "unit": "g",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "amount": 15,
+      "unit": "ml",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "amount": 50,
+      "unit": "ml",
+      "name": "olivenolie",
+      "note": "ekstra jomfru",
+      "optional": false
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "amount": 25,
+      "unit": "ml",
+      "name": "trøffelolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "amount": 5,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urteolie",
+      "amount": 200,
+      "unit": "g",
+      "name": "persille",
+      "note": "gerne blandet med purløg og andre friske krydderurter",
+      "optional": false
+    },
+    {
+      "section": "Urteolie",
+      "amount": 100,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 3,
+      "unit": "kg",
+      "name": "lammeafskær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 2,
+      "unit": "kg",
+      "name": "lammeknogler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hvide, i tern",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "store, i tern",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 4,
+      "unit": "dl",
+      "name": "madeira",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 4,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": "tør",
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "lammefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 1,
+      "unit": "l",
+      "name": "kalvefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammesauce",
+      "amount": 1,
+      "unit": "l",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "amount": 370,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": "plus lidt til at drysse med",
+      "optional": false
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "amount": 14,
+      "unit": "g",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": "nåle plukket og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æggehvider",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 650,
+      "unit": "g",
+      "name": "knoldselleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 200,
+      "unit": "ml",
+      "name": "sødmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 200,
+      "unit": "ml",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 100,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "bladene plukket",
+      "optional": false
+    },
+    {
+      "section": "Selleripuré",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammeryg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lammeryg",
+      "note": "hel",
+      "optional": false
+    },
+    {
+      "section": "Lammeryg",
+      "amount": 100,
+      "unit": "g",
+      "name": "timian",
+      "note": "stilke",
+      "optional": false
+    },
+    {
+      "section": "Lammeryg",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Lammeryg",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammeryg",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lammeryg",
+      "amount": null,
+      "unit": null,
+      "name": "havsalt",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Mangold",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "mangold",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mangold",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Mangold",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Lage til lammehals",
+      "text": "Hæld vandet i en gryde og varm det op ved høj varme. Pisk salt og sukker i, tilsæt laurbærblade, timian og rosmarin, og bring det i kog."
+    },
+    {
+      "section": "Lage til lammehals",
+      "text": "Tag gryden af varmen, og lad lagen køle helt af til stuetemperatur."
+    },
+    {
+      "section": "Lage til lammehals",
+      "text": "Læg lammehalsene i den kolde lage, så de er helt dækket. Dæk til, og stil dem på køl i 12 timer."
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "text": "Skræl knoldselleriet, og skær det i 2–3 mm tynde tændstikker."
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "text": "Kog dem 2–3 minutter i kogende saltet vand, til de er møre, men ikke bløde. Hæld dem i en si, og skyl dem straks i koldt vand."
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "text": "Dup selleriet tørt med køkkenrulle, og kom det i en skål med purløg, citronsaft, olivenolie, trøffelolie og salt. Rør rundt, og smag til med lidt mere olie eller citronsaft, hvis det trænger."
+    },
+    {
+      "section": "Syltet knoldselleri",
+      "text": "Fyld selleriet i en beholder, og stil det på køl i mindst 3 timer. Det holder sig op til 3 dage."
+    },
+    {
+      "section": "Brasseret lammehals",
+      "text": "Skyl lammehalsene i koldt vand, og dup dem tørre."
+    },
+    {
+      "section": "Brasseret lammehals",
+      "text": "Bring begge fonder i kog i en stor gryde, og tag den derefter af varmen."
+    },
+    {
+      "section": "Brasseret lammehals",
+      "text": "Brun lammehalsene ved høj varme i en anden stor gryde. Tilsæt gulerødder, timian, rosmarin, hvidløg, korianderfrø, stjerneanis og rosenpeber."
+    },
+    {
+      "section": "Brasseret lammehals",
+      "text": "Hæld fondblandingen over, og bring det i kog. Skru ned til lav varme, og lad det simre i 4–5 timer, til væsken er reduceret til det halve."
+    },
+    {
+      "section": "Brasseret lammehals",
+      "text": "Rør de tørrede abrikoser i, og kog væsken videre ind, til den hænger på bagsiden af en ske og er blank og kraftig. Det tager 30–60 minutter."
+    },
+    {
+      "section": "Urteolie",
+      "text": "Mens lammehalsen simrer, bringes en stor gryde med vand i kog. Fyld en skål halvt med isterninger og vand."
+    },
+    {
+      "section": "Urteolie",
+      "text": "Kog urterne i ca. 15 sekunder, til stilkene er stærkt grønne. Læg dem straks i isvandet, og lad dem køle helt af."
+    },
+    {
+      "section": "Urteolie",
+      "text": "Tag urterne op, og pres vandet grundigt ud i et viskestykke eller køkkenrulle. Der må ikke være vand tilbage, ellers bliver olien tynd."
+    },
+    {
+      "section": "Urteolie",
+      "text": "Beklæd en fin si med osteklæde. Blend olie og urter på høj hastighed i mindst 1 minut, til olien er helt glat. Er den for tyk, tilsættes lidt mere olie – aldrig vand."
+    },
+    {
+      "section": "Urteolie",
+      "text": "Hæld olien i sien over en skål, og lad den dryppe af i nogle timer. Rør af og til, men pres den ikke igennem, for så følger urenheder med."
+    },
+    {
+      "section": "Urteolie",
+      "text": "Fyld den klare olie på en sprayflaske, og opbevar den på køl. Den holder sig godt i 48 timer."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Varm ovnen op til 180 °C. Rist lammeafskær og knogler i et ovnfast fad i 30–45 minutter."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Varm imens olie i en stor gryde ved middel varme. Svits løg, gulerødder og selleri i 5 minutter. Tilsæt rosmarin, timian og hvidløg, og svits 2 minutter mere, til grøntsagerne er bløde og får farve."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Kom tomaterne i, og lad det koge under omrøring, til det er som marmelade."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Hæld madeira og hvidvin i, og kog det ind til det halve. Så er knoglerne færdigristede."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Kom afskær og knogler i gryden sammen med alle tre fonde. Skru op for varmen, bring det i kog, og skru derefter ned til lav varme. Lad det simre i 3 timer, og skum af hvert 30. minut, til der ikke kommer mere skum."
+    },
+    {
+      "section": "Lammesauce",
+      "text": "Sigt saucen gennem en fin si og derefter gennem osteklæde. Lad den løbe af sig selv uden at presse. Dæk til, og stil den på køl. Den holder sig mindst 3 dage og koges ind, når den skal bruges."
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "text": "Varm ovnen op til 200 °C. Ælt hvedemel, salt, rosmarin og æggehvider sammen med hænderne i en stor skål."
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "text": "Tilsæt det lunkne vand lidt ad gangen, til du har en fast, men let dej."
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "text": "Rul dejen ud til ca. 1 cm på et meldrysset bord. Læg knoldselleriet i midten, pak det ind, og klip overskydende dej af. Rul det til en kugle med jævn tykkelse hele vejen rundt. Resten af dejen kan pakkes tæt ind og gemmes 3 dage på køl."
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "text": "Bag selleriet på en bageplade i 45 minutter til 1 time og 15 minutter. Stik et trispyd i efter 45 minutter. Glider det let ind, er det færdigt, eller kernetemperaturen skal være 64 °C."
+    },
+    {
+      "section": "Saltbagt knoldselleri",
+      "text": "Lad selleriet køle af til stuetemperatur i 2–3 timer. Bræk skorpen af, og skær selleriet i 1,5 cm tykke skiver. Opbevar dem tildækket på køl i op til 3 dage."
+    },
+    {
+      "section": "Selleripuré",
+      "text": "Skræl knoldselleriet, og skær det i små stykker. Kom det i en gryde med mælk, fløde, en god knivspids salt, smør og timian. Lad det simre i 15 minutter, til selleriet er mørt."
+    },
+    {
+      "section": "Selleripuré",
+      "text": "Si væsken fra, og blend selleriet glat. Smag til med mere salt, og sigt puréen gennem en fin si. Den holder sig 3 dage på køl."
+    },
+    {
+      "section": "Lammeryg",
+      "text": "Skær fedtet på lammerygen i et ternet mønster. Vakuumpak den med timian, og tilbered den i vandbad ved 58 °C i 35 minutter."
+    },
+    {
+      "section": "Lammeryg",
+      "text": "Tag kødet op af posen, og krydr det med salt og peber hele vejen rundt. Brun det på alle sider i en varm pande."
+    },
+    {
+      "section": "Lammeryg",
+      "text": "Tilsæt smør og timian fra posen. Når smørret skummer, øses det over kødet gentagne gange."
+    },
+    {
+      "section": "Lammeryg",
+      "text": "Drys med havsalt, og lad kødet hvile i 10–12 minutter."
+    },
+    {
+      "section": "Mangold",
+      "text": "Bring smør og en sjat vand i kog i en pande. Kom mangold og salt i, og lad den falde sammen på kort tid. Pres overskydende væske ud."
+    },
+    {
+      "section": "Anretning",
+      "text": "Varm sellerisåren op, og kom en skefuld på hver tallerken. Læg syltet selleri, en kile saltbagt selleri og et stykke mangold ved siden af."
+    },
+    {
+      "section": "Anretning",
+      "text": "Rul en portion lammehals ind i et mangoldblad, og læg den mellem mangold og puré. Server med lidt af braiseringsvæsken."
+    },
+    {
+      "section": "Anretning",
+      "text": "Skær lammerygen i portioner, og læg en i midten af hver tallerken. Hæld lammesauce over, og pynt med urteolie."
+    }
+  ],
+  "changes": [
+    "Citrontimian er erstattet af almindelig timian.",
+    "Sorrel og blomsterkarse i urteolien er erstattet af persille og andre friske krydderurter.",
+    "Pink peppercorns er erstattet af rosenpeber.",
+    "Muslin er erstattet af osteklæde."
+  ]
+}

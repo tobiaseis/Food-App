@@ -1,0 +1,194 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/swedish-meatballs-beetroot-apple-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:01:39.314Z",
+  "total_minutes": 40,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 16,
+  "title": "Svenske kødboller med rødbede- og æblesalat",
+  "intro": "Møre kødboller af svinekød med squash og dild, vendt i en let cremet sauce. Til serveres en frisk salat af rødbeder, æble og kapers.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kødboller",
+      "amount": 500,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": "helst magert",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 100,
+      "unit": "g",
+      "name": "squash",
+      "note": "groft revet og presset for væde",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "dild",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "sort, friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "grøntsagsfond",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogende",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": "let",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "stort, hakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "halveret og i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 300,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "kogte, i strimler",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kødboller",
+      "text": "Kom svinekødet i en skål sammen med squash, løg, halvdelen af dilden, halvdelen af hvidløget og rigeligt peber. Slå ægget ud i skålen og ælt det hele godt sammen med hænderne."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Form valnøddestore boller af farsen. Der bliver cirka 28 stk. Farsen er meget blød."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Varm olien i en stor pande med slip-let-belægning. Steg kødbollerne i to omgange ved moderat varme i 6-8 minutter pr. omgang, til de er faste og lysegyldne. Vend dem jævnligt, så de brunes ensartet."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tør panden ren for overskydende fedt. Rør resten af hvidløget og timian i panden, hæld bouillonen over, og lad den koge op."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tag panden af varmen og rør cremefraichen og resten af dilden i. Kom kødbollerne tilbage på panden, og vend dem rundt, til de er dækket af saucen."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend æble, rødløg, persille og kapers med citronsaften. Rør rødbederne i til sidst, og server salaten til kødbollerne."
+    },
+    {
+      "section": "Salat",
+      "text": "Skal der kun spises for to, kan halvdelen gemmes. Den holder sig op til tre dage på køl. Varm kødbollerne igennem i mikroovn, til de er rygende varme."
+    }
+  ],
+  "changes": [
+    "Courgette er skiftet til squash."
+  ]
+}

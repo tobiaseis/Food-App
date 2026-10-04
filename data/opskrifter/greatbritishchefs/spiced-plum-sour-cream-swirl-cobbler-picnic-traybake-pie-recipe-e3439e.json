@@ -1,0 +1,262 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/spiced-plum-sour-cream-swirl-cobbler-picnic-traybake-pie-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:45:24.720Z",
+  "total_minutes": 160,
+  "active_minutes": null,
+  "yield_count": 10,
+  "source_lines": 23,
+  "title": "Blommetærte med creme fraiche-swirl",
+  "intro": "Gigantisk bradepandetærte med krydrede, ovnbagte blommer og en cremet swirl, som er perfekt til picnic. Serveres med krydret flødeskum og en frisk bærsalat med ristede havregryn.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": "Fyld",
+      "amount": 1.25,
+      "unit": "kg",
+      "name": "blommer",
+      "note": "udstenede og skåret i skiver",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "stødt ingefær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "appelsiner",
+      "note": "skallen rives fint; pres 3 spsk saft til fyldet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "majsstivelse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Swirl",
+      "amount": 200,
+      "unit": "g",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Swirl",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Swirl",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblomme",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Swirl",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 1000,
+      "unit": "g",
+      "name": "butterdej",
+      "note": "udrullet, i plader",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "til udrulning",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "malede mandler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": "Tærten",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": "til drys",
+      "optional": false
+    },
+    {
+      "section": "Krydret flødeskum",
+      "amount": 1,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret flødeskum",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "lønnesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret flødeskum",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "stødt ingefær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydret flødeskum",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "stødt kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bærsalat",
+      "amount": 150,
+      "unit": "g",
+      "name": "bær",
+      "note": "blandede, friske eller frosne",
+      "optional": false
+    },
+    {
+      "section": "Bærsalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bærsalat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bærsalat",
+      "amount": 25,
+      "unit": "g",
+      "name": "havregryn",
+      "note": "ristede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Fyld",
+      "text": "Vend blommeskiverne med farin, kanel, ingefær, appelsinskal, appelsinsaft og majsstivelse."
+    },
+    {
+      "section": "Fyld",
+      "text": "Fordel blommerne på en bageplade og steg dem i 20 minutter, til de er bløde og sirupsagtige. Lad dem køle af."
+    },
+    {
+      "section": "Swirl",
+      "text": "Pisk creme fraiche, lønnesirup, æggeblomme og vanilje glat sammen. Sæt det på køl."
+    },
+    {
+      "section": "Tærten",
+      "text": "Skru ovnen ned til 180 °C (160 °C varmluft). Beklæd en form på ca. 20 × 30 cm med bagepapir."
+    },
+    {
+      "section": "Tærten",
+      "text": "Læg to butterdejsplader, så de overlapper hinanden med nogle få centimeter, og pres dem sammen. Brug lidt vand, hvis de ikke vil hænge sammen."
+    },
+    {
+      "section": "Tærten",
+      "text": "Rul den samlede dejplade ud på et meldrysset bord, til den er ca. 3 mm tyk og stor nok til at dække både bund og sider. Pres den ned i formen."
+    },
+    {
+      "section": "Tærten",
+      "text": "Drys de malede mandler over bunden. Fordel halvdelen af blommerne ovenpå, og træk halvdelen af creme fraiche-blandingen igennem i swirls. Gentag med resten af blommer og creme."
+    },
+    {
+      "section": "Tærten",
+      "text": "Tag nogle få spsk af de piskede æg fra til pensling. Hæld resten forsigtigt over fyldet."
+    },
+    {
+      "section": "Tærten",
+      "text": "Læg den sidste dejplade over som låg, og klem kanterne sammen. Pensl med det afsatte æg, drys med farin og rids dejen let med en kniv."
+    },
+    {
+      "section": "Tærten",
+      "text": "Bag tærten i 1 time og 20 minutter, til den er hævet og gylden. Lad den køle helt af, før du skærer den ud."
+    },
+    {
+      "section": "Krydret flødeskum",
+      "text": "Pisk fløde, lønnesirup, ingefær og kanel til bløde toppe, lige før servering."
+    },
+    {
+      "section": "Bærsalat",
+      "text": "Vend bærrene forsigtigt med citronsaft og honning. Bland de ristede havregryn i lige før servering."
+    }
+  ],
+  "changes": [
+    "Sour cream er erstattet med creme fraiche.",
+    "Demerara-sukker er erstattet med brun farin.",
+    "Double cream er erstattet med piskefløde.",
+    "Malede mandler bruges i stedet for ground almonds.",
+    "Majsstivelse bruges i stedet for cornflour."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/air-fryer-boiled-eggs",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:43:38.154Z",
+  "total_minutes": 15,
+  "active_minutes": 1,
+  "yield_count": 6,
+  "source_lines": 2,
+  "title": "Kogte æg i airfryer",
+  "intro": "Æggene bliver perfekt kogte i airfryeren uden en gryde vand. Vælg selv, om blommen skal være flydende, cremet eller hård.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "æg",
+      "note": "stuetemperatur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "toastbrød",
+      "note": "til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Forvarm airfryeren til 180 °C."
+    },
+    {
+      "section": null,
+      "text": "Læg æggene i kurven, så de ligger i ét lag."
+    },
+    {
+      "section": null,
+      "text": "Tilbered dem i 6-6½ minut, hvis blommen skal være flydende, 7 minutter for en cremet blomme eller 9 minutter, hvis den skal være hård."
+    },
+    {
+      "section": null,
+      "text": "Kom æggene i en skål med iskoldt vand et øjeblik, så de holder op med at koge."
+    },
+    {
+      "section": null,
+      "text": "Pil æggene, eller server dem i æggebægre med toastbrød ved siden af."
+    }
+  ],
+  "changes": []
+}

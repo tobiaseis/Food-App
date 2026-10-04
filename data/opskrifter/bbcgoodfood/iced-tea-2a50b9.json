@@ -1,0 +1,102 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/iced-tea",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:32:34.783Z",
+  "total_minutes": 5,
+  "active_minutes": 5,
+  "yield_count": 6,
+  "source_lines": 7,
+  "title": "Hjemmelavet iste",
+  "intro": "Frisk iste med citron, appelsin og mynte, sødet med lidt sukker og honning. Den er nem at lave i en kande og lige til at servere på en varm dag.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "te",
+      "note": "teposer",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": "flydende, plus ekstra til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "citron",
+      "note": "1 presset til saft, 1 i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "appelsin",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "små blade plukket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "l",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "is",
+      "note": "isterninger",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom teposer, sukker, honning og vand i en stor kande. Lad teen trække i 10 minutter, og fjern derefter teposerne."
+    },
+    {
+      "section": null,
+      "text": "Stil kanden i køleskabet, til teen skal serveres."
+    },
+    {
+      "section": null,
+      "text": "Rør citronsaft, citronskiver, appelsinskiver og mynteblade i. Fyld kanden op med rigeligt is, og rør rundt igen."
+    },
+    {
+      "section": null,
+      "text": "Fyld høje glas med is, og hæld iste over. Server med ekstra honning, så hver gæst kan søde efter smag."
+    }
+  ],
+  "changes": [
+    "Golden caster sugar er erstattet af almindeligt sukker."
+  ]
+}

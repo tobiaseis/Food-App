@@ -1,0 +1,255 @@
+{
+  "url": "https://www.valdemarsro.dk/kaalsalat-med-crispy-kylling-og-mangodressing/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:06:57.728Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 22,
+  "title": "Kålsalat med sprød kylling og mangodressing",
+  "intro": "Tre slags kål med pankopaneret kylling, avocado og cashewnødder, vendt i en cremet mangodressing med lime, ingefær og chili. En frisk og mættende salat med masser af tekstur.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Mangodressing",
+      "amount": 100,
+      "unit": "g",
+      "name": "mango",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Mangodressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mangodressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Mangodressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mangodressing",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mangodressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mangodressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "økologisk lime",
+      "note": "fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Mangodressing",
+      "amount": 1,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Mangodressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sød paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "amount": 100,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "eller anden stegeolie",
+      "optional": false
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 150,
+      "unit": "g",
+      "name": "grønkål",
+      "note": "fintsnittet",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mangodressing",
+      "text": "Kom mango, hvidløg, ingefær, røget paprika, chiliflager, fiskesauce samt skal og saft fra limen i en blender, og kør det helt glat."
+    },
+    {
+      "section": "Mangodressing",
+      "text": "Hæld massen i en skål, og rør creme fraiche og mayonnaise i. Smag dressingen til."
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "text": "Pisk æggene i en dyb tallerken, og hæld panko i en anden."
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "text": "Vend kyllingen i hvedemel blandet med paprika, salt og peber. Træk den derefter gennem æggene, og pres den til sidst ned i panko, så den er dækket hele vejen rundt."
+    },
+    {
+      "section": "Pankopaneret kylling",
+      "text": "Varm olie op på en pande ved middelvarme, og steg kyllingen i ca. 6 minutter på hver side, til panéringen er sprød og gyldne. Kontrollér, at kødet er gennemstegt."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg spidskål og grønkål i en skål sammen med et par spiseskeer dressing. Ælt kålen med hænderne i 1-2 minutter, til den er blevet blødere og mør."
+    },
+    {
+      "section": "Servering",
+      "text": "Kom kålen i en stor skål, og læg rødkålen ved siden af. Hæld dressing over, og top med avocado og kyllingen skåret i skiver."
+    },
+    {
+      "section": "Servering",
+      "text": "Strø cashewnødder og persille over, og krydr med salt og peber."
+    }
+  ],
+  "changes": [
+    "Fishsauce er skiftet til fiskesauce.",
+    "Pankorasp er skiftet til panko."
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/steak-aubergine-salad",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:04:09.327Z",
+  "total_minutes": 25,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 10,
+  "title": "Entrecote med auberginesalat og krydderurtedressing",
+  "intro": "Sprøde auberginer og saftig bøf på et leje af salat med feta og en frisk dressing af koriander, mynte, chili og citron. Retten er hurtigt lavet og passer godt til en let middag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "halveret på langs og skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "entrecote",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "babyleaf",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": "skåret i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "grøn, halveret og hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "plus lidt ekstra blade til pynt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "plus lidt ekstra blade til pynt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bland melet med salt og peber, og vend aubergineskiverne i blandingen."
+    },
+    {
+      "section": null,
+      "text": "Varm 2 spsk af olivenolien op på en stor pande, til den næsten ryger. Steg auberginerne i nogle minutter på hver side, til de er bløde og falder sammen. Tag dem af panden."
+    },
+    {
+      "section": null,
+      "text": "Skru op for varmen. Krydr bøffen med salt og peber, og steg den i 2 minutter på hver side for rosa kød – lidt længere, hvis du vil have den medium. Lad den hvile i 5 minutter, og skær den derefter i skiver."
+    },
+    {
+      "section": null,
+      "text": "Kør resten af olivenolien med chili, citronsaft, koriander, mynte og en sjat vand til en glat dressing i en blender eller lille foodprocessor."
+    },
+    {
+      "section": null,
+      "text": "Vend salaten med halvdelen af dressingen lige før servering, og læg den på et fad. Anret auberginer og bøf ovenpå, smuldr fetaen over, og dryp med resten af dressingen. Drys med ekstra krydderurter."
+    }
+  ],
+  "changes": [
+    "Vindrueslat (lamb's lettuce) er erstattet af babyleaf.",
+    "Sirloin steak er erstattet af entrecote.",
+    "Mel er angivet som hvedemel."
+  ]
+}

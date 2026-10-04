@@ -1,0 +1,268 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/fish-stew-roast-garlic-saffron",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:32:53.419Z",
+  "total_minutes": 165,
+  "active_minutes": 60,
+  "yield_count": 6,
+  "source_lines": 23,
+  "title": "Fiskesuppe med ovnbagt hvidløg og safran",
+  "intro": "En fyldig, tomatbaseret fiskesuppe med fennikel og pastis, hvor fisk og blæksprutte får et blidt toppunkt i suppen. Serveres med en safran- og hvidløgspasta, der rører dybde ind i hver skefuld.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Safran- og hvidløgspasta",
+      "amount": 3,
+      "unit": "stk",
+      "name": "hvidløg",
+      "note": "hele hoveder",
+      "optional": false
+    },
+    {
+      "section": "Safran- og hvidløgspasta",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": "god kvalitet, plus lidt ekstra til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Safran- og hvidløgspasta",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "flagesalt, et par gode knivspidser",
+      "optional": false
+    },
+    {
+      "section": "Safran- og hvidløgspasta",
+      "amount": 50,
+      "unit": "ml",
+      "name": "Pernod",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Safran- og hvidløgspasta",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": "strimler, en god knivspids",
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "knold",
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 4,
+      "unit": "stilk",
+      "name": "selleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "med kerner",
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 50,
+      "unit": "ml",
+      "name": "Pernod",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 2,
+      "unit": "dl",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 7.5,
+      "unit": "dl",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppebase",
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 500,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": "med skind, skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 300,
+      "unit": "g",
+      "name": "rødspættefilet",
+      "note": "med skind, skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 200,
+      "unit": "g",
+      "name": "blæksprutte",
+      "note": "renset, skåret i ringe, gerne med tentakler",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "fladbladet, hakket – 4 spsk i suppen, resten til servering",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "flute",
+      "note": "ristede skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Safran- og hvidløgspasta",
+      "text": "Tænd ovnen på 160 °C (140 °C varmluft). Del hvidløgshovederne på tværs, og læg dem med snitfladen opad på en lille bageplade."
+    },
+    {
+      "section": "Safran- og hvidløgspasta",
+      "text": "Dryp med olivenolie, og krydr med salt. Dæk med folie, og bag i 40-50 minutter, til hvidløgene er bløde."
+    },
+    {
+      "section": "Safran- og hvidløgspasta",
+      "text": "Tag folien af, og sæt pladen tilbage i ovnen i yderligere 15-20 minutter, til hvidløgene er gyldenbrune."
+    },
+    {
+      "section": "Safran- og hvidløgspasta",
+      "text": "Kom Pernod og safran i en lille gryde, og bring det i kog. Tilsæt olivenolien, varm den forsigtigt igennem, og lad det køle af uden for varmen."
+    },
+    {
+      "section": "Safran- og hvidløgspasta",
+      "text": "Pres de bagte fed ud i en mortér, tilsæt en stor knivspids salt, og stød det til en pasta. Rør den safranduftende olie i en lille smule ad gangen, og rør hele tiden. Kom pastaen i en ren beholder, og stil den på køl."
+    },
+    {
+      "section": "Suppebase",
+      "text": "Skær fennikel, selleri og løg i små tern, og skær chilien i tynde ringe."
+    },
+    {
+      "section": "Suppebase",
+      "text": "Varm olien i en stor gryde, og kom grøntsagerne i. Riv hvidløget direkte i gryden, tilsæt fennikelfrø, og rør rundt. Læg låg på, og lad det svede i 10 minutter."
+    },
+    {
+      "section": "Suppebase",
+      "text": "Tilsæt safran og laurbærblade, og lad det simre uden låg i 10 minutter mere, til grøntsagerne begynder at blive møre."
+    },
+    {
+      "section": "Suppebase",
+      "text": "Hæld Pernod og vin i, og bring det i kog. Tilsæt passata og vand, og kog op igen. Skru ned til en stille simren, læg låg på, og lad suppen koge i 45 minutter, så smagene smelter sammen. Tag gryden af varmen, og lad suppen køle lidt af."
+    },
+    {
+      "section": "Suppebase",
+      "text": "Blend suppen glat i en blender, og si den gennem en fin si over i en ren gryde – gør det evt. i omgange. Er den for tynd, så lad den koge ind ved middel varme, til den har konsistens som piskefløde. Stil den til side, eller afkøl og opbevar den i køleskabet. Suppebasen kan laves 3 dage i forvejen."
+    },
+    {
+      "section": "Fisk",
+      "text": "Bring suppebasen i kog i en stor gryde, skru ned til en let simren, og smag til med salt. Læg fisk og blæksprutte i, og lad dem trække forsigtigt i suppen i 10 minutter, til fisken lige er gennemkogt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Tag gryden af varmen, og rør citronsaft og persille i. Øs suppen op i skåle, og stable fisken i midten."
+    },
+    {
+      "section": "Til servering",
+      "text": "Top med en skefuld safran- og hvidløgspasta og lidt ekstra persille. Server med ristede skiver flute og resten af pastaen ved siden af."
+    }
+  ],
+  "changes": [
+    "Multe er erstattet med torskefilet.",
+    "Knurhane er erstattet med rødspættefilet.",
+    "Flagesalt er erstattet med almindeligt salt."
+  ]
+}

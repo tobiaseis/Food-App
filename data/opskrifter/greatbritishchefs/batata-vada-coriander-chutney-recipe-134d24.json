@@ -1,0 +1,296 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/batata-vada-coriander-chutney-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:56:44.691Z",
+  "total_minutes": 60,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 27,
+  "title": "Batata vada med korianderchutney",
+  "intro": "Krydrede kartoffelboller vendt i en dej af kikærtemel og friturestegt, til de er gyldne og sprøde. Den friske korianderchutney med lime og peanuts klæder dem perfekt.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Kartoffelfyld",
+      "amount": 800,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrællet og skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennepsfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "frø",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 10,
+      "unit": "stk",
+      "name": "karryblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 2,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 25,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelfyld",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 200,
+      "unit": "g",
+      "name": "kikærtemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chilipulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dej",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til friturestegning",
+      "optional": false
+    },
+    {
+      "section": "Korianderchutney",
+      "amount": 2,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "gem nogle få blade til pynt",
+      "optional": false
+    },
+    {
+      "section": "Korianderchutney",
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Korianderchutney",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korianderchutney",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korianderchutney",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Korianderchutney",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ristede peanuts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korianderchutney",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korianderchutney",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Korianderchutney",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citronskal",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Kom kartoflerne i en gryde med koldt, saltet vand, og bring det i kog. Lad dem simre i 15-18 minutter, til de er møre. Hæld vandet fra, og lad dem dampe tørre."
+    },
+    {
+      "section": "Korianderchutney",
+      "text": "Blend alle ingredienser til chutneyen i en foodprocessor eller med en stavblender. Tilsæt lidt ekstra vand, indtil konsistensen kan øses med ske. Smag til med salt og peber, og stil til side."
+    },
+    {
+      "section": "Dej",
+      "text": "Pisk kikærtemel, gurkemeje, chilipulver, bagepulver og salt sammen i en skål. Pisk vandet i lidt ad gangen, til dejen er tyk og glat og hænger på bagsiden af en ske. Juster eventuelt med lidt mere eller mindre vand. Lad dejen hvile."
+    },
+    {
+      "section": "Kartoffelfyld",
+      "text": "Mos de møre kartofler, så de er bløde, men stadig har lidt struktur. En lidt grov mos giver bedre bid efter stegningen."
+    },
+    {
+      "section": "Kartoffelfyld",
+      "text": "Varm rapsolien op i en pande ved middel varme. Kom sennepsfrøene i, og lad dem sprætte. Tilsæt derefter spidskommen og karryblade, og rør chili og ingefær i. Steg i 1 minut, til det dufter."
+    },
+    {
+      "section": "Kartoffelfyld",
+      "text": "Rør gurkemeje i, og vend kartoffelmosen og saltet i. Bland grundigt, og afslut med citronsaft og koriander."
+    },
+    {
+      "section": "Kartoffelfyld",
+      "text": "Lad farsen køle lidt af. Form den til kugler på ca. 40-45 g stykket, omtrent på størrelse med en golfbold."
+    },
+    {
+      "section": "Friturestegning",
+      "text": "Fyld olien i en dyb gryde, så den højst er to tredjedele fuld, og varm den op til 170-175 °C."
+    },
+    {
+      "section": "Friturestegning",
+      "text": "Vend hver kartoffelkugle i dejen, til den er helt dækket, og læg den forsigtigt i den varme olie. Steg i 4-5 minutter, og vend dem af og til, til de er gyldne og sprøde, og dejen er gennemstegt. Steg i omgange, så olien holder omkring 170 °C."
+    },
+    {
+      "section": "Friturestegning",
+      "text": "Tag kuglerne op med en hulske, og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret vada på et fad. Server med chutneyen, og drys med de sparede korianderblade, citronskal og cayennepeber."
+    }
+  ],
+  "changes": []
+}

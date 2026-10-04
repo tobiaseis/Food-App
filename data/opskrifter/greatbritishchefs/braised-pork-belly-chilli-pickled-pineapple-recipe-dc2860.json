@@ -1,0 +1,287 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/braised-pork-belly-chilli-pickled-pineapple-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:38:49.908Z",
+  "total_minutes": 105,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Braiseret svinebryst med chilisyltet ananas og broccoli",
+  "intro": "Mørt svinebryst, der braiseres i tre timer og presses natten over, serveres med syrlig, stærk ananas og stegt broccoli i østersdressing. Retten laves over to dage, så den er god at forberede.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til svinebrystet",
+      "amount": 60,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svinebrystet",
+      "amount": 100,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svinebrystet",
+      "amount": 5,
+      "unit": "dl",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svinebrystet",
+      "amount": 60,
+      "unit": "g",
+      "name": "østerssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svinebrystet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællet og i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til svinebrystet",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til svinebrystet",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "skrællet og i stykker",
+      "optional": false
+    },
+    {
+      "section": "Til svinebrystet",
+      "amount": 500,
+      "unit": "g",
+      "name": "svinebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den syltede ananas",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "ananas",
+      "note": "skrællet, uden kerne og i fine tern",
+      "optional": false
+    },
+    {
+      "section": "Til den syltede ananas",
+      "amount": 2,
+      "unit": "dl",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den syltede ananas",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den syltede ananas",
+      "amount": 100,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den syltede ananas",
+      "amount": 1,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den syltede ananas",
+      "amount": 2,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den syltede ananas",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fennikelfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den syltede ananas",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sorte peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til den syltede ananas",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "uden kerner og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til broccoli og dressing",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "ca. 2 cm",
+      "optional": false
+    },
+    {
+      "section": "Til broccoli og dressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille",
+      "optional": false
+    },
+    {
+      "section": "Til broccoli og dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til broccoli og dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til broccoli og dressing",
+      "amount": 6,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til broccoli og dressing",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "ekstra til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til broccoli og dressing",
+      "amount": 50,
+      "unit": "g",
+      "name": "østerssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til broccoli og dressing",
+      "amount": 400,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "trimmet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svinebrystet",
+      "text": "Tænd ovnen på 150 °C."
+    },
+    {
+      "section": "Svinebrystet",
+      "text": "Smelt sukkeret i en tykbundet mellemstor gryde, til det er gyldent. Pas på, for karamellen er meget varm."
+    },
+    {
+      "section": "Svinebrystet",
+      "text": "Hæld vandet i lidt ad gangen og hold afstand, da karamellen sprutter kraftigt. Rør, til al karamellen er opløst. Tilsæt bouillon og østerssauce, og rør rundt."
+    },
+    {
+      "section": "Svinebrystet",
+      "text": "Læg grøntsagerne og svinebrystet i et stort ildfast fad eller en stor gryde, og hæld væsken over. Dæk tæt med bagepapir og derefter alufolie."
+    },
+    {
+      "section": "Svinebrystet",
+      "text": "Braisér i ovnen i 3 timer. Tag fadet ud, og lad kødet køle af i væsken i 1 time."
+    },
+    {
+      "section": "Svinebrystet",
+      "text": "Løft kødet over i et fad foret med bagepapir. Gem grøntsager og sovs. Læg en bakke ovenpå, og læg dåser eller andre tunge ting på bakken. Stil i køleskabet natten over, så kødet bliver presset."
+    },
+    {
+      "section": "Svinebrystet",
+      "text": "Si stegevæsken over i en ren gryde. Kog den op ved høj varme, og lad den koge kraftigt ind. Smag til undervejs, så den ikke bliver for salt og stærk, og tag gryden af varmen, når smagen passer."
+    },
+    {
+      "section": "Svinebrystet",
+      "text": "Stil den reducerede sovs i køleskabet natten over sammen med kødet."
+    },
+    {
+      "section": "Syltet ananas",
+      "text": "Bring eddike, sukker, vand og krydderier i kog. Rør, til sukkeret er opløst, og lad det simre i 5 minutter, så smagen trækker, og væsken koger lidt ind."
+    },
+    {
+      "section": "Syltet ananas",
+      "text": "Si væsken over ananasen, og rør den hakkede chili i. Stil til side til servering."
+    },
+    {
+      "section": "Broccoli og dressing",
+      "text": "Riv ingefær og hvidløg fint på en mikroplane direkte i en skål. Tilsæt resten af ingredienserne til dressingen (alt undtagen broccolien) og lidt af den reducerede sovs fra svinebrystet."
+    },
+    {
+      "section": "Broccoli og dressing",
+      "text": "Pisk dressingen sammen, og sæt den på køl, til den skal bruges."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær svinebrystet i fire portioner, og fjern svaden. Brun kødet på alle sider i lidt olie."
+    },
+    {
+      "section": "Servering",
+      "text": "Lad resten af sovsen simre, tag den af varmen, og læg det brunede kød i. Lad det stå, så kødet holder varmen, mens du tilbereder broccolien."
+    },
+    {
+      "section": "Servering",
+      "text": "Varm en pande op med et skvæt olie, og steg broccolien, til den begynder at tage farve. Tag af varmen, og vend den i østersdressingen efter smag."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret på varme tallerkener med kødet lidt til siden og broccolien ved siden af. Hæld lidt sovs over, og top med syltet ananas."
+    }
+  ],
+  "changes": [
+    "Tenderstem broccoli er skiftet til almindelig broccoli.",
+    "Risvineddike er skiftet til hvidvinseddike."
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "url": "https://www.arla.dk/opskrifter/spinatsuppe/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:03:02.421Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 14,
+  "title": "Spinatsuppe med ostebrød og smilende æg",
+  "intro": "En cremet, grøn suppe af frossen spinat og fløde, som serveres med sprødt gratineret ostebrød og et smilende æg. Den er hurtig at lave og mættende nok til en hverdagsaften.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Spinatsuppe",
+      "amount": 15,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatsuppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Spinatsuppe",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "stort, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Spinatsuppe",
+      "amount": 500,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frossen, hakket",
+      "optional": false
+    },
+    {
+      "section": "Spinatsuppe",
+      "amount": 5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatsuppe",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatsuppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "grøntsagsfond",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Spinatsuppe",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Spinatsuppe",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Spinatsuppe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ostebrød",
+      "amount": 4,
+      "unit": "skive",
+      "name": "brød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostebrød",
+      "amount": 100,
+      "unit": "g",
+      "name": "ost",
+      "note": "pastaost",
+      "optional": false
+    },
+    {
+      "section": "Ostebrød",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": "smilende",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ostebrød",
+      "text": "Tænd ovnen på 200 °C (almindelig ovn), og beklæd en bageplade med bagepapir."
+    },
+    {
+      "section": "Ostebrød",
+      "text": "Læg brødskiverne på pladen, og drys dem med osten og solsikkekernerne."
+    },
+    {
+      "section": "Ostebrød",
+      "text": "Bag brødene midt i ovnen i ca. 10 minutter, til osten har smeltet og fået farve."
+    },
+    {
+      "section": "Spinatsuppe",
+      "text": "Varm en tykbundet gryde op på høj varme, og smelt smørret, så det ikke tager farve."
+    },
+    {
+      "section": "Spinatsuppe",
+      "text": "Rør løg og hvidløg rundt i gryden i ca. 1 minut."
+    },
+    {
+      "section": "Spinatsuppe",
+      "text": "Kom spinat, fløde, vand, fond, muskatnød, salt og peber i. Lad suppen koge i ca. 3 minutter, og smag den til."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld suppen op i skåle, og stil de varme ostebrød og et smilende æg ved siden af."
+    }
+  ],
+  "changes": []
+}

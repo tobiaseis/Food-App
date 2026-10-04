@@ -1,0 +1,111 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/french-style-chicken-peas-bacon",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:04:48.071Z",
+  "total_minutes": 40,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 8,
+  "title": "Fransk kylling med ærter og bacon",
+  "intro": "Mør kylling i en let sauce af fond og creme fraiche med sprød bacon, bløde ærter og salat. En nem one-pan-ret med fransk præg.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": "uden skind og ben",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "forårsløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": "varm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "salat",
+      "note": "hjertesalat, groft strimlet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Steg baconen på en stor pande uden fedt ved middel varme i 3 minutter, til fedtet er smeltet ud, og baconen er gylden. Tag baconen op i en lille skål, og lad fedtet blive på panden."
+    },
+    {
+      "section": null,
+      "text": "Brun kyllingen i baconfedtet i 4 minutter på hver side."
+    },
+    {
+      "section": null,
+      "text": "Skub kyllingen til siden. Rør hvidløg og forårsløg ned i den frie del af panden, og steg dem i ca. 30 sekunder, til løgene er klart grønne."
+    },
+    {
+      "section": null,
+      "text": "Hæld fonden på, kom baconen tilbage, læg låg på, og lad det simre i 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Skru op for varmen. Kom ærter og salat ned i saucen, og kog med låg på i 4 minutter, til ærterne er møre, og salaten lige er faldet sammen."
+    },
+    {
+      "section": null,
+      "text": "Tjek, at kyllingen er gennemstegt. Rør creme fraiche i lige før servering."
+    }
+  ],
+  "changes": [
+    "Little Gem-salat er erstattet af hjertesalat.",
+    "Bacon er angivet i gram i stedet for skiver, og røget stribet bacon er erstattet af almindelig bacon i skiver."
+  ]
+}

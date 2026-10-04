@@ -1,0 +1,220 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/gooseberry-ptys-style-choux-bun-elderflower-gooseberry-compote-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:51:46.970Z",
+  "total_minutes": 120,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 18,
+  "title": "Vandbakkelser med stikkelsbær og hyldeblomst",
+  "intro": "Luftige vandbakkelser med sprødt sukkerlåg, fyldt med vaniljefløde og en syrlig kompot af stikkelsbær og hyldeblomst. Kompotten kan trække natten over, og låget skal fryse, så start i god tid.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Kompot",
+      "amount": 300,
+      "unit": "g",
+      "name": "stikkelsbær",
+      "note": "friske eller frosne",
+      "optional": false
+    },
+    {
+      "section": "Kompot",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kompot",
+      "amount": 3,
+      "unit": "stk",
+      "name": "hyldeblomster",
+      "note": "blomsterhoveder, plukket af stilkene",
+      "optional": false
+    },
+    {
+      "section": "Sprødt låg",
+      "amount": 125,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt",
+      "optional": false
+    },
+    {
+      "section": "Sprødt låg",
+      "amount": 125,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprødt låg",
+      "amount": 125,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sprødt låg",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "amount": 65,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "amount": 65,
+      "unit": "ml",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "amount": 50,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "amount": 70,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket, i alt ca. 120 g",
+      "optional": false
+    },
+    {
+      "section": "Vaniljefløde",
+      "amount": 3,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljefløde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Vaniljefløde",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kompot",
+      "text": "Kom stikkelsbær, sukker og hyldeblomster i en gryde. Halvér bærrene, hvis de er friske. Dæk til og lad det stå ved stuetemperatur i 6-8 timer, hvis du har tid."
+    },
+    {
+      "section": "Sprødt låg",
+      "text": "Rør smør og brun farin let og luftigt i en røremaskine med fladpisker i 2 minutter. Bland mel og salt i."
+    },
+    {
+      "section": "Sprødt låg",
+      "text": "Rul dejen ud mellem to ark bagepapir til 3-5 mm tykkelse. Læg den på en bageplade med bagepapir, og frys den helt hård, ca. 4 timer."
+    },
+    {
+      "section": "Kompot",
+      "text": "Varm kompotten op ved lav varme, til bærrene falder fra hinanden, men ikke bliver til grød. Si den, så du får noget af saften fra. Stil saft og bær til afkøling hver for sig."
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "text": "Varm vand, mælk, sukker, salt og smør langsomt op i en gryde. Tag den af varmen, når smørret er smeltet, og blandingen koger."
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "text": "Rør melet i med en spatel, til der ikke er klumper. Lad dejen stege 1 minut ved lav varme, og kom den så i røremaskinens skål. Lad den køle af til ca. 55 °C."
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "text": "Pisk ægget i dejen med fladpiskeren i ca. 5 omgange, og lad hver portion blive blandet helt ind, før næste kommer i. Det er muligvis ikke nødvendigt at bruge alt ægget. Dejen skal være blank og falde tungt fra piskeren."
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "text": "Forvarm ovnen til 170 °C (150 °C varmluft)."
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "text": "Fyld dejen i en sprøjtepose, og sprøjt 6 buller på ca. 3 cm i bredden og 55 g stykket på en bageplade med bagepapir. Stik runde skiver på 5 cm ud af den frosne låg-dej, og læg en skive oven på hver bulle."
+    },
+    {
+      "section": "Vandbakkelsedej",
+      "text": "Bag bullerne i 25-30 minutter, til de er hævede, gyldne og helt gennembagte. Lad dem køle af."
+    },
+    {
+      "section": "Vaniljefløde",
+      "text": "Pisk fløde, sukker og vaniljeekstrakt til bløde toppe, og fyld flødeblandingen i en sprøjtepose."
+    },
+    {
+      "section": "Samling",
+      "text": "Del hver bakkelse på midten. Kom lidt kompot i bunden, og sprøjt rigeligt fløde ovenpå."
+    },
+    {
+      "section": "Samling",
+      "text": "Tryk en ske ned i flødet, så der bliver et hul, og fyld det med mere kompot. Dryp med saft, læg låget på, og drys med flormelis."
+    }
+  ],
+  "changes": [
+    "Light brown sugar er skiftet til brun farin.",
+    "Strong flour er skiftet til almindeligt hvedemel.",
+    "Caster sugar er skiftet til almindeligt sukker."
+  ]
+}

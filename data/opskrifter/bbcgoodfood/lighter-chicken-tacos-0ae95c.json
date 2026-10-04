@@ -1,0 +1,288 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/lighter-chicken-tacos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:54:20.565Z",
+  "total_minutes": 60,
+  "active_minutes": 35,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Lette kyllingetacos med grillet salsa og guacamole",
+  "intro": "Krydret kyllingebryst fra grillen i tacoskaller med røget tomatsalsa, frisk guacamole og yoghurt. Alle lægger selv deres tacos ved bordet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kylling",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 500,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "uden skind",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "rød, delt i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "lille, skåret i 8 både",
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "limesaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "modne, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 4,
+      "unit": "tsk",
+      "name": "limesaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Guacamole",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tacoskaller",
+      "note": "af majs",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 8,
+      "unit": "tsk",
+      "name": "græsk yoghurt",
+      "note": "0 %",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "hjertesalat",
+      "note": "strimlet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling",
+      "text": "Rør olie, spidskommen og røget paprika sammen på en stor tallerken. Vend kyllingen i den krydrede olie, så den er dækket hele vejen rundt. Krydr med peber og salt, dæk til og stil til side, mens du laver salsaen."
+    },
+    {
+      "section": "Salsa",
+      "text": "Tænd ovnens grill på højeste indstilling, og lad den varme op i 10 minutter. Beklæd imens en stor bageplade med sølvpapir."
+    },
+    {
+      "section": "Salsa",
+      "text": "Læg tomaterne med snitfladen opad på pladen sammen med peberfrugt og rødløg. Pensl løget med olien, og drys tomater og løg med peber."
+    },
+    {
+      "section": "Salsa",
+      "text": "Grill grøntsagerne i 12-15 minutter, til de er godt forkullede. Vend tomater og løg på halvvejen. Tag pladen ud, men lad grillen være tændt."
+    },
+    {
+      "section": "Salsa",
+      "text": "Kom peberfrugten i en skål, og stram film over, så skindet er lettere at pille af senere. Lad det hele køle af."
+    },
+    {
+      "section": "Guacamole",
+      "text": "Mos avocadoen kort med en gaffel i en skål, så der stadig er stykker i. Vend limesaft, forårsløg, koriander og chiliflager forsigtigt i. Smag til med peber og salt."
+    },
+    {
+      "section": "Kylling",
+      "text": "Beklæd bagepladen med nyt sølvpapir, og læg kyllingen på med den tykkeste side opad. Grill den i cirka 10 minutter, til den er gennemstegt. Den skal ikke vendes."
+    },
+    {
+      "section": "Salsa",
+      "text": "Skrab kerner og saft ud af de afkølede tomater, så salsaen ikke bliver for våd. Behold kødet og den forkullede skal. Pil skindet af peberfrugten, når den kan holdes i hånden."
+    },
+    {
+      "section": "Salsa",
+      "text": "Hak tomater og løg, og skær peberfrugten i tern. Bland det hele i en skål med limesaft, spidskommen, chiliflager, peber og salt."
+    },
+    {
+      "section": "Kylling",
+      "text": "Tag kyllingen ud af ovnen, læg et løst stykke sølvpapir over, og lad den hvile i 5 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skru ovnen til 180 °C (160 °C varmluft). Skær kyllingen i tykke skiver, og hæld stegesaften over."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm tacoskallerne på en bageplade i ovnen i 2-3 minutter. Sæt kylling, tacoskaller, yoghurt, salat, koriander og limebåde frem i hver sin skål, så alle kan fylde deres egne tacos. Server salsa og guacamole ved siden af."
+    }
+  ],
+  "changes": [
+    "Little Gem-salat er erstattet af hjertesalat.",
+    "Rapsolie er beholdt som rapsolie.",
+    "Majstacoskaller er erstattet af almindelige tacoskaller."
+  ]
+}

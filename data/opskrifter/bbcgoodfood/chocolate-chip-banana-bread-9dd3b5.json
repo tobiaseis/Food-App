@@ -1,0 +1,129 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chocolate-chip-banana-bread",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:57:58.403Z",
+  "total_minutes": 65,
+  "active_minutes": 5,
+  "yield_count": 10,
+  "source_lines": 8,
+  "title": "Bananbrød med chokolade",
+  "intro": "Saftigt bananbrød med chokoladestykker, der er nemt at røre sammen. Det er et godt sted at bruge de meget modne bananer.",
+  "servings": 10,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "blødt, plus lidt ekstra til formen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket sammen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "vaniljeekstrakt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "bananer",
+      "note": "modne, moset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "chokolade",
+      "note": "chokoladedråber",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C eller 160 °C varmluft. Smør en brødform og beklæd bund og sider med bagepapir."
+    },
+    {
+      "section": null,
+      "text": "Pisk det bløde smør og sukkeret med en el-pisker, til det er lyst og luftigt."
+    },
+    {
+      "section": null,
+      "text": "Bland æg og vaniljeekstrakt, og rør dem i smørblandingen lidt ad gangen. Pisk godt mellem hver omgang."
+    },
+    {
+      "section": null,
+      "text": "Vend hvedemel, bagepulver og salt i dejen sammen med de mosede bananer. Vend alle chokoladedråberne i på nær en lille håndfuld."
+    },
+    {
+      "section": null,
+      "text": "Hæld dejen i formen, og drys de sidste chokoladedråber ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Bag brødet i cirka 50 minutter. Det er færdigt, når det har hævet, og et spyd i midten kommer rent ud."
+    },
+    {
+      "section": null,
+      "text": "Lad brødet hvile i formen i 10 minutter. Løft det derefter ud på en rist, og lad det køle helt af."
+    },
+    {
+      "section": null,
+      "text": "Skær i skiver og server. Brødet kan holde sig op til fem dage i en lufttæt beholder."
+    }
+  ],
+  "changes": [
+    "Selvhævende mel er erstattet af hvedemel og ekstra bagepulver.",
+    "Gyldent kastesukker er erstattet af almindeligt sukker.",
+    "Usaltet smør er erstattet af smør.",
+    "Chocolate chips er erstattet af chokoladedråber."
+  ]
+}

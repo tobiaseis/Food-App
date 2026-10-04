@@ -1,0 +1,170 @@
+{
+  "url": "https://www.arla.dk/opskrifter/marineret-kylling-med-kernesalat-og-ingefardressing/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:00:57.317Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Marineret kylling med kernesalat og ingefærdressing",
+  "intro": "Mør kylling i ingefær- og karrymarinade serveres med en frisk salat af savojkål, perlespelt, gulerødder og appelsin. Resten af marinaden bliver til en cremet dressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ingefærmarinade",
+      "amount": 250,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ingefærmarinade",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": "flydende",
+      "optional": false
+    },
+    {
+      "section": "Ingefærmarinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "frisk, fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Ingefærmarinade",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Ingefærmarinade",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "karry",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ingefærmarinade",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingeinderfilet",
+      "note": "rensede",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kernesalat",
+      "amount": 300,
+      "unit": "g",
+      "name": "savojkål",
+      "note": "fintstrimlet",
+      "optional": false
+    },
+    {
+      "section": "Kernesalat",
+      "amount": 1.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Kernesalat",
+      "amount": 650,
+      "unit": "g",
+      "name": "perlespelt",
+      "note": "kogt, kold eller lun (ca. 240 g rå)",
+      "optional": false
+    },
+    {
+      "section": "Kernesalat",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": "Kernesalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "appelsiner",
+      "note": "i fileter",
+      "optional": false
+    },
+    {
+      "section": "Kernesalat",
+      "amount": 50,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "hakkede",
+      "optional": false
+    },
+    {
+      "section": "Ingefærdressing",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "appelsinjuice",
+      "note": "friskpresset",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ingefærmarinade",
+      "text": "Rør yoghurt, honning, ingefær, hvidløg, karry og salt sammen i en skål."
+    },
+    {
+      "section": "Ingefærmarinade",
+      "text": "Kom halvdelen over i en frysepose. Den anden halvdel bliver i skålen til dressingen."
+    },
+    {
+      "section": "Kylling",
+      "text": "Del kyllingeinderfileterne på langs, og læg dem i posen. Masser posen, så al kødet er dækket af marinade."
+    },
+    {
+      "section": "Kylling",
+      "text": "Smelt smørret på en pande, til det begynder at få farve. Steg kyllingen over høj varme i ca. 4 minutter, og vend den undervejs. Læg den til side under låg eller folie, så den holder varmen."
+    },
+    {
+      "section": "Kernesalat",
+      "text": "Ælt kålen med saltet, til den bliver blød og slipper vand."
+    },
+    {
+      "section": "Kernesalat",
+      "text": "Bland kål og perlespelt i et stort fad. Fordel gulerødder, appelsinfileter og hasselnødder over."
+    },
+    {
+      "section": "Ingefærdressing",
+      "text": "Rør appelsinjuice ind i den resterende marinade, og smag til. Server dressingen til den lune kylling og salaten."
+    }
+  ],
+  "changes": [
+    "Kvark er erstattet af græsk yoghurt."
+  ]
+}

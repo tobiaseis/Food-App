@@ -1,0 +1,171 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-schnitzel-coleslaw",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:57:24.285Z",
+  "total_minutes": 40,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Kyllingeschnitzel med coleslaw",
+  "intro": "Sprøde, paneret kyllingeschnitzler med parmesan serveres til en frisk coleslaw af hvidkål, gulerod og æble i yoghurtdressing.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til schnitzlerne",
+      "amount": 4,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "parmesan",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 100,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "stort, pisket",
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 75,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": 75,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til schnitzlerne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 300,
+      "unit": "g",
+      "name": "hvidkål",
+      "note": "strimlet",
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "stor, skrællet og revet",
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 6,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "skåret på skrå",
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æbler",
+      "note": "rødt, revet",
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til coleslawen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Coleslaw",
+      "text": "Bland kål, gulerod, forårsløg, æble, yoghurt, citronsaft og sennep i en stor skål. Smag til med salt og peber, og stil den til side."
+    },
+    {
+      "section": "Schnitzler",
+      "text": "Læg kyllingebrysterne mellem to lag husholdningsfilm. Bank dem med en kagerulle, til de er 2-3 mm tykke."
+    },
+    {
+      "section": "Schnitzler",
+      "text": "Hæld melet på en tallerken og krydr det med salt og peber. Slå ægget ud på en anden tallerken."
+    },
+    {
+      "section": "Schnitzler",
+      "text": "Vend kyllingen først i melet og derefter i ægget."
+    },
+    {
+      "section": "Schnitzler",
+      "text": "Bland panko og parmesan i en lav skål. Vend kyllingen i blandingen, så den er dækket hele vejen rundt. Stil den afkølet i køleskabet, hvis den ikke skal steges med det samme."
+    },
+    {
+      "section": "Schnitzler",
+      "text": "Varm olien op på en stor pande ved middelhøj til høj varme. Steg 2 schnitzler ad gangen i 2-3 minutter på hver side, til de er helt gyldne."
+    },
+    {
+      "section": "Schnitzler",
+      "text": "Læg dem over på køkkenrulle, så fedtet løber af. Hold dem varme i en lav ovn, mens resten steges. Server med coleslawen."
+    }
+  ],
+  "changes": [
+    "Vegetabilsk olie er skiftet til rapsolie.",
+    "English mustard er skiftet til sennep."
+  ]
+}

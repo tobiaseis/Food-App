@@ -1,0 +1,178 @@
+{
+  "url": "https://www.valdemarsro.dk/laks-citronsauce/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:49:30.480Z",
+  "total_minutes": 30,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Ovnbagt laks med citronsauce og kapers",
+  "intro": "Mørt laksefilet fra ovnen serveres med spaghetti i en cremet citronsauce med yoghurt og kapers. En let og frisk hverdagsret, der er hurtig at lave.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Laks",
+      "amount": 300,
+      "unit": "g",
+      "name": "laksefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Laks",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Laks",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "fintrevet skal, økologisk",
+      "optional": false
+    },
+    {
+      "section": "Laks",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Laks",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saft og fintrevet skal, økologisk",
+      "optional": false
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk, 10 %",
+      "optional": false
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 400,
+      "unit": "g",
+      "name": "pasta",
+      "note": "spaghetti",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "fladbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "kapers",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Laks",
+      "text": "Forvarm ovnen til 175 °C varmluft. Klæd et ovnfast fad med bagepapir, og læg laksen i fadet."
+    },
+    {
+      "section": "Laks",
+      "text": "Krydr laksen med salt og peber, og strø citronskal og hvidløg over. Bag den i 16-18 minutter."
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "text": "Smelt smørret i en gryde ved middel varme. Svits hvidløget under omrøring, til det dufter, men uden at det får farve."
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "text": "Sænk varmen, og rør citronsaft, citronskal og kapers i. Smag til med salt og peber. Lad saucen trække, mens laksen bager, og pastaen koger al dente."
+    },
+    {
+      "section": "Kapers og citronsauce",
+      "text": "Skru op til middel varme, og rør yoghurten i. Bliv ved med at røre, og lad saucen ikke koge, da den ellers skiller. Den skal kun være glat og lun."
+    },
+    {
+      "section": "Til servering",
+      "text": "Vend den kogte pasta med et par spsk af saucen. Anret på tallerkener, og læg laks og resten af saucen ovenpå."
+    },
+    {
+      "section": "Til servering",
+      "text": "Top med peber, kapers og hakket persille."
+    }
+  ],
+  "changes": [
+    "Bredbladet persille er skiftet til fladbladet persille."
+  ]
+}

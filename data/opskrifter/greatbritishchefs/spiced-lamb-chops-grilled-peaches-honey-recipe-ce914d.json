@@ -1,0 +1,320 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/spiced-lamb-chops-grilled-peaches-honey-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:54:56.665Z",
+  "total_minutes": 50,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 30,
+  "title": "Krydrede lammekoteletter med grillede ferskner og honning",
+  "intro": "Lammekoteletter marineret i yoghurt og varme krydderier, grillet sammen med ferskner og pensletpå med honningglasur. Serveres på kølig mynteyoghurt.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 12,
+      "unit": "stk",
+      "name": "lammekoteletter",
+      "note": "overskydende fedt skæres af",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "fersken",
+      "note": "halveret og uden sten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 450,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 25,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "stødt koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "pulver",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tandoori masala",
+      "note": "tørret krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": "Til yoghurtmarinaden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tørrede bukkehornsblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til honningglasuren",
+      "amount": 125,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til honningglasuren",
+      "amount": 40,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til honningglasuren",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Til honningglasuren",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "usaltet",
+      "optional": false
+    },
+    {
+      "section": "Til honningglasuren",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "maizena",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til honningglasuren",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Til honningglasuren",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til honningglasuren",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til mynteyoghurten",
+      "amount": 200,
+      "unit": "g",
+      "name": "græsk yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mynteyoghurten",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": "blade plukket og fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Til mynteyoghurten",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Til mynteyoghurten",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mynteyoghurten",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "fintHakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skallen finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "i både",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Rør alle ingredienserne til yoghurtmarinaden sammen i en stor skål. Vend lammekoteletterne i marinaden, så de er dækket hele vejen rundt."
+    },
+    {
+      "section": "Marinade",
+      "text": "Lad kødet trække i mindst 1 time, gerne natten over."
+    },
+    {
+      "section": "Honningglasur",
+      "text": "Pisk alle ingredienserne til glasuren sammen i en gryde. Lad den simre i 15-20 minutter, til den er tyk og reduceret. Hold den varm."
+    },
+    {
+      "section": "Honningglasur",
+      "text": "Har du grillen tændt, kan glasuren i stedet koge i en ovnfast gryde eller pande på det midterste, medium varme område."
+    },
+    {
+      "section": "Mynteyoghurt",
+      "text": "Bland ingredienserne til mynteyoghurten, og smag til med salt og peber."
+    },
+    {
+      "section": "Grillning",
+      "text": "Gør grillen klar til direkte varme, og vent til den er varm."
+    },
+    {
+      "section": "Grillning",
+      "text": "Pensl ferskenerne med olie, og drys dem med salt og peber. Grill dem med låg på og ventilationen åben, til de har fået pæn farve og afgiver saft. Tag dem af og hold dem varme."
+    },
+    {
+      "section": "Grillning",
+      "text": "Tag koteletterne op af marinaden, og aftør overskydende marinade. Grill dem med låg på og ventilationen åben i ca. 3 minutter på hver side, til kernetemperaturen er 57-60°C. Låget forhindrer flammer, som let opstår, når man griller fedtholdigt kød som lam."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg koteletterne på en bakke, og lad dem hvile i 5 minutter. Dryp det meste af honningglasuren over, og gem lidt til servering."
+    },
+    {
+      "section": "Anretning",
+      "text": "Smør mynteyoghurten ud på et fad, og læg koteletter og ferskner ovenpå. Dryp med resten af glasuren, og strø koriander, citronskal og rucola over. Server med citronbåde."
+    }
+  ],
+  "changes": [
+    "Kashmiri chilipulver er erstattet med almindeligt chilipulver.",
+    "Kasoori methi er skiftet til tørrede bukkehornsblade.",
+    "Wild rocket er skiftet til rucola."
+  ]
+}

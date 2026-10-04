@@ -1,0 +1,252 @@
+{
+  "url": "https://www.valdemarsro.dk/asiatisk-nudelsalat-med-kyllingekoedboller/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:25:38.535Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Asiatisk nudelsalat med kyllingeboller",
+  "intro": "Sprød nudelsalat med spidskål og gulerødder i en frisk dressing af lime, ingefær og fiskesauce. Til serveres saftige kyllingeboller med ingefær og koriander på spyd.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kyllingeboller",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket kyllingekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fintsnittede",
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "rød chili",
+      "note": "finthakket, efter smag",
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kyllingeboller",
+      "amount": null,
+      "unit": null,
+      "name": "grillspyd af træ",
+      "note": "kan undlades",
+      "optional": true
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "nudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "spidskål",
+      "note": "rød, fintstrimlet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i julienne",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "i tynde ringe",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 25,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 25,
+      "unit": "g",
+      "name": "peanuts",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakkede, til drys",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kyllingeboller",
+      "text": "Ælt hakket kylling, forårsløg, koriander, ingefær, hvidløg, chili, salt og peber sammen til en farsmasse. Brug kun så meget chili, som du kan lide – den kan også undlades."
+    },
+    {
+      "section": "Kyllingeboller",
+      "text": "Form farsen til små boller. Brun dem i olie på panden i 7-8 minutter, og vend dem ofte, så de bliver runde."
+    },
+    {
+      "section": "Kyllingeboller",
+      "text": "Skær en bolle over for at tjekke, at de er gennemstegte. Tilsæt brun farin og sojasauce, og vend hurtigt bollerne rundt i glasuren. Stik dem på spyd, hvis du bruger dem."
+    },
+    {
+      "section": "Dressing",
+      "text": "Pisk alle ingredienserne til dressingen sammen, og smag den til."
+    },
+    {
+      "section": "Salat",
+      "text": "Kog nudlerne som anvist på pakken, og lad dem løbe af."
+    },
+    {
+      "section": "Salat",
+      "text": "Massér spidskålen med dressingen i en stor skål, til den falder lidt sammen."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend gulerødder og nudler i skålen sammen med halvdelen af chili, sesamfrø, peanuts og forårsløg."
+    },
+    {
+      "section": "Salat",
+      "text": "Anret salaten på tallerkener, og server kyllingebollerne ved siden af. Drys resten af chili, sesamfrø, peanuts og forårsløg over."
+    }
+  ],
+  "changes": []
+}

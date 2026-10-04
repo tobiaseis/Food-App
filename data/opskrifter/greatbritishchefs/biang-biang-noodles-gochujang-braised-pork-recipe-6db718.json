@@ -1,0 +1,296 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/biang-biang-noodles-gochujang-braised-pork-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:50:18.552Z",
+  "total_minutes": 105,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 26,
+  "title": "Biang biang-nudler med gochujang-braiseret svinebryst og pak choi",
+  "intro": "Håndtrukne, brede nudler med mør, klistret svinebryst i krydret gochujang-sauce, stegt pak choi og varm chiliolie. En lidt tidskrævende ret, hvor nudlerne trækkes og smækkes mod bordet.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Nudler",
+      "amount": 375,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": 200,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudler",
+      "amount": null,
+      "unit": null,
+      "name": "rapsolie",
+      "note": "til at smøre med",
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 4,
+      "unit": "stk",
+      "name": "svinebryst",
+      "note": "strimler med svær, skåret i 5 cm stykker",
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 100,
+      "unit": "ml",
+      "name": "hvidvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 100,
+      "unit": "ml",
+      "name": "vand",
+      "note": "plus ekstra efter behov",
+      "optional": false
+    },
+    {
+      "section": "Varm chiliolie",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "chiliflager",
+      "optional": false
+    },
+    {
+      "section": "Varm chiliolie",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Varm chiliolie",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille, revet",
+      "optional": false
+    },
+    {
+      "section": "Varm chiliolie",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Varm chiliolie",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "jordnødder",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Varm chiliolie",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Varm chiliolie",
+      "amount": 100,
+      "unit": "ml",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 2,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": "halveret på langs",
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 150,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Nudler",
+      "text": "Rør mel og salt sammen i en stor skål. Hæld vandet i lidt ad gangen, mens du rører."
+    },
+    {
+      "section": "Nudler",
+      "text": "Ælt dejen i 5 minutter, til den er helt glat. Del den i otte lige store stykker, rul hvert stykke til en pølse, og pensl dem let med olie."
+    },
+    {
+      "section": "Nudler",
+      "text": "Læg pølserne tildækket til hvile i 1 time."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Læg svinebrystet i en gryde, og dæk med koldt vand. Bring det i kog ved svag varme, og tag kødet op, når det er blevet uigennemsigtigt. Skyl det for skum, og stil det til side."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Varm olie og farin op i en ren gryde ved middelvarme, til farinen er smeltet. Brun kødet på alle sider."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Skru ned på lav varme, og tilsæt gochujang, honning, vin, sojasauce og vand. Skru op igen, og lad saucen komme i kog. Læg et tætsluttende låg på, skru ned på lav varme, og lad det simre i 1 time, til kødet er mørt nok til at gå fra hinanden med en gaffel. Hæld lidt mere vand på undervejs, hvis gryden bliver tør."
+    },
+    {
+      "section": "Varm chiliolie",
+      "text": "Mens kødet simrer: Kom chili, ingefær, hvidløg, forårsløg, jordnødder og sesamfrø i en lille tykbundet gryde eller en stor ildfast skål."
+    },
+    {
+      "section": "Varm chiliolie",
+      "text": "Varm olien op i en tykbundet gryde til 140 °C. Hæld den forsigtigt over de øvrige ingredienser – den bobler kraftigt op, så stå på afstand, og hæld evt. i omgange. Lad olien trække, mens du laver resten."
+    },
+    {
+      "section": "Svinebryst",
+      "text": "Tag låget af, når kødet er mørt. Lad saucen koge ind, til den er en tyk, blank glasur."
+    },
+    {
+      "section": "Pak choi",
+      "text": "Varm olie op i en pande ved høj varme, og steg pak choi med snitfladen nedad, til den er gylden. Skru ned for varmen, hæld vand og sesamolie på, læg låg på, og damp i 2-4 minutter, til den er mør."
+    },
+    {
+      "section": "Nudler",
+      "text": "Sæt en stor gryde vand over til kogning, og drys to store bageplader let med mel."
+    },
+    {
+      "section": "Nudler",
+      "text": "Rul hver dejpølse flad på en let olieret bordplade med en olieret kagerulle, til en tynd firkant, der er lidt længere og bredere end kagerullen. Tryk en rille på langs midt i dejen med en spisepind eller skaftet af en tynd træske."
+    },
+    {
+      "section": "Nudler",
+      "text": "Tag fat i dejens to korte sider, og træk den ud, mens du smækker den mod bordet, så den strækkes. Det er lyden af smæk, der har givet nudlerne deres navn. Riv dejen over i rillen, så du får to meget lange, tynde nudler."
+    },
+    {
+      "section": "Nudler",
+      "text": "Læg nudlerne strakt ud på de meldryssede plader, ikke i en rede, da de nemt klistrer sammen. Lad dem helst ikke røre hinanden. Du kan også trække og koge nudlerne efter behov – to dejpølser svarer til én portion."
+    },
+    {
+      "section": "Nudler",
+      "text": "Kog nudlerne i et par minutter, til de er møre; tiden afhænger af, hvor tykke de er. Kog gerne to nudler ad gangen, fisk dem op, og lad dem dryppe af i et dørslag."
+    },
+    {
+      "section": "Til servering",
+      "text": "Vend de kogte nudler med al chiliolien, og fordel dem i skåle. Top med pak choi, en god portion svinebryst, en citronbåd, koriander og sesamfrø."
+    }
+  ],
+  "changes": [
+    "Hvedemel erstatter brødmel.",
+    "Hvidvin erstatter Shaoxing-vin.",
+    "Rapsolie erstatter jordnøddeolie i chiliolien."
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/grilled-fish-with-samphire",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:02:21.880Z",
+  "total_minutes": 31,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 16,
+  "title": "Grillet havbars med asparges og stærk marinade",
+  "intro": "Hel fisk marineret i en kraftig blanding af chili, løg, hvidløg og krydderier og grillet over glødende kul. Serveres med chips og drysses med friske grønne asparges og persille.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "havbars",
+      "note": "hele, renset og skæl fjernet; hovedet må gerne blive på",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "asparges",
+      "note": "tynde, skåret i små stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "chips",
+      "note": "til servering",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "kernerne fjernet, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "kernerne fjernet, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "fiskekrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "finmalet, sort",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "timian",
+      "note": "friske blade",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "stærk",
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidløgspulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til marinaden",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til grillristen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fisken",
+      "text": "Skær 2-3 dybe snit i begge sider af fiskene. Dup dem tørre, og krydr med salt og citronsaft. Stil dem til side."
+    },
+    {
+      "section": "Marinaden",
+      "text": "Kør peberfrugt, løg, chili og hvidløg i en food processor, til det er hakket fint, men ikke helt glat."
+    },
+    {
+      "section": "Marinaden",
+      "text": "Kom blandingen i en skål, og rør fiskekrydderi, peber, paprika, timian, karry, hvidløgspulver og olivenolie i."
+    },
+    {
+      "section": "Marinaden",
+      "text": "Gnid fiskene godt ind med marinaden udvendigt og indvendigt, og pres den ned i snittene. Fyld lidt marinade i bughulen af hver fisk – brug evt. handsker."
+    },
+    {
+      "section": "Marinaden",
+      "text": "Stil fiskene på køl i mindst 1 time."
+    },
+    {
+      "section": "Grillning",
+      "text": "Tænd grillen på fuld styrke, og vent, til flammerne har lagt sig, og kullene er hvidglødende. Pensl grillristen let med olie, så fisken ikke hænger fast."
+    },
+    {
+      "section": "Grillning",
+      "text": "Læg fiskene direkte på risten, og grill dem 4-8 minutter på hver side. Hænger en fisk fast, så lad den grille lidt længere, til den slipper af sig selv, før du vender den."
+    },
+    {
+      "section": "Grillning",
+      "text": "Uden grill kan fiskene i stedet steges under en varm ovngrill i 6-8 minutter på hver side."
+    },
+    {
+      "section": "Servering",
+      "text": "Løft fiskene over på et fad, og drys med asparges og persille. Server med chips."
+    }
+  ],
+  "changes": [
+    "Samphire er erstattet med asparges.",
+    "Romano-peberfrugt er erstattet med almindelig peberfrugt.",
+    "Scotch bonnet er erstattet med chili.",
+    "Cassavachips eller stegt yam er erstattet med chips.",
+    "Garlic granules er erstattet med hvidløgspulver."
+  ]
+}

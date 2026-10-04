@@ -1,0 +1,358 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/eggs-benedict-crispy-pork-belly-homemade-crumpets-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T16:12:26.363Z",
+  "total_minutes": 100,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 31,
+  "title": "Eggs Benedict med sprød svinebryst og hjemmelavede crumpets",
+  "intro": "Langtidsstegt, krydret svinebryst på friskbagte crumpets med pocherede æg og lun hollandaise. Svinebrystet tilberedes dagen før, så retten er nem at samle på dagen.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Svinebryst",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "ribbensteg",
+      "note": "med ribben, uden svær",
+      "optional": false
+    },
+    {
+      "section": "Svinebryst",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": "Dijon",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 50,
+      "unit": "g",
+      "name": "paprika",
+      "note": "røget, stærk",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chili",
+      "note": "pulver eller flager",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 60,
+      "unit": "g",
+      "name": "salt",
+      "note": "havsalt",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "peber",
+      "note": "stødt sort",
+      "optional": false
+    },
+    {
+      "section": "Krydderirub",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "barbecuesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Eddikespray",
+      "amount": 1,
+      "unit": "dl",
+      "name": "barbecuesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Eddikespray",
+      "amount": 1,
+      "unit": "dl",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crumpets",
+      "amount": 250,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crumpets",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "sødmælk",
+      "note": "lunken",
+      "optional": false
+    },
+    {
+      "section": "Crumpets",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "lunkent",
+      "optional": false
+    },
+    {
+      "section": "Crumpets",
+      "amount": 7,
+      "unit": "g",
+      "name": "tørgær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crumpets",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crumpets",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crumpets",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "natron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Crumpets",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til smøring af ringene",
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": 5,
+      "unit": "stk",
+      "name": "hvide peberkorn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finskåret",
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": 3,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hollandaise",
+      "amount": 150,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg og servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg og servering",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg og servering",
+      "amount": null,
+      "unit": null,
+      "name": "smør",
+      "note": "saltet, til smørring",
+      "optional": false
+    },
+    {
+      "section": "Pocherede æg og servering",
+      "amount": null,
+      "unit": null,
+      "name": "purløg",
+      "note": "finskåret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Tag svinebrystet ud af køleskabet en time før tilberedning, så det når stuetemperatur."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Bland alle krydderierne med salt, peber og hvidløg til en rub. Stil den til side."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Rør barbecuesauce og æblecidereddike til glasuren sammen i en lille skål. Rør ligeledes sauce og eddike til spraymarinaden, og hæld den på en sprayflaske."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Forvarm ovnen til 140 °C. Smør sennep over hele kødet, drys halvdelen af rubben rigeligt på, og masser den forsigtigt ind."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Læg et stort stykke folie, der kan pakke hele kødet ind, på bordet. Fordel halvdelen af glasuren på folien, og læg kødet ovenpå med fedtsiden opad. Hæld resten af glasuren over, og luk folien tæt om kødet."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Stil pakken i et dybt bradefad med lidt vand (eller øl) i bunden. Steg i 3½-4½ time, til pakken føles blød, når man trykker på den."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Tag fadet ud, og skru ovnen op på 240 °C. Åbn folien forsigtigt, for der slipper damp ud. Drys resten af rubben over kødet, og sprøjt det rigeligt med eddikespray."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Sæt fadet tilbage i ovnen i 20-30 minutter, til overfladen begynder at karamellisere. Kig til det efter 10 minutter."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Tag kødet ud, og læg en bakke eller et låg over, så det ikke tørrer ud. Lad det hvile i 10-20 minutter."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Skær ribbenene forsigtigt fra, og lad kødet køle helt af. Stil det derefter i køleskabet natten over."
+    },
+    {
+      "section": "Svinebryst (dagen før)",
+      "text": "Skær næste dag kødet i tykke skiver, i alt ca. 500 g. Opbevar dem i køleskabet, til de skal bruges."
+    },
+    {
+      "section": "Crumpets",
+      "text": "Rør alle ingredienserne til crumpets sammen i en skål, bortset fra natron. Lad dejen stå i en time."
+    },
+    {
+      "section": "Crumpets",
+      "text": "Rør natron i dejen, til den er jævn."
+    },
+    {
+      "section": "Crumpets",
+      "text": "Forvarm ovnen til 180 °C. Smør 4 crumpetringe med olie, og varm en pande op ved middel varme."
+    },
+    {
+      "section": "Crumpets",
+      "text": "Sæt ringene på panden, og fyld dem med dej i lige store portioner. Steg i 6-8 minutter ved middel varme, til der kommer små bobler i overfladen. Fjern ringene, vend crumpetsene, og steg dem ca. 1 minut på den anden side. Lad dem køle af."
+    },
+    {
+      "section": "Hollandaise",
+      "text": "Kom eddike, citronsaft, skalotteløg og peberkorn i en kasserolle, og bring det i kog. Lad det simre et par minutter, og stil det til afkøling. Si væsken, og kassér det, der bliver tilbage i sien."
+    },
+    {
+      "section": "Hollandaise",
+      "text": "Sæt en varmefast skål over en lille gryde med let simrende vand, så bunden ikke rører vandet. Pisk æggeblommerne luftige i skålen, og pisk derefter eddikereduktionen i."
+    },
+    {
+      "section": "Hollandaise",
+      "text": "Hæld det smeltede smør i en tynd stråle, mens du pisker konstant, til saucen er tyk og blank. Smag til med salt og peber, og hold den varm."
+    },
+    {
+      "section": "Pocherede æg og servering",
+      "text": "Steg svinebrystskiverne på en tør, varm pande, til de er sprøde på begge sider. Hold dem varme i ovnen, mens æggene pocheres."
+    },
+    {
+      "section": "Pocherede æg og servering",
+      "text": "Bring en gryde vand på et let kog, og tilsæt eddiken. Slå ét æg ad gangen ud i en lille skål, og lad det glide forsigtigt ned i vandet. Poscher i 2½-3 minutter, til hviden er stivnet, og blommen stadig er blød. Tag æggene op med en hulske, og lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": "Pocherede æg og servering",
+      "text": "Rist imens crumpetsene, og smør dem med smør."
+    },
+    {
+      "section": "Pocherede æg og servering",
+      "text": "Læg de sprøde svinebrystskiver på crumpetsene, og top med de pocherede æg. Hæld hollandaise over, og drys med purløg og friskkværnet peber. Server straks."
+    }
+  ],
+  "changes": [
+    "Stærkt hvedemel er erstattet med almindeligt hvedemel."
+  ]
+}

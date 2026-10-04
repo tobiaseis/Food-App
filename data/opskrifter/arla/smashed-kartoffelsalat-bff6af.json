@@ -1,0 +1,155 @@
+{
+  "url": "https://www.arla.dk/opskrifter/smashed-kartoffelsalat/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:10:18.616Z",
+  "total_minutes": 45,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Smashed kartoffelsalat",
+  "intro": "Sprøde, knuste kartofler vendes med en cremet yoghurtdressing og friske grøntsager. Perfekt som tilbehør til grillmad eller som let måltid.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Kartofler",
+      "amount": 600,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "kogte",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "cornichoner",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike, eller lage fra syltede agurker",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "knust",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i små stykker",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": 6,
+      "unit": "stk",
+      "name": "asparges",
+      "note": "grønne, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Dressing og salat",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Læg de kogte kartofler på en bageplade med bagepapir. Tryk hver kartoffel let med bunden af et glas, så den revner, men holder sammen."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Pensl med smør og drys med flagesalt og peber."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Bag kartoflerne i ca. 20 minutter ved 225 °C varmluft, til de er helt sprøde. Lad dem køle lidt af, og hak dem derefter groft."
+    },
+    {
+      "section": "Dressing og salat",
+      "text": "Rør yoghurt, cornichoner, eddike, hvidløg, groft salt og peber sammen til en dressing."
+    },
+    {
+      "section": "Dressing og salat",
+      "text": "Vend agurk, rødløg, asparges, persille og de hakkede kartofler i dressingen. Smag til med salt og peber, og server."
+    }
+  ],
+  "changes": [
+    "Syltede agurker er skiftet til cornichoner.",
+    "Syltelage er skrevet som alternativ i noten til eddike."
+  ]
+}

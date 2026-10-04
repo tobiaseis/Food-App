@@ -1,0 +1,128 @@
+{
+  "url": "https://www.valdemarsro.dk/clubsandwich/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:04:53.396Z",
+  "total_minutes": 10,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 11,
+  "title": "Clubsandwich med kylling og bacon",
+  "intro": "Dansk clubsandwich med stegt kylling, sprød bacon og sprødt æble, samlet med en cremet karrydressing. Perfekt til frokost eller en let aftensmad.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "skive",
+      "name": "brød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "kyllingebryst",
+      "note": "stegt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "sprødstegt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "salat",
+      "note": "grøn",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "karry",
+      "note": "mediumstærk",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Bland creme fraiche, mayonnaise, sennep, karry og spidskommen i en skål. Krydr med salt og peber efter smag."
+    },
+    {
+      "section": "Samling",
+      "text": "Fordel dressingen på alle brødskiverne."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg salat, kylling, bacon og æbleskiver i lag på brødet, og luk sandwichene med de resterende skiver."
+    }
+  ],
+  "changes": []
+}

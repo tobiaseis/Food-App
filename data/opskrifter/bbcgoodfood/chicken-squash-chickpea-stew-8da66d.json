@@ -1,0 +1,187 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chicken-squash-chickpea-stew",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:16:20.548Z",
+  "total_minutes": 90,
+  "active_minutes": 20,
+  "yield_count": 4,
+  "source_lines": 13,
+  "title": "Kyllingegryde med squash og kikærter",
+  "intro": "En mør gryderet med kyllingelår, græskar og kikærter, som simrer langsomt i tomat og rosmarin. Den serveres med harissayoghurt, ristede mandler og frisk koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "kyllingelår",
+      "note": "med skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": "blade plukket og finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "squash",
+      "note": "skåret i tern på 3 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "afdryppede, à 400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 600,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til yoghurten",
+      "amount": 1,
+      "unit": "dl",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til yoghurten",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til yoghurten",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mandler",
+      "note": "ristede flager",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "blade",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien i en lav gryde med låg ved middelhøj varme. Læg kyllingen i gryden med skindsiden nedad, og brun den i 8-10 minutter, til skindet er gyldent."
+    },
+    {
+      "section": null,
+      "text": "Vend kyllingen, steg den 5 minutter mere, og tag den derefter op på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Sænk varmen til middel, og lad løgene stege i fedtet fra kyllingen i 8 minutter, til de er bløde."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløg, rosmarin, tomatpuré og laurbærblade i, og lad det stege 2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld vandet i, og skrab bunden fri for stegeskorpe, så den opløses i væsken."
+    },
+    {
+      "section": null,
+      "text": "Kom squash og kikærter i, og læg kyllingen ovenpå med skindsiden opad."
+    },
+    {
+      "section": null,
+      "text": "Læg låg på, og lad retten simre i 40-45 minutter, til kyllingen er gennemstegt, og squashen er mør. Tilsæt lidt vand undervejs, hvis gryden bliver for tør. Er der for meget væske, så tag låget af de sidste 5-10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tag kyllingen op, fjern skindet, og pil kødet af benene i strimler. Du kan også lade lårene være hele."
+    },
+    {
+      "section": null,
+      "text": "Mos en del af kikærterne og squashen ud i saucen, så den tykner. Læg kyllingen tilbage i gryden."
+    },
+    {
+      "section": "Til yoghurten",
+      "text": "Rør yoghurt, harissa og salt let sammen i en lille skål, så det bliver marmoreret."
+    },
+    {
+      "section": "Til servering",
+      "text": "Server gryden med harissayoghurten, ristede mandelflager og hakket koriander drysset over."
+    }
+  ],
+  "changes": [
+    "Butternut squash er skiftet til squash.",
+    "Kyllingelår med skind erstatter lår eller trommestikker."
+  ]
+}

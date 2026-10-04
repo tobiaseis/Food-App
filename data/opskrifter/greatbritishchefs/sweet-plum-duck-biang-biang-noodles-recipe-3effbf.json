@@ -1,0 +1,353 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/sweet-plum-duck-biang-biang-noodles-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:50:12.124Z",
+  "total_minutes": 105,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 30,
+  "title": "Biang biang-nudler med and, blommesauce og syltede forårsløg",
+  "intro": "Langtidsstegte andelår med sød blommeglasur på håndtrukne, brede nudler, der vendes i varm chili-hvidløgsolie. Toppes med friske krydderurter, agurk og syltede forårsløg.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Til anden",
+      "amount": 3,
+      "unit": "stk",
+      "name": "andelår",
+      "note": "med skind",
+      "optional": false
+    },
+    {
+      "section": "Til anden",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til anden",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": 375,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "neutral, til at smøre med",
+      "optional": false
+    },
+    {
+      "section": "Til chili-hvidløgsolien",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chili-hvidløgsolien",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "cayennepeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chili-hvidløgsolien",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "lille, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til chili-hvidløgsolien",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til chili-hvidløgsolien",
+      "amount": 1,
+      "unit": "dl",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommesauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "blommer",
+      "note": "uden sten, groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til blommesauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommesauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommesauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommesauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "rødvin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommesauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "teriyakisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blommesauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede forårsløg",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "eddike",
+      "note": "risvineddike",
+      "optional": false
+    },
+    {
+      "section": "Til de syltede forårsløg",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede forårsløg",
+      "amount": 100,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede forårsløg",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede forårsløg",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": "sorte peberkorn",
+      "optional": false
+    },
+    {
+      "section": "Til de syltede forårsløg",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "forårsløg",
+      "note": "skåret i stykker på ca. 2,5 cm",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "fint skåret",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "sesamfrø",
+      "note": "til drys",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "chiliflager",
+      "note": "til drys",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Anden",
+      "text": "Tænd ovnen på 150 °C. Tør andelårene godt med køkkenrulle."
+    },
+    {
+      "section": "Anden",
+      "text": "Rids skindet i et rudemønster, og læg lårene i et stegefad. Salt dem over det hele, og hæld fonden i bunden af fadet."
+    },
+    {
+      "section": "Anden",
+      "text": "Steg andelårene i ca. 3 timer. Start på nudlerne, når de har været i ovnen i 90 minutter."
+    },
+    {
+      "section": "Nudler",
+      "text": "Bland mel og salt i en stor skål. Rør vandet i lidt ad gangen, til det samler sig til en dej."
+    },
+    {
+      "section": "Nudler",
+      "text": "Ælt dejen i 5 minutter, til den er glat. Del den i otte lige store stykker, rul hvert stykke til en pølse, og pensl dem let med olie."
+    },
+    {
+      "section": "Nudler",
+      "text": "Dæk dejpølserne til, og lad dem hvile i 1 time."
+    },
+    {
+      "section": "Chili-hvidløgsolie",
+      "text": "Kom chiliflager, cayennepeber, hvidløg og forårsløg i en stor, varmefast skål eller en tykbundet gryde."
+    },
+    {
+      "section": "Chili-hvidløgsolie",
+      "text": "Varm olien op til 140 °C i en tykbundet gryde. Hæld den forsigtigt over krydderierne i omgange – den bruser kraftigt op, så hold afstand."
+    },
+    {
+      "section": "Chili-hvidløgsolie",
+      "text": "Stil olien til side, så smagen kan trække, mens du laver resten."
+    },
+    {
+      "section": "Blommesauce",
+      "text": "Bring alle ingredienserne i blommesaucen i kog i en gryde. Skru ned på lav varme, og lad saucen koge ind i 5–10 minutter, til blommerne er bløde. Mos dem med bagsiden af en ske undervejs."
+    },
+    {
+      "section": "Syltede forårsløg",
+      "text": "Rør eddike, vand, sukker, salt og peberkorn sammen. Læg forårsløgene i lagen, og lad dem trække i mindst 30 minutter."
+    },
+    {
+      "section": "Anden",
+      "text": "Tag anden ud af ovnen, og skru op på 190 °C. Pensl skindet med noget af blommesaucen."
+    },
+    {
+      "section": "Anden",
+      "text": "Sæt anden tilbage i den varme ovn i 10 minutter, til glasuren er karamelliseret. Tag den ud, og lad den hvile, mens nudlerne trækkes."
+    },
+    {
+      "section": "Nudler",
+      "text": "Sæt en stor gryde vand over til kogning. Drys to store bageplader let med mel."
+    },
+    {
+      "section": "Nudler",
+      "text": "Rul hver dejpølse ud til et tyndt rektangel på en let olieret bordplade. Brug et smurt kagerulle, og rul dem lidt længere og bredere end selve kagerullen. Tryk en lang fordybning ned midt i dejen med en spisepind eller skaftet på en tynd grydeske."
+    },
+    {
+      "section": "Nudler",
+      "text": "Hold i dejens korte sider, og træk den langt ud. Slå den mod bordet undervejs, så den strækker sig – det er lyden, der har givet nudlerne deres navn."
+    },
+    {
+      "section": "Nudler",
+      "text": "Riv dejen over langs fordybningen, så der bliver to meget lange, tynde stykker."
+    },
+    {
+      "section": "Nudler",
+      "text": "Læg nudlerne strakt ud på de meldryssede plader, og undgå en samlet klump, da de nemt klistrer sammen. Lad dem røre hinanden så lidt som muligt. Du kan også trække og koge dem efter behov: to dejpølser giver én portion."
+    },
+    {
+      "section": "Nudler",
+      "text": "Kog nudlerne i et par minutter, til de er møre. Tiden afhænger af, hvor tykke de er. Kog dem gerne to ad gangen, og tag dem op med en hulske eller si, før næste omgang kommer i."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend de kogte nudler i skålen med chili-hvidløgsolien."
+    },
+    {
+      "section": "Servering",
+      "text": "Pil anden i tråde med to gafler, og vend den med noget af den resterende blommesauce."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel nudlerne i skåle. Top med and, syltede forårsløg, krydderurter, agurk, sesamfrø og chiliflager."
+    }
+  ],
+  "changes": [
+    "Hvedemel erstatter bread flour.",
+    "Olie erstatter jordnøddeolie.",
+    "Eddike erstatter risvineddike.",
+    "Basilikum erstatter thaibasilikum."
+  ]
+}

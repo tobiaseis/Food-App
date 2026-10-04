@@ -1,0 +1,334 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/adobo-chicken-skewers-banana-ketchup-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:55:30.590Z",
+  "total_minutes": 75,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 31,
+  "title": "Adobo-kyllingespyd med bananketchup",
+  "intro": "Marinerede kyllingelår på spyd, der grilles og penslés med sød-sur glasur, og serveres med en krydret hjemmelavet bananketchup. Limehalvdelene på spyddene og de grillede limestykker giver frisk syrlighed.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Spyd",
+      "amount": 1.5,
+      "unit": "kg",
+      "name": "kyllingeoverlår",
+      "note": "udbenede, skåret i 2,5 cm stykker",
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": 5,
+      "unit": "stk",
+      "name": "lime",
+      "note": "3 halveres; på de 2 skæres de to kinder af, og midterstykket kasseres",
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Spyd",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket, til servering",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1.2,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "dl",
+      "name": "risvineddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 30,
+      "unit": "g",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 20,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 100,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 50,
+      "unit": "ml",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "en rigelig knivspids",
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 2,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 1,
+      "unit": "stk",
+      "name": "grøn chili",
+      "note": "lille, fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 30,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "gurkemeje",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "allehånde",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 400,
+      "unit": "g",
+      "name": "bananer",
+      "note": "ca. 4 stk., moset",
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mirin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 1,
+      "unit": "dl",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 50,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mørk rom",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bananketchup",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur med brun farin",
+      "amount": 100,
+      "unit": "g",
+      "name": "brun farin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur med brun farin",
+      "amount": 0.6,
+      "unit": "dl",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur med brun farin",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "saften",
+      "optional": false
+    },
+    {
+      "section": "Glasur med brun farin",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur med brun farin",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": "Glasur med brun farin",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Marinade",
+      "text": "Rør alle ingredienserne til marinaden sammen. Vend kyllingestykkerne i marinaden, og lad dem stå i køleskabet i mindst 30 minutter – gerne natten over."
+    },
+    {
+      "section": "Bananketchup",
+      "text": "Varm olien op i en gryde, og svits skalotteløgene i ca. 5 minutter, til de er bløde."
+    },
+    {
+      "section": "Bananketchup",
+      "text": "Tilsæt hvidløg, chili, ingefær, gurkemeje, allehånde og røget paprika. Steg det i 1 minut, til det dufter."
+    },
+    {
+      "section": "Bananketchup",
+      "text": "Rør resten af ingredienserne i, og bring det i kog. Skru ned på lav varme, læg låg på, og lad det simre i 15-20 minutter, til det er tykt. Lad det køle af."
+    },
+    {
+      "section": "Bananketchup",
+      "text": "Smag til med salt og peber, og blend det helt glat. Tynd det evt. ud med lidt vand. Hæld lidt i en lille skål til dip, og kom resten i en anden skål til at pensle med under grillningen."
+    },
+    {
+      "section": "Glasur med brun farin",
+      "text": "Kog alle ingredienserne op i en gryde, og lad dem simre i 5 minutter. Gem lidt glasur til sidst, og hæld resten i en skål til at pensle med under grillningen."
+    },
+    {
+      "section": null,
+      "text": "Lægger du træspyd i blød, så lad dem trække i vand i mindst 20 minutter og dryp dem af."
+    },
+    {
+      "section": null,
+      "text": "Træk kyllingen på spyddene, og sæt en limehalvdel for enden af hvert spyd, så kødet sidder fast."
+    },
+    {
+      "section": null,
+      "text": "Gør grillen klar til direkte varme ved middelhøj varme."
+    },
+    {
+      "section": null,
+      "text": "Pensl spyddene med lidt olie, og læg dem på grillen. Grill dem med låg på og udluftningen åben i 15-20 minutter. Vend dem hvert 2. minut, og pensl skiftevis med bananketchup og glasur. Flyt spyddene til en køligere zone, hvis de bliver for mørke. Kernetemperaturen skal være mindst 74 °C."
+    },
+    {
+      "section": null,
+      "text": "Grill imens limekinderne, til de har fået flot farve, og tag dem af."
+    },
+    {
+      "section": null,
+      "text": "Anret spyddene på et fad – kødet kan trækkes af spyddene, hvis du vil. Pensl med den reserverede glasur med en ren pensel, og drys med koriander. Server med de grillede limekinder og bananketchup til dip."
+    }
+  ],
+  "changes": [
+    "Bananskalotteløg er erstattet med skalotteløg."
+  ]
+}

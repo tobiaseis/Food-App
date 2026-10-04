@@ -1,0 +1,183 @@
+{
+  "url": "https://www.valdemarsro.dk/sproede-foraarsruller/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:08:15.464Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 30,
+  "source_lines": 15,
+  "title": "Sprøde forårsruller",
+  "intro": "Friturestegte forårsruller fyldt med svinekød, svampe, gulerod og glasnudler. De er gode som forret eller til en asiatisk buffet.",
+  "servings": 30,
+  "ingredients": [
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "champignon",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": "eller anden olie til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 40,
+      "unit": "g",
+      "name": "glasnudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 30,
+      "unit": "stk",
+      "name": "forårsrulleplader",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": null,
+      "unit": null,
+      "name": "vand",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 1,
+      "unit": "l",
+      "name": "olie",
+      "note": "fritureolie",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Varm en pande op ved høj varme med olie, og svits løg, hvidløg og champignon."
+    },
+    {
+      "section": "Fyld",
+      "text": "Tilsæt svinekødet, guleroden, chilien og sukkeret, og steg, indtil kødet er helt gennemstegt. Smag til med fiskesauce, sojasauce, ingefær og peber."
+    },
+    {
+      "section": "Fyld",
+      "text": "Læg glasnudlerne i en skål, overhæld dem med kogende vand, og lad dem trække i et halvt minut. Si vandet fra."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg en plade med et hjørne mod dig. Fordel en spiseskefuld fyld på tværs af midten, og top med lidt glasnudler."
+    },
+    {
+      "section": "Samling",
+      "text": "Fold det nederste hjørne op over fyldet, og fold så de to sidehjørner ind mod midten. Rul sammen mod det øverste hjørne, og pensl kanten med koldt vand, så den klæber."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg rullerne med samlingen nedad, og gentag med resten af fyldet."
+    },
+    {
+      "section": "Stegning",
+      "text": "Hæld olien i en gryde, og varm den op. Prøv temperaturen ved at holde et trægrillspyd i olien: Når der bobler let omkring træet, er olien klar."
+    },
+    {
+      "section": "Stegning",
+      "text": "Friturestek 5-6 ruller ad gangen, til de er gyldne. Lad dem dryppe af på køkkenrulle, og server."
+    }
+  ],
+  "changes": [
+    "Fishsauce er skiftet til fiskesauce.",
+    "Glasnudler er rundet op til 40 g."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/broccoli-pesto-pancetta-pasta",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:19:35.465Z",
+  "total_minutes": 25,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 9,
+  "title": "Pasta med broccolipesto og bacon",
+  "intro": "Pasta vendes i en grøn pesto af kogt broccoli, basilikum og pinjekerner og toppes med sprødt bacon og bløde tomater. Retten er hurtig og klar på under en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "delt i buketter",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "pasta",
+      "note": "fx orecchiette",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "stort bundt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "stort",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "bacon i tern",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog en gryde let saltet vand op. Kog broccolien i 5 minutter, og tag den op med en hulske. Stil den til side."
+    },
+    {
+      "section": null,
+      "text": "Kog pasta i samme vand efter anvisningen på pakken."
+    },
+    {
+      "section": null,
+      "text": "Blend imens broccoli, pinjekerner, basilikum, hvidløg, parmesan og olivenolie til en glat pesto. Smag til med peber og kun lidt salt, da baconen er salt."
+    },
+    {
+      "section": null,
+      "text": "Varm en pande op ved middel varme, og steg baconen i 2 minutter. Kom tomaterne på, og steg dem i 3 minutter, til de er bløde."
+    },
+    {
+      "section": null,
+      "text": "Si pastaen, og gem lidt af kogevandet. Vend pastaen med pesto, tomater og bacon. Tilsæt en sjat kogevand, hvis den er for tør."
+    },
+    {
+      "section": null,
+      "text": "Anret i dybe tallerkener og server med det samme."
+    }
+  ],
+  "changes": [
+    "Pancetta er erstattet med bacon i tern."
+  ]
+}

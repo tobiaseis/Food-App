@@ -1,0 +1,171 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/spicy-fish-stew",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T22:00:24.659Z",
+  "total_minutes": 50,
+  "active_minutes": 10,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Krydret fiskegryde med laks og kidneybønner",
+  "intro": "En solid tomatgryde med laks, kidneybønner og peberfrugt, der får varme fra chili og friskhed fra lime og urter. Serveres med brune basmatiris.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, uden kerner, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "timian",
+      "note": "få kviste",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "à 400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": "lavet af 2 tsk bouillonpulver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "grøn, uden kerner, i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": "brune",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "400 g og 200 g, afdryppede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "koriander",
+      "note": "hakket, plus lidt hele kviste til servering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "fladbladet, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "laksefilet",
+      "note": "frossen, uden skind, i store stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "kun skallen, revet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor non-stick-pande. Steg løgene i 8-10 minutter, til de er bløde og gyldne."
+    },
+    {
+      "section": null,
+      "text": "Rør forårsløg, hvidløg, chili og timian i panden, og lad det stege under omrøring i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Hæld tomater og fond i, og kom peberfrugten ned i gryden. Læg låg på, og lad det småkoge i 15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kog imens risene efter anvisningen på pakken."
+    },
+    {
+      "section": null,
+      "text": "Vend bønner, koriander og persille i gryden. Lad retten simre ved svag varme i yderligere 10 minutter, til peberfrugten er mør."
+    },
+    {
+      "section": null,
+      "text": "Læg laksen og limeskallen i gryden, og lad den simre i 4-5 minutter, til fisken er gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Anret i dybe tallerkener sammen med risene, og drys med korianderkviste."
+    }
+  ],
+  "changes": [
+    "Frosset vild laks er erstattet med frossen laksefilet.",
+    "Vegetabilsk bouillonpulver og vand er erstattet med grøntsagsfond."
+  ]
+}

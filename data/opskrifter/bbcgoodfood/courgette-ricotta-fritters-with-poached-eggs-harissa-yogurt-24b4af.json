@@ -1,0 +1,205 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/courgette-ricotta-fritters-with-poached-eggs-harissa-yogurt",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T06:57:11.105Z",
+  "total_minutes": 45,
+  "active_minutes": 15,
+  "yield_count": 2,
+  "source_lines": 13,
+  "title": "Squashfritter med pocherede æg og harissayoghurt",
+  "intro": "Sprøde fritter af squash og ricotta toppet med pocherede æg og en kølig yoghurt med harissa. Flot til brunch eller en let aftensmad, gerne med sprød bacon ved siden af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Fritter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "squash",
+      "note": "groft revet",
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 50,
+      "unit": "g",
+      "name": "ricotta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "revet skal",
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "let pisket",
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 50,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 0.75,
+      "unit": "tsk",
+      "name": "bagepulver",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Harissayoghurt",
+      "amount": 60,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": "græsk",
+      "optional": false
+    },
+    {
+      "section": "Harissayoghurt",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Harissayoghurt",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 6,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "tynde skiver",
+      "optional": true
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "en sjat hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "store, til pochering",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "plukket, ca. 8 g sammen med persillen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "plukket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fritter",
+      "text": "Fores en skål med et rent viskestykke. Kom squashen i med en knivspids salt, og lad den stå i 30 minutter. Saml derefter viskestykket og vrid al væsken ud af squashen."
+    },
+    {
+      "section": "Fritter",
+      "text": "Rør den afdryppede squash sammen med ricotta, citronskal, de piskede æg og parmesan. Vend hvedemel og bagepulver i, og smag til med salt og peber."
+    },
+    {
+      "section": "Harissayoghurt",
+      "text": "Rør yoghurt og harissa sammen i en lille skål, og smag til med en knivspids salt. Stil den til side."
+    },
+    {
+      "section": "Fritter",
+      "text": "Tænd ovnen på 180 °C (160 °C varmluft). Varm olien op på en non-stick pande, og læg seks portioner af dejen på panden med en ske. Steg dem over middelvarme i 3-4 minutter på hver side, til de er gyldne. Læg dem på en bageplade, og bag dem i ovnen i 10 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Mens fritterne bager, sættes grillen på høj varme. Grill baconen i 2-3 minutter på hver side, til den er sprød."
+    },
+    {
+      "section": "Til servering",
+      "text": "Bring en gryde vand i kog, og skru ned, så det simrer. Hæld en smule eddike i en lille skål, og slå et æg ud i den. Rør vandet rundt med en grydeske, så der opstår en hvirvel, og lad ægget glide forsigtigt ned i midten. Lad det simre i 3 minutter, og tag det op. Pochér det andet æg på samme måde."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret tre fritter oven på hinanden på hver tallerken. Læg et pocheret æg og tre skiver bacon ovenpå, og sæt en klat harissayoghurt ved siden af. Drys med dild og persille."
+    }
+  ],
+  "changes": [
+    "Courgette er skiftet til squash.",
+    "Self-raising flour er skiftet til hvedemel og bagepulver.",
+    "Rose harissa er skiftet til almindelig harissa.",
+    "Pancetta er skiftet til bacon i skiver."
+  ]
+}

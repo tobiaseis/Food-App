@@ -1,0 +1,124 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/one-pan-english-breakfast",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:58:03.443Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 7,
+  "title": "Engelsk morgenmad fra én pande",
+  "intro": "Pølser, bacon, champignon og røræg samles på samme pande og gratineres kort under grillen. En mættende morgenmad, der kan skæres ud i tern og serveres direkte fra panden.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "pølser",
+      "note": "små svinepølser",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "skive",
+      "name": "bacon",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "champignon",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "revet ost",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "purløg",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnens grill på høj varme. Varm en mellemstor non-stick-pande op, og brun pølserne i 3 minutter."
+    },
+    {
+      "section": null,
+      "text": "Læg baconen på panden, og vend den af og til, til den begynder at blive sprød, cirka 5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom champignonerne på panden, og steg alt sammen i 3-5 minutter. Hæld overskydende fedt fra, og fordel indholdet jævnt over panden."
+    },
+    {
+      "section": null,
+      "text": "Krydr æggene med salt og peber, og hæld dem over. Vip panden, så ægget løber ned i hullerne."
+    },
+    {
+      "section": null,
+      "text": "Rør forsigtigt rundt med en gaffel ved lav til middel varme i 2 minutter, til ægget lige begynder at stivne."
+    },
+    {
+      "section": null,
+      "text": "Drys med tomater, ost og purløg. Sæt panden under grillen i 2 minutter, til æggene er stivnet."
+    },
+    {
+      "section": null,
+      "text": "Skær i trekanter, og server med den ketchup eller sauce, du bedst kan lide."
+    }
+  ],
+  "changes": [
+    "Chipolatas er erstattet af små svinepølser.",
+    "Back bacon er erstattet af bacon i skiver.",
+    "Purløg erstatter snippede chives."
+  ]
+}

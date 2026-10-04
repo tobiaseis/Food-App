@@ -1,0 +1,124 @@
+{
+  "url": "https://www.arla.dk/opskrifter/bagte-rodfrugter-med-bacon/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:22:43.374Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 10,
+  "title": "Bagte rodfrugter med bacon",
+  "intro": "Ovnbagte rødbeder, persillerødder og gulerødder med sprød bacon, timian og hvidløgssmør. Serveres med rugbrød og mere smør.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "skrællede, i stave",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "persillerødder",
+      "note": "skrællede, i stave (ca. 500 g)",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællede, i stave (ca. 500 g)",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "stilk",
+      "name": "timian",
+      "note": "friske kviste",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "hvidløgssmør",
+      "note": "til rodfrugterne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "timian",
+      "note": "friske kviste, til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "rugbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 25,
+      "unit": "g",
+      "name": "hvidløgssmør",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skær baconen i tern og læg dem i en lille bradepande. Sæt panden på en rist øverst i ovnen."
+    },
+    {
+      "section": null,
+      "text": "Læg rodfrugterne på en bageplade med bagepapir. Stik timiankvistene ned imellem og drys med salt. Sæt pladen nederst i ovnen."
+    },
+    {
+      "section": null,
+      "text": "Bag ved 225 °C varmluft. Baconen skal ud efter ca. 20 minutter, når den er sprød og gylden. Lad den dryppe af på køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Lad rodfrugterne blive i ovnen i alt ca. 35 minutter."
+    },
+    {
+      "section": null,
+      "text": "Pluk de tørre timianblade af kvistene. Vend dem sammen med baconen og hvidløgssmørret (50 g) i de varme rodfrugter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret i et fad, pynt med timian og server med rugbrød og det resterende hvidløgssmør."
+    }
+  ],
+  "changes": []
+}

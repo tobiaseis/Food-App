@@ -1,0 +1,136 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/japanese-salad-ginger-soy-dressing",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:14:24.140Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Sprød salat med ingefær-sojadressing",
+  "intro": "Frisk salat med baby gem, edamamebønner, gulerødder og radiser, som toppes med en cremet dressing af ingefær og soja. Den er hurtig at lave og smager dejligt let.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Salat",
+      "amount": 4,
+      "unit": "stk",
+      "name": "salat",
+      "note": "baby gem, halveret på langs",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "edamamebønner",
+      "note": "frosne, afskallede, tøet op",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i lange tændstikker",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "radiser",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "risvineddike",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": "gerne letsaltet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "lille, hakket",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Dressing",
+      "text": "Kom alle ingredienserne til dressingen i en blender eller foodprocessor sammen med vandet."
+    },
+    {
+      "section": "Dressing",
+      "text": "Kør dressingen, til den er helt glat."
+    },
+    {
+      "section": "Salat",
+      "text": "Fordel baby gem, edamamebønner, gulerødder og radiser på fire tallerkener eller på ét stort fad."
+    },
+    {
+      "section": "Salat",
+      "text": "Hæld dressingen over lige før servering."
+    }
+  ],
+  "changes": [
+    "Risvineddike er skiftet til eddike.",
+    "Baby gem er skiftet til salat.",
+    "Caster sugar er skiftet til sukker."
+  ]
+}

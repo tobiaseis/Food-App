@@ -1,0 +1,219 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/slow-cooker-beef-tacos",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:46:20.903Z",
+  "total_minutes": 570,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 20,
+  "title": "Langtidsstegte oksetacos",
+  "intro": "Mørt oksespidsbryst, der får lov at simre i en røget chipotlesauce i slow cooker, til det kan trækkes i tråde. Server kødet i bløde tortillas med friske toppings og masser af lime.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "rapsolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "oksespidsbryst",
+      "note": "skåret i store stykker på ca. 6 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "oksefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "æblecidereddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til krydderpastaen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "majstortillas",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "guacamole",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tomatsalsa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "tabasco",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "lime",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Krydderpasta",
+      "text": "Hvis din slow cooker kan brune, så sæt den på høj. Ellers varm en stegepande op ved høj varme."
+    },
+    {
+      "section": "Krydderpasta",
+      "text": "Brun løgbåde og tomathalvdele i 6-8 minutter, til de er let sorte og begynder at blive bløde. Vend dem undervejs med få minutters mellemrum. Det giver pastaen en røget smag."
+    },
+    {
+      "section": "Krydderpasta",
+      "text": "Kom løg og tomat i en foodprocessor sammen med resten af ingredienserne til krydderpastaen. Blend, til massen er helt glat."
+    },
+    {
+      "section": "Kødet",
+      "text": "Varm olien i den varme pande eller i slow cookeren. Brun oksespidsbrystet gyldent på alle sider i 5-7 minutter."
+    },
+    {
+      "section": "Kødet",
+      "text": "Rør krydderpastaen ned til kødet, og steg den 2-3 minutter, til den dufter. Brugte du en pande, flyttes alt over i slow cookeren."
+    },
+    {
+      "section": "Kødet",
+      "text": "Hæld så meget oksefond over, at kødet lige er dækket. Læg laurbærbladene i, og sæt låg på."
+    },
+    {
+      "section": "Kødet",
+      "text": "Kog på lav varme i 6-8 timer, til kødet er mørt og let kan trækkes i tråde med to gafler. Er saucen for tynd, så lad den simre uden låg i yderligere 30 minutter. Smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Træk kødet i stykker, og vend det tilbage i den tykke sauce. Fyld tortillaerne med kødet, og server med guacamole, salsa, tabasco, koriander og rigeligt lime til at presse over."
+    }
+  ],
+  "changes": [
+    "Tørrede chipotlechilier er erstattet af chipotlepasta (kildens eget alternativ), så iblødsætningen udgår.",
+    "Oksespidsbryst bruges i stedet for brisket.",
+    "Rapsolie bruges i stedet for vegetabilsk olie.",
+    "Æblecidereddike bruges i stedet for cider vinegar.",
+    "Almindeligt salt bruges i stedet for havsaltflager.",
+    "Tomatsalsa og tabasco bruges i stedet for tomatsalsa og hot sauce i generel forstand."
+  ]
+}

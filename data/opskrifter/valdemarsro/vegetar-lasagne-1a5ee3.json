@@ -1,0 +1,316 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetar-lasagne/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:53:19.528Z",
+  "total_minutes": 180,
+  "active_minutes": 60,
+  "yield_count": 6,
+  "source_lines": 26,
+  "title": "Vegetarlasagne med spinat og grøntsagssauce",
+  "intro": "Lasagne med en langtidssimret grøntsagssauce, cremet spinatfyld og mozzarellasauce. En mættende ret uden kød, der er let at lave til mange.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Lasagnesauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 250,
+      "unit": "g",
+      "name": "champignon",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 4,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevne",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 3,
+      "unit": "stilk",
+      "name": "bladselleri",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "på dåse",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lasagnesauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": 500,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frossen",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "frisk, skåret i tern",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": null,
+      "unit": null,
+      "name": "muskatnød",
+      "note": "fintrevet, et drys",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 250,
+      "unit": "g",
+      "name": "lasagneplader",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Lasagnesauce",
+      "text": "Varm olien op i en gryde ved middelvarme, og blød løgene i den."
+    },
+    {
+      "section": "Lasagnesauce",
+      "text": "Skru op for varmen, og rør champignonerne i. Steg dem under omrøring."
+    },
+    {
+      "section": "Lasagnesauce",
+      "text": "Tilsæt de resterende ingredienser til saucen. Lad det simre ved lav varme i mindst 1 time – jo længere, jo cremetere sauce. Rør ofte, og skvæt lidt ekstra bouillon i, hvis saucen bliver for tør. Smag til med salt og peber."
+    },
+    {
+      "section": "Spinatfyld",
+      "text": "Lav spinatfyldet, mens saucen er færdigsimret. Blød løg og hvidløg i olien på en pande."
+    },
+    {
+      "section": "Spinatfyld",
+      "text": "Kom den frosne spinat på panden, og varm op, til den er tøet. Hæld væden fra."
+    },
+    {
+      "section": "Spinatfyld",
+      "text": "Rør basilikum og fløde i. Smag til med muskatnød, salt og peber."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Smelt smørret i en gryde, og pisk melet i, så det danner en klump."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Hæld mælken i lidt ad gangen under konstant piskning, til saucen er glat uden meleklumper. Lad den koge igennem, og tilsæt evt. lidt mere mælk."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Saucen skal være cremet, men stadig flydende. Rør så mozzarellaen i, til den er smeltet, og smag til med muskatnød, salt og peber."
+    },
+    {
+      "section": "Samling",
+      "text": "Smør et ovnfast fad, og fordel halvdelen af mornaysaucen i bunden."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg lag på lag af lasagnesauce, spinatfyld og lasagneplader, til alt er brugt. Slut med resten af mornaysaucen øverst."
+    },
+    {
+      "section": "Samling",
+      "text": "Forvarm ovnen til 175 °C varmluft. Bag lasagnen i ca. 20-25 minutter, til pladerne er møre."
+    }
+  ],
+  "changes": []
+}

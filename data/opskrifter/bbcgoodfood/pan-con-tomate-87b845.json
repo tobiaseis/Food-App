@@ -1,0 +1,76 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/pan-con-tomate",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:39:06.263Z",
+  "total_minutes": 15,
+  "active_minutes": 10,
+  "yield_count": 1,
+  "source_lines": 4,
+  "title": "Pan con tomate",
+  "intro": "Spansk tomatbrød med ristet brød, hvidløg og revet moden tomat. Enkelt og friskt, og det er klar på få minutter.",
+  "servings": 1,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "skive",
+      "name": "brød",
+      "note": "land- eller surdejsbrød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "stor og moden",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Rist brødskiven på grill, grillpande eller i brødristeren, til den er gylden og sprød udenpå, men stadig lidt blød indeni."
+    },
+    {
+      "section": null,
+      "text": "Gnid den ene side af det varme brød let med den snittede flade af hvidløgsfeddet."
+    },
+    {
+      "section": null,
+      "text": "Skær tomaten over på midten. Riv den på den grove side af et rivejern over en sigte, der står i en skål, så overskydende væde løber fra."
+    },
+    {
+      "section": null,
+      "text": "Hæld den revne tomat ud over brødet, og drys med salt. Dryp olivenolien over, og server straks."
+    }
+  ],
+  "changes": []
+}

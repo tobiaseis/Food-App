@@ -1,0 +1,283 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/pink-prawn-ravioli-beurre-blanc-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T21:15:09.619Z",
+  "total_minutes": 100,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "title": "Lyserøde rejeravioli med champagnesmørsauce",
+  "intro": "Hjemmelavet rødbedepasta fyldt med cremet rejefars og serveret med en silkeblød smørsauce på champagne. Toppen får stegte rejer og ørredrogn.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til pastaen",
+      "amount": 200,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pastaen",
+      "amount": 4,
+      "unit": "stk",
+      "name": "æggeblommer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pastaen",
+      "amount": 60,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "kogte",
+      "optional": false
+    },
+    {
+      "section": "Til pastaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pastaen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 150,
+      "unit": "g",
+      "name": "rejer",
+      "note": "rå og pillede kæmperejer",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 0.6,
+      "unit": "dl",
+      "name": "piskefløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "citron",
+      "note": "revet skal",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "purløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fyldet",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "champagne",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": 200,
+      "unit": "g",
+      "name": "smør",
+      "note": "usaltet, koldt og i tern",
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "hvid peber",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": 40,
+      "unit": "g",
+      "name": "ørredrogn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": 9,
+      "unit": "stk",
+      "name": "rejer",
+      "note": "rå og pillede kæmperejer, til servering",
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": null,
+      "unit": null,
+      "name": "citron",
+      "note": "saft til servering",
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": null,
+      "unit": null,
+      "name": "durummel",
+      "note": "fint, til at drysse med",
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": null,
+      "unit": null,
+      "name": "dild",
+      "note": "toppe til pynt",
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sauce og servering",
+      "amount": null,
+      "unit": null,
+      "name": "sort peber",
+      "note": "friskkværnet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pastadej",
+      "text": "Bland melet med en rigelig knivspids salt i en skål eller på bordet."
+    },
+    {
+      "section": "Pastadej",
+      "text": "Blend æggeblommer, rødbeder og olivenolie helt glat. Lav en fordybning i melet, og hæld blandingen i."
+    },
+    {
+      "section": "Pastadej",
+      "text": "Træk melet langsomt ind i væden, til det samler sig til en dej. Ælt den godt igennem i 8-10 minutter, til den er glat og elastisk. Det kan også ske i en røremaskine med dejkrog."
+    },
+    {
+      "section": "Pastadej",
+      "text": "Pak dejen tæt ind, og lad den hvile i køleskabet i mindst 30 minutter. Den kan holde sig op til 2 dage."
+    },
+    {
+      "section": "Fyld",
+      "text": "Kør rejerne til fyldet i en foodprocessor med nogle få pulsslag, så de er hakket fint, men ikke til mos."
+    },
+    {
+      "section": "Fyld",
+      "text": "Tilsæt fløde, citronskal og en knivspids salt og peber. Pulsér et par gange mere, og vend fyldet derefter med purløg i en skål. Stil det tildækket på køl i 20 minutter."
+    },
+    {
+      "section": "Ravioli",
+      "text": "Rul dejen ud i pastamaskinen. Start på den bredeste indstilling, og stil gradvist tyndere, til du har en lang, tynd plade ved omkring trin 6. Del pladen i kortere stykker, hvis det er lettere at arbejde med."
+    },
+    {
+      "section": "Ravioli",
+      "text": "Læg små, pæne klatter fyld på den nederste halvdel af en plade med en teske eller sprøjtepose. Fold den øverste halvdel ned over, og tryk luften ud rundt om hver klat."
+    },
+    {
+      "section": "Ravioli",
+      "text": "Skær firkanter ud rundt om fyldet, gerne med et takket pastahjul. Læg raviolierne på en bakke drysset med durummel eller mel."
+    },
+    {
+      "section": "Ravioli",
+      "text": "Dæk bakken med et viskestykke, til raviolierne skal koges."
+    },
+    {
+      "section": "Sauce",
+      "text": "Sæt en stor gryde med saltet vand over til raviolierne. Kom champagne, skalotteløg og eddike i en lille kasserolle, og lad det simre ind til omkring 2 spsk."
+    },
+    {
+      "section": "Sauce",
+      "text": "Sænk varmen, og pisk smørret i, nogle få tern ad gangen, til saucen er blank og lagt sammen. Smag forsigtigt til med salt og hvid peber."
+    },
+    {
+      "section": "Sauce",
+      "text": "Sigt saucen over i en kande, og hold den varm uden at lade den koge."
+    },
+    {
+      "section": "Servering",
+      "text": "Kog raviolierne i det kogende saltvand i 2-3 minutter."
+    },
+    {
+      "section": "Servering",
+      "text": "Imens steges rejerne til servering på en meget varm pande med et skvæt olivenolie i 1-2 minutter på hver side, til de er lyserøde."
+    },
+    {
+      "section": "Servering",
+      "text": "Hæv raviolierne op med en hulske, og fordel dem på tallerkener. Krydr rejerne med salt og citronsaft."
+    },
+    {
+      "section": "Servering",
+      "text": "Rør ørredrognen ned i den varme sauce, og øs rigeligt over pastaen. Læg rejerne ovenpå, og pynt med dild og friskkværnet peber."
+    }
+  ],
+  "changes": [
+    "Pastamel er erstattet med hvedemel.",
+    "Double cream er erstattet med piskefløde."
+  ]
+}

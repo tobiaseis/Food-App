@@ -1,0 +1,159 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/chunky-chilli",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:07:44.609Z",
+  "total_minutes": 140,
+  "active_minutes": 5,
+  "yield_count": 4,
+  "source_lines": 11,
+  "title": "Chili con carne med langtidsstegt oksekød",
+  "intro": "En lidt lettere chili con carne med mørt oksekød i tern, røget chipotle og kidneybønner. Kødet simrer længe, så det bliver mørt, og retten serveres med lime og frisk koriander.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "plus lidt ekstra efter behov",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "oksekød",
+      "note": "i tern, til langtidsstegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "spidskommen",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "chipotle",
+      "note": "pasta, efter ønsket styrke",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kidneybønner",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "400 g",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "revet skal, og skåret i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "kun bladene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "ris",
+      "note": "kogte, til servering",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde. Brun oksekødet i få minutter på hver side, til det er farvet hele vejen rundt. Tag kødet op med en hulske og stil det til side."
+    },
+    {
+      "section": null,
+      "text": "Svits løget i samme gryde, og tilsæt lidt mere olie, hvis der er brug for det. Rør hvidløg, spidskommen og chipotle i, og lad det stege i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Hæld kidneybønnerne af i en sigte, og gem væsken fra dåsen. Rør væsken i gryden sammen med de hakkede tomater og vandet."
+    },
+    {
+      "section": null,
+      "text": "Kom kødet tilbage i gryden, og bring det i kog. Lad det simre under låg i 2 timer, til kødet er mørt. Du kan i stedet bage retten i ovnen i 3 timer ved 140 °C varmluft."
+    },
+    {
+      "section": null,
+      "text": "Vend bønnerne og limeskallen i, smag til med salt og peber, og varm det hele igennem."
+    },
+    {
+      "section": null,
+      "text": "Server med korianderblade drysset over, limebåde til at presse over og eventuelt ris ved siden af."
+    }
+  ],
+  "changes": [
+    "Kidneybønner i chilisauce er erstattet af almindelige kidneybønner på dåse.",
+    "Chipotlepasta er beholdt som chipotle, da der ikke findes en tydelig dansk afløser."
+  ]
+}

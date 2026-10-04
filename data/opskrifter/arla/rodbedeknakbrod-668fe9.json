@@ -1,0 +1,100 @@
+{
+  "url": "https://www.arla.dk/opskrifter/rodbedeknakbrod/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:11:55.402Z",
+  "total_minutes": 75,
+  "active_minutes": 20,
+  "yield_count": 25,
+  "source_lines": 7,
+  "title": "Rødbedeknækbrød",
+  "intro": "Sprødt hjemmebagt knækbrød med revne rødbeder, havregryn, mandler og frø. Det bages langsomt og skæres i små firkanter.",
+  "servings": 25,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "fintrevne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "havregryn",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "mandler",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "hørfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "flagesalt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bland alle ingredienserne i en skål, til de hænger sammen som en dej."
+    },
+    {
+      "section": null,
+      "text": "Læg dejen mellem to ark bagepapir, og rul den jævnt ud til cirka 2 mm tykkelse. Undgå, at laget bliver for tykt."
+    },
+    {
+      "section": null,
+      "text": "Løft det øverste ark af, og skær dejen i riller, så der bliver cirka 25 firkanter."
+    },
+    {
+      "section": null,
+      "text": "Flyt det nederste ark med dejen over på en bageplade. Bag midt i ovnen ved 150 °C (almindelig ovn) i cirka 1 time."
+    },
+    {
+      "section": null,
+      "text": "Tag pladen ud efter 45 minutter, og vend hvert stykke knækbrød."
+    },
+    {
+      "section": null,
+      "text": "Sæt pladen ind igen, og bag knækbrødet færdigt. Lad det afkøle på en rist."
+    }
+  ],
+  "changes": []
+}

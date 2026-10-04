@@ -1,0 +1,240 @@
+{
+  "url": "https://www.valdemarsro.dk/friske-foraarsruller-med-rejer/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:53:01.905Z",
+  "total_minutes": 90,
+  "active_minutes": 60,
+  "yield_count": 4,
+  "source_lines": 21,
+  "title": "Forårsruller med pankorejer og ananassalsa",
+  "intro": "Friske rispapirruller fyldt med sprøde, marinerede rejer, grøntsager og en frisk ananassalsa med avocado. Serveres med sød chilisauce.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Pankorejer",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "pressede",
+      "optional": false
+    },
+    {
+      "section": "Pankorejer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Pankorejer",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pankorejer",
+      "amount": 2,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologiske; fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Pankorejer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": "eller anden olie til stegning",
+      "optional": false
+    },
+    {
+      "section": "Pankorejer",
+      "amount": 250,
+      "unit": "g",
+      "name": "tigerrejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pankorejer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "sammenpisket",
+      "optional": false
+    },
+    {
+      "section": "Pankorejer",
+      "amount": 75,
+      "unit": "g",
+      "name": "pankorasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "ananas",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i små tern",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "mynte",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "økologisk; saft og fintrevet skal",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "rød, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Forårsruller",
+      "amount": 16,
+      "unit": "stk",
+      "name": "rispapir",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Forårsruller",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i stave",
+      "optional": false
+    },
+    {
+      "section": "Forårsruller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i stave",
+      "optional": false
+    },
+    {
+      "section": "Forårsruller",
+      "amount": 75,
+      "unit": "g",
+      "name": "bønnespirer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Forårsruller",
+      "amount": 2,
+      "unit": "stilk",
+      "name": "forårsløg",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": "Forårsruller",
+      "amount": 1,
+      "unit": "dl",
+      "name": "sød chilisauce",
+      "note": "til servering",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pankorejer",
+      "text": "Rør hvidløg, ingefær, fiskesauce, limesaft, limeskal og olie sammen til en jævn marinade."
+    },
+    {
+      "section": "Pankorejer",
+      "text": "Tør rejerne grundigt med køkkenrulle, og vend dem i marinaden. Lad dem stå køligt i mindst 1 time – gerne natten over."
+    },
+    {
+      "section": "Pankorejer",
+      "text": "Forvarm ovnen til 190 °C varmluft. Sæt to skåle frem: ægget i den ene og pankoraspen i den anden."
+    },
+    {
+      "section": "Pankorejer",
+      "text": "Træk rejerne gennem ægget og derefter gennem raspen, så de er dækket hele vejen rundt. Læg dem på en bageplade med bagepapir."
+    },
+    {
+      "section": "Pankorejer",
+      "text": "Bag rejerne i ovnen i ca. 12-15 minutter, til de er gyldne."
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "text": "Bland ananas, avocado, mynte og basilikum i en skål."
+    },
+    {
+      "section": "Ananassalsa med avocado",
+      "text": "Krydr med limesaft, limeskal, chili, salt og peber, og vend det forsigtigt sammen."
+    },
+    {
+      "section": "Forårsruller",
+      "text": "Fyld et stort fad med vand. Læg et ark rispapir i vandet, til det er blødt, og løft det op på et bræt eller bordet."
+    },
+    {
+      "section": "Forårsruller",
+      "text": "Fordel rejer, salsa, mynte, gulerødder, bønnespirer, agurk og forårsløg i en stribe midt på arket."
+    },
+    {
+      "section": "Forårsruller",
+      "text": "Slå siderne ind over fyldet, og rul arket stramt sammen. Gentag med resten af rispapiret."
+    },
+    {
+      "section": "Forårsruller",
+      "text": "Server rullerne med sød chilisauce. Hvis der er grøntsager eller salsa tilovers, kan de stå ved siden af som tilbehør."
+    }
+  ],
+  "changes": []
+}

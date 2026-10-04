@@ -1,0 +1,139 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/pumpkin-pie",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:04:07.660Z",
+  "total_minutes": 130,
+  "active_minutes": 40,
+  "yield_count": 8,
+  "source_lines": 11,
+  "title": "Græskartærte",
+  "intro": "Klassisk tærte med mør bund og en blød fyld af kogt græskar, kanel og muskat. Server den kold med et drys kanelsukker.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 750,
+      "unit": "g",
+      "name": "hokkaido græskar",
+      "note": "skrællet, uden kerner og skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 350,
+      "unit": "g",
+      "name": "mørdej",
+      "note": "sød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "hvedemel",
+      "note": "til ælning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "muskatnød",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "kanel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "pisket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": "smeltet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "flormelis",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Græskar",
+      "text": "Kom græskarstykkerne i en stor gryde, og hæld vand over, så de er dækket. Bring det i kog, læg låg på, og lad det simre i 15 minutter, til græskarret er mørt. Hæld vandet fra, og lad græskarret køle af."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Forvarm ovnen til 180 °C. Rul mørdejen ud på en meldrysset bordplade, og læg den i en tærteform på 22 cm med løs bund. Sæt formen i køleskabet i 15 minutter."
+    },
+    {
+      "section": "Tærtebund",
+      "text": "Læg bagepapir i bunden, og fyld med bagekugler eller tørre bønner. Forbag i 15 minutter. Tag papir og kugler af, og bag bunden 10 minutter mere, til den er lys gylden og mør. Tag den ud, og lad den køle lidt af."
+    },
+    {
+      "section": "Fyld",
+      "text": "Skru ovnen op på 220 °C. Mos det afkølede græskar gennem en sigte ned i en stor skål, eller blend det glat i en food processor."
+    },
+    {
+      "section": "Fyld",
+      "text": "Bland sukker, salt, muskat og halvdelen af kanelen i en anden skål. Rør æg, smeltet smør og mælk i, og vend blandingen i græskarmosen."
+    },
+    {
+      "section": "Bagning",
+      "text": "Hæld fyldet i tærtebunden, og bag den i 10 minutter. Sænk så ovnen til 180 °C, og bag videre i 35-40 minutter, til fyldet netop er stivnet."
+    },
+    {
+      "section": "Servering",
+      "text": "Lad tærten køle af, og tag den derefter ud af formen. Bland resten af kanelen med flormelis, og sigt det over tærten. Server den kold."
+    }
+  ],
+  "changes": [
+    "Pumpkin eller butternut squash er erstattet med hokkaido græskar.",
+    "Sweet shortcrust pastry er erstattet med færdig mørdej."
+  ]
+}

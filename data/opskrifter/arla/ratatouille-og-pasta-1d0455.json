@@ -1,0 +1,140 @@
+{
+  "url": "https://www.arla.dk/opskrifter/ratatouille-og-pasta/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T13:33:37.949Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 4,
+  "source_lines": 12,
+  "title": "Pasta med ratatouille",
+  "intro": "En grøntsagsfyldt tomatsauce med aubergine, squash og oliven, som serveres over fuldkornspasta. Retten er nem og kan stå klar på under en halv time.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 200,
+      "unit": "g",
+      "name": "løg",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "små, hakkede",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 200,
+      "unit": "g",
+      "name": "aubergine",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 200,
+      "unit": "g",
+      "name": "squash",
+      "note": "grøn, i tern",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "ca. 400 g",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 200,
+      "unit": "g",
+      "name": "tomater",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "oregano",
+      "note": "friske blade, grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 150,
+      "unit": "g",
+      "name": "oliven",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": 400,
+      "unit": "g",
+      "name": "pasta",
+      "note": "fuldkornspasta, fx penne",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ratatouille",
+      "text": "Varm olien op i en stor, tykbundet gryde."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Svits løg, hvidløg, aubergine og squash i cirka 2 minutter."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Hæld hakkede tomater og tomatterninger i gryden, og krydr med salt og peber. Lad saucen komme i kog, læg låg på, og lad den simre ved svag varme i cirka 7 minutter. Rør i den en gang imellem."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Rør oregano i, og smag til med salt og peber."
+    },
+    {
+      "section": "Pasta",
+      "text": "Kog pastaen efter anvisningen på pakken, mens saucen simrer, og si den fra."
+    },
+    {
+      "section": "Pasta",
+      "text": "Anret pastaen med ratatouillen ved siden af, og strø oliven over."
+    }
+  ],
+  "changes": []
+}

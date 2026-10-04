@@ -1,0 +1,183 @@
+{
+  "url": "https://www.valdemarsro.dk/karry-pastasalat-med-kylling/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:10:46.897Z",
+  "total_minutes": 45,
+  "active_minutes": 45,
+  "yield_count": 4,
+  "source_lines": 15,
+  "title": "Karrypastasalat med kylling",
+  "intro": "Kold pastasalat med sprød bacon, mør kylling og grøntsager i en cremet karrydressing. Den er nem at lave i forvejen og god til frokost eller madpakke.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "pasta",
+      "note": "skruer",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "haricots verts",
+      "note": "fra frost",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "ærter",
+      "note": "frosne, optøede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "majs",
+      "note": "optøede eller fra dåse",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Karrydressing",
+      "amount": 4,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": "18 %",
+      "optional": false
+    },
+    {
+      "section": "Karrydressing",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrydressing",
+      "amount": 60,
+      "unit": "g",
+      "name": "cornichoner",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Karrydressing",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "karry",
+      "note": "mediumstærk",
+      "optional": false
+    },
+    {
+      "section": "Karrydressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Karrydressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karrydressing",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal og en smule saft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Karrydressing",
+      "text": "Rør alle ingredienserne til dressingen sammen. Smag til med salt, peber, citronskal, sennep, sukker og eventuelt mere karry."
+    },
+    {
+      "section": "Salaten",
+      "text": "Kog pasta efter anvisningen på pakken. Si vandet fra, og skyl straks pastaen i koldt vand, så den holder op med at koge og køler af."
+    },
+    {
+      "section": "Salaten",
+      "text": "Steg bacon sprødt på en pande med lidt olie. Lad det dryppe af på køkkenrulle, og hak det groft."
+    },
+    {
+      "section": "Salaten",
+      "text": "Vend kyllingetern i hvedemel, salt og peber. Tilsæt lidt mere olie på baconpanden, og steg kyllingen under konstant omrøring i 4-6 minutter, til den er gennemstegt. Tag den af panden, og lad den køle lidt af."
+    },
+    {
+      "section": "Salaten",
+      "text": "Kog haricots verts direkte fra frost i letsaltet vand i 2 minutter. Hæld dem i en sigte, og skyl straks med iskoldt vand."
+    },
+    {
+      "section": "Salaten",
+      "text": "Bland pasta, bacon, kylling, haricots verts, ærter og majs i en stor skål. Vend dressingen i, så alt er dækket."
+    }
+  ],
+  "changes": [
+    "Pastaskruer er skrevet som pasta (skruer).",
+    "Kyllingefilet er skrevet som kyllingebryst."
+  ]
+}

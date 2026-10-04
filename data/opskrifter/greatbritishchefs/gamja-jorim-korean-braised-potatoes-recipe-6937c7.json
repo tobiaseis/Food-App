@@ -1,0 +1,153 @@
+{
+  "url": "https://www.greatbritishchefs.com/recipes/gamja-jorim-korean-braised-potatoes-recipe",
+  "source": "greatbritishchefs",
+  "source_name": "Great British Chefs",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T20:56:19.213Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 6,
+  "source_lines": 11,
+  "title": "Koreanske braiserede kartofler (gamja jorim)",
+  "intro": "Små kartoffelstykker, der koger møre og vendes i en blank, sød og salt sojaglasur. Drys med forårsløg og sesamfrø, og server som tilbehør eller som en del af et koreansk måltid.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": "med skræl, skåret i stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 80,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "lys",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 40,
+      "unit": "ml",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Glasur",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "eddike",
+      "note": "efter smag",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 3,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "gochugaru",
+      "note": null,
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom kartoflerne i en gryde, og dæk dem med koldt, saltet vand. Bring det i kog, og lad dem simre i 12-15 minutter, til de er næsten møre, men stadig holder formen."
+    },
+    {
+      "section": null,
+      "text": "Hæld vandet fra, og lad kartoflerne dampe af i et par minutter, så de bliver tørre."
+    },
+    {
+      "section": "Glasur",
+      "text": "Rør sojasauce, vand, honning, sukker, hvidløg og sesamolie sammen i en bred stegepande. Varm det op, til det simrer svagt."
+    },
+    {
+      "section": "Glasur",
+      "text": "Læg kartoflerne i panden, og vend dem rundt i væsken. Lad dem simre ved middelvarme i 10-15 minutter, og vend dem af og til. Væsken skal koge ind til en tyk, blank og klistret glasur, der hænger ved kartoflerne."
+    },
+    {
+      "section": "Til servering",
+      "text": "Tag panden af varmen, og tilsæt en lille skvæt eddike, så sødmen får modspil."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret kartoflerne på et fad. Drys med forårsløg, sesamfrø og peber, og tilsæt gochugaru, hvis du bruger den."
+    }
+  ],
+  "changes": [
+    "Risvinseddike er skiftet til almindelig eddike.",
+    "Ssal-jocheong (risirup) er skiftet til honning, som kilden selv nævner som alternativ.",
+    "Nanna Tate-kartofler er skiftet til almindelige kartofler.",
+    "Kogevandets salt og den afsluttende peber fra fremgangsmåden er skrevet ind på ingredienslisten."
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "url": "https://www.valdemarsro.dk/vegetarburger/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T08:02:12.461Z",
+  "total_minutes": 30,
+  "active_minutes": 30,
+  "yield_count": 4,
+  "source_lines": 17,
+  "title": "Vegetarburger med rødbedebøffer",
+  "intro": "Saftige bøffer af rødbede og havregryn bages i ovnen og toppes med smeltet ost. Serveres i bolle med frisk salat, avocado og agurk.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Rødbedebøffer",
+      "amount": 250,
+      "unit": "g",
+      "name": "rødbeder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": 50,
+      "unit": "g",
+      "name": "havregryn",
+      "note": "finvalsede",
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": 25,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sennep",
+      "note": "dijon",
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til at dryppe over",
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødbedebøffer",
+      "amount": 4,
+      "unit": "skive",
+      "name": "cheddar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 4,
+      "unit": "stk",
+      "name": "burgerboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 125,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 2,
+      "unit": "stk",
+      "name": "avocado",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødløg",
+      "note": "i ringe",
+      "optional": false
+    },
+    {
+      "section": "Til burgerne",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rødbedebøffer",
+      "text": "Bland rødbeder, havregryn, hvedemel, løg, hvidløg, æg og sennep i en skål. Rør det godt sammen og smag til med salt og peber."
+    },
+    {
+      "section": "Rødbedebøffer",
+      "text": "Er blandingen for våd eller for tør, så tilsæt lidt mere havregryn eller mel, til den er nem at forme."
+    },
+    {
+      "section": "Rødbedebøffer",
+      "text": "Tænd ovnen på 200 °C varmluft. Form fire bøffer, og læg dem på en bradepande med bagepapir. Dryp olie over."
+    },
+    {
+      "section": "Rødbedebøffer",
+      "text": "Bag bøfferne i cirka 10 minutter, vend dem, og bag dem i 5 minutter mere. Læg en skive ost på hver, og bag 1 minut, til osten lige er smeltet."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Del bollerne og varm dem kort i ovnen. Smør dem med mayonnaise."
+    },
+    {
+      "section": "Til burgerne",
+      "text": "Læg salat, avocado, rødløg, agurk og en rødbedebøf i hver bolle, og luk burgeren."
+    }
+  ],
+  "changes": []
+}

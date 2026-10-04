@@ -1,0 +1,268 @@
+{
+  "url": "https://www.valdemarsro.dk/kyllingelasagne-med-spinat/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:35:58.538Z",
+  "total_minutes": 90,
+  "active_minutes": 60,
+  "yield_count": 4,
+  "source_lines": 24,
+  "title": "Kyllingelasagne med spinat",
+  "intro": "Lasagne med kylling i krydret tomatsauce, cremet spinatfyld og en mornaysauce med mozzarella. Den bages i ovnen, til toppen er gylden.",
+  "servings": 4,
+  "ingredients": [
+    {
+      "section": "Spinatfyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": 500,
+      "unit": "g",
+      "name": "spinat",
+      "note": "frossen",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "naturel",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatfyld",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 400,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "løg",
+      "note": "finthakket, som i spinatfyldet",
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 3,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "tørret timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 30,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": "koncentreret",
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "grøntsagsfond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "olivenolie, til stegning",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 3,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Mornaysauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "muskatnød",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til lasagnen",
+      "amount": 200,
+      "unit": "g",
+      "name": "lasagneplader",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Til lasagnen",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "oregano",
+      "note": "frisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Spinatfyld",
+      "text": "Svits løgene i olivenolie på en pande, til de er bløde og stadig lyse."
+    },
+    {
+      "section": "Spinatfyld",
+      "text": "Kom den frosne spinat på panden, og varm den, til den er helt optøet. Rør flødeost i, og krydr med salt og peber."
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "text": "Hæld olie på en varm pande, og brun kyllingetern på alle sider over høj varme. Læg dem over på en tallerken."
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "text": "Sænk til middelvarme. Svits løg, hvidløg og gulerødder på samme pande."
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "text": "Tilsæt squash, de tørrede krydderurter, tomatpuré, hakkede tomater og fond. Lad saucen simre i ca. 15 minutter, til den er kogt lidt ind."
+    },
+    {
+      "section": "Kylling i krydret tomatsauce",
+      "text": "Sluk for varmen, og vend de brunede kyllingetern i saucen."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Smelt smørret i en gryde, og pisk melet i, så det danner en klump."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Hæld mælken i en tynd stråle, mens du pisker, til saucen er jævn og tyk nok til at kunne hældes."
+    },
+    {
+      "section": "Mornaysauce",
+      "text": "Pisk osten i, til den er smeltet, og smag til med muskatnød, salt og peber."
+    },
+    {
+      "section": "Til lasagnen",
+      "text": "Varm ovnen op til 220 °C varmluft."
+    },
+    {
+      "section": "Til lasagnen",
+      "text": "Byg lasagnen i lag af tomatsauce med kylling, spinatfyld, mornaysauce og lasagneplader. Slut med et lag mornaysauce øverst."
+    },
+    {
+      "section": "Til lasagnen",
+      "text": "Bag lasagnen i 12-15 minutter. Drys med frisk oregano, inden den serveres."
+    }
+  ],
+  "changes": []
+}

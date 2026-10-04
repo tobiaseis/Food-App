@@ -1,0 +1,248 @@
+{
+  "url": "https://www.valdemarsro.dk/kalkunbryst/",
+  "source": "valdemarsro",
+  "source_name": "Valdemarsro",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T14:13:39.040Z",
+  "total_minutes": 150,
+  "active_minutes": 60,
+  "yield_count": 8,
+  "source_lines": 20,
+  "title": "Fyldt kalkunbryst med knuste kartofler og salat",
+  "intro": "Saltlagt kalkunbryst rullet med en cremet fyld af hvidløgsflødeost, soltørrede tomater og pinjekerner og pakket ind i bacon. Serveres med sprøde knuste kartofler og frisk salat med tomat og basilikum.",
+  "servings": 8,
+  "ingredients": [
+    {
+      "section": "Saltlage",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Saltlage",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 1400,
+      "unit": "g",
+      "name": "kalkunbryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 150,
+      "unit": "g",
+      "name": "flødeost",
+      "note": "hvidløgsflødeost",
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 50,
+      "unit": "g",
+      "name": "soltørrede tomater",
+      "note": "i olie, finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "rosmarin",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 30,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 25,
+      "unit": "g",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": "Kalkunsteg",
+      "amount": 2,
+      "unit": "dl",
+      "name": "bouillon",
+      "note": "grøntsagsbouillon, til fadet",
+      "optional": false
+    },
+    {
+      "section": "Knuste kartofler",
+      "amount": 2,
+      "unit": "kg",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 300,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "basilikum",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "citron",
+      "note": "økologisk, fintrevet skal og saft",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Saltlage",
+      "text": "Rør vand, salt og sukker sammen, til det hele er opløst."
+    },
+    {
+      "section": "Saltlage",
+      "text": "Læg kalkunbrystet på et skærebord med den glatte side nedad. Skær to snit på langs fra midten og ud gennem kødet, så brystet kan foldes ud som en skjorte. Læg kødet i saltlagen, så det er helt dækket, og lad det stå i køleskabet i ca. 1 time."
+    },
+    {
+      "section": "Kalkunsteg",
+      "text": "Bland flødeost, soltørrede tomater, hvidløg, rosmarin, basilikum og pinjekerner i en skål. Tilsæt lidt af olien fra tomaterne, til fyldet er cremet og let at smøre."
+    },
+    {
+      "section": "Kalkunsteg",
+      "text": "Løft kødet op af saltlagen, og tør det grundigt med køkkenrulle. Smør fyldet ud over kødet, og rul det stramt til en rouladesteg. Hold stegen lukket med kødnåle, og vend den, så samlingen vender nedad."
+    },
+    {
+      "section": "Kalkunsteg",
+      "text": "Smør stegen tyndt med smør, og læg baconskiverne rundt om, så de overlapper. Læg stegen i et smurt ovnfast fad, og hæld bouillon i bunden."
+    },
+    {
+      "section": "Kalkunsteg",
+      "text": "Steg i forvarmet ovn ved 180 °C i ca. 1½ time, eller til kernetemperaturen er 70-73 °C. Øs væden fra fadet over stegen ca. hvert kvarter."
+    },
+    {
+      "section": "Knuste kartofler",
+      "text": "Kog kartoflerne i letsaltet vand, til de lige akkurat er møre. Hæld vandet fra, og læg dem på en bageplade med bagepapir. Tryk dem flade med bunden af et glas."
+    },
+    {
+      "section": "Knuste kartofler",
+      "text": "Tag stegen ud af ovnen, og lad den hvile på et bræt eller fad, gerne under folie. Pensl kartoflerne med fonden og fedtet fra fadet, og bag dem ved 230 °C varmluft i ca. 15 minutter, mens kødet hviler."
+    },
+    {
+      "section": "Salat",
+      "text": "Pisk citronsaft, citronskal og olie sammen til en vinaigrette, og smag til med salt og peber."
+    },
+    {
+      "section": "Salat",
+      "text": "Anret salatblandingen med pinjekerner, tomater og basilikum, og dryp vinaigretten over."
+    },
+    {
+      "section": "Kalkunsteg",
+      "text": "Skær stegen i skiver, og server den med salaten og de knuste kartofler."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,335 @@
+{
+  "url": "https://www.bbcgoodfood.com/recipes/bouillabaisse",
+  "source": "bbcgoodfood",
+  "source_name": "BBC Good Food",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-04T07:33:20.255Z",
+  "total_minutes": 120,
+  "active_minutes": 60,
+  "yield_count": 6,
+  "source_lines": 29,
+  "title": "Bouillabaisse med rouille og croutoner",
+  "intro": "Klassisk fransk fiskesuppe med safran, fennikel og tomat, der serveres med sprøde croutoner og en kraftig hvidløgsrouille. Den kan laves rustik med hele stykker eller forfinet som en glat bouillon.",
+  "servings": 6,
+  "ingredients": [
+    {
+      "section": "Urtebundt",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "den grønne top, holdes hel",
+      "optional": false
+    },
+    {
+      "section": "Urtebundt",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "timian",
+      "note": "lille bundt",
+      "optional": false
+    },
+    {
+      "section": "Urtebundt",
+      "amount": 3,
+      "unit": "stk",
+      "name": "laurbærblade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urtebundt",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "stilkene bruges hele i bundtet, bladene hakkes groft til servering",
+      "optional": false
+    },
+    {
+      "section": "Urtebundt",
+      "amount": 2,
+      "unit": "stk",
+      "name": "appelsinskal",
+      "note": "strimler",
+      "optional": false
+    },
+    {
+      "section": "Urtebundt",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "den hvide del, fint snittet",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "hakket; fennikelgrønt plukkes og gemmes",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 4,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "stjerneanis",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Pernod",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Suppe",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "store, modne, hakkede",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": "stor knivspids",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 1.5,
+      "unit": "l",
+      "name": "fiskefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": 100,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "ét skrællet stykke",
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Suppe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "kg",
+      "name": "fiskefilet",
+      "note": "blandede faste fisk, hver filet skåret i store stykker",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 300,
+      "unit": "g",
+      "name": "blåmuslinger",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Rouille",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rød chili",
+      "note": "lille stykke",
+      "optional": true
+    },
+    {
+      "section": "Rouille",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "safran",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "kartofler",
+      "note": "stykket der er kogt i suppen",
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æggeblomme",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 1,
+      "unit": "dl",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rouille",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "citronsaft",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "flute",
+      "note": "skåret i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Croutoner",
+      "text": "Forvarm ovnen til 200 °C (180 °C varmluft)."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Fordel brødskiverne i ét lag på en bageplade og dryp dem med olivenolie. Bag dem i 15 minutter, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Lad dem køle af. De kan laves dagen før og opbevares i en lufttæt beholder."
+    },
+    {
+      "section": "Urtebundt",
+      "text": "Brug et stykke af porretoppen som omslag om timian, laurbærblade, persillestilke, appelsinskal og chili. Bind bundtet sammen med køkkengarn."
+    },
+    {
+      "section": "Suppe",
+      "text": "Varm olien op i en meget stor gryde. Sæt løg, hvid porre og fennikel i og svits dem i ca. 10 minutter, til de er møre."
+    },
+    {
+      "section": "Suppe",
+      "text": "Rør hvidløget i og steg det 2 minutter. Kom urtebundt, tomatpuré, stjerneanis, Pernod, tomater og safran i, og lad det simre under omrøring i et par minutter."
+    },
+    {
+      "section": "Suppe",
+      "text": "Hæld fiskefonden over og smag til med salt og peber. Bring det i kog under svag varme, og læg kartoffelstykket ned i gryden."
+    },
+    {
+      "section": "Suppe",
+      "text": "Lad suppen putre i 30 minutter, til den er tynd og tomatrød. Tag kartoffelstykket op, lige før det falder fra hinanden, og gem det til rouillen."
+    },
+    {
+      "section": "Rouille",
+      "text": "Mos hvidløg, chili og safran sammen med en knivspids salt i en mortér. Tilsæt den kogte kartoffel og mos til en klistret masse."
+    },
+    {
+      "section": "Rouille",
+      "text": "Pisk æggeblommen i, og tilsæt derefter olien i en tynd stråle, mens du pisker, til du har en cremet sauce som mayonnaise. Rør citronsaft i og stil den til side."
+    },
+    {
+      "section": "Fisk",
+      "text": "Vælg en af to måder. Rustik: Læg fisken og muslingerne direkte i den sigtede suppe og lad dem trække, til muslingerne åbner sig. Forfinet: Fortsæt som beskrevet herunder."
+    },
+    {
+      "section": "Fisk",
+      "text": "Til den forfinede udgave fjernes urtebundt og stjerneanis. Blend suppen glat og si den over i en ren gryde. Bring den til en let simren."
+    },
+    {
+      "section": "Fisk",
+      "text": "Kom fisken i én slags ad gangen, og start med den fasteste. Lad hver slags koge 1 minut, før den næste kommer i."
+    },
+    {
+      "section": "Fisk",
+      "text": "Kom til sidst muslingerne ovenpå og lad det simre i ca. 5 minutter, til fisken lige er gennemkogt, og muslingerne har åbnet sig."
+    },
+    {
+      "section": "Servering",
+      "text": "Løft fisk og muslinger op på et varmt fad med en hulske. Fugt dem med lidt suppe og drys med hakket persille og det gemte fennikelgrønt."
+    },
+    {
+      "section": "Servering",
+      "text": "Server suppen med croutoner og rouille, enten som to retter (suppe først, så fisken i samme skål) eller som én samlet fiskesuppe. Rør rouillen ud i suppen, så den bliver tykkere og får mere kant."
+    }
+  ],
+  "changes": [
+    "Middelhavsfiskene (multe, havtaske, sanktpetersfisk, knurhane) er erstattet med blandede faste fiskefileter.",
+    "Baguette er erstattet med flute."
+  ]
+}

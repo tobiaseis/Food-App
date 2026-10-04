@@ -1,0 +1,128 @@
+{
+  "url": "https://www.arla.dk/opskrifter/fladbrod-med-hytteost/",
+  "source": "arla",
+  "source_name": "Arla",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-03T15:11:42.452Z",
+  "total_minutes": 30,
+  "active_minutes": 10,
+  "yield_count": 2,
+  "source_lines": 10,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "hytteost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "friskkværnet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "tørrede chiliflager",
+      "optional": false
+    },
+    {
+      "section": "Til fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "pesto",
+      "note": "basilikumpesto",
+      "optional": false
+    },
+    {
+      "section": "Til fyld",
+      "amount": 150,
+      "unit": "g",
+      "name": "kylling",
+      "note": "stegt",
+      "optional": false
+    },
+    {
+      "section": "Til fyld",
+      "amount": 4,
+      "unit": "stk",
+      "name": "salat",
+      "note": "salatblade",
+      "optional": false
+    },
+    {
+      "section": "Til fyld",
+      "amount": 10,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "cherrytomater, halveret",
+      "optional": false
+    },
+    {
+      "section": "Til fyld",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "rødløg",
+      "note": "syltede",
+      "optional": false
+    }
+  ],
+  "servings": 2,
+  "title": "Fladbrød med hytteost og kylling",
+  "intro": "Et luftigt fladbrød lavet af hytteost og æg, som fyldes med pesto, kylling og friske grøntsager. Det er nemt og kan sagtens laves i forvejen.",
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180 °C varmluft og læg bagepapir på en bageplade på cirka 30 x 40 cm."
+    },
+    {
+      "section": null,
+      "text": "Kør hytteost, æg, salt og peber sammen i en blender, til massen er helt glat og tyndtflydende."
+    },
+    {
+      "section": null,
+      "text": "Hæld massen på bagepapiret og stryg den ud i et jævnt lag. Strø chiliflager over."
+    },
+    {
+      "section": null,
+      "text": "Bag fladbrødet i 15-20 minutter, til overfladen er gyldden."
+    },
+    {
+      "section": null,
+      "text": "Lad brødet køle helt af på pladen, og træk så bagepapiret forsigtigt af."
+    },
+    {
+      "section": "Fyld",
+      "text": "Skær fladbrødet over på midten, så du har to halvdele."
+    },
+    {
+      "section": "Fyld",
+      "text": "Smør pesto på begge halvdele, og læg kylling, salat, tomater og syltede rødløg ovenpå."
+    }
+  ],
+  "changes": []
+}
