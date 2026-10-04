@@ -583,6 +583,98 @@ test('tre linjer mod én før (+2) udløser ikke ingrediensreglen', () => {
   });
 });
 
+// ── Kontrollen sammenligner det sammenlignelige ──────────────────────────────
+
+const { problems } = require('../src/recipes/import-da');
+
+/** En udgave, der kun kan fejle på det, testen prøver: titel, trin og portioner er i orden. */
+function edOf(ingredients, extra = {}) {
+  return {
+    title: 'Ret til prøve', servings: 4, yield_count: 4,
+    steps: [{ section: null, text: 'Først.' }, { section: null, text: 'Så.' }],
+    ingredients: ingredients.map(([amount, unit, name]) =>
+      ({ section: null, amount, unit, name, note: null, optional: false })),
+    ...extra,
+  };
+}
+const parsedLines = (raws) => raws.map((raw, i) => ({ ...parseIngredient(raw, i), raw }));
+const editionLines = (ed) => parsedLines(ed.ingredients.map(lineOf));
+
+test('hovedråvaren genfindes i en søstervare af samme dyr', () => {
+  // Den engelske linje og den danske kan ramme hver sin nøgle for samme kød:
+  // "1 kylling (ca. 1200 g)" er `kylling`, "hel kylling" er `hel_kylling`;
+  // "4 slices of ham" er `paalaeg`, "skinke" er `skinke`. 137 udgaver blev
+  // holdt tilbage for "hovedråvaren er væk", og det var mest den slags.
+  const cases = [
+    [['1 kylling (ca. 1200 g)', '1 tsp salt'], [[1200, 'g', 'hel kylling'], [1, 'tsk', 'salt']]],
+    [['4 slices of ham', '1 tsp salt'], [[4, 'skive', 'skinke'], [1, 'tsk', 'salt']]],
+    [['4 slices prosciutto', '1 tsp salt'], [[4, 'skive', 'parmaskinke'], [1, 'tsk', 'salt']]],
+  ];
+  for (const [before, after] of cases) {
+    const ed = edOf(after);
+    assert.deepEqual(problems(ed, editionLines(ed), parsedLines(before)), [], before[0]);
+  }
+});
+
+test('mængden måles over hele familien: 1,2 kg kylling mod 1,8 kg hel kylling er for meget', () => {
+  const ed = edOf([[1800, 'g', 'hel kylling'], [1, 'tsk', 'salt']]);
+  const issues = problems(ed, editionLines(ed), parsedLines(['1 kylling (ca. 1200 g)', '1 tsp salt']));
+  assert.equal(issues.length, 1, issues.join());
+  assert.match(issues[0], /kylling: 1200 → 1800 \(mere end 25 %\)/);
+});
+
+test('et andet dyr er stadig en anden ret: lam → svinemørbrad', () => {
+  const ed = edOf([[600, 'g', 'svinemørbrad'], [1, 'tsk', 'salt']]);
+  const issues = problems(ed, editionLines(ed), parsedLines(['600 g lamb rump', '1 tsp salt']));
+  assert.ok(issues.includes('hovedråvaren lam er væk'), issues.join());
+});
+
+test('linjetallet måles mod kildens linjer, ikke mod basens', () => {
+  // #643 softice: kildesiden har 9 linjer, basen kun 4 (crawleren fik ikke
+  // dem alle med), udgaven 9. Det er ikke nye ingredienser.
+  const nine = [[5, 'dl', 'mælk'], [100, 'g', 'sukker'], [3, 'stk', 'æg'], [2, 'dl', 'piskefløde'],
+    [1, 'tsk', 'vaniljesukker'], [50, 'g', 'smør'], [1, 'knivspids', 'salt'],
+    [100, 'g', 'mørk chokolade'], [1, 'stk', 'citron']];
+  const db4 = parsedLines(['500 ml milk', '100 g sugar', '3 eggs', '2 dl cream']);
+
+  const fromSource = edOf(nine, { source_lines: 9 });
+  assert.deepEqual(problems(fromSource, editionLines(fromSource), db4), []);
+
+  // Siger kilden selv 4, er 9 stadig nye ingredienser.
+  const invented = edOf(nine, { source_lines: 4 });
+  assert.match(problems(invented, editionLines(invented), db4).join(), /9 ingredienslinjer, kilden 4/);
+
+  // Uden source_lines (en ældre fil) er basens linjer målestokken, som før.
+  const old = edOf(nine);
+  assert.match(problems(old, editionLines(old), db4).join(), /9 ingredienslinjer, før 4/);
+});
+
+test('udgaven husker kildens antal ingredienslinjer ved siden af yield_count', () => {
+  const { editionRecord } = require('../src/recipes/rewrite');
+  const src = {
+    url: 'https://test.invalid/x', source: 'test', source_name: 'Test',
+    total_minutes: 30, active_minutes: 10, yield_count: 4,
+    ingredients: ['1 a', '2 b', '3 c'],
+  };
+  const ed = editionRecord(src, { model: 'm', output: { title: 'X', ingredients: [] } });
+  assert.equal(ed.source_lines, 3);
+  const keys = Object.keys(ed);
+  assert.equal(keys[keys.indexOf('yield_count') + 1], 'source_lines');
+});
+
+test('backfill-source-lines lægger source_lines lige efter yield_count og rører intet andet', () => {
+  const { withSourceLines } = require('../scripts/backfill-source-lines');
+  const ed = { url: 'u', total_minutes: 30, active_minutes: null, yield_count: 4, title: 'T', ingredients: [] };
+  const out = withSourceLines(ed, 7);
+  assert.deepEqual(Object.keys(out),
+    ['url', 'total_minutes', 'active_minutes', 'yield_count', 'source_lines', 'title', 'ingredients']);
+  assert.equal(out.source_lines, 7);
+  assert.equal(ed.source_lines, undefined, 'originalen er urørt');
+  // Allerede der: samme plads, nyt tal.
+  assert.deepEqual(Object.keys(withSourceLines(out, 8)), Object.keys(out));
+  assert.equal(withSourceLines(out, 8).source_lines, 8);
+});
+
 test('systemprompten forbyder hjemmelavede erstatninger', () => {
   assert.ok(systemText().includes('aldrig med en hjemmelavet version'));
 });

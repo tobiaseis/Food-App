@@ -43,6 +43,25 @@ const ANIMAL_PREFIX = [
   ['kylling', (k) => /kylling/.test(k)],
 ];
 
+// Søstervarer af samme dyr eller samme vare. Den engelske linje og den danske
+// rammer ofte hver sin nøgle for det samme kød: "1 kylling (ca. 1200 g)" er
+// `kylling`, udgavens "hel kylling" er `hel_kylling`; "4 slices of ham" og
+// "prosciutto" er `paalaeg`, udgavens "skinke" og "parmaskinke" er `skinke`.
+// Kontrollen holdt 137 udgaver tilbage for "hovedråvaren er væk", mest af den
+// grund. Inden for familien er hovedråvaren der stadig, og mængden måles over
+// hele familien; et skift til et andet dyr (lam → svin) fanges som før. En
+// hovedvare, der ikke står her, er sin egen familie.
+const FAMILIES = {
+  kylling: ['kylling', 'hel_kylling', 'kyllingebryst', 'kyllingelaar'],
+  svin: ['flaeskesteg', 'svinemoerbrad', 'svinekoteletter', 'hakket_svinekoed', 'bacon', 'skinke',
+    'paalaeg', 'poelser'],
+  okse: ['oksekoed', 'boef', 'oksemoerbrad', 'hakket_oksekoed'],
+  lam: ['lam'],
+  kalv: ['kalvekoed'],
+};
+const FAMILY_OF = new Map(Object.entries(FAMILIES).flatMap(([f, keys]) => keys.map((k) => [k, f])));
+const familyOf = (key) => FAMILY_OF.get(key) || key;
+
 function listFiles(dir) {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir, { withFileTypes: true })
@@ -65,13 +84,20 @@ function problems(ed, lines, before) {
     out.push(`${ed.servings} portioner, kilden siger ${ed.yield_count}`);
   }
 
-  // Hovedråvaren må ikke være skiftet ud.
-  const after = new Set(lines.map((l) => l.item_key).filter(Boolean));
+  // Hovedråvaren må ikke være skiftet ud — en søstervare af samme dyr er den
+  // samme råvare (FAMILIES).
+  const after = new Set(lines.map((l) => l.item_key).filter(Boolean).map(familyOf));
+  const seen = new Set();
   for (const k of new Set(before.filter((l) => MAIN_CATS.has(catOf(l.item_key))).map((l) => l.item_key))) {
-    if (!after.has(k)) { out.push(`hovedråvaren ${k} er væk`); continue; }
+    const fam = familyOf(k);
+    if (seen.has(fam)) continue;
+    seen.add(fam);
+    if (!after.has(fam)) { out.push(`hovedråvaren ${k} er væk`); continue; }
     // Afrundingen må højst flytte en vare 20 % (prompten); 25 % giver plads
-    // til hele pakker. Mere end det er en anden ret.
-    const sum = (ls) => ls.filter((l) => l.item_key === k).reduce((a, l) => a + (l.amount || 0), 0);
+    // til hele pakker. Mere end det er en anden ret. Summen er familiens:
+    // "1 kylling 1200 g" mod "hel kylling 1200 g" er den samme mængde.
+    const sum = (ls) => ls.filter((l) => l.item_key && familyOf(l.item_key) === fam)
+      .reduce((a, l) => a + (l.amount || 0), 0);
     const was = sum(before), now = sum(lines);
     if (was > 0 && now > 0 && Math.abs(now / was - 1) > 0.25) {
       out.push(`${k}: ${Math.round(was * 1000)} → ${Math.round(now * 1000)} (mere end 25 %)`);
@@ -90,8 +116,15 @@ function problems(ed, lines, before) {
   // Flere ingredienslinjer end kilden: en erstattet færdigvare er blevet til en
   // hjemmelavet delopskrift med opfundne mængder (pilotens cheesecake med gelé).
   // Marginen på +2 og 30 % lader "salt og peber" blive til to linjer.
-  if (before.length > 0 && lines.length > before.length + 2 && lines.length > before.length * 1.3) {
-    out.push(`${lines.length} ingredienslinjer, før ${before.length} (nye ingredienser?)`);
+  //
+  // Målestokken er KILDESIDENS linjer (source_lines, skrevet af rewrite.js):
+  // basens linjer er ofte færre end sidens — #643 softice har 9 på siden, 4 i
+  // basen — og 128 udgaver blev holdt tilbage for linjer, kilden faktisk har.
+  // En ældre fil uden feltet måles mod basen som før.
+  const fromSource = typeof ed.source_lines === 'number';
+  const base = fromSource ? ed.source_lines : before.length;
+  if (base > 0 && lines.length > base + 2 && lines.length > base * 1.3) {
+    out.push(`${lines.length} ingredienslinjer, ${fromSource ? 'kilden' : 'før'} ${base} (nye ingredienser?)`);
   }
   return out;
 }

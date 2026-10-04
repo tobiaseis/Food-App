@@ -268,16 +268,25 @@ function reportClose(close) {
   console.log(`npm run recipes:rewrite -- run --force --ids ${close.join(',')}`);
 }
 
-function writeEdition(src, answer) {
-  const ed = {
+/** Udgavens fil som objekt: kildens faktiske felter først, modellens svar efter. */
+function editionRecord(src, answer) {
+  return {
     url: src.url, source: src.source, source_name: src.source_name,
     edition: EDITION, model: answer.model, written_at: new Date().toISOString(),
     // Tiderne er kildens, læst af times.js — ikke modellens.
     total_minutes: src.total_minutes ?? null,
     active_minutes: src.active_minutes ?? null,
     yield_count: src.yield_count ?? null,
+    // Kildesidens antal ingredienslinjer. import-da.js måler udgavens linjer
+    // mod dette tal og ikke mod basens, som ofte har færre end siden.
+    // Kun tallet: kildens tekst forlader ikke tmp/kilder/.
+    source_lines: Array.isArray(src.ingredients) ? src.ingredients.length : null,
     ...answer.output,
   };
+}
+
+function writeEdition(src, answer) {
+  const ed = editionRecord(src, answer);
   const file = editionPath(src.source, src.url);
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, `${JSON.stringify(ed, null, 2)}\n`);
@@ -406,5 +415,5 @@ if (require.main === module) {
 
 module.exports = {
   newestClaude, limitHit, generatingModel, systemText, userMessage,
-  overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN, drain, MAX_ERRORS_IN_A_ROW,
+  overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN, drain, MAX_ERRORS_IN_A_ROW, editionRecord,
 };
