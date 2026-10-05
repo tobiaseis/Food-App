@@ -794,22 +794,24 @@ test('sides-prompten er fast og nævner de tilladte enheder; beskeden bruger udg
   assert.match(msg, /1\. Steg\./);
 });
 
-test('cleanSide: varenavne med småt, basisvarer droppes, men en eneste linje bevares', () => {
+// Ændret bevidst (opgave 1): olie og smør droppes ikke mere — sprøde ovnkartofler
+// kræver olie. Kun salt og peber fjernes.
+test('cleanSide: varenavne med småt, salt/peber droppes, olie/smør beholdes, og en eneste linje bevares', () => {
   const l = (name, extra = {}) => ({ section: null, amount: 1, unit: 'g', name, note: 'Til Vandet', optional: false, ...extra });
   const side = { title: 'Kartofler', ingredients: [l('Kartofler'), l('Grøn salat'), l('Olivenolie'), l('Salt'), l('Peanutsmør')], steps: ['Kog.'] };
   const out = sides.cleanSide(side);
-  assert.deepEqual(out.ingredients.map((i) => i.name), ['kartofler', 'grøn salat', 'peanutsmør']);
+  assert.deepEqual(out.ingredients.map((i) => i.name), ['kartofler', 'grøn salat', 'olivenolie', 'peanutsmør']);
   assert.equal(out.ingredients[0].note, 'Til Vandet', 'resten af teksten er uændret');
   assert.equal(out.title, 'Kartofler');
-  const only = sides.cleanSide({ title: 'x', ingredients: [l('Smør')], steps: [] });
-  assert.deepEqual(only.ingredients.map((i) => i.name), ['smør']);
+  const only = sides.cleanSide({ title: 'x', ingredients: [l('Salt')], steps: [] });
+  assert.deepEqual(only.ingredients.map((i) => i.name), ['salt']);
   assert.equal(sides.cleanSide(null), null);
 });
 
 // ── Tilbehør (meal.side) ─────────────────────────────────────────────────────
 
 const SIDE = {
-  title: 'Kogte kartofler',
+  title: 'Sprøde ovnkartofler',
   ingredients: [
     { section: null, amount: 800, unit: 'g', name: 'kartofler', note: null, optional: false },
     { section: null, amount: null, unit: null, name: 'salt', note: null, optional: false },
@@ -824,7 +826,7 @@ test('en udgave med tilbehør får afsnittet Tilbehør i linjer og trin', () => 
     assert.equal(res.applied, 1, JSON.stringify(res.flaggedList));
     const lines = db.prepare('SELECT * FROM recipe_ingredients WHERE recipe_id = ? ORDER BY position').all(id);
     assert.equal(lines.length, 5);
-    assert.deepEqual(lines.slice(3).map((l) => l.section), ['Tilbehør: Kogte kartofler', 'Tilbehør: Kogte kartofler']);
+    assert.deepEqual(lines.slice(3).map((l) => l.section), ['Tilbehør: Sprøde ovnkartofler', 'Tilbehør: Sprøde ovnkartofler']);
     assert.equal(lines[3].item_key, 'kartofler');
     const steps = db.prepare('SELECT * FROM recipe_steps WHERE recipe_id = ? ORDER BY position').all(id);
     assert.deepEqual(steps.slice(2).map((s) => s.section), ['Tilbehør', 'Tilbehør']);
@@ -850,7 +852,8 @@ test('et tilbehør med ukendt enhed, uden trin eller med for mange linjer holdes
   const bad = [
     { ...SIDE, ingredients: [{ ...SIDE.ingredients[0], unit: 'bolle' }, SIDE.ingredients[1]] },
     { ...SIDE, steps: [] },
-    { ...SIDE, ingredients: Array(5).fill(SIDE.ingredients[0]) },
+    { ...SIDE, ingredients: Array(7).fill(SIDE.ingredients[0]) },
+    { ...SIDE, steps: Array(5).fill('Bag.') },
     { ...SIDE, ingredients: [] },
     { ...SIDE, ingredients: [{ ...SIDE.ingredients[0], amount: 0 }] },
   ];
@@ -877,6 +880,31 @@ test('et tilbehør med bælgfrugt eller æg holdes tilbage, kartofler ikke', () 
   withEdition(withMeal(31, { complete: false, reason: 'x', side: pot }), ({ dir }) => {
     assert.equal(importAll({ dir, log: () => {} }).applied, 1);
   });
+});
+
+test('et kedeligt tilbehør (kun kogte kartofler/ris/bar salat) holdes tilbage, et med smag ikke', () => {
+  const { sideProblems } = require('../src/recipes/import-da');
+  const l = (amount, unit, name) => ({ section: null, amount, unit, name, note: null, optional: false });
+  const boring = [
+    { title: 'Kogte kartofler og grøn salat', ingredients: [l(1, 'kg', 'kartofler'), l(1, 'stk', 'hovedsalat')] },
+    { title: 'Kogt ris', ingredients: [l(300, 'g', 'ris'), l(null, null, 'salt')] },
+    { title: 'Ris', ingredients: [l(300, 'g', 'basmatiris')] },
+    { title: 'Hovedsalat', ingredients: [l(1, 'stk', 'hovedsalat')] },
+    { title: 'Grøn salat', ingredients: [l(200, 'g', 'grøn salat')] },
+  ];
+  for (const b of boring) {
+    const issues = sideProblems({ ...b, steps: ['Kog.'] });
+    assert.ok(issues.some((m) => m.startsWith('tilbehør: for kedeligt')), b.title);
+  }
+  const good = {
+    title: 'Sprøde rosmarinkartofler og agurkesalat',
+    ingredients: [l(1, 'kg', 'kartofler'), l(2, 'spsk', 'olivenolie'), l(2, 'tsk', 'rosmarin'), l(1, 'stk', 'agurk'), l(2, 'spsk', 'eddike'), l(1, 'dl', 'dild')],
+    steps: ['Bag.', 'Vend.'],
+  };
+  assert.deepEqual(sideProblems(good), []);
+  // Titlen alene afgør ikke noget: kogte kartofler med smør og dild er ikke bare kogte kartofler.
+  const butter = { title: 'Kogte kartofler', ingredients: [l(1, 'kg', 'kartofler'), l(30, 'g', 'smør'), l(1, 'dl', 'dild')], steps: ['Kog.'] };
+  assert.ok(!sideProblems(butter).some((m) => m.includes('kedeligt')));
 });
 
 test('en udgave, der får meal tilføjet, læses ind igen', () => {

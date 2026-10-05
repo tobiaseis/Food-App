@@ -142,8 +142,9 @@ function problems(ed, lines, before) {
 function sideProblems(side) {
   const out = [];
   const ings = Array.isArray(side.ingredients) ? side.ingredients : [];
-  // Højst 4 linjer: det er ét klassisk tilbehør, ikke en delopskrift.
-  if (ings.length < 1 || ings.length > 4) out.push(`tilbehør: ${ings.length} ingredienslinjer (1-4 er tilladt)`);
+  // Højst 6 linjer: et rigtigt tilbehør (fx rosmarinkartofler og agurkesalat) har
+  // brug for olie, krydderurt og dressing, men er stadig ikke en delopskrift.
+  if (ings.length < 1 || ings.length > 6) out.push(`tilbehør: ${ings.length} ingredienslinjer (1-6 er tilladt)`);
   for (const ing of ings) {
     if (ing.unit != null && !UNITS.includes(ing.unit)) out.push(`tilbehør: ukendt enhed "${ing.unit}"`);
     if (ing.amount != null && !(ing.amount > 0)) out.push(`tilbehør: mængden ${ing.amount} for ${ing.name}`);
@@ -156,7 +157,27 @@ function sideProblems(side) {
   }
   if (!side.title) out.push('tilbehør: ingen titel');
   if (!Array.isArray(side.steps) || !side.steps.length) out.push('tilbehør: intet trin');
+  else if (side.steps.length > 4) out.push(`tilbehør: ${side.steps.length} trin (højst 4)`);
+  if (ings.length && isBoringSide(side, ings)) out.push('tilbehør: for kedeligt (kun kogte kartofler, ris eller bar salat)');
   return out;
+}
+
+// "Kogte kartofler og hovedsalat er ikke tilbehør" (brugeren). Prompten forbyder
+// dem, men modellen glider tilbage; kontrollen er deterministisk, så de aldrig
+// havner i en opskrift. Kedeligt = titlen er kun de nøgne ord OG alle linjer er
+// kartofler/ris/salat (salt, peber og vand tæller ikke) — rosmarin, dressing,
+// olie, smør eller en grøntsag gør det til noget andet. En linje uden kendt
+// nøgle regnes for smag (hellere en for lidt end en for meget holdt tilbage).
+const BORING_TITLE_WORDS = new Set([
+  'kogte', 'kogt', 'dampede', 'dampet', 'kartofler', 'kartoffel', 'nye', 'ris', 'hvide', 'jasminris', 'basmatiris',
+  'grøn', 'grønne', 'salat', 'hovedsalat', 'bladsalat', 'og', 'med', 'til',
+]);
+const BORING_KEYS = new Set(['kartofler', 'ris', 'salat', 'salt', 'peber', 'vand']);
+
+function isBoringSide(side, ings) {
+  const words = String(side.title || '').toLowerCase().split(/[^a-zæøå]+/).filter(Boolean);
+  if (!words.length || !words.every((w) => BORING_TITLE_WORDS.has(w))) return false;
+  return ings.every((ing) => BORING_KEYS.has(parseIngredient(lineOf(ing), 0).item_key));
 }
 
 /**
@@ -292,4 +313,4 @@ if (require.main === module) {
   importAll({ reportPath: i === -1 ? null : args[i + 1] });
 }
 
-module.exports = { importAll, problems, actionsWarning };
+module.exports = { importAll, problems, sideProblems, actionsWarning };

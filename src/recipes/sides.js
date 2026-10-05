@@ -19,9 +19,10 @@ const { getDb } = require('../db');
 const { UNITS, MEAL_SCHEMA, editionPath, lineOf } = require('./edition');
 const { askClaude, drain, reportStops, argValue } = require('./rewrite');
 
-// En enkel ja/nej-vurdering plus en lille tilbehørsopskrift: Haiku er nok og
-// sparer abonnementets grænse. --model sonnet, hvis den tager fejl for ofte.
-const DEFAULT_MODEL = 'haiku';
+// Tilbehøret skal være lækkert og passe til retten (brugeren: "ordentlige og
+// lækre måltider"), så kvaliteten vejer tungere end abonnementets grænse.
+// --model haiku kan stadig vælges.
+const DEFAULT_MODEL = 'sonnet';
 
 // Fast tekst, uden noget der skifter fra kald til kald, så den kan genbruges
 // fra cachen. Enhederne kommer fra UNITS, så prompt og skema aldrig skilles.
@@ -33,21 +34,22 @@ Er retten et helt aftensmåltid for en dansk husstand? Et helt måltid har en ho
 - reason er én kort sætning om hvorfor.
 
 TILBEHØR (kun hvis retten ikke er et helt måltid)
-- Foreslå ÉT enkelt, klassisk tilbehør, der passer til retten og køkkenet: fx kogte kartofler, ris, brød eller grøn salat – eller to af dem, når det er det naturlige, fx kartofler og salat.
-- Tilbehøret må ikke være bælgfrugter (bønner, ærter, linser, kikærter) eller æg – de kan blive forvekslet med rettens hovedråvare. Brug kartofler, ris, pasta, brød eller grønt som salat, gulerødder, broccoli.
-- En sauce eller dressing er ikke tilbehør.
+- Foreslå ét rigtigt tilbehør, der passer til rettens køkken og smag – det, en god kogebog eller et måltidskassefirma ville servere til retten. Fx sprøde ovnkartofler med rosmarin, agurkesalat med dild, sesamnudler, ristet brød med hvidløgssmør, couscoussalat med citron, coleslaw, ovnbagte rodfrugter eller kartoffelmos med brunet smør.
+- FORBUDT: ren kogte kartofler, ren kogt ris uden noget andet og en bar salat af ét blad (hovedsalat eller grøn salat alene). Giv altid tilbehøret smag: krydderurter, dressing, citron, hvidløg, ristede frø eller en stegt eller bagt tilberedning.
+- Tilbehøret må ikke være bælgfrugter (bønner, ærter, linser, kikærter) eller æg – de kan blive forvekslet med rettens hovedråvare. Brug kartofler, ris, pasta, nudler, couscous, brød eller grønt som salat, gulerødder, broccoli.
+- En sauce eller dressing er ikke tilbehør i sig selv, men må gerne være en del af tilbehøret.
 - Mængderne er til rettens eget antal portioner.
-- Højst 4 ingredienser og højst 3 korte trin i bydeform.
+- Højst 6 ingredienser og højst 4 korte trin i bydeform.
 - Brug kun disse enheder: ${UNITS.join(', ')} – eller null, når linjen ikke har en mængde.
 - Skriv varenavnene med småt, som de hedder i et dansk supermarked (kartofler, ris, grøn salat – ikke Kartofler).
-- Skriv ikke salt, peber, olie eller smør som ingredienslinjer – de står i køkkenet i forvejen. Kun hvis tilbehøret ikke kan laves uden, fx smør til kartoffelmos.
+- Salt og peber skal ikke stå som ingredienslinjer – de står i køkkenet i forvejen. Olie og smør skriver du, når tilbehøret kræver det (fx til ovnkartofler).
 - Ingen mængder i trinene.
 - section og note er null, og optional er false.
 
 EKSEMPEL på et godt tilbehør (4 portioner)
-title: Kogte kartofler og grøn salat
-ingredienser: 1 kg kartofler; 1 stk hovedsalat
-trin: 1. Skræl kartoflerne, og kog dem møre i letsaltet vand. 2. Vask salaten, riv den i stykker, og server den til kartoflerne.
+title: Sprøde rosmarinkartofler og agurkesalat
+ingredienser: 1 kg kartofler; 2 spsk olivenolie; 2 tsk rosmarin; 1 stk agurk; 2 spsk eddike; 1 dl dild
+trin: 1. Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter. 2. Skær agurken i tynde skiver, og vend den med eddike, dild og en knivspids salt. 3. Server agurkesalaten til de varme kartofler.
 `;
 
 function systemText() { return INSTRUCTIONS; }
@@ -91,13 +93,15 @@ function pendingMeals(recipes, items, { ids = null, force = false, limit = Infin
   return out;
 }
 
-// Basisvarer, modellen alligevel skriver ind: de står i køkkenet og må ikke
-// komme på indkøbslisten. Kun navnet som hele linjen — "smør" i "peanutsmør" rører vi ikke.
-const PANTRY = new Set(['salt', 'peber', 'olie', 'olivenolie', 'smør']);
+// Salt og peber, modellen alligevel skriver ind: de står i køkkenet og må ikke
+// komme på indkøbslisten. Olie og smør beholdes: et tilbehør som sprøde
+// ovnkartofler kræver dem, og de er essentials, der alligevel kun havner på
+// "tjek at du har". Kun navnet som hele linjen.
+const PANTRY = new Set(['salt', 'peber']);
 
 /**
  * Retter modellens tilbehør til, før det gemmes: varenavne med småt (modellen
- * skriver "Kartofler" trods prompten), og basisvarelinjer droppes — medmindre
+ * skriver "Kartofler" trods prompten), og salt/peber-linjer droppes — medmindre
  * de er tilbehørets eneste linje. Resten af teksten er uændret.
  */
 function cleanSide(side) {
