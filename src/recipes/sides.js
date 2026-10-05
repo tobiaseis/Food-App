@@ -35,7 +35,7 @@ Er retten et helt aftensmåltid for en dansk husstand? Et helt måltid har en ho
 
 TILBEHØR (kun hvis retten ikke er et helt måltid)
 - Foreslå ét rigtigt tilbehør, der passer til rettens køkken og smag – det, en god kogebog eller et måltidskassefirma ville servere til retten. Fx sprøde ovnkartofler med rosmarin, agurkesalat med dild, sesamnudler, ristet brød med hvidløgssmør, couscoussalat med citron, coleslaw, ovnbagte rodfrugter eller kartoffelmos med brunet smør.
-- FORBUDT: ren kogte kartofler, ren kogt ris uden noget andet og en bar salat af ét blad (hovedsalat eller grøn salat alene). Giv altid tilbehøret smag: krydderurter, dressing, citron, hvidløg, ristede frø eller en stegt eller bagt tilberedning.
+- FORBUDT: rene kogte kartofler, ren kogt ris uden noget andet og en bar salat af ét blad (hovedsalat eller grøn salat alene) – også med smør eller dild alene. Giv altid tilbehøret smag: krydderurter, dressing, citron, hvidløg, ristede frø eller en stegt eller bagt tilberedning.
 - Tilbehøret må ikke være bælgfrugter (bønner, ærter, linser, kikærter) eller æg – de kan blive forvekslet med rettens hovedråvare. Brug kartofler, ris, pasta, nudler, couscous, brød eller grønt som salat, gulerødder, broccoli.
 - En sauce eller dressing er ikke tilbehør i sig selv, men må gerne være en del af tilbehøret.
 - Mængderne er til rettens eget antal portioner.

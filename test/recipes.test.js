@@ -814,7 +814,7 @@ const SIDE = {
   title: 'Sprøde ovnkartofler',
   ingredients: [
     { section: null, amount: 800, unit: 'g', name: 'kartofler', note: null, optional: false },
-    { section: null, amount: null, unit: null, name: 'salt', note: null, optional: false },
+    { section: null, amount: 2, unit: 'spsk', name: 'olivenolie', note: null, optional: false },
   ],
   steps: ['Kog kartoflerne møre i letsaltet vand.', 'Hæld vandet fra og damp dem af.'],
 };
@@ -876,7 +876,7 @@ test('et tilbehør med bælgfrugt eller æg holdes tilbage, kartofler ikke', () 
     assert.equal(res.applied, 0);
     assert.match(res.flaggedList[0].issues[0], /^tilbehør: /);
   });
-  const pot = { ...SIDE, ingredients: [{ section: null, amount: 1, unit: 'kg', name: 'kartofler', note: null, optional: false }] };
+  const pot = { ...SIDE, ingredients: [{ section: null, amount: 1, unit: 'kg', name: 'kartofler', note: null, optional: false }, SIDE.ingredients[1]] };
   withEdition(withMeal(31, { complete: false, reason: 'x', side: pot }), ({ dir }) => {
     assert.equal(importAll({ dir, log: () => {} }).applied, 1);
   });
@@ -902,9 +902,14 @@ test('et kedeligt tilbehør (kun kogte kartofler/ris/bar salat) holdes tilbage, 
     steps: ['Bag.', 'Vend.'],
   };
   assert.deepEqual(sideProblems(good), []);
-  // Titlen alene afgør ikke noget: kogte kartofler med smør og dild er ikke bare kogte kartofler.
+  // En nøgen titel er nok: smør og dild på kogte kartofler gør dem ikke til et tilbehør.
   const butter = { title: 'Kogte kartofler', ingredients: [l(1, 'kg', 'kartofler'), l(30, 'g', 'smør'), l(1, 'dl', 'dild')], steps: ['Kog.'] };
-  assert.ok(!sideProblems(butter).some((m) => m.includes('kedeligt')));
+  assert.ok(sideProblems(butter).some((m) => m.includes('kedeligt')));
+  const rice = { title: 'Kogt ris', ingredients: [l(300, 'g', 'ris'), l(20, 'g', 'smør')], steps: ['Kog.'] };
+  assert.ok(sideProblems(rice).some((m) => m.includes('kedeligt')));
+  // Finere titel, men kun kartofler: også kedeligt. Med persille slipper den igennem.
+  assert.ok(sideProblems({ title: 'Sprøde ovnkartofler', ingredients: [l(1, 'kg', 'kartofler')], steps: ['Bag.'] }).some((m) => m.includes('kedeligt')));
+  assert.ok(!sideProblems({ title: 'Kartofler med persille', ingredients: [l(1, 'kg', 'kartofler'), l(1, 'dl', 'persille')], steps: ['Kog.'] }).some((m) => m.includes('kedeligt')));
 });
 
 test('en udgave, der får meal tilføjet, læses ind igen', () => {

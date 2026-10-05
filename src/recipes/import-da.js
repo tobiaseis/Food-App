@@ -164,9 +164,9 @@ function sideProblems(side) {
 
 // "Kogte kartofler og hovedsalat er ikke tilbehør" (brugeren). Prompten forbyder
 // dem, men modellen glider tilbage; kontrollen er deterministisk, så de aldrig
-// havner i en opskrift. Kedeligt = titlen er kun de nøgne ord OG alle linjer er
-// kartofler/ris/salat (salt, peber og vand tæller ikke) — rosmarin, dressing,
-// olie, smør eller en grøntsag gør det til noget andet. En linje uden kendt
+// havner i en opskrift. Kedeligt = titlen er kun de nøgne ord, ELLER alle linjer
+// er kartofler/ris/salat (salt, peber og vand tæller ikke). "Kartofler med
+// persille" slipper igennem: persille er ikke et nøgent ord. En linje uden kendt
 // nøgle regnes for smag (hellere en for lidt end en for meget holdt tilbage).
 const BORING_TITLE_WORDS = new Set([
   'kogte', 'kogt', 'dampede', 'dampet', 'kartofler', 'kartoffel', 'nye', 'ris', 'hvide', 'jasminris', 'basmatiris',
@@ -176,7 +176,10 @@ const BORING_KEYS = new Set(['kartofler', 'ris', 'salat', 'salt', 'peber', 'vand
 
 function isBoringSide(side, ings) {
   const words = String(side.title || '').toLowerCase().split(/[^a-zæøå]+/).filter(Boolean);
-  if (!words.length || !words.every((w) => BORING_TITLE_WORDS.has(w))) return false;
+  // Nøgen titel (kogte kartofler, ris, hovedsalat, kogte kartofler og grøn salat): kedeligt,
+  // uanset linjerne — smør eller dild på en kogt kartoffel gør den ikke til et tilbehør.
+  if (words.length && words.every((w) => BORING_TITLE_WORDS.has(w))) return true;
+  // Finere titel end indhold (sprøde ovnkartofler med kun kartofler og salt): også kedeligt.
   return ings.every((ing) => BORING_KEYS.has(parseIngredient(lineOf(ing), 0).item_key));
 }
 
