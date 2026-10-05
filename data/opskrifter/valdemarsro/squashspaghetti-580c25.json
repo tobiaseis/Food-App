@@ -176,5 +176,28 @@
       "text": "Top med parmesan og friske krydderurter."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Squashspaghetti alene er ikke mættende nok – der mangler en solid stivelse som kartofler, ris eller brød.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 800,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl og kog kartoflerne møre i letsaltet vand.",
+        "Server dem til squashspaghetti med bolognese."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:48:50.455Z"
+  }
 }

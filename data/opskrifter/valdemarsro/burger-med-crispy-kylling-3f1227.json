@@ -176,5 +176,12 @@
       "text": "Læg salat i bunden af hver bolle, og top med kylling, avocadomos og skiver af agurk. Læg låget på og server."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Burgeren har protein (kylling), stivelse (boller) og rigeligt grønt (avocado, salat, agurk).",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:52:54.047Z"
+  }
 }

@@ -163,5 +163,12 @@
   "changes": [
     "Syltede citroner er erstattet med almindelig citron.",
     "Kyllingefond er erstattet med hønsefond."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Gryderetten har kylling som hovedråvare, sødkartoffel og naanbrød som mættende elementer samt spinat som grønt – det er et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:18:02.406Z"
+  }
 }

@@ -216,5 +216,36 @@
       "text": "Læg kebabberne på et fad, og drys dem med chaat masala. Træk kødet af spyddene, og server med sauce, løgringe og citronbåde til at presse over. Drys med chilipulver, og server yoghurt og evt. brød ved siden af."
     }
   ],
-  "title": "Seekh kebab"
+  "title": "Seekh kebab",
+  "meal": {
+    "complete": false,
+    "reason": "Kebabberne har protein, men mangler mættende tilbehør som kartofler eller ris.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1.2,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:12:15.251Z"
+  }
 }

@@ -215,5 +215,12 @@
   "changes": [
     "Grydebrød er beholdt som eksempel på brød.",
     "Dijon sennep er skiftet til sennep med dijon i noten."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Salaten indeholder protein (æg og bacon), mættende kartofler og brødtern samt rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:37:36.156Z"
+  }
 }

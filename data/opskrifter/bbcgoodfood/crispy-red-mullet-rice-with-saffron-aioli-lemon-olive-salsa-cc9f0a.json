@@ -212,5 +212,12 @@
     "Rød mulle er erstattet af havbars.",
     "Paellaris er erstattet af risotto ris.",
     "Syltet citron er beholdt under dansk navn, da den kan være svær at finde; den fås i større supermarkeder og delikatessebutikker."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Risotto med fisk er et helt måltid med protein og mættende ris.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:31:21.723Z"
+  }
 }

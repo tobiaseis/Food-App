@@ -107,5 +107,27 @@
   "changes": [
     "Superbag-filterpose er erstattet af en fin filterpose eller et rent viskestykke.",
     "Ærteskid til pynt er beholdt som frisk ærteskid; kan udelades, hvis det ikke fås."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten er en cocktail uden mætning eller ernæringsværdi - det er en drik, ikke en måltid.",
+    "side": {
+      "title": "Knækbrød til martinin",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "skive",
+          "name": "knækbrød",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Server knækbrødet ved siden af martinin."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:33:37.652Z"
+  }
 }

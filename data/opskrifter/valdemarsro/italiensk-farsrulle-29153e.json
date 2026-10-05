@@ -180,5 +180,36 @@
       "text": "Bag rullen midt i ovnen ved 180 °C varmluft i cirka 1 time. Ovnen skal være forvarmet."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende tilbehør som kartofler eller ris.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:01:43.741Z"
+  }
 }

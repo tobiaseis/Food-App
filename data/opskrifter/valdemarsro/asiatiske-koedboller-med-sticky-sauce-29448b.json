@@ -168,5 +168,28 @@
       "text": "Anret bollerne og strø ristede sesamfrø og hakket forårsløg over."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende stivelse eller rigeligt grønt",
+    "side": {
+      "title": "Kogt jasminris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "1. Kog risen i vand ifølge pakningens instruks.",
+        "2. Server den til kyllingeboller."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:25:46.876Z"
+  }
 }

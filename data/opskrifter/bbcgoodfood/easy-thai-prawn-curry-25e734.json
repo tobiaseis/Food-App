@@ -100,5 +100,28 @@
       "text": "Server curryen med kogte ris, og drys med hakket koriander, hvis du vil."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Curryen har protein og grønt fra tomaterne, men mangler mættende stivelse og skal serveres med ris for at være et helt måltid.",
+    "side": {
+      "title": "Kogte ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "langkornet ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen under koldt vand.",
+        "Kog risen i saltet vand til den er møre."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:03:28.323Z"
+  }
 }

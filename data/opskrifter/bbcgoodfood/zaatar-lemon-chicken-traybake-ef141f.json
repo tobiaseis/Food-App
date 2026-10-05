@@ -147,5 +147,12 @@
   "changes": [
     "Mængden af kartofler er angivet i gram i stedet for antal.",
     "Kyllingelår med ben og skind er skrevet som kyllingeoverlår."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som protein, kartofler som mættende stivelse, og tilstrækkeligt grønt med rødløg og oliven – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:30:22.863Z"
+  }
 }

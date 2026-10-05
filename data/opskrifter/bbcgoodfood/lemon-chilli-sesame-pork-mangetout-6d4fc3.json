@@ -127,5 +127,28 @@
   "changes": [
     "Mangetout er erstattet med sukkerærter.",
     "Svinemørbrad bruges som den danske udgave af pork fillet or loin."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelse som kartofler, ris eller pasta.",
+    "side": {
+      "title": "Ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakningens anvisning.",
+        "Server risen med wok-retten."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:06:26.321Z"
+  }
 }

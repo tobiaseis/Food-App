@@ -168,5 +168,28 @@
       "text": "Anret woken på tallerkener eller i skåle. Drys med cashewnødder, forårsløg og sesamfrø."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelse – der er grønt, men ingen kartofler, ris, pasta eller lignende.",
+    "side": {
+      "title": "Ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakningens anvisning.",
+        "Server risen ved siden af kålwoken."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:48:26.191Z"
+  }
 }

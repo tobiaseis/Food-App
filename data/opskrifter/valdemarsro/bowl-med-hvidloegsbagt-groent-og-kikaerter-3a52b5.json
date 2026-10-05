@@ -235,5 +235,12 @@
   "changes": [
     "Baby spinat er skiftet til almindelig spinat.",
     "Basmati ris er skrevet som basmatiris."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten indeholder protein fra kikærter, mættende ris og rigeligt grønt og danner et komplet måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:00:34.742Z"
+  }
 }

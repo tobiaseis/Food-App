@@ -127,5 +127,12 @@
   "changes": [
     "Frosne ærter og kogte rejer beholdes som i kilden; vegetable oil er skiftet til olie.",
     "Chilli oil er skiftet til chiliolie."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Stegt ris med æg og rejer er et helt måltid med ris som stivelse, rejer og æg som protein, samt grøntsager.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:37:44.744Z"
+  }
 }

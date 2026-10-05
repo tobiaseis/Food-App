@@ -247,5 +247,12 @@
   "changes": [
     "Hokkaido-græskar er skrevet som hokkaido græskar uden ændring af mængden.",
     "Tortilla-pandekager er erstattet med almindelige tortillas."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Suppen indeholder kartofler, sorte bønner, rigeligt grønt og serveres med tortillachips – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:36:40.664Z"
+  }
 }

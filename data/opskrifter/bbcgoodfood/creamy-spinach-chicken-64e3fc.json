@@ -122,5 +122,27 @@
   ],
   "changes": [
     "Double cream er byttet med piskefløde."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler kartofler eller ris til at være et helt måltid.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:42:02.334Z"
+  }
 }

@@ -150,5 +150,36 @@
   ],
   "changes": [
     "Speck er erstattet af bacon i skiver."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mætning; kun grønt er ikke nok til et helt dansk måltid.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, riv den i stykker, og server den til retten."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:32:50.490Z"
+  }
 }

@@ -295,5 +295,12 @@
   "changes": [
     "Mayonnaise er skrevet som mayonnaise (varekatalogets navn) uden ændring af mængde.",
     "Grøntsagsbouillon er skiftet til grøntsagsfond."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en bowl med ris, blomkål, kikærter og rigeligt grønt – altså både mættende stivelse og protein.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:22:43.138Z"
+  }
 }

@@ -107,5 +107,45 @@
   "changes": [
     "Romano-peberfrugt er erstattet med almindelig rød peberfrugt.",
     "Pul biber er erstattet med chiliflager."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende tilbehør såsom brød eller ris.",
+    "side": {
+      "title": "Pita brød og tomat-agurk salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "pakke",
+          "name": "pita brød",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "stk",
+          "name": "tomater",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Varm pita brødet let op.",
+        "Vask tomaterne og agurken, og skær dem i små stykker.",
+        "Server brødet og salaten til kebabben."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:03:02.515Z"
+  }
 }

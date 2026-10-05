@@ -163,5 +163,12 @@
   "changes": [
     "Lilla spidskål er skiftet til almindelig spidskål.",
     "Fraiche er skiftet til creme fraiche."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rejerne som protein, tortillaerne som stivelse, og rigeligt grønt med spidskål, koriander og tomat.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:03:27.270Z"
+  }
 }

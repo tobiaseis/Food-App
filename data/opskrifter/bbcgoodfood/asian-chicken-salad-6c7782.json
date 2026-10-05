@@ -111,5 +111,12 @@
   "changes": [
     "Fiskesauce bruges i stedet for fish sauce (samme vare, dansk navn).",
     "Sukker bruges i stedet for caster sugar."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Salaten har kyllingebryst og rigeligt grønt, hvilket utgør et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:57:22.860Z"
+  }
 }

@@ -183,5 +183,12 @@
   "changes": [
     "Little Gem er skiftet til hjertesalat.",
     "Grana Padano er skiftet til parmesan."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Salaten har kylling som protein, bulgur som stivelse og rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:10:40.529Z"
+  }
 }

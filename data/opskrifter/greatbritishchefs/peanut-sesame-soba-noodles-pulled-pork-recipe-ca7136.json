@@ -313,5 +313,12 @@
     "Koreansk bbq-sauce er erstattet med barbecuesauce.",
     "Soba er beholdt som sobanudler under kataloget 'nudler' – ingen ændring i varen.",
     "Hønsefond erstatter chicken stock."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har protein, stivelse og rigeligt grønt, og er en komplet nuddelret med sauce og tilbehør.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:39:27.044Z"
+  }
 }

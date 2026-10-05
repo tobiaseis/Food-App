@@ -255,5 +255,28 @@
   "changes": [
     "Sunflower eller groundnut oil er skiftet til olie (solsikke- eller rapsolie).",
     "Chapatis er sat sammen med basmatiris som valgfrit tilbehør."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelse som mættende element.",
+    "side": {
+      "title": "Basmatiris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "basmatiris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen under koldt vand.",
+        "Kog den i letsaltet vand efter pakningens anvisning."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:15:58.706Z"
+  }
 }

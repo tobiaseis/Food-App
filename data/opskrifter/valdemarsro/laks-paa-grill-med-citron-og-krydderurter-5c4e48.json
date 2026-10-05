@@ -84,5 +84,36 @@
       "text": "Vil du bruge ovnen, så læg laksen i et ovnfast fad og bag den ved 200 °C i 12-16 minutter."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende komponent som kartofler, ris eller grønt.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:47:54.867Z"
+  }
 }

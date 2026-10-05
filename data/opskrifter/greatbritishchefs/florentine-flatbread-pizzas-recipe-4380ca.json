@@ -223,5 +223,12 @@
   "changes": [
     "Buffalo mozzarella er erstattet af almindelig mozzarella.",
     "Strong bread flour er erstattet af hvedemel."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har brød, æg, ost og rigeligt grønt i spinatpestoen – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:38:10.944Z"
+  }
 }

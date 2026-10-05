@@ -151,5 +151,36 @@
   "changes": [
     "Courgette er skiftet til squash.",
     "Rocket er skiftet til rucola."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende base som kartofler, ris eller pasta.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, riv den i stykker, og server det sammen med kartoflerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:52:17.519Z"
+  }
 }

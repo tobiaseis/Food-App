@@ -139,5 +139,28 @@
   "changes": [
     "Rapeseed oil er skiftet til rapsolie.",
     "Reduced-salt vegetable bouillon er skiftet til grøntsagsfond med lavt saltindhold."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelseholdigt tilbehør som kartofler eller ris for at være mættende nok som helt måltid.",
+    "side": {
+      "title": "Kogte nye kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "nye kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne og kog dem møre i letsaltet vand.",
+        "Afløb og server til kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:13:53.570Z"
+  }
 }

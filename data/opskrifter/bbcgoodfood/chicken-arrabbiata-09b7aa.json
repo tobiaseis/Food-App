@@ -152,5 +152,37 @@
       "text": "Drys eventuelt med persille, og server med pasta eller kartoffelmos."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Gryderetten mangler stivelse for at være et helt dansk måltid.",
+    "side": {
+      "title": "Pasta og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "pasta",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog pastaen i letsaltet vand.",
+        "Vask salaten og riv den i stykker.",
+        "Dræn pastaen og server med salaten."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:20:14.838Z"
+  }
 }

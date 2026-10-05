@@ -128,5 +128,27 @@
       "text": "Drys med forårsløg og timian. Skær i kvarte eller åttendedele, og server."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende stivelsesbestanddel som kartofler, ris eller brød.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:16:27.429Z"
+  }
 }

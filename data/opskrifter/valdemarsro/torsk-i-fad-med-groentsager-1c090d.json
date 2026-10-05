@@ -223,5 +223,12 @@
   "changes": [
     "Grøntsagsbouillon er skiftet til grøntsagsfond.",
     "Parmaskinke er beholdt som parmaskinke, da den fås i danske supermarkeder."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk som hovedråvare, kartofler som mættende del og grøntsager – det er en komplet ovnret.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:45:30.402Z"
+  }
 }

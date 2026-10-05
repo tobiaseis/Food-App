@@ -183,5 +183,29 @@
   "changes": [
     "Shaoxing-vin er erstattet af hvidvin.",
     "Vegetabilsk olie er erstattet af rapsolie."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende stivelse til at være et helt måltid.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 150,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen i koldt vand.",
+        "Kog risen i dobbelt så meget vand i ca. 15 minutter.",
+        "Lad den hvile 5 minutter under låg."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:33:50.087Z"
+  }
 }

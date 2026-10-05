@@ -131,5 +131,12 @@
   "changes": [
     "Stegt kylling er erstattet med kyllingebryst, som skal være kold og stegt.",
     "Lang rød chili er skiftet til almindelig chili."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Salaten har protein (kyllingebryst), stivelse (quinoa) og rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:45:47.933Z"
+  }
 }

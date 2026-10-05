@@ -118,5 +118,28 @@
   ],
   "changes": [
     "Aleppo-chiliflager er erstattet af almindelige chiliflager."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende stivelsesholdigt tilbehør til at blive et helt måltid.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Hæld vandet af, og server til spinaten med æg."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:38:37.141Z"
+  }
 }

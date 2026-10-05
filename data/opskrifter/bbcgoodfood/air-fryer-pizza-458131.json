@@ -127,5 +127,12 @@
   "changes": [
     "Garlic granules er erstattet med hvidløgspulver.",
     "Self-raising flour er erstattet med hvedemel og ekstra bagepulver."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Pizza er et helt måltid med dej, tomat og ost.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:10:56.885Z"
+  }
 }

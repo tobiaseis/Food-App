@@ -236,5 +236,45 @@
       "text": "Server rullerne med sød chilisauce. Hvis der er grøntsager eller salsa tilovers, kan de stå ved siden af som tilbehør."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende kulhydrater som ris eller kartofler til at være et helt måltid.",
+    "side": {
+      "title": "Jasminris og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 200,
+          "unit": "g",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "dl",
+          "name": "vand",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen, og kog den med vandet efter pakningen.",
+        "Vask salaten, og riv den i stykker.",
+        "Server risen og salaten til rullerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:02:31.903Z"
+  }
 }

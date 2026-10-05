@@ -122,5 +122,36 @@
   ],
   "changes": [
     "Prosciutto er skiftet til parmaskinke."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har protein men mangler mættende stivelse eller rigeligt grønt.",
+    "side": {
+      "title": "Kogte kartofler og grønne bønner",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "grønne bønner",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Kog de grønne bønner, og server alt til kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:04:06.416Z"
+  }
 }

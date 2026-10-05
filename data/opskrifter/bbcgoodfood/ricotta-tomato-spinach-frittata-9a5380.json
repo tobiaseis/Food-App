@@ -108,5 +108,28 @@
       "text": "Bag frittataen i ovnen i 20-25 minutter, til den er lysegylden og stivnet. Server med salat."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Frittataen mangler mættende stivelse eller tilstrækkeligt grønt.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 800,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Server dem ved siden af frittataen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:56:57.222Z"
+  }
 }

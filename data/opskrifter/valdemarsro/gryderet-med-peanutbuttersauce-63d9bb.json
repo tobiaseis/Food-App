@@ -140,5 +140,36 @@
       "text": "Server med ris eller kartoffelmos, en grøn salat og friske krydderurter drysset over."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Gryden mangler stivelse til at være et helt måltid.",
+    "side": {
+      "title": "Ris og hovedsalat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakningens anvisning.",
+        "Vask hovedsalaten, riv den i stykker, og server til gryden."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:50:05.544Z"
+  }
 }

@@ -192,5 +192,29 @@
       "text": "Server gryden med koriander, persille og de ristede mandler drysset over."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Gryden mangler stivelse til at være et helt måltid.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "hvid ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyll risen under koldt vand.",
+        "Kom risen i gryden med dobbelt mængde koldt vand, dæk med låg og bring til kogning.",
+        "Sænk varmen og kok risen, til vandet er opsugt."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:00:55.612Z"
+  }
 }

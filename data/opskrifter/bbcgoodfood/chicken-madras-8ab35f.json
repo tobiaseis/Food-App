@@ -172,5 +172,36 @@
     "Vegetable oil er skiftet til rapsolie.",
     "Hot chilli powder er skiftet til chilipulver.",
     "Naan er skiftet til naanbrød."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Gryderetten mangler integreret stivelse eller rigeligt grønt.",
+    "side": {
+      "title": "Ris og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 240,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen i letsaltet vand til den er møre.",
+        "Vask salaten, riv den i stykker, og server den til risen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:16:44.731Z"
+  }
 }

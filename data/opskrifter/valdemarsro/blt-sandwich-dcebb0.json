@@ -100,5 +100,12 @@
       "text": "Læg bacon, tomatskiver og salat på halvdelen af brødskiverne, og læg de øvrige skiver ovenpå."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Sandwichen har brød (mættende), bacon (protein) og rigeligt grønt (salat og tomater) – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:25:27.171Z"
+  }
 }

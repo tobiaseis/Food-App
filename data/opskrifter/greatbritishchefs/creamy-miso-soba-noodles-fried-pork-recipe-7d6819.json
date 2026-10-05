@@ -259,5 +259,12 @@
   "changes": [
     "Vegetable oil er skiftet til olie.",
     "Chicken stock er skiftet til hønsebouillon."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en komplet nudelret med svinekød som protein, soba-nudler som stivelse og en cremet misosup.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:39:18.349Z"
+  }
 }

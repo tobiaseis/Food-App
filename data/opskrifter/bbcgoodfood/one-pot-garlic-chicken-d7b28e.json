@@ -147,5 +147,36 @@
   "changes": [
     "Double cream er erstattet med piskefløde.",
     "Parmigiano-Reggiano er erstattet med parmesan."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelse – den skal serveres med ris, kartofler eller lignende.",
+    "side": {
+      "title": "Kogt ris og dampede grønne bønner",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "dl",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "grønne bønner",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen i letsaltet vand efter pakningsvejledning.",
+        "Damp bønnerne møre samtidigt."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:48:58.555Z"
+  }
 }

@@ -191,5 +191,12 @@
   "changes": [
     "Malede mandler er byttet med stødte mandler.",
     "Kylling-bouillon med reduceret salt er byttet med almindelig kyllingefond."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en gryderet med kylling, krydret sauce, ris og frisk sambal – et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:18:36.035Z"
+  }
 }

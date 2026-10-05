@@ -179,5 +179,12 @@
   "changes": [
     "Fishsauce er ændret til fiskesauce.",
     "Frisk koriander er ændret til koriander."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Banh mi-sandwichen har sprød kylling, brød og rigeligt grønt, og er således et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:50:44.121Z"
+  }
 }

@@ -176,5 +176,12 @@
     "Amerikansk sennep er erstattet med mild sennep.",
     "Crinkle cut pickles er erstattet med syltede agurker i skiver.",
     "Hvidløgsgranulat er erstattet med hvidløgspulver."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har protein (oksekød), stivelse (kartofler) og rigelige grøntsager (salat, rødløg, tomater, agurker) – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:00:02.059Z"
+  }
 }

@@ -84,5 +84,28 @@
       "text": "Server spydene varme med dippen ved siden af."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mætningskomponent som kartofler, ris eller brød.",
+    "side": {
+      "title": "Kogt hvid ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 240,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen, og kog den møre i letsaltet vand.",
+        "Server risen til spydene."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:46:53.446Z"
+  }
 }

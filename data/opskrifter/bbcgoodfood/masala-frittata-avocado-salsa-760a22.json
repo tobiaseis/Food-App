@@ -130,5 +130,28 @@
   ],
   "changes": [
     "Madras curry paste er erstattet af karry."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Frittataen er proteinrig med rigeligt grønt, men mangler stivelse/mætningsfølelse til et helt dansk aftensmåltid.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Dræn dem, og server til frittataen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:57:39.463Z"
+  }
 }

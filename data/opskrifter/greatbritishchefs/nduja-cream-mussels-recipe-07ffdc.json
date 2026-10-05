@@ -107,5 +107,12 @@
   "changes": [
     "’Nduja er erstattet med chorizo.",
     "Double cream er erstattet med piskefløde."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har blåmuslinger som hovedråvare, focaccia som mætning, og er en komplet gryderet med sauce.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:35:32.341Z"
+  }
 }

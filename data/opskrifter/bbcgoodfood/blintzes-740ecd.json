@@ -184,5 +184,27 @@
     "Golden caster sugar er erstattet af almindeligt sukker.",
     "Plain flour er erstattet af hvedemel.",
     "Full-fat soft cheese er erstattet af flødeost."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Blintzer med kompot er en sødt ret, der traditionelt spises som dessert eller morgenmad, ikke som hovedmåltid til aftensmad.",
+    "side": {
+      "title": "Grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Vask hovedsalaten, og riv den i stykker."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:15:30.944Z"
+  }
 }

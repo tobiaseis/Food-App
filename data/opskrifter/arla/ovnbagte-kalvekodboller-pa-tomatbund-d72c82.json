@@ -191,5 +191,12 @@
   "changes": [
     "Grahamsmel er erstattet med hvedemel.",
     "Parmigiano reggiano er erstattet med parmesan."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kalvekødboller som protein, kartofler som stivelse og rigeligt grønt (tomater og aubergine), så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:10:00.997Z"
+  }
 }

@@ -256,5 +256,27 @@
       "text": "Rør smørret i. Smag suppen til med citronsaft, citronskal, salt, peber og dild, og tilsæt evt. lidt mere fløde. Pynt med resten af dilden."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Fiskesuppen mangler mættende stivelse – supper skal have enten stivelse eller rigeligt grønt for at være hele måltider.",
+    "side": {
+      "title": "Rugbrød",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "rugbrød",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skær rugbrødet i skiver, og server det til suppen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:33:31.482Z"
+  }
 }

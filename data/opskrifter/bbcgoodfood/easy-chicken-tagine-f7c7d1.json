@@ -139,5 +139,37 @@
   "changes": [
     "Kyllingelår uden skind og ben bruges i stedet for skinless boneless chicken thighs under det danske navn kyllingelår.",
     "Safran eller gurkemeje er bevaret som i kilden."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har protein og gulerødder, men mangler stivelse eller rigeligt grønt til at være et helt aftensmåltid.",
+    "side": {
+      "title": "Kouscous",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "dl",
+          "name": "kouscous",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4.5,
+          "unit": "dl",
+          "name": "vand",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Bring vand i kog, og hæld kouscous i.",
+        "Rør rundt, og fjern fra varmen.",
+        "Dæk til med låg, og lad det stå i 5 minutter."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:19:26.311Z"
+  }
 }

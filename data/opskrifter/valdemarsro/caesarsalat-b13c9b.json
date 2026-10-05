@@ -182,5 +182,28 @@
   ],
   "changes": [
     "Worcestershiresauce er skrevet som ét ord, så den passer til danske butikker."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har protein og grønt, men kun minimalt brød – kartofler som tilbehør gør det til et helt måltid.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Server dem varme ved siden af salaten."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:57:52.615Z"
+  }
 }

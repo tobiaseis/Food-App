@@ -176,5 +176,28 @@
       "text": "Lad retten stå et par minutter, før den serveres. Pynt med friske basilikumblade."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende stivelseskomponent som ris eller brød.",
+    "side": {
+      "title": "Ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "hvid ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen i rigeligt letsaltet vand efter anvisning på pakken.",
+        "Hæld det gennem en si, og server det varmt."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:27:37.206Z"
+  }
 }

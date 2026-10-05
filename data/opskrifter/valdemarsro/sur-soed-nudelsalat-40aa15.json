@@ -195,5 +195,12 @@
   "changes": [
     "Riseddike er erstattet af eddike (riseddike) som den nærmeste almindelige vare – navnet er beholdt i noten.",
     "Pillede edamamebønner er beholdt som edamamebønner, da der ikke er nogen mere almindelig afløser."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Nudelsalaten indeholder stivelse (nudler), protein (edamamebønner og peanuts) og rigeligt grønt, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:42:25.931Z"
+  }
 }

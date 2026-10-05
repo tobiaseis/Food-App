@@ -112,5 +112,28 @@
       "text": "Åbn pakkerne, og dryp med lidt sesamolie. Server med ris."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende stivelse, selvom der er rigeligt grønt.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 150,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter anvisning på pakken.",
+        "Afvand risen, og server ved siden af fiskepakkerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:59:08.292Z"
+  }
 }

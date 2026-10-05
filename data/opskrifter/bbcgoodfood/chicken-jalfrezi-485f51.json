@@ -231,5 +231,12 @@
   "changes": [
     "Plum tomatoes er erstattet med flåede tomater.",
     "Vegetable oil er erstattet med olie."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Gryderetten har kylling som hovedråvare og serveres med ris eller naanbrød, som er mættende.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:59:28.541Z"
+  }
 }

@@ -225,5 +225,29 @@
     "Kokosolie og vegetabilsk olie i kilden er samlet til kokosolie.",
     "Kokosfløde er erstattet med den tykke del af kokosmælken fra en dåse, da kokosfløde er svær at få.",
     "Kanelstang er skrevet som kanel, og grøn chili som chili."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har kylling som hovedråvare, men mangler mættende komponent som ris, kartofler eller brød.",
+    "side": {
+      "title": "Basmati ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "basmati ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen.",
+        "Kog risen ifølge pakningen.",
+        "Server til kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:06:32.362Z"
+  }
 }

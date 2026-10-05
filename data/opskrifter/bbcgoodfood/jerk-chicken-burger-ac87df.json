@@ -127,5 +127,12 @@
   "changes": [
     "Jerk seasoning er skrevet som jerk-krydderi, da det er den danske betegnelse.",
     "Little Gem-hjerte er skiftet til salat."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Burgeren har grillet kylling, boller og rigeligt grønt – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:16:53.784Z"
+  }
 }

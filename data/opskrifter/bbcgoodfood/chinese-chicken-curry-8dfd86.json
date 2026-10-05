@@ -172,5 +172,28 @@
     "Cornflour er erstattet med majsstivelse.",
     "Curry powder er erstattet med karry.",
     "Rapeseed oil er erstattet med rapsolie."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten skal serveres med ris for at være et helt måltid.",
+    "side": {
+      "title": "Kogte ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter anvisning på pakken.",
+        "Server risen til kyllingekarryen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:47:49.840Z"
+  }
 }

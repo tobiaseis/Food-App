@@ -260,5 +260,28 @@
     "Double cream er skiftet til piskefløde.",
     "Friske brødkrummer er skiftet til rasp.",
     "Vegetable oil er skiftet til rapsolie."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har en hovedråvare, men mangler noget mættende som kartofler, ris eller pasta.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Dræn dem, og server dem varme til schnitzlen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:37:07.104Z"
+  }
 }

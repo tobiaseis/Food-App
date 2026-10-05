@@ -194,5 +194,12 @@
     "Løgpulver erstatter onion granules.",
     "Chiliflager er skrevet som chili med note om flager.",
     "Frosne sødkartoffelpommes frites erstatter sweet potato fries."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har protein (kylling), stivelse (sødkartoffelpommes frites) og grøntsager (peberfrugt og rødløg), så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:12:08.834Z"
+  }
 }

@@ -116,5 +116,28 @@
     "Malteddike er erstattet af almindelig eddike.",
     "Mørk muscovadosukker er erstattet af brun farin.",
     "Sukkerærter er beholdt, da de kan købes i danske supermarkeder."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har en god hovedråvare og grønt, men mangler mættende komponent som ris eller kartofler.",
+    "side": {
+      "title": "Hvid ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "hvid ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter anvisningen på pakken.",
+        "Server med kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:02:33.759Z"
+  }
 }

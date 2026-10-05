@@ -180,5 +180,28 @@
     "Rapsolie er beholdt som i kilden.",
     "Grøntsagsbouillon er erstattet af grøntsagsfond.",
     "Brune ris er beholdt som færdigvare i serveringen."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mætende stivelse til at være et helt dansk måltid.",
+    "side": {
+      "title": "Nye kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 800,
+          "unit": "g",
+          "name": "nye kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog kartoflerne hele og uskalte i letsaltet vand, til de er møre.",
+        "Aftap og server dem til mørbraden og ratatouillen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:50:50.007Z"
+  }
 }

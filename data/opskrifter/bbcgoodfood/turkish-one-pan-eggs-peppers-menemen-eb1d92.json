@@ -132,5 +132,28 @@
       "text": "Drys persille over retten, og server direkte fra panden med en klat hvidløgsyoghurt ved siden af."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har æg og grønt, men mangler noget mættende som kartofler, ris eller brød.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Server dem til retten."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:56:31.251Z"
+  }
 }

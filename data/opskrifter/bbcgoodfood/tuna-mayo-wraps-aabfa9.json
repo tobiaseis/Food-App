@@ -110,5 +110,29 @@
   ],
   "changes": [
     "Engelsk sennepspulver er erstattet af sennep."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har protein og grønt, men mangler mættende stivelse som kartofler, ris eller brød.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne.",
+        "Kog dem møre i letsaltet vand i cirka 15 minutter.",
+        "Dræn og server til wrapsene."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:53:59.538Z"
+  }
 }

@@ -124,5 +124,12 @@
       "text": "Server sandwichene med det samme."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Sandwichen har flæskesteg (protein), brød (stivelse) og grønt (rødkål og salat), og er derfor et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:07:00.094Z"
+  }
 }

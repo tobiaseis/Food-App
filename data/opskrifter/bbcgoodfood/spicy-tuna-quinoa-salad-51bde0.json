@@ -99,5 +99,12 @@
   "changes": [
     "Ready-to-eat quinoa i pose er erstattet med letkogt quinoa, klar til servering.",
     "Albacore-tun i glas er erstattet med tun i olie på dåse."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Salaten har tun som protein, quinoa som mætning og rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:54:55.971Z"
+  }
 }

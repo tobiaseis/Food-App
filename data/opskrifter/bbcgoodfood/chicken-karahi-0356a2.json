@@ -135,5 +135,28 @@
   "changes": [
     "Lime er skrevet som citron i varelisten efter kataloget; limebåde bruges stadig i retten.",
     "Naan og roti er valgfrit tilbehør, ris er angivet som standardvare."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en obligatorisk mættende komponent, da ris er markeret som valgfrit tilbehør.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen under koldt vand.",
+        "Kog risen i letsaltet vand ifølge pakningens anvisning, til den er gart."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:49:02.170Z"
+  }
 }

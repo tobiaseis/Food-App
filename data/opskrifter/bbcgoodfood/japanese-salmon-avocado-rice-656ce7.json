@@ -163,5 +163,12 @@
   "changes": [
     "Frosne edamamebønner er beholdt som frosne edamamebønner.",
     "Caster sugar er skiftet til almindeligt sukker."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har protein (laks), mættende ris og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:15:35.998Z"
+  }
 }

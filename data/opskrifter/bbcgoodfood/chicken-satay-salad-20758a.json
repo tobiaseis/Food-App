@@ -182,5 +182,27 @@
     "Sweet chilisauce, jordnøddesmør og hjertesalat er danske betegnelser; Little Gem er erstattet af hjertesalat.",
     "Banana shallot er erstattet af skalotteløg.",
     "Lime juice er erstattet af saft fra lime."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende stivelse som kartofler eller ris.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:45:05.789Z"
+  }
 }

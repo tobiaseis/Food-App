@@ -192,5 +192,12 @@
       "text": "Server kyllingen med saucen og den nykogte pasta."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en pastarét med kylling og flødesauce, som har både protein, pasta og grønt, og er derfor et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:44:13.294Z"
+  }
 }

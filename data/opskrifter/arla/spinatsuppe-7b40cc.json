@@ -156,5 +156,12 @@
       "text": "Hæld suppen op i skåle, og stil de varme ostebrød og et smilende æg ved siden af."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Suppen har rigeligt grønt, protein fra æg og ost, stivelse fra brødet, og er derfor et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:04:51.767Z"
+  }
 }

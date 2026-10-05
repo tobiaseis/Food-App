@@ -168,5 +168,27 @@
       "text": "Skær kyllingen i skiver. Læg salaten på et stort fad, og fordel kylling, æg, bacon, tomater, avocado og blåskimmelost i hver sin stribe ovenpå. Hæld vinaigretten over, og strø purløg til sidst."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Salaten mangler stivelse til mæthed.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 800,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:50:42.611Z"
+  }
 }

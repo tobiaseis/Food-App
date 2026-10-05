@@ -91,5 +91,12 @@
   "changes": [
     "Guanciale er erstattet af bacon i skiver.",
     "Butter beans på glas er erstattet af hvide bønner på dåse."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Med bacon, æg og hvide bønner har retten både protein og mættende elementer til et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:13:55.455Z"
+  }
 }

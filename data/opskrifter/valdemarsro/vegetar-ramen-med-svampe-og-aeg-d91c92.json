@@ -192,5 +192,12 @@
     "Ramen-nudler er skiftet til almindelige nudler.",
     "Soja er skiftet til sojasauce.",
     "Baby spinat er skiftet til spinat."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Ramen indeholder nudler som stivelse, æg og svampe som protein samt rigeligt grønt - det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:47:15.399Z"
+  }
 }

@@ -200,5 +200,12 @@
       "text": "Læg kødskiverne på salaten. Drys med salt, peber og estragon, og top med lidt mere dressing. Server med det samme."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Salaten har protein fra flanksteaken og rigeligt grønt, hvilket gør den til et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:40:41.299Z"
+  }
 }

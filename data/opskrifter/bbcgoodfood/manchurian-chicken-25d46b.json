@@ -213,5 +213,27 @@
     "Sweet chilli sauce er skiftet til sød chilisauce.",
     "Neutral olie er skiftet til rapsolie.",
     "Plain flour er skiftet til hvedemel."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelse; æggenudler er markeret som valgfri.",
+    "side": {
+      "title": "Ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "hvid ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen møre i saltet vand efter pakningens anvisning."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:48:34.377Z"
+  }
 }

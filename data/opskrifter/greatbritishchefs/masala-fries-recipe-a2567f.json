@@ -262,5 +262,28 @@
     "Vegetable oil er erstattet af rapsolie.",
     "Caster sugar er erstattet af almindeligt sukker.",
     "Passata er beholdt som passata."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler tilstrækkelig protein til at være et helt aftensmåltid.",
+    "side": {
+      "title": "Grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Vask salaten og riv den i stykker.",
+        "Server den til masala-pommes fritesene."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:36:40.445Z"
+  }
 }

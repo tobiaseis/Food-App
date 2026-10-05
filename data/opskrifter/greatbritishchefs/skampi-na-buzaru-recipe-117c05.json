@@ -140,5 +140,28 @@
       "text": "Dryp med lidt mere olivenolie, og strø resten af persillen over. Server med det samme og brød ved siden af."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har god protein fra rejerne, men mangler en mættende komponent som kartofler eller ris.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Server ved siden af rejerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:39:48.434Z"
+  }
 }

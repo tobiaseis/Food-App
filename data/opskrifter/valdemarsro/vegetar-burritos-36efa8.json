@@ -280,5 +280,12 @@
       "text": "Server de sprøde burritos med hvidløgsris og limedressing."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Burritoerne med bønner, ost og grønsager danner et helt måltid sammen med hvidløgsris.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:47:38.186Z"
+  }
 }

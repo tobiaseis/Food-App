@@ -82,5 +82,37 @@
   ],
   "changes": [
     "Crispy breadcrumbs er erstattet med almindeligt rasp."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler noget mættende som kartofler eller ris.",
+    "side": {
+      "title": "Nye kartofler og ærter",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "nye kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "ærter",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog de nye kartofler hele i letsaltet vand.",
+        "Tilsæt ærterne mod slutningen.",
+        "Dræn og server til kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:20:31.770Z"
+  }
 }

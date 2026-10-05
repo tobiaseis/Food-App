@@ -100,5 +100,28 @@
       "text": "Uden grill kan spydene bages i ovnen ved 175 °C varmluft i 18-20 minutter. Du kan også stege dem på en pande i lidt olie, til kyllingen er gennemstegt."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har protein og sauce, men mangler en mættende base som ris, kartofler eller brød.",
+    "side": {
+      "title": "Jasminris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 200,
+          "unit": "g",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakningens anvisning.",
+        "Server risen som underlag for satayspydene."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:33:04.156Z"
+  }
 }

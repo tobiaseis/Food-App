@@ -239,5 +239,12 @@
   "changes": [
     "Grøntsagsbouillon er skrevet som grøntsagsfond.",
     "Kogende vand er skrevet som vand, som skal koges først."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Frikadeller med kartofler, sauce og grønt er et helt traditionelt dansk aftensmåltid med hovedråvare, mættende stivelse og grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:43:46.195Z"
+  }
 }

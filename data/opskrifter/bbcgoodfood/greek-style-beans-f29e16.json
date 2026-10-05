@@ -167,5 +167,12 @@
   "changes": [
     "Surdejsbrød er erstattet af almindeligt brød, ristet.",
     "Smørbønner er skrevet som bønner med smørbønner i noten."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Gryderetten indeholder protein fra bønner, grønt fra tomater og stivelse fra serveret brød.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:16:17.282Z"
+  }
 }

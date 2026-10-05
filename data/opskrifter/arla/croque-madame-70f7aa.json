@@ -175,5 +175,12 @@
   "changes": [
     "Landbrød er skiftet til brød.",
     "Parmaskinke er beholdt som parmaskinke."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har brød, protein (skinke, ost, æg) og grønt i form af cherrytomater – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:06:32.162Z"
+  }
 }

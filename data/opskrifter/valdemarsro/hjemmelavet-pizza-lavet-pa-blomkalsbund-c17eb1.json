@@ -164,5 +164,27 @@
       "text": "Drys med persille, inden de serveres."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelse; blomkål alene er ikke mættende nok til et helt måltid.",
+    "side": {
+      "title": "Grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Vask og skil salaten i stykker, og server den til pizzaerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:48:43.367Z"
+  }
 }

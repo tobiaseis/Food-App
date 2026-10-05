@@ -159,5 +159,12 @@
   "changes": [
     "Sultanas er skiftet til rosiner.",
     "Golden caster sugar er skiftet til almindeligt sukker."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Det er en gryderet med kylling og skal serveres med basmatiris, hvilket gør det til et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:02:35.496Z"
+  }
 }

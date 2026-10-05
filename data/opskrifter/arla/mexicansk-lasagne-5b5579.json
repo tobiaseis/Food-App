@@ -215,5 +215,12 @@
   "changes": [
     "Cheddar står som revet cheddar i mængden fra kilden, uden ændring af varen.",
     "Tortillachips er skrevet som chips."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Lasagnen indeholder oksekød, pasta (lasagneplader), kidneybønner og serveres med grøn salat – et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:08:46.283Z"
+  }
 }

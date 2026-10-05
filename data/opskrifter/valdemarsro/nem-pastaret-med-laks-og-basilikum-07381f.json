@@ -124,5 +124,12 @@
       "text": "Vend den varme pasta med en del af saucen. Anret på tallerkener, og top med resten af saucen og laksen."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Pastaretten har laks som protein og pasta som stivelse, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:42:49.930Z"
+  }
 }

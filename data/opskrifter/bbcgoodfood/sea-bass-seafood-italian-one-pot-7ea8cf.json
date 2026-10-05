@@ -148,5 +148,28 @@
       "text": "Drys med basilikumblade og fennikeltop, og server med brød."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "One-pot retten mangler mættende komponenter som kartofler, ris eller pasta.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 200,
+          "unit": "g",
+          "name": "langkornet ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen i rigeligt kogende, letsaltet vand efter pakningens anvisning.",
+        "Afvæl vandet gennem en si, og server risen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:44:05.796Z"
+  }
 }

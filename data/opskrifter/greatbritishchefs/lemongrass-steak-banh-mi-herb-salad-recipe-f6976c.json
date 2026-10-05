@@ -270,5 +270,12 @@
     "Risvineddike er beholdt som den nærmeste almindelige eddike, og fiskesauce er beholdt under dansk navn.",
     "Neutral olie er erstattet af rapsolie.",
     "Demi-baguette er erstattet af en lille flute."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har protein (flanksteak), brød (flute) og rigeligt grønt og urter – det er en komplet sandwich-ret.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:39:55.491Z"
+  }
 }

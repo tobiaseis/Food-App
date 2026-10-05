@@ -156,5 +156,12 @@
     "Salatløg er skiftet til almindeligt løg.",
     "Det grillstegte kød er valgt som kyllingebryst; svinekoteletter eller oksebøffer kan bruges i stedet.",
     "Havsalt er skiftet til almindeligt salt."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Salaten har protein (grillstegt kød), stivelse (vilde ris og grønne bønner), rigeligt grønt (romainesalat) og brød, så det er et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:09:32.589Z"
+  }
 }

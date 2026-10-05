@@ -183,5 +183,12 @@
   "changes": [
     "Svinget til rutabaga som er den danske betegnelse for swede.",
     "Grøntsagsbouillon er angivet som bouillonpulver og vand i stedet for færdig fond."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en tagine med fisk, grønt og ris – et komplet måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:21:25.334Z"
+  }
 }

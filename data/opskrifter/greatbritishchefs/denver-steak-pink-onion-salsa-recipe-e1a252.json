@@ -240,5 +240,28 @@
     "Denver steak er erstattet af culotte, som er nemmere at få i Danmark.",
     "Vegetabilsk olie er erstattet af rapsolie.",
     "Lyserøde peberkorn hedder lyserød peber."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har en fin hovedråvare og grøntsagssalsa, men mangler mættende stivelse til at være et helt aftensmåltid.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Afløb og server til steaken."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:37:39.996Z"
+  }
 }

@@ -288,5 +288,12 @@
       "text": "Fordel nudlerne i skåle, og øs den grønne suppe over. Læg svampe, chiliolie, æg og forårsløg ovenpå, og server straks."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Suppen er en komplet nudelsuppe med stivelse (nudler), protein (æg og svampe) og grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:39:36.295Z"
+  }
 }

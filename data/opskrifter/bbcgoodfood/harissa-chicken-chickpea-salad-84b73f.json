@@ -123,5 +123,12 @@
   "changes": [
     "Fuldkorns-pitabrød er skrevet som brød.",
     "Fedtfattig naturel yoghurt er skrevet som yoghurt."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som protein, kikærter som mætning, rigeligt grønt og pitabrød – et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:17:47.196Z"
+  }
 }

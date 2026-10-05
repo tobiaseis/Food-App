@@ -187,5 +187,12 @@
   "changes": [
     "Cherrytomater på dåse er erstattet med hakkede tomater.",
     "Hønsebouillonterning er brugt i stedet for kyllingefond-terning."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten indeholder kylling som hovedråvare og orzo-pasta som mættende komponent, og er således et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:15:13.242Z"
+  }
 }

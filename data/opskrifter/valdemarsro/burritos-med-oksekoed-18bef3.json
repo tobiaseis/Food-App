@@ -267,5 +267,12 @@
   "changes": [
     "Koncentreret tomatpuré er skrevet som tomatpuré.",
     "Chiliflager i kildens trin er udeladt, da de ikke står i ingredienslisten."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Burritoerne indeholder oksekød, tortillas og rigeligt grønt samt frugt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:02:58.881Z"
+  }
 }

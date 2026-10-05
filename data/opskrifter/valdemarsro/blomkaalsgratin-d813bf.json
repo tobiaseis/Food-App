@@ -132,5 +132,28 @@
       "text": "Lad ovnlågen være lukket de første 30 minutter, ellers kan gratinen falde sammen."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende del som kartofler eller ris til at fylde måltidet.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Skyl dem, og server dem varme ved siden af gratinen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:30:21.378Z"
+  }
 }

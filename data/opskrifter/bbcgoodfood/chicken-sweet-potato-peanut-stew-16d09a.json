@@ -159,5 +159,12 @@
   "changes": [
     "Vegetable oil er erstattet af almindelig olie.",
     "Peanut butter er skrevet som jordnøddesmør, og peanuts som jordnødder."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Gryderetter er hele måltider, og denne har kylling som protein, sødkartofler som mætning og peberfrugter som grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:31:49.198Z"
+  }
 }

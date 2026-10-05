@@ -183,5 +183,27 @@
   "changes": [
     "Sennepspulver er erstattet af almindelig sennep.",
     "Ketchup med reduceret salt og sukker er erstattet af almindelig ketchup."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende elementer som ris eller pasta, selvom den foreslår det selv i fremgangsmåden.",
+    "side": {
+      "title": "Kogt hvid ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "hvid ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen i kogende vand efter pakkingens vejledning."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:17:52.142Z"
+  }
 }

@@ -160,5 +160,28 @@
     "Prosciutto er erstattet med skinke i skiver, lufttørret.",
     "Blommetomater på dåse er erstattet med hakkede tomater.",
     "Chestnut mushrooms er erstattet med champignon."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende komponenter som ris, kartofler eller pasta.",
+    "side": {
+      "title": "Hvid ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen i saltet vand ifølge pakningen.",
+        "Fluf risen med en gaffel før servering."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:21:09.853Z"
+  }
 }

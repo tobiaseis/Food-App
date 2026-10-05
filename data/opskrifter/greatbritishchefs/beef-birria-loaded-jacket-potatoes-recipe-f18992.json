@@ -325,5 +325,12 @@
     "Mexicansk oregano er erstattet af almindelig oregano.",
     "Sherryeddike er erstattet af almindelig eddike.",
     "Sour cream er erstattet af creme fraiche."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har en stærk proteinkomponent (braiseret oksekød) og kartofler som mætning, og udgør et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:34:00.169Z"
+  }
 }

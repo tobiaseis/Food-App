@@ -134,5 +134,37 @@
   ],
   "changes": [
     "Kilden giver to melvarianter; der er valgt den med boghvedemel i stedet for kikærtemel, som er sværere at finde."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Det er en opskrift på at lave pastaen fra bunden, men uden sauce kan det ikke være et helt aftensmåltid.",
+    "side": {
+      "title": "Enkel tomatsauce",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 800,
+          "unit": "g",
+          "name": "hakkede tomater",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Hakk hvidløgen",
+        "Steg hvidløgen kort i en pande",
+        "Tilsæt tomaterne, og kok uden låg"
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:15:28.403Z"
+  }
 }

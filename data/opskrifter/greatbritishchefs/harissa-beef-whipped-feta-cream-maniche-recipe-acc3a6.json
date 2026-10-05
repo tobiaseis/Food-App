@@ -199,5 +199,12 @@
   "changes": [
     "Garofalo High Protein Mezze Maniche Rigate er erstattet af almindelig pasta (rigatoni).",
     "Hakket oksekød er brugt i stedet for beef mince, og harissa paste hedder harissa."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Det er en pastaret med hakket oksekød og pasta som mætning.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:34:25.910Z"
+  }
 }
