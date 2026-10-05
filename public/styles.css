@@ -316,7 +316,7 @@ button:hover { box-shadow: var(--shadow-border-hover); }
 button:active { scale: .96; }
 
 button.primary {
-  background: var(--accent); color: #fff; box-shadow: none;
+  background: var(--accent); color: var(--surface); box-shadow: none;
 }
 button.primary:hover { background: var(--accent-press); box-shadow: none; }
 
@@ -1191,6 +1191,60 @@ dialog::backdrop {
   .chain-pick[aria-pressed="true"]:hover, .tile[aria-checked="true"]:hover { box-shadow: var(--ring-on); }
 }
 
+/* Swipe i trin 4 (kun telefon). Vælgeren og kortene findes i siden på alle
+   skærme, men JS tænder dem kun ≤ 720 px – på computeren er alt som før. */
+.view-toggle, .swipe { display: none; }
+.is-phone .view-toggle {
+  display: inline-flex; gap: 2px; margin: 0 0 16px; padding: 3px;
+  border-radius: 999px; background: var(--surface-2);
+}
+.view-toggle button {
+  padding: 7px 20px; border-radius: 999px; min-height: 34px;
+  background: transparent; box-shadow: none; font-size: 14px; color: var(--ink-2);
+}
+.view-toggle button:hover { background: transparent; box-shadow: none; }
+.view-toggle button[aria-pressed="true"] { background: var(--surface); box-shadow: var(--shadow-border); color: var(--ink); font-weight: 600; }
+.is-swipe .swipe { display: block; }
+.is-swipe .picks { display: none; }
+
+.swipe-count { margin: 0 0 12px; font-size: 15px; color: var(--ink-2); text-align: center; }
+.swipe-count b { font-family: var(--font-display); font-size: 18px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.swipe-count .warn { display: block; margin-top: 4px; font-size: 13px; font-weight: 500; color: var(--urgent); }
+.swipe-stage { position: relative; }
+.swipe-card {
+  position: relative; overflow: hidden; background: var(--surface);
+  border-radius: var(--r-xl); box-shadow: var(--shadow-border);
+  /* pan-y: lodret rulning er stadig sidens; vandret hører til kortet. */
+  touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab;
+  will-change: transform;
+}
+.swipe-card:active { cursor: grabbing; }
+.swipe-card img, .swipe-ph {
+  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  background: var(--surface-2); pointer-events: none;
+}
+.swipe-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; }
+.swipe-body h3 { margin: 0; font-size: 21px; font-weight: 600; letter-spacing: -.02em; }
+.swipe-body .note { margin: 0; }
+.swipe-stamp {
+  position: absolute; top: 16px; padding: 4px 12px; border-radius: var(--r-sm);
+  font-size: 15px; font-weight: 600; opacity: 0; pointer-events: none;
+  background: var(--surface);
+}
+.swipe-stamp.is-yes { left: 16px; color: var(--good); box-shadow: inset 0 0 0 2px var(--good); }
+.swipe-stamp.is-no { right: 16px; color: var(--ink-2); box-shadow: inset 0 0 0 2px var(--ink-3); }
+.swipe-actions { display: flex; justify-content: center; gap: 28px; margin: 18px 0 4px; }
+.swipe-btn {
+  width: 60px; height: 60px; padding: 0; border-radius: 50%;
+  background: var(--surface); box-shadow: var(--shadow-border);
+  font-size: 28px; line-height: 1; color: var(--ink-2);
+}
+.swipe-btn.is-yes { background: var(--accent); color: var(--surface); box-shadow: none; }
+.swipe-btn.is-yes:hover { background: var(--accent-press); box-shadow: none; }
+.swipe-cta { display: block; width: 100%; margin-top: 16px; min-height: 44px; }
+.swipe-empty { padding: 28px 18px; text-align: center; background: var(--surface); border-radius: var(--r-xl); box-shadow: var(--shadow-border); }
+.swipe-empty p { margin: 0 0 14px; color: var(--ink-2); }
+
 /* Har brugeren bedt om ro, får de ro. Tilstandene skifter stadig – bare uden
    bevægelse. */
 @media (prefers-reduced-motion: reduce) {
@@ -1201,4 +1255,5 @@ dialog::backdrop {
   }
   .offer:hover { translate: 0 0; }
   button:active, .tile:active { scale: 1; }
+  .swipe-card { will-change: auto; }
 }

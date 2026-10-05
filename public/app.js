@@ -540,6 +540,9 @@ function readFlow() {
     days: int(f.days, DAYS_MIN, DAYS_MAX, 4),
     servings: int(f.servings, PEOPLE_MIN, PEOPLE_MAX, 4),
     picks: f.picks && Array.isArray(f.picks.ids) ? f.picks : null,
+    // Telefonens visning af retterne i trin 4. Swipe er standard; huskes, så den
+    // der foretrækker listen ikke skal skifte hver gang.
+    view: f.view === 'list' ? 'list' : 'swipe',
     // Varer, brugeren allerede har ("brug det, jeg har"). Nøgler og ikke
     // navne: navnene kommer fra varekataloget, og nøglen er det, motoren kender.
     have: Array.isArray(f.have)
@@ -552,7 +555,7 @@ function writeFlow() {
   const picks = FLOW.ctx ? { week: `${FLOW.ctx.year}-${FLOW.ctx.week}`, ids: FLOW.selected } : s.picks;
   try {
     localStorage.setItem(FLOW_KEY, JSON.stringify({
-      track: s.track, days: s.days, servings: s.servings, picks, have: s.have,
+      track: s.track, days: s.days, servings: s.servings, picks, have: s.have, view: s.view,
     }));
   } catch { /* privat vindue – valget gælder så kun denne visning */ }
 }
@@ -566,6 +569,7 @@ const FLOW = {
   list: null,             // Data.lists for det valgte
   token: 0,               // kun den nyeste beregning må tegne
   hint: '',
+  skipped: [],            // id'er sprunget over i swipe, i den rækkefølge – de kommer igen sidst
 };
 
 /** De varer, brugeren har, som motoren vil have dem: et Set af nøgler. */
@@ -1061,9 +1065,21 @@ function renderChoose() {
     <div class="docket tally" id="flow-tally" aria-live="polite"></div>
     <div class="proposals">${cards}</div>
     ${cards ? '<h3 class="picks-head">Eller vælg selv</h3>' : ''}
+    <div class="view-toggle" role="group" aria-label="Visning af retter">
+      <button type="button" data-view="swipe">Swipe</button>
+      <button type="button" data-view="list">Liste</button>
+    </div>
+    <div class="swipe" id="flow-swipe"></div>
     <ul class="picks">${rows}</ul>`;
 
   bindGotoStores(el);
+  el.querySelectorAll('[data-view]').forEach((b) => b.addEventListener('click', () => {
+    if (FLOW.settings.view === b.dataset.view) return;
+    FLOW.settings.view = b.dataset.view;
+    writeFlow();
+    applyView();
+  }));
+  applyView();
   bindRecipeLinks(el);
   el.querySelectorAll('[data-accept]').forEach((b) => b.addEventListener('click', () => {
     const w = proposals[Number(b.dataset.accept)];
@@ -1076,23 +1092,200 @@ function renderChoose() {
   }));
   el.querySelectorAll('.pick-box').forEach((box) => box.addEventListener('change', () => {
     const id = Number(box.value);
-    if (box.checked) {
-      if (FLOW.selected.length >= FLOW.settings.days) {
-        // Loftet er brugerens eget antal aftener. Hellere et ord end at
-        // skubbe den ret ud, hun valgte først.
-        box.checked = false;
-        FLOW.hint = `Du har valgt ${FLOW.settings.days} – fravælg en ret først.`;
-      } else {
-        FLOW.selected = [...FLOW.selected, id];
-        FLOW.hint = '';
-      }
-    } else {
-      FLOW.selected = FLOW.selected.filter((x) => x !== id);
-      FLOW.hint = '';
-    }
+    // Er loftet nået, afvises valget og fluebenet tages af igen.
+    if (!setPick(id, box.checked)) box.checked = false;
     syncSelection();
   }));
 }
+
+/**
+ * Vælg eller fravælg en ret. ÉN funktion, som både fluebenet og swipe bruger,
+ * så loftet på antal aftener og beskeden aldrig kan opføre sig forskelligt.
+ * Returnerer false, når valget blev afvist af loftet.
+ */
+function setPick(id, on) {
+  if (on) {
+    if (FLOW.selected.includes(id)) return true;
+    if (FLOW.selected.length >= FLOW.settings.days) {
+      // Loftet er brugerens eget antal aftener. Hellere et ord end at
+      // skubbe den ret ud, hun valgte først.
+      FLOW.hint = `Du har valgt ${FLOW.settings.days} – fravælg en ret først.`;
+      return false;
+    }
+    FLOW.selected = [...FLOW.selected, id];
+  } else {
+    FLOW.selected = FLOW.selected.filter((x) => x !== id);
+  }
+  FLOW.hint = '';
+  return true;
+}
+
+/* ── Trin 4 på telefon: swipe ─────────────────────────────────────────────── */
+
+const phoneQuery = window.matchMedia('(max-width: 720px)');
+const calmQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const swipeOn = () => phoneQuery.matches && Boolean(FLOW.settings) && FLOW.settings.view === 'swipe';
+
+/** Retterne, der stadig kan swipes: ikke valgt, og de oversprungne sidst. */
+function swipeQueue() {
+  const pool = FLOW.choice ? FLOW.choice.pool : [];
+  const open = pool.filter((r) => !FLOW.selected.includes(r.id));
+  const rank = (r) => FLOW.skipped.indexOf(r.id);   // −1 = ikke sprunget over
+  // Stabil sortering: ikke-oversprungne i listens rækkefølge, så de oversprungne
+  // i den rækkefølge, de blev sprunget over.
+  return open.map((r, i) => [r, i]).sort((x, y) => rank(x[0]) - rank(y[0]) || x[1] - y[1]).map((x) => x[0]);
+}
+
+/** Skifter mellem swipe og liste – og følger skærmbredden, hvis den ændres. */
+function applyView() {
+  const el = $('#flow-choose');
+  if (!el || !FLOW.choice) return;
+  el.classList.toggle('is-phone', phoneQuery.matches);
+  el.classList.toggle('is-swipe', swipeOn());
+  el.querySelectorAll('[data-view]').forEach((b) =>
+    b.setAttribute('aria-pressed', b.dataset.view === FLOW.settings.view ? 'true' : 'false'));
+  if (swipeOn()) renderSwipe();
+}
+phoneQuery.addEventListener('change', applyView);
+
+function renderSwipe() {
+  const box = $('#flow-swipe');
+  if (!box || !FLOW.choice) return;
+  const { days, track } = FLOW.settings;
+  const n = FLOW.selected.length;
+  // En tynd pulje kan have færre retter end aftener (som i renderTally).
+  const full = n >= Math.min(days, FLOW.choice.pool.length);
+  const r = swipeQueue()[0];
+  // Tælleren er en live-region, så en skærmlæser siger "3 af 4 valgt", når den ændres.
+  const counter = `<p class="swipe-count" aria-live="polite"><b>${n} af ${days}</b> valgt${
+    FLOW.hint ? ` <span class="warn">${esc(FLOW.hint)}</span>` : ''}</p>`;
+  const cta = full ? '<button type="button" class="primary swipe-cta" data-goto-list>Se indkøbslisten</button>' : '';
+  let stage;
+  if (!r) {
+    stage = `<div class="swipe-empty"><p>Du har set alle retterne.</p>
+      <button type="button" data-view-list>Liste</button></div>`;
+  } else {
+    const parts = [];
+    const t = timeShort(r);
+    if (t) parts.push(esc(t));
+    if (track === 'budget' && r.cost_per_serving != null) parts.push(`ca. ${kr(Math.round(r.cost_per_serving))} pr. portion`);
+    stage = `<div class="swipe-stage">
+      <article class="swipe-card" data-id="${r.id}" aria-label="${esc(r.title)}">
+        ${r.image ? `<img src="${esc(thumb(r.image, 480))}" alt="" draggable="false" decoding="async">`
+                  : '<span class="swipe-ph" aria-hidden="true"></span>'}
+        <div class="swipe-body">
+          <h3>${esc(r.title)}</h3>
+          <p class="note">${parts.join(' · ')}</p>
+          ${r.image && r.source_name ? `<span class="pick-credit">Foto: ${esc(r.source_name)}</span>` : ''}
+        </div>
+        <span class="swipe-stamp is-yes" aria-hidden="true">Vælg</span>
+        <span class="swipe-stamp is-no" aria-hidden="true">Næste</span>
+      </article>
+    </div>
+    <div class="swipe-actions">
+      <button type="button" class="swipe-btn" data-swipe="left" aria-label="Spring over">&times;</button>
+      <button type="button" class="swipe-btn is-yes" data-swipe="right" aria-label="Vælg">&#10003;</button>
+    </div>`;
+  }
+  box.innerHTML = `${counter}${stage}${cta}`;
+  const toList = box.querySelector('[data-view-list]');
+  if (toList) toList.addEventListener('click', () => {
+    FLOW.settings.view = 'list';
+    writeFlow();
+    applyView();
+  });
+  const go = box.querySelector('[data-goto-list]');
+  if (go) go.addEventListener('click', gotoList);
+  if (!r) return;
+  const card = box.querySelector('.swipe-card');
+  box.querySelectorAll('[data-swipe]').forEach((b) => b.addEventListener('click', () => swipeAct(b.dataset.swipe, card)));
+  bindSwipeCard(card);
+}
+
+let swipeBusy = false;   // mens et kort flyver ud, tages der ikke imod flere handlinger
+
+/**
+ * Højre = vælg (via setPick, samme som fluebenet), venstre = spring over.
+ * Afvist af loftet: kortet bliver stående, og beskeden vises.
+ */
+function swipeAct(dir, card) {
+  if (swipeBusy || !card) return;
+  const id = Number(card.dataset.id);
+  const finish = () => {
+    swipeBusy = false;
+    if (dir === 'right') {
+      if (setPick(id, true)) Native.haptic();
+    } else {
+      FLOW.skipped = [...FLOW.skipped.filter((x) => x !== id), id];
+      FLOW.hint = '';
+    }
+    syncSelection();         // tegner også swipe-visningen igen, så et afvist kort kommer tilbage
+  };
+  // Et afvist valg skal ikke flyve ud for så at komme tilbage.
+  const refused = dir === 'right' && FLOW.selected.length >= FLOW.settings.days;
+  if (calmQuery.matches || refused) { finish(); return; }
+  swipeBusy = true;
+  const w = card.offsetWidth;
+  card.style.transition = 'transform .22s ease-out, opacity .22s';
+  card.style.transform = `translateX(${dir === 'right' ? w * 1.3 : -w * 1.3}px) rotate(${dir === 'right' ? 18 : -18}deg)`;
+  card.style.opacity = '0';
+  setTimeout(finish, 220);
+}
+
+/** Pointer Events: virker med finger og mus. Kortet følger fingeren. */
+function bindSwipeCard(card) {
+  if (!card) return;
+  let startX = 0, startT = 0, dx = 0, drag = false, down = false;
+  const yes = card.querySelector('.is-yes'), no = card.querySelector('.is-no');
+  const reset = () => {
+    card.style.transition = calmQuery.matches ? 'none' : 'transform .2s ease-out';
+    card.style.transform = '';
+    yes.style.opacity = no.style.opacity = 0;
+  };
+  card.addEventListener('pointerdown', (e) => {
+    if (swipeBusy || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    down = true; drag = false; dx = 0;
+    startX = e.clientX; startT = e.timeStamp;
+    card.setPointerCapture(e.pointerId);
+    card.style.transition = 'none';
+  });
+  card.addEventListener('pointermove', (e) => {
+    if (!down) return;
+    dx = e.clientX - startX;
+    if (!drag && Math.abs(dx) > 8) drag = true;   // under 8 px er det et tryk, ikke et træk
+    if (!drag) return;
+    // Rotationen er lille – nok til at kortet føles som papir, ikke til at det væltes.
+    card.style.transform = calmQuery.matches ? '' : `translateX(${dx}px) rotate(${dx / 20}deg)`;
+    const k = Math.min(1, Math.abs(dx) / (card.offsetWidth * 0.25));
+    yes.style.opacity = dx > 0 ? k : 0;
+    no.style.opacity = dx < 0 ? k : 0;
+  });
+  card.addEventListener('pointercancel', () => { down = false; reset(); });
+  card.addEventListener('pointerup', (e) => {
+    if (!down) return;
+    down = false;
+    // Et tryk uden træk åbner opskriften, som i listen.
+    if (!drag) { showRecipe(Number(card.dataset.id)); return; }
+    const speed = Math.abs(dx) / Math.max(1, e.timeStamp - startT);   // px pr. ms – et hurtigt flik tæller også
+    if (Math.abs(dx) > card.offsetWidth * 0.25 || (speed > 0.6 && Math.abs(dx) > 30)) {
+      swipeAct(dx > 0 ? 'right' : 'left', card);
+    } else {
+      reset();
+    }
+  });
+}
+
+// ← og → i swipe-visningen. Ikke mens man skriver (søgefeltet i trin 3 m.m.).
+document.addEventListener('keydown', (e) => {
+  if (!swipeOn() || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+  const t = e.target;
+  if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+  const card = document.querySelector('#flow-swipe .swipe-card');
+  if (!card) return;
+  e.preventDefault();
+  swipeAct(e.key === 'ArrowRight' ? 'right' : 'left', card);
+});
 
 function bindGotoStores(root) {
   root.querySelectorAll('[data-goto-stores]').forEach((b) => b.addEventListener('click', () =>
@@ -1138,6 +1331,7 @@ function syncSelection() {
       btn.textContent = on ? `${name} er valgt` : `Vælg forslag ${'AB'[i]}`;
     });
     renderTally(picks.length);
+    if (swipeOn()) renderSwipe();
   }
   markStep('choose', picks.length > 0 && picks.length === FLOW.settings.days);
   markStep('list', Boolean(FLOW.list));
