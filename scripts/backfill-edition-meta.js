@@ -71,8 +71,9 @@ function main({ dir = EDITION_DIR, dbPath = DB_PATH } = {}) {
     const text = fs.readFileSync(file, 'utf8');
     const ed = JSON.parse(text);
     // En fil, der ikke står i rewrite.js' format (håndrettet), omformateres aldrig.
-    if (`${JSON.stringify(ed, null, 2)}
-` !== text) { stats.handEdited++; handEdited.push(file); continue; }
+    // På Windows med core.autocrlf=true har filen CRLF, men scripts skriver LF. Normaliserer
+    // til LF før sammenligning så udgaver i standardformat opdateres selvom de har CRLF.
+    if (`${JSON.stringify(ed, null, 2)}\n` !== text.replace(/\r\n/g, '\n')) { stats.handEdited++; handEdited.push(file); continue; }
     const row = get.get(ed.url);
     if (!row) { stats.noRecipe++; noRecipe.push(`${file} (${ed.url})`); continue; }
     const next = `${JSON.stringify(withMeta(ed, row), null, 2)}\n`;

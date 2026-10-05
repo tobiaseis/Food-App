@@ -1058,6 +1058,48 @@ test('backfill-edition-meta lægger kun manglende felter på, lige efter source_
   assert.deepEqual(ed, { url: 'u', yield_count: 4, source_lines: 3, title: 'T', image: 'rettet.jpg' });
 });
 
+test('backfill-edition-meta opdaterer en udgave med CRLF, ikke springer den over', () => {
+  // På Windows med core.autocrlf=true læses filen med CRLF fra git, men scripts
+  // skriver LF. En fil i standardformat men med CRLF blev derfor sprunget over.
+  // Testen skriver en fil med CRLF og uden lang-feltet, kører backfill, og
+  // tjekker at (a) den blev opdateret, ikke sprunget, og (b) den skrives med LF.
+  const db = getDb();
+  const { DB_PATH } = require('../src/db');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'opskrifter-crlf-'));
+
+  // Indsætter en ret i databasen så backfill kan finde den
+  const now = new Date().toISOString();
+  db.prepare(`INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at)
+             VALUES (?, 'test', 'Test', 'Lammeculotte', 'en', 4, ?)`).run(EDITION_FIXTURE.url, now);
+
+  try {
+    const filePath = path.join(dir, 'crlf-test.json');
+    // Skriver filen uden lang-feltet, med CRLF sådan som Windows autocrlf-checkout ville gøre
+    const withoutLang = { ...EDITION_FIXTURE, lang: undefined };
+    const json = `${JSON.stringify(withoutLang, null, 2)}\n`;
+    fs.writeFileSync(filePath, json.replace(/\n/g, '\r\n'));
+
+    // Verificerer at filen har CRLF før backfill
+    const before = fs.readFileSync(filePath, 'utf8');
+    assert.ok(before.includes('\r\n'), 'testen skal skrive filen med CRLF');
+    assert.equal(before, json.replace(/\n/g, '\r\n'));
+
+    const stats = require('../scripts/backfill-edition-meta').main({ dir, dbPath: DB_PATH });
+    // Fil blev opdateret, ikke sprunget over som håndrettet
+    assert.equal(stats.written, 1, 'CRLF-filen skal opdateres');
+    assert.equal(stats.handEdited, 0, 'CRLF-filen skal ikke tælles som håndrettet');
+
+    // Verificerer at filen nu har LF
+    const after = fs.readFileSync(filePath, 'utf8');
+    assert.ok(after.includes('lang'), 'lang-feltet skal være tilføjet');
+    assert.ok(!after.includes('\r\n'), 'filen skal skrives med LF, ikke CRLF');
+    assert.ok(after.endsWith('\n') && !after.endsWith('\r\n'));
+  } finally {
+    db.prepare('DELETE FROM recipes WHERE url = ?').run(EDITION_FIXTURE.url);
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('HelloFresh: nyeste udgave pr. ret, kun rene opskrifts-URL\'er', () => {
   const { pickHelloFreshUrls } = require('../src/recipes/sources');
   const B = 'https://www.hellofresh.dk/recipes/';
