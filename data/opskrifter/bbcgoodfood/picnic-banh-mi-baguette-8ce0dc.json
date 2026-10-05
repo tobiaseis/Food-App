@@ -185,5 +185,12 @@
     "Pâté er erstattet af leverpostej.",
     "Cooked pork loin er erstattet af kogt svinekam.",
     "Caster sugar er erstattet af almindeligt sukker."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har brød, protein og grøntsager, og er et helt sandwich-måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:17:32.474Z"
+  }
 }

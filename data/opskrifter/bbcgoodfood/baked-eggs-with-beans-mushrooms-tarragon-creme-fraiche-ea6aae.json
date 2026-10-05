@@ -143,5 +143,12 @@
   "changes": [
     "Haricot- eller cannellinibønner er skiftet til hvide bønner.",
     "Surdejs- eller bloomerbrød er skiftet til surdejsbrød."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Det er en gryderet med protein, mætning fra hvide bønner og brød, og rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:13:22.056Z"
+  }
 }

@@ -195,5 +195,12 @@
   "changes": [
     "Kvark er erstattet af creme fraiche, som kilden også nævner.",
     "Syltede agurker er skrevet som cornichoner."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Burgeren har kartoffelfrikadeller som hovedråvare, burgerbolle som mættefaktor og rigeligt grønt, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:05:33.226Z"
+  }
 }

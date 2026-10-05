@@ -156,5 +156,12 @@
     "Caster sugar er erstattet af almindeligt sukker.",
     "Plain flour er erstattet af hvedemel.",
     "Double cream er erstattet af piskefløde."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Det er en dessert/kage, ikke en hovedret til aftensmad.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:32:07.305Z"
+  }
 }

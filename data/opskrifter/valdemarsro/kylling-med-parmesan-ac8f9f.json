@@ -115,5 +115,12 @@
   "changes": [
     "Kyllingebouillon er skiftet til kyllingefond.",
     "Mængden af cherrytomater er sat op fra 75 g til 250 g, da 75 g virker som en fejl."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare og grønne linser som mætningsfølelse, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:55:23.874Z"
+  }
 }

@@ -155,5 +155,12 @@
   "changes": [
     "Chiliflager er skrevet som chili.",
     "Chicken wings er skrevet som kyllingevinger."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, ris som stivelse og coleslaw som grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:19:24.520Z"
+  }
 }

@@ -147,5 +147,12 @@
   "changes": [
     "Chipotle paste er skrevet som chipotle (pasta).",
     "Fedtfattig græsk yoghurt er skrevet som græsk yoghurt 0 % fedt."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten består af bagte kyllingeunderlår og rigeligt grønt i form af coleslaw, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:12:53.661Z"
+  }
 }

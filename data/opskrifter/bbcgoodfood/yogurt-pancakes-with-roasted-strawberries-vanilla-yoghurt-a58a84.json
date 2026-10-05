@@ -166,5 +166,12 @@
   ],
   "changes": [
     "Self-raising flour er erstattet med hvedemel og bagepulver (ekstra bagepulver tilføjet)."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Pandekager med jordbær er en dessert, ikke et helt aftensmåltid – det mangler en savory hovedret med protein og grøntsager.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:13:21.456Z"
+  }
 }

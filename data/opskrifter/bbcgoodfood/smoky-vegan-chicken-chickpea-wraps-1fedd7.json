@@ -168,5 +168,12 @@
     "Vegetabilsk olie er skiftet til olie.",
     "Fajita seasoning er skiftet til fajitakrydderi.",
     "Chilli flakes er skiftet til chiliflager."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Wraps er hele måltider, og denne har protein (vegansk kylling og kikærter), stivelse (tortilla) og rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:16:53.739Z"
+  }
 }

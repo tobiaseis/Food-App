@@ -215,5 +215,12 @@
   "changes": [
     "Bambusspyd er flyttet øverst på ingredienslisten som egen vare, da kilden fejlagtigt har dem i samme linje som olivenolie.",
     "Baby spinach er skrevet som spinat (baby)."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Kyllingespyd serveret som wraps med fuldkornstortillas, grønt og tzatziki udgør et helt måltid med protein, stivelse og rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:49:43.302Z"
+  }
 }

@@ -120,5 +120,12 @@
     "Fajita seasoning er skiftet til fajitakrydderi i pose.",
     "Mexican-style rice pouch er skiftet til færdigkogt mexicansk ris i pose.",
     "Roasted red peppers er skiftet til ristet peberfrugt."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har bøf som hovedråvare, ris som mætning og peberfrugt som grøntsager – et komplet aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:42:05.475Z"
+  }
 }

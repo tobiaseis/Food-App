@@ -184,5 +184,28 @@
     "Caster sugar er erstattet af almindeligt sukker.",
     "Hvidvinseddike er erstattet af almindelig eddike.",
     "Sourdough er erstattet af almindeligt brød (surdejsbrød)."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Der mangler grønt til at være et helt aftensmåltid.",
+    "side": {
+      "title": "Grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Vask og riv salaten i stykker.",
+        "Server til toastene."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:38:43.704Z"
+  }
 }

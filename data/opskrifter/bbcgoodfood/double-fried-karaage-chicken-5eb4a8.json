@@ -138,5 +138,28 @@
   ],
   "changes": [
     "Sake er erstattet med hvidvin."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende komponent som ris, kartofler eller brød.",
+    "side": {
+      "title": "Ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Spul risen under koldt vand.",
+        "Kog den i letsaltet vand efter anvisningen på pakken."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:45:11.859Z"
+  }
 }

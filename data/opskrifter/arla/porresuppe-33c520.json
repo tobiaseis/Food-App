@@ -140,5 +140,12 @@
       "text": "Anret den varme suppe med salattoppingen, og server med det ristede brød ved siden af."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Suppen indeholder linser som protein og stivelse, og serveres med brød og salattopping.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:08:11.545Z"
+  }
 }

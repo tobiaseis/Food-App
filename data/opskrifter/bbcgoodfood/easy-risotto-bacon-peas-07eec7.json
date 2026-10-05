@@ -123,5 +123,12 @@
   "changes": [
     "Streaky bacon er skiftet til bacon i skiver.",
     "Knob of butter er skiftet til smør."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Risotto er en komplet gryderett med ris som stivelse, bacon som protein og ærter.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:10:11.929Z"
+  }
 }

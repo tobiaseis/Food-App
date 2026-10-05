@@ -748,3 +748,143 @@ test('kyllingebryst → hakket kylling er stadig samme hovedråvare', () => {
   assert.equal(editionLines(ed)[0].item_key, 'hakket_kylling');
   assert.deepEqual(problems(ed, editionLines(ed), parsedLines(['500 g chicken breast', '1 tsp salt'])), []);
 });
+
+// ── Tilbehør: vurderingen af måltidet (sides.js) ───────────────────────────
+const { MEAL_SCHEMA } = require('../src/recipes/edition');
+const sides = require('../src/recipes/sides');
+
+test('MEAL_SCHEMA tillader kun UNITS (samme ingrediensskema som udgaven) og er lukket', () => {
+  const side = MEAL_SCHEMA.properties.side.anyOf[0];
+  assert.equal(MEAL_SCHEMA.additionalProperties, false);
+  assert.equal(side.additionalProperties, false);
+  assert.equal(side.properties.ingredients, RECIPE_SCHEMA.properties.ingredients);
+  const unit = side.properties.ingredients.items.properties.unit.anyOf[0];
+  assert.deepEqual(unit.enum, UNITS);
+  assert.deepEqual(MEAL_SCHEMA.required, ['complete', 'reason', 'side']);
+});
+
+test('udvælgelsen: kun aftensretter med udgave, og meal springes over uden --force', () => {
+  const recipes = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
+  const editions = { 1: { title: 'a' }, 2: { title: 'b', meal: { complete: true } }, 3: null, 4: { title: 'd' } };
+  const isDinner = (r) => r.id !== 4; // 4 er ikke aftensmad
+  const read = (r) => editions[r.id];
+  const ids = (o) => sides.pendingMeals(recipes, [], { isDinner, read, ...o }).map((p) => p.recipe.id);
+  assert.deepEqual(ids({}), [1]);
+  assert.deepEqual(ids({ force: true }), [1, 2]);
+  assert.deepEqual(ids({ force: true, limit: 1 }), [1]);
+  assert.deepEqual(ids({ force: true, ids: [2] }), [2]);
+});
+
+test('meal skrives ind i udgaven, og de øvrige felter er uændrede', () => {
+  const ed = { url: 'u', title: 'Stegt tunsteak', servings: 4, ingredients: [{ name: 'tun' }], steps: [{ section: null, text: 'Steg.' }] };
+  const side = { title: 'Kogte kartofler', ingredients: [], steps: ['Kog.'] };
+  const out = sides.withMeal(ed, { output: { complete: false, reason: 'Mangler stivelse.', side }, model: 'claude-haiku-4-5' }, new Date('2026-10-04T10:00:00Z'));
+  const { meal, ...rest } = out;
+  assert.deepEqual(rest, ed);
+  assert.deepEqual(meal, { complete: false, reason: 'Mangler stivelse.', side, model: 'claude-haiku-4-5', checked_at: '2026-10-04T10:00:00.000Z' });
+  assert.equal(ed.meal, undefined, 'den oprindelige udgave røres ikke');
+});
+
+test('sides-prompten er fast og nævner de tilladte enheder; beskeden bruger udgavens linjer', () => {
+  assert.equal(sides.systemText(), sides.systemText());
+  assert.ok(sides.systemText().includes(UNITS.join(', ')));
+  const msg = sides.userMessage({ title: 'T', servings: 2, ingredients: [{ amount: 400, unit: 'g', name: 'tun', note: null, optional: false }], steps: [{ text: 'Steg.' }] });
+  assert.match(msg, /Portioner: 2/);
+  assert.match(msg, /- 400 g tun/);
+  assert.match(msg, /1\. Steg\./);
+});
+
+test('cleanSide: varenavne med småt, basisvarer droppes, men en eneste linje bevares', () => {
+  const l = (name, extra = {}) => ({ section: null, amount: 1, unit: 'g', name, note: 'Til Vandet', optional: false, ...extra });
+  const side = { title: 'Kartofler', ingredients: [l('Kartofler'), l('Grøn salat'), l('Olivenolie'), l('Salt'), l('Peanutsmør')], steps: ['Kog.'] };
+  const out = sides.cleanSide(side);
+  assert.deepEqual(out.ingredients.map((i) => i.name), ['kartofler', 'grøn salat', 'peanutsmør']);
+  assert.equal(out.ingredients[0].note, 'Til Vandet', 'resten af teksten er uændret');
+  assert.equal(out.title, 'Kartofler');
+  const only = sides.cleanSide({ title: 'x', ingredients: [l('Smør')], steps: [] });
+  assert.deepEqual(only.ingredients.map((i) => i.name), ['smør']);
+  assert.equal(sides.cleanSide(null), null);
+});
+
+// ── Tilbehør (meal.side) ─────────────────────────────────────────────────────
+
+const SIDE = {
+  title: 'Kogte kartofler',
+  ingredients: [
+    { section: null, amount: 800, unit: 'g', name: 'kartofler', note: null, optional: false },
+    { section: null, amount: null, unit: null, name: 'salt', note: null, optional: false },
+  ],
+  steps: ['Kog kartoflerne møre i letsaltet vand.', 'Hæld vandet fra og damp dem af.'],
+};
+const withMeal = (n, meal) => ({ ...EDITION_FIXTURE, url: `https://test.invalid/da-side-${n}`, meal });
+
+test('en udgave med tilbehør får afsnittet Tilbehør i linjer og trin', () => {
+  withEdition(withMeal(1, { complete: false, reason: 'x', side: SIDE }), ({ db, dir, id }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.applied, 1, JSON.stringify(res.flaggedList));
+    const lines = db.prepare('SELECT * FROM recipe_ingredients WHERE recipe_id = ? ORDER BY position').all(id);
+    assert.equal(lines.length, 5);
+    assert.deepEqual(lines.slice(3).map((l) => l.section), ['Tilbehør: Kogte kartofler', 'Tilbehør: Kogte kartofler']);
+    assert.equal(lines[3].item_key, 'kartofler');
+    const steps = db.prepare('SELECT * FROM recipe_steps WHERE recipe_id = ? ORDER BY position').all(id);
+    assert.deepEqual(steps.slice(2).map((s) => s.section), ['Tilbehør', 'Tilbehør']);
+    assert.equal(steps[2].text, SIDE.steps[0]);
+    // Tilbehørets 2 linjer tæller ikke med i ingredienslinje-kontrollen (3 + 2 > 1 + 2 og > 30 %).
+    assert.equal(res.flagged, 0);
+  });
+});
+
+test('en udgave med et helt måltid eller uden tilbehør får ingen ekstra linjer', () => {
+  withEdition(withMeal(2, { complete: true, reason: 'x', side: null }), ({ db, dir, id }) => {
+    assert.equal(importAll({ dir, log: () => {} }).applied, 1);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_ingredients WHERE recipe_id = ?').get(id).n, 3);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_steps WHERE recipe_id = ?').get(id).n, 2);
+  });
+  withEdition(withMeal(3, { complete: true, reason: 'x', side: SIDE }), ({ db, dir, id }) => {
+    importAll({ dir, log: () => {} });
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_ingredients WHERE recipe_id = ?').get(id).n, 3);
+  });
+});
+
+test('et tilbehør med ukendt enhed, uden trin eller med for mange linjer holdes tilbage', () => {
+  const bad = [
+    { ...SIDE, ingredients: [{ ...SIDE.ingredients[0], unit: 'bolle' }, SIDE.ingredients[1]] },
+    { ...SIDE, steps: [] },
+    { ...SIDE, ingredients: Array(5).fill(SIDE.ingredients[0]) },
+    { ...SIDE, ingredients: [] },
+    { ...SIDE, ingredients: [{ ...SIDE.ingredients[0], amount: 0 }] },
+  ];
+  bad.forEach((side, i) => {
+    // accepted frigiver ikke et ødelagt tilbehør.
+    withEdition({ ...withMeal(10 + i, { complete: false, reason: 'x', side }), accepted: true }, ({ db, dir, id }) => {
+      const res = importAll({ dir, log: () => {} });
+      assert.equal(res.applied, 0, `tilfælde ${i}`);
+      assert.equal(res.flagged, 1);
+      assert.match(res.flaggedList[0].issues[0], /^tilbehør:/);
+      assert.equal(db.prepare('SELECT title FROM recipes WHERE id = ?').get(id).title, 'Lamb rump');
+    });
+  });
+});
+
+test('et tilbehør med bælgfrugt eller æg holdes tilbage, kartofler ikke', () => {
+  const peas = { ...SIDE, ingredients: [{ section: null, amount: 300, unit: 'g', name: 'ærter', note: null, optional: false }] };
+  withEdition({ ...withMeal(30, { complete: false, reason: 'x', side: peas }), accepted: true }, ({ dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.applied, 0);
+    assert.match(res.flaggedList[0].issues[0], /^tilbehør: /);
+  });
+  const pot = { ...SIDE, ingredients: [{ section: null, amount: 1, unit: 'kg', name: 'kartofler', note: null, optional: false }] };
+  withEdition(withMeal(31, { complete: false, reason: 'x', side: pot }), ({ dir }) => {
+    assert.equal(importAll({ dir, log: () => {} }).applied, 1);
+  });
+});
+
+test('en udgave, der får meal tilføjet, læses ind igen', () => {
+  withEdition(EDITION_FIXTURE, ({ db, dir, id }) => {
+    importAll({ dir, log: () => {} });
+    fs.writeFileSync(path.join(dir, 'ret.json'),
+      JSON.stringify({ ...EDITION_FIXTURE, meal: { complete: false, reason: 'x', side: SIDE } }));
+    assert.equal(importAll({ dir, log: () => {} }).applied, 1);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_ingredients WHERE recipe_id = ?').get(id).n, 5);
+  });
+});

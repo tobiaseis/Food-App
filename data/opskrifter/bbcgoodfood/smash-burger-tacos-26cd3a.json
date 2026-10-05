@@ -116,5 +116,12 @@
     "Vegetable/sunflower oil er skiftet til rapsolie.",
     "Burger cheese/monterey jack er skiftet til cheddar i skiver.",
     "Gherkins er skiftet til cornichoner."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har protein, stivelse fra tortillas og grønt, og er derfor et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:28:51.107Z"
+  }
 }

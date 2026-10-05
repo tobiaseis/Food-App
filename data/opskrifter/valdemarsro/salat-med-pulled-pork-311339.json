@@ -179,5 +179,28 @@
   "changes": [
     "Rød chili er skrevet som chili, og æblecidereddike som eddike med note.",
     "Sriracha chilisauce er skrevet som sriracha."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Salaten har protein og grønt, men mangler stivelse som kartofler, ris eller brød.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Dræn dem, og server til salaten."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:35:21.438Z"
+  }
 }

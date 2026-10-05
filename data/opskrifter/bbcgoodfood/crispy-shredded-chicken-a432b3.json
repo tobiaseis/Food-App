@@ -124,5 +124,28 @@
       "text": "Server med forårsløg drysset over."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende komponent som ris, kartofler, pasta eller brød.",
+    "side": {
+      "title": "Jasminris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 150,
+          "unit": "g",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter anvisning på pakken.",
+        "Server til kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:41:30.650Z"
+  }
 }

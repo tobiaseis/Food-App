@@ -192,5 +192,12 @@
     "Ramennudler er erstattet af almindelige nudler.",
     "Frisk ingefær angives som et stykke, da kilden ikke opgiver en vægt.",
     "Chili i pulver er skrevet som stødt chili."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Ramen er et helt måltid med nudler, protein, grønt og rig buillon.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:53:26.923Z"
+  }
 }

@@ -148,5 +148,28 @@
     "Fløde-sur (half-fat soured cream) er erstattet af creme fraiche 9 %.",
     "Chestnut mushrooms er erstattet af champignon.",
     "Wholegrain mustard er erstattet af grov sennep."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mættende stivelse som kartofler, ris eller brød.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne.",
+        "Kog dem møre i letsaltet vand."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:58:12.419Z"
+  }
 }

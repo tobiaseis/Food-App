@@ -156,5 +156,28 @@
       "text": "Rør limesaften i, og smag til med salt og peber. Server med blomkålsris."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Chilien har kun en lille sødkartoffel, så der mangler tilstrækkelig stivelse til at være et helt måltid.",
+    "side": {
+      "title": "Ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 75,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter instruks på pakken.",
+        "Server risen til chilien."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:42:54.068Z"
+  }
 }

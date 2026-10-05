@@ -425,5 +425,28 @@
     "Balsamico glaze er erstattet af balsamicocreme.",
     "Grøn papaya er erstattet af gulerødder.",
     "Ingefær- og hvidløgspasta kan fås i asiatiske butikker og nogle supermarkeder."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mætningsholdende komponent som kartofler, ris eller brød.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen i letsal vand efter pakningens anvisning.",
+        "Dren den og server til kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:34:04.605Z"
+  }
 }

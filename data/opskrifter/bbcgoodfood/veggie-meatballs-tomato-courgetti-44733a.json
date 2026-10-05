@@ -191,5 +191,36 @@
   "changes": [
     "Courgette er skiftet til squash.",
     "Formalede mandler er skrevet som mandler, malede."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Squashnudler giver ikke nok mættelighed; der mangler kartofler, ris eller lignende.",
+    "side": {
+      "title": "Hvid ris og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 150,
+          "unit": "g",
+          "name": "hvid ris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakken.",
+        "Vask salaten og riv den i stykker."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:43:40.381Z"
+  }
 }

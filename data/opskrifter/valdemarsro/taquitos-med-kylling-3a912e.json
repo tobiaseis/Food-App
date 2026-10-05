@@ -263,5 +263,12 @@
   "changes": [
     "Hakket kylling er skiftet til hakket kyllingekød.",
     "Tortillapandekager er skiftet til tortillas."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Taquitos med tortillas, kylling og grønt udgør et helt måltid med protein og mætning.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:23:22.211Z"
+  }
 }

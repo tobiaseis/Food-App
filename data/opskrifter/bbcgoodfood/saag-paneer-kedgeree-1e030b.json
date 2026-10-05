@@ -123,5 +123,12 @@
   "changes": [
     "Mild karrypulver er erstattet med karry.",
     "Kogt kokosris i pose er erstattet med kogte ris i pose med kokos, som den nærmeste danske færdigvare."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten indeholder ris (stivelse), paneer og æg (protein) og spinat (grønt) – en komplet ret.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:52:12.925Z"
+  }
 }

@@ -91,5 +91,12 @@
   "changes": [
     "Wholegrain rice mix med tang (Merchant Gourmet) er erstattet af færdigkogt fuldkornsris.",
     "Fillet steak er erstattet af oksemørbrad."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kødet som hovedråvare, fuldkornsris som mættende stof og rigeligt grønt – det er et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:45:13.707Z"
+  }
 }

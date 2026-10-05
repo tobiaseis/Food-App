@@ -202,5 +202,28 @@
     "Scotch bonnet er erstattet med chili.",
     "Cassavachips eller stegt yam er erstattet med chips.",
     "Garlic granules er erstattet med hvidløgspulver."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en klassisk mættende del som kartofler eller ris – chips er ikke tilstrækkelig.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Afdryp dem, og server til fiskene."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:30:03.025Z"
+  }
 }

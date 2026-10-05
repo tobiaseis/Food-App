@@ -132,5 +132,28 @@
     "Aldi-laksefilet er erstattet af almindelig laksefilet.",
     "Vegetable oil er erstattet af rapsolie.",
     "Golden caster sugar er erstattet af almindeligt sukker."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler noget mættende som kartofler eller ris til at være et helt måltid.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakkens vejledning.",
+        "Server til laksebøfferne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:00:07.392Z"
+  }
 }

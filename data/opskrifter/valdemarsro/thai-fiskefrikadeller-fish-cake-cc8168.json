@@ -240,5 +240,28 @@
       "text": "Server frikadellerne med dippen."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mætning i form af kartofler, ris eller brød.",
+    "side": {
+      "title": "Jasminris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen under rindende vand.",
+        "Kog den efter pakningens anvisning."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:46:16.800Z"
+  }
 }

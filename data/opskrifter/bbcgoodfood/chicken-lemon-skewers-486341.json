@@ -191,5 +191,12 @@
   "changes": [
     "Little Gem-salat er erstattet af almindelig salat.",
     "Fuldkornsflatbread eller pita er erstattet af brød."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Kyllingespyd serveres i brød med frisk salat og rødløg – det er et komplet måltid med protein, stivelse og grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:55:31.269Z"
+  }
 }

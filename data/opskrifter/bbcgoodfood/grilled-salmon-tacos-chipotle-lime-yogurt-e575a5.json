@@ -183,5 +183,12 @@
   "changes": [
     "Grøn kål er erstattet af spidskål.",
     "Fedtfri yoghurt er skrevet som yoghurt med note om fedtfri."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har laks som hovedråvare, hvedetortillas som mætningsgrundlag og rigeligt grønt (spidskål, koriander, jalapeños), så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:58:49.073Z"
+  }
 }

@@ -141,15 +141,19 @@ function userMessage(src) {
   ].join('\n');
 }
 
-/** Ét kald til CLI'en. Svarer { output, model } eller { error, limit }. */
-function ask(src, { model = DEFAULT_MODEL } = {}) {
+/**
+ * Ét kald til CLI'en med et givet system-prompt og skema. Svarer { output,
+ * model } eller { error, limit }. Generisk, så sides.js bruger samme kald
+ * (cwd, flag, fejl- og grænsehåndtering) uden en kopi.
+ */
+function askClaude({ system, schema, input, model }) {
   return new Promise((resolve) => {
     const args = ['-p', '--output-format', 'json',
-      '--json-schema', JSON.stringify(RECIPE_SCHEMA),
+      '--json-schema', JSON.stringify(schema),
       // ~12.900 tegn (systemText + skema) — et godt stykke under Windows'
       // grænse på 32.767 for en kommandolinje. Vokser kataloget meget, skal
       // den i en fil eller flyttes til stdin-beskeden (se testen for grænsen).
-      '--system-prompt', systemText(),
+      '--system-prompt', system,
       '--tools', '', '--setting-sources', '', '--strict-mcp-config',
       '--no-session-persistence', '--model', model];
     // En tom mappe: ingen CLAUDE.md eller projektfiler må farve svaret.
@@ -174,8 +178,13 @@ function ask(src, { model = DEFAULT_MODEL } = {}) {
       }
       resolve({ output: res.structured_output, model: generatingModel(res.modelUsage, model) });
     });
-    child.stdin.end(userMessage(src));
+    child.stdin.end(input);
   });
+}
+
+/** Opskriftens omskrivning: det generiske kald med rewrite-prompten og -skemaet. */
+function ask(src, { model = DEFAULT_MODEL } = {}) {
+  return askClaude({ system: systemText(), schema: RECIPE_SCHEMA, input: userMessage(src), model });
 }
 
 // ── Egne ord, målt ──────────────────────────────────────────────────────────
@@ -350,6 +359,18 @@ async function drain(todo, { parallel = 1, ask: askOne, onOk }) {
   return { failed, stopped, broken };
 }
 
+/** Det, køen siger til sidst, når den stoppede før tid — samme tekst for alle CLI'er. */
+function reportStops({ stopped, broken }) {
+  if (broken) {
+    console.log(`\n${MAX_ERRORS_IN_A_ROW} fejl i træk — kørslen er stoppet. Den sidste: ${broken}`);
+    console.log('Se, om claude virker (login, version), og start samme kommando igen — den fortsætter, hvor den slap.');
+  }
+  if (stopped) {
+    console.log(`\nAbonnementets grænse er nået: ${stopped}`);
+    console.log('Start samme kommando igen, når grænsen er nulstillet — den fortsætter, hvor den slap.');
+  }
+}
+
 async function run(args) {
   const todo = pending(args);
   if (!todo.length) { console.log('Intet at omskrive.'); return; }
@@ -382,14 +403,7 @@ async function run(args) {
     console.log(`Kør dem igen: npm run recipes:rewrite -- run --force --ids ${failed.map((f) => f.id).join(',')}`);
   }
   reportClose(close);
-  if (broken) {
-    console.log(`\n${MAX_ERRORS_IN_A_ROW} fejl i træk — kørslen er stoppet. Den sidste: ${broken}`);
-    console.log('Se, om claude virker (login, version), og start samme kommando igen — den fortsætter, hvor den slap.');
-  }
-  if (stopped) {
-    console.log(`\nAbonnementets grænse er nået: ${stopped}`);
-    console.log('Start samme kommando igen, når grænsen er nulstillet — den fortsætter, hvor den slap.');
-  }
+  reportStops({ stopped, broken });
 }
 
 async function one(id, args) {
@@ -416,4 +430,5 @@ if (require.main === module) {
 module.exports = {
   newestClaude, limitHit, generatingModel, systemText, userMessage,
   overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN, drain, MAX_ERRORS_IN_A_ROW, editionRecord,
+  askClaude, reportStops, argValue,
 };

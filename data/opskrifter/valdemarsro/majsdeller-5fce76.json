@@ -144,5 +144,36 @@
       "text": "Bag dellerne i ca. 25 minutter, og vend dem undervejs efter halv tid."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Majsdellerne er en lille kornret, der har brug for et mættende tilbehør for at være et helt måltid.",
+    "side": {
+      "title": "Ris og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakningens anvisning.",
+        "Vask salaten, og riv den i stykker."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:27:15.431Z"
+  }
 }

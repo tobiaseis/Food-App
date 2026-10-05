@@ -150,5 +150,12 @@
   ],
   "changes": [
     "Frisk oregano er skrevet som oregano uden mængde, som i kilden."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, kartofler som mættende stivelse og grøn salat.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:06:56.244Z"
+  }
 }

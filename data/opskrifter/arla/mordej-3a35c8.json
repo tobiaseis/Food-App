@@ -112,5 +112,12 @@
       "text": "Lad medaljerne køle af på en rist."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Mørdej er en dej-komponent til andre retter, ikke en selvstændig aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:03:43.106Z"
+  }
 }

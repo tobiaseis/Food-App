@@ -160,5 +160,27 @@
     "Soltørrede tomater i olie er beholdt som soltørrede tomater.",
     "Double cream er byttet til piskefløde.",
     "Self-raising er ikke relevant; plain flour er byttet til hvedemel."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mætning – der er kun kylling og sauce, ingen kartofler, ris, pasta eller rigeligt grønt.",
+    "side": {
+      "title": "Kogt spaghetti",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "spaghetti",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog spaghettien efter anvisningen på pakken til den er al dente."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:39:12.893Z"
+  }
 }

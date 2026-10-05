@@ -188,5 +188,12 @@
   "title": "Chow mein med kylling",
   "intro": "Wokret med nudler, kylling og masser af grøntsager, vendt i en sød og salt sauce med soja og østersauce. Den er hurtig at lave og god til hverdag.",
   "servings": 4,
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en veldokumenteret vok-ret med kylling, nudler og rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:41:47.830Z"
+  }
 }

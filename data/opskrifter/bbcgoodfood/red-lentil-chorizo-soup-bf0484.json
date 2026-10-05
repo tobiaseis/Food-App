@@ -149,5 +149,12 @@
     "Rødvinseddike er erstattet af eddike.",
     "Cooking chorizo er erstattet af chorizo.",
     "Kyllingefond bruges i stedet for chicken stock."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Det er en suppe med protein fra chorizo og linser, mættende stivelse fra røde linser og grønt fra gulerødder og løg.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:53:37.620Z"
+  }
 }

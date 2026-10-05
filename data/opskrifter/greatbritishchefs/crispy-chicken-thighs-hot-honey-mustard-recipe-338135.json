@@ -311,5 +311,36 @@
   "changes": [
     "Banana shallots er erstattet af skalotteløg.",
     "Dried garlic granules er erstattet af hvidløgspulver."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten er stegt kylling med saucer, men mangler en kulhydratbase eller rigeligt grønt til at blive et helt måltid.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:32:45.801Z"
+  }
 }

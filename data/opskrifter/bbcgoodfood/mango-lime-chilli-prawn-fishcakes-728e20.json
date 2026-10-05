@@ -176,5 +176,12 @@
     "Vegetabilsk olie er skrevet som olie.",
     "Sticky rice er skrevet som ris.",
     "Satay sauce er skrevet som sauce med satay i noten."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rejer som hovedråvare, ris eller nudler som mættet del, og grønt på siden.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:30:41.368Z"
+  }
 }

@@ -270,5 +270,12 @@
   ],
   "changes": [
     "Ølandshvede er erstattet med hvedemel, så den samlede melmængde er 300 g."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har alt hvad der skal til: hjemmebagt brød, oksekød, guacamole, grønsager og kartoffelbåde.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:43:32.458Z"
+  }
 }

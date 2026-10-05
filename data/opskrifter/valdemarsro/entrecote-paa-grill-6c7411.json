@@ -171,5 +171,12 @@
   "changes": [
     "Hjertesalat er ændret til salat.",
     "Babykartofler er beholdt som babykartofler."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Grillet entrecote med babykartofler, asparges og salat gør det til et helt måltid med protein, stivelse og rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:45:03.334Z"
+  }
 }

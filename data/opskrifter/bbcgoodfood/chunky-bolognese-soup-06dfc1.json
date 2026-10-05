@@ -163,5 +163,12 @@
   "changes": [
     "Fuldkornspenne er skrevet som pasta med note om fuldkornspenne.",
     "Hakket oksekød med 5 % fedt er skrevet som hakket oksekød med note om lavt fedtindhold."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Suppen indeholder kød, pasta og grøntsager – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:55:12.211Z"
+  }
 }

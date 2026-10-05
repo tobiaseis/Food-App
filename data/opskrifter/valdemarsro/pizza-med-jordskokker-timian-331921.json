@@ -176,5 +176,12 @@
       "text": "Drys pizzaerne med timianblade, salt og peber, og dryp med olivenolie, inden de serveres."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Pizzaen indeholder stivelse fra dejen, protein fra mozzarella og æg, samt grønt fra jordskokker og rødløg.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:46:28.100Z"
+  }
 }

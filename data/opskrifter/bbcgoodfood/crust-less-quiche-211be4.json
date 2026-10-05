@@ -115,5 +115,12 @@
   "changes": [
     "Pancetta er udeladt, og bacon i tern bruges i stedet.",
     "Double cream er erstattet med piskefløde."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Quiche er en fuldstændig ret med protein, grøntsager og mætting fra æg og fløde.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:55:14.083Z"
+  }
 }

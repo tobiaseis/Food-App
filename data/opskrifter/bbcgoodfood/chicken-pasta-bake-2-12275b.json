@@ -199,5 +199,12 @@
   "changes": [
     "Smoked streaky bacon er skiftet til almindelig bacon.",
     "Caster sugar er skiftet til almindeligt sukker."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Pastaretten indeholder kylling, bacon, pasta og grønsager – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:49:11.411Z"
+  }
 }

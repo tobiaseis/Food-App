@@ -159,5 +159,29 @@
   "changes": [
     "Frisk brødkrumme er erstattet af rasp.",
     "Courgette er erstattet af squash."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelsesholdige ingredienser som kartofler, ris eller pasta.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 800,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne.",
+        "Kog dem møre i let saltet vand.",
+        "Afkog og server til kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:19:09.548Z"
+  }
 }

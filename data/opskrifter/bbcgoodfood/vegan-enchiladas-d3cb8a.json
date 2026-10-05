@@ -239,5 +239,12 @@
   "changes": [
     "Habanero-chiliflager er erstattet med almindelige chiliflager.",
     "Fuldkornsspeltmel er erstattet med fuldkornsspeltmel fra supermarkedets mel-hylde (speltmel)."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Enchiladas med sorte bønner, hjemmelavede tortillaer og rigeligt grønt er et helt aftensmåltid med protein, stivelse og rigeligt grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:08:44.583Z"
+  }
 }

@@ -171,5 +171,12 @@
   "changes": [
     "Lammekødboller er skrevet som kødboller af lam, da de findes færdigkøbte.",
     "Rose harissa er skiftet til almindelig harissa."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Gryderetten har lammekødboller og kikærter, som giver både protein og mætning.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:01:07.034Z"
+  }
 }

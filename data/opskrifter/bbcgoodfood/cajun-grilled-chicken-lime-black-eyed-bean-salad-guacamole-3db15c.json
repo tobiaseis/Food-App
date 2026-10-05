@@ -215,5 +215,12 @@
   "changes": [
     "Sorte øjne-bønner er skiftet til hvide bønner.",
     "Semi-tørrede tomater i olie er skiftet til soltørrede tomater i olie."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har en hovedråvare (kylling), mættende elementer (hvide bønner og majs) og rigeligt grønt (tomater, avocado, koriander, forårsløg), så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:17:26.906Z"
+  }
 }

@@ -147,5 +147,28 @@
   "changes": [
     "Double cream er erstattet med piskefløde.",
     "Parmigiano-Reggiano er erstattet med parmesan."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelse til at være et helt måltid.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen i letsaltet vand ifølge pakningens anvisning.",
+        "Server til kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:55:12.093Z"
+  }
 }

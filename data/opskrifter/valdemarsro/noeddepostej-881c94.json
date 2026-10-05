@@ -184,5 +184,36 @@
   "title": "Nøddepostej",
   "intro": "Vegetarisk postej af ristede nødder, champignon, ris og jordskokker, der bages i ovnen. Den er god både varm og kold.",
   "servings": 4,
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Postej serveres traditionelt med tilbehør for at være et helt måltid.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, riv den i stykker, og server det til postejen og kartoflerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:31:24.931Z"
+  }
 }

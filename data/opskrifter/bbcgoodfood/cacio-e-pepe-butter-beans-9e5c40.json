@@ -98,5 +98,36 @@
   ],
   "changes": [
     "Butter beans er skiftet til hvide bønner."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten trænger til brød eller grønt for at være et helt måltid.",
+    "side": {
+      "title": "Sprødt brød og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "skive",
+          "name": "sprødt brød",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "grøn salat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Varm brødet op.",
+        "Vask salaten, riv den i stykker, og server."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:11:47.132Z"
+  }
 }

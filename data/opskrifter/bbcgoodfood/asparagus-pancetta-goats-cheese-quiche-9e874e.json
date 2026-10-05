@@ -161,5 +161,12 @@
     "Double cream er erstattet af piskefløde.",
     "Goat's cheese er erstattet af gedeost.",
     "Dijon mustard er erstattet af Dijonsennep."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Tærter er hele måltider, og denne har mørdejsbund, protein (bacon og gedeost) og grønt (asparges).",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:31:23.985Z"
+  }
 }

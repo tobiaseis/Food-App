@@ -192,5 +192,12 @@
     "Pancetta er erstattet af bacon i tern.",
     "Tomatpuré er i stedet for tomat purée, og hakkede tomater erstatter cherrytomater på dåse.",
     "Hakket oksekød med 15 % fedt er erstattet af almindeligt hakket oksekød."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Suppen har protein (oksekød og bacon), stivelse (lasagneplader) og rigeligt grønt – det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:55:48.619Z"
+  }
 }

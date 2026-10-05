@@ -192,5 +192,28 @@
     "Shiitake er erstattet af champignon.",
     "Vietnamesiske forårsrulleark er erstattet af rispapir.",
     "Vegetabilsk olie er erstattet af neutral olie."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Rispapirdumplings mangler mættende stivelse som ris eller kartofler.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakkens anvisning.",
+        "Server den til dumplingsene."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:29:42.304Z"
+  }
 }

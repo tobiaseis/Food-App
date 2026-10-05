@@ -184,5 +184,12 @@
     "Rapeseed oil er skiftet til rapsolie.",
     "Tomatpuré er brugt i stedet for tomato purée (samme vare på dansk).",
     "Bio yogurt er skiftet til naturel yoghurt."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten indeholder kylling, ris og spinat – altså protein, stivelse og grønt.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:11:56.417Z"
+  }
 }

@@ -167,5 +167,29 @@
   "changes": [
     "Vegetabilsk olie er skiftet til rapsolie.",
     "English mustard er skiftet til sennep."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler mætning - kyllingeschnitzel serveres klassisk med kartofler eller brød.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne.",
+        "Kog dem møre i letsaltet vand.",
+        "Server til schnitzlerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:18:29.060Z"
+  }
 }

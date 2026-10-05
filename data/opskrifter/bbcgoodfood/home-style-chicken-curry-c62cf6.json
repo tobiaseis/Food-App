@@ -184,5 +184,37 @@
       "text": "Drys med koriander. Server med indisk fladbrød eller luftigt basmatiris og yoghurt ved siden af."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Karrymen mangler mættende kulhydrater.",
+    "side": {
+      "title": "Luftigt basmatiris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "basmatiris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 5,
+          "unit": "dl",
+          "name": "vand",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen grundigt under koldt vand.",
+        "Kom risen i en pande med vand, og bring det i kog.",
+        "Dæk panden til, skru ned for varmen, og kok risen mørt i ca. 15 minutter."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:59:36.863Z"
+  }
 }

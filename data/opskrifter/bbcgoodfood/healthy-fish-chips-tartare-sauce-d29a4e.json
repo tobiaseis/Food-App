@@ -122,5 +122,12 @@
   ],
   "changes": [
     "Hvid fisk er erstattet med torskefilet."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk som hovedråvare og kartofler som mætning, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:07:07.597Z"
+  }
 }

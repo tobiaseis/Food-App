@@ -12,6 +12,7 @@
     "recipes": "node src/recipes/crawl.js --limit 320",
     "recipes:fetch-sources": "node src/recipes/fetch-sources.js",
     "recipes:rewrite": "node src/recipes/rewrite.js",
+    "recipes:sides": "node src/recipes/sides.js",
     "recipes:images": "node src/recipes/backfill-images.js",
     "recipes:import": "node src/recipes/import-da.js",
     "recipes:edition-only": "node -e \"require('./src/db').setSetting('recipes_edition_only', true); console.log('recipes_edition_only = true')\"",

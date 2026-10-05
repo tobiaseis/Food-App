@@ -219,5 +219,12 @@
   "changes": [
     "Risvinseddike er erstattet af hvidvinseddike.",
     "Little Gem-salat er udeladt til fordel for hovedsalat."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Salaten har protein fra kyllingen og rigeligt grønt til at være et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:17:03.606Z"
+  }
 }

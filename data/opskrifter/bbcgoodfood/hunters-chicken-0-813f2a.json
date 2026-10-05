@@ -160,5 +160,12 @@
     "Runner beans er erstattet med almindelige bønner.",
     "Soft cheese er erstattet med flødeost.",
     "BBQ-sauce er erstattet med ketchup/sauce i kataloget, så brug bbq-sauce."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, kartoffelmos som mætning og grøntsager som tilsat.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:17:56.256Z"
+  }
 }

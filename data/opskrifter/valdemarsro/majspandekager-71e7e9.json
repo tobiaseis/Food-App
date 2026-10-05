@@ -80,5 +80,28 @@
       "text": "Steg pandekagerne én ad gangen, til de er gyldne på begge sider."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Pandekager med majsmel er mættende som kornret, men mangler kød eller fisk som hovedråvare og tilstrækkelig grønt til at være et helt aftensmåltid.",
+    "side": {
+      "title": "Grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Vask salaten, og riv den i stykker.",
+        "Server den til pandekagerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:41:00.117Z"
+  }
 }

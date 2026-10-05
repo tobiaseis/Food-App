@@ -151,5 +151,37 @@
   "changes": [
     "Pølsekød er erstattet med medisterpølse uden skind.",
     "Kogt skinke er skiftet til skinke i skiver, revet i strimler."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler kartofler og grønt til at være et helt aftensmåltid.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, og riv den i stykker.",
+        "Server scotch eggs med kartofler, salat og piccalilli."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:40:42.156Z"
+  }
 }

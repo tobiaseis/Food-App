@@ -244,5 +244,12 @@
     "Cooking chorizo er erstattet med chorizo.",
     "Sour cream er erstattet med creme fraiche.",
     "Red wine vinegar er erstattet med rødvinseddike under varenavnet eddike."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en proteinrig sandwich på brød med majs og squash-salat som side, hvilket udgør et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:39:59.213Z"
+  }
 }

@@ -235,5 +235,12 @@
   "changes": [
     "Feldsalat er skiftet til salatblanding.",
     "Bredbladet persille er skiftet til almindelig persille."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten indeholder fladbrød (stivelse), kyllingeboller (protein) og rigeligt grønt og er dermed et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:24:49.062Z"
+  }
 }

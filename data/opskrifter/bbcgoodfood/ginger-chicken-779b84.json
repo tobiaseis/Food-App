@@ -150,5 +150,28 @@
   ],
   "changes": [
     "Frisk chili i skiver og chilipulver beholdes; mango chutney, poppadoms og naan nævnes uden mængde som tilbehør."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten er en karry, der mangler stivelse (ris) til at være et helt måltid.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen mørt efter anvisning på pakken.",
+        "Server sammen med karrien."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:04:42.461Z"
+  }
 }

@@ -83,5 +83,28 @@
   "changes": [
     "Comté er skiftet til gruyère.",
     "Landskinke er skiftet til skinke i skiver."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler grønt og består kun af en enkelt toast per portion, hvilket er for sparsomt til et helt aftensmål.",
+    "side": {
+      "title": "Grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Vask salaten og riv den i stykker.",
+        "Server til toastene."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:52:07.949Z"
+  }
 }

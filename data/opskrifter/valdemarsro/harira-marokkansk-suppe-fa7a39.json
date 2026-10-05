@@ -255,5 +255,12 @@
   "changes": [
     "Grøntsagsbouillon er skiftet til grøntsagsfond.",
     "Frisk chili er skrevet som rød chili i stk."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Harira er en fyldig suppe med kikærter og linser, som gør den til et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:26:32.840Z"
+  }
 }

@@ -174,5 +174,12 @@
   ],
   "changes": [
     "Mælk er tilføjet i saucen som i kilden; kogevandet fra kartoflerne er udeladt, da kun grøntsagernes kogevand står på ingredienslisten."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Frikassé er en gryderet med rigeligt grønt og kogte kartofler som mættende komponent.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:45:50.141Z"
+  }
 }

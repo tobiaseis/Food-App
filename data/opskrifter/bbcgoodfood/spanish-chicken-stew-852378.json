@@ -144,5 +144,27 @@
     "Udskåret kyllingebryst er ikke brugt; kyllingelår uden skind og ben bruges som i kilden.",
     "Hvidvinseddike er skrevet som eddike.",
     "Couchillo-oliven er skiftet til almindelige sorte oliven."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Gryden skal serveres med ris eller brød for at være et helt måltid.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "langkornet ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen i letsaltet vand efter pakkeringsinstruktion."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:51:09.858Z"
+  }
 }

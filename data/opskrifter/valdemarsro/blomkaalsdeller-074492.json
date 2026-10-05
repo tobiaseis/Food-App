@@ -112,5 +112,28 @@
       "text": "Bag dellerne i ca. 25 minutter. Vend dem undervejs, når halvdelen af tiden er gået."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Dellerne mangler rigeligt grønt – en grøn salat gør det til et helt måltid.",
+    "side": {
+      "title": "Grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Vask og riv salaten i stykker.",
+        "Server den til blomkålsdellerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:29:32.595Z"
+  }
 }

@@ -120,5 +120,12 @@
     "Guanciale er erstattet med bacon i skiver.",
     "Pecorino romano er erstattet med parmesan.",
     "Mezzi rigatoni er erstattet med almindelig rigatoni."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Klassisk pastarret med bacon og pasta er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:16:38.931Z"
+  }
 }

@@ -140,5 +140,37 @@
       "text": "Pensl dellerne med olie, og bag dem i cirka 25 minutter. Vend dem undervejs, når halvdelen af tiden er gået."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Bønnedellerne er en proteinrig ret, men uden mættende tilsætning som kartofler, ris eller brød bliver det ikke et helt måltid.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, og riv den i stykker.",
+        "Server kartoflerne og salaten til dellerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:40:36.614Z"
+  }
 }

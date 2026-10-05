@@ -171,5 +171,12 @@
   "changes": [
     "Hønsebouillon i stedet for kyllingebouillonterning.",
     "Hakket kalkun i stedet for hakket kalkunbryst."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kalkunfars som hovedråvare og serveres med rigeligt grønt, hvilket gør den til et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:57:07.768Z"
+  }
 }

@@ -144,5 +144,36 @@
       "text": "Steg andelårene sprøde på en pande i andefedtet. Du kan også lægge dem på en bradepande med bagepapir, drysse skindet med flagesalt og bage dem i forvarmet ovn ved 225 °C varmluft i cirka 10-15 minutter, til skindet er sprødt."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har andelår som hovedråvare, men mangler stivelse eller rigeligt grønt.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:38:18.370Z"
+  }
 }

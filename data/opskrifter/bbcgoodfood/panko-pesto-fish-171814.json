@@ -152,5 +152,12 @@
     "Hvide fiskefileter er erstattet med torskefilet.",
     "Cornichoner er udeladt som alternativ; kun kapers bruges.",
     "Persille er udeladt som alternativ; kun dild bruges."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk som hovedråvare, ovnkartofler som mættende og kogte ærter som grønt, hvilket udgør et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:11:46.509Z"
+  }
 }

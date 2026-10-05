@@ -232,5 +232,28 @@
     "Sherry er udeladt som alternativ til hvidvin; der bruges hvidvin.",
     "Extra virgin olivenolie er skiftet til almindelig olivenolie.",
     "Courgette er skiftet til squash."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Fiskemåltid uden mættende kulhydrater som kartofler, ris eller pasta.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Dræn dem, og server ved siden af fisken."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:05:59.546Z"
+  }
 }

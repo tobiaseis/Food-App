@@ -179,5 +179,12 @@
   "changes": [
     "Hot sauce er skiftet til tabasco.",
     "Cooking chorizo er skiftet til chorizo."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Det er en gryderett med skaldyr som hovedråvare, kartofler og majs, som udgør et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:16:48.915Z"
+  }
 }

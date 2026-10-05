@@ -134,5 +134,28 @@
   ],
   "changes": [
     "Kilden giver to melvarianter; der er valgt den med boghvedemel i stedet for kikærtemel, som er sværere at finde."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten er kun en pastaopskrift uden sauce eller protein og udgør ikke et helt måltid.",
+    "side": {
+      "title": "Grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Vask salaten, og riv den i stykker.",
+        "Server til pastaen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:54:31.901Z"
+  }
 }

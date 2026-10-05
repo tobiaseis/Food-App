@@ -207,5 +207,12 @@
   "changes": [
     "Fladt koreansk fiskekager er erstattet med fiskefrikadeller.",
     "Perillablade er erstattet med basilikum."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Tteokbokki-lasagne er en lasagneret med protein fra fiskefrikadeller, stivelse fra riskager og fyldig sauce, hvilket gør det til et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:13:32.335Z"
+  }
 }

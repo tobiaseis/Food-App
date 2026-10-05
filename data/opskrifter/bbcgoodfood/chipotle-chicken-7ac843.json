@@ -119,5 +119,27 @@
   "changes": [
     "Sur fløde er erstattet af creme fraiche.",
     "Udbenede kyllingelår uden skind (thigh fillets) er skrevet som kyllingelår."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mængdespecificeret mættende tilbehørsdel.",
+    "side": {
+      "title": "Ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter anvisningen på pakken."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:20:35.027Z"
+  }
 }

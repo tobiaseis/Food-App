@@ -144,5 +144,28 @@
     "Pancetta er erstattet af bacon i tern.",
     "Hvidvinseddike er skiftet til almindelig eddike (hvidvinseddike angivet i note).",
     "Kyllingefond er brugt i stedet for chicken stock."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten er en kyllingestuvning uden mættende tilbehør – den skal serveres med kartofler eller ris.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Afluk og server til retten."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:03:15.640Z"
+  }
 }

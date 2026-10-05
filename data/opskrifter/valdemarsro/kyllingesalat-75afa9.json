@@ -180,5 +180,12 @@
       "text": "Læg salaten på et fad, og top med den pynt, du lagde til side. Server straks."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Salaten har protein (kylling og bacon) og rigeligt grønt, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:35:44.688Z"
+  }
 }

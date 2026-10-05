@@ -179,5 +179,12 @@
   "changes": [
     "Pastaskruer er skrevet som pasta (skruer).",
     "Kyllingefilet er skrevet som kyllingebryst."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Pastaret har kylling og bacon som protein, pasta som stivelse, og rigeligt grønt (haricots verts, ærter og majs), så det er et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:44:04.975Z"
+  }
 }

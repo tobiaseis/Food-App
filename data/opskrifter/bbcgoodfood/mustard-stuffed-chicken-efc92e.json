@@ -99,5 +99,36 @@
   "changes": [
     "Streaky bacon er skiftet til bacon i skiver.",
     "Wholegrain mustard er skiftet til grov sennep."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende komponent som kartofler, ris eller rigeligt grønt.",
+    "side": {
+      "title": "Kogte kartofler og grøn salat",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Vask salaten, riv den i stykker, og server den til kyllingebrysterne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:01:19.365Z"
+  }
 }

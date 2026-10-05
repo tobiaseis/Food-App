@@ -131,5 +131,12 @@
   "changes": [
     "Æblecidereddike er erstattet af eddike.",
     "Chiliflager er erstattet af krydderi (chili)."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Kyllingesuppe er et helt måltid – den har protein (kylling) og rigeligt grønt (grønkål).",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:42:20.727Z"
+  }
 }

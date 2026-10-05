@@ -168,5 +168,12 @@
     "Soft cheese er erstattet med flødeost.",
     "Dijon mustard er erstattet med Dijon-sennep.",
     "Smoked mackerel fillets er erstattet med røget makrel."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har røget makrel som hovedråvare og smadrede kartofler som mætning.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:31:32.732Z"
+  }
 }

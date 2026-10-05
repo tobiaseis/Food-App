@@ -139,5 +139,12 @@
   "changes": [
     "Hvide bønner i stedet for butter beans.",
     "Torskefilet i stedet for frossen hvid fisk som torsk eller sej."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Fiskegryderet indeholder fisk, hvide bønner og rigeligt grønt og udgør et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:01:13.415Z"
+  }
 }

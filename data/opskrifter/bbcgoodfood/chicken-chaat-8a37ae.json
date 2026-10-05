@@ -155,5 +155,27 @@
   "changes": [
     "Grøn chili erstatter green chillies (samme vare, dansk navn).",
     "Grøntsagsolie som alternativ til ghee er udeladt; der bruges ghee."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler stivelse til at blive et helt måltid.",
+    "side": {
+      "title": "Kogte ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 150,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter anvisning på pakken."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:14:26.572Z"
+  }
 }

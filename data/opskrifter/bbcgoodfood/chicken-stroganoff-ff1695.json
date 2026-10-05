@@ -151,5 +151,37 @@
   "changes": [
     "Sur fløde er erstattet af creme fraiche.",
     "Kyllingefond er skrevet som hønsefond."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Uden kartofler, ris eller pasta er kylling-stroganoff ikke et helt aftensmåltid.",
+    "side": {
+      "title": "Kartoffelmos",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "dl",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Dræn kartoflerne, og mos dem med en kartoffelkværn eller gaffel.",
+        "Rør smør og mælk i."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:40:59.233Z"
+  }
 }

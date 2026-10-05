@@ -100,5 +100,27 @@
       "text": "Sæt panden under grillen i 2-3 minutter, til spinaten er faldet sammen, og omeletten har hævet sig."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Omeletten mangler stivelse eller mere grønt til at være et helt måltid.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:58:33.646Z"
+  }
 }

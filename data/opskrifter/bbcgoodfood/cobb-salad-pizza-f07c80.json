@@ -220,5 +220,12 @@
     "Kogt kyllingebryst i skiver er erstattet med kyllingepålæg i skiver.",
     "Golden caster sugar er erstattet med almindeligt sukker.",
     "Plain flour er erstattet med hvedemel."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Det er en pizza med stivelse, protein og rigeligt grønt, hvilket udgør et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:17:08.874Z"
+  }
 }

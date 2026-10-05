@@ -187,5 +187,28 @@
   "changes": [
     "Cornflour er skiftet til maizena.",
     "Plain flour er skiftet til hvedemel."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler et fast stivelsesholdigt tilbehør, da nudlerne er valgfri.",
+    "side": {
+      "title": "Kogte nudler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "æggenudler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog nudlerne i letsaltet vand ifølge pakkeudtrykkenes vejledning.",
+        "Sil dem af, og server til kyllingen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:42:40.666Z"
+  }
 }

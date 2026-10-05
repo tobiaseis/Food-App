@@ -81,6 +81,29 @@ const RECIPE_SCHEMA = {
   },
 };
 
+// Vurderingen af måltidet (sides.js): er retten hel, og hvis ikke, hvilket
+// tilbehør. Ingrediensskemaet er RECIPE_SCHEMA's eget, så tilbehøret følger de
+// samme enheder og felter som rettens linjer og kan læses af samme kode.
+const MEAL_SCHEMA = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['complete', 'reason', 'side'],
+  properties: {
+    complete: { type: 'boolean' },
+    reason: { type: 'string' },
+    side: nullable({
+      type: 'object',
+      additionalProperties: false,
+      required: ['title', 'ingredients', 'steps'],
+      properties: {
+        title: { type: 'string' },
+        ingredients: RECIPE_SCHEMA.properties.ingredients,
+        steps: { type: 'array', items: { type: 'string' } },
+      },
+    }),
+  },
+};
+
 /** 1.5 → "1,5". Listen er dansk; parseIngredient læser begge dele. */
 const fmtAmount = (n) => String(Math.round(n * 1000) / 1000).replace('.', ',');
 
@@ -100,5 +123,5 @@ function lineOf(ing) {
 
 module.exports = {
   EDITION_DIR, SOURCE_DIR, slugOf, editionPath, sourcePath,
-  UNITS, RECIPE_SCHEMA, fmtAmount, labelOf, lineOf,
+  UNITS, RECIPE_SCHEMA, MEAL_SCHEMA, fmtAmount, labelOf, lineOf,
 };

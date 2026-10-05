@@ -139,5 +139,12 @@
   "changes": [
     "Cavolo nero er erstattet af grønkål.",
     "Giant couscous er erstattet af almindelig couscous (store perlecouscous)."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten indeholder kylling, couscous og grønkål, som udgør et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:16:26.399Z"
+  }
 }

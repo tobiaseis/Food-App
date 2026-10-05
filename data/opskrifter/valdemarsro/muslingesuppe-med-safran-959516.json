@@ -188,5 +188,12 @@
       "text": "Server med brød og smør. Kasser alle muslinger, der ikke har åbnet sig under kogningen."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Suppen indeholder muslinger som protein, grøntsager og serveres med brød.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:46:53.702Z"
+  }
 }

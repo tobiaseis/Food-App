@@ -183,5 +183,28 @@
   "changes": [
     "Vegetabilsk bouillonterning er skrevet som grøntsagsbouillonterning.",
     "Rødvinseddike er skrevet som eddike med rødvinseddike i noten."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Gryden har bønner og grønt, men mangler en klassisk mættende stivelseskomponent som ris eller brød, som en dansk husstand forventer til aftensmad.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakningsvejledningen i letsoltet vand.",
+        "Server ved siden af gryden."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:55:42.472Z"
+  }
 }

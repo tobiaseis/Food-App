@@ -171,5 +171,12 @@
   "changes": [
     "Pintobønner er erstattet af kidneybønner.",
     "Chipotle paste er beholdt som chipotlepasta."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en gryde med kylling, quinoa og bønner, som udgør et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:40:06.945Z"
+  }
 }

@@ -88,5 +88,12 @@
     "Streaky bacon er skiftet til bacon i skiver.",
     "Færdigrullet all-butter puff pastry er skiftet til færdigrullet butterdej.",
     "Pork sausages er skiftet til rå svinepølser."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har pølser som hovedråvare og butterdej som mætning, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:16:36.158Z"
+  }
 }

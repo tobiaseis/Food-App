@@ -134,6 +134,32 @@ function problems(ed, lines, before) {
 }
 
 /**
+ * Tilbehørets egen lille kontrol (`meal.side`). Tom liste: det kan lægges ind.
+ * Den gælder også for `accepted`: det er den menneskelige frigivelse af de
+ * store kontroller på rettens egne linjer, ikke af et tilbehør, der ikke kan
+ * prissættes (ukendt enhed) eller er uden trin.
+ */
+function sideProblems(side) {
+  const out = [];
+  const ings = Array.isArray(side.ingredients) ? side.ingredients : [];
+  // Højst 4 linjer: det er ét klassisk tilbehør, ikke en delopskrift.
+  if (ings.length < 1 || ings.length > 4) out.push(`tilbehør: ${ings.length} ingredienslinjer (1-4 er tilladt)`);
+  for (const ing of ings) {
+    if (ing.unit != null && !UNITS.includes(ing.unit)) out.push(`tilbehør: ukendt enhed "${ing.unit}"`);
+    if (ing.amount != null && !(ing.amount > 0)) out.push(`tilbehør: mængden ${ing.amount} for ${ing.name}`);
+    // En bælgfrugt eller et æg i tilbehøret kan blive et medhovedråvare i motoren.
+    const key = parseIngredient(lineOf(ing), 0).item_key;
+    const cat = catOf(key);
+    if (cat === 'legume' || cat === 'eggs') {
+      out.push(`tilbehør: ${ing.name} er ${cat === 'legume' ? 'en bælgfrugt' : 'æg'} og kan blive opfattet som hovedråvaren`);
+    }
+  }
+  if (!side.title) out.push('tilbehør: ingen titel');
+  if (!Array.isArray(side.steps) || !side.steps.length) out.push('tilbehør: intet trin');
+  return out;
+}
+
+/**
  * Én `::warning::`-linje til GitHub Actions: hvor mange udgaver der venter på
  * eftersyn eller ikke kunne læses, og de første filer. Én linje, fordi en
  * annotation er én linje; null, når der intet er at sige.
@@ -200,17 +226,29 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
       const hash = crypto.createHash('sha1').update(text).digest('hex');
       if (row.edition_hash === hash) { stats.unchanged++; continue; }
 
-      const lines = (ed.ingredients || []).map((ing, i) => {
+      const toLine = (ing, i, section) => {
         const raw = lineOf(ing);
-        return { ...parseIngredient(raw, i), raw, section: ing.section || null, label: labelOf(ing) };
-      });
+        return { ...parseIngredient(raw, i), raw, section, label: labelOf(ing) };
+      };
+      const lines = (ed.ingredients || []).map((ing, i) => toLine(ing, i, ing.section || null));
+      // problems() ser kun rettens egne linjer: tilbehørets må ikke tælle med i
+      // linjetallet mod source_lines eller i "ukendte linjer".
       const issues = problems(ed, lines, before.all(row.id));
-      if (issues.length && !ed.accepted) {
+      const side = ed.meal && ed.meal.complete !== true ? ed.meal.side : null;
+      const sideIssues = side ? sideProblems(side) : [];
+      if (sideIssues.length || (issues.length && !ed.accepted)) {
         stats.flagged++;
-        flagged.push({ file: rel, id: row.id, title: ed.title, issues });
+        flagged.push({ file: rel, id: row.id, title: ed.title, issues: [...sideIssues, ...issues] });
         continue;
       }
-      apply(row.id, ed, lines, hash);
+      let steps = ed.steps;
+      if (side) {
+        const section = `Tilbehør: ${side.title}`;
+        const start = lines.length;
+        side.ingredients.forEach((ing, i) => lines.push(toLine(ing, start + i, section)));
+        steps = [...ed.steps, ...side.steps.map((text) => ({ section: 'Tilbehør', text }))];
+      }
+      apply(row.id, { ...ed, steps }, lines, hash);
       stats.applied++;
     } catch (err) {
       // apply() er en transaktion, så en fejl undervejs i den ruller kun DEN

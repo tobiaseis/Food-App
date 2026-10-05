@@ -184,5 +184,12 @@
       "text": "Læg salat, avocado, rødløg, agurk og en rødbedebøf i hver bolle, og luk burgeren."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Det er en burger med rødbedebøffer, brød og rigeligt grønt, hvilket er et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:41:51.526Z"
+  }
 }

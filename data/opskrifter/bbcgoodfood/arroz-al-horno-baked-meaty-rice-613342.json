@@ -152,5 +152,12 @@
     "Pancetta er erstattet af bacon i tern.",
     "Chipolatapølser er erstattet af små grillpølser.",
     "Paellaris beholdes som ris, da det er den nærmeste almindelige vare."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Paellaen har protein fra chorizo, pølser, bacon og kikærter, samt ris som mættende stivelse.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:13:41.379Z"
+  }
 }

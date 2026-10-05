@@ -138,5 +138,28 @@
   ],
   "changes": [
     "Løberbønner er erstattet af haricots verts."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mætningsbestanddel som kartofler, ris eller brød; grønt og haricots verts alene er ikke tilstrækkeligt.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 750,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne og kog dem møre.",
+        "Hæld dem i et dørslag."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:54:31.935Z"
+  }
 }

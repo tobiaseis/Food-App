@@ -180,5 +180,28 @@
     "Rødvinseddike er skiftet til eddike.",
     "Wholegrain mustard er skiftet til grov sennep.",
     "Sourdough er skiftet til surdejsbrød."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har god protein og rigeligt grønt, men mængden af stivelse (croutoner) er for lille til at være det vigtigste mættende element.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Sil dem, og server dem til fadet."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:17:23.208Z"
+  }
 }

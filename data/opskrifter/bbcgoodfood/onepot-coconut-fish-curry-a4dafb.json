@@ -150,5 +150,12 @@
   ],
   "changes": [
     "Fish pie mix er erstattet med torskefilet i tern, da blandingen ikke findes i Danmark."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Det er en gryderets med fisk, grønt og ris – et helt måltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:00:30.836Z"
+  }
 }

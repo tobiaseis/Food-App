@@ -146,5 +146,28 @@
   ],
   "changes": [
     "Avocadoolie er skiftet til rapsolie."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættet stivelseside – blomkålsris er for light og er valgfri.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "ris (hvid eller basmati)",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen under koldt vand.",
+        "Kog risen efter pakningens vejledning, indtil vandet er absorbert."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:05:31.013Z"
+  }
 }

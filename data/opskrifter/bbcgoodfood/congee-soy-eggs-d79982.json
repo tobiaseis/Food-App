@@ -163,5 +163,12 @@
   "changes": [
     "Sushiris er erstattet med almindelig ris.",
     "Ristede peanuts er skrevet som nødder med peanuts i noten."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Congee er en komplet ris-baseret suppe med protein, hønsefond og grøntsager.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:56:26.529Z"
+  }
 }

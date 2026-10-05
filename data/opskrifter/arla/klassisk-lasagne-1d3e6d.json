@@ -262,5 +262,12 @@
   ],
   "changes": [
     "Pancetta er erstattet af bacon i skiver."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Lasagne med kødsauce og grøn salat er et helt måltid – den har protein (oksekød), stivelse (lasagneplader) og grønt (salat).",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:04:02.139Z"
+  }
 }

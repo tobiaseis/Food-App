@@ -224,5 +224,29 @@
       "text": "Server de varme samosaer med dippen og limebåde."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Samosaer er en forret, ikke en hovedret – der mangler en mættende tilbehør til at gøre det til et helt aftensmåltid.",
+    "side": {
+      "title": "Basmati ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "basmati ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skyl risen under koldt vand.",
+        "Kog risen i saltet vand efter pakningens vejledning.",
+        "Server risen ved siden af samosaerne."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:30:46.219Z"
+  }
 }

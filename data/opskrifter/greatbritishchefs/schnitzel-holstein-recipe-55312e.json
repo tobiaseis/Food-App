@@ -205,5 +205,28 @@
     "Baby gem er erstattet af romainesalat.",
     "Brøndkarse er erstattet af karse.",
     "Vegetabilsk olie er erstattet af rapsolie."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler en mættende kulhydratbase som kartofler eller ris til at gøre det til et helt måltid.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 800,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne.",
+        "Kog dem møre i letsaltet vand, og aflast dem."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:37:06.582Z"
+  }
 }

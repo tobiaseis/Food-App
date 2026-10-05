@@ -233,5 +233,12 @@
     "Brussels sprouts er skiftet til rosenkål.",
     "Rotis er udeladt; der serveres kun naanbrød.",
     "Paneer beholdes som paneer, da der ikke er en tilsvarende dansk vare."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har paneer som hovedråvare, rigeligt grønt og naanbrød som stivelse.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:52:03.329Z"
+  }
 }

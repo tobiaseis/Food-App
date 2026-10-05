@@ -150,5 +150,12 @@
   ],
   "changes": [
     "Sandwichboller er angivet i stk i stedet for gram."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Burgers med brød og kylling er et helt måltid, og denne har rigeligt grønt og salsa som toppings.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:03:55.412Z"
+  }
 }

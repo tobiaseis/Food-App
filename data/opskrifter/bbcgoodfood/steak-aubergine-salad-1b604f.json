@@ -136,5 +136,28 @@
     "Vindrueslat (lamb's lettuce) er erstattet af babyleaf.",
     "Sirloin steak er erstattet af entrecote.",
     "Mel er angivet som hvedemel."
-  ]
+  ],
+  "meal": {
+    "complete": false,
+    "reason": "Retten mangler et mættende stivelsesprodukt som kartofler, ris eller brød for at være et helt måltid.",
+    "side": {
+      "title": "Kogte kartofler",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
+        "Aftap vandet, og server dem varme til retten."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:47:20.419Z"
+  }
 }

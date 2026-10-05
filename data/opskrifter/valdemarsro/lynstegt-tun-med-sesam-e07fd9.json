@@ -144,5 +144,28 @@
       "text": "Hæld marinaden over, og strø purløg og sesamfrø ovenpå."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": false,
+    "reason": "Retten har protein men mangler mættende stivelse som ris, kartofler eller pasta til et helt måltid.",
+    "side": {
+      "title": "Kogt ris",
+      "ingredients": [
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        }
+      ],
+      "steps": [
+        "Kog risen efter pakningens vejledning.",
+        "Server risen ved siden af tunen."
+      ]
+    },
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:01:23.516Z"
+  }
 }

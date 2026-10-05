@@ -259,5 +259,12 @@
   "changes": [
     "Fuldkornshvedemel er erstattet af almindeligt hvedemel (fuldkorn, hvis du kan få det).",
     "Medium curry powder er erstattet af karry."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, ris som mættende og frisk grønsagssalat med curry-sauce.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T15:07:16.549Z"
+  }
 }

@@ -175,5 +175,12 @@
   "changes": [
     "Pancetta er erstattet med bacon i tern.",
     "Plain flour er erstattet med hvedemel."
-  ]
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Pastaretten har pasta som stivelse, rigeligt protein fra bacon og ost, samt grønsager.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-05T14:30:30.944Z"
+  }
 }

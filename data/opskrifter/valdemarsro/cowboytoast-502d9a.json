@@ -176,5 +176,12 @@
       "text": "Server med resten af persillen drysset over."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten indeholder oksekød (hovedråvare) og brød (stivelse), og er således et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T16:52:16.641Z"
+  }
 }

@@ -200,5 +200,12 @@
       "text": "Top med koriander, mynte, grøn chili og ingefær. Server med naanbrød eller kogt basmatiris."
     }
   ],
-  "changes": []
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har lammekød som hovedråvare og serveres med naanbrød eller ris, som er mættende.",
+    "side": null,
+    "model": "claude-haiku-4-5-20251001",
+    "checked_at": "2026-10-04T17:11:49.174Z"
+  }
 }
