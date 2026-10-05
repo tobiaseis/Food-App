@@ -385,7 +385,7 @@ const SEED = [
     class: 'fresh', keeps: 'perishable', p: 0.3, kcal: 52, c: 14, da: ['æbler', 'æble'], en: ['apple', 'apples'] },
   { key: 'citron', name: 'Citron', cat: 'fruit',
     class: 'fresh', keeps: 'perishable', p: 1, kcal: 29, c: 9,
-    da: ['citron', 'citroner', 'lime'], en: ['lemon', 'lime', 'lemons'] },
+    da: ['citron', 'citroner', 'lime', 'citrusfrugt'], en: ['lemon', 'lime', 'lemons'] },
   { key: 'appelsin', name: 'Appelsiner', cat: 'fruit',
     class: 'fresh', keeps: 'perishable', p: 0.9, kcal: 47, c: 12,
     da: ['appelsiner', 'appelsin', 'clementiner'], en: ['orange', 'oranges'] },

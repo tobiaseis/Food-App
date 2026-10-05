@@ -1057,3 +1057,39 @@ test('backfill-edition-meta lægger kun manglende felter på, lige efter source_
   assert.deepEqual(withMeta(out, row), out);
   assert.deepEqual(ed, { url: 'u', yield_count: 4, source_lines: 3, title: 'T', image: 'rettet.jpg' });
 });
+
+test('HelloFresh: nyeste udgave pr. ret, kun rene opskrifts-URL\'er', () => {
+  const { pickHelloFreshUrls } = require('../src/recipes/sources');
+  const B = 'https://www.hellofresh.dk/recipes/';
+  const gammel = `${B}kyllingewok-5ec7740fc1fac21b2d322c06`;
+  const ny = `${B}kyllingewok-65ec7740fc1fac21b2d322c0`;
+  const anden = `${B}laks-med-ris-60aa0000fc1fac21b2d322c1`;
+  const locs = [
+    gammel, anden, ny,
+    `${B}laks-med-ris-60aa0000fc1fac21b2d322c1?page=2`,
+    `${B}search/?q=laks`,
+    `${B}uden-id`,
+    'https://www.hellofresh.dk/recipes/',
+  ];
+  assert.deepEqual(pickHelloFreshUrls(locs), [ny, anden]);
+  assert.deepEqual(pickHelloFreshUrls(locs, 1), [ny]);
+});
+
+test('HelloFresh-ingredienslinjer læses til vare og mængde', () => {
+  const p = (s) => parseIngredient(s);
+  const a = p('300 g Kyllingelårfilet');
+  assert.equal(a.item_key, 'kyllingelaar'); near(a.amount, 0.3);
+  const b = p('150 g Jasminris');
+  assert.equal(b.item_key, 'ris'); near(b.amount, 0.15);
+  const c = p('250 ml Kokosmælk');
+  assert.equal(c.item_key, 'kokosmaelk'); near(c.amount, 0.25);
+  const d = p('1 pose Koriander');
+  assert.equal(d.item_key, 'persille'); // koriander er i krydderurte-varen
+  const e = p('efter behov Sukker');
+  assert.equal(e.item_key, 'sukker');
+  assert.ok(e.amount == null);
+  // HelloFresh skriver "Citrusfrugt" (lime eller citron) – samme vare som citron.
+  // (parseIngredient læser items-tabellen i data.db, som først får ordet ved `npm run seed:items`, så seed-listen testes.)
+  assert.ok(require('../src/lib/taxonomy').SEED.find((i) => i.key === 'citron').da.includes('citrusfrugt'));
+  near(p('3.5 dl Vand').amount, 0.35);
+});
