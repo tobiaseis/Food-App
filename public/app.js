@@ -1098,6 +1098,9 @@ function renderChoose() {
   }));
 }
 
+/** Er der plads til en ret mere? Loftet er brugerens antal aftener. */
+const canPick = () => FLOW.selected.length < FLOW.settings.days;
+
 /**
  * Vælg eller fravælg en ret. ÉN funktion, som både fluebenet og swipe bruger,
  * så loftet på antal aftener og beskeden aldrig kan opføre sig forskelligt.
@@ -1106,7 +1109,7 @@ function renderChoose() {
 function setPick(id, on) {
   if (on) {
     if (FLOW.selected.includes(id)) return true;
-    if (FLOW.selected.length >= FLOW.settings.days) {
+    if (!canPick()) {
       // Loftet er brugerens eget antal aftener. Hellere et ord end at
       // skubbe den ret ud, hun valgte først.
       FLOW.hint = `Du har valgt ${FLOW.settings.days} – fravælg en ret først.`;
@@ -1153,12 +1156,14 @@ function renderSwipe() {
   if (!box || !FLOW.choice) return;
   const { days, track } = FLOW.settings;
   const n = FLOW.selected.length;
+  // (En tom pulje når aldrig hertil: renderChoose viser "Vælg flere butikker"
+  // og tegner hverken vælger eller swipe.)
   // En tynd pulje kan have færre retter end aftener (som i renderTally).
   const full = n >= Math.min(days, FLOW.choice.pool.length);
   const r = swipeQueue()[0];
-  // Tælleren er en live-region, så en skærmlæser siger "3 af 4 valgt", når den ændres.
-  const counter = `<p class="swipe-count" aria-live="polite"><b>${n} af ${days}</b> valgt${
-    FLOW.hint ? ` <span class="warn">${esc(FLOW.hint)}</span>` : ''}</p>`;
+  // Tælleren "3 af 4 valgt" står i den klæbende bone (en live-region) lige over;
+  // en kopi her ville blive læst op to gange. Kun afvisningen står ved kortet.
+  const counter = FLOW.hint ? `<p class="swipe-hint">${esc(FLOW.hint)}</p>` : '';
   const cta = full ? '<button type="button" class="primary swipe-cta" data-goto-list>Se indkøbslisten</button>' : '';
   let stage;
   if (!r) {
@@ -1170,7 +1175,7 @@ function renderSwipe() {
     if (t) parts.push(esc(t));
     if (track === 'budget' && r.cost_per_serving != null) parts.push(`ca. ${kr(Math.round(r.cost_per_serving))} pr. portion`);
     stage = `<div class="swipe-stage">
-      <article class="swipe-card" data-id="${r.id}" aria-label="${esc(r.title)}">
+      <article class="swipe-card" data-id="${r.id}">
         ${r.image ? `<img src="${esc(thumb(r.image, 480))}" alt="" draggable="false" decoding="async">`
                   : '<span class="swipe-ph" aria-hidden="true"></span>'}
         <div class="swipe-body">
@@ -1179,7 +1184,7 @@ function renderSwipe() {
           ${r.image && r.source_name ? `<span class="pick-credit">Foto: ${esc(r.source_name)}</span>` : ''}
         </div>
         <span class="swipe-stamp is-yes" aria-hidden="true">Vælg</span>
-        <span class="swipe-stamp is-no" aria-hidden="true">Næste</span>
+        <span class="swipe-stamp is-no" aria-hidden="true">Spring over</span>
       </article>
     </div>
     <div class="swipe-actions">
@@ -1222,7 +1227,7 @@ function swipeAct(dir, card) {
     syncSelection();         // tegner også swipe-visningen igen, så et afvist kort kommer tilbage
   };
   // Et afvist valg skal ikke flyve ud for så at komme tilbage.
-  const refused = dir === 'right' && FLOW.selected.length >= FLOW.settings.days;
+  const refused = dir === 'right' && !canPick();
   if (calmQuery.matches || refused) { finish(); return; }
   swipeBusy = true;
   const w = card.offsetWidth;
@@ -1281,8 +1286,14 @@ document.addEventListener('keydown', (e) => {
   if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
   const t = e.target;
   if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+  // Ikke mens et ark (opskrift m.m.) er åbent – så ville pilene vælge retter bag det.
+  if (document.querySelector('dialog[open]')) return;
   const card = document.querySelector('#flow-swipe .swipe-card');
   if (!card) return;
+  // Og kun når kortet faktisk er på skærmen: står man i et andet trin, skal
+  // pilene ikke vælge retter, man ikke kan se.
+  const r = card.getBoundingClientRect();
+  if (r.bottom < 0 || r.top > window.innerHeight) return;
   e.preventDefault();
   swipeAct(e.key === 'ArrowRight' ? 'right' : 'left', card);
 });

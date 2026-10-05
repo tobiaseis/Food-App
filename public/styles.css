@@ -316,7 +316,7 @@ button:hover { box-shadow: var(--shadow-border-hover); }
 button:active { scale: .96; }
 
 button.primary {
-  background: var(--accent); color: var(--surface); box-shadow: none;
+  background: var(--accent); color: #fff; box-shadow: none;
 }
 button.primary:hover { background: var(--accent-press); box-shadow: none; }
 
@@ -1207,9 +1207,7 @@ dialog::backdrop {
 .is-swipe .swipe { display: block; }
 .is-swipe .picks { display: none; }
 
-.swipe-count { margin: 0 0 12px; font-size: 15px; color: var(--ink-2); text-align: center; }
-.swipe-count b { font-family: var(--font-display); font-size: 18px; color: var(--ink); font-variant-numeric: tabular-nums; }
-.swipe-count .warn { display: block; margin-top: 4px; font-size: 13px; font-weight: 500; color: var(--urgent); }
+.swipe-hint { margin: 0 0 12px; font-size: 13px; font-weight: 500; color: var(--urgent); text-align: center; }
 .swipe-stage { position: relative; }
 .swipe-card {
   position: relative; overflow: hidden; background: var(--surface);
