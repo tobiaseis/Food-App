@@ -406,6 +406,41 @@ async function showProduct(productId) {
  * fremgangsmåden. Er en rest af en pakke lagt i netop denne ret (engine:
  * shoppingList.topups), står det ved varen.
  */
+// Husstandens størrelse, som både arket og madlavningstilstanden regner med.
+function recipeHousehold(r) {
+  return FLOW.settings ? FLOW.settings.servings : (r.servings || 4);
+}
+
+// Rækker i hver deres afsnit (fx "Tilbehør") i den rækkefølge, de står i.
+function groupBySection(rows) {
+  return rows.reduce((acc, row) => {
+    const last = acc[acc.length - 1];
+    if (!last || last.section !== (row.section || null)) acc.push({ section: row.section || null, rows: [] });
+    acc[acc.length - 1].rows.push(row);
+    return acc;
+  }, []);
+}
+
+/**
+ * Ingredienslisten ganget op til husstanden. Den ENE udgave: opskriftsarket og
+ * madlavningstilstanden bruger den begge, så mængderne aldrig kan afvige.
+ * Resten af en pakke (topups) står kun ved den første linje med varen.
+ */
+function ingredientsHtml(r, id) {
+  const factor = recipeHousehold(r) / (r.servings > 0 ? r.servings : 4);
+  const extra = { ...((FLOW.list && FLOW.list.topups && FLOW.list.topups[id]) || {}) };
+  const unitOf = (key) => FLOW.ctx && FLOW.ctx.items && FLOW.ctx.items.get(key)?.base_unit;
+  return groupBySection(r.ingredients).map((g) => `
+    ${g.section ? `<h3 class="recipe-sub">${esc(g.section)}</h3>` : ''}
+    <ul class="ingr">${g.rows.map((ing) => {
+      const more = ing.key && extra[ing.key] ? extra[ing.key] : 0;
+      if (more) delete extra[ing.key];
+      return `<li><span class="ingr-amt">${esc(lineAmount(ing.qty, ing.unit, factor))}</span>
+        <span>${esc(ing.label)}${ing.optional ? ' <span class="note">(valgfri)</span>' : ''}
+        ${more ? `<small class="topup">+ ${esc(qty(more, unitOf(ing.key)))} — så pakken bliver brugt op</small>` : ''}</span></li>`;
+    }).join('')}</ul>`).join('');
+}
+
 // Hvilken åbning af arket, der er den seneste. Åbner man A, lukker og åbner B,
 // mens A stadig hentes, må A's svar ikke lande i B's ark.
 let recipeTicket = 0;
@@ -435,30 +470,10 @@ async function showRecipe(id) {
     return;
   }
 
-  const household = FLOW.settings ? FLOW.settings.servings : (r.servings || 4);
-  const factor = household / (r.servings > 0 ? r.servings : 4);
-  const extra = { ...((FLOW.list && FLOW.list.topups && FLOW.list.topups[id]) || {}) };
-  const unitOf = (key) => FLOW.ctx && FLOW.ctx.items && FLOW.ctx.items.get(key)?.base_unit;
+  const household = recipeHousehold(r);
+  const ingredients = ingredientsHtml(r, id);
 
-  const grouped = (rows) => rows.reduce((acc, row) => {
-    const last = acc[acc.length - 1];
-    if (!last || last.section !== (row.section || null)) acc.push({ section: row.section || null, rows: [] });
-    acc[acc.length - 1].rows.push(row);
-    return acc;
-  }, []);
-
-  const ingredients = grouped(r.ingredients).map((g) => `
-    ${g.section ? `<h3 class="recipe-sub">${esc(g.section)}</h3>` : ''}
-    <ul class="ingr">${g.rows.map((ing) => {
-      // Resten står kun ved den første linje med varen.
-      const more = ing.key && extra[ing.key] ? extra[ing.key] : 0;
-      if (more) delete extra[ing.key];
-      return `<li><span class="ingr-amt">${esc(lineAmount(ing.qty, ing.unit, factor))}</span>
-        <span>${esc(ing.label)}${ing.optional ? ' <span class="note">(valgfri)</span>' : ''}
-        ${more ? `<small class="topup">+ ${esc(qty(more, unitOf(ing.key)))} — så pakken bliver brugt op</small>` : ''}</span></li>`;
-    }).join('')}</ul>`).join('');
-
-  const steps = grouped(r.steps).map((g) => `
+  const steps = groupBySection(r.steps).map((g) => `
     ${g.section ? `<h3 class="recipe-sub">${esc(g.section)}</h3>` : ''}
     <ol class="steps">${g.rows.map((s) => `<li>${esc(s.text)}</li>`).join('')}</ol>`).join('');
 
@@ -476,10 +491,139 @@ async function showRecipe(id) {
     </figure>` : ''}
     ${r.intro ? `<p class="recipe-intro">${esc(r.intro)}</p>` : ''}
     <p class="recipe-meta">${esc(meta)}</p>
+    ${r.steps.length ? '<button type="button" class="primary cook-start" id="cook-start">Begynd at lave mad</button>' : ''}
     <div class="recipe-cols">
       <section><h2>Ingredienser</h2>${ingredients}</section>
       <section><h2>Sådan gør du</h2>${steps}</section>
     </div>`;
+  const start = $('#cook-start');
+  if (start) start.addEventListener('click', () => openCooking(r, id, start));
+}
+
+/* ── Madlavningstilstand ──────────────────────────────────────────────────────
+ * Fuldskærm, ét trin ad gangen, til når man står ved komfuret med snavsede
+ * hænder. Et eget <dialog> ovenpå arket: Escape lukker kun det øverste, fokus
+ * fanges, og trin 4's pile-handler tier allerede, når et dialog er åbent.
+ */
+let cookWake = null;
+
+async function cookAcquireWake() {
+  // Mangler API'et, eller afviser browseren (fx lav strøm), sker der ingenting.
+  try {
+    if (!navigator.wakeLock) return;
+    const lock = await navigator.wakeLock.request('screen');
+    cookReleaseWake();   // aldrig to låse ad gangen
+    cookWake = lock;
+  } catch { /* ingen lås, ingen fejl */ }
+}
+
+function cookReleaseWake() {
+  const w = cookWake;
+  cookWake = null;
+  try { if (w) w.release().catch(() => {}); } catch { /* intet at slippe */ }
+}
+
+function openCooking(r, id, opener) {
+  const steps = r.steps.map((s) => ({ text: s.text, section: s.section || null }));
+  if (!steps.length) return;
+  const dlg = document.createElement('dialog');
+  dlg.className = 'cook';
+  dlg.setAttribute('aria-label', `Madlavning: ${r.title}`);
+  dlg.innerHTML = `
+    <div class="cook-top">
+      <button type="button" class="close" data-cook="close" aria-label="Luk"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 1.5l9 9M10.5 1.5l-9 9"/></svg></button>
+      <p class="cook-count" aria-live="polite"></p>
+      <button type="button" class="ghost cook-ingr-btn" data-cook="ingr" aria-label="Vis eller skjul ingredienserne" aria-expanded="false">Ingredienser</button>
+    </div>
+    <div class="cook-bar" aria-hidden="true"><i></i></div>
+    <div class="cook-stage">
+      <p class="cook-section"></p>
+      <p class="cook-text"></p>
+    </div>
+    <div class="cook-nav">
+      <button type="button" class="ghost" data-cook="prev" aria-label="Forrige trin">Forrige</button>
+      <button type="button" class="primary" data-cook="next" aria-label="Næste trin">Næste</button>
+    </div>
+    <div class="cook-ingr" hidden>
+      <h2>Ingredienser</h2>${ingredientsHtml(r, id)}
+    </div>`;
+  document.body.appendChild(dlg);
+
+  let i = 0;
+  const q = (sel) => dlg.querySelector(sel);
+  const draw = () => {
+    const st = steps[i], last = i === steps.length - 1;
+    q('.cook-count').textContent = `${i + 1} af ${steps.length}`;
+    q('.cook-bar i').style.width = `${((i + 1) / steps.length) * 100}%`;
+    q('.cook-section').textContent = st.section || '';
+    q('.cook-section').hidden = !st.section;
+    q('.cook-text').textContent = st.text;
+    q('[data-cook="prev"]').disabled = i === 0;
+    const next = q('[data-cook="next"]');
+    next.textContent = last ? 'Færdig' : 'Næste';
+    next.setAttribute('aria-label', last ? 'Færdig, luk madlavning' : 'Næste trin');
+  };
+  const go = (d) => {
+    const n = i + d;
+    if (n < 0) return;
+    if (n >= steps.length) { dlg.close(); return; }
+    i = n; draw();
+  };
+  const panel = q('.cook-ingr'), ingrBtn = q('[data-cook="ingr"]');
+  const toggleIngr = () => {
+    panel.hidden = !panel.hidden;
+    ingrBtn.setAttribute('aria-expanded', String(!panel.hidden));
+    ingrBtn.textContent = panel.hidden ? 'Ingredienser' : 'Skjul ingredienser';
+  };
+
+  dlg.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-cook]');
+    if (!b) return;
+    const a = b.dataset.cook;
+    if (a === 'close') dlg.close();
+    else if (a === 'prev') go(-1);
+    else if (a === 'next') go(1);
+    else if (a === 'ingr') toggleIngr();
+  });
+
+  // Pile: lyttes på selve dialogen (ikke dokumentet), så de forsvinder med den.
+  dlg.addEventListener('keydown', (e) => {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+  });
+
+  // Swipe: samme Pointer Events-mønster som kortene i trin 4, men der er intet
+  // kort at flytte, så kun retningen tæller. Et tryk eller en rulning skifter ikke.
+  let sx = 0, sy = 0, down = false;
+  const stage = q('.cook-stage');
+  stage.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    down = true; sx = e.clientX; sy = e.clientY;
+  });
+  stage.addEventListener('pointercancel', () => { down = false; });
+  stage.addEventListener('pointerup', (e) => {
+    if (!down) return;
+    down = false;
+    const dx = e.clientX - sx, dy = e.clientY - sy;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) go(dx < 0 ? 1 : -1);
+  });
+
+  // Browseren slipper låsen, når fanen skjules; tag den igen, når man vender tilbage.
+  const onVisible = () => { if (document.visibilityState === 'visible' && dlg.open) cookAcquireWake(); };
+  document.addEventListener('visibilitychange', onVisible);
+
+  dlg.addEventListener('close', () => {
+    document.removeEventListener('visibilitychange', onVisible);
+    cookReleaseWake();
+    dlg.remove();
+    if (opener && opener.isConnected) opener.focus();
+  });
+
+  draw();
+  dlg.showModal();
+  cookAcquireWake();
+  q('[data-cook="next"]').focus();
 }
 
 /* ── Visning: madplanen i fem trin ────────────────────────────────────────────
