@@ -401,11 +401,6 @@ async function showProduct(productId) {
   });
 }
 
-/**
- * Opskriften i appen: ingredienserne ganget op til husstanden, og
- * fremgangsmåden. Er en rest af en pakke lagt i netop denne ret (engine:
- * shoppingList.topups), står det ved varen.
- */
 // Husstandens størrelse, som både arket og madlavningstilstanden regner med.
 function recipeHousehold(r) {
   return FLOW.settings ? FLOW.settings.servings : (r.servings || 4);
@@ -445,6 +440,11 @@ function ingredientsHtml(r, id) {
 // mens A stadig hentes, må A's svar ikke lande i B's ark.
 let recipeTicket = 0;
 
+/**
+ * Opskriften i appen: ingredienserne ganget op til husstanden, og
+ * fremgangsmåden. Er en rest af en pakke lagt i netop denne ret (engine:
+ * shoppingList.topups), står det ved varen.
+ */
 async function showRecipe(id) {
   const modal = $('#modal');
   const ticket = ++recipeTicket;
@@ -507,11 +507,14 @@ async function showRecipe(id) {
  */
 let cookWake = null;
 
-async function cookAcquireWake() {
+async function cookAcquireWake(dlg) {
   // Mangler API'et, eller afviser browseren (fx lav strøm), sker der ingenting.
   try {
     if (!navigator.wakeLock) return;
     const lock = await navigator.wakeLock.request('screen');
+    // Lukkede dialogen, mens vi ventede, har luk-handleren intet at slippe:
+    // låsen skal slippes her, ellers holder den skærmen tændt for evigt.
+    if (!dlg.open) { lock.release().catch(() => {}); return; }
     cookReleaseWake();   // aldrig to låse ad gangen
     cookWake = lock;
   } catch { /* ingen lås, ingen fejl */ }
@@ -558,7 +561,10 @@ function openCooking(r, id, opener) {
     q('.cook-section').textContent = st.section || '';
     q('.cook-section').hidden = !st.section;
     q('.cook-text').textContent = st.text;
-    q('[data-cook="prev"]').disabled = i === 0;
+    const prev = q('[data-cook="prev"]');
+    // Et deaktiveret, fokuseret knap taber fokus, og så virker pilene ikke mere.
+    if (i === 0 && document.activeElement === prev) q('[data-cook="next"]').focus();
+    prev.disabled = i === 0;
     const next = q('[data-cook="next"]');
     next.textContent = last ? 'Færdig' : 'Næste';
     next.setAttribute('aria-label', last ? 'Færdig, luk madlavning' : 'Næste trin');
@@ -588,7 +594,7 @@ function openCooking(r, id, opener) {
 
   // Pile: lyttes på selve dialogen (ikke dokumentet), så de forsvinder med den.
   dlg.addEventListener('keydown', (e) => {
-    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.altKey || e.ctrlKey || e.metaKey || !panel.hidden) return;   // panelet dækker trinnet
     if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
     else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
   });
@@ -610,7 +616,7 @@ function openCooking(r, id, opener) {
   });
 
   // Browseren slipper låsen, når fanen skjules; tag den igen, når man vender tilbage.
-  const onVisible = () => { if (document.visibilityState === 'visible' && dlg.open) cookAcquireWake(); };
+  const onVisible = () => { if (document.visibilityState === 'visible' && dlg.open) cookAcquireWake(dlg); };
   document.addEventListener('visibilitychange', onVisible);
 
   dlg.addEventListener('close', () => {
@@ -622,7 +628,7 @@ function openCooking(r, id, opener) {
 
   draw();
   dlg.showModal();
-  cookAcquireWake();
+  cookAcquireWake(dlg);
   q('[data-cook="next"]').focus();
 }
 
