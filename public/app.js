@@ -766,14 +766,16 @@ function renderWeek() {
       <output aria-live="polite"><b>${value}</b> ${value === 1 ? one : many}</output>
       <button type="button" data-delta="1" aria-label="${more}" ${value >= hi ? 'disabled' : ''}>+</button>
     </div>`;
-  el.innerHTML = `
+  // Kun stepperne tegnes om. Søgefeltet under dem ("Har du noget…") har
+  // tekst og fokus, som en ny tegning ville slette midt i en indtastning.
+  if (!$('#week-top')) el.innerHTML = '<div id="week-top"></div><div class="have" id="have"></div>';
+  $('#week-top').innerHTML = `
     <div class="week-pick">
       ${stepper('days', days, DAYS_MIN, DAYS_MAX, 'aften', 'aftener', 'Færre aftener', 'Flere aftener')}
       ${stepper('servings', servings, PEOPLE_MIN, PEOPLE_MAX, 'person', 'personer', 'Færre personer', 'Flere personer')}
     </div>
-    <p class="note step-note">Opskrifterne regnes om til ${servings} ${servings === 1 ? 'person' : 'personer'}.</p>
-    <div class="have" id="have"></div>`;
-  renderHave();
+    <p class="note step-note">Opskrifterne regnes om til ${servings} ${servings === 1 ? 'person' : 'personer'}.</p>`;
+  if (!$('#have-q')) renderHave();
 
   el.querySelectorAll('.stepper button').forEach((b) => b.addEventListener('click', () => {
     const field = b.closest('.stepper').dataset.field;

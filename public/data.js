@@ -724,6 +724,8 @@ const Data = {
     return {
       track, recipes, items, normals, offers,
       chainIds: favs,
+      // Budget rangerer i kroner pr. portion; "har"-tillægget skal på samme skala.
+      haveScale: budget ? window.PlanEngine.SCORE_KR : 1,
       rank: budget ? (r) => (r.cost_per_serving == null ? null : -r.cost_per_serving) : undefined,
       seed: year * 100 + week,
       week, year,
@@ -742,6 +744,7 @@ const Data = {
     const { pool, thin } = E.candidatePool(ctx.recipes, {
       days, items: ctx.items, rank: ctx.rank, seed: ctx.seed,
       offers: ctx.offers, normals: ctx.normals, chainIds: ctx.chainIds, have,
+      haveScale: ctx.haveScale,
     });
     const proposals = pool.length
       ? E.twoProposals(pool, {

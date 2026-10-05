@@ -1318,15 +1318,39 @@ test('kun den ret, der vejer varen, får resten — og højst en fjerdedel af si
 
 // ── "Brug det, jeg har" ──────────────────────────────────────────────────────
 
-test('haveBonus: 0,15 pr. forskellig vare, højst 0,3, tom giver 0', () => {
+test('haveBonus: 0,15 pr. forskellig købt vare, højst 0,3, tom giver 0', () => {
   const r = recipe(300, 0.5, [line('kylling', 0.5), line('ris', 0.3), line('kylling', 0.1), line('pasta', 0.2)]);
-  near(engine.haveBonus(r, new Set(['kylling'])), 0.15);
+  const b = (have) => engine.haveBonus(r, have, W_ITEMS);
+  near(b(new Set(['kylling'])), 0.15);
   // Samme vare på to linjer tæller én gang.
-  near(engine.haveBonus(r, new Set(['kylling', 'ris'])), 0.3);
-  near(engine.haveBonus(r, new Set(['kylling', 'ris', 'pasta'])), 0.3);   // loftet
-  assert.equal(engine.haveBonus(r, new Set(['laks'])), 0);
-  assert.equal(engine.haveBonus(r, new Set()), 0);
-  assert.equal(engine.haveBonus(r, undefined), 0);
+  near(b(new Set(['kylling', 'ris'])), 0.3);
+  near(b(new Set(['kylling', 'ris', 'pasta'])), 0.3);   // loftet
+  assert.equal(b(new Set(['laks'])), 0);
+  assert.equal(b(new Set()), 0);
+  assert.equal(b(undefined), 0);
+});
+
+test('haveBonus tæller kun linjer, der købes: ikke valgfrie og ikke basisvarer', () => {
+  const r = recipe(301, 0.5, [line('kylling', 0.5), { ...line('persille', 0.02), optional: true }, line('salt', 0.01)]);
+  near(engine.haveBonus(r, new Set(['persille', 'salt']), W_ITEMS), 0);
+  near(engine.haveBonus(r, new Set(['persille', 'salt', 'kylling']), W_ITEMS), 0.15);
+  // En valgfri hovedprotein købes, så den tæller.
+  const k = recipe(302, 0.5, [line('kartofler', 0.6), { ...line('laks', 0.4), optional: true }]);
+  near(engine.haveBonus(k, new Set(['laks']), W_ITEMS), 0.15);
+});
+
+test('budget-sporet: bonussen er i kroner og flytter en lidt dyrere ret ind i puljen', () => {
+  // 1 dag = 3 pladser, og kun tre kan være i puljen. Fire retter, hvor laksen er
+  // ca. 2 kr pr. portion dyrere end resten; uden skala er 0,15 kr ingenting.
+  const mk = (id, key, perServing) => ({ ...recipe(id, 0, [line(key, 0.5), line('ris', 0.3)]), cost_per_serving: perServing });
+  const rs = [mk(320, 'kylling', 10), mk(321, 'hakket_oksekoed', 10.5), mk(322, 'kyllingebryst', 11), mk(323, 'laks', 13)];
+  const rank = (r) => -r.cost_per_serving;
+  const base = { days: 1, ...CTX, rank };
+  const ids = (o) => engine.candidatePool(rs, { ...base, ...o }).pool.map((r) => r.id);
+  assert.ok(!ids({}).includes(323), 'uden have er laksen for dyr');
+  assert.ok(!ids({ have: new Set(['laks']) }).includes(323), 'uskaleret er bonussen 15 øre og ingenting');
+  assert.ok(ids({ have: new Set(['laks']), haveScale: engine.SCORE_KR }).includes(323),
+    'på kroneskala (0,15 x 84 = 12,6 kr) kommer laksen med');
 });
 
 test('en "har"-vare rykker retten op i puljen, og købes ikke på listen eller i ugens pris', () => {

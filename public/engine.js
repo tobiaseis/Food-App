@@ -1611,15 +1611,18 @@
    *
    *   recipe  opskrift med `items: [{ key }]`
    *   have    Set af varenøgler (tom/udeladt giver 0)
+   *   items   `items`-tabellen. Kun linjer, der FAKTISK købes (isBoughtLine),
+   *           tæller: bonussen skal svare til det, der forsvinder fra kurven,
+   *           og en valgfri linje eller en basisvare gør ingen forskel dér.
    *
    * DISTINKTE varer: samme vare på to linjer tæller én gang. Ren funktion og
    * eksporteret, fordi pulje og uge skal bruge præcis det samme tal.
    */
-  function haveBonus(recipe, have) {
+  function haveBonus(recipe, have, items = new Map()) {
     if (!have || !have.size) return 0;
     const seen = new Set();
     for (const it of (recipe && recipe.items) || []) {
-      if (have.has(it.key)) seen.add(it.key);
+      if (have.has(it.key) && isBoughtLine(it, items.get(it.key))) seen.add(it.key);
     }
     return Math.min(HAVE_BONUS_MAX, seen.size * HAVE_BONUS_PER_ITEM);
   }
@@ -1710,7 +1713,7 @@
    */
   function candidatePool(recipes, {
     days = 5, items = new Map(), rank = (r) => r.score, seed = 0,
-    offers, normals, chainIds = [], now, have = null,
+    offers, normals, chainIds = [], now, have = null, haveScale = 1,
   } = {}) {
     const want = POOL_PER_DAY * days;
 
@@ -1735,7 +1738,10 @@
       if (!canPrice(r, priceCtx)) continue;
       // Tillægget lægges på EFTER filtrene: en ret uden værdi i sporet er
       // stadig ikke i sporet, uanset hvad brugeren har i skabet.
-      const value = base + haveBonus(r, have);
+      // `haveScale`: tillægget er i score-enheder (0-1). Et spor, der rangerer
+      // i andet — budget i kroner pr. portion — giver sin egen skala, ellers
+      // er 0,15 blot 15 øre og flytter intet.
+      const value = base + haveBonus(r, have, items) * haveScale;
       ranked.push({ r, value, noise: seededNoise(seed, r.id) });
     }
     // Uafgjort afgøres af frøet. Målt har 83 af de 100 bedste i klassisk
@@ -2141,7 +2147,7 @@
           // netop kroner pr. portion.
           const perServing = marginal / household;
 
-          const score = ((cand.score || 0) + haveBonus(cand, have)) * SCORE_KR - perServing
+          const score = ((cand.score || 0) + haveBonus(cand, have, items)) * SCORE_KR - perServing
                       + seededNoise(seed, cand.id)
                       - (avoid && avoid.has(cand.id) ? AVOID_PENALTY : 0);
 

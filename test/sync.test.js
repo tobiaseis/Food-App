@@ -945,18 +945,29 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
     // "Brug det, jeg har": den samme `have` gennem begge veje. Kyllingen står i
     // to retter og risen i en; med dem i skabet skal pulje, forslag og lister
     // stadig være ens, og varerne stå på lagerlisten som "har du".
-    {
+    for (const track of ['classic', 'budget']) {
       const have = new Set(['kyllingebryst', 'ris']);
-      const ctx = await Data.flowInputs('classic', chainIds);
+      const ctx = await Data.flowInputs(track, chainIds);
       const browser = Data.choices(ctx, { days, servings, have });
-      const recipes = plans.loadRecipes({ tier: 'classic' })
-        .filter((r) => recipeIds.includes(r.id)).map((r) => ({ ...r, score: r.tier_score }));
+      let recipes = plans.loadRecipes(track === 'budget' ? {} : { tier: track })
+        .filter((r) => recipeIds.includes(r.id));
+      let rank; let haveScale = 1;
+      if (track === 'budget') {
+        const per = new Map(db.prepare("SELECT recipe_id, cost_per_serving FROM recipe_costs WHERE chain_id = 'tst'")
+          .all().map((r) => [r.recipe_id, r.cost_per_serving]));
+        recipes = recipes.map((r) => ({ ...r, score: 0, cost_per_serving: per.get(r.id) }));
+        rank = (r) => -r.cost_per_serving;
+        haveScale = engine.SCORE_KR;
+      } else {
+        recipes = recipes.map((r) => ({ ...r, score: r.tier_score }));
+      }
+      assert.equal(ctx.haveScale, haveScale, `have ${track}: skalaen`);
       const pool = engine.candidatePool(recipes,
-        { days, items, seed: year * 100 + week, offers, normals, chainIds, have });
+        { days, items, rank, seed: year * 100 + week, offers, normals, chainIds, have, haveScale });
       const props = engine.twoProposals(pool.pool, { days, servings, items, offers, normals, chainIds, have });
-      assert.deepEqual(browser.pool.map((r) => r.id), pool.pool.map((r) => r.id), 'have: samme pulje');
+      assert.deepEqual(browser.pool.map((r) => r.id), pool.pool.map((r) => r.id), `have ${track}: samme pulje`);
       props.forEach((w, i) => {
-        const tag = `have forslag ${'AB'[i]}`;
+        const tag = `have ${track} forslag ${'AB'[i]}`;
         const bw = browser.proposals[i];
         assert.deepEqual(bw.picks.map((r) => r.id), w.picks.map((r) => r.id), `${tag}: samme retter`);
         assert.equal(bw.cost, w.cost, `${tag}: samme ugepris`);
