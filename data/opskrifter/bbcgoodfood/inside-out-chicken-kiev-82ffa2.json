@@ -85,9 +85,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler noget mættende som kartofler eller ris.",
+    "reason": "Retten mangler stivelse eller grønt.",
     "side": {
-      "title": "Nye kartofler og ærter",
+      "title": "Nye kartofler og grøn salat",
       "ingredients": [
         {
           "section": null,
@@ -99,20 +99,20 @@
         },
         {
           "section": null,
-          "amount": 300,
-          "unit": "g",
-          "name": "ærter",
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog de nye kartofler hele i letsaltet vand.",
-        "Tilsæt ærterne mod slutningen.",
-        "Dræn og server til kyllingen."
+        "Kog kartoflerne hele i letsaltet vand, til de er møre.",
+        "Vask salaten, og riv den i stykker.",
+        "Dræn kartoflerne, og server dem sammen med salaten."
       ]
     },
     "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:20:31.770Z"
+    "checked_at": "2026-10-05T15:56:03.752Z"
   }
 }

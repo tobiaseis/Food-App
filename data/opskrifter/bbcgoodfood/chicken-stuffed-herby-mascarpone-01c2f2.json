@@ -125,13 +125,13 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten har protein men mangler mættende stivelse eller rigeligt grønt.",
+    "reason": "Retten har en fin hovedråvare, men mangler kartofler eller anden mættende ingrediens.",
     "side": {
-      "title": "Kogte kartofler og grønne bønner",
+      "title": "Kogte kartofler og grøn salat",
       "ingredients": [
         {
           "section": null,
-          "amount": 600,
+          "amount": 500,
           "unit": "g",
           "name": "kartofler",
           "note": null,
@@ -139,19 +139,19 @@
         },
         {
           "section": null,
-          "amount": 300,
-          "unit": "g",
-          "name": "grønne bønner",
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "hovedsalat",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
         "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Kog de grønne bønner, og server alt til kyllingen."
+        "Vask salaten, riv den i stykker, og server den til kartoflerne."
       ]
     },
     "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:04:06.416Z"
+    "checked_at": "2026-10-05T15:55:46.549Z"
   }
 }

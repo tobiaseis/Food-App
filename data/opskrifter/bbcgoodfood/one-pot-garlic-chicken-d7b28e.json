@@ -150,33 +150,25 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse – den skal serveres med ris, kartofler eller lignende.",
+    "reason": "Retten mangler stivelse til at være et helt måltid.",
     "side": {
-      "title": "Kogt ris og dampede grønne bønner",
+      "title": "Kogt ris",
       "ingredients": [
         {
           "section": null,
-          "amount": 3,
-          "unit": "dl",
-          "name": "ris",
-          "note": null,
-          "optional": false
-        },
-        {
-          "section": null,
-          "amount": 500,
+          "amount": 250,
           "unit": "g",
-          "name": "grønne bønner",
+          "name": "ris",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen i letsaltet vand efter pakningsvejledning.",
-        "Damp bønnerne møre samtidigt."
+        "Kog risen i letsaltet vand ifølge pakningens anvisning.",
+        "Server til kyllingen."
       ]
     },
     "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:48:58.555Z"
+    "checked_at": "2026-10-05T15:55:12.093Z"
   }
 }

@@ -137,34 +137,25 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Det er en opskrift på at lave pastaen fra bunden, men uden sauce kan det ikke være et helt aftensmåltid.",
+    "reason": "Retten er kun en pastaopskrift uden sauce eller protein og udgør ikke et helt måltid.",
     "side": {
-      "title": "Enkel tomatsauce",
+      "title": "Grøn salat",
       "ingredients": [
         {
           "section": null,
-          "amount": 800,
-          "unit": "g",
-          "name": "hakkede tomater",
-          "note": null,
-          "optional": false
-        },
-        {
-          "section": null,
-          "amount": 4,
-          "unit": "fed",
-          "name": "hvidløg",
+          "amount": 1,
+          "unit": "stk",
+          "name": "hovedsalat",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Hakk hvidløgen",
-        "Steg hvidløgen kort i en pande",
-        "Tilsæt tomaterne, og kok uden låg"
+        "Vask salaten, og riv den i stykker.",
+        "Server til pastaen."
       ]
     },
     "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:15:28.403Z"
+    "checked_at": "2026-10-05T15:54:31.901Z"
   }
 }
