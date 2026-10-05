@@ -65,12 +65,16 @@ function listFiles(dir) {
 function main({ dir = EDITION_DIR, dbPath = DB_PATH } = {}) {
   const db = new Database(dbPath, { readonly: true });
   const get = db.prepare('SELECT image, keywords, fetched_at FROM recipes WHERE url = ?');
-  const stats = { written: 0, unchanged: 0, noRecipe: 0 };
+  const stats = { written: 0, unchanged: 0, noRecipe: 0, handEdited: 0 };
+  const noRecipe = [], handEdited = [];
   for (const file of listFiles(dir)) {
     const text = fs.readFileSync(file, 'utf8');
     const ed = JSON.parse(text);
+    // En fil, der ikke står i rewrite.js' format (håndrettet), omformateres aldrig.
+    if (`${JSON.stringify(ed, null, 2)}
+` !== text) { stats.handEdited++; handEdited.push(file); continue; }
     const row = get.get(ed.url);
-    if (!row) { stats.noRecipe++; continue; }
+    if (!row) { stats.noRecipe++; noRecipe.push(`${file} (${ed.url})`); continue; }
     const next = `${JSON.stringify(withMeta(ed, row), null, 2)}\n`;
     if (next === text) { stats.unchanged++; continue; }
     fs.writeFileSync(file, next);
@@ -78,7 +82,10 @@ function main({ dir = EDITION_DIR, dbPath = DB_PATH } = {}) {
   }
   db.close();
   console.log(`${stats.written} udgaver fik image/lang/keywords/fetched_at · `
-    + `${stats.unchanged} havde dem allerede · ${stats.noRecipe} uden ret i basen`);
+    + `${stats.unchanged} havde dem allerede · ${stats.noRecipe} uden ret i basen · `
+    + `${stats.handEdited} sprunget over (ikke i standardformat)`);
+  for (const f of handEdited) console.log(`  ikke i standardformat: ${f}`);
+  for (const f of noRecipe) console.log(`  uden ret i basen: ${f}`);
   return stats;
 }
 

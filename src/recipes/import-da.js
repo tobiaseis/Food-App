@@ -31,8 +31,6 @@ const { parseIngredient } = require('./extract');
 const { UNITS, EDITION_DIR, lineOf, labelOf } = require('./edition');
 
 const MAIN_CATS = new Set(['meat', 'poultry', 'fish']);
-// Det motoren regner for en hovedråvare (public/engine.js MAIN_CATS).
-const ENGINE_MAINS = new Set(['meat', 'poultry', 'fish', 'eggs', 'legume']);
 const catOf = (key) => { const m = key && taxonomy.get(key); return m ? (m.category || m.cat) : null; };
 
 // Et dyr forrest i et sammensat kødord skal genfindes i varen. Ellers er
@@ -82,11 +80,8 @@ function problems(ed, lines, before, { created = false } = {}) {
   // En ret, der oprettes af udgaven, skal kunne stå alene i basen.
   if (created) {
     for (const f of ['source', 'source_name']) if (!ed[f]) out.push(`ny ret: ${f} mangler i udgaven`);
-    // Uden en kendt "før" kan hovedråvaren ikke sammenlignes; i stedet kræves
-    // det, at udgaven selv har en, motoren kan bygge en ret om (samme
-    // kategorier som public/engine.js' MAIN_CATS). Ellers får vi en ret uden
-    // hovedråvare ind i puljen.
-    if (!lines.some((l) => ENGINE_MAINS.has(catOf(l.item_key)))) out.push('ingen kendt hovedråvare');
+    // Ingen krav om hovedråvare: om en ret er aftensmad afgøres senere af
+    // motoren (isDinner/hasMainCourse), så en ret uden er harmløs i puljen.
   }
   if (!ed.title || ed.title.length < 3) out.push('ingen titel');
   if (!Array.isArray(ed.steps) || ed.steps.length < 2) out.push('færre end to trin');
@@ -127,7 +122,14 @@ function problems(ed, lines, before, { created = false } = {}) {
 
   // Flere ukendte linjer end før: udgaven er sværere at prissætte end kilden.
   const unknown = (ls) => ls.filter((l) => !l.item_key && !l.optional).length;
-  if (unknown(lines) > unknown(before)) out.push(`${unknown(lines)} ukendte linjer (før ${unknown(before)})`);
+  // En ny ret har intet "før" at sammenligne med; i stedet må højst en
+  // fjerdedel af linjerne (mindst én) være ukendte, så en enkelt eksotisk
+  // ingrediens ikke holder en HelloFresh-ret tilbage.
+  const nonOpt = lines.filter((l) => !l.optional).length;
+  const cap = Math.max(1, Math.ceil(nonOpt * 0.25));
+  if (created ? unknown(lines) > cap : unknown(lines) > unknown(before)) {
+    out.push(`${unknown(lines)} ukendte linjer (${created ? `højst ${cap}` : `før ${unknown(before)}`})`);
+  }
   // Flere ingredienslinjer end kilden: en erstattet færdigvare er blevet til en
   // hjemmelavet delopskrift med opfundne mængder (pilotens cheesecake med gelé).
   // Marginen på +2 og 30 % lader "salt og peber" blive til to linjer.

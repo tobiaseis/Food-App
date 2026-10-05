@@ -982,7 +982,7 @@ test('en oprettet ret får tier og scorer af reclassify', () => {
   });
 });
 
-test('en ny ret uden kendt hovedråvare holdes tilbage og oprettes ikke', () => {
+test('en ny ret uden kendt hovedråvare oprettes (motoren afgør, om den er aftensmad)', () => {
   const veg = newEdition({
     ingredients: [
       { section: null, amount: 3, unit: 'fed', name: 'hvidløg', note: null, optional: false },
@@ -992,9 +992,24 @@ test('en ny ret uden kendt hovedråvare holdes tilbage og oprettes ikke', () => 
   });
   withNewEdition(veg, ({ db, dir }) => {
     const res = importAll({ dir, log: () => {} });
+    assert.equal(res.created, 1);
+    assert.equal(res.flagged, 0);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipes WHERE url = ?').get(NEW_URL).n, 1);
+  });
+});
+
+test('en ny ret med 1 af 4 linjer ukendt oprettes, med 2 af 4 holdes den tilbage', () => {
+  const ing = (name) => ({ section: null, amount: 1, unit: 'stk', name, note: null, optional: false });
+  const four = (a, b) => newEdition({
+    ingredients: [ing('lammeculotte'), ing('hvidløg'), ing(a), ing(b)], source_lines: 4,
+  });
+  withNewEdition(four('qxzvbn', 'salt'), ({ dir }) => {
+    assert.equal(importAll({ dir, log: () => {} }).created, 1);
+  });
+  withNewEdition(four('qxzvbn', 'zzyxwv'), ({ db, dir }) => {
+    const res = importAll({ dir, log: () => {} });
     assert.equal(res.created, 0);
-    assert.equal(res.flagged, 1);
-    assert.match(res.flaggedList[0].issues.join(), /ingen kendt hovedråvare/);
+    assert.match(res.flaggedList[0].issues.join(), /2 ukendte linjer/);
     assert.equal(db.prepare('SELECT COUNT(*) n FROM recipes WHERE url = ?').get(NEW_URL).n, 0);
   });
 });
