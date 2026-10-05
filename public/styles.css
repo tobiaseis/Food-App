@@ -625,6 +625,29 @@ input.grow { flex: 1; min-width: 200px; }
   font-variant-numeric: tabular-nums;
 }
 
+/* "Har du noget, der skal bruges?" – søgefelt, forslag og valgte varer som chips. */
+.have { margin-top: 28px; max-width: 520px; }
+.have-field input { width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips:not(:empty) { margin-top: 12px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; font-size: 13.5px; font-weight: 500; color: var(--ink-2);
+}
+.chip.is-on {
+  border-radius: 999px; padding-right: 4px;
+  background: var(--accent-soft); color: var(--link);
+}
+.chip-x {
+  width: 24px; height: 24px; padding: 0; border-radius: 50%;
+  background: transparent; box-shadow: none;
+  font-size: 16px; line-height: 1; color: inherit;
+}
+.chip-x:hover { background: var(--surface); box-shadow: none; }
+.have-line { margin: 0 0 20px; font-size: 15px; color: var(--ink-2); }
+.have-line b { color: var(--ink); font-weight: 600; }
+.have-tag { margin-left: 6px; font-size: 12px; font-weight: 500; color: var(--good); }
+
 /* Noget, brugeren skal gøre noget ved, før valget giver mening (for få
    retter, for mange butikker). Sjældent nok til at blive set. */
 .flag {

@@ -941,6 +941,39 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
           `${tag}: en ret, der tæller kyllingen, får ikke resten`);
       });
     }
+
+    // "Brug det, jeg har": den samme `have` gennem begge veje. Kyllingen står i
+    // to retter og risen i en; med dem i skabet skal pulje, forslag og lister
+    // stadig være ens, og varerne stå på lagerlisten som "har du".
+    {
+      const have = new Set(['kyllingebryst', 'ris']);
+      const ctx = await Data.flowInputs('classic', chainIds);
+      const browser = Data.choices(ctx, { days, servings, have });
+      const recipes = plans.loadRecipes({ tier: 'classic' })
+        .filter((r) => recipeIds.includes(r.id)).map((r) => ({ ...r, score: r.tier_score }));
+      const pool = engine.candidatePool(recipes,
+        { days, items, seed: year * 100 + week, offers, normals, chainIds, have });
+      const props = engine.twoProposals(pool.pool, { days, servings, items, offers, normals, chainIds, have });
+      assert.deepEqual(browser.pool.map((r) => r.id), pool.pool.map((r) => r.id), 'have: samme pulje');
+      props.forEach((w, i) => {
+        const tag = `have forslag ${'AB'[i]}`;
+        const bw = browser.proposals[i];
+        assert.deepEqual(bw.picks.map((r) => r.id), w.picks.map((r) => r.id), `${tag}: samme retter`);
+        assert.equal(bw.cost, w.cost, `${tag}: samme ugepris`);
+        const s = engine.shoppingList({ days: w.picks.map((recipe) => ({ recipe })) },
+          { items, offers, normals, chainIds, servings, have });
+        const b = Data.lists(ctx, bw.picks, { servings, have });
+        assert.equal(b.total, s.total, `${tag}: samme indkøbssum`);
+        assert.equal(b.total, w.cost, `${tag}: listen koster det, forslaget sagde`);
+        assert.deepEqual(plain(b.pantry), plain(s.pantry), `${tag}: samme lagerliste`);
+        assert.ok(b.buy.every((l) => !have.has(l.key)), `${tag}: "har"-varer købes ikke`);
+        for (const key of have) {
+          if (w.picks.some((r) => r.items.some((it) => it.key === key))) {
+            assert.ok(b.pantry.some((p) => p.key === key && p.have === true), `${tag}: ${key} står som "har du"`);
+          }
+        }
+      });
+    }
     assert.ok(sawTopup, 'påfyldningen skal prøves i mindst ét forslag, ellers måler paritetstesten den ikke');
   } finally {
     await new Promise((r) => server.close(r));

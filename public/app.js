@@ -528,6 +528,7 @@ const maxStores = () => window.PlanEngine.MAX_CHOICE_CHAINS;
  * indkøbslisten stå der endnu — men ikke næste mandag, hvor puljen er en anden.
  */
 const FLOW_KEY = 'madplan_flow';
+const HAVE_MAX = 30;   // flere end det er en køleskabsrengøring, ikke en madplan
 
 function readFlow() {
   let v = null;
@@ -539,6 +540,10 @@ function readFlow() {
     days: int(f.days, DAYS_MIN, DAYS_MAX, 4),
     servings: int(f.servings, PEOPLE_MIN, PEOPLE_MAX, 4),
     picks: f.picks && Array.isArray(f.picks.ids) ? f.picks : null,
+    // Varer, brugeren allerede har ("brug det, jeg har"). Nøgler og ikke
+    // navne: navnene kommer fra varekataloget, og nøglen er det, motoren kender.
+    have: Array.isArray(f.have)
+      ? [...new Set(f.have.filter((k) => typeof k === 'string' && k))].slice(0, HAVE_MAX) : [],
   };
 }
 
@@ -547,7 +552,7 @@ function writeFlow() {
   const picks = FLOW.ctx ? { week: `${FLOW.ctx.year}-${FLOW.ctx.week}`, ids: FLOW.selected } : s.picks;
   try {
     localStorage.setItem(FLOW_KEY, JSON.stringify({
-      track: s.track, days: s.days, servings: s.servings, picks,
+      track: s.track, days: s.days, servings: s.servings, picks, have: s.have,
     }));
   } catch { /* privat vindue – valget gælder så kun denne visning */ }
 }
@@ -562,6 +567,9 @@ const FLOW = {
   token: 0,               // kun den nyeste beregning må tegne
   hint: '',
 };
+
+/** De varer, brugeren har, som motoren vil have dem: et Set af nøgler. */
+const haveSet = () => new Set((FLOW.settings && FLOW.settings.have) || []);
 
 /** Mængde, som man siger den i et køkken: 400 g, ikke 0,4 kg. */
 function qty(n, unit) {
@@ -763,7 +771,9 @@ function renderWeek() {
       ${stepper('days', days, DAYS_MIN, DAYS_MAX, 'aften', 'aftener', 'Færre aftener', 'Flere aftener')}
       ${stepper('servings', servings, PEOPLE_MIN, PEOPLE_MAX, 'person', 'personer', 'Færre personer', 'Flere personer')}
     </div>
-    <p class="note step-note">Opskrifterne regnes om til ${servings} ${servings === 1 ? 'person' : 'personer'}.</p>`;
+    <p class="note step-note">Opskrifterne regnes om til ${servings} ${servings === 1 ? 'person' : 'personer'}.</p>
+    <div class="have" id="have"></div>`;
+  renderHave();
 
   el.querySelectorAll('.stepper button').forEach((b) => b.addEventListener('click', () => {
     const field = b.closest('.stepper').dataset.field;
@@ -777,6 +787,89 @@ function renderWeek() {
     clearTimeout(renderWeek.timer);
     renderWeek.timer = setTimeout(recompute, 220);
   }));
+}
+
+/* ── Trin 3: "Har du noget, der skal bruges?" ─────────────────────────────── */
+
+// Varekataloget til søgningen. Hentes første gang feltet tegnes og huskes af
+// Data.items(); før det er der, kan der ikke søges, men kataloget kommer på
+// et øjeblik.
+let HAVE_CATALOG = null;
+const HAVE_SUGGESTIONS = 8;
+
+/**
+ * Forslag til det, brugeren skriver: navne, der BEGYNDER med det, før navne,
+ * der blot indeholder det. Kun varer, der købes — basisvarer (salt, olie)
+ * står allerede på "Tjek at du har" og kan ikke bruges op på en uge. Der er
+ * ingen synonymer i varekataloget, så der søges på navnet alene.
+ */
+function haveMatches(query) {
+  const q = query.trim().toLocaleLowerCase('da');
+  if (!q || !HAVE_CATALOG) return [];
+  const taken = haveSet();
+  const starts = [], inside = [];
+  for (const [key, it] of HAVE_CATALOG) {
+    if (it.class === 'essential' || taken.has(key)) continue;
+    const name = String(it.name || key).toLocaleLowerCase('da');
+    if (name.startsWith(q)) starts.push(it);
+    else if (name.includes(q)) inside.push(it);
+  }
+  const byName = (a, b) => String(a.name).localeCompare(String(b.name), 'da');
+  return [...starts.sort(byName), ...inside.sort(byName)].slice(0, HAVE_SUGGESTIONS);
+}
+
+function renderHave() {
+  const el = $('#have');
+  if (!el) return;
+  el.innerHTML = `
+    <label class="field have-field"><span>Har du noget, der skal bruges?</span>
+      <input type="search" id="have-q" placeholder="Fx kylling eller ris" autocomplete="off"
+        aria-controls="have-suggest"></label>
+    <div class="chips" id="have-suggest" aria-label="Forslag"></div>
+    <div class="chips" id="have-chosen" aria-label="Det, du har"></div>
+    <p class="note step-note">Retter, der bruger det, rykker op – og det købes ikke.</p>`;
+
+  const drawChosen = () => {
+    const box = $('#have-chosen');
+    if (!box) return;
+    box.innerHTML = FLOW.settings.have.map((key) => {
+      const name = (HAVE_CATALOG && HAVE_CATALOG.get(key)?.name) || key;
+      return `<span class="chip is-on">${esc(name)}<button type="button" class="chip-x"
+        data-have-remove="${esc(key)}" aria-label="Fjern ${esc(name)}">×</button></span>`;
+    }).join('');
+    box.querySelectorAll('[data-have-remove]').forEach((b) => b.addEventListener('click', () => {
+      FLOW.settings.have = FLOW.settings.have.filter((k) => k !== b.dataset.haveRemove);
+      haveChanged();
+    }));
+  };
+  const drawSuggest = () => {
+    const box = $('#have-suggest');
+    if (!box) return;
+    box.innerHTML = haveMatches($('#have-q').value).map((it) =>
+      `<button type="button" class="chip" data-have-add="${esc(it.key)}">${esc(it.name)}</button>`).join('');
+    box.querySelectorAll('[data-have-add]').forEach((b) => b.addEventListener('click', () => {
+      if (FLOW.settings.have.length >= HAVE_MAX) return;
+      FLOW.settings.have = [...FLOW.settings.have, b.dataset.haveAdd];
+      $('#have-q').value = '';
+      haveChanged();
+    }));
+  };
+  // Samme tegning, uden at feltet bygges om, mens man skriver i det.
+  renderHave.redraw = () => { drawChosen(); drawSuggest(); };
+  $('#have-q').addEventListener('input', drawSuggest);
+  renderHave.redraw();
+
+  if (!HAVE_CATALOG) {
+    Data.items().then((m) => { HAVE_CATALOG = m; if ($('#have')) renderHave.redraw(); }).catch(() => {});
+  }
+}
+
+function haveChanged() {
+  writeFlow();
+  renderHave.redraw();
+  // Som ved personerne: flere tryk i træk er én beslutning.
+  clearTimeout(haveChanged.timer);
+  haveChanged.timer = setTimeout(recompute, 220);
 }
 
 /* ── Beregningen ──────────────────────────────────────────────────────────── */
@@ -831,8 +924,9 @@ async function recompute() {
 
   let choice;
   try {
-    choice = Data.choices(ctx, { days: s.days, servings: s.servings });
-    FLOW.proposalLists = choice.proposals.map((w) => Data.lists(ctx, w.picks, { servings: s.servings }));
+    const have = haveSet();
+    choice = Data.choices(ctx, { days: s.days, servings: s.servings, have });
+    FLOW.proposalLists = choice.proposals.map((w) => Data.lists(ctx, w.picks, { servings: s.servings, have }));
   } catch (err) {
     fail('Kunne ikke sætte ugen sammen', err);
     return;
@@ -1019,7 +1113,7 @@ function syncSelection() {
     ? FLOW.selected.map((id) => FLOW.choice.pool.find((r) => r.id === id)).filter(Boolean)
     : [];
   FLOW.list = FLOW.ctx && picks.length
-    ? Data.lists(FLOW.ctx, picks, { servings: FLOW.settings.servings })
+    ? Data.lists(FLOW.ctx, picks, { servings: FLOW.settings.servings, have: haveSet() })
     : null;
   writeFlow();
 
@@ -1142,6 +1236,7 @@ function renderList(picks) {
   const dropped = (l.dropped_chains || []).map(chainById).filter(Boolean).map((c) => c.name);
 
   const estimated = priced.some((b) => b.source === 'estimate:rema');
+  const haveNames = [...haveSet()].map((k) => FLOW.ctx.items.get(k)?.name || k);
 
   el.innerHTML = `
     <div class="docket">
@@ -1154,6 +1249,7 @@ function renderList(picks) {
       du behøver ikke i ${esc(listNames(skipped))} denne gang.</p>` : ''}
     ${dropped.length ? `<p class="flag">Listen regner kun med dine fem første butikker. <strong>${esc(listNames(dropped))}</strong> er ikke med.</p>` : ''}
 
+    ${haveNames.length ? `<p class="have-line"><b>Du har:</b> ${esc(haveNames.join(', '))}</p>` : ''}
     <div class="spread list-head">
       <h3>Køb ind</h3>
       <button type="button" id="share-list">Del listen</button>
@@ -1169,9 +1265,9 @@ function renderList(picks) {
 
     <h3 class="list-head">Tjek at du har</h3>
     ${l.pantry.length ? `<div class="card pantry">
-      ${l.pantry.map((p) => `<label class="pantry-row"><input type="checkbox" class="tick"> ${esc(p.name)}</label>`).join('')}
+      ${l.pantry.map((p) => `<label class="pantry-row"><input type="checkbox" class="tick"> ${esc(p.name)}${p.have ? ' <span class="have-tag">har du</span>' : ''}</label>`).join('')}
     </div>
-    <p class="note">Basisvarer, retterne bruger. Dem regner vi med, du har – de er ikke med i prisen.</p>`
+    <p class="note">Basisvarer, retterne bruger, og det, du selv har. Dem regner vi med, du har – de er ikke med i prisen.</p>`
     : '<p class="note">Retterne bruger ingen basisvarer, vi kender til.</p>'}
 
     <h3 class="list-head">Ugens retter</h3>
@@ -1224,7 +1320,7 @@ function listText(l, picks) {
   }
   if (l.pantry.length) {
     out.push('TJEK AT DU HAR');
-    out.push(`  · ${l.pantry.map((p) => p.name).join(', ')}`);
+    out.push(`  · ${l.pantry.map((p) => (p.have ? `${p.name} (har du)` : p.name)).join(', ')}`);
     out.push('');
   }
   out.push(`I alt ca. ${kr(l.total)}.`);
