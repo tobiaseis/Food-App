@@ -34,6 +34,8 @@ Er retten et helt aftensmåltid for en dansk husstand? Et helt måltid har en ho
 
 TILBEHØR (kun hvis retten ikke er et helt måltid)
 - Foreslå ÉT enkelt, klassisk tilbehør, der passer til retten og køkkenet: fx kogte kartofler, ris, brød eller grøn salat – eller to af dem, når det er det naturlige, fx kartofler og salat.
+- Tilbehøret må ikke være bælgfrugter (bønner, ærter, linser, kikærter) eller æg – de kan blive forvekslet med rettens hovedråvare. Brug kartofler, ris, pasta, brød eller grønt som salat, gulerødder, broccoli.
+- En sauce eller dressing er ikke tilbehør.
 - Mængderne er til rettens eget antal portioner.
 - Højst 4 ingredienser og højst 3 korte trin i bydeform.
 - Brug kun disse enheder: ${UNITS.join(', ')} – eller null, når linjen ikke har en mængde.

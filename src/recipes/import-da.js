@@ -147,6 +147,12 @@ function sideProblems(side) {
   for (const ing of ings) {
     if (ing.unit != null && !UNITS.includes(ing.unit)) out.push(`tilbehør: ukendt enhed "${ing.unit}"`);
     if (ing.amount != null && !(ing.amount > 0)) out.push(`tilbehør: mængden ${ing.amount} for ${ing.name}`);
+    // En bælgfrugt eller et æg i tilbehøret kan blive et medhovedråvare i motoren.
+    const key = parseIngredient(lineOf(ing), 0).item_key;
+    const cat = catOf(key);
+    if (cat === 'legume' || cat === 'eggs') {
+      out.push(`tilbehør: ${ing.name} er ${cat === 'legume' ? 'en bælgfrugt' : 'æg'} og kan blive opfattet som hovedråvaren`);
+    }
   }
   if (!side.title) out.push('tilbehør: ingen titel');
   if (!Array.isArray(side.steps) || !side.steps.length) out.push('tilbehør: intet trin');

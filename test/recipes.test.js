@@ -866,6 +866,19 @@ test('et tilbehør med ukendt enhed, uden trin eller med for mange linjer holdes
   });
 });
 
+test('et tilbehør med bælgfrugt eller æg holdes tilbage, kartofler ikke', () => {
+  const peas = { ...SIDE, ingredients: [{ section: null, amount: 300, unit: 'g', name: 'ærter', note: null, optional: false }] };
+  withEdition({ ...withMeal(30, { complete: false, reason: 'x', side: peas }), accepted: true }, ({ dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.applied, 0);
+    assert.match(res.flaggedList[0].issues[0], /^tilbehør: /);
+  });
+  const pot = { ...SIDE, ingredients: [{ section: null, amount: 1, unit: 'kg', name: 'kartofler', note: null, optional: false }] };
+  withEdition(withMeal(31, { complete: false, reason: 'x', side: pot }), ({ dir }) => {
+    assert.equal(importAll({ dir, log: () => {} }).applied, 1);
+  });
+});
+
 test('en udgave, der får meal tilføjet, læses ind igen', () => {
   withEdition(EDITION_FIXTURE, ({ db, dir, id }) => {
     importAll({ dir, log: () => {} });
