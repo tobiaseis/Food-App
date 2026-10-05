@@ -31,6 +31,8 @@ const { parseIngredient } = require('./extract');
 const { UNITS, EDITION_DIR, lineOf, labelOf } = require('./edition');
 
 const MAIN_CATS = new Set(['meat', 'poultry', 'fish']);
+// Det motoren regner for en hovedråvare (public/engine.js MAIN_CATS).
+const ENGINE_MAINS = new Set(['meat', 'poultry', 'fish', 'eggs', 'legume']);
 const catOf = (key) => { const m = key && taxonomy.get(key); return m ? (m.category || m.cat) : null; };
 
 // Et dyr forrest i et sammensat kødord skal genfindes i varen. Ellers er
@@ -75,8 +77,17 @@ function listFiles(dir) {
 }
 
 /** Hvad der er galt med udgaven. Tom liste: den kan læses ind. */
-function problems(ed, lines, before) {
+function problems(ed, lines, before, { created = false } = {}) {
   const out = [];
+  // En ret, der oprettes af udgaven, skal kunne stå alene i basen.
+  if (created) {
+    for (const f of ['source', 'source_name']) if (!ed[f]) out.push(`ny ret: ${f} mangler i udgaven`);
+    // Uden en kendt "før" kan hovedråvaren ikke sammenlignes; i stedet kræves
+    // det, at udgaven selv har en, motoren kan bygge en ret om (samme
+    // kategorier som public/engine.js' MAIN_CATS). Ellers får vi en ret uden
+    // hovedråvare ind i puljen.
+    if (!lines.some((l) => ENGINE_MAINS.has(catOf(l.item_key)))) out.push('ingen kendt hovedråvare');
+  }
   if (!ed.title || ed.title.length < 3) out.push('ingen titel');
   if (!Array.isArray(ed.steps) || ed.steps.length < 2) out.push('færre end to trin');
   if (!Array.isArray(ed.ingredients) || ed.ingredients.length < 2) out.push('færre end to ingredienser');
@@ -202,7 +213,26 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
   const byUrl = new Map(db.prepare('SELECT id, url, edition_hash FROM recipes').all().map((r) => [r.url, r]));
   const before = db.prepare('SELECT raw, ingredient, item_key, amount, optional FROM recipe_ingredients WHERE recipe_id = ?');
 
+  const create = db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, yield_count,
+                         total_minutes, active_minutes, image, keywords, fetched_at)
+    VALUES (@url, @source, @source_name, @title, 'da', @servings, @yield_count,
+            @total, @active, @image, @keywords, @fetched_at)`);
+
   const apply = db.transaction((id, ed, lines, hash) => {
+    // Udgaven er selvbærende: kender basen ikke retten (en ny kilde i den
+    // natlige kørsel, hvor release-basen ikke har den), oprettes den her, og
+    // resten af funktionen læser udgaven ind som på enhver anden ret.
+    if (id == null) {
+      id = Number(create.run({
+        url: ed.url, source: ed.source, source_name: ed.source_name, title: ed.title,
+        servings: ed.servings > 0 ? ed.servings : null,
+        yield_count: ed.yield_count ?? (ed.servings > 0 ? ed.servings : null),
+        total: ed.total_minutes ?? null, active: ed.active_minutes ?? null,
+        image: ed.image ?? null, keywords: ed.keywords ?? null,
+        fetched_at: ed.fetched_at || ed.written_at || new Date().toISOString(),
+      }).lastInsertRowid);
+    }
     // description = NULL: den rummer op til 500 tegn af kildens EGEN tekst
     // (extract.js), og release-assettets data.db er offentlig, hvis repoet er.
     // Kildens tekst forlader ikke maskinen — heller ikke via basen. Udgavens
@@ -234,11 +264,11 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
     db.prepare('DELETE FROM recipe_steps WHERE recipe_id = ?').run(id);
     const step = db.prepare('INSERT INTO recipe_steps (recipe_id, position, section, text) VALUES (?, ?, ?, ?)');
     ed.steps.forEach((s, i) => step.run(id, i, s.section || null, s.text));
+    return id;
   });
 
-  const stats = { applied: 0, unchanged: 0, flagged: 0, orphan: 0, errored: 0 };
+  const stats = { applied: 0, unchanged: 0, flagged: 0, created: 0, errored: 0 };
   const flagged = [];
-  const orphaned = [];
   const errored = [];
   for (const file of listFiles(dir)) {
     const rel = path.relative(process.cwd(), file);
@@ -246,9 +276,9 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
       const text = fs.readFileSync(file, 'utf8');
       const ed = JSON.parse(text);
       const row = byUrl.get(ed.url);
-      if (!row) { stats.orphan++; orphaned.push({ file: rel, url: ed.url }); continue; }
+      const isNew = !row;
       const hash = crypto.createHash('sha1').update(text).digest('hex');
-      if (row.edition_hash === hash) { stats.unchanged++; continue; }
+      if (row && row.edition_hash === hash) { stats.unchanged++; continue; }
 
       const toLine = (ing, i, section) => {
         const raw = lineOf(ing);
@@ -257,12 +287,12 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
       const lines = (ed.ingredients || []).map((ing, i) => toLine(ing, i, ing.section || null));
       // problems() ser kun rettens egne linjer: tilbehørets må ikke tælle med i
       // linjetallet mod source_lines eller i "ukendte linjer".
-      const issues = problems(ed, lines, before.all(row.id));
+      const issues = problems(ed, lines, isNew ? [] : before.all(row.id), { created: isNew });
       const side = ed.meal && ed.meal.complete !== true ? ed.meal.side : null;
       const sideIssues = side ? sideProblems(side) : [];
       if (sideIssues.length || (issues.length && !ed.accepted)) {
         stats.flagged++;
-        flagged.push({ file: rel, id: row.id, title: ed.title, issues: [...sideIssues, ...issues] });
+        flagged.push({ file: rel, id: row ? row.id : null, title: ed.title, issues: [...sideIssues, ...issues] });
         continue;
       }
       let steps = ed.steps;
@@ -272,8 +302,9 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
         side.ingredients.forEach((ing, i) => lines.push(toLine(ing, start + i, section)));
         steps = [...ed.steps, ...side.steps.map((text) => ({ section: 'Tilbehør', text }))];
       }
-      apply(row.id, { ...ed, steps }, lines, hash);
-      stats.applied++;
+      const id = apply(row ? row.id : null, { ...ed, steps }, lines, hash);
+      if (isNew) { stats.created++; byUrl.set(ed.url, { id, url: ed.url, edition_hash: hash }); }
+      else stats.applied++;
     } catch (err) {
       // apply() er en transaktion, så en fejl undervejs i den ruller kun DEN
       // ene opskrift tilbage — ikke tidligere filer i samme kørsel.
@@ -283,12 +314,11 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
   }
 
   log(`${stats.applied} læst ind · ${stats.unchanged} uændrede · ${stats.flagged} til eftersyn · `
-    + `${stats.orphan} uden ret i basen · ${stats.errored} kunne ikke læses`);
+    + `${stats.created} oprettet · ${stats.errored} kunne ikke læses`);
   for (const f of flagged.slice(0, 20)) log(`  ${f.id} ${f.title}: ${f.issues.join('; ')}`);
-  // Navngiv også forældreløse og fejlede filer i loggen: i en natlig,
+  // Navngiv også fejlede filer i loggen: i en natlig,
   // ubemandet kørsel er logudskriften det eneste sted, man kan se HVORFOR en
   // fil ikke blev læst ind.
-  for (const f of orphaned.slice(0, 20)) log(`  uden ret i basen: ${f.file} (${f.url})`);
   for (const f of errored.slice(0, 20)) log(`  kunne ikke læses: ${f.file}: ${f.error}`);
   // I GitHub Actions bliver linjen en advarsel på kørslens forside. Ellers
   // står det kun dybt i loggen af en kørsel, der lykkedes — og ingen læser den.

@@ -921,3 +921,124 @@ test('en udgave, der får meal tilføjet, læses ind igen', () => {
     assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_ingredients WHERE recipe_id = ?').get(id).n, 5);
   });
 });
+
+// --- Selvbærende udgaver: en ret, basen ikke kender, oprettes af importen ---
+
+const NEW_URL = 'https://test.invalid/da-import-ny';
+const newEdition = (over = {}) => ({
+  ...EDITION_FIXTURE, url: NEW_URL, source: 'nykilde', source_name: 'Ny Kilde',
+  image: 'https://test.invalid/foto.jpg', lang: 'da', keywords: 'Aftensmad, Lam',
+  fetched_at: '2026-10-01T08:00:00.000Z', source_lines: 3, ...over,
+});
+
+function withNewEdition(edition, fn) {
+  const db = getDb();
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'opskrifter-'));
+  fs.writeFileSync(path.join(dir, 'ny.json'), JSON.stringify(edition));
+  try { return fn({ db, dir }); } finally {
+    db.prepare('DELETE FROM recipes WHERE url = ?').run(NEW_URL);
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+test('en udgave med ukendt url opretter retten og læses ind', () => {
+  withNewEdition(newEdition(), ({ db, dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.created, 1);
+    assert.equal(res.flagged, 0);
+    const r = db.prepare('SELECT * FROM recipes WHERE url = ?').get(NEW_URL);
+    assert.equal(r.source, 'nykilde');
+    assert.equal(r.source_name, 'Ny Kilde');
+    assert.equal(r.title, 'Lammeculotte med krydderurter');
+    assert.equal(r.lang, 'da');
+    assert.equal(r.image, 'https://test.invalid/foto.jpg');
+    assert.equal(r.keywords, 'Aftensmad, Lam');
+    assert.equal(r.fetched_at, '2026-10-01T08:00:00.000Z');
+    assert.equal(r.servings, 4);
+    assert.equal(r.yield_count, 4);
+    assert.equal(r.total_minutes, 90);
+    assert.equal(r.edition, 1);
+    const lines = db.prepare('SELECT item_key FROM recipe_ingredients WHERE recipe_id = ? ORDER BY position').all(r.id);
+    assert.deepEqual(lines.map((l) => l.item_key), ['lam', 'hvidloeg', 'salt']);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_steps WHERE recipe_id = ?').get(r.id).n, 2);
+    // Anden gang er den kendt og uændret: ingen ny ret.
+    const again = importAll({ dir, log: () => {} });
+    assert.equal(again.created, 0);
+    assert.equal(again.unchanged, 1);
+  });
+});
+
+test('en oprettet ret får tier og scorer af reclassify', () => {
+  const { reclassify } = require('../src/recipes/reclassify');
+  withNewEdition(newEdition(), ({ db, dir }) => {
+    importAll({ dir, log: () => {} });
+    reclassify({ log: () => {} });
+    const r = db.prepare('SELECT tier, tier_score, score_healthy, score_classic, score_premium, nutrition_src, kcal FROM recipes WHERE url = ?').get(NEW_URL);
+    assert.ok(['healthy', 'classic', 'premium'].includes(r.tier), `tier: ${r.tier}`);
+    for (const k of ['tier_score', 'score_healthy', 'score_classic', 'score_premium']) {
+      assert.equal(typeof r[k], 'number', k);
+    }
+    assert.equal(r.nutrition_src, 'estimated');
+  });
+});
+
+test('en ny ret uden kendt hovedråvare holdes tilbage og oprettes ikke', () => {
+  const veg = newEdition({
+    ingredients: [
+      { section: null, amount: 3, unit: 'fed', name: 'hvidløg', note: null, optional: false },
+      { section: null, amount: null, unit: null, name: 'salt', note: null, optional: false },
+    ],
+    source_lines: 2,
+  });
+  withNewEdition(veg, ({ db, dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.created, 0);
+    assert.equal(res.flagged, 1);
+    assert.match(res.flaggedList[0].issues.join(), /ingen kendt hovedråvare/);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipes WHERE url = ?').get(NEW_URL).n, 0);
+  });
+});
+
+test('en ny ret uden source_name holdes tilbage', () => {
+  withNewEdition(newEdition({ source_name: undefined }), ({ dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.created, 0);
+    assert.match(res.flaggedList[0].issues.join(), /source_name mangler/);
+  });
+});
+
+test('editionRecord skriver image, lang, keywords og fetched_at fra kilden', () => {
+  const { editionRecord } = require('../src/recipes/rewrite');
+  const src = {
+    url: 'https://test.invalid/x', source: 'test', source_name: 'Test', yield_count: 4,
+    ingredients: ['1 a'], image: 'https://test.invalid/i.jpg', keywords: 'a, b',
+    fetched_at: '2026-10-01T00:00:00.000Z',
+  };
+  const ed = editionRecord(src, { model: 'm', output: { title: 'X', ingredients: [] } });
+  assert.equal(ed.image, 'https://test.invalid/i.jpg');
+  assert.equal(ed.lang, 'da');
+  assert.equal(ed.keywords, 'a, b');
+  assert.equal(ed.fetched_at, '2026-10-01T00:00:00.000Z');
+  // En ældre kilde-record uden felterne giver null, ikke fejl.
+  const bare = editionRecord({ ...src, image: undefined, keywords: undefined, fetched_at: undefined },
+    { model: 'm', output: { title: 'X', ingredients: [] } });
+  assert.equal(bare.image, null);
+  assert.equal(bare.keywords, null);
+});
+
+test('backfill-edition-meta lægger kun manglende felter på, lige efter source_lines', () => {
+  const { withMeta } = require('../scripts/backfill-edition-meta');
+  const ed = { url: 'u', yield_count: 4, source_lines: 3, title: 'T', image: 'rettet.jpg' };
+  const row = { image: 'basen.jpg', keywords: 'k', fetched_at: '2026-08-27T00:00:00.000Z' };
+  const out = withMeta(ed, row);
+  assert.equal(out.image, 'rettet.jpg');
+  assert.equal(out.lang, 'da');
+  assert.equal(out.keywords, 'k');
+  assert.equal(out.fetched_at, '2026-08-27T00:00:00.000Z');
+  const keys = Object.keys(out);
+  assert.equal(keys[keys.indexOf('source_lines') + 1], 'lang');
+  assert.equal(keys.at(-1), 'image');
+  // Idempotent.
+  assert.deepEqual(withMeta(out, row), out);
+  assert.deepEqual(ed, { url: 'u', yield_count: 4, source_lines: 3, title: 'T', image: 'rettet.jpg' });
+});

@@ -38,6 +38,8 @@ async function fetchOne(row) {
     url: row.url, source: row.source, source_name: row.source_name, lang: row.lang,
     fetched_at: new Date().toISOString(),
     title: parsed.title,
+    image: parsed.image,
+    keywords: parsed.keywords,
     yield_count: parsed.servings,
     total_minutes: parsed.total_minutes,
     active_minutes: parsed.active_minutes,

@@ -290,6 +290,13 @@ function editionRecord(src, answer) {
     // mod dette tal og ikke mod basens, som ofte har færre end siden.
     // Kun tallet: kildens tekst forlader ikke tmp/kilder/.
     source_lines: Array.isArray(src.ingredients) ? src.ingredients.length : null,
+    // Det, import-da.js skal bruge for at oprette retten, hvis release-basen
+    // ikke kender den (en ny kilde): udgaven er selvbærende. Billedets URL og
+    // kildens nøgleord er fakta, ikke kildens tekst.
+    image: src.image ?? null,
+    lang: 'da',
+    keywords: src.keywords ?? null,
+    fetched_at: src.fetched_at ?? null,
     ...answer.output,
   };
 }
