@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 23,
+  "image": "https://www.valdemarsro.dk/wp-content/2022/10/tatarsalat.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Festmad, Forretter, Franske retter, Natmad, Nytår",
+  "fetched_at": "2026-08-27T15:17:31.679Z",
   "title": "Rørt tatarsalat med syltede sennepsfrø",
   "intro": "Rørt tatar af oksekød med peberrodscreme, syltede sennepsfrø, friske urter og sprøde chips. Den er klassisk smørrebrød-agtig, men serveret som en let salat.",
   "servings": 4,
@@ -235,24 +239,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse til at være et helt måltid.",
+    "reason": "Retten består af rå oksetatar og lidt salat uden egentlig mættende tilbehør, så den mangler kartofler eller brød.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde ovnkartofler med hvidløg og persille",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "rapsolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "timian",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
+        "Skær kartoflerne i både, og vend dem med olie, timian og salt.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Tilsæt de knuste hvidløgsfedt de sidste 5 minutter.",
+        "Vend de varme kartofler med hakket persille og citronsaft, og server dem til tataren."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:52:03.113Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:12.509Z"
   }
 }

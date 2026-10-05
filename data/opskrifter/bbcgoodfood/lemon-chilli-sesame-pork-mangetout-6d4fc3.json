@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 2,
   "source_lines": 9,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-8322_11-aedc727.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Supper, Asian,  Josh Eagleton, 2 servings, 200 kcal or less, 30-60 minutes, Asian, Chilli, Gary Rhodes, Mains, Mange tout, Pork fillet, Pork fillets, Red chilli, Red chillies, Sesame oil, Shallot, Shallots, Stir fry, Stirfry",
+  "fetched_at": "2026-08-27T17:50:28.420Z",
   "title": "Citron- og chilisvinemørbrad med sesam og sukkerærter",
   "intro": "Hurtig wokret med mørt svinekød, ristede sesamfrø, frisk chili og citron. Sukkerærterne giver sprødhed og friskhed.",
   "servings": 2,
@@ -130,25 +134,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse som kartofler, ris eller pasta.",
+    "reason": "Retten har kød og grønt, men mangler noget mættende som ris, nudler eller kartofler.",
     "side": {
-      "title": "Ris",
+      "title": "Stegt hvidløgsris med forårsløg og koriander",
       "ingredients": [
         {
           "section": null,
-          "amount": 1.5,
-          "unit": "dl",
-          "name": "ris",
+          "amount": 150,
+          "unit": "g",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "olie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "forårsløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "frisk koriander",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakningens anvisning.",
-        "Server risen med wok-retten."
+        "Kog risene efter anvisningen på posen, si dem fra, og lad dem dampe af i nogle minutter.",
+        "Hak hvidløg, skær forårsløg i tynde ringe, og hak koriander.",
+        "Varm olien op på en pande, og steg hvidløg og forårsløg i et minut.",
+        "Tilsæt risene og sojasauce, steg dem til de er let sprøde, og vend koriander i."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:06:26.321Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:26:27.053Z"
   }
 }

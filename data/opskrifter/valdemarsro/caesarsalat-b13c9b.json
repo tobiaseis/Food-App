@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 14,
+  "image": "https://www.valdemarsro.dk/wp-content/2017/03/ceasarsalat.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Buffet, Forår, Franske retter, Frokost, Måltidssalat og bowls, Salat",
+  "fetched_at": "2026-08-27T15:18:48.500Z",
   "title": "Cæsarsalat med kylling",
   "intro": "Sprød romainesalat med sprødstegt kylling, hjemmelavede croutoner og en cremet cæsardressing med parmesan og ansjos. En klassiker, der er nem at lave til fire.",
   "servings": 4,
@@ -184,26 +188,10 @@
     "Worcestershiresauce er skrevet som ét ord, så den passer til danske butikker."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Retten har protein og grønt, men kun minimalt brød – kartofler som tilbehør gør det til et helt måltid.",
-    "side": {
-      "title": "Kogte kartofler",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Server dem varme ved siden af salaten."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:57:52.615Z"
+    "complete": true,
+    "reason": "Cæsarsalat med kylling, rigeligt salat og croutoner er et helt måltid med protein, grønt og brød.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:32.923Z"
   }
 }

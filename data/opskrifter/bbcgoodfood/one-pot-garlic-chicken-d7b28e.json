@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 10,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2022/09/OnePotGarlicChicken-d0de695.jpg?resize=768,768",
+  "lang": "da",
+  "keywords": "Dinner, Chicken, Creamy chicken, family dishes, Garlic chicken",
+  "fetched_at": "2026-08-27T17:46:59.567Z",
   "title": "Kylling i hvidløgsfløde",
   "intro": "Mør kylling og bløde hvidløg i en cremet sauce med parmesan, alt sammen lavet på én pande. Server med ris og grønne bønner.",
   "servings": 4,
@@ -150,25 +154,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse til at være et helt måltid.",
+    "reason": "Retten er kun kylling i sauce, og ris og bønner er kun valgfrie, så der mangler noget mættende tilbehør.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Sprøde timiankartofler og citronbroccoli",
       "ingredients": [
         {
           "section": null,
-          "amount": 250,
+          "amount": 800,
           "unit": "g",
-          "name": "ris",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "timian",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "broccoli",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen i letsaltet vand ifølge pakningens anvisning.",
-        "Server til kyllingen."
+        "Skær kartoflerne i både, vend dem med to spiseskefulde olie, timian og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Del broccolien i små buketter, og vend dem med resten af olien og salt. Bag dem de sidste 15 minutter sammen med kartoflerne.",
+        "Riv citronskallen, og pres saften. Hak hvidløget fint.",
+        "Vend de varme broccolibuketter med citronskal, citronsaft og hvidløg, og server dem til kartoflerne og kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:55:12.093Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:43.260Z"
   }
 }

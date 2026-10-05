@@ -9,6 +9,10 @@
   "active_minutes": 60,
   "yield_count": 4,
   "source_lines": 14,
+  "image": "https://www.valdemarsro.dk/wp-content/2020/09/melanzane-alla-parmigiana.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Grill opskrifter, Italiensk, Mad i fad og ovnretter, Mad på budget, Sommer, Tapas, Vegetar",
+  "fetched_at": "2026-08-27T17:55:19.944Z",
   "title": "Aubergine alla parmigiana",
   "intro": "Lag på lag af stegte aubergineskiver, tomatsauce og parmesan, bagt gyldne med mozzarella og rasp på toppen. En klassisk italiensk ovnret, der er rigtig god med brød og salat til.",
   "servings": 4,
@@ -179,25 +183,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende stivelseskomponent som ris eller brød.",
+    "reason": "Retten er mest aubergine, tomat og ost uden rigtig mættende komponent, så den mangler brød, pasta eller kartofler ved siden af.",
     "side": {
-      "title": "Ris",
+      "title": "Ovnristet hvidløgsbrød med persille",
       "ingredients": [
         {
           "section": null,
-          "amount": 300,
+          "amount": 1,
+          "unit": "stk",
+          "name": "baguette",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 75,
           "unit": "g",
-          "name": "hvid ris",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen i rigeligt letsaltet vand efter anvisning på pakken.",
-        "Hæld det gennem en si, og server det varmt."
+        "Rør blødt smør med presset hvidløg, hakket persille, olivenolie, citronskal og en knivspids salt.",
+        "Skær baguetten i skiver uden at skære helt igennem, og smør hvidløgssmørret ind mellem skiverne.",
+        "Bag brødet ved 175 grader i cirka 10-12 minutter, til det er sprødt og gyldent.",
+        "Pres lidt citronsaft over det varme brød, og server det til retten."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:27:37.206Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:16.824Z"
   }
 }

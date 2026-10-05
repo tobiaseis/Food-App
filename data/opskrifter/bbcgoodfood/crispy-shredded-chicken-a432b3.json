@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 2,
   "source_lines": 10,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2023/09/Crispy-shredded-chicken-cb41b41.jpg?resize=768,713",
+  "lang": "da",
+  "keywords": "Dinner, Asian, Chicken, Crispy chicken, Peppers, Spring onions",
+  "fetched_at": "2026-08-27T17:45:19.221Z",
   "title": "Sprød kylling med peberfrugt og sweet chili",
   "intro": "Tynde kyllingestrimler marineres i soja, vendes i majsstivelse og steges sprøde. Til sidst vendes de i en sticky sauce med peberfrugt og drysses med forårsløg.",
   "servings": 2,
@@ -127,25 +131,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende komponent som ris, kartofler, pasta eller brød.",
+    "reason": "Retten har kylling og peberfrugt, men intet mættende tilbehør som ris eller nudler.",
     "side": {
-      "title": "Jasminris",
+      "title": "Sesamnudler med forårsløg",
       "ingredients": [
         {
           "section": null,
           "amount": 150,
           "unit": "g",
-          "name": "jasminris",
+          "name": "nudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "ris eddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "forårsløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter anvisning på pakken.",
-        "Server til kyllingen."
+        "Kog nudlerne efter anvisningen på pakken, og lad dem dryppe godt af.",
+        "Rist sesamfrøene på en tør pande i 2 minutter, til de er gyldne.",
+        "Vend de varme nudler med sesamolie, sojasauce og eddike.",
+        "Drys med sesamfrø og fint skåret forårsløg, og server til kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:41:30.650Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:52.710Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 15,
+  "image": "https://www.valdemarsro.dk/wp-content/2019/11/noeddepostej-svampe.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Buffet, Julefrokost, julemiddag, Juleopskrifter, Vegetar, Vinter",
+  "fetched_at": "2026-08-27T17:55:54.075Z",
   "ingredients": [
     {
       "section": null,
@@ -187,15 +191,15 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Postej serveres traditionelt med tilbehør for at være et helt måltid.",
+    "reason": "Postejen er en mættende, men kompakt ret uden rigeligt grønt, så den har brug for et friskt tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Ovnbagte gulerødder og broccoli med citron og solsikkekerner",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
+          "amount": 600,
+          "unit": "g",
+          "name": "gulerødder",
           "note": null,
           "optional": false
         },
@@ -203,17 +207,51 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "broccoli",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "solsikkekerner",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server det til postejen og kartoflerne."
+        "Skær gulerødderne i lange både, del broccolien i buketter, og hak hvidløget fint.",
+        "Vend grøntsagerne med olie, hvidløg og salt, og bag dem ved 200 grader i cirka 25 minutter, til de er møre og let gyldne.",
+        "Rist solsikkekernerne på en tør pande, til de dufter.",
+        "Pres citronsaft over grøntsagerne, drys med kernerne, og server til postejen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:31:24.931Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:54.524Z"
   }
 }

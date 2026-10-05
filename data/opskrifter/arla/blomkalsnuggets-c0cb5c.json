@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 20,
+  "image": "https://images.arla.com/recordid/86B13853-0AA1-4665-A61CE940442ADCA0/picture.jpg?width=1300&height=525&mode=crop&format=webp",
+  "lang": "da",
+  "keywords": "Blomkålsnuggets",
+  "fetched_at": "2026-08-27T15:22:56.202Z",
   "title": "Blomkålsnuggets med dip",
   "intro": "Sprøde nuggets af forkogt blomkål, vendt i krydret dej og ostepanering og stegt gyldne. Serveres med en kølig, krydret fraichedip.",
   "servings": 4,
@@ -217,15 +221,47 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende kulhydrater som kartofler eller ris.",
+    "reason": "Retten er panerede blomkålsnuggets med dip uden noget mættende, så den mangler kartofler eller lignende.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde paprikakartofler og spidskålssalat med citron",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "paprika",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "spidskål",
           "note": null,
           "optional": false
         },
@@ -233,17 +269,19 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til nuggets og kartofler."
+        "Skær kartoflerne i både, og vend dem med halvdelen af olien, paprika, knuste hvidløgsfed og salt.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter.",
+        "Snit spidskålen fint, og vend den med resten af olien, saft fra citronen og en knivspids salt.",
+        "Server den friske spidskålssalat og de varme kartofler til nuggets."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:05:49.913Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:13.096Z"
   }
 }

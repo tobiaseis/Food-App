@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 6,
   "source_lines": 23,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/n3xk5hll/gbc_lambweston_march26-33.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, masala, fries, curry leaf, easy",
+  "fetched_at": "2026-08-27T17:05:49.121Z",
   "title": "Masala-pommes frites med karryblade-crunch",
   "intro": "Sprøde pommes frites vendes i en krydret tomat-masala og toppes med en knasende blanding af ristede frø, karryblade og peanuts. Det er en indisk inspireret snack eller tilbehør med både syrlighed og varme.",
   "servings": 6,
@@ -265,25 +269,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler tilstrækkelig protein til at være et helt aftensmåltid.",
+    "reason": "Retten er mættende, men har ingen egentlig hovedråvare som kød, fisk eller bælgfrugter (kun lidt jordnødder), så den fungerer som snack eller tilbehør og mangler noget grønt og protein.",
     "side": {
-      "title": "Grøn salat",
+      "title": "Ovnbagt spidskommenblomkål med agurke-mynteraita",
       "ingredients": [
         {
           "section": null,
           "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "blomkål",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "rapsolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "dl",
+          "name": "yoghurt naturel",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "mynte",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Vask salaten og riv den i stykker.",
-        "Server den til masala-pommes fritesene."
+        "Del blomkålen i buketter, vend dem med olie, spidskommen og salt, og bag dem gyldne og sprøde ved 220 grader i cirka 25 minutter.",
+        "Riv agurken groft, og pres overskydende vand fra.",
+        "Rør agurken sammen med yoghurt, hakket mynte og en knivspids salt.",
+        "Server den varme blomkål med raitaen ved siden af masala-pommes fritesene."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:36:40.445Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:13.442Z"
   }
 }

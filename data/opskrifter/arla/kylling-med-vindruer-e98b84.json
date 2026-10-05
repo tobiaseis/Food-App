@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 8,
+  "image": "https://images.arla.com/recordid/BB83B632-8886-4712-882DC9EFA2D92C2E/kylling-med-vindruer.jpg?width=1300&height=525&mode=crop&format=webp",
+  "lang": "da",
+  "keywords": "Hovedretter, Aftensmad, Fransk, Kylling,Vindrue",
+  "fetched_at": "2026-08-27T15:21:57.558Z",
   "title": "Kylling med vindruer",
   "intro": "Mørt kylling i en cremet karrysauce med friske, søde druer. Serveres med groft brød eller kartofler.",
   "servings": 4,
@@ -106,34 +110,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "Retten er kylling i flødesauce uden integrerede mættende komponenter.",
-    "side": {
-      "title": "Kogte kartofler og grøn salat",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        },
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:04:52.360Z"
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare og indeholder allerede brød eller kartofler som mættende del i ingredienslisten.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:04.491Z"
   }
 }

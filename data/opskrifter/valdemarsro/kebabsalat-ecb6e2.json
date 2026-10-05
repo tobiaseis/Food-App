@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 25,
+  "image": "https://www.valdemarsro.dk/wp-content/2022/02/kebabsalat.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Børnenes livretter, Familiefavoritter, Forår, Mellemøstens køkken, Nem Hverdagsmad, Sommer",
+  "fetched_at": "2026-08-27T15:17:50.148Z",
   "intro": "Mør oksekød krydret med spidskommen, koriander og paprika og stegt hurtigt af, serveret på frisk salat med grøntsager og en kølig hvidløgsdressing. En letlavet kebabsalat uden brød.",
   "servings": 4,
   "title": "Kebabsalat",
@@ -243,25 +247,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten har kød og grønt, men mangler noget mættende som kartofler, ris eller brød.",
+    "reason": "Retten har kød og lidt grønt, men mangler noget mættende og er kun en lille salat til fire.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde paprikakartofler med oregano",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "paprika, sød",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "oregano, tørret",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Hæld dem på tallerkenen ved siden af salaten."
+        "Skær kartoflerne i både, og vend dem med olie, paprika, oregano og salt.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Tilsæt de hele hvidløgsfed med skal de sidste 10 minutter.",
+        "Pres citronsaft over de varme kartofler, og server dem til kebabsalaten."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:53:30.492Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:21.488Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 6,
   "source_lines": 7,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/10/Gluten-free-pasta-10c0771.jpg?resize=768,845",
+  "lang": "da",
+  "keywords": "Dinner, Gluten-free pasta, gluten-free recipes, Homemade pasta, Tagliatelle, Tagliatelle. pasta",
+  "fetched_at": "2026-08-27T15:31:19.269Z",
   "title": "Glutenfri tagliatelle",
   "intro": "Hjemmelavet tagliatelle uden gluten på boghvedemel og kartoffelmel, som holder sammen takket være psyllium og æg. Server den med din yndlingspastasauce.",
   "servings": 6,
@@ -137,25 +141,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten er kun en pastaopskrift uden sauce eller protein og udgør ikke et helt måltid.",
+    "reason": "Retten er kun selve pastadejen uden sauce eller hovedråvare, så den mangler noget at servere den med.",
     "side": {
-      "title": "Grøn salat",
+      "title": "Ovnbagte tomater og broccoli med hvidløg og parmesan",
       "ingredients": [
         {
           "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "cherrytomater",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "broccoli",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 50,
+          "unit": "g",
+          "name": "parmesan",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
+          "unit": "bundt",
+          "name": "basilikum",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Vask salaten, og riv den i stykker.",
-        "Server til pastaen."
+        "Del broccolien i små buketter, og hak hvidløget groft.",
+        "Vend broccoli, cherrytomater og hvidløg med olie og salt på en bageplade.",
+        "Bag grøntsagerne ved 220 grader i cirka 20 minutter, til de er møre og let brunede.",
+        "Riv parmesan over, og top med revet basilikum, inden det serveres til pastaen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:54:31.901Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:59.134Z"
   }
 }

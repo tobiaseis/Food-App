@@ -9,6 +9,10 @@
   "active_minutes": 5,
   "yield_count": null,
   "source_lines": 2,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/12/GettyImages-1250136366-e1cbb55.jpg?resize=768,512",
+  "lang": "da",
+  "keywords": "Dinner, Seared tuna, Tuna steak, tuna steak ideas, tuna steak recipes, Tuna steaks",
+  "fetched_at": "2026-08-27T15:30:41.915Z",
   "title": "Stegt tunsteak",
   "intro": "Tunsteak, der brunes hurtigt på en meget varm pande, så den er gylden udenpå og saftig indeni. Retten er klar på få minutter.",
   "servings": 2,
@@ -71,13 +75,13 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler noget mættende som kartofler eller ris.",
+    "reason": "Retten er kun stegt tun uden noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med citron og agurkesalat med dild",
       "ingredients": [
         {
           "section": null,
-          "amount": 500,
+          "amount": 600,
           "unit": "g",
           "name": "kartofler",
           "note": null,
@@ -85,20 +89,53 @@
         },
         {
           "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "dild",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "eddike",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne og kog dem møre i letsaltet vand.",
-        "Vask salaten og riv den i stykker.",
-        "Server kartoflerne og salaten til tunsteaks."
+        "Skær kartoflerne i både, vend dem med olie og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Riv skallen af citronen, og vend den med de varme kartofler sammen med lidt hakket dild.",
+        "Skær agurken i tynde skiver, og vend den med eddike, resten af dilden og en knivspids salt.",
+        "Server kartoflerne og agurkesalaten sammen med tunen, og pres lidt citronsaft over."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:38:33.839Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:40.230Z"
   }
 }

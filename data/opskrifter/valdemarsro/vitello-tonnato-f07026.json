@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 12,
+  "image": "https://www.valdemarsro.dk/wp-content/2014/03/vitello-tunnato-1.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Italiensk, Måltidssalat og bowls, Salat",
+  "fetched_at": "2026-08-27T17:58:10.094Z",
   "title": "Vitello tonnato",
   "intro": "Kolde, tynde skiver culottesteg med cremet tunsauce, pesto og friske grøntsager. En klassisk italiensk ret, der kan laves på forhånd.",
   "servings": 4,
@@ -141,25 +145,59 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten har protein og lidt grønt, men mangler mættende kulhydrater til at være et helt aftensmåltid.",
+    "reason": "Retten er kødruller med tunsauce og en lille salat, så der mangler noget mættende som kartofler, pasta eller brød.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde rosmarinkartofler med hvidløg og citron",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "tørret rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Server dem til retten."
+        "Skær kartoflerne i både, og vend dem med olivenolie, rosmarin og salt.",
+        "Bag kartoflerne ved 220 grader i cirka 35 minutter, til de er gyldne og sprøde.",
+        "Tilsæt de knuste hvidløgsfedt de sidste 10 minutter af bagetiden.",
+        "Pres citronsaft over de varme kartofler, og server dem til kødrullerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:41:54.835Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:27.902Z"
   }
 }

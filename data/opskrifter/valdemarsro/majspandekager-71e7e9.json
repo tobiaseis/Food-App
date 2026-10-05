@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 10,
   "source_lines": 6,
+  "image": "https://www.valdemarsro.dk/wp-content/2015/01/majspandekager-2.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Madpandekager og madvafler, Pandekager, Tilbehør Aftensmad",
+  "fetched_at": "2026-08-27T17:57:57.471Z",
   "title": "Majspandekager",
   "intro": "Tynde pandekager lavet på majsmel, som giver en let gylden farve og en let sødlig smag. Dejen er hurtigt rørt sammen og kan hvile, mens panden varmer.",
   "servings": 10,
@@ -83,25 +87,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Pandekager med majsmel er mættende som kornret, men mangler kød eller fisk som hovedråvare og tilstrækkelig grønt til at være et helt aftensmåltid.",
+    "reason": "Majspandekagerne er kun en dej af majsmel, mælk og æg uden fyld, protein eller grønt, så de mangler noget at blive mætte af.",
     "side": {
-      "title": "Grøn salat",
+      "title": "Ovnbagte søde kartofler med røget paprika og tomatsalsa",
       "ingredients": [
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "kg",
+          "name": "søde kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "røget paprika",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "tomater",
+          "note": null,
+          "optional": false
+        },
         {
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "rødløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "frisk koriander",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Vask salaten, og riv den i stykker.",
-        "Server den til pandekagerne."
+        "Skær de søde kartofler i både, vend dem med olie, paprika og salt, og bag dem ved 220 grader i cirka 30 minutter.",
+        "Hak tomater, rødløg og koriander fint.",
+        "Vend det hele sammen til en salsa med en knivspids salt.",
+        "Server de varme søde kartofler og salsaen til pandekagerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:41:00.117Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:19.938Z"
   }
 }

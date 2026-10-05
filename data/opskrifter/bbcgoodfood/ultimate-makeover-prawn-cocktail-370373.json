@@ -9,6 +9,10 @@
   "active_minutes": 35,
   "yield_count": 4,
   "source_lines": 14,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-359494_11-9b6359b.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Starter, British,  Josh Eagleton, 200 kcal or less, 30-60 minutes, 4 servings, Angela Nilsen, Angela Nilsen recipes, Avocado, Avocados, Healthy recipes, Light recipes, Mains, Prawn, Prawn cocktails, Prawn recipes, Prawns, Retro recipes, Starter recipes, Ultimate makeover recipes, Wate",
+  "fetched_at": "2026-08-27T17:50:42.433Z",
   "title": "Rejecocktail med avocado og agurk",
   "intro": "Klassisk rejecocktail med cocktailsauce, syrlig agurk, cremet avocado og peberrodsagtig karse, serveret i glas. Perfekt som let forret.",
   "servings": 4,
@@ -165,15 +169,39 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Rejecocktailen mangler mættende komponenter som brød eller kartofler til at være et helt måltid.",
+    "reason": "Rejecocktailen er en kold forret uden noget mættende, så den har brug for tilbehør.",
     "side": {
-      "title": "Rugbrød og grøn salat",
+      "title": "Ristet baguette med hvidløgssmør og persille",
       "ingredients": [
         {
           "section": null,
-          "amount": 8,
-          "unit": "skive",
-          "name": "rugbrød",
+          "amount": 1,
+          "unit": "stk",
+          "name": "baguette",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 100,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
           "note": null,
           "optional": false
         },
@@ -181,18 +209,19 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skær rugbrødet i skiver.",
-        "Vask hovedsalaten, og riv den i stykker.",
-        "Server rejecocktailen med brød og salat på siden."
+        "Rør blødt smør sammen med presset hvidløg, hakket persille, revet citronskal og salt.",
+        "Skær baguetten i skiver, og smør hvidløgssmørret på skiverne.",
+        "Bag brødet ved 200 grader i cirka 8 minutter, til det er gyldent og sprødt.",
+        "Server det varme brød til rejecocktailen med en skive citron."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:07:23.430Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:25:52.950Z"
   }
 }

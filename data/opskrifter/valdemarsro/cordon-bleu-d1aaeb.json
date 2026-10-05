@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 9,
+  "image": "https://www.valdemarsro.dk/wp-content/2016/11/cordon-bleu.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Familiefavoritter, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:57:26.323Z",
   "title": "Cordon bleu af kyllingebryst",
   "intro": "Sprødstegt kyllingebryst fyldt med skinke og smeltet mozzarella. En klassiker, der er nem at lave og passer til hele familien.",
   "servings": 4,
@@ -121,9 +125,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en selvstændig mættende side som kartofler eller lignende.",
+    "reason": "Retten har kun kød med panering og mangler noget mættende eller grønt som tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med rosmarin og agurkesalat",
       "ingredients": [
         {
           "section": null,
@@ -135,19 +139,53 @@
         },
         {
           "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "hvidvinseddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kyllingen."
+        "Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver.",
+        "Hak dilden, og vend den med agurken, eddike og en knivspids salt.",
+        "Server agurkesalaten til de varme kartofler."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:38:39.750Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:01.354Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": null,
   "source_lines": 7,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2022/09/CreamySpinachChicken-e6b2815.jpg?resize=768,768",
+  "lang": "da",
+  "keywords": "Dinner, Chicken, Creamy chicken, family dishes, Spinach",
+  "fetched_at": "2026-08-27T17:45:20.207Z",
   "title": "Cremet spinatkylling",
   "intro": "Mørt kylling i en cremet sauce med spinat, hvidløg og parmesan. Retten er hurtig at lave og passer godt til ris eller kartofler.",
   "servings": 4,
@@ -125,9 +129,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler kartofler eller ris til at være et helt måltid.",
+    "reason": "Retten har kylling og spinat i flødesauce, men ris eller kartofler er kun valgfrie, så den mangler noget mættende.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde timiankartofler og citronbroccoli",
       "ingredients": [
         {
           "section": null,
@@ -136,13 +140,56 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "timian",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "broccoli",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
+        "Skær kartoflerne i både, og vend dem med halvdelen af olien, timian, hvidløg i skiver og salt.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter.",
+        "Del broccolien i buketter, og vend dem med resten af olien og salt. Bag dem de sidste 15 minutter sammen med kartoflerne.",
+        "Pres citronsaft over broccolien, og server den med kartoflerne og kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:42:02.334Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:00.539Z"
   }
 }

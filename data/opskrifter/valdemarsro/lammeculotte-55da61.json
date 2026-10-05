@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 7,
+  "image": "https://www.valdemarsro.dk/wp-content/2017/04/lammeculotte.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Festmad, Forår, Nytår, Påskefrokost",
+  "fetched_at": "2026-08-27T17:59:06.540Z",
   "title": "Intervalstegt lammeculotte med urter og citron",
   "intro": "Mør lammeculotte, der steges i tre omgange med hvil imellem, så kødet bliver saftigt og lyserødt. Stegen gnides med en duftende blanding af hvidløg, urter og citronskal.",
   "servings": 4,
@@ -115,9 +119,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende tilbehør som kartofler eller ris.",
+    "reason": "Retten er kun en lammesteg med krydderurter uden noget mættende eller grønt tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde rosmarinkartofler og citronsalat af spinat",
       "ingredients": [
         {
           "section": null,
@@ -129,20 +133,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "tørret rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "pakke",
+          "name": "babyspinat",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne og kog dem møre i letsaltet vand.",
-        "Vask salaten og riv den i stykker.",
-        "Server kartoflerne og salaten til den stegede lam."
+        "Skær kartoflerne i både, og vend dem med halvdelen af olien, hakket hvidløg, rosmarin og salt.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter.",
+        "Vend spinaten med resten af olien, saft fra citronen og en knivspids salt.",
+        "Server spinatsalaten til de varme kartofler og lammesteg."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:45:34.114Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:47.999Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 2,
   "source_lines": 10,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/cod-smashed-celeriac-1362cb5.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Fish Course, Main course, Supper, Celeriac, Cod, Easy, Fibre, Folate, Gluten free, goodhealth, Healthy, Low calorie, Midweek meal, Miriam Nice, Vitamin c",
+  "fetched_at": "2026-08-27T17:47:36.406Z",
   "title": "Torsk med smasket knoldselleri",
   "intro": "Mør torsk bagt i foliepakker med squash og forårsløg, serveret ved siden af ovnbagt og mast knoldselleri med fennikelfrø. En let ret med frisk citron og rucola.",
   "servings": 2,
@@ -153,34 +157,10 @@
     "Rocket er skiftet til rucola."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Retten mangler en mættende base som kartofler, ris eller pasta.",
-    "side": {
-      "title": "Kogte kartofler og grøn salat",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 600,
-          "unit": "g",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        },
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server det sammen med kartoflerne."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:52:17.519Z"
+    "complete": true,
+    "reason": "Retten har torsk som hovedråvare og rigeligt grønt i form af smasket knoldselleri, squash og forårsløg, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:55.140Z"
   }
 }

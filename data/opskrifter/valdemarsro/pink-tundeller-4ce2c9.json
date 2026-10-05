@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 8,
   "source_lines": 12,
+  "image": "https://www.valdemarsro.dk/wp-content/2013/01/tundeller-opskrift.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Børnenes livretter, Familiefavoritter, Madpakker, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:59:43.595Z",
   "title": "Pink tunfrikadeller med rødbede",
   "intro": "Små, farverige frikadeller af tun, revet rødbede og havregryn, krydret med spidskommen og cayennepeber. De steges i smør og olie.",
   "servings": 8,
@@ -143,13 +147,13 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Frikadellerne mangler stivelse og grønt til at være et helt måltid.",
+    "reason": "Retten er kun lidt tun og rødbede uden noget mættende tilbehør, så den mangler kartofler, ris eller lignende.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde rosmarinkartofler og agurkesalat med dild",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
+          "amount": 1.5,
           "unit": "kg",
           "name": "kartofler",
           "note": null,
@@ -157,19 +161,53 @@
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "hvidvinseddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til frikadellerne."
+        "Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær agurkerne i tynde skiver, og vend dem med eddike, hakket dild og en knivspids salt.",
+        "Lad agurkesalaten trække, mens kartoflerne bager.",
+        "Server agurkesalaten til de varme kartofler og tunfrikadellerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:48:32.243Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:30:21.366Z"
   }
 }

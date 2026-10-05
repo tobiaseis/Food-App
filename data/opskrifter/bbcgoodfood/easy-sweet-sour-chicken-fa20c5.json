@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 10,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1259495_9-59c201e.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Main course, Supper, Chinese, BBC Good Food, Cashew, Cashews, Chicken breast, Chicken breasts, Chinese, Good Food, Malt vinegar, Muscovado sugar, Onion, Onions, Pepper, Peppers, Pineapple, Pineapples, Sugar snap pea, Sugar snap peas, Sweet and sour",
+  "fetched_at": "2026-08-27T17:50:01.127Z",
   "title": "Sweet & sour kylling i mikroovn",
   "intro": "En hurtig sweet & sour-ret, hvor kylling og grøntsager tilberedes i sovsen i mikroovnen. Færdig på under en halv time med ananas, sukkerærter og knasende cashewnødder.",
   "servings": 4,
@@ -119,25 +123,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten har en god hovedråvare og grønt, men mangler mættende komponent som ris eller kartofler.",
+    "reason": "Retten har kylling og grønt i sovs, men mangler noget mættende som ris eller nudler.",
     "side": {
-      "title": "Hvid ris",
+      "title": "Sesamris med forårsløg og lime",
       "ingredients": [
         {
           "section": null,
-          "amount": 300,
-          "unit": "g",
-          "name": "hvid ris",
+          "amount": 3,
+          "unit": "dl",
+          "name": "ris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "olie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "stk",
+          "name": "forårsløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "lime",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter anvisningen på pakken.",
-        "Server med kyllingen."
+        "Kog risene efter pakkens anvisning, og lad dem dampe af.",
+        "Rist sesamfrøene tørre på en pande, og tag dem af.",
+        "Svits de snittede forårsløg i olie i et par minutter, og vend de kogte ris med i et par minutter.",
+        "Vend sesamfrø, sojasauce og saft fra limen i risene, og server til kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:02:33.759Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:25:30.411Z"
   }
 }

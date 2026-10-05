@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 1,
   "source_lines": 11,
+  "image": "https://www.valdemarsro.dk/wp-content/2011/12/flaeskestegsandwich.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Familiefavoritter, Juleopskrifter, Sandwich",
+  "fetched_at": "2026-08-27T17:58:39.224Z",
   "title": "Flæskestegssandwich",
   "intro": "En hurtig sandwich med kold flæskesteg, sprødt æble og en sød-skarp dressing. Perfekt til at bruge rester af julemiddagen eller søndagssteg.",
   "servings": 1,
@@ -130,34 +134,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "Sandwichen mangler tilstrækkeligt grønt til at være et helt måltid.",
-    "side": {
-      "title": "Kogte kartofler og grøn salat",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 250,
-          "unit": "g",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        },
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til sandwichen."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:44:25.191Z"
+    "complete": true,
+    "reason": "Sandwichen har kød, brød og grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:28.824Z"
   }
 }

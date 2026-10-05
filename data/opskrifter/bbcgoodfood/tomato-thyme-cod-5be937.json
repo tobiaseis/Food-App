@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 7,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-192662_12-669095c.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Supper, Mediterranean, 20 minutes, Chopped tomato, Chopped tomatoes, Cod, Fish, Good Food, Make ahead, Make it tonight, One-pot, Pollack, Pollock, Soy sauce, White fish",
+  "fetched_at": "2026-08-27T17:49:53.095Z",
   "title": "Torsk i tomat og timian",
   "intro": "Mør torskefilet, der simrer i en let sød tomatsauce med timian og soja. En hurtig hverdagsret, som passer godt til kartofler.",
   "servings": 4,
@@ -95,9 +99,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten har fisk som hovedråvare, men kartofler mangler i ingredienslisten – de nævnes kun i servereringsforslaget.",
+    "reason": "Retten har fisk i tomatsauce, men mangler noget mættende som kartofler, ris eller pasta.",
     "side": {
-      "title": "Dampede kartofler og grøn salat",
+      "title": "Ovnbagte timiankartofler med citron",
       "ingredients": [
         {
           "section": null,
@@ -109,19 +113,53 @@
         },
         {
           "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "tørret timian",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "frisk persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til fiskeskalen og kartofflerne."
+        "Skær kartoflerne i både, og vend dem med olie, timian og salt i en bradepande.",
+        "Bag kartoflerne ved 220 grader i cirka 35 minutter, til de er gyldne og sprøde.",
+        "Tilsæt de knuste hvidløgsfed de sidste 10 minutter af bagetiden.",
+        "Pres citronsaft over kartoflerne, og drys dem med hakket persille inden servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:01:51.511Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:25:18.085Z"
   }
 }

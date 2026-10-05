@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 7,
+  "image": "https://www.valdemarsro.dk/wp-content/2015/06/kylling-honning-sennep-opskrift-1.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Familiefavoritter, Festmad",
+  "fetched_at": "2026-08-27T17:57:53.619Z",
   "title": "Honningkylling med sennep og rosmarin",
   "intro": "Kyllingebryst med skind marineres i honning, sennep, citron og rosmarin og bages i ovnen, til de er gyldne og møre. En nem hverdagsret med sødme og syrlighed.",
   "servings": 4,
@@ -107,9 +111,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse – kartofler eller lign. passer perfekt til den sprøde kylling.",
+    "reason": "Retten har kun kylling og ingen mættende tilbehør eller grønt, så den mangler kartofler eller lignende.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med hvidløg og timian og gulerodssalat",
       "ingredients": [
         {
           "section": null,
@@ -121,19 +125,53 @@
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "timian",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "citronsaft",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, og vend dem med olie, timian, knuste hvidløgsfedder og salt.",
+        "Bag kartoflerne sprøde ved 200 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Riv gulerødderne groft, og vend dem med citronsaft og en knivspids salt.",
+        "Server de varme kartofler med gulerodssalaten til kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:40:30.657Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:08.672Z"
   }
 }

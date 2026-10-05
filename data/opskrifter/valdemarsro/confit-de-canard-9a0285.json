@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 9,
+  "image": "https://www.valdemarsro.dk/wp-content/2016/11/confiteret-and.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Julefrokost, julemiddag, Juleopskrifter, Simremad, Vinter",
+  "fetched_at": "2026-08-27T17:57:22.438Z",
   "title": "Confiterede andelår",
   "intro": "Andelår, der langsomt simrer mørke i andefedt efter en nat i krydderurter, citron og hvidløg. Til sidst får de sprød skind i ovnen eller på panden.",
   "servings": 4,
@@ -147,9 +151,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten har andelår som hovedråvare, men mangler stivelse eller rigeligt grønt.",
+    "reason": "Confiterede andelår er kun kød uden mættende tilbehør eller grønt, så retten mangler kartofler eller lignende.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde rosmarinkartofler og rødkålssalat med æble",
       "ingredients": [
         {
           "section": null,
@@ -161,19 +165,53 @@
         },
         {
           "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "rødkål",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "æble",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "æbleeddike",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Snit rødkålen fint, og riv eller skær æblet i tynde strimler.",
+        "Vend rødkål og æble med æbleeddike og en knivspids salt, og lad salaten trække, mens kartoflerne bager.",
+        "Server rødkålssalaten til de varme kartofler og de sprøde andelår."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:38:18.370Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:55.037Z"
   }
 }

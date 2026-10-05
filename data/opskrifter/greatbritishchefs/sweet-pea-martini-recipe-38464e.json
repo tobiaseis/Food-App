@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 1,
   "source_lines": 7,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/k4pa4xca/sweet-pea-martini-landscape-1.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Cocktail, Martini, Vermouth, Pea, Gin, easy",
+  "fetched_at": "2026-08-27T17:03:57.135Z",
   "title": "Sweet pea martini",
   "intro": "En grøn martini med ginmacereret på ærter og et strejf tør vermouth. Ærtevand og ærtegin skal laves dagen før.",
   "servings": 1,
@@ -110,24 +114,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten er en cocktail uden mætning eller ernæringsværdi - det er en drik, ikke en måltid.",
+    "reason": "Retten er en cocktail og ikke et aftensmåltid, så der mangler både hovedråvare og noget mættende.",
     "side": {
-      "title": "Knækbrød til martinin",
+      "title": "Ristet brød med hvidløgssmør og citron-agurkesalat",
       "ingredients": [
         {
           "section": null,
           "amount": 2,
           "unit": "skive",
-          "name": "knækbrød",
+          "name": "surdejsbrød",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "frisk dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Server knækbrødet ved siden af martinin."
+        "Rør det fintrevne hvidløg ud i det bløde smør, og smør det på brødskiverne.",
+        "Rist brødet på en varm pande eller i ovnen ved 220 grader, til det er gyldent og sprødt.",
+        "Skær agurken i tynde skiver, og vend den med citronsaft, hakket dild og en knivspids salt.",
+        "Server det varme brød til den friske agurkesalat."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:33:37.652Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:56.930Z"
   }
 }

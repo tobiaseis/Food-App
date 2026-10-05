@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 8,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-546476_11-4d36dee.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Asian,  Josh Eagleton, 10-30 minutes, 200 kcal or less, 4 servings, Easy, Ginger, Good for you, Haddock, Healthy recipes, Low-fat recipes, Mains, Pak choi, Plaice, Quick, Red chilli, Red chillies, Silvana Franco, Soy sauce, Steamed fish, White fish",
+  "fetched_at": "2026-08-27T17:49:24.787Z",
   "title": "Dampede fiskepakker med pak choi",
   "intro": "Hvide fiskefileter bages i foliepakker sammen med pak choi, ingefær og chili, så de damper møre i deres egen aroma. Serveres med ris.",
   "servings": 4,
@@ -115,25 +119,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse, selvom der er rigeligt grønt.",
+    "reason": "Retten har fisk og pak choi, men intet mættende tilbehør i ingredienslisten, så den mangler ris eller lignende.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Sesamris med forårsløg og lime",
       "ingredients": [
         {
           "section": null,
-          "amount": 150,
+          "amount": 250,
           "unit": "g",
-          "name": "ris",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "stk",
+          "name": "forårsløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sojasauce",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter anvisning på pakken.",
-        "Afvand risen, og server ved siden af fiskepakkerne."
+        "Kog risene efter anvisningen på pakken, og lad dem dampe af i en si.",
+        "Rist sesamfrøene gyldne på en tør pande, og skær forårsløgene i tynde ringe.",
+        "Vend de varme ris med sesamolie, sojasauce, saft fra limen, forårsløg og halvdelen af sesamfrøene.",
+        "Drys med resten af sesamfrøene, og server til fiskepakkerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:59:08.292Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:44.654Z"
   }
 }

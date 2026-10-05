@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 5,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1274488_8-6868db5.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Supper, French, Bacon, Breast, Cheddar, Chicken, Chook, Favourite, Good Food, Midweek, Mozzarella, Skinless boneless chicken breast fillet, Skinless boneless chicken breast fillets, Streaky, Streaky bacon, Wholegrain, Wholegrain mustard",
+  "fetched_at": "2026-08-27T17:49:48.219Z",
   "title": "Kyllingebryst fyldt med sennep og ost",
   "intro": "Saftige kyllingebryster fyldt med mozzarella, cheddar og grov sennep og pakket ind i sprødt bacon. Retten er hurtig at gøre klar og bages i ovnen.",
   "servings": 4,
@@ -102,15 +106,39 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende komponent som kartofler, ris eller rigeligt grønt.",
+    "reason": "Retten har kun kød og ost uden noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med hvidløg og timian og agurkesalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "timian",
           "note": null,
           "optional": false
         },
@@ -118,17 +146,27 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "eddike",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kyllingebrysterne."
+        "Skær kartoflerne i både, og vend dem med olie, hakket hvidløg, timian og salt.",
+        "Bag kartoflerne sprøde ved 200 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver, og vend den med eddike og en knivspids salt.",
+        "Server agurkesalaten til de varme kartofler."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:01:19.365Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:25:12.814Z"
   }
 }

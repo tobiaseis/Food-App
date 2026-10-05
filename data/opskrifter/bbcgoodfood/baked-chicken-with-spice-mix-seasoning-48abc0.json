@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 8,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2022/09/BakedChicken-58f57fe.jpg?resize=768,768",
+  "lang": "da",
+  "keywords": "Dinner, Chicken, family dishes, Spiced chicken",
+  "fetched_at": "2026-08-27T17:49:58.016Z",
   "title": "Ovnbagt kyllingebryst med krydderblanding",
   "intro": "Saftige kyllingebryster med en sød og røget krydderskorpe, som karamelliserer i ovnen. Enkel hverdagsret, der passer godt til kartoffelbåde og grønt.",
   "servings": 4,
@@ -125,9 +129,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler fast mættende del, da kartofler og grønt er valgfrie.",
+    "reason": "Retten er kun kyllingebryst med krydderblanding, og kartofler og grønt er valgfrie, så der mangler noget mættende.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde rosmarinkartofler og citronbroccoli",
       "ingredients": [
         {
           "section": null,
@@ -139,19 +143,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "broccoli",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, vend dem med halvdelen af olien, rosmarin og salt, og bag dem sprøde ved 200 grader i cirka 40 minutter.",
+        "Del broccolien i små buketter, og vend dem med resten af olien, hakket hvidløg og salt.",
+        "Bag broccolien på en plade sammen med kartoflerne de sidste 15 minutter.",
+        "Pres citronsaft over broccolien, og server den med kartoflerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:02:17.280Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:25:24.826Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 13,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/dlekdzzx/gbc_ferments_april26-16.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, easy",
+  "fetched_at": "2026-08-27T17:05:10.094Z",
   "title": "Grillspyd med kylling og stærk ananassauce",
   "intro": "Marinerede kyllingelår på spyd, stegt til de er brændte i kanten og penslet med en blendet, sødlig ananassauce. Serveres med en grøn urtepuré af koriander og mynte.",
   "servings": 4,
@@ -178,15 +182,31 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse eller rigeligt grønt til at være et helt måltid.",
+    "reason": "Retten har kylling og sauce, men ingen mættende komponent eller rigeligt grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Ris og grøn salat",
+      "title": "Ovnbagte kartofler med lime og koriander",
       "ingredients": [
         {
           "section": null,
-          "amount": 300,
-          "unit": "g",
-          "name": "ris",
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "røget paprika",
           "note": null,
           "optional": false
         },
@@ -194,17 +214,35 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "grøn salat",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "koriander",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakkens anvisning.",
-        "Vask salaten, riv den i stykker, og server den til spyden og risen."
+        "Skær kartoflerne i både, og vend dem med olie, paprika, hvidløg i skiver og salt.",
+        "Bag kartoflerne på en plade ved 220 grader i cirka 35 minutter, til de er gyldne og sprøde.",
+        "Pres limen over de varme kartofler, og vend dem med hakket koriander.",
+        "Server kartoflerne ved siden af grillspydene."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:35:13.867Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:02.166Z"
   }
 }

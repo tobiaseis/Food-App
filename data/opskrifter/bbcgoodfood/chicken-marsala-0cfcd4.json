@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 12,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Chicken-marsala-5c23142.jpg?resize=768,512",
+  "lang": "da",
+  "keywords": "Dinner, Chicken breasts, Creamy chicken, Crispy chicken, Marsala, Marsala gravy, Mushrooms",
+  "fetched_at": "2026-08-27T15:29:12.841Z",
   "title": "Kylling i marsalasauce",
   "intro": "Mør kylling og gyldne champignon i en cremet sauce med skalotteløg og vin. Serveres med ris, kartoffelmos eller pasta.",
   "servings": 4,
@@ -165,9 +169,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende tilbehør som kartofler, ris eller pasta.",
+    "reason": "Retten har kylling og svampe i sauce, men ingen mættende bestanddel, da ris, kartoffelmos eller pasta kun er serveringsforslag.",
     "side": {
-      "title": "Kartoffelmos og grøn salat",
+      "title": "Kartoffelmos med brunet smør og ovnbagt broccoli",
       "ingredients": [
         {
           "section": null,
@@ -179,9 +183,33 @@
         },
         {
           "section": null,
-          "amount": 2,
+          "amount": 50,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
           "unit": "dl",
-          "name": "fløde",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "broccoli",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
           "note": null,
           "optional": false
         },
@@ -189,18 +217,19 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Dræn dem, og mos dem med smør og fløde.",
-        "Vask salaten, riv den i stykker, og server ved siden af."
+        "Skær kartoflerne i stykker, kog dem møre i cirka 20 minutter, og hæld vandet fra.",
+        "Del broccolien i buketter, vend dem med olivenolie og salt, og bag dem ved 220 grader i cirka 15 minutter.",
+        "Brun smørret let på en pande, og mos kartoflerne med det brunede smør og mælk til en jævn mos.",
+        "Pres lidt citronsaft over broccolien, og server den til kartoffelmosen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:11:38.630Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:24.739Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 2,
   "source_lines": 19,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/k3tnbp2z/gbc_valentines_2026-22.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, easy",
+  "fetched_at": "2026-08-27T17:07:02.897Z",
   "title": "Culottesteak med salsa af syltede rødløg",
   "intro": "Mør, rosastegt bøf med smørbasting og friske urter, serveret med en frisk salsa af hurtigsyltede lyserøde løg, rødbeder og tomat. Løgene skal trække i mindst en time, så start i god tid.",
   "servings": 2,
@@ -243,25 +247,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten har en fin hovedråvare og grøntsagssalsa, men mangler mættende stivelse til at være et helt aftensmåltid.",
+    "reason": "Retten har kun kød og salsa uden mættende tilbehør, så den mangler kartofler, pasta, ris eller brød.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde hvidløgskartofler med rosmarin",
       "ingredients": [
         {
           "section": null,
-          "amount": 400,
+          "amount": 700,
           "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 20,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Afløb og server til steaken."
+        "Skær kartoflerne i både, og vend dem med olivenolie, rosmarin og salt.",
+        "Bag kartoflerne på en bageplade ved 220 grader i cirka 35 minutter, til de er gyldne og sprøde.",
+        "Hak hvidløg og persille, og vend dem med smør og de varme kartofler.",
+        "Server kartoflerne ved siden af bøfferne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:37:39.996Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:28.074Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 24,
+  "image": "https://www.valdemarsro.dk/wp-content/2019/04/fiskesuppe.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Festmad, Fisk & Skaldyr, Forretter, Natmad, Nytår, Påskefrokost, Suppe",
+  "fetched_at": "2026-08-27T17:56:10.541Z",
   "title": "Fiskesuppe med hjemmelavet fiskefond",
   "intro": "Cremet fiskesuppe med torsk, laks og tynde strimler af grøntsager, smagt til med citron og dild. Fonden koges først på fiskeben og kan laves i forvejen.",
   "servings": 4,
@@ -258,25 +262,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "Fiskesuppen mangler mættende stivelse – supper skal have enten stivelse eller rigeligt grønt for at være hele måltider.",
-    "side": {
-      "title": "Rugbrød",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "stk",
-          "name": "rugbrød",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skær rugbrødet i skiver, og server det til suppen."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:33:31.482Z"
+    "complete": true,
+    "reason": "Suppen har fisk og rigeligt grønt og er en hel aftensret, som supper regnes for.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:04.776Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 13,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2014/09/Chicken-schnitzel-with-coleslaw-b53b41f.jpg?resize=768,698",
+  "lang": "da",
+  "keywords": "Dinner, Main course, British, 25th birthday, Autumn, Calcium, Cooking with kids, easy chicken dinner, Family friendly, German recipe, healthy chicken breast recipe, healthy chicken dinner, healthy chicken schnitzel, kid's cooking recipe",
+  "fetched_at": "2026-08-27T15:32:51.059Z",
   "title": "Kyllingeschnitzel med coleslaw",
   "intro": "Sprøde, paneret kyllingeschnitzler med parmesan serveres til en frisk coleslaw af hvidkål, gulerod og æble i yoghurtdressing.",
   "servings": 4,
@@ -170,26 +174,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mætning - kyllingeschnitzel serveres klassisk med kartofler eller brød.",
+    "reason": "Retten har protein og lidt grønt i coleslawen, men mangler noget mættende som kartofler, ris eller pasta.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde ovnkartofler med hvidløg og persille",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "paprika",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne.",
-        "Kog dem møre i letsaltet vand.",
-        "Server til schnitzlerne."
+        "Skær kartoflerne i både, og vend dem med olie, paprika, knuste hvidløg og salt.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Hak persillen, og vend den med citronsaft og de varme kartofler.",
+        "Server kartoflerne til schnitzlerne og coleslawen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:18:29.060Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:12.650Z"
   }
 }

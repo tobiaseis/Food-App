@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 27,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/ijdekw0v/crispy-chicken-thighs-with-hot-honey-mustard-landscape-1.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, Steam, Combi oven, Chicken thigh, Hot honey, mustard, easy",
+  "fetched_at": "2026-08-27T17:03:42.963Z",
   "title": "Sprøde kyllingelår med hot honey-sennep",
   "intro": "Ovnbagte kyllingeoverlår med sprød skind, penslet med en sød og stærk glaze af honning, sennep og sriracha. Serveres på citronyoghurt med hurtigt syltede skalotteløg og dild.",
   "servings": 4,
@@ -314,9 +318,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten er stegt kylling med saucer, men mangler en kulhydratbase eller rigeligt grønt til at blive et helt måltid.",
+    "reason": "Retten har kun kylling, yoghurt og syltede løg, men intet mættende eller rigeligt grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med rosmarin og hvidløg",
       "ingredients": [
         {
           "section": null,
@@ -328,19 +332,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, og vend dem med olie, rosmarin, knuste hvidløgsfed og salt.",
+        "Bag kartoflerne sprøde ved 200 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Hak persillen, og riv skallen af citronen.",
+        "Vend persille og citronskal over de varme kartofler, og pres lidt citronsaft over."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:32:45.801Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:45.305Z"
   }
 }

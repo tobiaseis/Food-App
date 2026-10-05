@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 15,
+  "image": "https://www.valdemarsro.dk/wp-content/2024/08/bang-bang-kylling.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Børnenes livretter, Familiefavoritter, Grill opskrifter, Grillspyd, Nem Hverdagsmad, Tilbehør Aftensmad",
+  "fetched_at": "2026-08-27T15:15:33.849Z",
   "title": "Bang bang-kyllingespyd",
   "intro": "Marinerede kyllingespyd, der stegges på panden og penskles med en cremet, sprød-stærk chilimayo. Perfekt til hverdag og til fest.",
   "servings": 4,
@@ -182,33 +186,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende elementer – den består kun af kyllingespyd uden kartofler, ris, pasta, brød eller tilsvarende.",
+    "reason": "Kyllingespyd med chilimayo er kun protein uden noget mættende eller grønt, så der mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler og asiatisk coleslaw",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
           "note": null,
           "optional": false
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "spidskål",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "risvineddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server med kartoflerne og spydene."
+        "Skær kartoflerne i både, vend dem med olivenolie og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Snit spidskålen fint, og riv gulerødderne groft.",
+        "Vend spidskål og gulerødder med risvineddike og en knivspids salt.",
+        "Rist sesamfrøene tørre på en pande, drys dem over coleslawen, og server med de varme kartofler."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:43:24.816Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:18:54.042Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 8,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-285506_11-ae8f79e.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, French,  Josh Eagleton, 30-60 minutes, 4 servings, 400 kcal or less, Cheap recipe, Chicken recipe, Chicken thigh, Chicken thighs, Crème fraîche, Easy recipe, Everyday recipe, Family recipe, Garlic clove, Garlic cloves, Good Food, Little Gem lettuce, Little Gem lettuces, Mains, O",
+  "fetched_at": "2026-08-27T17:50:09.931Z",
   "title": "Fransk kylling med ærter og bacon",
   "intro": "Mør kylling i en let sauce af fond og creme fraiche med sprød bacon, bløde ærter og salat. En nem one-pan-ret med fransk præg.",
   "servings": 4,
@@ -110,34 +114,59 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler et mættende tilbehør som kartofler eller ris.",
+    "reason": "Retten har kylling og lidt ærter, men mangler noget mættende som kartofler, ris eller brød for at være et helt måltid.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Kartoffelmos med brunet smør og purløg",
       "ingredients": [
         {
           "section": null,
-          "amount": 800,
-          "unit": "g",
+          "amount": 1,
+          "unit": "kg",
           "name": "kartofler",
           "note": null,
           "optional": false
         },
         {
           "section": null,
+          "amount": 75,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
+          "unit": "dl",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "purløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "knivspids",
+          "name": "muskatnød",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, og riv den i stykker.",
-        "Server kartoflerne og salaten til kyllingen."
+        "Skræl kartoflerne, skær dem i stykker, og kog dem møre i cirka 20 minutter i letsaltet vand.",
+        "Varm smørret i en lille gryde ved middel varme, til det er gyldent og dufter nøddeagtigt, og tilsæt mælken.",
+        "Si vandet fra kartoflerne, og mos dem med det brunede smør og mælken og muskatnød, til moset er glat.",
+        "Klip purløget fint, og vend det i moset lige før servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:04:01.501Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:25:50.786Z"
   }
 }

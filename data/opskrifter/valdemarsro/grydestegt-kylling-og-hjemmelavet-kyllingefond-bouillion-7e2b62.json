@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 1,
   "source_lines": 18,
+  "image": "https://www.valdemarsro.dk/wp-content/hanekylling.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Suppe",
+  "fetched_at": "2026-08-27T17:59:49.463Z",
   "title": "Grydekogt kylling med hjemmelavet kyllingefond",
   "intro": "En hel kylling simrer i grønsagsfond, og bagefter bliver skrog og ben kogt videre til en kraftig, hjemmelavet kyllingefond. Fonden kan fryses og bruges til supper og saucer.",
   "servings": 6,
@@ -211,9 +215,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelsesholdigt tilbehør som kartofler eller anden stivelse.",
+    "reason": "Retten er kogt kylling og fond uden mættende tilbehør, da grøntsagerne sies fra, så der mangler kartofler eller lignende.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Kartoffelmos med brunet smør og purløg",
       "ingredients": [
         {
           "section": null,
@@ -225,19 +229,53 @@
         },
         {
           "section": null,
+          "amount": 100,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "dl",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
+          "unit": "knivspids",
+          "name": "muskatnød",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "purløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "citronsaft",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kyllingen."
+        "Skræl kartoflerne, skær dem i stykker, og kog dem møre i saltet vand.",
+        "Bræk smørret ved middel varme, til det er gyldent og dufter nøddeagtigt, og varm mælken op.",
+        "Mos kartoflerne, og rør dem med det brunede smør, mælk, muskat og citronsaft til en glat mos.",
+        "Klip purløget fint, og drys det over moset lige før servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:49:16.936Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:30:32.450Z"
   }
 }

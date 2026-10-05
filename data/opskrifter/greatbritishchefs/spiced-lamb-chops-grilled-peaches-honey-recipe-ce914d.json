@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 30,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/5z5clhtl/260416_gbc_kamodo_joe_lamb_145.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, lamb chop, yoghurt, peaches, easy",
+  "fetched_at": "2026-08-27T17:05:16.696Z",
   "title": "Krydrede lammekoteletter med grillede ferskner og honning",
   "intro": "Lammekoteletter marineret i yoghurt og varme krydderier, grillet sammen med ferskner og pensletpå med honningglasur. Serveres på kølig mynteyoghurt.",
   "servings": 4,
@@ -319,9 +323,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse til at være et helt aftensmåltid.",
+    "reason": "Retten har lam og frugt, men intet mættende tilbehør som kartofler, ris eller brød, så den mangler en stivelseskomponent.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Ovnkartofler med spidskommen og citron",
       "ingredients": [
         {
           "section": null,
@@ -333,19 +337,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "frisk koriander",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, og vend dem med olie, spidskommen og salt.",
+        "Bag kartoflerne ved 220 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Tilsæt de knuste hvidløgsfed de sidste 10 minutter.",
+        "Pres citronsaft over de varme kartofler, og drys med hakket koriander."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:35:13.751Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:05.478Z"
   }
 }

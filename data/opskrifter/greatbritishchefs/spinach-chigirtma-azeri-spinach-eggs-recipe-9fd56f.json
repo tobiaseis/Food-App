@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 2,
   "source_lines": 8,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/2mjbgi13/spinach-chigirtma.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, spinach recipes, spinach and eggs, easy",
+  "fetched_at": "2026-08-27T17:08:52.646Z",
   "title": "Aserbajdsjansk spinat med æg (chigirtma)",
   "intro": "Mør spinat og gyldne løg samles med æg, der stivner under låg i panden. En hurtig ret fra Aserbajdsjan, der er god til frokost eller aftensmad.",
   "servings": 2,
@@ -121,25 +125,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende stivelsesholdigt tilbehør til at blive et helt måltid.",
+    "reason": "Retten er mest spinat og æg uden noget mættende, så den mangler kartofler, brød eller lignende.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde spidskommenskartofler og tomat-agurkesalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 500,
+          "amount": 600,
           "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "spidskommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "tomater",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Hæld vandet af, og server til spinaten med æg."
+        "Skær kartoflerne i både, vend dem med olie, spidskommen og salt, og bag dem sprøde ved 220 grader i cirka 30 minutter.",
+        "Skær tomater og agurk i tern, og hak dilden.",
+        "Vend grøntsagerne med dild og en knivspids salt lige før servering.",
+        "Server den friske salat til de varme kartofler."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:38:37.141Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:37.875Z"
   }
 }

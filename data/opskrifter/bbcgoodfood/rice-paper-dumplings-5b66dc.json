@@ -9,6 +9,10 @@
   "active_minutes": 25,
   "yield_count": 20,
   "source_lines": 15,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/06/RicePaperDumplings-1f593cd.jpg?resize=768,713",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Side dish, Snack, Vietnamese, Chinese dumplings, Dumplings, Pork mince, rice paper sheets, Shiitake mushrooms",
+  "fetched_at": "2026-08-27T15:33:11.232Z",
   "title": "Rispapirdumplings med svinekød",
   "intro": "Sprøde dumplings i rispapir fyldt med svinekød, kål og shiitake, som steges gyldne i panden. Serveres med en let dip af soja, riseddike og sesam.",
   "servings": 20,
@@ -195,25 +199,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Rispapirdumplings mangler mættende stivelse som ris eller kartofler.",
+    "reason": "Dumplingsene har kun lidt kød og fyld pr. portion og ingen rigtig mættende del, så de mangler et tilbehør.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Sesamnudler med gulerod og forårsløg",
       "ingredients": [
         {
           "section": null,
-          "amount": 400,
-          "unit": "g",
-          "name": "ris",
+          "amount": 1,
+          "unit": "kg",
+          "name": "nudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 6,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 5,
+          "unit": "stk",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "bundt",
+          "name": "forårsløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "sesamfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakkens anvisning.",
-        "Server den til dumplingsene."
+        "Kog nudlerne efter anvisningen på pakken, og lad dem dryppe af.",
+        "Rist sesamfrøene tørre på en pande, til de dufter.",
+        "Riv gulerødderne groft, og skær forårsløgene fint.",
+        "Vend de lune nudler med sesamolie, sojasauce, gulerod og forårsløg, og drys med sesamfrø."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:29:42.304Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:25.698Z"
   }
 }

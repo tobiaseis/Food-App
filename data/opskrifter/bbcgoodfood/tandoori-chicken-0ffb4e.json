@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 8,
   "source_lines": 12,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-871507_11-edaf531.jpg?resize=500,454",
+  "lang": "da",
+  "keywords": null,
+  "fetched_at": "2026-08-27T15:32:59.218Z",
   "title": "Tandoori kylling",
   "intro": "Mørt kyllingelår i en marinade af yoghurt, citron og krydderier, grillet til de er let forkullede. Marinaden kan laves dagen før.",
   "servings": 8,
@@ -138,15 +142,23 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler et stivelsesholdigt tilbehør.",
+    "reason": "Retten er kun kylling med marinade og mangler noget mættende som ris, kartofler eller brød.",
     "side": {
-      "title": "Ris og agurkesalat",
+      "title": "Citronris med koriander og ristede mandler",
       "ingredients": [
         {
           "section": null,
-          "amount": 500,
+          "amount": 600,
           "unit": "g",
-          "name": "ris",
+          "name": "basmatiris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "smør",
           "note": null,
           "optional": false
         },
@@ -154,26 +166,43 @@
           "section": null,
           "amount": 2,
           "unit": "stk",
-          "name": "agurk",
+          "name": "citron",
           "note": null,
           "optional": false
         },
         {
           "section": null,
-          "amount": 1.5,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "frisk koriander",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
           "unit": "dl",
-          "name": "naturel yoghurt",
+          "name": "mandelflager",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommenfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen i letsaltet vand efter anvisningen på pakken.",
-        "Skræl agurkerne, skær dem i skiver, og bland dem med yoghurten. Krydr med salt.",
-        "Dræn risen, og server den med agurkesalaten til kyllingen."
+        "Rist mandelflagerne tørre på en pande, til de er gyldne, og tag dem af panden.",
+        "Smelt smørret i en gryde, og rist spidskommenfrøene i et minut. Tilsæt risene, og kog dem efter anvisningen på posen.",
+        "Riv skallen af citronerne, og pres saften. Hak koriander.",
+        "Vend citronskal, citronsaft, koriander og mandler i de varme ris, og server til kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:19:15.585Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:15.432Z"
   }
 }

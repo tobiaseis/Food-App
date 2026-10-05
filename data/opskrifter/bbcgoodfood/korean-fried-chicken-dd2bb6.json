@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 11,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/korean-fried-chicken-0cb444a.gif?resize=440,400",
+  "lang": "da",
+  "keywords": "Buffet, Dinner, Barbecue, Buffet, Chicken wings, Elena Silcock, Indulgent, Korean, korean chicken wings, Party, Spicy, sticky wings",
+  "fetched_at": "2026-08-27T15:32:50.078Z",
   "title": "Koreansk friturestegt kylling",
   "intro": "Sprøde kyllingevinger vendt i en sød og lidt stærk sauce med gochujang, soja og hvidløg. Drys med sesamfrø og forårsløg, og server med det samme.",
   "servings": 4,
@@ -166,15 +170,31 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende komponenter som ris eller kartofler.",
+    "reason": "Retten er kun kyllingevinger i sauce uden noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Ris og grøn salat",
+      "title": "Sesamris med agurkesalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 400,
-          "unit": "g",
+          "amount": 3,
+          "unit": "dl",
           "name": "jasminris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "ristede sesamfrø",
           "note": null,
           "optional": false
         },
@@ -182,18 +202,34 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "riseddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "forårsløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakkens anvisning.",
-        "Vask salaten, og riv den i stykker.",
-        "Server risen og salaten til kyllingen."
+        "Kog risene efter pakkens anvisning, og vend dem med sesamolie og halvdelen af sesamfrøene.",
+        "Skær agurken i tynde skiver, og vend dem med riseddike, forårsløg i tynde skiver og en knivspids salt.",
+        "Drys risene med resten af sesamfrøene, og server dem med agurkesalaten."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:18:10.765Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:07.999Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 17,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/t41gvwgb/schnitzels-0.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, easy",
+  "fetched_at": "2026-08-27T17:06:37.001Z",
   "title": "Schnitzel Holstein",
   "intro": "Paneret kalveschnitzel toppet med spejlæg, ansjoser og sprøde kapers, serveret med en frisk salat af romaine, karse og radiser. En klassiker, der smager af smør og citron.",
   "servings": 4,
@@ -208,9 +212,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende kulhydratbase som kartofler eller ris til at gøre det til et helt måltid.",
+    "reason": "Retten har kød og salat, men mangler noget mættende som kartofler, ris eller pasta.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde ovnkartofler med hvidløg og persille",
       "ingredients": [
         {
           "section": null,
@@ -219,14 +223,56 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "paprika",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne.",
-        "Kog dem møre i letsaltet vand, og aflast dem."
+        "Skær kartoflerne i både, og vend dem med olie, paprika og salt.",
+        "Bag kartoflerne på en bageplade ved 220 grader i cirka 30 minutter, til de er gyldne og sprøde.",
+        "Tilsæt de knuste hvidløg de sidste 5 minutter af bagetiden.",
+        "Hak persillen, og vend den med revet citronskal og et pres citronsaft over de varme kartofler."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:37:06.582Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:22.341Z"
   }
 }

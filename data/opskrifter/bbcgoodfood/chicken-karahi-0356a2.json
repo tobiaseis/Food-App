@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 6,
   "source_lines": 10,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2024/12/Chicken-Karahi-847828f.jpg?resize=768,713",
+  "lang": "da",
+  "keywords": "Dinner, Indian, Chicken curry, pakistani recipes",
+  "fetched_at": "2026-08-27T17:47:00.542Z",
   "title": "Kylling karahi",
   "intro": "En pakistansk kyllingegryde med modne tomater, grøn chili og ingefær, der simrer ind til en tyk, sprød sovs. Server den med ris, naan eller roti.",
   "servings": 6,
@@ -138,25 +142,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en obligatorisk mættende komponent, da ris er markeret som valgfrit tilbehør.",
+    "reason": "Retten er kun kylling i tomatsauce uden en mættende bestanddel, da ris eller brød kun er valgfrit.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Spidskommenris med løg og koriander",
       "ingredients": [
         {
           "section": null,
-          "amount": 300,
+          "amount": 400,
           "unit": "g",
-          "name": "ris",
+          "name": "basmatiris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "løg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 8,
+          "unit": "dl",
+          "name": "vand",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "koriander",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skyl risen under koldt vand.",
-        "Kog risen i letsaltet vand ifølge pakningens anvisning, til den er gart."
+        "Hak løget fint, og skyl risene i en sigte, til vandet er klart.",
+        "Rist spidskommen i smør i en gryde i 1 minut, og steg løget gyldent.",
+        "Kom risene og vand i med salt, kog op, og lad det simre med låg på i cirka 12 minutter.",
+        "Lad risene trække med låg i 5 minutter, og vend hakket koriander i inden servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:49:02.170Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:49.903Z"
   }
 }

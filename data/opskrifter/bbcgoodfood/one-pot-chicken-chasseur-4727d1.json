@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 10,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2010/07/Chicken-chasseur-41ef293.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, French, Chicken casserole, Chicken leg, Chicken legs, Chicken stew, Coq au vin, Easy entertaining, French recipes, James Martin, Mushroom, Mushrooms, Red wine, Thyme, Tomato purée",
+  "fetched_at": "2026-08-27T17:49:32.212Z",
   "title": "Kylling chasseur i én gryde",
   "intro": "Møre kyllingelår, der simrer i en rig sauce af rødvin, champignon og tomat. Alt laves i samme gryde, og saucen koger ind til sidst, så smagen bliver koncentreret.",
   "servings": 4,
@@ -147,13 +151,13 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Kylling chasseur er en lækker gryderet, men mangler kulhydrater og grønt som tilbehør.",
+    "reason": "Retten har kylling og sauce, men intet mættende tilbehør som kartofler, ris eller pasta.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Kartoffelmos med brunet smør og persille",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
+          "amount": 1.2,
           "unit": "kg",
           "name": "kartofler",
           "note": null,
@@ -161,19 +165,45 @@
         },
         {
           "section": null,
+          "amount": 75,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
+          "unit": "dl",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "knivspids",
+          "name": "muskatnød",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til maden."
+        "Skræl kartoflerne, skær dem i stykker, og kog dem møre i cirka 20 minutter.",
+        "Brun smørret i en lille pande, til det dufter nøddeagtigt og er gyldent.",
+        "Si kartoflerne, og mos dem med mælk, brunet smør, muskatnød og salt.",
+        "Hak persillen, og vend den i moset lige før servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:59:54.531Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:25:03.437Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 12,
+  "image": "https://www.valdemarsro.dk/wp-content/2024/04/lynstegt-tun.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Appetizer, Asiatisk, Festmad, Fisk & Skaldyr, Forretter, Frokost, Tapas",
+  "fetched_at": "2026-08-27T15:19:41.275Z",
   "title": "Lynstegt tun med sesam",
   "intro": "Tunen brunes kort på panden, så den bliver rosa og mør indeni. Den serveres på rucola med en frisk asiatisk marinade og ristede sesamfrø.",
   "servings": 4,
@@ -147,25 +151,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten har protein men mangler mættende stivelse som ris, kartofler eller pasta til et helt måltid.",
+    "reason": "Retten er kun tun med lidt rucola og mangler noget mættende som ris, nudler eller kartofler.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Sesamnudler med forårsløg og lime",
       "ingredients": [
         {
           "section": null,
           "amount": 250,
           "unit": "g",
-          "name": "ris",
+          "name": "nudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "stk",
+          "name": "forårsløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakningens vejledning.",
-        "Server risen ved siden af tunen."
+        "Kog nudlerne efter anvisningen på pakken, og skyl dem i koldt vand.",
+        "Skær forårsløg i tynde ringe, og skær agurken i tynde stave.",
+        "Rør sesamolie, sojasauce og saft fra limen sammen til en dressing.",
+        "Vend nudler, forårsløg og agurk med dressingen, og server til tunen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:01:23.516Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:53.561Z"
   }
 }

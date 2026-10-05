@@ -9,6 +9,10 @@
   "active_minutes": 45,
   "yield_count": 4,
   "source_lines": 10,
+  "image": "https://www.valdemarsro.dk/wp-content/2018/11/moerbradboeffer-bloede-loeg-2.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Buffet, Efterår, Julefrokost, Juleopskrifter, Mormormad, Vinter",
+  "fetched_at": "2026-08-27T17:56:20.245Z",
   "title": "Mørbradbøffer med løg, champignon og flødesauce",
   "intro": "Mør svinemørbrad i bøffer med cremet sauce af løg, champignon og sprød bacon. Serveres med friske krydderurter drysset over.",
   "servings": 4,
@@ -143,9 +147,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten er en klassisk støvsuppe uden mættende komponenter som kartofler eller ris.",
+    "reason": "Retten har kød og svampe i flødesauce, men mangler noget mættende som kartofler, ris eller pasta.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Kartoffelmos med brunet smør",
       "ingredients": [
         {
           "section": null,
@@ -154,14 +158,56 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 50,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "dl",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "knivspids",
+          "name": "muskatnød",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "purløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "ristede løg",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Dræn og server til kødet."
+        "Skær kartoflerne i stykker, og kog dem møre i letsaltet vand i cirka 20 minutter.",
+        "Smelt smørret ved middelvarme, til det dufter nøddeagtigt og er gyldent, og varm mælken.",
+        "Hæld vandet fra kartoflerne, og mos dem med brunet smør, mælk, muskat og salt, til moset er glat.",
+        "Drys med hakket purløg og ristede løg, og server til bøfferne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:34:07.320Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:16.357Z"
   }
 }

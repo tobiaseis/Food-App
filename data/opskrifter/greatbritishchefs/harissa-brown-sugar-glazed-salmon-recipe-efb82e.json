@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 6,
   "source_lines": 7,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/isoct4bb/harissabrownsugarsalmon_betterathome_p178.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, salmon, sugar, harissa, easy",
+  "fetched_at": "2026-08-27T17:06:00.660Z",
   "title": "Harissa-glaseret laks med brun farin",
   "intro": "Ovnbagt laksefilet med en sprød, krydret glasur af harissa, brun farin og hvidløg. Retten serveres direkte fra pladen med friske krydderurter.",
   "servings": 6,
@@ -118,13 +122,13 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse eller rigeligt grønt som tilbehør.",
+    "reason": "Retten er kun laks med marinade uden noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med citron og yoghurt-agurkesalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 1.2,
+          "amount": 1.5,
           "unit": "kg",
           "name": "kartofler",
           "note": null,
@@ -132,19 +136,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "dl",
+          "name": "græsk yoghurt",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server sammen med kartoflerne."
+        "Skær kartoflerne i både, vend dem med olivenolie og salt, og bag dem sprøde ved 200 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver, og vend den med yoghurt, hakket dild, saft fra halvdelen af citronen og en knivspids salt.",
+        "Pres resten af citronsaften over de varme kartofler.",
+        "Server kartoflerne og agurkesalaten til laksen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:35:47.627Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:12.279Z"
   }
 }

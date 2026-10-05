@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 2,
   "source_lines": 8,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/tuna-mayo-wraps-a1f5206.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Snack, 5-a-day, Avocado, Fibre, Folate, Gluten free, goodhealth, Healthy, Low calorie, Omega 3, Sara Buenfeld, Tuna, Vitamin c, Wrap",
+  "fetched_at": "2026-08-27T17:48:05.547Z",
   "title": "Tunwraps i salatblade",
   "intro": "Letstegt tunsteak rullet ind i sprøde salatblade med en cremet avocadomayo med kapers. Et let og hurtigt måltid, der er klar på få minutter.",
   "servings": 2,
@@ -113,9 +117,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten har protein og grønt, men mangler mættende stivelse som kartofler, ris eller brød.",
+    "reason": "Retten har tun og grønt, men ingen mættende komponent, og salatbladene giver kun en let portion til et aftensmåltid.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde ovnkartofler med citron og hvidløg",
       "ingredients": [
         {
           "section": null,
@@ -124,15 +128,56 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "timian",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne.",
-        "Kog dem møre i letsaltet vand i cirka 15 minutter.",
-        "Dræn og server til wrapsene."
+        "Skær kartoflerne i både, og vend dem med olie, timian og salt.",
+        "Bag kartoflerne på en bageplade ved 220 grader i cirka 30 minutter, til de er gyldne og sprøde.",
+        "Hak hvidløg og persille, og riv skallen af citronen.",
+        "Vend de varme kartofler med hvidløg, persille, citronskal og en skvæt citronsaft."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:53:59.538Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:02.439Z"
   }
 }

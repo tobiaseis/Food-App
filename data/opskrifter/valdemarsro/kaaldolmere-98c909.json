@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 11,
+  "image": "https://www.valdemarsro.dk/wp-content/2015/09/kaaldolmere.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Mormormad",
+  "fetched_at": "2026-08-27T17:57:44.874Z",
   "title": "Kåldolmere",
   "intro": "Bløde kålblade fyldt med krydret svinefars og bagt i ovnen i bouillon og smør. En klassisk dansk hverdagsret.",
   "servings": 4,
@@ -147,33 +151,59 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler kartofler eller lignende stivelsestilbehør til at være et helt måltid.",
+    "reason": "Retten har kød og kål, men intet mættende element som kartofler, ris eller brød, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og sødmælk",
+      "title": "Kartoffelmos med brunet smør og purløg",
       "ingredients": [
         {
           "section": null,
-          "amount": 800,
-          "unit": "g",
+          "amount": 1,
+          "unit": "kg",
           "name": "kartofler",
           "note": null,
           "optional": false
         },
         {
           "section": null,
+          "amount": 75,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "dåse",
-          "name": "sødmælk",
+          "unit": "knivspids",
+          "name": "muskatnød",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "purløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne og kog dem møre i letsaltet vand.",
-        "Varm sødmælken gennem, og server den til kåldolmerne og kartoflerne."
+        "Skræl kartoflerne, skær dem i stykker, og kog dem møre i saltet vand i cirka 15 minutter.",
+        "Brun smørret i en lille gryde ved middel varme, til det dufter nøddeagtigt og er gyldent.",
+        "Hæld vandet fra kartoflerne, og mos dem med varm mælk, det brunede smør og muskatnød, til moset er jævnt.",
+        "Smag til med salt, og drys med fintklippet purløg før servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:39:58.547Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:09.946Z"
   }
 }

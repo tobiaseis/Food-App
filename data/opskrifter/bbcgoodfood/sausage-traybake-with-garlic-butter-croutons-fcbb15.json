@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 13,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/07/CROPPED-GFOMorrisonsSausagecauliflowertraybake-b80f916.jpg?resize=768,845",
+  "lang": "da",
+  "keywords": "autumn dishes, back to school, Brocoli, Cauliflower, Garlic croutons, Pork sausages, Sausage bake, sausage traybake, Vegetable bake",
+  "fetched_at": "2026-08-27T15:32:18.380Z",
   "title": "Pølsefad med blomkål, broccoli og hvidløgscroutoner",
   "intro": "Svinepølser bages sammen med blomkål, broccoli og rødløg i en sennepsglasur med honning og fennikelfrø. Til sidst får fadet et knasende topping af croutoner med hvidløgssmør og krydderurter.",
   "servings": 4,
@@ -182,26 +186,10 @@
     "Sourdough er skiftet til surdejsbrød."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Retten har god protein og rigeligt grønt, men mængden af stivelse (croutoner) er for lille til at være det vigtigste mættende element.",
-    "side": {
-      "title": "Kogte kartofler",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Sil dem, og server dem til fadet."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:17:23.208Z"
+    "complete": true,
+    "reason": "Retten har pølser som hovedråvare, rigeligt grønt fra blomkål og broccoli og mættende surdejscroutoner, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:04.172Z"
   }
 }

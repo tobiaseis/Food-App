@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 12,
+  "image": "https://www.valdemarsro.dk/wp-content/2017/01/tarteletter.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Buffet, Forretter, Julefrokost, Juleopskrifter, Mormormad, Natmad",
+  "fetched_at": "2026-08-27T15:18:50.456Z",
   "title": "Tarteletter med høns i asparges",
   "intro": "Klassisk dansk tarteletfyld med mør kogt kylling og asparges i en cremet hvid sauce. Serveres i sprøde, lune tarteletskaller med friskhakket persille.",
   "servings": 4,
@@ -157,15 +161,31 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Tarteletter er små og traditionelt en forret; tilbehør skal til for at gøre det til et helt måltid.",
+    "reason": "Tarteletter med kylling i asparges er en let ret med lidt dej og lidt grønt, så den mangler et mættende tilbehør til at blive et helt aftensmåltid.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Ovnbagt broccoli med citron og mandler",
       "ingredients": [
         {
           "section": null,
-          "amount": 800,
-          "unit": "g",
-          "name": "kartofler",
+          "amount": 2,
+          "unit": "stk",
+          "name": "broccoli",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         },
@@ -173,17 +193,35 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 40,
+          "unit": "g",
+          "name": "hakkede mandler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "nye kartofler",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker og server den til tarteletterne og kartoflerne."
+        "Skær kartoflerne i både, vend dem med halvdelen af olien og salt, og bag dem ved 220 grader i cirka 30 minutter.",
+        "Del broccolien i buketter, og vend dem med resten af olien, presset hvidløg og salt.",
+        "Bag broccolien sammen med kartoflerne de sidste 15 minutter, og rist mandlerne tørre på en pande.",
+        "Pres citronsaft over broccolien, og top med de ristede mandler og revet citronskal."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:57:55.780Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:43.227Z"
   }
 }

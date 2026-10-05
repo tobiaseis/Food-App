@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 2,
   "source_lines": 14,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/ofmnsa5e/steamed-sea-bass-with-ginger-soy-and-sizzling-chilli-oil-landscape-1.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, Steam, Sea bass, Sizzling oil, Chilli oil, easy",
+  "fetched_at": "2026-08-27T17:03:44.039Z",
   "title": "Dampet havbars med ingefær, soja og sprødende chiliolie",
   "intro": "Havbarsfileter damper blidt på en seng af koriander og får en sprød, varm chiliolie og en frisk sojadressing med ingefær. Retten er let og hurtig og har masser af smag.",
   "servings": 2,
@@ -186,26 +190,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse til at være et helt måltid.",
+    "reason": "Retten er kun fisk med dressing og chiliolie uden noget mættende eller grønt tilbehør.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Sesamnudler med agurk og forårsløg",
       "ingredients": [
         {
           "section": null,
-          "amount": 150,
+          "amount": 200,
           "unit": "g",
-          "name": "ris",
+          "name": "nudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "risvineddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skyl risen i koldt vand.",
-        "Kog risen i dobbelt så meget vand i ca. 15 minutter.",
-        "Lad den hvile 5 minutter under låg."
+        "Kog nudlerne efter anvisningen, skyl dem i koldt vand, og lad dem dryppe af.",
+        "Rør sesamolie, sojasauce og eddike sammen, og vend nudlerne i dressingen.",
+        "Skær agurken i tynde strimler, og vend dem i nudlerne.",
+        "Rist sesamfrøene tørre på en pande, og drys dem over, før du serverer."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:33:50.087Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:45.137Z"
   }
 }

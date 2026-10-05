@@ -9,6 +9,10 @@
   "active_minutes": 45,
   "yield_count": 4,
   "source_lines": 22,
+  "image": "https://www.valdemarsro.dk/wp-content/2023/05/sproed-mexi-torsk.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Fisk & Skaldyr, Mexicansk",
+  "fetched_at": "2026-08-27T15:17:02.470Z",
   "title": "Sprød mexicansk torsk med mangosalsa og pico de gallo",
   "intro": "Torskefilet i sprød pankorasp med mexicanske krydderier, serveret med frisk mangosalsa og en klassisk pico de gallo. Det er en let og farverig ret med meget smag.",
   "servings": 4,
@@ -251,9 +255,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten har fisk og salsaer, men mangler en mættende komponent som kartofler, ris eller brød.",
+    "reason": "Retten har fisk og friske salsaer, men mangler noget mættende som kartofler, ris eller brød.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde paprikakartofler med lime og koriander",
       "ingredients": [
         {
           "section": null,
@@ -262,14 +266,56 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "paprika",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "spidskommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "koriander",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Afløb dem, og server dem til torsken."
+        "Skær kartoflerne i både, og vend dem med olie, paprika, spidskommen og salt.",
+        "Bag kartoflerne ved 220 grader i cirka 35 minutter, til de er gyldne og sprøde.",
+        "Hak koriander, og vend den med limesaft og lidt limeskal over de varme kartofler.",
+        "Server kartoflerne ved siden af den sprøde torsk."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:49:40.263Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:03.143Z"
   }
 }

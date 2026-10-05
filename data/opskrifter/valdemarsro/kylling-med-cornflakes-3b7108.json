@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 9,
+  "image": "https://www.valdemarsro.dk/wp-content/2016/02/kylling-cornflakes-1.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Børnenes livretter, Familiefavoritter, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:57:39.070Z",
   "title": "Cornflakeskylling",
   "intro": "Mør kylling, der først hviler i kærnemælk og derefter får en sprød panering af cornflakes. Bages i ovnen og bliver gyldn og sprød.",
   "servings": 4,
@@ -119,33 +123,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten er paneret kylling uden kartofler, ris, pasta eller grønt som mætning.",
+    "reason": "Retten har kun protein med en tynd panering og mangler noget mættende eller rigeligt grønt.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Ovnbagte kartoffelbåde med paprika og coleslaw",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
           "note": null,
           "optional": false
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
+          "unit": "tsk",
+          "name": "paprika",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "hvidkål",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "cremefraiche",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den sammen med kartoflerne til kyllingen."
+        "Skær kartoflerne i både, vend dem med olie, paprika og salt, og bag dem sprøde ved 200 grader i cirka 35 minutter.",
+        "Snit hvidkålen fint, og riv gulerødderne groft.",
+        "Vend kål og gulerødder med cremefraiche, en knivspids salt og peber.",
+        "Server coleslawen til de varme kartoffelbåde."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:39:26.534Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:01.713Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 6,
   "source_lines": 12,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-5116_11-a42028a.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Buffet, Dinner, Main course, Supper, Indian,  Josh Eagleton, 30-60 minutes, 400 kcal or less, 6 servings, Chicken thigh, Chicken thighs, Chilli powder, Coconut milk, Curry, Ginger, Ground turmeric, Indian, Lime, Limes, Mains, Make ahead, Red chilli, Red chillies, Sara Buenfeld, Thigh",
+  "fetched_at": "2026-08-27T17:50:13.121Z",
   "title": "Ingefærkylling med kokosmælk",
   "intro": "Mør kylling i en mild karry med ingefær, koriander og kokosmælk. Kødet marinerer først, og retten serveres med ris og chutney.",
   "servings": 6,
@@ -153,25 +157,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten er en karry, der mangler stivelse (ris) til at være et helt måltid.",
+    "reason": "Retten er kun kylling i kokossauce uden mættende tilbehør i ingredienserne, så den mangler ris, brød eller lignende.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Spidskommenris og agurkeraita",
       "ingredients": [
         {
           "section": null,
-          "amount": 400,
+          "amount": 350,
           "unit": "g",
-          "name": "ris",
+          "name": "basmatiris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommen, hele frø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "dl",
+          "name": "yoghurt naturel",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "mynte",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen mørt efter anvisning på pakken.",
-        "Server sammen med karrien."
+        "Skyl risene, og rist spidskommen i smør i en gryde i et par minutter, til den dufter.",
+        "Tilsæt ris og vand efter pakkens anvisning samt en knivspids salt, og kog risene med låg, til de er møre.",
+        "Riv agurken groft, pres vandet fra, og vend den med yoghurt, hakket mynte og en knivspids salt.",
+        "Server spidskommenrisene med raitaen til kyllingeretten."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:04:42.461Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:26:01.356Z"
   }
 }

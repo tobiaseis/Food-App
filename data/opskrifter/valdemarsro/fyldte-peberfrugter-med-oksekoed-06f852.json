@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 11,
+  "image": "https://www.valdemarsro.dk/wp-content/2022/02/fyldte-peberfrugter-oksekoed.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Mad på budget, Mormormad, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T15:17:53.062Z",
   "title": "Fyldte peberfrugter med oksekød",
   "intro": "Halve røde peberfrugter fyldt med krydret oksekød og squash og bagt under smeltet ost. En nem ret til hverdagen, som klares på én pande og i ét fad.",
   "servings": 4,
@@ -151,15 +155,23 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Der mangler stivelseholdigt tilbehør.",
+    "reason": "Retten har kød og grønt, men ingen mættende basis som ris, kartofler eller brød, så den mangler et tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Couscoussalat med citron og mynte",
       "ingredients": [
         {
           "section": null,
-          "amount": 800,
+          "amount": 250,
           "unit": "g",
-          "name": "kartofler",
+          "name": "couscous",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "dl",
+          "name": "kogende vand",
           "note": null,
           "optional": false
         },
@@ -167,17 +179,43 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "frisk mynte",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server med kartoflerne."
+        "Hæld det kogende vand over couscousen i en skål, dæk til, og lad den trække i 5 minutter.",
+        "Riv skallen af citronen, og pres saften.",
+        "Fnug couscousen med en gaffel, og vend den med citronskal, citronsaft, olivenolie og salt.",
+        "Skær agurken i små tern, hak mynten, og vend begge dele i couscousen lige før servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:54:34.757Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:28.948Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 9,
+  "image": "https://www.valdemarsro.dk/wp-content/2018/06/frittata-squash.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad",
+  "fetched_at": "2026-08-27T17:59:03.641Z",
   "title": "Frittata med squash og chorizo",
   "intro": "En saftig ovnbagt æggekage med revet squash, løg og pikant chorizo. Den er nem at lave på én pande og smager godt både varm og kold.",
   "servings": 4,
@@ -123,15 +127,47 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Frittataen har protein og lidt grøntsag, men mangler stivelse eller rigeligt grønt til at være et helt måltid.",
+    "reason": "Frittataen er mest æg og squash uden noget mættende som kartofler eller brød, så den trænger til tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med hvidløg og røget paprika",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "røget paprika",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         },
@@ -139,17 +175,19 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til frittataen."
+        "Tænd ovnen på 220 grader, og skær kartoflerne i både.",
+        "Vend kartoflerne med olie, rosmarin, røget paprika, salt og peber, og bag dem på en plade i cirka 35 minutter.",
+        "Hak hvidløget groft, og vend det i kartoflerne de sidste 5 minutter.",
+        "Pres citronsaft over de varme kartofler, og server dem til frittataen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:45:13.181Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:42.773Z"
   }
 }

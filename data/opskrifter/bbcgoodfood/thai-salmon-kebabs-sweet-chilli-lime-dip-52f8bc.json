@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 4,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-2204_11-f67d158.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Thai,  Josh Eagleton, 10-30 minutes, 30-60 minutes, 4 servings, 400 kcal or less, BBC Good Food, Chilli sauce, Fish, Good Food, Lime, Limes, Mains, Quick, Salmon, Salmon fillet, Salmon fillets, Thai food",
+  "fetched_at": "2026-08-27T17:46:24.790Z",
   "title": "Thailandske laksespyd med sweet chili-dip",
   "intro": "Saftige laksespyd, der marinerer kort i sød chili og lime og tilberedes på grillpande. Serveres med en frisk dip af den samme blanding.",
   "servings": 4,
@@ -87,25 +91,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mætningskomponent som kartofler, ris eller brød.",
+    "reason": "Retten er kun laksespyd med dip uden noget mættende eller grønt tilbehør.",
     "side": {
-      "title": "Kogt hvid ris",
+      "title": "Sesamnudler med agurk og lime",
       "ingredients": [
         {
           "section": null,
-          "amount": 240,
+          "amount": 300,
           "unit": "g",
-          "name": "ris",
+          "name": "nudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "koriander",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skyl risen, og kog den møre i letsaltet vand.",
-        "Server risen til spydene."
+        "Kog nudlerne efter pakkens anvisning, og lad dem dryppe af.",
+        "Rist sesamfrøene tørre på en pande, til de dufter og får farve.",
+        "Skær agurken i tynde stave, og hak koriander.",
+        "Vend nudlerne med sesamolie, sojasauce, agurk, koriander og sesamfrø."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:46:53.446Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:24.989Z"
   }
 }

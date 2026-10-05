@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 1,
   "source_lines": 4,
+  "image": "https://www.valdemarsro.dk/wp-content/2016/11/anderilette.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Frokost, Julefrokost, Juleopskrifter, Pålægssalat, Tilbehør Aftensmad",
+  "fetched_at": "2026-08-27T17:57:21.462Z",
   "title": "Anderillette",
   "intro": "Cremet rillette lavet af confiterede andelår, der trevles og røres med andefedt. Den er god på brød og holder sig længe under et lag fedt.",
   "servings": 1,
@@ -71,33 +75,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Anderillette er en rillett uden stivelse eller grønt og skal kombineres med brød for at være et helt måltid.",
+    "reason": "Rilletten er et pålæg til at smøre, så den mangler noget mættende og grønt for at blive et helt måltid.",
     "side": {
-      "title": "Rugbrød og grøn salat",
+      "title": "Ristet surdejsbrød og gulerodssalat med sennep",
       "ingredients": [
         {
           "section": null,
-          "amount": 4,
+          "amount": 3,
           "unit": "skive",
-          "name": "rugbrød",
+          "name": "surdejsbrød",
           "note": null,
           "optional": false
         },
         {
           "section": null,
-          "amount": 0.5,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "dijonsennep",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "hvidvinseddike",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skær rugbrødet i skiver.",
-        "Vask salaten, riv den i stykker, og server den til anderilletten."
+        "Pensl brødskiverne med olivenolie, og rist dem gyldne på en varm pande eller i ovnen.",
+        "Gnid de varme skiver med den halverede hvidløgsfed.",
+        "Riv gulerødderne groft, og vend dem med sennep, eddike og en knivspids salt.",
+        "Server det ristede brød og gulerodssalaten sammen med rilletten."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:38:21.475Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:52.392Z"
   }
 }

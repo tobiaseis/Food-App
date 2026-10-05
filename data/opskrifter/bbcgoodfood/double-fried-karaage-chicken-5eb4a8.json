@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 3,
   "source_lines": 10,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2024/06/DoubleFriedKaraageChicken-09db89c.jpg?resize=768,713",
+  "lang": "da",
+  "keywords": "Dinner, Japanese, Chicken, Japanese recipe, Karaage chicken, Sake, togarashi",
+  "fetched_at": "2026-08-27T17:46:03.896Z",
   "title": "Dobbeltstegt karaage-kylling",
   "intro": "Japansk friturestegt kylling, der er mørbanet i sojamarinade og vendt i kartoffelmel. Den steges to gange, så den bliver mør indeni og sprød udenpå.",
   "servings": 3,
@@ -141,25 +145,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende komponent som ris, kartofler eller brød.",
+    "reason": "Retten er kun friturestegt kylling med mayonnaise og citron uden noget mættende eller grønt.",
     "side": {
-      "title": "Ris",
+      "title": "Sesamris med forårsløg og agurkesalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 250,
-          "unit": "g",
-          "name": "ris",
+          "amount": 3,
+          "unit": "dl",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "ristede sesamfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "riseddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "forårsløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Spul risen under koldt vand.",
-        "Kog den i letsaltet vand efter anvisningen på pakken."
+        "Kog risene efter pakkens anvisning, og vend dem med sesamolie, halvdelen af sesamfrøene og hakket forårsløg.",
+        "Skær agurken i tynde skiver, og vend dem med riseddike og en knivspids salt.",
+        "Drys agurkesalaten med resten af sesamfrøene.",
+        "Server risene og agurkesalaten ved siden af kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:45:11.859Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:18.567Z"
   }
 }

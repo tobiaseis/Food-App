@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 16,
+  "image": "https://www.valdemarsro.dk/wp-content/2023/10/kaalfad-oksekoed.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Børnenes livretter, Familiefavoritter, Mad på budget, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T15:16:53.733Z",
   "title": "Kålfad med hakket oksekød",
   "intro": "Et nemt ovnfad med mørt oksefars, spidskål, gulerødder og squash i cremet sovs med smag af spidskommen og paprika. Fadet toppes med smeltet ost og drysses med persille, chili og sesam.",
   "servings": 4,
@@ -178,26 +182,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "Retten har god protein og rigeligt grønt, men mangler noget mættende som kartofler, ris eller pasta.",
-    "side": {
-      "title": "Kogte kartofler",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne og kog dem møre i letsaltet vand.",
-        "Aftrys og server til fadet."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:49:03.165Z"
+    "complete": true,
+    "reason": "Retten har hakket oksekød som hovedråvare og rigeligt grønt (spidskål, gulerødder, squash), så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:18:58.778Z"
   }
 }

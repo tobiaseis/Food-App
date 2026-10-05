@@ -9,6 +9,10 @@
   "active_minutes": 60,
   "yield_count": 4,
   "source_lines": 21,
+  "image": "https://www.valdemarsro.dk/wp-content/2024/03/friske-foraarsruller-rejer.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Asiatisk, Fisk & Skaldyr",
+  "fetched_at": "2026-08-27T15:19:48.059Z",
   "title": "Forårsruller med pankorejer og ananassalsa",
   "intro": "Friske rispapirruller fyldt med sprøde, marinerede rejer, grøntsager og en frisk ananassalsa med avocado. Serveres med sød chilisauce.",
   "servings": 4,
@@ -239,23 +243,31 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende kulhydrater som ris eller kartofler til at være et helt måltid.",
+    "reason": "Rullerne er lette med lidt rejer og rispapir uden rigtig mættende basis, så de har brug for et tilbehør med nudler.",
     "side": {
-      "title": "Jasminris og grøn salat",
+      "title": "Sesamnudler med lime og forårsløg",
       "ingredients": [
         {
           "section": null,
-          "amount": 200,
+          "amount": 250,
           "unit": "g",
-          "name": "jasminris",
+          "name": "nudler",
           "note": null,
           "optional": false
         },
         {
           "section": null,
-          "amount": 4,
-          "unit": "dl",
-          "name": "vand",
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sojasauce",
           "note": null,
           "optional": false
         },
@@ -263,18 +275,35 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stilk",
+          "name": "forårsløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skyl risen, og kog den med vandet efter pakningen.",
-        "Vask salaten, og riv den i stykker.",
-        "Server risen og salaten til rullerne."
+        "Kog nudlerne efter anvisningen på pakken, og lad dem dryppe godt af.",
+        "Rist sesamfrøene på en tør pande, til de er gyldne.",
+        "Rør sesamolie, sojasauce og saft fra limen sammen, og vend nudlerne i dressingen.",
+        "Snit forårsløgene, og vend dem i nudlerne sammen med sesamfrøene."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:02:31.903Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:03.402Z"
   }
 }

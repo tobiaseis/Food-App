@@ -9,6 +9,10 @@
   "active_minutes": 5,
   "yield_count": 4,
   "source_lines": 8,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-338576_12-d97fbf5.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Thai, Coconut cream, Couch, Curry, Friday, Friday night, Good Food, One bowl, Quick curry, Thai red curry paste",
+  "fetched_at": "2026-08-27T17:50:05.981Z",
   "title": "Thailandsk rejecurry",
   "intro": "En hurtig rød curry med rejer, tomat og kokos, der er klar på cirka en halv time. Server den med kogte ris.",
   "servings": 4,
@@ -103,25 +107,59 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Curryen har protein og grønt fra tomaterne, men mangler mættende stivelse og skal serveres med ris for at være et helt måltid.",
+    "reason": "Retten har rejer og sauce, men ingen mættende bestanddel i ingredienslisten, da risene kun nævnes i serveringen.",
     "side": {
-      "title": "Kogte ris",
+      "title": "Limeris med sesam og forårsløg",
       "ingredients": [
         {
           "section": null,
           "amount": 250,
           "unit": "g",
-          "name": "langkornet ris",
+          "name": "jasminris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "stk",
+          "name": "forårsløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "smør",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skyl risen under koldt vand.",
-        "Kog risen i saltet vand til den er møre."
+        "Kog risene efter anvisningen på pakken, og lad dem dampe af i en sigte.",
+        "Rist sesamfrøene på en tør pande, til de er gyldne.",
+        "Riv skallen af limen, og pres saften. Snit forårsløgene fint.",
+        "Vend de varme ris med smør, limeskal, limesaft, forårsløg og sesamfrø, og server dem til curryen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:03:28.323Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:25:40.709Z"
   }
 }

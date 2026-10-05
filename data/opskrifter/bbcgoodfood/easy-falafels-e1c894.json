@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 16,
   "source_lines": 15,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/easy-falafels-ed47d49.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Lunch, Supper, Easy, Falafel, Gluten free, Healthy, John Torode, Vegan, Vegetarian",
+  "fetched_at": "2026-08-27T17:51:20.399Z",
   "title": "Sprøde falafler",
   "intro": "Lette falafler af udblødte kikærter, løg, porre og krydderurter, der steges i lidt olie, til de er sprøde. Server dem i wraps med hummus og tabbouleh.",
   "servings": 16,
@@ -224,34 +228,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Falaflerne mangler stivelse til at være et helt aftensmåltid.",
+    "reason": "Falaflerne er kun kikærtebøffer uden fast mættende tilbehør, da wraps er valgfrie, så de mangler noget at blive et helt måltid.",
     "side": {
-      "title": "Pitatbrød og grøn salat",
+      "title": "Couscoussalat med citron, agurk og mynte",
       "ingredients": [
         {
           "section": null,
-          "amount": 8,
-          "unit": "stk",
-          "name": "pitatbrød",
+          "amount": 400,
+          "unit": "g",
+          "name": "couscous",
           "note": null,
           "optional": false
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 3,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 6,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 8,
+          "unit": "stk",
+          "name": "tomater",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "bundt",
+          "name": "frisk mynte",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Varm pitatbrødet.",
-        "Vask salaten, og riv den i stykker.",
-        "Server falaflerne i pitatbrødet med salaten."
+        "Overhæld couscousen med lige så meget kogende vand, læg låg på, og lad den trække i 5 minutter.",
+        "Rør couscousen løs med en gaffel, og vend den med olivenolie, saft og revet skal fra citronerne og salt.",
+        "Skær agurk og tomater i små tern, og hak myntebladene.",
+        "Vend grøntsagerne og mynten i couscousen, og server salaten til falaflerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:09:55.940Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:26:05.031Z"
   }
 }

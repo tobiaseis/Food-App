@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 6,
   "source_lines": 11,
+  "image": "https://www.valdemarsro.dk/wp-content/2010/01/crunchy-peanutbutter-gryderet.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad",
+  "fetched_at": "2026-08-27T17:59:51.411Z",
   "title": "Oksegryde med peanutbutter",
   "intro": "Mørt oksekød, der simrer langsomt i en cremet sauce af peanutbutter og tomat med et strejf af røget paprika. Passer godt til ris eller kartoffelmos.",
   "servings": 6,
@@ -143,33 +147,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Gryden mangler stivelse til at være et helt måltid.",
+    "reason": "Gryden har kød og sauce, men ingen mættende bestanddel i selve retten, så den mangler kartofler, ris eller lignende.",
     "side": {
-      "title": "Ris og hovedsalat",
+      "title": "Ovnbagte søde kartofler med lime og koriander",
       "ingredients": [
         {
           "section": null,
-          "amount": 600,
-          "unit": "g",
-          "name": "ris",
+          "amount": 1.2,
+          "unit": "kg",
+          "name": "søde kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spisekommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "lime",
           "note": null,
           "optional": false
         },
         {
           "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
+          "unit": "bundt",
+          "name": "frisk koriander",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 50,
+          "unit": "g",
+          "name": "usaltede peanuts",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakningens anvisning.",
-        "Vask hovedsalaten, riv den i stykker, og server til gryden."
+        "Skær de søde kartofler i både, og vend dem med olie, spisekommen og salt.",
+        "Bag kartoflerne ved 220 grader i cirka 30 minutter, til de er møre og har fået kant.",
+        "Hak peanuts og koriander groft, og rist peanuts på en tør pande i et par minutter.",
+        "Pres limesaft over de varme kartofler, og drys med koriander og peanuts."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:50:05.544Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:30:38.674Z"
   }
 }

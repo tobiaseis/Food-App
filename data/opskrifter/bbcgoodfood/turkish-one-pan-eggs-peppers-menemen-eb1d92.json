@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 10,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1201531_11-80800f0.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Brunch, Main course, Middle Eastern,  Josh Eagleton, 30-60 minutes, 4 servings, 400 kcal or less, Brunch, Eggs, Good Food, goodhealth, Green pepper, Green peppers, Mains, One pan, One-pot, Street food, Tomato, Tomatoes",
+  "fetched_at": "2026-08-27T17:48:40.031Z",
   "title": "Pandestegte æg med tomat, peberfrugt og hvidløgsyoghurt",
   "intro": "Æg pocheres i en kraftig tomatsauce med løg, peberfrugt og chili og serveres med kølig hvidløgsyoghurt. Det hele laves i én pande.",
   "servings": 4,
@@ -135,25 +139,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten har æg og grønt, men mangler noget mættende som kartofler, ris eller brød.",
+    "reason": "Retten har æg og grøntsager, men mangler noget mættende som brød eller kartofler.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Ristet pitabrød med sesam og citronagurk",
       "ingredients": [
         {
           "section": null,
+          "amount": 8,
+          "unit": "stk",
+          "name": "pitabrød",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
+          "unit": "tsk",
+          "name": "spidskommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Server dem til retten."
+        "Pensl pitabrødene med to spsk olivenolie, og drys dem med sesamfrø, spidskommen og salt.",
+        "Bag pitabrødene ved 200 grader i cirka 5 minutter, til de er varme og sprøde i kanten.",
+        "Skær agurken i tern, og vend den med saft fra citronen, resten af olivenolien og salt.",
+        "Server de varme pitabrød og citronagurken til de pandestegte æg."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:56:31.251Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:14.443Z"
   }
 }

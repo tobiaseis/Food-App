@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 14,
+  "image": "https://www.valdemarsro.dk/wp-content/2022/06/asiatiske-koedboller.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Asiatisk, Buffet, Familiefavoritter, Forretter, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:54:56.727Z",
   "title": "Asiatiske kyllingeboller med sticky sauce",
   "intro": "Saftige kyllingeboller med ingefær, koriander og chili, der vendes i en blank, sødt-salt sauce. Drysset med sesam og forårsløg er de klar på under en halv time.",
   "servings": 4,
@@ -171,25 +175,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse eller rigeligt grønt",
+    "reason": "Retten har kun kyllingeboller i sauce uden noget mættende eller rigeligt grønt.",
     "side": {
-      "title": "Kogt jasminris",
+      "title": "Sesamnudler med agurk",
       "ingredients": [
         {
           "section": null,
           "amount": 250,
           "unit": "g",
-          "name": "jasminris",
+          "name": "nudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "risvineddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "1. Kog risen i vand ifølge pakningens instruks.",
-        "2. Server den til kyllingeboller."
+        "Kog nudlerne efter pakkens anvisning, og lad dem dryppe af.",
+        "Pres hvidløget, og rør det sammen med sojasauce, sesamolie og risvineddike.",
+        "Skær agurken i tynde stave, og vend den med de lune nudler og dressingen.",
+        "Server nudlerne til kyllingebollerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:25:46.876Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:04.981Z"
   }
 }

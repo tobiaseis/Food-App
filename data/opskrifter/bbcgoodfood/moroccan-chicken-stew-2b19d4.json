@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 18,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/moroccan-chicken-stew-2f0a4e9.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Supper, Moroccan, 3 of 5-a-day, chicken stew recipe, Folate fibre, Gluten free, goodhealth, Healthy, Healthy chicken recipe, Healthy stew recipe, Hemsley sisters recipe, Jasmine and Melissa Hemsley, Low calorie, Moroccan, Stew, Vit C",
+  "fetched_at": "2026-08-27T17:49:35.159Z",
   "title": "Marokkansk kyllingegryde",
   "intro": "Kyllingelår simrer mør med krydderier, citron, oliven og dadler, så gryden får en sød og aromatisk smag. Mandler, urter og grønne bønner giver knas og friskhed til sidst.",
   "servings": 4,
@@ -195,26 +199,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Gryden mangler stivelse til at være et helt måltid.",
+    "reason": "Kyllingegryden har kød og grønt, men ikke noget mættende som kartofler, ris eller couscous, så den mangler tilbehør.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Couscous med citron og mynte",
       "ingredients": [
         {
           "section": null,
           "amount": 250,
           "unit": "g",
-          "name": "hvid ris",
+          "name": "couscous",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "dl",
+          "name": "kogende vand",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "mynte",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "mandler",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skyll risen under koldt vand.",
-        "Kom risen i gryden med dobbelt mængde koldt vand, dæk med låg og bring til kogning.",
-        "Sænk varmen og kok risen, til vandet er opsugt."
+        "Kom couscous, olivenolie og salt i en skål, og hæld det kogende vand over. Læg låg på, og lad den trække i 5 minutter.",
+        "Riv skallen af citronen, og pres saften.",
+        "Luft couscousen op med en gaffel, og vend citronskal, citronsaft og hakket mynte i.",
+        "Hak mandlerne groft, og drys dem over inden servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:00:55.612Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:25:05.203Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 5,
   "yield_count": 3,
   "source_lines": 15,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/06/Air-fryer-buffalo-wings-with-ranch-dressing-548e12c.jpg?resize=768,713",
+  "lang": "da",
+  "keywords": "Dinner, air fryer, air fryer chicken wings, buffalo sauce, buffalo wings, Chicken wings, Easy family dinner, friday night dinner, Movie night",
+  "fetched_at": "2026-08-27T15:33:17.909Z",
   "title": "Buffalo wings i airfryer",
   "intro": "Sprøde kyllingevinger fra airfryeren, vendt i en stærk smørsauce og serveret med kølig ranchdip. Bagepulveret i krydderiblandingen gør skindet ekstra sprødt.",
   "servings": 3,
@@ -183,9 +187,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten er protein uden mættende stivelse eller rigeligt grønt.",
+    "reason": "Retten er kun kyllingevinger med dip uden mættende tilbehør eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med hvidløg og persille og coleslaw",
       "ingredients": [
         {
           "section": null,
@@ -197,19 +201,53 @@
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "hvidkål",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "æblecidereddike",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne og buffalo wingene."
+        "Skær kartoflerne i både, vend dem med olie, knuste hvidløg og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Snit hvidkålen fint, og riv gulerødderne.",
+        "Vend kål og gulerødder med eddike og en knivspids salt, og lad coleslawen trække, mens kartoflerne bager.",
+        "Server de varme kartofler og den friske coleslaw til vingerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:29:08.256Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:25.466Z"
   }
 }

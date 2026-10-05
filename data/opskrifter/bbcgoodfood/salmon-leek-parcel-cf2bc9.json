@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 2,
   "source_lines": 7,
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/salmon-leek-parcel-6dd60f6.jpg?resize=400,440",
+  "lang": "da",
+  "keywords": "Dinner, Fish Course, Main course, Supper, British, Budget, Easy fish recipe, Everyday recipe, Fish parcel, Gluten free, Keto, Omega 3, salmon and leek recipe, Salmon recipe, take it to 10, Winter",
+  "fetched_at": "2026-08-27T17:49:17.521Z",
   "title": "Ovnbagt laks med porre i pakke",
   "intro": "Laksen bages i bagepapir sammen med cremede porrer, så den bliver mør og saftig. Citron, dild og kapers giver frisk smag til retten.",
   "servings": 2,
@@ -123,9 +127,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse til at være et helt måltid.",
+    "reason": "Retten har laks og grønt i porrecreme, men mangler noget mættende som kartofler, ris eller brød.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde hvidløgskartofler med timian",
       "ingredients": [
         {
           "section": null,
@@ -137,19 +141,45 @@
         },
         {
           "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
+          "unit": "tsk",
+          "name": "timian",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "fennikelfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server sammen med kartoflerne og laksen."
+        "Tænd ovnen på 200 grader, og skær kartoflerne i både.",
+        "Vend kartoflerne med olie, timian, fennikelfrø, knuste hvidløgsfed og salt på en bageplade.",
+        "Bag kartoflerne sprøde i cirka 35 minutter, og vend dem undervejs.",
+        "Server de varme kartofler ved siden af laksen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:58:28.566Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:38.806Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 10,
   "source_lines": 12,
+  "image": "https://www.valdemarsro.dk/wp-content/2020/08/majsdeller.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Nem Hverdagsmad, Tilbehør Aftensmad",
+  "fetched_at": "2026-08-27T17:55:15.104Z",
   "title": "Majsdeller",
   "intro": "Sprøde, krydrede deller af grofthakket majs med røget paprika og chili. De bages i ovnen og er gode både varme og kolde.",
   "servings": 10,
@@ -147,15 +151,31 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Majsdellerne er en lille kornret, der har brug for et mættende tilbehør for at være et helt måltid.",
+    "reason": "Majsdellerne har næsten intet mættende og mangler en stivelseskilde, så de kræver tilbehør.",
     "side": {
-      "title": "Ris og grøn salat",
+      "title": "Ovnbagte søde kartofler med lime og koriander",
       "ingredients": [
         {
           "section": null,
-          "amount": 300,
-          "unit": "g",
-          "name": "ris",
+          "amount": 2,
+          "unit": "kg",
+          "name": "søde kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "røget paprika",
           "note": null,
           "optional": false
         },
@@ -163,17 +183,35 @@
           "section": null,
           "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "koriander",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "rødløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakningens anvisning.",
-        "Vask salaten, og riv den i stykker."
+        "Skær de søde kartofler i både, og vend dem med halvdelen af olien, paprika og salt.",
+        "Bag kartoflerne på en plade ved 220 grader i cirka 30 minutter, til de er møre og har fået kant.",
+        "Skær rødløgene i tynde ringe, og hak koriander. Bland med saft fra limerne og resten af olien.",
+        "Vend de varme kartofler med lime-korianderblandingen lige før servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:27:15.431Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:11.036Z"
   }
 }

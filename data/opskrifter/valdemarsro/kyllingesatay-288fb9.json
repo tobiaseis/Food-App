@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 7,
+  "image": "https://www.valdemarsro.dk/wp-content/2019/03/kyllingesatay-opskrift.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Asiatisk, Grill opskrifter, Grillspyd",
+  "fetched_at": "2026-08-27T17:56:11.544Z",
   "title": "Kyllingesatay",
   "intro": "Møre kyllingestrimler marineret i en cremet blanding af kokosmælk, peanuts og ingefær og grillet på spyd. Servér dem gerne med ris eller salat.",
   "servings": 4,
@@ -103,25 +107,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten har protein og sauce, men mangler en mættende base som ris, kartofler eller brød.",
+    "reason": "Retten har kun kylling og peanutsauce uden mættende tilbehør eller rigeligt grønt.",
     "side": {
-      "title": "Jasminris",
+      "title": "Sesamnudler med agurk og lime",
       "ingredients": [
         {
           "section": null,
-          "amount": 200,
+          "amount": 250,
           "unit": "g",
-          "name": "jasminris",
+          "name": "nudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakningens anvisning.",
-        "Server risen som underlag for satayspydene."
+        "Kog nudlerne efter anvisningen på pakken, skyl dem i koldt vand, og lad dem dryppe af.",
+        "Rist sesamfrøene på en tør pande, til de er gyldne.",
+        "Skær agurken i tynde stave, og pres saften fra limen.",
+        "Vend nudlerne med sesamolie, sojasauce, limesaft og agurk, og drys med sesamfrø."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:33:04.156Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:09.302Z"
   }
 }
