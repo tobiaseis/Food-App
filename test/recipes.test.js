@@ -1117,6 +1117,16 @@ test('HelloFresh: nyeste udgave pr. ret, kun rene opskrifts-URL\'er', () => {
   assert.deepEqual(pickHelloFreshUrls(locs, 1), [ny]);
 });
 
+test('HelloFresh: ret med kendt slug hentes ikke igen under nyt id', () => {
+  const { excludeKnownHelloFreshSlugs } = require('../src/recipes/sources');
+  const B = 'https://www.hellofresh.dk/recipes/';
+  const kendt = new Set([`${B}kyllingewok-5ec7740fc1fac21b2d322c06`]);
+  const genudgivet = `${B}kyllingewok-65ec7740fc1fac21b2d322c0`;
+  const ny = `${B}laks-med-ris-60aa0000fc1fac21b2d322c1`;
+  assert.deepEqual(excludeKnownHelloFreshSlugs([genudgivet, ny], kendt), [ny]);
+  assert.deepEqual(excludeKnownHelloFreshSlugs([genudgivet, ny], new Set()), [genudgivet, ny]);
+});
+
 test('HelloFresh-ingredienslinjer læses til vare og mængde', () => {
   const p = (s) => parseIngredient(s);
   const a = p('300 g Kyllingelårfilet');
@@ -1131,7 +1141,7 @@ test('HelloFresh-ingredienslinjer læses til vare og mængde', () => {
   assert.equal(e.item_key, 'sukker');
   assert.ok(e.amount == null);
   // HelloFresh skriver "Citrusfrugt" (lime eller citron) – samme vare som citron.
-  // (parseIngredient læser items-tabellen i data.db, som først får ordet ved `npm run seed:items`, så seed-listen testes.)
+  // (parseIngredient læser items-tabellen i test.db, som først får ordet ved `npm run seed:items`, så seed-listen testes.)
   assert.ok(require('../src/lib/taxonomy').SEED.find((i) => i.key === 'citron').da.includes('citrusfrugt'));
   near(p('3.5 dl Vand').amount, 0.35);
 });

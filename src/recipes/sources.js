@@ -30,6 +30,18 @@ function pickHelloFreshUrls(locs, limit = Infinity) {
   return [...bySlug.values()].sort((a, b) => b.ts - a.ts).map((x) => x.url).slice(0, limit);
 }
 
+/**
+ * Fjerner URL'er, hvis ret (slug uden id) allerede findes i basen. HelloFresh
+ * genudgiver samme ret med nyere id, så en match på præcis URL henter den
+ * igen hold efter hold. Andre URL'er (uden slug-mønster) slipper igennem.
+ */
+function excludeKnownHelloFreshSlugs(urls, knownUrls) {
+  const slugOf = (u) => { const m = HF_URL.exec(u); return m ? m[1].toLowerCase() : null; };
+  const known = new Set();
+  for (const u of knownUrls) { const s = slugOf(u); if (s) known.add(s); }
+  return urls.filter((u) => { const s = slugOf(u); return !s || !known.has(s); });
+}
+
 const SOURCES = [
   {
     key: 'valdemarsro',
@@ -198,4 +210,4 @@ const SOURCES = [
 
 const BY_KEY = new Map(SOURCES.map((s) => [s.key, s]));
 
-module.exports = { SOURCES, BY_KEY, pickHelloFreshUrls };
+module.exports = { SOURCES, BY_KEY, pickHelloFreshUrls, excludeKnownHelloFreshSlugs };
