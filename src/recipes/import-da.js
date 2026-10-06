@@ -28,6 +28,7 @@ const path = require('path');
 const { getDb } = require('../db');
 const taxonomy = require('../lib/taxonomy');
 const { parseIngredient } = require('./extract');
+const { scaleNutrition } = require('./servings');
 const { UNITS, EDITION_DIR, lineOf, labelOf } = require('./edition');
 
 const MAIN_CATS = new Set(['meat', 'poultry', 'fish']);
@@ -74,12 +75,21 @@ function listFiles(dir) {
     .sort();
 }
 
+/**
+ * En ret, der oprettes af udgaven, skal kunne stå alene i basen — og skal kunne
+ * kreditere sin kilde (fotoet). Ligesom tilbehørets fejl kan det ikke
+ * tilsidesættes med `accepted`; der er intet at "godkende" ved et manglende navn.
+ */
+function newRecipeProblems(ed) {
+  return ['source', 'source_name'].filter((f) => !ed[f]).map((f) => `ny ret: ${f} mangler i udgaven`);
+}
+
 /** Hvad der er galt med udgaven. Tom liste: den kan læses ind. */
 function problems(ed, lines, before, { created = false } = {}) {
   const out = [];
-  // En ret, der oprettes af udgaven, skal kunne stå alene i basen.
+  // Kravet om source/source_name på en ny ret ligger i newRecipeProblems(): det
+  // kan ikke tilsidesættes med `accepted`. Her gælder det øvrige for en ny ret.
   if (created) {
-    for (const f of ['source', 'source_name']) if (!ed[f]) out.push(`ny ret: ${f} mangler i udgaven`);
     // Ingen krav om hovedråvare: om en ret er aftensmad afgøres senere af
     // motoren (isDinner/hasMainCourse), så en ret uden er harmløs i puljen.
   }
@@ -210,6 +220,22 @@ function actionsWarning(flagged, errored) {
     + 'Kør npm run recipes:import -- --report tmp/omskrivning/kontrol.md lokalt.';
 }
 
+/**
+ * Sidens næring fra udgaven som kolonner til en NY ret. Med nutrition_src
+ * 'site' beholder reclassify tallene (kun skaleret ved ændret portionsantal) i
+ * stedet for at skønne dem, så sunde scorer/spor er de samme som lokalt.
+ * Uden næring i udgaven: NULL, og reclassify skønner som hidtil.
+ */
+function nutritionColumns(ed) {
+  const n = ed.nutrition;
+  const none = { kcal: null, protein_g: null, carbs_g: null, fat_g: null, nutrition_src: null };
+  if (!n || (n.kcal == null && n.protein_g == null)) return none;
+  const servings = ed.servings > 0 ? ed.servings : null;
+  const s = servings ? scaleNutrition(n, n.per_servings, servings) : n;
+  return { kcal: s.kcal ?? null, protein_g: s.protein_g ?? null, carbs_g: s.carbs_g ?? null,
+           fat_g: s.fat_g ?? null, nutrition_src: 'site' };
+}
+
 function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } = {}) {
   const db = getDb();
   const byUrl = new Map(db.prepare('SELECT id, url, edition_hash FROM recipes').all().map((r) => [r.url, r]));
@@ -217,9 +243,11 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
 
   const create = db.prepare(`
     INSERT INTO recipes (url, source, source_name, title, lang, servings, yield_count,
-                         total_minutes, active_minutes, image, keywords, fetched_at)
+                         total_minutes, active_minutes, image, keywords, fetched_at,
+                         kcal, protein_g, carbs_g, fat_g, nutrition_src)
     VALUES (@url, @source, @source_name, @title, 'da', @servings, @yield_count,
-            @total, @active, @image, @keywords, @fetched_at)`);
+            @total, @active, @image, @keywords, @fetched_at,
+            @kcal, @protein_g, @carbs_g, @fat_g, @nutrition_src)`);
 
   const apply = db.transaction((id, ed, lines, hash) => {
     // Udgaven er selvbærende: kender basen ikke retten (en ny kilde i den
@@ -233,6 +261,7 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
         total: ed.total_minutes ?? null, active: ed.active_minutes ?? null,
         image: ed.image ?? null, keywords: ed.keywords ?? null,
         fetched_at: ed.fetched_at || ed.written_at || new Date().toISOString(),
+        ...nutritionColumns(ed),
       }).lastInsertRowid);
     }
     // description = NULL: den rummer op til 500 tegn af kildens EGEN tekst
@@ -291,7 +320,7 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
       // linjetallet mod source_lines eller i "ukendte linjer".
       const issues = problems(ed, lines, isNew ? [] : before.all(row.id), { created: isNew });
       const side = ed.meal && ed.meal.complete !== true ? ed.meal.side : null;
-      const sideIssues = side ? sideProblems(side) : [];
+      const sideIssues = [...(isNew ? newRecipeProblems(ed) : []), ...(side ? sideProblems(side) : [])];
       if (sideIssues.length || (issues.length && !ed.accepted)) {
         stats.flagged++;
         flagged.push({ file: rel, id: row ? row.id : null, title: ed.title, issues: [...sideIssues, ...issues] });
@@ -317,7 +346,8 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
 
   log(`${stats.applied} læst ind · ${stats.unchanged} uændrede · ${stats.flagged} til eftersyn · `
     + `${stats.created} oprettet · ${stats.errored} kunne ikke læses`);
-  for (const f of flagged.slice(0, 20)) log(`  ${f.id} ${f.title}: ${f.issues.join('; ')}`);
+  // En ny ret har intet id i basen endnu: vis "ny" i stedet for null.
+  for (const f of flagged.slice(0, 20)) log(`  ${f.id ?? 'ny'} ${f.title}: ${f.issues.join('; ')}`);
   // Navngiv også fejlede filer i loggen: i en natlig,
   // ubemandet kørsel er logudskriften det eneste sted, man kan se HVORFOR en
   // fil ikke blev læst ind.
@@ -330,7 +360,7 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
   }
   if (reportPath) {
     const md = ['# Danske udgaver til eftersyn', '',
-      ...flagged.map((f) => `- **${f.title}** (${f.id}) \`${f.file}\`\n  - ${f.issues.join('\n  - ')}`)];
+      ...flagged.map((f) => `- **${f.title}** (${f.id ?? 'ny'}) \`${f.file}\`\n  - ${f.issues.join('\n  - ')}`)];
     if (errored.length) {
       md.push('', '## Kunne ikke læses', '',
         ...errored.map((f) => `- \`${f.file}\`: ${f.error}`));

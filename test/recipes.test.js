@@ -1022,6 +1022,46 @@ test('en ny ret uden source_name holdes tilbage', () => {
   });
 });
 
+test('accepted tilsidesætter ikke kravet om source_name på en ny ret', () => {
+  withNewEdition(newEdition({ source_name: undefined, accepted: true }), ({ dir }) => {
+    const lines = [];
+    const res = importAll({ dir, log: (l) => lines.push(l) });
+    assert.equal(res.created, 0);
+    assert.match(res.flaggedList[0].issues.join(), /source_name mangler/);
+    // Tilbageholdt ny ret vises som "ny", ikke "null".
+    assert.ok(lines.some((l) => /^ {2}ny /.test(l)), lines.join(', '));
+    assert.ok(!lines.some((l) => /null/.test(l)), lines.join(', '));
+  });
+});
+
+test('en ny ret med næring i udgaven beholder den (site) efter reclassify', () => {
+  const { reclassify } = require('../src/recipes/reclassify');
+  const nutrition = { per_servings: 4, kcal: 612, protein_g: 41.5, carbs_g: 38, fat_g: 29 };
+  withNewEdition(newEdition({ nutrition }), ({ db, dir }) => {
+    importAll({ dir, log: () => {} });
+    reclassify({ log: () => {} });
+    const r = db.prepare('SELECT kcal, protein_g, carbs_g, fat_g, nutrition_src FROM recipes WHERE url = ?').get(NEW_URL);
+    assert.equal(r.nutrition_src, 'site');
+    assert.equal(r.kcal, 612);
+    assert.equal(r.protein_g, 41.5);
+    assert.equal(r.fat_g, 29);
+  });
+});
+
+test('editionRecord skriver sidens næring, og backfill lægger kun site-næring fra basen', () => {
+  const { editionRecord } = require('../src/recipes/rewrite');
+  const { withMeta } = require('../scripts/backfill-edition-meta');
+  const base = { url: 'u', source: 's', source_name: 'S', yield_count: 2, ingredients: ['1 a'] };
+  const out = { model: 'm', output: { title: 'X', ingredients: [] } };
+  assert.deepEqual(editionRecord({ ...base, nutrition: { kcal: 500, protein_g: 30, carbs_g: null, fat_g: 20 } }, out).nutrition,
+    { per_servings: 2, kcal: 500, protein_g: 30, carbs_g: null, fat_g: 20 });
+  assert.ok(!('nutrition' in editionRecord(base, out)));
+  const ed = { url: 'u', yield_count: 2, source_lines: 1, title: 'T', image: 'i', lang: 'da', keywords: null, fetched_at: 'f' };
+  const site = { servings: 2, kcal: 500, protein_g: 30, carbs_g: 40, fat_g: 20, nutrition_src: 'site' };
+  assert.deepEqual(withMeta(ed, site).nutrition, { per_servings: 2, kcal: 500, protein_g: 30, carbs_g: 40, fat_g: 20 });
+  assert.ok(!('nutrition' in withMeta(ed, { ...site, nutrition_src: 'estimated' })));
+});
+
 test('editionRecord skriver image, lang, keywords og fetched_at fra kilden', () => {
   const { editionRecord } = require('../src/recipes/rewrite');
   const src = {

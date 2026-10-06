@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lægger image, lang, keywords og fetched_at på de danske udgaver, der blev
+ * Lægger image, lang, keywords, fetched_at og sidens næring (tal) på de danske udgaver, der blev
  * skrevet, før rewrite.js selv skrev dem.
  *
  * import-da.js opretter en ret, som release-basen ikke kender (en ny kilde i
@@ -23,13 +23,25 @@ const Database = require('better-sqlite3');
 const { DB_PATH } = require('../src/db');
 const { EDITION_DIR } = require('../src/recipes/edition');
 
-const FIELDS = ['image', 'lang', 'keywords', 'fetched_at'];
+const FIELDS = ['image', 'lang', 'keywords', 'fetched_at', 'nutrition'];
 
 /** Udgaven med de manglende felter fra `row` (en række fra recipes). Originalen røres ikke. */
 function withMeta(ed, row) {
   const add = {};
   for (const f of FIELDS) {
     if (f in ed) continue;
+    if (f === 'nutrition') {
+      // Kun sidens egen næring (nutrition_src 'site'); et skøn genskabes af
+      // reclassify og hører ikke hjemme i udgaven. Pr. rækkens portionsantal.
+      if (row.nutrition_src === 'site' && (row.kcal != null || row.protein_g != null)) {
+        add.nutrition = {
+          per_servings: row.servings > 0 ? row.servings : 1,
+          kcal: row.kcal ?? null, protein_g: row.protein_g ?? null,
+          carbs_g: row.carbs_g ?? null, fat_g: row.fat_g ?? null,
+        };
+      }
+      continue;
+    }
     // Udgaver er altid danske, uanset hvad basen kaldte retten før udgaven.
     add[f] = f === 'lang' ? 'da' : (row[f] ?? null);
   }
@@ -64,7 +76,7 @@ function listFiles(dir) {
 
 function main({ dir = EDITION_DIR, dbPath = DB_PATH } = {}) {
   const db = new Database(dbPath, { readonly: true });
-  const get = db.prepare('SELECT image, keywords, fetched_at FROM recipes WHERE url = ?');
+  const get = db.prepare('SELECT image, keywords, fetched_at, servings, kcal, protein_g, carbs_g, fat_g, nutrition_src FROM recipes WHERE url = ?');
   const stats = { written: 0, unchanged: 0, noRecipe: 0, handEdited: 0 };
   const noRecipe = [], handEdited = [];
   for (const file of listFiles(dir)) {
@@ -82,7 +94,7 @@ function main({ dir = EDITION_DIR, dbPath = DB_PATH } = {}) {
     stats.written++;
   }
   db.close();
-  console.log(`${stats.written} udgaver fik image/lang/keywords/fetched_at · `
+  console.log(`${stats.written} udgaver fik image/lang/keywords/fetched_at/næring · `
     + `${stats.unchanged} havde dem allerede · ${stats.noRecipe} uden ret i basen · `
     + `${stats.handEdited} sprunget over (ikke i standardformat)`);
   for (const f of handEdited) console.log(`  ikke i standardformat: ${f}`);

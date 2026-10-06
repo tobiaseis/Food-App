@@ -41,6 +41,11 @@ async function fetchOne(row) {
     image: parsed.image,
     keywords: parsed.keywords,
     yield_count: parsed.servings,
+    // Sidens næring pr. SIN portion (tal, ikke tekst). rewrite.js lægger den i
+    // udgaven, så en ret, release-basen ikke kender, får sidens tal og ikke et skøn.
+    nutrition: parsed.kcal != null || parsed.protein_g != null
+      ? { kcal: parsed.kcal, protein_g: parsed.protein_g, carbs_g: parsed.carbs_g, fat_g: parsed.fat_g }
+      : null,
     total_minutes: parsed.total_minutes,
     active_minutes: parsed.active_minutes,
     ingredients: parsed.ingredients.map((i) => i.raw),
