@@ -1,0 +1,212 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-japansk-kyllinge-teriyakibowl-6976848fbcdfd65d69c2d8a0",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:14:01.172Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 827,
+    "protein_g": 48.8,
+    "carbs_g": 88.8,
+    "fat_g": 35.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R13_BW45_SE_R16068-1_Main_high-ffaeda2c.jpg",
+  "lang": "da",
+  "keywords": "Japansk",
+  "fetched_at": "2026-10-05T20:07:12.416Z",
+  "title": "Kylling-teriyakibowl med sesam-agurkesalat",
+  "intro": "Hurtig skål med glaseret teriyakikylling, duftende jasminris og en frisk salat af agurk og kål med sesam. Mayonnaise på toppen runder af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Teriyakikylling",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Teriyakikylling",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Teriyakikylling",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Teriyakikylling",
+      "amount": 75,
+      "unit": "g",
+      "name": "teriyakisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "amount": 150,
+      "unit": "g",
+      "name": "kål",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket eller presset",
+      "optional": false
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Bring vandet i kog i en mellemstor gryde. Kom ris og salt i, læg låg på, og lad risene koge ved lav varme i 14 minutter. Tag gryden af varmen."
+    },
+    {
+      "section": "Teriyakikylling",
+      "text": "Varm olien op i en stor pande ved middelhøj varme, mens risene koger. Drys kyllingestrimlerne med salt, og steg dem i 4-5 minutter, til de er gyldne og helt gennemstegte. Kødet skal være hvidt uden spor af rødt."
+    },
+    {
+      "section": "Teriyakikylling",
+      "text": "Hæld teriyakisaucen over, og lad den simre i 1 minut, til kyllingen er varm hele vejen igennem."
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "text": "Halver citronen. Skær agurk og løg i tynde, halve skiver."
+    },
+    {
+      "section": "Sesam-agurkesalat",
+      "text": "Vend sesamfrø, kål, løg, agurk, olie, sukker og salt sammen i en stor skål sammen med et godt skvæt citronsaft."
+    },
+    {
+      "section": "Ris",
+      "text": "Hak hvidløget fint, eller pres det. Rør det sammen med smørret og de færdige ris i gryden."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel risene i dybe tallerkener, og læg teriyakikyllingen ovenpå. Server med salaten og mayonnaisen ved siden af."
+    }
+  ],
+  "changes": [
+    "Vegansk sesammayonnaise er erstattet med almindelig mayonnaise."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, ris som mættende del og en salat med grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:11.928Z"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/ovnbagt-laks-i-karry-kokosmaelksauce-6a38ec0abcf472ce94494d38",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:30:44.383Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 716,
+    "protein_g": 36.3,
+    "carbs_g": 61.6,
+    "fat_g": 36.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R26_BW26_SE_C59445-1main_high-e1e7b391.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:01:54.662Z",
+  "title": "Ovnbagt laks i karry-kokossauce med sukkerærter",
+  "intro": "Laks og grøntsager bages sammen i ét fad og dækkes af en cremet sauce med gul karrypasta og kokosmælk. En nem hverdagsret, der kan serveres direkte fra fadet.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "laks",
+      "note": "laksefilet med skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "sukkerærter",
+      "note": "enderne skæres af",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 20,
+      "unit": "g",
+      "name": "gul karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 30,
+      "unit": "g",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "en smule til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til fisk, sauce og grøntsager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skær kartoflerne i tern på 2 cm og gulerødderne i tynde halve skiver. Del løget i både på 1 cm."
+    },
+    {
+      "section": "Sauce",
+      "text": "Pres eller hak hvidløget fint. Rør det sammen med karrypasta, kokosmælk, fiskesauce, vand og en smule salt i en kande eller skål."
+    },
+    {
+      "section": null,
+      "text": "Tør laksen med køkkenrulle, og drys den let med salt."
+    },
+    {
+      "section": null,
+      "text": "Læg kartofler, løg og gulerødder i et stort ildfast fad. Dryp med olivenolie, smag til med salt og peber, og vend rundt. Brug to fade, hvis der ikke er plads i ét."
+    },
+    {
+      "section": null,
+      "text": "Bag grøntsagerne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Læg sukkerærterne oven på grøntsagerne, når der er 10-12 minutter tilbage af bagetiden. Sæt laksen mellem grøntsagerne med skindsiden nedad."
+    },
+    {
+      "section": null,
+      "text": "Hæld saucen over laks og grøntsager. Bag videre i 9-10 minutter, til laksen er mat i midten og gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Sæt fadet direkte på bordet."
+    }
+  ],
+  "changes": [
+    "Fish sauce er skiftet til fiskesauce.",
+    "Olivenolie og peber fra fremgangsmåden er skrevet ind i ingredienslisten."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har laks som hovedråvare og både kartofler og grøntsager bagt med i samme fad, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:47.504Z"
+  }
+}

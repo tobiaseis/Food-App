@@ -1,0 +1,222 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/middelhavs-lammekoftaer-og-bagte-grontsager-6a4fb26a6e4158183d5da02f",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:15:05.739Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 979,
+    "protein_g": 36.9,
+    "carbs_g": 79.6,
+    "fat_g": 54.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R05_BW34_SE_C59269-1_main_high-61e3bdfa.jpg",
+  "lang": "da",
+  "keywords": "Tyrkisk",
+  "fetched_at": "2026-10-05T20:00:24.190Z",
+  "title": "Lammekoftaer med bagte grøntsager og mynteyoghurt",
+  "intro": "Små krydrede lammekoftaer bages i ét fad sammen med honningmarinerede grøntsager. Serveres med fladbrød og en frisk yoghurt med mynte.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Koftaer",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket lammekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftaer",
+      "amount": 4,
+      "unit": "g",
+      "name": "souvlaki-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftaer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftaer",
+      "amount": 15,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftaer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "skæres i strimler",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "grøn peberfrugt",
+      "note": "skæres i strimler",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 25,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mynteyoghurt",
+      "amount": 5,
+      "unit": "g",
+      "name": "mynte",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Mynteyoghurt",
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mynteyoghurt",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mynteyoghurt",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "fladbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "lidt til fadet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Koftaer",
+      "text": "Ælt lammekød, souvlaki-krydderi, æg, rasp og salt sammen i en stor skål. Rul farsen til aflange koftaer på ca. 6 cm – cirka 5 til hver person."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Skær peberfrugterne i strimler på ca. 1 cm. Del tomater og løg i både på ca. 2 cm. Vend det hele med olie, honning, salt og peber i en skål."
+    },
+    {
+      "section": "Mynteyoghurt",
+      "text": "Rør mynte, yoghurt, salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Bagning",
+      "text": "Smør fadet med lidt olie og læg koftaerne i. Dæk med sølvpapir og bag i 6 minutter."
+    },
+    {
+      "section": "Bagning",
+      "text": "Kom grøntsagerne ned i fadet, dæk igen med sølvpapir, og bag i 6-8 minutter."
+    },
+    {
+      "section": "Bagning",
+      "text": "Tag sølvpapiret af, og bag videre i 12-15 minutter. Koftaerne skal være helt gennemstegte uden spor af rødt kød indeni."
+    },
+    {
+      "section": "Servering",
+      "text": "Sæt fadet på bordet og server med fladbrød. Hæld mynteyoghurten over koftaer og grøntsager."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har lammekød, fladbrød som mættende element og rigeligt bagt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:14.365Z"
+  }
+}

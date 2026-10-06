@@ -1,0 +1,189 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hvidlogsbagt-kylling-6a38ebd84e4b173945bce0b0",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:31:44.320Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 12,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 548,
+    "protein_g": 47.6,
+    "carbs_g": 47,
+    "fat_g": 18.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R08_BW01_SE_F12344089-29_edit_chicken_MT_Main_F1_high-e09a408c.jpg",
+  "lang": "da",
+  "keywords": "Skandinavisk",
+  "fetched_at": "2026-10-05T20:02:01.761Z",
+  "title": "Hvidløgsbagt kylling med basilikumsauce og ovnbagt broccoli",
+  "intro": "Mør kyllingebryst med cremet basilikumsauce, kogte kartofler og stegt broccoli med sukkerærter. En nem hverdagsret til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "hvidløgskrydderi",
+      "note": "hvidløgs- og urtekrydderi",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "et nip til kartoflerne og lidt til kogevandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning, plus lidt mere til broccoli og sauce",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Sæt en stor gryde med saltet vand over til kogning."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olie i en stor pande på middelhøj varme. Krydr kyllingen med salt og hvidløgskrydderi, og brun den i 2 minutter på hver side."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingen på en bageplade med bagepapir, og bag den i ovnen i 11-12 minutter, til den er gennemstegt og kødet er hvidt uden rødt. Dæk den med sølvpapir, og lad den hvile, til maden skal serveres."
+    },
+    {
+      "section": null,
+      "text": "Kog kartoflerne i 12-15 minutter, til en kniv let går igennem. Si vandet fra, smag til med salt og peber, og lad dem stå under låg."
+    },
+    {
+      "section": null,
+      "text": "Del broccolien i buketter på ca. 2 cm. Skræl stokken om nødvendigt, og skær den i stykker på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Varm olie i en mellemstor pande på middelhøj varme. Steg broccolien i 3-4 minutter, til den er mør. Kom sukkerærterne i, og steg dem 2-4 minutter, til de er lidt bløde. Tag grøntsagerne op i en skål. Et skvæt vand i panden gør dem hurtigere færdige."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olie i den samme pande på middelhøj varme. Svits hvidløget i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Hæld fløde, basilikum og bouillon i panden, og lad saucen simre i 1-2 minutter, til den er varm hele vejen igennem."
+    },
+    {
+      "section": null,
+      "text": "Skær kyllingen i skiver. Server den sammen med kartofler og grøntsager, og hæld basilikumsaucen over kartoflerne."
+    }
+  ],
+  "changes": [
+    "Hvidløgs- og urtekrydderi er skrevet som hvidløgskrydderi.",
+    "Sukkerærter er beholdt, men uden mængde i kilden er der sat 100 g."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, kartofler som mættende del og rigeligt grønt i form af broccoli og sukkerærter.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:51.697Z"
+  }
+}

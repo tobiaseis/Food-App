@@ -1,0 +1,228 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/sprodstegt-svinekod-6a2ab3bcb2e241c4bdaf6692",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:36:03.377Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 733,
+    "protein_g": 49,
+    "carbs_g": 69.6,
+    "fat_g": 28.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R05_BW21_SE_C12649-2main_high-772cdc3b.jpg",
+  "lang": "da",
+  "keywords": "Østeuropæisk",
+  "fetched_at": "2026-10-05T20:02:32.602Z",
+  "title": "Paneret svinekam med ovnbagt broccoli og kartoffel-selleri-mos",
+  "intro": "Sprøde panerede svinekamskiver med hvidløgssmør, serveret til ovnbagt broccoli og en blød mos af kartofler og knoldselleri. En enkel hverdagsret til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "krydderiblanding til broccolien",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "svinekam",
+      "note": "mørbrad af svinekam, i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "til moset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til moset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til broccolien",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet og til at krydre kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til hvidløgssmørret, blødt",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220°C (200°C varmluft). Tag smørret ud af køleskabet, så det bliver blødt."
+    },
+    {
+      "section": "Mos",
+      "text": "Skræl kartofler og knoldselleri, og skær dem i tern på 2 cm. Kog dem i usaltet vand med salt i en stor gryde i 11-13 minutter, til de er møre."
+    },
+    {
+      "section": "Mos",
+      "text": "Hæld vandet fra. Mos kartofler og selleri med mælk, salt og peber, og sæt gryden til side med låg. Rør evt. lidt smør i moset."
+    },
+    {
+      "section": "Broccoli",
+      "text": "Del broccolien i små buketter, og skær stokken i tern på 2 cm. Læg det hele på en bageplade med bagepapir."
+    },
+    {
+      "section": "Broccoli",
+      "text": "Vend broccolien med en smule olie, krydderiet, salt og peber. Bag den midt i ovnen i 10-12 minutter, til den er mør."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Skær svinekammen i skiver, to af dem, én til hver. Pisk ægget i en dyb tallerken. Bland panko, sesamfrø, salt og rigeligt peber på en anden tallerken."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Krydr skiverne med salt. Vend dem først i ægget og dernæst i panko-blandingen, så de er dækket hele vejen rundt. Har du ikke æg, kan du bruge 2 spsk mælk."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Hæld så meget olie på en stor pande, at bunden er dækket, og varm den op ved middelhøj varme. Steg skiverne 3-4 minutter på hver side, til de er gyldne og gennemstegte. Tilsæt mere olie, hvis de sidder fast, og steg evt. i omgange."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Læg de stegte skiver på en tallerken med køkkenrulle."
+    },
+    {
+      "section": "Hvidløgssmør",
+      "text": "Hak persillen fint, og pres eller hak hvidløget fint. Rør det sammen med det bløde smør i en skål."
+    },
+    {
+      "section": null,
+      "text": "Anret mos, broccoli og svinekød på tallerkener, og læg hvidløgssmør oven på kødet."
+    }
+  ],
+  "changes": [
+    "Hello Sunrise (krydderiblanding fra HelloFresh) er erstattet med en almindelig krydderiblanding."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har paneret svinekam som hovedråvare, kartoffel-selleri-mos som mættende del og ovnbagt broccoli som grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:37:41.047Z"
+  }
+}

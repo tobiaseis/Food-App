@@ -1,0 +1,186 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cajunkrydrede-veggiestrimler-69642e2d30d8e7c0c766ad90",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:18:27.780Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 12,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 570,
+    "protein_g": 25.7,
+    "carbs_g": 80.3,
+    "fat_g": 18.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R09_BW05_SE_V19030-1_RAN_TD_Main_Balanced__Main_high-c503bc5e.jpg",
+  "lang": "da",
+  "keywords": "Cajunsk",
+  "fetched_at": "2026-10-05T20:07:46.652Z",
+  "title": "Cajunkrydrede veggiestykker med ovnbagte grøntsager og citronfraiche",
+  "intro": "Plantebaserede kyllingestykker med cajunkrydderi serveres på ovnbagte kartofler, løg og gulerødder med majs og spinat. En kold creme fraiche med citron og hvidløg runder det hele af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": "afdryppet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "plantebaserede kyllingestykker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Del løget i både på ca. 2 cm, og skær gulerødder og kartofler i tern på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Kom kartofler, gulerødder og løg på en bageplade med bagepapir. Rør dem rundt med olivenolie, paprika, salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Bag grøntsagerne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Skyl spinaten, og lad majsene dryppe af. Når der er 10 minutter tilbage af bagetiden, skubbes majsene ud i et hjørne af bagepladen."
+    },
+    {
+      "section": null,
+      "text": "Varm olivenolie op i en stor pande ved middelhøj varme. Brun de plantebaserede kyllingestykker med Cajun-krydderi, salt og peber i 3-4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Del citronen i to. Hak hvidløget fint, eller pres det. Rør creme fraiche sammen med hvidløg, saft fra citronen, salt og peber i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Vend spinaten ned i de varme grøntsager på bagepladen, så den falder sammen."
+    },
+    {
+      "section": null,
+      "text": "Server grøntsagerne på tallerkener med kyllingestykkerne ovenpå og citronfraichen ved siden af."
+    }
+  ],
+  "changes": [
+    "Panamad Central American Spice er erstattet med paprika.",
+    "Citrusfrugt er erstattet med citron.",
+    "Fraiche er erstattet med creme fraiche."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har protein fra plantebaserede kyllingestykker, kartofler som mættende element og rigeligt ovnbagt grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:16.155Z"
+  }
+}

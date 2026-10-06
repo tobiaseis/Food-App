@@ -1,0 +1,234 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremet-one-pot-med-chorizo-og-tortelloni-693acc08c92924105eca6b8f",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:22:47.443Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1120,
+    "protein_g": 37,
+    "carbs_g": 82.7,
+    "fat_g": 71.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R19_BW52_SE_C40369-1_Main_4_high-2d92c397.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:08:19.687Z",
+  "title": "Cremet chorizo- og tortellonigryde",
+  "intro": "En cremet one-pot-ret med tortelloni i tomat- og fløde sauce med chorizo og spinat. Voksne får en frisk gremolata med chili oven på, så retten passer både til børn og voksne.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 120,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i 1 cm tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Souvlaki-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "tortelloni",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "spinat",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "i flager",
+      "optional": false
+    },
+    {
+      "section": "Til gremolata",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til gremolata",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til gremolata",
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gremolata",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gremolata",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gremolata",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien i en stor stegepande ved middel varme. Brun chorizoen i 4-5 minutter, til den er gennemstegt, og læg den over på en tallerken med køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Hak løget fint, skær guleroden i 1 cm tern, og skyl spinaten."
+    },
+    {
+      "section": null,
+      "text": "Sæt samme pande på middelhøj varme, og steg løg og gulerod i 3-4 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Rør krydderiet, passata, madlavningsfløde, vand, sukker, salt og peber i panden."
+    },
+    {
+      "section": null,
+      "text": "Kom tortelloni i, læg låg på, og skru ned på middel varme. Lad det simre i 5-6 minutter, til pastaen er al dente, altså kogt, men stadig fast i bid."
+    },
+    {
+      "section": "Til gremolata",
+      "text": "Mens pastaen koger: Hak persille og hvidløg fint. Rør dem sammen med chiliflager, olie, salt og peber i en lille skål. Brug mindre chili eller drop den, hvis I ikke vil have det stærkt."
+    },
+    {
+      "section": null,
+      "text": "Vend spinat og halvdelen af parmesanen ned i panden, og rør, til spinaten er faldet sammen."
+    },
+    {
+      "section": null,
+      "text": "Fordel retten i dybe tallerkener, og strø resten af parmesanen over. Voksenportionerne toppes med gremolata og chorizo."
+    }
+  ],
+  "changes": [
+    "Hakkede tomater i trinnet er erstattet af passata, som i ingredienslisten.",
+    "Tortelloni er beholdt som pastavare, og Grana Padano er skrevet som parmesan.",
+    "Gulerod er skrevet i flertal som gulerødder efter varekataloget."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en pastaret med chorizo, tortelloni, grøntsager og spinat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:47:08.401Z"
+  }
+}

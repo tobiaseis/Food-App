@@ -1,0 +1,194 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/pandestegt-rumpsteak-og-estragon-aioli-6a0dc190bff716338a6d68bc",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:39:57.728Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 667,
+    "protein_g": 39.1,
+    "carbs_g": 61.4,
+    "fat_g": 30.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF220208_R18_W13_SE_P12343970-4_edit_KB_Main_high-feb913fd.jpg",
+  "lang": "da",
+  "keywords": "Britisk",
+  "fetched_at": "2026-10-05T20:03:03.554Z",
+  "title": "Rumpsteak med estragon-aioli, rosmarinfritter og grønne bønner",
+  "intro": "Mør rumpsteak serveres med ovnbagte fritter af kartofler og gulerod og sprøde grønne bønner med hvidløg. Ved siden af er der en cremet aioli med estragon og skalotteløg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "rumpsteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "estragon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "grønne bønner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "aioli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "skalotteløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Tag bøfferne ud af køleskabet, og drys dem med salt."
+    },
+    {
+      "section": null,
+      "text": "Hak rosmarinen groft. Skær kartofler og gulerod i fritter på 1 cm, og skær løget i både på 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Læg det hele på en bageplade med bagepapir. Dryp med olivenolie, og kryd med rosmarin, salt og peber. Vend rundt, og bag i 25-35 minutter, til fritterne er møre. Brug to plader, hvis der er trangt."
+    },
+    {
+      "section": null,
+      "text": "Hak estragon og skalotteløg fint. Hak hvidløget fint eller pres det. Knip enderne af bønnerne."
+    },
+    {
+      "section": null,
+      "text": "Rør aioli sammen med estragon og skalotteløg i en lille skål, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olivenolie op på en stor pande ved middelhøj varme, når der er 10 minutter tilbage af fritternes tid. Brun bøfferne 3-4 minutter på hver side. Ønsker du dem gennemstegte, så giv dem 1-2 minutter mere."
+    },
+    {
+      "section": null,
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, mens du laver bønnerne."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt ny olie op på den samme pande ved middelhøj varme. Steg bønnerne med salt og peber i 2 minutter, kom hvidløget i, og steg 1 minut mere."
+    },
+    {
+      "section": null,
+      "text": "Server bøffer, fritter og bønner på tallerkener med estragon-aioli ved siden af."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rumpsteak som hovedråvare, kartoffelfritter som mættende del og grønne bønner som grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:38:28.897Z"
+  }
+}

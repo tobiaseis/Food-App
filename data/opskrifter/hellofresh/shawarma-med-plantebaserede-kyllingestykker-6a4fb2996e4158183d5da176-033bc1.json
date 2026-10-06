@@ -1,0 +1,247 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/shawarma-med-plantebaserede-kyllingestykker-6a4fb2996e4158183d5da176",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:14:30.080Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 681,
+    "protein_g": 31.3,
+    "carbs_g": 97.3,
+    "fat_g": 17
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R04_BW02_SE_V36087-1_Main_F1_high-051b85a5.jpg",
+  "lang": "da",
+  "keywords": "Tyrkisk",
+  "fetched_at": "2026-10-05T20:00:19.462Z",
+  "title": "Shawarma med plantebaserede kyllingestykker, harissakartofler og hvidløgsdressing",
+  "intro": "Pitabrød fyldt med stegte plantebaserede kyllingestykker, squash, tomat og syltet løg. Serveres med ovnbagte harissakartofler og en frisk hvidløgsdressing.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kartofler",
+      "amount": 4,
+      "unit": "g",
+      "name": "harissa",
+      "note": "krydderi",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartofler",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet løg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet løg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet løg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltning",
+      "optional": false
+    },
+    {
+      "section": "Syltet løg",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til syltning",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "amount": 200,
+      "unit": "g",
+      "name": "plantebaserede kyllingestykker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til vegetarprotein",
+      "optional": false
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsager",
+      "optional": false
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "pitabrød",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 240°C (220°C varmluft). Skær kartoflerne i både på ca. 2 cm, og læg dem på en bageplade med bagepapir. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Drys kartoflerne med olivenolie, halvdelen af harissaen, salt og peber, og vend dem rundt. Bag dem i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Syltet løg",
+      "text": "Skær løget i tynde halve skiver, og halvér citronen. Rør citronsaft, sukker og salt sammen i en lille skål, og læg løgene i. Lad dem trække, mens du laver resten, og hæld væden fra før servering."
+    },
+    {
+      "section": "Dressing",
+      "text": "Pres eller finhak hvidløget, og hak koriander fint. Rør yoghurt, hvidløg, koriander, resten af harissaen, salt og peber sammen i en skål."
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "text": "Skær squashen i skiver på ½ cm, og hak tomaten groft."
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "text": "Varm lidt olivenolie op i en stor pande ved middelhøj varme. Steg de plantebaserede kyllingestykker med krydderiblandingen, salt og peber i 3-4 minutter, til de er brunede. Læg dem på en tallerken under låg eller folie for at holde dem varme."
+    },
+    {
+      "section": "Shawarma og grøntsager",
+      "text": "Steg squashen i samme pande ved middelhøj varme i 2-3 minutter, til den er blød. Smag til med salt og peber."
+    },
+    {
+      "section": "Pitabrød",
+      "text": "Hold pitabrødene et kort øjeblik under rindende vand. Varm dem på ovnristen i 2-3 minutter, skær dem over på midten, og åbn dem forsigtigt."
+    },
+    {
+      "section": "Servering",
+      "text": "Fyld pitabrødene med kyllingestykker, dressing, squash, tomat og syltet løg. Server dem i skåle sammen med kartoflerne og de resterende grøntsager, og top kartoflerne med resten af dressingen."
+    }
+  ],
+  "changes": [
+    "Harissa-krydderi er skrevet som harissa.",
+    "Jorden Rundt-krydderiblandingen er erstattet med en almindelig krydderiblanding.",
+    "Citrusfrugt er erstattet med citron.",
+    "Zucchini er erstattet med squash."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har plantebaseret protein, pitabrød og harissakartofler samt grøntsager, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:09.154Z"
+  }
+}

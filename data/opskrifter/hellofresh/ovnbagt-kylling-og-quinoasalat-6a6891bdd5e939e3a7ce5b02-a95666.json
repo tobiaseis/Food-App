@@ -1,0 +1,214 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/ovnbagt-kylling-og-quinoasalat-6a6891bdd5e939e3a7ce5b02",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:10:03.306Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 700,
+    "protein_g": 53.1,
+    "carbs_g": 64,
+    "fat_g": 25.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R01_BW32_SE_P55117-1_main_high-4927691e.jpg",
+  "lang": "da",
+  "keywords": "Fusion cuisine",
+  "fetched_at": "2026-10-05T19:59:45.768Z",
+  "title": "Ovnbagt kylling med quinoasalat, avocado og appelsin-misodressing",
+  "intro": "BBQ-marineret kyllingebryst serveres på en frisk quinoasalat med avocado, appelsin og en sprød dressing af miso og appelsinsaft. Toppes med yoghurt og sesamfrø.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "quinoa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til quinoaen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til quinoaen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 325,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "BBQ-marineret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "Hello Sunrise erstattet af grillkrydderi",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "appelsiner",
+      "note": "den ene presses, den anden skæres i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 15,
+      "unit": "g",
+      "name": "miso",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "sukkerærter",
+      "note": "1/2 stk er cirka en lille håndfuld",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": "ristede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Quinoa",
+      "text": "Kom vandet i en mellemstor gryde, og bring det i kog. Rør quinoa og salt i, læg låg på, og lad den småkoge på middellav varme i 15 minutter. Træk gryden af varmen, og lad quinoaen trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingen på en bageplade med bagepapir. Drys med salt og krydderi. Bag den i ovnen i 17-19 minutter, til den er gennemstegt, og kødet er hvidt hele vejen igennem."
+    },
+    {
+      "section": "Dressing",
+      "text": "Skær den ene appelsin over, og pres saften ned i en mellemstor skål. Rør miso, eddike og salt ud i saften. Skræl den anden appelsin, så al hvid hinde fjernes, og skær den i skiver på 1 cm. Rør evt. lidt olivenolie i dressingen."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær sukkerærterne over på langs. Snit forårsløget fint, og hak koriander groft. Halvér avocadoen, og tag stenen ud. Skræl den, og skær frugtkødet i tern på 1 cm."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl rucolaen. Bland quinoa, sukkerærter, forårsløg, rucola, salat og koriander i en stor skål, og vend dressingen i."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel salaten, appelsinskiverne og avocadoen i dybe tallerkener. Læg kyllingen og yoghurt ovenpå, og drys med sesamfrø."
+    }
+  ],
+  "changes": [
+    "Hello Sunrise-krydderiblandingen er erstattet af almindeligt grillkrydderi.",
+    "Sukkerærter er beholdt, men uden fast mængde fra kilden; ½ stk er angivet som i kilden.",
+    "Koriander er angivet som 1 bundt i stedet for 1 stk."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, quinoa som mættende element og rigeligt grønt i salaten, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:33:16.389Z"
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/pandestegte-sellerifritters-6969683b850f974aa21309f5",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:16:08.008Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 679,
+    "protein_g": 21.8,
+    "carbs_g": 63.2,
+    "fat_g": 35.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF220805_R14_W35_NO_V12136-1_MB_Main_Reshot_high-d7fe96d1.jpg",
+  "lang": "da",
+  "keywords": "Skandinavisk",
+  "fetched_at": "2026-10-05T20:07:28.963Z",
+  "title": "Sellerifritters med æblesalat og pestodressing",
+  "intro": "Sprøde pandestegte fritters af knoldselleri med parmesan, serveret med kogte kartofler og en frisk salat af æble, gulerod og spinat. Pestodressingen giver cremet fylde til det hele.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til fritters",
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "en del gemmes til anretning",
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 40,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til kartofler",
+      "amount": 400,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Til kartofler",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til æblesalaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til æblesalaten",
+      "amount": 60,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til æblesalaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til æblesalaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til æblesalaten",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til æblesalaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til æblesalaten",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "dressing",
+      "note": "cremet pestodressing",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en mellemstor gryde med saltet vand over varmen og bring det i kog."
+    },
+    {
+      "section": "Fritters",
+      "text": "Hak persillen fint, og gem lidt af bladene til pynt. Hak løget fint, skræl knoldselleriet og riv det groft. Skyl spinaten, og del citronen i to."
+    },
+    {
+      "section": "Fritters",
+      "text": "Rør selleri, bouillon, krydderurter, persille, parmesan, løg, æg, mel, salt og peber sammen i en skål."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Kog kartoflerne i 11-13 minutter, til en kniv let går igennem. Hæld vandet fra, smag til med salt og peber, og læg låg på. Du kan evt. vende dem med lidt smør."
+    },
+    {
+      "section": "Æblesalat",
+      "text": "Skær æblet i tynde halve skiver, og lav lange tynde bånd af gulerod med en skræller. Rør olie, en sjat citronsaft, salt og peber sammen i en stor skål. Vend spinat, æble og gulerod i dressingen lige før servering."
+    },
+    {
+      "section": "Fritters",
+      "text": "Hæld så meget olie på en stor pande, at bunden er dækket, og varm den op ved middelhøj varme. Kom fritterfarsen på panden som 4 fritters, og tryk dem flade med en paletkniv. Steg dem 3-4 minutter på hver side, til de er gyldne og gennemstegte. Læg dem på køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Anret fritters, kartofler og salat på tallerkener, og drys med den gemte persille. Server med pestodressing."
+    }
+  ],
+  "changes": [
+    "Hvide Løjer & Urter er erstattet af blandede tørrede krydderurter.",
+    "Citrusfrugt er erstattet af citron.",
+    "Parmigiano Reggiano er erstattet af parmesan.",
+    "Cremet pestodressing er erstattet af dressing."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har sellerifritters med æg og ost, kartofler og en stor salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:39.991Z"
+  }
+}

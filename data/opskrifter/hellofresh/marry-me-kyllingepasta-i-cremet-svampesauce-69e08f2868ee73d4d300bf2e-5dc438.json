@@ -1,0 +1,261 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/marry-me-kyllingepasta-i-cremet-svampesauce-69e08f2868ee73d4d300bf2e",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:50:13.534Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1151,
+    "protein_g": 73.1,
+    "carbs_g": 94.9,
+    "fat_g": 54.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R13_BW50_SE_P53751-1_MT_Main_high-a18cba98.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:04:15.855Z",
+  "title": "Marry me-kyllingepasta med svampesauce og caprese",
+  "intro": "Orecchiette i cremet tomatsauce med østershatte, spinat og stegt kylling, serveret med en frisk capresesalat. Retten er rig og mættende, men klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "orecchiette",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "BBQ-marineret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 70,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "ml",
+      "name": "balsamico",
+      "note": "balsamicocreme",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "østershatte",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "pastavand, gemt fra kogningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til capresesalaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": "til capresesalaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom pastaen i en stor gryde med kogende vand, der er saltet kraftigt. Kog den i 11-12 minutter, til den er al dente."
+    },
+    {
+      "section": null,
+      "text": "Tag 1 dl af kogevandet fra, og si pastaen. Lad den vente."
+    },
+    {
+      "section": null,
+      "text": "Hak løget fint, og pil østershattene i grove stykker. Lad mozzarellaen dryppe af, og skær den i skiver på ca. ½ cm."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingen mellem to stykker bagepapir, og tryk den ud til ca. 2 cm tykkelse med en kødhammer eller en kagerulle."
+    },
+    {
+      "section": null,
+      "text": "Varm en stor pande op ved middelhøj varme, og rist pinjekernerne i 3-4 minutter, til de er gyldne. Kom dem i en skål."
+    },
+    {
+      "section": null,
+      "text": "Hæld lidt olie på samme pande. Steg kyllingen med salt i 2 minutter på hver side, til den har fået farve."
+    },
+    {
+      "section": null,
+      "text": "Skru ned til middel varme, og steg kyllingen 2-3 minutter mere på hver side, til kødet er hvidt hele vejen igennem. Læg den på et fad, og hold den varm."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt mere olie på panden ved middelhøj varme. Brun løg og svampe med salt i 3-4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør tomatpuré, bouillon, creme fraiche og fløde i. Skru ned til lav varme, og lad saucen småkoge 1-2 minutter, til den tykner en anelse."
+    },
+    {
+      "section": null,
+      "text": "Skær imens kyllingen i tynde skiver. Skær også tomaten i tynde skiver, og pluk basilikumbladene."
+    },
+    {
+      "section": null,
+      "text": "Læg tomat, mozzarella og basilikum på skift i en ring på et fad. Drys med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Vend pasta, pastavand og spinat i saucen lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Fordel pastaen i dybe tallerkener, og læg kylling, parmesan og pinjekerner ovenpå. Dryp balsamicocremen over capresesalaten, og server den ved siden af."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano er erstattet med parmesan.",
+    "Balsamicocreme er erstattet med balsamico."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, pasta som mættende element og en caprese ved siden af, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:40:32.563Z"
+  }
+}

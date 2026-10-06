@@ -1,0 +1,223 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtige-kongerejer-og-chimichurri-69c3dbf48146910691095ded",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:59:23.271Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 636,
+    "protein_g": 19.1,
+    "carbs_g": 76.3,
+    "fat_g": 29.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R08_BW13_SE_C55487-1_main_high-0ae4ae55.jpg",
+  "lang": "da",
+  "keywords": "Argentinsk",
+  "fetched_at": "2026-10-05T20:05:29.199Z",
+  "title": "Kongerejer med chimichurri, squash og basmatiris",
+  "intro": "Hurtig hverdagsret med stegte kongerejer og farverige grøntsager, serveret med duftende basmatiris. En frisk chimichurri af persille, hvidløg og eddike runder retten af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "amount": 150,
+      "unit": "g",
+      "name": "kæmperejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": "skåret i tern på 2 cm",
+      "optional": false
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "skåret i strimler på 1 cm",
+      "optional": false
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": "til rejerne",
+      "optional": false
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til rejerne",
+      "optional": false
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "en knivspids",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 12,
+      "unit": "ml",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 4,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til chimichurrien",
+      "optional": false
+    },
+    {
+      "section": "Chimichurri",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "en knivspids",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom vandet i en gryde og bring det i kog. Rør risene og saltet i, læg låg på, og lad dem simre ved middel-lav varme i 10 min."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risene trække under låg i 10 min. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "text": "Mens risene koger, skæres squash, peberfrugt og løg som beskrevet i ingredienslisten."
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "text": "Varm lidt olivenolie op i en stor pande ved middelhøj varme. Steg grøntsagerne i 4-5 min, til de er lidt bløde."
+    },
+    {
+      "section": "Rejer og grøntsager",
+      "text": "Kom rejerne på panden sammen med krydderurterne, saltet og peberen. Steg i 2-3 min, til rejerne er gyldne og helt hvide og matte indeni."
+    },
+    {
+      "section": "Chimichurri",
+      "text": "Rør persille, hvidløg, chiliflager, krydderurter, eddike, olivenolie, salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Chimichurri",
+      "text": "Læg ris, rejer og grøntsager på tallerkener, og hæld chimichurrien ovenpå."
+    }
+  ],
+  "changes": [
+    "Zucchini er skiftet til squash.",
+    "Hvide Løjer & Urter er skiftet til blandede tørrede krydderurter.",
+    "Middelhavsdrøm er skiftet til blandede tørrede krydderurter.",
+    "Kongerejer er skiftet til kæmperejer."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rejer som hovedråvare, basmatiris som mættende element og rigeligt grønt fra squash, peberfrugt og løg.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:33.312Z"
+  }
+}

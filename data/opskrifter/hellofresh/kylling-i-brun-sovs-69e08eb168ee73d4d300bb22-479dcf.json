@@ -1,0 +1,222 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/kylling-i-brun-sovs-69e08eb168ee73d4d300bb22",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:52:15.515Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 726,
+    "protein_g": 40.9,
+    "carbs_g": 64.4,
+    "fat_g": 34.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R27_W20_NO_C20620-2_Main_edit_high-9ac67ea3.jpg",
+  "lang": "da",
+  "keywords": "Britisk",
+  "fetched_at": "2026-10-05T20:04:31.167Z",
+  "title": "Kylling i brun sovs med persillekartofler og rødkålssalat",
+  "intro": "Mør kyllingebryst med brun sovs, smørdampede persillekartofler og en sprød rødkålssalat med tranebær og honning-sennepsdressing. En enkel hverdagsret i klassisk dansk stil.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "brun sovs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "honning-sennepsdressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "tørrede tranebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til de kogte kartofler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skær kartoflerne i tern på ca. 2 cm, og lad skrællen blive på. Kog dem i 11-13 minutter, til en kniv let går igennem. Si vandet fra."
+    },
+    {
+      "section": null,
+      "text": "Smag kartoflerne til med salt og peber, og sæt låg på, så de holder sig varme."
+    },
+    {
+      "section": null,
+      "text": "Varm olien på en stor pande ved middelhøj varme. Steg kyllingen med salt i 2 minutter på hver side, til den er brunet."
+    },
+    {
+      "section": null,
+      "text": "Skru ned til middelvarme, og steg kyllingen yderligere 2-3 minutter på hver side. Den er færdig, når kødet er hvidt hele vejen igennem uden rødt."
+    },
+    {
+      "section": null,
+      "text": "Hak persillen fint."
+    },
+    {
+      "section": null,
+      "text": "Rør rødkål, tranebær, dressing, olie, salt og peber sammen i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Sæt panden tilbage på middelvarme. Rør brun sovs, vand, salt og smør i, og lad saucen blive varm."
+    },
+    {
+      "section": null,
+      "text": "Skær kyllingen i skiver på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Vend smør, persille og salt ned i de varme kartofler lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Anret kartofler, kylling og salat på tallerkener, og hæld saucen over kyllingen."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, kartofler som mættende del og rødkålssalat som grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:40:53.708Z"
+  }
+}

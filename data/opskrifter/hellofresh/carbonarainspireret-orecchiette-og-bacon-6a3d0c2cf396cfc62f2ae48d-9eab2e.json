@@ -1,0 +1,218 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/carbonarainspireret-orecchiette-og-bacon-6a3d0c2cf396cfc62f2ae48d",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:25:21.248Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 889,
+    "protein_g": 35.1,
+    "carbs_g": 88.3,
+    "fat_g": 42.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R11_BW27_SE_C58879-1main_high-6c8f8fca.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:01:27.426Z",
+  "title": "Pasta carbonara med skjult blomkål og majssalat",
+  "intro": "Cremet pasta med sprød bacon, hvor en blendet sauce af blomkål og parmesan giver en let udgave af carbonara. Serveres med en frisk salat af majs og balsamico.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "orecchiette",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fint revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "pastavand",
+      "note": "gemt fra kogningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "peber",
+      "note": "groftmalet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 12,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "balsamico",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bring to store gryder med saltet vand i kog: den ene til pastaen, den anden til blomkålen. Vandet skal være salt som havvand."
+    },
+    {
+      "section": null,
+      "text": "Kog pastaen i 12-13 minutter, til den er al dente, så den stadig har lidt bid. Tag en kop af kogevandet fra, og si derefter pastaen."
+    },
+    {
+      "section": null,
+      "text": "Kog blomkålsbuketterne i 6-8 minutter, til de er møre. Si dem."
+    },
+    {
+      "section": null,
+      "text": "Varm en mellemstor pande op ved middelhøj varme, mens blomkålen koger. Steg baconen i 5-6 minutter, til den er gylden. Læg den på en tallerken, og hold den varm."
+    },
+    {
+      "section": null,
+      "text": "Pres eller hak hvidløget fint."
+    },
+    {
+      "section": null,
+      "text": "Kom blomkål, fløde, bouillon, pastavand, hvidløg, mælk, halvdelen af parmesanen, peber og salt til saucen i en gryde. Lad det simre i 2-3 minutter, til det er varmt hele vejen igennem."
+    },
+    {
+      "section": null,
+      "text": "Tag gryden af varmen, og blend saucen helt glat med stavblender eller i en blender. Stil den tilbage på varmen, og vend bacon og pasta i."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Skyl salaten, og lad majsen dryppe af i en si. Vend salat, majs, balsamico, olie, salt og peber sammen i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Hak persillen fint. Anret pastaen i dybe tallerkener, og drys med persille og resten af parmesanen. Server med salaten ved siden af."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en pastaret med bacon og blomkål og har allerede en salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:59.642Z"
+  }
+}

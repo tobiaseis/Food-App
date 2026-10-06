@@ -1,0 +1,241 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/asiatisk-tofu-pokebowl-693a95ecc92924105eca63ab",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:24:09.060Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 836,
+    "protein_g": 28.7,
+    "carbs_g": 93.9,
+    "fat_g": 43.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R16_BW47_SE_V20057-1_Main_high-eb678069.jpg",
+  "lang": "da",
+  "keywords": "Hawaiiansk",
+  "fetched_at": "2026-10-05T20:08:29.109Z",
+  "title": "Tofu-pokebowl med mango og hvidløgsris",
+  "intro": "En frisk skål med sprød stegt tofu i sojaglaze, mango, agurk og gulerod på duftende hvidløgsris. Toppes med peanuts, mynte og sriracha-mayo.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til risen",
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.25,
+      "unit": "spsk",
+      "name": "mel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 25,
+      "unit": "g",
+      "name": "honning-ingefærdressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 200,
+      "unit": "g",
+      "name": "tofu",
+      "note": "skåret i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "et nip til tofuen",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællet til bånd, resten finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til bowlen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "mango",
+      "note": "i 1 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 15,
+      "unit": "ml",
+      "name": "ponzudressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "saltede peanuts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "vegansk srirachamayonnaise",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Til risen",
+      "text": "Pres hvidløget eller hak det fint. Varm olien op i en mellemstor gryde ved middel varme, og svits hvidløget i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": "Til risen",
+      "text": "Hæld vandet i, og bring det i kog. Kom ris og salt i, læg låg på, og lad risen småkoge ved middellav varme i 12 minutter."
+    },
+    {
+      "section": "Til risen",
+      "text": "Tag gryden af varmen, og lad risen trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Til saucen",
+      "text": "Mens risen koger, skæres citronen i både. Rør sojasauce, mel, vand, honning-ingefærdressing og sukker sammen i en lille skål, og pres en god sjat citronsaft i."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Skær agurken i skiver. Lav lange, tynde bånd af guleroden med skræller, og hak det stykke, der er til overs, fint."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Skræl mangoen, og skær kødet af på begge sider af stenen. Skær det i tern på 1 cm."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Drys tofuen med et nip salt. Varm olien til stegning op på en stor pande ved middelhøj varme, og steg tofuen gylden i 3-4 minutter."
+    },
+    {
+      "section": "Til bowlen",
+      "text": "Tag panden af varmen, hæld saucen over tofuen, og vend rundt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel risen i dybe tallerkener, og læg tofu, gulerod, agurk og mango ovenpå. Dryp med ponzudressing."
+    },
+    {
+      "section": "Til servering",
+      "text": "Strø peanuts og mynte over. Server med srirachamayonnaise og de resterende citronbåde ved siden af."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron."
+  ]
+}

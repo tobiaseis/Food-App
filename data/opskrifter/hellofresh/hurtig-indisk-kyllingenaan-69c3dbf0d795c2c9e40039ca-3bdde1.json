@@ -1,0 +1,194 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-indisk-kyllingenaan-69c3dbf0d795c2c9e40039ca",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:59:23.759Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 876,
+    "protein_g": 53.6,
+    "carbs_g": 91.6,
+    "fat_g": 31.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R05_BW14_SE_C52997-1_main_high-9d5a5d8c.jpg",
+  "lang": "da",
+  "keywords": "Indisk",
+  "fetched_at": "2026-10-05T20:05:30.371Z",
+  "title": "Hurtig kyllingenaan med raita",
+  "intro": "Sprødt varme naanbrød med krydret kylling i tikka masala-sauce, som alle selv fylder op med raita, løg, tomat og chutney. Det går hurtigt og er sjovt at spise sammen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Mild Mahal",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "naanbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "hakket groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde, halve skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "tikka masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 35,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "abrikoschutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til raita",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": "til raita",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Raita og tilbehør",
+      "text": "Hak tomaterne groft, og skær løget i tynde, halve skiver. Stil begge dele til side."
+    },
+    {
+      "section": "Raita og tilbehør",
+      "text": "Riv agurken groft, og pres så meget væde ud af den som muligt. Rør den sammen med yoghurt, salt og peber i en mellemstor skål."
+    },
+    {
+      "section": "Kylling og sauce",
+      "text": "Varm olien op i en stegepande ved middelhøj varme. Steg kyllingen med salt og Mild Mahal i 4-5 minutter på hver side, til den er gylden og helt gennemstegt. Kødet skal være hvidt og uden spor af rødt."
+    },
+    {
+      "section": "Kylling og sauce",
+      "text": "Kom smør, tikka masala, tomatpuré og vand på panden. Lad det simre 1-2 minutter, til saucen er lidt tykkere."
+    },
+    {
+      "section": "Naanbrød",
+      "text": "Mens kyllingen steger, så hold naanbrødene kort under rindende vand, ca. 2 sekunder. Pak dem i sølvpapir, og varm dem i ovnen i 4-5 minutter."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg naanbrødene på tallerkener, og fordel kyllingen ovenpå. Sæt raita, løg, tomat og chutney frem i små skåle, så hver kan fylde sit eget brød."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling i sauce, naanbrød som mættende base samt raita og grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:35.984Z"
+  }
+}

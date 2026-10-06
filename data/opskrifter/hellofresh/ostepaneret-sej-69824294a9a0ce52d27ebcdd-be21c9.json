@@ -1,0 +1,274 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/ostepaneret-sej-69824294a9a0ce52d27ebcdd",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:13:08.334Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 792,
+    "protein_g": 39.8,
+    "carbs_g": 77.4,
+    "fat_g": 36.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y23_R10_W29_SE_C14257-2_Main_7_high-3c42ed9e.jpg",
+  "lang": "da",
+  "keywords": "North American",
+  "fetched_at": "2026-10-05T20:07:05.231Z",
+  "title": "Ostepaneret sej med ovnbagte kartofler og cæsarsalat",
+  "intro": "Sprød sej i ost- og pankorasp serveres med ovnbagte kartoffelbåde og en frisk salat med cremet dressing i cæsarstil.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ovnbagte kartofler",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede, skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte kartofler",
+      "amount": 1,
+      "unit": "g",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte kartofler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ovnbagte kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "en smule til at dryppe med",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 10,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet, halvdelen af osten",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skrællet i lange, tynde bånd",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": "vandet drænet fra",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "kål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": "Ostepaneret sej",
+      "amount": 250,
+      "unit": "g",
+      "name": "sej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostepaneret sej",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostepaneret sej",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til melet",
+      "optional": false
+    },
+    {
+      "section": "Ostepaneret sej",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostepaneret sej",
+      "amount": 12.5,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ostepaneret sej",
+      "amount": 4,
+      "unit": "g",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Ostepaneret sej",
+      "amount": 10,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet, resten af osten",
+      "optional": false
+    },
+    {
+      "section": "Ostepaneret sej",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til fisken",
+      "optional": false
+    },
+    {
+      "section": "Ostepaneret sej",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning, evt. mere efter behov",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ovnbagte kartofler",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Læg bagepapir på en bageplade."
+    },
+    {
+      "section": "Ovnbagte kartofler",
+      "text": "Fordel kartoffelbådene på pladen, dryp med lidt olivenolie, og drys med oregano, salt og peber. Vend dem rundt, så de er dækket. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": "Ovnbagte kartofler",
+      "text": "Bag kartoflerne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Dressing",
+      "text": "Mens kartoflerne bager, rør mayonnaise, hvidløg, den afmålte parmesan, olivenolie, vand, salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Kom gulerodsbånd, majs og kål i en stor skål."
+    },
+    {
+      "section": "Ostepaneret sej",
+      "text": "Stil tre dybe tallerkener frem. Bland mel og salt i den første, pisk ægget i den næste, og rør panko, røget paprika og resten af parmesanen sammen i den sidste."
+    },
+    {
+      "section": "Ostepaneret sej",
+      "text": "Tør fisken med køkkenrulle, og drys den med salt. Rul den først i mel, så i æg og til sidst i panko-blandingen. Læg den på et fad. Har du ikke æg, kan du bruge 2 spsk mælk."
+    },
+    {
+      "section": "Ostepaneret sej",
+      "text": "Hæld så meget olivenolie på en stor pande, at bunden er dækket, og varm den over middelhøj varme."
+    },
+    {
+      "section": "Ostepaneret sej",
+      "text": "Steg fisken 2-3 minutter på hver side, til den er gylden og gennemstegt. Kødet skal være mælkehvidt og mat. Tilsæt mere olie, hvis det behøves. Læg fisken på køkkenrulle."
+    },
+    {
+      "section": "Ostepaneret sej",
+      "text": "Vend dressingen med salaten, og server med fisk og kartofler."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano er skiftet til parmesan.",
+    "Hvidløgsfed er skrevet som hvidløg.",
+    "Kålblanding er skiftet til kål."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk som hovedråvare, ovnbagte kartofler som mættende tilbehør og en cæsarsalat med grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:02.794Z"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/rumpsteak-diane-6a4b773cb4eff25aed71b33e",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:16:04.349Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 735,
+    "protein_g": 41.3,
+    "carbs_g": 50.7,
+    "fat_g": 41
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R11_BW49_SE_C31011-1_edit_beef_Main__7high-87516181.jpg",
+  "lang": "da",
+  "keywords": "Fransk",
+  "fetched_at": "2026-10-05T20:00:33.652Z",
+  "title": "Rumpsteak Diane med ovnbagte fritter og valnøddesalat",
+  "intro": "Mør rumpsteak med cremet sennepssauce med worcestershire, serveret med sprøde ovnbagte kartoffelfritter og frisk rucolasalat med valnødder.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "rumpsteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "valnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til kartoflerne",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tag bøfferne ud af køleskabet, og drys dem med salt. Tænd ovnen på 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skær de uskrællede kartofler i fritter på ca. 1 cm. Læg dem på en bageplade med bagepapir, og vend dem med olie, salt og peber. Brug flere plader, hvis de ligger for tæt."
+    },
+    {
+      "section": null,
+      "text": "Bag fritterne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Hak løg og persille fint, mens fritterne bager."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en stegepande ved middelhøj varme. Brun bøfferne i 3-4 minutter på hver side. Vil du have dem gennemstegt, så giv dem 1-2 minutter mere. Pak dem ind i folie, og lad dem hvile."
+    },
+    {
+      "section": null,
+      "text": "Smelt smørret i den samme pande ved middelhøj varme, og svits løget 1-2 minutter, til det er blødt. Rør worcestershiresauce, fløde, halvdelen af sennepen, persille, vand, salt og peber i. Lad saucen simre 1-2 minutter, til den tykner en anelse."
+    },
+    {
+      "section": null,
+      "text": "Skyl rucolaen, hak valnødderne groft, og halver tomaterne. Vend rucola og tomater med resten af sennepen, olie, salt og peber i en skål."
+    },
+    {
+      "section": null,
+      "text": "Skær bøfferne i tynde skiver lige før servering. Anret fritter, kød og salat på tallerkener. Drys valnødder over salaten, og hæld saucen over kødet."
+    }
+  ],
+  "changes": []
+}

@@ -1,0 +1,314 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/fransk-kylling-cordon-bleu-og-persillesauce-69171723623e0c85b682c099",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:28:04.097Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 22,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1251,
+    "protein_g": 65.7,
+    "carbs_g": 89.1,
+    "fat_g": 71.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y23_R19_W43_SE_P12858-2_Main_edit___13low-29614467.jpg",
+  "lang": "da",
+  "keywords": "Fransk",
+  "fetched_at": "2026-10-05T20:09:11.697Z",
+  "title": "Kylling cordon bleu med persillesauce og kartoffelmos",
+  "intro": "Paneret kyllingebryst fyldt med bacon, ost og sennepsmayonnaise, serveret med persillesauce, cremet kartoffelmos og en frisk salat af pære og ristede valnødder.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kylling",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 25,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 15,
+      "unit": "g",
+      "name": "grov sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 60,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 50,
+      "unit": "g",
+      "name": "revet ost",
+      "note": "gouda",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 50,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Panering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 20,
+      "unit": "g",
+      "name": "grana padano",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til mos",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "valnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pære",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "honning-sennepsdressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Persillesauce",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelmos",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Sæt en stor gryde med saltet vand over varmen og bring det i kog."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Skræl kartoflerne og skær dem i tern på 2 cm. Kog dem i 11-13 minutter, til en kniv let går igennem."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Si vandet fra. Tilsæt mælk, grana padano, salt og peber, og mos det hele med en kartoffelmoser eller gaffel. Læg låg på, så moset holder varmen."
+    },
+    {
+      "section": "Salat",
+      "text": "Fordel valnødderne på en bageplade med bagepapir og rist dem i ovnen i 5-6 minutter, til de dufter. Tag dem ud og lad dem køle."
+    },
+    {
+      "section": "Salat",
+      "text": "Rør mayonnaise og sennep sammen i en lille skål. Hak persillen fint. Skær pæren i tynde halve skiver, og skyl salaten."
+    },
+    {
+      "section": "Salat",
+      "text": "Kom pære, valnødder og salat i en skål. Vend den med dressing, salt og peber lige før servering."
+    },
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingebrysterne på et skærebræt og hold en hånd fladt oven på dem. Skær en lomme i hvert bryst fra siden med en skarp kniv, uden at skære helt igennem."
+    },
+    {
+      "section": "Kylling",
+      "text": "Drys lommerne med salt. Fyld dem med sennepsmayonnaise, bacon og ost, og luk dem."
+    },
+    {
+      "section": "Panering",
+      "text": "Stil tre dybe tallerkener frem: mel i den første, sammenpisket æg i den anden, og panko blandet med salt og peber i den tredje. Mangler du æg, kan du bruge 2 spsk mælk i stedet."
+    },
+    {
+      "section": "Panering",
+      "text": "Vend kyllingen først i mel, så i æg og til sidst i panko. Gør det forsigtigt, så fyldet bliver inde."
+    },
+    {
+      "section": "Panering",
+      "text": "Hæld olie i en stegepande, så bunden er dækket, og varm den op over middelhøj varme. Steg kyllingen gylden i 3-4 minutter på hver side."
+    },
+    {
+      "section": "Panering",
+      "text": "Læg kyllingen på en bageplade med bagepapir og bag den i ovnen i 11-12 minutter. Den er færdig, når kødet er hvidt uden spor af rødt."
+    },
+    {
+      "section": "Persillesauce",
+      "text": "Sæt den brugte stegepande på middel varme. Hæld fløden i og lad den simre 1-2 minutter, til den er varm."
+    },
+    {
+      "section": "Persillesauce",
+      "text": "Rør persille, salt og peber i saucen."
+    },
+    {
+      "section": "Persillesauce",
+      "text": "Anret kylling og kartoffelmos på tallerkener, og server med persillesauce og salat."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, kartoffelmos som mættende tilbehør og en salat med pære og valnødder, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:48:11.660Z"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-cajunkrydret-kyllingepasta-694309500a853ea815821289",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:21:25.129Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 887,
+    "protein_g": 57.1,
+    "carbs_g": 81,
+    "fat_g": 36.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R21_BW01_SE_R11248-11_Main_high-3639689f.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:08:10.269Z",
+  "title": "Cajunkyllingepasta med parmesan",
+  "intro": "Hurtig pasta med kylling, squash og tomat i en cremet cajunsauce. Toppes med parmesan og chiliflager.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 35,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "conchiglie",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "i flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "pastavand",
+      "note": "fra kogningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til pastavandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til krydring",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog pastaen i rigeligt letsaltet vand i 12-13 minutter, til den er al dente. Tag en kop af kogevandet fra, og si pastaen. Lad den gerne vente i gryden med lidt olie."
+    },
+    {
+      "section": null,
+      "text": "Skær squash og tomater i tern på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en stor pande ved middelhøj varme. Brun kyllingen med et nip salt, og kom squash, tomat, cajun-krydderi, krydderurter og tomatpuré i. Steg i 4-5 minutter, til kyllingen er gennemstegt og hvid helt igennem."
+    },
+    {
+      "section": null,
+      "text": "Hæld pastavand, bouillon og fløde i panden, og lad det småkoge i 1 minut. Vend pastaen i, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Fordel i dybe tallerkener, og drys med parmesan og chiliflager. Brug mindre chili eller drop den, hvis du ikke bryder dig om stærk mad."
+    }
+  ],
+  "changes": [
+    "Ay Cajun-ba er erstattet af almindeligt cajun-krydderi.",
+    "Mamas Favorit er erstattet af blandede tørrede krydderurter.",
+    "Grana Padano er erstattet af parmesan."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, pasta som mættende element og squash og tomat som grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:52.172Z"
+  }
+}

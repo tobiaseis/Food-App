@@ -1,0 +1,234 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremede-sydstatsrejer-og-bacon-pa-grits-699594d81d69a6906de09b77",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:09:14.975Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 809,
+    "protein_g": 22.5,
+    "carbs_g": 76.3,
+    "fat_g": 43.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R16_BW07_SE_C54149-1_Main_4_high-bab4dbf8.jpg",
+  "lang": "da",
+  "keywords": "Cajunsk",
+  "fetched_at": "2026-10-05T20:06:35.622Z",
+  "title": "Cremede rejer og bacon på polenta med majs",
+  "intro": "Cremet polenta i stil med amerikanske grits toppes med cajunkrydrede rejer, sprød bacon og stegt majs. Retten er klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Polenta",
+      "amount": 150,
+      "unit": "g",
+      "name": "polenta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 7,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til polentaen",
+      "optional": false
+    },
+    {
+      "section": "Polenta",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til polentaen",
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 150,
+      "unit": "g",
+      "name": "rejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": "hakket groft",
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": "afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "snittet fint, hvid og grøn del adskilt",
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller hakket fint",
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 4,
+      "unit": "g",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 70,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til rejerne",
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": "til rejerne",
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Rejer og bacon",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til mosen",
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Polenta",
+      "text": "Kom vand, bouillon og salt i en mellemstor gryde, og bring det i kog. Skru ned, så det kun småkoger. Rør polentaen i og pisk rundt i cirka 2 minutter, til den er tyk. Lad den stå på lav varme."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Snit forårsløget fint, og del det i hvid og grøn del. Pres eller hak hvidløget fint, hak tomaten groft, og lad majsen dryppe af."
+    },
+    {
+      "section": "Majs",
+      "text": "Varm en mellemstor pande op på middelhøj varme. Brun majsen let i 4-5 minutter, og læg den over i en skål. Hold den varm."
+    },
+    {
+      "section": "Rejer og bacon",
+      "text": "Brug den samme pande på middelhøj varme, og steg baconet gyldent i 4-5 minutter. Tør rejerne med køkkenrulle."
+    },
+    {
+      "section": "Rejer og bacon",
+      "text": "Kom rejer, tomat, hvidløg, den hvide del af forårsløget, cajunkrydderi, salt og peber på panden. Steg 1-2 minutter på hver side, til rejerne er gennemstegte, dvs. hvide og mat i kødet."
+    },
+    {
+      "section": "Rejer og bacon",
+      "text": "Hæld vand på panden, og lad det koge ind i 1-2 minutter, til saucen er lidt tykkere. Tag panden af varmen, og rør smørret i."
+    },
+    {
+      "section": "Til mosen",
+      "text": "Sæt polentagryden på middelvarme igen. Rør fløde, vand og parmesan i, og lad det simre i 2-3 minutter. Mos det glat med en kartoffelmoser eller gaffel, og smag til med salt og peber. Server med det samme, for polentaen bliver fastere, når den køler af."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel polentaen i dybe tallerkener. Læg majs, rejer og bacon ovenpå, og drys med den grønne del af forårsløget."
+    }
+  ],
+  "changes": [
+    "Kongerejer er skiftet til almindelige rejer.",
+    "Ay Cajun-ba er skiftet til Cajun-krydderi.",
+    "Parmigiano Reggiano er skiftet til parmesan."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rejer og bacon som hovedråvare og polenta som mættende base, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:17.238Z"
+  }
+}

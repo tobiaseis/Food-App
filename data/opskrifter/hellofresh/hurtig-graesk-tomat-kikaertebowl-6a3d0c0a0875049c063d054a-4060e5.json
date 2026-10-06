@@ -1,0 +1,208 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-graesk-tomat-kikaertebowl-6a3d0c0a0875049c063d054a",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:28:39.964Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 681,
+    "protein_g": 24.4,
+    "carbs_g": 88.1,
+    "fat_g": 26
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R26_BW15_SE_C54203-1_main_high-f0c9a943.jpg",
+  "lang": "da",
+  "keywords": "Græsk",
+  "fetched_at": "2026-10-05T20:01:38.069Z",
+  "title": "Græsk kikærtebowl med feta og spinatris",
+  "intro": "Kikærter i tomatsauce med græske krydderier, serveret med spinatris og en frisk agurkesalat. Retten er klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 30,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 10,
+      "unit": "g",
+      "name": "dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "souvlaki-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 200,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom vand i en gryde og bring det i kog. Tilsæt ris og salt, læg låg på, og lad risen koge ved middellav varme i 10 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risen trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Skyl kikærterne i en si. Smelt smørret i en mellemstor stegepande ved middelhøj varme."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Rist kikærter, souvlaki-krydderi og chiliflager i ca. 30 sekunder, til det dufter. Brug mindre chili eller drop den, hvis I ikke vil have det stærkt."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Hæld hakkede tomater, sukker og salt på panden. Lad det simre i 5-6 minutter, til saucen er tyknet lidt."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær tomat og agurk i grove stykker, og vend dem i en stor skål med olie og salt."
+    },
+    {
+      "section": "Ris",
+      "text": "Skyl spinaten, og pluk den sammen med dilden i grove stykker. Vend begge dele i risen lige før servering."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel ris, salat og kikærter i dybe tallerkener. Smuldr fetaen ovenpå."
+    }
+  ],
+  "changes": [
+    "Græsk ost er skiftet til feta."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kikærter og feta som protein, spinatris som mættende basis og salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:22.077Z"
+  }
+}

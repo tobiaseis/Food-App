@@ -1,0 +1,203 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/falafelwraps-og-hvidlogsdressing-6a104cbdc7f6424d709d7a12",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:38:37.945Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 878,
+    "protein_g": 25.7,
+    "carbs_g": 117.3,
+    "fat_g": 31.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R19_BW40_SE_V43102-1_Main_high-cedb1072.jpg",
+  "lang": "da",
+  "keywords": "Libanesisk",
+  "fetched_at": "2026-10-05T20:02:52.875Z",
+  "title": "Falafelwraps med hvidløgsdressing, syltede løg og harissafritter",
+  "intro": "Sprøde falafler i fuldkornswraps med cremet hvidløgsdressing, friske grøntsager og hurtigsyltede løg. Til det ovnbagte harissafritter.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "fuldkorn",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "falafel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "romainesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "harissa",
+      "note": "krydderi",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til syltningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Harissafritter",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær kartoflerne i fritter på ca. 1 cm, og læg dem på en bageplade med bagepapir. Brug to plader, hvis der ikke er plads på én."
+    },
+    {
+      "section": "Harissafritter",
+      "text": "Vend fritterne med en smule olivenolie, salt, harissa og peber. Bag dem i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Syltede løg",
+      "text": "Skær løget i tynde halve skiver. Pres saften fra den halverede citron i en lille skål, og rør sukker og salt i. Læg løgene i, og lad dem trække, mens resten laves. Hæld saften fra, før du serverer."
+    },
+    {
+      "section": "Dressing og grønt",
+      "text": "Hak eller pres hvidløget fint, og rør det sammen med mayonnaise, creme fraiche og peber til en dressing."
+    },
+    {
+      "section": "Dressing og grønt",
+      "text": "Hak tomaten groft, og skær agurken i tynde skiver. Skær roden af salaten, og del bladene."
+    },
+    {
+      "section": "Falafel",
+      "text": "Varm lidt olivenolie på en stor pande ved middelhøj varme. Steg falaflerne i 4-5 minutter, til de er varme hele vejen igennem, gyldne og sprøde. Vend dem ofte, så de ikke brænder på."
+    },
+    {
+      "section": "Samling",
+      "text": "Varm tortillaerne i mikrobølgeovnen i 30-60 sekunder. Du kan også svøbe dem i sølvpapir og varme dem i ovnen i 4-5 minutter."
+    },
+    {
+      "section": "Samling",
+      "text": "Smør dressing på midten af hver tortilla, og læg agurk, syltede løg, tomat og falafel ovenpå. Fold siderne ind, og rul tortillaen sammen."
+    },
+    {
+      "section": "Samling",
+      "text": "Server wrapsene med fritterne, salaten og resten af dressingen."
+    }
+  ],
+  "changes": []
+}

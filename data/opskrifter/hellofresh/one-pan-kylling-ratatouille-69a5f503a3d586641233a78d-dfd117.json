@@ -1,0 +1,226 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/one-pan-kylling-ratatouille-69a5f503a3d586641233a78d",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:07:40.644Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 568,
+    "protein_g": 46.8,
+    "carbs_g": 53,
+    "fat_g": 17.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R11_BW01_SE_C50192-1_MT_Main_high-cb17593a.jpg",
+  "lang": "da",
+  "keywords": "Fransk",
+  "fetched_at": "2026-10-05T20:06:22.662Z",
+  "title": "One pan-kylling med ratatouille og parmesanbrød",
+  "intro": "Mørt kylling simrer i en tomatstuvning med squash, aubergine og løg, og serveres med sprødt baguettebrød med smeltet parmesan. Det hele tilberedes i én pande.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "gerne med basilikum",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 6,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til gryderetten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til gryderetten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til gryderetten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "baguette",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til brødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "kruspersille",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skær kyllingen i skiver, cirka tre til hver person. Varm olien op i en stor stegepande ved høj varme."
+    },
+    {
+      "section": null,
+      "text": "Brun kyllingen med saltet i 1-2 minutter på hver side. Læg den over på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Skær squash og aubergine i store tern på et andet skærebræt, og skær løget i tynde halve skiver."
+    },
+    {
+      "section": null,
+      "text": "Sæt samme pande på middelhøj varme, og steg grøntsagerne i 3-4 minutter, til de er bløde og har fået farve."
+    },
+    {
+      "section": null,
+      "text": "Skru ned til middel varme. Kom kyllingen tilbage i panden sammen med tomater, krydderurter, bouillon, vand, sukker, salt og peber. Lad det simre i 10-12 minutter, til kyllingen er helt gennemstegt og kødet er hvidt hele vejen igennem."
+    },
+    {
+      "section": null,
+      "text": "Del baguetten på langs, og smør snitfladerne. Drys med parmesan, og læg brødet på en bageplade med bagepapir."
+    },
+    {
+      "section": null,
+      "text": "Bag brødet i ovnen i 7-8 minutter, til osten er smeltet og gylden."
+    },
+    {
+      "section": null,
+      "text": "Hak persillen groft."
+    },
+    {
+      "section": null,
+      "text": "Fordel retten i skåle, og strø persille og chiliflager over. Server med det varme brød. Brug mindre chili eller helt uden, hvis I ikke kan lide stærk mad."
+    }
+  ],
+  "changes": [
+    "Hvide Løjer & Urter og Middelhavsdrøm er erstattet af blandede tørrede krydderurter.",
+    "Parmigiano Reggiano er erstattet af parmesan.",
+    "Zucchini er skiftet til squash."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, rigeligt grønt i ratatouillen og mættende baguette med parmesan.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:43:59.150Z"
+  }
+}

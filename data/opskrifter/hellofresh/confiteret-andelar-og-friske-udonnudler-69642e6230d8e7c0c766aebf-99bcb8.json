@@ -1,0 +1,236 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/confiteret-andelar-og-friske-udonnudler-69642e6230d8e7c0c766aebf",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:16:55.475Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1077,
+    "protein_g": 65.2,
+    "carbs_g": 93.2,
+    "fat_g": 49.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R26_BW38_SE_C45607-1_Main_high-9da57c88.jpg",
+  "lang": "da",
+  "keywords": "Kinesisk",
+  "fetched_at": "2026-10-05T20:07:34.841Z",
+  "title": "Konfiteret andelår med udonnudler, hoisin-pak choi og syltet rødkål",
+  "intro": "Sprødt konfiteret andelår på wokede udonnudler med pak choi i sød hoisinsauce. Den friske, syrlige rødkål skærer fedmen fra anden.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "andelår",
+      "note": "konfiterede, sous vide",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til andelår",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "nudler",
+      "note": "friske udonnudler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "skåret i både på ca. 2 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fint hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "hoisinsauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "ml",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 150,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "skåret fint",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "snittet fint",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet rødkål",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 30,
+      "unit": "g",
+      "name": "ristede løg",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Læg andelårene med skindsiden opad på en bageplade med bagepapir, og drys dem med salt. Bag dem i 30 minutter."
+    },
+    {
+      "section": "Syltet rødkål",
+      "text": "Pres et skvæt saft fra citronen i en mellemstor skål. Rør sukker, vand og salt i saften, indtil det er opløst."
+    },
+    {
+      "section": "Syltet rødkål",
+      "text": "Vend rødkål og forårsløg i væsken, og sæt skålen til side, mens resten laves."
+    },
+    {
+      "section": null,
+      "text": "Gør pak choi, hvidløg og løg klar som beskrevet i ingredienslisten."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor stegepande ved middelhøj varme, når der er 10 minutter tilbage af andens tid."
+    },
+    {
+      "section": null,
+      "text": "Rør pak choi og løg rundt i panden i 2-3 minutter. Kom hvidløget i, og steg det i 30 sekunder, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Hæld hoisinsauce, sojasauce, sesamolie, salt og vand i panden, og rør rundt."
+    },
+    {
+      "section": null,
+      "text": "Læg nudlerne i panden, og lad dem varme igennem i 1-2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Fordel nudler og grøntsager i dybe tallerkener. Læg andelår ovenpå, og strø sesamfrø og ristede løg over. Server med den syltede rødkål ved siden af."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er erstattet med citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har andelår som hovedråvare, udonnudler som mættende element og både pak choi og syltet rødkål som grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:50.862Z"
+  }
+}

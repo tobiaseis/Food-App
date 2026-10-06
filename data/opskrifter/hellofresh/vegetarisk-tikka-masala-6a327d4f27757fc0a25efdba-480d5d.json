@@ -1,0 +1,255 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/vegetarisk-tikka-masala-6a327d4f27757fc0a25efdba",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:34:09.640Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 23,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 942,
+    "protein_g": 24.7,
+    "carbs_g": 151.3,
+    "fat_g": 28.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y23_R27_W18_DE_EXP3862-3_Main_6_low-2a04e0ea.jpg",
+  "lang": "da",
+  "keywords": "Indisk",
+  "fetched_at": "2026-10-05T20:02:19.560Z",
+  "title": "Vegetarisk tikka masala med bagt aubergine, naan og raita",
+  "intro": "Cremet tikka masala med ovnbagt aubergine, serveret på ris med kold agurkeraita og lune naanbrød. En nem hverdagsret uden kød.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til ris",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til ris",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": "i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fint hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "karry",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 70,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "tikka masala",
+      "note": "krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 90,
+      "unit": "ml",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i 1 cm tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til raita",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "naanbrød",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Kom vand, ris, halvdelen af ingefæren og et nip salt i en mellemstor gryde. Bring det i kog, læg låg på, og lad risen koge på lav varme i 10 minutter. Tag gryden af varmen, og lad risen trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": null,
+      "text": "Læg auberginetern på en bageplade med bagepapir. Vend dem med lidt olie og salt, og bag dem i ovnen i 20-25 minutter, til de er møre og let gyldne."
+    },
+    {
+      "section": null,
+      "text": "Mens risen og auberginen gør sig klar: Skær løget, snit citronen i både, hak hvidløg og persille, og skær agurken i tern."
+    },
+    {
+      "section": null,
+      "text": "Varm olie op i en stor pande på middelvarme, og svits løget i 2-3 minutter, til det er blødt. Rør hvidløg, karry, resten af ingefæren og bouillon i, og steg det i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt tomatpuré, tikka masala, vand, kokosmælk, salt, sukker og et skvæt citronsaft. Lad saucen simre i 2-3 minutter, til den er tyknet."
+    },
+    {
+      "section": null,
+      "text": "Rør agurk, persille, yoghurt, salt og et skvæt citronsaft sammen til raita."
+    },
+    {
+      "section": null,
+      "text": "Hold naanbrødene under vandhanen i et par sekunder, pak dem i sølvpapir, og varm dem i ovnen i 4-5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Vend den bagte aubergine i saucen lige før servering. Fordel risen i dybe tallerkener, og top med sauce og raita. Server med citronbåde og naanbrød ved siden af."
+    }
+  ],
+  "changes": [
+    "Ginger Ninja er erstattet af stødt ingefær.",
+    "Mild Mahal er erstattet af mild karry.",
+    "Citrusfrugt er erstattet af citron."
+  ]
+}

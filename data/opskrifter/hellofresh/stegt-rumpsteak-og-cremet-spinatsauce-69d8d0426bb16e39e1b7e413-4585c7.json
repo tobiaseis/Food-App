@@ -1,0 +1,243 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/stegt-rumpsteak-og-cremet-spinatsauce-69d8d0426bb16e39e1b7e413",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:52:38.080Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 840,
+    "protein_g": 42.1,
+    "carbs_g": 63.4,
+    "fat_g": 48.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R33_BW47_SE_P12344011-5_Main_9_high-92c2e906.jpg",
+  "lang": "da",
+  "keywords": "Britisk",
+  "fetched_at": "2026-10-05T20:04:33.503Z",
+  "title": "Rumpsteak med spinatsauce, ovnkartofler og karamelliserede løg",
+  "intro": "Saftig rumpsteak med cremet spinatsauce, sprøde ovnkartofler og søde løg. Serveres med en frisk salat af romaine og avocado.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "rumpsteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Ovnkartofler",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Ovnkartofler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "halvdelen af løgene",
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "resten af løgene, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Spinatsauce",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatsauce",
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatsauce",
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatsauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Spinatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "romainesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "karse",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler og kød",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Tag bøfferne ud af køleskabet, og drys dem med saltet til kødet."
+    },
+    {
+      "section": "Kartofler og kød",
+      "text": "Skær kartoflerne i tern på 2 cm uden at skrælle dem. Læg dem på en bageplade med bagepapir, og vend dem med en smule olie og saltet til kartoflerne. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": "Kartofler og kød",
+      "text": "Bag kartoflerne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Karamelliserede løg",
+      "text": "Skær halvdelen af løgene i tynde halve skiver. Varm olien til løgene op i en stor pande på middel varme, og steg løgene i 5-6 minutter, til de er bløde."
+    },
+    {
+      "section": "Karamelliserede løg",
+      "text": "Hæld vand, sukker og salt på panden, og lad det småkoge i 3-5 minutter, til løgene er karamelliserede. Kom dem over i en lille skål."
+    },
+    {
+      "section": "Salat og forberedelse",
+      "text": "Hak de resterende løg fint, og pres eller hak hvidløget. Klip karsen af lige over rødderne, og skyl spinaten."
+    },
+    {
+      "section": "Salat og forberedelse",
+      "text": "Skær avocadoen over, og tag stenen ud. Skrab kødet ud med en ske, og skær det i tynde skiver. Hak romainesalaten groft, og vend den med avocado, olie og salt i en skål."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm olien til stegning op i den store pande på middelhøj varme. Steg bøfferne 3-4 minutter på hver side, til de er brunede. Steg 1-2 minutter længere pr. side, hvis de skal være gennemstegte."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, til du skal servere. Gem den safts, der samler sig."
+    },
+    {
+      "section": "Spinatsauce",
+      "text": "Sænk varmen til middel, og steg de hakkede løg i samme pande i 2-3 minutter, til de dufter. Kom hvidløg og spinat i, og steg 1-2 minutter, til spinaten er faldet sammen."
+    },
+    {
+      "section": "Spinatsauce",
+      "text": "Rør fløde, bouillon og saften fra folien i. Lad saucen småkoge i 1-2 minutter, til den er let tyknet, og smag den til med salt."
+    },
+    {
+      "section": "Anretning",
+      "text": "Vend de bagte kartofler med de karamelliserede løg. Skær bøfferne i tykke skiver."
+    },
+    {
+      "section": "Anretning",
+      "text": "Læg bøf, kartofler og spinatsauce på tallerkener, og drys med karse. Server med salaten."
+    }
+  ],
+  "changes": []
+}

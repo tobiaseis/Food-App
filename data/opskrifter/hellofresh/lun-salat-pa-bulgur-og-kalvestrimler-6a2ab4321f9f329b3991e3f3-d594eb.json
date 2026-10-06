@@ -1,0 +1,245 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/lun-salat-pa-bulgur-og-kalvestrimler-6a2ab4321f9f329b3991e3f3",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:34:49.449Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 577,
+    "protein_g": 46.4,
+    "carbs_g": 54.3,
+    "fat_g": 19.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R04_BW18_SE_P55111-1_main_high-eedff3ad.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:02:24.303Z",
+  "title": "Bulgursalat med kalvestrimler, bagte grøntsager og urtedressing",
+  "intro": "Lun salat med bulgur, sprødstegte kalvestrimler, ovnbagt løg og peberfrugt samt friske grønne bønner. Det hele toppes med valnødder, parmesanlignende ost og en syrlig yoghurtdressing med persille.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kalvekød",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "grønne bønner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "grana padano",
+      "note": "i flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "valnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "bulgur",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til bulgur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til bulgur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Del løget i både på ca. 2 cm, og skær peberfrugten i tern på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Læg løg og peberfrugt på en bageplade med bagepapir. Vend dem med olivenolie, salt og peber, og bag dem i 15-20 min., til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Kog vandet op i en mellemstor gryde, mens grøntsagerne bager. Rør bulgur, bouillon og salt i, læg låg på, og lad det simre på middellav varme i 9-10 min., til bulgurten er al dente."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olivenolie i en stor pande på middelhøj varme. Brun kalvestrimlerne i 3-4 min. sammen med krydderurterne, salt og peber. Læg dem på en tallerken. Kødet er færdigt, når der ikke er rødt tilbage."
+    },
+    {
+      "section": null,
+      "text": "Hak tomat og valnødder groft, og hak persillen fint. Halvér citronen. Pres eller hak hvidløget fint."
+    },
+    {
+      "section": null,
+      "text": "Rør persille, hvidløg, yoghurt og et skvæt citronsaft sammen i en lille skål. Smag til med salt og peber. Skyl rucolaen."
+    },
+    {
+      "section": null,
+      "text": "Tør panden af, og varm lidt ny olivenolie op på middelhøj varme. Knip enderne af bønnerne, og steg dem i 3-4 min., til de er møre. Et skvæt vand i panden får dem hurtigere færdige."
+    },
+    {
+      "section": null,
+      "text": "Vend rucola, tomat, kalvestrimler, bønner, bulgur og de bagte grøntsager sammen i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Fordel salaten i dybe tallerkener. Drys med valnødder og ostefager, og top med dressingen."
+    }
+  ],
+  "changes": [
+    "Buon Appetito er erstattet af blandede tørrede krydderurter.",
+    "Citrusfrugt er erstattet af citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kalvekød som hovedråvare, bulgur som mættende element og rigeligt grønt, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:37:28.679Z"
+  }
+}

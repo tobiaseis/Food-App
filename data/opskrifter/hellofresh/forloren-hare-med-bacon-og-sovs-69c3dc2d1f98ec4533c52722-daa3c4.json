@@ -1,0 +1,194 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/forloren-hare-med-bacon-og-sovs-69c3dc2d1f98ec4533c52722",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:57:38.528Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 11,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 697,
+    "protein_g": 45.4,
+    "carbs_g": 59.9,
+    "fat_g": 29.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/DK_Recipe_Overlay_Forlorenhare_med_brun_sovs_1200x800-31f52706.jpg",
+  "lang": "da",
+  "keywords": "Dansk",
+  "fetched_at": "2026-10-05T20:05:14.999Z",
+  "ingredients": [
+    {
+      "section": "Farsbrød",
+      "amount": 250,
+      "unit": "g",
+      "name": "Hakket kalv og flæsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 25,
+      "unit": "g",
+      "name": "Rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 75,
+      "unit": "g",
+      "name": "Bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 400,
+      "unit": "g",
+      "name": "Kartofler",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 250,
+      "unit": "g",
+      "name": "Broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": 20,
+      "unit": "g",
+      "name": "Tørret frugt",
+      "note": "tranebær",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": null,
+      "unit": null,
+      "name": "Olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tilbehør",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs",
+      "amount": 100,
+      "unit": "g",
+      "name": "Brun sovs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "Mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Farsbrød",
+      "text": "Sæt en stor gryde med saltet vand over varmen, så det når at koge, mens du laver farsbrødet. Tænd ovnen på 230 °C (210 °C varmluft)."
+    },
+    {
+      "section": "Farsbrød",
+      "text": "Rør kødet sammen med æg, rasp og salt i en stor skål. Form farsen til en aflang kage i et ildfast fad, og læg baconskiverne ovenpå."
+    },
+    {
+      "section": "Farsbrød",
+      "text": "Sæt fadet i ovnen i 15 min. Skru derefter ned til 180 °C (160 °C varmluft), og lad farsbrødet stege færdigt i 20 min. Kødet skal være helt gennemstegt uden spor af rødt."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Kog kartoflerne i 12-15 min, til en kniv nemt går igennem dem. Hæld vandet fra, smag til med salt og peber, og lad dem stå med låg."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Del broccolien i buketter, og skær stokken i tern på 2 cm. Varm lidt olivenolie i en mellemstor pande på middelhøj varme, og steg broccolien mør i 5-6 min. Et skvæt vand får dem hurtigere færdige."
+    },
+    {
+      "section": "Tilbehør",
+      "text": "Vend den stegte broccoli med tranebærrene i en skål."
+    },
+    {
+      "section": "Sovs",
+      "text": "Tør panden ren, og varm den op på middelhøj varme. Hæld mælk og brun sovs i, krydr med salt og peber, og bring det i kog."
+    },
+    {
+      "section": "Sovs",
+      "text": "Skru ned til middellav varme, og lad sovsen simre i 2-3 min, til den er tyk."
+    },
+    {
+      "section": "Sovs",
+      "text": "Server farsbrød, broccoli og kartofler på tallerkener, og hæld sovsen over."
+    }
+  ],
+  "title": "Forloren hare med bacon, broccoli og brun sovs",
+  "intro": "Farsbrød med sprød bacon bages i ovnen og serves med kogte kartofler, broccoli med tranebær og en cremet brun sovs.",
+  "servings": 2,
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kød som hovedråvare, kartofler som mættende tilbehør og broccoli som grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:07.990Z"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremet-prosciuttopasta-69b7eb28fff2efa4150dfa26",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:02:35.795Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 911,
+    "protein_g": 25.8,
+    "carbs_g": 78.1,
+    "fat_g": 55.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R17_BW45_SE_R11255-8_Main_edit_high-de992f9c.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:05:54.280Z",
+  "title": "Cremet baconpasta med rucolasalat",
+  "intro": "Spaghetti i en cremet sauce med sprødt bacon, tomat og parmesan, serveret med en frisk salat af agurk og rucola. En hurtig hverdagsret til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "spaghetti",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "gemt fra kogning af pastaen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "i flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 20,
+      "unit": "g",
+      "name": "honning-sennepsdressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 10,
+      "unit": "g",
+      "name": "græskarkerner",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en stor gryde med vand over varmen, og bring det i kog. Salt vandet kraftigt – det skal smage som havvand."
+    },
+    {
+      "section": null,
+      "text": "Hak tomater og persille groft, og hak hvidløget fint. Skræl agurken til lange, tynde bånd med en skræller, og skyl rucolaen."
+    },
+    {
+      "section": null,
+      "text": "Kog spaghettien 8-9 minutter, til den er al dente. Tag 1 dl af kogevandet fra, inden du hælder resten af."
+    },
+    {
+      "section": null,
+      "text": "Varm i mellemtiden en stor pande op ved middel varme. Steg baconen sprød i 4-5 minutter, og rør hvidløget i. Steg 30 sekunder, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Hæld fløde og det gemte kogevand på panden. Kom tomater, persille, bouillon, halvdelen af parmesanen og lidt peber i, og lad saucen simre 3-4 minutter, til den er tyknet."
+    },
+    {
+      "section": null,
+      "text": "Vend agurk, rucola og dressing sammen i en stor skål. Har børnene ikke lyst til dressingen, kan den serveres ved siden af."
+    },
+    {
+      "section": null,
+      "text": "Kom den afdryppede spaghetti på panden, og vend den rundt i saucen. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Anret pastaen i dybe tallerkener, og drys med resten af parmesanen. Top salaten med græskarkerner, og server den ved siden af."
+    }
+  ],
+  "changes": [
+    "Guanciale er erstattet af bacon i skiver."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har bacon og spaghetti som mættende base samt en salat ved siden af, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:43:18.296Z"
+  }
+}

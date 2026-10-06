@@ -1,0 +1,230 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/kinesisk-inspirerede-svinekodboller-69c3dc268146910691096072",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:57:53.754Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 835,
+    "protein_g": 46.9,
+    "carbs_g": 104.6,
+    "fat_g": 27.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R03_BW14_SE_C51710-1_main_high-14c0cdaf.jpg",
+  "lang": "da",
+  "keywords": "Kinesisk",
+  "fetched_at": "2026-10-05T20:05:17.373Z",
+  "title": "Kinesisk inspirerede svinekødboller med ris og grøntsager",
+  "intro": "Mør svinekødboller i sød chili- og sojaglaze serveret med jasminris og ovnbagt broccoli og pak choi. Børnene får den milde udgave, mens de voksne får en stærk topping med chili, forårsløg og sesam.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kødboller",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødbollerne",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 80,
+      "unit": "g",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 40,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "gerne med lavt saltindhold",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 250,
+      "unit": "g",
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "en smule til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Topping til de voksne",
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping til de voksne",
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping til de voksne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Varm ovnen op til 240 °C (220 °C varmluft). Kom vand i en mellemstor gryde, og bring det i kog."
+    },
+    {
+      "section": "Ris",
+      "text": "Rør ris og salt i det kogende vand. Læg låg på, og lad risene koge ved middellav varme i 12 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risene trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Ælt svinekød, æg, rasp og salt sammen i en stor skål. Form farsen til kødboller, cirka 4 til hver person."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Varm olien op på en stegepande ved middelhøj varme. Brun kødbollerne, og skru ned til middel varme, når de har fået farve."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Steg i alt 12-14 minutter, til kødbollerne er gyldne og helt gennemstegte uden spor af rødt kød."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Del broccolien i buketter, og skær stokken i tern på 2 cm. Hak pak choien groft."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Læg grøntsagerne på en bageplade med bagepapir. Vend dem med olie, salt og peber, og brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Bag i ovnen i 10-12 minutter, til de er møre."
+    },
+    {
+      "section": "Topping til de voksne",
+      "text": "Snit forårsløget fint, og bland det med chiliflager og sesamfrø i en lille skål. Spar på chilien eller udelad den, hvis du ikke bryder dig om stærk mad."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Kom sød chilisauce og sojasauce på stegepanden til kødbollerne. Lad det simre 1-2 minutter, til saucen er tyknet."
+    },
+    {
+      "section": null,
+      "text": "Anret risene i dybe tallerkener, og læg kødboller og grøntsager ovenpå. Strø toppingen over de voksnes portioner."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har svinekødboller som hovedråvare, jasminris som mættende element og både broccoli og pak choi, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:15.243Z"
+  }
+}

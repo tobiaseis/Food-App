@@ -1,0 +1,198 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/urtepanerede-fiskepinde-69f1b1afd52e296f6a385e0c",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:47:10.209Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 683,
+    "protein_g": 39.2,
+    "carbs_g": 75.8,
+    "fat_g": 25.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R03_BW08_SE_F15720-19_Main_high-0f180366.jpg",
+  "lang": "da",
+  "keywords": "Svensk",
+  "fetched_at": "2026-10-05T20:03:54.520Z",
+  "title": "Urtepanerede fiskepinde med remoulade og fritter",
+  "intro": "Sprøde fiskepinde af sej i panko og persille, serveret med ovnbagte fritter af kartofler og gulerødder samt en frisk salat med æble og sukkerærter. Remouladen hører selvfølgelig med.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "sej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "remoulade",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "g",
+      "name": "sukkerærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til fisken",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fritter",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær kartofler og gulerødder i fritter på ca. 1 cm."
+    },
+    {
+      "section": "Fritter",
+      "text": "Læg fritterne på en bageplade med bagepapir, og vend dem med lidt olie, salt og peber. Brug to plader, hvis der ikke er plads på én."
+    },
+    {
+      "section": "Fritter",
+      "text": "Bag dem midt i ovnen i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Fiskepinde",
+      "text": "Hak persillen fint. Del fisken i 3 stykker, og drys dem med salt."
+    },
+    {
+      "section": "Fiskepinde",
+      "text": "Stil tre dybe tallerkener frem: hvedemel med lidt peber i den første, sammenpisket æg i den anden og panko blandet med persille i den tredje. Har du ikke æg, kan du bruge 2 spsk mælk."
+    },
+    {
+      "section": "Fiskepinde",
+      "text": "Rul fisken først i mel, så i æg og til sidst i pankoblandingen. Læg den på en ren tallerken."
+    },
+    {
+      "section": "Fiskepinde",
+      "text": "Varm så meget olie i en stegepande, at bunden er dækket, ved middelhøj varme. Steg fisken 2-3 minutter på hver side, til den er gylden og helt gennemstegt, og kødet er mælkehvidt og mat. Læg den på køkkenrulle. Tilsæt lidt mere olie, hvis fisken hænger fast."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl salaten. Skær æblet i tynde halve skiver og sukkerærterne i tynde skiver."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend salat, sukkerærter og æble med salt og olie i en skål lige før servering."
+    },
+    {
+      "section": "Servering",
+      "text": "Server fiskepinde, salat og fritter sammen med remouladen."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk, ovnbagte fritter af kartofler og gulerødder samt salat, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:39:48.214Z"
+  }
+}

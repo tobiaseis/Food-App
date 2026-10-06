@@ -1,0 +1,210 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/tyrkisk-inspireret-oksekods-og-bulgurbowl-699594ab24dac753f4995b22",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:10:20.827Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 533,
+    "protein_g": 33.6,
+    "carbs_g": 61.6,
+    "fat_g": 17.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R10_BW09_SE_C54158-1_Main_high-1a5af312.jpg",
+  "lang": "da",
+  "keywords": "Tyrkisk",
+  "fetched_at": "2026-10-05T20:06:43.990Z",
+  "title": "Bulgurbowl med krydret oksekød og agurkeyoghurt",
+  "intro": "Bulgur med krydret hakket oksekød i tomatsauce, toppet med granatæblesirup og kølig agurkeyoghurt. En hurtig ret med tyrkisk præg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Bulgur",
+      "amount": 100,
+      "unit": "g",
+      "name": "Bulgur",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgur",
+      "amount": 4,
+      "unit": "g",
+      "name": "Bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgur",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "Vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgur",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bulgur",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Mynte",
+      "note": "hakkes fint",
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": null,
+      "unit": null,
+      "name": "Olie",
+      "note": "en smule",
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": 250,
+      "unit": "g",
+      "name": "Hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "Harissa",
+      "note": "krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "Jorden Rundt-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Gulerødder",
+      "note": "i julienne-strimler",
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "Vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "Hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Oksekød og sauce",
+      "amount": 15,
+      "unit": "g",
+      "name": "Granatæblesirup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Agurkeyoghurt",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "Agurk",
+      "note": "revet groft",
+      "optional": false
+    },
+    {
+      "section": "Agurkeyoghurt",
+      "amount": 75,
+      "unit": "g",
+      "name": "Yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Agurkeyoghurt",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Agurkeyoghurt",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bulgur",
+      "text": "Kom vand, bulgur, bouillon og salt i en mellemstor gryde. Bring det i kog, læg låg på, og lad det simre ved middellav varme i 9-10 minutter, til bulguren er al dente."
+    },
+    {
+      "section": "Agurkeyoghurt",
+      "text": "Pres al væsken ud af den revne agurk. Rør agurken sammen med yoghurt, salt og peber i en skål."
+    },
+    {
+      "section": "Oksekød og sauce",
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Brun oksekødet med harissa, Jorden Rundt-krydderiet og saltet i 4-5 minutter. Kødet skal være gennemstegt uden spor af rødt."
+    },
+    {
+      "section": "Oksekød og sauce",
+      "text": "Kom gulerødder, vand, sukker og hakkede tomater på panden. Lad det simre i 5-6 minutter, til saucen er let tyknet. Er den for tyk, så tilsæt lidt ekstra vand."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend den hakkede mynte i bulguren lige før servering. Fordel bulgur i dybe tallerkener, læg kødsaucen ovenpå, og dryp med granatæblesirup. Server agurkeyoghurten ved siden af."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har hakket oksekød, bulgur som mættende kornbase og grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:31.535Z"
+  }
+}

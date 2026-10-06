@@ -1,0 +1,183 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/bagt-kylling-og-gnocchi-6a3d0c10f396cfc62f2ae40c",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:28:28.528Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 733,
+    "protein_g": 57.5,
+    "carbs_g": 65.8,
+    "fat_g": 23.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R10_BW27_SE_C58851-1main_high-4ec8ea56.jpg",
+  "lang": "da",
+  "keywords": "Græsk",
+  "fetched_at": "2026-10-05T20:01:36.888Z",
+  "title": "Ovnbagt kylling med gnocchi, grøntsager og gedeost",
+  "intro": "Alt bages på én plade: Kylling, gnocchi og grøntsager får gylden gedeost på toppen og serveres med en kølig, saltet yoghurt.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "gnocchi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "gedeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Skær løget i både på ca. 2 cm, og skær den uskrællede gulerod i stave på ca. 2 cm. Hak hvidløget fint, eller pres det."
+    },
+    {
+      "section": null,
+      "text": "Kom løg, gulerod, cherrytomater og gnocchi på en bageplade med bagepapir. Drys med lidt olivenolie, krydderurterne til grøntsagerne, chiliflager, saltet og en smule peber, og vend det hele rundt."
+    },
+    {
+      "section": null,
+      "text": "Bag pladen i 15-25 minutter, til grøntsagerne er møre. Brug to bageplader, hvis der ikke er plads nok. Brug mindre chili eller ingen, hvis nogen ikke bryder sig om stærk mad."
+    },
+    {
+      "section": null,
+      "text": "Rør yoghurten sammen med en knivspids salt i en lille skål. Gnid kyllingen med saltet til kød, krydderurterne til kyllingen og hvidløget."
+    },
+    {
+      "section": null,
+      "text": "Tag pladen ud, når der er ca. 15 minutter tilbage af bagetiden, og vend grøntsagerne. Læg broccoli og kylling ovenpå."
+    },
+    {
+      "section": null,
+      "text": "Smuldr gedeosten ud over, og sæt pladen tilbage i ovnen. Bag videre, til osten er gylden, grøntsagerne er møre, og kyllingen er helt gennemstegt – kødet skal være hvidt uden rødt."
+    },
+    {
+      "section": null,
+      "text": "Sæt pladen på bordet, og top med den saltede yoghurt."
+    }
+  ],
+  "changes": [
+    "Gnocchi med hvidløg og mozzarella er skiftet til almindelig gnocchi.",
+    "Hvidløg- og urtekrydderi er skiftet til blandede tørrede krydderurter.",
+    "Buon Appetito er skiftet til blandede tørrede krydderurter.",
+    "Broccolini er skiftet til broccoli."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, gnocchi som mættende element og rigeligt grønt, så den er et helt måltid på én bageplade.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:17.094Z"
+  }
+}

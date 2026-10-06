@@ -1,0 +1,201 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/teriyaki-glaseret-svinekamfilet-6a4fb29f1713d196bd6e13b7",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:14:07.462Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 710,
+    "protein_g": 46.8,
+    "carbs_g": 82.1,
+    "fat_g": 22.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R09_BW44_SE_C49814-1_Main_11_high-8dd33d70.jpg",
+  "lang": "da",
+  "keywords": "Vietnamesisk",
+  "fetched_at": "2026-10-05T20:00:17.086Z",
+  "title": "Teriyakisvinekam med udonnudler og mynte",
+  "intro": "Stegt svinekam vendt i teriyakisauce serveres på kølige nudler med sprød kål, salat og agurk. Dressingen med sesam, ingefær, mynte og citron gør retten frisk, og sriracha giver et skarpt skud til sidst.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kød",
+      "amount": 300,
+      "unit": "g",
+      "name": "svinekam",
+      "note": "filet",
+      "optional": false
+    },
+    {
+      "section": "Kød",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Kød",
+      "amount": 75,
+      "unit": "g",
+      "name": "teriyakisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 400,
+      "unit": "g",
+      "name": "udonnudler",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 150,
+      "unit": "g",
+      "name": "kål",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "salat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 5,
+      "unit": "g",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Nudelsalat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefærpasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kød",
+      "text": "Sæt en gryde med vand over varmen, og kom salt i, så vandet smager som havvand. Lad det koge."
+    },
+    {
+      "section": "Kød",
+      "text": "Skær svinekammen i 2 skiver, én til hver person. Varm en smule olie i en stor pande på høj varme."
+    },
+    {
+      "section": "Kød",
+      "text": "Krydr kødet med salt, og steg det 1-2 minutter på hver side, til det er gyldent og helt gennemstegt uden spor af rødt."
+    },
+    {
+      "section": "Kød",
+      "text": "Skær kødet i tynde skiver, og vend dem rundt i teriyakisaucen i en mellemstor skål."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Mens kødet steges: Skær roden af salaten, og hak den groft. Skær agurken i tynde stave."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Pluk mynteblade af, og riv dem i grove stykker. Del citronen på midten."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Kog nudlerne i 1 minut, til de er varme. Si dem fra, og skyl dem i koldt vand."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør sesamolie, ingefærpasta, mynte, et skvæt citronsaft, olie, salt og peber sammen i en stor skål."
+    },
+    {
+      "section": "Nudelsalat",
+      "text": "Vend nudler, kål, salat og agurk i dressingen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel nudelsalaten i to skåle, læg svinekødet ovenpå, og dryp med sriracha."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron.",
+    "Snittet kålsalat er skiftet til snittet kål."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har svinekam som hovedråvare, udonnudler som mættende element og rigeligt grønt i nudelsalaten.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:03.945Z"
+  }
+}

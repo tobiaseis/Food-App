@@ -1,0 +1,238 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/svinekodboller-i-flodesauce-6969681c850f974aa2130928",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:16:22.814Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 819,
+    "protein_g": 38.6,
+    "carbs_g": 85.4,
+    "fat_g": 36.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R03_BW06_SE_C40718-10_MT_Main_1_high-c395fd35.jpg",
+  "lang": "da",
+  "keywords": "Svensk",
+  "fetched_at": "2026-10-05T20:07:31.333Z",
+  "title": "Svinekødboller i cremet sauce med kartoffel-pastinakmos og æblesalat",
+  "intro": "Saftige frikadelleagtige kødboller i cremet sennepssauce, serveret med blødt mos af kartofler og pastinak og en sprød salat af æble, agurk og radiser. Tyttebærsyltetøjet giver en syrlig sødme til.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kødboller",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 15,
+      "unit": "g",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 75,
+      "unit": "g",
+      "name": "radiser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "olivenolie",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "tyttebærsyltetøj",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mos",
+      "text": "Kom saltet vand i en stor gryde og bring det i kog. Skræl kartofler, pastinak og hvidløg, og skær kartofler og pastinak i tern på 2 cm."
+    },
+    {
+      "section": "Mos",
+      "text": "Kog kartofler, pastinak og hvidløg i 11-13 minutter, til de nemt giver efter for en kniv. Si vandet fra."
+    },
+    {
+      "section": "Mos",
+      "text": "Mos det kogte med mælk, salt og peber, og sæt det til side under låg. Rør evt. en klat smør i for et cremetere mos."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær æblet i tynde halve skiver, og skær agurk og radiser i tynde skiver. Vend det hele sammen med olie og salt."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Ælt hakket svinekød, æg, rasp og salt sammen, og form farsen til kødboller, 4 til hver person."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Varm olien i en stegepande ved middelhøj varme, og brun kødbollerne. Skru ned til middel varme, når de har fået farve, og steg dem i alt 12-14 minutter, til de er gyldne og helt gennemstegte uden rødt kød indeni."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tag kødbollerne af panden og læg dem på et fad. Sæt panden tilbage på middel varme, og rør creme fraiche, sennep, vand og bouillon ud i den. Lad saucen varme igennem i 1-2 minutter, og vend kødbollerne i den."
+    },
+    {
+      "section": "Sauce",
+      "text": "Anret mos, salat og kødboller på tallerkener, hæld saucen over kødbollerne, og server med tyttebærsyltetøj."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har svinekødboller som hovedråvare, kartoffel-pastinakmos som mættende og en frisk æblesalat som grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:44.945Z"
+  }
+}

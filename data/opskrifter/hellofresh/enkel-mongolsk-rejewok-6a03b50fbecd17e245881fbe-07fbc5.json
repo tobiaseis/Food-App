@@ -1,0 +1,173 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/enkel-mongolsk-rejewok-6a03b50fbecd17e245881fbe",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:43:08.068Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 468,
+    "protein_g": 27.9,
+    "carbs_g": 59,
+    "fat_g": 14.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R07_BW21_SE_C44026-1_Main_swap_shrimps_edit_high-fcc231df.jpg",
+  "lang": "da",
+  "keywords": "Mongolian",
+  "fetched_at": "2026-10-05T20:03:27.186Z",
+  "title": "Mongolsk rejewok med udonnudler og pak choi",
+  "intro": "Hurtig wok med rejer, friske udonnudler og sprød pak choi, vendt i en sød og salt sauce. Færdig på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "rejer",
+      "note": "kæmperejer",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til rejerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "karry",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "nudler",
+      "note": "friske udonnudler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "nødder",
+      "note": "saltede peanuts",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en gryde med vand og rigeligt salt over til kogning. Vandet skal smage som havvand."
+    },
+    {
+      "section": null,
+      "text": "Skær løget i halve, tynde skiver. Hak pak choi groft, og del citronen i to."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Steg rejer og løg med saltet i 1-2 minutter på hver side, til rejerne er gyldne og hvide og matte i kødet."
+    },
+    {
+      "section": null,
+      "text": "Kom pak choi, karry og gulerødder på panden, og vend det hele rundt."
+    },
+    {
+      "section": null,
+      "text": "Kog nudlerne i det kogende vand i cirka 1 minut, til de er varme og løsner sig fra hinanden. Si dem fra, og skyl dem i koldt vand."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt nudlerne på panden sammen med sød chilisauce, sojasauce og et skvæt citronsaft. Tag panden af varmen. Er retten tør, så rør lidt vand i."
+    },
+    {
+      "section": null,
+      "text": "Snit forårsløget fint. Fordel wokretten i dybe tallerkener, og drys med peanuts og forårsløg."
+    }
+  ],
+  "changes": [
+    "Goan Xacuti er skiftet til karry.",
+    "Saltede peanuts er skrevet som nødder i varekataloget, men peanuts er stadig varen."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rejer som hovedråvare, udonnudler som mættende element og grønsager, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:39:05.349Z"
+  }
+}

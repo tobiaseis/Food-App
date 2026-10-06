@@ -1,0 +1,213 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/sprodpaneret-halloumi-69b930172d4fe324cc3fd822",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:01:39.364Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 934,
+    "protein_g": 39.1,
+    "carbs_g": 98,
+    "fat_g": 42.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y23_R26_W40_SE_C13642-2_Main_edit_high-19c3257c.jpg",
+  "lang": "da",
+  "keywords": "American",
+  "fetched_at": "2026-10-05T20:05:47.170Z",
+  "title": "Sprødpaneret halloumi med kartoffel-blomkålsmos og æblesalat",
+  "intro": "Gyldne, sprøde halloumiterninger serveres med cremet mos af kartofler og blomkål og en frisk salat af broccoli, æble og tranebær. Yoghurtdressingen binder det hele sammen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Mos",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrællet og skåret i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkål",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 200,
+      "unit": "g",
+      "name": "halloumi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 50,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Halloumi",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 125,
+      "unit": "g",
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "tørrede tranebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 25,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mos",
+      "text": "Kog en stor gryde saltet vand op. Kom kartoffeltern og blomkålsbuketter i, og kog dem i 11-13 minutter, til de let giver efter for en kniv."
+    },
+    {
+      "section": "Mos",
+      "text": "Si vandet fra, og kom mælk, salt og en knivspids peber i gryden. Mos med kartoffelmoser eller gaffel, og sæt det til side med låg."
+    },
+    {
+      "section": "Halloumi",
+      "text": "Skær halloumien i terninger på ca. 6 cm, så der er 3 til hver. Pisk ægget ud på en dyb tallerken."
+    },
+    {
+      "section": "Halloumi",
+      "text": "Rør panko, salt og rigeligt peber sammen på en anden dyb tallerken, og hæld melet på en tredje. Vend halloumien først i mel, så i æg og til sidst i panko."
+    },
+    {
+      "section": "Halloumi",
+      "text": "Varm lidt olivenolie på en stor pande ved middelhøj varme. Steg halloumien 2-3 minutter på hver side, til den er gylden."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær æblet i terninger på 1 cm. Del broccolien i små buketter, og skær stokken i 1 cm tern."
+    },
+    {
+      "section": "Til dressingen",
+      "text": "Rør yoghurt, mayonnaise, vand, sukker, salt og rigeligt peber sammen i en lille skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend broccoli, æble og tranebær med halvdelen af dressingen i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Læg halloumi, mos og salat på tallerkener, og server med resten af dressingen ved siden af."
+    }
+  ],
+  "changes": [
+    "Panko er ikke ændret.",
+    "Blomkålsbuketter er skrevet som blomkål."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har paneret halloumi som hovedråvare, kartoffel-blomkålsmos som mættende del og en salat med broccoli og æble.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:43:07.626Z"
+  }
+}

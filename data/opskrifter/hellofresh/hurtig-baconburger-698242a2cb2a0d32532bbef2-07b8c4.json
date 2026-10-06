@@ -1,0 +1,166 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-baconburger-698242a2cb2a0d32532bbef2",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:12:37.288Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 11,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 726,
+    "protein_g": 29,
+    "carbs_g": 60.5,
+    "fat_g": 40.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF220113_R03_W09_SE_R10424-2_KB_Main_high-3bb6b6dd.jpg",
+  "lang": "da",
+  "keywords": "North American",
+  "fetched_at": "2026-10-05T20:07:01.699Z",
+  "title": "Svampe- og baconburger med kålsalat og spejlæg",
+  "intro": "Brioche-burger med sprød bacon, brunede champignon og porre, spejlæg og frisk kålsalat med gulerod. Den er hurtigt på bordet og mættende.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "briocheboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "kål",
+      "note": "kålblanding, skåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "porre",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "burgerdressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til svampene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kålsalaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til spejlæg",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til kålsalaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Sæt en stor pande på middelhøj varme."
+    },
+    {
+      "section": null,
+      "text": "Steg baconen gylden på panden i 4-5 minutter, og læg den over på køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Grovhak champignon. Skær porren i tynde halve skiver."
+    },
+    {
+      "section": null,
+      "text": "Skru op for varmen, og brun champignon og porre på samme pande i 4-5 minutter. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Riv gulerødderne groft på rivejern uden at skrælle dem. Vend dem med kålen, olie, salt og peber i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olie på en anden stor pande ved middelhøj varme. Steg æggene som spejlæg i 4-6 minutter, til hviden er fast, og blommen stadig er blød. Drys med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Skær bollerne over, og rist dem på ovnristen i 3-4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Smør bollerne med burgerdressing. Læg svampeblandingen, bacon, spejlæg og lidt kålsalat i. Server resten af kålsalaten ved siden af."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Burgeren har brioche som mættende base, bacon, svampe og spejlæg som protein samt kålsalat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:57.562Z"
+  }
+}

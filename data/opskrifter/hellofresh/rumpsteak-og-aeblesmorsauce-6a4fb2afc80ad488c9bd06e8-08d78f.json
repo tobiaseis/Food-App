@@ -1,0 +1,259 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/rumpsteak-og-aeblesmorsauce-6a4fb2afc80ad488c9bd06e8",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:13:28.181Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 699,
+    "protein_g": 38.7,
+    "carbs_g": 54,
+    "fat_g": 36.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R25_BW40_SE_C48446-1_Main_F1_swap_rump_steak_edit_high-312a17d9.jpg",
+  "lang": "da",
+  "keywords": "Skandinavisk",
+  "fetched_at": "2026-10-05T20:00:13.583Z",
+  "title": "Rumpsteak med æblesmørsauce, persillekartofler og rødkålssalat",
+  "intro": "Mør rumpsteak med cremet sauce af æble og løg, serveret med smørvendte persillekartofler og en frisk salat af rødkål. En nem hverdagsret til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Bøffer",
+      "amount": 300,
+      "unit": "g",
+      "name": "Rumpsteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 400,
+      "unit": "g",
+      "name": "Kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Smør",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 10,
+      "unit": "g",
+      "name": "Persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æblesmørsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Æble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æblesmørsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æblesmørsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Smør",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Æblesmørsauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "Bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æblesmørsauce",
+      "amount": 12,
+      "unit": "ml",
+      "name": "Eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Æblesmørsauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "Madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æblesmørsauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Æblesmørsauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Æblesmørsauce",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": 150,
+      "unit": "g",
+      "name": "Rødkål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": 60,
+      "unit": "g",
+      "name": "Salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": 8,
+      "unit": "ml",
+      "name": "Balsamico",
+      "note": "balsamicocreme",
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rødkålssalat",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Lad bøfferne komme op af køleskabet, og drys dem med salt. Kom kartoflerne i en stor gryde med saltet vand, læg låg på, og kog dem i 12-15 minutter, til en kniv let glider igennem."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Hæld vandet fra, og sæt låg på igen, så de holder sig varme."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Skær æble og løg i tynde halve skiver. Skyl salatblandingen. Hak persillen groft."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm olien op i en stegepande ved middelhøj varme. Brun bøfferne 3-4 minutter på hver side. Vil du have dem gennemstegte, så giv dem 1-2 minutter mere."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Læg bøfferne i en foliepakke, og lad dem hvile, til du skal servere."
+    },
+    {
+      "section": "Æblesmørsauce",
+      "text": "Smelt smørret i den samme pande ved middelhøj varme. Steg æble og løg i 3-4 minutter, til de er møre."
+    },
+    {
+      "section": "Æblesmørsauce",
+      "text": "Rør bouillon, eddike, fløde, vand, salt og peber i panden. Lad saucen simre ved middel varme i 1-2 minutter, til den er varm hele vejen igennem. Læg bøfferne i panden, når saucen er færdig."
+    },
+    {
+      "section": "Rødkålssalat",
+      "text": "Vend rødkål, salatblanding, olie, salt og peber i en stor skål, og dryp balsamicocremen over."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Vend kartoflerne med smør, persille, salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær bøfferne i tynde skiver lige før servering. Anret kartofler, kød og sauce på tallerkener, og server salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Rumpsteak i opskriften er beholdt som rumpsteak.",
+    "Hvidvinseddike er skrevet som eddike, og balsamicocreme som balsamico, efter varekataloget.",
+    "Blandet salat er skiftet til salatblanding."
+  ]
+}

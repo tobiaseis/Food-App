@@ -1,0 +1,250 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/bagt-pasta-bolognese-6a3d0c1abcb653703ca8bb6f",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:25:57.494Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 931,
+    "protein_g": 51.4,
+    "carbs_g": 89.8,
+    "fat_g": 38.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R01_BW16_SE_F12790-9_MAIN_-2high-3355f04b.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:01:32.148Z",
+  "title": "Ovnbagt pasta bolognese med bechamel",
+  "intro": "Kødsovs og pasta vendes sammen, dækkes med cremet bechamel og ost og bages gyldne i ovnen. Serveres med en simpel salat ved siden af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Bolognese",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bolognese",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Bolognese",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Bolognese",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Bolognese",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bolognese",
+      "amount": 35,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bolognese",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bolognese",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "med lavt saltindhold",
+      "optional": false
+    },
+    {
+      "section": "Bolognese",
+      "amount": 4,
+      "unit": "g",
+      "name": "hvidløg- og urtekrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bolognese",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 20,
+      "unit": "g",
+      "name": "Grana Padano",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 25,
+      "unit": "g",
+      "name": "revet ost",
+      "note": "gouda, til toppen",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "salat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Sæt en stor gryde med saltet vand over til kogning, og hak løget fint."
+    },
+    {
+      "section": "Bolognese",
+      "text": "Varm olien i en stor pande ved middelhøj varme. Brun løg og oksekød med en smule salt i 4-5 minutter."
+    },
+    {
+      "section": "Bolognese",
+      "text": "Rør tomatpuré, hakkede tomater, bouillon, sojasauce, krydderi, salt og peber i panden. Lad det simre ved middellav varme, mens du laver pasta og bechamel. Kødet skal være helt gennemstegt og uden rødt."
+    },
+    {
+      "section": "Pasta",
+      "text": "Kog pastaen i det kogende vand i 5-7 minutter, så den stadig er fast. Si vandet fra, og læg pastaen i et ildfast fad. Den bliver færdig i ovnen."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Smelt smørret i den tomme gryde ved middelvarme. Pisk melet i, og hæld mælken i lidt ad gangen under konstant omrøring. Fortsæt i 3-4 minutter, til saucen er tyk."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Rør Grana Padano, salt og peber i, til osten er smeltet."
+    },
+    {
+      "section": "Bagning",
+      "text": "Vend kødsaucen med pastaen i fadet. Hæld bechamelen ovenpå, drys med gouda, og bag i 15 minutter, til pastaen er mør."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær bunden af salaten, og pluk bladene fra hinanden. Vend dem med olie og salt i en skål."
+    },
+    {
+      "section": "Servering",
+      "text": "Tag fadet ud af ovnen, og lad det hvile i 5 minutter. Anret på tallerkener, og server med salaten."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har hakket oksekød, pasta og bechamel samt en salat ved siden af, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:10.690Z"
+  }
+}

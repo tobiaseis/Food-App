@@ -1,0 +1,218 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/fiskekarry-fra-goa-6a3d0c60f396cfc62f2ae5f2",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:24:50.843Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 686,
+    "protein_g": 38.8,
+    "carbs_g": 82.5,
+    "fat_g": 25.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R04_BW27_SE_C58150-1main_high-11002b25.jpg",
+  "lang": "da",
+  "keywords": "Goansk",
+  "fetched_at": "2026-10-05T20:01:22.655Z",
+  "title": "Goansk fiskekarry med basmatiris",
+  "intro": "Mild og cremet karry med kuller i en sauce af kokosmælk, tomat og ingefær. Den serveres med duftende basmatiris og friskhakket koriander.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "kan udelades eller mindskes",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 8,
+      "unit": "g",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 250,
+      "unit": "g",
+      "name": "kuller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til fisken",
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk og servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom vand og salt i en gryde, og bring det i kog. Rør risen i, læg låg på, og lad den koge ved middellav varme i 10 min."
+    },
+    {
+      "section": "Ris",
+      "text": "Træk gryden af varmen. Lad risen trække under låg i 10 min, og løft ikke låget undervejs."
+    },
+    {
+      "section": "Sauce",
+      "text": "Skær løget i tynde halve skiver, og hak tomaterne fint. Riv ingefæren fint, og pres eller hak hvidløget. Del chilien på langs, fjern kernerne, og hak den fint."
+    },
+    {
+      "section": "Sauce",
+      "text": "Varm olien op i en mellemstor gryde ved middelhøj varme. Steg løg og tomat i 3-4 min, til de er bløde."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør hvidløg, ingefær, chili og garam masala i, og svits det i 30 sek., til det dufter."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld kokosmælk og vand i, og tilsæt salt og sukker. Bring det i kog, skru ned til middel varme, og lad saucen simre under låg i 4-5 min, til den er let tyknet."
+    },
+    {
+      "section": "Sauce",
+      "text": "Blend saucen jævn med stavblender eller i en blender. Uden blender kan du mose den groft med en kartoffelmoser."
+    },
+    {
+      "section": "Fisk og servering",
+      "text": "Hak koriander fint, og skær citronen over. Dup fisken tør med køkkenrulle, og drys den med salt."
+    },
+    {
+      "section": "Fisk og servering",
+      "text": "Læg fisken i saucen, og lad den simre i 5-6 min, til kødet er mat i midten."
+    },
+    {
+      "section": "Fisk og servering",
+      "text": "Rør koriander og et stort skvæt citronsaft i lige før servering. Anret ris, fisk og sauce i dybe tallerkener."
+    }
+  ],
+  "changes": [
+    "Goan Xacuti-krydderiblandingen er erstattet med garam masala.",
+    "Citrusfrugt er erstattet med citron."
+  ]
+}

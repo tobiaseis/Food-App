@@ -1,0 +1,201 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/sod-chilimarineret-svinekod-6917174bbc8059f9ea105932",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:27:33.969Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 785,
+    "protein_g": 43.8,
+    "carbs_g": 104.8,
+    "fat_g": 24.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF220324_R02_W17_NO_R11492-1_KB_Main_remove_mint_edit_high-8c7c8b17.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:09:08.154Z",
+  "title": "Sødt chilisvinekød med peanutris",
+  "intro": "Hakket svinekød i en sød og skarp chiliglace med sprøde grøntsager og ris med peanuts. En hurtig hverdagsret til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til risen",
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 20,
+      "unit": "g",
+      "name": "saltede peanuts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 250,
+      "unit": "g",
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": "til saft og servering",
+      "optional": false
+    },
+    {
+      "section": "Til glacen",
+      "amount": 40,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glacen",
+      "amount": 80,
+      "unit": "g",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glacen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til glacen",
+      "optional": false
+    },
+    {
+      "section": "Til glacen",
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": "en lille smule også til servering",
+      "optional": false
+    },
+    {
+      "section": "Til kødet",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kødet",
+      "amount": 5,
+      "unit": "g",
+      "name": "Ginger Ninja",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kødet",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Bring vandet i kog i en gryde, og kom ris og salt i. Læg låg på, og lad risen simre på middellav varme i 12 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risen stå med låg på i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Skær peberfrugten i tern på ca. 2 cm. Skær gulerod i tynde halve skiver. Del broccolien i små buketter, og skær stokken i terninger på 1 cm (skræl den, hvis den er sej). Skær limen i både."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Steg peberfrugt, broccoli og gulerod i 5-6 minutter, til de er møre. Smag til med salt, og læg dem over på et fad. Et skvæt vand i panden får grøntsagerne hurtigere færdige."
+    },
+    {
+      "section": "Glace",
+      "text": "Rør sojasauce, sød chilisauce, vand, en god sjat limesaft og lidt chiliflager sammen i en skål. Brug mindre chili eller helt uden, hvis retten skal være mild."
+    },
+    {
+      "section": "Kød",
+      "text": "Varm olie op i den samme pande ved middelhøj varme. Brun svinekødet sammen med Ginger Ninja i 4-5 minutter. Kødet skal være helt gennemstegt uden rosa."
+    },
+    {
+      "section": "Kød",
+      "text": "Kom grøntsagerne og glacen i panden, og lad det hele varme igennem i 1-2 minutter."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend peanuts i risen. Fordel ris, kød og grøntsager i dybe tallerkener, og drys med chiliflager. Server med limebåde ved siden af."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til lime.",
+    "Ginger Ninja er en kryddermix fra en måltidskasse, som ikke kan købes i almindelige danske supermarkeder. Varen er beholdt under sit navn, da der ikke findes en direkte afløser."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har hakket svinekød, ris og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:48:04.710Z"
+  }
+}

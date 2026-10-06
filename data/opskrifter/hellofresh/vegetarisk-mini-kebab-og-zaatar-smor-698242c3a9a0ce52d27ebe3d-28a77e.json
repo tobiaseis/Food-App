@@ -1,0 +1,197 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/vegetarisk-mini-kebab-og-zaatar-smor-698242c3a9a0ce52d27ebe3d",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:12:14.201Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1006,
+    "protein_g": 35.9,
+    "carbs_g": 122.8,
+    "fat_g": 39.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R02_BW29_SE_V28316-1_Main_4_high-d02e7a04.jpg",
+  "lang": "da",
+  "keywords": "Levantine",
+  "fetched_at": "2026-10-05T20:06:58.163Z",
+  "title": "Veggiestykker i fladbrød med za'atar-smør og appelsinsalat",
+  "intro": "Sprødstegte plantebaserede kyllingestykker med løg og krydderi i lune fladbrød penslet med za'atar-smør. Til serveres en frisk salat af appelsin, tomat og agurk samt yoghurt.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Baharat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Za'atar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "Agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Appelsiner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "Persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "Plantebaserede kyllingestykker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "Fladbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "Yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til de plantebaserede stykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Smør",
+      "note": "til za'atar-smørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "til za'atar-smørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Hak persillen fint og skær tomat og agurk i store stykker. Skræl appelsinen helt ind til frugtkødet, så al den hvide hinde fjernes, og skær den i tern på 1 cm."
+    },
+    {
+      "section": null,
+      "text": "Vend persille, tomat, agurk og appelsin sammen med salt, olie og peber i en mellemstor skål. Stil salaten til side."
+    },
+    {
+      "section": null,
+      "text": "Del løget i tynde skiver."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olie i en stor pande ved middelhøj varme. Brun de plantebaserede stykker sammen med løg, salt, baharat og peber i 3-4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør halvdelen af za'atar sammen med smør og olie, mens du steger. Smelt blandingen i mikrobølgeovnen i 30 sekunder, eller varm den i en gryde."
+    },
+    {
+      "section": null,
+      "text": "Pensl fladbrødene på den ene side med za'atar-smørret lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Fyld fladbrødene med de stegte stykker, løg og lidt af appelsinsalaten. Top med yoghurt, og server resten af salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Saha-Ras er skiftet til baharat, som er et lignende krydderi og kan købes i Danmark.",
+    "Bredbladet persille er skiftet til almindelig persille."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har plantebaserede kyllingestykker som hovedråvare, fladbrød som mættende element og rigeligt grønt i appelsinsalaten.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:52.474Z"
+  }
+}

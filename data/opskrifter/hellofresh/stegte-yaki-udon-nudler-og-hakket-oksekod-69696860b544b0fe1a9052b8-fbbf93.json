@@ -1,0 +1,154 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/stegte-yaki-udon-nudler-og-hakket-oksekod-69696860b544b0fe1a9052b8",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:15:09.653Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 11,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 681,
+    "protein_g": 41.9,
+    "carbs_g": 78.7,
+    "fat_g": 21.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R17_BW01_SE_C52622-1_Main_high-00d01ac8.jpg",
+  "lang": "da",
+  "keywords": "Japansk",
+  "fetched_at": "2026-10-05T20:07:21.869Z",
+  "title": "Yaki udon med oksekød og pak choi",
+  "intro": "Hurtig nudelret med hakket oksekød, champignon og pak choi, der vendes i sojasauce og sød chilisauce. Drysset af sesamfrø giver lidt knas til sidst.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "udonnudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en gryde med vand over varmen, og bring det i kog. Salt vandet så meget, at det smager som havvand."
+    },
+    {
+      "section": null,
+      "text": "Pres eller finhak hvidløget. Skær champignon og pak choi i tynde skiver, og læg den hvide og den grønne del af pak choi hver for sig."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en stor pande ved middelhøj varme. Steg champignon og den hvide pak choi med saltet til grøntsagerne i 2-3 minutter, til de er lidt bløde. Læg dem over på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Sæt panden tilbage på middelhøj varme. Brun oksekødet med hvidløg og saltet til kødet i 4-5 minutter. Kødet skal være helt gennemstegt, uden rødt tilbage."
+    },
+    {
+      "section": null,
+      "text": "Kog nudlerne i 1 minut i mellemtiden, til de er varme. Si dem fra, og skyl dem i koldt vand."
+    },
+    {
+      "section": null,
+      "text": "Kom grøntsagerne og nudlerne tilbage i panden til kødet sammen med sojasauce og sød chilisauce. Vend rundt, og steg i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Server nudlerne på tallerkener, og drys med sesamfrø og den grønne pak choi."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har oksekød, nudler som mættende element og grøntsager, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:27.337Z"
+  }
+}

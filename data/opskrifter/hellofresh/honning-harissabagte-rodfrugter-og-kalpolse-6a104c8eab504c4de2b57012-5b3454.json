@@ -1,0 +1,196 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/honning-harissabagte-rodfrugter-og-kalpolse-6a104c8eab504c4de2b57012",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:39:03.462Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 957,
+    "protein_g": 40.3,
+    "carbs_g": 85.3,
+    "fat_g": 48
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R14_BW41_SE_C49735-1_Main_high-adc53a2f.jpg",
+  "lang": "da",
+  "keywords": "Fusion cuisine",
+  "fetched_at": "2026-10-05T20:02:56.477Z",
+  "title": "Honning-harissabagte rodfrugter med ostepølse og thousand island-dressing",
+  "intro": "Ovnbagte rodfrugter med honning og harissa, knuste kartofler og sprøde ostepølser på samme plade. Det hele toppes med feta og en hurtig thousand island-dressing.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "ostepølser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 4,
+      "unit": "g",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "pakke",
+      "name": "kartofler",
+      "note": "små, forkogte",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Thousand island-dressing",
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Thousand island-dressing",
+      "amount": 25,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Thousand island-dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Thousand island-dressing",
+      "amount": 8,
+      "unit": "ml",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Thousand island-dressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til dressingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rodfrugter",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skræl knoldselleriet."
+    },
+    {
+      "section": "Rodfrugter",
+      "text": "Skær gulerødder og knoldselleri i stave på ca. 1 cm. Del løgene i både på ca. 2 cm."
+    },
+    {
+      "section": "Rodfrugter",
+      "text": "Læg grøntsagerne på en bageplade med bagepapir. Hæld lidt olivenolie og honning over, drys med harissa, salt og peber, og vend det hele rundt."
+    },
+    {
+      "section": "Rodfrugter",
+      "text": "Bag i 25-35 minutter, til rodfrugterne er møre. Brug to plader, hvis der ikke er plads på én."
+    },
+    {
+      "section": "Kartofler og pølser",
+      "text": "Læg kartoflerne på den ene halvdel af en bageplade med bagepapir, og tryk dem flade med bunden af et glas. Dryp med lidt olivenolie, og drys med salt og peber."
+    },
+    {
+      "section": "Kartofler og pølser",
+      "text": "Sæt kartoflerne i ovnen i 20-25 minutter. Læg ostepølserne på pladens anden halvdel, når der er 15 minutter tilbage, og bag dem færdige, til de er gyldne og gennemvarme."
+    },
+    {
+      "section": "Thousand island-dressing",
+      "text": "Rør yoghurt, mayonnaise, ketchup, worcestershiresauce og salt sammen i en lille skål, mens maden bager."
+    },
+    {
+      "section": "Anretning",
+      "text": "Smuldr fetaen over rodfrugter og pølser, så snart de er ude af ovnen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel pølser, kartofler og rodfrugter på tallerkener, og skee dressingen ovenpå."
+    }
+  ],
+  "changes": [
+    "Græsk ost er skiftet til feta."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har ostepølser som hovedråvare, kartofler som det mættende og rigeligt bagt rodfrugt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:38:16.195Z"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/klassisk-svensk-ovnbagt-falu-polse-6a2ab42491ca82626cee746b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:35:08.757Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 912,
+    "protein_g": 29.2,
+    "carbs_g": 67.4,
+    "fat_g": 58.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R03_BW25_SE_C57582-1main_high-3a8f092e.jpg",
+  "lang": "da",
+  "keywords": "Svensk",
+  "fetched_at": "2026-10-05T20:02:26.672Z",
+  "title": "Ovnbagt pølse med ost, kartoffelmos og tomatsalat",
+  "intro": "En svensk inspireret ovnret, hvor pølsen bages med løg, sennep og ost under en sprød top. Serveres med cremet kartoffelmos og en frisk salat med tomater.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "medisterpølse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "revet ost",
+      "note": "gouda",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "til moset",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til moset",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en stor gryde med letsaltet vand over varmen og bring det i kog. Tænd ovnen på 225 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skræl kartoflerne og skær dem i tern på ca. 2 cm. Kog dem i 11-13 minutter, til en kniv let går igennem."
+    },
+    {
+      "section": null,
+      "text": "Skær løget i tynde halve skiver, og halvér tomaterne. Vend halvdelen af tomaterne og halvdelen af løget med olie og salt til grøntsagerne."
+    },
+    {
+      "section": null,
+      "text": "Læg pølsen i et ildfast fad sammen med tomat- og løgblandingen. Skær små dybe snit i pølsen, men skær ikke helt igennem, og læg løg fra den resterende halvdel i snittene."
+    },
+    {
+      "section": null,
+      "text": "Pensl pølsen med sennep, og drys ost og panko over. Bag i ovnen i 20 minutter, til osten er smeltet og gyldne. Lidt af toppen falder af undervejs, det er helt normalt."
+    },
+    {
+      "section": null,
+      "text": "Skyl salaten, og vend den med de resterende tomater, olie og salt til salaten."
+    },
+    {
+      "section": null,
+      "text": "Si kartoflerne, og mos dem med mælk og salt til moset med en kartoffelmoser eller en gaffel. Læg låg på, og sæt dem til side. En klat smør giver et cremetere mos."
+    },
+    {
+      "section": null,
+      "text": "Server pølsen med kartoffelmos og salat."
+    }
+  ],
+  "changes": [
+    "Falu-pølse er erstattet med medisterpølse."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har pølse som hovedråvare, kartoffelmos som mættende del og tomatsalat som grønt, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:37:30.428Z"
+  }
+}

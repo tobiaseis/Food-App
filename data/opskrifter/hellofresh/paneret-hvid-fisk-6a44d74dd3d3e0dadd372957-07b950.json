@@ -1,0 +1,265 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/paneret-hvid-fisk-6a44d74dd3d3e0dadd372957",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:22:05.160Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 21,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 891,
+    "protein_g": 47.4,
+    "carbs_g": 74.6,
+    "fat_g": 43.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R10_BW49_SE_C17805-3_edit_fish_Main_high-8b37d125.jpg",
+  "lang": "da",
+  "keywords": "Fusion",
+  "fetched_at": "2026-10-05T20:01:02.416Z",
+  "title": "Paneret torsk med quinoasalat og pestodressing",
+  "intro": "Sprød paneret fisk med en frisk quinoasalat af tomat, agurk og syltet løg. Dressingen af yoghurt, mayonnaise og pesto binder det hele sammen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Quinoasalat",
+      "amount": 100,
+      "unit": "g",
+      "name": "quinoa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoasalat",
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til quinoa",
+      "optional": false
+    },
+    {
+      "section": "Quinoasalat",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoasalat",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til quinoa",
+      "optional": false
+    },
+    {
+      "section": "Quinoasalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Quinoasalat",
+      "amount": 12,
+      "unit": "ml",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Quinoasalat",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltning",
+      "optional": false
+    },
+    {
+      "section": "Quinoasalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i 1 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Quinoasalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i 1 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Quinoasalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salat",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 250,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til fisk",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mel",
+      "note": "hvedemel til panering",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 50,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Pestodressing",
+      "amount": 25,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pestodressing",
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pestodressing",
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Pestodressing",
+      "amount": 30,
+      "unit": "g",
+      "name": "pesto",
+      "note": "basilikumpesto",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Quinoasalat",
+      "text": "Kog vand op i en mellemstor gryde. Kom quinoa, bouillon og salt i, og sænk varmen til middel."
+    },
+    {
+      "section": "Quinoasalat",
+      "text": "Lad quinoaen simre i 12-15 minutter, til kornene er blevet dobbelt så store. Si vandet fra, hæld quinoaen tilbage i gryden, og sæt låg på. Stil den til side."
+    },
+    {
+      "section": "Quinoasalat",
+      "text": "Mens quinoaen simrer, kommer du løg, balsamico, sukker, et nip salt og peber i en mellemstor skål og blander det."
+    },
+    {
+      "section": "Fisk",
+      "text": "Sæt tre dybe tallerkener frem. Bland hvedemel, salt og peber på den første, pisk ægget på den næste, og hæld rasp på den sidste."
+    },
+    {
+      "section": "Fisk",
+      "text": "Tør fisken med køkkenrulle, og drys med salt. Vend den først i melet, så i ægget og til sidst i raspen. Mangler du æg, kan du bruge mælk i stedet."
+    },
+    {
+      "section": "Fisk",
+      "text": "Varm olie op på en pande ved middelhøj varme, så bunden er dækket. Steg fisken 2-3 minutter på hver side, til den er gylden og gennemstegt. Fisken er klar, når kødet er mat og mælkehvidt."
+    },
+    {
+      "section": "Fisk",
+      "text": "Læg fisken på en tallerken med køkkenrulle, og drys med et nip salt."
+    },
+    {
+      "section": "Pestodressing",
+      "text": "Rør mayonnaise, yoghurt, hvidløg, pesto, salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Quinoasalat",
+      "text": "Vend tomat, agurk, quinoa og olie sammen med det syltede løg, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Skær fisken i skiver. Anret den sammen med quinoasalaten i dybe tallerkener, og top fisken med dressingen."
+    }
+  ],
+  "changes": [
+    "Kuller er erstattet med torskefilet.",
+    "Basilikumpesto med cashewnødder er erstattet med almindelig basilikumpesto."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har paneret torsk som hovedråvare og quinoasalat med grønt som mættende del, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:23.362Z"
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/harissakrydret-halloumi-pa-mujadara-salat-6a327d22962b251b8d5659e5",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:34:38.122Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 771,
+    "protein_g": 35.1,
+    "carbs_g": 60.7,
+    "fat_g": 43.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R23_BW35_SE_C46117-1_Main_swap_halloumi_edit_swap_cherry_tomatoes_mix_edit_high-b3feec4a.jpg",
+  "lang": "da",
+  "keywords": "North African",
+  "fetched_at": "2026-10-05T20:02:23.100Z",
+  "title": "Harissa-halloumi med mujadara-salat og hvidløgsyoghurt",
+  "intro": "Stegt halloumi med harissa serveres på en lun salat af bulgur, linser og karamelliserede løg. Dertil er der frisk tomatsalat og en kølig hvidløgsyoghurt.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "bulgur",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "linser",
+      "note": "grønne, kogte",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "harissa",
+      "note": "krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "halloumi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bulguren",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bulguren",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de karamelliserede løg",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de karamelliserede løg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de karamelliserede løg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de karamelliserede løg",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning og smag",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning af linser og halloumi",
+      "optional": false
+    },
+    {
+      "section": "Til stegning og smag",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegning og smag",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Bulgur",
+      "text": "Kom vandet i en mellemstor gryde og bring det i kog. Rør bulgur, bouillon og en knivspids salt i, læg låg på, og lad det simre ved middellav varme i 9-10 minutter, til bulguren er al dente."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Halver cherrytomaterne. Skær agurken i tern på 1 cm. Pres eller hak hvidløget fint. Skær løget i halve, tynde skiver."
+    },
+    {
+      "section": "Karamelliserede løg",
+      "text": "Varm olien i en stor pande ved middel varme. Svits løget 5-6 minutter, til det er blødt. Hæld vand, sukker og salt på, og steg 3-5 minutter mere, til løgene er karamelliserede. Kom dem over i en lille skål."
+    },
+    {
+      "section": "Linser",
+      "text": "Skyl linserne. Varm lidt olie i samme pande ved middelhøj varme. Steg linserne med halvdelen af hvidløget, salt og peber i 2-3 minutter, til de er varme hele vejen igennem. Vend dem i gryden med bulguren sammen med løgene og solsikkekernerne."
+    },
+    {
+      "section": "Halloumi",
+      "text": "Tør panden af, og varm lidt ny olie i den ved middelhøj varme. Skær halloumien i 4 skiver, så der er 2 til hver. Dup skiverne tørre med køkkenrulle, og drys dem med harissa. Steg dem 2-3 minutter på hver side, til de er gyldne."
+    },
+    {
+      "section": "Tomatsalat og yoghurt",
+      "text": "Del citronen i både. Vend agurk, tomater, olie, salt og peber i en stor skål. Rør yoghurt, resten af hvidløget, en sjat citronsaft, salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel bulgursalaten, tomatsalaten og halloumien i dybe tallerkener. Hæld hvidløgsyoghurten over, og server med resten af citronbådene."
+    }
+  ],
+  "changes": [
+    "Grønne linser er skrevet som kogte linser, så de kan købes på dåse eller i glas og bruges direkte.",
+    "Citrusfrugt er skiftet til citron.",
+    "Harissa-krydderi er skrevet som harissa (krydderiblanding)."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har halloumi som hovedråvare, bulgur og linser som mættende base samt grøntsager, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:37:24.544Z"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/farverig-kyllingebowl-6a3d0c050875049c063d051a",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:28:49.171Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 621,
+    "protein_g": 51,
+    "carbs_g": 61.6,
+    "fat_g": 18.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y23_R06_W27_NO_RA12343660-16_Main_1_swap_sugar-snaps_edit_high-57d47f60.jpg",
+  "lang": "da",
+  "keywords": "Marokkansk",
+  "fetched_at": "2026-10-05T20:01:39.277Z",
+  "title": "Kyllingebowl med couscous, appelsin og mandler",
+  "intro": "BBQ-marineret kylling serveres med ovnbagt peberfrugt og løg, sprøde sukkerærter og couscous med appelsin og mandler. Det hele toppes med en hvidløgsdressing af yoghurt og mayonnaise.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 350,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "BBQ-marineret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "sukkerærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "couscous",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til couscous",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "mandler",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "appelsin",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fint hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til couscousen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til dressingen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Skær peberfrugt i tern på ca. 2 cm og løg i både på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Læg grøntsagerne på en bageplade med bagepapir. Vend dem med lidt olie, salten til grøntsagerne og peber. Bag dem i 15-25 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Drys kyllingen med salten til kødet. Varm lidt olie i en stor pande ved middelhøj varme, og brun kyllingen i 2 minutter på hver side."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingen ovenpå grøntsagerne på bagepladen, og bag den i 11-12 minutter. Den er færdig, når kødet er hvidt hele vejen igennem uden rødt."
+    },
+    {
+      "section": null,
+      "text": "Steg sukkerærterne i 2 minutter på samme pande ved middelhøj varme, til de er bløde."
+    },
+    {
+      "section": null,
+      "text": "Kog vand med salten til couscousen og bouillon i en mellemstor gryde, mens kyllingen bager. Rør couscousen i, tag gryden af varmen, og læg låg på. Lad den trække i 5 minutter, til vandet er opsuget."
+    },
+    {
+      "section": null,
+      "text": "Rør mayonnaise, yoghurt, hvidløg, salten til dressingen og peber sammen i en skål."
+    },
+    {
+      "section": null,
+      "text": "Rør mandler og persille ind i couscousen. Pres saften fra appelsinen over, og vend det hele rundt."
+    },
+    {
+      "section": null,
+      "text": "Vend sukkerærterne i de bagte grøntsager. Skær kyllingen i skiver på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Fordel couscous, grøntsager og kylling i dybe tallerkener, og hæld dressingen over."
+    }
+  ],
+  "changes": [
+    "Blodappelsin er skiftet til appelsin."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, couscous som mættende element og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:23.417Z"
+  }
+}

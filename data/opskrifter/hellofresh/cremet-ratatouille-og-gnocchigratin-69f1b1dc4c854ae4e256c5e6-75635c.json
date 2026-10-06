@@ -1,0 +1,240 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremet-ratatouille-og-gnocchigratin-69f1b1dc4c854ae4e256c5e6",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:46:52.476Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 21,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 719,
+    "protein_g": 19.9,
+    "carbs_g": 90.6,
+    "fat_g": 30.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R14_BW27_SE_V28023-1_Main_1_low-6585dc2a.jpg",
+  "lang": "da",
+  "keywords": "Fransk",
+  "fetched_at": "2026-10-05T20:03:52.156Z",
+  "title": "Ratatouille-gnocchigratin med rucolasalat",
+  "intro": "Gnocchi bages gyldne oven på en cremet grøntsagssauce med tomat og fløde. Den serveres med en frisk salat af rucola og gulerodsbånd.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Rødløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "g",
+      "name": "Blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 2,
+      "unit": "g",
+      "name": "Røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 200,
+      "unit": "g",
+      "name": "Hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 75,
+      "unit": "ml",
+      "name": "Madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 1,
+      "unit": "dl",
+      "name": "Vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Sukker",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Ratatouille",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 400,
+      "unit": "g",
+      "name": "Gnocchi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "Olivenolie",
+      "note": "til gnocchien",
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 4,
+      "unit": "g",
+      "name": "Krydderi",
+      "note": "Hello Sunrise",
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til gnocchien",
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 20,
+      "unit": "g",
+      "name": "Parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 40,
+      "unit": "g",
+      "name": "Rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "Olivenolie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ratatouille",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Hak rødløget groft, og skær peberfrugt og squash i tern på 1 cm."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Varm olien i en stor pande ved middelhøj varme. Steg løg, peberfrugt og squash med saltet i 2-3 minutter."
+    },
+    {
+      "section": "Gnocchi",
+      "text": "Vend gnocchi med olie, krydderiblandingen og salt i en skål, mens grøntsagerne steger."
+    },
+    {
+      "section": "Ratatouille",
+      "text": "Kom krydderurter, røget paprika, tomater, fløde, vand, sukker og salt på panden. Lad det simre i 1-2 minutter, til saucen er lidt tykkere."
+    },
+    {
+      "section": "Gnocchi",
+      "text": "Hæld grøntsagerne i et ildfast fad, og læg gnocchien ovenpå i et jævnt lag. Bag i 8-10 minutter, til gnocchien er gylden."
+    },
+    {
+      "section": "Gnocchi",
+      "text": "Strø parmesan over, og bag gratinen 1-2 minutter mere, til osten er smeltet."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl rucolaen. Skræl guleroden i lange, tynde bånd, og hak den resterende bid fint."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend rucola og gulerod med olie og salt."
+    },
+    {
+      "section": "Salat",
+      "text": "Anret gratinen på tallerkener, og server salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Zucchini er skiftet til squash.",
+    "Middelhavsdrøm er skiftet til blandede tørrede krydderurter.",
+    "Hello Sunrise er skiftet til krydderi.",
+    "Parmigiano Reggiano er skiftet til parmesan."
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/enkel-toscansk-svinekodspasta-6969684a850f974aa2130a68",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:15:29.409Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 791,
+    "protein_g": 42.7,
+    "carbs_g": 69.5,
+    "fat_g": 36.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R23_BW45_SE_R13366-3_Main_high-d517b476.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:07:24.259Z",
+  "title": "Toscansk svinekødspasta med grønkål",
+  "intro": "Hurtig pastaret med brunet svinekød, grønkål og en cremet sauce af creme fraiche. Drys med parmesan og frisk persille lige før servering.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Mamas Favorit",
+      "note": "krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "grønkål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "souvlaki-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "skalleformet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "grana padano i flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "persille",
+      "note": "bredbladet, hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "pastavand",
+      "note": "gemt fra kogningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til pastavandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bring en stor gryde vand med salt i kog. Kog pastaen i 12-13 minutter, til den er al dente, dvs. mør med lidt modstand i midten. Gem 1,5 dl af kogevandet, og si pastaen fra."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor pande ved middelhøj varme, mens pastaen koger. Brun svinekødet med souvlaki-krydderi og salt i 4-5 minutter. Kødet skal være gennemstegt og helt uden rødt."
+    },
+    {
+      "section": null,
+      "text": "Skær tomaten i tern på ca. 1 cm, mens kødet steger."
+    },
+    {
+      "section": null,
+      "text": "Rør grønkål, tomat, creme fraiche, Mamas Favorit og bouillon ned i kødet. Lad det simre i 2-3 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hæld pastavandet i panden, og lad saucen simre i 1-2 minutter, til den tykner en anelse."
+    },
+    {
+      "section": null,
+      "text": "Vend pastaen i saucen sammen med peber."
+    },
+    {
+      "section": null,
+      "text": "Server i dybe tallerkener, og drys med parmesan og persille."
+    }
+  ],
+  "changes": [
+    "Conchiglie er skiftet til almindelig skalleformet pasta."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en pastaret med hakket svinekød, pasta og grønkål, så den har både protein, stivelse og grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:31.535Z"
+  }
+}

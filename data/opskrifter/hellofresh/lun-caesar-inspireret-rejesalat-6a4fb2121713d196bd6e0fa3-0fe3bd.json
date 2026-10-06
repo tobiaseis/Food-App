@@ -1,0 +1,233 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/lun-caesar-inspireret-rejesalat-6a4fb2121713d196bd6e0fa3",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:15:50.776Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 672,
+    "protein_g": 32.1,
+    "carbs_g": 49.5,
+    "fat_g": 38.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R04_BW15_SE_F12343790-9_Main_swap_shrimps_edit_high-bb4f946f.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:00:31.255Z",
+  "title": "Cæsarinspireret rejesalat med hvidløgscroutoner og spejlæg",
+  "intro": "Frisk salat med bagte hvidløgscroutoner, gyldne rejer og et blødt spejlæg på toppen. Dressingen er cremet med sennep, mayonnaise og parmesan.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Croutoner",
+      "amount": 1,
+      "unit": "stk",
+      "name": "baguette",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer og æg",
+      "amount": 250,
+      "unit": "g",
+      "name": "rejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer og æg",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til rejerne",
+      "optional": false
+    },
+    {
+      "section": "Rejer og æg",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Rejer og æg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rejer og æg",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til æggene",
+      "optional": false
+    },
+    {
+      "section": "Rejer og æg",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "til æggene",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 15,
+      "unit": "g",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Croutoner",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Pres eller finhak hvidløget, og skær baguetten i små tern."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Læg brødet på en bageplade med bagepapir. Vend det med olie, hvidløg, salt og peber. Bag croutonerne i 8-10 minutter, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl salaten. Skræl gulerødderne i lange, tynde bånd, og hak den sidste rest fint. Hak peberfrugten groft."
+    },
+    {
+      "section": "Rejer og æg",
+      "text": "Varm lidt olie op i en pande ved middelhøj varme. Steg rejerne med saltet i 1-2 minutter på hver side, til de er gyldne og hvide og matte i kødet. Læg dem på en tallerken."
+    },
+    {
+      "section": "Rejer og æg",
+      "text": "Hæld lidt ny olie på samme pande ved middelhøj varme. Steg æggene som spejlæg i 4-6 minutter, til hviden er fast, og blommen stadig er blød. Smag til med salt og peber."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør sennep, mayonnaise, vand, salt og peber sammen i en stor skål sammen med halvdelen af parmesanen."
+    },
+    {
+      "section": "Dressing",
+      "text": "Vend salat, gulerod og peberfrugt i dressingen lige inden servering."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret salaten i dybe tallerkener. Læg croutoner, rejer og spejlæg ovenpå, og drys med resten af parmesanen."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano er erstattet af parmesan.",
+    "Kongerejer er erstattet af rejer."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rejer og æg som protein, baguettecroutoner som mættende og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:29.988Z"
+  }
+}

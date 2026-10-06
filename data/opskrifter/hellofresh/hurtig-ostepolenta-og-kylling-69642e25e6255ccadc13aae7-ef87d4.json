@@ -1,0 +1,176 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-ostepolenta-og-kylling-69642e25e6255ccadc13aae7",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:18:34.537Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 614,
+    "protein_g": 46,
+    "carbs_g": 75.6,
+    "fat_g": 9.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R19_BW04_SE_C52963-1_Main_high-32e0c7a4.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:07:47.824Z",
+  "title": "Ostepolenta med kylling og tomatsauce",
+  "intro": "Cremet polenta med parmesan toppes med mør kylling og en hurtig tomatsauce med peberfrugt. Retten er klar på cirka en kvarter.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Mamas Favorit",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "polenta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 7,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til polentaen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til polentaen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm lidt olivenolie op i en stor pande ved middelhøj varme. Brun kyllingen med salt og Mamas Favorit i 4-5 minutter, til den er gylden og helt gennemstegt – kødet skal være hvidt uden spor af rødt."
+    },
+    {
+      "section": null,
+      "text": "Skær peberfrugten i tynde strimler, og hak persillen fint."
+    },
+    {
+      "section": null,
+      "text": "Kom peberfrugten på panden, og steg den med i 1-2 minutter. Rør bouillon, passata, salt og sukker i, og lad saucen simre 1-2 minutter, til den er lidt tykkere."
+    },
+    {
+      "section": null,
+      "text": "Kog vand og salt op i en mellemstor gryde, og skru ned, så det kun småkoger. Pisk polentaen i under omrøring, og rør 2 minutter, til den tykner. Rør halvdelen af parmesanen i."
+    },
+    {
+      "section": null,
+      "text": "Vend persillen i tomatsaucen lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Fordel polentaen i dybe tallerkener, og læg kylling og sauce ovenpå. Drys med resten af parmesanen."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano er skiftet til parmesan."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, polenta som mættende base og grønt i saucen, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:19.100Z"
+  }
+}

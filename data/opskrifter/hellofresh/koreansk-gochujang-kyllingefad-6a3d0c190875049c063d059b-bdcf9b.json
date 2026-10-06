@@ -1,0 +1,194 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/koreansk-gochujang-kyllingefad-6a3d0c190875049c063d059b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:26:10.086Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 775,
+    "protein_g": 48.3,
+    "carbs_g": 77.4,
+    "fat_g": 31.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R13_BW27_SE_C59258-1main_high-f26d8791.jpg",
+  "lang": "da",
+  "keywords": "Koreansk",
+  "fetched_at": "2026-10-05T20:01:34.510Z",
+  "title": "Gochujang-kyllingefad med sesamris og pak choi",
+  "intro": "Mør kylling i en krydret gochujang-marinade bages sammen med ris og spidskål i ét fad. Serveres med soja-ingefærsauce, mayonnaise og sesamfrø.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "spidskål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chili",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Del spidskålen på langs og skær den i tynde strimler. Skær pak choi i kvarte."
+    },
+    {
+      "section": null,
+      "text": "Rør soja-ingefærsaucen sammen i en lille skål af halvdelen af sesamolien, sojasaucen, eddiken og ingefæren."
+    },
+    {
+      "section": null,
+      "text": "Skær kyllingen i mundrette stykker, cirka 3 pr. person. Vend dem med salt og gochujang i en skål."
+    },
+    {
+      "section": null,
+      "text": "Rør vand, resten af sesamolien og saltet til risene sammen i en kande."
+    },
+    {
+      "section": null,
+      "text": "Fordel risene i et stort ildfast fad og læg spidskålen ovenpå. Hæld vandblandingen over, dæk fadet med sølvpapir, og bag det i 30 min."
+    },
+    {
+      "section": null,
+      "text": "Når der er 15-20 min tilbage af bagetiden, lægges pak choi og kylling ovenpå. Dæk fadet tæt med sølvpapir igen, og bag færdigt. Kyllingen er færdig, når den er hvid helt igennem uden rødt."
+    },
+    {
+      "section": null,
+      "text": "Tag fadet direkte fra ovnen og stil det på bordet. Dryp soja-ingefærsauce og mayonnaise over, og drys med chili og sesamfrø. Brug mindre chili eller drop den, hvis nogen ikke bryder sig om stærk mad."
+    }
+  ],
+  "changes": [
+    "Ingefærpasta er erstattet af revet ingefær.",
+    "Vegansk asiatisk mayonnaise er erstattet af almindelig mayonnaise.",
+    "Chiliflager er angivet som chili."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, ris som mættende basis og grønt som spidskål og pak choi, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:12.067Z"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/svine-og-kalvekodsenchiladas-6a0dc167099c5b8fd89ccd20",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:40:42.591Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 785,
+    "protein_g": 41.9,
+    "carbs_g": 64.1,
+    "fat_g": 39.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R06_BW22_SE_C57284-1main_high-aa09712f.jpg",
+  "lang": "da",
+  "keywords": "Mexicansk",
+  "fetched_at": "2026-10-05T20:03:07.121Z",
+  "title": "Enchiladas med kalv og flæsk, ost og creme fraiche",
+  "intro": "Tortillaruller fyldt med krydret kød, peberfrugt og løg, bagt i tomatsauce med ost. Serveres med en klat creme fraiche.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Fyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket kalv og flæsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "skåret i 1 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 1.5,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 5,
+      "unit": "g",
+      "name": "tex-mex krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Fyld",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 40,
+      "unit": "g",
+      "name": "chipotlepasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 4,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Samling",
+      "amount": 50,
+      "unit": "g",
+      "name": "revet ost",
+      "note": "gouda",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fyld",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær peberfrugten i tern på 1 cm og hak løget groft."
+    },
+    {
+      "section": "Fyld",
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Brun løg, peberfrugt og kød med saltet i 4-5 minutter."
+    },
+    {
+      "section": "Fyld",
+      "text": "Rør Worcestershire-agtig sauce og Tex-Mex krydderi i panden og lad det stege med i 1-2 minutter. Kødet skal være helt gennemstegt uden rosa eller rødt."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret i en anden stor pande ved middelhøj varme, mens fyldet bliver færdigt."
+    },
+    {
+      "section": "Sauce",
+      "text": "Kom passata, chipotlepasta, sukker, salt og peber i panden. Lad det simre i 2-3 minutter, til saucen er blevet lidt tykkere."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld halvdelen af saucen i bunden af et ildfast fad."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg en skefuld fyld på hver tortilla og rul dem stramt. Læg dem i fadet med samlingen nedad."
+    },
+    {
+      "section": "Samling",
+      "text": "Kom resten af saucen ovenpå og strø osten over."
+    },
+    {
+      "section": "Samling",
+      "text": "Bag i ovnen i 8-10 minutter, til osten er gyldens og kanterne sprøde."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg enchiladas på tallerkener og server med creme fraiche ovenpå."
+    }
+  ],
+  "changes": [
+    "Røget peberfrugtpasta er erstattet af chipotlepasta.",
+    "Worcestershiresauce er erstattet af sojasauce."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Enchiladaerne har kød og grønt i fyldet og tortillas som mættende element, så de er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:38:33.647Z"
+  }
+}

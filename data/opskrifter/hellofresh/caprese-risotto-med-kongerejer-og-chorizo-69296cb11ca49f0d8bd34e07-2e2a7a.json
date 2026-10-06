@@ -1,0 +1,240 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/caprese-risotto-med-kongerejer-og-chorizo-69296cb11ca49f0d8bd34e07",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:25:41.033Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 907,
+    "protein_g": 44.4,
+    "carbs_g": 77.5,
+    "fat_g": 49.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R09_BW50_SE_P36793-1_MT_Main_high-1031f821.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:08:39.822Z",
+  "title": "Caprese-risotto med kongerejer og chorizo",
+  "intro": "Cremet risotto med pesto, stegte kongerejer og spicy chorizo, toppet med sprækkede cherrytomater i balsamicoglaze og mozzarella. Retten har alle caprese-smagene og er lavet i én pande.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "risotto ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "kyllingefond",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "pesto",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "basilikum",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "ml",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": "vandet hældt fra",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "Grana Padano",
+      "note": "i flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "kongerejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til risotto",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risotto",
+      "amount": 6,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risotto",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glaze",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glaze",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til glaze",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til rejerne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm olien i en stor pande ved middelhøj varme. Steg chorizoen i 4-6 minutter, til den er gennemstegt, og læg den på en tallerken med køkkenrulle. Hak løget fint, mens chorizoen steger."
+    },
+    {
+      "section": null,
+      "text": "Brug samme pande ved middelhøj varme, og svits løget i 1-2 minutter, til det er blødt. Rør risene i og steg dem 1-2 minutter, til de er blevet gennemsigtige."
+    },
+    {
+      "section": null,
+      "text": "Hæld vand, fond, pesto og salt til risotto i panden, og bring det i kog. Skru ned til middel varme, og lad risottoen simre i 18-22 minutter, til væsken er optaget, og risene er al dente. Tilsæt lidt ekstra vand, hvis den bliver for tør."
+    },
+    {
+      "section": null,
+      "text": "Varm en stor pande op ved middelhøj varme, og rist pinjekernerne i 3-4 minutter, til de er gyldne. Kom dem i en lille skål. Hak basilikummen groft, mens kernerne ristes."
+    },
+    {
+      "section": null,
+      "text": "Steg cherrytomaterne i samme pande i 3-4 minutter ved middelhøj varme, til de er bløde. Tilsæt balsamico, vand, sukker og salt til glaze, og rør rundt. Kom tomaterne i en mellemstor skål."
+    },
+    {
+      "section": null,
+      "text": "Tør panden af, og varm lidt olie i den ved middelhøj varme. Steg rejerne med salt og peber i 1-2 minutter på hver side, til de er gyldne og gennemstegte. De er færdige, når kødet er hvidt og mat."
+    },
+    {
+      "section": null,
+      "text": "Tag risottoen af varmen, og rør Grana Padano og smør i. Smag til med rigeligt salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Fordel risottoen i skåle, og læg chorizo, tomater, rejer og mozzarella ovenpå. Drys med pinjekerner og basilikum."
+    }
+  ],
+  "changes": [
+    "Calabresepesto er erstattet af almindelig pesto."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Risottoen har ris som mættende base og både kongerejer, chorizo og mozzarella som protein, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:47:44.701Z"
+  }
+}

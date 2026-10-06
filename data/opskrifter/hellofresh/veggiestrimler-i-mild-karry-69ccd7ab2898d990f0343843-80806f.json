@@ -1,0 +1,182 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/veggiestrimler-i-mild-karry-69ccd7ab2898d990f0343843",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:56:23.723Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 12,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 687,
+    "protein_g": 28.1,
+    "carbs_g": 82.8,
+    "fat_g": 27.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R26_BW28_SE_C12559-7_Main_Remove_Spring_onion_edit_edit_high-2727559a.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:05:04.335Z",
+  "title": "Veggiestykker i mild karry med nudler og ingefærstegt pak choi",
+  "intro": "Hurtig vegetarret med nudler i en cremet, mild karrysauce med kokosmælk. Pak choi, gulerødder og plantebaserede kyllingestykker giver bid og fylde.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "med lavt saltindhold",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "nudler",
+      "note": "mienudler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "rød karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefærpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "plantebaserede kyllingestykker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en stor gryde med vand over varmen, og salt det kraftigt, så det smager som havvand. Bring det i kog."
+    },
+    {
+      "section": null,
+      "text": "Del citronen i både. Skær pak choi i skiver på ca. 1 cm, og skær gulerødderne uskrællede i stave på ca. 3 cm."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op på en stor pande ved middelhøj varme. Steg gulerødderne i 3-4 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Kom pak choi, kyllingestykkerne og ingefærpuréen på panden, og steg det i 2 minutter. Rør karrypastaen ind, og steg i 1 minut mere."
+    },
+    {
+      "section": null,
+      "text": "Skru ned til middelvarme. Hæld kokosmælk og sojasauce på panden, drys sukkeret over, og lad saucen koge under omrøring i 3-4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kog nudlerne i det kogende vand i 4-6 minutter, til de er bløde. Si dem fra, og skyl dem under koldt vand."
+    },
+    {
+      "section": null,
+      "text": "Vend nudlerne i saucen på panden. Pres lidt citronsaft over, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Fordel retten i dybe tallerkener, og drys med chiliflager. Server med de resterende citronbåde. Brug mindre chili, eller spring den over, hvis nogen ikke bryder sig om stærk mad."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har plantebaserede kyllingestykker som hovedråvare, nudler som mættende element og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:41:49.107Z"
+  }
+}

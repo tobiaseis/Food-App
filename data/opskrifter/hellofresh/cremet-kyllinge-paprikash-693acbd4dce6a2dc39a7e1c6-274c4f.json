@@ -1,0 +1,202 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremet-kyllinge-paprikash-693acbd4dce6a2dc39a7e1c6",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:23:24.647Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 887,
+    "protein_g": 51.4,
+    "carbs_g": 82.7,
+    "fat_g": 41.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R12_BW51_SE_V20618-1_Mainhigh-b0da5e0f.jpg",
+  "lang": "da",
+  "keywords": "Ungarsk",
+  "fetched_at": "2026-10-05T20:08:24.374Z",
+  "title": "Ungarsk kylling-paprikash med jasminris og agurkesalat",
+  "intro": "Kyllingestrimler og løg simrer i en cremet sovs med røget paprika og tomat. Retten serveres med jasminris og en sprød salat af agurk, kål og gulerod.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til risene",
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risene",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risene",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 4,
+      "unit": "g",
+      "name": "paprika",
+      "note": "røget",
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kyllingen",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 150,
+      "unit": "g",
+      "name": "kål",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i julienne",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 12,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salat",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kog vandet op i en mellemstor gryde. Kom ris og salt i, læg låg på, og lad risene koge ved middellav varme i 14 minutter. Træk gryden af varmen, og lad den stå med låg."
+    },
+    {
+      "section": "Kylling",
+      "text": "Skær løget i tynde halve skiver, mens risene koger."
+    },
+    {
+      "section": "Kylling",
+      "text": "Varm olien op på en stor pande ved middelhøj varme. Steg kylling og løg i 3-4 minutter, til løgene er blanke og bløde."
+    },
+    {
+      "section": "Kylling",
+      "text": "Rør sojasauce, røget paprika og tomatpuré i, og steg i ca. 1 minut mere. Kyllingen er færdig, når kødet er helt hvidt uden spor af rødt."
+    },
+    {
+      "section": "Kylling",
+      "text": "Skru ned til middel varme. Rør creme fraiche og bouillon i, og lad det simre 2-3 minutter, til saucen er tyk og varm hele vejen igennem."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend agurk, kål og gulerod med eddike, olie og salt i en skål."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel ris og kylling i dybe tallerkener, og server salaten ved siden af."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, ris som mættende del og en salat med grønt ved siden af.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:47:21.961Z"
+  }
+}

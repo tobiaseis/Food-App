@@ -1,0 +1,185 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-sydstatsinspireret-bbq-kyllingesandwich-6a33f44e4e4b173945bbbf79",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:32:02.213Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 907,
+    "protein_g": 47.7,
+    "carbs_g": 87.8,
+    "fat_g": 40.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R01_BW26_SE_C57234-1main_high-a8ba4a16.jpg",
+  "lang": "da",
+  "keywords": "American",
+  "fetched_at": "2026-10-05T20:02:02.928Z",
+  "title": "BBQ-kyllingesandwich med kålslaw",
+  "intro": "Sprød baguette fyldt med BBQ-kylling og frisk slaw af gulerod og rødkål. Serveres med en let salat ved siden af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "BBQ-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "BBQ-sauce",
+      "note": "South Carolina-stil",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "baguette",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 80,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "skåret fint",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til slawen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til slawen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Steg kyllingen med salt og krydderi i 4-5 minutter, til den er gyldin og helt gennemstegt. Kødet skal være hvidt uden rosa."
+    },
+    {
+      "section": null,
+      "text": "Tag panden af varmen, og vend kyllingen rundt i BBQ-saucen."
+    },
+    {
+      "section": null,
+      "text": "Skær baguetterne over på langs, og læg dem direkte på ovnristen. Bag dem i 7-8 minutter."
+    },
+    {
+      "section": null,
+      "text": "Mens brødet bager, rives guleroden groft. Vend den i en stor skål med rødkål, halvdelen af mayonnaisen, olie og salt til slawen."
+    },
+    {
+      "section": null,
+      "text": "Rør resten af mayonnaisen sammen med en lille knivspids salt i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Skyl salaten, og vend den med olie og salt til salaten."
+    },
+    {
+      "section": null,
+      "text": "Læg baguetterne på tallerkener, og smør dem med mayonnaisen. Fordel slaw og kylling i brødet, og dryp ketchup over. Server med salaten."
+    }
+  ],
+  "changes": [
+    "Jorden Rundt-krydderiblandingen er erstattet med BBQ-krydderi.",
+    "Gulerod er skrevet som gulerødder efter varekataloget."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, baguette som mættende element og rigeligt grønt i slaw og salat.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:54.635Z"
+  }
+}

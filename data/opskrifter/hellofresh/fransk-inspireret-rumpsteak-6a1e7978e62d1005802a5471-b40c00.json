@@ -1,0 +1,238 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/fransk-inspireret-rumpsteak-6a1e7978e62d1005802a5471",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:38:23.157Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 578,
+    "protein_g": 39.8,
+    "carbs_g": 66.9,
+    "fat_g": 16.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R02_BW20_SE_K30363-1_Main_swap_rump_steak_edit_high-b8e011d1.jpg",
+  "lang": "da",
+  "keywords": "Fransk",
+  "fetched_at": "2026-10-05T20:02:51.682Z",
+  "title": "Rumpsteak med sennepsdressing, selleri-kartoffelmos og pæresalat",
+  "intro": "Saftig rumpsteak serveres med cremet mos af kartofler og knoldselleri, karamelliserede løg og en frisk salat med pære. En fransk-inspireret dressing af creme fraiche, honning og sennep binder det hele sammen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "rumpsteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pære",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.75,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "honning-sennepsdressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "til mos",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til mos",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til karamelliserede løg",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til karamelliserede løg",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til karamelliserede løg",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til dressing",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning og evt. i salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tag bøfferne ud af køleskabet, og krydr dem med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Bring en stor gryde saltet vand i kog. Skræl kartofler og knoldselleri, og skær dem i tern på 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Kog ternene i 11-13 minutter, til en kniv let går igennem. Hæld vandet fra, og tilsæt mælk, salt og peber. Mos det med kartoffelmoser eller gaffel, og lad det stå med låg. Tip: En klat smør gør moset cremet."
+    },
+    {
+      "section": null,
+      "text": "Skær løget i tynde halve skiver. Smelt smørret i en stor pande ved middel varme, og steg løget i 5-6 minutter, til det er blødt."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt vand, sukker og salt til løgene. Steg dem videre i 3-5 minutter, til de er karamelliserede, og kom dem over i en skål."
+    },
+    {
+      "section": null,
+      "text": "Hak persillen fint, og rør den sammen med creme fraiche, honning-sennepsdressing, salt og peber i en lille skål. Del citronen i to. Skær pæren i tynde halve skiver, og skyl salaten."
+    },
+    {
+      "section": null,
+      "text": "Tør panden af, og varm lidt olivenolie op på høj varme. Steg bøfferne i 3-4 minutter på hver side, til de er brunede. Pak dem ind i folie, og lad dem hvile, til du skal servere. Tip: Steg 1-2 minutter længere, hvis bøfferne skal være gennemstegte."
+    },
+    {
+      "section": null,
+      "text": "Vend pære og salat i en stor skål med et skvæt citronsaft og salt. Dryp evt. lidt olivenolie over."
+    },
+    {
+      "section": null,
+      "text": "Læg mos, bøffer og salat på tallerkener, og top bøfferne med de karamelliserede løg. Server med dressingen ved siden af."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron.",
+    "Kørvel er skiftet til persille."
+  ]
+}

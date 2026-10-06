@@ -1,0 +1,243 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/svenske-svine-og-kalvekodskrebinetter-6969684f850f974aa2130a98",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:15:13.551Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 848,
+    "protein_g": 40.1,
+    "carbs_g": 89.4,
+    "fat_g": 38.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R01_BW06_SE_C28926-9_MT_Main_6_remove_lingonberry_jam_edit_high-ed36cc34.jpg",
+  "lang": "da",
+  "keywords": "Svensk",
+  "fetched_at": "2026-10-05T20:07:23.078Z",
+  "title": "Svenske krebinetter med stegt spidskål og pastinakmos",
+  "intro": "Saftige krebinetter af svine- og kalvekød med panérede kanter, serveret med smørstegt spidskål og cremet kartoffel-pastinakmos med hvidløg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Krebinetter",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": "gerne blandet svine- og kalvekød",
+      "optional": false
+    },
+    {
+      "section": "Krebinetter",
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krebinetter",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krebinetter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krebinetter",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krebinetter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Krebinetter",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Stegt spidskål",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": "Stegt spidskål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Stegt spidskål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Stegt spidskål",
+      "amount": 1,
+      "unit": "stk",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Stegt spidskål",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Stegt spidskål",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegt spidskål",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pastinakmos",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrællede, i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Pastinakmos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": "skrællet, i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Pastinakmos",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "skrællet",
+      "optional": false
+    },
+    {
+      "section": "Pastinakmos",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pastinakmos",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pastinakmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pastinakmos",
+      "text": "Kom vand med salt i en stor gryde, og bring det i kog. Skær kartofler og pastinak i 2 cm tern, og kog dem sammen med hvidløget i 11-13 minutter, til de let giver efter for en kniv."
+    },
+    {
+      "section": "Pastinakmos",
+      "text": "Si vandet fra. Tilsæt mælk, salt og peber, og mos med kartoffelmoser eller gaffel. Læg låg på, og sæt til side. En klat smør gør mosen mere cremet."
+    },
+    {
+      "section": "Stegt spidskål",
+      "text": "Skær løget i tynde halve skiver, halvér citronen, og hak dilden fint."
+    },
+    {
+      "section": "Stegt spidskål",
+      "text": "Varm olien i en stor pande ved middelhøj varme. Steg løg og spidskål i 6-8 minutter, til de er møre."
+    },
+    {
+      "section": "Stegt spidskål",
+      "text": "Rør salt, smør, en sjat citronsaft og dild i panden. Læg kålen på et fad, og hold den varm."
+    },
+    {
+      "section": "Krebinetter",
+      "text": "Hæld panko i en dyb tallerken. Ælt hakket kød, rasp, æg, salt og peber sammen i en stor skål."
+    },
+    {
+      "section": "Krebinetter",
+      "text": "Form farsen til to flade bøffer, én til hver. Vend dem i panko, til de er dækket."
+    },
+    {
+      "section": "Krebinetter",
+      "text": "Tør panden af, og hæld olie i, så bunden er dækket. Varm op ved middelhøj varme."
+    },
+    {
+      "section": "Krebinetter",
+      "text": "Steg krebinetterne 4-5 minutter, til de er gyldne og helt gennemstegte uden spor af rødt. Lad dem dryppe af på køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Server krebinetterne med spidskål og mos."
+    }
+  ],
+  "changes": [
+    "Hakket svine-/kalvekød er skrevet som hakket svinekød med note om, at det gerne må være blandet med kalv.",
+    "Citrusfrugt er ændret til citron.",
+    "Hvidløgsfed er skrevet som hvidløg."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har krebinetter som hovedråvare, pastinak- og kartoffelmos som mættende del og stegt spidskål som grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:30.135Z"
+  },
+  "accepted": true
+}

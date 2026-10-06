@@ -1,0 +1,253 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/asiatiske-grontsagsfrikadeller-69e8c8a0fe534c766c459260",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:49:11.270Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 21,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 751,
+    "protein_g": 20.3,
+    "carbs_g": 101.9,
+    "fat_g": 30.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R11_BW18_SE_V12643-3_main_high-155ffdb8.jpg",
+  "lang": "da",
+  "keywords": "Japansk",
+  "fetched_at": "2026-10-05T20:04:07.571Z",
+  "title": "Asiatiske grøntsagsfrikadeller med ris og salat",
+  "intro": "Sprøde frikadeller af spidskål, gulerod og ingefær serveres med ris og en frisk salat af syltet spidskål, spinat og sukkerærter. Dryp med sriracha og server med mayonnaise.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "friskrevet, uskrællet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet, uskrællet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "ml",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "dressing",
+      "note": "asiatisk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "sukkerærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til syltningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til frikadellerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til frikadellerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "til frikadellerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog vandet op i en mellemstor gryde. Kom risene og saltet til risene i, sæt låg på, og lad dem simre ved middellav varme i 14 min."
+    },
+    {
+      "section": null,
+      "text": "Tag gryden af varmen, og lad risene trække under låg i 10 min. Løft ikke låget undervejs."
+    },
+    {
+      "section": null,
+      "text": "Mens risene trækker: Hak forårsløgene fint, og riv gulerødderne groft med skræl på. Riv ingefæren fint, også med skræl. Skyl spinaten, og skær citronen over."
+    },
+    {
+      "section": null,
+      "text": "Rør et godt skvæt citronsaft sammen med sukker og salt til syltningen i en lille skål. Vend halvdelen af spidskålen i, og lad den stå."
+    },
+    {
+      "section": null,
+      "text": "Pisk æggene i en mellemstor skål. Rør panko, forårsløg, ingefær, gulerod, sojasauce, salt og peber i sammen med den resterende spidskål."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en stor stegepande ved middelhøj varme, så den dækker bunden. Form tre frikadeller pr. person med en ske direkte i panden, og tryk dem flade med en paletkniv."
+    },
+    {
+      "section": null,
+      "text": "Steg frikadellerne i 3-4 min på hver side, til de er gyldne og gennemstegte. Vend dem ikke for tidligt, ellers falder de fra hinanden. Læg dem på køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Vend spinat, sukkerærter, salt til salaten og dressing i skålen med den syltede spidskål. Tilsæt evt. lidt olie."
+    },
+    {
+      "section": null,
+      "text": "Anret frikadeller, ris og salat på tallerkener. Dryp med sriracha, og server mayonnaisen ved siden af. Brug mindre sriracha eller helt uden, hvis du ikke vil have det stærkt."
+    }
+  ],
+  "changes": [
+    "Mayonnaise erstatter vegansk sesammayonnaise.",
+    "Citron erstatter citrusfrugt."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har grøntsagsfrikadeller som hovedråvare sammen med ris og salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:40:14.987Z"
+  }
+}

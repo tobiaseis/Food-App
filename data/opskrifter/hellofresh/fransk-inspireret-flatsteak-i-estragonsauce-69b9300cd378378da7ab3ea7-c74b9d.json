@@ -1,0 +1,249 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/fransk-inspireret-flatsteak-i-estragonsauce-69b9300cd378378da7ab3ea7",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:01:51.234Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 922,
+    "protein_g": 41.1,
+    "carbs_g": 68.2,
+    "fat_g": 53.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R17_BW13_SE_C56410-1_main_high-9ead673d.jpg",
+  "lang": "da",
+  "keywords": "Fransk",
+  "fetched_at": "2026-10-05T20:05:48.332Z",
+  "title": "Flanksteak i estragonsauce med lyonnaise-kartofler og pæresalat",
+  "intro": "Mør bøf med cremet estragonsauce, ovnbagte kartofler vendt med karamelliserede løg og en sprød salat med pære og radiser. En fransk bistro-middag for to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kartofler",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 350,
+      "unit": "g",
+      "name": "flanksteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonsauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonsauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonsauce",
+      "amount": 15,
+      "unit": "g",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonsauce",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "estragon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Estragonsauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pæresalat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pæresalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pære",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pæresalat",
+      "amount": 75,
+      "unit": "g",
+      "name": "radiser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pæresalat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pæresalat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Tag bøfferne ud af køleskabet, så de når at blive stuetempererede."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Hak rosmarinen groft. Skær de uskrællede kartofler i skiver på ca. 1 cm, og læg dem på en bageplade med bagepapir. Drys med olie, rosmarin og salt, og vend rundt."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Bag kartoflerne midt i ovnen i 25-35 minutter, til de er møre. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": "Karamelliserede løg",
+      "text": "Skær løgene i tynde halve skiver. Varm olien op i en stor pande over middelhøj varme, og svits løgene i 5-6 minutter, til de er bløde."
+    },
+    {
+      "section": "Karamelliserede løg",
+      "text": "Kom vand, sukker og salt på panden, og steg 3-5 minutter mere, til løgene er karamelliserede."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm olien op i en anden stor pande over middelhøj varme. Brun bøfferne i 3 minutter på hver side."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, til maden skal på bordet. Vil du have dem gennemstegte, så steg dem 1-2 minutter længere på hver side."
+    },
+    {
+      "section": "Estragonsauce",
+      "text": "Hak estragonen groft. Sæt bøfpanden over middellav varme, og rør creme fraiche, vand, sennep, salt og estragon i."
+    },
+    {
+      "section": "Estragonsauce",
+      "text": "Lad saucen simre i 2-3 minutter, til den er varm hele vejen igennem. Hold den varm, til servering."
+    },
+    {
+      "section": "Pæresalat",
+      "text": "Skyl salaten. Skær pæren i tynde halve skiver og radiserne i tynde skiver. Vend det hele med salt og olie i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Vend kartoflerne med de karamelliserede løg lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Skær bøfferne på tværs af fibrene i skiver på ½ cm. Anret med kartofler og salat, og hæld estragonsaucen over kødet."
+    }
+  ],
+  "changes": [
+    "Flatsteak er erstattet med flanksteak.",
+    "Salat er erstattet med salatblanding."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kød, ovnbagte lyonnaise-kartofler som mættende bestanddel og en pæresalat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:43:07.713Z"
+  }
+}

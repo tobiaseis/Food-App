@@ -1,0 +1,234 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/svampe-og-gronsagsfyldt-butterdejstaerte-695b777f2a2e2effad183335",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:19:46.806Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 820,
+    "protein_g": 20.5,
+    "carbs_g": 57.1,
+    "fat_g": 56.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R08_BW15_SE_V36796-1_Main_high-e17e3eed.jpg",
+  "lang": "da",
+  "keywords": "Fransk",
+  "fetched_at": "2026-10-05T20:07:57.299Z",
+  "title": "Butterdejstærte med svampe, porre og parmesan",
+  "intro": "Cremet tærte med champignon, porre og kartofler under et gyldent låg af butterdej. Serveres med en frisk rucolasalat og ristede græskarkerner.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "pakke",
+      "name": "Butterdej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Porre",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "Champignon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Gulerødder",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "Hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "Timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "Madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "Rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 12,
+      "unit": "ml",
+      "name": "Eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "Kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "Parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "Græskarkerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "Hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "Vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Slå porren over på langs, skyl den, og skær den i tynde halve skiver. Skær champignon i tynde skiver."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Skræl kartoflerne, og skær dem i tern på 1 cm. Hak gulerod og hvidløg fint. Pluk timianbladene af stilkene."
+    },
+    {
+      "section": "Sauce",
+      "text": "Varm smør og olie i en stor pande ved middelhøj varme. Steg gulerod, porre, kartofler og champignon med salt i 4-5 minutter."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør timian, mel og hvidløg i, og steg i 1 minut."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld fløde, vand, eddike og bouillon i. Skru ned til middel varme, og lad det simre i 1-2 minutter, til saucen er tyk."
+    },
+    {
+      "section": "Tærte",
+      "text": "Kom blandingen i et ildfast fad, og drys parmesan over. Læg butterdejen ovenpå, og skær et kryds i den."
+    },
+    {
+      "section": "Tærte",
+      "text": "Bag tærten i 10-15 minutter, til dejen er gyldenbrun. Lad den hvile i 5 minutter."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl rucolaen, og vend den med salt og olie i en skål."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret tærten på tallerkener med salaten ved siden af, og drys græskarkerner over salaten."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano er erstattet med parmesan.",
+    "Hvidvinseddike er erstattet med almindelig eddike."
+  ]
+}

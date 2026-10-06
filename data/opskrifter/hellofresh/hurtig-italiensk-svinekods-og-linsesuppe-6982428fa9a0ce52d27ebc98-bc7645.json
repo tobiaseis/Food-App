@@ -1,0 +1,180 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-italiensk-svinekods-og-linsesuppe-6982428fa9a0ce52d27ebc98",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:13:13.664Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 771,
+    "protein_g": 39.3,
+    "carbs_g": 40.2,
+    "fat_g": 48.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R14_BW17_SE_C42380-1_Main_high-b20dcd08.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:07:06.433Z",
+  "title": "Hurtig linsesuppe med svinekød og persilleolie",
+  "intro": "En mættende italiensk-inspireret suppe med hakket svinekød, linser og tomat, som er klar på få minutter. Persilleolie og feta på toppen giver frisk smag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "linser",
+      "note": "grønne, skyllede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chili",
+      "note": "chiliflager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "i alt, fordelt på kød, suppe og persilleolie",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til persilleolien",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til persilleolien",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skær peberfrugten i tern på ca. 2 cm og gulerødderne i tern på ca. 1 cm. Skyl linserne i en si."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en stor stegepande over middelhøj varme. Brun svinekødet sammen med peberfrugt og gulerod i 4-5 minutter, og krydr med en lille del af saltet og peber. Kødet skal være gennemstegt uden spor af rødt, og grøntsagerne skal være møre."
+    },
+    {
+      "section": null,
+      "text": "Kom linser, hakkede tomater, bouillon, chiliflager, vand, sukker, en større del af saltet og peber i panden, og lad det varme igennem. Brug mindre chili eller drop den, hvis suppen ikke skal være stærk."
+    },
+    {
+      "section": "Til persilleolien",
+      "text": "Rør den hakkede persille sammen med olivenolie og resten af saltet i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Øs suppen op i skåle. Hæld persilleolie over, og smuldr feta ovenpå."
+    }
+  ],
+  "changes": [
+    "Græsk ost er erstattet med feta."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Suppen har både svinekød, linser og grøntsager, så den er et mættende helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:04.878Z"
+  }
+}

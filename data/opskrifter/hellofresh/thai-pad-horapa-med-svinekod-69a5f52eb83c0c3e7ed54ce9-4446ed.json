@@ -1,0 +1,198 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/thai-pad-horapa-med-svinekod-69a5f52eb83c0c3e7ed54ce9",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:07:01.255Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 686,
+    "protein_g": 38.1,
+    "carbs_g": 92,
+    "fat_g": 21.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R04_BW11_SE_C55085-1_main_high-e119a2bb.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:06:17.889Z",
+  "title": "Pad horapa med svinekød og chili",
+  "intro": "Thailandsk wokret med hakket svinekød, bønner og masser af basilikum, serveret på dampende jasminris. Den er hurtig at lave og kan gøres mild eller stærk efter smag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "haricots verts",
+      "note": "endestykkerne skåret af, halveret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællede, groft revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "asiatisk woksauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "basilikum",
+      "note": "bladene plukket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog vandet op i en gryde. Kom ris og salt i, læg låg på, og lad risen simre på middellav varme i 12 minutter."
+    },
+    {
+      "section": null,
+      "text": "Træk gryden af varmen, og lad risen stå med låg på i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": null,
+      "text": "Rids grøntsagerne, mens risen koger: Riv gulerødderne groft med skrællen på, og hak hvidløget fint. Skær løget i tynde halve skiver. Snit enderne af bønnerne, og skær dem over på midten. Slå chilien op, fjern kernerne, og hak den fint."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op på en stor pande ved høj varme. Steg bønner, løg og chili i 1-2 minutter. Brug mindre chili eller drop den, hvis nogen ikke bryder sig om stærk mad."
+    },
+    {
+      "section": null,
+      "text": "Kom svinekødet på panden, og brun det i 3-4 minutter. Kødet skal være gennemstegt og uden rosa."
+    },
+    {
+      "section": null,
+      "text": "Tilsæt gulerødder og hvidløg, og steg i cirka 1 minut, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Rør woksauce, fiskesauce, bouillon og vand til saucen ned i panden, og lad det småkoge i 1 minut."
+    },
+    {
+      "section": null,
+      "text": "Tag panden af varmen, og vend basilikum i."
+    },
+    {
+      "section": null,
+      "text": "Fordel risen i dybe tallerkener, og top med kødet og grøntsagerne."
+    }
+  ],
+  "changes": [
+    "Thaibasilikum er skiftet til almindelig basilikum.",
+    "Fish sauce er skiftet til fiskesauce.",
+    "Grønne bønner er skiftet til haricots verts."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har hakket svinekød, jasminris og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:43:52.606Z"
+  }
+}

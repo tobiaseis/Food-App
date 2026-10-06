@@ -1,0 +1,202 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/asiatisk-boost-burger-6a4b7729746dd895cd0b08ca",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:18:05.023Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1121,
+    "protein_g": 42.6,
+    "carbs_g": 102.7,
+    "fat_g": 61.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R02_BW29_SE_C27982-1main_high-902acee6.jpg",
+  "lang": "da",
+  "keywords": "Japansk",
+  "fetched_at": "2026-10-05T20:00:40.858Z",
+  "title": "Asiatisk burger med sesamfritter og pak choi-salat",
+  "intro": "Veganske burgerbøffer i briochebolle med hjemmebagte sesamfritter og en sprød salat af pak choi og syltet glaskål. Asiatisk dressing og mayonnaise giver smag og saftighed.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "briocheboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "glaskål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "dressing",
+      "note": "asiatisk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "veganske burgerbøffer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til glaskålen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til glaskålen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til bøfferne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fritter",
+      "text": "Tænd ovnen på 240 °C (220 °C med varmluft). Beklæd en bageplade med bagepapir."
+    },
+    {
+      "section": "Fritter",
+      "text": "Skær kartoflerne i fritter på ca. 1 cm. Læg dem på pladen, og vend dem med olivenolie, salt og peber. Brug to plader, hvis der ikke er plads på én."
+    },
+    {
+      "section": "Fritter",
+      "text": "Bag fritterne i 25-35 minutter, til de er møre. Drys med sesamfrø, og vend dem."
+    },
+    {
+      "section": "Salat",
+      "text": "Snit pak choi fint. Skræl glaskålen, og skær den i tynde stave på ca. ½ cm."
+    },
+    {
+      "section": "Salat",
+      "text": "Pres saften af citronen i en lille skål, og rør sukker og salt i. Læg glaskålsstavene i og vend dem."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm lidt olivenolie op i en stor pande ved middelhøj varme. Drys bøfferne med salt og peber."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Brun bøfferne 2 minutter på hver side. Skru ned til middelvarme, og steg dem videre i 8-10 minutter. Vend dem undervejs, og læg dem derefter på en tallerken."
+    },
+    {
+      "section": "Boller",
+      "text": "Skær bollerne igennem på midten. Læg dem med snitfladen opad direkte på ovnristen, og varm dem i 3-4 minutter."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend den syltede glaskål med pak choi, salt og peber i en stor skål lige før servering."
+    },
+    {
+      "section": "Samling",
+      "text": "Læg fritterne på tallerkener. Smør dressing på bollerne, og læg bøf og lidt salat i. Server med mayonnaise og resten af salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Vegansk asiatisk mayonnaise er skiftet til almindelig mayonnaise.",
+    "Burger Boost Smoky Twist-bøf er skiftet til veganske burgerbøffer.",
+    "Asiatisk dressing er skiftet til en almindelig asiatisk dressing fra supermarkedet."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har burgerbøf og brioche, sesamfritter og pak choi-salat, så den har både protein, stivelse og grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:48.017Z"
+  }
+}

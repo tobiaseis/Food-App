@@ -1,0 +1,178 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/lun-flatsteak-salat-69c3dc0e8146910691095f2b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:58:42.454Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 895,
+    "protein_g": 49,
+    "carbs_g": 48.4,
+    "fat_g": 55.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R14_BW14_SE_C56765-1_main_high-1cc6b431.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:05:23.294Z",
+  "title": "Flanksteaksalat med hvidløgscroutoner og spejlæg",
+  "intro": "Mør flanksteak i skiver på frisk salat med sprøde hvidløgscroutoner, spejlæg og en cremet sennepsdressing med parmesan. En nem og mættende aftensmad.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "baguette",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finreven",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 350,
+      "unit": "g",
+      "name": "flanksteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til brødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til spejlæg",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til dressingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til dressingen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Tag bøfferne ud af køleskabet, så de kan nå at tage lidt af kulden."
+    },
+    {
+      "section": null,
+      "text": "Pres eller hak hvidløget fint. Skræl gulerødderne i lange, tynde bånd, og hak det stykke fint, der er til overs. Hak tomaten groft, skyl salaten, og skær baguetten i små tern."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Læg brødternene på en bageplade med bagepapir. Vend dem med olie, hvidløg, salt og peber, og bag dem i 8-10 minutter, til de er gyldne og sprøde."
+    },
+    {
+      "section": "Bøf og æg",
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Brun bøfferne i 3 minutter på hver side. Pak dem ind i folie, og lad dem hvile, til maden skal serveres. Vil du have dem mere gennemstegte, så steg dem 1-2 minutter længere."
+    },
+    {
+      "section": "Bøf og æg",
+      "text": "Hæld lidt ny olie på den samme pande, stadig ved middelhøj varme. Steg æggene i 4-6 minutter, til hviden er stivnet, og blommen stadig er næsten flydende. Smag til med salt og peber."
+    },
+    {
+      "section": "Salat",
+      "text": "Rør sennep, mayonnaise, vand, salt, peber og halvdelen af parmesanen sammen i en stor skål. Vend salat, gulerødder og tomat i dressingen lige før servering."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær bøfferne på tværs af fibrene i skiver på ca. 1/2 cm."
+    },
+    {
+      "section": null,
+      "text": "Fordel salaten i dybe tallerkener. Læg croutoner, bøfskiver og spejlæg ovenpå, og strø resten af parmesanen over."
+    }
+  ],
+  "changes": [
+    "Flatsteak er skiftet til flanksteak.",
+    "Parmigiano Reggiano er skiftet til parmesan.",
+    "Blandet salat er skiftet til salatblanding."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har bøf og spejlæg som protein, hvidløgscroutoner som mættende element og rigeligt grønt i salaten.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:23.929Z"
+  }
+}

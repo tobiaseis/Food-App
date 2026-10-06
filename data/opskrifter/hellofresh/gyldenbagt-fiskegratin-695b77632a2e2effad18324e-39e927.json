@@ -1,0 +1,253 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/gyldenbagt-fiskegratin-695b77632a2e2effad18324e",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:20:00.203Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 809,
+    "protein_g": 38.7,
+    "carbs_g": 73.8,
+    "fat_g": 42.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R12_BW49_SE_C33371-1_Main__9high-db6a7aa9.jpg",
+  "lang": "da",
+  "keywords": "Svensk",
+  "fetched_at": "2026-10-05T20:07:58.472Z",
+  "title": "Fiskegratin med pastinakmos og dildsauce",
+  "intro": "Mør sej i cremet dildsauce, bagt på en kant af kartoffel- og pastinakmos. Serveres med en frisk salat af bønner og squashbånd.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "sej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til fisken",
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "Grana Padano i flager, revet",
+      "optional": false
+    },
+    {
+      "section": "Til dildsaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dildsaucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dildsaucen",
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dildsaucen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dildsaucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dildsaucen",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dildsaucen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til dildsaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 75,
+      "unit": "g",
+      "name": "grønne bønner",
+      "note": "enderne skåret af",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mos",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Sæt en stor gryde med saltet vand over til kogning."
+    },
+    {
+      "section": "Mos",
+      "text": "Skræl kartofler og pastinak, og skær dem i tern på 2 cm. Kog dem 11-13 minutter, til en kniv let deler dem."
+    },
+    {
+      "section": "Mos",
+      "text": "Si vandet fra. Tilsæt mælk, salt og parmesan, og mos det hele med kartoffelmoser eller gaffel. Læg låg på og stil det til side. En klat smør gør mosen cremet."
+    },
+    {
+      "section": "Sauce og bønner",
+      "text": "Hak dilden fint, og del citronen over. Skær enderne af bønnerne."
+    },
+    {
+      "section": "Sauce og bønner",
+      "text": "Varm lidt olie i en stor pande på middelhøj varme. Steg bønnerne 3-4 minutter, til de er møre, og kom dem i en skål. Et skvæt vand i panden får dem hurtigere færdige."
+    },
+    {
+      "section": "Sauce og bønner",
+      "text": "Smelt smørret i den samme pande på middelvarme. Rør melet i, og lad det stege 1 minut."
+    },
+    {
+      "section": "Sauce og bønner",
+      "text": "Hæld fløde og vand i, og tilsæt salt og bouillon. Lad saucen simre 2-3 minutter, til den er tyk."
+    },
+    {
+      "section": "Sauce og bønner",
+      "text": "Træk panden af varmen, og rør dild og et skvæt citronsaft i."
+    },
+    {
+      "section": "Gratin",
+      "text": "Smør mosen ud langs kanten af et ildfast fad. Dup fisken tør med køkkenrulle, drys den med salt, og læg den midt i fadet."
+    },
+    {
+      "section": "Gratin",
+      "text": "Hæld saucen over fisken, og bag gratinen 10-12 minutter. Fisken er færdig, når den er mælkehvid og mat."
+    },
+    {
+      "section": "Salat",
+      "text": "Mens gratinen bager, skær squashen i lange, tynde bånd med en skræller. Hak de sidste rester fint."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl salatblandingen. Vend den med squash, olie og salt i skålen med bønnerne."
+    },
+    {
+      "section": null,
+      "text": "Anret gratinen på tallerkener, og server salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron.",
+    "Zucchini er skiftet til squash."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk, kartoffel-pastinakmos, grønne bønner og salat, så det er et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:31.816Z"
+  }
+}

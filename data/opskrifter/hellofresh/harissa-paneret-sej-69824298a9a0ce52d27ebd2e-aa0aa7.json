@@ -1,0 +1,252 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/harissa-paneret-sej-69824298a9a0ce52d27ebd2e",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:12:56.933Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 752,
+    "protein_g": 37.7,
+    "carbs_g": 85,
+    "fat_g": 30.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R13_BW36_SE_K22174-1_Main_high-dfae870c.jpg",
+  "lang": "da",
+  "keywords": "Mediterransk ",
+  "fetched_at": "2026-10-05T20:07:02.869Z",
+  "title": "Harissapaneret sej med ovnbagte rodfrugter og persillemayonnaise",
+  "intro": "Sprød sej i panering med harissa og paprika, serveret med ovnbagte kartofler, pastinak og løg, en frisk rucolasalat og en hjemmerørt persillemayonnaise.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Grøntsager",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 4,
+      "unit": "g",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillemayonnaise",
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillemayonnaise",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Persillemayonnaise",
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Persillemayonnaise",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 250,
+      "unit": "g",
+      "name": "sej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til fisken",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til paneringen",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 4,
+      "unit": "g",
+      "name": "harissa-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grøntsager",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær kartofler, pastinak og løg i både på ca. 2 cm."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Læg det hele på en bageplade med bagepapir. Dryp med lidt olie, drys med røget paprika, salt og peber, og vend rundt."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Bag i 25-35 minutter, til grøntsagerne er møre."
+    },
+    {
+      "section": "Persillemayonnaise",
+      "text": "Mens grøntsagerne bager: Hak persillen fint, og pres eller hak hvidløget fint. Halvér citronen."
+    },
+    {
+      "section": "Persillemayonnaise",
+      "text": "Rør mayonnaise, persille, hvidløg, saften fra citronen samt salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Fisk",
+      "text": "Bland hvedemel, salt og peber på en dyb tallerken. Pisk ægget på en anden, og bland panko og harissa-krydderi på en tredje."
+    },
+    {
+      "section": "Fisk",
+      "text": "Tør sejen med køkkenrulle, og salt den. Vend den først i melet, så i ægget og til sidst i panko-blandingen. Tip: Har du ikke æg, kan du bruge mælk."
+    },
+    {
+      "section": "Fisk",
+      "text": "Varm olie op i en stegepande ved middelhøj varme, så bunden er dækket. Steg fisken 2-3 minutter på hver side, til den er gylden og gennemstegt. Kødet skal være mælkehvidt og mat."
+    },
+    {
+      "section": "Fisk",
+      "text": "Læg fisken over på en tallerken med køkkenrulle."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl rucolaen, og hak tomaten groft. Vend dem med salt i en skål. Tip: Tilsæt gerne lidt olie."
+    },
+    {
+      "section": "Salat",
+      "text": "Anret salat og grøntsager på dybe tallerkener, læg fisken ovenpå, og server med persillemayonnaisen."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har paneret fisk, ovnbagte kartofler og rodfrugter samt en salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:45:00.560Z"
+  }
+}

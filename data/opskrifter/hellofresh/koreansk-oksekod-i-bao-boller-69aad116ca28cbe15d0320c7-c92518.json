@@ -1,0 +1,217 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/koreansk-oksekod-i-bao-boller-69aad116ca28cbe15d0320c7",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:03:52.589Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 703,
+    "protein_g": 35.3,
+    "carbs_g": 69.2,
+    "fat_g": 31.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R09_BW11_SE_C53197-1_main_high-14cb15b4.jpg",
+  "lang": "da",
+  "keywords": "Koreansk",
+  "fetched_at": "2026-10-05T20:06:03.685Z",
+  "title": "Koreanske bao-boller med oksekød, syltet agurk og spidskål",
+  "intro": "Bløde bao-boller fyldt med krydret, sødt hakket oksekød, sprød spidskålssalat og friskt syltet agurk. En hurtig ret med masser af kontraster.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Koreansk oksekød",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koreansk oksekød",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "kernerne fjernes, hakkes fint",
+      "optional": false
+    },
+    {
+      "section": "Koreansk oksekød",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citrusfrugt",
+      "note": "saften bruges i marinaden, resten skæres i både til servering",
+      "optional": false
+    },
+    {
+      "section": "Koreansk oksekød",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": "Koreansk oksekød",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefærpasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koreansk oksekød",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til marinaden",
+      "optional": false
+    },
+    {
+      "section": "Koreansk oksekød",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koreansk oksekød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til marinaden",
+      "optional": false
+    },
+    {
+      "section": "Koreansk oksekød",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "skrælles til lange, tynde bånd",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltningen",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "i julienne",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "et nip til agurken og et nip til salaten",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 8,
+      "unit": "stk",
+      "name": "bao-boller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Koreansk oksekød",
+      "text": "Sæt en mellemstor gryde med vand over varmen og bring det i kog, hvis bollerne skal dampes i stedet for at komme i mikrobølgeovn."
+    },
+    {
+      "section": "Koreansk oksekød",
+      "text": "Rør chili, saften fra citrusfrugten, hvidløg, ingefærpasta, sukker, sojasauce og olien til marinaden sammen i en lille skål. Skær resten af citrusfrugten i både."
+    },
+    {
+      "section": "Koreansk oksekød",
+      "text": "Varm olien til stegning op i en stor pande ved middelhøj varme. Brun det hakkede oksekød i 4-5 minutter."
+    },
+    {
+      "section": "Koreansk oksekød",
+      "text": "Hæld marinaden på panden og lad det simre 1-2 minutter, til det dufter krydret. Kødet skal være gennemstegt uden spor af rødt."
+    },
+    {
+      "section": "Syltet agurk",
+      "text": "Rør eddike, sukker og et nip salt sammen i en stor skål, og vend agurkebåndene i blandingen. Lad dem trække, mens resten laves, og hæld væsken fra lige før servering."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend spidskål, gulerod, olie og et nip salt sammen i en anden stor skål."
+    },
+    {
+      "section": "Til servering",
+      "text": "Klip et hul i hver side af bollernes pakke og varm dem 40 sekunder i mikrobølgeovnen. Du kan også dampe dem 3-5 minutter under låg i en si over den kogende gryde. Varm helst bollerne lige før servering, så de er bløde."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg salat, oksekød og syltet agurk i bollerne, og kom creme fraiche på toppen. Server med resten af agurken og citrusbådene ved siden af."
+    }
+  ],
+  "changes": [
+    "Fraiche er skiftet til creme fraiche.",
+    "Olivenolie er skiftet til almindelig olie, som i ingredienslisten."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har oksekød, bao-boller som mættende element og rigeligt grønt i spidskål, agurk og gulerod.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:43:27.631Z"
+  }
+}

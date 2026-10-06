@@ -1,0 +1,284 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/svine-og-oksekodskofta-i-tomatsauce-med-couscous-695fd7422a2e2effad18c97b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:19:32.615Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 24,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 721,
+    "protein_g": 41.2,
+    "carbs_g": 73.7,
+    "fat_g": 27.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R20_BW04_SE_C52967-1_Main_high-6832d64b.jpg",
+  "lang": "da",
+  "keywords": "Tyrkisk",
+  "fetched_at": "2026-10-05T20:07:54.951Z",
+  "title": "Koftas af svine- og kalvekød i tomatsauce med couscous",
+  "intro": "Saftige koftas simrer i en tomatsauce med peberfrugt og squash og serveres med luftig couscous. Til de voksne toppes retten med syltede løg og persille.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "skåret i tern på 2 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "squash",
+      "note": "i halve skiver på 2 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde, halve skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Koftas",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket kalv og flæsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftas",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftas",
+      "amount": 4,
+      "unit": "g",
+      "name": "Blandede tørrede krydderurter",
+      "note": "middelhavskrydderi",
+      "optional": false
+    },
+    {
+      "section": "Koftas",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftas",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftas",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftas",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Syltede løg",
+      "amount": 12,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltede løg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede løg",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltede løg",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "Blandede tørrede krydderurter",
+      "note": "italiensk krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 400,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 100,
+      "unit": "g",
+      "name": "couscous",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Forberedelse",
+      "text": "Skær peberfrugt i tern og squash i halve skiver, begge på ca. 2 cm. Skær løget i tynde halve skiver, og hak persillen fint."
+    },
+    {
+      "section": "Koftas",
+      "text": "Ælt kød, rasp, krydderurter, æg, salt og lidt peber sammen i en stor skål. Form farsen til aflange koftas på ca. 8 cm – 3 til hver person."
+    },
+    {
+      "section": "Syltede løg",
+      "text": "Rør eddike, sukker, vand og salt sammen i en lille skål. Læg løgene i væden, og lad dem stå, til retten skal serveres. Si dem fra lagen lige før servering."
+    },
+    {
+      "section": "Koftas",
+      "text": "Varm lidt olie i en stor pande ved middelhøj varme. Brun koftaerne i 2-3 minutter, og læg dem på en tallerken."
+    },
+    {
+      "section": "Sauce",
+      "text": "Sæt panden tilbage på middelhøj varme, og svits peberfrugt og squash i 1-2 minutter, til de er let møre. Rør krydderiblandingen, smør, vand, sukker, salt, passata og lidt peber i, og skru ned til middel varme."
+    },
+    {
+      "section": "Sauce",
+      "text": "Læg koftaerne tilbage i saucen, og lad dem simre i 6-7 minutter. De er færdige, når kødet er helt gennemstegt uden rød farve indeni. Tilsæt en smule vand, hvis saucen bliver for tør."
+    },
+    {
+      "section": "Couscous",
+      "text": "Kog vand med bouillon og salt i en mellemstor gryde, mens koftaerne simrer. Rør couscous og olie i, tag gryden af varmen, og læg låg på. Lad den trække i 5 minutter, til alt vandet er opsuget."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret couscous, koftas og sauce i dybe tallerkener. Drys de voksnes portioner med syltede løg og persille."
+    }
+  ],
+  "changes": [
+    "Zucchini er skiftet til squash.",
+    "Mamas Favorit er skiftet til blandede tørrede krydderurter.",
+    "Middelhavsdrøm er skiftet til blandede tørrede krydderurter.",
+    "Hakket svine-/kalvekød er skiftet til hakket kalv og flæsk.",
+    "Bredbladet persille er skiftet til persille."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kødboller som hovedråvare, couscous som mættende element og grøntsager i tomatsaucen, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:27.565Z"
+  }
+}

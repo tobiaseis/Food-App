@@ -1,0 +1,202 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/gyldenstegt-gnocchi-pa-tomatsauce-699782321d69a6906de1b1d1",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:09:12.084Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 648,
+    "protein_g": 18.6,
+    "carbs_g": 89.3,
+    "fat_g": 24
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF220721_R14_W36_NO_V12162-1_KB_Main_high-149cd9c7.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:06:34.457Z",
+  "title": "Stegt gnocchi i tomatsauce med rucola",
+  "intro": "Sprødstegt gnocchi på en cremet tomatsauce med peberfrugt og cherrytomater. Toppes med rucola og friske basilikumblade og serveres i dybe tallerkener.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "i strimler på ca. 1 cm",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chili",
+      "note": "chiliflager",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 75,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til løgene",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Tomatsauce",
+      "amount": 20,
+      "unit": "g",
+      "name": "grana padano",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 400,
+      "unit": "g",
+      "name": "gnocchi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til gnocchien",
+      "optional": false
+    },
+    {
+      "section": "Gnocchi",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning, så panden er dækket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "rucola",
+      "note": "skyllet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Tomatsauce",
+      "text": "Hak løg og basilikum fint, skær peberfrugten i strimler på ca. 1 cm, og skyl rucolaen."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Varm olien i en stor stegepande ved middel varme, og svits løgene i 5-6 minutter, til de er bløde."
+    },
+    {
+      "section": "Gnocchi",
+      "text": "Mens løgene svitser: Hæld olie i en anden pande, så bunden er dækket, og varm den ved middelhøj varme. Gnocchien skal ikke forkoges. Steg den under omrøring i 6-8 minutter, til den er gyldne, og drys med salt. Læg den over på en tallerken. Hæld lidt mere olie på, hvis gnocchien hænger fast."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Rør krydderurter, tomatpuré, bouillon, chili, sukker, salt, vand og madlavningsfløde ned til løgene. Kom cherrytomater og peberfrugt i, læg låg på, og lad det simre i 8 minutter, til tomaterne er møre. Mas tomaterne med en spatel. Brug mindre chili eller drop den, hvis ikke alle kan lide stærk mad."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Rør basilikum og grana padano i saucen, og lad den simre 1 minut, til osten er smeltet."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld saucen i dybe tallerkener, og læg den stegte gnocchi og rucolaen ovenpå."
+    }
+  ],
+  "changes": [
+    "Mamas Favorit (kryddermix) er erstattet med blandede tørrede krydderurter.",
+    "Chiliflager er skrevet som chili."
+  ]
+}

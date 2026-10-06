@@ -1,0 +1,180 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/kylling-og-tomatbagt-orzo-6a68916e640e6eb29c2ac71a",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:11:09.825Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 822,
+    "protein_g": 51.5,
+    "carbs_g": 76.1,
+    "fat_g": 16
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R08_BW34_SE_C59256-1_main_high-dbf95124.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T19:59:54.624Z",
+  "title": "Ovnbagt orzo med kylling, tomat og feta",
+  "intro": "Orzo, kylling og cherrytomater bages sammen i ét fad, så retten næsten laver sig selv. Spinat og feta giver friskhed og cremet saltethed.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingeinderfilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "orzo",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til orzoen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til orzoen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Del cherrytomaterne på midten, og skær løget i både på ca. 2 cm. Pluk timianbladene af stilkene."
+    },
+    {
+      "section": null,
+      "text": "Skyl spinaten. Vend kyllingen med krydderurterne, et skvæt olie og lidt salt i en mellemstor skål."
+    },
+    {
+      "section": null,
+      "text": "Læg tomater, løg og timian i et ildfast fad. Dryp med olie, og drys med salt og peber. Bag i 8-10 minutter, til grøntsagerne er bløde."
+    },
+    {
+      "section": null,
+      "text": "Rør orzo, spinat, bouillon, salt og vand ned i fadet. Dæk med sølvpapir, og bag i 10 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom kyllingen i fadet, og smuldr fetaen ovenpå. Bag uden låg i 18-20 minutter, til kyllingen er helt gennemstegt og hvid hele vejen igennem."
+    },
+    {
+      "section": null,
+      "text": "Sæt fadet på bordet, og server direkte fra det."
+    }
+  ],
+  "changes": [
+    "Buon Appetito er erstattet af blandede tørrede krydderurter."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, orzo som mættende pasta og tomat, løg og spinat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:33:28.132Z"
+  }
+}

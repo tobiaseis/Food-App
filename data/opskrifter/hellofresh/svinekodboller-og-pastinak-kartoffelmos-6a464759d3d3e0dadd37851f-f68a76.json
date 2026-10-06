@@ -1,0 +1,266 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/svinekodboller-og-pastinak-kartoffelmos-6a464759d3d3e0dadd37851f",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:21:01.885Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 21,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 955,
+    "protein_g": 47.5,
+    "carbs_g": 83.7,
+    "fat_g": 48.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R15_BW28_SE_C58578-1main_high-06c27f78.jpg",
+  "lang": "da",
+  "keywords": "Skandinavisk",
+  "fetched_at": "2026-10-05T20:00:55.098Z",
+  "title": "Svinekødboller med pastinakmos og baconbønner",
+  "intro": "Sprøde kødboller med revet gulerod i farsen, cremet mos af kartofler og pastinak og stegte bønner med bacon. Det hele serveres med brun sovs og ristede løg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kødboller",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "revet fint",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 15,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skåret i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": "skåret i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Mos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Baconbønner",
+      "amount": 150,
+      "unit": "g",
+      "name": "bønner",
+      "note": "grønne, enderne skåret af og halveret",
+      "optional": false
+    },
+    {
+      "section": "Baconbønner",
+      "amount": 70,
+      "unit": "g",
+      "name": "bacon i tern",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Baconbønner",
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": "hakket fint, halvdelen bruges i kødbollerne",
+      "optional": false
+    },
+    {
+      "section": "Baconbønner",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Baconbønner",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Baconbønner",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs og topping",
+      "amount": 100,
+      "unit": "g",
+      "name": "brun sovs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs og topping",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs og topping",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs og topping",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs og topping",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs og topping",
+      "amount": 30,
+      "unit": "g",
+      "name": "ristede løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sovs og topping",
+      "amount": 1,
+      "unit": "stk",
+      "name": "purløg",
+      "note": "hakket fint",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mos",
+      "text": "Kom kartofler og pastinak i en stor gryde med letsaltet kogende vand. Kog dem i 11-13 minutter, til en kniv let går igennem."
+    },
+    {
+      "section": "Mos",
+      "text": "Si vandet fra. Mos kartofler og pastinak med mælk, salt og peber, og lad dem stå under låg. Mosen bliver cremet, hvis du tilsætter en klat smør."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Rør svinekød, gulerod, halvdelen af løgene, æg, rasp, salt og peber sammen i en stor skål. Form farsen til 5 kødboller pr. person."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Varm olien i en stegepande ved middelhøj varme. Brun kødbollerne i 12-14 minutter, til de er gyldne og helt gennemstegte uden rødt i midten. Læg dem over på et fad."
+    },
+    {
+      "section": "Baconbønner",
+      "text": "Imens smelter du smørret i en anden stor pande ved middelhøj varme. Steg bønner, bacon og de resterende løg med salt og peber i 6-7 minutter, til baconen og løgene er gyldne."
+    },
+    {
+      "section": "Sovs og topping",
+      "text": "Sæt panden fra kødbollerne tilbage på middelhøj varme. Rør brun sovs, sojasauce, vand, sukker og peber i, og lad det simre i 2-3 minutter, til sovsen er varm."
+    },
+    {
+      "section": "Sovs og topping",
+      "text": "Server mos, kødboller og baconbønner på tallerkener. Hæld sovsen over kødbollerne, og drys med purløg og ristede løg."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har svinekødboller som hovedråvare, kartoffel-pastinakmos som mættende del og baconbønner som grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:11.232Z"
+  }
+}

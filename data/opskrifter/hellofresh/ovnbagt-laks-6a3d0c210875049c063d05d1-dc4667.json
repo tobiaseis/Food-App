@@ -1,0 +1,202 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/ovnbagt-laks-6a3d0c210875049c063d05d1",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:25:52.077Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 615,
+    "protein_g": 37.4,
+    "carbs_g": 53.4,
+    "fat_g": 28
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R11_BW05_SE_C23373-1_edit_salmon_Main_high-5c36cd85.jpg",
+  "lang": "da",
+  "keywords": "Mediterransk ",
+  "fetched_at": "2026-10-05T20:01:30.956Z",
+  "title": "Ovnbagt laks med souvlaki-grøntsager og dildcreme fraiche",
+  "intro": "Laksen bages sammen med ovnristede kartofler, løg og grøntsager krydret med souvlaki. Det hele serveres med en frisk dildcreme fraiche.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "Laks",
+      "note": "filet med skind",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "Kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "Broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "Spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "Græskarkerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Souvlaki-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Olivenolie",
+      "note": "en smule",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til fisken",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": "et nip til grøntsagerne og et nip til dressingen",
+      "optional": false
+    },
+    {
+      "section": "Dildcreme fraiche",
+      "amount": 75,
+      "unit": "ml",
+      "name": "Creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildcreme fraiche",
+      "amount": 10,
+      "unit": "g",
+      "name": "Dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dildcreme fraiche",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til dressingen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler og løg",
+      "text": "Tænd ovnen på 240°C (220°C varmluft). Skær de uskrællede kartofler i tern på 2 cm, og del løget i både på ca. 2 cm."
+    },
+    {
+      "section": "Kartofler og løg",
+      "text": "Læg kartofler og løg på en bageplade med bagepapir. Drys med souvlaki-krydderi, salt og peber, og rør rundt med lidt olivenolie. Brug to plader, hvis der ikke er plads på én."
+    },
+    {
+      "section": "Kartofler og løg",
+      "text": "Bag i 25-35 minutter, til kartoflerne er møre."
+    },
+    {
+      "section": "Dildcreme fraiche",
+      "text": "Hak dilden fint, og rør den sammen med creme fraiche, salt og peber i en lille skål."
+    },
+    {
+      "section": "Grøntsager og laks",
+      "text": "Skyl spinaten. Skær squashen i tern på 2 cm, og hak broccolien groft."
+    },
+    {
+      "section": "Grøntsager og laks",
+      "text": "Når der er 9-10 minutter tilbage af bagetiden, skal ovnen skrues ned på 220°C (200°C varmluft)."
+    },
+    {
+      "section": "Grøntsager og laks",
+      "text": "Tør laksen med køkkenrulle, og drys den med salt. Læg broccoli, squash og laks med skindsiden nedad på en ny bageplade med bagepapir."
+    },
+    {
+      "section": "Grøntsager og laks",
+      "text": "Bag resten af tiden, til laksen er gennemstegt og kødet er mat i midten."
+    },
+    {
+      "section": "Anretning",
+      "text": "Tag begge plader ud af ovnen, og vend spinaten i de bagte grøntsager på pladen."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel grøntsagerne på tallerkener, læg laksen ovenpå, og strø græskarkerner over. Server med dildcreme fraichen."
+    }
+  ],
+  "changes": [
+    "Zucchini er byttet med squash.",
+    "Fraiche er byttet med creme fraiche.",
+    "Broccolini er byttet med broccoli."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har laks som hovedråvare, ovnbagte kartofler som mættende element og rigeligt grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:07.648Z"
+  }
+}

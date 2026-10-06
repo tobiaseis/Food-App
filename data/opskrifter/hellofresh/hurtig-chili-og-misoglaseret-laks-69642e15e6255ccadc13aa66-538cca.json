@@ -1,0 +1,170 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-chili-og-misoglaseret-laks-69642e15e6255ccadc13aa66",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:18:58.859Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 830,
+    "protein_g": 35.7,
+    "carbs_g": 98.3,
+    "fat_g": 36.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R10_BW48_SE_C50473-1_Main_F1_high-55389fc1.jpg",
+  "lang": "da",
+  "keywords": "East Asian",
+  "fetched_at": "2026-10-05T20:07:51.378Z",
+  "title": "Misoglaseret laks med pæreslaw og sesammayonnaise",
+  "intro": "Hurtig ovnbagt laks med en sød og salt glasur af miso og chilisauce. Serveres med jasminris og en frisk slaw af pære, spidskål og gulerod.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "laksefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "misopasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "skåret i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pære",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til slawen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": "gerne vegansk, med sesam",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Kom vand, ris og salt i en mellemstor gryde, og bring det i kog. Læg låg på, skru ned på lav varme, og kog risene i 14 minutter. Træk gryden af varmen, og lad risene hvile under låg uden at løfte det."
+    },
+    {
+      "section": null,
+      "text": "Rør misopasta og sød chilisauce sammen i en lille skål. Tør laksen med køkkenrulle, og læg den med skindsiden nedad på en bageplade med bagepapir. Fordel misoblandingen over fisken."
+    },
+    {
+      "section": null,
+      "text": "Bag laksen i ovnen i 9-10 minutter. Den er færdig, når kødet er mat i midten."
+    },
+    {
+      "section": null,
+      "text": "Skær imens pæren i tynde, halve skiver, og del citronen på midten. Vend gulerod, ingefær, spidskål og pære med salt og et skvæt citronsaft i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Fordel ris, slaw og laks i dybe tallerkener, og top med mayonnaise."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er erstattet af citron.",
+    "Ingefærpasta er erstattet af revet frisk ingefær.",
+    "Vegansk sesammayonnaise er erstattet af mayonnaise, gerne vegansk og med sesam."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har laks som hovedråvare, jasminris som mættende element og rigeligt grønt i slawen, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:25.368Z"
+  }
+}

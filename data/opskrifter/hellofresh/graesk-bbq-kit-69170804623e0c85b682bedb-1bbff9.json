@@ -1,0 +1,310 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/graesk-bbq-kit-69170804623e0c85b682bedb",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:29:17.624Z",
+  "total_minutes": 50,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 24,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 2079,
+    "protein_g": 124.6,
+    "carbs_g": 199.9,
+    "fat_g": 86.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_RA_R03_BW15_SE_AO23619-1_Main__7low-239c6120.jpg",
+  "lang": "da",
+  "keywords": "Græsk",
+  "fetched_at": "2026-10-05T20:09:19.926Z",
+  "title": "Græsk BBQ-kit med fisk, halloumi og tzatziki",
+  "intro": "Ovnbagte rosmarinkartofler, fisk i sølvpapirbåde, grillet halloumi og pita med tzatziki, ostedip og græsk salat. En sommerlig grillmiddag med masser af citron og friske urter.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "soltørrede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1000,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "oregano",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "oliven",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "stk",
+      "name": "pitabrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "halloumi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til kartofler, grill, fisk, halloumi og salat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til ostedip",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til ostedip",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til ostedip",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til tzatziki",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til fisken",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Varm grillen op til 200 °C på middel varme, og dryp lidt olivenolie på risten."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Halvér citronen. Hak rosmarin fint, og hak eller pres halvdelen af hvidløget."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Skær kartoflerne i tern på 2 cm, og læg dem på to bageplader med bagepapir. Vend dem med olivenolie, citronsaft, rosmarin, hvidløg, salt og peber."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Bag kartoflerne i 25-35 minutter, til de er gyldne."
+    },
+    {
+      "section": "Ostedip",
+      "text": "Smuldr halvdelen af fetaen i en skål. Tilsæt halvdelen af yoghurten, sukker, olivenolie, salt og peber, og pisk 1-2 minutter, til dippen er glat."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Pres eller hak det resterende hvidløg. Riv den ene agurk groft, og pres så meget væske ud af den som muligt. Rør agurk, resten af yoghurten, hvidløg, salt og peber sammen."
+    },
+    {
+      "section": "Græsk salat",
+      "text": "Skær løget i tynde skiver, halvér cherrytomaterne og skær den anden agurk i halve skiver. Hak oregano fint, og halvér olivenerne."
+    },
+    {
+      "section": "Græsk salat",
+      "text": "Vend grøntsager, oliven og oregano med citronsaft, olivenolie, salt og peber. Smuldr den resterende feta ovenpå."
+    },
+    {
+      "section": "Fisk",
+      "text": "Skær den halve citron i skiver på ½ cm, og hak de soltørrede tomater groft."
+    },
+    {
+      "section": "Fisk",
+      "text": "Tør fisken med køkkenrulle, pensl den med olivenolie, og drys med salt og peber."
+    },
+    {
+      "section": "Fisk",
+      "text": "Klip fire stykker sølvpapir på ca. 30 x 30 cm. Dryp olie midt på hvert stykke, og læg en citronskive, fisk og soltørrede tomater ovenpå. Fold kanterne op som en båd, og luk enderne godt, men lad toppen være åben."
+    },
+    {
+      "section": "Grill",
+      "text": "Grill fiskebådene i 10-12 minutter. Fisken er færdig, når kødet er mælkehvidt og mat."
+    },
+    {
+      "section": "Grill",
+      "text": "Skær halloumien i tynde skiver på tværs, og pensl begge sider med olie. Grill den 2-3 minutter på hver side, til den er gylden."
+    },
+    {
+      "section": "Grill",
+      "text": "Grill pitabrødene 1-2 minutter på hver side, til de er gyldne, og skær dem i trekanter."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg kartoflerne på et fad, og top med ostedippen. Anret fisken med solsikkekerner på et andet fad. Server med græsk salat, halloumi, pita og tzatziki."
+    }
+  ],
+  "changes": [
+    "Kuller er erstattet med torskefilet.",
+    "Græsk ost er erstattet med feta.",
+    "Citrusfrugt er erstattet med citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk og halloumi som hovedråvarer samt kartofler, pitabrød og græsk salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:48:21.777Z"
+  }
+}

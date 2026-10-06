@@ -1,0 +1,237 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/farsbrod-og-flodesauce-69b93041fff2efa4150e473c",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:00:27.297Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 765,
+    "protein_g": 36.1,
+    "carbs_g": 54.4,
+    "fat_g": 45.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/SE_Recipe_Overlay_Kottfarslimpa_1200x800-2fd47a65.jpg",
+  "lang": "da",
+  "keywords": "Svensk",
+  "fetched_at": "2026-10-05T20:05:37.508Z",
+  "title": "Farsbrød med flødesauce og syltet agurk",
+  "intro": "Mørt farsbrød af kalv og flæsk med kogte kartofler, cremet løgsauce med rosmarin og friske, syltede agurkebånd. En enkel hverdagsret til to.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket kalv og flæsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 10,
+      "unit": "g",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Farsbrød",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 12,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet agurk",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til kartoflerne og kogevandet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Farsbrød",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Sæt en mellemstor gryde med saltet vand over til kartoflerne."
+    },
+    {
+      "section": "Farsbrød",
+      "text": "Ælt kødet sammen med æg, rasp, sennep, salt og peber i en stor skål. Form farsen til et aflangt brød, og læg det i et ildfast fad."
+    },
+    {
+      "section": "Farsbrød",
+      "text": "Bag farsbrødet i 15 minutter. Skru derefter ned på 180 °C (160 °C varmluft), og bag det 15 minutter mere. Det skal være gennemstegt uden spor af rødt i kødet."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Kog kartoflerne i 12-15 minutter, til en kniv let går igennem dem. Si vandet fra, drys med salt og peber, og læg låg på."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Hak løg og rosmarin fint, mens kartoflerne koger."
+    },
+    {
+      "section": "Syltet agurk",
+      "text": "Skær agurken i lange, tynde bånd med en skræller. Rør eddike, sukker, vand og salt sammen i en lille skål, og vend agurkebåndene i. Lad dem stå, og hæld væden fra lige før servering."
+    },
+    {
+      "section": "Sauce",
+      "text": "Varm olien i en stor pande ved middelhøj varme. Svits løget 3-4 minutter, til det er blødt."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld fløde og mælk på panden, og kom rosmarin, salt og bouillon i. Lad saucen simre cirka 3 minutter, til den er svagt tyknet."
+    },
+    {
+      "section": null,
+      "text": "Læg farsbrød og kartofler på tallerkener, og hæld saucen over. Server med de syltede agurker ved siden af."
+    }
+  ],
+  "changes": [
+    "Hakket svine-/kalvekød er skiftet til hakket kalv og flæsk.",
+    "Hvidvinseddike er skiftet til almindelig eddike (hvidvinseddike)."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kød som hovedråvare, kartofler som mættende del og syltet agurk, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:47.151Z"
+  }
+}

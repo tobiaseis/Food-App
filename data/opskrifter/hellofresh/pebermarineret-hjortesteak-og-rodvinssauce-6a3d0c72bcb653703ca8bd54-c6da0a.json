@@ -1,0 +1,255 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/pebermarineret-hjortesteak-og-rodvinssauce-6a3d0c72bcb653703ca8bd54",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:24:09.437Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 692,
+    "protein_g": 42.6,
+    "carbs_g": 61.2,
+    "fat_g": 31.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R14_BW27_SE_P58745-1main_high-05819b11.jpg",
+  "lang": "da",
+  "keywords": "Fransk",
+  "fetched_at": "2026-10-05T20:01:17.893Z",
+  "title": "Pebermarineret hjortesteak med rødvinssauce, persillemos og mozzarellasalat",
+  "intro": "Saftig hjortesteak med peberskorpe serveres med rødvinssauce, grov kartoffelmos med persille og en frisk salat med ovnbagte tomater og mozzarella.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hjortesteak",
+      "note": "pebermarineret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "til mosen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "tomater",
+      "note": "cherrytomater",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 12,
+      "unit": "ml",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til tomaterne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "kerner & frø",
+      "note": "græskarkerner",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stilk",
+      "name": "rosmarin",
+      "note": "frisk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "rødvinssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til mosen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til tomaterne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220°C (200°C varmluft). Tag hjortesteakene op af køleskabet, og drys dem med salt."
+    },
+    {
+      "section": "Mos",
+      "text": "Bring en mellemstor gryde med saltet vand i kog. Skræl kartoflerne, og skær dem i tern på 2 cm."
+    },
+    {
+      "section": "Mos",
+      "text": "Kog kartoflerne i 11-13 minutter, til en kniv let går igennem dem. Si vandet fra, og tilsæt mælk, salt og peber. Mos med kartoffelmoser eller gaffel, og læg låg på."
+    },
+    {
+      "section": "Mos",
+      "text": "Tip: En klat smør i mosen gør den cremet."
+    },
+    {
+      "section": "Tomater",
+      "text": "Del cherrytomaterne i halve, og læg dem i et ildfast fad. Vend dem med balsamico, olivenolie, sukker, salt og peber. Sæt fadet øverst i ovnen i 15 minutter."
+    },
+    {
+      "section": "Steaks",
+      "text": "Varm lidt olivenolie op i en stor pande ved middelhøj varme. Brun steakene i 5-6 minutter på hver side."
+    },
+    {
+      "section": "Steaks",
+      "text": "Pak steakene ind i folie, og lad dem hvile, til maden skal på bordet. Tip: Steg 1-2 minutter længere for gennemstegt kød."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hak rosmarin og hvidløg fint. Sæt den brugte pande på middel varme, og smelt smørret i den."
+    },
+    {
+      "section": "Sauce",
+      "text": "Kom hvidløg, rosmarin, rødvinssauce, vand, salt og peber i panden. Lad saucen simre i 2-3 minutter."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl salaten. Hak persillen groft, og vend den i kartoffelmosen."
+    },
+    {
+      "section": "Salat",
+      "text": "Lad mozzarellaen dryppe af, tør den med køkkenrulle, og skær den i tern på 2 cm."
+    },
+    {
+      "section": "Salat",
+      "text": "Tag tomaterne ud af ovnen, og lad dem køle lidt af. Vend dem med salaten i en skål, og krydr med salt og peber. Tilsæt evt. lidt olivenolie."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær steakene i tykke skiver. Anret mos, kød og salat på tallerkener."
+    },
+    {
+      "section": "Servering",
+      "text": "Hæld rødvinssauce over kødet, og top salaten med mozzarella og græskarkerner."
+    }
+  ],
+  "changes": []
+}

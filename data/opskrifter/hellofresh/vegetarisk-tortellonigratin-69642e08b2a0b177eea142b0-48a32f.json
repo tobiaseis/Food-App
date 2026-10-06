@@ -1,0 +1,250 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/vegetarisk-tortellonigratin-69642e08b2a0b177eea142b0",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:19:06.135Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1003,
+    "protein_g": 28.3,
+    "carbs_g": 92.4,
+    "fat_g": 58.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF220425_R12_W23_SE_V11377-1_KB_Main_high-0f5fcd88.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:07:52.592Z",
+  "title": "Tortellonigratin med cremet tomatsauce",
+  "intro": "Tortelloni i cremet tomatsauce med peberfrugt og tomat, toppet med sprød rasp og ost og gratineret i ovnen. Serveres med frisk rucola.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til toppen",
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 20,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 35,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gratinen",
+      "amount": 300,
+      "unit": "g",
+      "name": "tortelloni",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 6,
+      "unit": "ml",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Forberedelse",
+      "text": "Sæt ovnen på 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Hak hvidløg, løg og basilikum, og skær tomater og peberfrugt i tern. Skyl rucola."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Rør panko, parmesan, solsikkekerner, olie, salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Sauce og pasta",
+      "text": "Varm olie op i en stor stegepande, der tåler ovn, ved middelhøj varme. Svits tomatpuré, hvidløg og løg i 30 sekunder."
+    },
+    {
+      "section": "Sauce og pasta",
+      "text": "Kom tomat, peberfrugt, basilikum, salt og peber i panden, og lad det simre 1-2 minutter."
+    },
+    {
+      "section": "Sauce og pasta",
+      "text": "Skru ned til middel varme. Hæld fløde, bouillon og vand i, og lad saucen småkoge 2-3 minutter. Smag til med salt og peber."
+    },
+    {
+      "section": "Sauce og pasta",
+      "text": "Vend tortelloni i saucen, og rør rundt i 1-2 minutter, til saucen er tyknet, og pastaen er al dente. Tilsæt lidt ekstra vand, hvis saucen bliver for tyk. Tåler panden ikke ovn, så hæld det i et ildfast fad."
+    },
+    {
+      "section": "Gratinering",
+      "text": "Fordel pankoblandingen over pastaen, og bag i ovnen i 5-7 minutter, til toppen er gylden og sprød."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend rucola med balsamico i en skål, gerne med en smule olivenolie."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret gratinen i dybe tallerkener, og læg rucolaen ovenpå."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano er skiftet til parmesan.",
+    "Tortelloni er beholdt under sit navn, da der ikke er en dansk afløser."
+  ]
+}

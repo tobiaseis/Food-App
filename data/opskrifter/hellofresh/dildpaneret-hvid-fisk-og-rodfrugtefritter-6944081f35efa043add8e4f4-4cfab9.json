@@ -1,0 +1,258 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/dildpaneret-hvid-fisk-og-rodfrugtefritter-6944081f35efa043add8e4f4",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:20:55.673Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 791,
+    "protein_g": 41.6,
+    "carbs_g": 56,
+    "fat_g": 46
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R03_BW50_SE_C28019-1_VAR_MAIN__3high-e320b1d4.jpg",
+  "lang": "da",
+  "keywords": "Skandinavisk",
+  "fetched_at": "2026-10-05T20:08:05.524Z",
+  "title": "Dildpaneret kuller med rodfrugtfritter, aioli og tomatsalat",
+  "intro": "Sprød fisk i dild og panko serveres med ovnbagte fritter af rodfrugter og en frisk salat af tomat. Aioli og citron runder retten af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Rodfrugtfritter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugtfritter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": "skrællet",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugtfritter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugtfritter",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "en smule",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugtfritter",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugtfritter",
+      "amount": null,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugtfritter",
+      "amount": null,
+      "unit": "knivspids",
+      "name": "citron",
+      "note": "citronpeber erstattet, se ændringer",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 250,
+      "unit": "g",
+      "name": "torsk",
+      "note": "kuller",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "stk",
+      "name": "dild",
+      "note": "hakket fint",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": "panko",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mel",
+      "note": "hvedemel",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": null,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "salat",
+      "note": "hakket groft",
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": 125,
+      "unit": "g",
+      "name": "tomater",
+      "note": "cherrytomater, halveret",
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": null,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 80,
+      "unit": "g",
+      "name": "aioli",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rodfrugtfritter",
+      "text": "Tænd ovnen på 240°C (220°C varmluft)."
+    },
+    {
+      "section": "Rodfrugtfritter",
+      "text": "Skær selleri, rødbede og pastinak i fritter på ca. 1 cm. Rødbede og pastinak skal ikke skrælles."
+    },
+    {
+      "section": "Rodfrugtfritter",
+      "text": "Læg rodfrugterne på en bageplade med bagepapir. Vend dem med olie, salt, peber og lidt citron, og brug to plader, hvis de ikke kan ligge i ét lag."
+    },
+    {
+      "section": "Rodfrugtfritter",
+      "text": "Bag fritterne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Fisk",
+      "text": "Hak dilden fint. Sæt tre dybe tallerkener frem: bland mel og peber i den første, pisk ægget i den anden, og vend panko med dild i den tredje."
+    },
+    {
+      "section": "Fisk",
+      "text": "Tør fisken med køkkenrulle, og drys den med salt. Vend den først i melet, så i ægget og til sidst i dildpankoen."
+    },
+    {
+      "section": "Fisk",
+      "text": "Hæld olie på en pande, så bunden er dækket, og varm den på middelhøj varme. Steg fisken 2-3 minutter på hver side, til panden er gylden og fisken mælkehvid og mat hele vejen igennem. Læg den på køkkenrulle."
+    },
+    {
+      "section": "Tomatsalat",
+      "text": "Halvér tomaterne. Skær enden af salaten, skil bladene ad, og hak dem groft."
+    },
+    {
+      "section": "Tomatsalat",
+      "text": "Vend salat og tomater med olie, salt og peber i en skål."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær citronen i både. Anret fritter, fisk og salat på tallerkener, og server med aioli og citronbåde."
+    }
+  ],
+  "changes": [
+    "Kuller er skiftet til torsk.",
+    "Panko er skiftet til rasp.",
+    "Citronpeber er skiftet til peber og citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk som hovedråvare, mættende rodfrugtfritter og tomatsalat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:43.175Z"
+  }
+}

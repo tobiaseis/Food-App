@@ -1,0 +1,182 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-japansk-teriyaki-tofu-699594a524dac753f4995afe",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:10:19.906Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 683,
+    "protein_g": 32.9,
+    "carbs_g": 83.3,
+    "fat_g": 26.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R15_BW09_SE_C55512-1_Main_high-085734f6.jpg",
+  "lang": "da",
+  "keywords": "Japansk",
+  "fetched_at": "2026-10-05T20:06:45.151Z",
+  "title": "Teriyaki-tofu med jasminris, svampe og broccoli",
+  "intro": "Sprød tofu og stegte grøntsager i en blank teriyakisauce, serveret på duftende jasminris. En hurtig hverdagsret med japansk præg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "amount": 200,
+      "unit": "g",
+      "name": "tofu",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "mel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "amount": 150,
+      "unit": "g",
+      "name": "champignon",
+      "note": "portobello",
+      "optional": false
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "amount": 250,
+      "unit": "g",
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 75,
+      "unit": "g",
+      "name": "teriyakisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sesamolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kog vandet op i en mellemstor gryde. Kom ris og salt i, læg låg på, og lad det putte på lav varme i 14 minutter. Tag gryden af varmen, og lad risene hvile under låg uden at løfte det."
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "text": "Dup tofuen tør med køkkenrulle, og skær den i tern på 2 cm. Vend ternene med melet i en stor skål."
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "text": "Hak hvidløget fint, og snit forårsløget fint. Riv svampene i stykker på ca. 2 cm. Del broccolien i buketter, og skær stokken i tern på 2 cm."
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "text": "Varm lidt af olien på en stor pande ved middelhøj varme. Brun tofuen i 3-4 minutter, til den er gylden, og læg den over på en tallerken."
+    },
+    {
+      "section": "Tofu og grøntsager",
+      "text": "Tør panden ren, og varm resten af olien op. Steg broccoli, svampe og hvidløg i 3-5 minutter, til de har fået farve."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld sojasauce, teriyakisauce, vand og sesamolie på panden. Lad det simre i 3-5 minutter, til saucen er tyk."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel risene i dybe tallerkener, og læg grøntsagerne og tofuen ovenpå. Strø forårsløg og sesamfrø over."
+    }
+  ],
+  "changes": [
+    "Portobello er skiftet til champignon.",
+    "Olivenolie i fremgangsmåden er blevet til almindelig olie, som i ingredienslisten."
+  ]
+}

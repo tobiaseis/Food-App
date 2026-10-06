@@ -1,0 +1,177 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/sod-og-staerk-nduja-pizza-6a46473966926770e8cdaa56",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:21:16.894Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 846,
+    "protein_g": 34,
+    "carbs_g": 112.9,
+    "fat_g": 29.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R14_BW28_SE_C57617-1main_high-eb8e93d0.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:00:56.285Z",
+  "title": "Pizza med chorizo og honning",
+  "intro": "Hjemmebagt pizza med tomatsauce, mozzarella og krydret pølse, der får en sød finish af honning. Server den med en sprød salat af tomat og agurk.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til pizzaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pizzadej",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pizzaen",
+      "amount": 25,
+      "unit": "g",
+      "name": "chorizo",
+      "note": "i små stykker",
+      "optional": false
+    },
+    {
+      "section": "Til pizzaen",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pizzaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Til pizzaen",
+      "amount": 25,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til pizzaen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til pizzaen",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 200,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt ovnen på 250 °C (240 °C ved varmluft). Tag pizzadejen ud af køleskabet og emballagen mindst 10 minutter før brug, og lad den hvile på et let meldrysset bord."
+    },
+    {
+      "section": null,
+      "text": "Riv mozzarellaen groft, og skær løget i tynde, halve skiver."
+    },
+    {
+      "section": null,
+      "text": "Del dejen i to, og træk eller rul hver halvdel ud til en rund bund på ca. 25 cm. Læg bundene på en plade med bagepapir. Er dejen stædig, så lad den hvile et par minutter og prøv igen."
+    },
+    {
+      "section": "Til saucen",
+      "text": "Rør passata, salt og sukker sammen i en skål."
+    },
+    {
+      "section": null,
+      "text": "Fordel saucen på bundene, og drys med salt. Læg mozzarella, løg og chorizo ovenpå. Brug halvdelen af mængden af de ingredienser, der er delt mellem de to pizzaer. Vil du have mildere pizza, så brug mindre chorizo eller spring den over."
+    },
+    {
+      "section": null,
+      "text": "Bag pizzaerne i 12-13 minutter, til de er gyldne og gennembagte."
+    },
+    {
+      "section": "Til salaten",
+      "text": "Skyl salaten, og hak tomat og agurk i grove stykker. Vend det hele med olivenolie og salt i en skål, mens pizzaerne bager."
+    },
+    {
+      "section": null,
+      "text": "Læg pizzaerne på tallerkener, og dryp honning over. Server med salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "'Nduja er erstattet af chorizo, som er nemmere at finde i danske supermarkeder."
+  ]
+}

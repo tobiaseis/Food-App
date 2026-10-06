@@ -1,0 +1,192 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/sayur-lemak-inspireret-tofukarry-69a160c1f603fa63dcbb46d4",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:07:57.174Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 682,
+    "protein_g": 25.8,
+    "carbs_g": 63.3,
+    "fat_g": 36.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R13_BW10_SE_C56511-1_Main_high-128831de.jpg",
+  "lang": "da",
+  "keywords": "Malayisisk",
+  "fetched_at": "2026-10-05T20:06:25.026Z",
+  "title": "Tofukarry med kartofler og grønne bønner",
+  "intro": "Cremet gul karry med tofu, aubergine og bønner, inspireret af malaysisk sayur lemak. Serveres med kartofler vendt i saucen og knasende peanuts.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "tofu",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bønner",
+      "note": "grønne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "gul karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "karry",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "saltede peanuts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet og kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom vand med salt i en stor gryde og bring det i kog. Skær kartoflerne i tern på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Kog kartoflerne i 11-13 minutter, til en kniv let går igennem. Hæld vandet fra, smag til med salt og peber, og læg låg på."
+    },
+    {
+      "section": null,
+      "text": "Hak løg og hvidløg fint. Knib enderne af bønnerne. Skær aubergine og tofu i tern på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Svits løg og hvidløg i 2 minutter, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Kom aubergine, tofu og bønner på panden, og steg dem møre i 5-7 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør karrypasta og karry ned i panden og steg i 30 sekunder, til det dufter. Hæld kokosmælk og vand i, og tilsæt saltet."
+    },
+    {
+      "section": null,
+      "text": "Skru ned til middel varme og lad karryen simre i 5-6 minutter, til saucen er tyknet. Hak imens peanuts groft."
+    },
+    {
+      "section": null,
+      "text": "Vend kartoflerne i saucen. Anret i dybe tallerkener og drys med peanuts."
+    }
+  ],
+  "changes": [
+    "Curry-On er erstattet med karry."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har tofu som hovedråvare, kartofler som mættende element og masser af grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:04.521Z"
+  }
+}

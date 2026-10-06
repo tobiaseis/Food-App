@@ -1,0 +1,197 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-graesk-oksekodsbowl-69ccd7bfa4f29fefb8a5a415",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:56:05.649Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 745,
+    "protein_g": 41,
+    "carbs_g": 50,
+    "fat_g": 43
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R08_BW15_SE_C54870-1_main_high-71eea6a7.jpg",
+  "lang": "da",
+  "keywords": "Græsk",
+  "fetched_at": "2026-10-05T20:05:01.963Z",
+  "title": "Hurtig græsk oksekødsbowl med couscous og feta",
+  "intro": "En hurtig bowl med krydret oksekød, couscous med ristede pinjekerner og en frisk tomat- og agurkesalat. Toppes med creme fraiche og smuldret feta.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "souvlakikrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "couscous",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til couscous",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til couscous",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til couscous",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm en mellemstor gryde op ved middelhøj varme, og rist pinjekernerne 3-4 minutter, til de er gyldne."
+    },
+    {
+      "section": null,
+      "text": "Hæld vandet i gryden, tilsæt saltet til couscous, og bring det i kog. Rør couscous og olie i, tag gryden af varmen, og sæt låg på. Lad den stå 5 minutter, til vandet er trukket ind."
+    },
+    {
+      "section": null,
+      "text": "Skær løget i halve, tynde skiver, mens couscousen trækker."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Brun oksekød og løg 4-5 minutter sammen med saltet til kødet og souvlakikrydderiet. Kødet skal være helt gennemstegt, uden rødt at se."
+    },
+    {
+      "section": null,
+      "text": "Hak tomater og agurk groft, og vend dem i en skål med saltet til salaten og olien til salaten."
+    },
+    {
+      "section": null,
+      "text": "Pluk persillen i grove stykker, og vend dem i couscousen lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Fordel couscous, kødblanding og salat i dybe tallerkener. Kom creme fraiche på, og smuldr fetaen ovenpå."
+    }
+  ],
+  "changes": [
+    "Græsk ost er skrevet som feta.",
+    "Fraiche er skrevet som creme fraiche."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har hakket oksekød, couscous og grøntsagssalat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:41:44.281Z"
+  }
+}

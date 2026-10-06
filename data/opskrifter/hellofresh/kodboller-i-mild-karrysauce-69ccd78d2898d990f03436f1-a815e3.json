@@ -1,0 +1,242 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/kodboller-i-mild-karrysauce-69ccd78d2898d990f03436f1",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:56:58.526Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 913,
+    "protein_g": 43,
+    "carbs_g": 89.4,
+    "fat_g": 44
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R03_BW15_SE_C52115-1_main_high-a005623e.jpg",
+  "lang": "da",
+  "keywords": "Fusion cuisine",
+  "fetched_at": "2026-10-05T20:05:09.082Z",
+  "title": "Kødboller i mild karrysauce",
+  "intro": "Saftige kødboller i cremet karrysauce med kokosmælk, serveret med ris og en frisk salat af pak choi, æble og gulerod. Chili og peanuts kan udelades til børnene.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til ris",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til ris",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": "gerne blandet med hakket kalvekød",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødboller",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 20,
+      "unit": "g",
+      "name": "gul karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "gerne med lavt saltindhold",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 20,
+      "unit": "g",
+      "name": "saltede peanuts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Topping",
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salat",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salat",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kog vandet op i en gryde. Kom ris og salt i, læg låg på, og lad risene simre ved middel-lav varme i 10 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Træk gryden af komfuret, og lad risene trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Ælt hakket kød, æg, rasp og salt sammen i en stor skål. Form 4 kødboller pr. person."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Varm olien op i en stegepande ved middelhøj varme, og brun kødbollerne i 5-6 minutter, til de er gyldne."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør karrypastaen ud i panden, og lad den stege i 30 sekunder, til det dufter. Hæld sojasauce, kokosmælk og vand i."
+    },
+    {
+      "section": "Sauce",
+      "text": "Skru ned til middel varme, læg låg på, og lad det simre i 8-12 minutter, til saucen er tyk. Kødbollerne skal være helt gennemstegte uden spor af rødt kød indeni."
+    },
+    {
+      "section": "Topping",
+      "text": "Hak koriander og peanuts groft, mens saucen simrer, og bland dem med chiliflagerne i en lille skål. Skær chilien fra eller brug mindre til dem, der ikke bryder sig om stærk mad."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær æblet i tynde halve skiver og pak choi i tynde strimler. Lav lange bånd af guldroden med en skræller, og hak den sidste rest fint."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend gulerod, pak choi og æble med olie og salt i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Server ris, kødboller, sauce og salat i dybe tallerkener. Drys toppingen over de voksnes portioner."
+    }
+  ],
+  "changes": [
+    "Hakket svine-/kalvekød er ændret til hakket svinekød, gerne blandet med kalvekød.",
+    "Gulerod er skrevet som gulerødder efter varekataloget."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kødboller som hovedråvare, ris som mættende del og en salat med pak choi, æble og gulerod, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:41:58.909Z"
+  },
+  "accepted": true
+}

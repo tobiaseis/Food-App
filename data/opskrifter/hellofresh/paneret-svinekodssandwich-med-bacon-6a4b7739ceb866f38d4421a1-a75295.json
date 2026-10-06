@@ -1,0 +1,291 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/paneret-svinekodssandwich-med-bacon-6a4b7739ceb866f38d4421a1",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:16:57.557Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 24,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1436,
+    "protein_g": 65,
+    "carbs_g": 104.9,
+    "fat_g": 85.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R19_BW45_SE_C28105-1_Main_high-ce303e76.jpg",
+  "lang": "da",
+  "keywords": "Tysk",
+  "fetched_at": "2026-10-05T20:00:37.279Z",
+  "title": "Paneret svinekamsandwich med baconog ostebagte løgringe",
+  "intro": "Sprød paneret svinekam i baguette med bacon, cremet sauce og ovnbagte løgringe med ost. Til siden er der en frisk salat af romaine og gulerod.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Løgringe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Løgringe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Løgringe",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Løgringe",
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "halvdelen bruges til løgringene, resten til saucen",
+      "optional": false
+    },
+    {
+      "section": "Løgringe",
+      "amount": 50,
+      "unit": "g",
+      "name": "ost",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 15,
+      "unit": "g",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "romainesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 300,
+      "unit": "g",
+      "name": "svinekam",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til meldrysset",
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 125,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Brød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "baguette",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Løgringe",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Skær løget i ringe på ca. 1 cm."
+    },
+    {
+      "section": "Løgringe",
+      "text": "Læg ringene på en bageplade med bagepapir. Drys med olie, salt og halvdelen af krydderiblandingen, og top med revet ost."
+    },
+    {
+      "section": "Løgringe",
+      "text": "Bag i 15-20 minutter, til osten er gylden."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør worcestershiresauce, ketchup, creme fraiche, mayonnaise og resten af krydderiblandingen sammen i en lille skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl romainesalaten, pluk den i blade, og hak dem groft. Snit forårsløget fint."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær gulerodden i lange, tynde bånd med en skræller, og hak den sidste rest fint."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend salat, gulerod og forårsløg med olie og salt."
+    },
+    {
+      "section": "Svinekam",
+      "text": "Drys svinekammen med salt. Bland mel og salt på en dyb tallerken, pisk ægget på en anden, og kom panko på en tredje."
+    },
+    {
+      "section": "Svinekam",
+      "text": "Vend kødet først i melet, så i ægget og til sidst i panko. Har du ikke æg, kan du bruge 2 spsk mælk i stedet."
+    },
+    {
+      "section": "Svinekam",
+      "text": "Varm olien på en pande ved middelhøj varme, så bunden er dækket. Steg kødet 3-4 minutter på hver side, til det er gyldent og helt gennemstegt uden rødt. Tilsæt mere olie, hvis det behøves."
+    },
+    {
+      "section": "Svinekam",
+      "text": "Skær kødet på langs i to stykker, læg det på køkkenrulle, og drys med salt."
+    },
+    {
+      "section": "Svinekam",
+      "text": "Steg baconen på samme pande i 4-5 minutter, til den er gylden."
+    },
+    {
+      "section": "Brød",
+      "text": "Skær baguetterne midt over, og smør underdelene med smør. Læg dem direkte på ovnristen i 2-3 minutter."
+    },
+    {
+      "section": "Brød",
+      "text": "Smør brødet med saucen, og læg lidt salat på. Fyld med svinekam, bacon og de ostebagte løgringe, og server resten af salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Hello Sunrise er erstattet af en almindelig krydderiblanding.",
+    "Svinekamfilet er skiftet til svinekam.",
+    "Gouda er skiftet til revet ost.",
+    "Fraiche er skiftet til creme fraiche."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har paneret svinekam og bacon i baguette samt løgringe og salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:39.897Z"
+  }
+}

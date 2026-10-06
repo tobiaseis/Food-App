@@ -1,0 +1,181 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/nem-tortelloni-rejegryde-6a2a8f1d91ca82626cee612a",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:36:29.385Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 12,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 771,
+    "protein_g": 34.6,
+    "carbs_g": 78.7,
+    "fat_g": 34.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R07_BW02_SE_C35994-1_Main_-1high-52a4f5bc.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:02:37.576Z",
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "tortelloni",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "rejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i julienne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til rejerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til gryderetten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til gryderetten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til gryderetten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til gryderetten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til pestoen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Brun rejer og gulerod med saltet i 1-2 minutter på hver side, til de er gyldne og igennem. Rejerne er klar, når kødet er hvidt og uigennemsigtigt."
+    },
+    {
+      "section": null,
+      "text": "Hæld hakkede tomater, vand, salt, smør og sukker i panden, og krydr med rigeligt peber. Lad det småkoge i 4-5 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom tortelloni i panden sammen med en smule salt og peber. Lad retten simre i 1-2 minutter, til pastaen er varm hele vejen igennem."
+    },
+    {
+      "section": null,
+      "text": "Hak i mellemtiden basilikum fint, og rør den sammen med parmesan, olie, salt og peber i en lille skål til en pesto."
+    },
+    {
+      "section": null,
+      "text": "Del retten ud i dybe tallerkener, og drys pestoen over."
+    }
+  ],
+  "title": "Tortelloni med rejer i tomatsauce og basilikumpesto",
+  "intro": "Fyldt pasta og rejer simrer i en nem tomatsauce og toppes med en hurtig pesto af basilikum og parmesan. Retten er hurtigt på bordet.",
+  "servings": 2,
+  "changes": [
+    "Kongerejer er skiftet til rejer.",
+    "Parmigiano Reggiano er skiftet til parmesan."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rejer som hovedråvare og tortelloni som mættende pasta, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:37:49.519Z"
+  }
+}

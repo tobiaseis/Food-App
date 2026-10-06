@@ -1,0 +1,233 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/stegt-rumpsteak-og-rodvinssauce-6a38ec6cbcf472ce94494fc9",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:29:10.915Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 711,
+    "protein_g": 43,
+    "carbs_g": 51.1,
+    "fat_g": 37
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y23_R18_W24_SE_P13108-3_Main_high-40596ff3.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:01:41.651Z",
+  "title": "Rumpsteak med rødvinssauce, knuste kartofler og cherrytomatsalat",
+  "intro": "Saftig rumpsteak med en hurtig sauce af rødvin og brun sovs, serveret med sprøde knuste kartofler og en frisk salat med rucola og tomater. Alt er klar på under en time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "rumpsteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning af kødet",
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "timian",
+      "note": "friske blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 50,
+      "unit": "g",
+      "name": "brun sovs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 60,
+      "unit": "g",
+      "name": "rødvinssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 125,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 25,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Tag bøfferne ud af køleskabet, og drys dem med salt."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Kog kartoflerne i letsaltet vand i 15-18 minutter, til de er næsten møre."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Forbered imens løg, timian, hvidløg, tomater og rucola som beskrevet i ingredienslisten."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Læg de kogte kartofler på en bageplade med bagepapir, og tryk hver enkelt let flad med en gaffel. Dryp med olie, og drys med salt. Bag dem i 10-12 minutter, til de er gyldne."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Steg bøfferne 3-4 minutter på hver side, til de er brunede. Giv dem 1-2 minutter mere på hver side, hvis de skal være gennemstegte."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, mens du laver saucen."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret i den samme pande ved middellav varme. Svits løget i 2-3 minutter, og rør hvidløget i i det sidste halve minut."
+    },
+    {
+      "section": "Sauce",
+      "text": "Tilsæt brun sovs, rødvinssauce, timian, bouillon, vand og peber samt kødsaften fra folien. Lad det simre i 3-4 minutter."
+    },
+    {
+      "section": "Salat og servering",
+      "text": "Vend rucola og tomater med olie og salt i en skål."
+    },
+    {
+      "section": "Salat og servering",
+      "text": "Skær bøfferne i tynde skiver, og anret dem med kartoflerne og salaten. Hæld saucen over kødet, og drys fetaen over salaten."
+    }
+  ],
+  "changes": [
+    "Ostesnack er erstattet med feta, som kan smuldres over salaten."
+  ]
+}

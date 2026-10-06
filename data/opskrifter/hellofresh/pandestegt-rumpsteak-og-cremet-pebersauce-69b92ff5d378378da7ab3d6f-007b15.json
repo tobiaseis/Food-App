@@ -1,0 +1,206 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/pandestegt-rumpsteak-og-cremet-pebersauce-69b92ff5d378378da7ab3d6f",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:02:18.882Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 653,
+    "protein_g": 41.5,
+    "carbs_g": 65.8,
+    "fat_g": 28
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF211109_R18_W52_SE_P10598-1__KB_Main_edit_high-db1f80ae.jpg",
+  "lang": "da",
+  "keywords": "North American",
+  "fetched_at": "2026-10-05T20:05:51.921Z",
+  "title": "Culotte med pebersauce, rosmarinfritter og stegte grøntsager",
+  "intro": "Mør culotte med cremet pebersauce, ovnbagte kartoffelfritter med rosmarin og grøntsager fra panden. Hele retten er klar på under en time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "culotte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Rosmarinfritter",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Rosmarinfritter",
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "rosmarin",
+      "note": "fintHakket",
+      "optional": false
+    },
+    {
+      "section": "Rosmarinfritter",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Stegte grøntsager",
+      "amount": 250,
+      "unit": "g",
+      "name": "asparges",
+      "note": "grønne",
+      "optional": false
+    },
+    {
+      "section": "Stegte grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Stegte grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegte grøntsager",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stegte grøntsager",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Pebersauce",
+      "amount": 2,
+      "unit": "g",
+      "name": "peber",
+      "note": "groftmalet",
+      "optional": false
+    },
+    {
+      "section": "Pebersauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pebersauce",
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pebersauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pebersauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rosmarinfritter",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Tag bøfferne ud af køleskabet, og drys dem med salt."
+    },
+    {
+      "section": "Rosmarinfritter",
+      "text": "Skær kartoflerne i fritter på ca. 1 cm, og læg dem på en bageplade med bagepapir. Vend dem med lidt olivenolie, rosmarin, salt og peber."
+    },
+    {
+      "section": "Rosmarinfritter",
+      "text": "Bag fritterne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Stegte grøntsager",
+      "text": "Skær guleroden i stave på ca. 5 cm og løget i både på ca. 1 cm. Hak hvidløget fint, og knæk de hårde ender af aspargesene."
+    },
+    {
+      "section": "Stegte grøntsager",
+      "text": "Varm lidt olie på en stor pande ved middelhøj varme. Steg asparges, gulerod og løg i 5-6 minutter, til de er møre."
+    },
+    {
+      "section": "Stegte grøntsager",
+      "text": "Rør hvidløget i, og steg det med i 1 minut. Smag til med salt og peber, og kom det hele i en skål med låg. Et skvæt vand i panden gør grøntsagerne hurtigere møre."
+    },
+    {
+      "section": "Culotte",
+      "text": "Varm lidt olie på en pande ved middelhøj varme. Steg bøfferne 3-4 minutter på hver side, til de er brune. Steg 1-2 minutter længere pr. side, hvis de skal være gennemstegte."
+    },
+    {
+      "section": "Culotte",
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, til maden skal serveres."
+    },
+    {
+      "section": "Pebersauce",
+      "text": "Start saucen, når fritterne har ca. 5 minutter tilbage. Varm lidt olie i den brugte pande ved middellav varme, og rist peberen i 30 sekunder."
+    },
+    {
+      "section": "Pebersauce",
+      "text": "Hæld vandet i, og skrab stegeskjul fra bunden med en spatel. Tilsæt fløde, bouillon og salt, og lad saucen simre 1-2 minutter, til den er tyk."
+    },
+    {
+      "section": "Pebersauce",
+      "text": "Hæld den kødsaft, der er løbet fra bøfferne, i saucen. Skær bøfferne i tynde skiver."
+    },
+    {
+      "section": null,
+      "text": "Server bøfskiver, fritter og grøntsager på tallerkener, og hæld pebersaucen over kødet."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kød som hovedråvare, kartoffelfritter som mættende element og rigeligt stegt grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:43:13.677Z"
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cheesy-lakselasagne-698afbecbb833db48a7ea6a9",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:11:00.644Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 22,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1291,
+    "protein_g": 57.2,
+    "carbs_g": 77.7,
+    "fat_g": 84.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R05_BW09_SE_P53750-1_Main_F1_high-c68b8f2b.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:06:49.877Z",
+  "title": "Cremet lakselasagne med salat og artiskokker",
+  "intro": "Lasagne med bagt laks, champignon og spinat i cremet bechamel med cheddar på toppen. Den serveres med en frisk salat med marinerede artiskokker.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Lasagne",
+      "amount": 250,
+      "unit": "g",
+      "name": "laksefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 200,
+      "unit": "g",
+      "name": "lasagneplader",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 150,
+      "unit": "g",
+      "name": "champignon",
+      "note": "portobello, grofthakket",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 50,
+      "unit": "g",
+      "name": "ost",
+      "note": "revet cheddar",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til laksen",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til svampene",
+      "optional": false
+    },
+    {
+      "section": "Lasagne",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 30,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bechamel",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 50,
+      "unit": "g",
+      "name": "artiskokker",
+      "note": "marinerede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 4,
+      "unit": "ml",
+      "name": "balsamico",
+      "note": "creme",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Laks og svampe",
+      "text": "Varm ovnen op til 220 °C (200 °C varmluft). Tør laksen med køkkenrulle og drys den med salt. Læg den med skindsiden nedad på en bageplade med bagepapir, og bag den i 9-10 minutter, til kødet er mat i midten."
+    },
+    {
+      "section": "Laks og svampe",
+      "text": "Hak løget fint og champignonerne groft, mens laksen bager."
+    },
+    {
+      "section": "Laks og svampe",
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Steg champignonerne med salt i 3-4 minutter, til de er brunede."
+    },
+    {
+      "section": "Laks og svampe",
+      "text": "Pil den bagte laks i mundrette stykker med to gafler. Vend den sammen med champignonerne i en stor skål."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Skyl spinaten. Rør fløde, mælk og vand sammen i en skål."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Smelt smørret i en gryde ved middel varme, og svits løget i 1-2 minutter, til det er blødt. Rør mel og bouillon i, og pisk i 1-2 minutter."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Hæld mælkeblandingen i lidt ad gangen, mens du rører, og kog i 3-4 minutter, til saucen er tyknet. Pisk spinat, salt, parmesan og peber i, til spinaten er faldet sammen."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Saml lasagnen, mens bechamelen stadig er varm og flydende. Kom først et lag bechamel i bunden af et ildfast fad, og læg lasagneplader over. Fordel noget af laksefyldet, og læg nye plader ovenpå."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Gentag med bechamel, plader og fyld, og slut med et lag bechamel. Drys med cheddar. Til 3-4 personer skal du bruge et større fad."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Dæk fadet med stanniol, og bag i 25-35 minutter. Tag folien af de sidste 10 minutter, så osten bliver gylden."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl salaten. Riv artiskokkerne i grove stykker. Vend salat, artiskokker, balsamico, olivenolie, solsikkekerner og salt i en stor skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Sæt lasagnen på bordet og server den med salaten."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano er skiftet til parmesan.",
+    "Balsamicocreme er skiftet til balsamico (creme).",
+    "Portobello er skiftet til champignon.",
+    "Blandet salat er skiftet til salatblanding."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Lasagne med laks, pasta og bechamel samt salat er et helt aftensmåltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:42.946Z"
+  }
+}
