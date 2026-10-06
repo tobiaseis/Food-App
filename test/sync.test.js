@@ -884,6 +884,7 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
     const days = 2;
     const servings = 3;
     let sawTopup = false;
+    let sawHave = false;
 
     for (const track of ['classic', 'budget']) {
       const ctx = await Data.flowInputs(track, chainIds);
@@ -980,11 +981,14 @@ test('de fem trin: browseren og serveren giver samme pulje, forslag og lister', 
         assert.ok(b.buy.every((l) => !have.has(l.key)), `${tag}: "har"-varer købes ikke`);
         for (const key of have) {
           if (w.picks.some((r) => r.items.some((it) => it.key === key))) {
+            sawHave = true;
             assert.ok(b.pantry.some((p) => p.key === key && p.have === true), `${tag}: ${key} står som "har du"`);
           }
         }
       });
     }
+    // Have-påstandene ovenfor er betingede: uden en valgt ret, der bruger en har-vare, bestod de tomt.
+    assert.ok(sawHave, 'mindst ét forslag skal bruge en har-vare, ellers måler have-påstandene intet');
     assert.ok(sawTopup, 'påfyldningen skal prøves i mindst ét forslag, ellers måler paritetstesten den ikke');
   } finally {
     await new Promise((r) => server.close(r));
