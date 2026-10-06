@@ -695,9 +695,22 @@ function readFlow() {
     view: f.view === 'list' ? 'list' : 'swipe',
     // Varer, brugeren allerede har ("brug det, jeg har"). Nøgler og ikke
     // navne: navnene kommer fra varekataloget, og nøglen er det, motoren kender.
-    have: Array.isArray(f.have)
-      ? [...new Set(f.have.filter((k) => typeof k === 'string' && k))].slice(0, HAVE_MAX) : [],
+    // Som valgene huskes de kun for UGEN: det, man havde i skabet i går, er
+    // sjældent der om en måned, og ellers bliver varen ved med at forsvinde
+    // fra indkøbslisten. En ny uge (eller en gammel værdi uden uge) starter tom.
+    have: haveFromStorage(f.have),
   };
+}
+
+const thisWeekKey = () => {
+  const { year, week } = window.PlanEngine.isoWeek(new Date());
+  return `${year}-${week}`;
+};
+
+/** De gemte har-varer for den aktuelle uge, renset for fremmede værdier. */
+function haveFromStorage(h) {
+  if (!h || !Array.isArray(h.keys) || h.week !== thisWeekKey()) return [];
+  return [...new Set(h.keys.filter((k) => typeof k === 'string' && k))].slice(0, HAVE_MAX);
 }
 
 function writeFlow() {
@@ -705,7 +718,7 @@ function writeFlow() {
   const picks = FLOW.ctx ? { week: `${FLOW.ctx.year}-${FLOW.ctx.week}`, ids: FLOW.selected } : s.picks;
   try {
     localStorage.setItem(FLOW_KEY, JSON.stringify({
-      track: s.track, days: s.days, servings: s.servings, picks, have: s.have, view: s.view,
+      track: s.track, days: s.days, servings: s.servings, picks, have: { week: thisWeekKey(), keys: s.have }, view: s.view,
     }));
   } catch { /* privat vindue – valget gælder så kun denne visning */ }
 }
@@ -1325,7 +1338,7 @@ function renderSwipe() {
     if (t) parts.push(esc(t));
     if (track === 'budget' && r.cost_per_serving != null) parts.push(`ca. ${kr(Math.round(r.cost_per_serving))} pr. portion`);
     stage = `<div class="swipe-stage">
-      <article class="swipe-card" data-id="${r.id}">
+      <article class="swipe-card" data-id="${r.id}" tabindex="0">
         ${r.image ? `<img src="${esc(thumb(r.image, 480))}" alt="" draggable="false" decoding="async">`
                   : '<span class="swipe-ph" aria-hidden="true"></span>'}
         <div class="swipe-body">
@@ -1414,6 +1427,15 @@ function bindSwipeCard(card) {
     const k = Math.min(1, Math.abs(dx) / (card.offsetWidth * 0.25));
     yes.style.opacity = dx > 0 ? k : 0;
     no.style.opacity = dx < 0 ? k : 0;
+  });
+  // Fra tastaturet åbnes opskriften med Enter eller mellemrum, som et tryk gør
+  // det. Kun når kortet selv har fokus; ←/→ håndteres af dokumentets lytter
+  // og forstyrres ikke.
+  card.addEventListener('keydown', (e) => {
+    if (e.target !== card || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    e.preventDefault();
+    showRecipe(Number(card.dataset.id));
   });
   card.addEventListener('pointercancel', () => { down = false; reset(); });
   card.addEventListener('pointerup', (e) => {
@@ -1593,7 +1615,10 @@ function renderList(picks) {
   const dropped = (l.dropped_chains || []).map(chainById).filter(Boolean).map((c) => c.name);
 
   const estimated = priced.some((b) => b.source === 'estimate:rema');
-  const haveNames = [...haveSet()].map((k) => FLOW.ctx.items.get(k)?.name || k);
+  // Kun de har-varer, de valgte retter faktisk bruger — ellers lover linjen
+  // noget om en vare, der slet ikke indgår i ugens retter.
+  const usedKeys = new Set(picks.flatMap((r) => (r.items || []).map((it) => it.key)));
+  const haveNames = [...haveSet()].filter((k) => usedKeys.has(k)).map((k) => FLOW.ctx.items.get(k)?.name || k);
 
   el.innerHTML = `
     <div class="docket">
