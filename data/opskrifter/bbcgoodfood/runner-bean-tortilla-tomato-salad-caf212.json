@@ -9,6 +9,17 @@
   "active_minutes": 10,
   "yield_count": 3,
   "source_lines": 11,
+  "nutrition": {
+    "per_servings": 3,
+    "kcal": 214,
+    "protein_g": 14,
+    "carbs_g": 8,
+    "fat_g": 13
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/runner-bean-tortilla-with-tomato-salsa-e24130c.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Supper, 3 of 5-a-day, Calcium, Eggs, Folate, Gluten free, goodhealth, Healthy, Low calorie, Runner beans, Sara Buenfeld, Tortilla, Vitamin c",
+  "fetched_at": "2026-08-27T17:48:14.136Z",
   "title": "Bønnetortilla med tomatsalat",
   "intro": "En let spansk tortilla med grønne bønner, citron og hvidløg, der serveres med en frisk salat af tomat, rødløg og basilikum.",
   "servings": 3,
@@ -141,25 +152,59 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mætningsbestanddel som kartofler, ris eller brød; grønt og haricots verts alene er ikke tilstrækkeligt.",
+    "reason": "Retten består af æg, bønner og tomatsalat uden kartofler, pasta, brød eller andet mættende, så den mangler noget solidt til at blive et helt måltid.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde ovnkartofler med rosmarin og hvidløg",
       "ingredients": [
         {
           "section": null,
-          "amount": 750,
+          "amount": 600,
           "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne og kog dem møre.",
-        "Hæld dem i et dørslag."
+        "Skær kartoflerne i både, og vend dem med olie, rosmarin og salt.",
+        "Bag kartoflerne på en bageplade ved 220 grader i cirka 35 minutter, til de er gyldne og sprøde.",
+        "Hak hvidløget fint, og vend det med kartoflerne de sidste 5 minutter.",
+        "Pres citronen over de varme kartofler, og server dem til tortillaen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:54:31.935Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:04.355Z"
   }
 }

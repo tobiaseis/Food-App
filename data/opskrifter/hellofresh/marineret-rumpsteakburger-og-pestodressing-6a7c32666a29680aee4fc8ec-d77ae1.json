@@ -1,0 +1,220 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/marineret-rumpsteakburger-og-pestodressing-6a7c32666a29680aee4fc8ec",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:09:51.629Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 814,
+    "protein_g": 44.2,
+    "carbs_g": 94.4,
+    "fat_g": 28.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF220804_R18_W41_SE_P11900-1_MB_Main_high-fb22a29b.jpg",
+  "lang": "da",
+  "keywords": "North American",
+  "fetched_at": "2026-10-05T19:59:43.377Z",
+  "title": "Rumpsteakburger med pestodressing og ovnfritter",
+  "intro": "Saftig burger af marineret culotte i brioche med karamelliserede løg, rucola og cremet pestodressing. Serveres med sprøde ovnbagte kartoffelbåde.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Fritter",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 4,
+      "unit": "g",
+      "name": "hvidløgs- og urtekrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til kartofler og bøffer",
+      "optional": false
+    },
+    {
+      "section": "Fritter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burger",
+      "amount": 300,
+      "unit": "g",
+      "name": "culotte",
+      "note": "rumpsteak",
+      "optional": false
+    },
+    {
+      "section": "Burger",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Burger",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burger",
+      "amount": 2,
+      "unit": "stk",
+      "name": "briocheboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burger",
+      "amount": 50,
+      "unit": "g",
+      "name": "cremet pestodressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burger",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burger",
+      "amount": 20,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karamelliserede løg",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Fritter og kød",
+      "text": "Tænd ovnen på 240°C (220°C varmluft). Lad bøfferne tage kølen af, drys dem med salt, og vend dem i balsamico i en skål."
+    },
+    {
+      "section": "Fritter og kød",
+      "text": "Skær de uskrællede kartofler i både på cirka 2 cm. Læg dem på en bageplade med bagepapir, og vend dem med lidt olivenolie, hvidløgs- og urtekrydderiet, salt og peber."
+    },
+    {
+      "section": "Fritter og kød",
+      "text": "Bag kartoflerne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Karamelliserede løg",
+      "text": "Skær løget i halve, tynde skiver. Varm olien op i en stor pande ved middel varme, og steg løgene i 5-6 minutter, til de er bløde."
+    },
+    {
+      "section": "Karamelliserede løg",
+      "text": "Kom vand, sukker og en knivspids salt på panden. Steg løgene videre i 3-5 minutter, til de er karamelliserede, og kom dem over i en skål."
+    },
+    {
+      "section": "Burger",
+      "text": "Skær tomaten i tynde skiver, del bollerne på midten, og skyl rucolaen."
+    },
+    {
+      "section": "Burger",
+      "text": "Varm lidt olivenolie op i en pande ved middelhøj varme. Tag bøfferne op af marinaden, og steg dem 3-4 minutter på hver side, til de er brunede. Hæld marinaden på panden, og lad den koge ind i cirka 30 sekunder, til den tykner."
+    },
+    {
+      "section": "Burger",
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, til maden skal serveres. Tip: Steg dem 1-2 minutter længere for gennemstegt kød."
+    },
+    {
+      "section": "Burger",
+      "text": "Læg bollerne på ovnristen, når kartoflerne har 4 minutter tilbage, og varm dem i 3-4 minutter."
+    },
+    {
+      "section": "Burger",
+      "text": "Skær bøfferne i tynde skiver, og smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Smør bollerne med lidt af pestodressingen, og læg bøfskiver, løg, rucola og tomat i. Server med fritterne og resten af dressingen."
+    }
+  ],
+  "changes": [
+    "Rumpsteak er skiftet til culotte, som er det danske navn for udskæringen."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har bøffer i burgerboller og ovnfritter som mættende tilbehør samt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:33:10.646Z"
+  }
+}

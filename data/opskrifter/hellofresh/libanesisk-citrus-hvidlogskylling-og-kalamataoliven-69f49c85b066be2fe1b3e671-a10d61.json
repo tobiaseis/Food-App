@@ -1,0 +1,310 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/libanesisk-citrus-hvidlogskylling-og-kalamataoliven-69f49c85b066be2fe1b3e671",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:43:50.441Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 24,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1131,
+    "protein_g": 51.1,
+    "carbs_g": 106,
+    "fat_g": 58
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R06_BW32_SE_P35132-1_Main_high-8c9ee8d9.jpg",
+  "lang": "da",
+  "keywords": "Libanesisk",
+  "fetched_at": "2026-10-05T20:03:32.000Z",
+  "title": "Libanesisk citronkylling med tranebærsalat og pinjekerneris",
+  "intro": "Mør, saftig kyllingebryst med hvidløg, oliven og citron, serveret med knasende salat, tahinidressing og ris med pinjekerner og ristede løg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Pinjekerneris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pinjekerneris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Pinjekerneris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Pinjekerneris",
+      "amount": 30,
+      "unit": "g",
+      "name": "ristede løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pinjekerneris",
+      "amount": 20,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tahinidressing",
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tahinidressing",
+      "amount": 25,
+      "unit": "g",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tahinidressing",
+      "amount": 15,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tahinidressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til dressingen",
+      "optional": false
+    },
+    {
+      "section": "Tahinidressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "et nip",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 100,
+      "unit": "g",
+      "name": "romainesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 40,
+      "unit": "g",
+      "name": "tørrede tranebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "et nip",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 4,
+      "unit": "g",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 30,
+      "unit": "g",
+      "name": "oliven",
+      "note": "groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "et nip",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "groft hakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pinjekerneris",
+      "text": "Kom vand i en gryde og bring det i kog. Tilsæt ris og salt, læg låg på og lad det småkoge på middellav varme i 10 minutter."
+    },
+    {
+      "section": "Pinjekerneris",
+      "text": "Tag gryden af varmen og lad risene trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Tahinidressing",
+      "text": "Rør yoghurt, tahin, honning, salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Pinjekerneris",
+      "text": "Varm en stor pande op på middelhøj varme, og rist pinjekernerne i 2-3 minutter, til de er gyldne. Kom dem i en skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Hak romainesalat og agurk groft. Vend dem i en stor skål med tranebær, olie, salt og peber."
+    },
+    {
+      "section": "Kylling",
+      "text": "Læg kyllingebrystet mellem to stykker bagepapir og bank det ud til en tykkelse på ca. 2 cm med en kødhammer eller en kagerulle."
+    },
+    {
+      "section": "Kylling",
+      "text": "Skær citronen i skiver, og klargør hvidløg, oliven og persille som angivet i ingredienslisten."
+    },
+    {
+      "section": "Kylling",
+      "text": "Varm olien op i den store pande på middelhøj varme. Krydr kyllingen med harissa, salt og peber, og brun den i 2 minutter på hver side."
+    },
+    {
+      "section": "Kylling",
+      "text": "Skru ned til middel varme, og steg kyllingen 2-3 minutter mere på hver side, til den er gennemstegt og helt hvid indeni."
+    },
+    {
+      "section": "Kylling",
+      "text": "Kom hvidløg, oliven, vand, smør samt salt og peber i panden, og læg 2 citronskiver på hvert stykke kylling. Lad det simre i 1-2 minutter, til saucen er reduceret lidt."
+    },
+    {
+      "section": "Pinjekerneris",
+      "text": "Vend i mellemtiden ristede løg og halvdelen af pinjekernerne i den kogte ris."
+    },
+    {
+      "section": "Til servering",
+      "text": "Pres risen let sammen i en lille skål, og vend den ud på en tallerken, så den danner en kuppel. Gør det samme med resten af risen."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret salat og kylling ved siden af risen, og hæld pandesaucen over kyllingen. Server med tahinidressingen, og drys med persille og resten af pinjekernerne."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron.",
+    "Tranebær er skiftet til tørrede tranebær.",
+    "Harissa-krydderi er skiftet til harissa."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, pinjekerneris som mættende element og en tranebærsalat med grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:39:13.987Z"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/argentinsk-inspireret-rumpsteakbowl-6a4b7764746dd895cd0b0a21",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:15:55.779Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 23,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1257,
+    "protein_g": 47.8,
+    "carbs_g": 109.1,
+    "fat_g": 72.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R07_BW27_SE_P27222-1_Main_high-b5a9a665.jpg",
+  "lang": "da",
+  "keywords": "Argentinsk",
+  "fetched_at": "2026-10-05T20:00:32.463Z",
+  "title": "Rumpsteakbowl med chimichurri og cremet majs",
+  "intro": "Mør rumpsteak med ris, frisk avocadosalat og cremet stegt majs, toppet med en syrlig chimichurri af persille og koriander. Det er en farverig bowl med fine kontraster mellem varmt og friskt.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chips",
+      "note": "tortillachips",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "bøf",
+      "note": "rumpsteak",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "Tex-Mex",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til chimichurri",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til chimichurri",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til majsen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning af bøffer",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tag bøfferne ud af køleskabet i god tid. Gnid dem med salt og Tex-Mex-krydderi."
+    },
+    {
+      "section": "Ris",
+      "text": "Hak eller pres hvidløget. Smelt smørret i en gryde ved middel varme, og svits hvidløget i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": "Ris",
+      "text": "Hæld vandet i, og bring det i kog. Kom ris og salt i, læg låg på, og lad risen koge ved middellav varme i 10 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Træk gryden af varmen, og lad risen trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Chimichurri",
+      "text": "Hak løg, persille og koriander fint. Del citronen på midten. Rør det hakkede sammen med salt, olivenolie og et godt skvæt citronsaft i en lille skål."
+    },
+    {
+      "section": "Avocadosalat",
+      "text": "Skær cherrytomaterne i kvarte. Halver avocadoen, fjern kernen, og øs kødet ud med en ske. Skær det i tern på ca. 2 cm."
+    },
+    {
+      "section": "Avocadosalat",
+      "text": "Vend tomater og avocado med salt og olivenolie i en skål."
+    },
+    {
+      "section": "Cremet majs",
+      "text": "Si majsene fra vandet. Varm en stegepande op ved middelhøj varme, og steg majsene i 4-5 minutter, til de er gyldne."
+    },
+    {
+      "section": "Cremet majs",
+      "text": "Kom majsene i en skål, og rør dem sammen med mayonnaise, salt og peber."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm lidt olivenolie op i en stegepande ved middelhøj varme. Steg bøfferne 3-4 minutter på hver side, til de er brunede. Steg 1-2 minutter længere pr. side, hvis de skal være gennemstegte."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, til du skal servere. Skær dem derefter i tynde skiver."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel ris, kød, majs, tortillachips og avocadosalat i dybe tallerkener. Smuldr feta over majsene, og top bøfferne med chimichurri."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron.",
+    "Rumpsteak er skiftet til bøf."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rumpsteak som hovedråvare, ris som mættende og rigeligt grønt i avocadosalat og majs, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:34.352Z"
+  }
+}

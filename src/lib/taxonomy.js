@@ -67,7 +67,11 @@ const SEED = [
   // ── Kød ───────────────────────────────────────────────────────────────────
   { key: 'hakket_oksekoed', name: 'Hakket oksekød', cat: 'meat',
     class: 'fresh', keeps: 'perishable', p: 20, kcal: 175, c: 0, fatGrades: true,
-    da: ['hakket oksekød', 'hakket okse', 'oksefars', 'hakket kalv og flæsk', 'hakket kalv & flæsk'],
+    // HelloFresh skriver "hakket svine-/kalvekød" om det, butikken kalder "hakket
+    // kalv og flæsk" — uden de lange former blev det til kalvekød (stege-kød).
+    da: ['hakket oksekød', 'hakket okse', 'oksefars', 'hakket kalv og flæsk', 'hakket kalv & flæsk',
+         'hakket svine-/kalvekød', 'hakket svine- og kalvekød', 'hakket kalve- og svinekød',
+         'hakket kalve-/svinekød'],
     en: ['minced beef', 'ground beef', 'beef mince'] },
   { key: 'hakket_svinekoed', name: 'Hakket svinekød', cat: 'meat',
     class: 'fresh', keeps: 'perishable', p: 18, kcal: 220, c: 0, fatGrades: true,
@@ -385,7 +389,7 @@ const SEED = [
     class: 'fresh', keeps: 'perishable', p: 0.3, kcal: 52, c: 14, da: ['æbler', 'æble'], en: ['apple', 'apples'] },
   { key: 'citron', name: 'Citron', cat: 'fruit',
     class: 'fresh', keeps: 'perishable', p: 1, kcal: 29, c: 9,
-    da: ['citron', 'citroner', 'lime'], en: ['lemon', 'lime', 'lemons'] },
+    da: ['citron', 'citroner', 'lime', 'citrusfrugt'], en: ['lemon', 'lime', 'lemons'] },
   { key: 'appelsin', name: 'Appelsiner', cat: 'fruit',
     class: 'fresh', keeps: 'perishable', p: 0.9, kcal: 47, c: 12,
     da: ['appelsiner', 'appelsin', 'clementiner'], en: ['orange', 'oranges'] },

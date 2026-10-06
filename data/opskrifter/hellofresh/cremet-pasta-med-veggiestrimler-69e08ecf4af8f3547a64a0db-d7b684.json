@@ -1,0 +1,211 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremet-pasta-med-veggiestrimler-69e08ecf4af8f3547a64a0db",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:51:32.139Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 913,
+    "protein_g": 35,
+    "carbs_g": 84.2,
+    "fat_g": 46.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R08_BW37_SE_C10327-6_Main_edit_high-4c040d75.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:04:25.278Z",
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "dild",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet, uskrællet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": "halveret og snittet fint",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "linguine",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "høvlet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "vegetarstykker",
+      "note": "plantebaserede kyllingestykker",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til vegetarstykkerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "gemt pastavand",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en stor gryde med vand over varmen, og kom rigeligt salt i, så vandet smager som havvand. Bring det i kog."
+    },
+    {
+      "section": null,
+      "text": "Forbered grøntsagerne: Snit fennikel fint, og hak hvidløg og dild. Skær porren i tynde halve skiver, riv gulerod groft med skræl på, og del citronen i både."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en stor pande på middelhøj varme. Brun vegetarstykkerne med salt og peber i 3-4 minutter. Kom dem i en lille skål, og pres et godt skvæt citronsaft over."
+    },
+    {
+      "section": null,
+      "text": "Kog pastaen al dente i ca. 8 minutter, så den er mør, men stadig har lidt bid. Tag en kop af kogevandet fra, før du hælder resten af vandet fra."
+    },
+    {
+      "section": null,
+      "text": "Mens pastaen koger, tilsættes lidt mere olie i samme pande på middelhøj varme. Svits fennikel, porre og hvidløg i 2-3 minutter, til de bliver bløde. Kom gulerod i, og steg i yderligere 3 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør creme fraiche, det gemte pastavand, bouillon, det meste af dilden, salt og peber i panden, og lad saucen simre i 4-5 minutter. Er den for tyk, så tilsæt lidt vand."
+    },
+    {
+      "section": null,
+      "text": "Vend pasta og vegetarstykker i saucen."
+    },
+    {
+      "section": null,
+      "text": "Anret i dybe tallerkener, og drys med høvlet parmesan og resten af dilden. Server med citronbådene ved siden af."
+    }
+  ],
+  "title": "Cremet pasta med vegetarstykker og dild",
+  "intro": "Cremet pasta med fennikel, porre og gulerod i en dildduftende sauce, toppet med vegetarstykker og høvlet parmesan. Citron giver friskhed til retten.",
+  "servings": 2,
+  "changes": [
+    "Linguine er skiftet til pasta.",
+    "Grana Padano er skiftet til parmesan.",
+    "Citrusfrugt er skiftet til citron.",
+    "Plantebaserede kyllingestykker er skiftet til vegetarstykker."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har vegetarstykker som hovedråvare, pasta som mættende element og masser af grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:40:43.443Z"
+  }
+}

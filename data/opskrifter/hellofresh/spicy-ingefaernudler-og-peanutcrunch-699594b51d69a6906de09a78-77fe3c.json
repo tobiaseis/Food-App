@@ -1,0 +1,198 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/spicy-ingefaernudler-og-peanutcrunch-699594b51d69a6906de09a78",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:10:06.812Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 635,
+    "protein_g": 24.2,
+    "carbs_g": 83.1,
+    "fat_g": 21.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R05_BW03_SE_R24249-1_Main_high-13b9001f.jpg",
+  "lang": "da",
+  "keywords": "Indonesisk",
+  "fetched_at": "2026-10-05T20:06:42.805Z",
+  "title": "Spicy ingefærnudler med peanutcrunch og stegte svampe",
+  "intro": "Nudler vendes i en kraftig sauce af gochujang, sataysauce og peanuts sammen med stegte champignon og wokgrøntsager. Toppet med cashewnødder, sesamfrø og forårsløg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 50,
+      "unit": "g",
+      "name": "sataysauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "revet, ellers ingefærpasta",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 20,
+      "unit": "g",
+      "name": "nødder",
+      "note": "saltede peanuts",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 30,
+      "unit": "g",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": 200,
+      "unit": "g",
+      "name": "wokblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": 150,
+      "unit": "g",
+      "name": "nudler",
+      "note": "mienudler",
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til nudlerne",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "nudelvand fra kogningen",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": "snittet fint",
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til toppen",
+      "amount": 20,
+      "unit": "g",
+      "name": "cashewnødder",
+      "note": "ristede",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en stor gryde med vand over varmen, og kom rigeligt salt i, så det smager af havvand. Lad det koge."
+    },
+    {
+      "section": "Til saucen",
+      "text": "Pres eller finhak hvidløget, og hak peanuts groft. Rør dem sammen med ingefær, gochujang, sojasauce, sataysauce, ketchup og eddike i en skål."
+    },
+    {
+      "section": "Til nudlerne",
+      "text": "Snit forårsløget fint, og skær champignon i tynde skiver."
+    },
+    {
+      "section": "Til nudlerne",
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Steg champignon og wokblanding med saltet, til det er brunet, 3-4 minutter."
+    },
+    {
+      "section": "Til nudlerne",
+      "text": "Kog nudlerne møre i 4 minutter. Tag 1 dl af kogevandet fra, og si nudlerne."
+    },
+    {
+      "section": "Til nudlerne",
+      "text": "Vend nudler, sauce og det afmålte nudelvand ned i panden til grøntsagerne. Tilsæt lidt vand, hvis det er for tørt."
+    },
+    {
+      "section": "Til toppen",
+      "text": "Fordel nudlerne i dybe tallerkener, og drys med forårsløg, sesamfrø og cashewnødder."
+    }
+  ],
+  "changes": [
+    "Ingefærpasta er erstattet af revet ingefær.",
+    "Wokblanding og mienudler er beholdt som i kilden."
+  ]
+}

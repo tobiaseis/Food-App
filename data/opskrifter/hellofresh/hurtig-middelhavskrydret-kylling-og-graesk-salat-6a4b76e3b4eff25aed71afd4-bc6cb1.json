@@ -1,0 +1,206 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-middelhavskrydret-kylling-og-graesk-salat-6a4b76e3b4eff25aed71afd4",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:20:23.723Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 650,
+    "protein_g": 52,
+    "carbs_g": 47.4,
+    "fat_g": 26.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R12_BW13_SE_C55553-1_main_high-85d41b85.jpg",
+  "lang": "da",
+  "keywords": "Græsk",
+  "fetched_at": "2026-10-05T20:00:50.357Z",
+  "title": "Middelhavskylling med græsk salat og kikærter",
+  "intro": "Paneret kylling steges sammen med kikærter og peberfrugt og lægges på en sprød salat med agurk og dressing. En hurtig hverdagsret med middelhavssmag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kylling",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 50,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 4,
+      "unit": "g",
+      "name": "souvlaki-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "romainesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 50,
+      "unit": "ml",
+      "name": "dressing",
+      "note": "citron",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "aioli",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kylling",
+      "text": "Skær peberfrugten i strimler på ca. 2 cm, og si kikærterne fra deres væske."
+    },
+    {
+      "section": "Kylling",
+      "text": "Vend kyllingen i en stor skål med mel, salt, peber og halvdelen af souvlaki-krydderiet. Pisk ægget i en anden skål, og rør det i kyllingen."
+    },
+    {
+      "section": "Kylling",
+      "text": "Varm olien på en stor pande ved middelhøj varme. Tilsæt panko til kyllingen lige før stegning, og vend det hele rundt."
+    },
+    {
+      "section": "Kylling",
+      "text": "Steg kylling, kikærter, peberfrugt og resten af krydderiet i 6-8 minutter, til kyllingen er gylden og helt gennemstegt. Kødet skal være hvidt uden spor af rødt."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær agurken i halve skiver. Skær bunden af salaten, og pluk bladene fra hinanden."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend salat og agurk i en stor skål med dressing, halvdelen af eddiken, salt og peber."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg salaten på tallerkener, og fordel kylling, kikærter og peberfrugt ovenpå. Dryp med aioli."
+    }
+  ],
+  "changes": [
+    "Kyllingebryststrimler er skrevet som kyllingebryst i strimler.",
+    "Mel til panering er skrevet som hvedemel.",
+    "Citrondressing med kærnemælk er erstattet af en almindelig citrondressing."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, kikærter som mættende element og rigeligt grønt i salaten, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:06.372Z"
+  }
+}

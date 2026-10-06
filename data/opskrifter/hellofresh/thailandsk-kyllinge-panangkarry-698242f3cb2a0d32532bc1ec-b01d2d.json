@@ -1,0 +1,230 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/thailandsk-kyllinge-panangkarry-698242f3cb2a0d32532bc1ec",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:11:38.317Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 983,
+    "protein_g": 55.2,
+    "carbs_g": 90.6,
+    "fat_g": 47.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R18_BW35_SE_P45682-1_Mainhigh-b83432b0.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:06:54.637Z",
+  "title": "Panangkarry med kylling, grønne bønner og peanuts",
+  "intro": "Cremet thailandsk karry med kylling, peberfrugt og peanutbutter, der serveres med ris og sprøde bønner. Ristede løg, koriander og peanuts giver knas og friskhed på toppen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 1,
+      "unit": "stilk",
+      "name": "citrongræs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 60,
+      "unit": "g",
+      "name": "rød karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 25,
+      "unit": "g",
+      "name": "peanutbutter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 30,
+      "unit": "g",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 150,
+      "unit": "g",
+      "name": "grønne bønner",
+      "note": "enderne skåret af, halveret",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til bønnerne",
+      "optional": false
+    },
+    {
+      "section": "Bønner",
+      "amount": 20,
+      "unit": "g",
+      "name": "saltede peanuts",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 30,
+      "unit": "g",
+      "name": "ristede løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citrusfrugt",
+      "note": "halveret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom vand og salt i en gryde, og bring det i kog. Rør risene i, læg låg på, og lad dem koge ved middellav varme i 10 min."
+    },
+    {
+      "section": "Ris",
+      "text": "Træk gryden af varmen, og lad risene trække under låg i 10 min. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Del citrusfrugten på midten. Skær peberfrugten i tern på 2 cm. Snit enderne af bønnerne, og skær dem over på midten."
+    },
+    {
+      "section": "Karry",
+      "text": "Varm olien i en stor pande ved middelhøj varme. Brun kylling og peberfrugt i 3-4 min, til kødet er hvidt hele vejen igennem, og peberfrugten er begyndt at blive blød."
+    },
+    {
+      "section": "Karry",
+      "text": "Slå let på citrongræsset med en træske, så det åbner sig. Læg det på panden sammen med karrypastaen, og rør rundt i cirka 20 sek., til det dufter."
+    },
+    {
+      "section": "Karry",
+      "text": "Rør peanutbutter, kokosmælk, fiskesauce og vand i panden. Skru ned til middel varme, og lad karryen simre 3-5 min, til kyllingen er helt gennemstegt. Hold den varm."
+    },
+    {
+      "section": "Karry",
+      "text": "Skær chilien på langs, skrab kernerne ud, og hak den fint. Brug mindre chili eller drop den, hvis nogen ikke bryder sig om stærk mad."
+    },
+    {
+      "section": "Bønner",
+      "text": "Varm lidt olie i en anden stor pande ved middelhøj varme. Steg bønnerne 3-4 min, til de er møre. Et skvæt vand i panden får dem hurtigere færdige."
+    },
+    {
+      "section": "Bønner",
+      "text": "Pluk korianderbladene, og hak peanuts groft."
+    },
+    {
+      "section": "Servering",
+      "text": "Tag citrongræsset op af karryen. Fordel ris og karry i dybe tallerkener, og drys med chili, ristede løg og koriander. Server bønnerne ved siden af med peanuts over og citrusfrugten til at presse."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, basmatiris som mættende element og grøntsager, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:46.471Z"
+  }
+}

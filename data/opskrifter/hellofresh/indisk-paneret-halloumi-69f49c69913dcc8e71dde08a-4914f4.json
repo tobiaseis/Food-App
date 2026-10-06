@@ -1,0 +1,278 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/indisk-paneret-halloumi-69f49c69913dcc8e71dde08a",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:45:08.646Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 24,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1016,
+    "protein_g": 39,
+    "carbs_g": 104,
+    "fat_g": 51.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R01_BW44_SE_V20036-1_Main_high-7055a561.jpg",
+  "lang": "da",
+  "keywords": "Indisk",
+  "fetched_at": "2026-10-05T20:03:39.146Z",
+  "title": "Paneret halloumi med ovnbagte rodfrugter og abrikoschutney",
+  "intro": "Sprød halloumi i krydret panering serveres med ovnbagte kartofler og gulerødder, frisk salat med kålrabi og syltede løg. Yoghurt og sød abrikoschutney runder retten af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "g",
+      "name": "ingefær",
+      "note": "stødt",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "abrikoschutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "kålrabi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "karry",
+      "note": "mild",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "romainesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "halloumi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartofler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til syltning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til salat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salat",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær kartofler og gulerod i tern på ca. 2 cm. Gulerod skal ikke skrælles."
+    },
+    {
+      "section": null,
+      "text": "Læg terningerne på en bageplade med bagepapir. Vend dem med lidt olivenolie, ingefær, salt til kartofler og peber. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": null,
+      "text": "Bag rodfrugterne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Skær løget i tynde halvskiver. Pres saften af citronen i en lille skål, og rør sukker og salt til syltning ud i den. Læg løget i og lad det trække, mens du laver resten."
+    },
+    {
+      "section": null,
+      "text": "Hak salaten groft. Skræl kålrabien, og skær den i stave på ca. 1 cm. Kom salat og kålrabi i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Hak koriander fint. Slå chilien op, fjern kernerne, og skær den i tynde skiver."
+    },
+    {
+      "section": null,
+      "text": "Skær halloumien i tynde skiver, tre til hver person. Rør hvedemel og peber sammen på en dyb tallerken. Pisk ægget på en anden tallerken. Bland panko, salt til panering og karry på en tredje. Har du ikke æg, kan du bruge 2 spsk mælk."
+    },
+    {
+      "section": null,
+      "text": "Vend hver skive først i melblandingen, så i æg og til sidst i panko."
+    },
+    {
+      "section": null,
+      "text": "Varm olivenolie til stegning på en stor pande ved middelhøj varme, så bunden er dækket. Steg halloumien gylden i 2-3 minutter på hver side, og læg den på køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Lige før servering vendes de syltede løg med lagen, olivenolie til salat og salt til salat sammen med salaten og kålrabien."
+    },
+    {
+      "section": null,
+      "text": "Server halloumi, salat og rodfrugter på tallerkener. Drys rodfrugterne med chili, sesamfrø og koriander, og sæt yoghurt og abrikoschutney ved siden af. Brug mindre chili eller drop den, hvis du ikke vil have det stærkt."
+    }
+  ],
+  "changes": [
+    "Ginger Ninja er erstattet med stødt ingefær.",
+    "Mild Mahal er erstattet med mild karry.",
+    "Citrusfrugt er erstattet med citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har halloumi som hovedråvare, ovnbagte kartofler og rodfrugter som mættende del samt salat med kålrabi.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:39:24.583Z"
+  }
+}

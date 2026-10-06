@@ -794,25 +794,27 @@ test('sides-prompten er fast og nævner de tilladte enheder; beskeden bruger udg
   assert.match(msg, /1\. Steg\./);
 });
 
-test('cleanSide: varenavne med småt, basisvarer droppes, men en eneste linje bevares', () => {
+// Ændret bevidst (opgave 1): olie og smør droppes ikke mere — sprøde ovnkartofler
+// kræver olie. Kun salt og peber fjernes.
+test('cleanSide: varenavne med småt, salt/peber droppes, olie/smør beholdes, og en eneste linje bevares', () => {
   const l = (name, extra = {}) => ({ section: null, amount: 1, unit: 'g', name, note: 'Til Vandet', optional: false, ...extra });
   const side = { title: 'Kartofler', ingredients: [l('Kartofler'), l('Grøn salat'), l('Olivenolie'), l('Salt'), l('Peanutsmør')], steps: ['Kog.'] };
   const out = sides.cleanSide(side);
-  assert.deepEqual(out.ingredients.map((i) => i.name), ['kartofler', 'grøn salat', 'peanutsmør']);
+  assert.deepEqual(out.ingredients.map((i) => i.name), ['kartofler', 'grøn salat', 'olivenolie', 'peanutsmør']);
   assert.equal(out.ingredients[0].note, 'Til Vandet', 'resten af teksten er uændret');
   assert.equal(out.title, 'Kartofler');
-  const only = sides.cleanSide({ title: 'x', ingredients: [l('Smør')], steps: [] });
-  assert.deepEqual(only.ingredients.map((i) => i.name), ['smør']);
+  const only = sides.cleanSide({ title: 'x', ingredients: [l('Salt')], steps: [] });
+  assert.deepEqual(only.ingredients.map((i) => i.name), ['salt']);
   assert.equal(sides.cleanSide(null), null);
 });
 
 // ── Tilbehør (meal.side) ─────────────────────────────────────────────────────
 
 const SIDE = {
-  title: 'Kogte kartofler',
+  title: 'Sprøde ovnkartofler',
   ingredients: [
     { section: null, amount: 800, unit: 'g', name: 'kartofler', note: null, optional: false },
-    { section: null, amount: null, unit: null, name: 'salt', note: null, optional: false },
+    { section: null, amount: 2, unit: 'spsk', name: 'olivenolie', note: null, optional: false },
   ],
   steps: ['Kog kartoflerne møre i letsaltet vand.', 'Hæld vandet fra og damp dem af.'],
 };
@@ -824,7 +826,7 @@ test('en udgave med tilbehør får afsnittet Tilbehør i linjer og trin', () => 
     assert.equal(res.applied, 1, JSON.stringify(res.flaggedList));
     const lines = db.prepare('SELECT * FROM recipe_ingredients WHERE recipe_id = ? ORDER BY position').all(id);
     assert.equal(lines.length, 5);
-    assert.deepEqual(lines.slice(3).map((l) => l.section), ['Tilbehør: Kogte kartofler', 'Tilbehør: Kogte kartofler']);
+    assert.deepEqual(lines.slice(3).map((l) => l.section), ['Tilbehør: Sprøde ovnkartofler', 'Tilbehør: Sprøde ovnkartofler']);
     assert.equal(lines[3].item_key, 'kartofler');
     const steps = db.prepare('SELECT * FROM recipe_steps WHERE recipe_id = ? ORDER BY position').all(id);
     assert.deepEqual(steps.slice(2).map((s) => s.section), ['Tilbehør', 'Tilbehør']);
@@ -850,7 +852,8 @@ test('et tilbehør med ukendt enhed, uden trin eller med for mange linjer holdes
   const bad = [
     { ...SIDE, ingredients: [{ ...SIDE.ingredients[0], unit: 'bolle' }, SIDE.ingredients[1]] },
     { ...SIDE, steps: [] },
-    { ...SIDE, ingredients: Array(5).fill(SIDE.ingredients[0]) },
+    { ...SIDE, ingredients: Array(7).fill(SIDE.ingredients[0]) },
+    { ...SIDE, steps: Array(5).fill('Bag.') },
     { ...SIDE, ingredients: [] },
     { ...SIDE, ingredients: [{ ...SIDE.ingredients[0], amount: 0 }] },
   ];
@@ -873,10 +876,40 @@ test('et tilbehør med bælgfrugt eller æg holdes tilbage, kartofler ikke', () 
     assert.equal(res.applied, 0);
     assert.match(res.flaggedList[0].issues[0], /^tilbehør: /);
   });
-  const pot = { ...SIDE, ingredients: [{ section: null, amount: 1, unit: 'kg', name: 'kartofler', note: null, optional: false }] };
+  const pot = { ...SIDE, ingredients: [{ section: null, amount: 1, unit: 'kg', name: 'kartofler', note: null, optional: false }, SIDE.ingredients[1]] };
   withEdition(withMeal(31, { complete: false, reason: 'x', side: pot }), ({ dir }) => {
     assert.equal(importAll({ dir, log: () => {} }).applied, 1);
   });
+});
+
+test('et kedeligt tilbehør (kun kogte kartofler/ris/bar salat) holdes tilbage, et med smag ikke', () => {
+  const { sideProblems } = require('../src/recipes/import-da');
+  const l = (amount, unit, name) => ({ section: null, amount, unit, name, note: null, optional: false });
+  const boring = [
+    { title: 'Kogte kartofler og grøn salat', ingredients: [l(1, 'kg', 'kartofler'), l(1, 'stk', 'hovedsalat')] },
+    { title: 'Kogt ris', ingredients: [l(300, 'g', 'ris'), l(null, null, 'salt')] },
+    { title: 'Ris', ingredients: [l(300, 'g', 'basmatiris')] },
+    { title: 'Hovedsalat', ingredients: [l(1, 'stk', 'hovedsalat')] },
+    { title: 'Grøn salat', ingredients: [l(200, 'g', 'grøn salat')] },
+  ];
+  for (const b of boring) {
+    const issues = sideProblems({ ...b, steps: ['Kog.'] });
+    assert.ok(issues.some((m) => m.startsWith('tilbehør: for kedeligt')), b.title);
+  }
+  const good = {
+    title: 'Sprøde rosmarinkartofler og agurkesalat',
+    ingredients: [l(1, 'kg', 'kartofler'), l(2, 'spsk', 'olivenolie'), l(2, 'tsk', 'rosmarin'), l(1, 'stk', 'agurk'), l(2, 'spsk', 'eddike'), l(1, 'dl', 'dild')],
+    steps: ['Bag.', 'Vend.'],
+  };
+  assert.deepEqual(sideProblems(good), []);
+  // En nøgen titel er nok: smør og dild på kogte kartofler gør dem ikke til et tilbehør.
+  const butter = { title: 'Kogte kartofler', ingredients: [l(1, 'kg', 'kartofler'), l(30, 'g', 'smør'), l(1, 'dl', 'dild')], steps: ['Kog.'] };
+  assert.ok(sideProblems(butter).some((m) => m.includes('kedeligt')));
+  const rice = { title: 'Kogt ris', ingredients: [l(300, 'g', 'ris'), l(20, 'g', 'smør')], steps: ['Kog.'] };
+  assert.ok(sideProblems(rice).some((m) => m.includes('kedeligt')));
+  // Finere titel, men kun kartofler: også kedeligt. Med persille slipper den igennem.
+  assert.ok(sideProblems({ title: 'Sprøde ovnkartofler', ingredients: [l(1, 'kg', 'kartofler')], steps: ['Bag.'] }).some((m) => m.includes('kedeligt')));
+  assert.ok(!sideProblems({ title: 'Kartofler med persille', ingredients: [l(1, 'kg', 'kartofler'), l(1, 'dl', 'persille')], steps: ['Kog.'] }).some((m) => m.includes('kedeligt')));
 });
 
 test('en udgave, der får meal tilføjet, læses ind igen', () => {
@@ -887,4 +920,274 @@ test('en udgave, der får meal tilføjet, læses ind igen', () => {
     assert.equal(importAll({ dir, log: () => {} }).applied, 1);
     assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_ingredients WHERE recipe_id = ?').get(id).n, 5);
   });
+});
+
+// --- Selvbærende udgaver: en ret, basen ikke kender, oprettes af importen ---
+
+const NEW_URL = 'https://test.invalid/da-import-ny';
+const newEdition = (over = {}) => ({
+  ...EDITION_FIXTURE, url: NEW_URL, source: 'nykilde', source_name: 'Ny Kilde',
+  image: 'https://test.invalid/foto.jpg', lang: 'da', keywords: 'Aftensmad, Lam',
+  fetched_at: '2026-10-01T08:00:00.000Z', source_lines: 3, ...over,
+});
+
+function withNewEdition(edition, fn) {
+  const db = getDb();
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'opskrifter-'));
+  fs.writeFileSync(path.join(dir, 'ny.json'), JSON.stringify(edition));
+  try { return fn({ db, dir }); } finally {
+    db.prepare('DELETE FROM recipes WHERE url = ?').run(NEW_URL);
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+test('en udgave med ukendt url opretter retten og læses ind', () => {
+  withNewEdition(newEdition(), ({ db, dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.created, 1);
+    assert.equal(res.flagged, 0);
+    const r = db.prepare('SELECT * FROM recipes WHERE url = ?').get(NEW_URL);
+    assert.equal(r.source, 'nykilde');
+    assert.equal(r.source_name, 'Ny Kilde');
+    assert.equal(r.title, 'Lammeculotte med krydderurter');
+    assert.equal(r.lang, 'da');
+    assert.equal(r.image, 'https://test.invalid/foto.jpg');
+    assert.equal(r.keywords, 'Aftensmad, Lam');
+    assert.equal(r.fetched_at, '2026-10-01T08:00:00.000Z');
+    assert.equal(r.servings, 4);
+    assert.equal(r.yield_count, 4);
+    assert.equal(r.total_minutes, 90);
+    assert.equal(r.edition, 1);
+    const lines = db.prepare('SELECT item_key FROM recipe_ingredients WHERE recipe_id = ? ORDER BY position').all(r.id);
+    assert.deepEqual(lines.map((l) => l.item_key), ['lam', 'hvidloeg', 'salt']);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipe_steps WHERE recipe_id = ?').get(r.id).n, 2);
+    // Anden gang er den kendt og uændret: ingen ny ret.
+    const again = importAll({ dir, log: () => {} });
+    assert.equal(again.created, 0);
+    assert.equal(again.unchanged, 1);
+  });
+});
+
+test('en oprettet ret får tier og scorer af reclassify', () => {
+  const { reclassify } = require('../src/recipes/reclassify');
+  withNewEdition(newEdition(), ({ db, dir }) => {
+    importAll({ dir, log: () => {} });
+    reclassify({ log: () => {} });
+    const r = db.prepare('SELECT tier, tier_score, score_healthy, score_classic, score_premium, nutrition_src, kcal FROM recipes WHERE url = ?').get(NEW_URL);
+    assert.ok(['healthy', 'classic', 'premium'].includes(r.tier), `tier: ${r.tier}`);
+    for (const k of ['tier_score', 'score_healthy', 'score_classic', 'score_premium']) {
+      assert.equal(typeof r[k], 'number', k);
+    }
+    assert.equal(r.nutrition_src, 'estimated');
+  });
+});
+
+test('en ny ret uden kendt hovedråvare oprettes (motoren afgør, om den er aftensmad)', () => {
+  const veg = newEdition({
+    ingredients: [
+      { section: null, amount: 3, unit: 'fed', name: 'hvidløg', note: null, optional: false },
+      { section: null, amount: null, unit: null, name: 'salt', note: null, optional: false },
+    ],
+    source_lines: 2,
+  });
+  withNewEdition(veg, ({ db, dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.created, 1);
+    assert.equal(res.flagged, 0);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipes WHERE url = ?').get(NEW_URL).n, 1);
+  });
+});
+
+test('en ny ret med 1 af 4 linjer ukendt oprettes, med 2 af 4 holdes den tilbage', () => {
+  const ing = (name) => ({ section: null, amount: 1, unit: 'stk', name, note: null, optional: false });
+  const four = (a, b) => newEdition({
+    ingredients: [ing('lammeculotte'), ing('hvidløg'), ing(a), ing(b)], source_lines: 4,
+  });
+  withNewEdition(four('qxzvbn', 'salt'), ({ dir }) => {
+    assert.equal(importAll({ dir, log: () => {} }).created, 1);
+  });
+  withNewEdition(four('qxzvbn', 'zzyxwv'), ({ db, dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.created, 0);
+    assert.match(res.flaggedList[0].issues.join(), /2 ukendte linjer/);
+    assert.equal(db.prepare('SELECT COUNT(*) n FROM recipes WHERE url = ?').get(NEW_URL).n, 0);
+  });
+});
+
+test('en ny ret uden source_name holdes tilbage', () => {
+  withNewEdition(newEdition({ source_name: undefined }), ({ dir }) => {
+    const res = importAll({ dir, log: () => {} });
+    assert.equal(res.created, 0);
+    assert.match(res.flaggedList[0].issues.join(), /source_name mangler/);
+  });
+});
+
+test('accepted tilsidesætter ikke kravet om source_name på en ny ret', () => {
+  withNewEdition(newEdition({ source_name: undefined, accepted: true }), ({ dir }) => {
+    const lines = [];
+    const res = importAll({ dir, log: (l) => lines.push(l) });
+    assert.equal(res.created, 0);
+    assert.match(res.flaggedList[0].issues.join(), /source_name mangler/);
+    // Tilbageholdt ny ret vises som "ny", ikke "null".
+    assert.ok(lines.some((l) => /^ {2}ny /.test(l)), lines.join(', '));
+    assert.ok(!lines.some((l) => /null/.test(l)), lines.join(', '));
+  });
+});
+
+test('en ny ret med næring i udgaven beholder den (site) efter reclassify', () => {
+  const { reclassify } = require('../src/recipes/reclassify');
+  const nutrition = { per_servings: 4, kcal: 612, protein_g: 41.5, carbs_g: 38, fat_g: 29 };
+  withNewEdition(newEdition({ nutrition }), ({ db, dir }) => {
+    importAll({ dir, log: () => {} });
+    reclassify({ log: () => {} });
+    const r = db.prepare('SELECT kcal, protein_g, carbs_g, fat_g, nutrition_src FROM recipes WHERE url = ?').get(NEW_URL);
+    assert.equal(r.nutrition_src, 'site');
+    assert.equal(r.kcal, 612);
+    assert.equal(r.protein_g, 41.5);
+    assert.equal(r.fat_g, 29);
+  });
+});
+
+test('editionRecord skriver sidens næring, og backfill lægger kun site-næring fra basen', () => {
+  const { editionRecord } = require('../src/recipes/rewrite');
+  const { withMeta } = require('../scripts/backfill-edition-meta');
+  const base = { url: 'u', source: 's', source_name: 'S', yield_count: 2, ingredients: ['1 a'] };
+  const out = { model: 'm', output: { title: 'X', ingredients: [] } };
+  assert.deepEqual(editionRecord({ ...base, nutrition: { kcal: 500, protein_g: 30, carbs_g: null, fat_g: 20 } }, out).nutrition,
+    { per_servings: 2, kcal: 500, protein_g: 30, carbs_g: null, fat_g: 20 });
+  assert.ok(!('nutrition' in editionRecord(base, out)));
+  const ed = { url: 'u', yield_count: 2, source_lines: 1, title: 'T', image: 'i', lang: 'da', keywords: null, fetched_at: 'f' };
+  const site = { servings: 2, kcal: 500, protein_g: 30, carbs_g: 40, fat_g: 20, nutrition_src: 'site' };
+  assert.deepEqual(withMeta(ed, site).nutrition, { per_servings: 2, kcal: 500, protein_g: 30, carbs_g: 40, fat_g: 20 });
+  assert.ok(!('nutrition' in withMeta(ed, { ...site, nutrition_src: 'estimated' })));
+});
+
+test('editionRecord skriver image, lang, keywords og fetched_at fra kilden', () => {
+  const { editionRecord } = require('../src/recipes/rewrite');
+  const src = {
+    url: 'https://test.invalid/x', source: 'test', source_name: 'Test', yield_count: 4,
+    ingredients: ['1 a'], image: 'https://test.invalid/i.jpg', keywords: 'a, b',
+    fetched_at: '2026-10-01T00:00:00.000Z',
+  };
+  const ed = editionRecord(src, { model: 'm', output: { title: 'X', ingredients: [] } });
+  assert.equal(ed.image, 'https://test.invalid/i.jpg');
+  assert.equal(ed.lang, 'da');
+  assert.equal(ed.keywords, 'a, b');
+  assert.equal(ed.fetched_at, '2026-10-01T00:00:00.000Z');
+  // En ældre kilde-record uden felterne giver null, ikke fejl.
+  const bare = editionRecord({ ...src, image: undefined, keywords: undefined, fetched_at: undefined },
+    { model: 'm', output: { title: 'X', ingredients: [] } });
+  assert.equal(bare.image, null);
+  assert.equal(bare.keywords, null);
+});
+
+test('backfill-edition-meta lægger kun manglende felter på, lige efter source_lines', () => {
+  const { withMeta } = require('../scripts/backfill-edition-meta');
+  const ed = { url: 'u', yield_count: 4, source_lines: 3, title: 'T', image: 'rettet.jpg' };
+  const row = { image: 'basen.jpg', keywords: 'k', fetched_at: '2026-08-27T00:00:00.000Z' };
+  const out = withMeta(ed, row);
+  assert.equal(out.image, 'rettet.jpg');
+  assert.equal(out.lang, 'da');
+  assert.equal(out.keywords, 'k');
+  assert.equal(out.fetched_at, '2026-08-27T00:00:00.000Z');
+  const keys = Object.keys(out);
+  assert.equal(keys[keys.indexOf('source_lines') + 1], 'lang');
+  assert.equal(keys.at(-1), 'image');
+  // Idempotent.
+  assert.deepEqual(withMeta(out, row), out);
+  assert.deepEqual(ed, { url: 'u', yield_count: 4, source_lines: 3, title: 'T', image: 'rettet.jpg' });
+});
+
+test('backfill-edition-meta opdaterer en udgave med CRLF, ikke springer den over', () => {
+  // På Windows med core.autocrlf=true læses filen med CRLF fra git, men scripts
+  // skriver LF. En fil i standardformat men med CRLF blev derfor sprunget over.
+  // Testen skriver en fil med CRLF og uden lang-feltet, kører backfill, og
+  // tjekker at (a) den blev opdateret, ikke sprunget, og (b) den skrives med LF.
+  const db = getDb();
+  const { DB_PATH } = require('../src/db');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'opskrifter-crlf-'));
+
+  // Indsætter en ret i databasen så backfill kan finde den
+  const now = new Date().toISOString();
+  db.prepare(`INSERT INTO recipes (url, source, source_name, title, lang, servings, fetched_at)
+             VALUES (?, 'test', 'Test', 'Lammeculotte', 'en', 4, ?)`).run(EDITION_FIXTURE.url, now);
+
+  try {
+    const filePath = path.join(dir, 'crlf-test.json');
+    // Skriver filen uden lang-feltet, med CRLF sådan som Windows autocrlf-checkout ville gøre
+    const withoutLang = { ...EDITION_FIXTURE, lang: undefined };
+    const json = `${JSON.stringify(withoutLang, null, 2)}\n`;
+    fs.writeFileSync(filePath, json.replace(/\n/g, '\r\n'));
+
+    // Verificerer at filen har CRLF før backfill
+    const before = fs.readFileSync(filePath, 'utf8');
+    assert.ok(before.includes('\r\n'), 'testen skal skrive filen med CRLF');
+    assert.equal(before, json.replace(/\n/g, '\r\n'));
+
+    const stats = require('../scripts/backfill-edition-meta').main({ dir, dbPath: DB_PATH });
+    // Fil blev opdateret, ikke sprunget over som håndrettet
+    assert.equal(stats.written, 1, 'CRLF-filen skal opdateres');
+    assert.equal(stats.handEdited, 0, 'CRLF-filen skal ikke tælles som håndrettet');
+
+    // Verificerer at filen nu har LF
+    const after = fs.readFileSync(filePath, 'utf8');
+    assert.ok(after.includes('lang'), 'lang-feltet skal være tilføjet');
+    assert.ok(!after.includes('\r\n'), 'filen skal skrives med LF, ikke CRLF');
+    assert.ok(after.endsWith('\n') && !after.endsWith('\r\n'));
+  } finally {
+    db.prepare('DELETE FROM recipes WHERE url = ?').run(EDITION_FIXTURE.url);
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('HelloFresh: nyeste udgave pr. ret, kun rene opskrifts-URL\'er', () => {
+  const { pickHelloFreshUrls } = require('../src/recipes/sources');
+  const B = 'https://www.hellofresh.dk/recipes/';
+  const gammel = `${B}kyllingewok-5ec7740fc1fac21b2d322c06`;
+  const ny = `${B}kyllingewok-65ec7740fc1fac21b2d322c0`;
+  const anden = `${B}laks-med-ris-60aa0000fc1fac21b2d322c1`;
+  const locs = [
+    gammel, anden, ny,
+    `${B}laks-med-ris-60aa0000fc1fac21b2d322c1?page=2`,
+    `${B}search/?q=laks`,
+    `${B}uden-id`,
+    'https://www.hellofresh.dk/recipes/',
+  ];
+  assert.deepEqual(pickHelloFreshUrls(locs), [ny, anden]);
+  assert.deepEqual(pickHelloFreshUrls(locs, 1), [ny]);
+});
+
+test('HelloFresh: ret med kendt slug hentes ikke igen under nyt id', () => {
+  const { excludeKnownHelloFreshSlugs } = require('../src/recipes/sources');
+  const B = 'https://www.hellofresh.dk/recipes/';
+  const kendt = new Set([`${B}kyllingewok-5ec7740fc1fac21b2d322c06`]);
+  const genudgivet = `${B}kyllingewok-65ec7740fc1fac21b2d322c0`;
+  const ny = `${B}laks-med-ris-60aa0000fc1fac21b2d322c1`;
+  assert.deepEqual(excludeKnownHelloFreshSlugs([genudgivet, ny], kendt), [ny]);
+  assert.deepEqual(excludeKnownHelloFreshSlugs([genudgivet, ny], new Set()), [genudgivet, ny]);
+});
+
+test('HelloFresh-ingredienslinjer læses til vare og mængde', () => {
+  const p = (s) => parseIngredient(s);
+  const a = p('300 g Kyllingelårfilet');
+  assert.equal(a.item_key, 'kyllingelaar'); near(a.amount, 0.3);
+  const b = p('150 g Jasminris');
+  assert.equal(b.item_key, 'ris'); near(b.amount, 0.15);
+  const c = p('250 ml Kokosmælk');
+  assert.equal(c.item_key, 'kokosmaelk'); near(c.amount, 0.25);
+  const d = p('1 pose Koriander');
+  assert.equal(d.item_key, 'persille'); // koriander er i krydderurte-varen
+  const e = p('efter behov Sukker');
+  assert.equal(e.item_key, 'sukker');
+  assert.ok(e.amount == null);
+  // HelloFresh skriver "Citrusfrugt" (lime eller citron) – samme vare som citron.
+  // (parseIngredient læser items-tabellen i test.db, som først får ordet ved `npm run seed:items`, så seed-listen testes.)
+  assert.ok(require('../src/lib/taxonomy').SEED.find((i) => i.key === 'citron').da.includes('citrusfrugt'));
+  near(p('3.5 dl Vand').amount, 0.35);
+  // "Hakket svine-/kalvekød" er butikkens "hakket kalv og flæsk" — ikke kalvekød
+  // (stege-kød). Ellers holder importen udgaven tilbage: "hovedråvaren er væk".
+  const hakket = require('../src/lib/taxonomy').SEED.find((i) => i.key === 'hakket_oksekoed').da;
+  for (const s of ['hakket svine-/kalvekød', 'hakket svine- og kalvekød', 'hakket kalv og flæsk']) {
+    assert.ok(hakket.includes(s), s);
+  }
 });

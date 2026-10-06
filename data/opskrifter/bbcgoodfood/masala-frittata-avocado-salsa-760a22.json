@@ -9,6 +9,17 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 9,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 347,
+    "protein_g": 16,
+    "carbs_g": 12,
+    "fat_g": 25
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/masala-frittata-with-avocado-salsa-4d0a156.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Main course, Supper, British, 2 of 5-a-day, Avocado salsa, Budget, Easy dinner, Folate, Frittata recipe, Good for you, goodhealth, Jemma Morphet, Low calorie, Masala, salsa recipe, vegetarian frittata recipe, Vit C, Winter",
+  "fetched_at": "2026-08-27T17:49:09.996Z",
   "title": "Frittata med karry og avocadosalsa",
   "intro": "Luftig æggekage med løg, tomater og karry, der færdigbages under grillen. Serveres med en frisk salsa af avocado, tomat og koriander.",
   "servings": 4,
@@ -133,25 +144,59 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Frittataen er proteinrig med rigeligt grønt, men mangler stivelse/mætningsfølelse til et helt dansk aftensmåltid.",
+    "reason": "Frittataen er æg og grønt uden noget mættende som kartofler, ris eller brød, så den mangler en stivelseskomponent.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde spidskommenkartofler med hvidløg og citron",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Dræn dem, og server til frittataen."
+        "Skær kartoflerne i både, og vend dem med olie, spidskommen og salt.",
+        "Bag kartoflerne på en bageplade ved 220 grader i cirka 35 minutter, til de er gyldne og sprøde.",
+        "Hak hvidløget fint, og vend det med kartoflerne de sidste 5 minutter.",
+        "Pres citronsaft over de varme kartofler, og server dem til frittataen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:57:39.463Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:25.049Z"
   }
 }

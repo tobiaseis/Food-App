@@ -9,6 +9,17 @@
   "active_minutes": 10,
   "yield_count": 1,
   "source_lines": 6,
+  "nutrition": {
+    "per_servings": 1,
+    "kcal": 365,
+    "protein_g": 35,
+    "carbs_g": 2,
+    "fat_g": 24
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/crab-asparagus-omelette-02025ef.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Supper, 1 of 5-a-day, Asparagus, Crab, Folate, Gluten free, James Collins, Omelette, Vit C",
+  "fetched_at": "2026-08-27T17:49:16.522Z",
   "title": "Omelet med krabbekød og asparges",
   "intro": "En hurtig enkeltportion-omelet med sødt krabbekød, grønne asparges og et let stød af chili. Den færdiggøres under grillen, så den hæver sig og bliver luftig.",
   "servings": 1,
@@ -103,24 +114,66 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Omeletten mangler stivelse eller mere grønt til at være et helt måltid.",
+    "reason": "Omeletten har protein, men ingen mættende kilde som kartofler, brød eller pasta og kun lidt grønt.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde ovnkartofler med hvidløg og citronsalat af gulerødder",
       "ingredients": [
         {
           "section": null,
-          "amount": 250,
+          "amount": 400,
           "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "citronsaft",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "frisk persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
+        "Skær kartoflerne i både, vend dem med olie, knust hvidløg og salt, og bag dem sprøde ved 220 grader i cirka 30 minutter.",
+        "Riv gulerødderne groft, og vend dem med citronsaft, hakket persille og en knivspids salt.",
+        "Server gulerodssalaten til de varme kartofler og omeletten."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:58:33.646Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:31.596Z"
   }
 }

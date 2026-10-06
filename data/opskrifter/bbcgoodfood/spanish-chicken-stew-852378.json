@@ -9,6 +9,17 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 11,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 329,
+    "protein_g": 34,
+    "carbs_g": 8,
+    "fat_g": 17
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/spanish-chicken-stew-7a63ed5.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Supper, Spanish, 1 of 5-a-day, Chicken, goodhealth, Healthy, Jennifer Joyce, Olives, Rustic, Spanish, Stew, Vit C",
+  "fetched_at": "2026-08-27T17:47:16.163Z",
   "title": "Spansk kyllingegryde",
   "intro": "En enkel gryderet med mørt kyllingelår, peberfrugt og røget paprika, toppet med oliven og ristede mandler. Server den med ris eller godt brød.",
   "servings": 4,
@@ -146,25 +157,10 @@
     "Couchillo-oliven er skiftet til almindelige sorte oliven."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Gryden skal serveres med ris eller brød for at være et helt måltid.",
-    "side": {
-      "title": "Kogt ris",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 300,
-          "unit": "g",
-          "name": "langkornet ris",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Kog risen i letsaltet vand efter pakkeringsinstruktion."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:51:09.858Z"
+    "complete": true,
+    "reason": "Gryderetten har kylling og grønt, og opskriften har allerede kogte ris eller brød med som mættende del.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:53.905Z"
   }
 }

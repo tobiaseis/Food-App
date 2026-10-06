@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 9,
+  "image": "https://www.valdemarsro.dk/wp-content/2016/03/pankorasp-kylling.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:59:22.128Z",
   "title": "Fyldt kyllingebryst med chorizo og soltørrede tomater",
   "intro": "Sprøde, panerede kyllingebryster fyldt med pikant flødeost, chorizo og soltørrede tomater. De bages i ovnen, så retten er nem at lave.",
   "servings": 4,
@@ -119,9 +123,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse – kartofler, ris, pasta eller brød.",
+    "reason": "Retten er kun kød med fyld og panering uden mættende tilbehør eller grønt.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med hvidløg og citronsalat af gulerødder",
       "ingredients": [
         {
           "section": null,
@@ -133,19 +137,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 500,
+          "unit": "g",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, vend dem med halvdelen af olien, knust hvidløg og salt, og bag dem sprøde ved 200 grader i cirka 35 minutter.",
+        "Riv gulerødderne groft, og vend dem med resten af olien, saft fra citronen og hakket persille.",
+        "Smag gulerodssalaten til med salt og peber.",
+        "Server de varme kartofler med gulerodssalaten til kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:47:00.971Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:30:05.932Z"
   }
 }

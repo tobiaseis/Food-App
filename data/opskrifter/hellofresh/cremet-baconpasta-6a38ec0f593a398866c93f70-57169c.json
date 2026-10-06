@@ -1,0 +1,212 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremet-baconpasta-6a38ec0f593a398866c93f70",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:30:32.309Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 930,
+    "protein_g": 37.7,
+    "carbs_g": 79.9,
+    "fat_g": 51
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R28_BW26_SE_R12343968-14main_high-b7c30830.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:01:52.366Z",
+  "title": "Cremet baconpasta med rucolasalat",
+  "intro": "Frisk tagliatelle i en cremet sauce med sprød bacon, løg og parmesanlignende ost. Serveres med en let salat af rucola og tomat og toppes med ristede solsikkekerner.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "pasta",
+      "note": "frisk tagliatelle",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "gemt pastavand",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "g",
+      "name": "paprika",
+      "note": "krydderi",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "grana padano",
+      "note": "høvlet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomat",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en stor gryde med rigeligt vand i kog, og smag til med salt, så det smager som havvand."
+    },
+    {
+      "section": null,
+      "text": "Skær løget i tynde skiver, og hak tomaterne groft. Hak persille og hvidløg fint, og skyl rucolaen."
+    },
+    {
+      "section": null,
+      "text": "Kog pastaen i 2-3 minutter, til den er al dente. Tag en kop af kogevandet fra, og si resten fra."
+    },
+    {
+      "section": "Sauce",
+      "text": "Varm en stor pande op over middelhøj varme med olie. Brun bacon og løg i 3-4 minutter."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør hvidløgget i, og steg i cirka 1 minut, til det dufter."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld madlavningsfløde og pastavand i, og tilsæt paprika, bouillon, halvdelen af osten og lidt peber. Lad det simre ved middel varme i 3-4 minutter, til saucen er let tyknet."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend rucola og tomat med olie, salt og peber i en skål."
+    },
+    {
+      "section": "Anretning",
+      "text": "Vend pasta og persille i saucen. Er den for tyk, så tilsæt et skvæt vand."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel pastaen i dybe tallerkener, drys med resten af osten og solsikkekernerne, og server med salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Hello Sunrise er erstattet med paprika (krydderi), da blandingen ikke kan købes i Danmark."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en pastaret med bacon og en rucolasalat, så den har både hovedråvare, mættende pasta og grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:42.509Z"
+  }
+}

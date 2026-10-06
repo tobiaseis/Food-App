@@ -1,0 +1,249 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/musakhan-fatteh-pulled-kylling-i-bowl-69f1b1f24c854ae4e256c6af",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:46:05.222Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 22,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 820,
+    "protein_g": 50.8,
+    "carbs_g": 75.9,
+    "fat_g": 33.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R01_BW20_SE_C57265-1_main_high-35913695.jpg",
+  "lang": "da",
+  "keywords": "Palestinian",
+  "fetched_at": "2026-10-05T20:03:46.239Z",
+  "title": "Musakhan fatteh med pulled kylling",
+  "intro": "Palæstinensisk inspireret skål med krydret kylling, bløde løg, sprødt fladbrød og kølig tahinyoghurt. Granatæble og frisk salat runder af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "za'atar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "tahin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "granatæble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "fladbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til løgene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til løgene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til løgene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til brødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til yoghurtdressingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til yoghurtdressingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Læg kyllingen på en bageplade med bagepapir, og drys med salt og harissa. Bag den i 17-19 minutter, til den er helt gennemstegt."
+    },
+    {
+      "section": null,
+      "text": "Skær løget i tynde halve skiver. Varm olien i en stor pande ved middelhøj varme, og svits løgene i 5-6 minutter, til de er bløde. Kom sukker, salt og vand på, og lad det småkoge i 4-6 minutter."
+    },
+    {
+      "section": null,
+      "text": "Skær fladbrødet i stykker på ca. 3 cm, og læg dem på en anden bageplade med bagepapir. Dryp med lidt olie, drys med salt og za'atar, og vend rundt. Sæt pladen i ovnen, når der er 5-6 minutter tilbage af kyllingens tid, og bag brødet færdigt sammen med kyllingen."
+    },
+    {
+      "section": null,
+      "text": "Skær citronen i både. Rul granatæblet hårdt hen over bordet, og del det på midten. Læg det i en skål med vand, og pil kernerne fri med fingrene, så de synker til bunds. Fisk det hvide fra overfladen, og skyl kernerne i en si under koldt vand."
+    },
+    {
+      "section": null,
+      "text": "Rør yoghurt, tahin, salt, sukker og en god sjat citronsaft sammen i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Rив kyllingen i strimler med to gafler, og vend den med løgene på panden. Kødet skal være hvidt uden rødt i midten."
+    },
+    {
+      "section": null,
+      "text": "Hak persillen fint, og hak tomat og agurk groft. Bland grøntsagerne med halvdelen af persillen, olie og salt i en skål."
+    },
+    {
+      "section": null,
+      "text": "Fordel fladbrød, kylling og løg i dybe tallerkener. Smag til med yoghurtdressingen, og drys med granatæblekerner og resten af persillen. Server med salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Harissa-krydderi er erstattet med harissa.",
+    "Citrusfrugt er erstattet med citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling, fladbrød som mættende base, yoghurtdressing og en frisk tomat- og agurkesalat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:39:35.119Z"
+  }
+}

@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 16,
+  "image": "https://www.valdemarsro.dk/wp-content/2023/12/kaalwok.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Asiatisk, Efterår, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T15:16:47.739Z",
   "title": "Kålwok med kylling",
   "intro": "Hurtig wok med sprød kål, gulerødder og kylling i en sød og sprød hoisinsauce med ingefær og lime. Toppes med cashewnødder, forårsløg og sesamfrø.",
   "servings": 4,
@@ -170,26 +174,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "Retten mangler stivelse – der er grønt, men ingen kartofler, ris, pasta eller lignende.",
-    "side": {
-      "title": "Ris",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 300,
-          "unit": "g",
-          "name": "jasminris",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Kog risen efter pakningens anvisning.",
-        "Server risen ved siden af kålwoken."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:48:26.191Z"
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare og rigeligt grønt i form af spidskål, rødkål og gulerødder, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:18:54.979Z"
   }
 }

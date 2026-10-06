@@ -9,6 +9,17 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 13,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 579,
+    "protein_g": 32,
+    "carbs_g": 12,
+    "fat_g": 43
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/peanut-butter-chicken-37f339a.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Supper, 1 of 5-a-day, Budget, Chelsie Collins, Chicken, Curry, Family, Gluten free, Peanut butter",
+  "fetched_at": "2026-08-27T17:50:23.417Z",
   "title": "Kylling i jordnøddesmør-karry",
   "intro": "Mørke kyllingestykker simrer i en cremet sauce af jordnøddesmør, kokosmælk og tomat, krydret med garam masala. Server med blomkålsris og ristede jordnødder.",
   "servings": 4,
@@ -149,25 +160,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættet stivelseside – blomkålsris er for light og er valgfri.",
+    "reason": "Retten har protein og sauce, men intet mættende tilbehør, da blomkålsris er valgfri og ikke mættende.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Spidskommenris med citron",
       "ingredients": [
         {
           "section": null,
-          "amount": 250,
+          "amount": 300,
           "unit": "g",
-          "name": "ris (hvid eller basmati)",
+          "name": "basmatiris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 6,
+          "unit": "dl",
+          "name": "vand",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "ristede mandelflager",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skyl risen under koldt vand.",
-        "Kog risen efter pakningens vejledning, indtil vandet er absorbert."
+        "Skyl risene, til vandet er klart.",
+        "Rist spidskommen i smørret i en gryde i 1 minut, og rør risene i.",
+        "Tilsæt vand og salt, kog det op, og lad risene simre under låg i cirka 12 minutter.",
+        "Fnug risene med en gaffel, og vend citronskal, citronsaft og mandelflager i."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:05:31.013Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:26:16.926Z"
   }
 }

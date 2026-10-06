@@ -1,0 +1,186 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/spansk-bacalao-i-tomatsauce-fra-leon-regionen-69cd236d2898d990f03447dc",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:53:56.210Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 555,
+    "protein_g": 35.4,
+    "carbs_g": 77.5,
+    "fat_g": 9.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R27_BW15_SE_C55185-1_main_high-09ae9aca.jpg",
+  "lang": "da",
+  "keywords": "Spansk",
+  "fetched_at": "2026-10-05T20:04:45.379Z",
+  "title": "Spansk bacalao med torsk og kartofler",
+  "intro": "Torsk simret i en røget tomatsauce med kartofler, peberfrugt og frisk chili. Serveres med sprøde, ovnvarme surdejsboller.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "torsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "grøn, i 1 cm tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "g",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "fint hakket, uden kerner",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "surdejsboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fint hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til saucen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Gør grøntsagerne klar: skær peberfrugten i tern, hak løg og chili fint, og pres eller hak hvidløget."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en stor gryde ved middelhøj varme. Svits løg, peberfrugt, chili og hvidløg med saltet til grøntsagerne i 2-3 minutter, til de er lidt bløde. Skær kartoflerne i tern, mens det står på."
+    },
+    {
+      "section": null,
+      "text": "Rør den røgede paprika i gryden og lad den stege ca. 30 sekunder, til det dufter. Kom kartofler, hakkede tomater, vand, bouillon, sukker og saltet til saucen i, og bring det i kog."
+    },
+    {
+      "section": null,
+      "text": "Skru ned til middelvarme og lad det simre i 15-17 minutter, til kartoflerne er møre."
+    },
+    {
+      "section": null,
+      "text": "Læg torsken i gryden, når der resterer 5-6 minutter, og lad den simre med. Den er færdig, når kødet er mat og hvidt og falder i små stykker."
+    },
+    {
+      "section": null,
+      "text": "Læg bollerne direkte på ovnristen og bag dem i 7-8 minutter, mens retten simrer."
+    },
+    {
+      "section": null,
+      "text": "Hæld bacalaoen op i dybe tallerkener og server med de varme boller. Brug mindre chili eller udelad den, hvis nogen ikke tåler stærk mad."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en gryderet med torsk, kartofler og grøntsager samt boller, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:41:15.590Z"
+  }
+}

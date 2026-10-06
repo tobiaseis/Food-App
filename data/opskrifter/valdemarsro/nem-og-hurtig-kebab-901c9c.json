@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 14,
+  "image": "https://www.valdemarsro.dk/wp-content/2022/05/lynhurtig-kebab.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Familiefavoritter, Mellemøstens køkken, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:54:39.271Z",
   "ingredients": [
     {
       "section": null,
@@ -157,15 +161,23 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende komponent.",
+    "reason": "Retten består kun af krydret oksekød uden noget mættende eller grønt tilbehør.",
     "side": {
-      "title": "Ris og hovedsalat",
+      "title": "Sprøde citronkartofler og agurkesalat med mynte",
       "ingredients": [
         {
           "section": null,
-          "amount": 300,
-          "unit": "g",
-          "name": "ris",
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
           "note": null,
           "optional": false
         },
@@ -173,17 +185,43 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "dl",
+          "name": "græsk yoghurt",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen i letsaltet vand til den er møre.",
-        "Vask hovedsalaten, riv den i stykker, og server til kebabben."
+        "Skær kartoflerne i både, vend dem med olie, saften fra en halv citron og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Riv hvidløget fint, og rør det sammen med yoghurt, den resterende citronsaft og en knivspids salt.",
+        "Skær agurken i tern, og vend den med yoghurtsaucen.",
+        "Server de varme kartofler og agurkesalaten til kebabben."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:24:40.288Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:00.142Z"
   }
 }

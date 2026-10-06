@@ -9,6 +9,17 @@
   "active_minutes": 5,
   "yield_count": 2,
   "source_lines": 10,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 433,
+    "protein_g": 25,
+    "carbs_g": 8,
+    "fat_g": 32
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/tarragon-mushroom-sausage-frittata-2a21182.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Brunch, Dinner, Lunch, Supper, Eggs, Esther Clark, Folate, Frittata, Midweek meal, Mushrooms, Quick, Sausages, Tarragon",
+  "fetched_at": "2026-08-27T17:49:12.125Z",
   "title": "Frittata med svampe, pølser og estragon",
   "intro": "En hurtig æggekage med brunede svampe, grove svinepølser og grønne asparges, krydret med sennep og estragon. Den færdiggøres under grillen, så toppen bliver sat og luftig.",
   "servings": 2,
@@ -151,9 +162,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse som kartofler, ris eller brød.",
+    "reason": "Frittataen har protein og lidt grønt, men mangler noget mættende som kartofler eller brød.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde ovnkartofler med rosmarin og hvidløg",
       "ingredients": [
         {
           "section": null,
@@ -162,14 +173,48 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne.",
-        "Kog dem møre i letsaltet vand."
+        "Skær kartoflerne i både, og vend dem med olie, rosmarin og salt.",
+        "Bag kartoflerne på en bageplade ved 220 grader i cirka 30 minutter, til de er gyldne og sprøde.",
+        "Pres hvidløget over kartoflerne de sidste 5 minutter, og vend dem én gang.",
+        "Pres citronsaft over kartoflerne, og server dem til frittataen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:58:12.419Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:30.757Z"
   }
 }

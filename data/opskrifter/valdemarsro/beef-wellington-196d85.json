@@ -9,6 +9,10 @@
   "active_minutes": 60,
   "yield_count": 6,
   "source_lines": 14,
+  "image": "https://www.valdemarsro.dk/wp-content/2019/11/beef-wellington-opskrift.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Festmad, Nytår",
+  "fetched_at": "2026-08-27T17:55:52.141Z",
   "title": "Beef Wellington",
   "intro": "Mørt oksemørbrad med svampefyld og serranoskinke, pakket ind i sprød butterdej. En klassisk festret, som kan forberedes dagen før.",
   "servings": 6,
@@ -205,13 +209,13 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende - den har kød og svampe i butterdej, men ingen kartofler, ris, pasta eller rigeligt grønt.",
+    "reason": "Beef Wellington er en festlig steg i butterdej, men dejen er tynd, så den mangler et rigtigt tilbehør for at blive et helt måltid.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Kartoffelmos med brunet smør og timiankaramelliserede gulerødder",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
+          "amount": 1.2,
           "unit": "kg",
           "name": "kartofler",
           "note": null,
@@ -219,19 +223,53 @@
         },
         {
           "section": null,
+          "amount": 75,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 800,
+          "unit": "g",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
+          "unit": "tsk",
+          "name": "tørret timian",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den sammen med kødet."
+        "Skær gulerødderne i lange både, vend dem med olie, timian og salt, og bag dem gyldne ved 200 grader i cirka 30 minutter.",
+        "Skræl kartoflerne, kog dem møre i letsaltet vand, og damp dem tørre i gryden.",
+        "Brun smørret i en lille pande, til det dufter nøddeagtigt, og varm mælken.",
+        "Mos kartoflerne med mælk og brunet smør, smag til med salt og peber, og server med gulerødderne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:31:02.874Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:44.126Z"
   }
 }

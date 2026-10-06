@@ -1,0 +1,231 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremet-ostershatte-linguine-6976847f2460c72e4c6d916f",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:14:37.353Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 922,
+    "protein_g": 26.7,
+    "carbs_g": 93.8,
+    "fat_g": 48.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R11_BW51_SE_V19903-1_Mainhigh-7ed15e93.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:07:17.126Z",
+  "title": "Cremet linguine med østershatte og valnøddecrumble",
+  "intro": "Linguine i cremet tomatsauce med stegte østershatte og frisk spinat. Toppet med sprød crumble af valnødder og panko.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Pasta og sauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "linguine",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "flækket, uden kerner og finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "kogevand fra pastaen",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 60,
+      "unit": "g",
+      "name": "spinat",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Pasta og sauce",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "østershatte, revet i strimler på ca. 2 cm",
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Svampe",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Valnøddecrumble",
+      "amount": 40,
+      "unit": "g",
+      "name": "valnødder",
+      "note": "groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Valnøddecrumble",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": "panko",
+      "optional": false
+    },
+    {
+      "section": "Valnøddecrumble",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Valnøddecrumble",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Pasta",
+      "text": "Kog en stor gryde vand op og salt det kraftigt, så det smager som havvand. Kog linguinen i 8 minutter, til den er al dente, så den stadig har lidt bid."
+    },
+    {
+      "section": "Pasta",
+      "text": "Tag en kop af kogevandet fra, inden du hælder resten fra."
+    },
+    {
+      "section": "Valnøddecrumble",
+      "text": "Varm olien på en pande ved middelhøj varme, mens pastaen koger. Rist valnødder og panko i 3-4 minutter, til de er gyldne og sprøde. Smag til med salt og peber, og kom crumblen i en skål."
+    },
+    {
+      "section": "Svampe",
+      "text": "Gør løg, hvidløg, chili og svampe klar som beskrevet i ingredienslisten, og skyl spinaten."
+    },
+    {
+      "section": "Svampe",
+      "text": "Varm olien til stegning i samme pande ved middelhøj varme. Brun svampene i 3-4 minutter, og drys dem med salt og peber. Læg dem på en tallerken med køkkenrulle."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Sænk varmen til middel, og hæld olien til saucen på panden. Svits løg, hvidløg og chili i 1-2 minutter, til de er blødt."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Rør tomatpuré, creme fraiche, kogevand, krydderurter, bouillon og røget paprika i. Lad saucen simre i 3-4 minutter, til den er tyknet."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Vend pasta, svampe, parmesan og spinat i saucen, og peber efter smag."
+    },
+    {
+      "section": "Pasta og sauce",
+      "text": "Anret i dybe tallerkener, og drys valnøddecrumblen over."
+    }
+  ],
+  "changes": [
+    "Hvide Løjer & Urter er erstattet af blandede tørrede krydderurter.",
+    "Grana Padano er erstattet af parmesan.",
+    "Gemt pastavand er skrevet som vand fra kogningen af pastaen."
+  ]
+}

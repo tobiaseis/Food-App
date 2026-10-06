@@ -1,0 +1,233 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/miso-ramen-med-rumpsteak-6a3d0c71bcb653703ca8bd39",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:24:12.973Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 883,
+    "protein_g": 49.1,
+    "carbs_g": 90.8,
+    "fat_g": 35.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R20_BW17_SE_P46052-5_MT_main_high-aaf1c161.jpg",
+  "lang": "da",
+  "keywords": "Japansk",
+  "fetched_at": "2026-10-05T20:01:19.093Z",
+  "title": "Miso-ramen med rumpsteak, chiliolie og pak choi",
+  "intro": "Cremet misosuppe med nudler, mørt rumpsteak og sprøde ristede løg. Chiliolien giver et varmt drys, som du selv kan skrue op eller ned for.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "Bøf / steak",
+      "note": "rumpsteak",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "Forårsløg",
+      "note": "snittet fint",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "Nudler",
+      "note": "mienudler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "Ristede løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "Hvidløg",
+      "note": "revet fint",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "Miso",
+      "note": "misopasta",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "g",
+      "name": "Chili",
+      "note": "chiliflager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "Ingefær",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "ml",
+      "name": "Sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Bouillon",
+      "note": "oksebouillon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 12,
+      "unit": "ml",
+      "name": "Eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Pak choi",
+      "note": "hakket groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "Majs",
+      "note": "afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Til kødet",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Til chiliolien",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "til chiliolien",
+      "optional": false
+    },
+    {
+      "section": "Til chiliolien",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til chiliolien",
+      "optional": false
+    },
+    {
+      "section": "Til stegning",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til suppen",
+      "amount": 7,
+      "unit": "dl",
+      "name": "Vand",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Lad bøfferne tage køleskabskulden af, og drys dem med salt."
+    },
+    {
+      "section": null,
+      "text": "Bring en gryde vand med rigelig salt i kog – det skal smage som havvand. Kog nudlerne i 4 minutter, til de er møre. Si dem fra, og skyl dem i koldt vand."
+    },
+    {
+      "section": null,
+      "text": "Lav chiliolien: Rør hvidløg, chiliflager, olie og salt sammen i en lille skål. Brug mindre chili eller drop den, hvis I ikke vil have det stærkt."
+    },
+    {
+      "section": null,
+      "text": "Hak pak choi groft, riv ingefær og hvidløg fint, og snit forårsløgene fint."
+    },
+    {
+      "section": null,
+      "text": "Varm olien til stegning op i en stegepande ved middelhøj varme. Steg bøfferne 3-4 minutter på hver side, til de er brunede. Steg 1-2 minutter længere, hvis de skal være gennemstegte."
+    },
+    {
+      "section": null,
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, mens suppen laves."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olie op i en gryde ved middelhøj varme. Svits ingefær og pak choi i 1-2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom majs, vand, bouillon, miso, sojasauce, eddike og sukker i gryden, og bring det i kog. Skru ned til middel varme, læg låg på, og lad suppen simre i 2-3 minutter."
+    },
+    {
+      "section": null,
+      "text": "Læg nudlerne i suppen. Skær bøfferne i tynde skiver lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Fordel nudler og suppe i skåle. Læg bøfskiver, forårsløg og ristede løg ovenpå, og dryp med chiliolie."
+    }
+  ],
+  "changes": [
+    "Rumpsteak er skiftet til bøf (rumpsteak bevares som note).",
+    "Chiliflager er skrevet som chili."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rumpsteak som hovedråvare, mienudler som mættende element og pak choi og majs i suppen, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:46.591Z"
+  }
+}

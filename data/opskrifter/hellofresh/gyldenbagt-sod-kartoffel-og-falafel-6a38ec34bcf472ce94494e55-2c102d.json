@@ -1,0 +1,190 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/gyldenbagt-sod-kartoffel-og-falafel-6a38ec34bcf472ce94494e55",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:29:48.786Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 789,
+    "protein_g": 18.1,
+    "carbs_g": 63.7,
+    "fat_g": 49.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R27_BW26_SE_C59465-1main_high-d58a1ba0.jpg",
+  "lang": "da",
+  "keywords": "Libanesisk",
+  "fetched_at": "2026-10-05T20:01:46.387Z",
+  "title": "Ovnbagt sødkartoffel og falafel med tzatziki og abrikoschutney",
+  "intro": "Sødkartoffel, blomkål og squash bages sammen med falafel på én plade og serveres med kold tzatziki og sød abrikoschutney. Det er en nem hverdagsret med kun én bageplade.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Bagt på pladen",
+      "amount": null,
+      "unit": null,
+      "name": "falafel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagt på pladen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bagt på pladen",
+      "amount": 200,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": "Bagt på pladen",
+      "amount": 250,
+      "unit": "g",
+      "name": "sødkartoffel",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Bagt på pladen",
+      "amount": 8,
+      "unit": "g",
+      "name": "karry",
+      "note": "mild karryblanding",
+      "optional": false
+    },
+    {
+      "section": "Bagt på pladen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til falafel",
+      "optional": false
+    },
+    {
+      "section": "Bagt på pladen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Bagt på pladen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chutneysauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "abrikoschutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Chutneysauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær sødkartoffel og squash i tern på 2 cm."
+    },
+    {
+      "section": "Tzatziki og sauce",
+      "text": "Pres hvidløget eller riv det fint. Riv agurken groft, og klem så meget væde ud af den som muligt."
+    },
+    {
+      "section": "Tzatziki og sauce",
+      "text": "Rør agurk, hvidløg, yoghurt, salt og en smule peber sammen i en skål. Stil den kold."
+    },
+    {
+      "section": "Tzatziki og sauce",
+      "text": "Rør chutneyen ud med vandet i en lille skål."
+    },
+    {
+      "section": "Bagning",
+      "text": "Vend falafel i olien beregnet til dem i en skål. Vend squash i en anden skål med olie, halvdelen af krydderiblandingen og en smule salt."
+    },
+    {
+      "section": "Bagning",
+      "text": "Læg sødkartoffel og blomkål på en plade med bagepapir. Hæld lidt olie over, drys med salt og resten af krydderiblandingen, og vend rundt."
+    },
+    {
+      "section": "Bagning",
+      "text": "Sæt pladen i ovnen i 20-25 minutter. Når der er 10-12 minutter tilbage, lægger du falafel og squash på pladen."
+    },
+    {
+      "section": "Bagning",
+      "text": "Bag videre, til falaflerne er gyldne, og grøntsagerne er møre."
+    },
+    {
+      "section": "Servering",
+      "text": "Sæt pladen på bordet, og top med tzatziki og chutneysauce."
+    }
+  ],
+  "changes": [
+    "Mild Mahal er erstattet af karry.",
+    "Zucchini er skiftet til squash."
+  ]
+}

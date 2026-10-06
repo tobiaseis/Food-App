@@ -1,0 +1,246 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/boller-i-karry-69b930412d4fe324cc3fd9f5",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:00:16.877Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 21,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1001,
+    "protein_g": 43.6,
+    "carbs_g": 98,
+    "fat_g": 50.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/DK_Recipe_Overlay_1200x800-1-17ddb109.jpg",
+  "lang": "da",
+  "keywords": "Dansk",
+  "fetched_at": "2026-10-05T20:05:36.319Z",
+  "title": "Kødboller i karrysauce med ris og æblesalat",
+  "intro": "Kogte kødboller med cremet karrysauce og duftende basmatiris. Til det en frisk salat med æble og ristede mandler.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kødboller",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket kalv og flæsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødbollerne",
+      "optional": false
+    },
+    {
+      "section": "Kødboller",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "karry",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 75,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": "i tynde, halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "mandler",
+      "note": "grofthakkede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kog vand op i en gryde. Kom ris og salt i, læg låg på, og lad risene simre ved middel-lav varme i 10 minutter. Træk gryden af varmen, og lad risene hvile under låg i yderligere 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Sæt en stor gryde med vand og bouillon over varmen, og bring det i kog. Hak imens løget fint."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Ælt kødet sammen med æg, rasp, løg og salt i en stor skål. Form farsen til små boller, ca. fem pr. person."
+    },
+    {
+      "section": "Kødboller",
+      "text": "Læg kødbollerne i den kogende bouillon, og lad dem simre i 12-15 minutter. De er færdige, når der ikke er rødt kød tilbage indeni. Gem en kop af kogevandet til saucen."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær æblet i tynde, halve skiver, og skyl salaten. Tør den, og hak mandlerne groft."
+    },
+    {
+      "section": "Salat",
+      "text": "Rist mandlerne på en stor, tør pande ved middelhøj varme i 3-4 minutter, til de er gyldne. Vend dem i en stor skål med æble og salat."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret på samme pande ved middelhøj varme. Rør mel og karry i, og svits i 1-2 minutter, til det dufter."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld fløde, mælk og kogevand i, og pisk, til saucen er helt glat."
+    },
+    {
+      "section": "Servering",
+      "text": "Drys salaten med salt lige før servering, og vend den med et skvæt citronsaft og olie. Anret ris og kødboller i dybe tallerkener, hæld sauce over, og server med salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Curry-On er erstattet med karry.",
+    "Citrusfrugt er erstattet med citron.",
+    "Hakket svine-/kalvekød er erstattet med hakket kalv og flæsk."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kødboller som hovedråvare, ris som mættende del og en salat med æble og mandler, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:42.874Z"
+  }
+}

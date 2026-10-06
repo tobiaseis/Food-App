@@ -1,0 +1,181 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/stegt-halloumi-69b92ffed378378da7ab3dc0",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:01:56.531Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 869,
+    "protein_g": 32.9,
+    "carbs_g": 59.6,
+    "fat_g": 56
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R02_BW12_SE_C14280-1_Main_3_Remove_Parsley_edit_edit_high-5d1d6a46.jpg",
+  "lang": "da",
+  "keywords": "Skandinavisk",
+  "fetched_at": "2026-10-05T20:05:49.511Z",
+  "title": "Stegt halloumi med bagte radiser og estragonsauce",
+  "intro": "Gylden halloumi i cremet estragonsauce med citron, serveret med ovnbagte kartofler, broccoli og radiser. En enkel vegetarret, hvor det meste klarer sig selv i ovnen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "halloumi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "radiser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "estragon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til saucen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240°C (220°C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skær de uskrællede kartofler i både på ca. 1 cm tykkelse. Læg dem på en bageplade med bagepapir, og vend dem med olivenolie, salt og peber. Brug to plader, hvis der ikke er plads på én."
+    },
+    {
+      "section": null,
+      "text": "Bag kartoflerne i 25-35 minutter, til de er møre og lidt brune."
+    },
+    {
+      "section": null,
+      "text": "Del citronen i både, og hak estragon fint. Rør estragon, madlavningsfløde, bouillon, vand, salt, peber og et godt skvæt citronsaft sammen i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Hak løget fint. Del broccolien i buketter, og skær stokken i tern på ca. 2 cm. Skær enderne af radiserne, og halver dem."
+    },
+    {
+      "section": null,
+      "text": "Når kartoflerne har 15 minutter tilbage, fordeles broccoli og radiser på pladen ved siden af. Dryp med olivenolie, og drys med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Skær halloumien i skiver, så der er to til hver. Varm lidt olivenolie op i en stor pande ved middelhøj varme, og steg skiverne i 2-3 minutter, til de er gyldne. Vend dem."
+    },
+    {
+      "section": null,
+      "text": "Kom smør og løg på panden, og lad det simre i 1 minut. Skru ned til middel varme, hæld saucen over halloumien, og lad den simre i 2-3 minutter, til alt er gennemvarmt."
+    },
+    {
+      "section": null,
+      "text": "Server kartofler, halloumi og grøntsager på tallerkener, og kom sauce over halloumien."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron."
+  ]
+}

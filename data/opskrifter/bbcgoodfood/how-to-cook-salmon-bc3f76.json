@@ -9,6 +9,17 @@
   "active_minutes": 5,
   "yield_count": null,
   "source_lines": 3,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 283,
+    "protein_g": 28,
+    "carbs_g": 0.5,
+    "fat_g": 19
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/salmon-fillet-04ca266.jpg?resize=768,733",
+  "lang": "da",
+  "keywords": null,
+  "fetched_at": "2026-08-27T15:29:25.161Z",
   "title": "Ovnbagt laks",
   "intro": "Laksefilet i ovnen er en enkel grundmetode, hvor fisken bliver mør og saftig. Smag til med friske krydderurter, citron eller krydderier, så du kan variere retten efter lyst.",
   "servings": 4,
@@ -79,9 +90,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende kulhydrater eller rigeligt grønt.",
+    "reason": "Retten består kun af laks uden noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde citronkartofler og agurkesalat med dild",
       "ingredients": [
         {
           "section": null,
@@ -93,19 +104,52 @@
         },
         {
           "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "dild",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "hvidvinseddike",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server alt sammen til laksen."
+        "Skær kartoflerne i både, vend dem med olie, revet citronskal og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver, og vend den med hakket dild, eddike og en knivspids salt.",
+        "Pres lidt citronsaft over de varme kartofler, og server dem med agurkesalaten til laksen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:38:17.870Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:30.894Z"
   }
 }

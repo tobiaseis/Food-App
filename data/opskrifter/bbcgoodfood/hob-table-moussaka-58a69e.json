@@ -9,6 +9,17 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 10,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 529,
+    "protein_g": 35,
+    "carbs_g": 11,
+    "fat_g": 39
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-513543_11-f28efa6.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Main course, Greek,  Josh Eagleton, 10-30 minutes, 30-60 minutes, 4 servings, 600 kcal or less, Aubergine, Aubergines, Beginners, Easy, Feta cheese, Good Food, Greek, Lamb, Mains, Make it tonight, Minced lamb, Moussaka, One-pot, Plum tomato, Plum tomatoes, Quick",
+  "fetched_at": "2026-08-27T17:50:14.100Z",
   "title": "Moussaka på panden",
   "intro": "En hurtig udgave af den græske klassiker, hvor lammefarsen simrer med tomat og kanel og toppes med feta og frisk mynte. Det hele laves i én pande.",
   "servings": 4,
@@ -135,9 +146,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættet stivelse som kartofler eller ris.",
+    "reason": "Retten er kun kød i tomatsauce med aubergine og feta og mangler noget mættende som kartofler, ris eller brød.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Græske citronkartofler med oregano",
       "ingredients": [
         {
           "section": null,
@@ -149,20 +160,45 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "tørret oregano",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl og kog kartoflerne møre i letsaltet vand.",
-        "Vask salaten, og riv den i stykker.",
-        "Server kartofler og salat til mousakkaen."
+        "Skær kartoflerne i både, og vend dem med olie, oregano, pressede hvidløg og salt.",
+        "Bag kartoflerne ved 220 grader i cirka 35-40 minutter, til de er gyldne og møre.",
+        "Pres saften fra citronen over de varme kartofler, og vend dem rundt.",
+        "Server kartoflerne til moussakaen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:04:47.067Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:26:00.425Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 10,
+  "image": "https://www.valdemarsro.dk/wp-content/2017/11/andebryst-orange-2.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Efterår, Julefrokost, julemiddag, Juleopskrifter, Vinter",
+  "fetched_at": "2026-08-27T17:56:46.488Z",
   "title": "Andebryst à l'orange",
   "intro": "Sprødstegt andebryst med en sirupsagtig appelsinsauce, der er krydret med kanel, kardemomme og timian. Saucen koger ind, mens anden steger, så retten er klar på en halv time.",
   "servings": 4,
@@ -141,9 +145,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende kulhydrater eller rigeligt grønt.",
+    "reason": "Retten er kun andebryst med sauce og mangler noget mættende eller grønt.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde rosmarinkartofler og glaserede gulerødder",
       "ingredients": [
         {
           "section": null,
@@ -155,19 +159,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 600,
+          "unit": "g",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
+          "unit": "spsk",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær gulerødderne i stave, og steg dem i smør på panden i cirka 10 minutter, til de er møre og let gyldne.",
+        "Hak persillen, og vend den i gulerødderne sammen med en knivspids salt.",
+        "Server de varme kartofler og gulerødderne sammen med anden."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:36:15.407Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:35.304Z"
   }
 }

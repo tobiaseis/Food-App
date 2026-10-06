@@ -9,6 +9,17 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 8,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 225,
+    "protein_g": 25,
+    "carbs_g": 7,
+    "fat_g": 11
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1259467_8-3e8ba1f.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Beef casserole, easy casserole, easy stew, goodhealth, Healthy, healthy casserole, Healthy stew, Italian, Make ahead, Polenta, Vitimin c",
+  "fetched_at": "2026-08-27T17:50:47.423Z",
   "title": "Sund oksegryde med peberfrugt og oliven",
   "intro": "En hurtig og let gryde med tynde strimler oksekød, tomat og gul peberfrugt. Rosmarin og oliven giver smag, og den er klar på små 25 minutter.",
   "servings": 4,
@@ -99,9 +110,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Gryden mangler mætningen fra kartofler eller anden stivelse.",
+    "reason": "Retten har kød og grønt, men mangler noget mættende som kartofler, ris eller pasta, så den har brug for tilbehør.",
     "side": {
-      "title": "Kartoffelmos",
+      "title": "Kartoffelmos med brunet smør og persille",
       "ingredients": [
         {
           "section": null,
@@ -110,14 +121,48 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 75,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "knivspids",
+          "name": "muskatnød",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Mos dem med smøret til cremet kartoffelmos."
+        "Skræl kartoflerne, skær dem i stykker, og kog dem møre i letsaltet vand.",
+        "Smelt smørret i en lille gryde ved middel varme, og lad det bruse, til det dufter nøddeagtigt og er gyldent.",
+        "Hæld vandet fra kartoflerne, og mos dem med den varme mælk, muskat og halvdelen af det brunede smør.",
+        "Top moset med resten af det brunede smør og hakket persille."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:08:06.821Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:25:53.894Z"
   }
 }

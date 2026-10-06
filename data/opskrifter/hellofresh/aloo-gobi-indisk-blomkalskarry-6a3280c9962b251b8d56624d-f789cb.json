@@ -1,0 +1,234 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/aloo-gobi-indisk-blomkalskarry-6a3280c9962b251b8d56624d",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:32:37.375Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 712,
+    "protein_g": 19.9,
+    "carbs_g": 134,
+    "fat_g": 13.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R16_BW26_SE_C58147-1main_high-cb397128.jpg",
+  "lang": "da",
+  "keywords": "Indisk",
+  "fetched_at": "2026-10-05T20:02:07.622Z",
+  "title": "Aloo gobi med mangochutney og basmatiris",
+  "intro": "Ovnbagte kartofler og blomkål vendes i en krydret tomatsauce med ingefær, hvidløg og chili. Serveres med basmatiris, sød chutney og kølig yoghurt.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "blomkål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "friskrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "g",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "mangochutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm ovnen op til 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": "Ris",
+      "text": "Bring vandet i kog i en gryde. Kom risene og saltet i, læg låg på, og lad dem simre ved middellav varme i 10 min."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risene trække under låg i 10 min. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Skær de uskrællede kartofler i tern på 2 cm, og del blomkålen i buketter på 3 cm."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Læg det hele på en bageplade med bagepapir. Hæld lidt olie over, drys med salt og peber, og vend rundt. Brug to plader, hvis der ikke er plads."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Bag midt i ovnen i 20-25 min, til grøntsagerne er møre."
+    },
+    {
+      "section": "Sauce",
+      "text": "Skær løgene i tynde halve skiver. Riv hvidløg og ingefær fint. Slå chilien op, skrab kernerne ud, og hak den fint. Hak tomater og koriander fint. Spring chilien over eller brug mindre, hvis nogen ikke bryder sig om stærk mad."
+    },
+    {
+      "section": "Sauce",
+      "text": "Varm olie op i en mellemstor gryde ved middelhøj varme. Svits løgene med saltet i 3-4 min, til de er lidt bløde."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør tomater, chili, hvidløg, ingefær og krydderiblandingen i, og steg i 4-5 min, til det er blødt."
+    },
+    {
+      "section": "Sauce",
+      "text": "Skru ned til middel varme, hæld vandet i, og lad saucen simre i 2-3 min, til den er let tyknet."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend de bagte grøntsager og halvdelen af korianderen i saucen."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel ris og aloo gobi i dybe tallerkener. Top med chutney, yoghurt og resten af korianderen."
+    }
+  ],
+  "changes": [
+    "Mild Mahal er skiftet til garam masala.",
+    "Ananaschutney er skiftet til mangochutney."
+  ]
+}

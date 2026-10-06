@@ -1,0 +1,170 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtige-loaded-oksekodsnachos-6a2a8f95b2e241c4bdaf5935",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:36:18.572Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 855,
+    "protein_g": 36.6,
+    "carbs_g": 63.5,
+    "fat_g": 49.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R02_BW25_SE_C56102-1main_high-0a00d178.jpg",
+  "lang": "da",
+  "keywords": "Mexicansk",
+  "fetched_at": "2026-10-05T20:02:35.009Z",
+  "title": "Hurtige loaded nachos med oksekød",
+  "intro": "Sprøde tortillachips med krydret oksekød, tomatsauce, creme fraiche og revet cheddar. Retten er klar på en halv time og er god som hverdagsmad.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "g",
+      "name": "Tex-Mex krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "ml",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "pakke",
+      "name": "tortillachips",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "revet cheddar",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Skær peberfrugten i tern på ca. 2 cm, og hak tomaten groft."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Brun oksekød og peberfrugt sammen med saltet til kødet i 4-5 minutter. Kødet skal være gennemstegt uden spor af rødt."
+    },
+    {
+      "section": null,
+      "text": "Rør Tex-Mex krydderiet i panden, og lad det stege i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Hæld passata, bouillon, sukker, vand og saltet til saucen i panden. Lad det simre i 2-3 minutter, til saucen er lidt tykkere."
+    },
+    {
+      "section": null,
+      "text": "Fordel tortillachips i dybe tallerkener. Læg kødsauce, tomat og creme fraiche ovenpå, og drys med cheddar."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har oksekød, grøntsager og tortillachips som mættende base, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:37:45.672Z"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cheesy-grontsagslasagne-pa-aubergine-og-zucchini-6a4fb2a06e4158183d5da19d",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:14:00.846Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 641,
+    "protein_g": 29.3,
+    "carbs_g": 73.7,
+    "fat_g": 23.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R16_BW40_SE_C48124-1_Main_high-bc6c7a57.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:00:15.922Z",
+  "title": "Grøntsagslasagne med aubergine, squash og mozzarella",
+  "intro": "Lasagne med lag af ovnbagte grøntsager, tomatsauce med basilikum og smeltet mozzarella. Retten er vegetarisk og klar på under en time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "lasagneplader",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "squash",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": "med basilikum",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": "italiensk krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til grøntsager og stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "til grøntsagerne og saucen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skær aubergine og squash i skiver på ca. 1/2 cm. Pres eller hak hvidløget fint. Hæld vandet fra mozzarellaen, og tør den med køkkenrulle. Riv basilikum groft."
+    },
+    {
+      "section": null,
+      "text": "Læg grøntsagsskiverne på en bageplade med bagepapir. Dryp med lidt olie, og drys med salt og peber. Bag i 10-15 minutter, til de er let møre. Brug to plader, hvis der ikke er plads på én."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Varm olie op i en stor pande ved middelhøj varme. Rør hvidløg og krydderurter rundt i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": "Tomatsauce",
+      "text": "Kom hakkede tomater, vand, sukker, salt og peber i panden. Lad saucen simre 4-5 minutter, til den er lidt tykkere."
+    },
+    {
+      "section": "Samling",
+      "text": "Smør et lag tomatsauce i bunden af et ildfast fad, og læg lasagneplader ovenpå. Hæld mere sauce over, og læg en jævn omgang grøntsager på. Drys med parmesan og halvdelen af basilikummen."
+    },
+    {
+      "section": "Samling",
+      "text": "Gentag med sauce, lasagneplader, grøntsager og resten af parmesanen. Slut med et lag sauce, og fordel mozzarella og den resterende basilikum øverst. Hold lagene tynde."
+    },
+    {
+      "section": null,
+      "text": "Bag lasagnen i 25-30 minutter, til osten er gylden. Lad den gerne hvile i 10 minutter, så er den nemmere at skære i."
+    },
+    {
+      "section": null,
+      "text": "Server lasagnen på tallerkener."
+    }
+  ],
+  "changes": [
+    "Zucchini er skiftet til squash.",
+    "Buon Appetito er skiftet til blandede tørrede krydderurter.",
+    "Parmigiano Reggiano er skiftet til parmesan."
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/jamaicansk-inspireret-sodkartoffelkarry-6a38ec13593a398866c93fd0",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:30:24.932Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 21,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1210,
+    "protein_g": 27.4,
+    "carbs_g": 186.5,
+    "fat_g": 37.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R30_W11_SE_V20067-2_Main_low-3dd82a46.jpg",
+  "lang": "da",
+  "keywords": "Caribisk",
+  "fetched_at": "2026-10-05T20:01:51.191Z",
+  "title": "Sødkartoffelkarry med kidneybønne-kokosris og naanbrød",
+  "intro": "Mild og cremet karry med ovnbagt sødkartoffel, serveret med kokosris med kidneybønner og lune naanbrød. Ristet kokosmel, chili og koriander giver frisk crunch til sidst.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 450,
+      "unit": "g",
+      "name": "sødkartoffel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "kokosmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 150,
+      "unit": "g",
+      "name": "ris",
+      "note": "langkornede hvide",
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 200,
+      "unit": "g",
+      "name": "kidneybønner",
+      "note": "afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 35,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 4,
+      "unit": "g",
+      "name": "karry",
+      "note": "i stedet for Goan Xacuti",
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 8,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "i stedet for Panamad Central American Spice",
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 180,
+      "unit": "ml",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Karry",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "naanbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt ovnen på 240 °C (220 °C varmluft). Skræl sødkartoflerne, og skær dem i tern på 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Læg kartoflerne på en bageplade med bagepapir. Vend dem med olivenolie, salt og peber, og bag dem møre i 20-30 minutter."
+    },
+    {
+      "section": null,
+      "text": "Varm en stor stegepande op ved middelhøj varme. Rist kokosmelet gyldent i ca. 30 sekunder, og kom det i en lille skål."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Si kidneybønnerne. Bring vandet i kog i en mellemstor gryde, og kom ris, bønner og salt i."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Kog under låg ved middellav varme i 14 minutter. Tag gryden af varmen, og lad risene trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Karry",
+      "text": "Hak løg og peberfrugt groft. Varm olie op i den samme stegepande ved middelhøj varme, og steg grøntsagerne bløde i 2-3 minutter."
+    },
+    {
+      "section": "Karry",
+      "text": "Rør tomatpuré, karry, krydderi og bouillon i, og steg det i 1 minut."
+    },
+    {
+      "section": "Karry",
+      "text": "Hæld kokosmælk og vand i, og smag til med salt og peber. Skru ned til middellav varme, og lad saucen simre i ca. 5 minutter, til den er tyknet. Vend de bagte sødkartofler i."
+    },
+    {
+      "section": "Karry",
+      "text": "Hold naanbrødene kort under rindende vand, og pak dem i sølvpapir. Varm dem i ovnen i 4-5 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Del chilien på langs, fjern kernerne, og hak den fint. Hak koriander groft, og skær citronen i både."
+    },
+    {
+      "section": "Til servering",
+      "text": "Læg ris og karry op i dybe tallerkener. Drys med det ristede kokosmel, chili og koriander. Server med naanbrød og citronbåde. Brug mindre chili eller udelad den, hvis retten skal være mildere."
+    }
+  ],
+  "changes": [
+    "Goan Xacuti er erstattet af karry.",
+    "Panamad Central American Spice er erstattet af krydderi.",
+    "Citrusfrugt er erstattet af citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har sødkartofler og bønner i karryen, kokosris og naanbrød, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:40.220Z"
+  }
+}

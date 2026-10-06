@@ -1,0 +1,178 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremet-laksegratin-6944085a0a853ea815822b67",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:31:55.462Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 12,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 809,
+    "protein_g": 38.3,
+    "carbs_g": 63,
+    "fat_g": 47.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y23_R25_W19_NO_C13961-2_Main_high-07bf1e04.jpg",
+  "lang": "da",
+  "keywords": "Britisk",
+  "fetched_at": "2026-10-05T20:08:02.010Z",
+  "title": "Laksegratin med kartoffelmos",
+  "intro": "Mør laks i cremet ostesauce under et lag parmesankartoffelmos og sprød panko. Serveres med en frisk salat med citron.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Gratin",
+      "amount": 100,
+      "unit": "g",
+      "name": "ostesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gratin",
+      "amount": 250,
+      "unit": "g",
+      "name": "laks",
+      "note": "laksefilet uden skind",
+      "optional": false
+    },
+    {
+      "section": "Gratin",
+      "amount": 30,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gratin",
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Gratin",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til pankoen",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelmos",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Skræl kartoflerne og skær dem i tern på 2 cm."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Kog kartoflerne i en stor gryde med saltet vand i 11-13 minutter, til en kniv let går igennem."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Si vandet fra. Mos kartoflerne med mælk, parmesan, salt og peber, og sæt dem til side under låg. Lidt smør i moset gør det cremet."
+    },
+    {
+      "section": "Gratin",
+      "text": "Skyl spinat og salat hver for sig. Del citronen i både."
+    },
+    {
+      "section": "Gratin",
+      "text": "Skær laksen i tern på 3 cm. Rør panko, olie og et nip salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Gratin",
+      "text": "Læg spinat, laks og ostesauce i et ildfast fad, rør rundt og glat ud. Krydr med peber."
+    },
+    {
+      "section": "Gratin",
+      "text": "Læg kartoffelmosen over, og drys panko ovenpå. Bag gratinen midt i ovnen i 12-15 minutter, til toppen er gylden og laksen er mat i midten."
+    },
+    {
+      "section": "Gratin",
+      "text": "Lad gratinen hvile nogle minutter, før den serveres."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend salaten med olie, et skvæt citronsaft, salt og peber lige før servering."
+    },
+    {
+      "section": "Salat",
+      "text": "Anret gratinen på tallerkener, og server salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Mornaysauce er erstattet med ostesauce.",
+    "Grana Padano er erstattet med parmesan.",
+    "Citrusfrugt er erstattet med citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har laks som hovedråvare, kartoffelmos som mættende element og spinat samt salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:38.970Z"
+  }
+}

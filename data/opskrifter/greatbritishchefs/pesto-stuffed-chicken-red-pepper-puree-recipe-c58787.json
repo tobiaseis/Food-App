@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 2,
   "source_lines": 9,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/ps0hccyr/sacla-saturated-1.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, Pesto, Stuffed chicken, Italian, easy",
+  "fetched_at": "2026-08-27T17:03:35.402Z",
   "title": "Pestofyldt kylling med peberfrugtpuré",
   "intro": "Kyllingebryst fyldt med pesto og stracciatella, pakket ind i sprødt bacon og serveret på en glat puré af ovnbagt rød peberfrugt. En flot ret, der er nem at lave.",
   "servings": 2,
@@ -153,9 +157,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mætning; kun grønt er ikke nok til et helt dansk måltid.",
+    "reason": "Retten har kylling og peberfrugtpuré, men ingen mættende komponent som kartofler, pasta eller ris.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde rosmarinkartofler med citron",
       "ingredients": [
         {
           "section": null,
@@ -167,19 +171,53 @@
         },
         {
           "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til retten."
+        "Skær kartoflerne i både, og vend dem med olie, rosmarin, knuste hvidløgsfed og salt.",
+        "Bag kartoflerne sprøde på en bageplade ved 200 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Pres citronsaft over de varme kartofler, og vend dem med hakket persille.",
+        "Server kartoflerne ved siden af kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:32:50.490Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:38.777Z"
   }
 }

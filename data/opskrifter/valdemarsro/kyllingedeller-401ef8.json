@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 9,
+  "image": "https://www.valdemarsro.dk/wp-content/2007/10/kyllingedeller-groent.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Familiefavoritter, Nem Hverdagsmad, Studenterfester og studenterkørsel",
+  "fetched_at": "2026-08-27T17:58:57.775Z",
   "title": "Kyllingedeller med persille og dild",
   "intro": "Saftige kyllingedeller smagt til med friske krydderurter, løg og hvidløg. Lækre til aftensmad med kartofler og en grøn salat.",
   "servings": 4,
@@ -111,15 +115,23 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten har god protein, men mangler mætning som kartofler, ris eller pasta.",
+    "reason": "Kyllingedellerne er kun protein uden mættende tilbehør eller rigeligt grønt, så retten mangler kartofler, ris eller lignende.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Ovnbagte kartofler med citron og agurkesalat med yoghurt",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
           "note": null,
           "optional": false
         },
@@ -127,17 +139,43 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "græsk yoghurt",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til dellerne."
+        "Skær kartoflerne i både, vend dem med olie, revet citronskal og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver.",
+        "Rør yoghurt med presset hvidløg, citronsaft og salt, og vend agurken i.",
+        "Server agurkesalaten til de varme kartofler og kyllingedellerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:44:55.144Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:35.356Z"
   }
 }

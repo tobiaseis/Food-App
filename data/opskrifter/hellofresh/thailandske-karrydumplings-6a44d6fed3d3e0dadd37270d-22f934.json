@@ -1,0 +1,211 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/thailandske-karrydumplings-6a44d6fed3d3e0dadd37270d",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:23:26.930Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 725,
+    "protein_g": 20.2,
+    "carbs_g": 100.3,
+    "fat_g": 29.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R16_BW38_SE_C48166-1_Main_high-393b766d.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:01:13.157Z",
+  "title": "Thailandsk karry med gyoza og jasminris",
+  "intro": "Sprøde gyoza på cremet rød kokoskarry med pak choi og tomat, serveret over jasminris. Det hele toppes med en brændende hvidløgsolie.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "Gyoza med grøntsager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "Rød karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Pak choi",
+      "note": "hakkes groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "Kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "Fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "Jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stilk",
+      "name": "Citrongræs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "Hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "g",
+      "name": "Chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Tomat",
+      "note": "hakkes groft",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Forårsløg",
+      "note": "snittes fint",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "Vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "til hvidløgsolien",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "Vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "Vand",
+      "note": "til gyozaen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom vand, ris og salt i en mellemstor gryde. Bring det i kog, læg låg på, og lad risene koge på middellav varme i 12 minutter."
+    },
+    {
+      "section": null,
+      "text": "Tag gryden af varmen, og lad risene trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": null,
+      "text": "Skær løget, og hak tomat og pak choi groft, mens risene koger. Slå citrongræsset let med en kagerulle, så det åbner sig."
+    },
+    {
+      "section": null,
+      "text": "Snit forårsløget fint, og knus eller hak hvidløget. Rør hvidløg, chiliflager og olie sammen i en lille skål til hvidløgsolie. Brug mindre chili eller helt uden, hvis retten skal være mild."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Svits løget i 1-2 minutter, til det er let blødt."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Kom karrypasta og citrongræs i panden, og rør rundt i ca. 30 sekunder, til det dufter kraftigt."
+    },
+    {
+      "section": "Karrysauce",
+      "text": "Hæld vand, tomat, pak choi, fiskesauce og kokosmælk i panden. Lad saucen simre i 3-4 minutter, til den er lidt tykkere."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Varm lidt olie op i en anden pande ved middelhøj varme. Læg gyozaen med den flade side nedad, og steg i 2-3 minutter, til bunden er gylden."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Hæld vand i panden, og læg låg på. Lad gyozaen dampe i 3 minutter."
+    },
+    {
+      "section": "Gyoza",
+      "text": "Tag låget af, og steg videre, til vandet er væk, og bunden er sprød. Har du intet låg, kan du dække med sølvpapir."
+    },
+    {
+      "section": "Servering",
+      "text": "Fisk citrongræsset op af saucen. Fordel ris og karry i dybe tallerkener, og læg gyozaen ovenpå. Dryp med hvidløgsolie, og strø forårsløg over."
+    }
+  ],
+  "changes": []
+}

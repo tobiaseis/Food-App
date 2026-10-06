@@ -9,6 +9,17 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 12,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 329,
+    "protein_g": 45,
+    "carbs_g": 7,
+    "fat_g": 11
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-910471_11-4eb17f4.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Italian,  Josh Eagleton, 2 of 5-a-day, 30-60 minutes, 4 servings, 400 kcal or less, Barney Desmazery, Bouillabaisse, Fish casserole, Fish stew, Good for you easy cooking, Iron, Italy, Low calorie, Mains, Night in, One-pot, Over an hour, Relaxed recipes, Saturday, Seafood, Shellf",
+  "fetched_at": "2026-08-27T17:45:48.793Z",
   "title": "Italiensk one-pot med havbars og skaldyr",
   "intro": "Havbars, muslinger og rejer damper ovenpå en tomatsauce med blæksprutte, fennikel og hvidvin. Det hele laves i én gryde og serveres med godt brød.",
   "servings": 4,
@@ -150,26 +161,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "One-pot retten mangler mættende komponenter som kartofler, ris eller pasta.",
-    "side": {
-      "title": "Kogt ris",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 200,
-          "unit": "g",
-          "name": "langkornet ris",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Kog risen i rigeligt kogende, letsaltet vand efter pakningens anvisning.",
-        "Afvæl vandet gennem en si, og server risen."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:44:05.796Z"
+    "complete": true,
+    "reason": "Retten er en mættende fiske- og skaldyrsgryde med tomat og fennikel, og det sprøde brød i ingredienslisten udgør det mættende element.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:10.019Z"
   }
 }

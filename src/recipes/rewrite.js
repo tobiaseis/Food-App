@@ -277,6 +277,16 @@ function reportClose(close) {
   console.log(`npm run recipes:rewrite -- run --force --ids ${close.join(',')}`);
 }
 
+/** Næring som udgaven gemmer den, eller null uden kcal/protein. */
+function nutritionOf(n, perServings) {
+  if (!n || (n.kcal == null && n.protein_g == null)) return null;
+  return {
+    per_servings: perServings > 0 ? perServings : 1,
+    kcal: n.kcal ?? null, protein_g: n.protein_g ?? null,
+    carbs_g: n.carbs_g ?? null, fat_g: n.fat_g ?? null,
+  };
+}
+
 /** Udgavens fil som objekt: kildens faktiske felter først, modellens svar efter. */
 function editionRecord(src, answer) {
   return {
@@ -290,6 +300,17 @@ function editionRecord(src, answer) {
     // mod dette tal og ikke mod basens, som ofte har færre end siden.
     // Kun tallet: kildens tekst forlader ikke tmp/kilder/.
     source_lines: Array.isArray(src.ingredients) ? src.ingredients.length : null,
+    // Det, import-da.js skal bruge for at oprette retten, hvis release-basen
+    // ikke kender den (en ny kilde): udgaven er selvbærende. Billedets URL og
+    // kildens nøgleord er fakta, ikke kildens tekst.
+    image: src.image ?? null,
+    lang: 'da',
+    keywords: src.keywords ?? null,
+    fetched_at: src.fetched_at ?? null,
+    // Sidens næring (tal) pr. kildens portion; per_servings er den portion, så
+    // import-da.js kan skalere den til udgavens portionsantal. Kun hvis kilden
+    // har den — ellers udelades feltet, og reclassify skønner som hidtil.
+    ...(nutritionOf(src.nutrition, src.yield_count) ? { nutrition: nutritionOf(src.nutrition, src.yield_count) } : {}),
     ...answer.output,
   };
 }
@@ -429,6 +450,6 @@ if (require.main === module) {
 
 module.exports = {
   newestClaude, limitHit, generatingModel, systemText, userMessage,
-  overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN, drain, MAX_ERRORS_IN_A_ROW, editionRecord,
+  nutritionOf, overlap, OVERLAP_MAX_SHARE, OVERLAP_MAX_RUN, drain, MAX_ERRORS_IN_A_ROW, editionRecord,
   askClaude, reportStops, argValue,
 };

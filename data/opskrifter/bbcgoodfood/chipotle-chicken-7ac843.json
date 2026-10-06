@@ -9,6 +9,17 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 9,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 286,
+    "protein_g": 42,
+    "carbs_g": 6,
+    "fat_g": 11
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-488671_11-19f846e.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Mexican,  Josh Eagleton, 30-60 minutes, 4 servings, 400 kcal or less, Chicken and tomato stew, Chicken casserole, Chicken recipes, Chicken thigh, Chicken thighs, Chipotle chillies, Easy recipes, Good Food, goodhealth, Low-fat recipes, Mains, Mexican recipes, Midweek meal recipes",
+  "fetched_at": "2026-08-27T17:53:32.076Z",
   "title": "Kylling i chipotletomatsauce",
   "intro": "Saftige kyllingelår, der simrer i en røget, let stærk tomatsauce med chipotle. Server med ris og creme fraiche.",
   "servings": 4,
@@ -121,25 +132,10 @@
     "Udbenede kyllingelår uden skind (thigh fillets) er skrevet som kyllingelår."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Retten mangler en mængdespecificeret mættende tilbehørsdel.",
-    "side": {
-      "title": "Ris",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 250,
-          "unit": "g",
-          "name": "ris",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Kog risen efter anvisningen på pakken."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:20:35.027Z"
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare og ris som mættende tilbehør, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:26:41.255Z"
   }
 }

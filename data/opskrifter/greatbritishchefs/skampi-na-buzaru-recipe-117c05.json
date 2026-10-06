@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 2,
   "source_lines": 11,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/ypxhg2l3/gbc-jordon-ek-117-004.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, Škampi na buzaru recipe, Scampi buzaru recipes, Venetian Croatian recipes, easy",
+  "fetched_at": "2026-08-27T17:10:21.598Z",
   "title": "Rejer på buzara",
   "intro": "Kroatisk rejeret i en let sauce af tomat, hvidvin og hvidløg, der tykkes med rasp. Server den med godt brød til at dyppe i saucen.",
   "servings": 2,
@@ -142,26 +146,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "Retten har god protein fra rejerne, men mangler en mættende komponent som kartofler eller ris.",
-    "side": {
-      "title": "Kogte kartofler",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 500,
-          "unit": "g",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Server ved siden af rejerne."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:39:48.434Z"
+    "complete": true,
+    "reason": "Retten har kæmperejer som hovedråvare i en rigelig tomatsauce og serveres med fast brød, som gør den mættende.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:38.127Z"
   }
 }

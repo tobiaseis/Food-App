@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 13,
+  "image": "https://www.valdemarsro.dk/wp-content/2012/09/pizza-med-blomkaalbund.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Pizza",
+  "fetched_at": "2026-08-27T17:59:46.561Z",
   "title": "Blomkålspizza",
   "intro": "Sprøde pizzabunde af revet blomkål, ost og æg, toppet med tomatsauce, mozzarella og tomatskiver. En let udgave af pizza, der bages i to omgange.",
   "servings": 4,
@@ -166,25 +170,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "Retten mangler stivelse; blomkål alene er ikke mættende nok til et helt måltid.",
-    "side": {
-      "title": "Grøn salat",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Vask og skil salaten i stykker, og server den til pizzaerne."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:48:43.367Z"
+    "complete": true,
+    "reason": "Pizza med bund af en hel blomkål, æg, ost og mandler samt tomatsauce og mozzarella er mættende og indeholder rigeligt grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:30:23.502Z"
   }
 }

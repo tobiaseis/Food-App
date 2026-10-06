@@ -30,7 +30,8 @@
 // v5: det lyse design. Ny markup i app.js (fliser, afkrydsning) passer kun
 // til den nye styles.css, så skallen skiftes samlet.
 // v6: opskriftsarket (recipe_details) og ny markup i app.js.
-const VERSION = 'v6';
+// v7: brug det, jeg har, swipe og madlavningstilstand.
+const VERSION = 'v7';
 const SHELL_CACHE = `madplan-shell-${VERSION}`;
 const DATA_CACHE = `madplan-data-${VERSION}`;
 

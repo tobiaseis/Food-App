@@ -1,0 +1,328 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/indisk-butter-chicken-6a6891b3640e6eb29c2ac8d8",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:31:20.777Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 28,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1402,
+    "protein_g": 57.4,
+    "carbs_g": 158.5,
+    "fat_g": 61.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R06_BW32_SE_P27248-1_main_high-1977ccde.jpg",
+  "lang": "da",
+  "keywords": "Indisk",
+  "fetched_at": "2026-10-05T19:59:48.588Z",
+  "title": "Butter chicken med kachumbersalat og urtenaan",
+  "intro": "Mild, cremet kylling i tomat- og karrysauce med kokosris, en frisk salat af agurk, tomat og granatæble og sprøde naanbrød med urteolie.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kokosris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 15,
+      "unit": "g",
+      "name": "kokosmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kokosris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kachumbersalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kachumbersalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kachumbersalat",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltning af løg",
+      "optional": false
+    },
+    {
+      "section": "Kachumbersalat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til syltning af løg",
+      "optional": false
+    },
+    {
+      "section": "Kachumbersalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "granatæble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kachumbersalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kachumbersalat",
+      "amount": 125,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kachumbersalat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Kachumbersalat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Urteolie og naan",
+      "amount": 1,
+      "unit": "stk",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Urteolie og naan",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til urteolien",
+      "optional": false
+    },
+    {
+      "section": "Urteolie og naan",
+      "amount": 2,
+      "unit": "stk",
+      "name": "naanbrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 30,
+      "unit": "g",
+      "name": "tikka masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 4,
+      "unit": "g",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Butter chicken",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kokosris",
+      "text": "Varm ovnen op til 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Varm olien i en mellemstor gryde ved middel varme. Rist kokosmelet i ca. 30 sekunder, til det er gyldent og dufter."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Hæld vandet i, og bring det i kog. Rør ris og salt ned i, læg låg på, og lad det koge ved middellav varme i 10 minutter."
+    },
+    {
+      "section": "Kokosris",
+      "text": "Træk gryden væk fra varmen, og lad risen trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Kachumbersalat",
+      "text": "Mens risen koger, skal citronen deles i halve. Skær løget i tynde halve skiver."
+    },
+    {
+      "section": "Kachumbersalat",
+      "text": "Pres saften fra citronen i en lille skål, og rør sukker og salt til syltningen ud i den. Vend løgskiverne i, og lad dem stå til senere."
+    },
+    {
+      "section": "Kachumbersalat",
+      "text": "Rul granatæblet hårdt hen over bordet, og skær det over på midten. Læg det i en skål med vand, og pil kernerne løs med fingrene. Kernerne synker, mens den hvide hinde flyder op, så den kan fiskes fra. Hæld kernerne i en si, og skyl dem under koldt vand."
+    },
+    {
+      "section": "Kachumbersalat",
+      "text": "Hak agurken groft, og halver tomaterne. Kom begge dele i en stor skål sammen med granatæblekernerne."
+    },
+    {
+      "section": "Urteolie og naan",
+      "text": "Hak myntebladene fint, og rør dem sammen med olie til urteolien og en smule salt i en lille skål."
+    },
+    {
+      "section": "Butter chicken",
+      "text": "Skær kyllingebrystet i tynde strimler på et separat skærebræt."
+    },
+    {
+      "section": "Butter chicken",
+      "text": "Varm olien i en stor pande ved middelhøj varme, og brun kyllingen i 3-4 minutter."
+    },
+    {
+      "section": "Butter chicken",
+      "text": "Rør tikka masala, tomatpuré, garam masala, sukker og smør i panden, og lad det simre i ca. 30 sekunder, til det dufter kraftigt."
+    },
+    {
+      "section": "Butter chicken",
+      "text": "Tilsæt bouillon, salt, fløde og vand. Lad saucen simre i 1-2 minutter, til kyllingen er helt gennemstegt – kødet skal være hvidt uden rosa."
+    },
+    {
+      "section": "Urteolie og naan",
+      "text": "Læg naanbrødene på en bageplade med bagepapir, og pensl dem med urteolien. Bag dem i ovnen i 2-3 minutter, til de er sprøde."
+    },
+    {
+      "section": "Kachumbersalat",
+      "text": "Lige før servering vendes de syltede løg med lagen, olien og saltet til salaten i skålen med agurk, tomat og granatæble."
+    },
+    {
+      "section": null,
+      "text": "Fordel kokosris og butter chicken i dybe tallerkener, og server med salaten og urtenaanen ved siden af."
+    }
+  ],
+  "changes": [
+    "Mild Mahal (krydderiblanding) er erstattet med garam masala."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling i sauce, kokosris, naanbrød og kachumbersalat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:33:19.824Z"
+  }
+}

@@ -9,6 +9,10 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 8,
+  "image": "https://www.valdemarsro.dk/wp-content/2020/11/kyllingelaar-krydrede.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Fødselsdag, Grill opskrifter, Madpakker, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:55:29.795Z",
   "title": "Krydrede kyllingelår",
   "intro": "Saftige kyllingelår med en marinade af honning, soja, citron og to slags paprika. De bliver gyldne i ovnen og er nemme at forberede i god tid.",
   "servings": 4,
@@ -103,9 +107,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende tilbehør som kartofler, ris eller grønt.",
+    "reason": "Retten er kun kylling i marinade uden noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med rosmarin og coleslaw",
       "ingredients": [
         {
           "section": null,
@@ -117,19 +121,53 @@
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 300,
+          "unit": "g",
+          "name": "hvidkål",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "cremet dressing til coleslaw",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kyllingelårene og kartoflerne."
+        "Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og bag dem sprøde ved 200 grader i cirka 35 minutter.",
+        "Snit hvidkålen fint, og riv gulerødderne.",
+        "Vend kål og gulerødder med dressingen og en knivspids salt.",
+        "Server den kolde coleslaw til de varme kartofler og kyllingelårene."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:28:46.533Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:23.106Z"
   }
 }

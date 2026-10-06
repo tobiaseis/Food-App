@@ -1,0 +1,190 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtige-vietnamesiske-rejetacos-69c3dbf91f98ec4533c52554",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:59:11.768Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 630,
+    "protein_g": 22.7,
+    "carbs_g": 68.9,
+    "fat_g": 29.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF200610_R02_W31_SE_C12343782-1_edit_shrimp_KB_main_high-e0e11a0e.jpg",
+  "lang": "da",
+  "keywords": "Vietnamesisk",
+  "fetched_at": "2026-10-05T20:05:28.015Z",
+  "title": "Vietnamesiske rejetacos med asiatisk mayonnaise",
+  "intro": "Hurtige tacos med sprøde rejer i en marinade af soja, ingefær og hvidløg. Toppes med mayonnaise, peanuts, mynte og chili.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortillas",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "kæmperejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "g",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "saltede peanuts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": "asiatisk, gerne vegansk",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i tynde strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til marinaden",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til rejerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft), hvis tortillaerne skal varmes i ovn og ikke i mikroovn."
+    },
+    {
+      "section": null,
+      "text": "Riv hvidløg og ingefær fint. Skær chilien på langs, fjern kernerne, og skær den i tynde skiver. Del limen i både, skyl salaten, og hak mynte og peanuts groft."
+    },
+    {
+      "section": null,
+      "text": "Rør hvidløg, ingefær, sojasauce og vand sammen i en lille skål med et stænk limesaft."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olivenolie op i en pande ved middelhøj varme. Steg rejerne med saltet, 1-2 minutter på hver side, til de er gyldne og helt gennemstegte. Rejerne er færdige, når de er hvide og mat i kødet."
+    },
+    {
+      "section": null,
+      "text": "Hæld marinaden på panden de sidste 2 minutter, og lad den koge ind, til den er tyk og dufter dejligt."
+    },
+    {
+      "section": null,
+      "text": "Varm i mellemtiden tortillaerne i mikroovn i 30-60 sekunder, eller svøb dem i sølvpapir og varm dem 4-5 minutter i ovnen."
+    },
+    {
+      "section": null,
+      "text": "Læg salat, rejer og gulerødder i tortillaerne. Top med mayonnaise, peanuts, mynte og chili. Brug mindre chili eller drop den, hvis du ikke bryder dig om stærk mad."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til lime.",
+    "Kongerejer er skiftet til kæmperejer.",
+    "Vegansk asiatisk mayonnaise er skiftet til almindelig mayonnaise (asiatisk, gerne vegansk)."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har rejer som hovedråvare, tortillas som mættende element og salat og gulerødder som grønt, så den er et helt måltid som en wrap.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:31.312Z"
+  }
+}

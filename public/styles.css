@@ -625,6 +625,29 @@ input.grow { flex: 1; min-width: 200px; }
   font-variant-numeric: tabular-nums;
 }
 
+/* "Har du noget, der skal bruges?" – søgefelt, forslag og valgte varer som chips. */
+.have { margin-top: 28px; max-width: 520px; }
+.have-field input { width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips:not(:empty) { margin-top: 12px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; font-size: 13.5px; font-weight: 500; color: var(--ink-2);
+}
+.chip.is-on {
+  border-radius: 999px; padding-right: 4px;
+  background: var(--accent-soft); color: var(--link);
+}
+.chip-x {
+  width: 24px; height: 24px; padding: 0; border-radius: 50%;
+  background: transparent; box-shadow: none;
+  font-size: 16px; line-height: 1; color: inherit;
+}
+.chip-x:hover { background: var(--surface); box-shadow: none; }
+.have-line { margin: 0 0 20px; font-size: 15px; color: var(--ink-2); }
+.have-line b { color: var(--ink); font-weight: 600; }
+.have-tag { margin-left: 6px; font-size: 12px; font-weight: 500; color: var(--good); }
+
 /* Noget, brugeren skal gøre noget ved, før valget giver mening (for få
    retter, for mange butikker). Sjældent nok til at blive set. */
 .flag {
@@ -980,6 +1003,39 @@ dialog.recipe { max-width: 920px; }
 .steps li { padding: 0 0 12px 4px; font-size: 15px; line-height: 1.55; }
 .steps li::marker { font-weight: 600; color: var(--ink-3); }
 
+.cook-start { width: 100%; margin: 0 0 18px; min-height: 52px; font-size: 17px; }
+
+/* ── Madlavningstilstand ─────────────────────────────────────────────────── */
+dialog.cook {
+  width: 100vw; max-width: none; height: 100dvh; max-height: none;
+  margin: 0; border-radius: 0; background: var(--ground); box-shadow: none;
+}
+dialog.cook[open] { display: flex; flex-direction: column; }
+dialog.cook::backdrop { background: var(--ground); backdrop-filter: none; -webkit-backdrop-filter: none; }
+.cook-top { position: relative; z-index: 3; display: flex; align-items: center; gap: 12px; padding: 14px 16px; }
+.cook-count { flex: 1; margin: 0; text-align: center; font-size: 15px; font-weight: 600; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.cook-bar { height: 3px; background: var(--surface-2); }
+.cook-bar i { display: block; height: 100%; background: var(--accent); transition: width .25s ease-out; }
+.cook-stage {
+  flex: 1; overflow-y: auto; touch-action: pan-y;
+  display: flex; flex-direction: column; justify-content: center;
+  width: 100%; max-width: 760px; margin: 0 auto; padding: 24px 22px;
+}
+.cook-section { margin: 0 0 10px; font-size: 14px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; color: var(--link); }
+.cook-text { margin: 0; font-size: clamp(22px, 2.2vw + 14px, 32px); line-height: 1.45; letter-spacing: -.01em; color: var(--ink); }
+.cook-nav {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  width: 100%; max-width: 760px; margin: 0 auto; padding: 12px 16px calc(16px + env(safe-area-inset-bottom));
+}
+.cook-nav button { min-height: 56px; font-size: 18px; }
+.cook-ingr {
+  position: absolute; inset: 0; z-index: 2; overflow-y: auto;
+  padding: 72px 22px 24px; background: var(--ground);
+}
+.cook-ingr[hidden] { display: none; }
+.cook-ingr > * { max-width: 560px; margin-left: auto; margin-right: auto; }
+@media (prefers-reduced-motion: reduce) { .cook-bar i { transition: none; } }
+
 /* ── Ark og dialoger ──────────────────────────────────────────────────────── */
 dialog {
   padding: 0; border: 0; border-radius: var(--r-xl);
@@ -1168,6 +1224,58 @@ dialog::backdrop {
   .chain-pick[aria-pressed="true"]:hover, .tile[aria-checked="true"]:hover { box-shadow: var(--ring-on); }
 }
 
+/* Swipe i trin 4 (kun telefon). Vælgeren og kortene findes i siden på alle
+   skærme, men JS tænder dem kun ≤ 720 px – på computeren er alt som før. */
+.view-toggle, .swipe { display: none; }
+.is-phone .view-toggle {
+  display: inline-flex; gap: 2px; margin: 0 0 16px; padding: 3px;
+  border-radius: 999px; background: var(--surface-2);
+}
+.view-toggle button {
+  padding: 7px 20px; border-radius: 999px; min-height: 34px;
+  background: transparent; box-shadow: none; font-size: 14px; color: var(--ink-2);
+}
+.view-toggle button:hover { background: transparent; box-shadow: none; }
+.view-toggle button[aria-pressed="true"] { background: var(--surface); box-shadow: var(--shadow-border); color: var(--ink); font-weight: 600; }
+.is-swipe .swipe { display: block; }
+.is-swipe .picks { display: none; }
+
+.swipe-hint { margin: 0 0 12px; font-size: 13px; font-weight: 500; color: var(--urgent); text-align: center; }
+.swipe-stage { position: relative; }
+.swipe-card {
+  position: relative; overflow: hidden; background: var(--surface);
+  border-radius: var(--r-xl); box-shadow: var(--shadow-border);
+  /* pan-y: lodret rulning er stadig sidens; vandret hører til kortet. */
+  touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab;
+  will-change: transform;
+}
+.swipe-card:active { cursor: grabbing; }
+.swipe-card img, .swipe-ph {
+  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  background: var(--surface-2); pointer-events: none;
+}
+.swipe-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; }
+.swipe-body h3 { margin: 0; font-size: 21px; font-weight: 600; letter-spacing: -.02em; }
+.swipe-body .note { margin: 0; }
+.swipe-stamp {
+  position: absolute; top: 16px; padding: 4px 12px; border-radius: var(--r-sm);
+  font-size: 15px; font-weight: 600; opacity: 0; pointer-events: none;
+  background: var(--surface);
+}
+.swipe-stamp.is-yes { left: 16px; color: var(--good); box-shadow: inset 0 0 0 2px var(--good); }
+.swipe-stamp.is-no { right: 16px; color: var(--ink-2); box-shadow: inset 0 0 0 2px var(--ink-3); }
+.swipe-actions { display: flex; justify-content: center; gap: 28px; margin: 18px 0 4px; }
+.swipe-btn {
+  width: 60px; height: 60px; padding: 0; border-radius: 50%;
+  background: var(--surface); box-shadow: var(--shadow-border);
+  font-size: 28px; line-height: 1; color: var(--ink-2);
+}
+.swipe-btn.is-yes { background: var(--accent); color: var(--surface); box-shadow: none; }
+.swipe-btn.is-yes:hover { background: var(--accent-press); box-shadow: none; }
+.swipe-cta { display: block; width: 100%; margin-top: 16px; min-height: 44px; }
+.swipe-empty { padding: 28px 18px; text-align: center; background: var(--surface); border-radius: var(--r-xl); box-shadow: var(--shadow-border); }
+.swipe-empty p { margin: 0 0 14px; color: var(--ink-2); }
+
 /* Har brugeren bedt om ro, får de ro. Tilstandene skifter stadig – bare uden
    bevægelse. */
 @media (prefers-reduced-motion: reduce) {
@@ -1178,4 +1286,5 @@ dialog::backdrop {
   }
   .offer:hover { translate: 0 0; }
   button:active, .tile:active { scale: 1; }
+  .swipe-card { will-change: auto; }
 }

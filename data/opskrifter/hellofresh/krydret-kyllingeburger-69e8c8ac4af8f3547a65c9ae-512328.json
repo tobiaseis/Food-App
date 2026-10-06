@@ -1,0 +1,177 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/krydret-kyllingeburger-69e8c8ac4af8f3547a65c9ae",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:48:42.006Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 859,
+    "protein_g": 46.3,
+    "carbs_g": 85.3,
+    "fat_g": 38.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R05_BW18_SE_C51246-1_main_high-eb994a5e.jpg",
+  "lang": "da",
+  "keywords": "Fusion cuisine",
+  "fetched_at": "2026-10-05T20:04:05.195Z",
+  "title": "Krydrede kyllingeburgere med ovnfritter",
+  "intro": "Bankede kyllingebryster med krydderi i brioche-boller, serveret med ovnbagte kartoffel- og gulerodsstave. Voksne får en frisk korianderchimichurri og tomat på, mens børnene får den mildere udgave.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "Koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "Chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "Briocheboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "Gulerødder",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "Kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "Mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "Kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olivenolie",
+      "note": "til chimichurrien",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm ovnen op til 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skær kartofler og gulerødder i stave, og læg dem på halvdelen af en bageplade med bagepapir. Vend dem med olie og salt, og bag dem i 15-25 minutter, til de er møre. Brug to bageplader, hvis der ikke er plads."
+    },
+    {
+      "section": null,
+      "text": "Hak koriander, og halvér citronen. Rør koriander, chiliflager, lidt citronsaft, olie og en knivspids salt sammen til chimichurri. Brug mindre chili eller helt uden, hvis ikke alle kan lide det stærkt."
+    },
+    {
+      "section": null,
+      "text": "Skær tomaten i skiver på 1 cm. Når der er 15 minutter tilbage af bagetiden, lægger du dem på pladen med lidt olie og salt, og bager dem færdige."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingebrystet mellem to ark bagepapir, og bank det til en tykkelse på ca. 2 cm med en kødhammer eller kagerulle. Gnid det med salt og krydderiblandingen."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olie op i en pande ved middelhøj varme. Steg kyllingen 3-4 minutter på hver side, til den er gylden og helt gennemstegt – kødet skal være hvidt uden spor af rødt."
+    },
+    {
+      "section": null,
+      "text": "Del bollerne på midten, og læg dem direkte på ovnristen i 3-4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Fyld bollerne med halvdelen af mayonnaisen og kyllingen. Læg chimichurri og tomat på de voksnes burgere. Anret med fritterne, og server resten af mayonnaisen ved siden af."
+    }
+  ],
+  "changes": [
+    "Panamad Central American Spice er erstattet af Cajun-krydderi.",
+    "Citrusfrugt er erstattet af citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, briocheboller og ovnfritter som mættende del samt grønt, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:40:09.043Z"
+  }
+}

@@ -11,6 +11,37 @@
  * lader fremgangsmåden blive hos kilden – brugeren klikker videre dertil.
  */
 
+// /recipes/<slug>-<24 hex MongoDB-id>, uden forespørgselsstreng eller bundstreg.
+const HF_URL = /^https:\/\/www\.hellofresh\.dk\/recipes\/([a-z0-9æøå-]+?)-([0-9a-f]{24})$/i;
+
+/**
+ * Rene opskrifts-URL'er, én pr. slug (nyeste id), nyeste først. De første 8
+ * hex i id'et er et Unix-tidsstempel, så id'et selv dateres uden at hente siden.
+ */
+function pickHelloFreshUrls(locs, limit = Infinity) {
+  const bySlug = new Map();
+  for (const loc of locs) {
+    const m = HF_URL.exec(loc);
+    if (!m) continue;
+    const ts = parseInt(m[2].slice(0, 8), 16);
+    const cur = bySlug.get(m[1].toLowerCase());
+    if (!cur || ts > cur.ts) bySlug.set(m[1].toLowerCase(), { url: loc, ts });
+  }
+  return [...bySlug.values()].sort((a, b) => b.ts - a.ts).map((x) => x.url).slice(0, limit);
+}
+
+/**
+ * Fjerner URL'er, hvis ret (slug uden id) allerede findes i basen. HelloFresh
+ * genudgiver samme ret med nyere id, så en match på præcis URL henter den
+ * igen hold efter hold. Andre URL'er (uden slug-mønster) slipper igennem.
+ */
+function excludeKnownHelloFreshSlugs(urls, knownUrls) {
+  const slugOf = (u) => { const m = HF_URL.exec(u); return m ? m[1].toLowerCase() : null; };
+  const known = new Set();
+  for (const u of knownUrls) { const s = slugOf(u); if (s) known.add(s); }
+  return urls.filter((u) => { const s = slugOf(u); return !s || !known.has(s); });
+}
+
 const SOURCES = [
   {
     key: 'valdemarsro',
@@ -59,6 +90,27 @@ const SOURCES = [
         await sleep(700);
       }
       return out;
+    },
+  },
+  {
+    key: 'hellofresh',
+    name: 'HelloFresh',
+    lang: 'da',
+    homepage: 'https://www.hellofresh.dk',
+    // Ugentlige måltidskasse-retter: moderne hverdagsmad med faste mængder.
+    tierHint: null,
+    isRecipeUrl: (u) => HF_URL.test(u),
+    delayMs: 1000,
+
+    /**
+     * Sitemappet har samme ret i flere uger under forskellige id'er, så der
+     * dedupes på slug og den nyeste udgave vælges. Kun rene /recipes/<slug>-<id>
+     * hentes; robots.txt forbyder søge- og forespørgselsvarianterne.
+     */
+    async discover({ fetchText }, limit) {
+      const xml = await fetchText('https://www.hellofresh.dk/sitemap_recipe_pages.xml');
+      const locs = [...(xml || '').matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)].map((m) => m[1]);
+      return pickHelloFreshUrls(locs, limit);
     },
   },
   {
@@ -158,4 +210,4 @@ const SOURCES = [
 
 const BY_KEY = new Map(SOURCES.map((s) => [s.key, s]));
 
-module.exports = { SOURCES, BY_KEY };
+module.exports = { SOURCES, BY_KEY, pickHelloFreshUrls, excludeKnownHelloFreshSlugs };

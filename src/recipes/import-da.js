@@ -28,6 +28,7 @@ const path = require('path');
 const { getDb } = require('../db');
 const taxonomy = require('../lib/taxonomy');
 const { parseIngredient } = require('./extract');
+const { scaleNutrition } = require('./servings');
 const { UNITS, EDITION_DIR, lineOf, labelOf } = require('./edition');
 
 const MAIN_CATS = new Set(['meat', 'poultry', 'fish']);
@@ -74,9 +75,24 @@ function listFiles(dir) {
     .sort();
 }
 
+/**
+ * En ret, der oprettes af udgaven, skal kunne stå alene i basen — og skal kunne
+ * kreditere sin kilde (fotoet). Ligesom tilbehørets fejl kan det ikke
+ * tilsidesættes med `accepted`; der er intet at "godkende" ved et manglende navn.
+ */
+function newRecipeProblems(ed) {
+  return ['source', 'source_name'].filter((f) => !ed[f]).map((f) => `ny ret: ${f} mangler i udgaven`);
+}
+
 /** Hvad der er galt med udgaven. Tom liste: den kan læses ind. */
-function problems(ed, lines, before) {
+function problems(ed, lines, before, { created = false } = {}) {
   const out = [];
+  // Kravet om source/source_name på en ny ret ligger i newRecipeProblems(): det
+  // kan ikke tilsidesættes med `accepted`. Her gælder det øvrige for en ny ret.
+  if (created) {
+    // Ingen krav om hovedråvare: om en ret er aftensmad afgøres senere af
+    // motoren (isDinner/hasMainCourse), så en ret uden er harmløs i puljen.
+  }
   if (!ed.title || ed.title.length < 3) out.push('ingen titel');
   if (!Array.isArray(ed.steps) || ed.steps.length < 2) out.push('færre end to trin');
   if (!Array.isArray(ed.ingredients) || ed.ingredients.length < 2) out.push('færre end to ingredienser');
@@ -116,7 +132,14 @@ function problems(ed, lines, before) {
 
   // Flere ukendte linjer end før: udgaven er sværere at prissætte end kilden.
   const unknown = (ls) => ls.filter((l) => !l.item_key && !l.optional).length;
-  if (unknown(lines) > unknown(before)) out.push(`${unknown(lines)} ukendte linjer (før ${unknown(before)})`);
+  // En ny ret har intet "før" at sammenligne med; i stedet må højst en
+  // fjerdedel af linjerne (mindst én) være ukendte, så en enkelt eksotisk
+  // ingrediens ikke holder en HelloFresh-ret tilbage.
+  const nonOpt = lines.filter((l) => !l.optional).length;
+  const cap = Math.max(1, Math.ceil(nonOpt * 0.25));
+  if (created ? unknown(lines) > cap : unknown(lines) > unknown(before)) {
+    out.push(`${unknown(lines)} ukendte linjer (${created ? `højst ${cap}` : `før ${unknown(before)}`})`);
+  }
   // Flere ingredienslinjer end kilden: en erstattet færdigvare er blevet til en
   // hjemmelavet delopskrift med opfundne mængder (pilotens cheesecake med gelé).
   // Marginen på +2 og 30 % lader "salt og peber" blive til to linjer.
@@ -142,8 +165,9 @@ function problems(ed, lines, before) {
 function sideProblems(side) {
   const out = [];
   const ings = Array.isArray(side.ingredients) ? side.ingredients : [];
-  // Højst 4 linjer: det er ét klassisk tilbehør, ikke en delopskrift.
-  if (ings.length < 1 || ings.length > 4) out.push(`tilbehør: ${ings.length} ingredienslinjer (1-4 er tilladt)`);
+  // Højst 6 linjer: et rigtigt tilbehør (fx rosmarinkartofler og agurkesalat) har
+  // brug for olie, krydderurt og dressing, men er stadig ikke en delopskrift.
+  if (ings.length < 1 || ings.length > 6) out.push(`tilbehør: ${ings.length} ingredienslinjer (1-6 er tilladt)`);
   for (const ing of ings) {
     if (ing.unit != null && !UNITS.includes(ing.unit)) out.push(`tilbehør: ukendt enhed "${ing.unit}"`);
     if (ing.amount != null && !(ing.amount > 0)) out.push(`tilbehør: mængden ${ing.amount} for ${ing.name}`);
@@ -156,7 +180,30 @@ function sideProblems(side) {
   }
   if (!side.title) out.push('tilbehør: ingen titel');
   if (!Array.isArray(side.steps) || !side.steps.length) out.push('tilbehør: intet trin');
+  else if (side.steps.length > 4) out.push(`tilbehør: ${side.steps.length} trin (højst 4)`);
+  if (ings.length && isBoringSide(side, ings)) out.push('tilbehør: for kedeligt (kun kogte kartofler, ris eller bar salat)');
   return out;
+}
+
+// "Kogte kartofler og hovedsalat er ikke tilbehør" (brugeren). Prompten forbyder
+// dem, men modellen glider tilbage; kontrollen er deterministisk, så de aldrig
+// havner i en opskrift. Kedeligt = titlen er kun de nøgne ord, ELLER alle linjer
+// er kartofler/ris/salat (salt, peber og vand tæller ikke). "Kartofler med
+// persille" slipper igennem: persille er ikke et nøgent ord. En linje uden kendt
+// nøgle regnes for smag (hellere en for lidt end en for meget holdt tilbage).
+const BORING_TITLE_WORDS = new Set([
+  'kogte', 'kogt', 'dampede', 'dampet', 'kartofler', 'kartoffel', 'nye', 'ris', 'hvide', 'jasminris', 'basmatiris',
+  'grøn', 'grønne', 'salat', 'hovedsalat', 'bladsalat', 'og', 'med', 'til',
+]);
+const BORING_KEYS = new Set(['kartofler', 'ris', 'salat', 'salt', 'peber', 'vand']);
+
+function isBoringSide(side, ings) {
+  const words = String(side.title || '').toLowerCase().split(/[^a-zæøå]+/).filter(Boolean);
+  // Nøgen titel (kogte kartofler, ris, hovedsalat, kogte kartofler og grøn salat): kedeligt,
+  // uanset linjerne — smør eller dild på en kogt kartoffel gør den ikke til et tilbehør.
+  if (words.length && words.every((w) => BORING_TITLE_WORDS.has(w))) return true;
+  // Finere titel end indhold (sprøde ovnkartofler med kun kartofler og salt): også kedeligt.
+  return ings.every((ing) => BORING_KEYS.has(parseIngredient(lineOf(ing), 0).item_key));
 }
 
 /**
@@ -173,12 +220,50 @@ function actionsWarning(flagged, errored) {
     + 'Kør npm run recipes:import -- --report tmp/omskrivning/kontrol.md lokalt.';
 }
 
+/**
+ * Sidens næring fra udgaven som kolonner til en NY ret. Med nutrition_src
+ * 'site' beholder reclassify tallene (kun skaleret ved ændret portionsantal) i
+ * stedet for at skønne dem, så sunde scorer/spor er de samme som lokalt.
+ * Uden næring i udgaven: NULL, og reclassify skønner som hidtil.
+ */
+function nutritionColumns(ed) {
+  const n = ed.nutrition;
+  const none = { kcal: null, protein_g: null, carbs_g: null, fat_g: null, nutrition_src: null };
+  if (!n || (n.kcal == null && n.protein_g == null)) return none;
+  const servings = ed.servings > 0 ? ed.servings : null;
+  const s = servings ? scaleNutrition(n, n.per_servings, servings) : n;
+  return { kcal: s.kcal ?? null, protein_g: s.protein_g ?? null, carbs_g: s.carbs_g ?? null,
+           fat_g: s.fat_g ?? null, nutrition_src: 'site' };
+}
+
 function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } = {}) {
   const db = getDb();
   const byUrl = new Map(db.prepare('SELECT id, url, edition_hash FROM recipes').all().map((r) => [r.url, r]));
   const before = db.prepare('SELECT raw, ingredient, item_key, amount, optional FROM recipe_ingredients WHERE recipe_id = ?');
 
+  const create = db.prepare(`
+    INSERT INTO recipes (url, source, source_name, title, lang, servings, yield_count,
+                         total_minutes, active_minutes, image, keywords, fetched_at,
+                         kcal, protein_g, carbs_g, fat_g, nutrition_src)
+    VALUES (@url, @source, @source_name, @title, 'da', @servings, @yield_count,
+            @total, @active, @image, @keywords, @fetched_at,
+            @kcal, @protein_g, @carbs_g, @fat_g, @nutrition_src)`);
+
   const apply = db.transaction((id, ed, lines, hash) => {
+    // Udgaven er selvbærende: kender basen ikke retten (en ny kilde i den
+    // natlige kørsel, hvor release-basen ikke har den), oprettes den her, og
+    // resten af funktionen læser udgaven ind som på enhver anden ret.
+    if (id == null) {
+      id = Number(create.run({
+        url: ed.url, source: ed.source, source_name: ed.source_name, title: ed.title,
+        servings: ed.servings > 0 ? ed.servings : null,
+        yield_count: ed.yield_count ?? (ed.servings > 0 ? ed.servings : null),
+        total: ed.total_minutes ?? null, active: ed.active_minutes ?? null,
+        image: ed.image ?? null, keywords: ed.keywords ?? null,
+        fetched_at: ed.fetched_at || ed.written_at || new Date().toISOString(),
+        ...nutritionColumns(ed),
+      }).lastInsertRowid);
+    }
     // description = NULL: den rummer op til 500 tegn af kildens EGEN tekst
     // (extract.js), og release-assettets data.db er offentlig, hvis repoet er.
     // Kildens tekst forlader ikke maskinen — heller ikke via basen. Udgavens
@@ -210,11 +295,11 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
     db.prepare('DELETE FROM recipe_steps WHERE recipe_id = ?').run(id);
     const step = db.prepare('INSERT INTO recipe_steps (recipe_id, position, section, text) VALUES (?, ?, ?, ?)');
     ed.steps.forEach((s, i) => step.run(id, i, s.section || null, s.text));
+    return id;
   });
 
-  const stats = { applied: 0, unchanged: 0, flagged: 0, orphan: 0, errored: 0 };
+  const stats = { applied: 0, unchanged: 0, flagged: 0, created: 0, errored: 0 };
   const flagged = [];
-  const orphaned = [];
   const errored = [];
   for (const file of listFiles(dir)) {
     const rel = path.relative(process.cwd(), file);
@@ -222,9 +307,9 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
       const text = fs.readFileSync(file, 'utf8');
       const ed = JSON.parse(text);
       const row = byUrl.get(ed.url);
-      if (!row) { stats.orphan++; orphaned.push({ file: rel, url: ed.url }); continue; }
+      const isNew = !row;
       const hash = crypto.createHash('sha1').update(text).digest('hex');
-      if (row.edition_hash === hash) { stats.unchanged++; continue; }
+      if (row && row.edition_hash === hash) { stats.unchanged++; continue; }
 
       const toLine = (ing, i, section) => {
         const raw = lineOf(ing);
@@ -233,12 +318,12 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
       const lines = (ed.ingredients || []).map((ing, i) => toLine(ing, i, ing.section || null));
       // problems() ser kun rettens egne linjer: tilbehørets må ikke tælle med i
       // linjetallet mod source_lines eller i "ukendte linjer".
-      const issues = problems(ed, lines, before.all(row.id));
+      const issues = problems(ed, lines, isNew ? [] : before.all(row.id), { created: isNew });
       const side = ed.meal && ed.meal.complete !== true ? ed.meal.side : null;
-      const sideIssues = side ? sideProblems(side) : [];
+      const sideIssues = [...(isNew ? newRecipeProblems(ed) : []), ...(side ? sideProblems(side) : [])];
       if (sideIssues.length || (issues.length && !ed.accepted)) {
         stats.flagged++;
-        flagged.push({ file: rel, id: row.id, title: ed.title, issues: [...sideIssues, ...issues] });
+        flagged.push({ file: rel, id: row ? row.id : null, title: ed.title, issues: [...sideIssues, ...issues] });
         continue;
       }
       let steps = ed.steps;
@@ -248,8 +333,9 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
         side.ingredients.forEach((ing, i) => lines.push(toLine(ing, start + i, section)));
         steps = [...ed.steps, ...side.steps.map((text) => ({ section: 'Tilbehør', text }))];
       }
-      apply(row.id, { ...ed, steps }, lines, hash);
-      stats.applied++;
+      const id = apply(row ? row.id : null, { ...ed, steps }, lines, hash);
+      if (isNew) { stats.created++; byUrl.set(ed.url, { id, url: ed.url, edition_hash: hash }); }
+      else stats.applied++;
     } catch (err) {
       // apply() er en transaktion, så en fejl undervejs i den ruller kun DEN
       // ene opskrift tilbage — ikke tidligere filer i samme kørsel.
@@ -259,12 +345,12 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
   }
 
   log(`${stats.applied} læst ind · ${stats.unchanged} uændrede · ${stats.flagged} til eftersyn · `
-    + `${stats.orphan} uden ret i basen · ${stats.errored} kunne ikke læses`);
-  for (const f of flagged.slice(0, 20)) log(`  ${f.id} ${f.title}: ${f.issues.join('; ')}`);
-  // Navngiv også forældreløse og fejlede filer i loggen: i en natlig,
+    + `${stats.created} oprettet · ${stats.errored} kunne ikke læses`);
+  // En ny ret har intet id i basen endnu: vis "ny" i stedet for null.
+  for (const f of flagged.slice(0, 20)) log(`  ${f.id ?? 'ny'} ${f.title}: ${f.issues.join('; ')}`);
+  // Navngiv også fejlede filer i loggen: i en natlig,
   // ubemandet kørsel er logudskriften det eneste sted, man kan se HVORFOR en
   // fil ikke blev læst ind.
-  for (const f of orphaned.slice(0, 20)) log(`  uden ret i basen: ${f.file} (${f.url})`);
   for (const f of errored.slice(0, 20)) log(`  kunne ikke læses: ${f.file}: ${f.error}`);
   // I GitHub Actions bliver linjen en advarsel på kørslens forside. Ellers
   // står det kun dybt i loggen af en kørsel, der lykkedes — og ingen læser den.
@@ -274,7 +360,7 @@ function importAll({ dir = EDITION_DIR, log = console.log, reportPath = null } =
   }
   if (reportPath) {
     const md = ['# Danske udgaver til eftersyn', '',
-      ...flagged.map((f) => `- **${f.title}** (${f.id}) \`${f.file}\`\n  - ${f.issues.join('\n  - ')}`)];
+      ...flagged.map((f) => `- **${f.title}** (${f.id ?? 'ny'}) \`${f.file}\`\n  - ${f.issues.join('\n  - ')}`)];
     if (errored.length) {
       md.push('', '## Kunne ikke læses', '',
         ...errored.map((f) => `- \`${f.file}\`: ${f.error}`));
@@ -292,4 +378,4 @@ if (require.main === module) {
   importAll({ reportPath: i === -1 ? null : args[i + 1] });
 }
 
-module.exports = { importAll, problems, actionsWarning };
+module.exports = { importAll, problems, sideProblems, actionsWarning };

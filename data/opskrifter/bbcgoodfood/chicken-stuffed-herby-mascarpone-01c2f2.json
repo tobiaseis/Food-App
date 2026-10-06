@@ -9,6 +9,17 @@
   "active_minutes": 5,
   "yield_count": 2,
   "source_lines": 7,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 339,
+    "protein_g": 37,
+    "carbs_g": 3,
+    "fat_g": 20
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-160495_11-4be689d.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, British, BBC Good Food, Beginners, Chicken, Chicken breast, Chicken breasts, Chook, Favourite, Good Food, Indulgent, Mascarpone, Poultry, Prosciutto, Rosemary",
+  "fetched_at": "2026-08-27T17:50:10.899Z",
   "title": "Kylling fyldt med mascarpone og rosmarin",
   "intro": "Kyllingebryster fyldt med cremet urtemascarpone og pakket ind i sprød parmaskinke. Retten steges kort og færdigbages i ovnen, og pandesaften får et pift af citron.",
   "servings": 2,
@@ -125,9 +136,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten har en fin hovedråvare, men mangler kartofler eller anden mættende ingrediens.",
+    "reason": "Retten er kun kyllingebryst med fyld og har ikke i sig selv noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler og citronbroccoli",
       "ingredients": [
         {
           "section": null,
@@ -139,19 +150,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "timian",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "broccoli",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 0.5,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, vend dem med halvdelen af olien, timian og salt, og bag dem sprøde ved 200 grader i cirka 35 minutter.",
+        "Del broccolien i små buketter, og vend dem med resten af olien, hvidløg og salt.",
+        "Bag broccolien sammen med kartoflerne de sidste 15 minutter, til den er mør og let brunet.",
+        "Pres citronsaft over broccolien, og server den til kartoflerne og kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:55:46.549Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:25:49.835Z"
   }
 }

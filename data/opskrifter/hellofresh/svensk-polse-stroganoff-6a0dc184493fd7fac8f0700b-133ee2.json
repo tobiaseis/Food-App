@@ -1,0 +1,211 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/svensk-polse-stroganoff-6a0dc184493fd7fac8f0700b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:40:18.475Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1112,
+    "protein_g": 25.3,
+    "carbs_g": 89.7,
+    "fat_g": 72.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R07_BW22_SE_C57597-1main_high-1aa58743.jpg",
+  "lang": "da",
+  "keywords": "Svensk",
+  "fetched_at": "2026-10-05T20:03:04.731Z",
+  "title": "Pølsestroganoff med ris og spidskålssalat",
+  "intro": "Svensk falukorv i en cremet tomatsauce med sennep og soja, serveret med ris og en frisk salat af spidskål og persille. Det er hverdagsmad, der er klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "ris",
+      "note": "langkornede hvide",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 300,
+      "unit": "g",
+      "name": "falukorv",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 10,
+      "unit": "g",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Stroganoff",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "skåret fint",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet, hakket groft; halvdelen bruges til at toppe retten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom vand i en gryde, og bring det i kog. Tilsæt salt og ris, læg låg på, og lad det koge ved middellav varme i 14 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risene stå under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Stroganoff",
+      "text": "Skær pølsen i strimler på ca. 1 cm, og hak løget fint."
+    },
+    {
+      "section": "Stroganoff",
+      "text": "Varm olien op i en stor stegepande ved middelhøj varme. Brun pølse og løg i 4-5 minutter."
+    },
+    {
+      "section": "Stroganoff",
+      "text": "Rør tomatpuréen ind, og lad den stege med i 1 minut."
+    },
+    {
+      "section": "Stroganoff",
+      "text": "Hæld fløde, mælk, vand og sojasauce i panden, og rør ketchup og sennep ud i saucen. Lad den simre i 4-5 minutter, til den har tyknet lidt."
+    },
+    {
+      "section": "Stroganoff",
+      "text": "Smag til med salt lige før servering."
+    },
+    {
+      "section": "Salat",
+      "text": "Hak persillen groft, mens saucen simrer. Vend spidskål, halvdelen af persillen, olie og salt sammen i en skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Fordel ris og stroganoff i dybe tallerkener, og drys med resten af persillen. Server med salaten ved siden af."
+    }
+  ],
+  "changes": []
+}

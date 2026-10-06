@@ -1,0 +1,248 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/citrus-og-ingefaerkrydret-kylling-69e8c8abfe534c766c4592b3",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:48:54.886Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 594,
+    "protein_g": 46.5,
+    "carbs_g": 90.8,
+    "fat_g": 6.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R07_BW18_SE_C56262-1_main_high-5c75a2f1.jpg",
+  "lang": "da",
+  "keywords": "Kinesisk",
+  "fetched_at": "2026-10-05T20:04:06.397Z",
+  "title": "Citronkylling med grønkål, ris og pak choi-salat",
+  "intro": "Ovnbagt kyllingebryst med citrus og ingefær, serveret med ris, bagt grønkål og en sprød salat. Det hele får en sød-salt sauce af soja og honning.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "grønkål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citrusfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": "med lavt saltindhold",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "revet, uskrællet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til grønkålen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "mel",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til grønkål og salat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Bring vandet til risen i kog i en gryde. Kom ris og salt i, læg låg på, og lad risen koge ved middellav varme i 10 minutter. Tag gryden af varmen, og lad risen trække under låg i yderligere 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": null,
+      "text": "Skræl gulerod i lange, tynde bånd, og hak resten fint. Hak pak choi groft, og snit forårsløg fint. Fjern de hårde stilke fra grønkålen, og hak bladene groft. Riv ingefæren fint uden at skrælle den."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingen på en bageplade med bagepapir. Drys med salt og halvdelen af ingefæren. Del citrusfrugten på midten, skær den ene halvdel i tynde skiver, og læg dem ovenpå kyllingen."
+    },
+    {
+      "section": null,
+      "text": "Bag kyllingen i 17-19 minutter, til den er helt gennemstegt, og kødet er hvidt uden røde steder."
+    },
+    {
+      "section": null,
+      "text": "Fordel grønkålen på en anden bageplade med bagepapir. Vend den med en smule olie, sukker, salt og peber. Sæt den i ovnen sammen med kyllingen, når der er 10-12 minutter tilbage af kyllingens tid."
+    },
+    {
+      "section": null,
+      "text": "Vend pak choi, gulerod og forårsløg med et nip salt i en stor skål. Tilsæt evt. lidt olie."
+    },
+    {
+      "section": null,
+      "text": "Rør vand, bouillon, sojasauce, honning, mel og et skvæt saft fra den anden citrushalvdel sammen i en skål."
+    },
+    {
+      "section": null,
+      "text": "Varm en stor stegepande op ved middelhøj varme. Hæld saucen på panden sammen med resten af ingefæren og et nip salt. Lad den småkoge i 4-6 minutter, til den er tyknet."
+    },
+    {
+      "section": null,
+      "text": "Server ris, kylling og grønkål på tallerkener. Hæld saucen over, og drys med sesamfrø. Server salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Palmekål er skiftet til grønkål."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, ris som mættende del samt grønkål og en pak choi-salat, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:40:11.725Z"
+  }
+}

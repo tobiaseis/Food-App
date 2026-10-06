@@ -1,0 +1,274 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/klassisk-lammesteg-6a4fb2ce6e4158183d5da278",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:13:39.543Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 21,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1265,
+    "protein_g": 44,
+    "carbs_g": 87.8,
+    "fat_g": 83.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R07_BW31_SE_C57774-1_main_high-4b2ae0c8.jpg",
+  "lang": "da",
+  "keywords": "Britisk",
+  "fetched_at": "2026-10-05T20:00:12.396Z",
+  "title": "Lammesteg med hasselbackkartofler, brun sovs og ostegratineret blomkål",
+  "intro": "Mør lammeculotte med rosmarinhonningristede rødder, sprøde hasselbackkartofler og cremet blomkålsgratin med cheddar. Det hele serveres med en hurtig brun sovs lavet på stegesky fra panden.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "lammeculotte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "rosmarin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "blomkål",
+      "note": "i buketter",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "revet cheddar",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bechamel",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bechamel",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bechamel",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bechamel",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sovsen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sovsen",
+      "amount": 100,
+      "unit": "g",
+      "name": "brun sovs",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sovsen",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salt",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Salt",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Salt",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 240°C (220°C varmluft), og tag lammet ud af køleskabet, så det når at tage lidt af kulden. Sæt også en stor gryde vand over til kogning."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Læg hver kartoffel mellem skafterne på to grydeskeer, og skær tynde parallelle snit næsten helt ned. Gør det med alle kartoflerne."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Læg kartoflerne på en bageplade med bagepapir. Dryp med lidt olie, og drys med salt og peber. Bag dem i 25-35 min, til de er gyldne og møre. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": "Lam og grøntsager",
+      "text": "Del gulerødder og pastinak i fire lange både hver. Hak rosmarinen groft."
+    },
+    {
+      "section": "Lam og grøntsager",
+      "text": "Læg rødderne på halvdelen af en bageplade med bagepapir. Drys med salt og halvdelen af rosmarinen, og vend dem med honningen."
+    },
+    {
+      "section": "Lam og grøntsager",
+      "text": "Skær et tern- eller rudemønster med cirka 1 cm afstand i lammets fedtside, og salt kødet. Læg det med fedtsiden nedad i en pande ved middel varme, og steg i 8-9 min."
+    },
+    {
+      "section": "Lam og grøntsager",
+      "text": "Skru op på høj varme, og brun kødet på alle sider i 30 sek. Læg det på den tomme halvdel af bagepladen, og sæt i ovnen i 15 min, til kødet er færdigt og grøntsagerne er møre."
+    },
+    {
+      "section": "Lam og grøntsager",
+      "text": "Pak lammet ind i folie, og lad det hvile, mens resten gøres færdigt. Gem panden med stegeskyen."
+    },
+    {
+      "section": "Blomkålsgratin",
+      "text": "Del blomkålen i buketter på ca. 2 cm. Pres eller finhak hvidløget, og del det i to."
+    },
+    {
+      "section": "Blomkålsgratin",
+      "text": "Kog blomkålen mør i det kogende vand på 5-7 min. Si vandet fra, og læg blomkålen i et ildfast fad."
+    },
+    {
+      "section": "Blomkålsgratin",
+      "text": "Smelt smørret til bechamelen i den tomme gryde ved middel varme. Svits halvdelen af hvidløget i 30 sek, til det dufter."
+    },
+    {
+      "section": "Blomkålsgratin",
+      "text": "Rør melet i, og tilsæt så mælk og fløde lidt ad gangen under konstant piskning. Lad det tykne i 3-4 min."
+    },
+    {
+      "section": "Blomkålsgratin",
+      "text": "Smag til med salt og peber, og pisk halvdelen af cheddaren i. Hæld sovsen jævnt over blomkålen, og strø resten af osten og panko ovenpå."
+    },
+    {
+      "section": "Blomkålsgratin",
+      "text": "Sæt gratinen i ovnen, når der er 8 min tilbage af grøntsagernes tid. Bag den i 8-10 min, til den er gylden."
+    },
+    {
+      "section": "Sovs",
+      "text": "Smelt smørret til sovsen i lammets pande ved middelhøj varme. Svits resten af hvidløget i 30 sek, til det dufter."
+    },
+    {
+      "section": "Sovs",
+      "text": "Rør brun sovs og vand i, og lad det simre i 2-3 min. Hæld den stegesky, der har samlet sig fra det hvilende lam, i panden."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær lammet ud, og anret med kartofler, gulerod, pastinak og gratin. Hæld den brune sovs over."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har lammekød som hovedråvare, hasselbackkartofler som mættende element og både rodfrugter og gratineret blomkål som grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:33:58.351Z"
+  }
+}

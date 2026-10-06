@@ -13,7 +13,7 @@
  */
 
 const { getDb } = require('../db');
-const { SOURCES, BY_KEY } = require('./sources');
+const { SOURCES, BY_KEY, excludeKnownHelloFreshSlugs } = require('./sources');
 const { extractRecipe } = require('./extract');
 const { estimateNutrition, scoreTiers, primaryTier } = require('./classify');
 const { servingsFromYield, totalGrams, scaleNutrition } = require('./servings');
@@ -172,7 +172,9 @@ async function crawlSource(source, { limit = 150, log = console.log } = {}) {
 
   log(`\n[${source.name}] finder opskrifts-URL'er...`);
   const all = await discoverUrls(source, limit);
-  const fresh = all.filter((u) => !known.has(u));
+  let fresh = all.filter((u) => !known.has(u));
+  // HelloFresh genudgiver samme ret under nyt id – match derfor også på slug.
+  if (source.key === 'hellofresh') fresh = excludeKnownHelloFreshSlugs(fresh, known);
   log(`  ${all.length} opskrifter i sitemap · ${known.size} allerede hentet · henter op til ${Math.min(limit, fresh.length)}`);
 
   const stats = { ok: 0, failed: 0, skipped: 0, tiers: {} };

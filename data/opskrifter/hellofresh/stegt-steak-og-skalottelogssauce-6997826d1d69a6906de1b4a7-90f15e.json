@@ -1,0 +1,227 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/stegt-steak-og-skalottelogssauce-6997826d1d69a6906de1b4a7",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:31:43.464Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 714,
+    "protein_g": 41.2,
+    "carbs_g": 67.8,
+    "fat_g": 31.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF221011_R18_W51_SE_P12770-1_remove_butter_edit__Main_high-691ce15b.jpg",
+  "lang": "da",
+  "keywords": "Skandinavisk",
+  "fetched_at": "2026-10-05T20:06:27.363Z",
+  "title": "Rumpsteak med skalotteløgssauce, pastinakmos og nøddeporre",
+  "intro": "Mør rumpsteak med brun løgsauce serveres med cremet mos af kartofler og pastinak og ovnbagt porre med ristede hasselnødder. Alt laves samtidig, så retten er hurtig at få på bordet.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "rumpsteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "kruspersille",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "ristede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "til mosen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til porren",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 12,
+      "unit": "ml",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": "oksebouillon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "mel",
+      "note": "hvedemel, til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til mosen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "til kogevandet og porren",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Tag smør og bøffer ud af køleskabet, og salt bøfferne. Sæt en stor gryde med saltet vand over til kogning."
+    },
+    {
+      "section": "Porre",
+      "text": "Skær porren over på midten og derefter på langs. Læg smør på stykkerne, drys med salt og peber, og pak dem i sølvpapir. Læg pakken på en bageplade med bagepapir, og bag den i 25-35 minutter, til porren er mør."
+    },
+    {
+      "section": "Mos",
+      "text": "Skræl kartofler og pastinak, og skær dem i tern på 2 cm. Kog dem i 11-13 minutter, til en kniv let glider igennem. Hæld vandet fra, og tilsæt mælk, salt og peber. Mos det hele med en kartoffelmoser eller en gaffel, tag gryden af varmen, og læg låg på. Tip: En klat smør gør mosen cremet."
+    },
+    {
+      "section": "Sauce og tilbehør",
+      "text": "Hak løg og persille fint, og grovhak hasselnødderne. Rør vand og hvedemel til en klumpfri jævning i en lille skål."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Når der er 10 minutter tilbage af porrens bagetid, varmes olien i en stor pande på høj varme. Steg bøfferne 3-4 minutter på hver side, til de er brunede. Pak dem i folie, og lad dem hvile, til de skal serveres. Tip: Steg 1-2 minutter længere for gennemstegt kød. Når der er 5 minutter tilbage af porrens tid, strøs hasselnødderne ud på den frie del af bagepladen."
+    },
+    {
+      "section": "Sauce og tilbehør",
+      "text": "Skru ned til middelvarme, og tilsæt lidt olie i den samme pande. Svits løget i 1 minut, til det dufter. Hæld eddike i, og rør rundt. Kom jævning, bouillon, saft fra bøfferne, smør, sukker, salt og peber i, og lad saucen simre under omrøring i 2-3 minutter, til den er tyknet. Tip: Er den for tyk, så tilsæt et skvæt vand."
+    },
+    {
+      "section": "Anretning",
+      "text": "Skær bøfferne i skiver. Fordel bøffer, mos og porre på tallerkenerne. Strø hasselnødder over porren, hæld løgsauce over kødet, og top med persille."
+    }
+  ],
+  "changes": []
+}

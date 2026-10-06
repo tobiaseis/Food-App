@@ -9,6 +9,17 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 13,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 373,
+    "protein_g": 43,
+    "carbs_g": 9,
+    "fat_g": 17
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-madras-f69ab47.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Chicken curry, chicken madras, Curry, Elena Silcock, goodhealth, Healthy, how to make a chicken madras, Indian, Madras, Takeaway",
+  "fetched_at": "2026-08-27T17:52:47.238Z",
   "title": "Kylling Madras",
   "intro": "En kraftigt krydret indisk kyllingeret med tomat, ingefær og chili. Server den med ris, naanbrød og mango chutney.",
   "servings": 4,
@@ -174,34 +185,10 @@
     "Naan er skiftet til naanbrød."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Gryderetten mangler integreret stivelse eller rigeligt grønt.",
-    "side": {
-      "title": "Ris og grøn salat",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 240,
-          "unit": "g",
-          "name": "ris",
-          "note": null,
-          "optional": false
-        },
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Kog risen i letsaltet vand til den er møre.",
-        "Vask salaten, riv den i stykker, og server den til risen."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:16:44.731Z"
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare og serveres med ris og naanbrød, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:26:23.339Z"
   }
 }

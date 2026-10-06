@@ -1,0 +1,195 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/ovnbagt-fajita-kylling-6a3d0c3cbcb653703ca8bc22",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:25:03.260Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 545,
+    "protein_g": 46.3,
+    "carbs_g": 65,
+    "fat_g": 12.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R16_BW28_SE_K14977-1main_high-c94404f9.jpg",
+  "lang": "da",
+  "keywords": "Mexicansk",
+  "fetched_at": "2026-10-05T20:01:24.987Z",
+  "title": "Ovnbagt fajitakylling med chimichurri og cajundressing",
+  "intro": "Mør kylling og ovnbagte grøntsager med fajitakrydderi, toppet med frisk chimichurri. Serveres med en cremet cajundressing med et skvæt citrus.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.75,
+      "unit": "dl",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "BBQ-marineret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "g",
+      "name": "Tex-Mex krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "broccolini",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "chimichurri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til dressingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skær kartofler med skræl og løg i både på ca. 2 cm. Skær peberfrugten i strimler på ca. 2 cm."
+    },
+    {
+      "section": null,
+      "text": "Læg grøntsagerne på en bageplade med bagepapir. Dryp olivenolie over, og drys med Tex-Mex krydderi, halvdelen af cajunkrydderiet, salt og peber. Vend rundt, og bag i 20-30 minutter, til de er møre. Brug to bageplader, hvis der ikke er plads på én."
+    },
+    {
+      "section": null,
+      "text": "Del citronen i to. Rør creme fraiche sammen med resten af cajunkrydderiet, saltet til dressingen og et skvæt citronsaft i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Hak broccolinien groft, og kom den på pladen med grøntsagerne, når der er 12 minutter tilbage af bagetiden."
+    },
+    {
+      "section": null,
+      "text": "Drys kyllingen med salt. Varm lidt olivenolie op i en stor pande ved middelhøj varme, og steg kyllingen 2 minutter på hver side."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingen på en ekstra bageplade med bagepapir, og bag den 11-12 minutter, til den er helt gennemstegt. Kødet skal være hvidt uden spor af rødt."
+    },
+    {
+      "section": null,
+      "text": "Anret kylling og grøntsager på tallerkener, og top med chimichurri. Server med cajundressingen."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron.",
+    "Broccolini er skiftet til broccoli.",
+    "Ay Cajun-ba er skiftet til Cajun-krydderi.",
+    "Tex-Mex er skrevet som Tex-Mex krydderi."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, ovnbagte kartofler som mættende element og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:55.119Z"
+  }
+}

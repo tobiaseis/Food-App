@@ -1,0 +1,240 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/pita-med-svinekodskofta-69202a6e927c3f76100b2c5b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:26:53.894Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 717,
+    "protein_g": 44,
+    "carbs_g": 74,
+    "fat_g": 24.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R05_BW18_SE_C42643-1_Main_low-25b04b29.jpg",
+  "lang": "da",
+  "keywords": "Tyrkisk",
+  "fetched_at": "2026-10-05T20:08:49.279Z",
+  "title": "Pita med svinekødskofta og regnbuefritter",
+  "intro": "Krydrede koftaer af hakket svinekød i lun pita med yoghurtdressing, frisk salat og ovnbagte rodfrugtfritter. Alle bygger deres egen pita ved bordet.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Koftaer",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftaer",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftaer",
+      "amount": 25,
+      "unit": "g",
+      "name": "rasp",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftaer",
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": "Koftaer",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Koftaer",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Regnbuefritter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Regnbuefritter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "knoldselleri",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Regnbuefritter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Regnbuefritter",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Regnbuefritter",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Regnbuefritter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Yoghurtdressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 2,
+      "unit": "stk",
+      "name": "brød",
+      "note": "pitabrød",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "salat",
+      "note": "romainesalat",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomater",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Regnbuefritter",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær gulerødder, knoldselleri og rødbeder i fritter på ca. 1 cm uden at skrælle dem."
+    },
+    {
+      "section": "Regnbuefritter",
+      "text": "Læg grøntsagerne på en bageplade med bagepapir. Vend dem med olie, salt og peber. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": "Regnbuefritter",
+      "text": "Bag i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Koftaer",
+      "text": "Rør svinekød, æg, rasp, krydderi og salt sammen i en stor skål. Rul farsen til koftaer på ca. 8 cm, tre til hver person."
+    },
+    {
+      "section": "Koftaer",
+      "text": "Varm lidt olie på en stor pande ved middelhøj varme. Brun koftaerne i 2-3 minutter."
+    },
+    {
+      "section": "Koftaer",
+      "text": "Skru ned til middel varme, og steg koftaerne færdige i 6-7 minutter. Kødet skal være helt gennemstegt uden spor af rødt."
+    },
+    {
+      "section": "Yoghurtdressing",
+      "text": "Rør yoghurt, hvidløg, salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Til servering",
+      "text": "Skær bunden af salaten, og pluk bladene fra hinanden. Hak tomat og løg som beskrevet i ingredienslisten."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hold pitabrødene et øjeblik under vandhanen. Læg dem på ovnristen, og varm dem i 3-4 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Anret fritterne på tallerkener. Stil pitabrød, koftaer, dressing og grøntsager på bordet, så alle kan fylde deres egen pita."
+    }
+  ],
+  "changes": [
+    "Panamad Central American Spice er erstattet med en almindelig krydderiblanding."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har svinekødskofta, pitabrød og ovnbagte rodfrugtfritter, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:47:55.873Z"
+  }
+}

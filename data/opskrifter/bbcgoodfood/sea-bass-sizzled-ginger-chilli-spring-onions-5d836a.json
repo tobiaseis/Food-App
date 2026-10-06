@@ -9,6 +9,17 @@
   "active_minutes": null,
   "yield_count": 6,
   "source_lines": 7,
+  "nutrition": {
+    "per_servings": 6,
+    "kcal": 202,
+    "protein_g": 28,
+    "carbs_g": 2,
+    "fat_g": 9
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2009/10/Sea-bass-with-sizzled-ginger-chilli-spring-onions-b508936.jpg?resize=768,845",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Chinese, Aromatic, Asian, Chinese new year, Fish, Ginger, healthy sea bass recipe, Jane Hornby, Make ahead, Red chilli, Red chillies, Sea bass, Spring onion, Spring onions",
+  "fetched_at": "2026-08-27T17:49:25.762Z",
   "title": "Havbars med stegt ingefær, chili og forårsløg",
   "intro": "Sprødstegte havbarsfileter med skind toppes med varm, gylden ingefær, hvidløg og chili samt friske forårsløg. En hurtig ret med asiatiske smage, der er klar på under en halv time.",
   "servings": 6,
@@ -115,33 +126,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Fisk med grøntsager, men der mangler en mættende karbohydratbase som kartofler eller ris.",
+    "reason": "Retten er kun fisk med asiatisk topping uden noget mættende eller rigeligt grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sesamnudler med agurk og lime",
       "ingredients": [
         {
           "section": null,
-          "amount": 1.2,
-          "unit": "kg",
-          "name": "kartofler",
+          "amount": 300,
+          "unit": "g",
+          "name": "nudler",
           "note": null,
           "optional": false
         },
         {
           "section": null,
           "amount": 2,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Kog nudlerne efter pakkens anvisning, og lad dem dryppe af.",
+        "Rist sesamfrøene på en tør pande, til de er gyldne.",
+        "Skær agurken i tynde strimler, og rør sesamolie, sojasauce og saft fra limen sammen.",
+        "Vend nudler og agurk med dressingen, og drys med sesamfrø."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:59:11.652Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:45.097Z"
   }
 }

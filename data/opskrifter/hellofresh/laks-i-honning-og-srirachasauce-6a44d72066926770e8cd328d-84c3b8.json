@@ -1,0 +1,281 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/laks-i-honning-og-srirachasauce-6a44d72066926770e8cd328d",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:23:07.898Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 751,
+    "protein_g": 33.5,
+    "carbs_g": 62.5,
+    "fat_g": 40.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R22_W05_NO_K19909-2_salmon_Mainhigh-e0dcca70.jpg",
+  "lang": "da",
+  "keywords": "North American",
+  "fetched_at": "2026-10-05T20:01:10.771Z",
+  "title": "Laks i honning- og srirachasauce med ovnbagte rodfrugter",
+  "intro": "Mør laks vendt i sød og skarp srirachasauce, serveret med ovnbagte rodfrugter, sprød salat og kølig ranchdressing.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Rodfrugter",
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 2,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ranchdressing",
+      "amount": 25,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ranchdressing",
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ranchdressing",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ranchdressing",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ranchdressing",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 75,
+      "unit": "g",
+      "name": "radiser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": true
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 16,
+      "unit": "ml",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 25,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Laks",
+      "amount": 250,
+      "unit": "g",
+      "name": "laksefilet",
+      "note": "med skind",
+      "optional": false
+    },
+    {
+      "section": "Laks",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Laks",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rodfrugter",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": "Rodfrugter",
+      "text": "Skær rødbeder, gulerod, pastinak og kartofler i fritter på ca. 1 cm. Læg dem på en bageplade med bagepapir – brug to plader, hvis der ikke er plads."
+    },
+    {
+      "section": "Rodfrugter",
+      "text": "Vend fritterne med lidt olivenolie, salt og peber. Bag dem i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Ranchdressing",
+      "text": "Pres hvidløget eller hak det fint. Rør det sammen med mayonnaise, creme fraiche, salt og peber i en lille skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl salaten, og skær radiserne i tynde skiver. Vend dem med salt i en stor skål, og tilsæt evt. lidt olivenolie."
+    },
+    {
+      "section": "Sauce",
+      "text": "Når rodfrugterne har ca. 10 minutter tilbage, smeltes smørret i en gryde ved middel varme. Pisk sriracha, honning, ketchup, vand og salt ned i smørret. Lad saucen stå på lav varme, til den skal bruges."
+    },
+    {
+      "section": "Laks",
+      "text": "Varm lidt olivenolie op i en stor pande ved middelhøj varme. Dup laksen tør med køkkenrulle, og drys den med salt."
+    },
+    {
+      "section": "Laks",
+      "text": "Steg laksen på skindsiden i 3-4 minutter. Vend den, og steg 3-5 minutter mere, til den er gylden og gennemstegt og kødet er mat i midten."
+    },
+    {
+      "section": "Laks",
+      "text": "Vend laksen i saucen lige før servering."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret laks, rodfrugter og salat på tallerkener. Hæld resten af saucen over laksen, og server med ranchdressing."
+    }
+  ],
+  "changes": [
+    "Fraiche er skiftet til creme fraiche.",
+    "Blandet salat er skiftet til salatblanding."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har laks som hovedråvare samt ovnbagte rodfrugter og kartofler som mættende tilbehør og salat.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:38.197Z"
+  }
+}

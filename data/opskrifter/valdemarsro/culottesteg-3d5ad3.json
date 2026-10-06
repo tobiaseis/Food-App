@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 1,
   "source_lines": 4,
+  "image": "https://www.valdemarsro.dk/wp-content/2017/07/culottesteg-opskrift.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Buffet, Festmad, Grill opskrifter, Nytår, Sommer",
+  "fetched_at": "2026-08-27T17:59:07.506Z",
   "title": "Culottesteg med rosmarinsalt",
   "intro": "Saftig culottesteg med sprødt fedt og en gnidning af rosmarin, hvidløg og salt. Den steges i tre omgange med hvil imellem og kan laves både på kuglegrill og i ovn.",
   "servings": 6,
@@ -103,9 +107,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten er kun protein – der mangler mættende tilbehør som kartofler eller ris.",
+    "reason": "Retten er kun et stykke kød uden noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde rosmarinkartofler og agurkesalat med dild",
       "ingredients": [
         {
           "section": null,
@@ -117,19 +121,52 @@
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "hvidvinseddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver, og vend den med eddike, hakket dild og en knivspids salt.",
+        "Server agurkesalaten til de varme kartofler og den skårne steg."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:45:33.914Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:49.135Z"
   }
 }

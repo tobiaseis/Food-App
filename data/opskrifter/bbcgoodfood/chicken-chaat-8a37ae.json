@@ -9,6 +9,17 @@
   "active_minutes": 10,
   "yield_count": 2,
   "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 549,
+    "protein_g": 42,
+    "carbs_g": 27,
+    "fat_g": 29
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/09/ChickenChaat-c544a14.jpg?resize=768,713",
+  "lang": "da",
+  "keywords": "Dinner, Side dish, Indian, chaat, Indian chicken, Indian side dish",
+  "fetched_at": "2026-08-27T15:31:09.926Z",
   "title": "Chicken chaat",
   "intro": "Krydret indisk kyllingeret med tamarind, garam masala og chaat masala, toppet med friske tomater, agurk og koriander. Den syrlige, friske smag får et ekstra pift af citron til sidst.",
   "servings": 2,
@@ -158,24 +169,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse til at blive et helt måltid.",
+    "reason": "Retten har kylling og grønt, men mangler noget mættende som ris eller brød.",
     "side": {
-      "title": "Kogte ris",
+      "title": "Spidskommenris med koriander",
       "ingredients": [
         {
           "section": null,
-          "amount": 150,
-          "unit": "g",
-          "name": "ris",
+          "amount": 2,
+          "unit": "dl",
+          "name": "basmatiris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommenfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "dl",
+          "name": "vand",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "frisk koriander",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter anvisning på pakken."
+        "Skyl risene i en sigte, til vandet er næsten klart.",
+        "Rist spidskommen i smør i en gryde i cirka 1 minut, til det dufter.",
+        "Tilsæt ris og vand med en knivspids salt, bring i kog, og lad det simre under låg ved lav varme i cirka 10 minutter.",
+        "Lad risene hvile under låg i 5 minutter, og vend dem med hakket koriander og saften fra citronen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:14:26.572Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:43.762Z"
   }
 }

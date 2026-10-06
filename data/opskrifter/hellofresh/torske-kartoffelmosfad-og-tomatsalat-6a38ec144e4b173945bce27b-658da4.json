@@ -1,0 +1,234 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/torske-kartoffelmosfad-og-tomatsalat-6a38ec144e4b173945bce27b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:30:15.442Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 21,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 962,
+    "protein_g": 44.8,
+    "carbs_g": 78.3,
+    "fat_g": 50.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R11_BW28_SE_C58867-1main_high-b56bbbd7.jpg",
+  "lang": "da",
+  "keywords": "Britisk",
+  "fetched_at": "2026-10-05T20:01:49.988Z",
+  "title": "Torskefad med kartoffelmos og tomatsalat",
+  "intro": "Mørk torsk i cremet ostesauce med skjulte grøntsager, toppet med kartoffelmos og sprød rasp. Serveres med en let tomatsalat.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "torsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "blomkålsris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "uskrællet og groft revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "groft revet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "til mosen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til bechamelen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": "til bechamelen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "til bechamelen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "1 spsk til pankoblandingen og 1 spsk til salaten, plus lidt til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220°C (200°C varmluft). Sæt en stor gryde med saltet vand over varmen."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Skræl kartoflerne og skær dem i tern på 2 cm. Kog dem i 11-13 minutter, til en kniv let deler dem."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Hæld vandet fra. Mos kartoflerne med mælk, salt og peber, og sæt dem til side under låg. En klat smør gør mosen mere cremet."
+    },
+    {
+      "section": "Sauce",
+      "text": "Steg hvidløg, løg og blomkålsris i lidt olivenolie i en stor gryde ved middelhøj varme i 2-3 minutter, til de er let bløde. Kom dem i en skål."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret i samme gryde ved middelvarme. Pisk hvedemelet i, og hæld mælk og madlavningsfløde i lidt ad gangen under omrøring i 3-4 minutter, til saucen er tyknet."
+    },
+    {
+      "section": "Sauce",
+      "text": "Pisk salt, peber og cheddar ned i saucen."
+    },
+    {
+      "section": "Samling",
+      "text": "Skær torsken i stykker, cirka 3 pr. person, og krydr dem med salt. Vend fisk, de stegte grøntsager og den revne gulerod i saucen."
+    },
+    {
+      "section": "Samling",
+      "text": "Rør panko sammen med 1 spsk olivenolie, salt og peber i en lille skål."
+    },
+    {
+      "section": "Samling",
+      "text": "Hæld fisk og sauce i et ildfast fad. Læg mosen ovenpå og drys med pankoblandingen."
+    },
+    {
+      "section": "Samling",
+      "text": "Bag i ovnen i 12-15 minutter, til retten er gylden og boblende. Fisken er færdig, når den er mælkehvid og mat."
+    },
+    {
+      "section": "Tomatsalat",
+      "text": "Skyl salaten, mens retten bager. Vend den med tomat, olivenolie, salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Server fadet med tomatsalaten."
+    }
+  ],
+  "changes": [
+    "Panko er skrevet med varenavnet panko, som findes som rasp i kataloget.",
+    "Blandet salat er ændret til salatblanding.",
+    "Revet cheddar er ændret til cheddar, revet."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk som hovedråvare, kartoffelmos som mættende element og en tomatsalat med grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:38.059Z"
+  }
+}

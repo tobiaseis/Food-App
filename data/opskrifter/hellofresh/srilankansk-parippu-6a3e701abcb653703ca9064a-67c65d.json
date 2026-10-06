@@ -1,0 +1,254 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/srilankansk-parippu-6a3e701abcb653703ca9064a",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:23:57.745Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 929,
+    "protein_g": 24.2,
+    "carbs_g": 108.1,
+    "fat_g": 45
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R17_BW27_SE_C58542-1main_high-df579777.jpg",
+  "lang": "da",
+  "keywords": "Srilankansk",
+  "fetched_at": "2026-10-05T20:01:16.712Z",
+  "title": "Srilankansk parippu med grønkålsmallum og basmatiris",
+  "intro": "Cremet linsekarry med kokosmælk serveres med sprød grønkål, gyldne løg og hvidløg samt duftende basmatiris. En mild og mættende ret med srilankansk præg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": "Parippu",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Parippu",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Parippu",
+      "amount": 4,
+      "unit": "g",
+      "name": "karry",
+      "note": "Curry-On",
+      "optional": false
+    },
+    {
+      "section": "Parippu",
+      "amount": 10,
+      "unit": "g",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Parippu",
+      "amount": 100,
+      "unit": "g",
+      "name": "linser",
+      "note": "røde, skyllet",
+      "optional": false
+    },
+    {
+      "section": "Parippu",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Parippu",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til linserne",
+      "optional": false
+    },
+    {
+      "section": "Parippu",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til linserne",
+      "optional": false
+    },
+    {
+      "section": "Grønkålsmallum",
+      "amount": 15,
+      "unit": "g",
+      "name": "kokosmel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grønkålsmallum",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til kokosmelet",
+      "optional": false
+    },
+    {
+      "section": "Grønkålsmallum",
+      "amount": 100,
+      "unit": "g",
+      "name": "grønkål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": "Grønkålsmallum",
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Grønkålsmallum",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "i både",
+      "optional": false
+    },
+    {
+      "section": "Grønkålsmallum",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Tarka",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Tarka",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Tarka",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til hvidløgsolie",
+      "optional": false
+    },
+    {
+      "section": "Tarka",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom vand i en gryde og bring det i kog. Rør ris og salt i, læg låg på, og lad risen koge ved middellav varme i 10 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risen trække under låget i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Parippu",
+      "text": "Hak løget fint, og skyl linserne. Skær citronen i både, og rens porren og skær den i tynde halve skiver."
+    },
+    {
+      "section": "Parippu",
+      "text": "Varm olien i en mellemstor gryde ved middelhøj varme. Svits løget i 2-3 minutter, til det er let blødt."
+    },
+    {
+      "section": "Parippu",
+      "text": "Rør karry og garam masala i, og svits i 30 sekunder, til det dufter. Tilsæt linser, kokosmælk, vand og salt, og bring det i kog."
+    },
+    {
+      "section": "Parippu",
+      "text": "Skru ned til middel varme, læg låg på, og lad det simre i 15-20 minutter, til linserne er møre. Er du ikke til stærk mad, så brug mindre krydderi."
+    },
+    {
+      "section": "Grønkålsmallum",
+      "text": "Rør kokosmel og vand sammen i en lille skål."
+    },
+    {
+      "section": "Grønkålsmallum",
+      "text": "Varm lidt olie i en mellemstor stegepande ved middelhøj varme. Steg grønkål, porre, kokosmelsblandingen, salt og et godt skvæt citronsaft i 3-4 minutter. Læg det over på en tallerken."
+    },
+    {
+      "section": "Tarka",
+      "text": "Skær hvidløg og løg i tynde skiver. Tør stegepanden af, og varm olien deri ved middelhøj varme."
+    },
+    {
+      "section": "Tarka",
+      "text": "Steg løg og hvidløg med salt i 3-4 minutter, til de er gyldne. Pas på, at de ikke brænder på."
+    },
+    {
+      "section": "Tarka",
+      "text": "Fordel ris, parippu og grønkålsmallum i dybe tallerkener, og læg tarkaen ovenpå. Server med resten af citronbådene."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron.",
+    "Curry-On er skiftet til karry.",
+    "Røde linser er skrevet som linser med røde i noten."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten indeholder ris, linser og grønkål, så den har både mættende basis, protein og grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:44.716Z"
+  }
+}

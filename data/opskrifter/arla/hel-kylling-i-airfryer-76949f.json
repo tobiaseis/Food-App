@@ -9,6 +9,17 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 4,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 179,
+    "protein_g": 17.6,
+    "carbs_g": 0,
+    "fat_g": 12.1
+  },
+  "image": "https://images.arla.com/recordid/4ED2528D-53CF-43B0-A401FC74330DB5BB/hel-kylling-i-airfryer.jpg?width=1300&height=525&mode=crop&crop=(0,973,0,-794)&format=webp",
+  "lang": "da",
+  "keywords": "Hovedretter, Aftensmad, Fastfood, Amerikansk, Hel kylling i airfryer ",
+  "fetched_at": "2026-08-27T15:26:19.296Z",
   "title": "Hel kylling i airfryer",
   "intro": "En sprød og saftig kylling, der tilberedes i airfryeren på cirka en time. Den eneste krydring er smør, salt og peber, så kyllingens egen smag kommer i centrum.",
   "servings": 4,
@@ -71,33 +82,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse eller grønt til at være et helt måltid.",
+    "reason": "Retten er kun en hel kylling uden noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med hvidløg og coleslaw",
       "ingredients": [
         {
           "section": null,
-          "amount": 800,
-          "unit": "g",
+          "amount": 1,
+          "unit": "kg",
           "name": "kartofler",
           "note": null,
           "optional": false
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "hvidkål",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "cremefraiche 18%",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, og vend dem med olie, hakket hvidløg og salt. Bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Snit hvidkålen fint, og riv gulerødderne groft.",
+        "Vend kål og gulerødder med cremefraiche, og smag til med salt og peber.",
+        "Server coleslawen til de varme kartofler og kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:08:37.051Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:11.105Z"
   }
 }

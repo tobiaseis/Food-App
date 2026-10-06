@@ -9,6 +9,17 @@
   "active_minutes": 10,
   "yield_count": 2,
   "source_lines": 10,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 346,
+    "protein_g": 42,
+    "carbs_g": 20,
+    "fat_g": 8
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/simple-fish-stew-1d0b259.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Fish Course, Lunch, Main course, Supper, Spanish, 3 of 5-a-day, Cod, Fibre, Fish stew, Folate, goodhealth, Haddock, healthy dinner ideas, healthy fish recipe, Pollack, Pollock, Quick healthy dinner, Sara Buenfeld, Spring, Vit C, Vitamin c, White fish",
+  "fetched_at": "2026-08-27T17:51:33.759Z",
   "title": "Hurtig fiskegryde med sej og rejer",
   "intro": "En let tomatgryde med fennikelfrø, rodfrugter og porre, hvor fisk og rejer kun skal trække helt til sidst. Den står klar på under en halv time.",
   "servings": 2,
@@ -134,26 +145,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "Retten mangler en mættende tilbehør som kartofler eller brød.",
-    "side": {
-      "title": "Kogte kartofler",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 500,
-          "unit": "g",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Server kartofflerne til fiskegryden."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:11:02.433Z"
+    "complete": true,
+    "reason": "Fiskegryden har fisk og rejer som hovedråvare og rigeligt grønt (gulerødder, selleri, porre, tomater), så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:26:10.626Z"
   }
 }

@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 15,
+  "image": "https://www.valdemarsro.dk/wp-content/2023/05/cobb-salat.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Forår, Måltidssalat og bowls, Salat, Sommer",
+  "fetched_at": "2026-08-27T15:17:13.145Z",
   "title": "Cobb-salat med kylling og bacon",
   "intro": "Klassisk amerikansk salat med sprødstegt kylling, bacon, æg, avocado og blåskimmelost. Den anrettes med hver ting for sig og får en frisk vinaigrette med balsamico og honning.",
   "servings": 4,
@@ -170,25 +174,10 @@
   ],
   "changes": [],
   "meal": {
-    "complete": false,
-    "reason": "Salaten mangler stivelse til mæthed.",
-    "side": {
-      "title": "Kogte kartofler",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 800,
-          "unit": "g",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:50:42.611Z"
+    "complete": true,
+    "reason": "Cobb-salaten har kylling, æg og bacon som protein og rigeligt grønt med avocado og tomater, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:03.316Z"
   }
 }

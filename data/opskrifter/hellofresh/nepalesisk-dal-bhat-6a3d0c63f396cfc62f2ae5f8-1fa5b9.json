@@ -1,0 +1,234 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/nepalesisk-dal-bhat-6a3d0c63f396cfc62f2ae5f8",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:24:34.365Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 17,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 632,
+    "protein_g": 22.9,
+    "carbs_g": 115.9,
+    "fat_g": 10.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R04_BW25_SE_C58407-1main_high-19e71bb3.jpg",
+  "lang": "da",
+  "keywords": "Nepalese",
+  "fetched_at": "2026-10-05T20:01:21.448Z",
+  "title": "Dal bhat med tomat-achar og ovnbagt blomkål",
+  "intro": "Nepalesisk tallerken med linsedal, ovnbagt krydret blomkål, frisk og stærk tomatsalat og ris formet som en kuppel. Det hele er klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risen",
+      "optional": false
+    },
+    {
+      "section": "Blomkål",
+      "amount": 300,
+      "unit": "g",
+      "name": "blomkål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Blomkål",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til blomkålen",
+      "optional": false
+    },
+    {
+      "section": "Dal",
+      "amount": 100,
+      "unit": "g",
+      "name": "linser",
+      "note": "røde",
+      "optional": false
+    },
+    {
+      "section": "Dal",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til linserne",
+      "optional": false
+    },
+    {
+      "section": "Dal",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til linserne",
+      "optional": false
+    },
+    {
+      "section": "Dal",
+      "amount": 50,
+      "unit": "g",
+      "name": "mangochutney",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Dal",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomat-achar",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomat-achar",
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomat-achar",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomat-achar",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "et nip",
+      "optional": false
+    },
+    {
+      "section": "Til blomkål og dal",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blomkål og dal",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blomkål og dal",
+      "amount": 8,
+      "unit": "g",
+      "name": "garam masala",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blomkål og dal",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Tænd ovnen på 240°C (220°C varmluft). Kom vand, salt og ris i en gryde, og bring det i kog."
+    },
+    {
+      "section": "Ris",
+      "text": "Sæt låg på, og lad risen koge på middellav varme i 10 minutter. Tag gryden af varmen, og lad risen trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Blomkål",
+      "text": "Riv ingefær og hvidløg fint. Del blomkålen i buketter på ca. 2 cm, og læg dem på en bageplade med bagepapir."
+    },
+    {
+      "section": "Blomkål",
+      "text": "Vend blomkålen med lidt olie, salt og halvdelen af garam masalaen. Bag den i ovnen i 15-20 minutter, til den er mør. Brug to plader, hvis der er trangt."
+    },
+    {
+      "section": "Dal",
+      "text": "Skyl linserne i en si under koldt vand, og hak koriander groft."
+    },
+    {
+      "section": "Dal",
+      "text": "Varm olie op i en mellemstor gryde ved middelhøj varme. Rist ingefær, hvidløg og resten af garam masalaen i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": "Dal",
+      "text": "Hæld vand, salt og linser i gryden, og bring det i kog. Skru ned til middellav varme, og lad linserne simre i 10-12 minutter, mens du rører af og til."
+    },
+    {
+      "section": "Dal",
+      "text": "Rør chutney og koriander i den færdige dal."
+    },
+    {
+      "section": "Tomat-achar",
+      "text": "Hak tomaterne fint, og skær citronen i både."
+    },
+    {
+      "section": "Tomat-achar",
+      "text": "Bland tomater, chiliflager, et godt skvæt citronsaft og lidt salt i en skål. Brug mindre chili eller drop den, hvis det ikke skal være stærkt."
+    },
+    {
+      "section": "Servering",
+      "text": "Pres risen let sammen i en lille skål pr. portion. Sæt en tallerken ovenpå, og vend det hele om, så risen står som en kuppel."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret dal, blomkål og tomat-achar i små skåle ved siden af, og server med de resterende citronbåde."
+    }
+  ],
+  "changes": [
+    "Mild Mahal er erstattet af garam masala.",
+    "Abrikoschutney er erstattet af mangochutney.",
+    "Citrusfrugt er erstattet af citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har linser som hovedråvare, ris som mættende del og ovnbagt blomkål og tomat-achar som grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:50.516Z"
+  }
+}

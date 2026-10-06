@@ -9,6 +9,17 @@
   "active_minutes": 15,
   "yield_count": 2,
   "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 258,
+    "protein_g": 12,
+    "carbs_g": 24,
+    "fat_g": 11
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/meatballs_1-44cc52f.jpg?resize=768,699",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Main course, Supper, Italian, 3 of 5-a-day, 7-day-summer diet plan, clean eating, Fibre, Folate, Good for you, goodhealth, Natural, Sara Buenfeld, Summer, Summer clean eating plan, vegetable noodle recipe, Vegetable noodles, Vit C, Vitamin c",
+  "fetched_at": "2026-08-27T17:45:46.823Z",
   "title": "Vegetarboller med tomatsquashnudler",
   "intro": "Små ovnbagte boller af kidneybønner, majs og mandler, som serveres med lune squashnudler i frisk tomatsauce. Retten er let og hurtig og er klar på under en halv time.",
   "servings": 2,
@@ -194,33 +205,59 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Squashnudler giver ikke nok mættelighed; der mangler kartofler, ris eller lignende.",
+    "reason": "Retten har kun lidt bønner og squashnudler og mangler noget mættende som kartofler eller brød.",
     "side": {
-      "title": "Hvid ris og grøn salat",
+      "title": "Ovnkartofler med paprika og hvidløg",
       "ingredients": [
         {
           "section": null,
-          "amount": 150,
+          "amount": 500,
           "unit": "g",
-          "name": "hvid ris",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "spsk",
+          "name": "olivenolie",
           "note": null,
           "optional": false
         },
         {
           "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "hovedsalat",
+          "unit": "tsk",
+          "name": "røget paprika",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakken.",
-        "Vask salaten og riv den i stykker."
+        "Skær kartoflerne i både, og vend dem med olie, paprika og salt.",
+        "Bag kartoflerne ved 220 grader i cirka 30 minutter, til de er gyldne og sprøde.",
+        "Hak hvidløg og persille fint.",
+        "Vend hvidløg og persille i de varme kartofler, og server dem til bollerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:43:40.381Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:12.029Z"
   }
 }

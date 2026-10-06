@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 12,
+  "image": "https://www.valdemarsro.dk/wp-content/2023/05/pulled-pork.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Burger, Familiefavoritter, Festmad, Forår, Grill opskrifter, Mad i fad og ovnretter, Sommer, Studenterfester og studenterkørsel",
+  "fetched_at": "2026-08-27T15:17:45.254Z",
   "title": "Pulled pork i ovn",
   "intro": "Mør nakkesteg, der får en krydret rub og steger langsomt i ovnen natten over, til kødet kan trækkes fra hinanden. Perfekt til burgere, wraps eller som det er.",
   "servings": 4,
@@ -150,33 +154,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Pulled pork er en gryderet uden mættende komponenter som kartofler, ris eller brød.",
+    "reason": "Pulled pork er kun kød uden noget mættende eller grønt, så der mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler og coleslaw",
       "ingredients": [
         {
           "section": null,
-          "amount": 800,
-          "unit": "g",
+          "amount": 1.2,
+          "unit": "kg",
           "name": "kartofler",
           "note": null,
           "optional": false
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
+          "unit": "tsk",
+          "name": "røget paprika",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 400,
+          "unit": "g",
+          "name": "hvidkål",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "cremefraiche 18%",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, vend dem med olie, paprika og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Snit hvidkålen fint, og riv gulerødderne groft.",
+        "Vend kål og gulerødder med cremefraiche, en knivspids salt og peber, og lad coleslawen trække i køleskabet.",
+        "Server coleslawen og de varme kartofler sammen med det trukne kød."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:53:09.206Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:19.221Z"
   }
 }

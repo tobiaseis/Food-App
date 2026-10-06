@@ -1,0 +1,201 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/middelhavsinspireret-gedeost-orzo-6976847ebcdfd65d69c2d819",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:14:43.571Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 625,
+    "protein_g": 26.8,
+    "carbs_g": 82.7,
+    "fat_g": 19.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R08_BW25_SE_V26635-1_Main_high-9f460aab.jpg",
+  "lang": "da",
+  "keywords": "Mediterransk ",
+  "fetched_at": "2026-10-05T20:07:18.306Z",
+  "title": "Orzotto med gedeost, ovnbagte grøntsager og mandler",
+  "intro": "Cremet orzo koges i tomatvand og toppes med ovnbagt peberfrugt, løg og tomat. Til sidst drysses med gedeost, persille og ristede mandelflager.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Grøntsager",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Orzotto",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzotto",
+      "amount": 4,
+      "unit": "g",
+      "name": "Hello Sunrise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzotto",
+      "amount": 200,
+      "unit": "g",
+      "name": "orzo",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzotto",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzotto",
+      "amount": 4.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Orzotto",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til orzotto",
+      "optional": false
+    },
+    {
+      "section": "Orzotto",
+      "amount": 25,
+      "unit": "g",
+      "name": "gruyère",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Orzotto",
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "gedeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 10,
+      "unit": "g",
+      "name": "mandelflager",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Grøntsager",
+      "text": "Sæt ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Skær peberfrugten i strimler på ca. 1 cm. Del løg og tomater i både på ca. 1 cm."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Læg grøntsagerne på en bageplade med bagepapir. Hæld lidt olivenolie over, tilsæt salt og peber, og vend det hele rundt."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Bag i 15-25 minutter, til grøntsagerne er møre."
+    },
+    {
+      "section": "Orzotto",
+      "text": "Pres hvidløget eller hak det fint."
+    },
+    {
+      "section": "Orzotto",
+      "text": "Varm lidt olivenolie op i en stor stegepande ved middelhøj varme. Rør hvidløg og Hello Sunrise rundt i 30 sekunder, til det dufter."
+    },
+    {
+      "section": "Orzotto",
+      "text": "Kom orzo og tomatpuré i panden, og steg under omrøring i 1 minut."
+    },
+    {
+      "section": "Orzotto",
+      "text": "Hæld vand og salt i, og lad det komme i kog. Skru ned til middel varme, læg låg på, og lad det simre i 12-14 minutter, til orzoen er al dente (kogt, men med lidt bid)."
+    },
+    {
+      "section": "Orzotto",
+      "text": "Rør ofte i panden, så orzoen ikke brænder fast. Ser den tør ud, så tilsæt et skvæt vand."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hak persillen groft, mens orzoen koger."
+    },
+    {
+      "section": "Til servering",
+      "text": "Rør gruyère og chiliflager ned i den kogte orzo. Brug mindre chili eller drop den, hvis I ikke vil have det stærkt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hæld orzotto op i dybe tallerkener, og læg de bagte grøntsager ovenpå. Smuldr gedeost over, og drys med persille og mandelflager."
+    }
+  ],
+  "changes": [
+    "Orzo er beholdt, men tomatpuré er afrundet til 40 g."
+  ]
+}

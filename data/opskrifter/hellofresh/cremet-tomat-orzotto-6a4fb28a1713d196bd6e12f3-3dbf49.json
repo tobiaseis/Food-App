@@ -1,0 +1,242 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/cremet-tomat-orzotto-6a4fb28a1713d196bd6e12f3",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:14:44.919Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 809,
+    "protein_g": 25.5,
+    "carbs_g": 89.2,
+    "fat_g": 37.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R02_BW01_SE_R14588-17_MT_Main_high-7dd7ed1f.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:00:20.629Z",
+  "title": "Tomat-orzotto med balsamicobagt champignon og broccoli",
+  "intro": "Cremet orzotto med tomat og parmesan toppet med ovnbagte svampe, broccoli, sprød rasp og ristede pinjekerner. Retten laves i en pande og på en bageplade og er klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "hvidløg- og urtekrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "orzo",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 125,
+      "unit": "g",
+      "name": "broccoli",
+      "note": "i buketter, stokken i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 12,
+      "unit": "ml",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til rasp",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Smelt smørret i en stor stegepande ved middelhøj varme, og steg løget i 1-2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør tomatpuré, krydderurter, hvidløg- og urtekrydderi og sukker i panden, og steg det med i 30 sekunder."
+    },
+    {
+      "section": null,
+      "text": "Kom orzo, vand, sojasauce og en knivspids salt i panden. Sæt låg på, og bring det i kog. Lad det simre ved middel varme i 12-14 minutter, til orzoen er al dente, altså mør med lidt bid. Har du intet låg, der passer, kan du dække med sølvpapir."
+    },
+    {
+      "section": null,
+      "text": "Læg svampe og broccoli på halvdelen af en bageplade med bagepapir. Dryp med balsamico og olie, og drys med salt og peber. Bag i ovnen i 8-10 minutter, til grøntsagerne er møre."
+    },
+    {
+      "section": null,
+      "text": "Skyl rucolaen. Bland panko, hvidløg, olie og lidt salt, og bred blandingen ud i et jævnt lag på den frie halvdel af bagepladen, når grøntsagerne har 5 minutter igen."
+    },
+    {
+      "section": null,
+      "text": "Læg pinjekernerne i et hjørne af pladen. Bag i 3-4 minutter, til raspen og pinjekernerne er gyldne."
+    },
+    {
+      "section": null,
+      "text": "Rør creme fraiche i orzoen, og lad den simre 1-2 minutter, til saucen er let tyknet. Tag panden af varmen, og vend parmesan i. Ser orzottoen tør ud, så tilsæt et skvæt vand."
+    },
+    {
+      "section": null,
+      "text": "Hæld orzottoen i dybe tallerkener. Top med svampe, broccoli, sprød rasp og rucola, og drys pinjekernerne over. Giv eventuelt en smule olie ovenpå."
+    }
+  ],
+  "changes": [
+    "Portobello er erstattet med champignon.",
+    "Buon Appetito er erstattet med blandede tørrede krydderurter."
+  ]
+}

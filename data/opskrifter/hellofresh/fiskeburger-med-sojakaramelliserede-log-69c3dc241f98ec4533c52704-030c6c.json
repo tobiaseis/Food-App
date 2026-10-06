@@ -1,0 +1,222 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/fiskeburger-med-sojakaramelliserede-log-69c3dc241f98ec4533c52704",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:58:13.134Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 986,
+    "protein_g": 43.9,
+    "carbs_g": 115.3,
+    "fat_g": 37.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R11_BW14_SE_C55511-1_main_high-a93935f3.jpg",
+  "lang": "da",
+  "keywords": "Japansk",
+  "fetched_at": "2026-10-05T20:05:19.757Z",
+  "title": "Fiskeburger med sojaløg og kartoffelbåde",
+  "intro": "Sprødt paneret torsk i briochebolle med karamelliserede sojaløg, kålsalat og agurk. Serveres med ovnbagte kartofler, så alle kan samle deres egen burger ved bordet.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "briocheboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "tsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "kålsalat",
+      "note": "snittet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 25,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartofler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kålsalat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "mel",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til fisken",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm ovnen op til 240 °C (220 °C varmluft). Skær de uskrællede kartofler i både på ca. 2 cm, og læg dem på en bageplade med bagepapir."
+    },
+    {
+      "section": null,
+      "text": "Vend kartoflerne med en smule olie, saltet til kartofler og peber. Bag dem i 25-35 minutter, til de er møre. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": null,
+      "text": "Skær løget i halve, tynde skiver, og skær agurken i halve skiver. Vend kålsalaten med eddike, halvdelen af mayonnaisen, saltet til kålsalat og peber i en skål."
+    },
+    {
+      "section": null,
+      "text": "Rør resten af mayonnaisen sammen med en tredjedel af sojasaucen i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Stil tre dybe tallerkener frem. Bland mel, saltet til panering og peber på den første, pisk ægget på den næste, og hæld panko på den sidste."
+    },
+    {
+      "section": null,
+      "text": "Tør torsken med køkkenrulle, og drys den med saltet til fisken. Vend den i mel, så i æg og til sidst i panko. Har du ikke æg, kan du bruge mælk."
+    },
+    {
+      "section": null,
+      "text": "Hæld olie i en stegepande, så bunden er dækket, og varm den op ved middelhøj varme. Steg fisken 2-3 minutter på hver side, til den er gylden og helt gennemstegt. Kødet skal være mat og hvidt. Læg fisken på køkkenrulle, og drys med et nip salt."
+    },
+    {
+      "section": null,
+      "text": "Tør stegepanden af, og varm lidt olie op ved middelhøj varme. Steg løgene 4-5 minutter, til de er bløde. Tag panden af varmen, og rør resten af sojasaucen, honningen og peber i."
+    },
+    {
+      "section": null,
+      "text": "Del brioche-bollerne på midten, og læg dem direkte på ovnristen i 3-4 minutter."
+    },
+    {
+      "section": null,
+      "text": "Læg fisk og boller på tallerkener. Sæt sojamayonnaise, løg, kålsalat og agurk frem i små skåle, så alle kan bygge deres egen burger. Server med kartoflerne ved siden af."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk, brioche-boller, kålsalat og kartoffelbåde, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:19.384Z"
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/graesk-vegansk-hakkebof-698afbaebb833db48a7ea49b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:11:13.853Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 512,
+    "protein_g": 23.7,
+    "carbs_g": 48.6,
+    "fat_g": 23.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R11_BW08_SE_C43026-1_Main_high-48345d92.jpg",
+  "lang": "da",
+  "keywords": "Græsk",
+  "fetched_at": "2026-10-05T20:06:51.103Z",
+  "title": "Græske veganbøffer med ovnkartofler og tzatziki",
+  "intro": "Veganske hakkebøffer serveres med ovnbagte kartofler, frisk tomatsalat og cremet tzatziki. En nem hverdagsret med græske smage.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kartofler",
+      "amount": 400,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "små, uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Kartofler",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": "Tomatsalat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 200,
+      "unit": "g",
+      "name": "vegansk hakkebøf",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til bøfferne",
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 150,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tzatziki",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartofler",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær kartoflerne over på midten, og læg dem på en bageplade med bagepapir."
+    },
+    {
+      "section": "Kartofler",
+      "text": "Hæld lidt olie over, og drys med oregano, salt og peber. Vend kartoflerne rundt, og bag dem i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Tomatsalat",
+      "text": "Hak løget fint, og skær tomaterne i tern på cirka 2 cm. Rør dem sammen med olie, balsamico, salt og peber i en lille skål."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Steg bøfferne 2-3 minutter på hver side, til de er gyldne. Krydr med salt."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Riv hvidløget fint, og riv agurken groft. Pres vandet fra agurken så grundigt som muligt."
+    },
+    {
+      "section": "Tzatziki",
+      "text": "Rør agurk, hvidløg og yoghurt sammen, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Anret bøffer, kartofler, tomatsalat og tzatziki på tallerkener."
+    }
+  ],
+  "changes": []
+}

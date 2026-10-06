@@ -1,0 +1,186 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/thailandsk-kokostorsk-inspireret-af-gardevoir-695b7783725ffb771e091925",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:19:35.108Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 596,
+    "protein_g": 38.7,
+    "carbs_g": 81.9,
+    "fat_g": 14.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R20_BW05_SE_C44013-1_Main_7_high-2fd2f0b1.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:07:56.128Z",
+  "title": "Thailandsk kokosfisk med myntesalat",
+  "intro": "Ovnbagt kuller med grøn karrysauce på kokosmælk, serveret med ris og en frisk salat af sukkerærter, gulerod, agurk og mynte.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "ris",
+      "note": "langkornede hvide",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "torsk",
+      "note": "filet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til fisken",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "grøn karrypasta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "mynte",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "sukkerærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 180°C varmluft."
+    },
+    {
+      "section": "Ris",
+      "text": "Kom vandet i en gryde og bring det i kog. Rør ris og salt i, læg låg på, og lad det koge ved middellav varme i 14 minutter. Tag gryden af kogepladen, og lad risene trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Fisk",
+      "text": "Tør fisken med køkkenrulle, og drys den med salt. Læg den i et ildfast fad beklædt med bagepapir. Bag den midt i ovnen i 12-15 minutter, til den er gennemstegt og kødet er mælkehvidt og mat."
+    },
+    {
+      "section": "Salat",
+      "text": "Knib enderne af sukkerærterne, og skær dem over på midten. Træk agurk og gulerod i lange, tynde bånd med en skræller. Hak myntebladene fint, og skær citronen over. Vend det hele i en stor skål med et skvæt citronsaft og saltet."
+    },
+    {
+      "section": "Sauce",
+      "text": "Smelt smørret i en gryde ved middelhøj varme. Rør karrypastaen rundt i omkring 30 sekunder, til den dufter. Hæld kokosmælken i, og lad saucen simre 1-2 minutter, til den er varm hele vejen igennem."
+    },
+    {
+      "section": null,
+      "text": "Snit forårsløget fint, og vend det i risene lige før servering. Anret fisk, salat og ris på tallerkener, og hæld saucen over fisken."
+    }
+  ],
+  "changes": [
+    "Kuller er erstattet med torsk.",
+    "Citrusfrugt er erstattet med citron.",
+    "Langkornede hvide ris er skrevet som ris."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk som hovedråvare, ris som mættende del og en grøntsagssalat ved siden af.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:29.689Z"
+  }
+}

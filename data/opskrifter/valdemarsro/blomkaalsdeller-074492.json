@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 10,
   "source_lines": 8,
+  "image": "https://www.valdemarsro.dk/wp-content/2020/08/blomkaalsdeller.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Mad på budget, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:55:33.675Z",
   "title": "Blomkålsdeller med quinoa og feta",
   "intro": "Bagte deller af quinoa, blomkål og feta, som er nemme at lave i stor mængde. De er gode både varme og kolde, fx i madpakken.",
   "servings": 10,
@@ -115,25 +119,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Dellerne mangler rigeligt grønt – en grøn salat gør det til et helt måltid.",
+    "reason": "Dellerne har protein og quinoa, men mangler rigeligt grønt og trænger til et friskt tilbehør.",
     "side": {
-      "title": "Grøn salat",
+      "title": "Tomat-agurkesalat med citron og persille",
       "ingredients": [
         {
           "section": null,
           "amount": 1,
+          "unit": "kg",
+          "name": "tomater",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "rødløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Vask og riv salaten i stykker.",
-        "Server den til blomkålsdellerne."
+        "Skær tomater og agurk i tern, og hak rødløget fint.",
+        "Hak persillen, og bland den med grøntsagerne.",
+        "Pres citronerne, og rør saften sammen med olivenolie og salt til en dressing.",
+        "Vend salaten med dressingen, og server den til de varme deller."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:29:32.595Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:29.218Z"
   }
 }

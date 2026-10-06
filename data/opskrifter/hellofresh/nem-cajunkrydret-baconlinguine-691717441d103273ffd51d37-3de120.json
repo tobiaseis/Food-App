@@ -1,0 +1,168 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/nem-cajunkrydret-baconlinguine-691717441d103273ffd51d37",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:27:51.009Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 881,
+    "protein_g": 31.7,
+    "carbs_g": 84.3,
+    "fat_g": 45.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R01_BW29_SE_R24874-1_Main_high-a7c5d485.jpg",
+  "lang": "da",
+  "keywords": "American",
+  "fetched_at": "2026-10-05T20:09:10.506Z",
+  "title": "Linguine med bacon, cherrytomater og cajun",
+  "intro": "Cremet pasta med sprød bacon, peberfrugt og cherrytomater, der får en let røget og krydret smag af cajun og paprika. Rucola og Grana Padano giver friskhed og fylde til sidst.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "linguine",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "skåret i strimler på ca. 1 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "g",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "cajun-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "grana padano",
+      "note": "flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "pastavand",
+      "note": "gemt fra kogningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": "skyllet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom vand i en stor gryde, og bring det i kog. Vandet skal være lige så salt som havvand."
+    },
+    {
+      "section": null,
+      "text": "Kog pastaen i ca. 8 minutter, til den er al dente, så den stadig har lidt bid. Tag en kop af kogevandet fra, og si derefter pastaen."
+    },
+    {
+      "section": null,
+      "text": "Varm en mellemstor stegepande op på middelhøj varme, mens pastaen koger. Brun bacon, cherrytomater og peberfrugt i 4-5 minutter, til grøntsagerne er let bløde."
+    },
+    {
+      "section": null,
+      "text": "Rør tomatpuré, chiliflager, røget paprika og cajun-krydderi i panden, og steg i ca. 30 sekunder, til det dufter. Brug mindre chili eller drop den, hvis retten ikke skal være så skarp."
+    },
+    {
+      "section": null,
+      "text": "Hæld madlavningsfløde, bouillon, Grana Padano og pastavand i panden, og rør rundt. Vend pastaen i saucen. Er den for tør, så tilsæt en smule vand."
+    },
+    {
+      "section": null,
+      "text": "Vend rucolaen i lige før servering, og anret i dybe tallerkener."
+    }
+  ],
+  "changes": [
+    "Ay Cajun-ba er erstattet af cajun-krydderi."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten er en pastaret med bacon og grønt, så den har både hovedråvare og mættende pasta.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:48:12.056Z"
+  }
+}

@@ -9,6 +9,17 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 9,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 304,
+    "protein_g": 39,
+    "carbs_g": 14,
+    "fat_g": 11
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-52383_11-427dca7.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Supper, Moroccan, Carrot, Carrots, Chicken, Chicken thigh, easy healthy chicken recipe, Good Food, goodhealth, healthy casserole, healthy chicken casserole, healthy chicken one-pot, Healthy chicken recipe, Healthy stew, Healthy tagine, One-pot, Saffron, Tagine, Thigh",
+  "fetched_at": "2026-08-27T17:53:22.939Z",
   "title": "Nem kyllingetagine",
   "intro": "Mør kylling og gulerødder simret med ingefær, safran og honning, toppet med frisk persille og citron. En nem gryderet med marokkansk præg.",
   "servings": 4,
@@ -142,34 +153,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten har protein og gulerødder, men mangler stivelse eller rigeligt grønt til at være et helt aftensmåltid.",
+    "reason": "Retten har kylling og gulerødder, men mangler noget mættende som couscous, ris eller brød.",
     "side": {
-      "title": "Kouscous",
+      "title": "Couscous med citron, mynte og ristede mandler",
       "ingredients": [
         {
           "section": null,
-          "amount": 3,
+          "amount": 4,
           "unit": "dl",
-          "name": "kouscous",
+          "name": "couscous",
           "note": null,
           "optional": false
         },
         {
           "section": null,
-          "amount": 4.5,
+          "amount": 4,
           "unit": "dl",
-          "name": "vand",
+          "name": "kogende vand",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "mynte",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 50,
+          "unit": "g",
+          "name": "mandler",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Bring vand i kog, og hæld kouscous i.",
-        "Rør rundt, og fjern fra varmen.",
-        "Dæk til med låg, og lad det stå i 5 minutter."
+        "Rist de hakkede mandler tørre på en pande, til de er gyldne.",
+        "Hæld couscous i en skål, og vend den med olie og salt. Hæld det kogende vand over, dæk til, og lad den trække i 5 minutter.",
+        "Riv skallen af citronen, og pres saften.",
+        "Luft couscousen op med en gaffel, og vend citronskal, citronsaft, hakket mynte og mandler i."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:19:26.311Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:26:35.484Z"
   }
 }

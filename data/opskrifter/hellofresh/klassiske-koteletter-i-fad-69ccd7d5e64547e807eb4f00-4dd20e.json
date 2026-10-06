@@ -1,0 +1,205 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/klassiske-koteletter-i-fad-69ccd7d5e64547e807eb4f00",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:54:47.296Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 923,
+    "protein_g": 43.5,
+    "carbs_g": 89.2,
+    "fat_g": 44.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/DK_Recipe_Overlay_Koteletter_i_fad_1200x800-fcb4662b.jpg",
+  "lang": "da",
+  "keywords": "Dansk",
+  "fetched_at": "2026-10-05T20:04:51.337Z",
+  "title": "Svinekoteletter i fad med svampe og ris",
+  "intro": "Mørt svinekød bages i en cremet tomatsauce med champignon og røget paprika og serveres med løse ris. En nem ret, hvor ovnen klarer det sidste arbejde.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "grofthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "ris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "svinemørbrad",
+      "note": "skåret i 2 skiver",
+      "optional": false
+    },
+    {
+      "section": "Til risene",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risene",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kødet",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kødet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Tænd ovnen på 180 °C almindelig ovn eller 160 °C varmluft."
+    },
+    {
+      "section": "Ris",
+      "text": "Kog vandet op i en gryde. Kom ris og salt i, læg låg på, og lad dem koge ved middellav varme i 14 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Træk gryden af varmen, og lad risene stå med låg på i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Kød og sauce",
+      "text": "Skær løget i tynde halve skiver, og hak champignonerne groft. Brug et separat skærebræt til svinekødet, og skær det i skiver – én til hver person."
+    },
+    {
+      "section": "Kød og sauce",
+      "text": "Varm olien i en stor stegepande ved middelhøj varme. Krydr kødet med salt og røget paprika, og brun det 1-2 minutter på hver side, til det er gennemstegt. Læg det i et ildfast fad."
+    },
+    {
+      "section": "Kød og sauce",
+      "text": "Hæld lidt mere olie i samme pande, og steg løg og champignon ved middelhøj varme i 3-4 minutter, til de er brune."
+    },
+    {
+      "section": "Kød og sauce",
+      "text": "Skru ned til middel varme. Rør fløde, tomater, vand, smør, salt, sukker og peber i, og lad saucen simre i 4-5 minutter."
+    },
+    {
+      "section": "Bagning",
+      "text": "Fordel saucen over kødet i fadet, og bag det i ovnen i 10-12 minutter. Kødet er færdigt, når der ikke er rosa tilbage."
+    },
+    {
+      "section": "Bagning",
+      "text": "Server svinekød og sauce sammen med risene."
+    }
+  ],
+  "changes": [
+    "Svinekamfilet er skiftet til svinemørbrad.",
+    "Olivenolie i fremgangsmåden er samlet til olie, som i ingredienslisten."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har svinekød med sauce og ris, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:41:25.976Z"
+  }
+}

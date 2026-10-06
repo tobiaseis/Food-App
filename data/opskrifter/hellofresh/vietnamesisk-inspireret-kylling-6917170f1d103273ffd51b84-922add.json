@@ -1,0 +1,291 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/vietnamesisk-inspireret-kylling-6917170f1d103273ffd51b84",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:28:52.771Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 22,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 834,
+    "protein_g": 48.3,
+    "carbs_g": 91,
+    "fat_g": 31.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF200917_R03_W45_SE_R12343877-1_KB_Main_low-31e74ae5.jpg",
+  "lang": "da",
+  "keywords": "Vietnamesisk",
+  "fetched_at": "2026-10-05T20:09:16.385Z",
+  "title": "Vietnamesisk-inspireret kylling med hvidløgsris og syltet gulerod",
+  "intro": "Mør kylling i sojamarinade serveres med hvidløgsduftende ris, sprøde syltede gulerodsbånd og stegt pak choi. Toppen af peanuts, urter og chili giver friskhed, og sriracha-mayonnaisen giver et stærkt drag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Hvidløgsris",
+      "amount": 150,
+      "unit": "g",
+      "name": "ris",
+      "note": "langkornede, hvide",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet gulerod",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet gulerod",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "hvidvinseddike",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet gulerod",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet gulerod",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltet gulerod",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Marinade",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "til saft og både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "saltede peanuts",
+      "note": "groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "mynte",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": null,
+      "unit": null,
+      "name": "koriander",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "chili",
+      "note": "uden kerner, i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "vegansk srirachamayonnaise",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Hvidløgsris",
+      "text": "Smelt smørret i en mellemstor gryde ved middel varme, og svits halvdelen af hvidløget i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": "Hvidløgsris",
+      "text": "Hæld vandet i, og bring det i kog. Kom ris og salt i, læg låg på, og lad risene simre ved middellav varme i 14 minutter."
+    },
+    {
+      "section": "Hvidløgsris",
+      "text": "Tag gryden af varmen, og lad risene trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Skræl guleroden i lange, tynde bånd, og hak resten fint. Hak pak choi og løg groft, og del citronen i både."
+    },
+    {
+      "section": "Syltet gulerod",
+      "text": "Rør eddike, sukker, vand og en knivspids salt sammen i en lille skål, og vend gulerodsbåndene heri. Lad dem stå, og hæld væsken fra lige før servering."
+    },
+    {
+      "section": "Kylling",
+      "text": "Vend kyllingestrimlerne i mel, salt og peber i en stor skål."
+    },
+    {
+      "section": "Marinade",
+      "text": "Rør sojasauce, sukker, et godt skvæt citronsaft og resten af hvidløget sammen i en lille skål."
+    },
+    {
+      "section": "Kylling",
+      "text": "Varm halvdelen af olien i en stor pande ved middelhøj varme, og steg pak choi i 2-3 minutter, til den er blød. Smag til med salt og peber, og stil den i en skål med låg."
+    },
+    {
+      "section": "Kylling",
+      "text": "Brug samme pande, og tilsæt lidt mere olie, hvis det er nødvendigt. Steg kylling og løg i 4-5 minutter, til kødet er gennemstegt og helt hvidt."
+    },
+    {
+      "section": "Kylling",
+      "text": "Tag panden af varmen, hæld marinaden over, og vend det hele rundt."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hak peanuts, mynte og koriander groft, og skær chilien i tynde skiver."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel ris, kylling, pak choi og gulerod i dybe tallerkener. Drys med peanuts, urter og chili, og server med srirachamayonnaise og de resterende citronbåde. Brug mindre chili eller drop den, hvis du ikke bryder dig om stærk mad."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron.",
+    "Skalotteløg i fremgangsmåden er skiftet til almindeligt løg, som i ingredienslisten.",
+    "Olivenolie i fremgangsmåden er skiftet til almindelig olie, som i ingredienslisten.",
+    "Mynte & koriander er delt i to linjer uden mængde, da kilden kun angiver 1 stk i alt."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, hvidløgsris som mættende del samt pak choi og syltet gulerod som grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:48:17.254Z"
+  }
+}

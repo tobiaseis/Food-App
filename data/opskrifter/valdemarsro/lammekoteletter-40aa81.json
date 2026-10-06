@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 9,
+  "image": "https://www.valdemarsro.dk/wp-content/2017/01/lammekoteletter-2.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Mellemøstens køkken, Påskefrokost",
+  "fetched_at": "2026-08-27T17:57:14.649Z",
   "title": "Grillede lammekoteletter med mynte og rosmarin",
   "intro": "Saftige lammekoteletter, der marineres i en duftende pasta af friske krydderurter, hvidløg og ingefær. Retten grilles hurtigt og passer perfekt til sommeraftenen.",
   "servings": 4,
@@ -115,15 +119,23 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse og grønt til et helt måltid.",
+    "reason": "Retten har kun kød og mangler noget mættende eller grønt tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Ovnbagte citronkartofler med yoghurt-agurkesalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
           "note": null,
           "optional": false
         },
@@ -131,17 +143,43 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "dl",
+          "name": "græsk yoghurt",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til koteletterne og kartoflerne."
+        "Skær kartoflerne i både, vend dem med olie, saften fra halvdelen af citronen og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver, og rør yoghurt med presset hvidløg, resten af citronsaften og en knivspids salt.",
+        "Vend agurken i yoghurtdressingen.",
+        "Server agurkesalaten til de varme kartofler og lammekoteletterne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:37:49.079Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:48.377Z"
   }
 }

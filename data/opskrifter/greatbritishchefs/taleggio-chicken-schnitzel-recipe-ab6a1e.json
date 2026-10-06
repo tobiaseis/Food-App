@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 17,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/oeee2rxm/schnitzels-6.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, easy",
+  "fetched_at": "2026-08-27T17:06:34.811Z",
   "title": "Schnitzel fyldt med taleggio og salvie",
   "intro": "Mør kyllingebryst med en smeltende fyld af taleggio og salvie, paneret og stegt gylden. Serveres med en sprød salat af hvidkål, fennikel og persille.",
   "servings": 4,
@@ -263,9 +267,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten har en hovedråvare, men mangler noget mættende som kartofler, ris eller pasta.",
+    "reason": "Schnitzlen med kålsalat mangler noget mættende som kartofler, så retten har brug for et tilbehør.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Ovnkartofler med rosmarin, hvidløg og citron",
       "ingredients": [
         {
           "section": null,
@@ -274,14 +278,48 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Dræn dem, og server dem varme til schnitzlen."
+        "Skær kartoflerne i både, og vend dem med olie, rosmarin og salt på en bageplade.",
+        "Bag kartoflerne ved 220 grader i cirka 30 minutter, til de er gyldne og sprøde.",
+        "Tilsæt de knuste hvidløgsfed de sidste 10 minutter, så de ikke brænder på.",
+        "Pres citronsaft over de varme kartofler, og server dem til schnitzlerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:37:07.104Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:22:21.671Z"
   }
 }

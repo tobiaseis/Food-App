@@ -1,0 +1,237 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/shepherds-pie-med-svine-og-kalvekod-6a44d745bcb653703ca9af2f",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:22:26.569Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 772,
+    "protein_g": 40.3,
+    "carbs_g": 74.2,
+    "fat_g": 36.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R20_BW28_SE_C58821-1main_high-a986af6f.jpg",
+  "lang": "da",
+  "keywords": "Britisk",
+  "fetched_at": "2026-10-05T20:01:04.766Z",
+  "title": "Shepherd's pie med kalv og flæsk og pastinakmos",
+  "intro": "En shepherd's pie med kødsauce af hakket kalv og flæsk, toppet med kartoffelmos, hvor pastinakken gemmer sig. Serveres med en frisk salat med pinjekerner og citron.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket kalv og flæsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "hvidløgs- og urtekrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": "til mos",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til mos",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": "til mos",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salat",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Mos",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Sæt en stor gryde med saltet vand over til kogning."
+    },
+    {
+      "section": "Mos",
+      "text": "Skræl kartofler og pastinak. Skær kartoflerne i tern på 2 cm, og lad dem koge med pastinakken i 11-13 minutter, til en kniv let glider igennem."
+    },
+    {
+      "section": "Mos",
+      "text": "Si vandet fra, og mos det kogte med mælk, salt og peber. Sæt moset til side under låg. Lidt smør i moset gør det cremet."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Varm olien i en stor pande ved middelhøj varme, og svits løget 1-2 minutter."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Kom kødet på panden sammen med saltet og hvidløgs- og urtekrydderiet. Brun det 4-5 minutter."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Hæld tomater og vand på panden, og smag til med salt og sukker. Lad det simre 2-3 minutter, til saucen er tyknet. Kødet skal være helt gennemstegt uden rødt."
+    },
+    {
+      "section": "Bagning",
+      "text": "Kom saucen i et ildfast fad, og fordel moset ovenpå. Strø parmesan over, og bag retten 10-15 minutter, til toppen er gylden og saucen bobler."
+    },
+    {
+      "section": "Salat",
+      "text": "Del citronen på midten. Rør olie, salt og en sjat citronsaft sammen i en stor skål, og vend salat og pinjekerner i dressingen."
+    },
+    {
+      "section": "Salat",
+      "text": "Sæt fadet på bordet, og server salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano er erstattet af parmesan.",
+    "Citrusfrugt er erstattet af citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kødsauce med kartoffel- og pastinakmos som mættende element samt en salat ved siden af, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:28.985Z"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/sichuan-kyllingewok-69d8d01268ee73d4d3ffd820",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:53:09.149Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 691,
+    "protein_g": 53.7,
+    "carbs_g": 84.8,
+    "fat_g": 14.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R03_BW16_SE_C55504-1_main_TD__Main_high-f9aede98.jpg",
+  "lang": "da",
+  "keywords": "Kinesisk",
+  "fetched_at": "2026-10-05T20:04:39.440Z",
+  "title": "Sichuan-kyllingewok med udonnudler og pak choi",
+  "intro": "En hurtig wok med mørt kyllingekød, sprøde grøntsager og bløde udonnudler i en sød og stærk sauce. Toppes med knuste saltede peanuts.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i julienne-strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 440,
+      "unit": "g",
+      "name": "udonnudler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "saltede peanuts",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til smag",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Snit pak choi groft. Skær løget i tynde halve skiver, og hak eller pres hvidløget fint."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Brun kyllingen med saltet i 1-2 minutter."
+    },
+    {
+      "section": null,
+      "text": "Kom gulerødder, løg, pak choi og hvidløg på panden. Rør rundt i 3-4 minutter, til grøntsagerne er møre, og kyllingen er helt gennemstegt – kødet skal være hvidt uden rosa."
+    },
+    {
+      "section": null,
+      "text": "Hæld nudler, sød chilisauce, sojasauce, sriracha og vand i. Lad det simre i 1-2 minutter, og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Knus peanuts i posen med bunden af en pande, mens woken simrer. Fordel woken på tallerkener, og drys peanuts over."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling, udonnudler og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:41:06.119Z"
+  }
+}

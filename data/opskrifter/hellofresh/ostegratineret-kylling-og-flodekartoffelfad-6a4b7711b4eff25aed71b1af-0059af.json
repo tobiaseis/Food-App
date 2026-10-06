@@ -1,0 +1,201 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/ostegratineret-kylling-og-flodekartoffelfad-6a4b7711b4eff25aed71b1af",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:19:43.544Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 606,
+    "protein_g": 47.2,
+    "carbs_g": 49.2,
+    "fat_g": 24.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R02_BW34_SE_C59266-1_main_high-af398bc8.jpg",
+  "lang": "da",
+  "keywords": "Fusion cuisine",
+  "fetched_at": "2026-10-05T20:00:46.773Z",
+  "title": "Kylling i fad med flødekartofler, svampe og parmesan",
+  "intro": "Kyllingebryst bages oven på kartofler og gulerødder i en cremet sovs med champignon og parmesan. Det hele laves i ét fad, og persillen på toppen giver friskhed.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "champignon",
+      "note": "i tynde skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællede, i stave på 1 cm",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": "provence-blanding",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller fint hakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Del kartoflerne i halve uden at skrælle dem. Skær gulerødderne i stave, champignonerne i tynde skiver og hak persillen groft. Pres eller hak hvidløget fint."
+    },
+    {
+      "section": null,
+      "text": "Drys kyllingen med saltet til kødet og lidt peber."
+    },
+    {
+      "section": null,
+      "text": "Rør vand, madlavningsfløde, hvidløg, bouillon, krydderurter, saltet til saucen og lidt peber sammen i en mellemstor skål."
+    },
+    {
+      "section": null,
+      "text": "Læg kartofler og gulerødder i et ildfast fad. Vend dem med olie, saltet til kartoflerne og lidt peber. Sæt fadet i ovnen i 25-35 minutter, til grøntsagerne er møre."
+    },
+    {
+      "section": null,
+      "text": "Når der er 12-15 minutter tilbage af bagetiden, tages fadet ud. Hæld flødeblandingen over og kom champignon i. Læg kyllingen ovenpå og drys med parmesan."
+    },
+    {
+      "section": null,
+      "text": "Bag videre, til kyllingen er helt gennemstegt og hvid uden spor af rødt, og saucen er lidt tykkere."
+    },
+    {
+      "section": null,
+      "text": "Servér fadet lige fra ovnen med persille drysset over."
+    }
+  ],
+  "changes": [
+    "Hello Provence er erstattet med blandede tørrede krydderurter.",
+    "Parmigiano Reggiano er erstattet med parmesan."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, kartofler som mættende element og gulerødder og champignon som grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:02.078Z"
+  }
+}

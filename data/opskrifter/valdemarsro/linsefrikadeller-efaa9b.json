@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 18,
   "source_lines": 13,
+  "image": "https://www.valdemarsro.dk/wp-content/2019/01/linsefrikadeller.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Mad på budget",
+  "fetched_at": "2026-08-27T17:56:15.413Z",
   "title": "Linsefrikadeller",
   "intro": "Små vegetariske frikadeller af røde linser, krydret med spidskommen, koriander og paprika. De steges gyldne i smør og olie.",
   "servings": 18,
@@ -171,13 +175,13 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Linsefrikadeller uden kartofler, ris eller andet stivelsesindhold er for lille som hele måltid – der er brug for tilbehør.",
+    "reason": "Linsefrikadeller har bælgfrugter som hovedråvare, men næsten intet mættende eller grønt ved siden af, så de mangler et tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler og agurkesalat med dild",
       "ingredients": [
         {
           "section": null,
-          "amount": 1.2,
+          "amount": 3,
           "unit": "kg",
           "name": "kartofler",
           "note": null,
@@ -185,19 +189,53 @@
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 6,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "tørret rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 6,
+          "unit": "spsk",
+          "name": "hvidvinseddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "bundt",
+          "name": "dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask hovedsalaten, riv den i stykker, og servér den til linsefrikadellerne."
+        "Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og fordel dem på bageplader.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Skær agurkerne i tynde skiver, og vend dem med eddike, hakket dild og en knivspids salt.",
+        "Server agurkesalaten til de varme kartofler og frikadellerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:34:04.330Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:14.093Z"
   }
 }

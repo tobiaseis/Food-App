@@ -1,0 +1,194 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/sprod-bbq-kylling-698afbf1ca20a4fa52b286a8",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:10:54.919Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 774,
+    "protein_g": 49.2,
+    "carbs_g": 86.9,
+    "fat_g": 25.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R02_BW10_SE_C12343780-28_Main_high-62166371.jpg",
+  "lang": "da",
+  "keywords": "American",
+  "fetched_at": "2026-10-05T20:06:48.707Z",
+  "title": "Sprød BBQ-kylling med kålsalat og burgerdressing",
+  "intro": "Paneret BBQ-marineret kylling med ovnbagte kartoffelfritter og en frisk kålsalat med æble og tranebær. Det hele serveres med en cremet burgerdressing.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "BBQ-marineret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "kål",
+      "note": "snittet kålsalat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "tørrede tranebær",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "burgerdressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": "til panering",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm ovnen op til 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skær de uskrællede kartofler i fritter og læg dem på en bageplade med bagepapir. Drys med salt og peber, dryp med lidt olie og vend rundt. Brug to plader, hvis der ikke er plads på én."
+    },
+    {
+      "section": null,
+      "text": "Bag fritterne i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": null,
+      "text": "Bland panko med salt og peber på en dyb tallerken. Pisk ægget på en anden dyb tallerken."
+    },
+    {
+      "section": null,
+      "text": "Skær kyllingen i strimler på 2 cm i tykkelse og drys dem med salt. Vend strimlerne først i æg og derefter i panko."
+    },
+    {
+      "section": null,
+      "text": "Hæld olie på en pande, til bunden er dækket, og varm den op ved middelhøj varme. Steg strimlerne 3-4 minutter på hver side, til de er gyldne og helt gennemstegte uden rødt i kødet. Læg dem på køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Skær æblet i tynde halve skiver."
+    },
+    {
+      "section": null,
+      "text": "Vend kål, æble, tranebær og halvdelen af cremen fraiche sammen i en skål med en knivspids salt. Tilsæt evt. lidt olie."
+    },
+    {
+      "section": null,
+      "text": "Rør resten af cremen fraiche med burgerdressingen og smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Anret kylling, kålsalat og fritter på tallerkener, og server med dressingen."
+    }
+  ],
+  "changes": [
+    "Snittet kålsalat er skrevet som kål.",
+    "Fraiche er skrevet som creme fraiche.",
+    "Tranebær er skrevet som tørrede tranebær."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har paneret kylling som hovedråvare, kartoffelfritter som mættende del og kålsalat som grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:37.362Z"
+  }
+}

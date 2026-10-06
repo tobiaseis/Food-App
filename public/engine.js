@@ -1552,7 +1552,7 @@
    *             forfra for hver ret.
    */
   function canPrice(rec, { items = new Map(), offers, normals, chainIds = [], now,
-                           priceIn = null } = {}) {
+                           priceIn = null, have = null } = {}) {
     // Samme loft på fem favoritter som ugen og listen — se chainsInPlay. En
     // ret, kun den sjette favorit kan prissætte, er ikke prissat i ugen.
     const { ids } = chainsInPlay(chainIds);
@@ -1561,6 +1561,10 @@
     for (const it of (rec && rec.items) || []) {
       const meta = items.get(it.key);
       if (!isBoughtLine(it, meta)) continue;
+      // En vare, brugeren har, købes ikke — så den skal heller ikke kunne
+      // prissættes, ellers faldt en ret ud af puljen på netop den vare, der
+      // er grunden til, at den er med.
+      if (have && have.has(it.key)) continue;
       if (!(it.amount > 0)) return false;
       if (!ids.some((chainId) => lookup(it.key, chainId, meta))) return false;
     }
@@ -1591,6 +1595,36 @@
    */
   function mainCategoryOf(recipe, items) {
     return recipeVarietyKeys(recipe, items).main;
+  }
+
+  // ── "Brug det, jeg har" ────────────────────────────────────────────────────
+
+  // Hvad en vare, brugeren allerede har, er værd i rangeringen: en ret, der
+  // bruger den, rykker op. Tallet er i sporets score-enheder (0-1), og loftet
+  // er der, for at en ret med fem "har"-varer ikke slår alt andet, sporet
+  // mener — det er et puf, ikke et ordrebrev.
+  const HAVE_BONUS_PER_ITEM = 0.15;
+  const HAVE_BONUS_MAX = 0.3;
+
+  /**
+   * Tillægget til en rets rangering for de varer, brugeren har.
+   *
+   *   recipe  opskrift med `items: [{ key }]`
+   *   have    Set af varenøgler (tom/udeladt giver 0)
+   *   items   `items`-tabellen. Kun linjer, der FAKTISK købes (isBoughtLine),
+   *           tæller: bonussen skal svare til det, der forsvinder fra kurven,
+   *           og en valgfri linje eller en basisvare gør ingen forskel dér.
+   *
+   * DISTINKTE varer: samme vare på to linjer tæller én gang. Ren funktion og
+   * eksporteret, fordi pulje og uge skal bruge præcis det samme tal.
+   */
+  function haveBonus(recipe, have, items = new Map()) {
+    if (!have || !have.size) return 0;
+    const seen = new Set();
+    for (const it of (recipe && recipe.items) || []) {
+      if (have.has(it.key) && isBoughtLine(it, items.get(it.key))) seen.add(it.key);
+    }
+    return Math.min(HAVE_BONUS_MAX, seen.size * HAVE_BONUS_PER_ITEM);
   }
 
   // ── Kandidatpuljen (spec 2.3) ──────────────────────────────────────────────
@@ -1679,7 +1713,7 @@
    */
   function candidatePool(recipes, {
     days = 5, items = new Map(), rank = (r) => r.score, seed = 0,
-    offers, normals, chainIds = [], now,
+    offers, normals, chainIds = [], now, have = null, haveScale = 1,
   } = {}) {
     const want = POOL_PER_DAY * days;
 
@@ -1691,17 +1725,23 @@
     // valg som for en manglende score: højlydt frem for forkert.
     //
     // Ét prisopslag for hele puljen: sporets retter deler de fleste varer.
-    const priceCtx = { items, chainIds, priceIn: priceLookup({ offers, normals, now }) };
+    const priceCtx = { items, chainIds, priceIn: priceLookup({ offers, normals, now }), have };
 
     // 1) Udvælgelse. En ret uden en værdi i sporet er ikke i sporet: glemmer
     //    kalderen at sætte `score`, skal puljen komme tom tilbage og melde
     //    `thin` — ikke stille rangere alle retter som lige gode.
     const ranked = [];
     for (const r of recipes || []) {
-      const value = rank(r);
-      if (value == null || !Number.isFinite(value)) continue;
+      const base = rank(r);
+      if (base == null || !Number.isFinite(base)) continue;
       if (!isDinner(r, items)) continue;
       if (!canPrice(r, priceCtx)) continue;
+      // Tillægget lægges på EFTER filtrene: en ret uden værdi i sporet er
+      // stadig ikke i sporet, uanset hvad brugeren har i skabet.
+      // `haveScale`: tillægget er i score-enheder (0-1). Et spor, der rangerer
+      // i andet — budget i kroner pr. portion — giver sin egen skala, ellers
+      // er 0,15 blot 15 øre og flytter intet.
+      const value = base + haveBonus(r, have, items) * haveScale;
       ranked.push({ r, value, noise: seededNoise(seed, r.id) });
     }
     // Uafgjort afgøres af frøet. Målt har 83 af de 100 bedste i klassisk
@@ -1901,7 +1941,7 @@
   function sharedWeek(candidates, {
     days = 5, seed = 0, servings = DEFAULT_SERVINGS,
     items = new Map(), offers = new Map(), normals = new Map(),
-    chainIds = [], avoid = null, now = new Date(),
+    chainIds = [], avoid = null, now = new Date(), have = null,
   } = {}) {
     // Husstanden, ikke opskriftens eget portionsantal. 0 eller negativ er
     // ikke en husstand og ville gøre hele kurven til nul eller negativ.
@@ -1947,6 +1987,9 @@
       for (const it of (rec && rec.items) || []) {
         const meta = items.get(it.key);
         if (!isBoughtLine(it, meta)) continue;
+        // Har brugeren varen, købes den ikke: den indgår hverken i kurven,
+        // prisen eller delingen. Samme regel som i shoppingList.
+        if (have && have.has(it.key)) continue;
         if (measuredOnly && !it.measured) continue;
         // `amount`, ikke `weight`. `weight` er en ROLLEVÆGT — stykantal
         // omregnet til kilo, så assignRoles kan sammenligne 6 æg med 0,4 kg
@@ -2043,7 +2086,7 @@
     //    Den FÆLLES canPrice, med ugens eget prisopslag: puljen i trin 4
     //    filtrerer med den samme, så de to ikke kan være uenige om en ret.
     const withMain = (candidates || []).filter((c) => isDinner(c, items));
-    const priceCtx = { items, chainIds: shopIds, priceIn };
+    const priceCtx = { items, chainIds: shopIds, priceIn, have };
     const priced = withMain.filter((c) => canPrice(c, priceCtx));
     const pool = priced.length ? priced : (withMain.length ? withMain : (candidates || []));
 
@@ -2104,7 +2147,7 @@
           // netop kroner pr. portion.
           const perServing = marginal / household;
 
-          const score = (cand.score || 0) * SCORE_KR - perServing
+          const score = ((cand.score || 0) + haveBonus(cand, have, items)) * SCORE_KR - perServing
                       + seededNoise(seed, cand.id)
                       - (avoid && avoid.has(cand.id) ? AVOID_PENALTY : 0);
 
@@ -2498,7 +2541,7 @@
    */
   function shoppingList(plan, { items = new Map(), offers = new Map(), normals = new Map(),
                                 chainIds = [], servings = DEFAULT_SERVINGS,
-                                now = new Date() } = {}) {
+                                now = new Date(), have = null } = {}) {
     // Husstanden, ikke opskriftens eget portionsantal — og 0 er ikke en
     // husstand. Samme vagt som i sharedWeek, af samme grund.
     const household = servings > 0 ? servings : DEFAULT_SERVINGS;
@@ -2536,6 +2579,13 @@
         // er ikke en ret, og ugens kurv køber den. Skulle listen springe den
         // over, ville den ret, brugeren har fået at se, mangle sin hovedråvare.
         if (!isBoughtLine(it, meta)) continue;
+        // "Har du": varen står på tjek-listen med en markering i stedet for
+        // på købslisten, og indgår ikke i prisen. Efter isBoughtLine, så en
+        // valgfri linje ikke får en vare til at se brugt ud.
+        if (have && have.has(it.key) && it.amount > 0) {
+          pantry.set(it.key, { key: it.key, name: meta.name || it.key, have: true });
+          continue;
+        }
 
         // Samme skalering som i sharedWeek. Uden den vælges ugen på skalerede
         // mængder, mens indkøbslisten skrives på opskriftens egne — og så
@@ -2669,7 +2719,7 @@
     seededNoise, isoWeek, validUntilFor, isPlausiblePrice, priceBandFor, effectivePrice,
     choosePack, isBoughtLine, hasMainCourse, isDinner, looksLikeDinner, quickEnough, withEstimates,
     DINNER_MAX_MINUTES, DINNER_MAX_TOTAL_MINUTES,
-    canPrice, candidatePool, mainCategoryOf, sharedWeek, twoProposals, explainWeek,
+    canPrice, candidatePool, haveBonus, HAVE_BONUS_PER_ITEM, HAVE_BONUS_MAX, mainCategoryOf, sharedWeek, twoProposals, explainWeek,
     MAIN_PROTEIN, SCORE_KR, DEFAULT_SERVINGS,
     LEVELS, DAYS, MAIN_CATS, CARRIER_CATS, IGNORED_CATS, STARCH_KEYS,
     PRICE_TTL_DAYS, PRICE_BAND, PRICE_BAND_STK, SOURCE_RANK,

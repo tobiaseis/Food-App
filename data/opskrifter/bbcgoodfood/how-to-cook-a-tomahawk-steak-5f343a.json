@@ -9,6 +9,17 @@
   "active_minutes": 5,
   "yield_count": 4,
   "source_lines": 5,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 482,
+    "protein_g": 42,
+    "carbs_g": 2,
+    "fat_g": 34
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/06/TomahawkSteak-93c94cb.jpg?resize=768,713",
+  "lang": "da",
+  "keywords": "Dinner, Beef, best steak, Steak",
+  "fetched_at": "2026-08-27T15:33:06.285Z",
   "title": "Tomahawksteak i ovn",
   "intro": "En stor tomahawksteak brunes hårdt på panden og færdigstegges blidt i ovnen, så den bliver mør og saftig hele vejen igennem. Smørbasting med hvidløg og urter giver ekstra smag.",
   "servings": 4,
@@ -115,13 +126,13 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Steaken mangler mættende stivelse eller grønt til at være et helt måltid.",
+    "reason": "Retten er kun kød uden mættende tilbehør eller grønt, så den mangler en stivelseskomponent.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde rosmarinkartofler og citronagurkesalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
+          "amount": 1.2,
           "unit": "kg",
           "name": "kartofler",
           "note": null,
@@ -129,19 +140,52 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "citronsaft",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til steaken."
+        "Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og bag dem sprøde ved 200 grader i cirka 40 minutter.",
+        "Skær agurken i tynde skiver, og vend den med citronsaft, hakket dild og en knivspids salt.",
+        "Server agurkesalaten til de varme kartofler og den hvilede steak."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:18:57.029Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:18.817Z"
   }
 }

@@ -1,0 +1,158 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-bacon-tortelloni-og-cheesy-tomatsauce-69642e4b30d8e7c0c766ae23",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:17:45.416Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 10,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 932,
+    "protein_g": 39.8,
+    "carbs_g": 69.8,
+    "fat_g": 53.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R18_BW04_SE_C52570-1_Main_3_high-c70619d8.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:07:41.922Z",
+  "title": "Tortelloni med bacon og cremet tomatsauce",
+  "intro": "Hurtig hverdagspasta med sprød bacon, broccoli og en cremet tomatsauce med parmesanagtig ost. Chiliolien med valnødder kan drysses over de voksnes portioner, så retten passer til både børn og voksne.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "Broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "Bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "Passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "Grana padano",
+      "note": "i flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "Tortelloni",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "ml",
+      "name": "Creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "Pastavand",
+      "note": "fra kogningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": "til kogevandet",
+      "optional": false
+    },
+    {
+      "section": "Til chiliolien",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "Chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chiliolien",
+      "amount": 20,
+      "unit": "g",
+      "name": "Valnødder",
+      "note": "fint hakkede",
+      "optional": false
+    },
+    {
+      "section": "Til chiliolien",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en stor gryde med vand over varmen, og bring det i kog. Smag til med salt, så det næsten smager som havvand."
+    },
+    {
+      "section": null,
+      "text": "Del broccolien i buketter, og skær stokken i tern på ca. 2 cm. Hak valnødderne fint."
+    },
+    {
+      "section": null,
+      "text": "Varm en mellemstor pande op ved middelhøj varme. Brun baconen i 4-5 minutter, til den er gylden."
+    },
+    {
+      "section": null,
+      "text": "Hæld passata, creme fraiche og halvdelen af osten på panden. Lad saucen simre 2-3 minutter, til den er tyk."
+    },
+    {
+      "section": null,
+      "text": "Kom broccoli og tortelloni i det kogende vand, og kog dem 1-2 minutter, til pastaen er al dente (kogt, men med lidt bid), og broccolien er mør."
+    },
+    {
+      "section": null,
+      "text": "Tag pastavandet fra, inden du hælder resten af vandet fra. Vend pasta, broccoli og pastavand sammen med saucen på panden."
+    },
+    {
+      "section": "Til chiliolien",
+      "text": "Rør chiliflager, valnødder og olie sammen i en lille skål. Brug mindre chili eller helt udelad den, hvis nogen ikke bryder sig om stærk mad."
+    },
+    {
+      "section": null,
+      "text": "Fordel pastaen i skåle, og drys med resten af osten. Dryp chiliolie over de voksnes portioner."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har tortelloni med fyld som mættende base, bacon som protein og broccoli, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:06.672Z"
+  }
+}

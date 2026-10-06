@@ -724,6 +724,8 @@ const Data = {
     return {
       track, recipes, items, normals, offers,
       chainIds: favs,
+      // Budget rangerer i kroner pr. portion; "har"-tillægget skal på samme skala.
+      haveScale: budget ? window.PlanEngine.SCORE_KR : 1,
       rank: budget ? (r) => (r.cost_per_serving == null ? null : -r.cost_per_serving) : undefined,
       seed: year * 100 + week,
       week, year,
@@ -737,16 +739,17 @@ const Data = {
    * delmængder af det, brugeren ser (spec 2.1). En tom pulje giver ingen
    * forslag frem for to tomme uger.
    */
-  choices(ctx, { days, servings }) {
+  choices(ctx, { days, servings, have = null }) {
     const E = window.PlanEngine;
     const { pool, thin } = E.candidatePool(ctx.recipes, {
       days, items: ctx.items, rank: ctx.rank, seed: ctx.seed,
-      offers: ctx.offers, normals: ctx.normals, chainIds: ctx.chainIds,
+      offers: ctx.offers, normals: ctx.normals, chainIds: ctx.chainIds, have,
+      haveScale: ctx.haveScale,
     });
     const proposals = pool.length
       ? E.twoProposals(pool, {
         days, servings, items: ctx.items,
-        offers: ctx.offers, normals: ctx.normals, chainIds: ctx.chainIds,
+        offers: ctx.offers, normals: ctx.normals, chainIds: ctx.chainIds, have,
       })
       : [];
     return { pool, thin, proposals };
@@ -762,11 +765,11 @@ const Data = {
    * samme argumenter, som kædevalget brugte til at vælge linjen, og giver
    * derfor den samme pris.
    */
-  lists(ctx, picks, { servings }) {
+  lists(ctx, picks, { servings, have = null }) {
     const E = window.PlanEngine;
     const list = E.shoppingList({ days: picks.map((recipe) => ({ recipe })) }, {
       items: ctx.items, offers: ctx.offers, normals: ctx.normals,
-      chainIds: ctx.chainIds, servings,
+      chainIds: ctx.chainIds, servings, have,
     });
     for (const line of list.buy) {
       line.source = null;

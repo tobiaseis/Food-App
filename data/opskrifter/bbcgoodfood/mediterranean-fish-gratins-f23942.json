@@ -9,6 +9,17 @@
   "active_minutes": 25,
   "yield_count": 6,
   "source_lines": 17,
+  "nutrition": {
+    "per_servings": 6,
+    "kcal": 372,
+    "protein_g": 46,
+    "carbs_g": 16,
+    "fat_g": 11
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mediterranean-fish-gratins-c17b32c.jpg?resize=768,698",
+  "lang": "da",
+  "keywords": "Dinner, Fish Course, Main course, British, 2 of 5-a-day, 400 kcal or less, 6 servings, Calcium, Fish pie, goodhealth, Individual meal, Individual pie, Justine Pattison, Make ahead, Make ahead and freeze, Over an hour, Winter",
+  "fetched_at": "2026-08-27T17:52:32.091Z",
   "title": "Gratinerede fiskeretter med tomat og fennikel",
   "intro": "Fisk og rejer i en tomatsauce med fennikel, safran og hvidvin, toppet med sprød parmesanrasp og bagt i individuelle forme. Server med grøn salat.",
   "servings": 6,
@@ -213,13 +224,13 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten har fisk og grøntsager i sauce, men mangler mættende stivelse.",
+    "reason": "Retten er fisk og rejer i tomatsauce uden rigtig mættende ledsager, så den mangler kartofler, brød eller lignende.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde citronkartofler med hvidløg og rosmarin",
       "ingredients": [
         {
           "section": null,
-          "amount": 1.5,
+          "amount": 1.2,
           "unit": "kg",
           "name": "kartofler",
           "note": null,
@@ -227,19 +238,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til gratinen og kartoflerne."
+        "Skær kartoflerne i både, og vend dem med olie, rosmarin, hakket hvidløg og salt på en bageplade.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Riv skallen af citronen, og hak persillen.",
+        "Vend de varme kartofler med citronskal, et skvæt citronsaft og persille, og server dem til fiskeretterne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:14:55.365Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:26:18.409Z"
   }
 }

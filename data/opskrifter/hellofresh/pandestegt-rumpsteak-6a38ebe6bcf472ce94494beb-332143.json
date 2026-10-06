@@ -1,0 +1,215 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/pandestegt-rumpsteak-6a38ebe6bcf472ce94494beb",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:31:30.438Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 490,
+    "protein_g": 41,
+    "carbs_g": 60.2,
+    "fat_g": 10.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF210628_R09_W32_SE_C12343903-2__edit_beef__Main_high-04fb2aae.jpg",
+  "lang": "da",
+  "keywords": "Britisk",
+  "fetched_at": "2026-10-05T20:01:59.388Z",
+  "title": "Rumpsteak med broccolini, kartoffelmos og løgsauce",
+  "intro": "Mør rumpsteak i skiver med kartoffelmos, ovnbagt broccolini og en sauce af karamelliserede løg og rødvinssauce. En hurtig hverdagsret med bistrostemning.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "rumpsteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelmos",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelmos",
+      "amount": 4,
+      "unit": "g",
+      "name": "hvidløgs- og urtekrydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelmos",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelmos",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til mosen",
+      "optional": false
+    },
+    {
+      "section": "Til kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til løgsaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Til løgsaucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "timian",
+      "note": "bladene plukket",
+      "optional": false
+    },
+    {
+      "section": "Til løgsaucen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til løgsaucen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "balsamico",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til løgsaucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til de karamelliserede løg",
+      "optional": false
+    },
+    {
+      "section": "Til løgsaucen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til løgsaucen",
+      "amount": 60,
+      "unit": "g",
+      "name": "rødvinssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til løgsaucen",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Til broccolini",
+      "amount": 200,
+      "unit": "g",
+      "name": "broccolini",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til broccolini",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "en smule",
+      "optional": false
+    },
+    {
+      "section": "Til broccolini",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Forberedelse",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Tag bøfferne ud af køleskabet i god tid, og drys dem med salt."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Sæt en stor gryde med saltet vand over varmen. Skræl kartoflerne, og skær dem i tern på 2 cm."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Kog kartoflerne i 11-13 minutter, til en kniv let går igennem. Si vandet fra, og kom krydderi, mælk, salt og peber i. Mos med moser eller gaffel, og hold varmt under låg. Lidt smør gør mosen cremet."
+    },
+    {
+      "section": "Løgsauce",
+      "text": "Varm olie i en stor pande på middelhøj varme. Brun løgene i 5-6 minutter, til de er bløde."
+    },
+    {
+      "section": "Løgsauce",
+      "text": "Rør balsamico, vand, timian og sukker i løgene. Lad det simre 2-3 minutter, til løgene er karamelliserede. Timianbladene løsnes nemt, hvis du stryger ned langs stilken."
+    },
+    {
+      "section": "Broccolini",
+      "text": "Læg broccolinien på en bageplade med bagepapir. Dryp med olie, og drys med salt og peber. Bag i ovnen i 10-12 minutter."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm lidt olie op i en anden pande på middelhøj varme. Steg bøfferne 5-6 minutter på hver side, til de er brunede. Steg 1-2 minutter længere pr. side, hvis de skal være gennemstegte."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, til maden skal serveres."
+    },
+    {
+      "section": "Sauce og servering",
+      "text": "Hæld rødvinssauce og vand på panden med løgene. Lad det simre på middelvarme i 3-4 minutter, til saucen er lidt tykkere. Smag til med salt og peber."
+    },
+    {
+      "section": "Sauce og servering",
+      "text": "Skær bøfferne i tynde skiver. Server dem med mos og broccolini, og hæld løgsaucen over."
+    }
+  ],
+  "changes": []
+}

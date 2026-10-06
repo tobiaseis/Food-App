@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 23,
+  "image": "https://www.valdemarsro.dk/wp-content/2017/01/fishcakes_asian.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Asiatisk, Fisk & Skaldyr",
+  "fetched_at": "2026-08-27T17:59:13.335Z",
   "title": "Thailandske fiskefrikadeller med sød chilidip",
   "intro": "Saftige frikadeller af torsk og rejer med citrongræs, kaffirlimeblade og karrypasta. Serveres med en frisk dip af agurk, chili og ingefær.",
   "servings": 4,
@@ -243,25 +247,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mætning i form af kartofler, ris eller brød.",
+    "reason": "Fiskefrikadellerne har kun lidt grønt og intet mættende, så de mangler et tilbehør som nudler.",
     "side": {
-      "title": "Jasminris",
+      "title": "Sesamnudler med lime og gulerod",
       "ingredients": [
         {
           "section": null,
-          "amount": 300,
+          "amount": 250,
           "unit": "g",
-          "name": "jasminris",
+          "name": "risnudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "lime",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skyl risen under rindende vand.",
-        "Kog den efter pakningens anvisning."
+        "Kog nudlerne efter anvisningen på pakken, og lad dem dryppe godt af.",
+        "Riv gulerødderne groft, og rist sesamfrøene tørre på en pande.",
+        "Vend nudlerne med sesamolie, sojasauce, saften fra limen og gulerødderne.",
+        "Top med de ristede sesamfrø, og server til frikadellerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:46:16.800Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:29:57.088Z"
   }
 }

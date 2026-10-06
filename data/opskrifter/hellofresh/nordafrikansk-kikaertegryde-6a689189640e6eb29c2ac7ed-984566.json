@@ -1,0 +1,225 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/nordafrikansk-kikaertegryde-6a689189640e6eb29c2ac7ed",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:10:53.098Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 660,
+    "protein_g": 21.7,
+    "carbs_g": 94.4,
+    "fat_g": 18.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R08_BW11_SE_C50181-1_main_high-b6280395.jpg",
+  "lang": "da",
+  "keywords": "Marokkansk",
+  "fetched_at": "2026-10-05T19:59:51.077Z",
+  "title": "Nordafrikansk kikærtegryde med couscous og feta",
+  "intro": "Sprød-sød kikærtegryde med dadler, gulerod og peberfrugt, krydret med ras el hanout. Serveres med couscous med granatæblekerner, feta og frisk koriander.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 2,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "skåret i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "skåret i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 70,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 40,
+      "unit": "g",
+      "name": "dadler",
+      "note": "i stykker",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 4,
+      "unit": "g",
+      "name": "ras el hanout",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kikærtegryde",
+      "amount": 4,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 100,
+      "unit": "g",
+      "name": "couscous",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "granatæble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": "smuldret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Forberedelse",
+      "text": "Skær gulerod og peberfrugt i tern på ca. 2 cm, og del citronen i både. Lad kikærterne dryppe af i en si."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Varm olien op i en stor gryde ved middelhøj varme. Svits gulerødder, kikærter og peberfrugt i 1-2 minutter under omrøring."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Kom dadler, ras el hanout, bouillon, tomatpuré, sukker, salt og peber i gryden, og hæld vandet over. Bring det i kog med låg på."
+    },
+    {
+      "section": "Kikærtegryde",
+      "text": "Skru ned for varmen, og lad retten simre i 10-15 minutter. Den er færdig, når saucen er lidt tyk, og grøntsagerne er møre."
+    },
+    {
+      "section": "Couscous",
+      "text": "Bring vand og salt i kog i en mindre gryde, mens gryderetten simrer. Rør couscousen ned i det kogende vand, og tag gryden af varmen. Lad den trække under låg i 5 minutter, til vandet er sunket ind."
+    },
+    {
+      "section": "Granatæble",
+      "text": "Rul granatæblet hårdt mod bordet, og skær det over på midten. Pil kernerne ud under vand i en skål. De falder til bunds, mens det hvide skynder sig op og kan øses af. Skyl kernerne i en si under koldt vand. Tip: Når kernerne tages ud under vand, undgår man, at saften farver."
+    },
+    {
+      "section": "Servering",
+      "text": "Vend granatæblekernerne i couscousen lige før servering. Hak koriander fint, og smuldr fetaen."
+    },
+    {
+      "section": "Servering",
+      "text": "Hæld gryden op i dybe tallerkener, og fordel feta og koriander ovenpå. Sæt citronbåde og couscous frem i små skåle ved siden af."
+    }
+  ],
+  "changes": [
+    "Saha-Ras er erstattet med ras el hanout.",
+    "Citrusfrugt er erstattet med citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kikærter og grøntsager som hovedråvarer og couscous som mættende del, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:33:23.716Z"
+  }
+}

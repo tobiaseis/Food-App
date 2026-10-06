@@ -1,0 +1,224 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/sydostasiatisk-inspireret-tunbowl-69e08eb74af8f3547a64a039",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:52:04.446Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 540,
+    "protein_g": 24.9,
+    "carbs_g": 84.4,
+    "fat_g": 16.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R01_BW19_SE_c55997-4_main_TD__Main_high-f29d4f56.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:04:30.003Z",
+  "title": "Tunbowl med jasminris og stærk limedressing",
+  "intro": "En frisk bowl med tun, sprød grøntsag og hurtigt syltet løg på jasminris. Dressingen med lime, chili og fiskesauce giver en kraftig, syrlig smag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 160,
+      "unit": "g",
+      "name": "tun på dåse",
+      "note": "i vand",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "avocado",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "ml",
+      "name": "sriracha",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til syltningen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til syltningen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 30,
+      "unit": "g",
+      "name": "fiskesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressingen",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kog vandet op i en mellemstor gryde. Kom risen og saltet i, læg låg på, og lad det simre ved middellav varme i 12 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risen trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Syltet løg",
+      "text": "Skær løget i tynde halve skiver, og halver limen."
+    },
+    {
+      "section": "Syltet løg",
+      "text": "Rør et stort skvæt limesaft sammen med sukker og salt i en lille skål, og vend løget i. Si væden fra lige før servering."
+    },
+    {
+      "section": "Tunsalat og grønt",
+      "text": "Halver avocadoen, tag stenen ud, og skrab kødet ud med en ske. Skær det i tynde skiver."
+    },
+    {
+      "section": "Tunsalat og grønt",
+      "text": "Riv gulerod groft med skræl på. Brug en skræller til at tage lange, tynde bånd af agurken."
+    },
+    {
+      "section": "Tunsalat og grønt",
+      "text": "Snit forårsløget fint, og lad tunen dryppe af. Vend tun, forårsløg, gulerod og sriracha sammen i en mellemstor skål."
+    },
+    {
+      "section": "Dressing",
+      "text": "Hak koriander fint. Slå chilien op, fjern kernerne, og skær den i tynde skiver."
+    },
+    {
+      "section": "Dressing",
+      "text": "Rør chili, koriander, fiskesauce, vand, olivenolie og et skvæt limesaft sammen i en lille skål. Brug mindre chili eller helt uden, hvis det ikke skal være så stærkt."
+    },
+    {
+      "section": null,
+      "text": "Fordel ris, tunsalat, avocado, agurk og syltet løg i dybe tallerkener, og hæld dressingen over."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til lime."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har tun som hovedråvare, jasminris som mættende element og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:40:48.675Z"
+  }
+}

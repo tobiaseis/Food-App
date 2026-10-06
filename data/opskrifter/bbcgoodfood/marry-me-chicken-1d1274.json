@@ -9,6 +9,17 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 12,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 584,
+    "protein_g": 38,
+    "carbs_g": 21,
+    "fat_g": 38
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2024/05/Marry-me-chicken-12e4be0.jpg?resize=768,713",
+  "lang": "da",
+  "keywords": "Dinner, Chicken, Chicken casserole, Chicken stew, Marry me chicken, Stews",
+  "fetched_at": "2026-08-27T17:46:44.796Z",
   "title": "Marry me chicken",
   "intro": "Mør kylling i en cremet sauce med soltørrede tomater, hvidløg og parmesan. Retten er kendt for at være så god, at den får en frieri på tungen.",
   "servings": 4,
@@ -163,24 +174,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mætning – der er kun kylling og sauce, ingen kartofler, ris, pasta eller rigeligt grønt.",
+    "reason": "Retten har kylling i fløde-tomatsauce, men ingen mættende bestanddel eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogt spaghetti",
+      "title": "Smørbagte kartofler med hvidløg og persille",
       "ingredients": [
         {
           "section": null,
-          "amount": 400,
-          "unit": "g",
-          "name": "spaghetti",
+          "amount": 1,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "tørret oregano",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog spaghettien efter anvisningen på pakken til den er al dente."
+        "Skær kartoflerne i både, og vend dem med olivenolie, oregano og salt.",
+        "Bag kartoflerne ved 220 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Smelt smørret med presset hvidløg ved lav varme, og vend det med de varme kartofler.",
+        "Hak persillen, og drys den over kartoflerne før servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:39:12.893Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:31.795Z"
   }
 }

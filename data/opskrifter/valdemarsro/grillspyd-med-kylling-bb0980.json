@@ -9,6 +9,10 @@
   "active_minutes": 25,
   "yield_count": 12,
   "source_lines": 13,
+  "image": "https://www.valdemarsro.dk/wp-content/2019/06/grillspyd-kylling-2.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Forår, Grill opskrifter, Grillspyd, Sommer, Studenterfester og studenterkørsel",
+  "fetched_at": "2026-08-27T17:56:02.800Z",
   "title": "Grillspyd med kylling, halloumi og chorizo",
   "intro": "Farverige grillspyd med kylling, pølse, ost og grøntsager, der marinerer i citron, hvidløg og ingefær. Perfekte til en stor grillaften med mange gæster.",
   "servings": 12,
@@ -143,33 +147,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Grillspydene har protein og grønt, men mangler mættende stivelse til at være et helt måltid.",
+    "reason": "Grillspyddene har protein og grønt, men næsten ingen mættende bestanddel og kun små mængder kød pr. person, så der mangler en stivelsesdel.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Couscoussalat med citron, mynte og agurk",
       "ingredients": [
         {
           "section": null,
-          "amount": 1.5,
-          "unit": "kg",
-          "name": "kartofler",
+          "amount": 500,
+          "unit": "g",
+          "name": "couscous",
           "note": null,
           "optional": false
         },
         {
           "section": null,
-          "amount": 1,
+          "amount": 6,
+          "unit": "dl",
+          "name": "kogende vand",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "bundt",
+          "name": "mynte",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til spyddene."
+        "Hæld couscous i en stor skål, tilsæt salt og kogende vand, og dæk med et fad i 5 minutter.",
+        "Fluff couscoussen med en gaffel, og vend olivenolie, revet citronskal og citronsaft i.",
+        "Skær agurk i små tern, hak mynten, og vend begge dele i couscoussen.",
+        "Server couscoussalaten ved siden af de varme grillspyd."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:32:28.759Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:00.137Z"
   }
 }

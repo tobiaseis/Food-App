@@ -9,6 +9,17 @@
   "active_minutes": 55,
   "yield_count": 6,
   "source_lines": 12,
+  "nutrition": {
+    "per_servings": 6,
+    "kcal": 305,
+    "protein_g": 12,
+    "carbs_g": 34,
+    "fat_g": 13
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/10/Blintzes-0d7df42.jpg?resize=768,845",
+  "lang": "da",
+  "keywords": "Jewish, Blintzes, Blueberry, Compote, Jewish recipes, Pancakes",
+  "fetched_at": "2026-08-27T15:31:18.207Z",
   "title": "Blintzer med ricotta og blåbærkompot",
   "intro": "Tynde pandekager fyldt med sød ricottacreme og stegt gyldne i smør. Serveres med varm blåbærkompot og flormelis.",
   "servings": 6,
@@ -187,24 +198,66 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Blintzer med kompot er en sødt ret, der traditionelt spises som dessert eller morgenmad, ikke som hovedmåltid til aftensmad.",
+    "reason": "Blintzer med sød ricottafyld og kompot er en dessertagtig ret uden rigtigt protein- eller grøntindhold til et aftensmåltid, så der mangler et salt tilbehør.",
     "side": {
-      "title": "Grøn salat",
+      "title": "Sprøde ovnkartofler med rosmarin og agurkesalat",
       "ingredients": [
+        {
+          "section": null,
+          "amount": 1.2,
+          "unit": "kg",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "tørret rosmarin",
+          "note": null,
+          "optional": false
+        },
         {
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "hvidvinseddike",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Vask hovedsalaten, og riv den i stykker."
+        "Skær kartoflerne i både, vend dem med olie, rosmarin og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver, og vend den med eddike, hakket dild og en knivspids salt.",
+        "Server agurkesalaten til de varme kartofler."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:15:30.944Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:50.048Z"
   }
 }

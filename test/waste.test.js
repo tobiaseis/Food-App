@@ -1315,3 +1315,70 @@ test('kun den ret, der vejer varen, får resten — og højst en fjerdedel af si
   near(wList.waste_kr, 14.25);
   near(week.waste, wList.waste_kr * engine.WASTE_AVERSION, 0.01);
 });
+
+// ── "Brug det, jeg har" ──────────────────────────────────────────────────────
+
+test('haveBonus: 0,15 pr. forskellig købt vare, højst 0,3, tom giver 0', () => {
+  const r = recipe(300, 0.5, [line('kylling', 0.5), line('ris', 0.3), line('kylling', 0.1), line('pasta', 0.2)]);
+  const b = (have) => engine.haveBonus(r, have, W_ITEMS);
+  near(b(new Set(['kylling'])), 0.15);
+  // Samme vare på to linjer tæller én gang.
+  near(b(new Set(['kylling', 'ris'])), 0.3);
+  near(b(new Set(['kylling', 'ris', 'pasta'])), 0.3);   // loftet
+  assert.equal(b(new Set(['laks'])), 0);
+  assert.equal(b(new Set()), 0);
+  assert.equal(b(undefined), 0);
+});
+
+test('haveBonus tæller kun linjer, der købes: ikke valgfrie og ikke basisvarer', () => {
+  const r = recipe(301, 0.5, [line('kylling', 0.5), { ...line('persille', 0.02), optional: true }, line('salt', 0.01)]);
+  near(engine.haveBonus(r, new Set(['persille', 'salt']), W_ITEMS), 0);
+  near(engine.haveBonus(r, new Set(['persille', 'salt', 'kylling']), W_ITEMS), 0.15);
+  // En valgfri hovedprotein købes, så den tæller.
+  const k = recipe(302, 0.5, [line('kartofler', 0.6), { ...line('laks', 0.4), optional: true }]);
+  near(engine.haveBonus(k, new Set(['laks']), W_ITEMS), 0.15);
+});
+
+test('budget-sporet: bonussen er i kroner og flytter en lidt dyrere ret ind i puljen', () => {
+  // 1 dag = 3 pladser, og kun tre kan være i puljen. Fire retter, hvor laksen er
+  // ca. 2 kr pr. portion dyrere end resten; uden skala er 0,15 kr ingenting.
+  const mk = (id, key, perServing) => ({ ...recipe(id, 0, [line(key, 0.5), line('ris', 0.3)]), cost_per_serving: perServing });
+  const rs = [mk(320, 'kylling', 10), mk(321, 'hakket_oksekoed', 10.5), mk(322, 'kyllingebryst', 11), mk(323, 'laks', 13)];
+  const rank = (r) => -r.cost_per_serving;
+  const base = { days: 1, ...CTX, rank };
+  const ids = (o) => engine.candidatePool(rs, { ...base, ...o }).pool.map((r) => r.id);
+  assert.ok(!ids({}).includes(323), 'uden have er laksen for dyr');
+  assert.ok(!ids({ have: new Set(['laks']) }).includes(323), 'uskaleret er bonussen 15 øre og ingenting');
+  assert.ok(ids({ have: new Set(['laks']), haveScale: engine.SCORE_KR }).includes(323),
+    'på kroneskala (0,15 x 84 = 12,6 kr) kommer laksen med');
+});
+
+test('en "har"-vare rykker retten op i puljen, og købes ikke på listen eller i ugens pris', () => {
+  // Ret A er lidt bedre end ret B; med laks i skabet skal B (laks) vinde.
+  const A = recipe(310, 0.80, [line('kylling', 0.5), line('ris', 0.3)]);
+  const B = recipe(311, 0.70, [line('laks', 0.5), line('ris', 0.3)]);
+  const uden = engine.candidatePool([A, B], { days: 1, ...CTX });
+  assert.deepEqual(uden.pool.map((r) => r.id), [310, 311]);
+  const med = engine.candidatePool([A, B], { days: 1, ...CTX, have: new Set(['laks']) });
+  assert.deepEqual(med.pool.map((r) => r.id), [311, 310], 'laksretten rykker op');
+
+  // Ugen: laksen er ikke i kurven, så den koster ris alene (20 kr).
+  const uge = engine.sharedWeek([B], { days: 1, ...CTX, have: new Set(['laks']) });
+  near(uge.cost, 20);
+  const liste = engine.shoppingList({ days: [{ recipe: B }] }, { ...CTX, have: new Set(['laks']) });
+  assert.ok(liste.buy.every((b) => b.key !== 'laks'), 'laksen købes ikke');
+  near(liste.total, uge.cost);
+  const p = liste.pantry.find((x) => x.key === 'laks');
+  assert.deepEqual(p, { key: 'laks', name: 'Laks', have: true });
+});
+
+test('uden "har" er alt uændret, også med et tomt Set', () => {
+  const plan = { days: [{ recipe: CANDIDATES[0] }] };
+  const a = JSON.stringify(engine.shoppingList(plan, CTX));
+  assert.equal(JSON.stringify(engine.shoppingList(plan, { ...CTX, have: new Set() })), a);
+  assert.equal(JSON.stringify(engine.shoppingList(plan, { ...CTX, have: null })), a);
+  const w = JSON.stringify(engine.sharedWeek(CANDIDATES, { days: 2, ...CTX }));
+  assert.equal(JSON.stringify(engine.sharedWeek(CANDIDATES, { days: 2, ...CTX, have: new Set() })), w);
+  const pool = JSON.stringify(engine.candidatePool(MANGE, { days: 4, ...CTX }));
+  assert.equal(JSON.stringify(engine.candidatePool(MANGE, { days: 4, ...CTX, have: new Set() })), pool);
+});

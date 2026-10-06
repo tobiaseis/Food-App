@@ -9,6 +9,17 @@
   "active_minutes": 15,
   "yield_count": 2,
   "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 750,
+    "protein_g": 25,
+    "carbs_g": 11,
+    "fat_g": 63
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/sea-bass-with-braised-courgettes-harissa-mayo-585f2d0.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Fish Course, Main course, Supper, Autumn, Courgettes, Fish, Harissa, One of 5-a-day, Rosie Birkett, Sea bass recipe, Seabass, Tomatoes",
+  "fetched_at": "2026-08-27T17:50:25.314Z",
   "title": "Havbars med braiseret squash og harissamayo",
   "intro": "Sprødstegt havbars med møre squash, der simrer med tomater, hvidvin og dild. Serveres med en hurtig harissamayo og citronbåde.",
   "servings": 2,
@@ -235,9 +246,9 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Fiskemåltid uden mættende kulhydrater som kartofler, ris eller pasta.",
+    "reason": "Retten har fisk og braiseret squash, men mangler noget mættende som kartofler, ris eller brød.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde citronkartofler med oregano",
       "ingredients": [
         {
           "section": null,
@@ -246,14 +257,56 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "oregano",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "persille",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Dræn dem, og server ved siden af fisken."
+        "Skær kartoflerne i både, og vend dem med olivenolie, oregano og salt.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Tilsæt det knuste hvidløg de sidste 5 minutter af bagetiden.",
+        "Vend de varme kartofler med citronsaft, citronskal og hakket persille, og server dem til fisken."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:05:59.546Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:26:13.209Z"
   }
 }

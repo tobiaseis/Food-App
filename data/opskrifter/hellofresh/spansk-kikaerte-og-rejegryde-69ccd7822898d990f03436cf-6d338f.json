@@ -1,0 +1,193 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/spansk-kikaerte-og-rejegryde-69ccd7822898d990f03436cf",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:57:15.538Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 519,
+    "protein_g": 26.6,
+    "carbs_g": 60.3,
+    "fat_g": 17.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R09_BW15_SE_C55191-1_main_high-785edaf6.jpg",
+  "lang": "da",
+  "keywords": "Spansk",
+  "fetched_at": "2026-10-05T20:05:11.436Z",
+  "title": "Spansk kikærte- og rejegryde med hvidløgsbrød",
+  "intro": "En hurtig gryderet med rejer, kikærter og spinat i en krydret tomatsauce. Den serveres med sprøde boller med hvidløgssmør.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "rejer",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "kikærter",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "spinat",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "boller",
+      "note": "surdejsboller",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 70,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til hvidløgssmørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til gryden",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": "til hvidløgssmørret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor gryde ved middelhøj varme, og steg løgene møre i 2-3 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør halvdelen af hvidløget, den røgede paprika, tomatpuréen og krydderurterne i gryden. Svits i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": null,
+      "text": "Kom kikærter, vand, salt og bouillon i gryden. Bring det i kog, skru ned til middelvarme, og lad det simre i 2-3 minutter."
+    },
+    {
+      "section": null,
+      "text": "Rør imens resten af hvidløget sammen med smør og en knivspids salt i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Skær bollerne over på midten, læg dem på en bageplade med bagepapir, og smør dem med hvidløgssmørret. Bag dem i ovnen i 5-6 minutter, til de er sprøde."
+    },
+    {
+      "section": null,
+      "text": "Vend rejer og spinat ned i gryden, og lad det simre i 2-3 minutter, til rejerne er færdige. De er klar, når kødet er hvidt og mat."
+    },
+    {
+      "section": null,
+      "text": "Hæld gryderetten op i dybe tallerkener, og server med de varme boller."
+    }
+  ],
+  "changes": [
+    "Middelhavsdrøm er erstattet af blandede tørrede krydderurter.",
+    "Kongerejer er erstattet af rejer."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Gryden har rejer og kikærter som protein og mættende bønner samt spinat, og den serveres med hvidløgsbrød, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:02.704Z"
+  }
+}

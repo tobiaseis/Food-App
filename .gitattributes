@@ -1,0 +1,4 @@
+# Udgaverne skrives altid med LF af scripts, og importeren bruger deres hash
+# til at detektere ændringer. Blandede CRLF/LF på Windows gjorde at backfill
+# sprang dem over selvom de var i standardformat.
+data/opskrifter/**/*.json text eol=lf

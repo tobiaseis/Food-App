@@ -1,0 +1,238 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/sod-chili-marineret-svinekod-69642e1fb2a0b177eea1433a",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:18:52.125Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 720,
+    "protein_g": 42.8,
+    "carbs_g": 95.9,
+    "fat_g": 23.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF210421_R03_W22_SE_R12343997-2_KB_Main_no_coriander_high-6873aaf3.jpg",
+  "lang": "da",
+  "keywords": "East Asian",
+  "fetched_at": "2026-10-05T20:07:49.017Z",
+  "title": "Svinekød i sød chili med stegte grøntsager og ris",
+  "intro": "Mørt svinekam i en sød og sprød chilisauce, serveret med hurtigstegte grøntsager og jasminris kogt i bouillon. En nem hverdagsret, der er klar på cirka en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til risene",
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risene",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risene",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risene",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællet, i tynde stave",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 40,
+      "unit": "g",
+      "name": "radiser",
+      "note": "i kvarte",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 75,
+      "unit": "g",
+      "name": "bønner",
+      "note": "grønne, enderne skåret af",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "fintkakket",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": "Til grøntsagerne",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til svinekødet",
+      "amount": 300,
+      "unit": "g",
+      "name": "svinekam",
+      "note": "uden ben, skåret i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Til svinekødet",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Til svinekødet",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 40,
+      "unit": "g",
+      "name": "sød chilisauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 20,
+      "unit": "ml",
+      "name": "sojasauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "tsk",
+      "name": "ingefær",
+      "note": "fintrevet",
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "skåret i både, lidt af saften bruges i saucen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom vand og bouillon i en gryde, og bring det i kog. Rør risene og saltet i, læg låg på, og lad dem simre ved middellav varme i 12 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Træk gryden af varmen, og lad risene hvile under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Mens risene koger, skæres gulerod, løg, radiser og bønner som angivet i ingredienslisten. Hak hvidløget fint, og riv ingefæren fint."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Skær citronen i både. Tern svinekødet på et separat skærebræt, og drys det med salt."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Steg gulerod, løg, radiser og bønner i 3-4 minutter, til de er næsten møre."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Kom hvidløget på panden, og steg med i 1 minut."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør sød chilisauce, sojasauce og ingefær sammen i en lille skål med et godt skvæt citronsaft."
+    },
+    {
+      "section": "Grøntsager",
+      "text": "Smag grøntsagerne til med salt og peber, og læg dem over i en skål med låg eller et fad som låg."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Hæld olien på den samme pande, og varm den op ved middelhøj varme. Steg svinekødet i 3-4 minutter, til det er gennemstegt."
+    },
+    {
+      "section": "Svinekød",
+      "text": "Hæld saucen over kødet de sidste 30 sekunder, og vend det rundt, til saucen er varm."
+    },
+    {
+      "section": "Anretning",
+      "text": "Fordel ris og grøntsager på tallerkener, og læg svinekødet ovenpå. Server med citronbådene ved siden af."
+    }
+  ],
+  "changes": [
+    "Svinekamfilet er skiftet til svinekam.",
+    "Citrusfrugt er skiftet til citron.",
+    "Grønne bønner er skiftet til bønner."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har svinekød som hovedråvare, ris som mættende del og rigeligt stegt grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:46:20.956Z"
+  }
+}

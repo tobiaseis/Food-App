@@ -1,0 +1,246 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/klassisk-svine-og-kalvekodslasagne-6a44d717d3d3e0dadd3727e5",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:23:19.698Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 978,
+    "protein_g": 50.6,
+    "carbs_g": 78.1,
+    "fat_g": 51.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R05_BW07_SE_C21035-1_Main_high-de580ad4.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:01:11.950Z",
+  "title": "Lasagne med kalv og flæsk og spinatsalat",
+  "intro": "Klassisk lasagne med kødsauce og cremet bechamel, gratineret med parmesan. Serveres med en frisk salat af spinat og sprøde solsikkekerner.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "Hakket kalv og flæsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "Hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "Lasagneplader",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "Parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "Spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "Solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Gulerødder",
+      "note": "julienne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "Vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Ketchup",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Smør",
+      "note": "til bechamelen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Mel",
+      "note": "til bechamelen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "Mælk",
+      "note": "til bechamelen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til bechamelen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": "til saucen, bechamelen og salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Hak løget fint."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Varm olien op i en stor pande over middelhøj varme. Brun kødet sammen med løg, gulerod og det salt, der hører til kødet, i 4-5 minutter, til der ikke er noget rødt tilbage i kødet."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Rør krydderurterne, tomaterne, vandet, ketchup, saucens salt og en god knivspids peber i. Lad det simre i 1 minut, og tag derefter panden af varmen."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Smelt smørret i en mellemstor gryde over høj varme. Pisk melet i, og hæld så mælken i lidt ad gangen, mens du rører, i 3-4 minutter, til saucen er tyk."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Pisk halvdelen af parmesanen, bechamelens salt og en knivspids peber i."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Kom halvdelen af kødsaucen i et ildfast fad, og læg lasagneplader over. Smør halvdelen af bechamelen ovenpå, og læg flere plader over. Gentag med resten af kødsaucen, plader og bechamel, og drys resten af parmesanen øverst."
+    },
+    {
+      "section": "Samling og bagning",
+      "text": "Læg folie over fadet, og bag lasagnen i ovnen i 20-30 minutter. Tag folien af de sidste 10 minutter, så toppen får farve."
+    },
+    {
+      "section": "Spinatsalat",
+      "text": "Skyl spinaten, mens lasagnen bager. Vend den i en stor skål med solsikkekerner, olie, salatens salt og en knivspids peber."
+    },
+    {
+      "section": null,
+      "text": "Lad lasagnen hvile et par minutter, og server den med salaten."
+    }
+  ],
+  "changes": [
+    "Hello Sunrise er erstattet med blandede tørrede krydderurter.",
+    "Parmigiano Reggiano er erstattet med parmesan.",
+    "Hakket svine-/kalvekød er erstattet med hakket kalv og flæsk."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Lasagne med kødsauce og pasta er et helt måltid med protein, stivelse og en spinatsalat ved siden af.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:40.091Z"
+  }
+}

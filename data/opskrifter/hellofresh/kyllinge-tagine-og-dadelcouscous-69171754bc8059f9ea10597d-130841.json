@@ -1,0 +1,249 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/kyllinge-tagine-og-dadelcouscous-69171754bc8059f9ea10597d",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:27:22.231Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 738,
+    "protein_g": 49.2,
+    "carbs_g": 80.9,
+    "fat_g": 22.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R12_BW41_SE_C49422-1_Main_high-fb8c4d96.jpg",
+  "lang": "da",
+  "keywords": "Marokkansk",
+  "fetched_at": "2026-10-05T20:09:06.972Z",
+  "title": "Kyllingetagine med dadelcouscous og kålsalat",
+  "intro": "Mør kylling i tomatsauce med krydderier, serveret med sød dadelcouscous og en frisk salat af spidskål og granatæble. En nem ret med nordafrikansk præg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Couscous",
+      "amount": 100,
+      "unit": "g",
+      "name": "couscous",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 40,
+      "unit": "g",
+      "name": "dadler",
+      "note": "i stykker",
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Couscous",
+      "amount": 1,
+      "unit": "håndfuld",
+      "name": "persille",
+      "note": "krydret krus",
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kyllingen",
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 4,
+      "unit": "g",
+      "name": "ras el hanout",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 400,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Tagine",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og topping",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "granatæble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og topping",
+      "amount": 75,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": "Salat og topping",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og topping",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og topping",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat og topping",
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Couscous",
+      "text": "Kog vand med salt op i en mellemstor gryde. Rør couscous, dadler og olie i, tag gryden af varmen, og læg låg på. Lad stå i 5 minutter, til vandet er trukket ind."
+    },
+    {
+      "section": "Tagine",
+      "text": "Varm olie i en stor pande ved middelhøj varme. Steg kyllingen med saltet i 4-5 minutter, til den er brunet og helt gennemstegt – kødet skal være hvidt uden spor af rødt. Læg den over på en tallerken."
+    },
+    {
+      "section": "Tagine",
+      "text": "Skær løget i tynde skiver. Tør panden af, og varm den igen ved middelhøj varme. Steg løgene i 2-3 minutter, til de er møre."
+    },
+    {
+      "section": "Tagine",
+      "text": "Rør krydderiblandingen i, og svits i 30 sekunder, til den dufter. Kom kylling, tomater, bouillon, vand, salt og peber i panden, og lad det simre i 7-10 minutter."
+    },
+    {
+      "section": "Salat og topping",
+      "text": "Rul granatæblet hårdt hen over bordet, og skær det over på midten. Læg det i en skål med vand, og pil kernerne løs med fingrene. Kernerne synker til bunds, så du kan øse det hvide frugtkød af overfladen. Vandet holder saften fra at farve. Skyl kernerne i en si under koldt vand."
+    },
+    {
+      "section": "Couscous",
+      "text": "Hak persillen groft, og vend den i couscousen."
+    },
+    {
+      "section": "Salat og topping",
+      "text": "Vend spidskål, granatæblekerner, olie, salt og peber sammen i en skål."
+    },
+    {
+      "section": null,
+      "text": "Fordel couscous og tagine i dybe tallerkener, og top med yoghurt. Server med salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Saha-Ras er skiftet til ras el hanout.",
+    "Kruspersille er skiftet til almindelig persille."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, couscous som mættende element og en kålsalat ved siden af, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:48:02.511Z"
+  }
+}

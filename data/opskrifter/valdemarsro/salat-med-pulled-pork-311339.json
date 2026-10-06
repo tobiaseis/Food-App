@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 15,
+  "image": "https://www.valdemarsro.dk/wp-content/2018/08/salat-pulled-pork.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Måltidssalat og bowls, Mexicansk, Nem Hverdagsmad, Salat",
+  "fetched_at": "2026-08-27T17:56:30.937Z",
   "title": "Salat med pulled pork",
   "intro": "Sprød salat med lun pulled pork, cremet avocado, syltede rødløg og en syrlig chilidressing. En nem og mættende ret, der er hurtig at samle.",
   "servings": 4,
@@ -181,26 +185,10 @@
     "Sriracha chilisauce er skrevet som sriracha."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Salaten har protein og grønt, men mangler stivelse som kartofler, ris eller brød.",
-    "side": {
-      "title": "Kogte kartofler",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Dræn dem, og server til salaten."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:35:21.438Z"
+    "complete": true,
+    "reason": "Salaten har pulled pork som hovedråvare og rigeligt grønt med salatblanding, spidskål og avocado, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:21.375Z"
   }
 }

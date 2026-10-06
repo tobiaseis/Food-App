@@ -1,0 +1,242 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/citrusstegt-rumpsteak-6a6890fd640e6eb29c2ac47e",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:12:36.240Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 665,
+    "protein_g": 37.6,
+    "carbs_g": 56.9,
+    "fat_g": 31.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R26_BW48_SE_C12344000-18_Main_F1_swap_rump_steak_edit_high-4c3e6838.jpg",
+  "lang": "da",
+  "keywords": "Mediterransk ",
+  "fetched_at": "2026-10-05T20:00:06.468Z",
+  "title": "Citronstegt rumpsteak med ovnbagte grøntsager og aioli",
+  "intro": "Mør rumpsteak i citronsauce med sprøde ovnkartofler og karamelliserede grøntsager. Serveres med cremet aioli og citronbåde.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "bøf",
+      "note": "rumpsteak",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": "aioli",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "kruspersille",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til grøntsagerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til kartofler og grøntsager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm ovnen op til 240 °C (220 °C varmluft). Tag bøfferne ud af køleskabet, og drys dem med saltet til kødet."
+    },
+    {
+      "section": null,
+      "text": "Skær de uskrællede kartofler i både, og læg dem på en bageplade med bagepapir. Vend dem med lidt olivenolie, saltet til kartoflerne og peber. Bag dem 25-35 minutter, til de er møre. Brug to bageplader, hvis der er trangt."
+    },
+    {
+      "section": null,
+      "text": "Skær peberfrugten i strimler på 1 cm og løget i både på 2 cm, og hak tomaten. Vend det på bagepladen med kartoflerne sammen med sukker, saltet til grøntsagerne, peber og lidt olivenolie. Bag i 10-20 minutter, til grøntsagerne er karamelliserede."
+    },
+    {
+      "section": null,
+      "text": "Pres eller hak hvidløget fint, og hak dild og persille groft. Skær halvdelen af citronen i både. Pres et godt skvæt saft fra citronen i en lille skål, og rør den sammen med vand, bouillon, hvidløg, dild, persille, saltet til saucen og peber."
+    },
+    {
+      "section": null,
+      "text": "Når kartoflerne har 15 minutter tilbage, varmes olie på en pande ved middelhøj varme. Brun bøfferne 3-4 minutter på den ene side."
+    },
+    {
+      "section": null,
+      "text": "Vend bøfferne, og hæld citronsaucen på panden sammen med smør. Steg 3-4 minutter mere. Vil du have bøfferne gennemstegte, så steg 1-2 minutter længere."
+    },
+    {
+      "section": null,
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, til du skal servere. Skær dem i tynde skiver lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Anret kød, kartofler og grøntsager på tallerkener. Hæld saucen over kødet, og server med aioli og citronbåde."
+    }
+  ],
+  "changes": [
+    "Aioli er skiftet til mayonnaise.",
+    "Rumpsteak er skiftet til bøf.",
+    "Kruspersille er skiftet til persille."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har bøf, ovnbagte kartofler og rigeligt grønt, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:33:49.501Z"
+  }
+}

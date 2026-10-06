@@ -9,6 +9,17 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 11,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 292,
+    "protein_g": 29,
+    "carbs_g": 7,
+    "fat_g": 17
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-195496_11-7d050d4.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Thai, easy fishcakes, Fish cakes, goodhealth, Healthy dinner, healthy fishcakes, Heart Healthy, keto dinner, Keto fishcakes, keto recipe, low carb dinner recipe, Salmon fishcakes, Thai fishcakes",
+  "fetched_at": "2026-08-27T17:49:30.965Z",
   "title": "Laksebøffer med gulerods- og agurkesalat",
   "intro": "Saftige laksebøffer med rød karry, ingefær og koriander, serveret med en frisk salat af gulerods- og agurkebånd. Retten er hurtig at lave og let at spise.",
   "servings": 4,
@@ -135,25 +146,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler noget mættende som kartofler eller ris til at være et helt måltid.",
+    "reason": "Retten har protein og en lille salat, men mangler noget mættende som nudler, ris eller kartofler.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Sesamnudler med forårsløg",
       "ingredients": [
         {
           "section": null,
           "amount": 250,
           "unit": "g",
-          "name": "ris",
+          "name": "risnudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sojasauce",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "sesamfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "forårsløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "fed",
+          "name": "hvidløg",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen efter pakkens vejledning.",
-        "Server til laksebøfferne."
+        "Rist sesamfrøene på en tør pande, til de er gyldne.",
+        "Kog nudlerne efter anvisningen på pakken, og lad dem dryppe af.",
+        "Vend de varme nudler med sesamolie, sojasauce og presset hvidløg.",
+        "Drys med skåret forårsløg og ristede sesamfrø, og server til laksebøfferne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:00:07.392Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:54.874Z"
   }
 }

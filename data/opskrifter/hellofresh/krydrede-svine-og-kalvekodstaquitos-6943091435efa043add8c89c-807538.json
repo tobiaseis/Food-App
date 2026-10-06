@@ -1,0 +1,267 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/krydrede-svine-og-kalvekodstaquitos-6943091435efa043add8c89c",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:22:38.142Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 988,
+    "protein_g": 43.6,
+    "carbs_g": 129.5,
+    "fat_g": 35.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R06_BW35_SE_C13557-2_Main_high-2f4e0337.jpg",
+  "lang": "da",
+  "keywords": "Mexicansk",
+  "fetched_at": "2026-10-05T20:08:18.518Z",
+  "title": "Taquitos med svine- og kalvekød, ovnbagte rodfrugter og citronfraiche",
+  "intro": "Sprøde ovnbagte taquitos fyldt med krydret kødfars, serveret med Tex-Mex-rodfrugter, frisk tomatsalsa og mild citronfraiche.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Rodfrugter",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pastinak",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 5,
+      "unit": "g",
+      "name": "Tex-Mex krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Rodfrugter",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødfyld",
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket svinekød",
+      "note": "gerne blandet med kalvekød",
+      "optional": false
+    },
+    {
+      "section": "Kødfyld",
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "Panamad Central American Spice",
+      "optional": false
+    },
+    {
+      "section": "Kødfyld",
+      "amount": 35,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødfyld",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødfyld",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kødfyld",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til pensling",
+      "optional": false
+    },
+    {
+      "section": "Taquitos",
+      "amount": null,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsa",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronfraiche",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronfraiche",
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Citronfraiche",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Rodfrugter",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær kartofler og pastinak i tern på ca. 2 cm, uden at skrælle pastinakken."
+    },
+    {
+      "section": "Rodfrugter",
+      "text": "Læg ternene på en bageplade med bagepapir. Vend dem med lidt olivenolie, Tex-Mex, salt og peber."
+    },
+    {
+      "section": "Rodfrugter",
+      "text": "Bag i 25-35 minutter, til de er møre."
+    },
+    {
+      "section": "Kødfyld",
+      "text": "Varm olivenolie op i en stor pande ved middelhøj varme. Brun kødet sammen med krydderiet, tomatpuréen og saltet i 4-5 minutter."
+    },
+    {
+      "section": "Kødfyld",
+      "text": "Hæld vandet på, og lad det koge med i 1 minut. Tag panden af varmen. Kødet skal være helt gennemstegt uden spor af rødt."
+    },
+    {
+      "section": "Salsa",
+      "text": "Kvart tomaterne, og hak løg og koriander fint. Rør det sammen i en skål med salt og peber. Lidt olivenolie kan evt. røres i."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Fordel kødfyldet på tortillaerne, og rul dem stramt sammen. Læg dem på en ny bageplade med bagepapir, pensl med olivenolie, og drys med lidt salt."
+    },
+    {
+      "section": "Taquitos",
+      "text": "Bag dem i 7-9 minutter, til de er sprøde og gyldne."
+    },
+    {
+      "section": "Citronfraiche",
+      "text": "Skær citronen i både. Rør creme fraiche sammen med et skvæt citronsaft og saltet."
+    },
+    {
+      "section": null,
+      "text": "Læg taquitos på tallerkener, og top med citronfraiche og salsa. Server med rodfrugterne og resten af salsaen og fraichen."
+    }
+  ],
+  "changes": [
+    "Tex-Mex og Panamad-krydderiet er beholdt som krydderiblandinger, da der ikke findes en præcis dansk afløser.",
+    "Fraiche er skrevet som creme fraiche.",
+    "Citrusfrugt er skrevet som citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kødfyld i tortillas og ovnbagte kartofler og pastinak, så den har både protein og mættende stivelse.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:47:09.127Z"
+  },
+  "accepted": true
+}

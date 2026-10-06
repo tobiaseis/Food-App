@@ -9,6 +9,17 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 6,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 263,
+    "protein_g": 5,
+    "carbs_g": 32,
+    "fat_g": 12
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/10/Kugel-56ed6f2.jpg?resize=768,845",
+  "lang": "da",
+  "keywords": "Jewish, Jewish recipes, kugel, Potato recipes",
+  "fetched_at": "2026-08-27T15:31:13.981Z",
   "title": "Kartoffelkugel",
   "intro": "Kugel er en jødisk kartoffelret med revne kartofler og løg, der bages, til toppen er gylden og sprød. Den er blød i midten og passer godt som tilbehør eller som hovedret.",
   "servings": 4,
@@ -118,15 +129,31 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler protein til at være et helt måltid.",
+    "reason": "Kartoffelkugel er kun kartofler og løg uden en egentlig hovedråvare som kød eller fisk, så den mangler noget at gøre den til et helt måltid.",
     "side": {
-      "title": "Rødbeder og grøn salat",
+      "title": "Cremet hvidkålssalat med æble og dild",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "dåse",
-          "name": "rødbeder",
+          "amount": 400,
+          "unit": "g",
+          "name": "hvidkål",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "æbler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1.5,
+          "unit": "dl",
+          "name": "creme fraiche",
           "note": null,
           "optional": false
         },
@@ -134,17 +161,35 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "sennep",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "dild",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Dræn rødbederne og varm dem gennem på en pande.",
-        "Vask salaten og riv den i stykker."
+        "Snit hvidkålen helt fint, og riv æblerne groft.",
+        "Rør creme fraiche, saft fra citronen, sennep og salt sammen til en dressing.",
+        "Vend kål og æble med dressingen, og lad salaten trække i køleskabet, mens kugelen bager.",
+        "Hak dilden, og drys den over salaten lige før servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:14:27.501Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:51.028Z"
   }
 }

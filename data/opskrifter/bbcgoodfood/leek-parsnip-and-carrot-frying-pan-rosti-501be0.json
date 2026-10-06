@@ -9,6 +9,17 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 10,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 244,
+    "protein_g": 6,
+    "carbs_g": 30,
+    "fat_g": 9
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/08/CROPPED-GFOMorrisonsleekrosti-8b001c9.jpg?resize=768,845",
+  "lang": "da",
+  "keywords": "autumn brunch, Autumn recipes, Carrots, goodhealth, Rosti",
+  "fetched_at": "2026-08-27T15:31:52.283Z",
   "title": "Grøntsagsrösti med porre, pastinak og gulerod",
   "intro": "En sprød grøntsagskage, der steges på panden og skæres ud i tern som en pizza. Den er nem hverdagsmad med rodfrugter, porre og friske krydderurter.",
   "servings": 4,
@@ -131,24 +142,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende stivelsesbestanddel som kartofler, ris eller brød.",
+    "reason": "Røstien er næsten kun grønt og mel uden rigtig protein eller mættende tilbehør, så den mangler noget at blive mæt af.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Spinatsalat med feta, tomater og ristede solsikkekerner",
       "ingredients": [
         {
           "section": null,
+          "amount": 150,
+          "unit": "g",
+          "name": "babyspinat",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "cherrytomater",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 150,
+          "unit": "g",
+          "name": "feta",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "spsk",
+          "name": "solsikkekerner",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand."
+        "Rist solsikkekernerne på en tør pande, til de er gyldne, og lad dem køle af.",
+        "Pres citronen, og rør saften sammen med olivenolie og en knivspids salt til en dressing.",
+        "Halver tomaterne, og vend dem med spinaten og dressingen.",
+        "Smuldr fetaen ud over salaten, drys med solsikkekerner, og server til røstien."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:16:27.429Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:01.816Z"
   }
 }

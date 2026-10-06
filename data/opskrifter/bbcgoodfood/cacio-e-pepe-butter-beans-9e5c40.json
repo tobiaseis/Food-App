@@ -9,6 +9,17 @@
   "active_minutes": 5,
   "yield_count": 2,
   "source_lines": 4,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 495,
+    "protein_g": 22,
+    "carbs_g": 30,
+    "fat_g": 29
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/07/Cacio-e-pepe-butter-beans-8b1a4c2.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Main course, side, Side dish, 1 of 5-a-day, Butter beans, Cacio e pepe, Calcium, Italian-style",
+  "fetched_at": "2026-08-27T15:28:54.680Z",
   "title": "Cacio e pepe-bønner",
   "intro": "Cremede hvide bønner i en sauce af smør, peber og parmesan, helt i cacio e pepe-stil. Retten er hurtig og lækker med godt brød og grønt ved siden af.",
   "servings": 2,
@@ -100,34 +111,10 @@
     "Butter beans er skiftet til hvide bønner."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Retten trænger til brød eller grønt for at være et helt måltid.",
-    "side": {
-      "title": "Sprødt brød og grøn salat",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 4,
-          "unit": "skive",
-          "name": "sprødt brød",
-          "note": null,
-          "optional": false
-        },
-        {
-          "section": null,
-          "amount": 250,
-          "unit": "g",
-          "name": "grøn salat",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Varm brødet op.",
-        "Vask salaten, riv den i stykker, og server."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:11:47.132Z"
+    "complete": true,
+    "reason": "Hvide bønner med parmesan er både hovedråvare og mættende, så retten er et helt måltid, især med brød og grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:17.369Z"
   }
 }

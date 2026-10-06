@@ -1,0 +1,164 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-linguine-bolognese-691717471d103273ffd51d4c",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:27:38.458Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 12,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 789,
+    "protein_g": 42.8,
+    "carbs_g": 88.2,
+    "fat_g": 28.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R22_BW45_SE_F16050-1_Main_high-ddf8f39b.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:09:09.337Z",
+  "title": "Hurtig linguine bolognese med frisk tomat",
+  "intro": "En hurtig hverdagsbolognese med hakket oksekød, hakkede tomater og en cremet ostesauce. Serveres med friske tomater, basilikum og Grana Padano.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "mornaysauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dåse",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "basilikum",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "Grana Padano i flager",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "linguine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom rigeligt vand med salt i en stor gryde, og bring det i kog. Vandet skal smage som havvand."
+    },
+    {
+      "section": null,
+      "text": "Kog linguinen i 8 minutter, til den er al dente – altså mør, men med lidt bid. Si vandet fra."
+    },
+    {
+      "section": null,
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Brun oksekødet sammen med krydderurterne og bouillonen i 4-5 minutter, til der ikke er noget rødt tilbage i kødet."
+    },
+    {
+      "section": null,
+      "text": "Hak tomaterne groft, mens kødet steger."
+    },
+    {
+      "section": null,
+      "text": "Hæld de hakkede tomater og sukkeret i panden, og lad det simre i 2-3 minutter. Rør mornaysaucen i, og smag til med salt."
+    },
+    {
+      "section": null,
+      "text": "Vend den kogte pasta i saucen."
+    },
+    {
+      "section": null,
+      "text": "Fordel bolognesen i dybe tallerkener. Top med de hakkede tomater, basilikum og Grana Padano."
+    }
+  ],
+  "changes": [
+    "Middelhavsdrøm er erstattet af blandede tørrede krydderurter."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har hakket oksekød og linguine i tomatsauce, så den er et helt måltid med protein og pasta.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:48:07.218Z"
+  }
+}

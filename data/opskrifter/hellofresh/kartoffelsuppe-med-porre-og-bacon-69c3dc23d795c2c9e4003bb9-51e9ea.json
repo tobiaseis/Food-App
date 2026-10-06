@@ -1,0 +1,158 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/kartoffelsuppe-med-porre-og-bacon-69c3dc23d795c2c9e4003bb9",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:58:23.725Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 10,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 817,
+    "protein_g": 25.8,
+    "carbs_g": 89.4,
+    "fat_g": 41.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R12_BW14_SE_C56391-1_main_high-595e184b.jpg",
+  "lang": "da",
+  "keywords": "Svensk",
+  "fetched_at": "2026-10-05T20:05:20.941Z",
+  "title": "Kartoffel-porresuppe med bacon og surdejsboller",
+  "intro": "Cremet suppe på kartofler og porre, toppet med sprødt bacon og frisk persille. Serveres med lune, ristede surdejsboller.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "porre",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "surdejsboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til suppen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til suppen",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220°C (200°C varmluft)."
+    },
+    {
+      "section": null,
+      "text": "Skræl kartoflerne, og skær dem i tern på ca. 2 cm. Skær den rensede porre i tynde skiver."
+    },
+    {
+      "section": null,
+      "text": "Træk bladene af timianen. Tip: Hold fat øverst på stilken, og stryg fingrene nedad."
+    },
+    {
+      "section": null,
+      "text": "Varm en stor gryde op ved middelhøj varme, og brun baconen i 4-5 minutter, til den er gylden. Tag den op af gryden, og stil den til side."
+    },
+    {
+      "section": null,
+      "text": "Svits porrerne i samme gryde i 2-3 minutter, til de er lidt møre."
+    },
+    {
+      "section": null,
+      "text": "Kom kartofler, timian, bouillon, vand og salt i gryden. Lad det simre i 13-15 minutter."
+    },
+    {
+      "section": null,
+      "text": "Blend suppen glat med stavblender eller i en blender, og rør fløden i. Uden blender kan du mose den groft med en kartoffelmoser. Tynd evt. ud med et skvæt vand, hvis suppen er for tyk."
+    },
+    {
+      "section": null,
+      "text": "Skær bollerne over på midten, og læg dem direkte på ovnristen. Bag dem i 5-6 minutter."
+    },
+    {
+      "section": null,
+      "text": "Hak persillen fint."
+    },
+    {
+      "section": null,
+      "text": "Øs suppen op i dybe tallerkener, og drys med bacon og persille. Server med de lune boller."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Suppen med kartofler, bacon og surdejsboller har både hovedråvare og mættende stivelse, så det er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:42:21.967Z"
+  }
+}

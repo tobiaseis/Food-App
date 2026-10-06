@@ -9,6 +9,17 @@
   "active_minutes": 10,
   "yield_count": 4,
   "source_lines": 8,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 236,
+    "protein_g": 16,
+    "carbs_g": 7,
+    "fat_g": 16
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-589465_11-e8b46c3.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Italian,  Josh Eagleton, 30-60 minutes, 4 servings, 400 kcal or less, Basil leaf, Basil leaves, Cherry tomato, Cherry tomatoes, Easy, Five a day, Fritata, Good Food, goodhealth, Mains, Omelette, Onion, Onions, Quick, Ricotta, Spinach, Super healthy, Vitamin c",
+  "fetched_at": "2026-08-27T17:48:58.245Z",
   "title": "Frittata med ricotta, tomat og spinat",
   "intro": "En luftig ovnbagt frittata med bløde tomater, spinat og klatter af ricotta. Server den lun med en frisk salat ved siden af.",
   "servings": 4,
@@ -111,9 +122,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Frittataen mangler mættende stivelse eller tilstrækkeligt grønt.",
+    "reason": "Frittataen består af æg, grønt og ost, men mangler noget mættende som kartofler eller brød.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde citronkartofler med hvidløg og timian",
       "ingredients": [
         {
           "section": null,
@@ -122,14 +133,56 @@
           "name": "kartofler",
           "note": null,
           "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "timian",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "frisk persille",
+          "note": null,
+          "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Server dem ved siden af frittataen."
+        "Skær kartoflerne i både, og vend dem med olie, timian, hele hvidløgsfed og salt.",
+        "Bag kartoflerne sprøde ved 220 grader i cirka 35 minutter, og vend dem undervejs.",
+        "Riv citronskallen over de varme kartofler, og pres lidt saft over.",
+        "Hak persillen, og strø den over inden servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:56:57.222Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:14.679Z"
   }
 }

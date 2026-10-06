@@ -9,6 +9,17 @@
   "active_minutes": 5,
   "yield_count": 4,
   "source_lines": 7,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 198,
+    "protein_g": 17.8,
+    "carbs_g": 4.1,
+    "fat_g": 12.3
+  },
+  "image": "https://images.arla.com/recordid/BFB48B29-3913-40EC-B1D1BA61E21DCD56/laks-i-airfryer.jpg?width=1300&height=525&mode=crop&format=webp",
+  "lang": "da",
+  "keywords": "Aftensmad, Mellemøsten, Laks i airfryer",
+  "fetched_at": "2026-08-27T15:28:19.100Z",
   "title": "Laks i airfryer med sojamarinade",
   "intro": "Saftig laks med en sød og salt marinade af soja, farin og hvidløg, der er klar på ca. 10 minutter i airfryeren. En hurtig hverdagsret.",
   "servings": 4,
@@ -91,15 +102,31 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Laksen er en god hovedråvare, men retten mangler en mættende komponente som kartofler eller ris.",
+    "reason": "Retten har kun laks med marinade og mangler noget mættende og grønt.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sesamnudler med agurk og forårsløg",
       "ingredients": [
         {
           "section": null,
-          "amount": 750,
+          "amount": 300,
           "unit": "g",
-          "name": "kartofler",
+          "name": "nudler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sojasauce",
           "note": null,
           "optional": false
         },
@@ -107,17 +134,35 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "stk",
+          "name": "forårsløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "sesamfrø",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til laksen."
+        "Kog nudlerne efter anvisningen på pakken, og lad dem dryppe godt af.",
+        "Vend de varme nudler med sesamolie og sojasauce.",
+        "Skær agurk i tynde strimler og forårsløg i ringe, og vend dem i nudlerne.",
+        "Drys med sesamfrø, og server nudlerne til laksen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T17:10:35.793Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:20:17.938Z"
   }
 }

@@ -1,0 +1,192 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/kokos-og-chilikrydret-torsk-6a38ec684e4b173945bce51f",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:29:38.185Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 16,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 760,
+    "protein_g": 33.3,
+    "carbs_g": 84.5,
+    "fat_g": 33.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R13_BW26_SE_C56954-1main_high-44c146d3.jpg",
+  "lang": "da",
+  "keywords": "Peruviansk",
+  "fetched_at": "2026-10-05T20:01:44.002Z",
+  "title": "Kokos-torsk med chili og basmatiris",
+  "intro": "Torsk simret i en cremet sauce af kokosmælk, tomat og chili, serveret med duftende basmatiris og frisk koriander. En hurtig ret, der er klar på cirka 30 minutter.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "basmatiris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 250,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "groftrevet",
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 40,
+      "unit": "g",
+      "name": "sambal oelek",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Torsk og sauce",
+      "amount": 2,
+      "unit": "dl",
+      "name": "kokosmælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": "blade plukket",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Bring vandet i kog i en gryde, og tilsæt ris og salt. Læg låg på, og kog på middellav varme i 10 minutter. Træk gryden af varmen, og lad risene trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Til torsk og sauce",
+      "text": "Mens risene trækker: Hak løg og tomat fint, riv gulerod groft, pluk korianderbladene, og skær citronen over."
+    },
+    {
+      "section": "Til torsk og sauce",
+      "text": "Varm olien op i en stor stegepande ved middelhøj varme. Steg løg, tomat og gulerod i 1-2 minutter, til de er bløde."
+    },
+    {
+      "section": "Til torsk og sauce",
+      "text": "Kom smør, tomatpuré og sambal oelek i panden, og rør rundt i cirka 30 sekunder, til det dufter. Hæld vand, bouillon og kokosmælk i, og lad det simre i 1-2 minutter. Brug mindre sambal oelek, hvis du ikke vil have det så stærkt."
+    },
+    {
+      "section": "Til torsk og sauce",
+      "text": "Skru ned til middel varme. Læg torsk og halvdelen af koriander i panden, og lad det simre i 6-8 minutter, til saucen er lidt tykkere, og fisken er mat i midten og falder i stykker."
+    },
+    {
+      "section": "Til servering",
+      "text": "Pres et godt skvæt citronsaft over lige før servering. Fordel ris, fisk og sauce på tallerkener, og drys med resten af korianderen."
+    }
+  ],
+  "changes": [
+    "Aji chilipasta er erstattet med sambal oelek."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har torsk som hovedråvare, basmatiris som mættende element og grøntsager i saucen, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:30.584Z"
+  }
+}

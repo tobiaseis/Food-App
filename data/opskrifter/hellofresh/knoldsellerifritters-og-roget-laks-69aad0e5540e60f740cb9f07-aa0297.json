@@ -1,0 +1,233 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/knoldsellerifritters-og-roget-laks-69aad0e5540e60f740cb9f07",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:04:19.125Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 18,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 596,
+    "protein_g": 28.5,
+    "carbs_g": 56.2,
+    "fat_g": 27.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R01_BW07_SE_C22421-1_Main_high-babb8a62.jpg",
+  "lang": "da",
+  "keywords": "Skandinavisk",
+  "fetched_at": "2026-10-05T20:06:09.597Z",
+  "title": "Knoldselleri-fritters med røget laks og agurkesalat",
+  "intro": "Sprøde fritters af knoldselleri toppes med flødeost og koldrøget laks og serveres med friske kartofler og en sprød salat af agurk og æble.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Knoldselleri",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "Agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 400,
+      "unit": "g",
+      "name": "Kartofler",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "Koldrøget laks",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "Parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "Løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "g",
+      "name": "Citronpeber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Æble",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "Flødeost",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "Dild",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 1.5,
+      "unit": "spsk",
+      "name": "Hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": "et nip",
+      "optional": false
+    },
+    {
+      "section": "Til fritters",
+      "amount": null,
+      "unit": null,
+      "name": "Olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til kartoflerne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kom kartoflerne i en stor gryde med saltet kogende vand, og kog dem i 12-15 min, til en kniv glider let igennem. Si vandet fra, læg låg på gryden, og lad dem stå."
+    },
+    {
+      "section": "Fritters",
+      "text": "Skræl knoldselleriet, og riv det groft. Hak løget fint."
+    },
+    {
+      "section": "Fritters",
+      "text": "Rør selleri, parmesan, bouillon, løg, æg, hvedemel, salt og peber sammen i en stor skål."
+    },
+    {
+      "section": "Agurkesalat",
+      "text": "Hak agurk, dild og æble groft. Pres saften fra den halverede citron, og vend det hele med saltet i en skål."
+    },
+    {
+      "section": "Fritters",
+      "text": "Hæld olivenolie i en stor pande, til bunden er dækket, og varm den på middelhøj varme. Form 4 fritters af farsen, og læg dem på panden."
+    },
+    {
+      "section": "Fritters",
+      "text": "Steg fritterne 3-4 min på hver side, til de er gyldne og gennemstegte. Rør ikke ved dem for tidligt, ellers falder de fra hinanden. Afdryp dem på køkkenrulle."
+    },
+    {
+      "section": null,
+      "text": "Vend smør, salt og citronpeber i de varme kartofler lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Anret kartofler, fritters og agurkesalat på tallerkener. Smør flødeost på fritterne, og læg den røgede laks ovenpå."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano erstattet med parmesan.",
+    "Citrusfrugt erstattet med citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har røget laks og fritters som protein samt kartofler og agurkesalat som mættende og grønt tilbehør.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:43:37.472Z"
+  }
+}

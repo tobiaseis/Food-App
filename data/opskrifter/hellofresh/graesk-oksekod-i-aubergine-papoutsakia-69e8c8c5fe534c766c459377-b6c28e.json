@@ -1,0 +1,290 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/graesk-oksekod-i-aubergine-papoutsakia-69e8c8c5fe534c766c459377",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:48:14.770Z",
+  "total_minutes": 40,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 23,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 682,
+    "protein_g": 39.8,
+    "carbs_g": 61.6,
+    "fat_g": 31.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R28_BW15_SE_C55196-1_main_high-76587232.jpg",
+  "lang": "da",
+  "keywords": "Græsk",
+  "fetched_at": "2026-10-05T20:04:01.610Z",
+  "title": "Græsk aubergine-papoutsakia med oksekød og bulgur",
+  "intro": "Ovnbagte auberginehalvdele fyldt med tomatkødsauce og toppet med ostebechamel, serveret med bulgur og salat. En græsk klassiker, som man traditionelt serverer med auberginens stilk på.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "aubergine",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "bulgur",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "salat",
+      "note": "blandet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "rødvinssauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "middelhavsdrøm",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til auberginen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til aubergine",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kød",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til bulgur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til bechamel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til bulgur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til bechamel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "til bechamel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": "til bechamel",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Sæt en mellemstor gryde med vand over til kogning, så den er klar til bulguren."
+    },
+    {
+      "section": null,
+      "text": "Halvér auberginen på langs, og lad stilken sidde. Rids kødsiden i et tern-mønster, men skær ikke hul i skallen."
+    },
+    {
+      "section": null,
+      "text": "Læg halvdelene med skallen nedad på en bageplade med bagepapir. Dryp med olivenolie, og krydr med salt og peber. Bag i 25-28 minutter, til de er gyldne og møre."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Varm olien i en stor pande ved middelhøj varme. Pres eller hak hvidløget fint."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Brun oksekødet med saltet i 4-5 minutter. Rør middelhavsdrøm, halvdelen af hvidløget og tomatpuréen i, og lad det osle i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": "Kødsauce",
+      "text": "Hæld passata, rødvinssauce, salt, sukker og vand i panden. Lad saucen simre i 4-5 minutter. Kødet skal være helt gennemstegt uden rødt tilbage."
+    },
+    {
+      "section": "Bulgur",
+      "text": "Kom bulgur, bouillon og salt i det kogende vand. Læg låg på, og lad det koge ved middellav varme i 9-10 minutter, til bulguren er al dente."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Smelt smørret i en anden gryde ved middelhøj varme, og svits resten af hvidløget i ca. 30 sekunder. Pisk melet i."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Hæld mælken i lidt ad gangen, mens du rører, og lad den tykne i 3-4 minutter. Pisk salt, peber og halvdelen af parmesanen i."
+    },
+    {
+      "section": "Samling",
+      "text": "Mas auberginekødet let med en gaffel inde i skallen. Fordel noget af kødsaucen ovenpå, men gem en del til servering, og dæk med bechamel."
+    },
+    {
+      "section": "Samling",
+      "text": "Bag i ovnen i 4-5 minutter, til toppen er gylden og boblende. Skyl imens salaten."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret bulgur og auberginehalvdele på tallerkener. Hæld den sidste kødsauce over bulguren, og drys resten af parmesanen over auberginerne. Server med salaten."
+    }
+  ],
+  "changes": [
+    "Parmigiano Reggiano erstattes af parmesan.",
+    "Hvedemel bruges, hvor kilden skriver mel.",
+    "Hvidløgsfed skrives som hvidløg."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har oksekød som hovedråvare, bulgur som mættende og aubergine samt salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:40:03.500Z"
+  }
+}

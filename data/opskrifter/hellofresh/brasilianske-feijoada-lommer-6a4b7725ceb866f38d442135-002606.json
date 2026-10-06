@@ -1,0 +1,279 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/brasilianske-feijoada-lommer-6a4b7725ceb866f38d442135",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:18:32.163Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 931,
+    "protein_g": 32.4,
+    "carbs_g": 123.9,
+    "fat_g": 30.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R04_BW29_SE_C58891-1main_high-6b2c884a.jpg",
+  "lang": "da",
+  "keywords": "Brasiliansk",
+  "fetched_at": "2026-10-05T20:00:42.018Z",
+  "title": "Feijoada-lommer med ovnbagt sødkartoffel",
+  "intro": "Sprøde tortillalommer fyldt med krydrede sorte bønner og smeltet cheddar, serveret med ovnbagt sødkartoffel, frisk salat og creme fraiche. En hurtig hverdagsret med brasiliansk smag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til sødkartoflerne",
+      "amount": 500,
+      "unit": "g",
+      "name": "sødkartoffel",
+      "note": "uskrællet",
+      "optional": false
+    },
+    {
+      "section": "Til sødkartoflerne",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sødkartoflerne",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til sødkartoflerne",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "sorte bønner",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": 1,
+      "unit": "stk",
+      "name": "chili",
+      "note": "fintsnittet, uden kerner",
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "brasiliansk krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": 40,
+      "unit": "g",
+      "name": "barbecuesauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til feijoadaen",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til lommerne",
+      "amount": 8,
+      "unit": "stk",
+      "name": "tortilla",
+      "note": "små",
+      "optional": false
+    },
+    {
+      "section": "Til lommerne",
+      "amount": 50,
+      "unit": "g",
+      "name": "cheddar",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til lommerne",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "lime",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "salat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til salaten",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sødkartofler",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær sødkartoflerne i tern på ca. 2 cm, og læg dem på en bageplade med bagepapir."
+    },
+    {
+      "section": "Sødkartofler",
+      "text": "Vend kartoflerne med olivenolie, salt og peber. Bag dem 20-30 minutter, til de er møre. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Del limen i både. Hak tomaten groft. Skær enden af salaten, pluk bladene fra hinanden, og hak dem groft. Skyl bønnerne. Flæk chilien, fjern kernerne, og hak den fint. Brug mindre chili eller drop den, hvis nogen ikke bryder sig om stærk mad."
+    },
+    {
+      "section": "Feijoada",
+      "text": "Varm lidt olivenolie op i en stor pande ved middelhøj varme. Steg bønner, tomatpuré, chili, krydderiblanding og barbecuesauce i 2 minutter."
+    },
+    {
+      "section": "Feijoada",
+      "text": "Rør sukker, vand, salt og peber i. Lad det simre 2-3 minutter, til det er lidt tykt. Mas en tredjedel af bønnerne med en kartoffelmoser eller en gaffel."
+    },
+    {
+      "section": "Lommer",
+      "text": "Læg tortillaerne på et bræt, og kom fyld på den ene halvdel af hver. Drys med cheddar, og fold dem sammen til halvmåner."
+    },
+    {
+      "section": "Lommer",
+      "text": "Læg lommerne på en bageplade med bagepapir, og pensl eller dryp dem med lidt olivenolie. Bag dem 8-12 minutter, til de er gyldne."
+    },
+    {
+      "section": "Salat",
+      "text": "Pres en god sjat limesaft i en stor skål, og rør sukker, olivenolie, salt og peber i. Vend salat og tomat i dressingen."
+    },
+    {
+      "section": "Servering",
+      "text": "Anret lommerne på tallerkener med en klat creme fraiche. Server med sødkartoflerne, salaten og de resterende limebåde."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til lime.",
+    "Hello Copacabana er skiftet til en brasiliansk krydderiblanding.",
+    "Churrascosauce er skiftet til barbecuesauce.",
+    "Fraiche er skiftet til creme fraiche."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har bønnefyld i tortillalommer, ovnbagt sødkartoffel og salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:53.011Z"
+  }
+}

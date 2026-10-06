@@ -1,0 +1,182 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/biksemad-med-kartofler-og-spejlaeg-69aad119540e60f740cba13f",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T05:03:30.117Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 15,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 728,
+    "protein_g": 34.9,
+    "carbs_g": 116.3,
+    "fat_g": 36.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R14_BW11_SE_C54915-1_main_high-d2135086.jpg",
+  "lang": "da",
+  "keywords": "Skandinavisk",
+  "fetched_at": "2026-10-05T20:06:02.511Z",
+  "intro": "Sprød biksemad med svinekotelet, kartofler og løg toppet med spejlæg. Til serveres syltede rødbeder og en cremet sennepsdressing.",
+  "title": "Biksemad med spejlæg og syltede rødbeder",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "svinekoteletter",
+      "note": "urtemarineret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "små, forkogte, i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "rødbeder",
+      "note": "forkogt, i skiver",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "eddike",
+      "note": "hvidvinseddike",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til syltningen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til løgene",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Varm lidt olivenolie op i en stor pande over høj varme. Steg koteletterne med salt i 1-2 minutter på hver side, til de er gyldne og helt gennemstegte uden rød kød. Læg dem på en tallerken."
+    },
+    {
+      "section": null,
+      "text": "Rør eddike, sukker, vand og lidt salt sammen i en lille skål. Vend rødbedeskiverne i lagen og lad dem trække, mens du laver resten. Hæld lagen fra lige før servering."
+    },
+    {
+      "section": null,
+      "text": "Smelt smørret i den samme pande over middel varme. Steg kartofler og løg med salt i 7-8 minutter, til de er gyldenbrune."
+    },
+    {
+      "section": null,
+      "text": "Skær koteletterne i små tern og vend dem i panden til kartoflerne og løgene. Rør mayonnaise og sennep sammen til en dressing i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Varm lidt olivenolie op i en anden stor pande over middelhøj varme. Slå æggene ud og steg dem som spejlæg i 4-6 minutter, til hviden er fast og blommen er, som du vil have den. Smag til med salt og peber."
+    },
+    {
+      "section": null,
+      "text": "Fordel biksemaden på tallerkener og læg et spejlæg på hver. Server med rødbederne, Worcestershiresauce og sennepsdressingen."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kød og kartofler samt rødbeder og æg, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:43:25.748Z"
+  }
+}

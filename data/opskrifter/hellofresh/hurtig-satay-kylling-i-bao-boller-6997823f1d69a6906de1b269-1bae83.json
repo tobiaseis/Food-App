@@ -1,0 +1,166 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-satay-kylling-i-bao-boller-6997823f1d69a6906de1b269",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:08:35.572Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 11,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 640,
+    "protein_g": 50,
+    "carbs_g": 65.4,
+    "fat_g": 18.3
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R22_BW09_SE_C53199-1_Main_high-5eae753f.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:06:30.917Z",
+  "title": "Bao-boller med satay-kylling og kålsalat",
+  "intro": "Møre bao-boller fyldt med stegt kylling, sprød rødkålssalat og cremet sataysauce. Det er en hurtig ret, der er klar på cirka en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kålsalat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kålsalat",
+      "amount": 150,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "skåret i fine strimler",
+      "optional": false
+    },
+    {
+      "section": "Kålsalat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "i julienne-strimler",
+      "optional": false
+    },
+    {
+      "section": "Kålsalat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kålsalat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 5,
+      "unit": "g",
+      "name": "Ginger Ninja",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kylling",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 8,
+      "unit": "stk",
+      "name": "bao-boller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "sataysauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 20,
+      "unit": "g",
+      "name": "saltede peanuts",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kålsalat",
+      "text": "Skær agurken i lange, tynde bånd med en skræller. Hak den sidste rest fint."
+    },
+    {
+      "section": "Kålsalat",
+      "text": "Vend agurk, gulerod og rødkål med olie og salt i en stor skål. Stil salaten til side."
+    },
+    {
+      "section": "Kylling",
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme."
+    },
+    {
+      "section": "Kylling",
+      "text": "Steg kyllingestrimlerne med Ginger Ninja og salt i 4-5 minutter, til de er gyldne. Kødet skal være hvidt hele vejen igennem uden rosa."
+    },
+    {
+      "section": "Til servering",
+      "text": "Hvis du ikke bruger mikrobølgeovn, så bring en mellemstor gryde vand i kog, mens du laver resten."
+    },
+    {
+      "section": "Til servering",
+      "text": "Klip et lille hul i hver side af bollepakken, og varm bollerne i mikrobølgeovnen i 40 sekunder. Du kan også lægge dem i en si over det kogende vand og dampe dem med låg i 3-5 minutter."
+    },
+    {
+      "section": "Til servering",
+      "text": "Varm helst bollerne lige før servering, så de bliver bløde og lune."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fyld bollerne med kålsalat, kylling og sataysauce. Drys med peanuts."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling, bao-boller som mættende element og rigeligt grønt i kålsalaten, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:10.948Z"
+  }
+}

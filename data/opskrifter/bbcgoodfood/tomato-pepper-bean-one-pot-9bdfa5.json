@@ -9,6 +9,17 @@
   "active_minutes": 15,
   "yield_count": 6,
   "source_lines": 15,
+  "nutrition": {
+    "per_servings": 6,
+    "kcal": 236,
+    "protein_g": 11,
+    "carbs_g": 35,
+    "fat_g": 3
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/tomato-pepper-bean-one-pot-398c4b2.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Lunch, Anna Glover, Beans, Casserole, easy bean stew, goodhealth, healthy bean stew, Healthy vegan recipe, healthy vegan stew, Lunch box, One-pot, Peppers, Stew, Tomatoes, Vegetarian stew",
+  "fetched_at": "2026-08-27T17:48:29.828Z",
   "title": "Tomat- og bønnegryde med peberfrugt",
   "intro": "En solid grøntsagsgryde med tre slags bønner, peberfrugt og tomat, der koger ind til en tyk sauce. Den holder sig godt og er perfekt til madpakker.",
   "servings": 6,
@@ -185,26 +196,10 @@
     "Rødvinseddike er skrevet som eddike med rødvinseddike i noten."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Gryden har bønner og grønt, men mangler en klassisk mættende stivelseskomponent som ris eller brød, som en dansk husstand forventer til aftensmad.",
-    "side": {
-      "title": "Kogt ris",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 250,
-          "unit": "g",
-          "name": "ris",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Kog risen efter pakningsvejledningen i letsoltet vand.",
-        "Server ved siden af gryden."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:55:42.472Z"
+    "complete": true,
+    "reason": "Gryden har tre slags bønner som mættende hovedråvare og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:24:07.276Z"
   }
 }

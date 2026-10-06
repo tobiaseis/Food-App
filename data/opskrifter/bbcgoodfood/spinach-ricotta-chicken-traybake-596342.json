@@ -9,6 +9,17 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 12,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 348,
+    "protein_g": 39,
+    "carbs_g": 24,
+    "fat_g": 11
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken_4-85420be.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, 4 of 5-a-day, Calcium, Fibre, Folate, Good Food, goodhealth, Healthy recipes, stuffed chicken recipe, Vitamin c",
+  "fetched_at": "2026-08-27T17:53:16.930Z",
   "title": "Ovnbagt kylling med fyld af spinat og ricotta",
   "intro": "Kyllingebryst fyldt med citronduftende spinat og ricotta, rullet i rasp og bagt sammen med grøntsager på bageplade. Det hele laves i ovnen på ca. 30 minutter.",
   "servings": 4,
@@ -161,27 +172,10 @@
     "Courgette er erstattet af squash."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Retten mangler stivelsesholdige ingredienser som kartofler, ris eller pasta.",
-    "side": {
-      "title": "Kogte kartofler",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 800,
-          "unit": "g",
-          "name": "kartofler",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Skræl kartoflerne.",
-        "Kog dem møre i let saltet vand.",
-        "Afkog og server til kyllingen."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:19:09.548Z"
+    "complete": true,
+    "reason": "Fyldt kylling med rigelige bagte grøntsager som squash, peberfrugt, løg og tomater er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:26:27.801Z"
   }
 }

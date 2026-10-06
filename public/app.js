@@ -401,15 +401,50 @@ async function showProduct(productId) {
   });
 }
 
+// Husstandens størrelse, som både arket og madlavningstilstanden regner med.
+function recipeHousehold(r) {
+  return FLOW.settings ? FLOW.settings.servings : (r.servings || 4);
+}
+
+// Rækker i hver deres afsnit (fx "Tilbehør") i den rækkefølge, de står i.
+function groupBySection(rows) {
+  return rows.reduce((acc, row) => {
+    const last = acc[acc.length - 1];
+    if (!last || last.section !== (row.section || null)) acc.push({ section: row.section || null, rows: [] });
+    acc[acc.length - 1].rows.push(row);
+    return acc;
+  }, []);
+}
+
+/**
+ * Ingredienslisten ganget op til husstanden. Den ENE udgave: opskriftsarket og
+ * madlavningstilstanden bruger den begge, så mængderne aldrig kan afvige.
+ * Resten af en pakke (topups) står kun ved den første linje med varen.
+ */
+function ingredientsHtml(r, id) {
+  const factor = recipeHousehold(r) / (r.servings > 0 ? r.servings : 4);
+  const extra = { ...((FLOW.list && FLOW.list.topups && FLOW.list.topups[id]) || {}) };
+  const unitOf = (key) => FLOW.ctx && FLOW.ctx.items && FLOW.ctx.items.get(key)?.base_unit;
+  return groupBySection(r.ingredients).map((g) => `
+    ${g.section ? `<h3 class="recipe-sub">${esc(g.section)}</h3>` : ''}
+    <ul class="ingr">${g.rows.map((ing) => {
+      const more = ing.key && extra[ing.key] ? extra[ing.key] : 0;
+      if (more) delete extra[ing.key];
+      return `<li><span class="ingr-amt">${esc(lineAmount(ing.qty, ing.unit, factor))}</span>
+        <span>${esc(ing.label)}${ing.optional ? ' <span class="note">(valgfri)</span>' : ''}
+        ${more ? `<small class="topup">+ ${esc(qty(more, unitOf(ing.key)))} — så pakken bliver brugt op</small>` : ''}</span></li>`;
+    }).join('')}</ul>`).join('');
+}
+
+// Hvilken åbning af arket, der er den seneste. Åbner man A, lukker og åbner B,
+// mens A stadig hentes, må A's svar ikke lande i B's ark.
+let recipeTicket = 0;
+
 /**
  * Opskriften i appen: ingredienserne ganget op til husstanden, og
  * fremgangsmåden. Er en rest af en pakke lagt i netop denne ret (engine:
  * shoppingList.topups), står det ved varen.
  */
-// Hvilken åbning af arket, der er den seneste. Åbner man A, lukker og åbner B,
-// mens A stadig hentes, må A's svar ikke lande i B's ark.
-let recipeTicket = 0;
-
 async function showRecipe(id) {
   const modal = $('#modal');
   const ticket = ++recipeTicket;
@@ -435,30 +470,10 @@ async function showRecipe(id) {
     return;
   }
 
-  const household = FLOW.settings ? FLOW.settings.servings : (r.servings || 4);
-  const factor = household / (r.servings > 0 ? r.servings : 4);
-  const extra = { ...((FLOW.list && FLOW.list.topups && FLOW.list.topups[id]) || {}) };
-  const unitOf = (key) => FLOW.ctx && FLOW.ctx.items && FLOW.ctx.items.get(key)?.base_unit;
+  const household = recipeHousehold(r);
+  const ingredients = ingredientsHtml(r, id);
 
-  const grouped = (rows) => rows.reduce((acc, row) => {
-    const last = acc[acc.length - 1];
-    if (!last || last.section !== (row.section || null)) acc.push({ section: row.section || null, rows: [] });
-    acc[acc.length - 1].rows.push(row);
-    return acc;
-  }, []);
-
-  const ingredients = grouped(r.ingredients).map((g) => `
-    ${g.section ? `<h3 class="recipe-sub">${esc(g.section)}</h3>` : ''}
-    <ul class="ingr">${g.rows.map((ing) => {
-      // Resten står kun ved den første linje med varen.
-      const more = ing.key && extra[ing.key] ? extra[ing.key] : 0;
-      if (more) delete extra[ing.key];
-      return `<li><span class="ingr-amt">${esc(lineAmount(ing.qty, ing.unit, factor))}</span>
-        <span>${esc(ing.label)}${ing.optional ? ' <span class="note">(valgfri)</span>' : ''}
-        ${more ? `<small class="topup">+ ${esc(qty(more, unitOf(ing.key)))} — så pakken bliver brugt op</small>` : ''}</span></li>`;
-    }).join('')}</ul>`).join('');
-
-  const steps = grouped(r.steps).map((g) => `
+  const steps = groupBySection(r.steps).map((g) => `
     ${g.section ? `<h3 class="recipe-sub">${esc(g.section)}</h3>` : ''}
     <ol class="steps">${g.rows.map((s) => `<li>${esc(s.text)}</li>`).join('')}</ol>`).join('');
 
@@ -476,10 +491,145 @@ async function showRecipe(id) {
     </figure>` : ''}
     ${r.intro ? `<p class="recipe-intro">${esc(r.intro)}</p>` : ''}
     <p class="recipe-meta">${esc(meta)}</p>
+    ${r.steps.length ? '<button type="button" class="primary cook-start" id="cook-start">Begynd at lave mad</button>' : ''}
     <div class="recipe-cols">
       <section><h2>Ingredienser</h2>${ingredients}</section>
       <section><h2>Sådan gør du</h2>${steps}</section>
     </div>`;
+  const start = $('#cook-start');
+  if (start) start.addEventListener('click', () => openCooking(r, id, start));
+}
+
+/* ── Madlavningstilstand ──────────────────────────────────────────────────────
+ * Fuldskærm, ét trin ad gangen, til når man står ved komfuret med snavsede
+ * hænder. Et eget <dialog> ovenpå arket: Escape lukker kun det øverste, fokus
+ * fanges, og trin 4's pile-handler tier allerede, når et dialog er åbent.
+ */
+let cookWake = null;
+
+async function cookAcquireWake(dlg) {
+  // Mangler API'et, eller afviser browseren (fx lav strøm), sker der ingenting.
+  try {
+    if (!navigator.wakeLock) return;
+    const lock = await navigator.wakeLock.request('screen');
+    // Lukkede dialogen, mens vi ventede, har luk-handleren intet at slippe:
+    // låsen skal slippes her, ellers holder den skærmen tændt for evigt.
+    if (!dlg.open) { lock.release().catch(() => {}); return; }
+    cookReleaseWake();   // aldrig to låse ad gangen
+    cookWake = lock;
+  } catch { /* ingen lås, ingen fejl */ }
+}
+
+function cookReleaseWake() {
+  const w = cookWake;
+  cookWake = null;
+  try { if (w) w.release().catch(() => {}); } catch { /* intet at slippe */ }
+}
+
+function openCooking(r, id, opener) {
+  const steps = r.steps.map((s) => ({ text: s.text, section: s.section || null }));
+  if (!steps.length) return;
+  const dlg = document.createElement('dialog');
+  dlg.className = 'cook';
+  dlg.setAttribute('aria-label', `Madlavning: ${r.title}`);
+  dlg.innerHTML = `
+    <div class="cook-top">
+      <button type="button" class="close" data-cook="close" aria-label="Luk"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 1.5l9 9M10.5 1.5l-9 9"/></svg></button>
+      <p class="cook-count" aria-live="polite"></p>
+      <button type="button" class="ghost cook-ingr-btn" data-cook="ingr" aria-label="Vis eller skjul ingredienserne" aria-expanded="false">Ingredienser</button>
+    </div>
+    <div class="cook-bar" aria-hidden="true"><i></i></div>
+    <div class="cook-stage">
+      <p class="cook-section"></p>
+      <p class="cook-text"></p>
+    </div>
+    <div class="cook-nav">
+      <button type="button" class="ghost" data-cook="prev" aria-label="Forrige trin">Forrige</button>
+      <button type="button" class="primary" data-cook="next" aria-label="Næste trin">Næste</button>
+    </div>
+    <div class="cook-ingr" hidden>
+      <h2>Ingredienser</h2>${ingredientsHtml(r, id)}
+    </div>`;
+  document.body.appendChild(dlg);
+
+  let i = 0;
+  const q = (sel) => dlg.querySelector(sel);
+  const draw = () => {
+    const st = steps[i], last = i === steps.length - 1;
+    q('.cook-count').textContent = `${i + 1} af ${steps.length}`;
+    q('.cook-bar i').style.width = `${((i + 1) / steps.length) * 100}%`;
+    q('.cook-section').textContent = st.section || '';
+    q('.cook-section').hidden = !st.section;
+    q('.cook-text').textContent = st.text;
+    const prev = q('[data-cook="prev"]');
+    // Et deaktiveret, fokuseret knap taber fokus, og så virker pilene ikke mere.
+    if (i === 0 && document.activeElement === prev) q('[data-cook="next"]').focus();
+    prev.disabled = i === 0;
+    const next = q('[data-cook="next"]');
+    next.textContent = last ? 'Færdig' : 'Næste';
+    next.setAttribute('aria-label', last ? 'Færdig, luk madlavning' : 'Næste trin');
+  };
+  const go = (d) => {
+    const n = i + d;
+    if (n < 0) return;
+    if (n >= steps.length) { dlg.close(); return; }
+    i = n; draw();
+  };
+  const panel = q('.cook-ingr'), ingrBtn = q('[data-cook="ingr"]');
+  const toggleIngr = () => {
+    panel.hidden = !panel.hidden;
+    ingrBtn.setAttribute('aria-expanded', String(!panel.hidden));
+    ingrBtn.textContent = panel.hidden ? 'Ingredienser' : 'Skjul ingredienser';
+  };
+
+  dlg.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-cook]');
+    if (!b) return;
+    const a = b.dataset.cook;
+    if (a === 'close') dlg.close();
+    else if (a === 'prev') go(-1);
+    else if (a === 'next') go(1);
+    else if (a === 'ingr') toggleIngr();
+  });
+
+  // Pile: lyttes på selve dialogen (ikke dokumentet), så de forsvinder med den.
+  dlg.addEventListener('keydown', (e) => {
+    if (e.altKey || e.ctrlKey || e.metaKey || !panel.hidden) return;   // panelet dækker trinnet
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+  });
+
+  // Swipe: samme Pointer Events-mønster som kortene i trin 4, men der er intet
+  // kort at flytte, så kun retningen tæller. Et tryk eller en rulning skifter ikke.
+  let sx = 0, sy = 0, down = false;
+  const stage = q('.cook-stage');
+  stage.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    down = true; sx = e.clientX; sy = e.clientY;
+  });
+  stage.addEventListener('pointercancel', () => { down = false; });
+  stage.addEventListener('pointerup', (e) => {
+    if (!down) return;
+    down = false;
+    const dx = e.clientX - sx, dy = e.clientY - sy;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) go(dx < 0 ? 1 : -1);
+  });
+
+  // Browseren slipper låsen, når fanen skjules; tag den igen, når man vender tilbage.
+  const onVisible = () => { if (document.visibilityState === 'visible' && dlg.open) cookAcquireWake(dlg); };
+  document.addEventListener('visibilitychange', onVisible);
+
+  dlg.addEventListener('close', () => {
+    document.removeEventListener('visibilitychange', onVisible);
+    cookReleaseWake();
+    dlg.remove();
+    if (opener && opener.isConnected) opener.focus();
+  });
+
+  draw();
+  dlg.showModal();
+  cookAcquireWake(dlg);
+  q('[data-cook="next"]').focus();
 }
 
 /* ── Visning: madplanen i fem trin ────────────────────────────────────────────
@@ -528,6 +678,7 @@ const maxStores = () => window.PlanEngine.MAX_CHOICE_CHAINS;
  * indkøbslisten stå der endnu — men ikke næste mandag, hvor puljen er en anden.
  */
 const FLOW_KEY = 'madplan_flow';
+const HAVE_MAX = 30;   // flere end det er en køleskabsrengøring, ikke en madplan
 
 function readFlow() {
   let v = null;
@@ -539,7 +690,27 @@ function readFlow() {
     days: int(f.days, DAYS_MIN, DAYS_MAX, 4),
     servings: int(f.servings, PEOPLE_MIN, PEOPLE_MAX, 4),
     picks: f.picks && Array.isArray(f.picks.ids) ? f.picks : null,
+    // Telefonens visning af retterne i trin 4. Swipe er standard; huskes, så den
+    // der foretrækker listen ikke skal skifte hver gang.
+    view: f.view === 'list' ? 'list' : 'swipe',
+    // Varer, brugeren allerede har ("brug det, jeg har"). Nøgler og ikke
+    // navne: navnene kommer fra varekataloget, og nøglen er det, motoren kender.
+    // Som valgene huskes de kun for UGEN: det, man havde i skabet i går, er
+    // sjældent der om en måned, og ellers bliver varen ved med at forsvinde
+    // fra indkøbslisten. En ny uge (eller en gammel værdi uden uge) starter tom.
+    have: haveFromStorage(f.have),
   };
+}
+
+const thisWeekKey = () => {
+  const { year, week } = window.PlanEngine.isoWeek(new Date());
+  return `${year}-${week}`;
+};
+
+/** De gemte har-varer for den aktuelle uge, renset for fremmede værdier. */
+function haveFromStorage(h) {
+  if (!h || !Array.isArray(h.keys) || h.week !== thisWeekKey()) return [];
+  return [...new Set(h.keys.filter((k) => typeof k === 'string' && k))].slice(0, HAVE_MAX);
 }
 
 function writeFlow() {
@@ -547,7 +718,7 @@ function writeFlow() {
   const picks = FLOW.ctx ? { week: `${FLOW.ctx.year}-${FLOW.ctx.week}`, ids: FLOW.selected } : s.picks;
   try {
     localStorage.setItem(FLOW_KEY, JSON.stringify({
-      track: s.track, days: s.days, servings: s.servings, picks,
+      track: s.track, days: s.days, servings: s.servings, picks, have: { week: thisWeekKey(), keys: s.have }, view: s.view,
     }));
   } catch { /* privat vindue – valget gælder så kun denne visning */ }
 }
@@ -561,7 +732,11 @@ const FLOW = {
   list: null,             // Data.lists for det valgte
   token: 0,               // kun den nyeste beregning må tegne
   hint: '',
+  skipped: [],            // id'er sprunget over i swipe, i den rækkefølge – de kommer igen sidst
 };
+
+/** De varer, brugeren har, som motoren vil have dem: et Set af nøgler. */
+const haveSet = () => new Set((FLOW.settings && FLOW.settings.have) || []);
 
 /** Mængde, som man siger den i et køkken: 400 g, ikke 0,4 kg. */
 function qty(n, unit) {
@@ -758,12 +933,16 @@ function renderWeek() {
       <output aria-live="polite"><b>${value}</b> ${value === 1 ? one : many}</output>
       <button type="button" data-delta="1" aria-label="${more}" ${value >= hi ? 'disabled' : ''}>+</button>
     </div>`;
-  el.innerHTML = `
+  // Kun stepperne tegnes om. Søgefeltet under dem ("Har du noget…") har
+  // tekst og fokus, som en ny tegning ville slette midt i en indtastning.
+  if (!$('#week-top')) el.innerHTML = '<div id="week-top"></div><div class="have" id="have"></div>';
+  $('#week-top').innerHTML = `
     <div class="week-pick">
       ${stepper('days', days, DAYS_MIN, DAYS_MAX, 'aften', 'aftener', 'Færre aftener', 'Flere aftener')}
       ${stepper('servings', servings, PEOPLE_MIN, PEOPLE_MAX, 'person', 'personer', 'Færre personer', 'Flere personer')}
     </div>
     <p class="note step-note">Opskrifterne regnes om til ${servings} ${servings === 1 ? 'person' : 'personer'}.</p>`;
+  if (!$('#have-q')) renderHave();
 
   el.querySelectorAll('.stepper button').forEach((b) => b.addEventListener('click', () => {
     const field = b.closest('.stepper').dataset.field;
@@ -777,6 +956,89 @@ function renderWeek() {
     clearTimeout(renderWeek.timer);
     renderWeek.timer = setTimeout(recompute, 220);
   }));
+}
+
+/* ── Trin 3: "Har du noget, der skal bruges?" ─────────────────────────────── */
+
+// Varekataloget til søgningen. Hentes første gang feltet tegnes og huskes af
+// Data.items(); før det er der, kan der ikke søges, men kataloget kommer på
+// et øjeblik.
+let HAVE_CATALOG = null;
+const HAVE_SUGGESTIONS = 8;
+
+/**
+ * Forslag til det, brugeren skriver: navne, der BEGYNDER med det, før navne,
+ * der blot indeholder det. Kun varer, der købes — basisvarer (salt, olie)
+ * står allerede på "Tjek at du har" og kan ikke bruges op på en uge. Der er
+ * ingen synonymer i varekataloget, så der søges på navnet alene.
+ */
+function haveMatches(query) {
+  const q = query.trim().toLocaleLowerCase('da');
+  if (!q || !HAVE_CATALOG) return [];
+  const taken = haveSet();
+  const starts = [], inside = [];
+  for (const [key, it] of HAVE_CATALOG) {
+    if (it.class === 'essential' || taken.has(key)) continue;
+    const name = String(it.name || key).toLocaleLowerCase('da');
+    if (name.startsWith(q)) starts.push(it);
+    else if (name.includes(q)) inside.push(it);
+  }
+  const byName = (a, b) => String(a.name).localeCompare(String(b.name), 'da');
+  return [...starts.sort(byName), ...inside.sort(byName)].slice(0, HAVE_SUGGESTIONS);
+}
+
+function renderHave() {
+  const el = $('#have');
+  if (!el) return;
+  el.innerHTML = `
+    <label class="field have-field"><span>Har du noget, der skal bruges?</span>
+      <input type="search" id="have-q" placeholder="Fx kylling eller ris" autocomplete="off"
+        aria-controls="have-suggest"></label>
+    <div class="chips" id="have-suggest" aria-label="Forslag"></div>
+    <div class="chips" id="have-chosen" aria-label="Det, du har"></div>
+    <p class="note step-note">Retter, der bruger det, rykker op – og det købes ikke.</p>`;
+
+  const drawChosen = () => {
+    const box = $('#have-chosen');
+    if (!box) return;
+    box.innerHTML = FLOW.settings.have.map((key) => {
+      const name = (HAVE_CATALOG && HAVE_CATALOG.get(key)?.name) || key;
+      return `<span class="chip is-on">${esc(name)}<button type="button" class="chip-x"
+        data-have-remove="${esc(key)}" aria-label="Fjern ${esc(name)}">×</button></span>`;
+    }).join('');
+    box.querySelectorAll('[data-have-remove]').forEach((b) => b.addEventListener('click', () => {
+      FLOW.settings.have = FLOW.settings.have.filter((k) => k !== b.dataset.haveRemove);
+      haveChanged();
+    }));
+  };
+  const drawSuggest = () => {
+    const box = $('#have-suggest');
+    if (!box) return;
+    box.innerHTML = haveMatches($('#have-q').value).map((it) =>
+      `<button type="button" class="chip" data-have-add="${esc(it.key)}">${esc(it.name)}</button>`).join('');
+    box.querySelectorAll('[data-have-add]').forEach((b) => b.addEventListener('click', () => {
+      if (FLOW.settings.have.length >= HAVE_MAX) return;
+      FLOW.settings.have = [...FLOW.settings.have, b.dataset.haveAdd];
+      $('#have-q').value = '';
+      haveChanged();
+    }));
+  };
+  // Samme tegning, uden at feltet bygges om, mens man skriver i det.
+  renderHave.redraw = () => { drawChosen(); drawSuggest(); };
+  $('#have-q').addEventListener('input', drawSuggest);
+  renderHave.redraw();
+
+  if (!HAVE_CATALOG) {
+    Data.items().then((m) => { HAVE_CATALOG = m; if ($('#have')) renderHave.redraw(); }).catch(() => {});
+  }
+}
+
+function haveChanged() {
+  writeFlow();
+  renderHave.redraw();
+  // Som ved personerne: flere tryk i træk er én beslutning.
+  clearTimeout(haveChanged.timer);
+  haveChanged.timer = setTimeout(recompute, 220);
 }
 
 /* ── Beregningen ──────────────────────────────────────────────────────────── */
@@ -831,8 +1093,9 @@ async function recompute() {
 
   let choice;
   try {
-    choice = Data.choices(ctx, { days: s.days, servings: s.servings });
-    FLOW.proposalLists = choice.proposals.map((w) => Data.lists(ctx, w.picks, { servings: s.servings }));
+    const have = haveSet();
+    choice = Data.choices(ctx, { days: s.days, servings: s.servings, have });
+    FLOW.proposalLists = choice.proposals.map((w) => Data.lists(ctx, w.picks, { servings: s.servings, have }));
   } catch (err) {
     fail('Kunne ikke sætte ugen sammen', err);
     return;
@@ -965,9 +1228,21 @@ function renderChoose() {
     <div class="docket tally" id="flow-tally" aria-live="polite"></div>
     <div class="proposals">${cards}</div>
     ${cards ? '<h3 class="picks-head">Eller vælg selv</h3>' : ''}
+    <div class="view-toggle" role="group" aria-label="Visning af retter">
+      <button type="button" data-view="swipe">Swipe</button>
+      <button type="button" data-view="list">Liste</button>
+    </div>
+    <div class="swipe" id="flow-swipe"></div>
     <ul class="picks">${rows}</ul>`;
 
   bindGotoStores(el);
+  el.querySelectorAll('[data-view]').forEach((b) => b.addEventListener('click', () => {
+    if (FLOW.settings.view === b.dataset.view) return;
+    FLOW.settings.view = b.dataset.view;
+    writeFlow();
+    applyView();
+  }));
+  applyView();
   bindRecipeLinks(el);
   el.querySelectorAll('[data-accept]').forEach((b) => b.addEventListener('click', () => {
     const w = proposals[Number(b.dataset.accept)];
@@ -980,23 +1255,220 @@ function renderChoose() {
   }));
   el.querySelectorAll('.pick-box').forEach((box) => box.addEventListener('change', () => {
     const id = Number(box.value);
-    if (box.checked) {
-      if (FLOW.selected.length >= FLOW.settings.days) {
-        // Loftet er brugerens eget antal aftener. Hellere et ord end at
-        // skubbe den ret ud, hun valgte først.
-        box.checked = false;
-        FLOW.hint = `Du har valgt ${FLOW.settings.days} – fravælg en ret først.`;
-      } else {
-        FLOW.selected = [...FLOW.selected, id];
-        FLOW.hint = '';
-      }
-    } else {
-      FLOW.selected = FLOW.selected.filter((x) => x !== id);
-      FLOW.hint = '';
-    }
+    // Er loftet nået, afvises valget og fluebenet tages af igen.
+    if (!setPick(id, box.checked)) box.checked = false;
     syncSelection();
   }));
 }
+
+/** Er der plads til en ret mere? Loftet er brugerens antal aftener. */
+const canPick = () => FLOW.selected.length < FLOW.settings.days;
+
+/**
+ * Vælg eller fravælg en ret. ÉN funktion, som både fluebenet og swipe bruger,
+ * så loftet på antal aftener og beskeden aldrig kan opføre sig forskelligt.
+ * Returnerer false, når valget blev afvist af loftet.
+ */
+function setPick(id, on) {
+  if (on) {
+    if (FLOW.selected.includes(id)) return true;
+    if (!canPick()) {
+      // Loftet er brugerens eget antal aftener. Hellere et ord end at
+      // skubbe den ret ud, hun valgte først.
+      FLOW.hint = `Du har valgt ${FLOW.settings.days} – fravælg en ret først.`;
+      return false;
+    }
+    FLOW.selected = [...FLOW.selected, id];
+  } else {
+    FLOW.selected = FLOW.selected.filter((x) => x !== id);
+  }
+  FLOW.hint = '';
+  return true;
+}
+
+/* ── Trin 4 på telefon: swipe ─────────────────────────────────────────────── */
+
+const phoneQuery = window.matchMedia('(max-width: 720px)');
+const calmQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const swipeOn = () => phoneQuery.matches && Boolean(FLOW.settings) && FLOW.settings.view === 'swipe';
+
+/** Retterne, der stadig kan swipes: ikke valgt, og de oversprungne sidst. */
+function swipeQueue() {
+  const pool = FLOW.choice ? FLOW.choice.pool : [];
+  const open = pool.filter((r) => !FLOW.selected.includes(r.id));
+  const rank = (r) => FLOW.skipped.indexOf(r.id);   // −1 = ikke sprunget over
+  // Stabil sortering: ikke-oversprungne i listens rækkefølge, så de oversprungne
+  // i den rækkefølge, de blev sprunget over.
+  return open.map((r, i) => [r, i]).sort((x, y) => rank(x[0]) - rank(y[0]) || x[1] - y[1]).map((x) => x[0]);
+}
+
+/** Skifter mellem swipe og liste – og følger skærmbredden, hvis den ændres. */
+function applyView() {
+  const el = $('#flow-choose');
+  if (!el || !FLOW.choice) return;
+  el.classList.toggle('is-phone', phoneQuery.matches);
+  el.classList.toggle('is-swipe', swipeOn());
+  el.querySelectorAll('[data-view]').forEach((b) =>
+    b.setAttribute('aria-pressed', b.dataset.view === FLOW.settings.view ? 'true' : 'false'));
+  if (swipeOn()) renderSwipe();
+}
+phoneQuery.addEventListener('change', applyView);
+
+function renderSwipe() {
+  const box = $('#flow-swipe');
+  if (!box || !FLOW.choice) return;
+  const { days, track } = FLOW.settings;
+  const n = FLOW.selected.length;
+  // (En tom pulje når aldrig hertil: renderChoose viser "Vælg flere butikker"
+  // og tegner hverken vælger eller swipe.)
+  // En tynd pulje kan have færre retter end aftener (som i renderTally).
+  const full = n >= Math.min(days, FLOW.choice.pool.length);
+  const r = swipeQueue()[0];
+  // Tælleren "3 af 4 valgt" står i den klæbende bone (en live-region) lige over;
+  // en kopi her ville blive læst op to gange. Kun afvisningen står ved kortet.
+  const counter = FLOW.hint ? `<p class="swipe-hint">${esc(FLOW.hint)}</p>` : '';
+  const cta = full ? '<button type="button" class="primary swipe-cta" data-goto-list>Se indkøbslisten</button>' : '';
+  let stage;
+  if (!r) {
+    stage = `<div class="swipe-empty"><p>Du har set alle retterne.</p>
+      <button type="button" data-view-list>Liste</button></div>`;
+  } else {
+    const parts = [];
+    const t = timeShort(r);
+    if (t) parts.push(esc(t));
+    if (track === 'budget' && r.cost_per_serving != null) parts.push(`ca. ${kr(Math.round(r.cost_per_serving))} pr. portion`);
+    stage = `<div class="swipe-stage">
+      <article class="swipe-card" data-id="${r.id}" tabindex="0">
+        ${r.image ? `<img src="${esc(thumb(r.image, 480))}" alt="" draggable="false" decoding="async">`
+                  : '<span class="swipe-ph" aria-hidden="true"></span>'}
+        <div class="swipe-body">
+          <h3>${esc(r.title)}</h3>
+          <p class="note">${parts.join(' · ')}</p>
+          ${r.image && r.source_name ? `<span class="pick-credit">Foto: ${esc(r.source_name)}</span>` : ''}
+        </div>
+        <span class="swipe-stamp is-yes" aria-hidden="true">Vælg</span>
+        <span class="swipe-stamp is-no" aria-hidden="true">Spring over</span>
+      </article>
+    </div>
+    <div class="swipe-actions">
+      <button type="button" class="swipe-btn" data-swipe="left" aria-label="Spring over">&times;</button>
+      <button type="button" class="swipe-btn is-yes" data-swipe="right" aria-label="Vælg">&#10003;</button>
+    </div>`;
+  }
+  box.innerHTML = `${counter}${stage}${cta}`;
+  const toList = box.querySelector('[data-view-list]');
+  if (toList) toList.addEventListener('click', () => {
+    FLOW.settings.view = 'list';
+    writeFlow();
+    applyView();
+  });
+  const go = box.querySelector('[data-goto-list]');
+  if (go) go.addEventListener('click', gotoList);
+  if (!r) return;
+  const card = box.querySelector('.swipe-card');
+  box.querySelectorAll('[data-swipe]').forEach((b) => b.addEventListener('click', () => swipeAct(b.dataset.swipe, card)));
+  bindSwipeCard(card);
+}
+
+let swipeBusy = false;   // mens et kort flyver ud, tages der ikke imod flere handlinger
+
+/**
+ * Højre = vælg (via setPick, samme som fluebenet), venstre = spring over.
+ * Afvist af loftet: kortet bliver stående, og beskeden vises.
+ */
+function swipeAct(dir, card) {
+  if (swipeBusy || !card) return;
+  const id = Number(card.dataset.id);
+  const finish = () => {
+    swipeBusy = false;
+    if (dir === 'right') {
+      if (setPick(id, true)) Native.haptic();
+    } else {
+      FLOW.skipped = [...FLOW.skipped.filter((x) => x !== id), id];
+      FLOW.hint = '';
+    }
+    syncSelection();         // tegner også swipe-visningen igen, så et afvist kort kommer tilbage
+  };
+  // Et afvist valg skal ikke flyve ud for så at komme tilbage.
+  const refused = dir === 'right' && !canPick();
+  if (calmQuery.matches || refused) { finish(); return; }
+  swipeBusy = true;
+  const w = card.offsetWidth;
+  card.style.transition = 'transform .22s ease-out, opacity .22s';
+  card.style.transform = `translateX(${dir === 'right' ? w * 1.3 : -w * 1.3}px) rotate(${dir === 'right' ? 18 : -18}deg)`;
+  card.style.opacity = '0';
+  setTimeout(finish, 220);
+}
+
+/** Pointer Events: virker med finger og mus. Kortet følger fingeren. */
+function bindSwipeCard(card) {
+  if (!card) return;
+  let startX = 0, startT = 0, dx = 0, drag = false, down = false;
+  const yes = card.querySelector('.is-yes'), no = card.querySelector('.is-no');
+  const reset = () => {
+    card.style.transition = calmQuery.matches ? 'none' : 'transform .2s ease-out';
+    card.style.transform = '';
+    yes.style.opacity = no.style.opacity = 0;
+  };
+  card.addEventListener('pointerdown', (e) => {
+    if (swipeBusy || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    down = true; drag = false; dx = 0;
+    startX = e.clientX; startT = e.timeStamp;
+    card.setPointerCapture(e.pointerId);
+    card.style.transition = 'none';
+  });
+  card.addEventListener('pointermove', (e) => {
+    if (!down) return;
+    dx = e.clientX - startX;
+    if (!drag && Math.abs(dx) > 8) drag = true;   // under 8 px er det et tryk, ikke et træk
+    if (!drag) return;
+    // Rotationen er lille – nok til at kortet føles som papir, ikke til at det væltes.
+    card.style.transform = calmQuery.matches ? '' : `translateX(${dx}px) rotate(${dx / 20}deg)`;
+    const k = Math.min(1, Math.abs(dx) / (card.offsetWidth * 0.25));
+    yes.style.opacity = dx > 0 ? k : 0;
+    no.style.opacity = dx < 0 ? k : 0;
+  });
+  // Fra tastaturet åbnes opskriften med Enter eller mellemrum, som et tryk gør
+  // det. Kun når kortet selv har fokus; ←/→ håndteres af dokumentets lytter
+  // og forstyrres ikke.
+  card.addEventListener('keydown', (e) => {
+    if (e.target !== card || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    e.preventDefault();
+    showRecipe(Number(card.dataset.id));
+  });
+  card.addEventListener('pointercancel', () => { down = false; reset(); });
+  card.addEventListener('pointerup', (e) => {
+    if (!down) return;
+    down = false;
+    // Et tryk uden træk åbner opskriften, som i listen.
+    if (!drag) { showRecipe(Number(card.dataset.id)); return; }
+    const speed = Math.abs(dx) / Math.max(1, e.timeStamp - startT);   // px pr. ms – et hurtigt flik tæller også
+    if (Math.abs(dx) > card.offsetWidth * 0.25 || (speed > 0.6 && Math.abs(dx) > 30)) {
+      swipeAct(dx > 0 ? 'right' : 'left', card);
+    } else {
+      reset();
+    }
+  });
+}
+
+// ← og → i swipe-visningen. Ikke mens man skriver (søgefeltet i trin 3 m.m.).
+document.addEventListener('keydown', (e) => {
+  if (!swipeOn() || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+  const t = e.target;
+  if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+  // Ikke mens et ark (opskrift m.m.) er åbent – så ville pilene vælge retter bag det.
+  if (document.querySelector('dialog[open]')) return;
+  const card = document.querySelector('#flow-swipe .swipe-card');
+  if (!card) return;
+  // Og kun når kortet faktisk er på skærmen: står man i et andet trin, skal
+  // pilene ikke vælge retter, man ikke kan se.
+  const r = card.getBoundingClientRect();
+  if (r.bottom < 0 || r.top > window.innerHeight) return;
+  e.preventDefault();
+  swipeAct(e.key === 'ArrowRight' ? 'right' : 'left', card);
+});
 
 function bindGotoStores(root) {
   root.querySelectorAll('[data-goto-stores]').forEach((b) => b.addEventListener('click', () =>
@@ -1019,7 +1491,7 @@ function syncSelection() {
     ? FLOW.selected.map((id) => FLOW.choice.pool.find((r) => r.id === id)).filter(Boolean)
     : [];
   FLOW.list = FLOW.ctx && picks.length
-    ? Data.lists(FLOW.ctx, picks, { servings: FLOW.settings.servings })
+    ? Data.lists(FLOW.ctx, picks, { servings: FLOW.settings.servings, have: haveSet() })
     : null;
   writeFlow();
 
@@ -1042,6 +1514,7 @@ function syncSelection() {
       btn.textContent = on ? `${name} er valgt` : `Vælg forslag ${'AB'[i]}`;
     });
     renderTally(picks.length);
+    if (swipeOn()) renderSwipe();
   }
   markStep('choose', picks.length > 0 && picks.length === FLOW.settings.days);
   markStep('list', Boolean(FLOW.list));
@@ -1142,6 +1615,10 @@ function renderList(picks) {
   const dropped = (l.dropped_chains || []).map(chainById).filter(Boolean).map((c) => c.name);
 
   const estimated = priced.some((b) => b.source === 'estimate:rema');
+  // Kun de har-varer, de valgte retter faktisk bruger — ellers lover linjen
+  // noget om en vare, der slet ikke indgår i ugens retter.
+  const usedKeys = new Set(picks.flatMap((r) => (r.items || []).map((it) => it.key)));
+  const haveNames = [...haveSet()].filter((k) => usedKeys.has(k)).map((k) => FLOW.ctx.items.get(k)?.name || k);
 
   el.innerHTML = `
     <div class="docket">
@@ -1154,6 +1631,7 @@ function renderList(picks) {
       du behøver ikke i ${esc(listNames(skipped))} denne gang.</p>` : ''}
     ${dropped.length ? `<p class="flag">Listen regner kun med dine fem første butikker. <strong>${esc(listNames(dropped))}</strong> er ikke med.</p>` : ''}
 
+    ${haveNames.length ? `<p class="have-line"><b>Du har:</b> ${esc(haveNames.join(', '))}</p>` : ''}
     <div class="spread list-head">
       <h3>Køb ind</h3>
       <button type="button" id="share-list">Del listen</button>
@@ -1169,9 +1647,9 @@ function renderList(picks) {
 
     <h3 class="list-head">Tjek at du har</h3>
     ${l.pantry.length ? `<div class="card pantry">
-      ${l.pantry.map((p) => `<label class="pantry-row"><input type="checkbox" class="tick"> ${esc(p.name)}</label>`).join('')}
+      ${l.pantry.map((p) => `<label class="pantry-row"><input type="checkbox" class="tick"> ${esc(p.name)}${p.have ? ' <span class="have-tag">har du</span>' : ''}</label>`).join('')}
     </div>
-    <p class="note">Basisvarer, retterne bruger. Dem regner vi med, du har – de er ikke med i prisen.</p>`
+    <p class="note">Basisvarer, retterne bruger, og det, du selv har. Dem regner vi med, du har – de er ikke med i prisen.</p>`
     : '<p class="note">Retterne bruger ingen basisvarer, vi kender til.</p>'}
 
     <h3 class="list-head">Ugens retter</h3>
@@ -1224,7 +1702,7 @@ function listText(l, picks) {
   }
   if (l.pantry.length) {
     out.push('TJEK AT DU HAR');
-    out.push(`  · ${l.pantry.map((p) => p.name).join(', ')}`);
+    out.push(`  · ${l.pantry.map((p) => (p.have ? `${p.name} (har du)` : p.name)).join(', ')}`);
     out.push('');
   }
   out.push(`I alt ca. ${kr(l.total)}.`);

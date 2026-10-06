@@ -9,6 +9,10 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 10,
+  "image": "https://www.valdemarsro.dk/wp-content/2021/04/kylling-kiev-1.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Familiefavoritter, Festmad, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:55:20.912Z",
   "title": "Kylling Kiev",
   "intro": "Sprødpanerede kyllingebryster fyldt med smør, krydret med basilikum, estragon og hvidløg. Smørret smelter under bagningen og løber ud, når man skærer i kyllingen.",
   "servings": 4,
@@ -131,9 +135,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelsesholdig side og grønt til at være et helt måltid.",
+    "reason": "Kylling Kiev er kun kød med panering og mangler noget mættende eller grønt som tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med citron og persille og gulerodssalat",
       "ingredients": [
         {
           "section": null,
@@ -145,19 +149,53 @@
         },
         {
           "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "stk",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "solsikkekerner",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, vend dem med olie og salt, og bag dem sprøde ved 200 grader i cirka 35 minutter sammen med kyllingen.",
+        "Riv gulerødderne groft, og vend dem med saft fra den halve citron, lidt olivenolie og en knivspids salt.",
+        "Hak persillen, og vend den i de varme kartofler sammen med revet skal fra citronen.",
+        "Drys gulerodssalaten med solsikkekerner, og server den til kartoflerne og kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:27:28.511Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:17.961Z"
   }
 }

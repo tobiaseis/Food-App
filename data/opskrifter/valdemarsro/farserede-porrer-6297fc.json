@@ -9,6 +9,10 @@
   "active_minutes": 40,
   "yield_count": 4,
   "source_lines": 14,
+  "image": "https://www.valdemarsro.dk/wp-content/2016/10/farserede-porre-opskrift.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Mormormad",
+  "fetched_at": "2026-08-27T17:59:14.304Z",
   "title": "Farserede porrer",
   "intro": "Forkogte porrestykker pakkes ind i svinekødsfars, koges i en pakke og steges sprøde i rasp. En hyggelig hverdagsret med saftig fyld og knasende skorpe.",
   "servings": 4,
@@ -171,9 +175,9 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse som kartofler, ris eller brød til at være et helt måltid.",
+    "reason": "Retten har kød og grønt, men mangler noget mættende som kartofler, ris eller pasta.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Kartoffelmos med brunet smør og purløg",
       "ingredients": [
         {
           "section": null,
@@ -185,19 +189,45 @@
         },
         {
           "section": null,
+          "amount": 50,
+          "unit": "g",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
           "amount": 1,
-          "unit": "stk",
-          "name": "grøn salat",
+          "unit": "dl",
+          "name": "mælk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "purløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "knivspids",
+          "name": "muskatnød",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skræl kartoflerne, skær dem i stykker, og kog dem møre i letsaltet vand.",
+        "Bruns smørret i en lille gryde, til det dufter af nødder og er gyldent.",
+        "Hæld vandet fra kartoflerne, og most dem med den varme mælk og det brunede smør. Smag til med muskatnød og salt.",
+        "Klip purløget fint, og vend det i moset lige før servering."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:46:40.589Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:30:05.477Z"
   }
 }

@@ -1,0 +1,282 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/krydret-gron-linsesalat-6a44d764d3d3e0dadd3729dd",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:21:43.514Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 25,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 647,
+    "protein_g": 18.5,
+    "carbs_g": 62.7,
+    "fat_g": 33.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R03_BW42_SE_C23445-1_Main_high-584b6f92.jpg",
+  "lang": "da",
+  "keywords": "Marokkansk",
+  "fetched_at": "2026-10-05T20:00:58.645Z",
+  "title": "Krydret linsesalat med feta og sprøde pitacroutoner",
+  "intro": "Lun, krydret linsesalat med friske grøntsager, hurtigsyltede løg og radiser. Toppes med sprøde pitacroutoner, creme fraiche og smuldret feta.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "linser",
+      "note": "grønne, afdryppede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "stk",
+      "name": "pitabrød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "røget paprika",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "radiser",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "g",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 60,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "Jorden Rundt-krydderi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 50,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Linser",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Linser",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Linser",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Linser",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltning",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltning",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Syltning",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Croutoner",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Linser",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Si linserne fra væden, og pres eller hak hvidløget fint."
+    },
+    {
+      "section": "Linser",
+      "text": "Varm olien i en stor pande over middelhøj varme. Rist Jorden Rundt-krydderiet og hvidløget i ca. 30 sekunder, til det dufter."
+    },
+    {
+      "section": "Linser",
+      "text": "Kom linser, chiliflager, smør, vand og salt i panden. Lad det simre i 3-4 minutter, til linserne er varme hele vejen igennem, og tag derefter panden af varmen. Brug mindre chili eller helt uden, hvis retten skal være mild."
+    },
+    {
+      "section": "Syltning",
+      "text": "Skær løget i tynde halve ringe og radiserne i tynde skiver. Halvér citronen."
+    },
+    {
+      "section": "Syltning",
+      "text": "Pres saften fra citronen i en lille skål, og rør sukker, vand og salt i. Vend løg og radiser i lagen, og lad dem stå."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Skær pitabrødet i strimler på ca. 2 cm. Vend dem med olie, røget paprika og salt i en skål."
+    },
+    {
+      "section": "Croutoner",
+      "text": "Læg strimlerne på en bageplade med bagepapir, og bag dem i 4-6 minutter, til de er gyldne og sprøde. Hold øje med dem mod slutningen, så de ikke brænder på."
+    },
+    {
+      "section": "Salat",
+      "text": "Skær agurken i tynde halve skiver, og halvér tomaterne. Skyl spinaten."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend spinat, tomater, agurk og de syltede grøntsager med lagen sammen med olie og salt i en skål. Tilsæt de afkølede linser, og vend det hele rundt."
+    },
+    {
+      "section": "Anretning",
+      "text": "Smuldr fetaen groft. Fordel salaten i dybe tallerkener, og læg croutonerne ovenpå. Top med klatter af creme fraiche og fetaen."
+    }
+  ],
+  "changes": [
+    "Græsk ost er skiftet til feta.",
+    "Fraiche er skiftet til creme fraiche.",
+    "Citrusfrugt er skiftet til citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har linser og feta som protein, pitacroutoner som mættende element og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:35:15.513Z"
+  }
+}

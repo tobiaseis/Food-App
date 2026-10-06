@@ -1,0 +1,258 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/honningglaseret-harissakylling-og-pinjekerner-6a0dc15b493fd7fac8f06e7c",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:41:07.788Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 22,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 634,
+    "protein_g": 46.9,
+    "carbs_g": 61.1,
+    "fat_g": 23.4
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R02_BW14_SE_C31031-1_Main_R_high-c6eaa551.jpg",
+  "lang": "da",
+  "keywords": "Tyrkisk",
+  "fetched_at": "2026-10-05T20:03:10.670Z",
+  "title": "Honningglaseret harissakylling med krydret bulgur",
+  "intro": "Fladbanket kyllingebryst med harissa og honning serveres på krydret bulgur med pinjekerner, hurtigsyltet løg, kålrabi og sukkerærter. Hvidløgsyoghurten giver en frisk kontrast til den sprøde, søde sauce.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "bulgur",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderiblanding",
+      "note": "til bulgur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "pinjekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "harissa",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 15,
+      "unit": "g",
+      "name": "honning",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "yoghurt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "kålrabi",
+      "note": "skrællet og skåret i stave",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "sukkerærter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til bulgur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til bulgur",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "vand",
+      "note": "til syltning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kylling",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til sauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til kålrabi",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kålrabi",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bring vandet til bulgur i kog i en mellemstor gryde. Rør bulgur, krydderiblanding og salt i, læg låg på, og lad det simre på middellav varme i 9-10 minutter, til bulguren er al dente."
+    },
+    {
+      "section": null,
+      "text": "Skær løget i tynde halve skiver, og halvér citronen. Rør et godt skvæt citronsaft sammen med sukker, vand og en knivspids salt i en lille skål. Vend løgene i, og lad dem stå, mens du laver resten."
+    },
+    {
+      "section": null,
+      "text": "Varm en stor pande op på middelhøj varme. Rist pinjekernerne i 3-4 minutter, til de er gyldne, og kom dem over i en skål."
+    },
+    {
+      "section": null,
+      "text": "Pres eller hak hvidløget fint, og rør det sammen med yoghurt og en knivspids salt."
+    },
+    {
+      "section": null,
+      "text": "Læg kyllingebrystet mellem to stykker bagepapir, og bank det ud til en tykkelse på ca. 2 cm med en kødhammer eller en kagerulle."
+    },
+    {
+      "section": null,
+      "text": "Varm olien til stegning op i den store pande på middelhøj varme. Krydr kyllingen med harissa og salt, og steg den i 2 minutter på hver side, til den er brunet."
+    },
+    {
+      "section": null,
+      "text": "Skru ned på middel varme, og steg kyllingen videre i 2-3 minutter på hver side, til den er gennemstegt. Kødet skal være hvidt uden spor af rødt."
+    },
+    {
+      "section": null,
+      "text": "Kom smør, honning og vand til saucen i panden, og lad det koge i ca. 1 minut, til saucen er let tyknet."
+    },
+    {
+      "section": null,
+      "text": "Skræl kålrabien, og skær den i stave på ca. 1/2 cm. Vend dem med olie og salt i en mellemstor skål."
+    },
+    {
+      "section": null,
+      "text": "Si væden fra løgene. Fordel bulgur, kylling, løg, kålrabi og sukkerærter i skåle, og hæld sauce fra panden over bulgur og kylling. Drys med pinjekerner, og server med hvidløgsyoghurten."
+    }
+  ],
+  "changes": [
+    "Hello Sunrise er skiftet til en almindelig krydderiblanding.",
+    "Glaskål er skiftet til kålrabi.",
+    "Citrusfrugt er skiftet til citron."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, bulgur som mættende del og kålrabi og sukkerærter som grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:38:38.256Z"
+  }
+}

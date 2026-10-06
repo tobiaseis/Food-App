@@ -1,0 +1,185 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/svensk-falu-polse-og-cremet-makaroni-6a1e79efa731a775df5202a8",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:37:07.520Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1211,
+    "protein_g": 36,
+    "carbs_g": 96.8,
+    "fat_g": 75.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R12_BW24_SE_C57581-1main_high-fded1c5b.jpg",
+  "lang": "da",
+  "keywords": "Svensk",
+  "fetched_at": "2026-10-05T20:02:42.314Z",
+  "title": "Medister og cremet makaroni med grøntsagsstave",
+  "intro": "Gylden pølse og makaroni i en cremet sauce, serveret med knasende grøntsagsstave og ketchup til dyppelse. En hurtig ret, som både store og små kan lide.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "medisterpølse",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "makaroni",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "i 1 cm strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællet, i 1 cm tynde stave",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "agurk",
+      "note": "i 1 cm tynde stave",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til saucen",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": "til dyppelse",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en stor gryde med vand i kog, og salt det kraftigt – det skal smage som havvand."
+    },
+    {
+      "section": null,
+      "text": "Skær gulerod og agurk i tynde stave og peberfrugten i strimler, begge dele cirka 1 cm brede. Læg alle grøntsagerne i en stor skål."
+    },
+    {
+      "section": null,
+      "text": "Kog makaronien i 3 minutter, til den er al dente, altså kogt, men med lidt bid. Si vandet fra."
+    },
+    {
+      "section": null,
+      "text": "Skær pølsen i skiver på 2 cm. Varm lidt olie i en stor pande ved middelhøj varme, og brun skiverne 1-2 minutter på hver side, til de er gyldne. Hold dem varme, til maden skal serveres."
+    },
+    {
+      "section": null,
+      "text": "Rør madlavningsfløde, mælk, vand og bouillon sammen i en skål."
+    },
+    {
+      "section": null,
+      "text": "Smelt smørret i en gryde ved middelvarme. Pisk melet i, og hæld så flødeblandingen i lidt ad gangen, mens du rører. Lad saucen koge 3-4 minutter, til den er tyk."
+    },
+    {
+      "section": null,
+      "text": "Pisk salt, peber og halvdelen af parmesanen i saucen. Vend den kogte makaroni i gryden."
+    },
+    {
+      "section": null,
+      "text": "Fordel makaroni og pølse i dybe tallerkener. Server med grøntsagsstave og ketchup, og drys resten af parmesanen over."
+    }
+  ],
+  "changes": [
+    "Falu-pølse er erstattet med medisterpølse.",
+    "Parmigiano Reggiano er erstattet med parmesan."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har medister som hovedråvare, makaroni som mættende element og grøntsagsstave ved siden af, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:37:53.898Z"
+  }
+}

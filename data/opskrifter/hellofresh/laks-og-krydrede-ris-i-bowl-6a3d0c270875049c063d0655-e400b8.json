@@ -1,0 +1,193 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/laks-og-krydrede-ris-i-bowl-6a3d0c270875049c063d0655",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:25:32.843Z",
+  "total_minutes": 20,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 800,
+    "protein_g": 33.8,
+    "carbs_g": 87.3,
+    "fat_g": 35.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R14_BW07_SE_C34784-2_Main_8_swap_salmon_edit_high-9b52a607.jpg",
+  "lang": "da",
+  "keywords": "Fusion cuisine",
+  "fetched_at": "2026-10-05T20:01:28.594Z",
+  "title": "Laks med krydrede ris og ristet majs- og rødkålsslaw",
+  "intro": "Sprødstegt laks på krydrede ris med en frisk slaw af ristet majs, rødkål og gulerod. Det hele toppes med en cremet citrondressing.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ris",
+      "amount": 150,
+      "unit": "g",
+      "name": "ris",
+      "note": "langkornede, hvide",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderi",
+      "note": "krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ris",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til risene",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 150,
+      "unit": "g",
+      "name": "majs",
+      "note": "drænet",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 75,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "skåret fint",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerod",
+      "note": "i julienne-strimler",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til slawen og stegning af laksen",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": "et nip til slawen",
+      "optional": false
+    },
+    {
+      "section": "Slaw",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Laks",
+      "amount": 250,
+      "unit": "g",
+      "name": "laks",
+      "note": "filet med skind",
+      "optional": false
+    },
+    {
+      "section": "Laks",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til laksen",
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 50,
+      "unit": "ml",
+      "name": "dressing",
+      "note": "citrondressing",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom vand, ris, krydderi og salt i en gryde, og bring det i kog. Læg låg på, og lad risene koge ved middellav varme i 14 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Træk gryden af varmen, og lad risene trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Slaw",
+      "text": "Lad majsene dryppe af. Varm en mellemstor pande op ved middelhøj varme, og rist majsene i 4-5 minutter, til de er gyldne."
+    },
+    {
+      "section": "Slaw",
+      "text": "Del citronen i to, og skær forårsløget i fine ringe."
+    },
+    {
+      "section": "Slaw",
+      "text": "Vend gulerod, rødkål og majs i en stor skål med et godt skvæt citronsaft, noget af olien, et nip salt og peber."
+    },
+    {
+      "section": "Laks",
+      "text": "Varm resten af olien op i en stor pande ved middelhøj varme. Tør laksen med køkkenrulle, og drys den med salt."
+    },
+    {
+      "section": "Laks",
+      "text": "Steg laksen med skindsiden nedad i 3-4 minutter. Vend den, og steg 3-5 minutter mere, til den er gylden og gennemstegt. Kødet skal være mat i midten."
+    },
+    {
+      "section": "Til servering",
+      "text": "Fordel risene i to skåle, og læg laks og slaw ovenpå. Strø forårsløg over, og dryp med dressingen."
+    }
+  ],
+  "changes": [
+    "Jorden Rundt-krydderiblandingen er erstattet med et almindeligt krydderi.",
+    "Citrondressing med kærnemælk er erstattet med en almindelig citrondressing."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har laks som hovedråvare, krydrede ris som mættende element og en slaw med grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:36:02.975Z"
+  }
+}

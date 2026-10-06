@@ -1,0 +1,283 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/salsiccia-i-cremet-nduja-ravioli-6a327da0962b251b8d565e54",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:32:48.966Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 24,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1761,
+    "protein_g": 58.8,
+    "carbs_g": 120.2,
+    "fat_g": 115.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R20_BW26_SE_P57947-1main_high-2954cf43.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:02:08.806Z",
+  "title": "Ravioli i tomatfløde med salsiccia, svampe og hvidløgsbrød",
+  "intro": "Fyldt pasta i en cremet tomatsauce med krydret pølse, stegte svampe og sprødt hvidløgsbrød. Der hører en frisk salat med fennikel og rucola til.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Ravioli og sauce",
+      "amount": 300,
+      "unit": "g",
+      "name": "ravioli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ravioli og sauce",
+      "amount": 1.5,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ravioli og sauce",
+      "amount": 200,
+      "unit": "g",
+      "name": "passata",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ravioli og sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "chiliflager",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Ravioli og sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Ravioli og sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Ravioli og sauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Ravioli og sauce",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Ravioli og sauce",
+      "amount": 1,
+      "unit": "dl",
+      "name": "pastavand",
+      "note": "gemt fra kogningen",
+      "optional": false
+    },
+    {
+      "section": "Salsiccia og svampe",
+      "amount": 350,
+      "unit": "g",
+      "name": "salsiccia",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsiccia og svampe",
+      "amount": 150,
+      "unit": "g",
+      "name": "champignon",
+      "note": "brune",
+      "optional": false
+    },
+    {
+      "section": "Salsiccia og svampe",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "salvie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsiccia og svampe",
+      "amount": 20,
+      "unit": "g",
+      "name": "valnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salsiccia og svampe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "surdejsboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "halvdelen til brødet, resten til saucen",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til brødet",
+      "optional": false
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til brødet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 40,
+      "unit": "g",
+      "name": "rucola",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "fennikel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "i flager",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Forberedelse",
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Sæt en stor gryde med rigeligt vand over varmen, og bring det i kog."
+    },
+    {
+      "section": "Forberedelse",
+      "text": "Fjern den hårde ende på svampene. Hak salvie og valnødder groft, og hak persillen fint. Pres hvidløget eller hak det fint, og del citronen på midten."
+    },
+    {
+      "section": "Salsiccia og svampe",
+      "text": "Varm lidt olie op i en stor pande ved middelhøj varme. Snit et hul i enden af hver pølse, og pres kødet ud i små klumper direkte i panden."
+    },
+    {
+      "section": "Salsiccia og svampe",
+      "text": "Steg kødet i 4-6 minutter, til det er gennemstegt, og læg det over på en tallerken."
+    },
+    {
+      "section": "Salsiccia og svampe",
+      "text": "Smelt smørret til stegning i den samme pande. Steg svampene med salvie og lidt salt i 4-5 minutter, til de er bløde. Kom salsiccia og valnødder tilbage i panden."
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "text": "Rør halvdelen af hvidløget sammen med persille, smør og salt til brødet i en lille skål. Skær bollerne igennem, og smør snitfladerne med hvidløgssmørret."
+    },
+    {
+      "section": "Hvidløgsbrød",
+      "text": "Læg bollerne direkte på ovnristen, og bag dem i 6-8 minutter."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl rucolaen. Del fennikel på midten, og hobl den ene halvdel til lange, tynde bånd. Hak resten fint."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend rucola og fennikel med halvdelen af parmesanen, olie, en solid sjat citronsaft samt salt og peber."
+    },
+    {
+      "section": "Ravioli og sauce",
+      "text": "Varm olie op i en mellemstor gryde ved middel varme. Svits det resterende hvidløg med chiliflager i 1-2 minutter, til det dufter. Skru ned på lav varme."
+    },
+    {
+      "section": "Ravioli og sauce",
+      "text": "Rør passata, smør, sukker, salt og peber i. Lad saucen simre i 5-6 minutter, tilsæt derefter fløden, og lad den simre 2-3 minutter mere. Brug mindre chili eller ingen, hvis maden ikke skal være stærk."
+    },
+    {
+      "section": "Ravioli og sauce",
+      "text": "Salt kogevandet kraftigt, og kog raviolien i 3 minutter, til den er al dente. Tag 1 dl af kogevandet fra, og afdryp raviolien."
+    },
+    {
+      "section": "Ravioli og sauce",
+      "text": "Vend raviolien rundt i saucen sammen med det gemte kogevand."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel ravioli i dybe tallerkener. Læg salsiccia og svampe ovenpå, og drys med resten af parmesanen. Server med salaten og hvidløgsbrødet."
+    }
+  ],
+  "changes": [
+    "Nduja-ravioli er skiftet til almindelig ravioli.",
+    "Shimeji-svampe er skiftet til brune champignon.",
+    "Kruspersille er skiftet til almindelig persille."
+  ]
+}

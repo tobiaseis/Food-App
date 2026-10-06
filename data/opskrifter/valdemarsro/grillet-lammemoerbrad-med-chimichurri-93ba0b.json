@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 9,
+  "image": "https://www.valdemarsro.dk/wp-content/2025/08/lammemoerbrad-chimichurri.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Festmad, Påskefrokost",
+  "fetched_at": "2026-08-27T15:19:21.774Z",
   "title": "Grillet lammemørbrad med chimichurri",
   "intro": "Mør lammemørbrad fra grillen med en frisk, grøn chimichurri af krydderurter, hvidløg og citron. Retten er hurtig at lave og passer perfekt til en sommeraften.",
   "servings": 4,
@@ -127,15 +131,31 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende komponent som kartofler, ris eller brød.",
+    "reason": "Retten er kun grillet kød med en urtesauce og mangler noget mættende eller grønt.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med citron og agurkesalat med mynte",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "tsk",
+          "name": "tørret oregano",
           "note": null,
           "optional": false
         },
@@ -143,17 +163,34 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "citronsaft",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "frisk mynte",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kødet."
+        "Skær kartoflerne i både, vend dem med olie, oregano og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver, og vend den med citronsaft, hakket mynte og en knivspids salt.",
+        "Server agurkesalaten til de varme kartofler og det grillede lam."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:59:59.903Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:47.223Z"
   }
 }

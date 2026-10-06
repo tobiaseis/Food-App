@@ -1,0 +1,237 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/lasagne-6a327d5827757fc0a25efe26",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:34:01.709Z",
+  "total_minutes": 45,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 887,
+    "protein_g": 46.2,
+    "carbs_g": 84.6,
+    "fat_g": 40.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R19_BW26_SE_C58611-1main_high-3ce1d55a.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:02:18.392Z",
+  "title": "Lasagne med skjult blomkål i bechamel",
+  "intro": "Klassisk lasagne med friske plader, hvor blomkålsris gemmer sig i den cremede bechamel. Kødsaucen får sødme fra gulerod og lidt ketchup.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "lasagneplader",
+      "note": "friske",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": "uskrællet, finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "pakke",
+      "name": "blomkålsris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": "gerne med basilikum",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "presset eller finthakket",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 2,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til bechamel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til bechamel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 4,
+      "unit": "dl",
+      "name": "mælk",
+      "note": "til bechamel",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": "til bechamel",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 220 °C (200 °C varmluft). Hak gulerod og løg helt fint, og pres eller hak hvidløget."
+    },
+    {
+      "section": "Kødsaucen",
+      "text": "Varm olien op på en stor pande ved middelhøj varme. Brun oksekød, gulerod og løg sammen med saltet til kødet i 4-5 minutter."
+    },
+    {
+      "section": "Kødsaucen",
+      "text": "Rør krydderurter, hakkede tomater, vand, ketchup, saltet til saucen og rigeligt peber i. Lad det koge i 3-4 minutter. Kødet skal være helt gennemstegt, uden spor af rødt."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Mens saucen koger, smeltes smørret til stegning i en mellemstor gryde ved middelhøj varme. Svits blomkålsris og hvidløg i 2-3 minutter, og læg det over på en tallerken."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Smelt smørret til bechamel i samme gryde. Pisk melet ud i smørret, og hæld mælken i lidt ad gangen, mens du rører. Lad det småkoge i 4-5 minutter, til det er tykt."
+    },
+    {
+      "section": "Bechamel",
+      "text": "Vend blomkålsrisen i sammen med halvdelen af parmesanen, saltet til bechamel og lidt peber, og pisk det jævnt."
+    },
+    {
+      "section": "Samling",
+      "text": "Kom halvdelen af kødsaucen i et ildfast fad, og dæk med et lag lasagneplader. Smør halvdelen af bechamelen ovenpå, og læg flere plader over. Gentag med resten af kødsaucen, pladerne og bechamelen."
+    },
+    {
+      "section": "Samling",
+      "text": "Stryg resten af parmesanen ovenpå, og dæk fadet med sølvpapir. Bag lasagnen i 20-30 minutter. Tag folien af, når der er 10 minutter tilbage, så osten når at blive gylden."
+    },
+    {
+      "section": "Samling",
+      "text": "Lad lasagnen hvile et par minutter, før den serveres."
+    }
+  ],
+  "changes": [
+    "Hello Sunrise er erstattet af blandede tørrede krydderurter.",
+    "Parmigiano Reggiano er erstattet af parmesan."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Lasagne med kødsauce, lasagneplader og bechamel med blomkål er et helt måltid med protein, pasta og grønt.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:37:20.300Z"
+  }
+}

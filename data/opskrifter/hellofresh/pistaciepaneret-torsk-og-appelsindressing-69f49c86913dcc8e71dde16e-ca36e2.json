@@ -1,0 +1,201 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/pistaciepaneret-torsk-og-appelsindressing-69f49c86913dcc8e71dde16e",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:43:46.613Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 609,
+    "protein_g": 36.1,
+    "carbs_g": 36.1,
+    "fat_g": 32.6
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R08_BW19_SE_P55109-1_main_high-fcc248df.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:03:30.809Z",
+  "title": "Pistaciepaneret torsk med appelsindressing og lun blomkålssalat",
+  "intro": "Mør torsk med sprød pistaciepanering, serveret med lun blomkålssalat i frisk appelsindressing og kogt broccoli. Det hele er klar på under en halv time.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "Torsk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "Broccoli",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "pakke",
+      "name": "Blomkålsris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "Kål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "Appelsin",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "Persille",
+      "note": "bredbladet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "Tørret frugt",
+      "note": "tørrede tranebær",
+      "optional": false
+    },
+    {
+      "section": "Til panering",
+      "amount": 30,
+      "unit": "g",
+      "name": "Pistacienødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til panering",
+      "amount": 15,
+      "unit": "g",
+      "name": "Rasp",
+      "note": "panko",
+      "optional": false
+    },
+    {
+      "section": "Til panering",
+      "amount": 15,
+      "unit": "g",
+      "name": "Sennep",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til panering",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til panering",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blomkålsris",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til blomkålsris",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til dressing",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Sæt en gryde med saltet vand over til kogning."
+    },
+    {
+      "section": "Fisk og blomkålsris",
+      "text": "Hak pistacienødderne fint, og bland dem i en lille skål med panko, salt og olie til panering."
+    },
+    {
+      "section": "Fisk og blomkålsris",
+      "text": "Læg torsken på den ene halvdel af en bageplade med bagepapir. Tør den med køkkenrulle, smør sennep ovenpå, og tryk pistaciemassen fast."
+    },
+    {
+      "section": "Fisk og blomkålsris",
+      "text": "Læg blomkålsrisene på den anden halvdel af pladen. Vend dem med lidt olie, salt og peber."
+    },
+    {
+      "section": "Fisk og blomkålsris",
+      "text": "Bag i ovnen i 9-10 minutter, til fisken er gennemstegt. Kødet skal være hvidt og mat."
+    },
+    {
+      "section": "Dressing og salat",
+      "text": "Hak persillen fint. Fjern skræl og hvid hinde fra appelsinen, og skær halvdelen i tern på 2 cm."
+    },
+    {
+      "section": "Dressing og salat",
+      "text": "Pres saften fra den anden halvdel af appelsinen ned i en stor skål, og rør olie til dressing i."
+    },
+    {
+      "section": "Broccoli",
+      "text": "Del broccolien i buketter, og skær stokken i tern på 2 cm. Kog i det saltede vand i 4-6 minutter, til den er mør, og si fra."
+    },
+    {
+      "section": "Samling",
+      "text": "Vend kål, persille, tranebær, appelsintern og de bagte blomkålsris sammen med dressingen."
+    },
+    {
+      "section": "Samling",
+      "text": "Anret salat, broccoli og fisk på dybe tallerkener."
+    }
+  ],
+  "changes": [
+    "Tranebær er skiftet til tørrede tranebær.",
+    "Panko er skiftet til rasp (panko)."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har torsk som hovedråvare og rigeligt grønt i form af broccoli, blomkålsris og kål, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:39:12.384Z"
+  }
+}

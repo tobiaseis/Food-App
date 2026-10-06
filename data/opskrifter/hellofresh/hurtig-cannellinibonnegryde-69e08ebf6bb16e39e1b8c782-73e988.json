@@ -1,0 +1,251 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-cannellinibonnegryde-69e08ebf6bb16e39e1b8c782",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:52:02.839Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1229,
+    "protein_g": 41.3,
+    "carbs_g": 117.7,
+    "fat_g": 66.2
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y24_R28_W03_SE_V18026-2_Main_b_low-3a0195fd.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:04:28.828Z",
+  "title": "Hurtig cannellinibønnegryde med gremolata og parmesan",
+  "intro": "Cremet bønnegryde med peberfrugt og spinat, der serveres på jasminris og toppes med en frisk gremolata af persille, solsikkekerner og parmesan. Retten er hurtigt klar og passer fint til hverdagen.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Til risen",
+      "amount": 150,
+      "unit": "g",
+      "name": "jasminris",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 3,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til risen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 8,
+      "unit": "g",
+      "name": "Hvide Løjer & Urter",
+      "note": "krydderiblanding",
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 200,
+      "unit": "g",
+      "name": "hakkede tomater",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": "i tern på 2 cm",
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 1,
+      "unit": "dåse",
+      "name": "cannellinibønner",
+      "note": "afdryppet",
+      "optional": false
+    },
+    {
+      "section": "Til bønnegryden",
+      "amount": 60,
+      "unit": "g",
+      "name": "spinat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gremolataen",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "persille",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til gremolataen",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "revet",
+      "optional": false
+    },
+    {
+      "section": "Til gremolataen",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gremolataen",
+      "amount": 20,
+      "unit": "g",
+      "name": "solsikkekerner",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gremolataen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til gremolataen",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til servering",
+      "amount": 100,
+      "unit": "g",
+      "name": "feta",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Ris",
+      "text": "Kom vand, ris og salt i en mellemstor gryde, og bring det i kog. Læg låg på, og lad risen koge ved middellav varme i 14 minutter."
+    },
+    {
+      "section": "Ris",
+      "text": "Tag gryden af varmen, og lad risen trække under låg i 10 minutter. Løft ikke låget undervejs."
+    },
+    {
+      "section": "Bønnegryde",
+      "text": "Varm olien op i en stor stegepande ved middelhøj varme. Rist krydderurterne og krydderiblandingen i ca. 30 sekunder, til de dufter."
+    },
+    {
+      "section": "Bønnegryde",
+      "text": "Rør hakkede tomater, bouillon, sukker og salt i panden. Lad det simre ved middel varme i 5-6 minutter."
+    },
+    {
+      "section": "Gremolata",
+      "text": "Mens saucen simrer: Bland persille, parmesan, olie, solsikkekerner, salt og peber i en skål."
+    },
+    {
+      "section": "Bønnegryde",
+      "text": "Hæld væsken fra bønnerne. Tilsæt vand, fløde, peberfrugt og bønner i panden, og lad det simre i 2-3 minutter."
+    },
+    {
+      "section": "Bønnegryde",
+      "text": "Skyl spinaten, og vend den i gryden med den færdige ris."
+    },
+    {
+      "section": "Servering",
+      "text": "Fordel risen i dybe tallerkener, og hæld bønnegryden over. Top med gremolata og smuldret feta."
+    }
+  ],
+  "changes": [
+    "Middelhavsdrøm er erstattet af blandede tørrede krydderurter.",
+    "Græsk ost er erstattet af feta.",
+    "Parmigiano Reggiano er erstattet af parmesan.",
+    "Bredbladet persille er erstattet af almindelig persille."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har ris som mættende base, bønner, feta og grøntsager, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:40:48.141Z"
+  }
+}

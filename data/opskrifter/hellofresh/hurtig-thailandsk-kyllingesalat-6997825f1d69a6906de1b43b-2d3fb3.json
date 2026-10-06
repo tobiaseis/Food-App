@@ -1,0 +1,182 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-thailandsk-kyllingesalat-6997825f1d69a6906de1b43b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T14:08:16.690Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 13,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 710,
+    "protein_g": 52.5,
+    "carbs_g": 83,
+    "fat_g": 19.1
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R27_BW09_SE_C54698-1_Main_high-a57e542a.jpg",
+  "lang": "da",
+  "keywords": "Thai",
+  "fetched_at": "2026-10-05T20:06:28.543Z",
+  "title": "Thailandsk kyllingesalat med sataysauce",
+  "intro": "Hurtig salat med nudler, sprød kål og stegte kyllingestrimler i en cremet sataysauce. Frisk koriander og peanuts giver smag og knas.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 300,
+      "unit": "g",
+      "name": "kyllingebryst",
+      "note": "i strimler",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "spidskål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "nudler",
+      "note": "tørrede, udon",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 100,
+      "unit": "g",
+      "name": "sauce",
+      "note": "sataysauce",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "bundt",
+      "name": "koriander",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 20,
+      "unit": "g",
+      "name": "nødder",
+      "note": "saltede peanuts",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "rødkål",
+      "note": "skåret",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salaten",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Kog nudlerne i rigeligt vand med salt, til de er bløde. Det tager 4-6 minutter. Vandet skal smage lige så salt som havvand."
+    },
+    {
+      "section": null,
+      "text": "Si nudlerne fra, og skyl dem i koldt vand. Lad dem dryppe godt af."
+    },
+    {
+      "section": null,
+      "text": "Varm en smule olie op i en stor pande ved middelhøj varme. Steg kyllingen med saltet i 4-5 minutter, til den er gylden og helt gennemstegt. Der må ikke være noget rosa i kødet."
+    },
+    {
+      "section": null,
+      "text": "Snit forårsløget fint, og del citronen på midten. Lav lange, tynde bånd af guleroden med en skræller, og hak den sidste rest fint."
+    },
+    {
+      "section": null,
+      "text": "Kom nudler, spidskål, rødkål, gulerod, sataysauce, forårsløg, salt og olie i en stor skål. Tilsæt et godt skvæt citronsaft."
+    },
+    {
+      "section": null,
+      "text": "Rip koriander groft, og vend den i salaten."
+    },
+    {
+      "section": null,
+      "text": "Fordel salaten i dybe tallerkener. Læg kyllingen ovenpå, og drys med peanuts."
+    }
+  ],
+  "changes": [
+    "Citrusfrugt er skiftet til citron.",
+    "Udonnudler er skiftet til nudler.",
+    "Sataysauce er skiftet til sauce med note om sataysauce."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kylling som hovedråvare, nudler som mættende element og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:44:09.094Z"
+  }
+}

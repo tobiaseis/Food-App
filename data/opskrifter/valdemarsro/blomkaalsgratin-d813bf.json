@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 10,
+  "image": "https://www.valdemarsro.dk/wp-content/2020/01/blomkaalsgratin.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Børnenes livretter, Vegetar",
+  "fetched_at": "2026-08-27T17:55:43.424Z",
   "title": "Blomkålsgratin",
   "intro": "Luftig gratin med blomkål i en cremet béchamel, hvor stivpiskede æggehvider gør saucen let. Bages gyldig med rasp og parmesan.",
   "servings": 4,
@@ -135,25 +139,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mættende del som kartofler eller ris til at fylde måltidet.",
+    "reason": "Blomkålsgratin med æg og sauce er let og mangler noget mættende som kartofler eller brød.",
     "side": {
-      "title": "Kogte kartofler",
+      "title": "Sprøde rosmarinkartofler med hvidløg og agurkesalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "rosmarin",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "fed",
+          "name": "hvidløg",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "hvidvinseddike",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Skyl dem, og server dem varme ved siden af gratinen."
+        "Skær kartoflerne i både, og vend dem med olie, rosmarin, knuste hvidløgsfed og salt.",
+        "Bag kartoflerne sprøde ved 200 grader i cirka 40 minutter, og vend dem undervejs.",
+        "Skær agurken i tynde skiver, og vend den med eddike og en knivspids salt.",
+        "Server agurkesalaten til de sprøde kartofler og gratinen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:30:21.378Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:33.245Z"
   }
 }

@@ -1,0 +1,288 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/paneret-svinekodssandwich-6a4b7739b4eff25aed71b30b",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:16:30.451Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 23,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1259,
+    "protein_g": 55.7,
+    "carbs_g": 104.6,
+    "fat_g": 69.5
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y25_R19_BW45_SE_C28105-1_Main_high-2d393d3d.jpg",
+  "lang": "da",
+  "keywords": "Tysk",
+  "fetched_at": "2026-10-05T20:00:36.058Z",
+  "title": "Paneret svinekam-sandwich med osteløgringe og gulerodssalat",
+  "intro": "Sprøde panerede skiver svinekam i flute med ovnbagte løgringe under smeltet ost, cremet sauce og frisk salat med gulerodsbånd. Sandwichen laves på én aften med både pande og ovn.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Osteløgringe",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osteløgringe",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osteløgringe",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Osteløgringe",
+      "amount": 4,
+      "unit": "g",
+      "name": "krydderiblanding",
+      "note": "halvdelen til løgringene, resten til saucen",
+      "optional": false
+    },
+    {
+      "section": "Osteløgringe",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "et nip",
+      "optional": false
+    },
+    {
+      "section": "Osteløgringe",
+      "amount": 50,
+      "unit": "g",
+      "name": "revet gouda",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 16,
+      "unit": "ml",
+      "name": "worcestershiresauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "ketchup",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 75,
+      "unit": "ml",
+      "name": "creme fraiche",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 200,
+      "unit": "g",
+      "name": "romainesalat",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "gulerødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 300,
+      "unit": "g",
+      "name": "svinekam",
+      "note": "filet",
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "hvedemel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til meldyppen",
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "et nip til meldyppen",
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 1,
+      "unit": "stk",
+      "name": "æg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 25,
+      "unit": "g",
+      "name": "panko",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Svinekam",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Brød",
+      "amount": 2,
+      "unit": "stk",
+      "name": "baguette",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Brød",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Osteløgringe",
+      "text": "Tænd ovnen på 200 °C (180 °C varmluft). Skær løget i ringe på ca. 1 cm."
+    },
+    {
+      "section": "Osteløgringe",
+      "text": "Læg ringene på en bageplade med bagepapir. Drys med olie, salt, peber og halvdelen af krydderiblandingen, og strø den revne gouda over."
+    },
+    {
+      "section": "Osteløgringe",
+      "text": "Bag løgringene midt i ovnen i 15-20 minutter, til osten er gylden."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør worcestershiresauce, ketchup, mayonnaise, creme fraiche og resten af krydderiblandingen sammen i en lille skål."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl romainesalaten, pluk bladene fra hinanden, og hak dem groft. Lav lange, tynde bånd af gulerodden med skræller, og hak resten fint. Snit forårsløget fint."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend salat, gulerod og forårsløg med olie og salt i en skål."
+    },
+    {
+      "section": "Svinekam",
+      "text": "Skær svinekammen i to skiver, én til hver. Drys dem med salt."
+    },
+    {
+      "section": "Svinekam",
+      "text": "Sæt tre dybe tallerkener frem: bland mel, salt og peber i den første, pisk ægget i den anden, og hæld panko i den tredje. Vend skiverne først i mel, så i æg og til sidst i panko. Har du ikke æg, kan du bruge 2 spsk mælk i stedet."
+    },
+    {
+      "section": "Svinekam",
+      "text": "Varm olie op i en stegepande på middelhøj varme, så bunden er dækket. Steg skiverne 3-4 minutter på hver side, til de er gyldne og helt gennemstegte uden rødt kød. Tilsæt mere olie, hvis panden bliver tør."
+    },
+    {
+      "section": "Svinekam",
+      "text": "Skær skiverne i to på langs, og læg dem på køkkenrulle."
+    },
+    {
+      "section": "Brød",
+      "text": "Skær baguetterne midt over, og smør bunden med smør. Læg dem direkte på ovnristen i 4-5 minutter."
+    },
+    {
+      "section": "Brød",
+      "text": "Smør brødene med saucen, og læg lidt salat på. Læg svinekammen og de ostebagte løgringe ovenpå, og server resten af salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Hello Sunrise er skiftet til krydderiblanding, da den ikke kan købes i Danmark."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har paneret svinekam, baguette som mættende element samt ovnbagte løgringe og gulerodssalat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:41.018Z"
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/pandestegt-torsk-og-sauce-vierge-6a03b51bb5c58db9dbcf3f0e",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:42:40.776Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 737,
+    "protein_g": 32.3,
+    "carbs_g": 53.9,
+    "fat_g": 41.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R06_BW21_SE_C28028-1main_high-dd5c8218.jpg",
+  "lang": "da",
+  "keywords": "Fransk",
+  "fetched_at": "2026-10-05T20:03:23.656Z",
+  "title": "Stegt torsk med sauce vierge, kartoffelmos og hasselnøddesalat",
+  "intro": "Gyldenstegt torskefilet med en frisk tomatsauce med oliven, persille og citron. Serveres med cremet kartoffelmos og en sprød salat med ristede hasselnødder.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Kartoffelmos",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "skrællet og skåret i 2 cm tern",
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Kartoffelmos",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "et nip",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "hasselnødder",
+      "note": "groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": "skyllet",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "et nip",
+      "optional": false
+    },
+    {
+      "section": "Sauce vierge",
+      "amount": 1,
+      "unit": "stk",
+      "name": "tomat",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Sauce vierge",
+      "amount": 30,
+      "unit": "g",
+      "name": "oliven",
+      "note": "groft hakkede",
+      "optional": false
+    },
+    {
+      "section": "Sauce vierge",
+      "amount": 10,
+      "unit": "g",
+      "name": "persille",
+      "note": "fint hakket",
+      "optional": false
+    },
+    {
+      "section": "Sauce vierge",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citron",
+      "note": "halveret",
+      "optional": false
+    },
+    {
+      "section": "Sauce vierge",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce vierge",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce vierge",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce vierge",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce vierge",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": "et nip",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 250,
+      "unit": "g",
+      "name": "torskefilet",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olivenolie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Fisk",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Kartoffelmos",
+      "text": "Kom kartoffelternene i en stor gryde med kogende saltet vand. Kog dem i 11-13 minutter, til en kniv let går igennem."
+    },
+    {
+      "section": "Kartoffelmos",
+      "text": "Hæld vandet fra. Tilsæt mælk, salt og peber, og mos kartoflerne med en kartoffelmoser eller gaffel. Læg låg på, og sæt gryden til side."
+    },
+    {
+      "section": "Salat",
+      "text": "Varm en stor stegepande op ved middelhøj varme, mens kartoflerne koger. Rist hasselnødderne i 3-4 minutter, til de er gyldne."
+    },
+    {
+      "section": "Salat",
+      "text": "Vend salaten med de ristede nødder, olie, salt og peber i en skål."
+    },
+    {
+      "section": "Sauce vierge",
+      "text": "Pres saften af citronen. Rør tomat, oliven, persille, vand, citronsaft, sukker, olie, salt og peber sammen i en lille skål."
+    },
+    {
+      "section": "Fisk",
+      "text": "Tør torsken med køkkenrulle. Krydr den med de tørrede krydderurter og salt."
+    },
+    {
+      "section": "Fisk",
+      "text": "Varm olien i en stor pande ved middelhøj varme, og steg fisken 2-3 minutter på hver side, til den er gylden og gennemstegt. Den er klar, når kødet er mælkehvidt og mat."
+    },
+    {
+      "section": "Fisk",
+      "text": "Hæld halvdelen af saucen på panden, og smag til med salt og peber. Varm igennem i 1 minut."
+    },
+    {
+      "section": "Fisk",
+      "text": "Anret fisk, mos og salat på tallerkener. Hæld resten af saucen over fisken."
+    }
+  ],
+  "changes": [
+    "Middelhavsdrøm er erstattet af blandede tørrede krydderurter.",
+    "Citrusfrugt er erstattet af citron.",
+    "Bredbladet persille er erstattet af persille."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har fisk som hovedråvare, kartoffelmos som mættende del og en salat med grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:39:01.233Z"
+  }
+}

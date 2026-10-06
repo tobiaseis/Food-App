@@ -9,6 +9,10 @@
   "active_minutes": 25,
   "yield_count": 4,
   "source_lines": 15,
+  "image": "https://www.valdemarsro.dk/wp-content/2018/10/peberfrugter-farserede.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Mormormad, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:56:23.167Z",
   "title": "Lammefyldte peberfrugter med feta",
   "intro": "Bløde peberfrugthalvdele fyldt med krydret lammefars og pinjekerner og bagt med smuldret feta. En nem ovnret med middelhavssmag.",
   "servings": 4,
@@ -175,15 +179,23 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende komponenter som kartofler eller ris.",
+    "reason": "Retten har kød og peberfrugt, men intet mættende som kartofler, ris eller brød, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Citroncouscous med mynte og ristede mandler",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
+          "amount": 3,
+          "unit": "dl",
+          "name": "couscous",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "dl",
+          "name": "kogende vand",
           "note": null,
           "optional": false
         },
@@ -191,17 +203,43 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "håndfuld",
+          "name": "mynte",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 30,
+          "unit": "g",
+          "name": "mandler",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Hæld couscous i en skål, vend den med olivenolie og salt, og hæld det kogende vand over. Læg låg på, og lad den trække i 5 minutter.",
+        "Rist de hakkede mandler på en tør pande, til de er gyldne.",
+        "Luft couscousen med en gaffel, og vend saften og revet skal fra citronen i.",
+        "Vend hakket mynte og mandler i, og server til peberfrugterne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:34:26.418Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:21.009Z"
   }
 }

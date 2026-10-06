@@ -9,6 +9,17 @@
   "active_minutes": 5,
   "yield_count": 4,
   "source_lines": 3,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 218,
+    "protein_g": 34,
+    "carbs_g": 5,
+    "fat_g": 7
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-520471_11-7af1f5c.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Supper, Eastern European, Breadcrumb, Breadcrumbs, Chicken kyiv, Garlic, Good Food, Healthy, Polish",
+  "fetched_at": "2026-08-27T17:53:33.120Z",
   "title": "Kylling Kiev på bageplade",
   "intro": "Kyllingebryst grillet i ovnen og toppet med sprødt hvidløgssmør med rasp. Det giver Kiev-smag uden panering og stegning i fedt.",
   "servings": 4,
@@ -85,15 +96,23 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse eller grønt.",
+    "reason": "Retten er kun kylling med raspsmør uden mættende tilbehør eller grønt, så den mangler kartofler eller lignende.",
     "side": {
-      "title": "Nye kartofler og grøn salat",
+      "title": "Ovnbagte citronkartofler med persille og gulerodssalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
-          "name": "nye kartofler",
+          "amount": 800,
+          "unit": "g",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "olivenolie",
           "note": null,
           "optional": false
         },
@@ -101,18 +120,43 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "økologisk citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 0.5,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 4,
+          "unit": "stk",
+          "name": "gulerødder",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "æblecidereddike",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog kartoflerne hele i letsaltet vand, til de er møre.",
-        "Vask salaten, og riv den i stykker.",
-        "Dræn kartoflerne, og server dem sammen med salaten."
+        "Skær kartoflerne i både, vend dem med olie, revet citronskal og salt, og bag dem gyldne ved 220 grader i cirka 35 minutter.",
+        "Riv gulerødderne groft, og vend dem med eddike, saften fra halvdelen af citronen og en knivspids salt.",
+        "Hak persillen, og vend den i de varme kartofler sammen med et pres citronsaft.",
+        "Server gulerodssalaten til kartoflerne og kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:56:03.752Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:26:48.411Z"
   }
 }

@@ -1,0 +1,258 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/stegt-flatsteak-og-chimichurri-69d8d0036bb16e39e1b7e251",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:53:26.567Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 19,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 738,
+    "protein_g": 39.7,
+    "carbs_g": 61.1,
+    "fat_g": 38
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R07_BW16_SE_C56411-1_main_TD__Main_high-c17fd955.jpg",
+  "lang": "da",
+  "keywords": "Latin American",
+  "fetched_at": "2026-10-05T20:04:40.634Z",
+  "title": "Stegt flatsteak med chimichurri, kartoffelmos og tomatsalat",
+  "intro": "Mørt flatsteak med frisk, syrlig chimichurri og cremet mos af kartofler og sødkartoffel. Til sidst vendes en sprød tomatsalat med hurtigpicklede løg.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 350,
+      "unit": "g",
+      "name": "Oksekød",
+      "note": "flatsteak",
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 250,
+      "unit": "g",
+      "name": "Sødkartoffel",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 250,
+      "unit": "g",
+      "name": "Kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 3,
+      "unit": "spsk",
+      "name": "Mælk",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til mosen",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til stegningen",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Løg",
+      "note": "skåret i tynde halve skiver",
+      "optional": false
+    },
+    {
+      "section": "Til de syltede løg",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chimichurri",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "Chili",
+      "note": "uden kerner, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til chimichurri",
+      "amount": 10,
+      "unit": "g",
+      "name": "Persille",
+      "note": "bredbladet, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til chimichurri",
+      "amount": 10,
+      "unit": "g",
+      "name": "Koriander",
+      "note": "finthakket, inklusive stilke",
+      "optional": false
+    },
+    {
+      "section": "Til chimichurri",
+      "amount": 1,
+      "unit": "fed",
+      "name": "Hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Til chimichurri",
+      "amount": 1,
+      "unit": "stk",
+      "name": "Citron",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chimichurri",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "Oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Til chimichurri",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "Vand",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chimichurri",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til chimichurri",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "Olie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 250,
+      "unit": "g",
+      "name": "Tomater",
+      "note": "cherrytomater, halveret",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "Peberfrugt",
+      "note": "groft hakket",
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": null,
+      "unit": null,
+      "name": "Salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Til tomatsalaten",
+      "amount": null,
+      "unit": null,
+      "name": "Peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Tag bøfferne ud af køleskabet, så de når at blive tempereret. Sæt en stor gryde med saltet vand over høj varme, så det kan komme i kog."
+    },
+    {
+      "section": "Syltede løg",
+      "text": "Skær løget i så tynde halve skiver som muligt. Rør det sammen med vand og en smule salt i en lille skål, og lad det stå til side."
+    },
+    {
+      "section": "Mos",
+      "text": "Skræl sødkartoffel og kartofler, og skær dem i tern på 2 cm. Kog dem i 11-13 minutter, til en kniv let glider igennem. Hæld vandet fra."
+    },
+    {
+      "section": "Mos",
+      "text": "Tilsæt mælk, salt og peber, og mos det hele med kartoffelmoser eller gaffel. Læg låg på, og lad mosen stå varm. Tilsæt evt. en klat smør for en cremet konsistens."
+    },
+    {
+      "section": "Kød",
+      "text": "Varm olien op i en stor pande ved middelhøj varme. Brun bøfferne i 3 minutter på hver side. Steg 1-2 minutter længere, hvis de skal være gennemstegte."
+    },
+    {
+      "section": "Kød",
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, til maden skal serveres. Gem panden med stegesaften."
+    },
+    {
+      "section": "Chimichurri",
+      "text": "Mens kødet steger: Slå chilien over på langs, fjern kernerne, og hak den fint. Halvér citronen. Hak persille, koriander med stilke og hvidløg fint."
+    },
+    {
+      "section": "Chimichurri",
+      "text": "Rør urterne, chili og hvidløg sammen med vand, salt, olie, saft fra citronen og oregano i en mellemstor skål. Brug mindre chili eller undlad den, hvis I ikke vil have det stærkt."
+    },
+    {
+      "section": "Tomatsalat",
+      "text": "Hak peberfrugten groft, og halvér tomaterne. Si væden fra de syltede løg lige før servering. Vend løg, tomater og peberfrugt i skålen med chimichurri, og smag til med salt og peber."
+    },
+    {
+      "section": "Servering",
+      "text": "Skær bøfferne på tværs af fibrene i skiver på 0,5 cm. Anret mos, salat og kød på tallerkener. Hæld stegesaften fra panden over kødet, og top med chimichurri."
+    }
+  ],
+  "changes": [
+    "Flatsteak er skrevet som oksekød, da den ikke er en fast vare i danske supermarkeder.",
+    "Citrusfrugt er erstattet af citron.",
+    "Bredbladet persille er skrevet som persille."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har kød, kartoffelmos som mættende bestanddel og en tomatsalat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:41:09.785Z"
+  }
+}

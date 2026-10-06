@@ -1,0 +1,198 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/flatsteak-og-flodekartofler-69ccd7d2e64547e807eb4edf",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:54:54.500Z",
+  "total_minutes": 35,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 998,
+    "protein_g": 44.1,
+    "carbs_g": 63,
+    "fat_g": 63.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/DK_Recipe_Overlay_Flødekartofler_med_kød_og_salat_1200x800-9d34c127.jpg",
+  "lang": "da",
+  "keywords": "Dansk",
+  "fetched_at": "2026-10-05T20:04:52.532Z",
+  "title": "Flatsteak med flødekartofler og valnøddesalat",
+  "intro": "Mørt flatsteak serveres med bagte flødekartofler med timian og en frisk salat med knasende valnødder og honning-sennepsdressing. En nem hverdagsret, hvor kartoflerne bager færdige i ovnen, mens du steger bøfferne.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Flødekartofler",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": "uskrællede",
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 3,
+      "unit": "dl",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 1,
+      "unit": "bundt",
+      "name": "timian",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til saucen",
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 1,
+      "unit": "knivspids",
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "smør",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Flødekartofler",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning af løg",
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": 350,
+      "unit": "g",
+      "name": "flatsteak",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Bøffer",
+      "amount": null,
+      "unit": null,
+      "name": "olie",
+      "note": "til stegning af bøfferne",
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "valnødder",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 20,
+      "unit": "g",
+      "name": "honning-sennepsdressing",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til salaten",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Flødekartofler",
+      "text": "Tag bøfferne ud af køleskabet, så de når at blive stuetempererede. Sæt en stor gryde med saltet vand over til kogning, og tænd ovnen på 240 °C (220 °C varmluft)."
+    },
+    {
+      "section": "Flødekartofler",
+      "text": "Skær de uskrællede kartofler i skiver på ½ cm. Kog dem i 4-5 minutter, til de er lidt bløde, og si dem fra."
+    },
+    {
+      "section": "Flødekartofler",
+      "text": "Mens kartoflerne koger: Pres eller hak hvidløget fint, og pluk bladene af timianen. Skær løget i tynde halve skiver. TIP: Hold fast øverst på timianstilken, og stryg fingrene nedad for at få bladene af."
+    },
+    {
+      "section": "Flødekartofler",
+      "text": "Varm olien i en mellemstor pande på middelhøj varme. Steg løg og hvidløg i 2-3 minutter, til det dufter. Rør fløde, vand, timian, salt og peber i, og lad saucen simre 1 minut."
+    },
+    {
+      "section": "Flødekartofler",
+      "text": "Skær smørret i små tern. Læg kartoflerne i et jævnt lag i et ildfast fad, hæld saucen over, og fordel smørterningerne ovenpå. Bag i ovnen i 15-20 minutter, til kartoflerne er møre, og overfladen er gylden."
+    },
+    {
+      "section": "Salat",
+      "text": "Hak valnødderne groft, og skyl salaten. Vend salat, dressing og salt sammen i en stor skål."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Varm lidt olie i en stor pande på middelhøj varme. Brun bøfferne 3 minutter på hver side. TIP: Steg 1-2 minutter længere på hver side, hvis de skal være gennemstegte."
+    },
+    {
+      "section": "Bøffer",
+      "text": "Pak bøfferne ind i folie, og lad dem hvile, til maden skal på bordet. Skær dem derefter i skiver på ½ cm på tværs af kødets fibre."
+    },
+    {
+      "section": null,
+      "text": "Server bøffer, flødekartofler og salat på tallerkener, og drys valnødderne over salaten."
+    }
+  ],
+  "changes": [
+    "Frisk timian er skrevet som 1 bundt i stedet for 1 stk.",
+    "Blandet salat er skrevet som salatblanding."
+  ]
+}

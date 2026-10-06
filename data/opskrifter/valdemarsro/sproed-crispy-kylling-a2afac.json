@@ -9,6 +9,10 @@
   "active_minutes": 25,
   "yield_count": 4,
   "source_lines": 7,
+  "image": "https://www.valdemarsro.dk/wp-content/2020/08/crispy-kylling.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad",
+  "fetched_at": "2026-08-27T15:18:07.553Z",
   "title": "Sprød panerede kyllingefileter",
   "intro": "Kyllingefileter i sprød rasppanering, der steges gyldne på panden. Kødet bliver saftigt, fordi det er banket fladt og steger hurtigt.",
   "servings": 4,
@@ -99,15 +103,23 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler mættende stivelse eller rigeligt grønt – det er kun en hovedråvare uden tilbehør.",
+    "reason": "Retten er kun panerede kyllingefileter uden noget mættende eller grønt, så den mangler tilbehør.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Sprøde ovnkartofler med citron og persille og agurkesalat",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
+          "amount": 800,
+          "unit": "g",
           "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
           "note": null,
           "optional": false
         },
@@ -115,17 +127,43 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "persille",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "hvidvinseddike",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til kartoflerne."
+        "Skær kartoflerne i både, vend dem med olie, revet citronskal og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Skær agurken i tynde skiver, og vend den med eddike, halvdelen af den hakkede persille og en knivspids salt.",
+        "Pres citronsaft over de varme kartofler, og vend dem med resten af den hakkede persille.",
+        "Server kartoflerne og agurkesalaten til kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-04T16:54:48.853Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:19:27.891Z"
   }
 }

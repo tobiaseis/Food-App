@@ -9,6 +9,10 @@
   "active_minutes": 30,
   "yield_count": 4,
   "source_lines": 22,
+  "image": "https://www.valdemarsro.dk/wp-content/2020/01/samosa.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Børnenes livretter, Indisk, Vegetar",
+  "fetched_at": "2026-08-27T17:55:50.201Z",
   "title": "Samosa med blomkål og myntedip",
   "intro": "Sprøde ovnbagte trekanter af filodej med fyld af kartofler, blomkål og ærter, krydret med garam masala og ingefær. Serveres med en frisk dip af yoghurt, mynte og koriander.",
   "servings": 4,
@@ -227,26 +231,67 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Samosaer er en forret, ikke en hovedret – der mangler en mættende tilbehør til at gøre det til et helt aftensmåltid.",
+    "reason": "Samosaerne har kun lidt fyld pr. person og er mere snack end hovedmåltid, så de har brug for noget mættende ved siden af.",
     "side": {
-      "title": "Basmati ris",
+      "title": "Spidskommenris med koriander og citron",
       "ingredients": [
         {
           "section": null,
-          "amount": 300,
-          "unit": "g",
-          "name": "basmati ris",
+          "amount": 3,
+          "unit": "dl",
+          "name": "basmatiris",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "spsk",
+          "name": "smør",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommenfrø",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 6,
+          "unit": "dl",
+          "name": "vand",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "koriander",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skyl risen under koldt vand.",
-        "Kog risen i saltet vand efter pakningens vejledning.",
-        "Server risen ved siden af samosaerne."
+        "Smelt smørret i en gryde, og rist spidskommenfrøene i cirka 1 minut, til de dufter.",
+        "Tilsæt risene, og vend dem med i smørret. Hæld vand og salt i, og bring det i kog.",
+        "Læg låg på, og lad risene simre på lav varme i cirka 10 minutter. Lad dem trække af varmen under låg i 5 minutter.",
+        "Fluff risene med en gaffel, og vend hakket koriander og saft fra citronen i."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:30:46.219Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:27:43.436Z"
   }
 }

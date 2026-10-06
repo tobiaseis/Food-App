@@ -9,6 +9,10 @@
   "active_minutes": 20,
   "yield_count": 4,
   "source_lines": 9,
+  "image": "https://www.valdemarsro.dk/wp-content/2017/09/kofta.jpg",
+  "lang": "da",
+  "keywords": "Aftensmad, Familiefavoritter, Grillspyd, Mellemøstens køkken, Nem Hverdagsmad",
+  "fetched_at": "2026-08-27T17:56:56.225Z",
   "title": "Lammekofta på spyd",
   "intro": "Saftige, krydrede koftaer af hakket lam med pinjekerner og masser af persille. De steges sprøde på panden og passer fint til salat og yoghurtdressing.",
   "servings": 4,
@@ -123,15 +127,15 @@
   "changes": [],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler stivelse eller rigeligt grønt til at være et helt måltid.",
+    "reason": "Retten har kun kød og ingen mættende bestanddel eller rigeligt grønt.",
     "side": {
-      "title": "Kogte kartofler og grøn salat",
+      "title": "Couscoussalat med citron og mynte",
       "ingredients": [
         {
           "section": null,
-          "amount": 1,
-          "unit": "kg",
-          "name": "kartofler",
+          "amount": 3,
+          "unit": "dl",
+          "name": "couscous",
           "note": null,
           "optional": false
         },
@@ -139,17 +143,51 @@
           "section": null,
           "amount": 1,
           "unit": "stk",
-          "name": "hovedsalat",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 250,
+          "unit": "g",
+          "name": "cherrytomater",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "citron",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 3,
+          "unit": "spsk",
+          "name": "olivenolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "mynte",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Skræl kartoflerne, og kog dem møre i letsaltet vand.",
-        "Vask salaten, riv den i stykker, og server den til koftaerne og kartoflerne."
+        "Overhæld couscousen med 3 dl kogende vand og lidt salt, og lad den trække tildækket i 5 minutter.",
+        "Fluff couscousen med en gaffel, og vend den med olivenolie og saft fra citronen.",
+        "Skær agurk og tomater i tern, og hak mynten.",
+        "Vend grøntsagerne og mynten i couscousen, og server salaten til koftaerne."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T15:36:53.258Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T19:28:43.198Z"
   }
 }

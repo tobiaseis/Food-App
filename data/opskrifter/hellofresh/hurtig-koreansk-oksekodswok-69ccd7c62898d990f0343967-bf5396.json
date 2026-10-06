@@ -1,0 +1,162 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/hurtig-koreansk-oksekodswok-69ccd7c62898d990f0343967",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:55:29.870Z",
+  "total_minutes": 15,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 12,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 646,
+    "protein_g": 37,
+    "carbs_g": 80.1,
+    "fat_g": 19.7
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R07_BW15_SE_C54859-1_main_high-0f4a893f.jpg",
+  "lang": "da",
+  "keywords": "Koreansk",
+  "fetched_at": "2026-10-05T20:04:58.436Z",
+  "title": "Koreansk oksekødswok med udonnudler",
+  "intro": "En hurtig wok med krydret hakket oksekød, peberfrugt og pak choi i en sovs af gochujang og woksauce. Den er klar på cirka 20 minutter.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "peberfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "stk",
+      "name": "forårsløg",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 30,
+      "unit": "g",
+      "name": "gochujang",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 75,
+      "unit": "g",
+      "name": "asiatisk woksauce",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 150,
+      "unit": "g",
+      "name": "udonnudler",
+      "note": "tørrede",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 250,
+      "unit": "g",
+      "name": "hakket oksekød",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 10,
+      "unit": "g",
+      "name": "ingefærpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "dl",
+      "name": "vand",
+      "note": "kogevand fra nudlerne",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kødet",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Bring en gryde vand med salt i kog. Vandet skal smage som havvand."
+    },
+    {
+      "section": null,
+      "text": "Kog nudlerne i 4-6 minutter, til de er bløde. Hold en kop af kogevandet tilbage, og si nudlerne fra. Skyl dem under koldt vand."
+    },
+    {
+      "section": null,
+      "text": "Skær peberfrugten i strimler på ½ cm. Hak pak choi groft, og snit forårsløget fint."
+    },
+    {
+      "section": null,
+      "text": "Varm olien i en stor stegepande ved middelhøj varme. Brun kødet med saltet i 4-5 minutter. Det skal være helt gennemstegt uden rødt tilbage."
+    },
+    {
+      "section": null,
+      "text": "Kom peberfrugt og pak choi på panden, og steg i 2-3 minutter, til grøntsagerne er møre."
+    },
+    {
+      "section": null,
+      "text": "Rør gochujang, ingefærpuré, woksauce og det afmålte kogevand ned i panden. Vend nudlerne med."
+    },
+    {
+      "section": null,
+      "text": "Fordel woken i dybe tallerkener, og drys med forårsløg og sesamfrø."
+    }
+  ],
+  "changes": [],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har hakket oksekød, udonnudler som mættende element og rigeligt grønt, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:41:37.905Z"
+  }
+}

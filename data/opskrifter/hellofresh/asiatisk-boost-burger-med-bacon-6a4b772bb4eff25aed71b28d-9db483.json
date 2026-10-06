@@ -1,0 +1,222 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/asiatisk-boost-burger-med-bacon-6a4b772bb4eff25aed71b28d",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-05T20:17:41.608Z",
+  "total_minutes": 30,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 14,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1300,
+    "protein_g": 52,
+    "carbs_g": 103.3,
+    "fat_g": 76.8
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R02_BW29_SE_C27982-1main_high-3e1737a8.jpg",
+  "lang": "da",
+  "keywords": "Fusion",
+  "fetched_at": "2026-10-05T20:00:39.636Z",
+  "title": "Asiatisk burger med bacon, sesamfritter og pak choi-salat",
+  "intro": "Saftig burger i briochebolle med sprødt bacon og en frisk salat af pak choi og syltet glaskål. Ovnbagte sesamfritter gør det til en komplet middag.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": "Sesamfritter",
+      "amount": 500,
+      "unit": "g",
+      "name": "kartofler",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sesamfritter",
+      "amount": null,
+      "unit": null,
+      "name": "olivenolie",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sesamfritter",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til kartoflerne",
+      "optional": false
+    },
+    {
+      "section": "Sesamfritter",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sesamfritter",
+      "amount": 10,
+      "unit": "g",
+      "name": "sesamfrø",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi-salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "pak choi",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi-salat",
+      "amount": 0.5,
+      "unit": "stk",
+      "name": "glaskål",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi-salat",
+      "amount": 1,
+      "unit": "stk",
+      "name": "citrusfrugt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pak choi-salat",
+      "amount": 0.5,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": "til syltningen",
+      "optional": false
+    },
+    {
+      "section": "Pak choi-salat",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til syltningen",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 300,
+      "unit": "g",
+      "name": "burgerbøffer",
+      "note": "fx røget",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": "til bøfferne",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 125,
+      "unit": "g",
+      "name": "bacon",
+      "note": "i skiver",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 2,
+      "unit": "stk",
+      "name": "briocheboller",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 40,
+      "unit": "g",
+      "name": "dressing",
+      "note": "asiatisk",
+      "optional": false
+    },
+    {
+      "section": "Burgere",
+      "amount": 50,
+      "unit": "g",
+      "name": "mayonnaise",
+      "note": "asiatisk",
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": "Sesamfritter",
+      "text": "Tænd ovnen på 240 °C (220 °C varmluft). Skær de uskrællede kartofler i fritter på ca. 1 cm."
+    },
+    {
+      "section": "Sesamfritter",
+      "text": "Læg fritterne på en bageplade med bagepapir. Vend dem med lidt olivenolie, salt og peber. Brug to plader, hvis de ligger for tæt."
+    },
+    {
+      "section": "Sesamfritter",
+      "text": "Bag fritterne i 25-35 minutter, til de er møre. Vend dem med sesamfrøene, når de kommer ud."
+    },
+    {
+      "section": "Pak choi-salat",
+      "text": "Skær pak choi i fine strimler. Skræl glaskålen, og skær den i stave på ca. ½ cm."
+    },
+    {
+      "section": "Pak choi-salat",
+      "text": "Pres saften fra citrusfrugten i en lille skål, og rør sukker og salt i. Læg glaskålen i marinaden, og lad den trække."
+    },
+    {
+      "section": "Burgere",
+      "text": "Varm lidt olivenolie op i en stor pande ved middelhøj varme. Drys bøfferne med salt og peber, og brun dem 2 minutter på hver side."
+    },
+    {
+      "section": "Burgere",
+      "text": "Skru ned til middel varme, og steg bøfferne videre i 8-10 minutter. Vend dem undervejs. Læg dem på en tallerken."
+    },
+    {
+      "section": "Burgere",
+      "text": "Sæt panden tilbage på middelhøj varme, og steg baconen gylden i 4-5 minutter."
+    },
+    {
+      "section": "Burgere",
+      "text": "Skær bollerne over, og læg dem direkte på ovnristen i 3-4 minutter."
+    },
+    {
+      "section": "Pak choi-salat",
+      "text": "Lige før servering vendes glaskål og pak choi med salt og peber i en stor skål."
+    },
+    {
+      "section": "Servering",
+      "text": "Læg fritterne på tallerkener. Byg burgerne med bøf, bacon, dressing og lidt salat. Server med mayonnaise og resten af salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Vegansk asiatisk mayonnaise er skiftet til almindelig mayonnaise med asiatisk præg.",
+    "Asiatisk dressing er skiftet til en asiatisk dressing fra hylden.",
+    "Burger Boost Smoky Twist-bøf er skiftet til færdige burgerbøffer."
+  ],
+  "meal": {
+    "complete": true,
+    "reason": "Retten har burgerbøf og bacon i brioche samt sesamfritter og pak choi-salat, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-06T14:34:45.959Z"
+  }
+}

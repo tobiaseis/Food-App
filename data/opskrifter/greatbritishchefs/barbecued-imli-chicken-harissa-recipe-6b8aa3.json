@@ -9,6 +9,10 @@
   "active_minutes": null,
   "yield_count": 4,
   "source_lines": 36,
+  "image": "https://media-cdn2.greatbritishchefs.com/media/wvphvy3u/barbecued-imli-chicken-with-harissa-landscape-1.whqc_1426x713q80.jpg",
+  "lang": "da",
+  "keywords": "Main, Chicken, Tamarind, Papaya, harissa, easy",
+  "fetched_at": "2026-08-27T17:04:03.660Z",
   "title": "Grillet imlikylling med harissa",
   "intro": "Marineret kylling grilles og pensles med en sød-sur tamarindglasur. Den serveres med stærk harissa, en lun salat af gulerod og knasende jordnødde-thecha.",
   "servings": 4,
@@ -428,25 +432,67 @@
   ],
   "meal": {
     "complete": false,
-    "reason": "Retten mangler en mætningsholdende komponent som kartofler, ris eller brød.",
+    "reason": "Retten har kun kylling og en lille gulerodssalat, så der mangler noget mættende som kartofler, ris eller brød.",
     "side": {
-      "title": "Kogt ris",
+      "title": "Spidskommenkartofler og agurkeraita",
       "ingredients": [
         {
           "section": null,
-          "amount": 250,
+          "amount": 800,
           "unit": "g",
-          "name": "ris",
+          "name": "kartofler",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "spsk",
+          "name": "rapsolie",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "tsk",
+          "name": "spidskommen",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "stk",
+          "name": "agurk",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 2,
+          "unit": "dl",
+          "name": "yoghurt naturel",
+          "note": null,
+          "optional": false
+        },
+        {
+          "section": null,
+          "amount": 1,
+          "unit": "bundt",
+          "name": "koriander",
           "note": null,
           "optional": false
         }
       ],
       "steps": [
-        "Kog risen i letsal vand efter pakningens anvisning.",
-        "Dren den og server til kyllingen."
+        "Skær kartoflerne i både, vend dem med olie, spidskommen og salt, og bag dem sprøde ved 220 grader i cirka 35 minutter.",
+        "Riv agurken groft, og pres overskydende vand af den.",
+        "Rør agurk, yoghurt og hakket koriander sammen med en knivspids salt til en raita.",
+        "Server de varme kartofler med raitaen ved siden af kyllingen."
       ]
     },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:34:04.605Z"
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:21:55.230Z"
   }
 }

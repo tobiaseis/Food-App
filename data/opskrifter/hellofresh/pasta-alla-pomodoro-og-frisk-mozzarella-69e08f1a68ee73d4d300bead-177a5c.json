@@ -1,0 +1,253 @@
+{
+  "url": "https://www.hellofresh.dk/recipes/pasta-alla-pomodoro-og-frisk-mozzarella-69e08f1a68ee73d4d300bead",
+  "source": "hellofresh",
+  "source_name": "HelloFresh",
+  "edition": 1,
+  "model": "claude-sonnet-5-5",
+  "written_at": "2026-10-06T04:50:38.999Z",
+  "total_minutes": 25,
+  "active_minutes": null,
+  "yield_count": 2,
+  "source_lines": 20,
+  "nutrition": {
+    "per_servings": 2,
+    "kcal": 1112,
+    "protein_g": 34.1,
+    "carbs_g": 87,
+    "fat_g": 69.9
+  },
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/HF_Y26_R05_BW01_SE_C36797-1_Main_high-756d0015.jpg",
+  "lang": "da",
+  "keywords": "Italiensk",
+  "fetched_at": "2026-10-05T20:04:18.215Z",
+  "title": "Pasta alla pomodoro med mozzarella og basilikumpesto",
+  "intro": "Orecchiette i cremet cherrytomatsauce toppet med friske mozzarellatern og en hurtig pesto af basilikum, valnødder og parmesan. Serveres med en lille grøn salat ved siden af.",
+  "servings": 2,
+  "ingredients": [
+    {
+      "section": null,
+      "amount": 200,
+      "unit": "g",
+      "name": "pasta",
+      "note": "orecchiette",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": 1,
+      "unit": "dl",
+      "name": "vand",
+      "note": "gemt pastavand",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "stk",
+      "name": "løg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "fed",
+      "name": "hvidløg",
+      "note": "finthakket",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 250,
+      "unit": "g",
+      "name": "cherrytomater",
+      "note": "halverede",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til stegning",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.5,
+      "unit": "g",
+      "name": "oregano",
+      "note": "tørret",
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "blandede tørrede krydderurter",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 40,
+      "unit": "g",
+      "name": "tomatpuré",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 1,
+      "unit": "tsk",
+      "name": "sukker",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 150,
+      "unit": "ml",
+      "name": "madlavningsfløde",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 4,
+      "unit": "g",
+      "name": "bouillon",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Sauce",
+      "amount": 0.25,
+      "unit": "tsk",
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Pesto og mozzarella",
+      "amount": 1,
+      "unit": "stk",
+      "name": "basilikum",
+      "note": "frisk, finthakket",
+      "optional": false
+    },
+    {
+      "section": "Pesto og mozzarella",
+      "amount": 20,
+      "unit": "g",
+      "name": "valnødder",
+      "note": "finthakkede",
+      "optional": false
+    },
+    {
+      "section": "Pesto og mozzarella",
+      "amount": 2,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til pesto",
+      "optional": false
+    },
+    {
+      "section": "Pesto og mozzarella",
+      "amount": 20,
+      "unit": "g",
+      "name": "parmesan",
+      "note": "finrevet",
+      "optional": false
+    },
+    {
+      "section": "Pesto og mozzarella",
+      "amount": 125,
+      "unit": "g",
+      "name": "mozzarella",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 60,
+      "unit": "g",
+      "name": "salatblanding",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": "Salat",
+      "amount": 0.5,
+      "unit": "spsk",
+      "name": "olie",
+      "note": "til salat",
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "salt",
+      "note": null,
+      "optional": false
+    },
+    {
+      "section": null,
+      "amount": null,
+      "unit": null,
+      "name": "peber",
+      "note": null,
+      "optional": false
+    }
+  ],
+  "steps": [
+    {
+      "section": null,
+      "text": "Sæt en stor gryde med vand i kog, og salt det kraftigt, så det smager som havvand. Kog pastaen i 11-12 minutter, til den er al dente, så den stadig har lidt bid."
+    },
+    {
+      "section": null,
+      "text": "Tag en kop af kogevandet fra, før du hælder pastaen af. Lad pastaen blive i dørslaget."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hak løg og hvidløg fint, og del cherrytomaterne på midten."
+    },
+    {
+      "section": "Sauce",
+      "text": "Varm olien i en stor pande på middelhøj varme. Steg løg og tomater i 2-3 minutter."
+    },
+    {
+      "section": "Sauce",
+      "text": "Rør hvidløg, oregano, krydderurter, tomatpuré og sukker i panden, og steg det med i 1 minut."
+    },
+    {
+      "section": "Sauce",
+      "text": "Hæld fløde, bouillon og pastavand i, og krydr med salt og peber. Skru ned til middel varme, og lad saucen simre i 4-5 minutter, til den er let tyk."
+    },
+    {
+      "section": "Pesto og mozzarella",
+      "text": "Hak basilikum og valnødder fint, og rør dem sammen med olie, parmesan og en smule salt og peber til en pesto."
+    },
+    {
+      "section": "Pesto og mozzarella",
+      "text": "Lad mozzarellaen dryppe af, og tør den med køkkenrulle. Skær den i tern på 2 cm, og drys med salt og peber."
+    },
+    {
+      "section": "Salat",
+      "text": "Skyl salaten, og vend den med olie og peber i en lille skål."
+    },
+    {
+      "section": null,
+      "text": "Vend den kogte pasta i saucen på panden."
+    },
+    {
+      "section": null,
+      "text": "Fordel pastaen i dybe tallerkener, og læg mozzarella og pesto ovenpå. Server salaten ved siden af."
+    }
+  ],
+  "changes": [
+    "Mamas Favorit er erstattet med blandede tørrede krydderurter."
+  ]
+}

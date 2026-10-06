@@ -9,6 +9,17 @@
   "active_minutes": 15,
   "yield_count": 4,
   "source_lines": 13,
+  "nutrition": {
+    "per_servings": 4,
+    "kcal": 264,
+    "protein_g": 40,
+    "carbs_g": 7,
+    "fat_g": 8
+  },
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-curry-9117113.jpg?resize=440,400",
+  "lang": "da",
+  "keywords": "Dinner, Main course, Chinese, Chicken, chicken curry recipe, Chinese, Curry, Easy, Easy curry, Family, Family friendly, Healthy, healthy chicken curry reccipe, healthy curry ideas, low calorie curry, Low fat, Low fat curry, Lulu Grimes, Quick chicken curry",
+  "fetched_at": "2026-08-27T17:46:45.874Z",
   "title": "Kinesisk kyllingekarry",
   "intro": "Mør kylling i en glat, gul karrysauce med løg, hvidløg og ærter. Server den med ris.",
   "servings": 4,
@@ -174,26 +185,10 @@
     "Rapeseed oil er erstattet med rapsolie."
   ],
   "meal": {
-    "complete": false,
-    "reason": "Retten skal serveres med ris for at være et helt måltid.",
-    "side": {
-      "title": "Kogte ris",
-      "ingredients": [
-        {
-          "section": null,
-          "amount": 250,
-          "unit": "g",
-          "name": "ris",
-          "note": null,
-          "optional": false
-        }
-      ],
-      "steps": [
-        "Kog risen efter anvisning på pakken.",
-        "Server risen til kyllingekarryen."
-      ]
-    },
-    "model": "claude-haiku-4-5-20251001",
-    "checked_at": "2026-10-05T14:47:49.840Z"
+    "complete": true,
+    "reason": "Retten har kylling i karrysauce og serveres med kogte ris, så den er et helt måltid.",
+    "side": null,
+    "model": "claude-sonnet-5-5",
+    "checked_at": "2026-10-05T16:23:33.940Z"
   }
 }
