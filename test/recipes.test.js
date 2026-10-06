@@ -1184,4 +1184,10 @@ test('HelloFresh-ingredienslinjer læses til vare og mængde', () => {
   // (parseIngredient læser items-tabellen i test.db, som først får ordet ved `npm run seed:items`, så seed-listen testes.)
   assert.ok(require('../src/lib/taxonomy').SEED.find((i) => i.key === 'citron').da.includes('citrusfrugt'));
   near(p('3.5 dl Vand').amount, 0.35);
+  // "Hakket svine-/kalvekød" er butikkens "hakket kalv og flæsk" — ikke kalvekød
+  // (stege-kød). Ellers holder importen udgaven tilbage: "hovedråvaren er væk".
+  const hakket = require('../src/lib/taxonomy').SEED.find((i) => i.key === 'hakket_oksekoed').da;
+  for (const s of ['hakket svine-/kalvekød', 'hakket svine- og kalvekød', 'hakket kalv og flæsk']) {
+    assert.ok(hakket.includes(s), s);
+  }
 });
